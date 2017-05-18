@@ -1,0 +1,1 @@
+<img src="http://www.topswagcode.com/content/images/2016/02/developer-patterns.jpg" width="250"/>

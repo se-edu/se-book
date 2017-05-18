@@ -1,0 +1,1 @@
+* :one: Do the exercise given in [SE-EDU: Addressbook Level 4: Apply Design Patterns](https://github.com/se-edu/addressbook-level4/blob/master/docs/LearningOutcomes.md#apply-design-patterns-lo-designpatterns)

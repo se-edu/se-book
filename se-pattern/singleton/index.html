@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Singleton Pattern</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content" id="main">
+  <h3 id="singleton-pattern">Singleton Pattern</h3>
+  <div class="pull-right" v-closeable="" alt="Read lecture slides online"><iframe src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212074&authkey=&em=2&wdAr=1.3333333333333333" width="350px" height="286px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office Online</a>.</iframe></div>
+  <h4
+    id="context">Context</h4>
+    <p>Creating more than one instance of a certain class is undesirable due to some reason
+      <morph title="Examples"> * Example 1 * Example 2 </morph>. If multiple
+      <trigger for="pop:client-code">clients</trigger> need to interact with an instance of the said class, they should share the same single instance. Such a single instance is commonly known as a <em>singleton</em>.</p>
+    <div class="clearfix">
+      <h4 id="problem">Problem</h4>
+      <p>Normally, any client can instantiate a class by calling the constructor. This means we can end up with multiple instances of the class in concern.</p>
+    </div>
+    <h4 id="solution">Solution</h4>
+    <tabs>
+      <tab header=":ab:">
+        <p>Make the <em>constructor</em> of the singleton class <code>private</code>. Provide a <code>public</code> method to access the <em>singleton</em> instance.</p><img class="center-block" src="/se-book/se-pattern/singleton/solution.png">
+        <p>As shown, the solution makes the constructor private (note the “-“ visibility marker for the constructor), which prevents instantiation from outside the class. The single instance of the singleton class is maintained by a private class-level variable.
+          Access to this object is provided by a public class-level operation <code>getInstance()</code>. In the skeleton code above, <code>getInstance()</code> instantiates a single copy of the singleton class when it is executed for the first time.
+          Subsequent calls to this operation return the single instance of the class.</p>
+      </tab>
+      <tab header=":symbols:">
+        <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212070&authkey=&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen="" mozallowfullscreen=""
+            allowfullscreen></iframe></div>
+      </tab>
+    </tabs>
+    <panel header=":computer: code examples" type="seamless">
+      <tabs>
+        <tab header="Java">
+          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ClassicSingleton</span> </span>{
+   <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> ClassicSingleton instance = <span class="hljs-keyword">null</span>;
+   <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">ClassicSingleton</span><span class="hljs-params">()</span> </span>{
+      <span class="hljs-comment">// Exists only to defeat instantiation.</span>
+   }
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> ClassicSingleton <span class="hljs-title">getInstance</span><span class="hljs-params">()</span> </span>{
+      <span class="hljs-keyword">if</span>(instance == <span class="hljs-keyword">null</span>) {
+         instance = <span class="hljs-keyword">new</span> ClassicSingleton();
+      }
+      <span class="hljs-keyword">return</span> instance;
+   }
+}
+</code></pre>
+        </tab>
+        <tab header="C++">
+          <pre><code class="hljs c++"><span class="hljs-keyword">class</span> GlobalClass
+{
+    <span class="hljs-keyword">int</span> m_value;
+    <span class="hljs-keyword">static</span> GlobalClass *s_instance;
+    GlobalClass(<span class="hljs-keyword">int</span> v = <span class="hljs-number">0</span>)
+    {
+        m_value = v;
+    }
+  <span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">get_value</span><span class="hljs-params">()</span>
+    </span>{
+        <span class="hljs-keyword">return</span> m_value;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set_value</span><span class="hljs-params">(<span class="hljs-keyword">int</span> v)</span>
+    </span>{
+        m_value = v;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">static</span> GlobalClass *<span class="hljs-title">instance</span><span class="hljs-params">()</span>
+    </span>{
+        <span class="hljs-keyword">if</span> (!s_instance)
+          s_instance = <span class="hljs-keyword">new</span> GlobalClass;
+        <span class="hljs-keyword">return</span> s_instance;
+    }
+};
+</code></pre>
+        </tab>
+      </tabs>
+    </panel>
+    <panel header=":paperclip: Extras" expandable="" type="seamless">
+      <panel header=":mortar_board: Learning Outcomes" expandable="" type="seamless">
+        <div>
+          <panel header=":one: Able to explain the singleton pattern" expandable="">
+            <panel header="Question 1" minimized="">
+              <question>
+                <p>Which of the following is an ideal situation for using Singleton pattern?</p>
+                <ul radio-group="06s5e" class="radio-list">
+                  <li class="radio-list-item"><label><input class="radio-list-input" name="06s5e" type="radio"> Utility methods used by many class in the application.</label></li>
+                  <li class="radio-list-item"><label><input class="radio-list-input" name="06s5e" type="radio"> A database manager shared by different component of the application.</label></li>
+                  <li class="radio-list-item"><label><input class="radio-list-input" name="06s5e" type="radio"> A constant String defined in every controller.</label></li>
+                </ul>
+                <div slot="answer">
+                  <ul radio-group="2qcge" class="radio-list">
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="2qcge" type="radio"> Utility methods used by many class in the application.</label></li>
+                    <li class="radio-list-item"><label><input class="radio-list-input" checked name="2qcge" type="radio"> Database manager shared by different component of the application.</label></li>
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="2qcge" type="radio"> A constant String defined in every controller.</label></li>
+                  </ul>
+                  <p>Database is a shared resources here, and by using singleton pattern, we have better control over the database operations.</p>
+                </div>
+              </question>
+            </panel>
+          </panel>
+        </div>
+      </panel>
+      <panel header=":pencil: Apply your knowledge" expandable="" type="seamless">
+        <div>
+          <ul>
+            <li><img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"> Do the exercise given in <a href="https://github.com/se-edu/addressbook-level4/blob/master/docs/LearningOutcomes.md#apply-design-patterns-lo-designpatterns">SE-EDU: Addressbook Level 4: Apply Design Patterns</a></li>
+          </ul>
+        </div>
+      </panel>
+      <panel header=":package: Resources" expandable="" type="seamless">
+        <div>
+          <ul>
+            <li><img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"> GoF Book</li>
+            <li><img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0030-20e3.png"> Resource 2</li>
+            <li><img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"> Resrouce 3</li>
+          </ul>
+        </div>
+      </panel>
+      <panel header=":laughing: Humor" expandable="" type="seamless">
+        <div><img src="http://www.topswagcode.com/content/images/2016/02/developer-patterns.jpg" width="250"></div>
+      </panel>
+    </panel>
+    <tooltip id="pop:client-code">
+      <div slot="content">
+        <div>
+          <p><strong>Client component/method/object</strong>: The component/method/object that is interacting with a given code.</p>
+        </div>
+      </div>
+    </tooltip>
+</div>
+</div>
+</body>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/vue-strap.min.js"></script>
+<script src="../../markbind/js/setup.js"></script>
+</html>

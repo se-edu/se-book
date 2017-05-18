@@ -1,0 +1,2 @@
+* <span id="explain-user-story">:trophy: Able to explain what is a user story :one:</span>
+* <span id="follow-user-story-format">:trophy: Able to write simple user stories in a known format :one:</span>
