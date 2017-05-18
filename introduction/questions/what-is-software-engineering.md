@@ -1,0 +1,27 @@
+<Question>
+
+What is software engineering?
+- ( ) A game people play for fun.
+- ( ) A course you have to take for graduate
+
+What can Software Engineer do?
+- [ ] Play Games
+- [ ] Become Billionaire
+
+<div slot="hint">
+
+Use your instinct.
+
+</div>
+<div slot="answer">
+
+What is software engineering?
+- ( ) A game people play for fun.
+- (X) A course you have to take for graduate
+
+What can Software Engineer do?
+- [X] Play Games
+- [X] Become Billionaire
+
+</div>
+</Question>
