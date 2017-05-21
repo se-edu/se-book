@@ -2,10 +2,9 @@
 
 <panel header="Example 1: ‘check account balance’ use case for an ATM" type="seamless" expanded>
 
-System: <popover effect="fade" placement="right" content="Automated Teller Machine">
+* System: <popover effect="fade" placement="right" content="Automated Teller Machine">
 ATM </popover>
-
-Use Case: Check account balance
+* Use Case: Check account balance
   1. User inserts an ATM card
   2. ATM prompts for PIN
   3. User enters PIN
