@@ -10,7 +10,7 @@
 
 Actor generalization
 
-<img src="{{baseUrl}}/requirements/useCases/usage/images/ActorGeneralisation.jpg" height="250" />
+<img src="{{baseUrl}}/requirements/useCases/usage/images/ActorGeneralisation.png" height="250" />
 
 <p/>
 

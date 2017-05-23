@@ -1,7 +1,7 @@
 <panel header="%%Prototype examples%%" expanded>
 
 <panel header="Text UI prototype" type="seamless" expanded>
-<img src="{{baseUrl}}/requirements/prototyping/introduction/images/TextPrototypeCLI.jpg" height="350" />
+<img src="{{baseUrl}}/requirements/prototyping/introduction/images/TextPrototypeCLI.png" height="350" />
 
 %%<sup>Simple text UI prototype for a primitive CLI (Command Line Interface) Minesweeper.</sup>%%
 

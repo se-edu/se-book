@@ -7,7 +7,7 @@ Consider a simple movie ticket vending machine application. Every week, the thea
 
 <div slot="answer">
 
-<img src="{{baseUrl}}/requirements/useCases/identification/images/TicketMachine.jpg" height="250" />
+<img src="{{baseUrl}}/requirements/useCases/identification/images/TicketMachine.png" height="250" />
 
 <p/>
 
