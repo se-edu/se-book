@@ -1,5 +1,5 @@
 ### Class-Level Members :two:
 
-<panel type="seamless" header="%%-----------------------------------------%%">
+<panel type="seamless" header="%%-----------------------------------------%%" expanded>
   <include src="./index.md#main" />
 </panel>
