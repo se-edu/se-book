@@ -10,7 +10,7 @@ We use arrow heads to indication the navigability of an association.
 
 <tip-box>
 
-<img src="{{baseUrl}}/uml/associations/navigability/images/LogicMinefield.png" height="40" />
+<img src="{{baseUrl}}/uml/associations/navigability/images/logicMinefield.png" height="40" />
 <p/>
 
 `Logic` is aware of `Minefield`, but `Minefield` is not aware of `Logic`

@@ -6,10 +6,17 @@
 
 <div id="main">
 
-<img src="{{baseUrl}}/uml/classInheritance/introduction/images/Report.png" height="120" />
+We uses a triangle and a solid line (not to be confused with an arrow) to indicate class inheritance.
+
+<tip-box>
+
+Example:
+
+<img src="{{baseUrl}}/uml/classInheritance/introduction/images/report.png" height="120" />
 <p/>
 
-We uses a triangle and a solid line (not to be confused with an arrow) to indicate class inheritance.
+</tip-box>
+
 
 <!-- extras ------------------------------------------------------------------------------------ -->
 

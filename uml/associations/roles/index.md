@@ -12,7 +12,7 @@
 
 Example:
 
-<img src="{{baseUrl}}/uml/associations/roles/images/HusbandWife.png" height="70" />
+<img src="{{baseUrl}}/uml/associations/roles/images/husbandWife.png" height="70" />
 <p/>
 
 This association represents a marriage between a Man object and a Woman object. The respective roles played by objects of these two classes are husband and wife.
@@ -23,12 +23,12 @@ This association represents a marriage between a Man object and a Woman object. 
 
 Example:
 
-<img src="{{baseUrl}}/uml/associations/roles/images/AdminStudent.png" height="70" />
+<img src="{{baseUrl}}/uml/associations/roles/images/adminStudent.png" height="70" />
 <p/>
 
 </tip-box>
 
-<img src="{{baseUrl}}/uml/associations/roles/images/Association.png" height="120" />
+<img src="{{baseUrl}}/uml/associations/roles/images/association.png" height="120" />
 <p/>
 
 <!-- extras ------------------------------------------------------------------------------------ -->

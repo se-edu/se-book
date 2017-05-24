@@ -8,8 +8,14 @@
 
 We use a hollow diamond is used to indicate an aggregation.
 
-<img src="{{baseUrl}}/uml/aggregation/introduction/images/ClubPerson.png" height="85" />
+<tip-box>
+
+Example:
+
+<img src="{{baseUrl}}/uml/aggregation/introduction/images/clubPerson.png" height="85" />
 <p/>
+
+</tip-box>
 
 <!-- extras ------------------------------------------------------------------------------------ -->
 

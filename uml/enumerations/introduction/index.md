@@ -8,8 +8,14 @@
 
 An `<< enumeration >>` is used to indicate that an attribute can only take on a fixed set of values.
 
-<img src="{{baseUrl}}/uml/enumerations/introduction/images/PlayerTurn.png" height="250" />
+<tip-box>
+
+Example:
+
+<img src="{{baseUrl}}/uml/enumerations/introduction/images/playerTurn.png" height="250" />
 <p/>
+
+</tip-box>
 
 <!-- extras ------------------------------------------------------------------------------------ -->
 

@@ -8,8 +8,14 @@
 
 Association classes are denoted as a connection to an association link using a dashed line as shown below.  
 
-<img src="{{baseUrl}}/uml/associationClasses/introduction/images/ManWoman.png" height="150" />
+<tip-box>
+
+Example:
+
+<img src="{{baseUrl}}/uml/associationClasses/introduction/images/manWoman.png" height="150" />
 <p/>
+
+</tip-box>
 
 <!-- extras ------------------------------------------------------------------------------------ -->
 

@@ -8,7 +8,7 @@
 
 We use a dashed arrow to show dependencies.
 
-<img src="{{baseUrl}}/uml/dependencies/introduction/images/Notation.png" height="120" />
+<img src="{{baseUrl}}/uml/dependencies/introduction/images/notation.png" height="120" />
 <p/>
 
 <!-- extras ------------------------------------------------------------------------------------ -->

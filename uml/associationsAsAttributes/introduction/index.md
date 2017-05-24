@@ -8,16 +8,24 @@
 
 An attribute is sometimes used to represent an association. The diagram below depicts a multiplayer _Square Game_ being played on a board comprising of one hundred squares. Each of the squares may be occupied with any number of Pieces, each belonging to a certain player. A piece may or may not be on a square.  Note how the association `’is on’` can be replaced by an `isOn` attribute of the `Piece` class. In order to realize the 0..1 multiplicity, the isOn attribute can either be null or hold a reference to a Square object.
 
-<img src="{{baseUrl}}/uml/associationsAsAttributes/introduction/images/SquareMultiplicity.png" height="300" />
+<tip-box>
+
+<img src="{{baseUrl}}/uml/associationsAsAttributes/introduction/images/squareMultiplicity.png" height="300" />
 <p/>
-<p/>
+
+</tip-box>
 
 In addition, association multiplicities of two or more can be made as part of the attribute using
 
 * name: type ==[multiplicity]==  = default value
 
-<img src="{{baseUrl}}/uml/associationsAsAttributes/introduction/images/Board.png" height="70" />
+<tip-box>
+
+<img src="{{baseUrl}}/uml/associationsAsAttributes/introduction/images/board.png" height="70" />
 <p/>
+
+</tip-box>
+
 
 <!-- extras ------------------------------------------------------------------------------------ -->
 

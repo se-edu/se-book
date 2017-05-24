@@ -24,7 +24,7 @@ A **use case** describes an _interaction between the user and the system_ for a 
 
 <p/>
 
-<img src="{{baseUrl}}/requirements/useCases/introduction/images/TicketMachine.png" height="250" />
+<img src="{{baseUrl}}/requirements/useCases/introduction/images/ticketMachine.png" height="250" />
 
 <p/>
 

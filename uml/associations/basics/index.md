@@ -8,7 +8,7 @@
 
 We use a solid line to show an association between two classes.
 
-<img src="{{baseUrl}}/uml/associations/basics/images/Basic.png" height="200" />
+<img src="{{baseUrl}}/uml/associations/basics/images/basic.png" height="200" />
 <p/>
 
 <!-- extras ------------------------------------------------------------------------------------ -->

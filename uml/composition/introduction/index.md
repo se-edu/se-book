@@ -8,8 +8,14 @@
 
 We use a solid diamond symbol to denote composition.
 
-<img src="{{baseUrl}}/uml/composition/introduction/images/BoardSquare.png" height="150" />
+<tip-box>
+
+Example:
+
+<img src="{{baseUrl}}/uml/composition/introduction/images/boardSquare.png" height="150" />
 <p/>
+
+</tip-box>
 
 <!-- extras ------------------------------------------------------------------------------------ -->
 

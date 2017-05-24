@@ -8,8 +8,14 @@
 
 In UML class diagrams, underlines are used to denote class-level attributes and variables.
 
-<img src="{{baseUrl}}/uml/classLevelMembers/introduction/images/Student.png" height="120" />
+<tip-box>
+
+Example:
+
+<img src="{{baseUrl}}/uml/classLevelMembers/introduction/images/student.png" height="120" />
 <p/>
+
+</tip-box>
 
 <!-- extras ------------------------------------------------------------------------------------ -->
 

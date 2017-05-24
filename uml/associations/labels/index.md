@@ -12,14 +12,14 @@ _Association labels_ describe the association. The arrow head indicates the “d
 
 Example:
 
-<img src="{{baseUrl}}/uml/associations/labels/images/AdminStudent.png" height="70" />
+<img src="{{baseUrl}}/uml/associations/labels/images/adminStudent.png" height="70" />
 <p/>
 
 an Admin object uses Student objects” or “Student objects are used by an Admin object”.
 
 </tip-box>
 
-<img src="{{baseUrl}}/uml/associations/labels/images/Association.png" height="70" />
+<img src="{{baseUrl}}/uml/associations/labels/images/association.png" height="70" />
 <p/>
 
 <!-- extras ------------------------------------------------------------------------------------ -->
