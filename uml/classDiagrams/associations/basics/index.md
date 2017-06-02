@@ -23,10 +23,6 @@ We use a solid line to show an association between two classes.
     <include src="resources.md" />
   </panel>
 
-  <panel header=":laughing: Humor" expandable type="seamless">
-    <include src="humor.md" />
-  </panel>
-
 </panel>
 
 </div>

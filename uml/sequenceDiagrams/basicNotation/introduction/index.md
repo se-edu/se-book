@@ -35,10 +35,6 @@ they can be distinguished by naming them as TextUi1:TextUi and TextUi2:TextUi.
     <include src="resources.md" />
   </panel>
 
-  <panel header=":laughing: Humor" expandable type="seamless">
-    <include src="humor.md" />
-  </panel>
-
 </panel>
 
 </div>

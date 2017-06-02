@@ -57,10 +57,6 @@ The _visibility_ of attributes and operations is used to indicate the level of a
     <include src="resources.md" />
   </panel>
 
-  <panel header=":laughing: Humor" expandable type="seamless">
-    <include src="humor.md" />
-  </panel>
-
 </panel>
 
 </div>

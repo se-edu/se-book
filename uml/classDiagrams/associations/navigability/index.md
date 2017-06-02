@@ -28,11 +28,7 @@ We use arrow heads to indication the navigability of an association.
   <panel header=":package: Resources" expandable type="seamless">
     <include src="resources.md" />
   </panel>
-
-  <panel header=":laughing: Humor" expandable type="seamless">
-    <include src="humor.md" />
-  </panel>
-
+	
 </panel>
 
 </div>

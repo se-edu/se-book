@@ -39,10 +39,6 @@ In addition, association multiplicities of two or more can be made as part of th
     <include src="resources.md" />
   </panel>
 
-  <panel header=":laughing: Humor" expandable type="seamless">
-    <include src="humor.md" />
-  </panel>
-
 </panel>
 
 </div>

@@ -43,10 +43,6 @@ Example:
     <include src="resources.md" />
   </panel>
 
-  <panel header=":laughing: Humor" expandable type="seamless">
-    <include src="humor.md" />
-  </panel>
-
 </panel>
 
 </div>

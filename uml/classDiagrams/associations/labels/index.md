@@ -34,10 +34,6 @@ an Admin object uses Student objects” or “Student objects are used by an Adm
     <include src="resources.md" />
   </panel>
 
-  <panel header=":laughing: Humor" expandable type="seamless">
-    <include src="humor.md" />
-  </panel>
-
 </panel>
 
 </div>
