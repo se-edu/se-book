@@ -1,4 +1,4 @@
-* __ [Aggregation](./uml/aggregation) :one: <trigger for="pop:aggregation-preview">:mag:</trigger>
+* __ [Aggregation](./uml/aggregation) :two: <trigger for="pop:aggregation-preview">:mag:</trigger>
 
 
 <popover id="pop:aggregation-preview" title=":mag: Aggregation" placement="right">

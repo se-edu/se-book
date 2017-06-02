@@ -1,4 +1,4 @@
-* __ [Composition](./uml/composition) :one: <trigger for="pop:composition-preview">:mag:</trigger>
+* __ [Composition](./uml/composition) :two: <trigger for="pop:composition-preview">:mag:</trigger>
 
 
 <popover id="pop:composition-preview" title=":mag: Composition" placement="right">

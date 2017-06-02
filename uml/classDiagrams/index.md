@@ -1,4 +1,4 @@
-<include src="../introduction/topicPanel.md" />
+<include src="../classDiagramsIntroduction/topicPanel.md" />
 
 <!-- ------------------------------------------------------------------------------------------------- -->
 

@@ -1,4 +1,4 @@
-* __ [Dependencies](./uml/dependencies) :one: <trigger for="pop:dependencies-preview">:mag:</trigger>
+* __ [Dependencies](./uml/dependencies) :three: <trigger for="pop:dependencies-preview">:mag:</trigger>
 
 
 <popover id="pop:dependencies-preview" title=":mag: Dependencies" placement="right">

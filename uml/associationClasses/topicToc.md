@@ -1,4 +1,4 @@
-* __ [Association Classes](./uml/associationClasses) :one: <trigger for="pop:associationClasses-preview">:mag:</trigger>
+* __ [Association Classes](./uml/associationClasses) :three: <trigger for="pop:associationClasses-preview">:mag:</trigger>
 
 
 <popover id="pop:associationClasses-preview" title=":mag: Association Classes" placement="right">
