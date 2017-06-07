@@ -16,7 +16,8 @@
 
 ### Design
 
-* [Object Oriented Programming]()
+<include src="oop/topicToc.md" />
+
 * [Architecture]()
 * [API design]()
 
@@ -44,6 +45,7 @@
 
 * [Definitions](common/definitions.html)
 * [References](common/references.html)
+
 <include src="uml/topicToc.md" />
 
 </div>
