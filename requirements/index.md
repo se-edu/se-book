@@ -9,9 +9,8 @@
 
 %%:o: What are Software Requirements%%
 
-<panel type="seamless" alt="definition">
-  <span slot="header"> ================================================================
-  </span>
+<panel header="================================================================"
+   type="seamless" alt="definition" >
   <include src="introduction/index.md#main" />
 </panel>
 
@@ -21,9 +20,8 @@
 
 %%:o: Functional vs non-functional requirements%%
 
-<panel type="seamless" alt="non-functional">
-  <span slot="header"> ================================================================
-  </span>
+<panel header="================================================================"
+    type="seamless" alt="non-functional">
   <include src="non-functional/index.md#main" />
 </panel>
 
@@ -33,9 +31,8 @@
 
 %%:o: Some tools and techniques used for gathering requirements%%
 
-<panel type="seamless" alt="gathering">
-  <span slot="header"> ================================================================
-  </span>
+<panel header="================================================================"
+    type="seamless" alt="gathering">
   <include src="gathering/index.md" />
 </panel>
 
@@ -45,9 +42,8 @@
 
 %%:o: Some tools and techniques used for specifying requirements%%
 
-<panel type="seamless" alt="specifying">
-  <span slot="header"> ================================================================
-  </span>
+<panel header="================================================================"
+    type="seamless" alt="specifying">
   <include src="specifying/index.md" />
 </panel>
 
@@ -57,9 +53,8 @@
 
 %%:o: Deciding the relative importance of the requirements gathered%%
 
-<panel type="seamless" alt="prioritizing" >
-  <span slot="header"> ================================================================
-  </span>
+<panel header="================================================================"
+    type="seamless" alt="prioritizing" >
   <include src="prioritizing/index.md#main" />
 </panel>
 
@@ -69,9 +64,8 @@
 
 %%:o: Guidance on writing good quality requirements%%
 
-<panel type="seamless" alt="quality" >
-  <span slot="header"> ================================================================
-  </span>
+<panel header="================================================================"
+    type="seamless" alt="quality" >
   <include src="quality/index.md#main" />
 </panel>
 
