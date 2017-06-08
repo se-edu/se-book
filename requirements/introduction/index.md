@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+
+<div class="website-content">
+
 ## What are software requirements? 
 
 <div id="main">
@@ -15,4 +19,7 @@ Requirements come from _stakeholders_. {more}
 Identifying requirements is not as straightforward as it sounds. It is not as simple as writing a wish list.
   {more details}
 
+</div>
+
+</div>
 </div>
