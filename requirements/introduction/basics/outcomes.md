@@ -1,1 +1,1 @@
-* <span id="outcome-brainstorming-introduction-one">:trophy: Able to explain requirements :one:</span>
+* <span id="outcome-explain">:trophy: Able to explain requirements :one:</span>

@@ -2,11 +2,13 @@
 
 <div class="website-content">
 
-## What are software requirements? 
+%%**Requirements :arrow_right:**%%
+
+## Introduction
 
 <div id="main">
 
-<include src="./basics/topicPanel.md" />
+<include src="./basics/embed.md" />
 
 </div>
 
