@@ -1,4 +1,4 @@
-### Aggregation :three:
+### Abstract Classes :two:
 
 <panel type="seamless" header="%%-----------------------------------------%%" expanded>
   <include src="./index.md#main" />

@@ -2,17 +2,20 @@
 
 <div class="website-content">
 
-#### Interface Inheritance
+#### Abstract Classes
 
 <div id="main">
 
-We use the keyword `<< interface >>` to indicate an interface. Interface inheritance is shown similar to class inheritance except a dashed line is used instead of a solid line.
+We can use _italics_ or `{abstract}` keyword to denote abstract classes/methods.
+
+<img src="{{baseUrl}}/uml/classDiagrams/abstractClasses/introduction/images/notation.png" height="110" />
+<p/>
 
 <tip-box>
 
 Example:
 
-<img src="{{baseUrl}}/uml/classDiagrams/interfaceInheritance/introduction/images/staff.png" height="250" />
+<img src="{{baseUrl}}/uml/classDiagrams/abstractClasses/introduction/images/staff.png" height="110" />
 <p/>
 
 </tip-box>

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-### Interface Inheritance
+### Interfaces
 
 <div id="main">
 

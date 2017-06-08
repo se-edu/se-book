@@ -2,17 +2,17 @@
 
 <div class="website-content">
 
-#### Enumerations
+#### Interfaces
 
 <div id="main">
 
-An `<< enumeration >>` is used to indicate that an attribute can only take on a fixed set of values.
+We use the keyword `<< interface >>` to indicate an interface. Interface inheritance is shown similar to class inheritance except a dashed line is used instead of a solid line.
 
 <tip-box>
 
 Example:
 
-<img src="{{baseUrl}}/uml/classDiagrams/enumerations/introduction/images/playerTurn.png" height="150" />
+<img src="{{baseUrl}}/uml/classDiagrams/interfaces/introduction/images/staff.png" height="250" />
 <p/>
 
 </tip-box>

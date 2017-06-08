@@ -9,7 +9,7 @@
 In OO, an _interface_ is a behavior specification.
 
 <panel header="UML: Class Diagrams: Interface">
-  <include src="../../../uml/classDiagrams/interfaceInheritance/topicPanel.md" />
+  <include src="../../../uml/classDiagrams/interfaces/topicPanel.md" />
 </panel>
 
 <p/>
