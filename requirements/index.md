@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-# Software requirements
+# Software Requirements
 
 
 ## Introduction :one:
@@ -17,7 +17,7 @@
 
 <!-- ------------------------------------------------------------------------------------------------- -->
 
-## Non-functional requirements :one:
+## Non-Functional Requirements :one:
 
 %%:o: Functional vs non-functional requirements%%
 
@@ -29,7 +29,7 @@
 
 <!-- ------------------------------------------------------------------------------------------------- -->
 
-## Gathering requirements :one:
+## Gathering Requirements :one:
 
 %%:o: Some tools and techniques used for gathering requirements%%
 
@@ -41,7 +41,7 @@
 
 <!-- ------------------------------------------------------------------------------------------------- -->
 
-## Specifying requirements :one:
+## Specifying Requirements :one:
 
 %%:o: Some tools and techniques used for specifying requirements%%
 
@@ -53,7 +53,7 @@
 
 <!-- ------------------------------------------------------------------------------------------------- -->
 
-## Prioritizing requirements :one:
+## Prioritizing Requirements :one:
 
 %%:o: Deciding the relative importance of the requirements gathered%%
 
@@ -65,7 +65,7 @@
 
 <!-- ------------------------------------------------------------------------------------------------- -->
 
-## Quality of requirements :three:
+## Quality of Requirements :three:
 
 %%:o: Guidance on writing good quality requirements%%
 
