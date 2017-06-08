@@ -79,6 +79,10 @@
 
 </div>
 
+<div id="def-stakeholder">
+**Stakeholder**: A party that is potentially affected by the software project. e.g. users, sponsors, developers, interest groups, government agencies, etc.
+</div>
+
 <div id="def-use-case">
 
 **Use Case**: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an
