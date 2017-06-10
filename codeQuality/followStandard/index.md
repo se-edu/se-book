@@ -9,6 +9,7 @@
 <div id="main">
 
 <include src="introduction/embed.md" />
+<include src="basics/embed.md" />
 
 </div>
 
