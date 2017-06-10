@@ -26,7 +26,9 @@
 ### Implementation
 
 * [IDEs]()
-* [Code quality]()
+
+<include src="codeQuality/topicToc.md" />
+
 * [Refactoring]()
 * [Defensive programming]()
 
