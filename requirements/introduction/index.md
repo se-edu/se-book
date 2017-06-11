@@ -1,18 +1,16 @@
-## What are software requirements? 
+<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+
+<div class="website-content">
+
+%%**Requirements :arrow_right:**%%
+
+## Introduction
 
 <div id="main">
 
-A requirement specifies a need to be fulfilled by the software product. 
+<include src="./basics/embed.md" />
 
-A software project may be,
-* a _brown-field_ project: develop a product to replace/update an existing software product 
-* a _green-field_ project: develop a totally new system with no precedent 
+</div>
 
-In either case, requirements have to be understood, discussed, refined, clarified, _scoped_. 
-
-Requirements come from _stakeholders_. {more}
-
-Identifying requirements is not as straightforward as it sounds. It is not as simple as writing a wish list.
-  {more details}
-
+</div>
 </div>

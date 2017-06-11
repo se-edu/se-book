@@ -26,7 +26,9 @@
 ### Implementation
 
 * [IDEs]()
-* [Code quality]()
+
+<include src="codeQuality/topicToc.md" />
+
 * [Refactoring]()
 * [Defensive programming]()
 
@@ -47,5 +49,6 @@
 * [References](common/references.html)
 
 <include src="uml/topicToc.md" />
+<include src="java/style/topicToc.md" />
 
 </div>

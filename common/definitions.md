@@ -5,7 +5,9 @@
 # Definitions
 
 <div id="def-actor">
+
 **Actor**: An actor (in a use case) is a role played by a user.  An actor can be a human or another system. Actors are not part of the system; they reside outside the system.
+
 </div>
 
 <div id="def-architecture">
@@ -76,6 +78,12 @@
 <div id="def-glossary">
 
 **Glossary**: A glossary serves to ensure that _all stakeholders have a common understanding_ of the noteworthy terms, abbreviation, acronyms etc.
+
+</div>
+
+<div id="def-stakeholder">
+
+**Stakeholder**: A party that is potentially affected by the software project. e.g. users, sponsors, developers, interest groups, government agencies, etc.
 
 </div>
 

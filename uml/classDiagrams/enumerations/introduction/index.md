@@ -12,7 +12,7 @@ An `<< enumeration >>` is used to indicate that an attribute can only take on a 
 
 Example:
 
-<img src="{{baseUrl}}/uml/classDiagrams/enumerations/introduction/images/playerTurn.png" height="250" />
+<img src="{{baseUrl}}/uml/classDiagrams/enumerations/introduction/images/playerTurn.png" height="150" />
 <p/>
 
 </tip-box>
