@@ -49,5 +49,6 @@
 * [References](common/references.html)
 
 <include src="uml/topicToc.md" />
+<include src="java/style/topicToc.md" />
 
 </div>

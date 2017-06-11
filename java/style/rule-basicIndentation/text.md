@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Java :arrow_right: Code Style: :arrow_right:</div>
-
 <div id="title">
 
 #### Basic Indentation :one:

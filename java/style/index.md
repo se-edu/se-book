@@ -7,12 +7,12 @@
 
 ## Layout
 
-<panel header="Basic Indentation"
-    type="seamless" alt="indentation">
+<panel header="Basic Indentation :one:"
+    type="seamless" alt="indentation" expanded>
   <include src="rule-basicIndentation/index.md#main" />
 </panel>
-<panel header="Line Length"
-    type="seamless" alt="line length">
+<panel header="Line Length :one:"
+    type="seamless" alt="line length" expanded>
   <include src="rule-lineLength/index.md#main" />
 </panel>
 
