@@ -10,7 +10,7 @@
 
 <div id="body">
 
-<panel header="Use Nouns for Things and Verbs for Actions"
+<panel header="**Use Nouns for Things and Verbs for Actions** :one:"
     type="seamless" alt="indentation">
   <include src="../../practices/practice-nounsAndVerbsAsNames/index.md#main" />
 </panel>

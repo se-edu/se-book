@@ -6,7 +6,7 @@
 
 ## Naming
 
-<panel type="seamless" header="Nouns and Verbs as Names" alt="nouns and verbs">
+<panel type="seamless" header="**Use Nouns for Things and Verbs for Actions** :one:" alt="nouns and verbs">
   <include src="practice-nounsAndVerbsAsNames/index.md#main" />
 </panel>
 
