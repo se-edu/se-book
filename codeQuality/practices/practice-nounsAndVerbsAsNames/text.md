@@ -11,7 +11,20 @@
 <div id="body">
 
 **Use nouns for classes/variables and verbs for methods/functions.**
-For example, `LimitChecker` is a better choice for a class name than `CheckLimit` 
+
+<tip-box>
+
+Example: 
+
+Name for a | ![][Bad]        | ![][Good]
+-----------|-----------------|----------------
+Class      |`CheckLimit`     | `LimitChecker`           
+method     |`result()`       | `calculate()`  
+
+</tip-box>
+
+[Bad]: ../../../images/Bad.png "Bad" 
+[Good]: ../../../images/Good.png "Good"
 
 </div>
 
