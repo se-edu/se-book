@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Using Nouns and Variables for Names :one:
+#### Use Nouns for Things and Verbs for Actions :one:
 
 </div>
 
