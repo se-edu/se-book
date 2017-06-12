@@ -12,7 +12,7 @@ Suppose we are planning to implement a simple minesweeper game that has a text b
 
 Example:
 
-<img src="{{baseUrl}}/oop/conceptualisingSolution/introduction/images/textLogicMinefieldcell.png" height="50" />
+<img src="{{baseUrl}}/oop/conceptualisingSolution/introduction/images/textLogicMinefieldCell.png" height="50" />
 <p/>
 
 </tip-box>
