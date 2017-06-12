@@ -22,6 +22,10 @@ When writing an OOP program to calculate the average age, instructions for creat
   <include src="../../../uml/classDiagrams/classes/topicPanel.md" />
 </panel>
 
+<panel header="UML: Object Diagrams: Objects">
+  <include src="../../../uml/objectDiagrams/objects/topicPanel.md" />
+</panel>
+
 <p/>
 
 <tip-box>

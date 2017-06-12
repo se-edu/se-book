@@ -98,4 +98,27 @@
 
 </div>
 
+<div id="def-type-signature">
+
+**Type Signature**: The _type signature_ of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant. Here are some examples:
+
+| Method                         | Type Signature        |
+| :----------------------------: | :-------------------: |
+| int add(int X, int Y)          | (int, int)            |
+| void add(int A, int B)         | (int, int)            |
+| void m(int X, double Y)        | (int, double)         |
+| void m(double X, int Y)        | (double, int)         |
+
+</div>
+
+<div id="def-polymorphism">
+
+**Polymorphism**:
+
+> The ability of different objects to respond, each in its own way, to identical messages is called polymorphism.
+>
+> -- [Object-Oriented Programming with Objective-C](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/), Apple
+
+</div>
+
 </div>
