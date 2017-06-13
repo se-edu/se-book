@@ -94,7 +94,7 @@ The updated class diagram:
 
 <tip-box>
 
-<img src="{{baseUrl}}/oop/conceptualisingSolution/intermediate/images/fullClassDiagram.png" height="250" />
+<img src="{{baseUrl}}/oop/conceptualisingSolution/intermediate/images/textLogicMinefieldCellConfigGenerator.png" height="250" />
 <p/>
 
 </tip-box>
