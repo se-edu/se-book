@@ -10,9 +10,9 @@ An abstract class is a class that is declared abstract. Abstract classes cannot 
 
 An abstract class can include abstract methods. An abstract method is simply the method interface without the implementation.
 
-<!-- <panel header="UML: Class Diagrams: Abstract Classes">
+<panel header="UML: Class Diagrams: Abstract Classes">
   <include src="../../../uml/classDiagrams/abstractClasses/topicPanel.md" />
-</panel> -->
+</panel>
 
 <p/>
 

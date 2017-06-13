@@ -44,6 +44,13 @@ Inheritance implies the derived class can be considered as a _sub-type_ of the b
 * SnakeHeadSquare _is a_ Square.
 * SnakeTailSquare _is a_ Square.
 
+
+<tip-box type="info">
+
+Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type relationship.
+
+</tip-box>
+
 <tip-box>
 
 Example:
