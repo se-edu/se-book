@@ -4,17 +4,21 @@
 
 <div id="title">
 
-#### Basics :one: 
+#### Basics :one:
 
 </div>
 
 <div id="body">
 
-<panel header="**Use Nouns for Things and Verbs for Actions** :one:"
+<panel header="**Use Nouns for Things and Verbs for Actions**"
     type="seamless" alt="indentation">
-  <include src="../../practices/practice-nounsAndVerbsAsNames/index.md#main" />
+  <include src="../../practices/nounsAndVerbsAsNames/index.md#main" />
 </panel>
 
+<panel header="**Use Standard Words**"
+    type="seamless" alt="indentation">
+  <include src="../../practices/useStandardWords/index.md#main" />
+</panel>
 
 </div>
 

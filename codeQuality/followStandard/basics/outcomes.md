@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can basic rules in a coding standard :one:</span>
+* <span id="outcome-explain">:trophy: Can follow simple mechanical style rules :one:</span>

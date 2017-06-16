@@ -121,4 +121,15 @@
 
 </div>
 
+<div id="def-abstraction">
+
+**Abstraction**:
+
+Most programs are written to solve complex problems involving large amounts of intricate details. It is impossible to deal with all these details at the same time.  The guiding principle of abstraction stipulates that we capture only details that are relevant to the current perspective or the task at hand. For example, within a certain software component, we might deal with a ‘user’ data type, while ignoring the details contained in the user data item. These details have been ‘abstracted away’ as they do not affect the task of that software component. This is called _data abstraction_. On the other hand, _control abstraction_ abstracts away details of the actual control flow to focus on tasks at a simplified level. For example, `print(“Hello”)` is an abstraction of the actual output mechanism within the computer.
+
+Abstraction can be applied repeatedly to obtain higher and _higher levels of abstractions_. For example, a `File` is a data item that is at a higher level than an array and an array is at a higher level than a bit. Similarly, `execute(Game)` is at a higher level than `print(Char)` which is at a higher than an Assembly language instruction `MOV`.
+
+
+</div>
+
 </div>

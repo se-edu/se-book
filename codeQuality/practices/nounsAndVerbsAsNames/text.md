@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Use Nouns for Things and Verbs for Actions :one:
+#### Use Nouns for Things and Verbs for Actions
 
 </div>
 
@@ -12,9 +12,14 @@
 
 **Use nouns for classes/variables and verbs for methods/functions.**
 
+Use nouns for classes/variables and verbs for methods.
+For example, `LimitChecker` is a better choice for a class name than `CheckLimit`
+
+Distinguish clearly between single valued and multivalued variables (e.g. `Person` student, `ArrayList<Person>` students).
+
 <tip-box>
 
-Example: 
+Example:
 
 Name for a | ![][Bad]        | ![][Good]
 -----------|-----------------|----------------
@@ -23,8 +28,8 @@ method     |`result()`       | `calculate()`
 
 </tip-box>
 
-[Bad]: ../../../images/Bad.png "Bad" 
-[Good]: ../../../images/Good.png "Good"
+[Bad]: {{baseUrl}}/images/Bad.png "Bad"
+[Good]: {{baseUrl}}/images/Good.png "Good"
 
 </div>
 

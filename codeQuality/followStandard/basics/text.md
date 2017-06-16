@@ -6,11 +6,13 @@
 
 <div id="title">
 
-#### Basics :one: 
+#### Basics :one:
 
 </div>
 
 <div id="body">
+
+{Some simple style rules for Java}
 
 <panel header="Basic Indentation"
     type="seamless" alt="indentation">
