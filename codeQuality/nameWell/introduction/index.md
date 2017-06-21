@@ -3,7 +3,7 @@
 <div class="website-content">
 
 
-%%**<include src="../path.md" inline />**%%
+%%**<include src="text.md#path" inline />**%%
 
 <include src="text.md#title" />
 

@@ -16,6 +16,10 @@
 
 ### Design
 
+<include src="softwareDesign/topicToc.md" />
+
+<include src="softwareDesignPrinciples/topicToc.md" />
+
 <include src="oop/topicToc.md" />
 
 * [Architecture]()
