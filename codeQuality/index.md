@@ -6,13 +6,13 @@
 
 ## Introduction
 <panel header="================================================================"
-    type="seamless" alt="follow standard">
+    type="seamless" alt="introduction">
   <include src="introduction/index.md#main" />
 </panel>
 
 ## Guideline: Maximise Readability
 <panel header="================================================================"
-    type="seamless" alt="follow standard">
+    type="seamless" alt="maximise readability">
   <include src="maximiseReadability/index.md#main" />
 </panel>
 
@@ -30,13 +30,13 @@
 
 ## Guideline: Avoid Unsafe Shortcuts
 <panel header="================================================================"
-    type="seamless" alt="name well">
+    type="seamless" alt="avoid shortcuts">
   <include src="avoidShortcuts/index.md#main" />
 </panel>
 
 ## Guideline: Comment Minimally, but Sufficiently
 <panel header="================================================================"
-    type="seamless" alt="name well">
+    type="seamless" alt="comment minimally">
   <include src="commentMinimally/index.md#main" />
 </panel>
 
