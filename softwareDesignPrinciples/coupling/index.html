@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Software Design Principles: Coupling</title>
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong>Software Design ➡️</strong></span></p>
+  <h2 id="coupling">Coupling</h2>
+  <div id="main">
+    <div>
+      <div>
+        <h4 id="what-it-is-one">What it is <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <ul>
+            <li><span id="outcome-explain">🏆 Can explain coupling (what, why) <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></span></li>
+          </ul>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p><em>Coupling</em> is a measure of the degree of <em>dependence</em> between components, classes, methods, etc. Low coupling indicates that a component is less dependent on other components. In the example below, design A appears to have a
+              more coupling between the components than design B.</p>
+            <tip-box>
+              <p>Example:</p><img src="/se-book/softwareDesignPrinciples/coupling/whatItIs/images/playerPuzzleManager.png" height="220">
+              <p></p>
+            </tip-box>
+            <panel header=":paperclip: Extras" expandable="" type="seamless" expanded="">
+              <panel header=":mortar_board: Learning Outcomes" expandable="" type="seamless">
+                <div>
+                  <panel type="success" expandable=""><span slot="header"><div><p>🏆 Can explain coupling (what, why) <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p></div></span>
+                    <div>
+                      <panel header="Q: Discuss the coupling levels of alternative designs x and y.">
+                        <question has-input="true">
+                          <p>Discuss the coupling levels of alternative designs x and y.</p>
+                          <tip-box><img src="/se-book/softwareDesignPrinciples/coupling/whatItIs/images/alternativeDesigns.png" height="180">
+                            <p></p>
+                          </tip-box>
+                          <div slot="answer">
+                            <p>Overall coupling levels in <em>x</em> and <em>y</em> seem to be similar (neither has more dependencies than the other). (Note that the number of dependency links is not a definitive measure of the level of coupling. Some links
+                              may be stronger than the others.). However, in <em>x</em>, A is highly-coupled to the rest of the system while <em>B</em>, <em>C</em>, <em>D</em>, and <em>E</em> are standalone (do not depend on anything else). In <em>y</em>,
+                              no component is as highly-coupled as <em>A</em> of <em>x</em>. However, only <em>D</em> and <em>E</em> are standalone.</p>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </panel>
+                </div>
+              </panel>
+            </panel>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <div>
+        <h4 id="why-we-care-one">Why we care <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <ul>
+            <li><span id="outcome-explain">🏆 Can justify the need to reduce coupling <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></span></li>
+          </ul>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p>Highly coupled (also referred to as tightly coupled or strongly coupled) systems display the following disadvantages:</p>
+            <ul>
+              <li>A change in one module usually forces changes in other modules coupled to it (i.e. a ripple effect).</li>
+              <li>Integration is harder because multiple components coupled with each other have to be integrated at the same time.</li>
+              <li>Testing and reuse of the module is harder due to its dependence on other modules.</li>
+            </ul>
+            <p>In the case of high-coupling (i.e. relatively high dependency), a change in one component may require changes in other coupled components. Therefore, we should strive to achieve a low-coupled design.</p>
+            <panel header=":paperclip: Extras" expandable=""
+              type="seamless" expanded="">
+              <panel header=":mortar_board: Learning Outcomes" expandable="" type="seamless">
+                <div>
+                  <panel type="success" expandable=""><span slot="header"><div><p>🏆 Can justify the need to reduce coupling <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p></div></span>
+                    <div>
+                      <panel header="Q: Explain the link (if any) between regression and coupling.">
+                        <question has-input="true">
+                          <p>Explain the link (if any) between regression and coupling.</p>
+                          <div slot="answer">
+                            <p>When the system is highly-coupled, the risk of regression is higher too. When component A is modified, all components ‘coupled’ to component A risk ‘unintended behavioral changes’.</p>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                    <div>
+                      <panel header="Q: Discuss the relationship between coupling and testability (testability is a measure of how easily a given component can be tested).">
+                        <question has-input="true">
+                          <p>Discuss the relationship between coupling and testability (testability is a measure of how easily a given component can be tested).</p>
+                          <div slot="answer">
+                            <p>Coupling decreases testability as it is difficult to isolate highly-coupled objects.</p>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </panel>
+                </div>
+              </panel>
+            </panel>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <div>
+        <h4 id="how-it-happens-two">How it happens <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <ul>
+            <li><span id="outcome-explain">🏆 Can identify common forms of coupling <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></span></li>
+          </ul>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p>In general component A is coupled to B if a change to B could <em>potentially</em> require a change in A.</p>
+            <p>Some examples:</p>
+            <ul>
+              <li><em>component A</em> has access to the internal structure of <em>component B</em> (this results in a very high level of coupling);</li>
+              <li><em>component A</em> and B depend on the same global variable;</li>
+              <li><em>component A</em> calls <em>component B</em>;</li>
+              <li><em>component A</em> receives an object of <em>component B</em> as a parameter or a return value;</li>
+              <li><em>component A</em> inherits from <em>component B</em>;</li>
+              <li><em>components A</em> and <em>B</em> are required to follow the same data format or communication protocol.</li>
+            </ul>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <div>
+        <h4 id="types-of-coupling-three">Types of Coupling <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <ul>
+            <li><span id="outcome-explain">🏆 Can identify types of coupling <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></span></li>
+          </ul>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p>Temporal coupling etc.</p>
+          </div>
+        </div>
+      </panel>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\markbind\js\setup.js"></script>
+</html>

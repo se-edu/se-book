@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Software Design Principles: Cohesion: How it happens</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong><span>Software Design Principles ➡️ Cohesion ➡️</span></strong>
+    </span>
+  </p>
+  <div>
+    <h4 id="how-it-happens-two">How it happens <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+  </div>
+  <tip-box type="success">
+    <div>
+      <ul>
+        <li><span id="outcome-explain">🏆 Can identify commons forms of cohesion <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></span></li>
+      </ul>
+    </div>
+  </tip-box>
+  <div id="main">
+    <div>
+      <p>Cohesion can be present in many forms. For example,</p>
+      <ul>
+        <li>Code related to a single concept is kept together, e.g. the Student component handles everything related to students.</li>
+        <li>Code that is invoked close together in time is kept together, e.g. all code related to initializing the system is kept together.</li>
+        <li>Code that manipulates the same data structure is kept together, e.g. the GameArchive component handles everything related to the storage and retrieval of game sessions.</li>
+      </ul>
+      <p>The components in the following sequence diagram show low cohesion because user interactions are handled by many components. Its cohesion can be improved by moving all user interactions to the UI component.</p>
+      <tip-box>
+        <p>Example:</p><img src="/se-book/softwareDesignPrinciples/cohesion/howItHappens/images/uiLogicStorage.png" height="220">
+        <p></p>
+      </tip-box>
+      <panel header=":paperclip: Extras" expandable="" type="seamless" expanded="">
+        <panel header=":mortar_board: Learning Outcomes" expandable="" type="seamless">
+          <div>
+            <panel type="success" expandable=""><span slot="header"><div><p>🏆 Can identify commons forms of cohesion <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p></div></span>
+              <div>
+                <panel header="Q: Compare the cohesion of the following two versions of the EmailMessage class. Which one is more cohesive and why?">
+                  <question has-input="true">
+                    <p>Compare the cohesion of the following two versions of the EmailMessage class. Which one is more cohesive and why?</p>
+                    <pre><code class="hljs java"><span class="hljs-comment">// version-1</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{
+    <span class="hljs-keyword">private</span> String sendTo;
+ 	  <span class="hljs-keyword">private</span> String subject;
+    <span class="hljs-keyword">private</span> String message;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{
+        <span class="hljs-keyword">this</span>.sendTo = sendTo;
+        <span class="hljs-keyword">this</span>.subject = subject;
+        <span class="hljs-keyword">this</span>.message = message;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// sends message using sendTo, subject and message</span>
+    }
+}
+
+<span class="hljs-comment">// version-2</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{
+    <span class="hljs-keyword">private</span> String sendTo;
+    <span class="hljs-keyword">private</span> String subject;
+    <span class="hljs-keyword">private</span> String message;
+    <span class="hljs-keyword">private</span> String username;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{
+        <span class="hljs-keyword">this</span>.sendTo = sendTo;
+        <span class="hljs-keyword">this</span>.subject = subject;
+        <span class="hljs-keyword">this</span>.message = message;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// sends message using sendTo, subject and message</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">login</span><span class="hljs-params">(String username, String password)</span> </span>{
+        <span class="hljs-keyword">this</span>.username = username;
+        <span class="hljs-comment">// code to login</span>
+    }
+}
+</code></pre>
+                    <div slot="answer">
+                      <p>Version 2 is less cohesive.</p>
+                      <p><strong>Explanation</strong>: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, we can improve the cohesion
+                        of both versions by removing the sendMessage functionality. Although sending message is related to emails, this class is supposed to represent an email message, not an email server.</p>
+                    </div>
+                  </question>
+                </panel>
+              </div>
+            </panel>
+          </div>
+        </panel>
+      </panel>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>
