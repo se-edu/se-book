@@ -19,7 +19,7 @@ In the example below, design A appears to have a more coupling between the compo
 
 Example:
 
-<img src="{{baseUrl}}/softwareDesignPrinciples/coupling/whatItIs/images/playerPuzzleManager.png" height="220" />
+<img src="{{baseUrl}}/designPrinciples/coupling/whatItIs/images/playerPuzzleManager.png" height="220" />
 <p/>
 
 </tip-box>

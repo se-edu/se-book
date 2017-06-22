@@ -1,1 +1,1 @@
-* <span id="outcome-classDiagrams-associations-navigability-one">:trophy: Able to interpret association navigabilities in class diagrams :one:</span>
+* <span id="outcome-classDiagrams-associations-navigability-one">:trophy: Able to interpret association navigabilities in class diagrams :two:</span>

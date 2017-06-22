@@ -21,7 +21,7 @@ The _Dependency Inversion Principle_ states that,
 
 Example:
 
-<img src="{{baseUrl}}/softwareDesignPrinciples/dependencyInversionPrinciple/whatItIs/images/payrollEmployee.png" height="130" />
+<img src="{{baseUrl}}/designPrinciples/dependencyInversionPrinciple/whatItIs/images/payrollEmployee.png" height="130" />
 <p/>
 
 In design (a), the higher level class `Payroll` depends on the lower level class `Employee`, a violation of DIP. In design (b), both `Payroll` and `Employee` depends on the Payee interface (note that inheritance is a dependency). Design (b) is more flexible (and less coupled) because now the `Payroll` class need not change when the `Employee` class changes.

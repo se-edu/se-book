@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Software Design :arrow_right:**%%
+%%**Software Design Principles :arrow_right:**%%
 
 ## Open-Closed Principle
 

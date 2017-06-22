@@ -2,15 +2,13 @@
 
 <div class="website-content">
 
-%%**Software Design :arrow_right:**%%
+%%**Software Design Principles :arrow_right:**%%
 
-## Cohesion
+## Dependency Inversion Principle
 
 <div id="main">
 
 <include src="whatItIs/embed.md" />
-<include src="whyWeCare/embed.md" />
-<include src="howItHappens/embed.md" />
 
 </div>
 

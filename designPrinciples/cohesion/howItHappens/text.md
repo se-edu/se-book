@@ -24,7 +24,7 @@ The components in the following sequence diagram show low cohesion because user 
 
 Example:
 
-<img src="{{baseUrl}}/softwareDesignPrinciples/cohesion/howItHappens/images/uiLogicStorage.png" height="220" />
+<img src="{{baseUrl}}/designPrinciples/cohesion/howItHappens/images/uiLogicStorage.png" height="220" />
 <p/>
 
 </tip-box>

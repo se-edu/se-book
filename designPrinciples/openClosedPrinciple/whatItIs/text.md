@@ -20,7 +20,7 @@ In object-oriented programming, these two seemingly opposing requirements can be
 
 Example:
 
-<img src="{{baseUrl}}/softwareDesignPrinciples/openClosedPrinciple/whatItIs/images/commandQueue.png" height="170" />
+<img src="{{baseUrl}}/designPrinciples/openClosedPrinciple/whatItIs/images/commandQueue.png" height="170" />
 <p/>
 
 The behavior of the `CommandQueue` class can be altered by adding more concrete `Command` subclasses. For example, by including a `Delete` class alongside `List`, `Sort`, and `Reset`, the `CommandQueue` can now perform delete commands without modifying its code at all. Indeed, its behavior was extended without having to open up and modify its code. Hence, it was open to extensions, but closed to modification.

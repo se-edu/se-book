@@ -12,18 +12,18 @@
 
 <include src="requirements/userStories/topicToc.md" />
 
-* [Product design]()
+* [Product Design]()
 
 ### Design
 
-<include src="softwareDesign/topicToc.md" />
+<include src="design/topicToc.md" />
 
-<include src="softwareDesignPrinciples/topicToc.md" />
+<include src="designPrinciples/topicToc.md" />
 
 <include src="oop/topicToc.md" />
 
 * [Architecture]()
-* [API design]()
+* [API Design]()
 
 <include src="se-pattern/topic.md" />
 
@@ -34,7 +34,7 @@
 <include src="codeQuality/topicToc.md" />
 
 * [Refactoring]()
-* [Defensive programming]()
+* [Defensive Programming]()
 
 ### Quality assurance
 
@@ -43,8 +43,8 @@
 
 ### Project management
 
-* [Revision control]()
-* [Dev ops]()
+* [Revision Control]()
+* [Dev Ops]()
 * [Software Process Models]()
 
 ### Supplementary
