@@ -25,7 +25,7 @@
 * [Architecture]()
 * [API Design]()
 
-<include src="se-pattern/topic.md" />
+<include src="designPatterns/topicToc.md" />
 
 ### Implementation
 
