@@ -1,1 +1,1 @@
-* <span id="outcome-sequenceDiagrams-minimalNotation-one">:trophy: Able to create sequence diagrams with minimal notation :one:</span>
+* <span id="outcome-sequenceDiagrams-minimalNotation-one">:trophy: Able to create sequence diagrams with minimal notation :three:</span>

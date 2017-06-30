@@ -129,6 +129,11 @@ Most programs are written to solve complex problems involving large amounts of i
 
 Abstraction can be applied repeatedly to obtain higher and _higher levels of abstractions_. For example, a `File` is a data item that is at a higher level than an array and an array is at a higher level than a bit. Similarly, `execute(Game)` is at a higher level than `print(Char)` which is at a higher than an Assembly language instruction `MOV`.
 
+</div>
+
+<div id="def-software-design-pattern">
+
+**Software Design Pattern**: An _elegant reusable solution_ to a _commonly recurring problem_ within a _given context_ in software design.
 
 </div>
 

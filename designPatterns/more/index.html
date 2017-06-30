@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Software Design Patterns: More</title>
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong>Software Design Patterns ➡️</strong></span></p>
+  <h2 id="more">More</h2>
+  <div id="main">
+    <div>
+      <div>
+        <h4 id="combining-design-patterns-three">Combining Design Patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <ul>
+            <li><span id="outcome-explain">🏆 Can combine multiple patterns to fit a context <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></span></li>
+          </ul>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p>Let us look at a case study that shows how design patterns are used in the design of a class structure for a Stock Inventory System (SIS) for a shop. The shop sells appliances, and accessories for the appliances. SIS simply stores information
+              about each item in the store.</p>
+            <tip-box>
+              <p><strong>Use Cases</strong>:</p>
+              <ul>
+                <li>Create a new item</li>
+                <li>View information about an item</li>
+                <li>Modify information about an item</li>
+                <li>View all available accessories for a given appliance</li>
+                <li>List all items in the store</li>
+              </ul>
+            </tip-box>
+            <p>SIS can be accessed using multiple terminals. Shop assistants use their own terminals to access SIS, while the shop manager’s terminal continuously displays a list of all items in store. In the future, it is expected that suppliers of items
+              use their own applications to connect to SIS to get real-time information about current stock status. User authentication is not required for the current version, but may be required in the future.</p>
+            <p>A step by step explanation of the design is given below. Note that this is one out of many possible designs. Design patterns are also applied where appropriate.</p>
+            <tip-box>
+              <p>Example:</p>
+              <p>A <code>StockItem</code> can be an Appliance or an Accessory.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/stockItem.png" height="100">
+              <p></p>
+              <p>To track that each <code>Accessory</code> is associated with the correct <code>Appliance</code>, consider the following alternative class structures.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeOne.png"
+                height="120">
+              <p></p>
+              <p>The third one seems more appropriate (the second one is suitable if accessories can have accessories). Next, consider between keeping a list of <code>Appliances</code>, and a list of <code>StockItems</code>. Which is more appropriate?</p>
+              <img
+                src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeTwo.png" height="100">
+                <p></p>
+                <p>The latter seems more suitable because it can handle both appliances and accessories the same way. Next, an abstraction occurrence pattern is applied to keep track of <code>StockItems</code>.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeThree.png"
+                  height="100">
+                <p></p>
+                <p>Note the inclusion of navigabilities. Here’s a sample object diagram based on the class model created thus far.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/stockItemListObjectDiagram.png" height="150">
+                <p></p>
+                <p>Next, apply the façade pattern to shield the SIS internals from the UI.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/withFacade.png" height="200">
+                <p></p>
+                <p>As UI consists of multiple views, the MVC pattern is applied here.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/withMVC.png" height="270">
+                <p></p>
+                <p>Some views need to be updated when the data change; apply the Observer pattern here.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/withObserver.png" height="270">
+                <p></p>
+                <p>In addition, the Singleton pattern can be applied to the façade class.</p>
+            </tip-box>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <div>
+        <h4 id="other-design-patterns-three">Other Design Patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <ul>
+            <li><span id="outcome-explain">🏆 Can recognize some of the GoF design patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></span></li>
+          </ul>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p>However, most are common, and well known. As an example, GoF book contains 23 design patterns:</p>
+            <ul>
+              <li><strong>Creational</strong>: About object creation. They separate the operation of an application from how its objects are created.
+                <ul>
+                  <li>Abstract Factory, Builder, Factory Method, Prototype, Singleton</li>
+                </ul>
+              </li>
+              <li><strong>Structural</strong>: About the composition of objects into larger structures while catering for future extension in structure.
+                <ul>
+                  <li>Adapter, Bridge, Composite, Decorator, Façade, Flyweight, Proxy</li>
+                </ul>
+              </li>
+              <li><strong>Behavioral</strong>: Defining how objects interact and how responsibility is distributed among them.
+                <ul>
+                  <li>Chain of Responsibility, Command, Interpreter, Template Method, Iterator, Mediator, Memento, Observer, State, Strategy, Visitor</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <div>
+        <h4 id="using-design-patterns-three">Using Design Patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <ul>
+            <li><span id="outcome-explain">🏆 Can explain pros and cons of design patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></span></li>
+          </ul>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p>{patterns provide a vocabulary}</p>
+            <p>The more patterns one acquires, the more ‘experienced’ she is. Exposing oneself to a multitude of patterns (at least the context and problem) is a must. Some patterns are domain-specific (e.g. patterns for distributed applications), some are
+              created in-house (e.g. patterns in the company/project) and some can be self-created (e.g. from past experience).</p>
+            <p>When using patterns, be careful not to overuse them. Do not throw patterns at a problem at every opportunity. Patterns come with overhead such as adding more classes or increasing the levels of abstraction. Use them only when they are needed.
+              Before applying a pattern, make sure that:</p>
+            <ul>
+              <li>there is substantial improvement in the design, not just superficial.</li>
+              <li>the associated tradeoffs are carefully considered. There are times when a design pattern is not appropriate (or an overkill).</li>
+            </ul>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <div>
+        <h4 id="other-types-of-patterns-three">Other Types of Patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <ul>
+            <li><span id="outcome-explain">🏆 Can explain how patterns exist beyond software design domain <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></span></li>
+          </ul>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p>The notion of capturing design ideas as "patterns" is usually attributed to Christopher Alexander. He is a building architect noted for his theories about design. His book <em>Timeless way of building</em> talks about “design patterns” for
+              constructing buildings.</p>
+            <p>Here is a sample pattern from that book:</p>
+            <blockquote>
+              <p>When a room has a window with a view, the window becomes a focal point: people are attracted to the window and want to look through it. The furniture in the room creates a second focal point: everyone is attracted toward whatever point the
+                furniture aims them at (usually the center of the room or a TV). This makes people feel uncomfortable. They want to look out the window, and toward the other focus at the same time. If you rearrange the furniture, so that its focal point
+                becomes the window, then everyone will suddenly notice that the room is much more “comfortable”</p>
+            </blockquote>
+            <p>Apparently, patterns and anti-patterns are found in the field of building architecture. This is because they are general concepts applicable to any domain, not just software design. In software engineering, there are many general types of
+              patterns: Analysis patterns, Design patterns, Testing patterns, Architectural patterns, Project management patterns, and so on.</p>
+            <p>In fact, the abstraction occurrence pattern is more of an analysis pattern than a design pattern, while MVC is more of an architectural pattern.</p>
+            <p>New patterns can be created too. If a common problem needs to be solved frequently that leads to a non-obvious and better solution, it can be formulated as a pattern so that it can be reused by others. However, don’t reinvent the wheel; the
+              pattern might already exist.</p>
+            <panel header=":paperclip: Extras" expandable="" type="seamless" expanded="">
+              <panel header=":mortar_board: Learning Outcomes" expandable="" type="seamless">
+                <div>
+                  <panel type="success" expandable=""><span slot="header"><div><p>🏆 Can explain how patterns exist beyond software design domain <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p></div></span>
+                    <div>
+                      <panel header="Q: Using similar elements, describe a pattern that is not a design pattern.">
+                        <question has-input="true">
+                          <p>Given below are some common elements of a design pattern. Using similar elements, describe a pattern that is not a design pattern. It must be a pattern you have noticed, not a pattern already documented by others. You may also
+                            give a pattern not related to software.</p>
+                          <p>Some examples:</p>
+                          <ul>
+                            <li>A pattern for testing textual UIs.</li>
+                            <li>A pattern for striking a good bargain at a mall such as Sim-Lim Square.</li>
+                          </ul>
+                          <p>Elements of a pattern: Name, Context, Problem, Solution, Anti-patterns (optional), Consequences (optional), other useful information (optional).</p>
+                          <div slot="answer">
+                            <p>No answer provided.</p>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </panel>
+                </div>
+              </panel>
+            </panel>
+          </div>
+        </div>
+      </panel>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\markbind\js\setup.js"></script>
+</html>

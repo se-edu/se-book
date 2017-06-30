@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Architectural Styles: More: Using Architectural Styles</title>
+    <link rel="stylesheet" href="..\..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong>Software Architecture ➡️ Architectural Styles ➡️ More ➡️</strong></span></p>
+  <h4 id="using-architectural-styles-two">Using Architectural Styles <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+  <div id="main">
+    <p>Most applications use a mix of these architectural styles or adopt a style that is customized to the requirements. For example, an application can use a client-server architecture where the server component comprises several layers, i.e. it uses the
+      multi-layer architecture.</p>
+    <panel header=":paperclip: Extras" expandable="" type="seamless" expanded="">
+      <panel header=":mortar_board: Learning Outcomes" expandable="" type="seamless">
+        <div>
+          <panel type="success" expandable=""><span slot="header"><div><p>🏆 Able to explain how architectural styles are combined <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p></div></span>
+            <div>
+              <panel header="Q: Comment on how each of the following architectural styles (these architectural styles are patterns too) could be potentially useful when designing the architecture for Minesweeper.">
+                <question has-input="true">
+                  <p>Assume you are designing a multiplayer version of the Minesweeper game where any number of players can play the same Minefield. Players use their own PCs to play the game. A player scores by deducing a cell correctly before any of the
+                    other players do. Once a cell is correctly deduced, it appears as either marked or cleared for all players. Comment on how each of the following architectural styles (these architectural styles are patterns too) could be potentially
+                    useful when designing the architecture for this game.</p>
+                  <ol>
+                    <li>Client-server</li>
+                    <li>Transaction-processing</li>
+                    <li>MVC</li>
+                    <li>SOA (Service Oriented Architecture)</li>
+                    <li>multi-layer (n-tier)</li>
+                  </ol>
+                  <div slot="answer">
+                    <ol>
+                      <li>Client-server – Clients can be the game UI running on player PCs. The server can be the game logic running on one machine.</li>
+                      <li>Transaction-processing – Each player action can be packaged as transactions (by the client component running on the player PC) and sent to the server. Server processes them in the order they are received.</li>
+                      <li>MVC – Game UI (running on player machines) can have the view and the controller part while the server can be considered as the model.</li>
+                      <li>SOA – The game can access a remote web services for things such as getting new puzzles, validating puzzles, charging players subscription fees, etc.</li>
+                      <li>Multi-layer – The server component can have two layers: logic layer and the storage layer.</li>
+                    </ol><img src="/se-book/architecture/architecturalStyles/more/usingStyles/images/architectureExample.png" height="300">
+                    <p></p>
+                  </div>
+                </question>
+              </panel>
+            </div>
+          </panel>
+        </div>
+      </panel>
+    </panel>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\..\markbind\js\setup.js"></script>
+</html>

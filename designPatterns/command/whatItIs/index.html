@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Software Design Patterns: Command: What it is</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong><span>Software Design Patterns ➡️ Command Pattern ➡️</span></strong>
+    </span>
+  </p>
+  <div>
+    <h4 id="what-it-is-two">What it is <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+  </div>
+  <tip-box type="success">
+    <div>
+      <ul>
+        <li><span id="outcome-explain">🏆 Can explain the Command design pattern <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></span></li>
+      </ul>
+    </div>
+  </tip-box>
+  <div id="main">
+    <div>
+      <p><strong>Context</strong></p>
+      <p>A system is required to execute a number of commands, each doing a different task. For example, a system might have to support <code>Sort</code>, <code>List</code>, <code>Reset</code> commands.</p>
+      <p><strong>Problem</strong></p>
+      <p>It is preferable that some part of the code execute these commands without having to know each command type. For example, there can be a <code>CommandQueue</code> object that is responsible for queuing commands and executing them without knowledge
+        of what each command does.</p>
+      <p><strong>Solution</strong></p>
+      <p>In the example solution below, the <code>CommandCreator</code> creates <code>List</code>, <code>Sort</code>, and <code>Reset Command</code> objects and adds them to the <code>CommandQueue</code> object. The <code>CommandQueue</code> object treats
+        them all as <code>Command</code> objects and performs the execute/undo operation on each of them without knowledge of the specific <code>Command</code> type. When executed, each <code>Command</code> object will access the <code>DataStore</code>        object to carry out its task. The <code>Command</code> class can also be an abstract class or an interface.</p>
+      <tip-box>
+        <p>Example:</p><img src="/se-book/designPatterns/command/whatItIs/images/commandCreator.png" height="150">
+        <p></p>
+      </tip-box>
+      <p>The general form of the solution is as follows.</p><img src="/se-book/designPatterns/command/whatItIs/images/clientInvoker.png" height="200">
+      <p></p>
+      <p>The <code><< Client >></code> creates a <code><< ConcreteCommand >></code> object, and passes it to the <code><< Invoker >></code>. The <code><< Invoker >></code> object treats all commands as a general <code><< Command >></code> type. <code><< Invoker >></code>        issues a request by calling <code>execute()</code> on the command. If a command is undoable, <code><< ConcreteCommand >></code> will store the state for undoing the command prior to invoking <code>execute()</code>. In addition, the <code><< ConcreteCommand >></code>        object may have to be linked to any <code><< Receiver >></code> of the command before it is passed to the <code><< Invoker >></code>. Note that an application of the command pattern does not have to follow the structure given above. The essential
+        element is to have a general <code><< Command >></code> object that can be passed around, stored, executed, etc</p>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>
