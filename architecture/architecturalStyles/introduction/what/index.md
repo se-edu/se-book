@@ -4,7 +4,7 @@
 
 %%**Software Architecture :arrow_right: Architectural Styles :arrow_right: Introduction :arrow_right:**%%
 
-#### What it is :one:
+#### What :one:
 
 <div id="main">
 

@@ -1,1 +1,1 @@
-<include src="./whatItIs/outcomes.md" />
+<include src="./what/outcomes.md" />

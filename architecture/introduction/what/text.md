@@ -6,7 +6,7 @@
 
 <div id="title">
 
-#### What it is :one:
+#### What :one:
 
 </div>
 
@@ -24,7 +24,7 @@ The software architecture shows the overall organization of the system and can b
 
 Example: A possible architecture for a _Minesweeper_ game
 
-<img src="{{baseUrl}}/architecture/introduction/whatItIs/images/minesweeper.png" height="220" />
+<img src="{{baseUrl}}/architecture/introduction/what/images/minesweeper.png" height="220" />
 <p/>
 
 The high-level components:
@@ -34,7 +34,7 @@ The high-level components:
 * Logic: computation and logic of the game
 * Store: storage and retrieval of game data (high scores etc.)
 
-<img src="{{baseUrl}}/architecture/introduction/whatItIs/images/minesweeperArchitecture.png" height="160" />
+<img src="{{baseUrl}}/architecture/introduction/what/images/minesweeperArchitecture.png" height="160" />
 <p/>
 
 </tip-box>

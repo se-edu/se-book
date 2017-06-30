@@ -4,7 +4,7 @@
 
 %%**Software Architecture :arrow_right: Architectural Styles :arrow_right: Service-oriented Architectural Style :arrow_right:**%%
 
-#### What it is :one:
+#### What :one:
 
 <div id="main">
 
@@ -16,7 +16,7 @@ Example:
 
 Suppose that Amazon.com provides a web service for customers to browse and buy merchandize, while HSBC provides a web service for merchants to charge HSBC credit cards. Using these web services, an ‘eBookShop’ web application can be developed that allows HSBC customers to buy merchandize from Amazon and pay for them using HSBC credit cards. Since both Amazon and HSBC services follow the SOA architecture, their web services can be reused by the web application, even if all three systems use different programming platforms.
 
-<img src="{{baseUrl}}/architecture/architecturalStyles/serviceOriented/whatItIs/images/amazonWebServices.png" height="280" />
+<img src="{{baseUrl}}/architecture/architecturalStyles/serviceOriented/what/images/amazonWebServices.png" height="280" />
 <p/>
 
 </tip-box>

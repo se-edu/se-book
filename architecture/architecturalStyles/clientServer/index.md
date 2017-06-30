@@ -8,7 +8,7 @@
 
 <div id="main">
 
-<include src="./whatItIs/topicPanel.md" />
+<include src="./what/topicPanel.md" />
 
 </div>
 </div>
