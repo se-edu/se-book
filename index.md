@@ -22,7 +22,8 @@
 
 <include src="oop/topicToc.md" />
 
-* [Architecture]()
+<include src="architecture/topicToc.md" />
+
 * [API Design]()
 
 <include src="designPatterns/topicToc.md" />
