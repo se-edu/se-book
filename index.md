@@ -37,6 +37,8 @@
 * [Refactoring]()
 * [Defensive Programming]()
 
+<include src="documentation/topicToc.md" />
+
 ### Quality assurance
 
 * [Testing]()
