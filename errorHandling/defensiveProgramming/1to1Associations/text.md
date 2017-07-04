@@ -18,8 +18,37 @@ Consider the association given below. Here, a MinedCell cannot exist without a M
 
 Example:
 
-<img src="{{baseUrl}}/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png" height="250" />
+<img src="{{baseUrl}}/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png" height="50" />
 <p/>
+
+Option 1:
+```java
+class MinedCell {
+    private Mine mine;
+
+    public MinedCell(Mine m){
+        if (m == null) error;
+        mine = m;
+    }
+    …
+}
+```
+
+Option 1 forces us to keep a `Mine` without a `MinedCell` (until the `MinedCell` is created).
+
+Option 2:
+```java
+class MinedCell {
+    private Mine mine;
+
+    public MinedCell(){
+        mine = new Mine();
+    }
+    …
+}
+```
+
+Option 2 is more defensive because the `Mine` is immediately linked to a `MinedCell`.
 
 </tip-box>
 
