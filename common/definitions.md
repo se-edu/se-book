@@ -137,4 +137,13 @@ Abstraction can be applied repeatedly to obtain higher and _higher levels of abs
 
 </div>
 
+<div id="def-exception">
+
+**Exception**:
+> An _exception_ is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
+>
+> –- Java Tutorial (Oracle Inc.)
+
+</div>
+
 </div>
