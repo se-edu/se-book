@@ -41,6 +41,8 @@
 
 <include src="errorHandling/topicToc.md" />
 
+<include src="integration/topicToc.md" />
+
 ### Quality assurance
 
 * [Testing]()
