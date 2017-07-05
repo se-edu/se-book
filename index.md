@@ -30,7 +30,7 @@
 
 ### Implementation
 
-* [IDEs]()
+<include src="ides/topicToc.md" />
 
 <include src="codeQuality/topicToc.md" />
 
@@ -40,6 +40,8 @@
 <include src="documentation/topicToc.md" />
 
 <include src="errorHandling/topicToc.md" />
+
+<include src="integration/topicToc.md" />
 
 ### Quality assurance
 
