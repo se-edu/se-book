@@ -20,7 +20,8 @@ Highly coupled (also referred to as tightly coupled or strongly coupled) systems
 
 In the case of high-coupling (i.e. relatively high dependency), a change in one component may require changes in other coupled components. Therefore, we should strive to achieve a low-coupled design.
 
-<!-- extras ------------------------------------------------------------------------------------ -->
+</div>
+<div id="extras">
 
 <panel header=":paperclip: Extras" expandable type="seamless" expanded>
 

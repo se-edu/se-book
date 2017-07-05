@@ -1,5 +1,5 @@
 * [Design Principles](./designPrinciples/)
-  <trigger for="pop:design-principles-preview">:mag:</trigger>
+  <trigger for="pop:design-principles-preview">:mag:</trigger>[:scroll:](designPrinciples/print.html)
 
 <popover id="pop:design-principles-preview" title="Software Design Principles :mag:" placement="right">
   <div slot="content">

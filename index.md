@@ -11,7 +11,7 @@
 <include src="requirements/topicToc.md" />
 
 
-### Design
+### Design 
 
 <include src="design/topicToc.md" />
 
@@ -67,6 +67,7 @@
 * [Principles]()
 * [Definitions](common/definitions.html)
 * [References](common/references.html)
+* [Printable :scroll:](print.html)
 
 <include src="java/style/topicToc.md" />
 

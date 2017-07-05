@@ -24,7 +24,8 @@ Example:
 
 </tip-box>
 
-<!-- extras ------------------------------------------------------------------------------------ -->
+</div>
+<div id="extras">
 
 <panel header=":paperclip: Extras" expandable type="seamless" expanded>
 
