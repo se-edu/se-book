@@ -16,8 +16,12 @@ When writing an OOP program to calculate the average age, instructions for creat
 
 </tip-box>
 
-<!-- <dynamic-panel src="../../../uml/classDiagrams/classes/topicPanel.md" header="UML: Class Diagrams: Classes" is-open></dynamic-panel> -->
+<!-- Dynamic Panel Not Working------------------------------------------------------------------ -->
+<dynamic-panel src="../../../uml/classDiagrams/classes/topicPanel.md" header="UML: Class Diagrams: Classes" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/objectDiagrams/objects/topicPanel.md" header="UML: Object Diagrams: Objects" is-open></dynamic-panel>
+<!---------------------------------------------------------------------------------------------- -->
 
+<!-- Currently Working Code--------------------------------------------------------------------- -->
 <panel header="UML: Class Diagrams: Classes">
   <include src="../../../uml/classDiagrams/classes/topicPanel.md" />
 </panel>
@@ -25,6 +29,7 @@ When writing an OOP program to calculate the average age, instructions for creat
 <panel header="UML: Object Diagrams: Objects">
   <include src="../../../uml/objectDiagrams/objects/topicPanel.md" />
 </panel>
+<!---------------------------------------------------------------------------------------------- -->
 
 <p/>
 
