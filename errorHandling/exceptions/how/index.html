@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Error Handling: Exceptions: How</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong><span>Error Handling ➡️ Exceptions ➡️</span></strong>
+    </span>
+  </p>
+  <div>
+    <h4 id="how-two">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+  </div>
+  <tip-box type="success">
+    <div>
+      <ul>
+        <li><span id="outcome-explain">🏆 Can do exception handling in code <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></span></li>
+      </ul>
+    </div>
+  </tip-box>
+  <div id="main">
+    <div>
+      <p>However, the code segment that encountered the unusual situation might not know how to recover from it. That is why most languages allow a method to encapsulate the unusual situation in an Exception object and ‘throw’ that object so that another
+        piece of code can ‘catch’ it and deal with it. Usually, an exception thrown by a method is caught by the caller method. If the called method does not know how to deal with the exception it caught, it will throw the Exception object to its own
+        caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the method call stack until it is received by the main method and thrown to the runtime, thus halting the system. In the Java code given
+        below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code> method inside a <code>try{ }</code> block and has a <code>catch{ }</code>        block to specify what to do if the exception is actually thrown.</p>
+      <tip-box>
+        <p>Example:</p><img src="/se-book/errorHandling/exceptions/how/images/processInput.png" height="320">
+        <p></p>
+      </tip-box>
+      <p>Advantages of exception handling in this way:</p>
+      <ul>
+        <li>The ability to propagate error information through the call stack.</li>
+        <li>The separation of code that deals with ‘unusual’ situations from the code that does the ‘usual’ work.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

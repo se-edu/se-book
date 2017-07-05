@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Website - Textbook [Printable]</title>
+    <link rel="stylesheet" href="markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <div id="main">
+    <hr>
+    <hr>
+    <h1 id="design">Design</h1>
+    <hr>
+    <div>
+      <h1 id="introduction">Introduction</h1>
+      <div>
+        <h4 id="basics-one">Basics <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <div>
+        <p>What is software design? Design can be viewed as a form of problem solving.</p>
+        <p>Where does it fit in?</p>
+      </div>
+    </div>
+    <div>
+      <h1 id="design-principles">Design Principles</h1>
+      <h2 id="introduction-2">Introduction</h2>
+      <div>
+        <h4 id="what-it-is-one">What it is <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <div>
+        <tip-box type="primary">
+          <div>
+            <p><strong>Abstraction</strong>:</p>
+            <p>Most programs are written to solve complex problems involving large amounts of intricate details. It is impossible to deal with all these details at the same time. The guiding principle of abstraction stipulates that we capture only details
+              that are relevant to the current perspective or the task at hand. For example, within a certain software component, we might deal with a ‘user’ data type, while ignoring the details contained in the user data item. These details have been
+              ‘abstracted away’ as they do not affect the task of that software component. This is called <em>data abstraction</em>. On the other hand, <em>control abstraction</em> abstracts away details of the actual control flow to focus on tasks at
+              a simplified level. For example, <code>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p>
+            <p>Abstraction can be applied repeatedly to obtain higher and <em>higher levels of abstractions</em>. For example, a <code>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a bit. Similarly,
+              <code>execute(Game)</code> is at a higher level than <code>print(Char)</code> which is at a higher than an Assembly language instruction <code>MOV</code>.</p>
+          </div>
+        </tip-box>
+      </div>
+      <h2 id="coupling">Coupling</h2>
+      <div>
+        <h4 id="what-it-is-one-2">What it is <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <div>
+        <p><em>Coupling</em> is a measure of the degree of <em>dependence</em> between components, classes, methods, etc. Low coupling indicates that a component is less dependent on other components. In the example below, design A appears to have a more
+          coupling between the components than design B.</p>
+        <tip-box>
+          <p>Example:</p><img src="/se-book/designPrinciples/coupling/whatItIs/images/playerPuzzleManager.png" height="220">
+          <p></p>
+        </tip-box>
+      </div>
+      <div>
+        <h4 id="why-we-care-one">Why we care <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <div>
+        <p>Highly coupled (also referred to as tightly coupled or strongly coupled) systems display the following disadvantages:</p>
+        <ul>
+          <li>A change in one module usually forces changes in other modules coupled to it (i.e. a ripple effect).</li>
+          <li>Integration is harder because multiple components coupled with each other have to be integrated at the same time.</li>
+          <li>Testing and reuse of the module is harder due to its dependence on other modules.</li>
+        </ul>
+        <p>In the case of high-coupling (i.e. relatively high dependency), a change in one component may require changes in other coupled components. Therefore, we should strive to achieve a low-coupled design.</p>
+      </div>
+      <div>
+        <h4 id="how-it-happens-two">How it happens <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <div>
+        <p>In general component A is coupled to B if a change to B could <em>potentially</em> require a change in A.</p>
+        <p>Some examples:</p>
+        <ul>
+          <li><em>component A</em> has access to the internal structure of <em>component B</em> (this results in a very high level of coupling);</li>
+          <li><em>component A</em> and B depend on the same global variable;</li>
+          <li><em>component A</em> calls <em>component B</em>;</li>
+          <li><em>component A</em> receives an object of <em>component B</em> as a parameter or a return value;</li>
+          <li><em>component A</em> inherits from <em>component B</em>;</li>
+          <li><em>components A</em> and <em>B</em> are required to follow the same data format or communication protocol.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 id="types-of-coupling-three">Types of Coupling <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <div>
+        <p>Temporal coupling etc.</p>
+      </div>
+      <h2 id="cohesion">Cohesion</h2>
+      <div>
+        <h4 id="what-it-is-one-3">What it is <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <div>
+        <p><em>Cohesion</em> is a measure of how strongly-related and focused the various responsibilities of a component are. A highly-cohesive component keeps related functionalities together while keeping out all other unrelated things.</p>
+      </div>
+      <div>
+        <h4 id="why-we-care-one-2">Why we care <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <div>
+        <p>The following are some disadvantages of low cohesion (or “weak cohesion”).</p>
+        <ul>
+          <li>Impedes the understandability of modules as it is difficult to express module functionalities at a higher level.</li>
+          <li>Difficulty in maintaining modules because a localized adjustment in the requirements can result in changes spread across the system since requirement-related functionality is implemented across many components of the system.</li>
+          <li>Modules become less reusable because they do not represent logical units of functionality.</li>
+        </ul>
+        <p>One should strive for high cohesion to facilitate code maintenance and reuse.</p>
+      </div>
+      <div>
+        <h4 id="how-it-happens-two-2">How it happens <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <div>
+        <p>Cohesion can be present in many forms. For example,</p>
+        <ul>
+          <li>Code related to a single concept is kept together, e.g. the Student component handles everything related to students.</li>
+          <li>Code that is invoked close together in time is kept together, e.g. all code related to initializing the system is kept together.</li>
+          <li>Code that manipulates the same data structure is kept together, e.g. the GameArchive component handles everything related to the storage and retrieval of game sessions.</li>
+        </ul>
+        <p>The components in the following sequence diagram show low cohesion because user interactions are handled by many components. Its cohesion can be improved by moving all user interactions to the UI component.</p>
+        <tip-box>
+          <p>Example:</p><img src="/se-book/designPrinciples/cohesion/howItHappens/images/uiLogicStorage.png" height="220">
+          <p></p>
+        </tip-box>
+      </div>
+      <h2 id="open-closed-principle">Open-Closed Principle</h2>
+      <div>
+        <h4 id="what-it-is-one-4">What it is <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <div>
+        <p>While it is possible to isolate the functionalities of a software system into modules, there is no way to remove interaction between modules. When modules interact with each other, coupling naturally increases. Consequently, it is harder to localize
+          any changes to the software system. In 1988, Bertrand Meyer proposed a guiding principle to alleviate this problem. The principle, known as the <em>open-closed principle</em>, states: “A module should be <em>open</em> for extension but <em>closed</em>          for modification”. That is, modules should be written so that they can be extended, without requiring them to be modified. In other words, changing what the modules do without changing the source code of the modules.</p>
+        <p>In object-oriented programming, these two seemingly opposing requirements can be achieved in various ways. This often requires separating the <em>specification (interface)</em> of a module from its <em>implementation</em>.</p>
+        <tip-box>
+          <p>Example:</p><img src="/se-book/designPrinciples/openClosedPrinciple/whatItIs/images/commandQueue.png" height="170">
+          <p></p>
+          <p>The behavior of the <code>CommandQueue</code> class can be altered by adding more concrete <code>Command</code> subclasses. For example, by including a <code>Delete</code> class alongside <code>List</code>, <code>Sort</code>, and <code>Reset</code>,
+            the <code>CommandQueue</code> can now perform delete commands without modifying its code at all. Indeed, its behavior was extended without having to open up and modify its code. Hence, it was open to extensions, but closed to modification.</p>
+        </tip-box>
+        <tip-box>
+          <p>The behavior of a Java generic class can be altered by passing it a different class as a parameter. In the code below, the <code>ArrayList</code> class behaves as a container of <code>Students</code> in one instance and as a container of <code>Admin</code>            objects in the other instance, without having to change its code. That is, the behavior of the <code>ArrayList</code> class is extended without modifying its code.</p>
+          <pre><code class="hljs java">ArrayList students = <span class="hljs-keyword">new</span> ArrayList< Student >();
+ArrayList admins = <span class="hljs-keyword">new</span> ArrayList< Admin >();  	
+</code></pre>
+        </tip-box>
+      </div>
+      <h2 id="dependency-inversion-principle">Dependency Inversion Principle</h2>
+      <div>
+        <h4 id="what-it-is-one-5">What it is <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <div>
+        <p>The <em>Dependency Inversion Principle</em> states that,</p>
+        <ol>
+          <li>High-level modules should not depend on low-level modules. Both should depend on abstractions.</li>
+          <li>Abstractions should not depend on details. Details should depend on abstractions.</li>
+        </ol>
+        <tip-box>
+          <p>Example:</p><img src="/se-book/designPrinciples/dependencyInversionPrinciple/whatItIs/images/payrollEmployee.png" height="130">
+          <p></p>
+          <p>In design (a), the higher level class <code>Payroll</code> depends on the lower level class <code>Employee</code>, a violation of DIP. In design (b), both <code>Payroll</code> and <code>Employee</code> depends on the Payee interface (note that
+            inheritance is a dependency).</p>
+          <p>Design (b) is more flexible (and less coupled) because now the <code>Payroll</code> class need not change when the <code>Employee</code> class changes.</p>
+        </tip-box>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="markbind\js\vue.min.js"></script>
+<script src="markbind\js\vue-strap.min.js"></script>
+<script src="markbind\js\setup.js"></script>
+</html>

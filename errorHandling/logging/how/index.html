@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Error Handling: Logging: How</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong><span>Error Handling ➡️ Logging ➡️</span></strong>
+    </span>
+  </p>
+  <div>
+    <h4 id="how-two">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+  </div>
+  <tip-box type="success">
+    <div>
+      <ul>
+        <li><span id="outcome-explain">🏆 Can use logging <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></span></li>
+      </ul>
+    </div>
+  </tip-box>
+  <div id="main">
+    <div>
+      <p>While it is relatively easy to implement a customized logging system (e.g. by inserting file I/O statements to write to a log file), most programming environments come with logging systems that allow more sophisticated forms of logging. For example,
+        being able to enable and disable logging easily or to change the logging intensity/verbosity (i.e. how much information to record).</p>
+      <p>Given below is a sample Java code that uses Java’s default logging mechanism. When running the code, the logging level can be set to WARNING so that log messages specified as INFO level will not be written to the log file at all.</p>
+      <tip-box>
+        <p>Example:</p>
+        <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.logging.*;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+    <span class="hljs-comment">// Obtain a suitable logger.</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bar</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// log a message at INFO level</span>
+        logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);
+        <span class="hljs-keyword">try</span> {
+            processInput();
+        } <span class="hljs-keyword">catch</span> (Exception ex) {
+            <span class="hljs-comment">//log a message at WARNING level</span>
+            logger.log(Level.WARNING, <span class="hljs-string">"processing error"</span>, ex);
+        }
+        logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
+    }
+}
+</code></pre>
+      </tip-box>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

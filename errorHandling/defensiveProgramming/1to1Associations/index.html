@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Error Handling: Defensive Programming: Enforcing 1-to-1 Associations</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong><span>Error Handling ➡️ Defensive Programming ➡️</span></strong>
+    </span>
+  </p>
+  <div>
+    <h4 id="enforcing-1-to-1-associations-three">Enforcing 1-to-1 Associations <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+  </div>
+  <tip-box type="success">
+    <div>
+      <ul>
+        <li><span id="outcome-explain">🏆 Can use defensive coding to enforce 1-to-1 associations <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></span></li>
+      </ul>
+    </div>
+  </tip-box>
+  <div id="main">
+    <div>
+      <p>Consider the association given below. Here, a MinedCell cannot exist without a Mine and vice versa. The only way to enforce this is by simultaneous object creation. However, in Java and C++, only one object can be created at a time. Given below
+        are two alternatives. Both options violate the multiplicity for a short period of time.</p>
+      <tip-box>
+        <p>Example:</p><img src="/se-book/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png" height="50">
+        <p></p>
+        <p>Option 1:</p>
+        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
+    <span class="hljs-keyword">private</span> Mine mine;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinedCell</span><span class="hljs-params">(Mine m)</span></span>{
+        <span class="hljs-keyword">if</span> (m == <span class="hljs-keyword">null</span>) error;
+        mine = m;
+    }
+    …
+}
+</code></pre>
+        <p>Option 1 forces us to keep a <code>Mine</code> without a <code>MinedCell</code> (until the <code>MinedCell</code> is created).</p>
+        <p>Option 2:</p>
+        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
+    <span class="hljs-keyword">private</span> Mine mine;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinedCell</span><span class="hljs-params">()</span></span>{
+        mine = <span class="hljs-keyword">new</span> Mine();
+    }
+    …
+}
+</code></pre>
+        <p>Option 2 is more defensive because the <code>Mine</code> is immediately linked to a <code>MinedCell</code>.</p>
+      </tip-box>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

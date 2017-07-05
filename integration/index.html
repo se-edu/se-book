@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Integration</title>
+    <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <h1 id="integration">Integration</h1>
+  <h2 id="introduction">Introduction</h2>
+  <panel header="================================================================" type="seamless" alt="introduction">
+    <div>
+      <div>
+        <div>
+          <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+        </div>
+        <tip-box type="success">
+          <div>
+            <ul>
+              <li><span id="outcome-explain">🏆 Can explain integration <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></span></li>
+            </ul>
+          </div>
+        </tip-box>
+        <panel type="seamless" header=" %%- - - - - - - - - -%%">
+          <div>
+            <div>
+              <p><em>Integrating</em> parts written by different team members is inevitable in multi-person projects. It is also one of the most troublesome tasks and it rarely goes smoothly.</p>
+            </div>
+          </div>
+        </panel>
+      </div>
+    </div>
+  </panel>
+  <h2 id="approaches">Approaches</h2>
+  <panel header="================================================================" type="seamless" alt="approaches">
+    <div>
+      <div>
+        <div>
+          <h4 id="late-and-one-time-vs-early-and-frequent-two">'Late and One Time' vs 'Early and Frequent' <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        </div>
+        <tip-box type="success">
+          <div>
+            <ul>
+              <li><span id="outcome-explain">🏆 Can explain how integration approaches vary based on timing and frequency <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></span></li>
+            </ul>
+          </div>
+        </tip-box>
+        <panel type="seamless" header=" %%- - - - - - - - - -%%">
+          <div>
+            <div>
+              <p>In terms of timing and frequency, there are two general approaches to integration:</p>
+              <ol>
+                <li><em>Late and one-time</em>: In an extreme case of this approach, developers wait till all components are completed and integrate all finished components just before the release. This approach is not recommended because integration often
+                  causes many component incompatibilities (due to previous miscommunications and misunderstandings) to surface which can lead to delivery delays: Late integration -> incompatibilities found -> major rework required -> cannot meet the delivery
+                  date.</li>
+                <li><em>Early and frequent</em>: The other approach is to integrate early and evolve in parallel in small steps, re-integrating frequently. For example, a working skeleton can be written first (i.e. it compiles and runs but does not produce
+                  any useful output). This can be done by one developer, possibly the one in charge of integration. After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate
+                  the new code to the main system.</li>
+              </ol>
+              <p>Whether using frequent integration or one-time late integration, there is still a need to decide the order in which components are to be integrated. There are several approaches to doing this, as explained next.</p>
+            </div>
+          </div>
+        </panel>
+      </div>
+      <div>
+        <div>
+          <h4 id="big-bang-vs-incremental-integration-two">Big-Bang vs Incremental Integration <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        </div>
+        <tip-box type="success">
+          <div>
+            <ul>
+              <li><span id="outcome-explain">🏆 Can explain how integration approaches vary based on amount merged at a time <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></span></li>
+            </ul>
+          </div>
+        </tip-box>
+        <panel type="seamless" header=" %%- - - - - - - - - -%%">
+          <div>
+            <div>
+              <p>In the <em>big-bang integration</em> approach, all components are integrated at the same time. This approach is not recommended because it will uncover too many problems at the same time which could make debugging and bug-fixing more complex
+                than when problems are uncovered incrementally.</p>
+              <panel header=":paperclip: Extras" expandable="" type="seamless" expanded="">
+                <panel header=":mortar_board: Learning Outcomes" expandable="" type="seamless">
+                  <div>
+                    <panel type="success" expandable=""><span slot="header"><div><p>🏆 Can explain how integration approaches vary based on amount merged at a time <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p></div></span>
+                      <div>
+                        <panel header="Q: Give two arguments in support and two arguments against the following statement.">
+                          <question has-input="true">
+                            <p>Give two arguments in support and two arguments against the following statement.</p>
+                            <p><em>Because there is no external client, it is OK to use big bang integration for a school project.</em></p>
+                            <div slot="answer">
+                              <p>Arguments for:</p>
+                              <ul>
+                                <li>It is relatively simple; even big-bang can succeed.</li>
+                                <li>Project duration is short; there is not enough time to integrate in steps.</li>
+                                <li>The system is non-critical, non-production (demo only); the cost of integration issues is relatively small.</li>
+                              </ul>
+                              <p>Arguments against:</p>
+                              <ul>
+                                <li>Inexperienced developers; big-bang more likely to fail</li>
+                                <li>Too many problems may be discovered too late. Submission deadline (fixed) can be missed.</li>
+                                <li>Team members have not worked together before; increases the probability of integration problems.</li>
+                              </ul>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                    </panel>
+                  </div>
+                </panel>
+              </panel>
+            </div>
+          </div>
+        </panel>
+      </div>
+      <div>
+        <div>
+          <h4 id="top-down-vs-bottom-up-integration-three">Top-Down vs Bottom-Up Integration <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+        </div>
+        <tip-box type="success">
+          <div>
+            <ul>
+              <li><span id="outcome-explain">🏆 Can explain how integration approaches vary based on top-down or bottom-up integration <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></span></li>
+            </ul>
+          </div>
+        </tip-box>
+        <panel type="seamless" header=" %%- - - - - - - - - -%%">
+          <div>
+            <div>
+              <p>For incremental integration efforts, the following three incremental integration approaches are more suitable.</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/approaches.png" height="100">
+              <p></p>
+              <ul>
+                <li><em>Top-down</em> integration: In top-down integration, higher-level components are integrated before bringing in the lower-level components. One advantage of this approach is that higher-level problems can be discovered early. One disadvantage
+                  is that this requires the use of dummy or skeletal components (i.e. stubs) in place of lower level components until the real lower-level components are integrated to the system. Otherwise, higher-level components cannot function as they
+                  depend on lower level ones.</li>
+                <li><em>Bottom-up</em> integration: This is the reverse of top-down integration. Advantages and disadvantages are simply the reverse of those of the top-down approach.</li>
+                <li><em>Sandwich</em> integration: This is a mix of the top-down and the bottom-up approaches. The idea is to do both top-down and bottom-up so as to “meet up” in the middle.</li>
+              </ul>
+              <panel header=":paperclip: Extras" expandable="" type="seamless" expanded="">
+                <panel header=":mortar_board: Learning Outcomes" expandable="" type="seamless">
+                  <div>
+                    <panel type="success" expandable=""><span slot="header"><div><p>🏆 Can explain how integration approaches vary based on top-down or bottom-up integration <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p></div></span>
+                      <div>
+                        <panel header="Q: Suggest an integration strategy for the system represented by following diagram.">
+                          <question has-input="true">
+                            <p>Suggest an integration strategy for the system represented by following diagram. You need not follow a strict top-down, bottom-up, sandwich, or big bang approach. Dashed arrows represent dependencies between classes.</p>
+                            <p>Also take into account the following facts in your test strategy.</p>
+                            <ul>
+                              <li><strong>HospitalUI</strong> will be developed early, so as to get customer feedback early.</li>
+                              <li><strong>HospitalFacade</strong> shields the UI from complexities of the application layer. It simply redirects the method calls received to the appropriate classes below</li>
+                              <li><strong>IO_Helper</strong> is to be reused from an earlier project, with minor modifications</li>
+                              <li>Development of <strong>OutPatient</strong> component has been outsourced, and the delivery is not expected until the 2nd half of the project.</li>
+                            </ul><img src="/se-book/integration/approaches/topDownVsBottomUp/images/hospital.png" height="250">
+                            <p></p>
+                            <div slot="answer">
+                              <p>There can be many acceptable answers to this question. But any good strategy should consider at least some of the below.</p>
+                              <ul>
+                                <li>Since <strong>HospitalUI</strong> will be developed early, it’s OK to integrate it early, using stubs, rather than wait for the rest of the system to finish. (i.e. a top-down integration is suitable for <strong>HospitalUI</strong>)</li>
+                                <li>Because <strong>HospitalFacade</strong> is unlikely to have a lot of business logic, it may not be worth to write stubs to test it (i.e. a bottom-up integration is better for <strong>HospitalFacade</strong>).</li>
+                                <li>Since <strong>IO_Helper</strong> is to be reused from an earlier project, we can finish it early. This is especially suitable since there are many classes that use it. Therefore <strong>IO_Helper</strong> can be integrated
+                                  with the dependent classes in bottom-up fashion.</li>
+                                <li>Since <strong>OutPatient</strong> class may be delayed, we may have to integrate <strong>PatientMgr</strong> using a stub.</li>
+                                <li><strong>TypeA</strong>, <strong>TypeB</strong>, and <strong>TypeC</strong> seem to be tightly coupled. It may be a good idea to test them together.</li>
+                              </ul>
+                              <p>Given above is one possible integration test strategy. Relative positioning also indicates a rough timeline.</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                      <div>
+                        <panel header="Q: Describe the order in which components will be integrated with one another if the following integration strategies were adopted.">
+                          <question has-input="false">
+                            <p>Consider the architecture given below. Describe the order in which components will be integrated with one another if the following integration strategies were adopted.</p>
+                            <p>a) top-down b) bottom-up c) sandwich</p>
+                            <p>Note that dashed arrows show dependencies (e.g. A depend on B, C, D and therefore, higher-level than B, C and D).</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/abc.png" height="190">
+                            <p></p>
+                            <div slot="answer">
+                              <p>a) Diagram:</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/aAnswer.png" height="230">
+                              <p></p>
+                              <p>b) Diagram:</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/bAnswer.png" height="230">
+                              <p></p>
+                              <p>c) Diagram:</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/cAnswer.png" height="230">
+                              <p></p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                    </panel>
+                  </div>
+                </panel>
+              </panel>
+            </div>
+          </div>
+        </panel>
+      </div>
+    </div>
+  </panel>
+  <h2 id="build-automation">Build Automation</h2>
+  <panel header="================================================================" type="seamless" alt="build automation">
+    <div>
+      <div>
+        <div>
+          <h4 id="what-one-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+        </div>
+        <tip-box type="success">
+          <div>
+            <ul>
+              <li><span id="outcome-explain">🏆 Can name some of the build automation tools <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></span></li>
+            </ul>
+          </div>
+        </tip-box>
+        <panel type="seamless" header=" %%- - - - - - - - - -%%">
+          <div>
+            <div>
+              <p>In a non-trivial project, building a product from source code can be a complex multi-step process. For example, it can include steps such as to pull code from the revision control system, compile, link, run automated tests, automatically
+                update release documents (e.g. build number), package into a distributable, push to repo, deploy to a server, delete temporary files created during building/testing, email developers of the new build, and so on. Furthermore, this build
+                process can be done ‘on demand’, it can be scheduled (e.g. every day at midnight) or it can be triggered by various events (e.g. triggered by a code push to the revision control system).</p>
+              <p>Some of these build steps such as to compile, link and package are already automated in most modern IDEs. For example, several steps happen automatically when the ‘build’ button of the IDE is clicked. Some IDEs even allow customization to
+                this build process to some extent.</p>
+              <p>However, most big projects use specialized build tools to automate complex build processes.</p>
+              <p>Build tool examples:</p>
+              <ul>
+                <li><a href="https://gradle.org/">Gradle</a></li>
+                <li><a href="http://maven.apache.org/">Maven</a></li>
+                <li><a href="http://ant.apache.org/">Apache Ant</a></li>
+                <li><a href="http://www.gnu.org/software/make/">GNU Make</a></li>
+              </ul>
+              <p>Modern software projects often depend on third party libraries that evolve constantly. That means developers need to download the correct version of the required libraries and update them regularly. Therefore, dependency management is an
+                important part of build automation. <em>Dependency Management</em> tools can automate that aspect of a project. Maven and Gradle, in addition to managing the build process, can play the role of dependency management tools too.</p>
+            </div>
+          </div>
+        </panel>
+      </div>
+      <div>
+        <div>
+          <h4 id="continuous-integration-and-continuous-deployment-two">Continuous Integration and Continuous Deployment <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        </div>
+        <tip-box type="success">
+          <div>
+            <ul>
+              <li><span id="outcome-explain">🏆 Can explain continuous integration and continuous deployment <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></span></li>
+            </ul>
+          </div>
+        </tip-box>
+        <panel type="seamless" header=" %%- - - - - - - - - -%%">
+          <div>
+            <div>
+              <p>An extreme application of build automation is called <em>continuous integration (CI)</em> in which integration, building, and testing happens automatically after each code change. A natural extension of CI is <em>Continuous Deployment (CD)</em>                where the changes are not only integrated continuously, but also deployed to end-users at the same time.</p>
+              <p>Some examples of CI/CD tools:</p>
+              <ul>
+                <li><a href="https://travis-ci.org/">Travis</a></li>
+                <li><a href="http://jenkins-ci.org">Jenkins</a></li>
+                <li><a href="https://www.appveyor.com">Appveyor</a></li>
+                <li><a href="https://circleci.com">CircleCI</a></li>
+              </ul>
+            </div>
+          </div>
+        </panel>
+      </div>
+    </div>
+  </panel>
+</div>
+</div>
+</body>
+<script src="..\markbind\js\vue.min.js"></script>
+<script src="..\markbind\js\vue-strap.min.js"></script>
+<script src="..\markbind\js\setup.js"></script>
+</html>
