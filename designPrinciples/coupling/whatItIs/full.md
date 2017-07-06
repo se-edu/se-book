@@ -1,3 +1,7 @@
+<panel header="%%prerequisites%%" expandable>
+ <include src="prereq.md"/>
+</panel>
+
 <tip-box type="success">
   <include src="outcomes.md" />
 </tip-box>
