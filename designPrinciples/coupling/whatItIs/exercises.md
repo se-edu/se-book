@@ -1,4 +1,3 @@
-<panel type="success" expandable>
-  <span slot="header"><include src="outcomes.md#outcome-explain" /></span>
+<panel header=":muscle: exercises" type="info" expandable>
   <include src="q-essay-coupling-levels.md" />
 </panel>
