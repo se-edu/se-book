@@ -40,6 +40,30 @@
 
 <!-- ------------------------------------------------------------------------------------------------- -->
 
+## Activity Diagrams :one:
+
+%%:o: What are Activity Diagrams%%
+
+<panel type="seamless" alt="activity diagrams">
+  <span slot="header"> ================================================================
+  </span>
+  <include src="activityDiagrams/index.md" />
+</panel>
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+
+## Notes :one:
+
+%%:o: Notes%%
+
+<panel type="seamless" alt="notes">
+  <span slot="header"> ================================================================
+  </span>
+  <include src="notes/index.md" />
+</panel>
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+
 ## Miscellaneous :one:
 
 %%:o: Miscellaneous%%

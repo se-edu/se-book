@@ -23,7 +23,10 @@ There can be many acceptable answers to this question. But any good strategy sho
 *	Since **OutPatient** class may be delayed, we may have to integrate **PatientMgr** using a stub.
 *	**TypeA**, **TypeB**, and **TypeC** seem to be tightly coupled. It may be a good idea to test them together.
 
-Given above is one possible integration test strategy. Relative positioning also indicates a rough timeline.
+Given below is one possible integration test strategy. Relative positioning also indicates a rough timeline.
+
+<img src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/hospitalIntegration.png" height="250" />
+<p/>
 
 </div>
 </question>
