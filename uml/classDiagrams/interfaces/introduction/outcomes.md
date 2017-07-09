@@ -1,1 +1,1 @@
-* <span id="outcome-classDiagrams-interfaces-one">:trophy: Able to interpret interfaces in class diagrams :two:</span>
+:trophy: Can interpret interfaces in class diagrams :two:

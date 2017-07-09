@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can explain YAGNI principle :four:</span>
+:trophy: Can explain YAGNI principle :four:

@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can recap test case design :three:</span>
+:trophy: Can recap test case design :three:

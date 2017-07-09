@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can explain ... :three:</span>
+:trophy: Can avoid using exceptions to control normal workflow :three:

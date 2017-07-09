@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Able to identify service-oriented architectural style :one:</span>
+:trophy: Can identify service-oriented architectural style :one:

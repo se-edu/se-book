@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can implement substitutability :three:</span>
+:trophy: Can implement substitutability :three:

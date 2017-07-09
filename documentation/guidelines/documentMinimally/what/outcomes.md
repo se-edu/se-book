@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Able to explain documentation should be minimal yet sufficient :one:</span>
+:trophy: Can explain documentation should be minimal yet sufficient :one:

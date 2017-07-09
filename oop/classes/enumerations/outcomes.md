@@ -1,1 +1,1 @@
-* <span id="outcome-classes-enumerations-one">:trophy: Able to explain the meaning of enumerations :two:</span>
+:trophy: Can explain the meaning of enumerations :two:

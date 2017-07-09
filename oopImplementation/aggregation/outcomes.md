@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can implement aggregation :two:</span>
+:trophy: Can implement aggregation :two:

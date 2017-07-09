@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Able to explain JavaDoc :one:</span>
+:trophy: Can explain JavaDoc :one:

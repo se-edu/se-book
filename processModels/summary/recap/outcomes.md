@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can recall process models :three:</span>
+:trophy: Can recall process models :three:

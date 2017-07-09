@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can explain software quality assurance :one:</span>
+:trophy: Can explain software quality assurance :one:

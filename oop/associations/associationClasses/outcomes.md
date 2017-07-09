@@ -1,1 +1,1 @@
-* <span id="outcome-associations-associationClasses-one">:trophy: Able to explain the meaning of association classes :three:</span>
+:trophy: Can explain the meaning of association classes :three:

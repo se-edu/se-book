@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can implement inheritance :one:</span>
+:trophy: Can implement inheritance :one:

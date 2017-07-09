@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can explain XP :four:</span>
+:trophy: Can explain XP :four:

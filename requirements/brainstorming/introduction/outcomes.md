@@ -1,1 +1,1 @@
-* <span id="outcome-brainstorming-introduction-one">:trophy: Able to explain what is brainstorming :one:</span>
+:trophy: Can explain what is brainstorming :one:

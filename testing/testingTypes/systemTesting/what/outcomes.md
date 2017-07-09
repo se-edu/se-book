@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Able to explain system testing :one:</span>
+:trophy: Can explain system testing :one:

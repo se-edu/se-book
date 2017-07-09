@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can implement interfaces :one:</span>
+:trophy: Can implement interfaces :one:

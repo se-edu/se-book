@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can explain DRCS vs CRCS :three:</span>
+:trophy: Can explain DRCS vs CRCS :three:

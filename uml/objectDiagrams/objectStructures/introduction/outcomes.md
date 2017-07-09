@@ -1,1 +1,1 @@
-* <span id="outcome-objectDiagrams-objectStructures-one">:trophy: Able to interpret object diagrams :one:</span>
+:trophy: Can interpret object diagrams :one:

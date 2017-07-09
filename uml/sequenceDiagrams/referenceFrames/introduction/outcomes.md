@@ -1,1 +1,1 @@
-* <span id="outcome-sequenceDiagrams-referenceFrames-one">:trophy: Able to create sequence diagrams with reference frames :two:</span>
+:trophy: Can create sequence diagrams with reference frames :two:

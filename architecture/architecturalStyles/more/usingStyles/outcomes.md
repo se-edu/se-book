@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Able to explain how architectural styles are combined :two:</span>
+:trophy: Can explain how architectural styles are combined :two:

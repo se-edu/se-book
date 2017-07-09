@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Able to explain activity diagrams :one:</span>
+:trophy: Can explain activity diagrams :one:

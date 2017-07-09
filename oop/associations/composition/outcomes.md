@@ -1,1 +1,1 @@
-* <span id="outcome-associations-composition-one">:trophy: Able to explain the meaning of composition :two:</span>
+:trophy: Can explain the meaning of composition :two:

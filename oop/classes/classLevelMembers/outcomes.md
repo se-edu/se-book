@@ -1,1 +1,1 @@
-* <span id="outcome-classes-classLevelMembers-one">:trophy: Able to explain class-level members :two:</span>
+:trophy: Can explain class-level members :two:

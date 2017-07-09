@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can combine multiple patterns to fit a context :three:</span>
+:trophy: Can combine multiple patterns to fit a context :three:

@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Able to identify n-tier architectural style :one:</span>
+:trophy: Can identify n-tier architectural style :one:

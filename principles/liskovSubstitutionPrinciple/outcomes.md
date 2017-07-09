@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can explain liskov substititution principle :three:</span>
+:trophy: Can explain liskov substititution principle :three:
