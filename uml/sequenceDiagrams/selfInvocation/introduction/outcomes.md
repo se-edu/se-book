@@ -1,1 +1,1 @@
-* <span id="outcome-sequenceDiagrams-selfInvocation-one">:trophy: Able to create sequence diagrams with self invocation :two:</span>
+* <span id="outcome-sequenceDiagrams-selfInvocation-one">:trophy: Can create sequence diagrams with self invocation :two:</span>

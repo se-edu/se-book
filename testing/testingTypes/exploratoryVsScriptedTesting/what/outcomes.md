@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Able to explain exploratory testing and scripted testing :two:</span>
+* <span id="outcome-explain">:trophy: Can explain exploratory testing and scripted testing :two:</span>

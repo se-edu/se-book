@@ -1,1 +1,1 @@
-* <span id="outcome-classDiagrams-associationClasses-one">:trophy: Able to interpret association classes in class diagrams :three:</span>
+* <span id="outcome-classDiagrams-associationClasses-one">:trophy: Can interpret association classes in class diagrams :three:</span>

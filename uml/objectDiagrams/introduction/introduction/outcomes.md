@@ -1,1 +1,1 @@
-* <span id="outcome-objectDiagrams-introduction-one">:trophy: Able to explain the purpose of UML object diagrams :one:</span>
+* <span id="outcome-objectDiagrams-introduction-one">:trophy: Can explain the purpose of UML object diagrams :one:</span>

@@ -1,1 +1,1 @@
-* <span id="outcome-inheritance-overriding-one">:trophy: Able to explain method overriding :one:</span>
+* <span id="outcome-inheritance-overriding-one">:trophy: Can explain method overriding :one:</span>

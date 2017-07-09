@@ -1,1 +1,1 @@
-* <span id="outcome-classDiagrams-enumerations-one">:trophy: Able to interpret enumerations in class diagrams :two:</span>
+* <span id="outcome-classDiagrams-enumerations-one">:trophy: Can interpret enumerations in class diagrams :two:</span>

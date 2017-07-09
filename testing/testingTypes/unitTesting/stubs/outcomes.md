@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Able to explain stubs :two:</span>
+* <span id="outcome-explain">:trophy: Can explain stubs :two:</span>

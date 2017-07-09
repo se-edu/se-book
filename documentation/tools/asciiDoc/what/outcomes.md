@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Able to explain AsciiDoc :two:</span>
+* <span id="outcome-explain">:trophy: Can explain AsciiDoc :two:</span>

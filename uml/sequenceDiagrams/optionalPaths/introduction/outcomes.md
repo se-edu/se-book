@@ -1,1 +1,1 @@
-* <span id="outcome-sequenceDiagrams-optionalPaths-one">:trophy: Able to create sequence diagrams with optional paths :two:</span>
+* <span id="outcome-sequenceDiagrams-optionalPaths-one">:trophy: Can create sequence diagrams with optional paths :two:</span>

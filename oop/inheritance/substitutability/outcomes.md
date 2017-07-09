@@ -1,1 +1,1 @@
-* <span id="outcome-inheritance-substitutability-one">:trophy: Able to explain substitutability :two:</span>
+* <span id="outcome-inheritance-substitutability-one">:trophy: Can explain substitutability :two:</span>

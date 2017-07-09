@@ -1,1 +1,1 @@
-* <span id="outcome-associations-dependencies-one">:trophy: Able to explain the meaning of dependencies in the context of UML class diagrams :two:</span>
+* <span id="outcome-associations-dependencies-one">:trophy: Can explain the meaning of dependencies in the context of UML class diagrams :two:</span>

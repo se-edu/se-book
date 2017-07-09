@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Able to explain swimlanes in activity diagrams :four:</span>
+* <span id="outcome-explain">:trophy: Can explain swimlanes in activity diagrams :four:</span>

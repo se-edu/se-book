@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Able to explain Markdown :one:</span>
+* <span id="outcome-explain">:trophy: Can explain Markdown :one:</span>

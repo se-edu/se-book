@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Able to explain regression testing :one:</span>
+* <span id="outcome-explain">:trophy: Can explain regression testing :one:</span>
