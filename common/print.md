@@ -9,8 +9,8 @@
 # Design
 ---
 
-<include src="design/print.md#main" />
-<include src="designPrinciples/print.md#main" />
+<include src="../design/print.md#main" />
+<include src="../designPrinciples/print.md#main" />
 
 </div>
 

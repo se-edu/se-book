@@ -81,7 +81,7 @@
 * [Definitions](common/definitions.html)
 * [References](common/references.html)
 * [Learning Outcomes](common/outcomes.html)
-* [Printable :scroll:](print.html)
+* [Printable :scroll:](common/print.html)
 
 <include src="java/style/topicToc.md" />
 
