@@ -24,15 +24,10 @@ Example:
 
 </tip-box>
 
-<!-- extras ------------------------------------------------------------------------------------ -->
+</div>
+<div id="extras">
 
-<panel header=":paperclip: Extras" expandable type="seamless" expanded>
-
-  <panel header=":mortar_board: Learning Outcomes" expandable type="seamless">
-    <include src="exercises.md" />
-  </panel>
-
-</panel>
+<include src="exercises.md" />
 
 </div>
 
