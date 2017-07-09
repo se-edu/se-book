@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can explain issue trackers :two:</span>
+:trophy: Can explain issue trackers :two:

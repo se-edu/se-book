@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can identify transaction processing architectural style :one:</span>
+:trophy: Can identify transaction processing architectural style :one:

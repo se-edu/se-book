@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can do exception handling in code :two:</span>
+:trophy: Can do exception handling in code :two:

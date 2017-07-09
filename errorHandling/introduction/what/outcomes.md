@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can explain error handling :one:</span>
+:trophy: Can explain error handling :one:

@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can explain dependency inversion principle :four:</span>
+:trophy: Can explain dependency inversion principle :four:

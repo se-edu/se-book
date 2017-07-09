@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can explain revision control :one:</span>
+:trophy: Can explain revision control :one:

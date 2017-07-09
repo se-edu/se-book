@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can write documents in Markdown format :two:</span>
+:trophy: Can write documents in Markdown format :two:

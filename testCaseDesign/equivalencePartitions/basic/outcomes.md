@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can apply EP for pure functions :two:</span>
+:trophy: Can apply EP for pure functions :two:

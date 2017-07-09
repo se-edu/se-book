@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can explain mocks :three:</span>
+:trophy: Can explain mocks :three:

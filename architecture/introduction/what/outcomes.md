@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can explain Software Architecture :one:</span>
+:trophy: Can explain Software Architecture :one:

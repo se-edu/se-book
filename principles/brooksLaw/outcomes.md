@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can explain Brooks' law :four:</span>
+:trophy: Can explain Brooks' law :four:

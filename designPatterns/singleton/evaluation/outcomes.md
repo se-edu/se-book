@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can decide when to apply Singleton design pattern :three:</span>
+:trophy: Can decide when to apply Singleton design pattern :three:

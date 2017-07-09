@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can name several other architecture styles :two:</span>
+:trophy: Can name several other architecture styles :two:

@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can identify common forms of coupling :two:</span>
+:trophy: Can identify common forms of coupling :two:

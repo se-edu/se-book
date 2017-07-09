@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can explain GANTT charts :three:</span>
+:trophy: Can explain GANTT charts :three:

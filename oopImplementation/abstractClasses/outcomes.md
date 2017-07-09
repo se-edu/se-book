@@ -1,1 +1,1 @@
-* <span id="outcome-explain">:trophy: Can implement abstract classes :one:</span>
+:trophy: Can implement abstract classes :one:
