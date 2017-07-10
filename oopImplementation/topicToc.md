@@ -1,4 +1,4 @@
-* [OOP](./oopImplementation/)
+* [Object Oriented Programming](./oopImplementation/)
   <trigger for="pop:oopImplementation-preview">:mag:</trigger>
 
 <popover id="pop:oopImplementation-preview" title="OOP :mag:" placement="right">
