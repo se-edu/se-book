@@ -12,7 +12,12 @@
 
 <div id="body">
 
-...
+A **package diagram** shows packages and their dependencies. A package is a grouping construct for grouping UML elements (classes, use cases, etc.).
+
+<img src="{{baseUrl}}/modelling/modellingStructures/packageDiagrams/images/diagram.png" height="450" />
+<p/>
+
+Source: https://en.wikipedia.org/wiki/Package_diagram
 
 </div>
 

@@ -12,7 +12,12 @@
 
 <div id="body">
 
-...
+A **composite structure diagram** hierarchically decomposes a class into its internal structure.
+
+<img src="{{baseUrl}}/modelling/modellingStructures/compositeStructureDiagrams/images/diagram.png" height="150" />
+<p/>
+
+Source: https://en.wikipedia.org/wiki/Composite_structure_diagram
 
 </div>
 

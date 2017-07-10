@@ -12,7 +12,11 @@
 
 <div id="body">
 
-..
+Activity diagrams model workflows
+
+More…
+
+Sequence diagrams model object interactions for specific scenarios
 
 </div>
 
