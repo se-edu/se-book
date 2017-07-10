@@ -68,13 +68,13 @@
 
 <include src="uml/topicToc.md" />
 
-* [Intellij IDEA]()
+<include src="intellij/topicToc.md" />
 
 <include src="gitAndGithub/topicToc.md" />
 
-* [Java]()
-* [JUnit]()
+<include src="javaTools/topicToc.md" />
 
+<include src="junit/topicToc.md" />
 
 ### Supplementary
 
