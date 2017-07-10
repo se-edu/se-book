@@ -14,6 +14,9 @@
 <include src="remoteRepositories/embed.md" />
 <include src="branching/embed.md" />
 <include src="drcsVsCrcs/embed.md" />
+<include src="forkingWorkflow/embed.md" />
+<include src="featureBranchFlow/embed.md" />
+<include src="centralisedFlow/embed.md" />
 
 </div>
 
