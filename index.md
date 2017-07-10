@@ -69,7 +69,9 @@
 <include src="uml/topicToc.md" />
 
 * [Intellij IDEA]()
-* [Git and GitHub]()
+
+<include src="gitAndGithub/topicToc.md" />
+
 * [Java]()
 * [JUnit]()
 

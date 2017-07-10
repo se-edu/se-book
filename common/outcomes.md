@@ -8,14 +8,13 @@
 
 <include src="../softwareEngineering/prosAndCons/outcomes.md" />
 
-
 ## Requirements
 
 ### Requirements
 
 <include src="../requirements/introduction/basics/outcomes.md" />
 
-### Gathering 
+### Gathering
 
 <include src="../requirements/brainstorming/introduction/outcomes.md" />
 <include src="../requirements/userSurveys/introduction/outcomes.md" />
@@ -384,6 +383,9 @@
 <include src="../revisionControl/remoteRepositories/outcomes.md" />
 <include src="../revisionControl/branching/outcomes.md" />
 <include src="../revisionControl/drcsVsCrcs/outcomes.md" />
+<include src="../revisionControl/forkingWorkflow/outcomes.md" />
+<include src="../revisionControl/featureBranchFlow/outcomes.md" />
+<include src="../revisionControl/centralisedFlow/outcomes.md" />
 
 ### Project Planning
 
@@ -478,6 +480,21 @@
 
 ### Git and GitHub
 
+<include src="../gitAndGithub/init/outcomes.md" />
+<include src="../gitAndGithub/commit/outcomes.md" />
+<include src="../gitAndGithub/ignore/outcomes.md" />
+<include src="../gitAndGithub/tag/outcomes.md" />
+<include src="../gitAndGithub/checkout/outcomes.md" />
+<include src="../gitAndGithub/stash/outcomes.md" />
+<include src="../gitAndGithub/clone/outcomes.md" />
+<include src="../gitAndGithub/pull/outcomes.md" />
+<include src="../gitAndGithub/push/outcomes.md" />
+<include src="../gitAndGithub/branch/outcomes.md" />
+<include src="../gitAndGithub/mergeConflicts/outcomes.md" />
+<include src="../gitAndGithub/createPRs/outcomes.md" />
+<include src="../gitAndGithub/managePRs/outcomes.md" />
+<include src="../gitAndGithub/forkingWorkflow/outcomes.md" />
+
 ### Java
 
 ### JUnit
@@ -498,4 +515,3 @@
 <include src="../principles/brooksLaw/outcomes.md" />
 <include src="../principles/yagniPrinciple/outcomes.md" />
 <include src="../principles/dryPrinciple/outcomes.md" />
-
