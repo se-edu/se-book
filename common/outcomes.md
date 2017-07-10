@@ -93,35 +93,35 @@
 
 ### Modeling
 
-<include src="../modelling/introduction/what/outcomes.md" />
-<include src="../modelling/introduction/how/outcomes.md" />
-<include src="../modelling/introduction/umlModels/outcomes.md" />
+<include src="../modeling/introduction/what/outcomes.md" />
+<include src="../modeling/introduction/how/outcomes.md" />
+<include src="../modeling/introduction/umlModels/outcomes.md" />
 
-<include src="../modelling/modellingStructures/classDiagramsBasic/outcomes.md" />
-<include src="../modelling/modellingStructures/classDiagramsIntermediate/outcomes.md" />
-<include src="../modelling/modellingStructures/classDiagramsAdvanced/outcomes.md" />
+<include src="../modeling/modelingStructures/classDiagramsBasic/outcomes.md" />
+<include src="../modeling/modelingStructures/classDiagramsIntermediate/outcomes.md" />
+<include src="../modeling/modelingStructures/classDiagramsAdvanced/outcomes.md" />
 
-<include src="../modelling/modellingStructures/objectDiagrams/outcomes.md" />
+<include src="../modeling/modelingStructures/objectDiagrams/outcomes.md" />
 
-<include src="../modelling/modellingStructures/objectOrientedDomainModels/outcomes.md" />
+<include src="../modeling/modelingStructures/objectOrientedDomainModels/outcomes.md" />
 
-<include src="../modelling/modellingStructures/deploymentDiagrams/outcomes.md" />
-<include src="../modelling/modellingStructures/componentDiagrams/outcomes.md" />
-<include src="../modelling/modellingStructures/packageDiagrams/outcomes.md" />
-<include src="../modelling/modellingStructures/compositeStructureDiagrams/outcomes.md" />
+<include src="../modeling/modelingStructures/deploymentDiagrams/outcomes.md" />
+<include src="../modeling/modelingStructures/componentDiagrams/outcomes.md" />
+<include src="../modeling/modelingStructures/packageDiagrams/outcomes.md" />
+<include src="../modeling/modelingStructures/compositeStructureDiagrams/outcomes.md" />
 
-<include src="../modelling/modellingBehaviours/activityDiagrams/outcomes.md" />
+<include src="../modeling/modelingBehaviors/activityDiagrams/outcomes.md" />
 
-<include src="../modelling/modellingBehaviours/sequenceDiagramsBasic/outcomes.md" />
-<include src="../modelling/modellingBehaviours/sequenceDiagramsIntermediate/outcomes.md" />
-<include src="../modelling/modellingBehaviours/sequenceDiagramsAdvanced/outcomes.md" />
+<include src="../modeling/modelingBehaviors/sequenceDiagramsBasic/outcomes.md" />
+<include src="../modeling/modelingBehaviors/sequenceDiagramsIntermediate/outcomes.md" />
+<include src="../modeling/modelingBehaviors/sequenceDiagramsAdvanced/outcomes.md" />
 
-<include src="../modelling/modellingBehaviours/useCaseDiagrams/outcomes.md" />
+<include src="../modeling/modelingBehaviors/useCaseDiagrams/outcomes.md" />
 
-<include src="../modelling/modellingBehaviours/timingDiagrams/outcomes.md" />
-<include src="../modelling/modellingBehaviours/interactionOverviewDiagrams/outcomes.md" />
-<include src="../modelling/modellingBehaviours/communicationDiagrams/outcomes.md" />
-<include src="../modelling/modellingBehaviours/stateMachineDiagrams/outcomes.md" />
+<include src="../modeling/modelingBehaviors/timingDiagrams/outcomes.md" />
+<include src="../modeling/modelingBehaviors/interactionOverviewDiagrams/outcomes.md" />
+<include src="../modeling/modelingBehaviors/communicationDiagrams/outcomes.md" />
+<include src="../modeling/modelingBehaviors/stateMachineDiagrams/outcomes.md" />
 
 ### Architecture
 
@@ -478,6 +478,13 @@
 
 ### Intellij IDEA
 
+<include src="../intellij/projectSetup/outcomes.md" />
+<include src="../intellij/codeNavigation/outcomes.md" />
+<include src="../intellij/productivityShortcuts/outcomes.md" />
+<include src="../intellij/debuggingBasic/outcomes.md" />
+<include src="../intellij/debuggingIntermediate/outcomes.md" />
+<include src="../intellij/refactoring/outcomes.md" />
+
 ### Git and GitHub
 
 <include src="../gitAndGithub/init/outcomes.md" />
@@ -497,8 +504,16 @@
 
 ### Java
 
+<include src="../javaTools/collections/outcomes.md" />
+<include src="../javaTools/enums/outcomes.md" />
+<include src="../javaTools/varargs/outcomes.md" />
+<include src="../javaTools/javaFXBasic/outcomes.md" />
+<include src="../javaTools/streamsBasic/outcomes.md" />
+
 ### JUnit
 
+<include src="../junit/basic/outcomes.md" />
+<include src="../junit/intermediate/outcomes.md" />
 
 ## Supplementary
 

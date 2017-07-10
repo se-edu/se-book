@@ -22,7 +22,7 @@
 
 <include src="oop/topicToc.md" />
 
-<include src="modelling/topicToc.md" />
+<include src="modeling/topicToc.md" />
 
 <include src="architecture/topicToc.md" />
 
