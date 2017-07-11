@@ -25,19 +25,19 @@ The unified process consists of four phases: _inception, elaboration, constructi
   <tr>
     <td>Inception</td>
     <td>
-			<ul>
-				<li>Understand the problem and requirements</li>
-				<li>Communicate with customer</li>
-				<li>Plan the development effort</li>
-			</ul>
-		</td>
+      <ul>
+        <li>Understand the problem and requirements</li>
+        <li>Communicate with customer</li>
+        <li>Plan the development effort</li>
+      </ul>
+    </td>
     <td>
-			<ul>
-				<li>Basic use case model</li>
-				<li>Rough project plan</li>
-				<li>Project vision and scope</li>
-			</ul>
-		</td>
+      <ul>
+        <li>Basic use case model</li>
+        <li>Rough project plan</li>
+        <li>Project vision and scope</li>
+      </ul>
+    </td>
   </tr>
   <tr>
     <td>Elaboration</td>
@@ -58,12 +58,12 @@ The unified process consists of four phases: _inception, elaboration, constructi
   <tr>
     <td>Construction</td>
     <td>
-			<ul>
-				<li>Major implementation effort to support the use cases identified</li>
-				<li>Design models are refined and fleshed out</li>
-				<li>Testing of all levels are carried out</li>
-				<li>Multiple releases of the system</li>
-			</ul>
+      <ul>
+        <li>Major implementation effort to support the use cases identified</li>
+        <li>Design models are refined and fleshed out</li>
+        <li>Testing of all levels are carried out</li>
+        <li>Multiple releases of the system</li>
+      </ul>
     </td>
     <td>
       <ul>
@@ -75,17 +75,17 @@ The unified process consists of four phases: _inception, elaboration, constructi
   <tr>
     <td>Transition</td>
     <td>
-			<ul>
-				<li>Ready the system for actual production use</li>
-				<li>Familiarize end users with the system</li>
-			</ul>
-		</td>
+      <ul>
+        <li>Ready the system for actual production use</li>
+        <li>Familiarize end users with the system</li>
+      </ul>
+    </td>
     <td>
-			<ul>
-				<li>Final system release</li>
-				<li>Instruction manual</li>
-			</ul>
-		</td>
+      <ul>
+        <li>Final system release</li>
+        <li>Instruction manual</li>
+      </ul>
+    </td>
   </tr>
 </table>
 
