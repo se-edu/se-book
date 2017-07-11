@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/useCases.css">
+<link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
 A use case can "include" another use case. Underlined text is commonly used to show an inclusion of a use case. Inclusions are useful,
 
