@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/useCases.css">
+<link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
 <panel header="Q: LearnSys – reply to post use case :two:">
 <question has-input="true">
