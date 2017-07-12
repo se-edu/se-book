@@ -152,4 +152,69 @@ Abstraction can be applied repeatedly to obtain higher and _higher levels of abs
 
 </div>
 
+<div id="def-single-responsibility-principle">
+
+**Single Responsibility Principle (SRP)**: A class should have one, and only one, reason to change. -- Robert C. Martin
+
+</div>
+
+<div id="def-interface-segregation-principle">
+
+**Interface Segregation Principle (ISP)**: No client should be forced to depend on methods it does not use.
+
+</div>
+
+<div id="def-liskov-substitution-principle">
+
+**Liskov Substitution Principle (LSP)**: Derived classes must be substitutable for their base classes. -- Barbara Liskov
+
+</div>
+
+<div id="def-dependency-inversion-principle">
+
+**Dependency Inversion Principle**:
+
+1. High-level modules should not depend on low-level modules. Both should depend on abstractions.
+2. Abstractions should not depend on details. Details should depend on abstractions.
+
+</div>
+
+<div id="def-separation-concerns-principle">
+
+**Separation of Concerns Principle (SoC)**: To achieve better modularity, separate the code into distinct sections, such that each section addresses a separate _concern_. -- Edsger W. Dijkstra
+
+</div>
+
+<div id="def-law-of-demeter">
+
+**Law of Demeter (LoD)**:
+
+* An object should have limited knowledge of another object.
+* An object should only interact with objects that are closely related to it.
+
+Also known as
+
+* Don’t talk to strangers.
+* Principle of least knowledge
+
+</div>
+
+<div id="def-brooks-law">
+
+**Brooks' Law**: Adding people to a late project will make it later. -- Fred Brooks (author of _The Mythical Man-Month_)
+
+</div>
+
+<div id="def-yagni-principle">
+
+**YAGNI (You Aren't Gonna Need It!) Principle**: Do not add code simply because ‘you might need it in the future’.
+
+</div>
+
+<div id="def-dry-principle">
+
+**DRY (Don't Repeat Yourself) Principle**: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system
+
+</div>
+
 </div>
