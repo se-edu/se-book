@@ -217,4 +217,10 @@ Also known as
 
 </div>
 
+<div id="def-equivalence-partition">
+
+**Equivalence partition (aka equivalence class)**: A group of test inputs that are likely to be processed by the SUT in the same way.
+
+</div>
+
 </div>
