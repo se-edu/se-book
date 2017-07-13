@@ -223,4 +223,10 @@ Also known as
 
 </div>
 
+<div id="def-static-analysis">
+
+**Static analysis**: Static analysis is the analysis of code without actually executing the code.  
+
+</div>
+
 </div>

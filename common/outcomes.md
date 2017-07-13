@@ -524,7 +524,7 @@
 <include src="../principles/interfaceSegregationPrinciple/outcomes.md" />
 <include src="../principles/liskovSubstitutionPrinciple/outcomes.md" />
 <include src="../principles/dependencyInversionPrinciple/outcomes.md" />
-<include src="../principles/solidPrinciple/outcomes.md" />
+<include src="../principles/solidPrinciples/outcomes.md" />
 <include src="../principles/separationOfConcernsPrinciple/outcomes.md" />
 <include src="../principles/lawOfDemeter/outcomes.md" />
 <include src="../principles/brooksLaw/outcomes.md" />

@@ -11,7 +11,7 @@
 <include src="interfaceSegregationPrinciple/embed.md" />
 <include src="liskovSubstitutionPrinciple/embed.md" />
 <include src="dependencyInversionPrinciple/embed.md" />
-<include src="solidPrinciple/embed.md" />
+<include src="solidPrinciples/embed.md" />
 <include src="separationOfConcernsPrinciple/embed.md" />
 <include src="lawOfDemeter/embed.md" />
 <include src="brooksLaw/embed.md" />
