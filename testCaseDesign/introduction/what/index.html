@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Test Case Design: Introduction: What</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong><span>Test Case Design ➡️ Introduction ➡️</span></strong>
+    </span>
+  </p>
+  <div>
+    <h4 id="what-two">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+  </div>
+  <tip-box type="success">
+    <div>
+      <p>🏆 Can explain the need for deliberate test case design <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+    </div>
+  </tip-box>
+  <div id="main">
+    <div>
+      <p>Testing all possible ways of using an SUT often requires an infinite number of test cases. Except for trivial SUTs, exhaustive testing is not practical.</p>
+      <tip-box>
+        <p>Example:</p>
+        <p>Consider the test cases for adding a String object to a Collection:</p>
+        <ul>
+          <li>Add an item to an empty collection.</li>
+          <li>Add an item when there is one item in the collection.</li>
+          <li>Add an item when there are 2, 3, .... n items in the collection.</li>
+          <li>Add an item that has an English, a French, a Spanish, … word.</li>
+          <li>Add an item that is the same as an existing item.</li>
+          <li>Add an item immediately after adding another item.</li>
+          <li>Add an item immediately after system startup.</li>
+          <li>...</li>
+        </ul>
+        <p>Exhaustive testing of this operation can take many more test cases.</p>
+      </tip-box>
+      <blockquote>
+        <p>Program testing can be used to show the presence of bugs, but never to show their absence!</p>
+        <p>--Edsger Dijkstra</p>
+      </blockquote>
+      <p>Every test case adds to the cost of testing. In some systems, a single test case can cost thousands of dollars (e.g. on-field testing of flight-control software). Therefore, test cases have to be designed to make the best use of testing resources.
+        In particular:</p>
+      <ul>
+        <li>Testing should be effective, i.e. it finds a high % of existing bugs. A set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system.</li>
+        <li>Testing should be efficient, i.e. it has a high rate of success (bugs found/test cases). A set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects.</li>
+      </ul>
+      <p>For testing to be E&E, each new test we add should be targeting a potential fault that is not already targeted by existing test cases. There are test case design techniques that can help us improve E&E (Effectiveness and Efficiency) of testing.
+        E.g. Equivalence Partitioning, Boundary Value Analysis</p>
+    </div>
+    <div>
+      <div>
+        <panel header=":muscle: Exercises" type="info" expandable="">
+          <div>
+            <panel header="Q: List test cases you would use to test ‘TriangleDetector’.">
+              <question has-input="true">
+                <p>A sample output from a text-based program ‘TriangleDetector’ is given below that determines whether the three input numbers make up the three sides of a valid triangle. A sample output is shown below. List test cases you would use to test
+                  ‘TriangleDetector’. Two sample test cases are given below.</p>
+                <pre class="hljs"><code><span class="hljs-keyword">C</span>:\> java TriangleDetector
+<span class="hljs-keyword">Enter</span> side <span class="hljs-number">1</span>: <span class="hljs-number">34</span>
+<span class="hljs-keyword">Enter</span> side <span class="hljs-number">2</span>: <span class="hljs-number">34</span>
+<span class="hljs-keyword">Enter</span> side <span class="hljs-number">3</span>: <span class="hljs-number">32</span>
+Can this be a triangle?:  Yes
+<span class="hljs-keyword">Enter</span> side <span class="hljs-number">1</span>:
+</code></pre>
+                <p>Sample test cases,</p>
+                <pre class="hljs"><code><span class="hljs-number">34</span><span class="hljs-string">,34,34:</span> <span class="hljs-literal">Yes</span>
+<span class="hljs-number">0</span><span class="hljs-string">,</span> <span class="hljs-string">any</span> <span class="hljs-string">valid,</span> <span class="hljs-string">any</span> <span class="hljs-attr">valid:</span> <span class="hljs-literal">No</span>
+</code></pre>
+                <div slot="answer">
+                  <p>In addition to obvious test cases such as</p>
+                  <ul>
+                    <li>sum of two sides == third,</li>
+                    <li>sum of two sides
+                      < third, …</li>
+                  </ul>
+                  <p>We may also devise some interesting test cases such as the ones depicted below.</p>
+                  <p>Note that their applicability depends on the context in which the software is operating.</p>
+                  <ul>
+                    <li>Non-integer number, negative numbers, 0, numbers formatted differently (e.g. 13F), very large numbers (e.g. MAX_INT), numbers with many decimal places, empty string, …</li>
+                    <li>Check many triangles one after the other (will the system run out of memory?)</li>
+                    <li>Backspace, tab, CTRL+C , …</li>
+                    <li>Introduce a long delay between entering data (will the program be affected by, say the screensaver?), minimize and restore window during the operation, hibernate the system in the middle of a calculation, start with invalid inputs
+                      (the system may perform error handling differently for the very first test case), …</li>
+                    <li>Test on different locale.</li>
+                  </ul>
+                  <p>The main point to note is how difficult it is to test exhaustively, even on a trivial system.</p>
+                </div>
+              </question>
+            </panel>
+          </div>
+          <div>
+            <panel header="Q: Explain the why exhaustive testing is not possible using the newGame operation of the Logic class in the Minesweeper case study as an example.">
+              <question has-input="true">
+                <p>Explain the why exhaustive testing is not possible using the newGame operation of the Logic class in the Minesweeper case study as an example.</p>
+                <div slot="answer">
+                  <p>Consider this sequence of test cases:</p>
+                  <ul>
+                    <li>Test case 1. Start Minesweeper. Activate newGame() and see if it works.</li>
+                    <li>Test case 2. Start Minesweeper. Activate newGame(). Activate newGame() again and see if it works.</li>
+                    <li>Test case 3. Start Minesweeper. Activate newGame() three times consecutively and see if it works.</li>
+                    <li>…</li>
+                    <li>Test case 267. Start Minesweeper. Activate newGame() 267 times consecutively and see if it works.</li>
+                  </ul>
+                  <p>Well, you get the idea. Exhaustive testing of newGame() is not possible.</p>
+                </div>
+              </question>
+            </panel>
+          </div>
+        </panel>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

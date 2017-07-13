@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Test Case Design: Combining Test Inputs: Heuristic: Each valid input at least once in a positive test case</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong><span>Test Case Design ➡️ Combining Test Inputs ➡️</span></strong>
+    </span>
+  </p>
+  <div>
+    <h4 id="heuristic-each-valid-input-at-least-once-in-a-positive-test-case-two">Heuristic: Each Valid Input At Least Once In A Positive Test Case <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+  </div>
+  <tip-box type="success">
+    <div>
+      <p>🏆 Can apply heuristic ‘each valid input at least once in a positive test case’ <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+    </div>
+  </tip-box>
+  <div id="main">
+    <div>
+      <tip-box>
+        <p>Scenario: calculateFruitPrice</p>
+        <p>SUT printLabel(fruitName String, unitPrice int)</p>
+        <p>Selected values for each input (invalid values are underlined):</p>
+        <table class="table">
+          <tr>
+            <th>Input</th>
+            <th>Values</th>
+            <th>Reason</th>
+          </tr>
+          <tr>
+            <td>fruitName</td>
+            <td>
+              <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Cherry</li>
+                <li>Dog</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Label format is round</li>
+                <li>Label format is oval</li>
+                <li>Label format is square</li>
+                <li>Not a valid fruit</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>unitPrice</td>
+            <td>
+              <ul>
+                <li>1</li>
+                <li>20</li>
+                <li>0</li>
+                <li>-1</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Only one digit</li>
+                <li>Two digits</li>
+                <li>Invalid because 0 is not a valid price</li>
+                <li>Invalid because negative prices are not allowed</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </tip-box>
+      <p>Suppose these are the test cases being considered.</p>
+      <table class="markbind-table table">
+        <thead>
+          <tr>
+            <th style="text-align:center">Case</th>
+            <th style="text-align:center">fruitName</th>
+            <th style="text-align:center">unitPrice</th>
+            <th style="text-align:center">Expected</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">Apple</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">Print label</td>
+          </tr>
+          <tr>
+            <td style="text-align:center">2</td>
+            <td style="text-align:center">Banana</td>
+            <td style="text-align:center">20</td>
+            <td style="text-align:center">Print label</td>
+          </tr>
+          <tr>
+            <td style="text-align:center">3</td>
+            <td style="text-align:center">Cherry</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">Error message “invalid price”</td>
+          </tr>
+          <tr>
+            <td style="text-align:center">4</td>
+            <td style="text-align:center">Dog</td>
+            <td style="text-align:center">-1</td>
+            <td style="text-align:center">Error message “invalid fruit"</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>It looks like the test cases were created using the ‘at least once’ strategy. After running these tests can we confirm that square-format label printing is done correctly? Answer: No. Reason: <code>Cherry</code> -- the only input that can produce
+        a square-format label -- is in a negative test case which produces an error message instead of a label. If there is a bug in the code that prints labels in square-format, these tests cases will not trigger that bug.</p>
+      <p>In this case a useful heuristic to apply is ‘each valid input at least once in a positive test case’ which means exactly what it says. <code>Cherry</code> is a valid test input and we must ensure that it appears at least once in a valid test case.
+        Here are the updated test cases after applying that heuristic.</p>
+      <div id="heuristic-valid-test-case">
+        <table class="markbind-table table">
+          <thead>
+            <tr>
+              <th style="text-align:center">Case</th>
+              <th style="text-align:center">fruitName</th>
+              <th style="text-align:center">unitPrice</th>
+              <th style="text-align:center">Expected</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:center">1</td>
+              <td style="text-align:center">Apple</td>
+              <td style="text-align:center">1</td>
+              <td style="text-align:center">Print round label</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">2</td>
+              <td style="text-align:center">Banana</td>
+              <td style="text-align:center">20</td>
+              <td style="text-align:center">Print oval label</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">2.1</td>
+              <td style="text-align:center">Cherry</td>
+              <td style="text-align:center">VV/IV</td>
+              <td style="text-align:center">Print square label</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">3</td>
+              <td style="text-align:center">VV</td>
+              <td style="text-align:center">0</td>
+              <td style="text-align:center">Error message “invalid price”</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">4</td>
+              <td style="text-align:center">Dog</td>
+              <td style="text-align:center">-1</td>
+              <td style="text-align:center">Error message “invalid fruit"</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

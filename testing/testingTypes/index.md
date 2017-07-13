@@ -8,6 +8,8 @@
 
 <div id="main">
 
+Testing can be categorized based on the level of testing, the objective of testing, who is doing the testing, etc.
+
 <include src="./unitTesting/topicPanel.md" />
 <include src="./integrationTesting/topicPanel.md" />
 <include src="./systemTesting/topicPanel.md" />

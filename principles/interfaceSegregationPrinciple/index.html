@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Principles: Interface Segregation Principle</title>
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong><span>Principles ➡️ </span></strong>
+    </span>
+  </p>
+  <div>
+    <h4 id="interface-segregation-principle-four">Interface Segregation Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></h4>
+  </div>
+  <tip-box type="success">
+    <div>
+      <p>🏆 Can explain interface segregation principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></p>
+    </div>
+  </tip-box>
+  <div id="main">
+    <div>
+      <tip-box type="primary">
+        <div>
+          <p><strong>Interface Segregation Principle (ISP)</strong>: No client should be forced to depend on methods it does not use.</p>
+        </div>
+      </tip-box>
+      <tip-box>
+        <p>Example:</p>
+        <p>The <code>Payroll</code> class should not depend on the <code>AdminStaff</code> class because it does not use the <code>arrangeMeeting()</code> method. Instead, it should depend on the <code>SalariedStaff</code> interface.</p>
+        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll</span> </span>{
+    <span class="hljs-comment">//...    </span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalaries</span><span class="hljs-params">(AdminStaff adminStaff)</span></span>{ <span class="hljs-comment">//violates ISP</span>
+        <span class="hljs-comment">//...</span>
+    }
+
+}
+</code></pre>
+        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll</span> </span>{
+    <span class="hljs-comment">//...    </span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalaries</span><span class="hljs-params">(SalariedStaff staff)</span></span>{ <span class="hljs-comment">//does not violate ISP</span>
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre><img src="/se-book/principles/interfaceSegregationPrinciple/images/payroll.png" height="200">
+        <p></p>
+      </tip-box>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\markbind\js\setup.js"></script>
+</html>

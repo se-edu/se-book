@@ -28,7 +28,8 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>Reusability is a major theme in software engineering practices. By reusing tried-and-tested components, the robustness of a new software system can be enhanced while reducing the manpower and time requirement. Reusable components come in
+                many forms; it can be reusing a piece of code, a subsystem, or a whole software.</p>
             </div>
           </div>
         </panel>
@@ -45,7 +46,36 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>{to add}</p>
+            </div>
+            <div>
+              <div>
+                <panel header=":muscle: Exercises" type="info" expandable="">
+                  <div>
+                    <panel header="Q: One of your teammates is proposing to use a recently-released “cool” UI framework for your class project. List the pros and cons of this idea. ">
+                      <question has-input="true">
+                        <p>One of your teammates is proposing to use a recently-released “cool” UI framework for your class project. List the pros and cons of this idea.</p>
+                        <div slot="answer">
+                          <p>Pros</p>
+                          <ul>
+                            <li>The potential to create a much better product by reusing the framework.</li>
+                            <li>Learning a new framework is good for the future job prospects.</li>
+                          </ul>
+                          <p>Cons</p>
+                          <ul>
+                            <li>Learning curve may be steep.</li>
+                            <li>May not be stable (it was recently released).</li>
+                            <li>May not allow us to do exactly what we want. While frameworks allow customization, such customization can be limited.</li>
+                            <li>Performance penalties.</li>
+                            <li>Might interfere with learning objectives of the module.</li>
+                          </ul>
+                          <p>Note that having more cons does not mean we should not use this framework. Further investigation is required before we can make a final decision.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
             </div>
           </div>
         </panel>
@@ -67,7 +97,17 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>An <em>Application Programming Interface (API)</em> specifies the interface through which other programs can interact with a software component. It is a contract between the component and its clients.</p>
+              <tip-box>
+                <p>Example:</p>
+                <p>The API of the Java String class is given at <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html">http://docs.oracle.com/javase/8/docs/api/java/lang/String.html</a></p>
+                <p>In this case, the API is a collection of public methods that we can invoke to make use of the String class.</p>
+              </tip-box>
+              <tip-box>
+                <p>Example:</p>
+                <p>The GitHub API is given at <a href="https://developer.github.com/v3/">https://developer.github.com/v3/</a></p>
+                <p>In this case the API is a collection of Web request formats GitHub server accepts and the corresponding responses. We can write a program that interacts with GitHub through that API.</p>
+              </tip-box>
             </div>
           </div>
         </panel>
@@ -84,7 +124,39 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>An API should be well-designed (i.e. should cater for the needs of its users) and well-documented.</p>
+              <p>When we write software consisting of multiple components, we need to define the API of each component.</p>
+              <p>One approach is to let the API emerge and evolve over time as we write code.</p>
+              <p>Another approach is to define the API up-front. Doing so allows us to develop the components in parallel.</p>
+              <p>We can use UML <em>sequence diagrams</em> to analyze the required interactions between components in order to discover the required API. Given below is an example.</p>
+              <tip-box>
+                <p>Example:</p><img src="/se-book/reuse/apis/designingAPIs/images/textLogic.png" height="500">
+                <p></p>
+                <p>As we analyze the interactions between components using sequence diagrams, we discover the API of those components. For example, the diagram above tells us that the MSLogic component API should have the methods:</p>
+                <ul>
+                  <li><code>new()</code></li>
+                  <li><code>getWidth:int</code></li>
+                  <li><code>getHeight():int</code></li>
+                  <li><code>getRemainingMineCount():int</code></li>
+                </ul>
+                <p>More details can be included to increase the precision of the method definitions before coding. Such precision is important to avoid misunderstandings between the developer of the class and developers of other classes that interact with
+                  this class.</p>
+                <ul>
+                  <li><strong>Operation</strong>: <em>newGame(): void</em></li>
+                  <li><strong>Description</strong>: Generates a new <em>WxH</em> minefield with <em>M</em> mines. Any existing minefield will be overwritten.</li>
+                  <li><strong>Preconditions</strong>: None</li>
+                  <li><strong>Postconditions</strong>: A new minefield is created. Game state is READY.</li>
+                </ul>
+                <p>Preconditions are the conditions that must be true before calling this operation. Postconditions describe the system after the operation is complete. Note that post conditions do not say what happens during the operation. Here is another
+                  example:</p>
+                <ul>
+                  <li><strong>Operation</strong>: <em>clearCellAt(int x, int y): void</em></li>
+                  <li><strong>Description</strong>: Records the cell at x,y as cleared.</li>
+                  <li><strong>Parameters</strong>: x, y coordinates of the cell</li>
+                  <li><strong>Preconditions</strong>: game state is READY or IN_PLAY. x and y are in 0..(H-1) and 0..(W-1), respectively.</li>
+                  <li><strong>Postconditions</strong>: Cell at x,y changes state to ZERO, ONE, TWO, THREE, …, EIGHT, or INCORRECTLY_CLEARED. Game state changes to IN_PLAY, WON or LOST as appropriate.</li>
+                </ul>
+              </tip-box>
             </div>
           </div>
         </panel>
@@ -106,7 +178,15 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>A library is a collection of modular code that is general and can be used by other programs.</p>
+              <tip-box>
+                <p>Example:</p>
+                <p>Java classes you get with the JDK (such as String, ArrayList, HashMap, etc.) are library classes that are provided in the default Java distribution.</p>
+              </tip-box>
+              <tip-box>
+                <p>Example:</p>
+                <p><a href="https://github.com/joestelmach/natty">Natty</a> is a Java library that can be used for parsing strings that represent dates e.g. <code>The 31st of April in the year 2008</code></p>
+              </tip-box>
             </div>
           </div>
         </panel>
@@ -123,7 +203,13 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>These are the typical steps required to use a library.</p>
+              <ol>
+                <li>Read the documentation to confirm that its functionality fits your needs</li>
+                <li>Check the license to confirm that it allows reuse in the way you plan to reuse it. For example, some libraries might allow non-commercial use only.</li>
+                <li>Download the library and make it accessible to your project. Alternatively, you can configure your dependency management tool to do it for you.</li>
+                <li>Call the library API from your code where you need to use the library functionality.</li>
+              </ol>
             </div>
           </div>
         </panel>
@@ -145,7 +231,39 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>The overall structure and execution flow of a specific category of software systems can be very similar. The similarity is an opportunity to reuse at a high scale.</p>
+              <tip-box>
+                <p>Running example:</p>
+                <p>IDEs for different programming languages are similar in how they support editing code, organizing project files, debugging, etc.</p>
+              </tip-box>
+              <p>A <em>software framework</em> is a reusable implementation of a software (or part thereof) providing <em>generic</em> functionality that can be selectively customized to produce a <em>specific</em> application.</p>
+              <tip-box>
+                <p>Running example:</p>
+                <p>Eclipse is an IDE framework that can be used to create IDEs for different programming languages.</p>
+              </tip-box>
+              <p>Some frameworks provide a complete implementation of a <em>default</em> behavior which makes them immediately usable.</p>
+              <tip-box>
+                <p>Running example:</p>
+                <p>Eclipse is a fully functional Java IDE out-of-the-box.</p>
+              </tip-box>
+              <p>A framework facilitates the adaptation and customization of some desired functionality.</p>
+              <tip-box>
+                <p>Running example:</p>
+                <p>Eclipse plugin system can be used to create an IDE for different programming languages while reusing most of the existing IDE features of Eclipse. E.g. <a href="https://marketplace.eclipse.org/content/pydev-python-ide-eclipse">https://marketplace.eclipse.org/content/pydev-python-ide-eclipse</a></p>
+              </tip-box>
+              <p>Some frameworks cover only a specific components or an aspect.</p>
+              <tip-box>
+                <p>Example:</p>
+                <p>JavaFx a framework for creating Java GUIs.</p>
+              </tip-box>
+              <tip-box>
+                <p>More examples:</p>
+                <ul>
+                  <li>Drupal: a framework for Web-based applications, content management systems in particular. Implemented using PHP</li>
+                  <li>Ruby on Rails : another Web-application framework similar to Drupal but uses Ruby instead of PHP</li>
+                  <li>JUnit: a framework for testing Java code.</li>
+                </ul>
+              </tip-box>
             </div>
           </div>
         </panel>
@@ -162,7 +280,17 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>Although both frameworks and libraries are reuse mechanisms, there are notable differences:</p>
+              <ul>
+                <li>
+                  <p><strong>Libraries are meant to be used ‘as is’ while frameworks are meant to be customized/extended.</strong> Examples: writing plugins for Eclipse so that it can be used as an IDE for different languages (C++, PHP, etc.), adding modules
+                    and themes to Drupal, and adding test cases to JUnit .</p>
+                </li>
+                <li>
+                  <p><strong>Your code calls the library code while the framework code calls your code.</strong> Frameworks use a technique called <em>inversion of control</em>, also called the “Hollywood principle” (i.e. don’t call us, we’ll call you!).
+                    That is, you write code that will be called by the framework, e.g. writing test methods that will be called by the JUnit framework. In the case of libraries, written code calls libraries.</p>
+                </li>
+              </ul>
             </div>
           </div>
         </panel>
@@ -184,7 +312,22 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>A <em>platform</em> provides a runtime environment for applications. A platform is often bundled with various libraries, tools, frameworks, and technologies in addition to a runtime environment but the defining characteristic of a software
+                platform is the presence of a runtime environment.</p>
+              <p>Technically, an operating system can be called a platform. For example, Windows PC is a platform for desktop applications while iOS is a platform for mobile apps.</p>
+              <p>Two well-known examples of platforms are JavaEE and .NET, both of which sit above Operating systems layer, and are used to develop <em>enterprise applications</em>. Infrastructure services such as connection pooling, load balancing, remote
+                code execution, transaction management, authentication, security, messaging etc. are done similarly in most
+                <trigger for="modal:enterprise-application" trigger="click">enterprise applications</trigger>. Both JavaEE and .NET provide these services to applications in a customizable way without developers having to implement them from scratch every time.</p>
+              <ul>
+                <li>JavaEE (Java Enterprise Edition) is both a framework and a platform for writing enterprise applications. The runtime used by the JavaEE applications is the JVM (Java Virtual Machine) that can run on different Operating Systems.</li>
+                <li>.NET is a similar platform and a framework. Its runtime is called CLR (Common Language Runtime) and usually used on Windows machines.</li>
+              </ul>
+              <modal title="**Enterprise Applications**" id="modal:enterprise-application">
+                <div>
+                  <p><strong>Enterprise Application</strong>: ‘enterprise applications’ means software applications used at organizations level and therefore has to meet much higher demands (such as in scalability, security, performance, and robustness)
+                    than software meant for individual use.</p>
+                </div>
+              </modal>
             </div>
           </div>
         </panel>
@@ -206,7 +349,10 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>Cloud computing is the delivery of computing as a service over the network, rather than a product running on a local machine. This means the actual hardware and software is located at a remote location, typically, at a large server farm,
+                while users access them over the network. Maintenance of the hardware and software is managed by the cloud provider while users typically pay for only the amount of services they use. This model is similar to the consumption of electricity;
+                the power company manages the power plant, while the consumers pay them only for the electricity used. The cloud computing model optimizes hardware and software utilization and reduces the cost to consumers. Furthermore, users can scale
+                up/down their utilization at will without having to upgrade their hardware and software. The traditional non-cloud model of computing is similar to everyone buying their own generators to create electricity for their own use.</p>
             </div>
           </div>
         </panel>
@@ -222,8 +368,25 @@
         </tip-box>
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
-            <div>
-              <p>...</p>
+            <div><img src="/se-book/reuse/cloudComputing/services/images/services.png" height="330">
+              <p></p>
+              <p>(source: Wikipedia)</p>
+              <p>Cloud computing can deliver computing services at three levels:</p>
+              <ol>
+                <li>
+                  <p><strong>Infrastructure as a service (IaaS)</strong>: IaaS delivers computer infrastructure as a service. For example, a user can deploy virtual servers on the cloud instead of buying physical hardware and installing server software on
+                    them. Another example would be a customer using storage space on the cloud for off-site storage of data. Rackspace is an example of an IaaS cloud provider. Amazon Elastic Compute Cloud (Amazon EC2) is another one.</p>
+                </li>
+                <li>
+                  <p><strong>Platform as a service (PaaS)</strong>: PaaS provides a platform on which developers can build applications. Developers do not have to worry about infrastructure issues such as deploying servers or load balancing as is required
+                    when using IaaS. Those aspects are automatically taken care of by the platform. The price to pay is reduced flexibility; applications written on PaaS are limited to facilities provided by the platform. A PaaS example is the Google
+                    App Engine where developers can build applications using Java, Python, PHP, or Go whereas Amazon EC2 allows users to deploy application written in any language on their virtual servers.</p>
+                </li>
+                <li>
+                  <p><strong>Software as a service (SaaS)</strong>: This is when applications can be accessed over the network instead of installing them on a local machine. For example, Google Docs is an SaaS word processing software, while Microsoft Word
+                    is a traditional word processing software.</p>
+                </li>
+              </ol>
             </div>
           </div>
         </panel>

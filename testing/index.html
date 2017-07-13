@@ -28,7 +28,54 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <blockquote>
+                <p>Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component.</p>
+                <p>–- source: IEEE</p>
+              </blockquote><img src="/se-book/testing/introduction/what/images/diagram.png" height="180">
+              <p></p>
+              <p>Testing entails the execution of a set of test cases. A test case specifies how to perform a test. At a minimum, it specifies the input to the <em>software under test (SUT)</em> and the expected behavior.</p>
+              <tip-box>
+                <p>Example: A minimal test case for testing a browser:</p>
+                <ul>
+                  <li><strong>Input</strong> – Start the browser using a blank page (vertical scrollbar disabled). Then, load ‘longfile.html’ located in the ‘test data’ folder.</li>
+                  <li><strong>Expected behavior</strong> – The scrollbar should be automatically enabled upon loading ‘longfile.html’.</li>
+                </ul>
+              </tip-box>
+              <p>Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.</p>
+              <panel header="Other details a test case can contain :two:" type="seamless">
+                <p>A more elaborate test case can have other details such as those given below.</p>
+                <ul>
+                  <li>A unique identifier : e.g. TC0034-a</li>
+                  <li>A descriptive name: e.g. vertical scrollbar activation for long web pages</li>
+                  <li>Objectives: e.g. to check whether the vertical scrollbar is correctly activated when a long web page is loaded to the browser</li>
+                  <li>Classification information: e.g. priority - medium, category - UI features</li>
+                  <li>Cleanup, if any: e.g. empty the browser cache.</li>
+                </ul>
+              </panel>
+              <p>For each test case we do the following:</p>
+              <ol>
+                <li>Feed the input to the SUT</li>
+                <li>Observe the actual output</li>
+                <li>Compare actual output with the expected output</li>
+              </ol>
+              <p>A test case <em>failure</em> is a mismatch between the expected behavior and the actual behavior. A failure is caused by a <em>defect</em> (or a bug).</p>
+              <tip-box>
+                <p>Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading ‘longfile.html’. The defect/bug causing that failure could be an uninitialized variable.</p>
+              </tip-box>
+              <panel header="A deeper look at the definition of testing :three:" type="seamless">
+                <p>Here is another definition of testing:</p>
+                <blockquote>
+                  <p>Software testing consists of the <em>dynamic</em> verification that a program provides <em>expected</em> behaviors on a <em>finite</em> set of test cases, suitably <em>selected</em> from the usually infinite execution domain.</p>
+                  <p>-– source: SWEBOKv3</p>
+                </blockquote>
+                <p>Some things to note (indicated by keywords in the above definition):</p>
+                <ul>
+                  <li><em>Dynamic</em>: Testing involves executing the software. It is not by examining the code statically.</li>
+                  <li><em>Finite</em>: In most non-trivial cases there are potentially infinite test scenarios but resource constraints dictate that we can test only a finite number of scenarios.</li>
+                  <li><em>Selected</em>: In most cases it is not possible to test all scenarios. That means we need to select what scenarios to test.</li>
+                  <li><em>Expected</em>: Testing requires some knowledge of how the software is expected to behave.</li>
+                </ul>
+              </panel>
             </div>
           </div>
         </panel>
@@ -45,7 +92,7 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>Testability is an indication of how easy it is to test an SUT. As testability depends a lot on the design and implementation. We should try to increase the testability of our software when we design and implement them.</p>
             </div>
           </div>
         </panel>
@@ -55,6 +102,7 @@
   <h2 id="testing-types">Testing Types</h2>
   <panel header="================================================================" type="seamless" alt="testing types">
     <div>
+      <p>Testing can be categorized based on the level of testing, the objective of testing, who is doing the testing, etc.</p>
       <div>
         <h3 id="unit-testing">Unit Testing</h3>
         <panel type="seamless" header="%%-----------------------------------------%%">
@@ -68,7 +116,7 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p>Unit testing involves testing individual units (methods, classes, subsystems, …) and finding out whether each piece works correctly in isolation. A proper unit test require the unit we are testing to be isolated from other code.</p>
                 </div>
               </panel>
             </div>
@@ -81,7 +129,8 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p>During unit testing, stubs are used in place of collaborating objects in order to isolate the SUT from those objects. Doing so prevents bugs within the collaborating objects from interfering with the test.</p>
+                  <p><strong>A stub has the same interface as the collaborator it replaces, but its implementation is meant to be so simple that it cannot have any bugs. It mimics the responses of the collaborating object, but only for the inputs used for testing.</strong>                    That is, it does not know how to respond to any other inputs. These mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
                 </div>
               </panel>
             </div>
@@ -94,7 +143,8 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p>In addition to Stubs, there are other type of replacements we use during testing. E.g. <em>Mocks, Fakes, Dummies, Spies.</em></p>
+                  <p>Refer <a href="https://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs">this article</a> for a more elaborate description</p>
                 </div>
               </panel>
             </div>
@@ -114,7 +164,15 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p>In <em>Integration testing</em> we test whether different parts of the software ‘work together’ (i.e. integrates) as expected. Here, we assume the individual parts have been unit tested already. Therefore, integration tests aim to discover
+                    bugs in the ‘glue code’ that are often the result of misunderstanding of what the parts are supposed to do vs what the parts are actually doing. For example let us assume a class <code>Car</code> users classes <code>Engine</code> and
+                    <code>Wheel</code>.</p>
+                  <ul>
+                    <li>First, we should unit test <code>Engine</code> and <code>Wheel</code>.</li>
+                    <li>Next, we should unit test <code>Car</code> in isolation of <code>Engine</code> and <code>Wheel</code>, using stubs for <code>Engine</code> and <code>Wheel</code>.</li>
+                    <li>After that, we can do an integration test for <code>Car</code> using it together with the <code>Engine</code> and <code>Wheel</code> classes to ensure the <code>Car</code> integrates properly with the <code>Engine</code> and the <code>Wheel</code>.</li>
+                  </ul>
+                  <p>In the example above, if the <code>Car</code> class assumed a <code>Wheel</code> can support 200 mph speed but the <code>Wheel</code> can only support 150 mph, it is the integration test that is supposed to uncover this discrepancy.</p>
                 </div>
               </panel>
             </div>
@@ -134,7 +192,24 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p>In system testing we take the <em>whole system</em> and test it <em>against the system specification</em>.</p>
+                  <p>System testing is typically done by a testing team (also called a QA team).</p>
+                  <p>System test cases are based on the specified external behavior of the system. Sometimes, system tests go beyond the bounds defined in the specification. This is useful when testing that the system fails ‘gracefully’ having pushed beyond
+                    its limits.</p>
+                  <tip-box>
+                    <p>Example:</p>
+                    <p>Take the example of an SUT (software under test) that is a browser capable of handling web pages containing up to 5000 characters. A test case can involve loading a web page containing more than 5000 characters. The expected ‘graceful’
+                      behavior would be to ‘abort the loading of the page and show a meaningful error message’. This test case would fail if the browser attempted to load the large file anyway and crashed.</p>
+                  </tip-box>
+                  <p>System testing includes testing against non-functional requirements too. Here are some examples.</p>
+                  <ul>
+                    <li><em>Performance testing</em> – to ensure the system responds quickly.</li>
+                    <li><em>Load testing</em> (also called <em>stress testing</em> or <em>scalability testing</em>) – to ensure the system can work under heavy load.</li>
+                    <li><em>Security testing</em> – to test how secure the system is.</li>
+                    <li><em>Compatibility testing, interoperability testing</em> – to check whether the system can work with other systems.</li>
+                    <li><em>Usability testing</em> – to test how easy it is to use the system.</li>
+                    <li><em>Portability testing</em> – to test whether the system works on different platforms.</li>
+                  </ul>
                 </div>
               </panel>
             </div>
@@ -154,7 +229,9 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p><em>Alpha testing</em> is performed by the users, under controlled conditions set by the software development team.</p>
+                  <p><em>Beta testing</em> is performed by a selected subset of target users of the system in their natural work setting.</p>
+                  <p>An <em>open beta release</em> is the release of not-yet-production-quality-but-almost-there software to the general population. For example, Google’s Gmail was in ‘beta’ for many years before the label was finally removed.</p>
                 </div>
               </panel>
             </div>
@@ -174,7 +251,8 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p>Developer testing is the testing done by the developers themselves as opposed to professional testers or end users.</p>
+                  <p>Examples of developer testing: unit testing, integration testing</p>
                 </div>
               </panel>
             </div>
@@ -187,7 +265,46 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p>At first it might seem logical to have the system built in its entirety first and then getting it tested by professional testers. Here are the downsides of that approach.</p>
+                  <ul>
+                    <li>Locating the cause of such a test case failure is difficult due to a large search space; in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple
+                      inter-related bugs.</li>
+                    <li>Fixing a bug found during such testing could result in major rework, especially if the bug originated during the design or during requirements specification (i.e. a faulty design or faulty requirements).</li>
+                    <li>One bug might 'hide' other bugs, which could emerge only after the first bug is fixed.</li>
+                    <li>Too many bugs found during system testing can lead to delivery delays.</li>
+                  </ul>
+                  <p>Due to the above reasons, it is better to do early developers testing. In fact, there is a widely accepted rule of thumb that says <em>the earlier a bug is found, the easier and cheaper to have it fixed</em>, as illustrated by the graph
+                    below.</p><img src="/se-book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
+                  <p></p>
+                </div>
+                <div>
+                  <div>
+                    <panel header=":muscle: Exercises" type="info" expandable="">
+                      <div>
+                        <panel header="Q: Discuss advantages and disadvantages of developers testing their own code.">
+                          <question has-input="true">
+                            <p>Discuss advantages and disadvantages of developers testing their own code.</p>
+                            <div slot="answer">
+                              <p>Advantages:</p>
+                              <ul>
+                                <li>Can be done early (the earlier we find a bug, the cheaper it is to fix).</li>
+                                <li>Can be done at lower levels, for examples, at operation and class level (testers usually test the system at UI level).</li>
+                                <li>It is possible to do more thorough testing since developers know the expected external behavior as well as the internal structure of the component.</li>
+                                <li>It forces developers to take responsibility for their own work (they cannot claim that “testing is the job of the testers”).</li>
+                              </ul>
+                              <p>Disadvantages:</p>
+                              <ul>
+                                <li>Developer may unconsciously test only situations that he knows to work (i.e. test it too “gently”).</li>
+                                <li>Developer may be blind to his own mistakes (if he did not consider a certain combination of input while writing code, he is likely to miss it again during testing).</li>
+                                <li>Developer may have misunderstood what the SUT is supposed to do in the first place.</li>
+                                <li>Developer may lack the testing expertise.</li>
+                              </ul>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                    </panel>
+                  </div>
                 </div>
               </panel>
             </div>
@@ -207,7 +324,25 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p>Here are two alternative approaches to testing a software.</p>
+                  <ol>
+                    <li>Scripted testing: First write a set of test cases based on the system specification, perform the test cases.</li>
+                    <li>Exploratory testing: Devise test cases on-the-fly, creating new test cases based on the results of the past test cases.</li>
+                  </ol>
+                  <p>Exploratory testing is ‘the simultaneous learning, test design, and test execution’
+                    <trigger for="pop:bach-et-explained">[source: bach-et-explained]</trigger> whereby the nature of the follow-up test case is decided based on the behavior of the previous test cases. In other words, running the system and trying out various operations. It is called <em>exploratory testing</em>                    because testing is driven by observations during testing. Exploratory testing is also known as <em>reactive testing, error guessing technique, attack-based testing,</em> and <em>bug hunting</em>. Exploratory testing usually starts
+                    with areas identified as error-prone, based on the tester’s past experience with similar systems. One tends to conduct more tests for those operations where more faults are found. For example,</p>
+                  <blockquote>
+                    <p>“Hmm... looks like feature x is broken. This usually means feature n and k could be broken too; we need to look at them soon. But before that, let us give a good test run to feature y because users can still use the product if feature
+                      y works, even if x doesn’t work. Now, if feature y doesn’t work 100%, we have a major problem and this has to be made known to the development team sooner rather than later...”</p>
+                  </blockquote>
+                  <popover id="pop:bach-et-explained" title="bach-et-explained :mag:" placement="right">
+                    <div slot="content">
+                      <div>
+                        <p>Exploratory testing explained, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a> (James Bach is an industry thought leader in software testing). Softcopy available at <a href="http://www.satisfice.com/articles/et-article.pdf">http://www.satisfice.com/articles/et-article.pdf</a></p>
+                      </div>
+                    </div>
+                  </popover>
                 </div>
               </panel>
             </div>
@@ -220,7 +355,41 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p>So which approach is better – scripted or exploratory?</p>
+                  <p>The success of exploratory testing depends on the tester’s prior experience and intuition. Exploratory testing should be done by experienced testers, using a clear strategy/plan/framework. Ad-hoc exploratory testing by unskilled or inexperienced
+                    testers without a clear strategy is not recommended for real-world non-trivial systems. While exploratory testing may allow us to detect some problems in a relatively short time, it is not prudent to use exploratory testing as the
+                    sole means of testing a critical system.</p>
+                  <p>Scripted testing is more systematic, and hence, likely to discover more bugs given sufficient time, while exploratory testing would aid in quick error discovery, especially if the tester has a lot of experience in testing similar systems.</p>
+                  <blockquote>
+                    <p>In some contexts, you will achieve your testing mission better through a more scripted approach; in other contexts, your mission will benefit more from the ability to create and improve tests as you execute them. I find that most situations
+                      benefit from a mix of scripted and exploratory approaches.</p>
+                    <p>--
+                      <trigger for="pop:bach-et-explained">[source: bach-et-explained]</trigger>
+                    </p>
+                  </blockquote>
+                  <popover id="pop:bach-et-explained" title="bach-et-explained :mag:" placement="right">
+                    <div slot="content">
+                      <div>
+                        <p>Exploratory testing explained, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a> (James Bach is an industry thought leader in software testing). Softcopy available at <a href="http://www.satisfice.com/articles/et-article.pdf">http://www.satisfice.com/articles/et-article.pdf</a></p>
+                      </div>
+                    </div>
+                  </popover>
+                </div>
+                <div>
+                  <div>
+                    <panel header=":muscle: Exercises" type="info" expandable="">
+                      <div>
+                        <panel header="Q: Explain the concept of exploratory testing using Minesweeper as an example.">
+                          <question has-input="true">
+                            <p>Explain the concept of exploratory testing using Minesweeper as an example.</p>
+                            <div slot="answer">
+                              <p>When we test the Minesweeper by simply playing it in various ways, especially trying out those that are likely to be buggy, that would be exploratory testing.</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                    </panel>
+                  </div>
                 </div>
               </panel>
             </div>
@@ -240,7 +409,9 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p><em>Acceptance testing</em>, also called <em>User Acceptance Testing (UAT)</em>, is a type of validation test carried out to show that the delivered system meets the requirements of the customer.</p>
+                  <p>Acceptance tests give an assurance to the customer that the system does what it is intended to do. Acceptance test cases are often defined at the beginning of the project, usually based on the use case specification. Successful completion
+                    of UAT is often a prerequisite to the project signoff.</p>
                 </div>
               </panel>
             </div>
@@ -253,7 +424,46 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p>Acceptance testing comes after system testing. Similar to system testing, acceptance testing involves testing the whole system.</p>
+                  <p>Some differences between system testing and acceptance testing:</p>
+                  <table class="markbind-table table">
+                    <thead>
+                      <tr>
+                        <th style="text-align:center">System Testing</th>
+                        <th style="text-align:center">Acceptance Testing</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="text-align:center">Done against the system specification</td>
+                        <td style="text-align:center">Done against the requirements specification (see note 1 below)</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">Done by testers of the project team</td>
+                        <td style="text-align:center">Done by a team that represents the customer</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">Done on the development environment or a test bed</td>
+                        <td style="text-align:center">Done on the deployment site or on a close simulation of the deployment site</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">Both positive and negative test cases</td>
+                        <td style="text-align:center">More focus on positive test cases</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <tip-box>
+                    <p><strong>Requirement Specification vs System Specification</strong></p>
+                    <p>The requirement specification need not be the same as the system specification. Some example differences:</p>
+                    <ul>
+                      <li>Requirements specification could be limited to how the system behaves in normal working conditions while the system specification can also include details on how it will fail gracefully when pushed beyond limits, how to recover,</li>
+                      <li>System specification could contain additional APIs not available for users (for the use of developers/testers), etc • Requirement specification could be written in terms of problems that need to be solved (e.g. provide a method to
+                        locate an email quickly) while the system specification could be written in terms of how the system solve those problems (e.g. explain the email search feature).</li>
+                    </ul>
+                    <p>However, in many cases one document serves as both a requirement specification and a system specification.</p>
+                    <p><strong>Importance of testing on the deployment environment</strong></p>
+                    <p>A system could work perfectly on the development environment, but fail in the deployment environment due to subtle differences between the two.</p>
+                  </tip-box>
                 </div>
               </panel>
             </div>
@@ -273,7 +483,9 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p>When we modify a system that has been tested, the modification may result in some unintended and undesirable effects on the system. Such an effect is called a <em>regression</em>.</p>
+                  <p>To detect and correct regressions, we need to retest all related components. Testing with this intent is called <em>regression testing</em>.</p>
+                  <p>Regression testing is more effective when it is done frequently, after each small change. However, doing so can be prohibitively expensive if testing is done manually. Hence, regression testing is more practical when it is automated.</p>
                 </div>
               </panel>
             </div>
@@ -297,7 +509,7 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>An automated test case can be run programmatically and the result of the test case (pass or fail) is determined programmatically.</p>
             </div>
           </div>
         </panel>
@@ -314,7 +526,33 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>A simple way to test a text UI is using input/output re-direction. Let us assume we are testing a program ‘RouteStore’ which has a text UI. First, we store the test input in the text file ‘input.txt’. Similarly, we store the output we expect
+                from the SUT to another text file ‘expected.txt’. Now, we run the program as:</p>
+              <pre class="hljs"><code>java RouteStore < <span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.txt</span> > output<span class="hljs-selector-class">.txt</span>
+<span class="hljs-comment">// or</span>
+RouteStore<span class="hljs-selector-class">.exe</span> < <span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.txt</span> > output<span class="hljs-selector-class">.txt</span>
+</code></pre>
+              <p>The above redirects the text in ‘input.txt’ as the input to ‘RouteStore’ and similarly, redirects the output of RouteStore to a text file ‘output.txt’. Note that this does not require any code changes to RouteStore.</p>
+              <panel header="**The ‘>’ operator and the ‘<’ operator. :zero:**"
+                alt="Alternative Header">
+                <p>A command line program written in the usual way (i.e., the way you are used to writing them during the first year programming modules) takes input from keyboard and outputs to the console. That is because those two are default input and
+                  output streams, respectively. But you can change that behavior using ‘<code><</code>’ and ‘<code>></code>’ operators. For example, if you run <code>TextBuddy</code> in the DOS prompt, the output will be shown in the console. But if you
+                  run it like this</p>
+                <pre class="hljs"><code>TextBuddy > <span class="hljs-keyword">output</span>.txt (<span class="hljs-keyword">or</span> java TextBuddy > <span class="hljs-keyword">output</span>.txt)
+</code></pre>
+                <p>the Operating System then creates a file ‘output.txt’ and stores the output in that file instead of displaying it in the console. Program output using <code>System.out.println</code> (in Java) and <code>cout</code> (in C++) is directed
+                  to the console by default. When you add ‘<code>> output.txt</code>’, the OS redirects the output to ‘output.txt’ instead. No file I/O coding is required. Similarly, adding ‘<code>< input.txt</code>’ (or any other filename) makes the
+                  OS redirect the contents of the file as input to the program.</p>
+                <p>The link below explains how Windows does it:
+                  <a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">http://technet.microsoft.com/en-us/library/bb490982.aspx</a></p>
+              </panel>
+              <p></p>
+              <p>All we have to do now is to compare ‘output.txt’ with ‘expected.txt’. This can be done using a utility such as Windows FC (i.e. File Compare) command or a GUI tool such as Winmerge. For example, we can run the following two commands.</p>
+              <pre
+                class="hljs"><code>java RouteStore < <span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.txt</span> > output<span class="hljs-selector-class">.txt</span>
+FC output<span class="hljs-selector-class">.txt</span> expected<span class="hljs-selector-class">.txt</span>
+</code></pre>
+                <p>Note that the above technique is only suitable when testing text UIs, and only if the exact output is known.</p>
             </div>
           </div>
         </panel>
@@ -331,7 +569,54 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>Automated testing requires test drivers. A test driver is a module written specifically for ‘driving’ the <em>SUT (Software Under Test)</em> for the purpose of testing i.e. invoking the SUT with test inputs and verifying the behavior is
+                as expected. In the code example given below, <code>PayrollTest</code> is a test driver for the <code>Payroll</code> class that ‘drives’ the <code>PayRoll</code> class by sending it test inputs and printing out the output. However, it
+                does not verify if the output is as expected.</p>
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestDriver</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//test setup</span>
+        Payroll p = <span class="hljs-keyword">new</span> Payroll();
+
+        <span class="hljs-comment">//test case 1</span>
+        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});
+        print(<span class="hljs-string">"Test 1 output "</span> + p.totalSalary());
+
+        <span class="hljs-comment">//test case 2</span>
+        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});
+        print(<span class="hljs-string">"Test 2 output "</span> + p.totalSalary());
+
+        <span class="hljs-comment">//more tests</span>
+        System.out.println(<span class="hljs-string">"Testing completed"</span>);
+    }
+    ...
+}
+</code></pre>
+              <p>The <code>PayrollTest</code> class below not only drives the SUT Payroll class using test inputs, it also automatically verifies that output for each test input in as expected.</p>
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestAtd</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+
+        <span class="hljs-comment">//test setup</span>
+        Payroll p = <span class="hljs-keyword">new</span> Payroll();
+
+        <span class="hljs-comment">//test case 1</span>
+        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});
+        <span class="hljs-comment">// automatically verify the response</span>
+        <span class="hljs-keyword">if</span> (p.totalSalary() != <span class="hljs-number">6400</span>) {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"case 1 failed "</span>);
+        }
+
+        <span class="hljs-comment">//test case 2</span>
+        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});
+        <span class="hljs-keyword">if</span> (p.totalSalary() != <span class="hljs-number">2300</span>) {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"case 2 failed "</span>);
+        }
+
+        <span class="hljs-comment">//more tests...</span>
+
+        System.out.println(<span class="hljs-string">"All tests passed"</span>);
+    }
+}
+</code></pre>
             </div>
           </div>
         </panel>
@@ -348,7 +633,29 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>JUnit is a tool for automated testing of Java programs. Similar tools are available for other languages.</p>
+              <p>Below is the code of an automated test for Payroll class, written using JUnit libraries.</p>
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestJUnit</span> </span>{
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testTotalSalary</span><span class="hljs-params">()</span></span>{
+        Payroll p = <span class="hljs-keyword">new</span> Payroll();
+
+        <span class="hljs-comment">//test case 1</span>
+        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});
+        assertEquals(p.totalSalary(), <span class="hljs-number">6400</span>);
+
+        <span class="hljs-comment">//test case 2</span>
+        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});
+        assertEquals(p.totalSalary(), <span class="hljs-number">2300</span>);
+
+        <span class="hljs-comment">//more tests...</span>
+    }
+}
+</code></pre>
+              <p>Most modern IDEs come packaged with integrated support for testing tools. The figure below shows the JUnit output when running some JUnit tests using the Eclipse IDE.</p><img src="/se-book/testing/testAutomation/tools/images/junit.png"
+                height="190">
+              <p></p>
             </div>
           </div>
         </panel>
@@ -365,7 +672,20 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>If a software product has a GUI component, all product-level testing (i.e. the types of testing mentioned above) need to be done using the GUI. However, testing the GUI is much harder than testing the CLI (command line interface) or API,
+                for the following reasons:</p>
+              <ul>
+                <li>Most GUIs contain a large number of different operations, many of which can be performed in any arbitrary order.</li>
+                <li>GUI operations are more difficult to automate than API testing. Reliably automating GUI operations and automatically verifying whether the GUI behaves as expected is harder than calling an operation and comparing its return value with
+                  an expected value. Therefore, automated regression testing of GUIs is rather difficult. However, there are testing tools that can automate GUI testing. For example, TestFx and support automated testing of JavaFX GUIs and Selenium (
+                  <a
+                    href="http://seleniumhq.org/">http://seleniumhq.org/</a>) can be used to automate testing of Web application UIs. VisualStudio supports ‘record replay’ type of GUI test automation.</li>
+                <li>The appearance of a GUI (and sometimes even behavior) can be different across platforms and even environments. For example, a GUI can behave differently based on whether it is minimized or maximized, in focus or out of focus, and in a
+                  high resolution display or a low resolution display.</li>
+              </ul><img src="/se-book/testing/testAutomation/testingGuis/images/diagram.png" height="120">
+              <p></p>
+              <p>One approach to overcome the challenges of testing GUIs is to minimize logic aspects in the GUI. Then, bypass the GUI to test the rest of the system using automated API testing. While this still requires the GUI to be tested manually, the
+                number of such manual test cases can be reduced as most of the system has been tested using automated API testing.</p>
             </div>
           </div>
         </panel>
@@ -387,7 +707,51 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>In the context of testing, coverage is a metric used to measure the extent to which testing exercises the code.</p>
+              <p>Here are some examples of different coverage criteria:</p>
+              <ul>
+                <li>
+                  <p><strong>Function/method coverage</strong> measures the coverage in terms of functions executed e.g. testing executed 90 out of 100 functions.</p>
+                </li>
+                <li>
+                  <p><strong>Statement coverage</strong> measures coverage in terms of the number of line of code executed e.g. testing executed 23k out of 25k LOC.</p>
+                </li>
+                <li>
+                  <p><strong>Decision/branch coverage</strong> measures coverage in terms of decision points e.g. an if statement evaluated to both true and false with separate test cases during testing.</p>
+                </li>
+                <li>
+                  <p><strong>Condition coverage</strong> measures coverage in terms of boolean sub-expressions, each evaluated to both true and false with different test cases. Condition coverage is not the same as the decision coverage; e.g. if(x > 2 &&
+                    x
+                    < 44) is considered one decision point but two conditions. For 100% branch or decision coverage, two test cases are required:</p>
+                      <ul>
+                        <li>
+                          <p>(x > 2 && x
+                            < 44)==t rue : [e.g. x=4 ]</p>
+                        </li>
+                        <li>
+                          <p>(x > 2 && x
+                            < 44)==f alse : [e.g. x=1 00]</p>
+                        </li>
+                        <li>
+                          <p>For 100% condition coverage, three test cases are required</p>
+                          <ul>
+                            <li>(x > 2) == true , (x
+                              < 44)==t rue : [e.g. x=4 ]</li>
+                                <li>(x
+                                  < 44)==f alse : [e.g. x=1 00]</li>
+                                    <li>(x > 2) == false : [e.g. x = 0]</li>
+                          </ul>
+                          </li>
+                      </ul>
+                      </li>
+                      <li>
+                        <p><strong>Path coverage</strong> measures coverage in terms of possible paths through a given part of the code executed. 100% path coverage means all possible paths have been executed. A commonly used notation for path analysis is
+                          called the <em>Control Flow Graph (CFG)</em>. For an introduction to CFGs, refer to the side-note below.</p>
+                      </li>
+                      <li>
+                        <p><strong>Entry/exit coverage</strong> measures coverage in terms of possible <em>calls to</em> and <em>exits</em> from the operations in the SUT.</p>
+                      </li>
+              </ul>
             </div>
           </div>
         </panel>
@@ -404,7 +768,9 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>Measuring coverage is often done using <em>coverage analysis tools</em>. Coverage measurements are used to improve testing E&E (Effectiveness and Efficiency). For example, if a set of test cases does not achieve 100% branch coverage, more
+                test cases are added to cover missed branches.</p>
+              <p>Most IDEs have inbuilt support for measuring test coverage, or at least have plugins that can measure test coverage.</p>
             </div>
           </div>
         </panel>
@@ -426,7 +792,10 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p><em>Dependency injection</em> is the process of ‘injecting’ objects to replace current dependencies with a different object. This is often used to inject stubs to isolate the SUT from other collaborating objects so that it can be tested
+                independently. In the example below, a Foo object normally depends on a Bar object, but we have injected a BarStub object so that the Foo object no longer depends on a Bar object. Now we can test the Foo object in isolation from the Bar
+                object.</p><img src="/se-book/testing/dependencyInjection/what/images/diagram.png" height="150">
+              <p></p>
             </div>
           </div>
         </panel>
@@ -443,7 +812,67 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>Given next is a sample testing scenario that tests the <code>totalSalary</code> of the <code>Payroll</code> class. The production version of the <code>totalSalary</code> method collaborates with the <code>SalaryManager</code> object to calculate
+                the return value. During testing, the <code>SalaryManager</code> object is substituted with a <code>SalaryManagerStub</code> object which responds with hard-coded return values.</p>
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestDriver</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//test setup</span>
+        Payroll p = <span class="hljs-keyword">new</span> Payroll();
+        p.setSalaryManager(<span class="hljs-keyword">new</span> SalaryManagerStub()); <span class="hljs-comment">//dependency injection</span>
+        <span class="hljs-comment">//test case 1</span>
+        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});
+        assertEquals(<span class="hljs-number">2500.0</span>, p.totalSalary());
+        <span class="hljs-comment">//test case 2</span>
+        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});
+        assertEquals(<span class="hljs-number">1000.0</span>, p.totalSalary());
+        <span class="hljs-comment">//more tests</span>
+        System.out.println(<span class="hljs-string">"Testing completed"</span>);
+    }
+}
+</code></pre>
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll</span> </span>{
+    <span class="hljs-keyword">private</span> SalaryManager manager = <span class="hljs-keyword">new</span> SalaryManager();
+    <span class="hljs-keyword">private</span> String[] employees;
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setEmployees</span><span class="hljs-params">(String[] employees)</span> </span>{
+        <span class="hljs-keyword">this</span>.employees = employees;
+    }
+
+    <span class="hljs-comment">/*the operation below is used to substitute the actual SalaryManager
+    with a stub used for testing */</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setSalaryManager</span><span class="hljs-params">(SalaryManager sm)</span> </span>{
+       <span class="hljs-keyword">this</span>. manager = sm;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">totalSalary</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">double</span> total = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i < employees.length; i++){
+            total += manager.getSalaryForEmployee(employees[i]);
+        }
+        <span class="hljs-keyword">return</span> total;
+    }
+}
+</code></pre>
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SalaryManager</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">getSalaryForEmployee</span><span class="hljs-params">(String empID)</span></span>{
+        <span class="hljs-comment">//code to access employee’s salary history</span>
+        <span class="hljs-comment">//code to calculate total salary paid and return it</span>
+    }
+}
+</code></pre>
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SalaryManagerStub</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">SalaryManager</span> </span>{
+    <span class="hljs-comment">/* this method returns hard coded values used for testing */</span>
+    <span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">getSalaryForEmployee</span><span class="hljs-params">(String empID)</span> </span>{
+        <span class="hljs-keyword">if</span>(empID.equals(<span class="hljs-string">"E001"</span>)) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1000.0</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(empID.equals(<span class="hljs-string">"E002"</span>)) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1500.0</span>;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"unknown id"</span>);
+        }
+    }
+}
+</code></pre>
             </div>
           </div>
         </panel>
@@ -465,7 +894,8 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>Typically, tests are written after writing the SUT. However, TDD advocates writing the tests before writing the SUT. In other words, first define the precise behavior of the SUT using test cases, and then write the SUT to match the specified
+                behavior. While TDD has its fair share of detractors, there are many who consider it a good way to reduce defects.</p>
             </div>
           </div>
         </panel>
@@ -482,7 +912,17 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>...</p>
+              <p>Note that TDD does not imply writing all the test cases first before writing functional code. Rather, proceed in small steps:</p>
+              <ol>
+                <li>Decide what behavior to implement.</li>
+                <li>Write test cases to test that behavior.</li>
+                <li>Run those test cases and watch them fail.</li>
+                <li>Implement the behavior.</li>
+                <li>Run the test case.</li>
+                <li>Keep modifying the code and rerunning test cases until they all pass.</li>
+                <li>Refactor code to improve quality.</li>
+                <li>Repeat the cycle for each small unit of behavior that needs to be implemented.</li>
+              </ol>
             </div>
           </div>
         </panel>

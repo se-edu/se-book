@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/useCases.css">
+<link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
 Preconditions specify the specific state we expect the system to be in before the use case starts.
 

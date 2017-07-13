@@ -2432,7 +2432,8 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p>Workflows define the flow or a connected sequence of steps in which a process or a set of tasks is executed. Understanding the workflow of the problem domain is important if the problem that is to be solved is connected to the workflow.</p>
+                  <p><strong>A UML Activity diagram (AD) can model workflows.</strong></p>
                 </div>
               </panel>
             </div>
@@ -2453,7 +2454,9 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p>An activity diagram (AD) consists of a sequence of actions and control flows. An <em>action</em> is a single step in an activity. It is shown as a rectangle with <strong>rounded</strong> edges. A control flow shows the flow of control
+                    from one action to the next. It is shown by drawing a line with an arrow-head to show the direction of the flow.</p><img src="/se-book/uml/activityDiagrams/basicNotations/linearPaths/images/diagram.png" height="230">
+                  <p></p>
                 </div>
               </panel>
             </div>
@@ -2466,7 +2469,14 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p><em>Branch nodes</em> and <em>merge nodes</em> have the same notation: a <strong>diamond</strong> shape. They are used to show alternative (not parallel) paths through the AD. Each control flow exiting a <em>Branch node</em> has a guard
+                    condition which allows control to flow only if the guard condition is satisfied. Therefore, a <em>guard</em> is a boolean condition that should be true for execution to take a specific path.</p><img src="/se-book/uml/activityDiagrams/basicNotations/alternatePaths/images/diagram.png"
+                    height="230">
+                  <p></p>
+                  <tip-box>
+                    <p>Example: AD for the Minesweeper (MS) that shows actions done by the player and the game (MS).</p><img src="/se-book/uml/activityDiagrams/basicNotations/alternatePaths/images/minesweeper.png" height="240">
+                    <p></p>
+                  </tip-box>
                 </div>
               </panel>
             </div>
@@ -2479,7 +2489,9 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p><em>Forks</em> and <em>joins</em> have the same notation: a <strong>bar</strong>. They indicate the start and end of concurrent flows of control. The following diagram shows an example of their use. For <em>join</em>, execution along
+                    all incoming control flows should be complete before the execution starts on the outgoing control flow.</p><img src="/se-book/uml/activityDiagrams/basicNotations/parallelPaths/images/diagram.png" height="220">
+                  <p></p>
                 </div>
               </panel>
             </div>
@@ -2492,7 +2504,13 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <tip-box>
+                    <p>Here is the AD for a game of ‘snakes and ladders’.</p><img src="/se-book/uml/activityDiagrams/basicNotations/rakes/images/snakesAndLadders.png" height="230">
+                    <p></p>
+                  </tip-box>
+                  <p>The <em>rake</em> symbol (in the “Move piece” action above) is used to show that an action is described in another subsidiary activity diagram elsewhere. That diagram is given below.</p><img src="/se-book/uml/activityDiagrams/basicNotations/rakes/images/movePiece.png"
+                    height="230">
+                  <p></p>
                 </div>
               </panel>
             </div>
@@ -2505,7 +2523,10 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <p>It is possible to <em>partition</em> an activity diagram to show who is doing which action. Such partitioned activity diagrams are sometime called <em>swimlane diagrams</em>.</p><img src="/se-book/uml/activityDiagrams/basicNotations/swimlanes/images/diagram.png"
+                    height="220">
+                  <p></p>
+                  <p>Note: Only essential elements of ADs are covered in this handout.</p>
                 </div>
               </panel>
             </div>
@@ -2518,7 +2539,37 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>...</p>
+                  <div>
+                    <panel header=":muscle: Exercises" type="info" expandable="">
+                      <div>
+                        <panel header="Q: Adding features to Minesweeper AD :three:">
+                          <question has-input="true">
+                            <p>Given below is the high-level game logic of the Minesweeper, drawn from the point of view of the player.</p><img src="/se-book/uml/activityDiagrams/basicNotations/combined/images/minesweeperQuestion.png" height="220">
+                            <p></p>
+                            <p>Incorporate the following new features to the above AD.</p>
+                            <p><strong>(a) timing</strong></p>
+                            <p>Description: The game keeps track of the total time spent on a game. The counting starts from the moment the first cell is cleared/marked and stops when the game is won or lost. Time elapsed is shown to the player after every
+                              mark/clear operation.</p>
+                            <p><strong>(b) standing_ground</strong></p>
+                            <p>Description: At the beginning of the game, the player chooses five cells to be revealed without penalty. This is done one cell at a time. If the cell so selected is mined, it will be marked automatically. The objective is to
+                              give some “standing ground” to the player from which he/she can deduce remaining cells. The player cannot mark or clear cells until the standing ground is selected.</p>
+                            <p><strong>(c) tolerate</strong></p>
+                            <p>Description: Marking a cell incorrectly is tolerated as long as the number of cells does not exceed the total mines. Marked cells can be unmarked. The player is not allowed to mark more cells if the total number of marked cells
+                              equals the total number of mines.</p>
+                            <div slot="answer">
+                              <p><strong>(a) No change to the AD</strong></p>
+                              <p>After incorporating (b)</p><img src="/se-book/uml/activityDiagrams/basicNotations/combined/images/minesweeperAnswerA.png" height="220">
+                              <p></p>
+                              <p>Given above is a minimal change. It is OK to show more details of the ‘clear standing ground’ action or show it as a separate AD.</p>
+                              <p>After incorporating (c)</p><img src="/se-book/uml/activityDiagrams/basicNotations/combined/images/minesweeperAnswerB.png" height="290">
+                              <p></p>
+                              <p>Note that some actions/paths have been deleted. The above diagram uses a diamond as either a branch or a merge (but not both). It is ok to use a diamond as both a merge and branch, as long as it does not lead to ambiguities.</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                    </panel>
+                  </div>
                 </div>
               </panel>
             </div>
@@ -2546,7 +2597,10 @@
           <panel type="seamless" header=" %%- - - - - - - - - -%%">
             <div>
               <div>
-                <p>...</p>
+                <p>UML notes are used to augment a UML diagram with additional information. These notes can be shown connected to a particular element in the diagram or can be shown without a connection. The diagram below shows examples of both.</p>
+                <img
+                  src="/se-book/uml/notes/notes/images/adminProfessor.png" height="120">
+                  <p></p>
               </div>
             </div>
           </panel>
@@ -2563,7 +2617,9 @@
           <panel type="seamless" header=" %%- - - - - - - - - -%%">
             <div>
               <div>
-                <p>...</p>
+                <p>A note can be used to specify a <em>constraint</em><strong>within curly brackets</strong>. Natural language or a formal notation such as OCL (Object Constraint Language) may be used to specify constraints. OCL is beyond the scope of this
+                  handout.</p><img src="/se-book/uml/notes/constraints/images/playerTurn.png" height="120">
+                <p></p>
               </div>
             </div>
           </panel>

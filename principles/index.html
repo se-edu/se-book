@@ -26,7 +26,7 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <p>Different principles have varying degrees of formality – rules, opinions, rules of thumb, observations, and axioms. Hence, their applicability is wider with correspondingly greater overlap as compared to patterns.</p>
           </div>
         </div>
       </panel>
@@ -43,7 +43,25 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <tip-box type="primary">
+              <div>
+                <p><strong>Single Responsibility Principle (SRP)</strong>: A class should have one, and only one, reason to change. -- Robert C. Martin</p>
+              </div>
+            </tip-box>
+            <p>If a class has only one responsibility, it needs to change only when there is a change to that responsibility.</p>
+            <tip-box>
+              <p>Example:</p>
+              <p>Consider a <code>TextUi</code> class that does parsing of the user commands as well as interacting with the user. That class needs to change when the formatting of the UI changes as well as when the syntax of the user command changes. Hence,
+                such a class does not follow the SRP.</p>
+            </tip-box>
+          </div>
+          <div>
+            <div>
+              <panel header="Resources" expanded="" type="default">
+                <p>[Book Chapter] Single Responsibility Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+                <p><a href="https://drive.google.com/file/d/0ByOwmqah_nuGNHEtcU5OekdDMkk/view">Single Responsibility Principle</a> - A book chapter on SRP, written by the father of the principle itself Robert C Martin.</p>
+              </panel>
+            </div>
           </div>
         </div>
       </panel>
@@ -60,7 +78,31 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <tip-box type="primary">
+              <div>
+                <p><strong>Interface Segregation Principle (ISP)</strong>: No client should be forced to depend on methods it does not use.</p>
+              </div>
+            </tip-box>
+            <tip-box>
+              <p>Example:</p>
+              <p>The <code>Payroll</code> class should not depend on the <code>AdminStaff</code> class because it does not use the <code>arrangeMeeting()</code> method. Instead, it should depend on the <code>SalariedStaff</code> interface.</p>
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll</span> </span>{
+    <span class="hljs-comment">//...    </span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalaries</span><span class="hljs-params">(AdminStaff adminStaff)</span></span>{ <span class="hljs-comment">//violates ISP</span>
+        <span class="hljs-comment">//...</span>
+    }
+
+}
+</code></pre>
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll</span> </span>{
+    <span class="hljs-comment">//...    </span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalaries</span><span class="hljs-params">(SalariedStaff staff)</span></span>{ <span class="hljs-comment">//does not violate ISP</span>
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre><img src="/se-book/principles/interfaceSegregationPrinciple/images/payroll.png" height="200">
+              <p></p>
+            </tip-box>
           </div>
         </div>
       </panel>
@@ -77,7 +119,31 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <tip-box type="primary">
+              <div>
+                <p><strong>Liskov Substitution Principle (LSP)</strong>: Derived classes must be substitutable for their base classes. -- Barbara Liskov</p>
+              </div>
+            </tip-box>
+            <p>In other words, if a program module is using a super class, then the reference to the super class can be replaced with a sub class without affecting the functionality of the program module.</p>
+            <p>As we know, Java already allows substituting objects of sub classes where an object of the super class is expected. However, that does not mean that doing so will not break the functionality of the code. To follow LSP, we should be careful
+              not to contradict the behavior specified by the super class.</p>
+            <tip-box>
+              <p>Example:</p><img src="/se-book/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200">
+              <p></p>
+              <p>Suppose the <code>Payroll</code> class depends on the <code>adjustMySalary(int percent)</code> method of the <code>Staff</code> class. Furthermore, the <code>Staff</code> class states that the <code>adjustMySalary</code> method will work
+                for all positive percent values. Both <code>Admin</code> and <code>Academic</code> classes override the <code>adjustMySalary</code> method. Now consider the following:</p>
+              <ul>
+                <li><code>Admin#adjustMySalary</code> method works for both negative and positive percent values.</li>
+                <li><code>Academic#adjustMySalary</code> method works for percent values 1..100 only.</li>
+              </ul>
+              <p>In the above scenario,</p>
+              <ul>
+                <li><code>Admin</code> class follows LSP because it fulfills <code>Payroll</code>’s expectation of <code>Staff</code> objects (i.e. it works for all positive values). Substituting <code>Admin</code> objects for Staff objects will not break
+                  the <code>Payroll</code> class functionality.</li>
+                <li><code>Academic</code> class violates LSP because it will not work for percent values over 100 as expected by the <code>Payroll</code> class. Substituting <code>Academic</code> objects for <code>Staff</code> objects can potentially break
+                  the <code>Payroll</code> class functionality.</li>
+              </ul>
+            </tip-box>
           </div>
         </div>
       </panel>
@@ -94,24 +160,46 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <tip-box type="primary">
+              <div>
+                <p><strong>Dependency Inversion Principle</strong>:</p>
+                <ol>
+                  <li>High-level modules should not depend on low-level modules. Both should depend on abstractions.</li>
+                  <li>Abstractions should not depend on details. Details should depend on abstractions.</li>
+                </ol>
+              </div>
+            </tip-box>
+            <tip-box>
+              <p>Example:</p>
+              <p>In design (a), the higher level class <code>Payroll</code> depends on the lower level class <code>Employee</code>, a violation of DIP. In design (b), both <code>Payroll</code> and <code>Employee</code> depends on the <code>Payee</code> interface
+                (note that inheritance is a dependency). Design (b) is more flexible (and less coupled) because now the <code>Payroll</code> class need not change when the <code>Employee</code> class changes. Here, <code>Payee</code> is the abstraction
+                and is owned by the <code>Payroll</code> class.</p><img src="/se-book/principles/dependencyInversionPrinciple/images/payroll.png" height="130">
+              <p></p>
+            </tip-box>
           </div>
         </div>
       </panel>
     </div>
     <div>
       <div>
-        <h4 id="solid-principle-four">SOLID Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></h4>
+        <h4 id="solid-principles-four">SOLID Principles <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></h4>
       </div>
       <tip-box type="success">
         <div>
-          <p>🏆 Can explain SOLID principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></p>
+          <p>🏆 Can explain SOLID Principles <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></p>
         </div>
       </tip-box>
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <p>The five OOP principles given below are known as <em>SOLID Principles</em> (an acronym made up of the first letter of each principle):</p>
+            <ul>
+              <li><a href="./singleResponsibilityPrinciple/">Single Responsibility Principle (SRP)</a></li>
+              <li><a href="../designPrinciples/openClosedPrinciple/">Open-Closed Principle (OCP)</a></li>
+              <li><a href="./liskovSubstitutionPrinciple/">Liskov Substitution Principle (LSP)</a></li>
+              <li><a href="./interfaceSegregationPrinciple/">Interface Segregation Principle (ISP)</a></li>
+              <li><a href="./dependencyInversionPrinciple/">Dependency Inversion Principle (DIP)</a></li>
+            </ul>
           </div>
         </div>
       </panel>
@@ -128,7 +216,21 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <tip-box type="primary">
+              <div>
+                <p><strong>Separation of Concerns Principle (SoC)</strong>: To achieve better modularity, separate the code into distinct sections, such that each section addresses a separate <em>concern</em>. -- Edsger W. Dijkstra</p>
+              </div>
+            </tip-box>
+            <p>A concern in this context is a set of information that affects the code of a computer program.</p>
+            <p>Examples for <em>concerns</em>:</p>
+            <ul>
+              <li>A specific feature, such as the code related to <code>add employee</code> feature</li>
+              <li>A specific aspect, such as the code related to <code>persistence</code> or <code>security</code></li>
+              <li>A specific entity, such as the code related to the <code>Employee</code> entity</li>
+            </ul>
+            <p>Applying SoC reduces functional overlaps among code sections and also limits the ripple effect when changes are introduced to a specific part of the system.</p>
+            <p>This principle can be applied at the class level, as well as on higher levels. For example, the n-tier architecture utilizes this principle. Each layer in the architecture has a well-defined functionality that has no functional overlap with
+              each other. A correct application of this principle should lead to higher cohesion and lower coupling.</p>
           </div>
         </div>
       </panel>
@@ -145,7 +247,64 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <tip-box type="primary">
+              <div>
+                <p><strong>Law of Demeter (LoD)</strong>:</p>
+                <ul>
+                  <li>An object should have limited knowledge of another object.</li>
+                  <li>An object should only interact with objects that are closely related to it.</li>
+                </ul>
+                <p>Also known as</p>
+                <ul>
+                  <li>Don’t talk to strangers.</li>
+                  <li>Principle of least knowledge</li>
+                </ul>
+              </div>
+            </tip-box>
+            <p>More concretely, a method m of an object O should invoke only the methods of the following kinds of objects:</p>
+            <ul>
+              <li>The object <code>O</code> itself</li>
+              <li>Objects passed as parameters of <code>m</code></li>
+              <li>Objects created/instantiated in <code>m</code></li>
+              <li>Objects from the direct association of <code>O</code></li>
+            </ul>
+            <tip-box>
+              <p>Example:</p>
+              <p>The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’),
+                and <code>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
+              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
+    Goo g = b.getGoo();
+    g.doSomething();
+}
+</code></pre>
+            </tip-box>
+            <p>Limiting the interaction to a closely related group of classes aims to reduce coupling. In the example able, <code>foo</code> is already coupled to <code>Bar</code>. Upholding LoD avoids <code>foo</code> being coupled to <code>Goo</code>.</p>
+            <p>An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be
+              allowed to see Adam’s posts unless Adam is a friend of yours as well.</p>
+          </div>
+          <div>
+            <div>
+              <panel header=":muscle: Exercises" type="info" expandable="">
+                <div>
+                  <panel header="Q: Explain the Law of Demeter using code examples.">
+                    <question has-input="true">
+                      <p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
+                      <div slot="answer">
+                        <p>Let us take the <code>Logic</code> class as an example. Assume that it has the following operation.</p>
+                        <p><code>setMinefield(Minefiled mf):void</code></p>
+                        <p>Consider the following that can happen inside this operation.</p>
+                        <ul>
+                          <li><code>mf.init(); //this does not violate LoD since LoD allows calling operations of parameters received.</code></li>
+                          <li><code>mf.getCell(1,3).clear(); //this violates LoD since Logic is handling Cell objects deep inside Minefield. Instead, it should be mf.clearCellAt(1,3);</code></li>
+                          <li><code>timer.start(); //this does not violate LoD since timer appears to be an internal component (i.e. a variable) of Logic itself.</code></li>
+                          <li><code>Cell c = new Cell(); c.init(); // this does not violate LoD since c was created inside the operation.</code></li>
+                        </ul>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+              </panel>
+            </div>
           </div>
         </div>
       </panel>
@@ -162,7 +321,29 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <tip-box type="primary">
+              <div>
+                <p><strong>Brooks' Law</strong>: Adding people to a late project will make it later. -- Fred Brooks (author of <em>The Mythical Man-Month</em>)</p>
+              </div>
+            </tip-box>
+            <p>The additional communication overhead will outweigh the benefit of adding extra manpower, especially if done near to a deadline.</p>
+          </div>
+          <div>
+            <div>
+              <panel header=":muscle: Exercises" type="info" expandable="">
+                <div>
+                  <panel header="Q: Do the Brook’s Law apply to a school project? Justify.">
+                    <question has-input="true">
+                      <p>Do the Brook’s Law apply to a school project? Justify.</p>
+                      <div slot="answer">
+                        <p>Yes. Adding a new student to a project team can result in a slow-down of the project for a short period. This is because the new member needs time to learn the project and existing members will have to spend time helping the new
+                          guy get up to speed. If the project is already behind schedule and near a deadline, this could delay the delivery even further.</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+              </panel>
+            </div>
           </div>
         </div>
       </panel>
@@ -179,7 +360,21 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <tip-box type="primary">
+              <div>
+                <p><strong>YAGNI (You Aren't Gonna Need It!) Principle</strong>: Do not add code simply because ‘you might need it in the future’.</p>
+              </div>
+            </tip-box>
+            <p>The principle says that some capability we presume our software needs in the future should not be built now because the chances are "you aren't gonna need it". The rationale is that we do not have perfect information about the future and therefore
+              some of the extra work we do to fulfill a potential future need might go to waste when some of our predictions fail to materialize.</p>
+          </div>
+          <div>
+            <div>
+              <panel header="Resources" expanded="" type="default">
+                <p>[Web Article] Yagni <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></p>
+                <p><a href="https://martinfowler.com/bliki/Yagni.html">Yagni</a> – A detailed article explaining YAGNI, written by Martin Fowler.</p>
+              </panel>
+            </div>
           </div>
         </div>
       </panel>
@@ -196,7 +391,13 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <tip-box type="primary">
+              <div>
+                <p><strong>DRY (Don't Repeat Yourself) Principle</strong>: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system</p>
+              </div>
+            </tip-box>
+            <p>This principle guards against duplication of information. The functionality implemented twice is a violation of this principle even if the two implementations are different. Similarly, the value a system-wide timeout being defined in multiple
+              places is a violation of DRY.</p>
           </div>
         </div>
       </panel>

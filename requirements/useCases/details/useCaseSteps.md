@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/useCases.css">
+<link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
 The main body of the use case is the sequence of steps that describes the interaction between the system and the actors. Each step is given as a simple statement.
 

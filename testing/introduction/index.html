@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Testing: Introduction</title>
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong>Testing ➡️</strong></span></p>
+  <h2 id="introduction">Introduction</h2>
+  <div id="main">
+    <div>
+      <div>
+        <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <blockquote>
+              <p>Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component.</p>
+              <p>–- source: IEEE</p>
+            </blockquote><img src="/se-book/testing/introduction/what/images/diagram.png" height="180">
+            <p></p>
+            <p>Testing entails the execution of a set of test cases. A test case specifies how to perform a test. At a minimum, it specifies the input to the <em>software under test (SUT)</em> and the expected behavior.</p>
+            <tip-box>
+              <p>Example: A minimal test case for testing a browser:</p>
+              <ul>
+                <li><strong>Input</strong> – Start the browser using a blank page (vertical scrollbar disabled). Then, load ‘longfile.html’ located in the ‘test data’ folder.</li>
+                <li><strong>Expected behavior</strong> – The scrollbar should be automatically enabled upon loading ‘longfile.html’.</li>
+              </ul>
+            </tip-box>
+            <p>Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.</p>
+            <panel header="Other details a test case can contain :two:" type="seamless">
+              <p>A more elaborate test case can have other details such as those given below.</p>
+              <ul>
+                <li>A unique identifier : e.g. TC0034-a</li>
+                <li>A descriptive name: e.g. vertical scrollbar activation for long web pages</li>
+                <li>Objectives: e.g. to check whether the vertical scrollbar is correctly activated when a long web page is loaded to the browser</li>
+                <li>Classification information: e.g. priority - medium, category - UI features</li>
+                <li>Cleanup, if any: e.g. empty the browser cache.</li>
+              </ul>
+            </panel>
+            <p>For each test case we do the following:</p>
+            <ol>
+              <li>Feed the input to the SUT</li>
+              <li>Observe the actual output</li>
+              <li>Compare actual output with the expected output</li>
+            </ol>
+            <p>A test case <em>failure</em> is a mismatch between the expected behavior and the actual behavior. A failure is caused by a <em>defect</em> (or a bug).</p>
+            <tip-box>
+              <p>Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading ‘longfile.html’. The defect/bug causing that failure could be an uninitialized variable.</p>
+            </tip-box>
+            <panel header="A deeper look at the definition of testing :three:" type="seamless">
+              <p>Here is another definition of testing:</p>
+              <blockquote>
+                <p>Software testing consists of the <em>dynamic</em> verification that a program provides <em>expected</em> behaviors on a <em>finite</em> set of test cases, suitably <em>selected</em> from the usually infinite execution domain.</p>
+                <p>-– source: SWEBOKv3</p>
+              </blockquote>
+              <p>Some things to note (indicated by keywords in the above definition):</p>
+              <ul>
+                <li><em>Dynamic</em>: Testing involves executing the software. It is not by examining the code statically.</li>
+                <li><em>Finite</em>: In most non-trivial cases there are potentially infinite test scenarios but resource constraints dictate that we can test only a finite number of scenarios.</li>
+                <li><em>Selected</em>: In most cases it is not possible to test all scenarios. That means we need to select what scenarios to test.</li>
+                <li><em>Expected</em>: Testing requires some knowledge of how the software is expected to behave.</li>
+              </ul>
+            </panel>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <div>
+        <h4 id="testability-three">Testability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain testability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p>Testability is an indication of how easy it is to test an SUT. As testability depends a lot on the design and implementation. We should try to increase the testability of our software when we design and implement them.</p>
+          </div>
+        </div>
+      </panel>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\markbind\js\setup.js"></script>
+</html>

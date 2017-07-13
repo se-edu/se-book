@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Testing: Testing Types</title>
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong>Testing ➡️</strong></span></p>
+  <h2 id="testing-types">Testing Types</h2>
+  <div id="main">
+    <p>Testing can be categorized based on the level of testing, the objective of testing, who is doing the testing, etc.</p>
+    <div>
+      <h3 id="unit-testing">Unit Testing</h3>
+      <panel type="seamless" header="%%-----------------------------------------%%">
+        <div>
+          <div>
+            <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+            <tip-box type="success">
+              <div>
+                <p>🏆 Can explain unit testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+              </div>
+            </tip-box>
+            <panel type="seamless" header=" %%- - - - - - - - - -%%">
+              <div>
+                <p>Unit testing involves testing individual units (methods, classes, subsystems, …) and finding out whether each piece works correctly in isolation. A proper unit test require the unit we are testing to be isolated from other code.</p>
+              </div>
+            </panel>
+          </div>
+          <div>
+            <h4 id="stubs-two">Stubs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+            <tip-box type="success">
+              <div>
+                <p>🏆 Can explain stubs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+              </div>
+            </tip-box>
+            <panel type="seamless" header=" %%- - - - - - - - - -%%">
+              <div>
+                <p>During unit testing, stubs are used in place of collaborating objects in order to isolate the SUT from those objects. Doing so prevents bugs within the collaborating objects from interfering with the test.</p>
+                <p><strong>A stub has the same interface as the collaborator it replaces, but its implementation is meant to be so simple that it cannot have any bugs. It mimics the responses of the collaborating object, but only for the inputs used for testing.</strong>                  That is, it does not know how to respond to any other inputs. These mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
+              </div>
+            </panel>
+          </div>
+          <div>
+            <h4 id="mocks-three">Mocks <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+            <tip-box type="success">
+              <div>
+                <p>🏆 Can explain mocks <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+              </div>
+            </tip-box>
+            <panel type="seamless" header=" %%- - - - - - - - - -%%">
+              <div>
+                <p>In addition to Stubs, there are other type of replacements we use during testing. E.g. <em>Mocks, Fakes, Dummies, Spies.</em></p>
+                <p>Refer <a href="https://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs">this article</a> for a more elaborate description</p>
+              </div>
+            </panel>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <h3 id="integration-testing">Integration Testing</h3>
+      <panel type="seamless" header="%%-----------------------------------------%%">
+        <div>
+          <div>
+            <h4 id="what-one-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+            <tip-box type="success">
+              <div>
+                <p>🏆 Can explain integration testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+              </div>
+            </tip-box>
+            <panel type="seamless" header=" %%- - - - - - - - - -%%">
+              <div>
+                <p>In <em>Integration testing</em> we test whether different parts of the software ‘work together’ (i.e. integrates) as expected. Here, we assume the individual parts have been unit tested already. Therefore, integration tests aim to discover
+                  bugs in the ‘glue code’ that are often the result of misunderstanding of what the parts are supposed to do vs what the parts are actually doing. For example let us assume a class <code>Car</code> users classes <code>Engine</code> and
+                  <code>Wheel</code>.</p>
+                <ul>
+                  <li>First, we should unit test <code>Engine</code> and <code>Wheel</code>.</li>
+                  <li>Next, we should unit test <code>Car</code> in isolation of <code>Engine</code> and <code>Wheel</code>, using stubs for <code>Engine</code> and <code>Wheel</code>.</li>
+                  <li>After that, we can do an integration test for <code>Car</code> using it together with the <code>Engine</code> and <code>Wheel</code> classes to ensure the <code>Car</code> integrates properly with the <code>Engine</code> and the <code>Wheel</code>.</li>
+                </ul>
+                <p>In the example above, if the <code>Car</code> class assumed a <code>Wheel</code> can support 200 mph speed but the <code>Wheel</code> can only support 150 mph, it is the integration test that is supposed to uncover this discrepancy.</p>
+              </div>
+            </panel>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <h3 id="system-testing">System Testing</h3>
+      <panel type="seamless" header="%%-----------------------------------------%%">
+        <div>
+          <div>
+            <h4 id="what-one-3">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+            <tip-box type="success">
+              <div>
+                <p>🏆 Can explain system testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+              </div>
+            </tip-box>
+            <panel type="seamless" header=" %%- - - - - - - - - -%%">
+              <div>
+                <p>In system testing we take the <em>whole system</em> and test it <em>against the system specification</em>.</p>
+                <p>System testing is typically done by a testing team (also called a QA team).</p>
+                <p>System test cases are based on the specified external behavior of the system. Sometimes, system tests go beyond the bounds defined in the specification. This is useful when testing that the system fails ‘gracefully’ having pushed beyond
+                  its limits.</p>
+                <tip-box>
+                  <p>Example:</p>
+                  <p>Take the example of an SUT (software under test) that is a browser capable of handling web pages containing up to 5000 characters. A test case can involve loading a web page containing more than 5000 characters. The expected ‘graceful’
+                    behavior would be to ‘abort the loading of the page and show a meaningful error message’. This test case would fail if the browser attempted to load the large file anyway and crashed.</p>
+                </tip-box>
+                <p>System testing includes testing against non-functional requirements too. Here are some examples.</p>
+                <ul>
+                  <li><em>Performance testing</em> – to ensure the system responds quickly.</li>
+                  <li><em>Load testing</em> (also called <em>stress testing</em> or <em>scalability testing</em>) – to ensure the system can work under heavy load.</li>
+                  <li><em>Security testing</em> – to test how secure the system is.</li>
+                  <li><em>Compatibility testing, interoperability testing</em> – to check whether the system can work with other systems.</li>
+                  <li><em>Usability testing</em> – to test how easy it is to use the system.</li>
+                  <li><em>Portability testing</em> – to test whether the system works on different platforms.</li>
+                </ul>
+              </div>
+            </panel>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <h3 id="alpha-and-beta-testing">Alpha and Beta Testing</h3>
+      <panel type="seamless" header="%%-----------------------------------------%%">
+        <div>
+          <div>
+            <h4 id="what-three">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+            <tip-box type="success">
+              <div>
+                <p>🏆 Can explain alpha and beta testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+              </div>
+            </tip-box>
+            <panel type="seamless" header=" %%- - - - - - - - - -%%">
+              <div>
+                <p><em>Alpha testing</em> is performed by the users, under controlled conditions set by the software development team.</p>
+                <p><em>Beta testing</em> is performed by a selected subset of target users of the system in their natural work setting.</p>
+                <p>An <em>open beta release</em> is the release of not-yet-production-quality-but-almost-there software to the general population. For example, Google’s Gmail was in ‘beta’ for many years before the label was finally removed.</p>
+              </div>
+            </panel>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <h3 id="developer-testing">Developer Testing</h3>
+      <panel type="seamless" header="%%-----------------------------------------%%">
+        <div>
+          <div>
+            <h4 id="what-two">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+            <tip-box type="success">
+              <div>
+                <p>🏆 Can explain developer testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+              </div>
+            </tip-box>
+            <panel type="seamless" header=" %%- - - - - - - - - -%%">
+              <div>
+                <p>Developer testing is the testing done by the developers themselves as opposed to professional testers or end users.</p>
+                <p>Examples of developer testing: unit testing, integration testing</p>
+              </div>
+            </panel>
+          </div>
+          <div>
+            <h4 id="why-two">Why <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+            <tip-box type="success">
+              <div>
+                <p>🏆 Can explain the need for early developer testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+              </div>
+            </tip-box>
+            <panel type="seamless" header=" %%- - - - - - - - - -%%">
+              <div>
+                <p>At first it might seem logical to have the system built in its entirety first and then getting it tested by professional testers. Here are the downsides of that approach.</p>
+                <ul>
+                  <li>Locating the cause of such a test case failure is difficult due to a large search space; in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple
+                    inter-related bugs.</li>
+                  <li>Fixing a bug found during such testing could result in major rework, especially if the bug originated during the design or during requirements specification (i.e. a faulty design or faulty requirements).</li>
+                  <li>One bug might 'hide' other bugs, which could emerge only after the first bug is fixed.</li>
+                  <li>Too many bugs found during system testing can lead to delivery delays.</li>
+                </ul>
+                <p>Due to the above reasons, it is better to do early developers testing. In fact, there is a widely accepted rule of thumb that says <em>the earlier a bug is found, the easier and cheaper to have it fixed</em>, as illustrated by the graph
+                  below.</p><img src="/se-book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
+                <p></p>
+              </div>
+              <div>
+                <div>
+                  <panel header=":muscle: Exercises" type="info" expandable="">
+                    <div>
+                      <panel header="Q: Discuss advantages and disadvantages of developers testing their own code.">
+                        <question has-input="true">
+                          <p>Discuss advantages and disadvantages of developers testing their own code.</p>
+                          <div slot="answer">
+                            <p>Advantages:</p>
+                            <ul>
+                              <li>Can be done early (the earlier we find a bug, the cheaper it is to fix).</li>
+                              <li>Can be done at lower levels, for examples, at operation and class level (testers usually test the system at UI level).</li>
+                              <li>It is possible to do more thorough testing since developers know the expected external behavior as well as the internal structure of the component.</li>
+                              <li>It forces developers to take responsibility for their own work (they cannot claim that “testing is the job of the testers”).</li>
+                            </ul>
+                            <p>Disadvantages:</p>
+                            <ul>
+                              <li>Developer may unconsciously test only situations that he knows to work (i.e. test it too “gently”).</li>
+                              <li>Developer may be blind to his own mistakes (if he did not consider a certain combination of input while writing code, he is likely to miss it again during testing).</li>
+                              <li>Developer may have misunderstood what the SUT is supposed to do in the first place.</li>
+                              <li>Developer may lack the testing expertise.</li>
+                            </ul>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </panel>
+                </div>
+              </div>
+            </panel>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <h3 id="exploratory-vs-scripted-testing">Exploratory vs Scripted Testing</h3>
+      <panel type="seamless" header="%%-----------------------------------------%%">
+        <div>
+          <div>
+            <h4 id="what-two-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+            <tip-box type="success">
+              <div>
+                <p>🏆 Can explain exploratory testing and scripted testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+              </div>
+            </tip-box>
+            <panel type="seamless" header=" %%- - - - - - - - - -%%">
+              <div>
+                <p>Here are two alternative approaches to testing a software.</p>
+                <ol>
+                  <li>Scripted testing: First write a set of test cases based on the system specification, perform the test cases.</li>
+                  <li>Exploratory testing: Devise test cases on-the-fly, creating new test cases based on the results of the past test cases.</li>
+                </ol>
+                <p>Exploratory testing is ‘the simultaneous learning, test design, and test execution’
+                  <trigger for="pop:bach-et-explained">[source: bach-et-explained]</trigger> whereby the nature of the follow-up test case is decided based on the behavior of the previous test cases. In other words, running the system and trying out various operations. It is called <em>exploratory testing</em>                  because testing is driven by observations during testing. Exploratory testing is also known as <em>reactive testing, error guessing technique, attack-based testing,</em> and <em>bug hunting</em>. Exploratory testing usually starts with
+                  areas identified as error-prone, based on the tester’s past experience with similar systems. One tends to conduct more tests for those operations where more faults are found. For example,</p>
+                <blockquote>
+                  <p>“Hmm... looks like feature x is broken. This usually means feature n and k could be broken too; we need to look at them soon. But before that, let us give a good test run to feature y because users can still use the product if feature
+                    y works, even if x doesn’t work. Now, if feature y doesn’t work 100%, we have a major problem and this has to be made known to the development team sooner rather than later...”</p>
+                </blockquote>
+                <popover id="pop:bach-et-explained" title="bach-et-explained :mag:" placement="right">
+                  <div slot="content">
+                    <div>
+                      <p>Exploratory testing explained, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a> (James Bach is an industry thought leader in software testing). Softcopy available at <a href="http://www.satisfice.com/articles/et-article.pdf">http://www.satisfice.com/articles/et-article.pdf</a></p>
+                    </div>
+                  </div>
+                </popover>
+              </div>
+            </panel>
+          </div>
+          <div>
+            <h4 id="when-three">When <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+            <tip-box type="success">
+              <div>
+                <p>🏆 Can explain the choice between exploratory testing and scripted testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+              </div>
+            </tip-box>
+            <panel type="seamless" header=" %%- - - - - - - - - -%%">
+              <div>
+                <p>So which approach is better – scripted or exploratory?</p>
+                <p>The success of exploratory testing depends on the tester’s prior experience and intuition. Exploratory testing should be done by experienced testers, using a clear strategy/plan/framework. Ad-hoc exploratory testing by unskilled or inexperienced
+                  testers without a clear strategy is not recommended for real-world non-trivial systems. While exploratory testing may allow us to detect some problems in a relatively short time, it is not prudent to use exploratory testing as the sole
+                  means of testing a critical system.</p>
+                <p>Scripted testing is more systematic, and hence, likely to discover more bugs given sufficient time, while exploratory testing would aid in quick error discovery, especially if the tester has a lot of experience in testing similar systems.</p>
+                <blockquote>
+                  <p>In some contexts, you will achieve your testing mission better through a more scripted approach; in other contexts, your mission will benefit more from the ability to create and improve tests as you execute them. I find that most situations
+                    benefit from a mix of scripted and exploratory approaches.</p>
+                  <p>--
+                    <trigger for="pop:bach-et-explained">[source: bach-et-explained]</trigger>
+                  </p>
+                </blockquote>
+                <popover id="pop:bach-et-explained" title="bach-et-explained :mag:" placement="right">
+                  <div slot="content">
+                    <div>
+                      <p>Exploratory testing explained, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a> (James Bach is an industry thought leader in software testing). Softcopy available at <a href="http://www.satisfice.com/articles/et-article.pdf">http://www.satisfice.com/articles/et-article.pdf</a></p>
+                    </div>
+                  </div>
+                </popover>
+              </div>
+              <div>
+                <div>
+                  <panel header=":muscle: Exercises" type="info" expandable="">
+                    <div>
+                      <panel header="Q: Explain the concept of exploratory testing using Minesweeper as an example.">
+                        <question has-input="true">
+                          <p>Explain the concept of exploratory testing using Minesweeper as an example.</p>
+                          <div slot="answer">
+                            <p>When we test the Minesweeper by simply playing it in various ways, especially trying out those that are likely to be buggy, that would be exploratory testing.</p>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </panel>
+                </div>
+              </div>
+            </panel>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <h3 id="acceptance-testing">Acceptance Testing</h3>
+      <panel type="seamless" header="%%-----------------------------------------%%">
+        <div>
+          <div>
+            <h4 id="what-one-4">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+            <tip-box type="success">
+              <div>
+                <p>🏆 Can explain acceptance testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+              </div>
+            </tip-box>
+            <panel type="seamless" header=" %%- - - - - - - - - -%%">
+              <div>
+                <p><em>Acceptance testing</em>, also called <em>User Acceptance Testing (UAT)</em>, is a type of validation test carried out to show that the delivered system meets the requirements of the customer.</p>
+                <p>Acceptance tests give an assurance to the customer that the system does what it is intended to do. Acceptance test cases are often defined at the beginning of the project, usually based on the use case specification. Successful completion
+                  of UAT is often a prerequisite to the project signoff.</p>
+              </div>
+            </panel>
+          </div>
+          <div>
+            <h4 id="acceptance-vs-system-testing-two">Acceptance vs System Testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+            <tip-box type="success">
+              <div>
+                <p>🏆 Can explain the differences between system testing and acceptance testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+              </div>
+            </tip-box>
+            <panel type="seamless" header=" %%- - - - - - - - - -%%">
+              <div>
+                <p>Acceptance testing comes after system testing. Similar to system testing, acceptance testing involves testing the whole system.</p>
+                <p>Some differences between system testing and acceptance testing:</p>
+                <table class="markbind-table table">
+                  <thead>
+                    <tr>
+                      <th style="text-align:center">System Testing</th>
+                      <th style="text-align:center">Acceptance Testing</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align:center">Done against the system specification</td>
+                      <td style="text-align:center">Done against the requirements specification (see note 1 below)</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">Done by testers of the project team</td>
+                      <td style="text-align:center">Done by a team that represents the customer</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">Done on the development environment or a test bed</td>
+                      <td style="text-align:center">Done on the deployment site or on a close simulation of the deployment site</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">Both positive and negative test cases</td>
+                      <td style="text-align:center">More focus on positive test cases</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <tip-box>
+                  <p><strong>Requirement Specification vs System Specification</strong></p>
+                  <p>The requirement specification need not be the same as the system specification. Some example differences:</p>
+                  <ul>
+                    <li>Requirements specification could be limited to how the system behaves in normal working conditions while the system specification can also include details on how it will fail gracefully when pushed beyond limits, how to recover,</li>
+                    <li>System specification could contain additional APIs not available for users (for the use of developers/testers), etc • Requirement specification could be written in terms of problems that need to be solved (e.g. provide a method to
+                      locate an email quickly) while the system specification could be written in terms of how the system solve those problems (e.g. explain the email search feature).</li>
+                  </ul>
+                  <p>However, in many cases one document serves as both a requirement specification and a system specification.</p>
+                  <p><strong>Importance of testing on the deployment environment</strong></p>
+                  <p>A system could work perfectly on the development environment, but fail in the deployment environment due to subtle differences between the two.</p>
+                </tip-box>
+              </div>
+            </panel>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <h3 id="regression-testing">Regression Testing</h3>
+      <panel type="seamless" header="%%-----------------------------------------%%">
+        <div>
+          <div>
+            <h4 id="what-one-5">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+            <tip-box type="success">
+              <div>
+                <p>🏆 Can explain regression testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+              </div>
+            </tip-box>
+            <panel type="seamless" header=" %%- - - - - - - - - -%%">
+              <div>
+                <p>When we modify a system that has been tested, the modification may result in some unintended and undesirable effects on the system. Such an effect is called a <em>regression</em>.</p>
+                <p>To detect and correct regressions, we need to retest all related components. Testing with this intent is called <em>regression testing</em>.</p>
+                <p>Regression testing is more effective when it is done frequently, after each small change. However, doing so can be prohibitively expensive if testing is done manually. Hence, regression testing is more practical when it is automated.</p>
+              </div>
+            </panel>
+          </div>
+        </div>
+      </panel>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\markbind\js\setup.js"></script>
+</html>

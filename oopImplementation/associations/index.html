@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Object Oriented Programming: Associations</title>
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong><span>Object Oriented Programming ➡️</span></strong>
+    </span>
+  </p>
+  <div>
+    <h4 id="associations-one">Associations <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+  </div>
+  <tip-box type="success">
+    <div>
+      <p>🏆 Can implement associations <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+    </div>
+  </tip-box>
+  <div id="main">
+    <div>
+      <panel src="/se-book\oop\associations\basics\topicPanel._include_.html" header="OOP: Associations: Basics" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+      <panel src="/se-book\oop\associations\multiplicity\topicPanel._include_.html" header="OOP: Associations: Multiplicity" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+      <panel src="/se-book\oop\associations\navigability\topicPanel._include_.html" header="OOP: Associations: Navigability" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+      <p></p>
+      <p>We use instance level variables to implement associations.</p>
+      <tip-box>
+        <p>Example:</p><img src="/se-book/oopImplementation/associations/images/logicMinefield.png" height="40">
+        <p></p>
+        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
+    Minefield minefield;
+    ...
+}
+</code></pre>
+        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
+    ...
+}
+</code></pre>
+        <p>A normal instance-level variable gives us a 0..1 multiplicity (also called <em>optional associations</em>) because a variable can hold a reference to a single object or null.</p><img src="/se-book/oopImplementation/associations/images/logicConfigGenerator.png"
+          height="40">
+        <p></p>
+        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
+    ConfigGenerator cg;
+    ...
+}
+</code></pre>
+        <p>A variable can be used to implement a 1-multiplicity too (also called <em>compulsory associations</em>).</p><img src="/se-book/oopImplementation/associations/images/fooBar.png" height="40">
+        <p></p>
+        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
+    Bar bar;
+    ...
+}
+</code></pre>
+        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> </span>{
+    Foo foo;
+    ...
+}
+</code></pre>
+        <p>Bi-directional associations require matching variables in both classes.</p>
+        <p>To implement other multiplicities, choose a suitable data structure such as Arrays, ArrayLists, HashMaps, Sets, etc.</p>
+        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
+    Cell[][] cell;
+    ...
+}
+</code></pre>
+      </tip-box>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\markbind\js\setup.js"></script>
+</html>

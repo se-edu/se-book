@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Principles: Liskov Substitution Principle</title>
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong><span>Principles ➡️ </span></strong>
+    </span>
+  </p>
+  <div>
+    <h4 id="liskov-substitution-principle-three">Liskov Substitution Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+  </div>
+  <tip-box type="success">
+    <div>
+      <p>🏆 Can explain liskov substititution principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+    </div>
+  </tip-box>
+  <div id="main">
+    <div>
+      <tip-box type="primary">
+        <div>
+          <p><strong>Liskov Substitution Principle (LSP)</strong>: Derived classes must be substitutable for their base classes. -- Barbara Liskov</p>
+        </div>
+      </tip-box>
+      <p>In other words, if a program module is using a super class, then the reference to the super class can be replaced with a sub class without affecting the functionality of the program module.</p>
+      <p>As we know, Java already allows substituting objects of sub classes where an object of the super class is expected. However, that does not mean that doing so will not break the functionality of the code. To follow LSP, we should be careful not to
+        contradict the behavior specified by the super class.</p>
+      <tip-box>
+        <p>Example:</p><img src="/se-book/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200">
+        <p></p>
+        <p>Suppose the <code>Payroll</code> class depends on the <code>adjustMySalary(int percent)</code> method of the <code>Staff</code> class. Furthermore, the <code>Staff</code> class states that the <code>adjustMySalary</code> method will work for all
+          positive percent values. Both <code>Admin</code> and <code>Academic</code> classes override the <code>adjustMySalary</code> method. Now consider the following:</p>
+        <ul>
+          <li><code>Admin#adjustMySalary</code> method works for both negative and positive percent values.</li>
+          <li><code>Academic#adjustMySalary</code> method works for percent values 1..100 only.</li>
+        </ul>
+        <p>In the above scenario,</p>
+        <ul>
+          <li><code>Admin</code> class follows LSP because it fulfills <code>Payroll</code>’s expectation of <code>Staff</code> objects (i.e. it works for all positive values). Substituting <code>Admin</code> objects for Staff objects will not break the <code>Payroll</code>            class functionality.</li>
+          <li><code>Academic</code> class violates LSP because it will not work for percent values over 100 as expected by the <code>Payroll</code> class. Substituting <code>Academic</code> objects for <code>Staff</code> objects can potentially break the
+            <code>Payroll</code> class functionality.</li>
+        </ul>
+      </tip-box>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\markbind\js\setup.js"></script>
+</html>

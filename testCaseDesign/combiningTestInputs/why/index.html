@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Test Case Design: Combining Test Inputs: Why</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong><span>Test Case Design ➡️ Combining Test Inputs ➡️</span></strong>
+    </span>
+  </p>
+  <div>
+    <h4 id="why-one">Why <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+  </div>
+  <tip-box type="success">
+    <div>
+      <p>🏆 Can explain the need for strategies to combine test inputs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+    </div>
+  </tip-box>
+  <div id="main">
+    <div>
+      <p>Often, an SUT can take multiple inputs. Having selected test values for each input (using equivalence partitioning, boundary value analysis, or some other technique), how are they combined to create test cases?</p>
+      <tip-box>
+        <ul>
+          <li>
+            <p>Scenario: calculateGrade</p>
+          </li>
+          <li>
+            <p>Method to test: calculateGrade(participation, projectGrade, isAbsent, examScore)</p>
+          </li>
+          <li>
+            <p>Values to test (invalid values are <strong>bold</strong>)</p>
+            <ul>
+              <li>participation: 0, 1, 19, 20, <strong>21</strong>, <strong>22</strong></li>
+              <li>projectGrade: A, B, C, D, F</li>
+              <li>isAbsent: true, false</li>
+              <li>examScore: 0, 1, 69, 70, <strong>71</strong>, <strong>72</strong></li>
+            </ul>
+          </li>
+        </ul>
+      </tip-box>
+      <p>For the calculateGrade scenario above, one obvious solution is to test all possible combinations i.e. test all 6x5x2x6=360 cases. Naturally, this technique has a higher chance of discovering bugs (i.e. effective) but the number of combinations can
+        be too high to test (i.e. not efficient).</p>
+      <p>Therefore, we need smarter ways to combine test inputs that are both effective and efficient.</p>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

@@ -12,7 +12,13 @@
 
 <div id="body">
 
-...
+{to add}
+
+</div>
+
+<div id="extras">
+
+<include src="exercises.md" />
 
 </div>
 

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Testing: Dependency Injection: How</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong><span>Testing ➡️ Dependency Injection ➡️</span></strong>
+    </span>
+  </p>
+  <div>
+    <h4 id="how-three">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+  </div>
+  <tip-box type="success">
+    <div>
+      <p>🏆 Can explain how dependency injection works <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+    </div>
+  </tip-box>
+  <div id="main">
+    <div>
+      <p>Given next is a sample testing scenario that tests the <code>totalSalary</code> of the <code>Payroll</code> class. The production version of the <code>totalSalary</code> method collaborates with the <code>SalaryManager</code> object to calculate
+        the return value. During testing, the <code>SalaryManager</code> object is substituted with a <code>SalaryManagerStub</code> object which responds with hard-coded return values.</p>
+      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestDriver</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//test setup</span>
+        Payroll p = <span class="hljs-keyword">new</span> Payroll();
+        p.setSalaryManager(<span class="hljs-keyword">new</span> SalaryManagerStub()); <span class="hljs-comment">//dependency injection</span>
+        <span class="hljs-comment">//test case 1</span>
+        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});
+        assertEquals(<span class="hljs-number">2500.0</span>, p.totalSalary());
+        <span class="hljs-comment">//test case 2</span>
+        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});
+        assertEquals(<span class="hljs-number">1000.0</span>, p.totalSalary());
+        <span class="hljs-comment">//more tests</span>
+        System.out.println(<span class="hljs-string">"Testing completed"</span>);
+    }
+}
+</code></pre>
+      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll</span> </span>{
+    <span class="hljs-keyword">private</span> SalaryManager manager = <span class="hljs-keyword">new</span> SalaryManager();
+    <span class="hljs-keyword">private</span> String[] employees;
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setEmployees</span><span class="hljs-params">(String[] employees)</span> </span>{
+        <span class="hljs-keyword">this</span>.employees = employees;
+    }
+
+    <span class="hljs-comment">/*the operation below is used to substitute the actual SalaryManager
+    with a stub used for testing */</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setSalaryManager</span><span class="hljs-params">(SalaryManager sm)</span> </span>{
+       <span class="hljs-keyword">this</span>. manager = sm;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">totalSalary</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">double</span> total = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i < employees.length; i++){
+            total += manager.getSalaryForEmployee(employees[i]);
+        }
+        <span class="hljs-keyword">return</span> total;
+    }
+}
+</code></pre>
+      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SalaryManager</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">getSalaryForEmployee</span><span class="hljs-params">(String empID)</span></span>{
+        <span class="hljs-comment">//code to access employee’s salary history</span>
+        <span class="hljs-comment">//code to calculate total salary paid and return it</span>
+    }
+}
+</code></pre>
+      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SalaryManagerStub</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">SalaryManager</span> </span>{
+    <span class="hljs-comment">/* this method returns hard coded values used for testing */</span>
+    <span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">getSalaryForEmployee</span><span class="hljs-params">(String empID)</span> </span>{
+        <span class="hljs-keyword">if</span>(empID.equals(<span class="hljs-string">"E001"</span>)) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1000.0</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(empID.equals(<span class="hljs-string">"E002"</span>)) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1500.0</span>;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"unknown id"</span>);
+        }
+    }
+}
+</code></pre>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

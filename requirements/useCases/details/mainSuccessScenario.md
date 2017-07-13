@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/useCases.css">
+<link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
 The Main Success Scenario (MSS) describes the most straightforward interaction for a given use case, which assumes that nothing goes wrong. This is also called the _Basic Course of Action_ or the _Main Flow of Events_ of a use case. Given below is another example of an MSS.
 

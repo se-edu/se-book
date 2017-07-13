@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-# OOP
+# Object Oriented Programming
 
 <div id="main">
 

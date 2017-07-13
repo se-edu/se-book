@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Test Case Design: Equivalence Partitions: Intermediate</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong><span>Test Case Design ➡️ Equivalence Partitions ➡️</span></strong>
+    </span>
+  </p>
+  <div>
+    <h4 id="intermediate-two">Intermediate <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+  </div>
+  <tip-box type="success">
+    <div>
+      <p>🏆 Can apply EP for OOP methods <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+    </div>
+  </tip-box>
+  <div id="main">
+    <div>
+      <p>When deciding EPs of OOP methods, we need to identify EPs of all data participants that can potentially influence the behaviour of the method, such as,</p>
+      <ul>
+        <li>the target object of the operation call</li>
+        <li>input parameters of the operation call</li>
+        <li>other data/objects accessed by the operation such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented)</li>
+      </ul>
+      <tip-box>
+        <p>Example:</p>
+        <p>Consider the push operation from a DataStack class.</p>
+        <ul>
+          <li>
+            <p>Operation: <code>push(Object o): boolean</code></p>
+          </li>
+          <li>
+            <p>Description: Throws <code>MutabilityException</code> if the global flag <code>FREEZE==true</code></p>
+            <ul>
+              <li>Else, throws <code>InvalidValueException</code> if <code>o==null</code>.</li>
+              <li>Else, returns <code>false</code> if the stack is full.</li>
+              <li>Else, puts <code>o</code> at the top of the <code>DataStack</code> and returns <code>true</code>.</li>
+            </ul>
+          </li>
+          <li>
+            <p>Here are the equivalence partitions for the push operation.</p>
+            <ul>
+              <li><code>DataStack</code> object: [full] [not full]</li>
+              <li><code>o</code>: [null] [not null]</li>
+              <li><code>FREEZE</code>: [true][false]</li>
+            </ul>
+          </li>
+        </ul>
+      </tip-box>
+      <tip-box>
+        <p>Example:</p>
+        <p>Consider the Minesweeper system that was explored previously. What are the EPs for the <code>newGame()</code> operation of the <code>Logic</code> component?</p>
+        <p>As <code>newGame()</code> does not have any parameters, the only obvious participant is the <code>Logic</code> object itself.</p>
+        <p>Note that if the glass-box or the grey-box approach is used, other associated objects that are involved in the operation might also be included as participants. For example, Minefield object can be considered as another participant of the <code>newGame()</code>          operation. Here, the black-box approach is assumed.</p>
+        <p>Next, let us identify equivalence partitions for each participant. Will the <code>newGame</code> operation behave differently for different <code>Logic</code> objects? If yes, how will it differ? In this case, yes, it might behave differently
+          based on the game state. Therefore, the equivalence partitions are:</p>
+        <ul>
+          <li><code>PRE_GAME</code> (before the game starts, minefield does not exist yet)</li>
+          <li><code>READY</code> (a new minefield has been created and waiting for player’s first move)</li>
+          <li><code>IN_PLAY</code> (the current minefield is already in use)</li>
+          <li><code>WON</code>, <code>LOST</code> (let us assume the <code>newGame</code> behaves the same way for these two values)</li>
+        </ul>
+      </tip-box>
+      <tip-box>
+        <p>Example:</p>
+        <p>Consider the Logic component of the Minesweeper application. What are the EPs for the <code>markCellAt(int x, int y)</code> operation?. The partitions in <strong>bold</strong> represent valid inputs.</p>
+        <ul>
+          <li>Logic: PRE_GAME, <strong>READY</strong>, <strong>IN_PLAY</strong>, WON, LOST</li>
+          <li>x: [MIN_INT..-1] <strong>[0..(W-1)]</strong> [W..MAX_INT] (we assume a minefield size of WxH)</li>
+          <li>y: [MIN_INT..-1] <strong>[0..(H-1)]</strong> [H..MAX_INT]</li>
+          <li>Cell at (x,y): <strong>HIDDEN</strong>, MARKED, CLEARED</li>
+        </ul>
+        <p>A test case for the push operation can be a combination of the equivalence partitions. Given below is such a test case.</p>
+        <ul>
+          <li>id: DataStack_Push_001</li>
+          <li>description: checks whether pushing onto a full stack works correctly</li>
+          <li>input: ds is full, o!=null, FREEZE==false</li>
+          <li>expected output: returns false, ds remains unchanged</li>
+        </ul>
+      </tip-box>
+      <p>Knowledge of how the SUT behaves is used when deriving equivalence partitions for a given data participant. The table below illustrates some examples.</p>
+      <table class="table">
+        <tr>
+          <th>Specification</th>
+          <th>Equivalence partitions</th>
+        </tr>
+        <tr>
+          <td>
+            <ul>
+              <li>isValidFlag(String s): boolean</li>
+              <li>Returns true if s is one of [“F”, “T”, “D”]. The comparison is case-sensitive.</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>[“F”] [“T”] [“D”] [“f”, “t”, “d”] [any other string][null]</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ul>
+              <li>squareRoot(String s): int</li>
+              <li>Pre-conditions: s represents a positive integer</li>
+              <li>Returns the square root of s if the square root is an integer; returns 0 otherwise.</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>[s is not a valid number] [s is a negative integer] [s has an integer square root] [s does not have an integer square root]</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ul>
+              <li>isPrimeNumber(int i): boolean</li>
+              <li>Returns true if i is a prime number</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>[prime numbers] [non-prime numbers]</li>
+              <li>* there are too many prime numbers to consider each one as a separate equivalence partition</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <p>Note that the EP technique is merely a heuristic and not an exact science, especially when applied manually (as opposed to using an automated program analysis tool to derive EPs). The partitions derived depend on how one ‘speculates’ the SUT to
+        behave internally. Applying EP under a glass-box or gray-box approach can yield more precise partitions.</p>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

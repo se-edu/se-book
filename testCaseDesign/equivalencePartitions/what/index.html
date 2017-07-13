@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Test Case Design: Equivalence Partitions: What</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong><span>Test Case Design ➡️ Equivalence Partitions ➡️</span></strong>
+    </span>
+  </p>
+  <div>
+    <h4 id="what-two">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+  </div>
+  <tip-box type="success">
+    <div>
+      <p>🏆 Can explain equivalence partitions <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+    </div>
+  </tip-box>
+  <div id="main">
+    <div>
+      <p>Consider the testing of the following operation.</p>
+      <ul>
+        <li><code>isValidMonth (int m): boolean</code></li>
+        <li>Description: checks if <code>m</code> is in the range [1..12]. returns <code>true</code> if <code>m</code> is in the range, <code>false</code> otherwise.</li>
+      </ul>
+      <p>It is inefficient and impractical to test this method for all integer values <code>[-MIN_INT to MAX_INT]</code>. Fortunately, there is no need to test all possible input values. For example, if the input value <code>233</code> failed to produce
+        the correct result, the input <code>234</code> is likely to fail too; there is no need to test both.</p>
+      <p>In general, most SUTs do not treat each input in a unique way. Instead, they process all possible inputs in a small number of distinct ways. That means a range of inputs is treated the same way inside the SUT.</p>
+      <tip-box type="primary">
+        <div>
+          <p><strong>Equivalence partition (aka equivalence class)</strong>: A group of test inputs that are likely to be processed by the SUT in the same way.</p>
+        </div>
+      </tip-box>
+      <p><em>Equivalence partitioning</em> is a technique that uses the above observation to improve the E&E of testing. By dividing possible inputs into equivalence partitions we can,</p>
+      <ul>
+        <li>avoid testing too many inputs from one partisan. Testing too many inputs from the same partition is unlikely to find new bugs.</li>
+        <li>ensure all partitions are tested. Missing partitions can result in bugs going unnoticed.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

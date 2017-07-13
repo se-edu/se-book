@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Object Oriented Programming: Substitutability</title>
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong><span>Object Oriented Programming ➡️ </span></strong>
+    </span>
+  </p>
+  <div>
+    <h4 id="substitutability-three">Substitutability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+  </div>
+  <tip-box type="success">
+    <div>
+      <p>🏆 Can implement substitutability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+    </div>
+  </tip-box>
+  <div id="main">
+    <div>
+      <p>When implementing inheritance, we should take care to preserve substitutability: i.e. the ability of sub-class objects to be substituted where a super class object is expected. In other words, we should follow the Liskov Substitution Principle.
+        In concrete terms it means a subclass must honor the contract set by the super class.</p>
+      <p>A classic example of violating substitutability is given below.</p>
+      <tip-box>
+        <p>Example:</p><img src="/se-book/oopImplementation/substitutability/images/rectangleSquare.png" height="120">
+        <p></p>
+        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{
+    Rectangle(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width){
+        …
+    }
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Square</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Rectangle</span> </span>{
+    Square(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width){
+        <span class="hljs-keyword">super</span>(height, width);
+        <span class="hljs-keyword">if</span> (height != width) {
+            <span class="hljs-comment">//error</span>
+       }
+    }
+}
+</code></pre>
+        <p>Explanation: The <code>super</code> class constructor can take any integers for height and width. This contract is violated by <code>Square</code> class because it does not accept a height that is different from the width. This means code that
+          is written to work with <code>Rectangle</code> class might fail in unexpected ways when it is given <code>Square</code> objects instead of <code>Rectangle</code> objects. That is, <code>Square</code> class is not substitutable for the <code>Rectangle</code>          class.</p>
+      </tip-box>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\markbind\js\setup.js"></script>
+</html>

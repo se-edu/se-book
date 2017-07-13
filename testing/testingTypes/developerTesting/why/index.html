@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Testing Types: Developer Testing: Why</title>
+    <link rel="stylesheet" href="..\..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong>Testing ➡️ Testing Types ➡️ Developer Testing ➡️</strong></span></p>
+  <h4 id="why-two">Why <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+  <div id="main">
+    <p>At first it might seem logical to have the system built in its entirety first and then getting it tested by professional testers. Here are the downsides of that approach.</p>
+    <ul>
+      <li>Locating the cause of such a test case failure is difficult due to a large search space; in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple inter-related
+        bugs.</li>
+      <li>Fixing a bug found during such testing could result in major rework, especially if the bug originated during the design or during requirements specification (i.e. a faulty design or faulty requirements).</li>
+      <li>One bug might 'hide' other bugs, which could emerge only after the first bug is fixed.</li>
+      <li>Too many bugs found during system testing can lead to delivery delays.</li>
+    </ul>
+    <p>Due to the above reasons, it is better to do early developers testing. In fact, there is a widely accepted rule of thumb that says <em>the earlier a bug is found, the easier and cheaper to have it fixed</em>, as illustrated by the graph below.</p>
+    <img
+      src="/se-book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
+      <p></p>
+  </div>
+  <div id="extras">
+    <div>
+      <panel header=":muscle: Exercises" type="info" expandable="">
+        <div>
+          <panel header="Q: Discuss advantages and disadvantages of developers testing their own code.">
+            <question has-input="true">
+              <p>Discuss advantages and disadvantages of developers testing their own code.</p>
+              <div slot="answer">
+                <p>Advantages:</p>
+                <ul>
+                  <li>Can be done early (the earlier we find a bug, the cheaper it is to fix).</li>
+                  <li>Can be done at lower levels, for examples, at operation and class level (testers usually test the system at UI level).</li>
+                  <li>It is possible to do more thorough testing since developers know the expected external behavior as well as the internal structure of the component.</li>
+                  <li>It forces developers to take responsibility for their own work (they cannot claim that “testing is the job of the testers”).</li>
+                </ul>
+                <p>Disadvantages:</p>
+                <ul>
+                  <li>Developer may unconsciously test only situations that he knows to work (i.e. test it too “gently”).</li>
+                  <li>Developer may be blind to his own mistakes (if he did not consider a certain combination of input while writing code, he is likely to miss it again during testing).</li>
+                  <li>Developer may have misunderstood what the SUT is supposed to do in the first place.</li>
+                  <li>Developer may lack the testing expertise.</li>
+                </ul>
+              </div>
+            </question>
+          </panel>
+        </div>
+      </panel>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\..\markbind\js\setup.js"></script>
+</html>
