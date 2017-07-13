@@ -12,7 +12,7 @@
 
 <div id="body">
 
-...
+Testability is an indication of how easy it is to test an SUT. As testability depends a lot on the design and implementation. We should try to increase the testability of our software when we design and implement them.
 
 </div>
 

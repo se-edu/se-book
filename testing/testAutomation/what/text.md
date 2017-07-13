@@ -12,7 +12,7 @@
 
 <div id="body">
 
-...
+An automated test case can be run programmatically and the result of the test case (pass or fail) is determined programmatically. 
 
 </div>
 

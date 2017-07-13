@@ -24,4 +24,9 @@
 
 	<div id="refactoring-catalog">[http://refactoring.com/catalog/]() - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/#refactoring)</div>
 
+
+* [bach-et-explained]
+
+  <div id="bach-et-explained">Exploratory testing explained, an online article by [James Bach](http://www.satisfice.com/aboutjames.shtml) (James Bach is an industry thought leader in software testing). Softcopy available at http://www.satisfice.com/articles/et-article.pdf</div>
+
 </div>
