@@ -12,7 +12,12 @@
 
 <div id="body">
 
-...
+This is similar to forking workflow except there are no forks or PRs. Everyone is pushing/pulling from the same remote repo.
+
+<img src="{{baseUrl}}/revisionControl/featureBranchFlow/images/diagram.png" height="330" />
+<p/>
+
+More info: https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow 
 
 </div>
 

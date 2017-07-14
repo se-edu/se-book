@@ -26,7 +26,47 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <panel src="/se-book\revisionControl\repositories\embed._include_.html" header="Revision Control: Repositories" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+            <p></p>
+            <p>Install <a href="https://www.sourcetreeapp.com/">SourceTree</a> which is Git + a GUI for Git.</p>
+            <p>Suppose you want to create a repository in an empty directory <code>project1</code></p>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>Click <code>File</code> -> <code>Clone/New…</code></p>
+                  <p>Click on <code>Create</code> button and enter the location of the directory as shown below. Click <code>Create</code></p><img src="/se-book/gitAndGithub/init/images/sourcetree_1.png" height="220">
+                  <p></p>
+                  <p>Go to the <code>things</code> folder and observe how a hidden folder <code>.git</code> has been created.</p>
+                  <p>Note: If you are on Windows, you might have to <a href="https://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">configure Windows Explorer to show hidden files</a>.</p>
+                </div>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <p>Open a Git Bash Terminal.</p>
+                  <p>If you installed SourceTree, you can click the <code>Terminal</code> button to open a GitBash terminal.</p><img src="/se-book/gitAndGithub/init/images/cli_1.png" height="100">
+                  <p></p>
+                  <p>Navigate to the <code>things</code> folder.</p>
+                  <p>Use the command <code>git init</code> which should initialize the repo.</p>
+                  <pre class="hljs"><code>$ git init
+Initialized empty Git repository <span class="hljs-keyword">in</span> <span class="hljs-string">c:</span><span class="hljs-regexp">/repos/</span>things<span class="hljs-regexp">/.git/</span>
+</code></pre>
+                  <p>You can use the command <code>ls -a</code> to view all files, which should show the <code>.git</code> directory that was created by the previous command.</p>
+                  <pre class="hljs"><code>$ ls -<span class="hljs-selector-tag">a</span>
+.  ..  <span class="hljs-selector-class">.git</span>
+</code></pre>
+                  <p>You can also use the <code>git status</code> command to check the status of the newly-created repo. It should respond with something like the bellow</p>
+                  <pre class="hljs"><code><span class="hljs-attribute">git status</span>
+</code></pre>
+                  <p>-></p>
+                  <pre class="hljs"><code><span class="hljs-comment"># On branch master</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Initial commit</span>
+<span class="hljs-comment">#</span>
+nothing <span class="hljs-built_in">to</span> commit (<span class="hljs-built_in">create</span>/copy <span class="hljs-built_in">files</span> <span class="hljs-keyword">and</span> use <span class="hljs-string">"git add"</span> <span class="hljs-built_in">to</span> track)
+</code></pre>
+                </div>
+              </tab>
+            </tabs>
           </div>
         </div>
       </panel>
@@ -43,7 +83,118 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <panel src="/se-book\revisionControl\savingHistory\embed._include_.html" header="Revision Control: Saving History" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+            <p></p>
+            <p>Create an empty repo as described <a href="./init/">here</a>.</p>
+            <p>Create a file named <code>fruits.txt</code> in the folder and add some dummy text to it.</p>
+            <tip-box type="primary">
+              <div>
+                <p><strong>Working directory</strong>: The directory the repo is based in is called the <em>working directory</em>.</p>
+              </div>
+            </tip-box>
+            <p>Observe how the file is detected by Git.</p>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>The file is shown as ‘unstaged’</p><img src="/se-book/gitAndGithub/commit/images/sourcetree_1.png" height="220">
+                  <p></p>
+                </div>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <p>You can use the <code>git status</code> command to check the status of the working directory.</p>
+                  <pre><code class="hljs sh">git status
+</code></pre>
+                  <p>-></p>
+                  <pre class="hljs"><code><span class="hljs-meta">#</span><span class="bash"> On branch master</span>
+<span class="hljs-meta">#</span><span class="bash"></span>
+<span class="hljs-meta">#</span><span class="bash"> Initial commit</span>
+<span class="hljs-meta">#</span><span class="bash"></span>
+<span class="hljs-meta">#</span><span class="bash"> Untracked files:</span>
+<span class="hljs-meta">#</span><span class="bash">   (use <span class="hljs-string">"git add <file cwf="</span>C:\Markbind\se-book\gitAndGithub\commit\cli_1.md<span class="hljs-string">">..."</span> to include <span class="hljs-keyword">in</span> what will be committed)</span>
+<span class="hljs-meta">#</span><span class="bash"></span>
+<span class="hljs-meta">#</span><span class="bash">   a.txt</span>
+nothing added to commit but untracked files present (use "git add" to track)
+</code></pre>
+                  <p></p>
+                </div>
+              </tab>
+            </tabs>
+            <p>Although git has detected the file in the working folder, it will not do anything with the file unless you tell it to. Suppose we want to commit the current state of the file. First, we should stage the file.</p>
+            <tip-box type="primary">
+              <div>
+                <p><strong>Commit</strong>: Saving the current state of the working folder into the Git revision history.</p>
+              </div>
+            </tip-box>
+            <tip-box type="primary">
+              <div>
+                <p><strong>Stage</strong>: Instructing Git to prepare a file for committing.</p>
+              </div>
+            </tip-box>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>Select the <code>fruits.txt</code> and click on the <code>Stage Selected</code> button</p><img src="/se-book/gitAndGithub/commit/images/sourcetree_2.png" height="100">
+                  <p></p>
+                  <p><code>fruits.txt</code> should appear in the <code>Staged files</code> panel now.’</p><img src="/se-book/gitAndGithub/commit/images/sourcetree_3.png" height="180">
+                  <p></p>
+                </div>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <p>You can use the <code>stage</code> or the <code>add</code> command (they are synonyms, <code>add</code> is the more popular choice) to stage files.</p>
+                  <pre><code class="hljs sh">git add fruits.txt
+git status
+</code></pre>
+                  <p>-></p>
+                  <pre><code class="hljs sh"><span class="hljs-comment"># On branch master</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Initial commit</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Changes to be committed:</span>
+<span class="hljs-comment">#   (use "git rm --cached <file cwf="C:\Markbind\se-book\gitAndGithub\commit\cli_2.md">..." to unstage)</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">#       new file:   fruits.txt</span>
+<span class="hljs-comment">#</span>
+</code></pre>
+                  <p></p>
+                </div>
+              </tab>
+            </tabs>
+            <p>Next, we can commit the staged version of <code>fruits.txt</code></p>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>Click the <code>Commit</code> button, enter a commit message e.g. <code>add fruits.txt</code> in to the text box, and click <code>Commit</code></p><img src="/se-book/gitAndGithub/commit/images/sourcetree_4.png" height="300">
+                  <p></p>
+                </div>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <p>Use the <code>commit</code> command to commit. The <code>-m</code> switch is used to specify the commit message.</p>
+                  <pre><code class="hljs sh">git commit -m <span class="hljs-string">"add fruits.txt"</span>
+</code></pre>
+                  <p>You can use the <code>log</code> command to see the commit history</p>
+                  <pre><code class="hljs sh">git <span class="hljs-built_in">log</span>
+</code></pre>
+                  <p>-></p>
+                  <pre class="hljs"><code>commit <span class="hljs-number">8</span>fd30a6910efb28bb258cd01be93e481caeab846
+<span class="hljs-symbol">Author:</span> … < … @... >
+<span class="hljs-symbol">Date:</span>   Wed Jul <span class="hljs-number">5</span> <span class="hljs-number">16</span>:<span class="hljs-number">06</span>:<span class="hljs-number">28</span> <span class="hljs-number">2017</span> +<span class="hljs-number">0800</span>
+
+  <span class="hljs-keyword">Add</span> fruits.txt
+</code></pre>
+                </div>
+              </tab>
+            </tabs>
+            <p>Note the existence of something called the <code>master</code> branch. Git allows you to have multiple branches (i.e. it is a way to evolve the content in parallel) and Git creates a default branch named <code>master</code> on which the commits
+              go on by default.</p>
+            <p>Do some changes to fruits.txt (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps we followed before. You should end up with something like this.</p><img src="/se-book/gitAndGithub/commit/images/sourcetree_6.png"
+              height="180">
+            <p></p>
+            <p>Next, add two more files <code>colors.txt</code> and <code>shapes.txt</code> to the same working directory. Add a third commit to record the current state of the working directory.</p><img src="/se-book/gitAndGithub/commit/images/sourcetree_7.png"
+              height="150">
+            <p></p>
           </div>
         </div>
       </panel>
@@ -60,7 +211,31 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <panel src="/se-book\revisionControl\savingHistory\embed._include_.html" header="Revision Control: Saving History" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+            <p></p>
+            <p>Add a file names <code>temp.txt</code> to the <code>things</code> repo you created. Suppose we don’t want this file to be revision controlled by Git. Let’s instructor Git to ignore <code>temp.txt</code></p>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>The file should be currently listed under <code>Unstaged files</code>. Right-click it and choose <code>Ignore…</code>. Choose <code>Ignore exact filename(s)</code> and click <code>OK</code>.</p>
+                  <p>Observe that a file named <code>.gitignore</code> has been created in the working directory root and has the following line in it.</p>
+                  <pre class="hljs"><code>temp<span class="hljs-selector-class">.text</span>
+</code></pre>
+                </div>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <p>Create a file named <code>.gitignore</code> in the working directory root and add the following line in it.</p>
+                  <pre class="hljs"><code>temp<span class="hljs-selector-class">.text</span>
+</code></pre>
+                </div>
+              </tab>
+            </tabs>
+            <p>The <code>.gitignore</code> file tells Git which files to ignore when tracking revision history. That file itself can be either revision controlled or ignored.</p>
+            <ul>
+              <li>To version control it (the more common choice – which allows you to track how the <code>.gitignore</code> file changed over time), simply commit it as you would commit any other file.</li>
+              <li>To ignore it, follow the same steps we followed above when we set Git to ignore the <code>temp.txt</code> file.</li>
+            </ul>
           </div>
         </div>
       </panel>
@@ -77,7 +252,29 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <panel src="/se-book\revisionControl\savingHistory\embed._include_.html" header="Revision Control: Saving History" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+            <p></p>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>Right-click on the commit (in the graphical revision graph) you want to tag and choose <code>Tag…</code></p>
+                  <p>Specify the tag name e.g. <code>v1.0</code> and click <code>Add Tag</code>.</p>
+                  <p>The added tag will appear in the revision graph view.</p><img src="/se-book/gitAndGithub/tag/images/sourcetree_1.png" height="70">
+                  <p></p>
+                </div>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <p>To add a tag to the current commit as <code>v1.0</code>,</p>
+                  <pre class="hljs"><code>git <span class="hljs-keyword">tag</span> <span class="hljs-title">–a</span> v1.<span class="hljs-number">0</span>
+</code></pre>
+                  <p>To view tags</p>
+                  <pre class="hljs"><code>git <span class="hljs-keyword">tag</span>
+<span class="hljs-title"></span></code></pre>
+                  <p>To learn how to add a tag to a past commit, go to the <a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">‘Git Basics – Tagging’ page of the git-scm book</a> and refer the ‘Tagging Later’ section.</p>
+                </div>
+              </tab>
+            </tabs>
           </div>
         </div>
       </panel>
@@ -94,7 +291,103 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <panel src="/se-book\revisionControl\usingHistory\embed._include_.html" header="Revision Control: Using History" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+            <p></p>
+            <p>Git can show you what changed in each commit.</p>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>To see which files changed in a commit, click on the commit. To see what changed in a specific file in that commit, click on the file name.</p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_1.png" height="220">
+                  <p></p>
+                </div>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <pre><code class="hljs sh">git show < part-of-commit-hash >
+</code></pre>
+                  <p>Example:</p>
+                  <pre class="hljs"><code>git <span class="hljs-keyword">show</span> <span class="hljs-number">251</span>b4cf
+</code></pre>
+                  <p>-></p>
+                  <pre><code class="hljs diff">commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3
+Author: … < … >
+Date:   Sat Jul 8 16:50:27 2017 +0800
+
+    fruits.txt: replace banana with berries
+
+diff --git a/fruits.txt b/fruits.txt
+index 15b57f7..17f4528 100644
+<span class="hljs-comment">--- a/fruits.txt</span>
+<span class="hljs-comment">+++ b/fruits.txt</span>
+<span class="hljs-meta">@@ -1,3 +1,3 @@</span>
+ apples
+<span class="hljs-deletion">-bananas</span>
+<span class="hljs-addition">+berries</span>
+ cherries
+</code></pre>
+                </div>
+              </tab>
+            </tabs>
+            <p>Git can also show you the difference between two points in the history of the repo.</p>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>Select the two points you want to compare using <code>Ctrl+Click</code></p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_2.png" height="200">
+                  <p></p>
+                  <p>The same method can be used to compare the current state of the working directory (which might have uncommitted changes) to a point in the history.</p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_3.png" height="100">
+                  <p></p>
+                </div>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <p>The <code>diff</code> command can be used to view the differences between two points of the history.</p>
+                  <ul>
+                    <li><code>git diff</code> : shows the changes (uncommitted) since the last commit</li>
+                    <li><code>git diff 0023cdd..fcd6199</code>: shows the changes between the points indicated by by commit hashes</li>
+                    <li><code>git diff v1.0..HEAD</code>: shows changes that happened from the commit tagged as <code>v1.0</code> to the most recent commit.</li>
+                  </ul>
+                  <p>Resources:</p>
+                  <ul>
+                    <li><a href="https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/diffs">Git-Tower Tutorial: Inspecting Changes with Diffs</a></li>
+                    <li><a href="https://stackoverflow.com/questions/8640838/how-do-i-navigate-in-the-results-of-diff">How to view the next page of a <code>git</code> command result</a></li>
+                  </ul>
+                </div>
+              </tab>
+            </tabs>
+            <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to stash them first to prevent them from being overwritten.</p>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>Double-click the commit you want to load to the working directory, or right-click on that commit and choose .</p>
+                  <p>Click <code>OK</code> to the warning about ‘detached HEAD’ (similar to below).</p><img src="/se-book/gitAndGithub/checkout/images/warning.png" height="140">
+                  <p></p>
+                  <p>The specified version is now loaded to the working folder, as indicated by the <code>HEAD</code> label. <code>HEAD</code> is a reference to the currently checked out commit.</p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_4.png"
+                    height="100">
+                  <p></p>
+                  <p>If you checkout a commit that come before the commit in which you added the <code>.gitignore</code> file, Git will now show ignored fiels as ‘unstaged modifications’ because at that stage Git hasn’t been told to ignore those files.</p>
+                  <img
+                    src="/se-book/gitAndGithub/checkout/images/sourcetree_5.png" height="260">
+                    <p></p>
+                    <p>To go back to the latest commit, double-click it.</p>
+                </div>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <p>Use the <code>checkout <commit-identifier cwf="C:\Markbind\se-book\gitAndGithub\checkout\cli_3.md"></code> command to change the working directory to the state it was in at a specific past commit.</p>
+                  <ul>
+                    <li><code>git checkout v1.0</code>: loads the state as at commit tagged <code>v1.0</code></li>
+                    <li><code>git checkout 0023cdd</code>: loads the state as at commit with the hash <code>0023cdd</code></li>
+                    <li><code>git checkout HEAD~2</code>: loads the state that is 2 commits behind the most recent commit</li>
+                  </ul>
+                  <p>For now, you can ignore the warning about ‘detached HEAD’.</p>
+                  <p>Use the <code>checkout <branch-name cwf="C:\Markbind\se-book\gitAndGithub\checkout\cli_3.md"></code> to go back to the most recent commit of the current branch (the default branch in git is named <code>master</code>)</p>
+                  <ul>
+                    <li><code>git checkout master</code></li>
+                  </ul>
+                  <p></p>
+                </div>
+              </tab>
+            </tabs>
           </div>
         </div>
       </panel>
@@ -111,7 +404,7 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <p>{todo}</p>
           </div>
         </div>
       </panel>
@@ -128,7 +421,24 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <panel src="/se-book\revisionControl\remoteRepositories\embed._include_.html" header="Revision Control: Remote Repositories" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+            <p></p>
+            <p>Clone the sample repo <mark>{give repo}</mark> to your computer.</p>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>File -> <code>Clone / New…</code> and provide the URL and the destination directory.</p>
+                  <p>You can use the <code>clone</code> command to clone a repo.</p>
+                  <p>Follow instructions in <a href="https://help.github.com/articles/cloning-a-repository/">this</a> page</p>
+                </div>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <p><code>origin</code></p>
+                  <p>{to do}</p>
+                </div>
+              </tab>
+            </tabs>
           </div>
         </div>
       </panel>
@@ -145,7 +455,85 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <p>Clone the sample repo
+              <trigger for="modal:clone-repository" trigger="click">(instructions)</trigger>.</p>
+            <p>Delete the last two commits to simulate cloning the repo 2 commits ago.</p>
+            <modal title="**Clone Repository**" id="modal:clone-repository">
+              <div>
+                <div>
+                  <h4 id="clone-one-2">Clone <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+                </div>
+                <tip-box type="success">
+                  <div>
+                    <p>🏆 Can clone a remote repo <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+                  </div>
+                </tip-box>
+                <panel type="seamless" header=" %%- - - - - - - - - -%%">
+                  <div>
+                    <div>
+                      <panel src="/se-book\revisionControl\remoteRepositories\embed._include_.html" header="Revision Control: Remote Repositories" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+                      <p></p>
+                      <p>Clone the sample repo <mark>{give repo}</mark> to your computer.</p>
+                      <tabs>
+                        <tab header="SourceTree">
+                          <div>
+                            <p>File -> <code>Clone / New…</code> and provide the URL and the destination directory.</p>
+                            <p>You can use the <code>clone</code> command to clone a repo.</p>
+                            <p>Follow instructions in <a href="https://help.github.com/articles/cloning-a-repository/">this</a> page</p>
+                          </div>
+                        </tab>
+                        <tab header="CLI">
+                          <div>
+                            <p><code>origin</code></p>
+                            <p>{to do}</p>
+                          </div>
+                        </tab>
+                      </tabs>
+                    </div>
+                  </div>
+                </panel>
+              </div>
+            </modal>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>Right-click the target commit (i.e. the commit that is 2 commits behind the tip) and choose <code>Reset current branch to this commit</code>.</p>
+                  <p>Choose the <code>Hard - …</code> option and click <code>OK</code>.</p><img src="/se-book/gitAndGithub/pull/images/sourcetree_1.png" height="120">
+                  <p></p>
+                  <p>This is what you will see.</p><img src="/se-book/gitAndGithub/pull/images/sourcetree_2.png" height="150">
+                  <p></p>
+                  <p>Note the following:</p>
+                  <ul>
+                    <li>The local repo is now at this commit, marked by the <code>master</code> label.</li>
+                    <li><code>origin/master</code> shows what is the latest commit in the <code>master</code> branch in the remote repo.</li>
+                  </ul>
+                </div>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <p>Use the <code>reset</code> command to delete commits at the tip of the revision history.</p>
+                  <pre class="hljs"><code>git <span class="hljs-keyword">reset</span> <span class="hljs-comment">--hard HEAD~2</span>
+</code></pre>
+                </div>
+              </tab>
+            </tabs>
+            <p>Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago. In other words, it is as if somebody has added two more commits to the remote repo since you cloned it. To get those commits to your local repo
+              (i.e. to sync your local repo with upstream repo) you can do a pull.</p>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>Click the <code>Pull</code> button in the main menu, choose <code>origin</code> and <code>master</code> in the next dialog, and click <code>OK</code>.</p><img src="/se-book/gitAndGithub/pull/images/sourcetree_3.png" height="160">
+                  <p></p>
+                  <p>Now you should see something like this where <code>master</code> and <code>origin\master</code> are both pointing the same commit.</p><img src="/se-book/gitAndGithub/pull/images/sourcetree_4.png" height="100">
+                  <p></p>
+                </div>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <p><code>git pull origin master</code></p>
+                </div>
+              </tab>
+            </tabs>
           </div>
         </div>
       </panel>
@@ -162,7 +550,32 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <ol>
+              <li>Fork the sample repo.</li>
+            </ol>
+            <ul>
+              <li>Navigate to the sample repo on GitHub</li>
+              <li>Click on the <code>Fork</code> button on the top-right corner</li>
+              <li><img src="/se-book/gitAndGithub/push/images/fork.png" height="30"></li>
+            </ul>
+            <ol start="2">
+              <li>Clone the frok (not the original) to your computer.</li>
+              <li>Create some commits in your repo.</li>
+              <li>Push the new commits to your fork on GitHub</li>
+            </ol>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>Click the <code>Push</code> button on the main menu, ensure the settings are as follows in the next dialog, and click the <code>Push</code> button on the dialog.</p><img src="/se-book/gitAndGithub/push/images/sourcetree_1.png" height="150">
+                  <p></p>
+                </div>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <p><code>git push origin master</code> enter Github username and password when prompted.</p>
+                </div>
+              </tab>
+            </tabs>
           </div>
         </div>
       </panel>
@@ -179,7 +592,93 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <panel src="/se-book\revisionControl\branching\embed._include_.html" header="Revision Control: Branching" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+            <p></p>
+            <p>Take any repo you have on your computer. Observe that you are in the branch called <code>master</code>.</p>
+            <ol>
+              <li>Start branch named <code>feature1</code> and switch to the new branch.</li>
+            </ol>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>Click on the <code>Branch</code> button on the main menu. In the next dialog, enter the branch name and click <code>Create Branch</code></p><img src="/se-book/gitAndGithub/branch/images/sourcetree_1.png" height="150">
+                  <p></p><img src="/se-book/gitAndGithub/branch/images/sourcetree_2.png" height="150">
+                  <p></p>
+                </div>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <pre class="hljs"><code><span class="hljs-symbol">git</span> <span class="hljs-keyword">branch </span>feature1
+<span class="hljs-symbol">git</span> checkout feature1
+</code></pre>
+                  <p>One-step shortcut</p>
+                  <pre class="hljs"><code>git checkout –<span class="hljs-selector-tag">b</span> feature1
+</code></pre>
+                </div>
+              </tab>
+            </tabs>
+            <ol start="2">
+              <li>
+                <p>Create some commits in the new branch.</p>
+              </li>
+              <li>
+                <p>Switch to master and note how the changes you did in the <code>feature1</code> branch are no longer in the working directory.</p>
+              </li>
+            </ol>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>Double-click the <code>master</code> branch</p><img src="/se-book/gitAndGithub/branch/images/sourcetree_3.png" height="150">
+                  <p></p>
+                </div>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <pre class="hljs"><code>git checkout <span class="hljs-keyword">master</span>
+<span class="hljs-title"></span></code></pre>
+                </div>
+              </tab>
+            </tabs>
+            <ol start="4">
+              <li>Add a commit to the master branch. Let’s imagine it’s a bug fix.</li>
+            </ol><img src="/se-book/gitAndGithub/branch/images/sourcetree_4.png" height="100">
+            <p></p>
+            <ol start="5">
+              <li>
+                <p>Switch back to the branch <code>feature1</code></p>
+              </li>
+              <li>
+                <p>To get the bug fix in the <code>master</code> branch to the <code>feature1</code> branch, merge the <code>master</code> branch to the <code>feature1</code> branch, be like this:</p>
+              </li>
+            </ol><img src="/se-book/gitAndGithub/branch/images/sourcetree_5.png" height="120">
+            <p></p>
+            <tabs>
+              <tab header="SourceTree">
+                <div>
+                  <p>Right-click on the <code>master</code> branch and choose <code>merge master into the current branch</code>. Click OK in the next dialog.</p>
+                </div>
+              </tab>
+              <tab header="CLI">
+                <div>
+                  <pre class="hljs"><code>git merge <span class="hljs-keyword">master</span>
+<span class="hljs-title"></span></code></pre>
+                </div>
+              </tab>
+            </tabs>
+            <ol start="7">
+              <li>
+                <p>Add another commit to the <code>feature1</code> branch</p>
+              </li>
+              <li>
+                <p>Switch to the <code>master</code> branch and add one more commit.</p>
+              </li>
+              <li>
+                <p>Merge <code>feature1</code> to the master branch.</p>
+              </li>
+            </ol><img src="/se-book/gitAndGithub/branch/images/sourcetree_6.png" height="150">
+            <p></p>
+            <p>{show a more intuitive version of the graph}</p>
+            <p>{mention fastforwarding}</p>
           </div>
         </div>
       </panel>
@@ -196,7 +695,39 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <ol>
+              <li>
+                <p>Start a branch named <code>fix1</code> in a local repo. Create a commit that adds a line with some text to one of the files.</p>
+              </li>
+              <li>
+                <p>Switch back to <code>master</code> branch. Create a commit that adds a line with some different text in the exact location the previous line was added.</p>
+              </li>
+            </ol><img src="/se-book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
+            <p></p>
+            <ol start="3">
+              <li>Try to merge the branch. Git will report a merge conflict. If you open the conflicted file, you will see something like this:</li>
+            </ol>
+            <pre class="hljs"><code><span class="hljs-section">COLORS
+------</span>
+blue
+<<<<<<< HEAD
+<span class="hljs-section">black
+=======</span>
+green
+>>>>>>> fix1
+red
+white<span class="hljs-code">```</span>
+The conflicted part is marked between a line starting with <span class="hljs-code">`<<<<<<< `</span> and a line starting with <span class="hljs-code">`>>>>>>>`</span>. Let us assume you want to keep both lines in the merged version. You can modify the file like this.
+<span class="hljs-code">```</span>txt
+<span class="hljs-section">COLORS
+------</span>
+blue
+black
+green
+red
+white
+</code></pre>
+            <p>Now, stage the changes, and commit.</p>
           </div>
         </div>
       </panel>
@@ -213,7 +744,16 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <ol>
+              <li>Fork the se-edu/samplerepo-pr-practice. Clone it into your computer.</li>
+              <li>Create a branch named <code>add-foo</code> in your clone. Add a commit which adds/modifies some new text.</li>
+              <li>Push the branch to the fork.</li>
+              <li>Create a Pull Request from the <code>add-foo</code> branch in your fork to the <code>master</code> branch of the same fork (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>), as described
+                in <a href="https://help.github.com/articles/creating-a-pull-request/">https://help.github.com/articles/creating-a-pull-request/</a></li>
+              <li>Go back to your local repo, and create a new branch <code>add-bar</code> off the <code>master</code> branch. It is very important that you switch back to <code>master</code> before you create the new branch. If not, the rew branch will be
+                created off the current branch <code>add-foo</code>.</li>
+              <li>Add a commit to <code>add-bar</code> that modifies the same part of the repo modified in the previous PR. Push to the fork and create a new PR similar to before.</li>
+            </ol>
           </div>
         </div>
       </panel>
@@ -230,7 +770,25 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <ol>
+              <li>Go to GitHub and review (i.e. add some dummy comments to the code) to the first PR created <a href="./createPRs">previously</a>.</li>
+              <li>Update the add-foo PR: Add some more commits to the <code>add-foo</code> branch and push the new commits to the fork. The PR will be updated automatically.</li>
+              <li>Merge add-foo PR.</li>
+              <li>Sync the local repo with the upstream repo. i.e. pull the master branch to the local repo.</li>
+            </ol>
+            <pre class="hljs"><code>git checkout <span class="hljs-keyword">master</span>
+<span class="hljs-title">git</span> pull origin <span class="hljs-keyword">master</span>
+<span class="hljs-title"></span></code></pre>
+            <ol start="5">
+              <li>Resolve conflicts. Note that GitHub page for the <code>add-bar</code> PR is not showing a conflict. You can resolve it locally and update the PR accordingly.</li>
+            </ol>
+            <ul>
+              <li>Switch to the <code>add-bar</code> branch. Merge <code>master</code> branch to it, which will surface the merge conflict. Resolve it and complete the merge.</li>
+              <li>Push the updated <code>add-bar</code> branch to the fork.</li>
+            </ul>
+            <ol start="6">
+              <li>Merge second PR.</li>
+            </ol>
           </div>
         </div>
       </panel>
@@ -247,7 +805,35 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>...</p>
+            <panel src="/se-book\revisionControl\forkingWorkflow\embed._include_.html" header="Revision Control: Forking Workflow" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+            <p></p>
+            <ol>
+              <li>Create a GitHub organization for your team.</li>
+              <li>One member: create a repo in the org and put some files in it.</li>
+              <li>All team members fork the repo.</li>
+              <li>All create PRs but ensure each person changes a different file (to avoid conflicts).</li>
+              <li>Review and merge PRs. i.e. for each PR</li>
+            </ol>
+            <ul>
+              <li>A team member (not the PR author): Review the PR by adding comments (can be just dummy comments).</li>
+              <li>PR author: Update the PR by pushing more commits to it, to simulate updating the PR based on review comments.</li>
+              <li>Maintainer: Merge the PR using the GitHub interface.</li>
+              <li>All: Sync fork with upstream changes.</li>
+            </ul>
+            <ol start="6">
+              <li>Create conflicting PRs.</li>
+            </ol>
+            <ul>
+              <li>All: Create PRs modifying the same part of the same file.</li>
+              <li>Maintainer: in the master branch, create a commit that modifies the same part of the same file. Push to the main repo.</li>
+            </ul>
+            <ol start="7">
+              <li>Merge PRs one at a time. Before merging a PR, PR you’ll have to resolve conflicts. Steps:</li>
+            </ol>
+            <ul>
+              <li>Maintainer: informs the PR author (by posting a comment) that there is a conflict in the PR.</li>
+              <li>PR author: Pull the <code>master</code> branch. Merge <code>master</code> to your PR branch. Resolve the merge conflict that corps up during the merge.</li>
+            </ul>
           </div>
         </div>
       </panel>

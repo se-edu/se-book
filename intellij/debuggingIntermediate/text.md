@@ -12,7 +12,7 @@
 
 <div id="body">
 
-...
+{Other types of break points}
 
 </div>
 

@@ -6,8 +6,7 @@
 
 # Introduction
 
-<include src="introduction/basics/text.md#title" />
-<include src="introduction/basics/text.md#body" />
+<include src="introduction/basics/print.md" />
 
 </div>
 

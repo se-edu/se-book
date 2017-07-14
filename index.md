@@ -4,15 +4,11 @@
 
 ## Software Engineering for Self-Directed Learners
 
-<include src="introduction/topic.md" />
-
 <include src="softwareEngineering/topicToc.md" />
 
 ### Requirements
 
 <include src="requirements/topicToc.md" />
-
-<include src="productDesign/topicToc.md" />
 
 ### Design
 

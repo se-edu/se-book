@@ -16,7 +16,7 @@
 <include src="drcsVsCrcs/embed.md" />
 <include src="forkingWorkflow/embed.md" />
 <include src="featureBranchFlow/embed.md" />
-<include src="centralisedFlow/embed.md" />
+<include src="centralizedFlow/embed.md" />
 
 </div>
 

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Git and Github: Branch</title>
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong><span>Git and Github ➡️ </span></strong>
+    </span>
+  </p>
+  <div>
+    <h4 id="branch-two">Branch <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+  </div>
+  <tip-box type="success">
+    <div>
+      <p>🏆 Can use Git branching <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+    </div>
+  </tip-box>
+  <div id="main">
+    <div>
+      <panel src="/se-book\revisionControl\branching\embed._include_.html" header="Revision Control: Branching" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+      <p></p>
+      <p>Take any repo you have on your computer. Observe that you are in the branch called <code>master</code>.</p>
+      <ol>
+        <li>Start branch named <code>feature1</code> and switch to the new branch.</li>
+      </ol>
+      <tabs>
+        <tab header="SourceTree">
+          <div>
+            <p>Click on the <code>Branch</code> button on the main menu. In the next dialog, enter the branch name and click <code>Create Branch</code></p><img src="/se-book/gitAndGithub/branch/images/sourcetree_1.png" height="150">
+            <p></p><img src="/se-book/gitAndGithub/branch/images/sourcetree_2.png" height="150">
+            <p></p>
+          </div>
+        </tab>
+        <tab header="CLI">
+          <div>
+            <pre class="hljs"><code><span class="hljs-symbol">git</span> <span class="hljs-keyword">branch </span>feature1
+<span class="hljs-symbol">git</span> checkout feature1
+</code></pre>
+            <p>One-step shortcut</p>
+            <pre class="hljs"><code>git checkout –<span class="hljs-selector-tag">b</span> feature1
+</code></pre>
+          </div>
+        </tab>
+      </tabs>
+      <ol start="2">
+        <li>
+          <p>Create some commits in the new branch.</p>
+        </li>
+        <li>
+          <p>Switch to master and note how the changes you did in the <code>feature1</code> branch are no longer in the working directory.</p>
+        </li>
+      </ol>
+      <tabs>
+        <tab header="SourceTree">
+          <div>
+            <p>Double-click the <code>master</code> branch</p><img src="/se-book/gitAndGithub/branch/images/sourcetree_3.png" height="150">
+            <p></p>
+          </div>
+        </tab>
+        <tab header="CLI">
+          <div>
+            <pre class="hljs"><code>git checkout <span class="hljs-keyword">master</span>
+<span class="hljs-title"></span></code></pre>
+          </div>
+        </tab>
+      </tabs>
+      <ol start="4">
+        <li>Add a commit to the master branch. Let’s imagine it’s a bug fix.</li>
+      </ol><img src="/se-book/gitAndGithub/branch/images/sourcetree_4.png" height="100">
+      <p></p>
+      <ol start="5">
+        <li>
+          <p>Switch back to the branch <code>feature1</code></p>
+        </li>
+        <li>
+          <p>To get the bug fix in the <code>master</code> branch to the <code>feature1</code> branch, merge the <code>master</code> branch to the <code>feature1</code> branch, be like this:</p>
+        </li>
+      </ol><img src="/se-book/gitAndGithub/branch/images/sourcetree_5.png" height="120">
+      <p></p>
+      <tabs>
+        <tab header="SourceTree">
+          <div>
+            <p>Right-click on the <code>master</code> branch and choose <code>merge master into the current branch</code>. Click OK in the next dialog.</p>
+          </div>
+        </tab>
+        <tab header="CLI">
+          <div>
+            <pre class="hljs"><code>git merge <span class="hljs-keyword">master</span>
+<span class="hljs-title"></span></code></pre>
+          </div>
+        </tab>
+      </tabs>
+      <ol start="7">
+        <li>
+          <p>Add another commit to the <code>feature1</code> branch</p>
+        </li>
+        <li>
+          <p>Switch to the <code>master</code> branch and add one more commit.</p>
+        </li>
+        <li>
+          <p>Merge <code>feature1</code> to the master branch.</p>
+        </li>
+      </ol><img src="/se-book/gitAndGithub/branch/images/sourcetree_6.png" height="150">
+      <p></p>
+      <p>{show a more intuitive version of the graph}</p>
+      <p>{mention fastforwarding}</p>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\markbind\js\setup.js"></script>
+</html>
