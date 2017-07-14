@@ -10,8 +10,6 @@
 
 <include src="requirements/topicToc.md" />
 
-<include src="productDesign/topicToc.md" />
-
 ### Design
 
 <include src="design/topicToc.md" />
