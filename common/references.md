@@ -29,4 +29,8 @@
 
   <div id="bach-et-explained">Exploratory testing explained, an online article by [James Bach](http://www.satisfice.com/aboutjames.shtml) (James Bach is an industry thought leader in software testing). Softcopy available at http://www.satisfice.com/articles/et-article.pdf</div>
 
+* [bryan-mercurial-guide]
+
+  <div id="bryan-mercurial-guide">[Mercurial: The Definitive Guide](http://hgbook.red-bean.com/) by Bryan O'Sullivan retrieve on 2012/07/11</div>
+
 </div>

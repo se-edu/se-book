@@ -385,7 +385,7 @@
 <include src="../revisionControl/drcsVsCrcs/outcomes.md" />
 <include src="../revisionControl/forkingWorkflow/outcomes.md" />
 <include src="../revisionControl/featureBranchFlow/outcomes.md" />
-<include src="../revisionControl/centralisedFlow/outcomes.md" />
+<include src="../revisionControl/centralizedFlow/outcomes.md" />
 
 ### Project Planning
 
