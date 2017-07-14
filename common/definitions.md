@@ -229,4 +229,22 @@ Also known as
 
 </div>
 
+<div id="def-working-directory">
+
+**Working directory**: The directory the repo is based in is called the _working directory_.
+
+</div>
+
+<div id="def-commit">
+
+**Commit**: Saving the current state of the working folder into the Git revision history.
+
+</div>
+
+<div id="def-stage">
+
+**Stage**: Instructing Git to prepare a file for committing.
+
+</div>
+
 </div>
