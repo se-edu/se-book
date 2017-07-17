@@ -30,4 +30,7 @@ Suppose you want to create a repository in an empty directory `project1`
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>
