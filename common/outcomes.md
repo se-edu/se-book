@@ -42,20 +42,21 @@
 
 ### Software Design
 
-<include src="../design/introduction/basics/outcomes.md" />
+<include src="../design/introduction/basic/outcomes.md" />
+<include src="../design/introduction/multilevelDesign/outcomes.md" />
 
 ### Design Principles
 
-<include src="../designPrinciples/abstraction/whatItIs/outcomes.md" />
-<include src="../designPrinciples/coupling/whatItIs/outcomes.md" />
-<include src="../designPrinciples/coupling/whyWeCare/outcomes.md" />
-<include src="../designPrinciples/coupling/howItHappens/outcomes.md" />
+<include src="../designPrinciples/abstraction/what/outcomes.md" />
+<include src="../designPrinciples/coupling/what/outcomes.md" />
+<include src="../designPrinciples/coupling/why/outcomes.md" />
+<include src="../designPrinciples/coupling/how/outcomes.md" />
 <include src="../designPrinciples/coupling/types/outcomes.md" />
-<include src="../designPrinciples/cohesion/howItHappens/outcomes.md" />
-<include src="../designPrinciples/cohesion/whatItIs/outcomes.md" />
-<include src="../designPrinciples/cohesion/whyWeCare/outcomes.md" />
-<include src="../designPrinciples/dependencyInversionPrinciple/whatItIs/outcomes.md" />
-<include src="../designPrinciples/openClosedPrinciple/whatItIs/outcomes.md" />
+<include src="../designPrinciples/cohesion/how/outcomes.md" />
+<include src="../designPrinciples/cohesion/what/outcomes.md" />
+<include src="../designPrinciples/cohesion/why/outcomes.md" />
+<include src="../designPrinciples/dependencyInversionPrinciple/what/outcomes.md" />
+<include src="../designPrinciples/openClosedPrinciple/what/outcomes.md" />
 
 ### Object Oriented Programming
 
@@ -140,23 +141,23 @@
 
 ### Design Patterns
 
-<include src="../designPatterns/introduction/whatItIs/outcomes.md" />
+<include src="../designPatterns/introduction/what/outcomes.md" />
 <include src="../designPatterns/introduction/format/outcomes.md" />
 
-<include src="../designPatterns/singleton/whatItIs/outcomes.md" />
+<include src="../designPatterns/singleton/what/outcomes.md" />
 <include src="../designPatterns/singleton/implementation/outcomes.md" />
 <include src="../designPatterns/singleton/application/outcomes.md" />
 <include src="../designPatterns/singleton/evaluation/outcomes.md" />
 
-<include src="../designPatterns/abstractionOccurrence/whatItIs/outcomes.md" />
+<include src="../designPatterns/abstractionOccurrence/what/outcomes.md" />
 
-<include src="../designPatterns/facade/whatItIs/outcomes.md" />
+<include src="../designPatterns/facade/what/outcomes.md" />
 
-<include src="../designPatterns/command/whatItIs/outcomes.md" />
+<include src="../designPatterns/command/what/outcomes.md" />
 
-<include src="../designPatterns/modelViewController/whatItIs/outcomes.md" />
+<include src="../designPatterns/modelViewController/what/outcomes.md" />
 
-<include src="../designPatterns/observer/whatItIs/outcomes.md" />
+<include src="../designPatterns/observer/what/outcomes.md" />
 
 <include src="../designPatterns/more/combiningDesignPatterns/outcomes.md" />
 <include src="../designPatterns/more/otherDesignPatterns/outcomes.md" />
@@ -172,27 +173,27 @@
 
 ### Code Quality
 
-<include src="../codeQuality/introduction/basics/outcomes.md" />
+<include src="../codeQuality/introduction/basic/outcomes.md" />
 
 <include src="../codeQuality/maximiseReadability/introduction/outcomes.md" />
-<include src="../codeQuality/maximiseReadability/basics/outcomes.md" />
+<include src="../codeQuality/maximiseReadability/basic/outcomes.md" />
 <include src="../codeQuality/maximiseReadability/intermediate/outcomes.md" />
 <include src="../codeQuality/maximiseReadability/advanced/outcomes.md" />
 
 <include src="../codeQuality/followStandard/introduction/outcomes.md" />
-<include src="../codeQuality/followStandard/basics/outcomes.md" />
+<include src="../codeQuality/followStandard/basic/outcomes.md" />
 <include src="../codeQuality/followStandard/intermediate/outcomes.md" />
 
 <include src="../codeQuality/nameWell/introduction/outcomes.md" />
-<include src="../codeQuality/nameWell/basics/outcomes.md" />
+<include src="../codeQuality/nameWell/basic/outcomes.md" />
 <include src="../codeQuality/nameWell/intermediate/outcomes.md" />
 
 <include src="../codeQuality/avoidShortcuts/introduction/outcomes.md" />
-<include src="../codeQuality/avoidShortcuts/basics/outcomes.md" />
+<include src="../codeQuality/avoidShortcuts/basic/outcomes.md" />
 <include src="../codeQuality/avoidShortcuts/intermediate/outcomes.md" />
 
 <include src="../codeQuality/commentMinimally/introduction/outcomes.md" />
-<include src="../codeQuality/commentMinimally/basics/outcomes.md" />
+<include src="../codeQuality/commentMinimally/basic/outcomes.md" />
 <include src="../codeQuality/commentMinimally/intermediate/outcomes.md" />
 
 ### Refactoring

@@ -8,28 +8,28 @@
 
 ## Abstraction
 
-<include src="abstraction/whatItIs/print.md" />
+<include src="abstraction/what/print.md" />
 
 ## Coupling
 
-<include src="coupling/whatItIs/print.md" />
-<include src="coupling/whyWeCare/print.md" />
-<include src="coupling/howItHappens/print.md" />
+<include src="coupling/what/print.md" />
+<include src="coupling/why/print.md" />
+<include src="coupling/how/print.md" />
 <include src="coupling/types/print.md" />
 
 ## Cohesion
 
-<include src="cohesion/whatItIs/print.md" />
-<include src="cohesion/whyWeCare/print.md" />
-<include src="cohesion/howItHappens/print.md" />
+<include src="cohesion/what/print.md" />
+<include src="cohesion/why/print.md" />
+<include src="cohesion/how/print.md" />
 
 ## Open-Closed Principle
 
-<include src="openClosedPrinciple/whatItIs/print.md" />
+<include src="openClosedPrinciple/what/print.md" />
 
 ## Dependency Inversion Principle
 
-<include src="dependencyInversionPrinciple/whatItIs/print.md" />
+<include src="dependencyInversionPrinciple/what/print.md" />
 
 </div>
 
