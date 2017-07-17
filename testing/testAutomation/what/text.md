@@ -16,4 +16,7 @@ An automated test case can be run programmatically and the result of the test ca
 
 </div>
 
+<div id="extras">
+</div>
+
 </div>

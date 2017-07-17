@@ -50,4 +50,7 @@ Note that the above technique is only suitable when testing text UIs, and only i
 
 </div>
 
+<div id="extras">
+</div>
+
 </div>

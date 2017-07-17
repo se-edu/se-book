@@ -78,4 +78,7 @@ Some things to note (indicated by keywords in the above definition):
 
 </div>
 
+<div id="extras">
+</div>
+
 </div>
