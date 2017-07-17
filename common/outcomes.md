@@ -60,37 +60,37 @@
 
 ### Object Oriented Programming
 
-<include src="../oop/objects/basics/outcomes.md" />
-<include src="../oop/objects/abstraction/outcomes.md" />
-<include src="../oop/objects/encapsulation/outcomes.md" />
+<include src="../oopDesign/objects/basic/outcomes.md" />
+<include src="../oopDesign/objects/abstraction/outcomes.md" />
+<include src="../oopDesign/objects/encapsulation/outcomes.md" />
 
-<include src="../oop/classes/basics/outcomes.md" />
-<include src="../oop/classes/classLevelMembers/outcomes.md" />
-<include src="../oop/classes/enumerations/outcomes.md" />
+<include src="../oopDesign/classes/basic/outcomes.md" />
+<include src="../oopDesign/classes/classLevelMembers/outcomes.md" />
+<include src="../oopDesign/classes/enumerations/outcomes.md" />
 
-<include src="../oop/associations/basics/outcomes.md" />
-<include src="../oop/associations/navigability/outcomes.md" />
-<include src="../oop/associations/multiplicity/outcomes.md" />
-<include src="../oop/associations/dependencies/outcomes.md" />
-<include src="../oop/associations/composition/outcomes.md" />
-<include src="../oop/associations/aggregation/outcomes.md" />
-<include src="../oop/associations/associationClasses/outcomes.md" />
+<include src="../oopDesign/associations/basic/outcomes.md" />
+<include src="../oopDesign/associations/navigability/outcomes.md" />
+<include src="../oopDesign/associations/multiplicity/outcomes.md" />
+<include src="../oopDesign/associations/dependencies/outcomes.md" />
+<include src="../oopDesign/associations/composition/outcomes.md" />
+<include src="../oopDesign/associations/aggregation/outcomes.md" />
+<include src="../oopDesign/associations/associationClasses/outcomes.md" />
 
-<include src="../oop/inheritance/basics/outcomes.md" />
-<include src="../oop/inheritance/overriding/outcomes.md" />
-<include src="../oop/inheritance/overloading/outcomes.md" />
-<include src="../oop/inheritance/interfaces/outcomes.md" />
-<include src="../oop/inheritance/abstractClasses/outcomes.md" />
-<include src="../oop/inheritance/dynamicAndStaticBinding/outcomes.md" />
-<include src="../oop/inheritance/substitutability/outcomes.md" />
+<include src="../oopDesign/inheritance/basic/outcomes.md" />
+<include src="../oopDesign/inheritance/overriding/outcomes.md" />
+<include src="../oopDesign/inheritance/overloading/outcomes.md" />
+<include src="../oopDesign/inheritance/interfaces/outcomes.md" />
+<include src="../oopDesign/inheritance/abstractClasses/outcomes.md" />
+<include src="../oopDesign/inheritance/dynamicAndStaticBinding/outcomes.md" />
+<include src="../oopDesign/inheritance/substitutability/outcomes.md" />
 
-<include src="../oop/polymorphism/introduction/outcomes.md" />
-<include src="../oop/polymorphism/basics/outcomes.md" />
-<include src="../oop/polymorphism/mechanism/outcomes.md" />
+<include src="../oopDesign/polymorphism/introduction/outcomes.md" />
+<include src="../oopDesign/polymorphism/basic/outcomes.md" />
+<include src="../oopDesign/polymorphism/mechanism/outcomes.md" />
 
-<include src="../oop/conceptualisingSolution/introduction/outcomes.md" />
-<include src="../oop/conceptualisingSolution/basics/outcomes.md" />
-<include src="../oop/conceptualisingSolution/intermediate/outcomes.md" />
+<include src="../oopDesign/conceptualizingSolution/introduction/outcomes.md" />
+<include src="../oopDesign/conceptualizingSolution/basic/outcomes.md" />
+<include src="../oopDesign/conceptualizingSolution/intermediate/outcomes.md" />
 
 ### Modeling
 

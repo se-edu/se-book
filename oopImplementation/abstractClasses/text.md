@@ -12,7 +12,7 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oop/inheritance/abstractClasses/topicPanel.md" header="OOP: Inheritance: Abstract Classes" is-open></dynamic-panel>
+<dynamic-panel src="../../oopDesign/inheritance/abstractClasses/embed.md" header="OOP: Inheritance: Abstract Classes" is-open></dynamic-panel>
 
 <p/>
 

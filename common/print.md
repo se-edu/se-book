@@ -10,6 +10,7 @@
 
 <include src="../design/print.md#main" />
 <include src="../designPrinciples/print.md#main" />
+<include src="../oopDesign/print.md#main" />
 <include src="../modeling/print.md#main" />
 <include src="../architecture/print.md#main" />
 <include src="../designPatterns/print.md#main" />
