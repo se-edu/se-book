@@ -288,16 +288,17 @@ Logic m = <span class="hljs-keyword">new</span> Logic();
               </tip-box>
               <p>The general idea can be found in the following class diagram:</p><img src="/se-book/designPatterns/abstractionOccurrence/whatItIs/images/abstractionOccurrence.png" height="50">
               <p></p>
-              <p>The <code><< Abstraction >></code> class should hold all common information, and the unique information should be kept by the <code><< Occurrence >></code> class. Note that ‘Abstraction’ and ‘Occurrence’ are not class names, but roles played
-                by each class. Think of this diagram as a <em>meta-model</em> (i.e. a ‘model of a model’) of the <code>BookTitle-BookCopy</code> class diagram given above.</p>
-              <panel header=":paperclip: Extras" expandable="" type="seamless" expanded="">
+              <p>The <code>&lt;&lt; Abstraction &gt;&gt;</code> class should hold all common information, and the unique information should be kept by the <code>&lt;&lt; Occurrence &gt;&gt;</code> class. Note that ‘Abstraction’ and ‘Occurrence’ are not class
+                names, but roles played by each class. Think of this diagram as a <em>meta-model</em> (i.e. a ‘model of a model’) of the <code>BookTitle-BookCopy</code> class diagram given above.</p>
+              <panel header=":paperclip: Extras" expandable="" type="seamless"
+                expanded="">
                 <panel header=":mortar_board: Learning Outcomes" expandable="" type="seamless">
                   <div>
                     <panel type="success" expandable=""><span slot="header"><div><p>null</p></div></span>
                       <div>
                         <panel header="Q: Which pairs of classes are likely to be the `<< Abstraction >>` and the `<< Occurrence >>` of the abstraction occurrence pattern?">
                           <question has-input="true">
-                            <p>Which pairs of classes are likely to be the <code><< Abstraction >></code> and the <code><< Occurrence >></code> of the abstraction occurrence pattern?</p>
+                            <p>Which pairs of classes are likely to be the <code>&lt;&lt; Abstraction &gt;&gt;</code> and the <code>&lt;&lt; Occurrence &gt;&gt;</code> of the abstraction occurrence pattern?</p>
                             <ol>
                               <li>CarModel, Car. (Here CarModel represents a particular model of a car produced by the car manufacturer. E.g. BMW R4300)</li>
                               <li>Car, Wheel</li>
@@ -306,8 +307,8 @@ Logic m = <span class="hljs-keyword">new</span> Logic();
                               <li>Magazine (E.g. ReadersDigest, PCWorld), MagazineIssue</li>
                             </ol>
                             <div slot="answer">
-                              <p>One of the key things to keep in mind is that the <code><< Abstraction >></code> does not represent a real entity. Rather, it represents some information common to a set of objects. A single real entity is represented by
-                                an object of <code><< Abstraction >></code> type and <code><< Occurrence >></code> type.</p>
+                              <p>One of the key things to keep in mind is that the <code>&lt;&lt; Abstraction &gt;&gt;</code> does not represent a real entity. Rather, it represents some information common to a set of objects. A single real entity is represented
+                                by an object of <code>&lt;&lt; Abstraction &gt;&gt;</code> type and <code>&lt;&lt; Occurrence &gt;&gt;</code> type.</p>
                               <p>Before applying the pattern, some attributes have the same values for multiple objects. For example, w.r.t. the BookTitle-BookCopy example given in this handout, values of attributes such as <code>book_title</code>, <code>ISBN</code>                                are exactly the same for copies of the same book.</p>
                               <p>After applying the pattern, the <code>Abstraction</code> and the <code>Occurrence</code> classes together represent one entity. It is like one class has been split into two. For example, a <code>BookTitle</code> object and
                                 a <code>BookCopy</code> object combines to represent an actual <code>Book</code>.</p>
@@ -397,8 +398,9 @@ Logic m = <span class="hljs-keyword">new</span> Logic();
               </tip-box>
               <p>The general form of the solution is as follows.</p><img src="/se-book/designPatterns/command/whatItIs/images/clientInvoker.png" height="200">
               <p></p>
-              <p>The <code><< Client >></code> creates a <code><< ConcreteCommand >></code> object, and passes it to the <code><< Invoker >></code>. The <code><< Invoker >></code> object treats all commands as a general <code><< Command >></code> type. <code><< Invoker >></code>                issues a request by calling <code>execute()</code> on the command. If a command is undoable, <code><< ConcreteCommand >></code> will store the state for undoing the command prior to invoking <code>execute()</code>. In addition, the <code><< ConcreteCommand >></code>                object may have to be linked to any <code><< Receiver >></code> of the command before it is passed to the <code><< Invoker >></code>. Note that an application of the command pattern does not have to follow the structure given above. The
-                essential element is to have a general <code><< Command >></code> object that can be passed around, stored, executed, etc</p>
+              <p>The <code>&lt;&lt; Client &gt;&gt;</code> creates a <code>&lt;&lt; ConcreteCommand &gt;&gt;</code> object, and passes it to the <code>&lt;&lt; Invoker &gt;&gt;</code>. The <code>&lt;&lt; Invoker &gt;&gt;</code> object treats all commands
+                as a general <code>&lt;&lt; Command &gt;&gt;</code> type. <code>&lt;&lt; Invoker &gt;&gt;</code> issues a request by calling <code>execute()</code> on the command. If a command is undoable, <code>&lt;&lt; ConcreteCommand &gt;&gt;</code>                will store the state for undoing the command prior to invoking <code>execute()</code>. In addition, the <code>&lt;&lt; ConcreteCommand &gt;&gt;</code> object may have to be linked to any <code>&lt;&lt; Receiver &gt;&gt;</code> of the command
+                before it is passed to the <code>&lt;&lt; Invoker &gt;&gt;</code>. Note that an application of the command pattern does not have to follow the structure given above. The essential element is to have a general <code>&lt;&lt; Command &gt;&gt;</code>                object that can be passed around, stored, executed, etc</p>
             </div>
           </div>
         </panel>
@@ -527,9 +529,11 @@ studentList.addUi(statusUi);
               <p>Here is the generic description of the observer pattern:</p><img src="/se-book/designPatterns/observer/whatItIs/images/observableInterfaceDiagram.png" height="80">
               <p></p>
               <ul>
-                <li><code><< Observer >></code> is an interface: any class that implements it can observe an <code><< Observable >></code>. Any number of <code><< Observer >></code> objects can observe (i.e. listen to changes of) the <code><< Observable >></code>                  object.</li>
-                <li>The <code><< Observable >></code> maintains a list of <code><< Observer >></code> objects. <code>addObserver(Observer)</code> operation adds a new <code><< Observer >></code> to the list of <code><< Observer >>s</code>.</li>
-                <li>Whenever there is a change in the <code><< Observable >></code>, the <code>notifyObservers()</code> operation is called that will call the <code>update()</code> operation of all <code><< Observer >>s</code> in the list.</li>
+                <li><code>&lt;&lt; Observer &gt;&gt;</code> is an interface: any class that implements it can observe an <code>&lt;&lt; Observable &gt;&gt;</code>. Any number of <code>&lt;&lt; Observer &gt;&gt;</code> objects can observe (i.e. listen to changes
+                  of) the <code>&lt;&lt; Observable &gt;&gt;</code> object.</li>
+                <li>The <code>&lt;&lt; Observable &gt;&gt;</code> maintains a list of <code>&lt;&lt; Observer &gt;&gt;</code> objects. <code>addObserver(Observer)</code> operation adds a new <code>&lt;&lt; Observer &gt;&gt;</code> to the list of <code>&lt;&lt; Observer &gt;&gt;s</code>.</li>
+                <li>Whenever there is a change in the <code>&lt;&lt; Observable &gt;&gt;</code>, the <code>notifyObservers()</code> operation is called that will call the <code>update()</code> operation of all <code>&lt;&lt; Observer &gt;&gt;s</code> in the
+                  list.</li>
               </ul>
               <p>In a GUI application, how is the Controller notified when the “save” button is clicked? UI frameworks such as JavaFX has inbuilt support for the Observer pattern.</p>
               <panel header=":paperclip: Extras" expandable="" type="seamless" expanded="">
@@ -691,8 +695,8 @@ studentList.addUi(statusUi);
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>The notion of capturing design ideas as "patterns" is usually attributed to Christopher Alexander. He is a building architect noted for his theories about design. His book <em>Timeless way of building</em> talks about “design patterns” for
-                constructing buildings.</p>
+              <p>The notion of capturing design ideas as &quot;patterns&quot; is usually attributed to Christopher Alexander. He is a building architect noted for his theories about design. His book <em>Timeless way of building</em> talks about “design patterns”
+                for constructing buildings.</p>
               <p>Here is a sample pattern from that book:</p>
               <blockquote>
                 <p>When a room has a window with a view, the window becomes a focal point: people are attracted to the window and want to look through it. The furniture in the room creates a second focal point: everyone is attracted toward whatever point

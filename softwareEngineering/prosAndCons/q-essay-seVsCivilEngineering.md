@@ -1,4 +1,4 @@
-<panel header="Q: SE vs Civil Engineering">
+<panel header=":lock::key: SE vs Civil Engineering">
 <question has-input="true">
 
 Compare Software Engineering with Civil Engineering in terms of how work products in CE (i.e. buildings) differ from those of SE (i.e. software).

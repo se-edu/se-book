@@ -73,7 +73,7 @@
                 <li>Use an object called Main to represent your role in the scenario.</li>
                 <li>As there is no physical writing involved, we can replace the Pen and Paper with an object called AgeList that is able to keep a list of ages.</li>
               </ul>
-              <p>{visual: optimizations: You -> Main; Pen + Paper -> AgeList}</p>
+              <p>{visual: optimizations: You -&gt; Main; Pen + Paper -&gt; AgeList}</p>
             </tip-box>
             <p><strong>Every object has both state (data) and behavior (operations on data).</strong></p>
             <table class="markbind-table table">
@@ -162,8 +162,8 @@
                     <td style="text-align:center">Real</td>
                     <td style="text-align:center">You</td>
                     <td style="text-align:center">Adam</td>
-                    <td style="text-align:center">"What is your name?"</td>
-                    <td style="text-align:center">"Adam"</td>
+                    <td style="text-align:center">&quot;What is your name?&quot;</td>
+                    <td style="text-align:center">&quot;Adam&quot;</td>
                     <td style="text-align:center">-</td>
                   </tr>
                   <tr>
@@ -171,7 +171,7 @@
                     <td style="text-align:center">Same</td>
                     <td style="text-align:center">Beth</td>
                     <td style="text-align:center">Same</td>
-                    <td style="text-align:center">"Beth"</td>
+                    <td style="text-align:center">&quot;Beth&quot;</td>
                     <td style="text-align:center">-</td>
                   </tr>
                   <tr>
@@ -826,7 +826,7 @@
                       </tip-box>
                       <panel type="seamless" header=" %%- - - - - - - - - -%%">
                         <div>
-                          <p>An <code><< enumeration >></code> is used to indicate that an attribute can only take on a fixed set of values.</p>
+                          <p>An <code>&lt;&lt; enumeration &gt;&gt;</code> is used to indicate that an attribute can only take on a fixed set of values.</p>
                           <tip-box>
                             <p>Example:</p><img src="/se-book/uml/classDiagrams/enumerations/introduction/images/playerTurn.png" height="150">
                             <p></p>
@@ -2487,19 +2487,19 @@
             </tip-box>
             <tip-box>
               <p>Example:</p>
-              <pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-type">Account</span> {
-    <span class="hljs-type">Account</span> () {
-        // <span class="hljs-type">Signature</span>: ()
+              <pre class="hljs"><code>class Account {
+    Account () {
+        // Signature: ()
         ...
     }
-    <span class="hljs-type">Account</span> (<span class="hljs-type">String</span> <span class="hljs-title">name</span>, <span class="hljs-type">String</span> <span class="hljs-title">number</span>, <span class="hljs-title">double</span> <span class="hljs-title">balance</span>) {
-        // <span class="hljs-type">Signature</span>: (<span class="hljs-type">String</span>, <span class="hljs-type">String</span>, <span class="hljs-title">double</span>)
+    Account (String name, String number, double balance) {
+        // Signature: (String, String, double)
         ...
     }
 }
-</span></code></pre>
-              <pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculateCAP</span> <span class="hljs-params">(String matric)</span> </span>{ ... }
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculateCAP</span> <span class="hljs-params">(<span class="hljs-keyword">int</span>[] averages)</span> </span>{ ... }
+</code></pre>
+              <pre class="hljs"><code>void calculateCAP (String matric) { ... }
+void calculateCAP (int[] averages) { ... }
 </code></pre>
               <p>The constructor <code>Account</code> and method <code>calculateCAP</code> has been overloaded.</p>
             </tip-box>
@@ -2578,7 +2578,7 @@
                       </tip-box>
                       <panel type="seamless" header=" %%- - - - - - - - - -%%">
                         <div>
-                          <p>We use the keyword <code><< interface >></code> to indicate an interface. Interface inheritance is shown similar to class inheritance except a dashed line is used instead of a solid line.</p>
+                          <p>We use the keyword <code>&lt;&lt; interface &gt;&gt;</code> to indicate an interface. Interface inheritance is shown similar to class inheritance except a dashed line is used instead of a solid line.</p>
                           <tip-box>
                             <p>Example:</p><img src="/se-book/uml/classDiagrams/interfaces/introduction/images/staff.png" height="250">
                             <p></p>
@@ -2852,8 +2852,8 @@
             <tip-box>
               <p>Example:</p><img src="/se-book/oop/inheritance/dynamicAndStaticBinding/images/staff.png" height="150">
               <p></p>
-              <pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-    <span class="hljs-keyword">for</span> (Staff s: staff) {
+              <pre class="hljs"><code>void adjustSalary(int byPercent) {
+    for (Staff s: staff) {
         s.adjustSalary(byPercent);
     }
 }
@@ -2864,19 +2864,19 @@
             </tip-box>
             <p>In contrast, overloaded methods are resolved at compile time, also called <em>static binding</em> (also called <em>early binding</em> and <em>compile-time binding</em>.)</p>
             <tip-box>
-              <pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-type">Account</span> {
-    <span class="hljs-type">Account</span> () {
-        // <span class="hljs-type">Signature</span>: ()
+              <pre class="hljs"><code>class Account {
+    Account () {
+        // Signature: ()
         ...
     }
-    <span class="hljs-type">Account</span> (<span class="hljs-type">String</span> <span class="hljs-title">name</span>, <span class="hljs-type">String</span> <span class="hljs-title">number</span>, <span class="hljs-title">double</span> <span class="hljs-title">balance</span>) {
-        // <span class="hljs-type">Signature</span>: (<span class="hljs-type">String</span>, <span class="hljs-type">String</span>, <span class="hljs-title">double</span>)
+    Account (String name, String number, double balance) {
+        // Signature: (String, String, double)
         ...
     }
 }
-</span></code></pre>
-              <pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculateCAP</span> <span class="hljs-params">(String matric)</span> </span>{ ... }
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculateCAP</span> <span class="hljs-params">(<span class="hljs-keyword">int</span>[] averages)</span> </span>{ ... }
+</code></pre>
+              <pre class="hljs"><code>void calculateCAP (String matric) { ... }
+void calculateCAP (int[] averages) { ... }
 </code></pre>
               <p>The calls to the two constructors are resolved at compile time.</p>
             </tip-box>
@@ -2944,11 +2944,11 @@
             </tip-box>
             <p>Every instance of a subclass is an instance of the superclass, but not vice-versa. For example, an <code>Academic</code> is an instance of a <code>Staff</code>, but a <code>Staff</code> is not necessarily an instance of an <code>Academic</code>.
               As a result, inheritance allows <em>substitutability</em>. i.e. wherever an object of the superclass is expected, it can be substituted by an object of any of its subclasses. For example, the following code is valid because an <code>AcademicStaff</code>              object is substitutable as a <code>Staff</code> object.</p>
-            <pre class="hljs"><code>Staff staff = <span class="hljs-keyword">new</span> <span class="hljs-type">AcademicStaff</span> (); <span class="hljs-comment">// OK</span>
+            <pre class="hljs"><code>Staff staff = new AcademicStaff (); // OK
 </code></pre>
             <p>But the following code is not because <code>staff</code> is declared as a <code>Staff</code> type (see above) and therefore its value may or may not be of type <code>AcademicStaff</code>, which is the type expected by variable <code>academicStaff</code>.</p>
             <pre
-              class="hljs"><code>AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
+              class="hljs"><code>AcademicStaff academicStaff = staff; // Not OK
 </code></pre>
               <p>{link up with Liskov Substitution Principle}</p>
               <panel header=":paperclip: Extras" expandable="" type="seamless" expanded="">
@@ -3031,16 +3031,16 @@
               <p>Example:</p><img src="/se-book/oop/polymorphism/introduction/images/payroll.png" height="150">
               <p></p>
               <p>Here is the implementation of the adjustSalary(int) operation from the above design.</p>
-              <pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll1</span> {</span>
-    ArrayList< Admin > admins;
-    ArrayList< Academic > academics;
-    <span class="hljs-comment">// ...</span>
+              <pre class="hljs"><code>class Payroll1 {
+    ArrayList&lt; Admin &gt; admins;
+    ArrayList&lt; Academic &gt; academics;
+    // ...
 		
-    <span class="hljs-keyword">void</span> adjustSalary(<span class="hljs-keyword">int</span> byPercent) {
-        <span class="hljs-keyword">for</span> (Admin <span class="hljs-string">ad:</span> admins) {
+    void adjustSalary(int byPercent) {
+        for (Admin ad: admins) {
             ad.adjustSalary(byPercent);
         }
-        <span class="hljs-keyword">for</span> (Academic <span class="hljs-string">ac:</span> academics) {
+        for (Academic ac: academics) {
             ac.adjustSalary(byPercent);
         }
     }
@@ -3050,12 +3050,12 @@
             <p>Note how processing is similar for the two staff types. It is <strong>as if the type of staff members is irrelevant</strong> to how they are processed inside this operation! If that is the case, can the staff type be “abstracted away” from
               this operation? After all, why keep irrelevant details? Here is such an implementation of <code>adjustSalary(int)</code>:</p>
             <tip-box>
-              <pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll2</span> {</span>
-    ArrayList< Staff > staff;
-    <span class="hljs-comment">// ...</span>
+              <pre class="hljs"><code>class Payroll2 {
+    ArrayList&lt; Staff &gt; staff;
+    // ...
 
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Staff s: staff) {
+    void adjustSalary(int byPercent) {
+        for (Staff s: staff) {
             s.adjustSalary(byPercent);
         }
     }
@@ -3063,7 +3063,7 @@
 </code></pre>
               <p>Notice the following:</p>
               <ul>
-                <li>Only one data structure <code>ArrayList<Staff cwf="C:\Markbind\se-book\oop\polymorphism\introduction\index.md"></code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
+                <li>Only one data structure <code>ArrayList&lt;Staff&gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
                 <li>Only one loop</li>
                 <li>Outcome of the <code>s.adjustSalary(byPercent)</code> method call depends on whether <code>s</code> is an <code>Academic</code> or <code>Admin</code> object</li>
               </ul>
@@ -3143,32 +3143,32 @@
           <p>Example:</p><img src="/se-book/oop/polymorphism/basics/images/staff.png" height="200">
           <p></p>
           <p>Given below is the minimum code for <code>Staff</code>, <code>Admin</code>, and <code>Academic</code> classes.</p>
-          <pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Staff</span> </span>{
-    <span class="hljs-type">String</span> name;
+          <pre class="hljs"><code>class Staff {
+    String name;
     double salary;
 
     void adjustSalary(int percent) {
-        <span class="hljs-comment">// do nothing</span>
+        // do nothing
     }
 }
 
-<span class="hljs-comment">//------------------------------------------</span>
+//------------------------------------------
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Admin</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Staff</span> </span>{
+class Admin extends Staff {
 
-    <span class="hljs-meta">@Override</span>
+    @Override
     void adjustSalary(int percent) {
         salary = salary * percent;
     }
 }
 
-<span class="hljs-comment">//------------------------------------------</span>
+//------------------------------------------
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Academic</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Staff</span> </span>{
+class Academic extends Staff {
 
-    <span class="hljs-meta">@Override</span>
+    @Override
     void adjustSalary(int percent) {
-        salary = salary * percent * <span class="hljs-number">2</span>;
+        salary = salary * percent * 2;
     }
 }
 </code></pre>

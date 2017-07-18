@@ -25,16 +25,16 @@
             <p>Example:</p><img src="/se-book/oop/polymorphism/introduction/images/payroll.png" height="150">
             <p></p>
             <p>Here is the implementation of the adjustSalary(int) operation from the above design.</p>
-            <pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll1</span> {</span>
-    ArrayList< Admin > admins;
-    ArrayList< Academic > academics;
-    <span class="hljs-comment">// ...</span>
+            <pre class="hljs"><code>class Payroll1 {
+    ArrayList&lt; Admin &gt; admins;
+    ArrayList&lt; Academic &gt; academics;
+    // ...
 		
-    <span class="hljs-keyword">void</span> adjustSalary(<span class="hljs-keyword">int</span> byPercent) {
-        <span class="hljs-keyword">for</span> (Admin <span class="hljs-string">ad:</span> admins) {
+    void adjustSalary(int byPercent) {
+        for (Admin ad: admins) {
             ad.adjustSalary(byPercent);
         }
-        <span class="hljs-keyword">for</span> (Academic <span class="hljs-string">ac:</span> academics) {
+        for (Academic ac: academics) {
             ac.adjustSalary(byPercent);
         }
     }
@@ -44,12 +44,12 @@
           <p>Note how processing is similar for the two staff types. It is <strong>as if the type of staff members is irrelevant</strong> to how they are processed inside this operation! If that is the case, can the staff type be “abstracted away” from this
             operation? After all, why keep irrelevant details? Here is such an implementation of <code>adjustSalary(int)</code>:</p>
           <tip-box>
-            <pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll2</span> {</span>
-    ArrayList< Staff > staff;
-    <span class="hljs-comment">// ...</span>
+            <pre class="hljs"><code>class Payroll2 {
+    ArrayList&lt; Staff &gt; staff;
+    // ...
 
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Staff s: staff) {
+    void adjustSalary(int byPercent) {
+        for (Staff s: staff) {
             s.adjustSalary(byPercent);
         }
     }
@@ -57,7 +57,7 @@
 </code></pre>
             <p>Notice the following:</p>
             <ul>
-              <li>Only one data structure <code>ArrayList<Staff cwf="C:\Markbind\se-book\oop\polymorphism\introduction\index.md"></code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
+              <li>Only one data structure <code>ArrayList&lt;Staff&gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
               <li>Only one loop</li>
               <li>Outcome of the <code>s.adjustSalary(byPercent)</code> method call depends on whether <code>s</code> is an <code>Academic</code> or <code>Admin</code> object</li>
             </ul>
@@ -137,32 +137,32 @@
         <p>Example:</p><img src="/se-book/oop/polymorphism/basics/images/staff.png" height="200">
         <p></p>
         <p>Given below is the minimum code for <code>Staff</code>, <code>Admin</code>, and <code>Academic</code> classes.</p>
-        <pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Staff</span> </span>{
-    <span class="hljs-type">String</span> name;
+        <pre class="hljs"><code>class Staff {
+    String name;
     double salary;
 
     void adjustSalary(int percent) {
-        <span class="hljs-comment">// do nothing</span>
+        // do nothing
     }
 }
 
-<span class="hljs-comment">//------------------------------------------</span>
+//------------------------------------------
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Admin</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Staff</span> </span>{
+class Admin extends Staff {
 
-    <span class="hljs-meta">@Override</span>
+    @Override
     void adjustSalary(int percent) {
         salary = salary * percent;
     }
 }
 
-<span class="hljs-comment">//------------------------------------------</span>
+//------------------------------------------
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Academic</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Staff</span> </span>{
+class Academic extends Staff {
 
-    <span class="hljs-meta">@Override</span>
+    @Override
     void adjustSalary(int percent) {
-        salary = salary * percent * <span class="hljs-number">2</span>;
+        salary = salary * percent * 2;
     }
 }
 </code></pre>

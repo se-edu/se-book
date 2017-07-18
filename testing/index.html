@@ -77,6 +77,7 @@
                 </ul>
               </panel>
             </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -475,7 +476,9 @@
         <panel type="seamless" header="%%-----------------------------------------%%">
           <div>
             <div>
-              <h4 id="what-one-6">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+              <div>
+                <h4 id="what-one-6">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+              </div>
               <tip-box type="success">
                 <div>
                   <p>🏆 Can explain regression testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
@@ -483,9 +486,12 @@
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
-                  <p>When we modify a system that has been tested, the modification may result in some unintended and undesirable effects on the system. Such an effect is called a <em>regression</em>.</p>
-                  <p>To detect and correct regressions, we need to retest all related components. Testing with this intent is called <em>regression testing</em>.</p>
-                  <p>Regression testing is more effective when it is done frequently, after each small change. However, doing so can be prohibitively expensive if testing is done manually. Hence, regression testing is more practical when it is automated.</p>
+                  <div>
+                    <p>When we modify a system that has been tested, the modification may result in some unintended and undesirable effects on the system. Such an effect is called a <em>regression</em>.</p>
+                    <p>To detect and correct regressions, we need to retest all related components. Testing with this intent is called <em>regression testing</em>.</p>
+                    <p>Regression testing is more effective when it is done frequently, after each small change. However, doing so can be prohibitively expensive if testing is done manually. Hence, regression testing is more practical when it is automated.</p>
+                  </div>
+                  <div></div>
                 </div>
               </panel>
             </div>
@@ -511,6 +517,7 @@
             <div>
               <p>An automated test case can be run programmatically and the result of the test case (pass or fail) is determined programmatically.</p>
             </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -528,32 +535,33 @@
             <div>
               <p>A simple way to test a text UI is using input/output re-direction. Let us assume we are testing a program ‘RouteStore’ which has a text UI. First, we store the test input in the text file ‘input.txt’. Similarly, we store the output we expect
                 from the SUT to another text file ‘expected.txt’. Now, we run the program as:</p>
-              <pre class="hljs"><code>java RouteStore < <span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.txt</span> > output<span class="hljs-selector-class">.txt</span>
-<span class="hljs-comment">// or</span>
-RouteStore<span class="hljs-selector-class">.exe</span> < <span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.txt</span> > output<span class="hljs-selector-class">.txt</span>
+              <pre class="hljs"><code>java RouteStore &lt; input.txt &gt; output.txt
+// or
+RouteStore.exe &lt; input.txt &gt; output.txt
 </code></pre>
               <p>The above redirects the text in ‘input.txt’ as the input to ‘RouteStore’ and similarly, redirects the output of RouteStore to a text file ‘output.txt’. Note that this does not require any code changes to RouteStore.</p>
               <panel header="**The ‘>’ operator and the ‘<’ operator. :zero:**"
                 alt="Alternative Header">
                 <p>A command line program written in the usual way (i.e., the way you are used to writing them during the first year programming modules) takes input from keyboard and outputs to the console. That is because those two are default input and
-                  output streams, respectively. But you can change that behavior using ‘<code><</code>’ and ‘<code>></code>’ operators. For example, if you run <code>TextBuddy</code> in the DOS prompt, the output will be shown in the console. But if you
-                  run it like this</p>
-                <pre class="hljs"><code>TextBuddy > <span class="hljs-keyword">output</span>.txt (<span class="hljs-keyword">or</span> java TextBuddy > <span class="hljs-keyword">output</span>.txt)
+                  output streams, respectively. But you can change that behavior using ‘<code>&lt;</code>’ and ‘<code>&gt;</code>’ operators. For example, if you run <code>TextBuddy</code> in the DOS prompt, the output will be shown in the console. But
+                  if you run it like this</p>
+                <pre class="hljs"><code>TextBuddy &gt; output.txt (or java TextBuddy &gt; output.txt)
 </code></pre>
                 <p>the Operating System then creates a file ‘output.txt’ and stores the output in that file instead of displaying it in the console. Program output using <code>System.out.println</code> (in Java) and <code>cout</code> (in C++) is directed
-                  to the console by default. When you add ‘<code>> output.txt</code>’, the OS redirects the output to ‘output.txt’ instead. No file I/O coding is required. Similarly, adding ‘<code>< input.txt</code>’ (or any other filename) makes the
-                  OS redirect the contents of the file as input to the program.</p>
+                  to the console by default. When you add ‘<code>&gt; output.txt</code>’, the OS redirects the output to ‘output.txt’ instead. No file I/O coding is required. Similarly, adding ‘<code>&lt; input.txt</code>’ (or any other filename) makes
+                  the OS redirect the contents of the file as input to the program.</p>
                 <p>The link below explains how Windows does it:
                   <a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">http://technet.microsoft.com/en-us/library/bb490982.aspx</a></p>
               </panel>
               <p></p>
               <p>All we have to do now is to compare ‘output.txt’ with ‘expected.txt’. This can be done using a utility such as Windows FC (i.e. File Compare) command or a GUI tool such as Winmerge. For example, we can run the following two commands.</p>
               <pre
-                class="hljs"><code>java RouteStore < <span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.txt</span> > output<span class="hljs-selector-class">.txt</span>
-FC output<span class="hljs-selector-class">.txt</span> expected<span class="hljs-selector-class">.txt</span>
+                class="hljs"><code>java RouteStore &lt; input.txt &gt; output.txt
+FC output.txt expected.txt
 </code></pre>
                 <p>Note that the above technique is only suitable when testing text UIs, and only if the exact output is known.</p>
             </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -720,37 +728,32 @@ FC output<span class="hljs-selector-class">.txt</span> expected<span class="hljs
                   <p><strong>Decision/branch coverage</strong> measures coverage in terms of decision points e.g. an if statement evaluated to both true and false with separate test cases during testing.</p>
                 </li>
                 <li>
-                  <p><strong>Condition coverage</strong> measures coverage in terms of boolean sub-expressions, each evaluated to both true and false with different test cases. Condition coverage is not the same as the decision coverage; e.g. if(x > 2 &&
-                    x
-                    < 44) is considered one decision point but two conditions. For 100% branch or decision coverage, two test cases are required:</p>
+                  <p><strong>Condition coverage</strong> measures coverage in terms of boolean sub-expressions, each evaluated to both true and false with different test cases. Condition coverage is not the same as the decision coverage; e.g. if(x &gt; 2
+                    &amp;&amp; x &lt; 44) is considered one decision point but two conditions. For 100% branch or decision coverage, two test cases are required:</p>
+                  <ul>
+                    <li>
+                      <p>(x &gt; 2 &amp;&amp; x &lt; 44) == true : [e.g. x = 4]</p>
+                    </li>
+                    <li>
+                      <p>(x &gt; 2 &amp;&amp; x &lt; 44) == false : [e.g. x = 100]</p>
+                    </li>
+                    <li>
+                      <p>For 100% condition coverage, three test cases are required</p>
                       <ul>
-                        <li>
-                          <p>(x > 2 && x
-                            < 44)==t rue : [e.g. x=4 ]</p>
-                        </li>
-                        <li>
-                          <p>(x > 2 && x
-                            < 44)==f alse : [e.g. x=1 00]</p>
-                        </li>
-                        <li>
-                          <p>For 100% condition coverage, three test cases are required</p>
-                          <ul>
-                            <li>(x > 2) == true , (x
-                              < 44)==t rue : [e.g. x=4 ]</li>
-                                <li>(x
-                                  < 44)==f alse : [e.g. x=1 00]</li>
-                                    <li>(x > 2) == false : [e.g. x = 0]</li>
-                          </ul>
-                          </li>
+                        <li>(x &gt; 2) == true , (x &lt; 44) == true : [e.g. x = 4]</li>
+                        <li>(x &lt; 44) == false : [e.g. x = 100]</li>
+                        <li>(x &gt; 2) == false : [e.g. x = 0]</li>
                       </ul>
-                      </li>
-                      <li>
-                        <p><strong>Path coverage</strong> measures coverage in terms of possible paths through a given part of the code executed. 100% path coverage means all possible paths have been executed. A commonly used notation for path analysis is
-                          called the <em>Control Flow Graph (CFG)</em>. For an introduction to CFGs, refer to the side-note below.</p>
-                      </li>
-                      <li>
-                        <p><strong>Entry/exit coverage</strong> measures coverage in terms of possible <em>calls to</em> and <em>exits</em> from the operations in the SUT.</p>
-                      </li>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p><strong>Path coverage</strong> measures coverage in terms of possible paths through a given part of the code executed. 100% path coverage means all possible paths have been executed. A commonly used notation for path analysis is called
+                    the <em>Control Flow Graph (CFG)</em>. For an introduction to CFGs, refer to the side-note below.</p>
+                </li>
+                <li>
+                  <p><strong>Entry/exit coverage</strong> measures coverage in terms of possible <em>calls to</em> and <em>exits</em> from the operations in the SUT.</p>
+                </li>
               </ul>
             </div>
           </div>
@@ -768,8 +771,8 @@ FC output<span class="hljs-selector-class">.txt</span> expected<span class="hljs
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>Measuring coverage is often done using <em>coverage analysis tools</em>. Coverage measurements are used to improve testing E&E (Effectiveness and Efficiency). For example, if a set of test cases does not achieve 100% branch coverage, more
-                test cases are added to cover missed branches.</p>
+              <p>Measuring coverage is often done using <em>coverage analysis tools</em>. Coverage measurements are used to improve testing E&amp;E (Effectiveness and Efficiency). For example, if a set of test cases does not achieve 100% branch coverage,
+                more test cases are added to cover missed branches.</p>
               <p>Most IDEs have inbuilt support for measuring test coverage, or at least have plugins that can measure test coverage.</p>
             </div>
           </div>
@@ -846,7 +849,7 @@ FC output<span class="hljs-selector-class">.txt</span> expected<span class="hljs
 
     <span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">totalSalary</span><span class="hljs-params">()</span> </span>{
         <span class="hljs-keyword">double</span> total = <span class="hljs-number">0</span>;
-        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i < employees.length; i++){
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; employees.length; i++){
             total += manager.getSalaryForEmployee(employees[i]);
         }
         <span class="hljs-keyword">return</span> total;

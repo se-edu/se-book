@@ -289,19 +289,19 @@
           </tip-box>
           <tip-box>
             <p>Example:</p>
-            <pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-type">Account</span> {
-    <span class="hljs-type">Account</span> () {
-        // <span class="hljs-type">Signature</span>: ()
+            <pre class="hljs"><code>class Account {
+    Account () {
+        // Signature: ()
         ...
     }
-    <span class="hljs-type">Account</span> (<span class="hljs-type">String</span> <span class="hljs-title">name</span>, <span class="hljs-type">String</span> <span class="hljs-title">number</span>, <span class="hljs-title">double</span> <span class="hljs-title">balance</span>) {
-        // <span class="hljs-type">Signature</span>: (<span class="hljs-type">String</span>, <span class="hljs-type">String</span>, <span class="hljs-title">double</span>)
+    Account (String name, String number, double balance) {
+        // Signature: (String, String, double)
         ...
     }
 }
-</span></code></pre>
-            <pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculateCAP</span> <span class="hljs-params">(String matric)</span> </span>{ ... }
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculateCAP</span> <span class="hljs-params">(<span class="hljs-keyword">int</span>[] averages)</span> </span>{ ... }
+</code></pre>
+            <pre class="hljs"><code>void calculateCAP (String matric) { ... }
+void calculateCAP (int[] averages) { ... }
 </code></pre>
             <p>The constructor <code>Account</code> and method <code>calculateCAP</code> has been overloaded.</p>
           </tip-box>
@@ -380,7 +380,7 @@
                     </tip-box>
                     <panel type="seamless" header=" %%- - - - - - - - - -%%">
                       <div>
-                        <p>We use the keyword <code><< interface >></code> to indicate an interface. Interface inheritance is shown similar to class inheritance except a dashed line is used instead of a solid line.</p>
+                        <p>We use the keyword <code>&lt;&lt; interface &gt;&gt;</code> to indicate an interface. Interface inheritance is shown similar to class inheritance except a dashed line is used instead of a solid line.</p>
                         <tip-box>
                           <p>Example:</p><img src="/se-book/uml/classDiagrams/interfaces/introduction/images/staff.png" height="250">
                           <p></p>
@@ -654,8 +654,8 @@
           <tip-box>
             <p>Example:</p><img src="/se-book/oop/inheritance/dynamicAndStaticBinding/images/staff.png" height="150">
             <p></p>
-            <pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-    <span class="hljs-keyword">for</span> (Staff s: staff) {
+            <pre class="hljs"><code>void adjustSalary(int byPercent) {
+    for (Staff s: staff) {
         s.adjustSalary(byPercent);
     }
 }
@@ -666,19 +666,19 @@
           </tip-box>
           <p>In contrast, overloaded methods are resolved at compile time, also called <em>static binding</em> (also called <em>early binding</em> and <em>compile-time binding</em>.)</p>
           <tip-box>
-            <pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-type">Account</span> {
-    <span class="hljs-type">Account</span> () {
-        // <span class="hljs-type">Signature</span>: ()
+            <pre class="hljs"><code>class Account {
+    Account () {
+        // Signature: ()
         ...
     }
-    <span class="hljs-type">Account</span> (<span class="hljs-type">String</span> <span class="hljs-title">name</span>, <span class="hljs-type">String</span> <span class="hljs-title">number</span>, <span class="hljs-title">double</span> <span class="hljs-title">balance</span>) {
-        // <span class="hljs-type">Signature</span>: (<span class="hljs-type">String</span>, <span class="hljs-type">String</span>, <span class="hljs-title">double</span>)
+    Account (String name, String number, double balance) {
+        // Signature: (String, String, double)
         ...
     }
 }
-</span></code></pre>
-            <pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculateCAP</span> <span class="hljs-params">(String matric)</span> </span>{ ... }
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculateCAP</span> <span class="hljs-params">(<span class="hljs-keyword">int</span>[] averages)</span> </span>{ ... }
+</code></pre>
+            <pre class="hljs"><code>void calculateCAP (String matric) { ... }
+void calculateCAP (int[] averages) { ... }
 </code></pre>
             <p>The calls to the two constructors are resolved at compile time.</p>
           </tip-box>
@@ -746,11 +746,11 @@
           </tip-box>
           <p>Every instance of a subclass is an instance of the superclass, but not vice-versa. For example, an <code>Academic</code> is an instance of a <code>Staff</code>, but a <code>Staff</code> is not necessarily an instance of an <code>Academic</code>.
             As a result, inheritance allows <em>substitutability</em>. i.e. wherever an object of the superclass is expected, it can be substituted by an object of any of its subclasses. For example, the following code is valid because an <code>AcademicStaff</code>            object is substitutable as a <code>Staff</code> object.</p>
-          <pre class="hljs"><code>Staff staff = <span class="hljs-keyword">new</span> <span class="hljs-type">AcademicStaff</span> (); <span class="hljs-comment">// OK</span>
+          <pre class="hljs"><code>Staff staff = new AcademicStaff (); // OK
 </code></pre>
           <p>But the following code is not because <code>staff</code> is declared as a <code>Staff</code> type (see above) and therefore its value may or may not be of type <code>AcademicStaff</code>, which is the type expected by variable <code>academicStaff</code>.</p>
           <pre
-            class="hljs"><code>AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
+            class="hljs"><code>AcademicStaff academicStaff = staff; // Not OK
 </code></pre>
             <p>{link up with Liskov Substitution Principle}</p>
             <panel header=":paperclip: Extras" expandable="" type="seamless" expanded="">

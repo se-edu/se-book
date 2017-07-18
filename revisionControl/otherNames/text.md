@@ -32,4 +32,7 @@ Some people claim that these terms actually have different meanings, but in prac
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

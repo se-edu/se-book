@@ -18,4 +18,7 @@ You can have multiple repos in your computer, each repo revision-controlling fil
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

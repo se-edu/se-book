@@ -1,4 +1,4 @@
-<panel header="Q: Coding as a manufacturing activity">
+<panel header=":lock::key: Coding as a manufacturing activity">
 <question has-input="true">
 
 Justify this statement: Coding is still a ‘design’ activity, not a ‘manufacturing’ activity.  You may use a comparison (or an analogy) of Software engineering versus Civil Engineering to argue this point.
