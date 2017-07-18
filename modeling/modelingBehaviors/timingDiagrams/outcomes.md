@@ -1,1 +1,1 @@
-:trophy: Can explain what are timing diagrams :four:
+:trophy: Can explain timing diagrams :four:

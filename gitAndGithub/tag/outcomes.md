@@ -1,1 +1,1 @@
-:trophy: Can set Git to tag files :three:
+:trophy: Can tag commits using Git :three:

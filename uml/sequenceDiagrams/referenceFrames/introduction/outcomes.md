@@ -1,1 +1,1 @@
-:trophy: Can create sequence diagrams with reference frames :two:
+:trophy: Can interpret sequence diagrams with reference frames :two:

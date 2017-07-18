@@ -1,1 +1,1 @@
-:trophy: Can explain what are component diagrams :four:
+:trophy: Can explain component diagrams :four:

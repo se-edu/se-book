@@ -1,1 +1,1 @@
-:trophy: Can create sequence diagrams with optional paths :two:
+:trophy: Can interpret sequence diagrams with optional paths :two:

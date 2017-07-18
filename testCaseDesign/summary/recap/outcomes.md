@@ -1,1 +1,1 @@
-:trophy: Can recap test case design :three:
+:trophy: Can explain test case design techniques at a higher level :three:

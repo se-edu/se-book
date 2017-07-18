@@ -1,1 +1,1 @@
-:trophy: Can explain what are state machine diagrams :four:
+:trophy: Can explain state machine diagrams :four:

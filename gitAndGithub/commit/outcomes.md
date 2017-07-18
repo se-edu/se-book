@@ -1,1 +1,1 @@
-:trophy: Can commit files using Git :one:
+:trophy: Can commit using Git :one:

@@ -1,1 +1,1 @@
-:trophy: Can explain what are sequential models :one:
+:trophy: Can explain sequential models :one:

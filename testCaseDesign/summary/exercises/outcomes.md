@@ -1,1 +1,1 @@
-:trophy: Can do test case design exercises :three:
+:trophy: Can combine test case design techniques :three:

@@ -1,1 +1,1 @@
-:trophy: Can explain what are interaction overview diagrams :four:
+:trophy: Can explain interaction overview diagrams :four:

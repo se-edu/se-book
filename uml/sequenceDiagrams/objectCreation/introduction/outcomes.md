@@ -1,1 +1,1 @@
-:trophy: Can create sequence diagrams with object creation :two:
+:trophy: Can interpret sequence diagrams with object creation :two:

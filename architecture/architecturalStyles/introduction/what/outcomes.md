@@ -1,1 +1,1 @@
-:trophy: Can explain what are architectural styles :one:
+:trophy: Can explain architectural styles :one:

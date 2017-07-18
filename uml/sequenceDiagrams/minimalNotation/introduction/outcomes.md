@@ -1,1 +1,1 @@
-:trophy: Can create sequence diagrams with minimal notation :three:
+:trophy: Can interpret sequence diagrams with minimal notation :three:

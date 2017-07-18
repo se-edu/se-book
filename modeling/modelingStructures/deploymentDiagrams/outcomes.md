@@ -1,1 +1,1 @@
-:trophy: Can explain what are deployment diagrams :four:
+:trophy: Can explain deployment diagrams :four:

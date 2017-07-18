@@ -1,1 +1,1 @@
-:trophy: Can explain what are class diagrams on a basic level :one:
+:trophy: Can explain class diagrams on a basic level :one:

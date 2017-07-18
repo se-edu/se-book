@@ -1,1 +1,1 @@
-:trophy: Can create sequence diagrams with parallel paths :three:
+:trophy: Can interpret sequence diagrams with parallel paths :three:

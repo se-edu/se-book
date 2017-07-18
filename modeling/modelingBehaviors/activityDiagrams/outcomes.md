@@ -1,1 +1,1 @@
-:trophy: Can explain what are activity diagrams :two:
+:trophy: Can explain activity diagrams :two:

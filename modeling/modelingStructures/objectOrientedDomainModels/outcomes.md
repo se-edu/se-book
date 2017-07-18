@@ -1,1 +1,1 @@
-:trophy: Can explain what are object oriented domain models :three:
+:trophy: Can explain object oriented domain models :three:

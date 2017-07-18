@@ -1,1 +1,1 @@
-:trophy: Can explain what are object diagrams :three:
+:trophy: Can explain object diagrams :three:

@@ -1,1 +1,1 @@
-:trophy: Can explain what are composite structure diagrams :four:
+:trophy: Can explain composite structure diagrams :four:
