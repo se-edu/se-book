@@ -12,9 +12,6 @@
 
 <div id="body">
 
-<dynamic-panel src="../../revisionControl/repositories/embed.md" header="Revision Control: Repositories" is-open></dynamic-panel>
-<p/>
-
 Install [SourceTree](https://www.sourcetreeapp.com/) which is Git + a GUI for Git.
 
 Suppose you want to create a repository in an empty directory `project1`
