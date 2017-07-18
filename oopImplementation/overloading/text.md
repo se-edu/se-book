@@ -12,7 +12,7 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oop/inheritance/overloading/topicPanel.md" header="OOP: Inheritance: Overloading" is-open></dynamic-panel>
+<dynamic-panel src="../../oopDesign/inheritance/overloading/embed.md" header="OOP: Inheritance: Overloading" is-open></dynamic-panel>
 
 <p/>
 

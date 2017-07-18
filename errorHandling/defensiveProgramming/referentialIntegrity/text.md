@@ -125,15 +125,11 @@ public class Man{
 
 When the code `james.setGirlfriend(jean)` is executed, the code ensures that `james` break up with any current girlfriend before he accepts `jean` as the girlfriend. Furthermore, the code ensures that `jean` breaks up with any existing boyfriends and accepts `james` as the boyfriend.
 
-<!-- extras ------------------------------------------------------------------------------------ -->
+</div>
 
-<panel header=":paperclip: Extras" expandable type="seamless" expanded>
+<div id="extras">
 
-  <panel header=":mortar_board: Learning Outcomes" expandable type="seamless">
-    <include src="exercises.md" />
-  </panel>
-
-</panel>
+<include src="exercises.md" />
 
 </div>
 

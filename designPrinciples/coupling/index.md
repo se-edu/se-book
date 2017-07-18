@@ -8,9 +8,9 @@
 
 <div id="main">
 
-<include src="whatItIs/embed.md" />
-<include src="whyWeCare/embed.md" />
-<include src="howItHappens/embed.md" />
+<include src="what/embed.md" />
+<include src="why/embed.md" />
+<include src="how/embed.md" />
 <include src="types/embed.md" />
 
 </div>

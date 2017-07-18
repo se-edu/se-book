@@ -12,7 +12,7 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oop/inheritance/interfaces/topicPanel.md" header="OOP: Inheritance: Interfaces" is-open></dynamic-panel>
+<dynamic-panel src="../../oopDesign/inheritance/interfaces/embed.md" header="OOP: Inheritance: Interfaces" is-open></dynamic-panel>
 
 <p/>
 

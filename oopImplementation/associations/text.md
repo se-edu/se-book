@@ -12,9 +12,9 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oop/associations/basics/topicPanel.md" header="OOP: Associations: Basics" is-open></dynamic-panel>
-<dynamic-panel src="../../oop/associations/multiplicity/topicPanel.md" header="OOP: Associations: Multiplicity" is-open></dynamic-panel>
-<dynamic-panel src="../../oop/associations/navigability/topicPanel.md" header="OOP: Associations: Navigability" is-open></dynamic-panel>
+<dynamic-panel src="../../oopDesign/associations/basic/embed.md" header="OOP: Associations: Basic" is-open></dynamic-panel>
+<dynamic-panel src="../../oopDesign/associations/multiplicity/embed.md" header="OOP: Associations: Multiplicity" is-open></dynamic-panel>
+<dynamic-panel src="../../oopDesign/associations/navigability/embed.md" header="OOP: Associations: Navigability" is-open></dynamic-panel>
 
 <p/>
 

@@ -12,7 +12,7 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oop/polymorphism/topicPanel.md" header="OOP: Polymorphism" is-open></dynamic-panel>
+<dynamic-panel src="../../oopDesign/polymorphism/index.md" header="OOP: Polymorphism" is-open></dynamic-panel>
 
 <p/>
 

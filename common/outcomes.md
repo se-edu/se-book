@@ -12,84 +12,95 @@
 
 ### Requirements
 
-<include src="../requirements/introduction/basics/outcomes.md" />
+<include src="../requirements/introduction/outcomes.md" />
+<include src="../requirements/nonFunctionalRequirements/outcomes.md" />
+<include src="../requirements/prioritizing/outcomes.md" />
+<include src="../requirements/quality/outcomes.md" />
 
 ### Gathering
 
-<include src="../requirements/brainstorming/introduction/outcomes.md" />
-<include src="../requirements/userSurveys/introduction/outcomes.md" />
-<include src="../requirements/observation/introduction/outcomes.md" />
-<include src="../requirements/interviews/introduction/outcomes.md" />
-<include src="../requirements/focusGroups/introduction/outcomes.md" />
-<include src="../requirements/prototyping/introduction/outcomes.md" />
-<include src="../requirements/productSurveys/introduction/outcomes.md" />
+<include src="../gatheringRequirements/brainstorming/outcomes.md" />
+<include src="../gatheringRequirements/userSurveys/outcomes.md" />
+<include src="../gatheringRequirements/observation/outcomes.md" />
+<include src="../gatheringRequirements/interviews/outcomes.md" />
+<include src="../gatheringRequirements/focusGroups/outcomes.md" />
+<include src="../gatheringRequirements/prototyping/outcomes.md" />
+<include src="../gatheringRequirements/productSurveys/outcomes.md" />
 
 ### Specifying
 
-<include src="../requirements/prose/introduction/outcomes.md" />
-<include src="../requirements/featureList/introduction/outcomes.md" />
-<include src="../requirements/userStories/introduction/outcomes.md" />
-<include src="../requirements/userStories/details/outcomes.md" />
-<include src="../requirements/userStories/usage/outcomes.md" />
-<include src="../requirements/useCases/introduction/outcomes.md" />
-<include src="../requirements/useCases/identification/outcomes.md" />
-<include src="../requirements/useCases/details/outcomes.md" />
-<include src="../requirements/useCases/usage/outcomes.md" />
-<include src="../requirements/glossary/introduction/outcomes.md" />
-<include src="../requirements/supplementaryRequirements/introduction/outcomes.md" />
+<include src="../specifyingRequirements/prose/what/outcomes.md" />
+<include src="../specifyingRequirements/featureList/what/outcomes.md" />
+
+<include src="../specifyingRequirements/userStories/introduction/outcomes.md" />
+<include src="../specifyingRequirements/userStories/details/outcomes.md" />
+<include src="../specifyingRequirements/userStories/usage/outcomes.md" />
+
+<include src="../specifyingRequirements/useCases/introduction/outcomes.md" />
+<include src="../specifyingRequirements/useCases/identifying/outcomes.md" />
+<include src="../specifyingRequirements/useCases/details/outcomes.md" />
+<include src="../specifyingRequirements/useCases/usage/outcomes.md" />
+
+<include src="../specifyingRequirements/glossary/what/outcomes.md" />
+<include src="../specifyingRequirements/supplementaryRequirements/what/outcomes.md" />
 
 ## Design
 
 ### Software Design
 
-<include src="../design/introduction/basics/outcomes.md" />
+<include src="../design/introduction/basic/outcomes.md" />
+<include src="../design/introduction/multilevelDesign/outcomes.md" />
 
 ### Design Principles
 
-<include src="../designPrinciples/abstraction/whatItIs/outcomes.md" />
-<include src="../designPrinciples/coupling/whatItIs/outcomes.md" />
-<include src="../designPrinciples/coupling/whyWeCare/outcomes.md" />
-<include src="../designPrinciples/coupling/howItHappens/outcomes.md" />
+<include src="../designPrinciples/abstraction/what/outcomes.md" />
+<include src="../designPrinciples/coupling/what/outcomes.md" />
+<include src="../designPrinciples/coupling/why/outcomes.md" />
+<include src="../designPrinciples/coupling/how/outcomes.md" />
 <include src="../designPrinciples/coupling/types/outcomes.md" />
-<include src="../designPrinciples/cohesion/howItHappens/outcomes.md" />
-<include src="../designPrinciples/cohesion/whatItIs/outcomes.md" />
-<include src="../designPrinciples/cohesion/whyWeCare/outcomes.md" />
-<include src="../designPrinciples/dependencyInversionPrinciple/whatItIs/outcomes.md" />
-<include src="../designPrinciples/openClosedPrinciple/whatItIs/outcomes.md" />
+<include src="../designPrinciples/cohesion/how/outcomes.md" />
+<include src="../designPrinciples/cohesion/what/outcomes.md" />
+<include src="../designPrinciples/cohesion/why/outcomes.md" />
+<include src="../designPrinciples/dependencyInversionPrinciple/what/outcomes.md" />
+<include src="../designPrinciples/openClosedPrinciple/what/outcomes.md" />
 
 ### Object Oriented Programming
 
-<include src="../oop/objects/basics/outcomes.md" />
-<include src="../oop/objects/abstraction/outcomes.md" />
-<include src="../oop/objects/encapsulation/outcomes.md" />
+<include src="../oopDesign/introduction/outcomes.md" />
 
-<include src="../oop/classes/basics/outcomes.md" />
-<include src="../oop/classes/classLevelMembers/outcomes.md" />
-<include src="../oop/classes/enumerations/outcomes.md" />
+<include src="../oopDesign/objects/basic/outcomes.md" />
+<include src="../oopDesign/objects/abstraction/outcomes.md" />
+<include src="../oopDesign/objects/encapsulation/outcomes.md" />
 
-<include src="../oop/associations/basics/outcomes.md" />
-<include src="../oop/associations/navigability/outcomes.md" />
-<include src="../oop/associations/multiplicity/outcomes.md" />
-<include src="../oop/associations/dependencies/outcomes.md" />
-<include src="../oop/associations/composition/outcomes.md" />
-<include src="../oop/associations/aggregation/outcomes.md" />
-<include src="../oop/associations/associationClasses/outcomes.md" />
+<include src="../oopDesign/classes/basic/outcomes.md" />
+<include src="../oopDesign/classes/classLevelMembers/outcomes.md" />
+<include src="../oopDesign/classes/enumerations/outcomes.md" />
 
-<include src="../oop/inheritance/basics/outcomes.md" />
-<include src="../oop/inheritance/overriding/outcomes.md" />
-<include src="../oop/inheritance/overloading/outcomes.md" />
-<include src="../oop/inheritance/interfaces/outcomes.md" />
-<include src="../oop/inheritance/abstractClasses/outcomes.md" />
-<include src="../oop/inheritance/dynamicAndStaticBinding/outcomes.md" />
-<include src="../oop/inheritance/substitutability/outcomes.md" />
+<include src="../oopDesign/associations/basic/outcomes.md" />
+<include src="../oopDesign/associations/navigability/outcomes.md" />
+<include src="../oopDesign/associations/multiplicity/outcomes.md" />
+<include src="../oopDesign/associations/dependencies/outcomes.md" />
+<include src="../oopDesign/associations/composition/outcomes.md" />
+<include src="../oopDesign/associations/aggregation/outcomes.md" />
+<include src="../oopDesign/associations/associationClasses/outcomes.md" />
 
-<include src="../oop/polymorphism/introduction/outcomes.md" />
-<include src="../oop/polymorphism/basics/outcomes.md" />
-<include src="../oop/polymorphism/mechanism/outcomes.md" />
+<include src="../oopDesign/inheritance/basic/outcomes.md" />
+<include src="../oopDesign/inheritance/overriding/outcomes.md" />
+<include src="../oopDesign/inheritance/overloading/outcomes.md" />
+<include src="../oopDesign/inheritance/interfaces/outcomes.md" />
+<include src="../oopDesign/inheritance/abstractClasses/outcomes.md" />
+<include src="../oopDesign/inheritance/dynamicAndStaticBinding/outcomes.md" />
+<include src="../oopDesign/inheritance/substitutability/outcomes.md" />
 
-<include src="../oop/conceptualisingSolution/introduction/outcomes.md" />
-<include src="../oop/conceptualisingSolution/basics/outcomes.md" />
-<include src="../oop/conceptualisingSolution/intermediate/outcomes.md" />
+<include src="../oopDesign/polymorphism/introduction/outcomes.md" />
+<include src="../oopDesign/polymorphism/basic/outcomes.md" />
+<include src="../oopDesign/polymorphism/mechanism/outcomes.md" />
+
+<include src="../oopDesign/conceptualizingSolution/introduction/outcomes.md" />
+<include src="../oopDesign/conceptualizingSolution/basic/outcomes.md" />
+<include src="../oopDesign/conceptualizingSolution/intermediate/outcomes.md" />
+
+<include src="../oopDesign/faq/outcomes.md" />
 
 ### Modeling
 
@@ -140,23 +151,23 @@
 
 ### Design Patterns
 
-<include src="../designPatterns/introduction/whatItIs/outcomes.md" />
+<include src="../designPatterns/introduction/what/outcomes.md" />
 <include src="../designPatterns/introduction/format/outcomes.md" />
 
-<include src="../designPatterns/singleton/whatItIs/outcomes.md" />
+<include src="../designPatterns/singleton/what/outcomes.md" />
 <include src="../designPatterns/singleton/implementation/outcomes.md" />
 <include src="../designPatterns/singleton/application/outcomes.md" />
 <include src="../designPatterns/singleton/evaluation/outcomes.md" />
 
-<include src="../designPatterns/abstractionOccurrence/whatItIs/outcomes.md" />
+<include src="../designPatterns/abstractionOccurrence/what/outcomes.md" />
 
-<include src="../designPatterns/facade/whatItIs/outcomes.md" />
+<include src="../designPatterns/facade/what/outcomes.md" />
 
-<include src="../designPatterns/command/whatItIs/outcomes.md" />
+<include src="../designPatterns/command/what/outcomes.md" />
 
-<include src="../designPatterns/modelViewController/whatItIs/outcomes.md" />
+<include src="../designPatterns/modelViewController/what/outcomes.md" />
 
-<include src="../designPatterns/observer/whatItIs/outcomes.md" />
+<include src="../designPatterns/observer/what/outcomes.md" />
 
 <include src="../designPatterns/more/combiningDesignPatterns/outcomes.md" />
 <include src="../designPatterns/more/otherDesignPatterns/outcomes.md" />
@@ -172,27 +183,27 @@
 
 ### Code Quality
 
-<include src="../codeQuality/introduction/basics/outcomes.md" />
+<include src="../codeQuality/introduction/basic/outcomes.md" />
 
 <include src="../codeQuality/maximiseReadability/introduction/outcomes.md" />
-<include src="../codeQuality/maximiseReadability/basics/outcomes.md" />
+<include src="../codeQuality/maximiseReadability/basic/outcomes.md" />
 <include src="../codeQuality/maximiseReadability/intermediate/outcomes.md" />
 <include src="../codeQuality/maximiseReadability/advanced/outcomes.md" />
 
 <include src="../codeQuality/followStandard/introduction/outcomes.md" />
-<include src="../codeQuality/followStandard/basics/outcomes.md" />
+<include src="../codeQuality/followStandard/basic/outcomes.md" />
 <include src="../codeQuality/followStandard/intermediate/outcomes.md" />
 
 <include src="../codeQuality/nameWell/introduction/outcomes.md" />
-<include src="../codeQuality/nameWell/basics/outcomes.md" />
+<include src="../codeQuality/nameWell/basic/outcomes.md" />
 <include src="../codeQuality/nameWell/intermediate/outcomes.md" />
 
 <include src="../codeQuality/avoidShortcuts/introduction/outcomes.md" />
-<include src="../codeQuality/avoidShortcuts/basics/outcomes.md" />
+<include src="../codeQuality/avoidShortcuts/basic/outcomes.md" />
 <include src="../codeQuality/avoidShortcuts/intermediate/outcomes.md" />
 
 <include src="../codeQuality/commentMinimally/introduction/outcomes.md" />
-<include src="../codeQuality/commentMinimally/basics/outcomes.md" />
+<include src="../codeQuality/commentMinimally/basic/outcomes.md" />
 <include src="../codeQuality/commentMinimally/intermediate/outcomes.md" />
 
 ### Refactoring

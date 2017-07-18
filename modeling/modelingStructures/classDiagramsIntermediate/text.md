@@ -12,13 +12,13 @@
 
 <div id="body">
 
-<dynamic-panel src="../../../oop/classes/classLevelMembers/topicPanel.md" header="OOP: Classes: Class Level Members" is-open></dynamic-panel>
-<dynamic-panel src="../../../oop/classes/enumerations/topicPanel.md" header="OOP: Classes: Enumerations" is-open></dynamic-panel>
-<dynamic-panel src="../../../oop/associations/multiplicity/topicPanel.md" header="OOP: Associations: Multiplicity" is-open></dynamic-panel>
-<dynamic-panel src="../../../oop/associations/dependencies/topicPanel.md" header="OOP: Associations: Dependencies" is-open></dynamic-panel>
-<dynamic-panel src="../../../oop/associations/composition/topicPanel.md" header="OOP: Associations: Composition" is-open></dynamic-panel>
-<dynamic-panel src="../../../oop/inheritance/interfaces/topicPanel.md" header="OOP: Inheritance: Interfaces" is-open></dynamic-panel>
-<dynamic-panel src="../../../oop/inheritance/abstractClasses/topicPanel.md" header="OOP: Inheritance: Abstract Classes" is-open></dynamic-panel>
+<dynamic-panel src="../../../oopDesign/classes/classLevelMembers/embed.md" header="OOP: Classes: Class Level Members" is-open></dynamic-panel>
+<dynamic-panel src="../../../oopDesign/classes/enumerations/embed.md" header="OOP: Classes: Enumerations" is-open></dynamic-panel>
+<dynamic-panel src="../../../oopDesign/associations/multiplicity/embed.md" header="OOP: Associations: Multiplicity" is-open></dynamic-panel>
+<dynamic-panel src="../../../oopDesign/associations/dependencies/embed.md" header="OOP: Associations: Dependencies" is-open></dynamic-panel>
+<dynamic-panel src="../../../oopDesign/associations/composition/embed.md" header="OOP: Associations: Composition" is-open></dynamic-panel>
+<dynamic-panel src="../../../oopDesign/inheritance/interfaces/embed.md" header="OOP: Inheritance: Interfaces" is-open></dynamic-panel>
+<dynamic-panel src="../../../oopDesign/inheritance/abstractClasses/embed.md" header="OOP: Inheritance: Abstract Classes" is-open></dynamic-panel>
 
 </div>
 

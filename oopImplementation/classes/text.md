@@ -12,7 +12,7 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oop/classes/basics/topicPanel.md" header="OOP: Classes: Basics" is-open></dynamic-panel>
+<dynamic-panel src="../../oopDesign/classes/basic/embed.md" header="OOP: Classes: Basic" is-open></dynamic-panel>
 
 <p/>
 

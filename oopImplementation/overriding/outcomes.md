@@ -1,1 +1,1 @@
-:trophy: Can implement classes :one:
+:trophy: Can implement operation overriding :one:

@@ -8,7 +8,7 @@
 
 <div id="main">
 
-<include src="whatItIs/embed.md" />
+<include src="what/embed.md" />
 <include src="format/embed.md" />
 
 </div>
