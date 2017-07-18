@@ -14,7 +14,7 @@
 
 Install [SourceTree](https://www.sourcetreeapp.com/) which is Git + a GUI for Git.
 
-Suppose you want to create a repository in an empty directory `project1`
+Suppose you want to create a repository in an empty directory `things`
 
 <tabs>
   <tab header="SourceTree">
