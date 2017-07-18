@@ -1,1 +1,1 @@
-:trophy: Can explain liskov substititution principle :three:
+:trophy: Can explain Liskov Substitution Principle :three:

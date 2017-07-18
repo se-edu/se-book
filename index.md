@@ -10,6 +10,10 @@
 
 <include src="requirements/topicToc.md" />
 
+<include src="gatheringRequirements/topicToc.md" />
+
+<include src="specifyingRequirements/topicToc.md" />
+
 ### Design
 
 <include src="design/topicToc.md" />

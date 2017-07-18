@@ -6,6 +6,12 @@
 
 <include src="../softwareEngineering/print.md#main" />
 
+# Requirements
+
+<include src="../requirements/print.md#main" />
+<include src="../gatheringRequirements/print.md#main" />
+<include src="../specifyingRequirements/print.md#main" />
+
 # Design
 
 <include src="../design/print.md#main" />

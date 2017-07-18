@@ -12,31 +12,37 @@
 
 ### Requirements
 
-<include src="../requirements/introduction/basics/outcomes.md" />
+<include src="../requirements/introduction/outcomes.md" />
+<include src="../requirements/nonFunctionalRequirements/outcomes.md" />
+<include src="../requirements/prioritizing/outcomes.md" />
+<include src="../requirements/quality/outcomes.md" />
 
 ### Gathering
 
-<include src="../requirements/brainstorming/introduction/outcomes.md" />
-<include src="../requirements/userSurveys/introduction/outcomes.md" />
-<include src="../requirements/observation/introduction/outcomes.md" />
-<include src="../requirements/interviews/introduction/outcomes.md" />
-<include src="../requirements/focusGroups/introduction/outcomes.md" />
-<include src="../requirements/prototyping/introduction/outcomes.md" />
-<include src="../requirements/productSurveys/introduction/outcomes.md" />
+<include src="../gatheringRequirements/brainstorming/outcomes.md" />
+<include src="../gatheringRequirements/userSurveys/outcomes.md" />
+<include src="../gatheringRequirements/observation/outcomes.md" />
+<include src="../gatheringRequirements/interviews/outcomes.md" />
+<include src="../gatheringRequirements/focusGroups/outcomes.md" />
+<include src="../gatheringRequirements/prototyping/outcomes.md" />
+<include src="../gatheringRequirements/productSurveys/outcomes.md" />
 
 ### Specifying
 
-<include src="../requirements/prose/introduction/outcomes.md" />
-<include src="../requirements/featureList/introduction/outcomes.md" />
-<include src="../requirements/userStories/introduction/outcomes.md" />
-<include src="../requirements/userStories/details/outcomes.md" />
-<include src="../requirements/userStories/usage/outcomes.md" />
-<include src="../requirements/useCases/introduction/outcomes.md" />
-<include src="../requirements/useCases/identification/outcomes.md" />
-<include src="../requirements/useCases/details/outcomes.md" />
-<include src="../requirements/useCases/usage/outcomes.md" />
-<include src="../requirements/glossary/introduction/outcomes.md" />
-<include src="../requirements/supplementaryRequirements/introduction/outcomes.md" />
+<include src="../specifyingRequirements/prose/what/outcomes.md" />
+<include src="../specifyingRequirements/featureList/what/outcomes.md" />
+
+<include src="../specifyingRequirements/userStories/introduction/outcomes.md" />
+<include src="../specifyingRequirements/userStories/details/outcomes.md" />
+<include src="../specifyingRequirements/userStories/usage/outcomes.md" />
+
+<include src="../specifyingRequirements/useCases/introduction/outcomes.md" />
+<include src="../specifyingRequirements/useCases/identifying/outcomes.md" />
+<include src="../specifyingRequirements/useCases/details/outcomes.md" />
+<include src="../specifyingRequirements/useCases/usage/outcomes.md" />
+
+<include src="../specifyingRequirements/glossary/what/outcomes.md" />
+<include src="../specifyingRequirements/supplementaryRequirements/what/outcomes.md" />
 
 ## Design
 
@@ -59,6 +65,8 @@
 <include src="../designPrinciples/openClosedPrinciple/what/outcomes.md" />
 
 ### Object Oriented Programming
+
+<include src="../oopDesign/introduction/outcomes.md" />
 
 <include src="../oopDesign/objects/basic/outcomes.md" />
 <include src="../oopDesign/objects/abstraction/outcomes.md" />
@@ -91,6 +99,8 @@
 <include src="../oopDesign/conceptualizingSolution/introduction/outcomes.md" />
 <include src="../oopDesign/conceptualizingSolution/basic/outcomes.md" />
 <include src="../oopDesign/conceptualizingSolution/intermediate/outcomes.md" />
+
+<include src="../oopDesign/faq/outcomes.md" />
 
 ### Modeling
 

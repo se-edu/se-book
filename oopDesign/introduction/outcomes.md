@@ -1,1 +1,1 @@
-:trophy: Can explain object oriented programming :one:
+:trophy: Can describe OOP at a higher level :one:
