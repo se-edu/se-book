@@ -86,4 +86,7 @@ Next, add two more files `colors.txt` and `shapes.txt` to the same working direc
 
 </div>
 
+<div id="extras">
+</div>
+
 </div>
