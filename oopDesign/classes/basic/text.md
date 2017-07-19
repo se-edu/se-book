@@ -23,7 +23,7 @@ When writing an OOP program to calculate the average age, instructions for creat
 </tip-box>
 
 <dynamic-panel src="../../../uml/classDiagrams/classes/topicPanel.md" header="UML: Class Diagrams: Classes" is-open></dynamic-panel>
-<dynamic-panel src="../../../uml/objectDiagrams/objects/topicPanel.md" header="UML: Object Diagrams: Objects" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/objectDiagrams/objects/embed.md" header="UML: Object Diagrams: Objects" is-open></dynamic-panel>
 
 <p/>
 

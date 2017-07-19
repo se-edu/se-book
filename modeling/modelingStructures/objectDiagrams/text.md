@@ -14,7 +14,7 @@
 
 Object diagrams model object structures that exist at a given moment of time.
 
-<dynamic-panel src="../../../uml/objectDiagrams/objectStructures/topicPanel.md" header="UML: Object Diagrams: Object Structures" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/objectDiagrams/objectStructures/embed.md" header="UML: Object Diagrams: Object Structures" is-open></dynamic-panel>
 
 </div>
 

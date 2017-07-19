@@ -2,6 +2,8 @@
 
 <div class="website-content">
 
+%%**UML :arrow_right: Activity Diagrams :arrow_right:**%%
+
 ### Basic Notations
 
 <div id="main">

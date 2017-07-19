@@ -2,7 +2,9 @@
 
 <div class="website-content">
 
-#### Parallel Paths
+%%**UML :arrow_right: Activity Diagrams :arrow_right: Basic Notations :arrow_right:**%%
+
+#### Parallel Paths :two:
 
 <div id="main">
 
@@ -10,6 +12,7 @@ _Forks_ and _joins_ have the same notation: a **bar**. They indicate the start a
 
 <img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/parallelPaths/images/diagram.png" height="220" />
 <p/>
+
 
 </div>
 </div>

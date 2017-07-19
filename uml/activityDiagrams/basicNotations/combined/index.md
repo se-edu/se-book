@@ -2,11 +2,14 @@
 
 <div class="website-content">
 
-#### Combined
+%%**UML :arrow_right: Activity Diagrams :arrow_right: Basic Notations :arrow_right:**%%
+
+#### Combined :three:
 
 <div id="extras">
 
 <include src="exercises.md" />
 
 </div>
+
 </div>

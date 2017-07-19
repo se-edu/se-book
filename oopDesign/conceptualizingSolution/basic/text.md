@@ -12,13 +12,13 @@
 
 <div id="body">
 
-<dynamic-panel src="../../../uml/sequenceDiagrams/introduction/topicPanel.md" header="UML: Sequence Diagrams: Introduction" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/introduction/embed.md" header="UML: Sequence Diagrams: Introduction" is-open></dynamic-panel>
 
 <p/>
 
 Let us start by modelling a sample interaction between the person playing the game and the TextUi object.
 
-<dynamic-panel src="../../../uml/sequenceDiagrams/basics/topicPanel.md" header="UML: Sequence Diagrams: Basics" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/basic/embed.md" header="UML: Sequence Diagrams: Basic" is-open></dynamic-panel>
 
 <p/>
 
@@ -56,7 +56,7 @@ The Logic methods we conceptualized in our modelling so far are:
 
 Now, let us look at what other objects and interactions are needed to support the `newGame()` operation.  It is likely that a new `Minefield` object is created when the `newGame()` method is called.
 
-<dynamic-panel src="../../../uml/sequenceDiagrams/objectCreation/topicPanel.md" header="UML: Sequence Diagrams: Object Creation" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/objectCreation/embed.md" header="UML: Sequence Diagrams: Object Creation" is-open></dynamic-panel>
 
 <p/>
 
@@ -71,7 +71,7 @@ Note that the behavior of the `Minefield` constructor has been abstracted away. 
 
 Given below are the interactions between the player and the Text UI for the whole game.
 
-<dynamic-panel src="../../../uml/sequenceDiagrams/loops/topicPanel.md" header="UML: Sequence Diagrams: Loops" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/loops/embed.md" header="UML: Sequence Diagrams: Loops" is-open></dynamic-panel>
 
 <p/>
 
@@ -82,7 +82,7 @@ Given below are the interactions between the player and the Text UI for the whol
 
 </tip-box>
 
-<dynamic-panel src="../../../uml/sequenceDiagrams/minimalNotation/topicPanel.md" header="UML: Sequence Diagrams: Minimal Notation" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/minimalNotation/embed.md" header="UML: Sequence Diagrams: Minimal Notation" is-open></dynamic-panel>
 
 <p/>
 

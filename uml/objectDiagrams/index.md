@@ -1,11 +1,17 @@
-<include src="./introduction/topicPanel.md" />
+<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
-<!-- ------------------------------------------------------------------------------------------------- -->
+<div class="website-content">
 
-<include src="./objects/topicPanel.md" />
+%%**UML :arrow_right:**%%
 
-<!-- ------------------------------------------------------------------------------------------------- -->
+## Object Diagrams
 
-<include src="./objectStructures/topicPanel.md" />
+<div id="main">
 
-<!-- ------------------------------------------------------------------------------------------------- -->
+<include src="introduction/embed.md" />
+<include src="objects/embed.md" />
+<include src="objectStructures/embed.md" />
+
+</div>
+
+</div>

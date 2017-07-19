@@ -2,7 +2,9 @@
 
 <div class="website-content">
 
-#### Alternate Paths
+%%**UML :arrow_right: Activity Diagrams :arrow_right: Basic Notations :arrow_right:**%%
+
+#### Alternate Paths :two:
 
 <div id="main">
 

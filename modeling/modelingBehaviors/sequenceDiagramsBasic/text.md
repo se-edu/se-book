@@ -12,10 +12,10 @@
 
 <div id="body">
 
-<dynamic-panel src="../../../uml/sequenceDiagrams/basics/topicPanel.md" header="UML: Sequence Diagrams: Basics" is-open></dynamic-panel>
-<dynamic-panel src="../../../uml/sequenceDiagrams/objectCreation/topicPanel.md" header="UML: Sequence Diagrams: Object Creation" is-open></dynamic-panel>
-<dynamic-panel src="../../../uml/sequenceDiagrams/loops/topicPanel.md" header="UML: Sequence Diagrams: Loops" is-open></dynamic-panel>
-<dynamic-panel src="../../../uml/sequenceDiagrams/minimalNotation/topicPanel.md" header="UML: Sequence Diagrams: Minimal Notation" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/basic/embed.md" header="UML: Sequence Diagrams: Basic" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/objectCreation/embed.md" header="UML: Sequence Diagrams: Object Creation" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/loops/embed.md" header="UML: Sequence Diagrams: Loops" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/minimalNotation/embed.md" header="UML: Sequence Diagrams: Minimal Notation" is-open></dynamic-panel>
 
 </div>
 

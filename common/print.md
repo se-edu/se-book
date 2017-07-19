@@ -47,6 +47,7 @@
 
 # Tools
 
+<include src="../uml/print.md#main" />
 <include src="../intellij/print.md#main" />
 <include src="../gitAndGithub/print.md#main" />
 <include src="../javaTools/print.md#main" />

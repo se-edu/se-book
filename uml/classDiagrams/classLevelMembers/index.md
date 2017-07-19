@@ -2,11 +2,13 @@
 
 <div class="website-content">
 
-### Class-Level Members
+%%**UML :arrow_right: Class Diagrams :arrow_right:**%%
+
+### Class Level Members
 
 <div id="main">
 
-<include src="./introduction/topicPanel.md" />
+<include src="./what/topicPanel.md" />
 
 </div>
 </div>

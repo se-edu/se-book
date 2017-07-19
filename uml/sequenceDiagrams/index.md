@@ -1,43 +1,25 @@
-<include src="./introduction/topicPanel.md" />
+<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
-<!-- ------------------------------------------------------------------------------------------------- -->
+<div class="website-content">
 
-<include src="./basics/topicPanel.md" />
+%%**UML :arrow_right:**%%
 
-<!-- ------------------------------------------------------------------------------------------------- -->
+## Sequence Diagrams
 
-<include src="./objectCreation/topicPanel.md" />
+<div id="main">
 
-<!-- ------------------------------------------------------------------------------------------------- -->
+<include src="introduction/embed.md" />
+<include src="basic/embed.md" />
+<include src="objectCreation/embed.md" />
+<include src="objectDeletion/embed.md" />
+<include src="loops/embed.md" />
+<include src="selfInvocation/embed.md" />
+<include src="alternativePaths/embed.md" />
+<include src="optionalPaths/embed.md" />
+<include src="parallelPaths/embed.md" />
+<include src="referenceFrames/embed.md" />
+<include src="minimalNotation/embed.md" />
 
-<include src="./objectDeletion/topicPanel.md" />
+</div>
 
-<!-- ------------------------------------------------------------------------------------------------- -->
-
-<include src="./loops/topicPanel.md" />
-
-<!-- ------------------------------------------------------------------------------------------------- -->
-
-<include src="./selfInvocation/topicPanel.md" />
-
-<!-- ------------------------------------------------------------------------------------------------- -->
-
-<include src="./alternativePaths/topicPanel.md" />
-
-<!-- ------------------------------------------------------------------------------------------------- -->
-
-<include src="./optionalPaths/topicPanel.md" />
-
-<!-- ------------------------------------------------------------------------------------------------- -->
-
-<include src="./parallelPaths/topicPanel.md" />
-
-<!-- ------------------------------------------------------------------------------------------------- -->
-
-<include src="./referenceFrames/topicPanel.md" />
-
-<!-- ------------------------------------------------------------------------------------------------- -->
-
-<include src="./minimalNotation/topicPanel.md" />
-
-<!-- ------------------------------------------------------------------------------------------------- -->
+</div>

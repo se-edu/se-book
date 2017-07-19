@@ -12,11 +12,11 @@
 
 <div id="body">
 
-<dynamic-panel src="../../../uml/sequenceDiagrams/referenceFrames/topicPanel.md" header="UML: Sequence Diagrams: Reference Frames" is-open></dynamic-panel>
-<dynamic-panel src="../../../uml/sequenceDiagrams/objectDeletion/topicPanel.md" header="UML: Sequence Diagrams: Object Deletion" is-open></dynamic-panel>
-<dynamic-panel src="../../../uml/sequenceDiagrams/selfInvocation/topicPanel.md" header="UML: Sequence Diagrams: Self-Invocation" is-open></dynamic-panel>
-<dynamic-panel src="../../../uml/sequenceDiagrams/alternativePaths/topicPanel.md" header="UML: Sequence Diagrams: Alternative Paths" is-open></dynamic-panel>
-<dynamic-panel src="../../../uml/sequenceDiagrams/optionalPaths/topicPanel.md" header="UML: Sequence Diagrams: Optional Paths" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/referenceFrames/embed.md" header="UML: Sequence Diagrams: Reference Frames" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/objectDeletion/embed.md" header="UML: Sequence Diagrams: Object Deletion" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/selfInvocation/embed.md" header="UML: Sequence Diagrams: Self-Invocation" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/alternativePaths/embed.md" header="UML: Sequence Diagrams: Alternative Paths" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/optionalPaths/embed.md" header="UML: Sequence Diagrams: Optional Paths" is-open></dynamic-panel>
 
 </div>
 
