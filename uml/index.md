@@ -4,75 +4,40 @@
 
 # UML
 
-## Class Diagrams :one:
-
-%%:o: What are Class Diagrams%%
-
-<panel type="seamless" alt="definition">
-  <span slot="header"> ================================================================
-  </span>
-  <include src="classDiagrams/index.md" />
+## Class Diagrams
+<panel header="================================================================"
+    type="seamless" alt="class diagrams">
+  <include src="classDiagrams/index.md#main" />
 </panel>
 
-<!-- ------------------------------------------------------------------------------------------------- -->
-
-## Sequence Diagrams :one:
-
-%%:o: What are Sequence Diagrams%%
-
-<panel type="seamless" alt="definition">
-  <span slot="header"> ================================================================
-  </span>
-  <include src="sequenceDiagrams/index.md" />
+## Sequence Diagrams
+<panel header="================================================================"
+    type="seamless" alt="sequence diagrams">
+  <include src="sequenceDiagrams/index.md#main" />
 </panel>
 
-<!-- ------------------------------------------------------------------------------------------------- -->
-
-## Object Diagrams :one:
-
-%%:o: What are Object Diagrams%%
-
-<panel type="seamless" alt="definition">
-  <span slot="header"> ================================================================
-  </span>
-  <include src="objectDiagrams/index.md" />
+## Object Diagrams
+<panel header="================================================================"
+    type="seamless" alt="object diagrams">
+  <include src="objectDiagrams/index.md#main" />
 </panel>
 
-<!-- ------------------------------------------------------------------------------------------------- -->
-
-## Activity Diagrams :one:
-
-%%:o: What are Activity Diagrams%%
-
-<panel type="seamless" alt="activity diagrams">
-  <span slot="header"> ================================================================
-  </span>
-  <include src="activityDiagrams/index.md" />
+## Activity Diagrams
+<panel header="================================================================"
+    type="seamless" alt="activity diagrams">
+  <include src="activityDiagrams/index.md#main" />
 </panel>
 
-<!-- ------------------------------------------------------------------------------------------------- -->
-
-## Notes :one:
-
-%%:o: Notes%%
-
-<panel type="seamless" alt="notes">
-  <span slot="header"> ================================================================
-  </span>
-  <include src="notes/index.md" />
+## Notes
+<panel header="================================================================"
+    type="seamless" alt="notes">
+  <include src="notes/index.md#main" />
 </panel>
 
-<!-- ------------------------------------------------------------------------------------------------- -->
-
-## Miscellaneous :one:
-
-%%:o: Miscellaneous%%
-
-<panel type="seamless" alt="definition">
-  <span slot="header"> ================================================================
-  </span>
-  <include src="misc/index.md" />
+## Miscellaneous
+<panel header="================================================================"
+    type="seamless" alt="miscellaneous">
+  <include src="miscellaneous/index.md#main" />
 </panel>
 
-<!-- ------------------------------------------------------------------------------------------------- -->
 </div>

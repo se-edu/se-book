@@ -1,6 +1,6 @@
-* __ [Dependencies](./uml/classDiagrams/dependencies) :three: <trigger for="pop:dependencies-preview">:mag:</trigger>
+* __ [Dependencies](./uml/classDiagrams/dependencies) :one: <trigger for="pop:classDiagrams-dependencies-preview">:mag:</trigger>
 
-<popover id="pop:dependencies-preview" title=":mag: Dependencies" placement="right">
+<popover id="pop:classDiagrams-dependencies-preview" title=":mag: Dependencies" placement="right">
   <div slot="content">
     <include src=".\preview.md" />
   </div>

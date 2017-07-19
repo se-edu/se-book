@@ -2,7 +2,9 @@
 
 <div class="website-content">
 
-#### Associations: Multiplicity
+%%**UML :arrow_right: Class Diagrams :arrow_right: Associations :arrow_right:**%%
+
+#### Multiplicity :two:
 
 <div id="main">
 
@@ -33,20 +35,6 @@ Example:
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/association.png" height="120" />
 <p/>
-
-<!-- extras ------------------------------------------------------------------------------------ -->
-
-<panel header=":paperclip: Extras" expandable type="seamless" expanded>
-
-  <panel header=":mortar_board: Learning Outcomes" expandable type="seamless">
-    <include src="exercises.md" />
-  </panel>
-
-  <panel header=":package: Resources" expandable type="seamless">
-    <include src="resources.md" />
-  </panel>
-
-</panel>
 
 </div>
 </div>

@@ -2,11 +2,11 @@
 
 <div class="website-content">
 
-#### Rakes
+%%**UML :arrow_right: Activity Diagrams :arrow_right: Basic Notations :arrow_right:**%%
+
+#### Rakes :three:
 
 <div id="main">
-
-<tip-box>
 
 Here is the AD for a game of  ‘snakes and ladders’.
 

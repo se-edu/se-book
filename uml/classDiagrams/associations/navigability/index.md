@@ -2,7 +2,9 @@
 
 <div class="website-content">
 
-#### Associations: Navigability
+%%**UML :arrow_right: Class Diagrams :arrow_right: Associations :arrow_right:**%%
+
+#### Navigability :two:
 
 <div id="main">
 
@@ -16,20 +18,6 @@ We use arrow heads to indication the navigability of an association.
 `Logic` is aware of `Minefield`, but `Minefield` is not aware of `Logic`
 
 </tip-box>
-
-<!-- extras ------------------------------------------------------------------------------------ -->
-
-<panel header=":paperclip: Extras" expandable type="seamless" expanded>
-
-  <panel header=":mortar_board: Learning Outcomes" expandable type="seamless">
-    <include src="exercises.md" />
-  </panel>
-
-  <panel header=":package: Resources" expandable type="seamless">
-    <include src="resources.md" />
-  </panel>
-	
-</panel>
 
 </div>
 </div>

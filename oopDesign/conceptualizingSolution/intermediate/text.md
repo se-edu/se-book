@@ -14,7 +14,7 @@
 
 Next, let us model how the TextUi interacts with the Logic to support the mark or clear operations until the game is won or lost.
 
-<dynamic-panel src="../../../uml/sequenceDiagrams/referenceFrames/topicPanel.md" header="UML: Sequence Diagrams: Reference Frames" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/referenceFrames/embed.md" header="UML: Sequence Diagrams: Reference Frames" is-open></dynamic-panel>
 
 <p/>
 
@@ -54,7 +54,7 @@ Here is the updated class diagram:
 The above is for the case when Actor `Player` interacts with the system using a text UI. Additional operations (if any) required for the GUI can be discovered similarly.
 Suppose `Logic` supports a `reset()` operation. We can model it like this:
 
-<dynamic-panel src="../../../uml/sequenceDiagrams/objectDeletion/topicPanel.md" header="UML: Sequence Diagrams: Object Deletion" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/objectDeletion/embed.md" header="UML: Sequence Diagrams: Object Deletion" is-open></dynamic-panel>
 
 <p/>
 
@@ -117,7 +117,7 @@ Here’s the SD for option 1.
 
 Here’s the SD for option 2. Here, assume that the game state is updated after every mark/clear action.
 
-<dynamic-panel src="../../../uml/sequenceDiagrams/selfInvocation/topicPanel.md" header="UML: Sequence Diagrams: Self-Invocation" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/selfInvocation/embed.md" header="UML: Sequence Diagrams: Self-Invocation" is-open></dynamic-panel>
 
 <p/>
 
@@ -130,7 +130,7 @@ Here’s the SD for option 2. Here, assume that the game state is updated after 
 
 It is now time to explore what happens inside the `Minefield` constructor? One way is to design it as follows.
 
-<dynamic-panel src="../../../uml/sequenceDiagrams/alternativePaths/topicPanel.md" header="UML: Sequence Diagrams: Alternative Paths" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/alternativePaths/embed.md" header="UML: Sequence Diagrams: Alternative Paths" is-open></dynamic-panel>
 
 <p/>
 
@@ -143,7 +143,7 @@ It is now time to explore what happens inside the `Minefield` constructor? One w
 
 Now let us assume that `Minesweeper` supports a ‘timing’ feature.
 
-<dynamic-panel src="../../../uml/sequenceDiagrams/optionalPaths/topicPanel.md" header="UML: Sequence Diagrams: Optional Paths" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/optionalPaths/embed.md" header="UML: Sequence Diagrams: Optional Paths" is-open></dynamic-panel>
 
 <p/>
 

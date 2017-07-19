@@ -430,49 +430,49 @@
 
 ### UML
 
-<include src="../uml/classDiagrams/introduction/introduction/outcomes.md" />
+<include src="../uml/classDiagrams/introduction/what/outcomes.md" />
 
-<include src="../uml/classDiagrams/classes/introduction/outcomes.md" />
+<include src="../uml/classDiagrams/classes/what/outcomes.md" />
 
-<include src="../uml/classDiagrams/associations/basics/outcomes.md" />
+<include src="../uml/classDiagrams/associations/basic/outcomes.md" />
 <include src="../uml/classDiagrams/associations/navigability/outcomes.md" />
 <include src="../uml/classDiagrams/associations/roles/outcomes.md" />
 <include src="../uml/classDiagrams/associations/labels/outcomes.md" />
 <include src="../uml/classDiagrams/associations/multiplicity/outcomes.md" />
 
-<include src="../uml/classDiagrams/dependencies/introduction/outcomes.md" />
+<include src="../uml/classDiagrams/dependencies/what/outcomes.md" />
 
-<include src="../uml/classDiagrams/associationsAsAttributes/introduction/outcomes.md" />
+<include src="../uml/classDiagrams/associationsAsAttributes/what/outcomes.md" />
 
-<include src="../uml/classDiagrams/enumerations/introduction/outcomes.md" />
+<include src="../uml/classDiagrams/enumerations/what/outcomes.md" />
 
-<include src="../uml/classDiagrams/classLevelMembers/introduction/outcomes.md" />
+<include src="../uml/classDiagrams/classLevelMembers/what/outcomes.md" />
 
-<include src="../uml/classDiagrams/associationClasses/introduction/outcomes.md" />
+<include src="../uml/classDiagrams/associationClasses/what/outcomes.md" />
 
-<include src="../uml/classDiagrams/composition/introduction/outcomes.md" />
+<include src="../uml/classDiagrams/composition/what/outcomes.md" />
 
-<include src="../uml/classDiagrams/aggregation/introduction/outcomes.md" />
+<include src="../uml/classDiagrams/aggregation/what/outcomes.md" />
 
-<include src="../uml/classDiagrams/classInheritance/introduction/outcomes.md" />
-<include src="../uml/classDiagrams/abstractClasses/introduction/outcomes.md" />
-<include src="../uml/classDiagrams/interfaces/introduction/outcomes.md" />
+<include src="../uml/classDiagrams/classInheritance/what/outcomes.md" />
+<include src="../uml/classDiagrams/abstractClasses/what/outcomes.md" />
+<include src="../uml/classDiagrams/interfaces/what/outcomes.md" />
 
-<include src="../uml/sequenceDiagrams/introduction/introduction/outcomes.md" />
-<include src="../uml/sequenceDiagrams/basics/introduction/outcomes.md" />
-<include src="../uml/sequenceDiagrams/objectCreation/introduction/outcomes.md" />
-<include src="../uml/sequenceDiagrams/objectDeletion/introduction/outcomes.md" />
-<include src="../uml/sequenceDiagrams/loops/introduction/outcomes.md" />
-<include src="../uml/sequenceDiagrams/selfInvocation/introduction/outcomes.md" />
-<include src="../uml/sequenceDiagrams/alternativePaths/introduction/outcomes.md" />
-<include src="../uml/sequenceDiagrams/optionalPaths/introduction/outcomes.md" />
-<include src="../uml/sequenceDiagrams/parallelPaths/introduction/outcomes.md" />
-<include src="../uml/sequenceDiagrams/referenceFrames/introduction/outcomes.md" />
-<include src="../uml/sequenceDiagrams/minimalNotation/introduction/outcomes.md" />
+<include src="../uml/sequenceDiagrams/introduction/outcomes.md" />
+<include src="../uml/sequenceDiagrams/basic/outcomes.md" />
+<include src="../uml/sequenceDiagrams/objectCreation/outcomes.md" />
+<include src="../uml/sequenceDiagrams/objectDeletion/outcomes.md" />
+<include src="../uml/sequenceDiagrams/loops/outcomes.md" />
+<include src="../uml/sequenceDiagrams/selfInvocation/outcomes.md" />
+<include src="../uml/sequenceDiagrams/alternativePaths/outcomes.md" />
+<include src="../uml/sequenceDiagrams/optionalPaths/outcomes.md" />
+<include src="../uml/sequenceDiagrams/parallelPaths/outcomes.md" />
+<include src="../uml/sequenceDiagrams/referenceFrames/outcomes.md" />
+<include src="../uml/sequenceDiagrams/minimalNotation/outcomes.md" />
 
-<include src="../uml/objectDiagrams/introduction/introduction/outcomes.md" />
-<include src="../uml/objectDiagrams/objects/introduction/outcomes.md" />
-<include src="../uml/objectDiagrams/objectStructures/introduction/outcomes.md" />
+<include src="../uml/objectDiagrams/introduction/outcomes.md" />
+<include src="../uml/objectDiagrams/objects/outcomes.md" />
+<include src="../uml/objectDiagrams/objectStructures/outcomes.md" />
 
 <include src="../uml/activityDiagrams/introduction/what/outcomes.md" />
 <include src="../uml/activityDiagrams/basicNotations/linearPaths/outcomes.md" />
@@ -482,10 +482,10 @@
 <include src="../uml/activityDiagrams/basicNotations/swimlanes/outcomes.md" />
 <include src="../uml/activityDiagrams/basicNotations/combined/outcomes.md" />
 
-<include src="../uml/notes/constraints/outcomes.md" />
 <include src="../uml/notes/notes/outcomes.md" />
+<include src="../uml/notes/constraints/outcomes.md" />
 
-<include src="../uml/misc/objectVsClassDiagrams/introduction/outcomes.md" />
+<include src="../uml/miscellaneous/objectVsClassDiagrams/outcomes.md" />
 
 ### Intellij IDEA
 

@@ -2,11 +2,13 @@
 
 <div class="website-content">
 
-### Associations As Attributes
+%%**UML :arrow_right: Class Diagrams :arrow_right:**%%
+
+### Associations as Attributes
 
 <div id="main">
 
-<include src="./introduction/topicPanel.md" />
+<include src="./what/topicPanel.md" />
 
 </div>
 </div>

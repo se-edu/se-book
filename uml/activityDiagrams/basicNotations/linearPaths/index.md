@@ -2,7 +2,9 @@
 
 <div class="website-content">
 
-#### Linear Paths
+%%**UML :arrow_right: Activity Diagrams :arrow_right: Basic Notations :arrow_right:**%%
+
+#### Linear Paths :two:
 
 <div id="main">
 
@@ -10,6 +12,7 @@ An activity diagram (AD) consists of a sequence of actions and control flows. An
 
 <img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/linearPaths/images/diagram.png" height="230" />
 <p/>
+
 
 </div>
 </div>

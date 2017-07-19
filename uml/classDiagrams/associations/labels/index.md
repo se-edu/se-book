@@ -2,7 +2,9 @@
 
 <div class="website-content">
 
-#### Associations: Labels
+%%**UML :arrow_right: Class Diagrams :arrow_right: Associations :arrow_right:**%%
+
+#### Labels :two:
 
 <div id="main">
 
@@ -21,20 +23,6 @@ an Admin object uses Student objects” or “Student objects are used by an Adm
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/labels/images/association.png" height="70" />
 <p/>
-
-<!-- extras ------------------------------------------------------------------------------------ -->
-
-<panel header=":paperclip: Extras" expandable type="seamless" expanded>
-
-  <panel header=":mortar_board: Learning Outcomes" expandable type="seamless">
-    <include src="exercises.md" />
-  </panel>
-
-  <panel header=":package: Resources" expandable type="seamless">
-    <include src="resources.md" />
-  </panel>
-
-</panel>
 
 </div>
 </div>

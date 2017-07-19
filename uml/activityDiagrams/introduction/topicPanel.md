@@ -1,5 +1,5 @@
-### Introduction :one:
+### Introduction
 
-<panel type="seamless" header="%%-----------------------------------------%%" expanded>
+<panel type="seamless" header="%%-----------------------------------------%%">
   <include src="./index.md#main" />
 </panel>
