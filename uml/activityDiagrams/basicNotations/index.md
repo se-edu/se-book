@@ -8,12 +8,12 @@
 
 <div id="main">
 
-<include src="./linearPaths/topicPanel.md" />
-<include src="./alternatePaths/topicPanel.md" />
-<include src="./parallelPaths/topicPanel.md" />
-<include src="./rakes/topicPanel.md" />
-<include src="./swimlanes/topicPanel.md" />
-<include src="./combined/topicPanel.md" />
+<include src="./linearPaths/embed.md" />
+<include src="./alternatePaths/embed.md" />
+<include src="./parallelPaths/embed.md" />
+<include src="./rakes/embed.md" />
+<include src="./swimlanes/embed.md" />
+<include src="./combined/embed.md" />
 
 </div>
 </div>

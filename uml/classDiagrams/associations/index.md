@@ -8,11 +8,11 @@
 
 <div id="main">
 
-<include src="./basic/topicPanel.md" />
-<include src="./navigability/topicPanel.md" />
-<include src="./roles/topicPanel.md" />
-<include src="./labels/topicPanel.md" />
-<include src="./multiplicity/topicPanel.md" />
+<include src="./basic/embed.md" />
+<include src="./navigability/embed.md" />
+<include src="./roles/embed.md" />
+<include src="./labels/embed.md" />
+<include src="./multiplicity/embed.md" />
 
 </div>
 </div>
