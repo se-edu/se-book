@@ -498,8 +498,10 @@
 
 ### Git and GitHub
 
-<include src="../gitAndGithub/init/outcomes.md" />
-<include src="../gitAndGithub/commit/outcomes.md" />
+<panel src="../gitAndGithub/init/full.md" alt=":mag:" dynamic minimized /><include src="../gitAndGithub/init/outcomes.md" inline />
+
+<panel src="../gitAndGithub/commit/full.md" alt=":mag:" dynamic minimized /><include src="../gitAndGithub/commit/outcomes.md" inline />
+
 <include src="../gitAndGithub/ignore/outcomes.md" />
 <include src="../gitAndGithub/tag/outcomes.md" />
 <include src="../gitAndGithub/checkout/outcomes.md" />
