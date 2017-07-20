@@ -28,7 +28,9 @@ In the Java code given above, the assertion in line 2 verifies the assumption th
 
 </tip-box>
 
-
 </div>
+
+<div id="extras">
+<div>
 
 </div>

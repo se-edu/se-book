@@ -33,6 +33,7 @@ Some useful navigation shortcuts:
 </panel>
 
 </div>
+
 <div id="extras">
 </div>
 

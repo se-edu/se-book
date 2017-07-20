@@ -26,4 +26,7 @@ Other relevant tutorials:
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

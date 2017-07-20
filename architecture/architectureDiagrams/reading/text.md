@@ -12,8 +12,11 @@
 
 <div id="body">
 
-Architecture diagrams are free-form diagrams. There is no universally adopted standard notation for architecture diagrams. Any symbol that reasonably describes the architecture may be used. 
+Architecture diagrams are free-form diagrams. There is no universally adopted standard notation for architecture diagrams. Any symbol that reasonably describes the architecture may be used.
 
 </div>
+
+<div id="extras">
+<div>
 
 </div>

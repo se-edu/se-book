@@ -26,7 +26,9 @@ The iterative model can take a _breadth-first_ or a _depth-first_ approach to it
 
 The breadth-first approach is considered purely ‘iterative’, while depth-first is ‘incremental’. As mentioned before, most project use a mixture of breadth-first and depth-first iterations. Hence, the common phrase ‘an iterative and incremental process’.
 
-
 </div>
+
+<div id="extras">
+<div>
 
 </div>

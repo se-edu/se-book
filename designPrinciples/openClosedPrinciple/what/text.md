@@ -40,4 +40,7 @@ ArrayList admins = new ArrayList< Admin >();
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

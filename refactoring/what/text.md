@@ -94,4 +94,7 @@ void printDetails (double outstanding) {
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

@@ -32,4 +32,7 @@ Design (b) is more flexible (and less coupled) because now the `Payroll` class n
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

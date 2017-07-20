@@ -82,8 +82,6 @@ Next, add two more files `colors.txt` and `shapes.txt` to the same working direc
 <img src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_7.png" height="150" />
 <p/>
 
-
-
 </div>
 
 <div id="extras">

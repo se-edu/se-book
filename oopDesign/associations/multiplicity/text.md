@@ -20,4 +20,7 @@ Another important aspect of setting up an object network is deciding how many ob
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

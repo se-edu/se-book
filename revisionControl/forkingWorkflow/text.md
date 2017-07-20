@@ -30,4 +30,7 @@ To illustrate how the workflow goes, let’s assume Jean wants to fix a bug in t
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

@@ -91,4 +91,7 @@ User stories for a travel website (credit: Mike Cohen)
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

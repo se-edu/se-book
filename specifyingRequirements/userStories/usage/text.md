@@ -47,4 +47,7 @@ impatient user | to be able experience reasonable response time from the website
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

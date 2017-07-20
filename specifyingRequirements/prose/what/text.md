@@ -24,4 +24,7 @@ Avoid lengthy textual descriptions, as they can be hard to follow.
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

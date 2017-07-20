@@ -27,7 +27,9 @@ Build tool examples:
 
 Modern software projects often depend on third party libraries that evolve constantly. That means developers need to download the correct version of the required libraries and update them regularly. Therefore, dependency management is an important part of build automation. _Dependency Management_ tools can automate that aspect of a project. Maven and Gradle, in addition to managing the build process, can play the role of dependency management tools too.
 
-
 </div>
+
+<div id="extras">
+<div>
 
 </div>

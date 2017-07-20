@@ -16,4 +16,7 @@ An object diagram shows an object structure at a given point of time.
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

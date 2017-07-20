@@ -49,4 +49,7 @@ Examples: the logical view (satisfying the functional requirements) vs. the proc
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

@@ -34,4 +34,7 @@ Here are some examples of different coverage criteria:
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

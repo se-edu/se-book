@@ -19,4 +19,7 @@ The following diagram uses the class diagram notation to show the different type
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

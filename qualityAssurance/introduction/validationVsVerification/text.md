@@ -23,4 +23,7 @@ Whether something belongs under validation or verification is not that important
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

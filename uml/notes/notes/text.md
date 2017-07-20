@@ -19,4 +19,7 @@ UML notes are used to augment a UML diagram with additional information. These n
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

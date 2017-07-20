@@ -24,4 +24,7 @@ We can deal with Adam object instead of details such as Adam’s date of birth (
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

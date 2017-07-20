@@ -3,5 +3,5 @@
   <include src="outcomes.md" />
 </tip-box>
 <panel type="seamless" header=" %%- - - - - - - - - -%%">
-  <include src="index.md#main"/>
+  <include src="full.md#main"/>
 </panel>

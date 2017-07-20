@@ -34,4 +34,7 @@ _Equivalence partitioning_ is a technique that uses the above observation to imp
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

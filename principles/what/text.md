@@ -16,4 +16,7 @@ Different principles have varying degrees of formality – rules, opinions, rule
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

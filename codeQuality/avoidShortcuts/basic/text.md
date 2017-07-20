@@ -32,7 +32,9 @@
   <include src="../../practices/deleteDeadCode/index.md#main" />
 </panel>
 
-
 </div>
+
+<div id="extras">
+<div>
 
 </div>

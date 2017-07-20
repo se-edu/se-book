@@ -20,4 +20,7 @@ When two classes are linked by an association, it does not necessarily mean both
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

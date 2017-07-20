@@ -40,4 +40,7 @@ Like other agile development methodologies, Scrum can be implemented through a w
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

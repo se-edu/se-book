@@ -29,4 +29,7 @@ A negative test case: i = null;
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

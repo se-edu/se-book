@@ -106,7 +106,9 @@ The high level tasks structure can be further refined into subtasks.
 * Not good: more coding | better: implement component X
 * Not good: do research on UI testing | better: find a suitable tool for testing the UI
 
-
 </div>
+
+<div id="extras">
+<div>
 
 </div>

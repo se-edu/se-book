@@ -52,4 +52,7 @@ These associations can be reflected among classes too.
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>
