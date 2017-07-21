@@ -18,4 +18,7 @@ We can **_checkout_** any commit in the history (i.e. load the state of files as
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

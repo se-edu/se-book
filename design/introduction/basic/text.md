@@ -18,4 +18,7 @@ Where does it fit in?
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

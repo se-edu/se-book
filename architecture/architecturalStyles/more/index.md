@@ -8,9 +8,8 @@
 
 <div id="main">
 
-<include src="./moreStyles/topicPanel.md" />
-<p/>
-<include src="./usingStyles/topicPanel.md" />
+<include src="./moreStyles/embed.md" />
+<include src="./usingStyles/embed.md" />
 
 </div>
 </div>

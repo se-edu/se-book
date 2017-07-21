@@ -88,4 +88,7 @@ Given below are the interactions between the player and the Text UI for the whol
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

@@ -14,10 +14,13 @@
 
 Another important aspect of setting up an object network is deciding how many objects take part in each association. That aspect is called _multiplicity_.
 
-<dynamic-panel src="../../../uml/classDiagrams/associations/multiplicity/topicPanel.md" header="UML: Class Diagrams: Associations: Multiplicity" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/classDiagrams/associations/multiplicity/embed.md" header="UML: Class Diagrams: Associations: Multiplicity" is-open></dynamic-panel>
 
 <p/>
 
 </div>
+
+<div id="extras">
+<div>
 
 </div>

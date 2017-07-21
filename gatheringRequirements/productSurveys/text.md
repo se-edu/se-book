@@ -16,4 +16,7 @@ Studying existing products can unearth shortcomings of existing solutions that c
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

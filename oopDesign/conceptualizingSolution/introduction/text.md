@@ -33,4 +33,7 @@ To answer those questions, we can analyze the how the objects of these classes w
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

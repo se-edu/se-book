@@ -19,4 +19,7 @@ It is important to include buffers (i.e. time set aside to absorb any unforeseen
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

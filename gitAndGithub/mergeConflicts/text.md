@@ -47,4 +47,7 @@ Now, stage the changes, and commit.
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

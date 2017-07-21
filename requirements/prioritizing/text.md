@@ -27,6 +27,10 @@ More examples:
 * `Must-have`, `Nice-to-have`, `Unlikely-to-have`
 
 At the same time, some requirements may get discarded as they are considered ‘out of scope’.
+
 </div>
+
+<div id="extras">
+<div>
 
 </div>

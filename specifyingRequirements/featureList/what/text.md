@@ -29,4 +29,7 @@ Here is a sample feature list from Minesweeper (only a brief description has bee
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

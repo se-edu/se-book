@@ -37,4 +37,7 @@ AcademicStaff academicStaff = staff; // Not OK
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

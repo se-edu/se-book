@@ -1,8 +1,14 @@
+<panel header="%%Prerequisites%%" expandable expanded>
+ <include src="prereq.md"/>
+</panel>
+
+<p/>
+
 <tip-box type="success">
   <include src="outcomes.md" />
 </tip-box>
 
-%%**<include src="text.md#path" inline />**%%
+%%**<include src="../path.md" inline />**%%
 
 <include src="text.md#title" />
 
@@ -12,4 +18,3 @@
 <include src="text.md#extras" />
 
 </div>
-

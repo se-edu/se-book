@@ -27,4 +27,7 @@ As an example, here is a partial glossary from a variant of the Snakes and Ladde
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

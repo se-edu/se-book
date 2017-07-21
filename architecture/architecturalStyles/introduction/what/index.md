@@ -2,14 +2,8 @@
 
 <div class="website-content">
 
-%%**Software Architecture :arrow_right: Architectural Styles :arrow_right: Introduction :arrow_right:**%%
-
-#### What :one:
-
-<div id="main">
-
-It’s a form of reusing high-level designs
-{describe more}
+<include src="full.md" />
 
 </div>
+
 </div>

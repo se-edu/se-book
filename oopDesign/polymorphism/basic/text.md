@@ -58,4 +58,7 @@ class Academic extends Staff {
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

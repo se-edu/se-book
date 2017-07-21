@@ -76,4 +76,7 @@ Even if we do not intend to pass the code to someone else, code quality is still
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

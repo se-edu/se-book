@@ -1,5 +1,4 @@
-
-<div id="path">Testing :arrow_right: Test Automation :arrow_right:</div>
+<div id="path">Testing :arrow_right: Testing Types :arrow_right:</div>
 
 <div id="title">
 

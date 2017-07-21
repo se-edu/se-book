@@ -17,8 +17,11 @@ This is similar to forking workflow except there are no forks or PRs. Everyone i
 <img src="{{baseUrl}}/revisionControl/featureBranchFlow/images/diagram.png" height="330" />
 <p/>
 
-More info: https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow 
+More info: https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow
 
 </div>
+
+<div id="extras">
+<div>
 
 </div>

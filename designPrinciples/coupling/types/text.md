@@ -16,4 +16,7 @@ Temporal coupling etc.
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

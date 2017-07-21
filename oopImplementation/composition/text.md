@@ -32,4 +32,7 @@ class Car {
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

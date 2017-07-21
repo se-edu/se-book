@@ -12,8 +12,11 @@
 
 <div id="body">
 
-_Integrating_ parts written by different team members is inevitable in multi-person projects. It is also one of the most troublesome tasks and it rarely goes smoothly. 
+_Integrating_ parts written by different team members is inevitable in multi-person projects. It is also one of the most troublesome tasks and it rarely goes smoothly.
 
 </div>
+
+<div id="extras">
+<div>
 
 </div>

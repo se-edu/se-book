@@ -42,7 +42,9 @@ Example:
 
 </tip-box>
 
-
 </div>
+
+<div id="extras">
+<div>
 
 </div>

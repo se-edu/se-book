@@ -22,4 +22,7 @@ One should strive for high cohesion to facilitate code maintenance and reuse.
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

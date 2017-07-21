@@ -27,4 +27,7 @@ In the chart, a solid bar represents the main task, which is generally composed 
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

@@ -21,4 +21,7 @@ Source: https://en.wikipedia.org/wiki/Component_diagram
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

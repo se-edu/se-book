@@ -8,9 +8,9 @@
 
 <div id="main">
 
-<include src="./what/topicPanel.md" />
-<include src="./stubs/topicPanel.md" />
-<include src="./mocks/topicPanel.md" />
+<include src="./what/embed.md" />
+<include src="./stubs/embed.md" />
+<include src="./mocks/embed.md" />
 
 </div>
 </div>

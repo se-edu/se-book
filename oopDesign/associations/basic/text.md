@@ -41,9 +41,9 @@ Example:
 
 These associations can be reflected among classes too.
 
-<dynamic-panel src="../../../uml/classDiagrams/associations/basic/topicPanel.md" header="UML: Class Diagrams: Associations: Basics" is-open></dynamic-panel>
-<dynamic-panel src="../../../uml/classDiagrams/associations/labels/topicPanel.md" header="UML: Class Diagrams: Associations: Labels" is-open></dynamic-panel>
-<dynamic-panel src="../../../uml/classDiagrams/associations/roles/topicPanel.md" header="UML: Class Diagrams: Associations: Roles" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/classDiagrams/associations/basic/embed.md" header="UML: Class Diagrams: Associations: Basic" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/classDiagrams/associations/labels/embed.md" header="UML: Class Diagrams: Associations: Labels" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/classDiagrams/associations/roles/embed.md" header="UML: Class Diagrams: Associations: Roles" is-open></dynamic-panel>
 
 <p/>
 
@@ -51,5 +51,8 @@ These associations can be reflected among classes too.
 <p/>
 
 </div>
+
+<div id="extras">
+<div>
 
 </div>

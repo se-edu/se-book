@@ -30,4 +30,7 @@ Advantages of exception handling in this way:
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

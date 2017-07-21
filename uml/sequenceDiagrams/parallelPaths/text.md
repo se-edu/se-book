@@ -32,4 +32,7 @@ In this example Logic is polling both CloudServer and LocalServer objects in par
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

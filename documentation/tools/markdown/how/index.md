@@ -2,13 +2,8 @@
 
 <div class="website-content">
 
-%%**Documentation :arrow_right: Tools :arrow_right: Markdown :arrow_right:**%%
-
-#### How :two:
-
-<div id="main">
-
-...
+<include src="full.md" />
 
 </div>
+
 </div>
