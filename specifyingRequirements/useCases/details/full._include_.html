@@ -1,0 +1,410 @@
+<tip-box type="success">
+  <div>
+    <p>🏆 Can specify details of a use case in a structured format <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+  </div>
+</tip-box>
+<p><span class="dimmed"><strong><span>Requirements ➡️ Specifying Requirements ➡️
+</span></strong>
+  </span>
+</p>
+<div>
+  <h4 id="details-two">Details <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+</div>
+<div id="main">
+  <div>
+    <p><strong>Writing use case steps</strong></p>
+    <div>
+      <link rel="stylesheet" href="/se-book/css/common.css">
+      <p>The main body of the use case is the sequence of steps that describes the interaction between the system and the actors. Each step is given as a simple statement.</p>
+      <tip-box>
+        <div>
+          <ul>
+            <li>Use case:
+              <popover effect="fade" placement="right" content="Each use case can be given a unique identification for easier cross reference."> UC01 </popover> conduct survey
+              <ol>
+                <li>Staff creates the survey.</li>
+                <li>Student completes the survey.</li>
+                <li>Staff views the survey results.</li>
+                <li class="custom-bullet-point">Use case ends.</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </tip-box>
+      <p>A use case describes only the externally visible behavior, not internal details, of a system.</p>
+      <p>{give example}</p>
+      <p>Every step should clearly show <em>who</em> does <em>what</em>. A step gives the <strong>intention</strong> of the actor (not the mechanics). That means UI details are usually omitted. The idea is to leave as much flexibility to the UI designer
+        as possible. That is, the use case specification should be as general as possible (less specific) about the UI. For example,</p>
+      <tip-box>
+        <p><code>User right-clicks the text box and chooses ‘clear’</code>: This contains UI-specific details and is not a good use case step.</p>
+        <p><code>User clears the input</code>: This is better because it omits UI-specific details.</p>
+      </tip-box>
+      <p>The following is an illustration of how we can include repetitive steps in a scenario.</p>
+      <tip-box>
+        <div>
+          <ul>
+            <li>Software System: Square game</li>
+            <li>Use case: UC02 - Play a Game</li>
+            <li>Actors: Player (multiple players)
+              <ol>
+                <li>A Player starts the game.</li>
+                <li>SquareGame asks for player names.</li>
+                <li>Each Player enters his own name.</li>
+                <li>SquareGame shows the order of play.</li>
+                <li>SquareGame prompts for the current Player to throw die.</li>
+                <li>Current Player adjusts the throw speed.</li>
+                <li>Current Player triggers the die throw.</li>
+                <li>Square Game shows the face value of the die.</li>
+                <li>Square Game moves the Player's piece accordingly.</li>
+                <li class="custom-bullet-point"><b>Steps 5-9 are repeated for each Player, and for as many rounds as required until a Player reaches the 100th square.</b></li>
+                <li class="custom-bullet-point">10. Square Game shows the Winner.</li>
+                <li class="custom-bullet-point">Use case ends.</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </tip-box>
+    </div>
+    <p><strong>Main success scenario</strong></p>
+    <div>
+      <link rel="stylesheet" href="/se-book/css/common.css">
+      <p>The Main Success Scenario (MSS) describes the most straightforward interaction for a given use case, which assumes that nothing goes wrong. This is also called the <em>Basic Course of Action</em> or the <em>Main Flow of Events</em> of a use case.
+        Given below is another example of an MSS.</p>
+      <tip-box>
+        <div>
+          <ul>
+            <li>System: Online Banking System (OBS)</li>
+            <li>Use case: UC23 - Transfer Money</li>
+            <li>Actor: User</li>
+            <li>MSS:
+              <ol>
+                <li>User chooses to transfer money.</li>
+                <li>OBS requests for details of the transfer.</li>
+                <li>User enters the requested details.</li>
+                <li>OBS requests for confirmation.</li>
+                <li>OBS transfers the money and displays the new account balance.</li>
+                <li class="custom-bullet-point">Use case ends.</li>
+              </ol>
+            </li>
+            <li> Extensions:
+              <ol class="custom-bullet-list">
+                <li>3a. OBS detects an error in the entered data.
+                  <ol class="custom-bullet-list">
+                    <li>3a1. OBS requests for the correct data.</li>
+                    <li>3a2. User enters new data.</li>
+                    <li>Steps 3a1-3a2 are repeated until the data entered are correct.</li>
+                    <li>Use case resumes from step 4.</li>
+                  </ol>
+                </li>
+                <li>3b. User requests to effect the transfer in a future date.
+                  <ol class="custom-bullet-list">
+                    <li>3b1. OBS requests for confirmation.</li>
+                    <li>3b2. User confirms future transfer.</li>
+                    <li>Use case ends.</li>
+                  </ol>
+                </li>
+                <li>*a. At any time, User chooses to cancel the transfer.
+                  <ol class="custom-bullet-list">
+                    <li>*a1. OBS requests to confirm the cancellation.</li>
+                    <li>*a2. User confirms the cancellation.</li>
+                    <li>Use case ends.</li>
+                  </ol>
+                </li>
+                <li>*b. At any time, 120 seconds lapse without any input from the User.
+                  <ol class="custom-bullet-list">
+                    <li>*b1. OBS cancels the transfer.</li>
+                    <li>*b2. OBS informs the User of the cancellation.</li>
+                    <li>Use case ends.</li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+        <p>Note how the MSS assumes that all entered details are correct and ignores problems such as timeouts, network outages etc. MSS does not tell us what happens if the user enters incorrect data.</p>
+      </tip-box>
+    </div>
+    <p><strong>Extensions</strong></p>
+    <div>
+      <p><em>Extensions</em>, given below the MSS, are &quot;add-on&quot;s to the MSS. They are also called <em>exceptional flow of events</em> or <em>alternative flow of events</em>. They describe variations of the scenario that can happen if certain things
+        are not as expected by the MSS. Extensions appear below the MSS. Note that the numbering style is not a rule but just a convention. The third extension, labeled as ‘*a’ can happen at any step (hence, the ‘*’).</p>
+      <p>When separating extensions from the MSS, keep in mind that the MSS should be self-contained. That is, the MSS should give us a complete usage scenario. Also note that it is not useful to mention events such as power failures or system crashes as
+        extensions because the system cannot function beyond such catastrophic failures.</p><img src="/se-book/specifyingRequirements/useCases/details/images/extension.png" height="250">
+      <p></p>
+      <p><code>&lt;&lt; extend &gt;&gt;</code> relationship between use cases is used to capture extensions to the use cases. Note how the arrow is pointing the other way.</p>
+    </div>
+    <p><strong>Inclusions</strong></p>
+    <div>
+      <link rel="stylesheet" href="/se-book/css/common.css">
+      <p>A use case can &quot;include&quot; another use case. Underlined text is commonly used to show an inclusion of a use case. Inclusions are useful,</p>
+      <ul>
+        <li>When you don't want to clutter a use case with too many low-level steps.</li>
+        <li>When a set of steps is repeated in multiple use cases.</li>
+      </ul>
+      <tip-box>
+        <div>
+          <ul>
+            <li>Software System: LearnSys</li>
+            <li>Use case: UC01 - Conduct Survey</li>
+            <li>Actors: Staff, Student</li>
+            <li>MSS:
+              <ol>
+                <li>Staff <span class="underline">creates the survey <b>(UC44).</b></span></li>
+                <li>Student <span class="underline">completes the survey <b>(UC50).</b></span></li>
+                <li>Staff views the survey results.</li>
+                <li class="custom-bullet-point">Use case ends.</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </tip-box>
+      <p>We use a dotted arrow and a <code>&lt;&lt; include &gt;&gt;</code> annotation to show use case inclusions in a use case diagram.</p><img src="/se-book/specifyingRequirements/useCases/details/images/inclusion.png" height="250">
+      <p></p>
+    </div>
+    <p><strong>Use case preconditions</strong></p>
+    <div>
+      <link rel="stylesheet" href="/se-book/css/common.css">
+      <p>Preconditions specify the specific state we expect the system to be in before the use case starts.</p>
+      <tip-box>
+        <div>
+          <ul>
+            <li>Software System: Online Banking System</li>
+            <li>Use case: UC23 - Transfer Money</li>
+            <li>Actor: User</li>
+            <li><b>Preconditions: User is logged in.</b></li>
+            <li>MSS:
+              <ol>
+                <li>User chooses to transfer money.</li>
+                <li>OBS requests for details for the transfer.</li>
+                <li class="custom-bullet-point">...</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </tip-box>
+      <p></p>
+    </div>
+    <p><strong>Use case guarantees</strong></p>
+    <div>
+      <link rel="stylesheet" href="/se-book/css/common.css">
+      <p><em>Guarantees</em> specify what the use case promises to give us at the end of its operation.</p>
+      <tip-box>
+        <div>
+          <ul>
+            <li>Software System: Online Banking System</li>
+            <li>Use case: UC23 - Transfer Money</li>
+            <li>Actor: User</li>
+            <li>Preconditions: User is logged in.</li>
+            <li><b>Guarantees:
+        <ul><li>Money will be transferred to the destination account.</li><li>All steps of the transaction will be logged.</li></ul></b></li>
+            <li>MSS:
+              <ol>
+                <li>User chooses to transfer money.</li>
+                <li>OBS requests for details for the transfer.</li>
+                <li class="custom-bullet-point">...</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </tip-box>
+      <p></p>
+    </div>
+  </div>
+  <div>
+    <div>
+      <panel header=":muscle: Exercises" type="info" expandable="">
+        <div>
+          <link rel="stylesheet" href="/se-book/css/common.css">
+          <panel header="Q: EZ-Link top-up use case :two:">
+            <question has-input="true">
+              <p>Complete the following use case (MSS, extensions, etc.). Note that you should not blindly follow how the existing EZ-Link machine operates since it will prevent you from designing a better system. You should consider all possible extensions
+                without complicating the use case too much.</p>
+              <tip-box>
+                <ul>
+                  <li>System: EZ-Link machine (those found at MRTs)</li>
+                  <li>Use case: UC2 top-up EZ-Link card</li>
+                  <li>Actor: EZ-Link card user</li>
+                </ul>
+              </tip-box>
+              <div slot="answer">
+                <tip-box>
+                  <div>
+                    <ul>
+                      <li>System: EZ-Link machine (those found at MRTs)</li>
+                      <li>Use case: UC2 top-up EZ-Link card</li>
+                      <li>Actor: EZ-Link card user</li>
+                      <li>Preconditions: All hardware in working order.</li>
+                      <li>Guarantees: MSS -> the card will be topped-up.</li>
+                      <li>MSS:
+                        <ol>
+                          <li>User places the card on the reader.</li>
+                          <li>System displays card details and prompts for desired action.</li>
+                          <li>User selects top-up.</li>
+                          <li>System requests for top-up details (amount, payment option, receipt required?).</li>
+                          <li>User enters details.</li>
+                          <li>System processes <span class="underline">cash payment (UC02)</span> or <span class="underline">NETS payment (UC03).</span></li>
+                          <li>System updates the card value.</li>
+                          <li>System indicates transaction as completed.</li>
+                          <li>If requested in step 5, system prints receipt.</li>
+                          <li>User removes the card.</li>
+                          <li class="custom-bullet-point">Use case ends.</li>
+                        </ol>
+                      </li>
+                      <li> Extensions:
+                        <ol class="custom-bullet-list">
+                          <li>*a. User removed card or other hardware error detected.
+                            <ol class="custom-bullet-list">
+                              <li>*a1. System indicates the transaction has been aborted.</li>
+                              <li>Use case ends.</li>
+                            </ol>
+                          </li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </div>
+                  <p>Notes:</p>
+                  <ul>
+                    <li>We assume that the only way to cancel a transaction is by removing the card.</li>
+                    <li>By not breaking step 4 into further steps, we avoid committing to a particular mechanism to enter data. For example, we are free to accept all data in one screen.</li>
+                    <li>In step 5, we assume that the input mechanism does not allow any incorrect data.</li>
+                  </ul>
+                </tip-box>
+                <tip-box>
+                  <div>
+                    <ul>
+                      <li>System: EZ-Link machine</li>
+                      <li>Use case: UC03 process NETS payment</li>
+                      <li>Actor: EZ-Link card user</li>
+                      <li>Preconditions: A transaction requiring payment is underway.</li>
+                      <li>Guarantees: MSS -> Transaction amount is transferred from user account to EZ-Link company account.</li>
+                      <li>MSS:
+                        <ol>
+                          <li>System requests to insert ATM card.</li>
+                          <li>User inserts the ATM card.</li>
+                          <li>System requests for PIN.</li>
+                          <li>User enters PIN.</li>
+                          <li>System reports success.</li>
+                          <li class="custom-bullet-point">Use case ends.</li>
+                        </ol>
+                      </li>
+                      <li> Extensions:
+                        <ol class="custom-bullet-list">
+                          <li>2a. Unacceptable ATM card (damaged or inserted wrong side up).
+                            <ol class="custom-bullet-list">
+                              <li>...</li>
+                            </ol>
+                          </li>
+                          <li>4a. Wrong PIN.
+                            <ol class="custom-bullet-list">
+                              <li>...</li>
+                            </ol>
+                          </li>
+                          <li>4b. Insufficient funds.
+                            <ol class="custom-bullet-list">
+                              <li>...</li>
+                            </ol>
+                          </li>
+                          <li>*a. Connection to the NETS gateway is disrupted.
+                            <ol class="custom-bullet-list">
+                              <li>...</li>
+                            </ol>
+                          </li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </div>
+                  <p>Note: UC02 can be written along similar lines.</p>
+                </tip-box>
+              </div>
+            </question>
+          </panel>
+        </div>
+        <div>
+          <link rel="stylesheet" href="/se-book/css/common.css">
+          <panel header="Q: LearnSys – reply to post use case :two:">
+            <question has-input="true">
+              <p>Complete the following use case (MSS, extensions, etc.).</p>
+              <tip-box>
+                <ul>
+                  <li>System: LearnSys</li>
+                  <li>Use case: UC01 reply to post in the forum</li>
+                  <li>Actor: Student</li>
+                </ul>
+              </tip-box>
+              <div slot="answer">
+                <tip-box>
+                  <div>
+                    <ul>
+                      <li>System: LearnSys</li>
+                      <li>Use case: UC01 reply to post in the forum</li>
+                      <li>Actor: Student</li>
+                      <li>Preconditions: Student is logged in and has permission to post in the forum. The post to which the Student replies already exists.</li>
+                      <li>Guarantees: MSS -> post will be added to the forum.</li>
+                      <li>MSS:
+                        <ol>
+                          <li>Student chooses to reply to an existing post.</li>
+                          <li>LearnSys requests the user to enter post details.</li>
+                          <li>Student enters post details.</li>
+                          <li>Student submits the post.</li>
+                          <li>LearnSys displays the post.</li>
+                          <li class="custom-bullet-point">Use case ends.</li>
+                        </ol>
+                      </li>
+                      <li> Extensions:
+                        <ol class="custom-bullet-list">
+                          <li>*a. Internet connection goes down.
+                            <ol class="custom-bullet-list">
+                              <li>...</li>
+                            </ol>
+                          </li>
+                          <li>*b. LearnSys times out
+                            <ol class="custom-bullet-list">
+                              <li>...</li>
+                            </ol>
+                          </li>
+                          <li>3a. Student chooses to ‘preview’ the post.
+                            <ol class="custom-bullet-list">
+                              <li>3a1. LearnSys shows a preview.</li>
+                              <li>3a2. User chooses to go back to editing.</li>
+                              <li>Use case resumes at step 3.</li>
+                            </ol>
+                          </li>
+                          <li>3b. Student chooses to attach picture/file
+                            <ol class="custom-bullet-list">
+                              <li>...</li>
+                            </ol>
+                          </li>
+                          <li>3c. Student chooses to save the post as a draft.
+                            <ol class="custom-bullet-list">
+                              <li>3c1. LearnSys confirms draft has been saved.</li>
+                              <li>Use case ends.</li>
+                            </ol>
+                          </li>
+                          <li>3d. Student chooses to abort the operation.
+                            <ol class="custom-bullet-list">
+                              <li>...</li>
+                            </ol>
+                          </li>
+                          <li>4a. The post being replied to is deleted by the owner while the reply is being entered.
+                            <ol class="custom-bullet-list">
+                              <li>...</li>
+                            </ol>
+                          </li>
+                          <li>4b. Unacceptable data entered.
+                            <ol class="custom-bullet-list">
+                              <li>...</li>
+                            </ol>
+                          </li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </div>
+                </tip-box>
+              </div>
+            </question>
+          </panel>
+        </div>
+      </panel>
+    </div>
+  </div>
+</div>

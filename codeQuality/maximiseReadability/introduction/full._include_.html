@@ -1,0 +1,66 @@
+<tip-box type="success">
+  <div>
+    <p>🏆 Can explain the importance of readability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+  </div>
+</tip-box>
+<p><span class="dimmed"><strong><span>Implementation ➡️ Code Quality ➡️
+</span></strong>
+  </span>
+</p>
+<div>
+  <h4 id="introduction-one">Introduction <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+</div>
+<div id="main">
+  <div>
+    <p>Among various dimensions of code quality, such as run-time efficiency, security, and robustness, one of the most important is understandability. This is because in any non-trivial team project, team members expect their code to be read, understood,
+      and modified by other developers later on. Here we interpret ‘good quality code’ primarily as code that is easy for developers to work with.</p>
+    <p>The two code samples given below achieve the same functionality, but one is easier to read.</p>
+    <p>{give more versions of the code, ask to find bug}</p>
+    <tip-box>
+      <p>Example:</p>
+      <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> subsidy;
+    <span class="hljs-keyword">if</span> (!age) {
+        <span class="hljs-keyword">if</span> (!sub) {
+            <span class="hljs-keyword">if</span> (!notFullTime) {
+                subsidy = <span class="hljs-number">500</span>;
+            } <span class="hljs-keyword">else</span> {
+                subsidy = <span class="hljs-number">250</span>;
+            }
+        } <span class="hljs-keyword">else</span> {
+            subsidy = <span class="hljs-number">250</span>;
+        }
+    } <span class="hljs-keyword">else</span> {
+        subsidy = -<span class="hljs-number">1</span>;
+    }
+    <span class="hljs-keyword">return</span> subsidy;
+}
+</code></pre>
+      <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> subsidy;
+    <span class="hljs-keyword">if</span> (isSenior) {
+        subsidy = REJECT_SENIOR;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {
+        subsidy = SUBSIDISED_SUBSIDY;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {
+        subsidy = FULLTIME_SUBSIDY * RATIO;
+    } <span class="hljs-keyword">else</span> {
+        subsidy = FULLTIME_SUBSIDY;
+    }
+    <span class="hljs-keyword">return</span> subsidy;
+}
+</code></pre>
+      <p>Code comparison: same function, different quality</p>
+    </tip-box>
+    <blockquote>
+      <p>The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague.</p>
+      <p>-- Edsger Dijkstra</p>
+    </blockquote>
+    <p>Even if we do not intend to pass the code to someone else, code quality is still important because we all become 'strangers' to our own code someday.</p>
+  </div>
+  <div>
+    <div></div>
+  </div>
+</div>

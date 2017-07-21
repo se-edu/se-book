@@ -1,0 +1,83 @@
+<tip-box type="success">
+  <div>
+    <p>🏆 Can explain OOP polymorphism <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+  </div>
+</tip-box>
+<p><span class="dimmed"><strong><span>Design ➡️ Object Oriented Programming ➡️
+</span></strong>
+  </span>
+</p>
+<div>
+  <h4 id="introduction-two">Introduction <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+</div>
+<div id="main">
+  <div>
+    <tip-box type="primary">
+      <div>
+        <p><strong>Polymorphism</strong>:</p>
+        <blockquote>
+          <p>The ability of different objects to respond, each in its own way, to identical messages is called polymorphism.</p>
+          <p>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</p>
+        </blockquote>
+      </div>
+    </tip-box>
+    <p>Take the example of writing a payroll application for a university to facilitate payroll processing of university staff. Suppose an <code>adjustSalary(int)</code> operation adjusts the salaries of all staff members. This operation will be executed
+      whenever the university initiates a salary adjustment for its staff. However, the adjustment formula is different for different staff categories, say admin and academic. Here is one possible way of designing the classes in the <code>Payroll</code>      system.</p>
+    <tip-box>
+      <p>Example:</p><img src="/se-book/oopDesign/polymorphism/introduction/images/payroll.png" height="150">
+      <p></p>
+      <p>Here is the implementation of the adjustSalary(int) operation from the above design.</p>
+      <pre class="hljs"><code>class Payroll1 {
+    ArrayList&lt; Admin &gt; admins;
+    ArrayList&lt; Academic &gt; academics;
+    // ...
+
+    void adjustSalary(int byPercent) {
+        for (Admin ad: admins) {
+            ad.adjustSalary(byPercent);
+        }
+        for (Academic ac: academics) {
+            ac.adjustSalary(byPercent);
+        }
+    }
+}
+</code></pre>
+    </tip-box>
+    <p>Note how processing is similar for the two staff types. It is <strong>as if the type of staff members is irrelevant</strong> to how they are processed inside this operation! If that is the case, can the staff type be “abstracted away” from this operation?
+      After all, why keep irrelevant details? Here is such an implementation of <code>adjustSalary(int)</code>:</p>
+    <tip-box>
+      <pre class="hljs"><code>class Payroll2 {
+    ArrayList&lt; Staff &gt; staff;
+    // ...
+
+    void adjustSalary(int byPercent) {
+        for (Staff s: staff) {
+            s.adjustSalary(byPercent);
+        }
+    }
+}
+</code></pre>
+      <p>Notice the following:</p>
+      <ul>
+        <li>Only one data structure <code>ArrayList&lt;Staff&gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
+        <li>Only one loop</li>
+        <li>Outcome of the <code>s.adjustSalary(byPercent)</code> method call depends on whether <code>s</code> is an <code>Academic</code> or <code>Admin</code> object</li>
+      </ul>
+      <p></p>
+    </tip-box>
+    <p>The above code is better in several ways:</p>
+    <ul>
+      <li>It is shorter.</li>
+      <li>It is simpler.</li>
+      <li>It is more flexible (this code will remain the same even if more staff types are added).</li>
+    </ul>
+    <p>This does not mean we are getting rid of the <code>Academic</code> and <code>Admin</code> classes completely and replacing them with a more general class called <code>Staff</code>. Rather, this part of the code “treats” both <code>Admin</code> and
+      <code>Academic</code> objects as one type called <code>Staff</code>.</p>
+    <p>For example, <code>ArrayList</code> staff contains both <code>Admin</code> and <code>Academic</code> objects although it treats all of them as <code>Staff</code> objects. However, when the <code>adjustSalary(int)</code> operation of these objects
+      is called, the resulting salary adjustment will be different for <code>Admin</code> objects and <code>Academic</code> objects. Therefore, <strong>different types of objects are treated as a single general type, but yet each type of object exhibits a different kind of behavior</strong>.
+      This is called <em>polymorphism</em> (literally, it means “ability to take many forms”). In this example, an object that is perceived as type <code>Staff</code> can be an <code>Admin</code> object or an <code>Academic</code> object.</p>
+  </div>
+  <div>
+    <div></div>
+  </div>
+</div>

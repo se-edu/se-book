@@ -1,0 +1,103 @@
+<tip-box type="success">
+  <div>
+    <p>🏆 Can pull changes from a repo <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+  </div>
+</tip-box>
+<p><span class="dimmed"><strong><span>Tools ➡️ Git and GitHub ➡️
+</span></strong>
+  </span>
+</p>
+<div>
+  <h4 id="pull-two">Pull <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+</div>
+<div id="main">
+  <div>
+    <p>Clone the sample repo
+      <trigger for="modal:clone-repository" trigger="click">(instructions)</trigger>.</p>
+    <p>Delete the last two commits to simulate cloning the repo 2 commits ago.</p>
+    <modal title="**Clone Repository**" id="modal:clone-repository">
+      <div>
+        <div>
+          <h4 id="clone-one">Clone <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+        </div>
+        <tip-box type="success">
+          <div>
+            <p>🏆 Can clone a remote repo <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+          </div>
+        </tip-box>
+        <panel type="seamless" header=" %%- - - - - - - - - -%%">
+          <div>
+            <div>
+              <p>
+                <panel src="/se-book\revisionControl\remoteRepositories\embed._include_.html" header="Revision Control: Remote Repositories" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+              </p>
+              <p></p>
+              <p>Clone the sample repo <mark>{give repo}</mark> to your computer.</p>
+              <tabs>
+                <tab header="SourceTree">
+                  <div>
+                    <p>File -&gt; <code>Clone / New…</code> and provide the URL and the destination directory.</p>
+                    <p>You can use the <code>clone</code> command to clone a repo.</p>
+                    <p>Follow instructions in <a href="https://help.github.com/articles/cloning-a-repository/">this</a> page</p>
+                  </div>
+                </tab>
+                <tab header="CLI">
+                  <div>
+                    <p><code>origin</code></p>
+                    <p>{to do}</p>
+                  </div>
+                </tab>
+              </tabs>
+            </div>
+            <div>
+              <div></div>
+            </div>
+          </div>
+        </panel>
+      </div>
+    </modal>
+    <tabs>
+      <tab header="SourceTree">
+        <div>
+          <p>Right-click the target commit (i.e. the commit that is 2 commits behind the tip) and choose <code>Reset current branch to this commit</code>.</p>
+          <p>Choose the <code>Hard - …</code> option and click <code>OK</code>.</p><img src="/se-book/gitAndGithub/pull/images/sourcetree_1.png" height="120">
+          <p></p>
+          <p>This is what you will see.</p><img src="/se-book/gitAndGithub/pull/images/sourcetree_2.png" height="150">
+          <p></p>
+          <p>Note the following:</p>
+          <ul>
+            <li>The local repo is now at this commit, marked by the <code>master</code> label.</li>
+            <li><code>origin/master</code> shows what is the latest commit in the <code>master</code> branch in the remote repo.</li>
+          </ul>
+        </div>
+      </tab>
+      <tab header="CLI">
+        <div>
+          <p>Use the <code>reset</code> command to delete commits at the tip of the revision history.</p>
+          <pre class="hljs"><code>git reset --hard HEAD~2
+</code></pre>
+        </div>
+      </tab>
+    </tabs>
+    <p>Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago. In other words, it is as if somebody has added two more commits to the remote repo since you cloned it. To get those commits to your local repo (i.e. to
+      sync your local repo with upstream repo) you can do a pull.</p>
+    <tabs>
+      <tab header="SourceTree">
+        <div>
+          <p>Click the <code>Pull</code> button in the main menu, choose <code>origin</code> and <code>master</code> in the next dialog, and click <code>OK</code>.</p><img src="/se-book/gitAndGithub/pull/images/sourcetree_3.png" height="160">
+          <p></p>
+          <p>Now you should see something like this where <code>master</code> and <code>origin\master</code> are both pointing the same commit.</p><img src="/se-book/gitAndGithub/pull/images/sourcetree_4.png" height="100">
+          <p></p>
+        </div>
+      </tab>
+      <tab header="CLI">
+        <div>
+          <p><code>git pull origin master</code></p>
+        </div>
+      </tab>
+    </tabs>
+  </div>
+  <div>
+    <div></div>
+  </div>
+</div>

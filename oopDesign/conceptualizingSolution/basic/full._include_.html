@@ -1,0 +1,64 @@
+<tip-box type="success">
+  <div>
+    <p>🏆 Can use simple class diagrams and sequence diagrams to model an OO solution <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+  </div>
+</tip-box>
+<p><span class="dimmed"><strong><span>Design ➡️ Object Oriented Programming ➡️
+</span></strong>
+  </span>
+</p>
+<div>
+  <h4 id="basic-two">Basic <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+</div>
+<div id="main">
+  <div>
+    <p>
+      <panel src="/se-book\uml\sequenceDiagrams\introduction\embed._include_.html" header="UML: Sequence Diagrams: Introduction" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+    </p>
+    <p></p>
+    <p>Let us start by modelling a sample interaction between the person playing the game and the TextUi object.</p>
+    <p>
+      <panel src="/se-book\uml\sequenceDiagrams\basic\embed._include_.html" header="UML: Sequence Diagrams: Basic" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+    </p>
+    <p></p>
+    <tip-box>
+      <p>Example:</p><img src="/se-book/oopDesign/conceptualizingSolution/basic/images/playerText.png" height="300">
+      <p></p>
+      <p><code>newgame</code> and <code>clear x y</code> represent commands typed by the <code>Player</code> on the <code>TextUi</code>.</p>
+    </tip-box>
+    <p>How does the <code>TextUi</code> object carry out the requests it has received from player? It would need to interact with other objects of the system. Because the <code>Logic</code> class is the one that controls the game logic, the <code>TextUi</code>      needs to collaborate with <code>Logic</code> to fulfill the <code>newgame</code> request. Let us extend the model to capture that interaction.</p>
+    <tip-box><img src="/se-book/oopDesign/conceptualizingSolution/basic/images/playerTextLogic.png" height="280">
+      <p></p>
+      <p>W = Width of the minefield; H = Height of the minefield</p>
+    </tip-box>
+    <p>The above diagram assumes that W and H are the only information <code>TextUi</code> requires to display the minefield to the <code>Player</code>. Note that there could be other ways of doing this.<br> The Logic methods we conceptualized in our modelling
+      so far are:</p>
+    <tip-box><img src="/se-book/oopDesign/conceptualizingSolution/basic/images/textLogicMinefieldCell.png" height="115">
+      <p></p>
+    </tip-box>
+    <p>Now, let us look at what other objects and interactions are needed to support the <code>newGame()</code> operation. It is likely that a new <code>Minefield</code> object is created when the <code>newGame()</code> method is called.</p>
+    <p>
+      <panel src="/se-book\uml\sequenceDiagrams\objectCreation\embed._include_.html" header="UML: Sequence Diagrams: Object Creation" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+    </p>
+    <p></p>
+    <tip-box><img src="/se-book/oopDesign/conceptualizingSolution/basic/images/logicMinefield.png" height="100">
+      <p></p>
+    </tip-box>
+    <p>Note that the behavior of the <code>Minefield</code> constructor has been abstracted away. It can be designed at a later stage.</p>
+    <p>Given below are the interactions between the player and the Text UI for the whole game.</p>
+    <p>
+      <panel src="/se-book\uml\sequenceDiagrams\loops\embed._include_.html" header="UML: Sequence Diagrams: Loops" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+    </p>
+    <p></p>
+    <tip-box><img src="/se-book/oopDesign/conceptualizingSolution/basic/images/playerTextLoop.png" height="300">
+      <p></p>
+    </tip-box>
+    <p>
+      <panel src="/se-book\uml\sequenceDiagrams\minimalNotation\embed._include_.html" header="UML: Sequence Diagrams: Minimal Notation" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+    </p>
+    <p></p>
+  </div>
+  <div>
+    <div></div>
+  </div>
+</div>

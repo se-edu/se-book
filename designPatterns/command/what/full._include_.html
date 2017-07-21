@@ -1,0 +1,38 @@
+<tip-box type="success">
+  <div>
+    <p>🏆 Can explain the Command design pattern <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+  </div>
+</tip-box>
+<p><span class="dimmed"><strong><span>Design ➡️ Design Patterns ➡️
+</span></strong>
+  </span>
+</p>
+<div>
+  <h4 id="what-two">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+</div>
+<div id="main">
+  <div>
+    <p><strong>Context</strong></p>
+    <p>A system is required to execute a number of commands, each doing a different task. For example, a system might have to support <code>Sort</code>, <code>List</code>, <code>Reset</code> commands.</p>
+    <p><strong>Problem</strong></p>
+    <p>It is preferable that some part of the code execute these commands without having to know each command type. For example, there can be a <code>CommandQueue</code> object that is responsible for queuing commands and executing them without knowledge
+      of what each command does.</p>
+    <p><strong>Solution</strong></p>
+    <p>In the example solution below, the <code>CommandCreator</code> creates <code>List</code>, <code>Sort</code>, and <code>Reset Command</code> objects and adds them to the <code>CommandQueue</code> object. The <code>CommandQueue</code> object treats
+      them all as <code>Command</code> objects and performs the execute/undo operation on each of them without knowledge of the specific <code>Command</code> type. When executed, each <code>Command</code> object will access the <code>DataStore</code>      object to carry out its task. The <code>Command</code> class can also be an abstract class or an interface.</p>
+    <tip-box>
+      <p>Example:</p><img src="/se-book/designPatterns/command/what/images/commandCreator.png" height="150">
+      <p></p>
+    </tip-box>
+    <p>The general form of the solution is as follows.</p><img src="/se-book/designPatterns/command/what/images/clientInvoker.png" height="200">
+    <p></p>
+    <p>The <code>&lt;&lt; Client &gt;&gt;</code> creates a <code>&lt;&lt; ConcreteCommand &gt;&gt;</code> object, and passes it to the <code>&lt;&lt; Invoker &gt;&gt;</code>. The <code>&lt;&lt; Invoker &gt;&gt;</code> object treats all commands as a general
+      <code>&lt;&lt; Command &gt;&gt;</code> type. <code>&lt;&lt; Invoker &gt;&gt;</code> issues a request by calling <code>execute()</code> on the command. If a command is undoable, <code>&lt;&lt; ConcreteCommand &gt;&gt;</code> will store the state
+      for undoing the command prior to invoking <code>execute()</code>. In addition, the <code>&lt;&lt; ConcreteCommand &gt;&gt;</code> object may have to be linked to any <code>&lt;&lt; Receiver &gt;&gt;</code> of the command before it is passed to the
+      <code>&lt;&lt; Invoker &gt;&gt;</code>. Note that an application of the command pattern does not have to follow the structure given above. The essential element is to have a general <code>&lt;&lt; Command &gt;&gt;</code> object that can be passed
+      around, stored, executed, etc</p>
+  </div>
+  <div>
+    <div></div>
+  </div>
+</div>

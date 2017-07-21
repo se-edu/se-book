@@ -1,0 +1,52 @@
+<tip-box type="success">
+  <div>
+    <p>🏆 Can use Git to resolve merge conflicts <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+  </div>
+</tip-box>
+<p><span class="dimmed"><strong><span>Tools ➡️ Git and GitHub ➡️
+</span></strong>
+  </span>
+</p>
+<div>
+  <h4 id="merge-conflicts-three">Merge Conflicts <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+</div>
+<div id="main">
+  <div>
+    <ol>
+      <li>
+        <p>Start a branch named <code>fix1</code> in a local repo. Create a commit that adds a line with some text to one of the files.</p>
+      </li>
+      <li>
+        <p>Switch back to <code>master</code> branch. Create a commit that adds a line with some different text in the exact location the previous line was added.</p>
+      </li>
+    </ol><img src="/se-book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
+    <p></p>
+    <ol start="3">
+      <li>Try to merge the branch. Git will report a merge conflict. If you open the conflicted file, you will see something like this:</li>
+    </ol>
+    <pre class="hljs"><code>COLORS
+------
+blue
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+black
+=======
+green
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; fix1
+red
+white```
+The conflicted part is marked between a line starting with `&lt;&lt;&lt;&lt;&lt;&lt;&lt; ` and a line starting with `&gt;&gt;&gt;&gt;&gt;&gt;&gt;`. Let us assume you want to keep both lines in the merged version. You can modify the file like this.
+```txt
+COLORS
+------
+blue
+black
+green
+red
+white
+</code></pre>
+    <p>Now, stage the changes, and commit.</p>
+  </div>
+  <div>
+    <div></div>
+  </div>
+</div>
