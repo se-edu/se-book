@@ -12,12 +12,15 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oop/polymorphism/topicPanel.md" header="OOP: Polymorphism" is-open></dynamic-panel>
+<dynamic-panel src="../../oopDesign/polymorphism/index.md" header="OOP: Polymorphism" is-open></dynamic-panel>
 
 <p/>
 
 [Oracle’s Java Tutorials: Polymorphism](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
 
 </div>
+
+<div id="extras">
+<div>
 
 </div>

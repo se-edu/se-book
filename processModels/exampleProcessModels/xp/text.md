@@ -40,4 +40,7 @@ _Pair programming, CRC cards, project velocity_, and _standup meetings_ are some
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

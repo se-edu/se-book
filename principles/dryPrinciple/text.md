@@ -20,7 +20,9 @@
 
 This principle guards against duplication of information. The functionality implemented twice is a violation of this principle even if the two implementations are different. Similarly, the value a system-wide timeout being defined in multiple places is a violation of DRY.
 
-
 </div>
+
+<div id="extras">
+<div>
 
 </div>

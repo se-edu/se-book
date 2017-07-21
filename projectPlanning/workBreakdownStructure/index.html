@@ -12,53 +12,135 @@
 <div id="app" class="container-fluid">
     <link rel="stylesheet" href="/se-book/css/textbook.css">
 <div class="website-content">
-  <p><span class="dimmed"><strong><span>Project Planning ➡️ </span></strong>
-    </span>
-  </p>
   <div>
-    <h4 id="work-breakdown-structure-one">Work Breakdown Structure <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
-  </div>
-  <tip-box type="success">
+    <panel header="%%Prerequisites%%" expandable="" expanded="">
+      <div></div>
+    </panel>
+    <p></p>
+    <tip-box type="success">
+      <div>
+        <p>🏆 Can explain work breakdown structures <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+      </div>
+    </tip-box>
+    <p><span class="dimmed"><strong><span>Project Management ➡️ Project Planning ➡️
+</span></strong>
+      </span>
+    </p>
     <div>
-      <p>🏆 Can explain work breakdown structures <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+      <h4 id="work-breakdown-structure-one">Work Breakdown Structure <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
     </div>
-  </tip-box>
-  <div id="main">
-    <div>
-      <p>When managing projects it is useful to divide the total work into smaller, well-defined units. Relatively complex tasks can be further split into subtasks. A structure that depicts the above information about tasks and their details in terms of
-        subtasks is known as a Work Breakdown Structure (WBS). In complex projects a WBS can also include prerequisite tasks and effort estimates for each task.</p>
-      <p>For the Minesweeper example, the high level tasks for a single iteration could look like the following:</p>
-      <table class="markbind-table table">
-        <thead>
+    <div id="main">
+      <div>
+        <p>When managing projects it is useful to divide the total work into smaller, well-defined units. Relatively complex tasks can be further split into subtasks. A structure that depicts the above information about tasks and their details in terms of
+          subtasks is known as a Work Breakdown Structure (WBS). In complex projects a WBS can also include prerequisite tasks and effort estimates for each task.</p>
+        <p>For the Minesweeper example, the high level tasks for a single iteration could look like the following:</p>
+        <table class="markbind-table table">
+          <thead>
+            <tr>
+              <th>Task ID</th>
+              <th>Task</th>
+              <th>Estimated Effort</th>
+              <th>Prerequisite Task</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A</td>
+              <td>Analysis</td>
+              <td>1 man day</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>B</td>
+              <td>Design</td>
+              <td>2 man day</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>C</td>
+              <td>Implementation</td>
+              <td>4.5 man day</td>
+              <td>B</td>
+            </tr>
+            <tr>
+              <td>D</td>
+              <td>Testing</td>
+              <td>1 man day</td>
+              <td>C</td>
+            </tr>
+            <tr>
+              <td>E</td>
+              <td>Planning for next version</td>
+              <td>1 man day</td>
+              <td>D</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>The effort is traditionally measured in <em>man hour/day/month</em> i.e. work that can be done by one person in one hour/day/month. The <em>Task ID</em> is a label for easy reference to a task. Simple labeling is suitable for a small project,
+          while a more informative labeling system can be adopted for bigger projects.</p>
+        <p>The high level tasks structure can be further refined into subtasks.</p>
+        <table class="table">
           <tr>
             <th>Task ID</th>
             <th>Task</th>
             <th>Estimated Effort</th>
             <th>Prerequisite Task</th>
           </tr>
-        </thead>
-        <tbody>
           <tr>
             <td>A</td>
-            <td>Analysis</td>
+            <td>High level design</td>
             <td>1 man day</td>
             <td>-</td>
           </tr>
           <tr>
             <td>B</td>
-            <td>Design</td>
-            <td>2 man day</td>
+            <td>
+              Detail design
+              <ol>
+                <li>User Interface</li>
+                <li>Game Logic</li>
+                <li>Persistency Support</li>
+              </ol>
+            </td>
+            <td>
+              2 man day
+              <ul>
+                <li>0.5 man day</li>
+                <li>1 man day</li>
+                <li>0.5 man day</li>
+              </ul>
+            </td>
             <td>A</td>
           </tr>
           <tr>
             <td>C</td>
-            <td>Implementation</td>
-            <td>4.5 man day</td>
-            <td>B</td>
+            <td>
+              Implementation
+              <ol>
+                <li>User Interface</li>
+                <li>Game Logic</li>
+                <li>Persistency Support</li>
+              </ol>
+            </td>
+            <td>
+              4.5 man day
+              <ul>
+                <li>1.5 man day</li>
+                <li>2 man day</li>
+                <li>1 man day</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>B.1</li>
+                <li>B.2</li>
+                <li>B.3</li>
+              </ul>
+            </td>
           </tr>
           <tr>
             <td>D</td>
-            <td>Testing</td>
+            <td>System Testing</td>
             <td>1 man day</td>
             <td>C</td>
           </tr>
@@ -68,88 +150,16 @@
             <td>1 man day</td>
             <td>D</td>
           </tr>
-        </tbody>
-      </table>
-      <p>The effort is traditionally measured in <em>man hour/day/month</em> i.e. work that can be done by one person in one hour/day/month. The <em>Task ID</em> is a label for easy reference to a task. Simple labeling is suitable for a small project, while
-        a more informative labeling system can be adopted for bigger projects.</p>
-      <p>The high level tasks structure can be further refined into subtasks.</p>
-      <table class="table">
-        <tr>
-          <th>Task ID</th>
-          <th>Task</th>
-          <th>Estimated Effort</th>
-          <th>Prerequisite Task</th>
-        </tr>
-        <tr>
-          <td>A</td>
-          <td>High level design</td>
-          <td>1 man day</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td>B</td>
-          <td>
-            Detail design
-            <ol>
-              <li>User Interface</li>
-              <li>Game Logic</li>
-              <li>Persistency Support</li>
-            </ol>
-          </td>
-          <td>
-            2 man day
-            <ul>
-              <li>0.5 man day</li>
-              <li>1 man day</li>
-              <li>0.5 man day</li>
-            </ul>
-          </td>
-          <td>A</td>
-        </tr>
-        <tr>
-          <td>C</td>
-          <td>
-            Implementation
-            <ol>
-              <li>User Interface</li>
-              <li>Game Logic</li>
-              <li>Persistency Support</li>
-            </ol>
-          </td>
-          <td>
-            4.5 man day
-            <ul>
-              <li>1.5 man day</li>
-              <li>2 man day</li>
-              <li>1 man day</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>B.1</li>
-              <li>B.2</li>
-              <li>B.3</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>D</td>
-          <td>System Testing</td>
-          <td>1 man day</td>
-          <td>C</td>
-        </tr>
-        <tr>
-          <td>E</td>
-          <td>Planning for next version</td>
-          <td>1 man day</td>
-          <td>D</td>
-        </tr>
-      </table>
-      <p><strong>All tasks should be well-defined.</strong> In particular, it should be clear as to when the task will be considered “done”. E.g.</p>
-      <ul>
-        <li>Not good: more coding | better: implement component X</li>
-        <li>Not good: do research on UI testing | better: find a suitable tool for testing the UI</li>
-      </ul>
+        </table>
+        <p><strong>All tasks should be well-defined.</strong> In particular, it should be clear as to when the task will be considered “done”. E.g.</p>
+        <ul>
+          <li>Not good: more coding | better: implement component X</li>
+          <li>Not good: do research on UI testing | better: find a suitable tool for testing the UI</li>
+        </ul>
+      </div>
+      <div>
+        <div></div>
+      </div>
     </div>
   </div>
 </div>

@@ -2,11 +2,8 @@
 
 <div class="website-content">
 
-#### Combined
-
-<div id="extras">
-
-<include src="exercises.md" />
+<include src="full.md" />
 
 </div>
+
 </div>

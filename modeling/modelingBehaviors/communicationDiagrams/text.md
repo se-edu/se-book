@@ -24,7 +24,9 @@ Adapted from:
   </div>
 </popover>
 
-
 </div>
+
+<div id="extras">
+<div>
 
 </div>

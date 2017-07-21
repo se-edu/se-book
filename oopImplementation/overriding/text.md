@@ -12,12 +12,15 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oop/inheritance/overriding/topicPanel.md" header="OOP: Inheritance: Overriding" is-open></dynamic-panel>
+<dynamic-panel src="../../oopDesign/inheritance/overriding/embed.md" header="OOP: Inheritance: Overriding" is-open></dynamic-panel>
 
 <p/>
 
 [Oracle’s Java Tutorials: Overriding](https://docs.oracle.com/javase/tutorial/java/IandI/override.html)
 
 </div>
+
+<div id="extras">
+<div>
 
 </div>

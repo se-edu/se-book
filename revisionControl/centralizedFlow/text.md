@@ -18,4 +18,7 @@ More info: https://www.atlassian.com/git/tutorials/comparing-workflows#centraliz
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

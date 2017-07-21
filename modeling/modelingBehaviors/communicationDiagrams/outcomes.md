@@ -1,1 +1,1 @@
-:trophy: Can explain what are communication diagrams :four:
+:trophy: Can explain communication diagrams :four:

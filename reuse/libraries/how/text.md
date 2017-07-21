@@ -21,4 +21,7 @@ These are the typical steps required to use a library.
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

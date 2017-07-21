@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">UML :arrow_right: Notes :arrow_right: </div>
+<div id="path">UML :arrow_right: Notes :arrow_right:</div>
 
 <div id="title">
 
@@ -18,5 +18,8 @@ UML notes are used to augment a UML diagram with additional information. These n
 <p/>
 
 </div>
+
+<div id="extras">
+<div>
 
 </div>

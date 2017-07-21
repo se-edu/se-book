@@ -27,4 +27,7 @@ Consider the two architecture diagrams of the same software. Because `Diagram 2`
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

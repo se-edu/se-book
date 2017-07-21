@@ -8,8 +8,8 @@
 
 <div id="main">
 
-<include src="./what/topicPanel.md" />
-<include src="./acceptanceVsSystemTesting/topicPanel.md" />
+<include src="./what/embed.md" />
+<include src="./acceptanceVsSystemTesting/embed.md" />
 
 </div>
 </div>

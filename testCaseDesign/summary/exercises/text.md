@@ -10,6 +10,9 @@
 
 </div>
 
+<div id="body">
+<div>
+
 <div id="extras">
 
 <include src="exercises.md" />

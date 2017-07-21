@@ -12,76 +12,83 @@
 <div id="app" class="container-fluid">
     <link rel="stylesheet" href="/se-book/css/textbook.css">
 <div class="website-content">
-  <p><span class="dimmed"><strong><span>Principles ➡️ </span></strong>
-    </span>
-  </p>
   <div>
-    <h4 id="law-of-demeter-three">Law of Demeter <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
-  </div>
-  <tip-box type="success">
+    <panel header="%%Prerequisites%%" expandable="" expanded="">
+      <div></div>
+    </panel>
+    <p></p>
+    <tip-box type="success">
+      <div>
+        <p>🏆 Can explain law of demeter <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+      </div>
+    </tip-box>
+    <p><span class="dimmed"><strong><span>Supplmentary ➡️ Principles ➡️
+</span></strong>
+      </span>
+    </p>
     <div>
-      <p>🏆 Can explain law of demeter <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+      <h4 id="law-of-demeter-three">Law of Demeter <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
     </div>
-  </tip-box>
-  <div id="main">
-    <div>
-      <tip-box type="primary">
-        <div>
-          <p><strong>Law of Demeter (LoD)</strong>:</p>
-          <ul>
-            <li>An object should have limited knowledge of another object.</li>
-            <li>An object should only interact with objects that are closely related to it.</li>
-          </ul>
-          <p>Also known as</p>
-          <ul>
-            <li>Don’t talk to strangers.</li>
-            <li>Principle of least knowledge</li>
-          </ul>
-        </div>
-      </tip-box>
-      <p>More concretely, a method m of an object O should invoke only the methods of the following kinds of objects:</p>
-      <ul>
-        <li>The object <code>O</code> itself</li>
-        <li>Objects passed as parameters of <code>m</code></li>
-        <li>Objects created/instantiated in <code>m</code></li>
-        <li>Objects from the direct association of <code>O</code></li>
-      </ul>
-      <tip-box>
-        <p>Example:</p>
-        <p>The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and
-          <code>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
-        <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
+    <div id="main">
+      <div>
+        <tip-box type="primary">
+          <div>
+            <p><strong>Law of Demeter (LoD)</strong>:</p>
+            <ul>
+              <li>An object should have limited knowledge of another object.</li>
+              <li>An object should only interact with objects that are closely related to it.</li>
+            </ul>
+            <p>Also known as</p>
+            <ul>
+              <li>Don’t talk to strangers.</li>
+              <li>Principle of least knowledge</li>
+            </ul>
+          </div>
+        </tip-box>
+        <p>More concretely, a method m of an object O should invoke only the methods of the following kinds of objects:</p>
+        <ul>
+          <li>The object <code>O</code> itself</li>
+          <li>Objects passed as parameters of <code>m</code></li>
+          <li>Objects created/instantiated in <code>m</code></li>
+          <li>Objects from the direct association of <code>O</code></li>
+        </ul>
+        <tip-box>
+          <p>Example:</p>
+          <p>The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and
+            <code>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
+          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
     Goo g = b.getGoo();
     g.doSomething();
 }
 </code></pre>
-      </tip-box>
-      <p>Limiting the interaction to a closely related group of classes aims to reduce coupling. In the example able, <code>foo</code> is already coupled to <code>Bar</code>. Upholding LoD avoids <code>foo</code> being coupled to <code>Goo</code>.</p>
-      <p>An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed
-        to see Adam’s posts unless Adam is a friend of yours as well.</p>
-    </div>
-    <div>
+        </tip-box>
+        <p>Limiting the interaction to a closely related group of classes aims to reduce coupling. In the example able, <code>foo</code> is already coupled to <code>Bar</code>. Upholding LoD avoids <code>foo</code> being coupled to <code>Goo</code>.</p>
+        <p>An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed
+          to see Adam’s posts unless Adam is a friend of yours as well.</p>
+      </div>
       <div>
-        <panel header=":muscle: Exercises" type="info" expandable="">
-          <div>
-            <panel header="Q: Explain the Law of Demeter using code examples.">
-              <question has-input="true">
-                <p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
-                <div slot="answer">
-                  <p>Let us take the <code>Logic</code> class as an example. Assume that it has the following operation.</p>
-                  <p><code>setMinefield(Minefiled mf):void</code></p>
-                  <p>Consider the following that can happen inside this operation.</p>
-                  <ul>
-                    <li><code>mf.init(); //this does not violate LoD since LoD allows calling operations of parameters received.</code></li>
-                    <li><code>mf.getCell(1,3).clear(); //this violates LoD since Logic is handling Cell objects deep inside Minefield. Instead, it should be mf.clearCellAt(1,3);</code></li>
-                    <li><code>timer.start(); //this does not violate LoD since timer appears to be an internal component (i.e. a variable) of Logic itself.</code></li>
-                    <li><code>Cell c = new Cell(); c.init(); // this does not violate LoD since c was created inside the operation.</code></li>
-                  </ul>
-                </div>
-              </question>
-            </panel>
-          </div>
-        </panel>
+        <div>
+          <panel header=":muscle: Exercises" type="info" expandable="">
+            <div>
+              <panel header="Q: Explain the Law of Demeter using code examples.">
+                <question has-input="true">
+                  <p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
+                  <div slot="answer">
+                    <p>Let us take the <code>Logic</code> class as an example. Assume that it has the following operation.</p>
+                    <p><code>setMinefield(Minefiled mf):void</code></p>
+                    <p>Consider the following that can happen inside this operation.</p>
+                    <ul>
+                      <li><code>mf.init(); //this does not violate LoD since LoD allows calling operations of parameters received.</code></li>
+                      <li><code>mf.getCell(1,3).clear(); //this violates LoD since Logic is handling Cell objects deep inside Minefield. Instead, it should be mf.clearCellAt(1,3);</code></li>
+                      <li><code>timer.start(); //this does not violate LoD since timer appears to be an internal component (i.e. a variable) of Logic itself.</code></li>
+                      <li><code>Cell c = new Cell(); c.init(); // this does not violate LoD since c was created inside the operation.</code></li>
+                    </ul>
+                  </div>
+                </question>
+              </panel>
+            </div>
+          </panel>
+        </div>
       </div>
     </div>
   </div>

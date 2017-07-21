@@ -17,7 +17,7 @@
   <div id="main">
     <div>
       <div>
-        <h4 id="what-it-is-three">What it is <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+        <h4 id="what-three">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
       <tip-box type="success">
         <div>
@@ -43,7 +43,7 @@
             <p>Representing the objects mentioned previously as a single class would be problematic because it results in duplication of data which can lead to inconsistencies in data (if some of the duplicates are not updated consistently).</p>
             <tip-box>
               <p>Example:</p>
-              <p>Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial numbers.</p><img src="/se-book/designPatterns/abstractionOccurrence/whatItIs/images/book.png"
+              <p>Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial numbers.</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/book.png"
                 height="200">
               <p></p>
               <p>The above solution requires common information to be duplicated by all instances. This will not only waste storage space, but also creates a consistency problem. Suppose that after creating several copies of the same title, the librarian
@@ -53,7 +53,7 @@
             <p><strong>Anti-pattern</strong></p>
             <p>Refer to the same Library example given above.</p>
             <tip-box>
-              <p>Example:</p><img src="/se-book/designPatterns/abstractionOccurrence/whatItIs/images/bookFriends.png" height="240">
+              <p>Example:</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookFriends.png" height="240">
               <p></p>
               <p>The design above segregates the common and unique information into a class hierarchy. Each book title is represented by a separate class with common data (i.e. Name, Author, ISBN) hard-coded in the class itself. This solution is problematic
                 because each book title is represented as a class, resulting in thousands of classes (one for each title). Every time the library buys new books, the source code of the system will have to be updated with new classes.</p>
@@ -61,53 +61,49 @@
             <p><strong>Solution</strong></p>
             <p>Let a book copy be represented by two objects instead of one, as given below.</p>
             <tip-box>
-              <p>Example:</p><img src="/se-book/designPatterns/abstractionOccurrence/whatItIs/images/bookTitleBookCopy.png" height="240">
+              <p>Example:</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookTitleBookCopy.png" height="240">
               <p></p>
-              <p>In this solution, the common and unique information are separated into two classes to avoid duplication. Given below is another example that contrasts the two situations before and after applying the pattern.</p><img src="/se-book/designPatterns/abstractionOccurrence/whatItIs/images/beforeAfter.png"
+              <p>In this solution, the common and unique information are separated into two classes to avoid duplication. Given below is another example that contrasts the two situations before and after applying the pattern.</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/beforeAfter.png"
                 height="350">
               <p></p>
             </tip-box>
-            <p>The general idea can be found in the following class diagram:</p><img src="/se-book/designPatterns/abstractionOccurrence/whatItIs/images/abstractionOccurrence.png" height="50">
+            <p>The general idea can be found in the following class diagram:</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/abstractionOccurrence.png" height="50">
             <p></p>
             <p>The <code>&lt;&lt; Abstraction &gt;&gt;</code> class should hold all common information, and the unique information should be kept by the <code>&lt;&lt; Occurrence &gt;&gt;</code> class. Note that ‘Abstraction’ and ‘Occurrence’ are not class
               names, but roles played by each class. Think of this diagram as a <em>meta-model</em> (i.e. a ‘model of a model’) of the <code>BookTitle-BookCopy</code> class diagram given above.</p>
-            <panel header=":paperclip: Extras" expandable="" type="seamless"
-              expanded="">
-              <panel header=":mortar_board: Learning Outcomes" expandable="" type="seamless">
+          </div>
+          <div>
+            <div>
+              <panel header=":muscle: Exercises" type="info" expandable="">
                 <div>
-                  <panel type="success" expandable=""><span slot="header"><div><p>null</p></div></span>
-                    <div>
-                      <panel header="Q: Which pairs of classes are likely to be the `<< Abstraction >>` and the `<< Occurrence >>` of the abstraction occurrence pattern?">
-                        <question has-input="true">
-                          <p>Which pairs of classes are likely to be the <code>&lt;&lt; Abstraction &gt;&gt;</code> and the <code>&lt;&lt; Occurrence &gt;&gt;</code> of the abstraction occurrence pattern?</p>
-                          <ol>
-                            <li>CarModel, Car. (Here CarModel represents a particular model of a car produced by the car manufacturer. E.g. BMW R4300)</li>
-                            <li>Car, Wheel</li>
-                            <li>Club, Member</li>
-                            <li>TeamLeader, TeamMember</li>
-                            <li>Magazine (E.g. ReadersDigest, PCWorld), MagazineIssue</li>
-                          </ol>
-                          <div slot="answer">
-                            <p>One of the key things to keep in mind is that the <code>&lt;&lt; Abstraction &gt;&gt;</code> does not represent a real entity. Rather, it represents some information common to a set of objects. A single real entity is represented
-                              by an object of <code>&lt;&lt; Abstraction &gt;&gt;</code> type and <code>&lt;&lt; Occurrence &gt;&gt;</code> type.</p>
-                            <p>Before applying the pattern, some attributes have the same values for multiple objects. For example, w.r.t. the BookTitle-BookCopy example given in this handout, values of attributes such as <code>book_title</code>, <code>ISBN</code>                              are exactly the same for copies of the same book.</p>
-                            <p>After applying the pattern, the <code>Abstraction</code> and the <code>Occurrence</code> classes together represent one entity. It is like one class has been split into two. For example, a <code>BookTitle</code> object and
-                              a <code>BookCopy</code> object combines to represent an actual <code>Book</code>.</p>
-                            <ol>
-                              <li>CarModel, Car: <strong>Yes</strong></li>
-                              <li>Car, Wheel: <strong>No. Wheel is a ‘part of’ Car. A wheel is not an occurrence of Car.</strong></li>
-                              <li>Club, Member: <strong>No. this is a ‘part of’ relationship.</strong></li>
-                              <li>TeamLeader, TeamMember: <strong>No. A TeamMember is not an occurrence of a TeamLeader or vice versa.</strong></li>
-                              <li>Magazine, MagazineIssue: <strong>Yes.</strong></li>
-                            </ol>
-                          </div>
-                        </question>
-                      </panel>
-                    </div>
+                  <panel header="Q: Which pairs of classes are likely to be the `<< Abstraction >>` and the `<< Occurrence >>` of the abstraction occurrence pattern?">
+                    <question has-input="true">
+                      <p>Which pairs of classes are likely to be the <code>&lt;&lt; Abstraction &gt;&gt;</code> and the <code>&lt;&lt; Occurrence &gt;&gt;</code> of the abstraction occurrence pattern?</p>
+                      <ol>
+                        <li>CarModel, Car. (Here CarModel represents a particular model of a car produced by the car manufacturer. E.g. BMW R4300)</li>
+                        <li>Car, Wheel</li>
+                        <li>Club, Member</li>
+                        <li>TeamLeader, TeamMember</li>
+                        <li>Magazine (E.g. ReadersDigest, PCWorld), MagazineIssue</li>
+                      </ol>
+                      <div slot="answer">
+                        <p>One of the key things to keep in mind is that the <code>&lt;&lt; Abstraction &gt;&gt;</code> does not represent a real entity. Rather, it represents some information common to a set of objects. A single real entity is represented
+                          by an object of <code>&lt;&lt; Abstraction &gt;&gt;</code> type and <code>&lt;&lt; Occurrence &gt;&gt;</code> type.</p>
+                        <p>Before applying the pattern, some attributes have the same values for multiple objects. For example, w.r.t. the BookTitle-BookCopy example given in this handout, values of attributes such as <code>book_title</code>, <code>ISBN</code>                          are exactly the same for copies of the same book.</p>
+                        <p>After applying the pattern, the <code>Abstraction</code> and the <code>Occurrence</code> classes together represent one entity. It is like one class has been split into two. For example, a <code>BookTitle</code> object and a <code>BookCopy</code>                          object combines to represent an actual <code>Book</code>.</p>
+                        <ol>
+                          <li>CarModel, Car: <strong>Yes</strong></li>
+                          <li>Car, Wheel: <strong>No. Wheel is a ‘part of’ Car. A wheel is not an occurrence of Car.</strong></li>
+                          <li>Club, Member: <strong>No. this is a ‘part of’ relationship.</strong></li>
+                          <li>TeamLeader, TeamMember: <strong>No. A TeamMember is not an occurrence of a TeamLeader or vice versa.</strong></li>
+                          <li>Magazine, MagazineIssue: <strong>Yes.</strong></li>
+                        </ol>
+                      </div>
+                    </question>
                   </panel>
                 </div>
               </panel>
-            </panel>
+            </div>
           </div>
         </div>
       </panel>

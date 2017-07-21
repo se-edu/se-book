@@ -14,15 +14,11 @@
 
 {to add}
 
-<!-- extras ------------------------------------------------------------------------------------ -->
+</div>
 
-<panel header=":paperclip: Extras" expandable type="seamless" expanded>
+<div id="extras">
 
-  <panel header=":mortar_board: Learning Outcomes" expandable type="seamless">
-    <include src="exercises.md" />
-  </panel>
-
-</panel>
+<include src="exercises.md" />
 
 </div>
 

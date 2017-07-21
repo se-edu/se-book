@@ -42,4 +42,7 @@ Now, your local repo state is exactly how it would be if you had cloned the repo
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

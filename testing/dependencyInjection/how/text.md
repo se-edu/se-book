@@ -83,4 +83,7 @@ class SalaryManagerStub extends SalaryManager {
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

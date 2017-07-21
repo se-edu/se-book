@@ -1,1 +1,1 @@
-:trophy: Can explain what are package diagrams :four:
+:trophy: Can explain package diagrams :four:

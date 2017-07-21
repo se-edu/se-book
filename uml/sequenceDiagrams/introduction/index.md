@@ -2,11 +2,8 @@
 
 <div class="website-content">
 
-### Introduction
-
-<div id="main">
-
-<include src="./introduction/topicPanel.md" />
+<include src="full.md" />
 
 </div>
+
 </div>

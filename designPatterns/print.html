@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Software Design Patterns [Printable]</title>
+    <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <div id="main">
+    <h1 id="software-design-patterns">Software Design Patterns</h1>
+    <h2 id="introduction">Introduction</h2>
+    <div>
+      <div>
+        <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain design patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>In software development, there are certain problems that recur in a certain context.</p>
+        <tip-box>
+          <p>Examples:</p>
+          <table class="markbind-table table">
+            <thead>
+              <tr>
+                <th>Design Context</th>
+                <th>Recurring Problem</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Assembling a system that makes use of other existing systems implemented using different technologies</td>
+                <td>What is the best architecture?</td>
+              </tr>
+              <tr>
+                <td>UI needs to be updated when the data in application backend changes</td>
+                <td>How to initiate an update to the UI when data changes without coupling the backend to the UI?</td>
+              </tr>
+            </tbody>
+          </table>
+        </tip-box>
+        <p>After repeated attempts at solving such problems, better solutions are discovered and refined over time. These solutions are known as design patterns, a term popularized by the seminal book <em>Design Patterns: Elements of Reusable Object-Oriented Software</em>          by the so-called “Gang of Four” (GoF) Eric Gamma, Richard Helm, Ralph Johnson and John Vlissides.</p>
+        <tip-box type="primary">
+          <div>
+            <p><strong>Software Design Pattern</strong>: An <em>elegant reusable solution</em> to a <em>commonly recurring problem</em> within a <em>given context</em> in software design.</p>
+          </div>
+        </tip-box>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="format-two">Format <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain design patterns format <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>The common format to describe a pattern consists of the following components:</p>
+        <ul>
+          <li><strong>Context</strong>: The situation or scenario where the design problem is encountered.</li>
+          <li><strong>Problem</strong>: The main difficulty to be resolved. The criteria for a good solution are also identified to evaluate solutions.</li>
+          <li><strong>Solution</strong>: The core of the solution. It is important to note that the solution presented only includes the most general constraints, which may need further refinement for a specific context.</li>
+          <li><strong>Anti-patterns</strong> (optional): Commonly used solutions, which are usually incorrect and/or inferior to the Design Pattern.</li>
+          <li><strong>Consequences</strong> (optional): Identifying the pros and cons of applying the pattern.</li>
+          <li><strong>Other useful information</strong> (optional): Code examples, known uses, other related patterns, etc.</li>
+        </ul>
+      </div>
+    </div>
+    <h2 id="singleton-pattern">Singleton Pattern</h2>
+    <div>
+      <div>
+        <h4 id="what-two">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain the Singleton design pattern <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p><strong>Context</strong></p>
+        <p>A certain classes should have no more than just one instance (e.g. the main controller class of the system). These single instances are commonly known as <em>singletons</em>.</p>
+        <p><strong>Problem</strong></p>
+        <p>A normal class can be instantiated multiple times by invoking the constructor.</p>
+        <p><strong>Solution</strong></p>
+        <p>The key insight of the solution is that the <em>constructor</em> of the singleton class cannot be <em>public</em>. Because a <em>public constructor</em> will allow others to instantiate the class at will, a <em>private constructor</em> should
+          be used instead. In addition, a public class-level method is provided to access the <em>single instance</em>.</p>
+        <tip-box>
+          <p>Example:</p><img src="/se-book/designPatterns/singleton/what/images/singleton.png" height="130">
+          <p></p>
+        </tip-box>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="implementation-two">Implementation <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can identify an application of the Singleton design pattern <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
+    <span class="hljs-keyword">private</span> Logic theOne = <span class="hljs-keyword">null</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Logic</span><span class="hljs-params">()</span> </span>{
+        ...
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Logic <span class="hljs-title">getInstance</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (theOne == <span class="hljs-keyword">null</span>) {
+            theOne = <span class="hljs-keyword">new</span> Logic();
+        }
+        <span class="hljs-keyword">return</span> theOne;
+    }
+}
+
+<span class="hljs-comment">// somewhere else in the system ...</span>
+Logic m = Logic.getInstance();
+
+<span class="hljs-comment">//instead of ...</span>
+Logic m = <span class="hljs-keyword">new</span> Logic();
+</code></pre>
+        <p>Notes:</p>
+        <ul>
+          <li>The constructor is private, which prevents instantiation from outside the class.</li>
+          <li>The single instance of the singleton class is maintained by a private class-level variable.</li>
+          <li>Access to this object is provided by a public class-level operation <code>getInstance()</code> which instantiates a single copy of the singleton class when it is executed for the first time. Subsequent calls to this operation return the single
+            instance of the class.</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="application-two">Application <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can apply the Singleton design pattern <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>{to add}</p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="evaluation-three">Evaluation <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can decide when to apply Singleton design pattern <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>{pros and cons}</p>
+      </div>
+    </div>
+    <h2 id="abstraction-occurrence-pattern">Abstraction Occurrence Pattern</h2>
+    <div>
+      <div>
+        <h4 id="what-three">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain the Abstraction Occurrence design pattern <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p><strong>Context</strong></p>
+        <p>There is a group of similar entities that appears to be ‘occurrences’ (or ‘copies’) of the same thing, sharing lots of common information, but also differing in significant ways.</p>
+        <tip-box>
+          <p>Example:</p>
+          <p>In a library, there can be multiple copies of same book title. Each copy shares common information such as book title, author, ISBN etc. However, there are also significant differences like purchase date and barcode number (assumed to be unique
+            for each copy of the book).</p>
+          <p>Other examples:</p>
+          <ul>
+            <li>Episodes of the same TV series</li>
+            <li>Stock items of the same product model (e.g. TV sets of the same model).</li>
+          </ul>
+        </tip-box>
+        <p><strong>Problem</strong></p>
+        <p>Representing the objects mentioned previously as a single class would be problematic because it results in duplication of data which can lead to inconsistencies in data (if some of the duplicates are not updated consistently).</p>
+        <tip-box>
+          <p>Example:</p>
+          <p>Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial numbers.</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/book.png"
+            height="200">
+          <p></p>
+          <p>The above solution requires common information to be duplicated by all instances. This will not only waste storage space, but also creates a consistency problem. Suppose that after creating several copies of the same title, the librarian realized
+            that the author name was wrongly spelt. To correct this mistake, the system needs to go through every copy of the same title to make the correction. Also, if a new copy of the title is added later on, the librarian has to make sure that all
+            information entered is the same as the existing copies to avoid inconsistency.</p>
+        </tip-box>
+        <p><strong>Anti-pattern</strong></p>
+        <p>Refer to the same Library example given above.</p>
+        <tip-box>
+          <p>Example:</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookFriends.png" height="240">
+          <p></p>
+          <p>The design above segregates the common and unique information into a class hierarchy. Each book title is represented by a separate class with common data (i.e. Name, Author, ISBN) hard-coded in the class itself. This solution is problematic
+            because each book title is represented as a class, resulting in thousands of classes (one for each title). Every time the library buys new books, the source code of the system will have to be updated with new classes.</p>
+        </tip-box>
+        <p><strong>Solution</strong></p>
+        <p>Let a book copy be represented by two objects instead of one, as given below.</p>
+        <tip-box>
+          <p>Example:</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookTitleBookCopy.png" height="240">
+          <p></p>
+          <p>In this solution, the common and unique information are separated into two classes to avoid duplication. Given below is another example that contrasts the two situations before and after applying the pattern.</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/beforeAfter.png"
+            height="350">
+          <p></p>
+        </tip-box>
+        <p>The general idea can be found in the following class diagram:</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/abstractionOccurrence.png" height="50">
+        <p></p>
+        <p>The <code>&lt;&lt; Abstraction &gt;&gt;</code> class should hold all common information, and the unique information should be kept by the <code>&lt;&lt; Occurrence &gt;&gt;</code> class. Note that ‘Abstraction’ and ‘Occurrence’ are not class names,
+          but roles played by each class. Think of this diagram as a <em>meta-model</em> (i.e. a ‘model of a model’) of the <code>BookTitle-BookCopy</code> class diagram given above.</p>
+      </div>
+    </div>
+    <h2 id="facade-pattern">Facade Pattern</h2>
+    <div>
+      <div>
+        <h4 id="what-two-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain the Facade design pattern <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p><strong>Context</strong></p>
+        <p>Components need to access functionality deep inside other components. For example, the <code>UI</code> component of a <code>Library</code> system might want to access functionality of the <code>Book</code> class contained inside the <code>Logic</code>          component.</p>
+        <tip-box>
+          <p>Example:</p><img src="/se-book/designPatterns/facade/what/images/textBook.png" height="120">
+          <p></p>
+        </tip-box>
+        <p><strong>Problem</strong></p>
+        <p>Access to the component should be allowed without exposing its internal details. For example, the <code>UI</code> component should access the functionality of the <code>Logic</code> component without knowing that it contained a <code>Book</code>          class within it.</p>
+        <p><strong>Solution</strong></p>
+        <p>Include a Façade class that sits between the component internals and users of the component such that all access to the component happens through the Façade class. The following class diagram shows the application of the Façade pattern to the
+          <code>Library System</code> example. In this example, the <code>LibraryLogic</code> class acts as the Façade class.</p>
+        <tip-box>
+          <p>Example:</p><img src="/se-book/designPatterns/facade/what/images/textLibraryBook.png" height="120">
+          <p></p>
+        </tip-box>
+      </div>
+    </div>
+    <h2 id="command-pattern">Command Pattern</h2>
+    <div>
+      <div>
+        <h4 id="what-two-3">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain the Command design pattern <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p><strong>Context</strong></p>
+        <p>A system is required to execute a number of commands, each doing a different task. For example, a system might have to support <code>Sort</code>, <code>List</code>, <code>Reset</code> commands.</p>
+        <p><strong>Problem</strong></p>
+        <p>It is preferable that some part of the code execute these commands without having to know each command type. For example, there can be a <code>CommandQueue</code> object that is responsible for queuing commands and executing them without knowledge
+          of what each command does.</p>
+        <p><strong>Solution</strong></p>
+        <p>In the example solution below, the <code>CommandCreator</code> creates <code>List</code>, <code>Sort</code>, and <code>Reset Command</code> objects and adds them to the <code>CommandQueue</code> object. The <code>CommandQueue</code> object treats
+          them all as <code>Command</code> objects and performs the execute/undo operation on each of them without knowledge of the specific <code>Command</code> type. When executed, each <code>Command</code> object will access the <code>DataStore</code>          object to carry out its task. The <code>Command</code> class can also be an abstract class or an interface.</p>
+        <tip-box>
+          <p>Example:</p><img src="/se-book/designPatterns/command/what/images/commandCreator.png" height="150">
+          <p></p>
+        </tip-box>
+        <p>The general form of the solution is as follows.</p><img src="/se-book/designPatterns/command/what/images/clientInvoker.png" height="200">
+        <p></p>
+        <p>The <code>&lt;&lt; Client &gt;&gt;</code> creates a <code>&lt;&lt; ConcreteCommand &gt;&gt;</code> object, and passes it to the <code>&lt;&lt; Invoker &gt;&gt;</code>. The <code>&lt;&lt; Invoker &gt;&gt;</code> object treats all commands as a
+          general <code>&lt;&lt; Command &gt;&gt;</code> type. <code>&lt;&lt; Invoker &gt;&gt;</code> issues a request by calling <code>execute()</code> on the command. If a command is undoable, <code>&lt;&lt; ConcreteCommand &gt;&gt;</code> will store
+          the state for undoing the command prior to invoking <code>execute()</code>. In addition, the <code>&lt;&lt; ConcreteCommand &gt;&gt;</code> object may have to be linked to any <code>&lt;&lt; Receiver &gt;&gt;</code> of the command before it
+          is passed to the <code>&lt;&lt; Invoker &gt;&gt;</code>. Note that an application of the command pattern does not have to follow the structure given above. The essential element is to have a general <code>&lt;&lt; Command &gt;&gt;</code> object
+          that can be passed around, stored, executed, etc</p>
+      </div>
+    </div>
+    <h2 id="model-view-controller-mvc-pattern">Model View Controller (MVC) Pattern</h2>
+    <div>
+      <div>
+        <h4 id="what-two-4">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain the Model View Controller (MVC) design pattern <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p><strong>Context</strong></p>
+        <p>Most applications support storage/retrieval of information, displaying of information to the user (often via multiple UIs having different formats), and changing stored information based on external inputs.</p>
+        <p><strong>Problem</strong></p>
+        <p>To reduce coupling resulting from the interlinked nature of the features described above.</p>
+        <p><strong>Solution</strong></p>
+        <p>To decouple data, presentation, and control logic of an application by separating them into three different components: Model, View and Controller.</p>
+        <ul>
+          <li>View: Displays data, interacts with the user, and pulls data from the model if necessary.</li>
+          <li>Controller: Detects UI events such as mouse clicks, button pushes and takes follow up action. Updates/changes the model/view when necessary.</li>
+          <li>Model: Stores and maintains data. Updates views if necessary.</li>
+        </ul>
+        <p>The relationship between the components can be observed in the diagram below. Typically, the UI is the combination of view and controller.</p>
+        <tip-box>
+          <p>Example:</p><img src="/se-book/designPatterns/modelViewController/what/images/classDiagram.png" height="150">
+          <p></p>
+          <p>Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving data of one student.</p><img src="/se-book/designPatterns/modelViewController/what/images/sequenceDiagram.png" height="220">
+          <p></p>
+          <p>In the diagram above, when the user clicks on a button using the UI, the ‘click’ event is caught and handled by the <code>UiController</code>.</p>
+        </tip-box>
+        <p>Note that in a simple UI where there’s only one view, Controller and View can be combined as one class.</p>
+        <p>There are many variations of the MVC model used in different domains. For example, the one used in a desktop GUI could be different from the one used in a Web application.</p>
+      </div>
+    </div>
+    <h2 id="observer-pattern">Observer Pattern</h2>
+    <div>
+      <div>
+        <h4 id="what-two-5">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain the Observer design pattern <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>Here is another scenario from the same student management system where the user is adding a new student to the system.</p>
+        <tip-box>
+          <p>Example:</p><img src="/se-book/designPatterns/observer/what/images/sequenceDiagram.png" height="300">
+          <p></p>
+          <p>Now, assume the system has two additional views used in parallel by different users:</p>
+          <ul>
+            <li><code>StudentListUi</code>: that accesses a list of students and</li>
+            <li><code>StudentStatsUi</code>: that generates statistics of current students.</li>
+          </ul>
+          <p>When a student is added to the database using <code>NewStudentUi</code> shown above, both <code>StudentListUi</code> and <code>StudentStatsUi</code> should get updated automatically, as shown below.</p><img src="/se-book/designPatterns/observer/what/images/studentListUI.png"
+            height="150">
+          <p></p>
+          <p>However, the <code>StudentList</code> object has no knowledge about <code>StudentListUi</code> and <code>StudentStatsUi</code> (note the direction of the navigability) and has no way to inform those objects. This is an example of the type of
+            problem addressed by the Observer pattern.</p>
+        </tip-box>
+        <p><strong>Context</strong></p>
+        <p>An object (possibly, more than one) is interested to get notified when a change happens to another object. That is, some objects want to ‘observe’ another object.</p>
+        <p><strong>Problem</strong></p>
+        <p>A bidirectional link between the two objects is not desirable. However the two entities need to communicate with each other. That is, the ‘observed’ object does not want to be coupled to objects that are ‘observing’ it.</p>
+        <p><strong>Solution</strong></p>
+        <p>The Observer pattern shows us how an object can communicate with other objects while avoiding a direct coupling with them. The solution is to force the communication through an interface known to both parties. A concrete example is given below.</p>
+        <tip-box>
+          <p>Example:</p><img src="/se-book/designPatterns/observer/what/images/studentListObserver.png" height="130">
+          <p></p>
+          <p>Here is the Observer pattern applied to the student management system.</p>
+          <p>During initialization of the system,</p>
+          <ol>
+            <li>First, create the relevant objects.</li>
+          </ol>
+          <pre><code class="hljs java">StudentList studentList = <span class="hljs-keyword">new</span> StudentList();
+StudentListUi listUi = <span class="hljs-keyword">new</span> StudentListUi();
+StudentStatusUi statusUi = <span class="hljs-keyword">new</span> StudentStatsUi();
+</code></pre>
+          <ol start="2">
+            <li>Next, the two UIs indicate to the <code>StudentList</code> that they are interested in being updated whenever <code>StudentList</code> changes. This is also known as ‘subscribing for updates’.</li>
+          </ol>
+          <pre><code class="hljs java">studentList.addUi(listUi);
+studentList.addUi(statusUi);
+</code></pre>
+          <p>Within the <code>addUi</code> operation of <code>StudentList</code>, all Observer objects subscribers are added to an internal data structure called <code>observerList</code>.</p>
+          <pre><code class="hljs java"><span class="hljs-comment">//StudentList class</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addUi</span><span class="hljs-params">(Observer o)</span> </span>{
+    observerList.add(o);
+}
+</code></pre>
+          <p>As such, whenever the data in <code>StudentList</code> changes (e.g. when a new student is added to the <code>StudentList</code>), all interested observers are updated by calling the <code>notifyUIs</code> operation.</p>
+          <pre><code class="hljs java"><span class="hljs-comment">//StudentList class</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notifyUIs</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">for</span>(Observer o: observerList) <span class="hljs-comment">//for each observer in the list</span>
+        o.update();
+}
+</code></pre>
+          <p>UIs can then pull data from the <code>StudentList</code> whenever the <code>update</code> operation is called.</p>
+          <pre><code class="hljs java"><span class="hljs-comment">//StudentListUI class</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">//refresh UI by pulling data from StudentList</span>
+}
+</code></pre>
+          <p>Note that StudentList is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.</p>
+        </tip-box>
+        <p>Here is the generic description of the observer pattern:</p><img src="/se-book/designPatterns/observer/what/images/observableInterfaceDiagram.png" height="80">
+        <p></p>
+        <ul>
+          <li><code>&lt;&lt; Observer &gt;&gt;</code> is an interface: any class that implements it can observe an <code>&lt;&lt; Observable &gt;&gt;</code>. Any number of <code>&lt;&lt; Observer &gt;&gt;</code> objects can observe (i.e. listen to changes
+            of) the <code>&lt;&lt; Observable &gt;&gt;</code> object.</li>
+          <li>The <code>&lt;&lt; Observable &gt;&gt;</code> maintains a list of <code>&lt;&lt; Observer &gt;&gt;</code> objects. <code>addObserver(Observer)</code> operation adds a new <code>&lt;&lt; Observer &gt;&gt;</code> to the list of <code>&lt;&lt; Observer &gt;&gt;s</code>.</li>
+          <li>Whenever there is a change in the <code>&lt;&lt; Observable &gt;&gt;</code>, the <code>notifyObservers()</code> operation is called that will call the <code>update()</code> operation of all <code>&lt;&lt; Observer &gt;&gt;s</code> in the list.</li>
+        </ul>
+        <p>In a GUI application, how is the Controller notified when the “save” button is clicked? UI frameworks such as JavaFX has inbuilt support for the Observer pattern.</p>
+      </div>
+    </div>
+    <h2 id="more">More</h2>
+    <div>
+      <div>
+        <h4 id="combining-design-patterns-three">Combining Design Patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can combine multiple patterns to fit a context <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>Let us look at a case study that shows how design patterns are used in the design of a class structure for a Stock Inventory System (SIS) for a shop. The shop sells appliances, and accessories for the appliances. SIS simply stores information
+          about each item in the store.</p>
+        <tip-box>
+          <p><strong>Use Cases</strong>:</p>
+          <ul>
+            <li>Create a new item</li>
+            <li>View information about an item</li>
+            <li>Modify information about an item</li>
+            <li>View all available accessories for a given appliance</li>
+            <li>List all items in the store</li>
+          </ul>
+        </tip-box>
+        <p>SIS can be accessed using multiple terminals. Shop assistants use their own terminals to access SIS, while the shop manager’s terminal continuously displays a list of all items in store. In the future, it is expected that suppliers of items use
+          their own applications to connect to SIS to get real-time information about current stock status. User authentication is not required for the current version, but may be required in the future.</p>
+        <p>A step by step explanation of the design is given below. Note that this is one out of many possible designs. Design patterns are also applied where appropriate.</p>
+        <tip-box>
+          <p>Example:</p>
+          <p>A <code>StockItem</code> can be an Appliance or an Accessory.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/stockItem.png" height="100">
+          <p></p>
+          <p>To track that each <code>Accessory</code> is associated with the correct <code>Appliance</code>, consider the following alternative class structures.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeOne.png"
+            height="120">
+          <p></p>
+          <p>The third one seems more appropriate (the second one is suitable if accessories can have accessories). Next, consider between keeping a list of <code>Appliances</code>, and a list of <code>StockItems</code>. Which is more appropriate?</p>
+          <img
+            src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeTwo.png" height="100">
+            <p></p>
+            <p>The latter seems more suitable because it can handle both appliances and accessories the same way. Next, an abstraction occurrence pattern is applied to keep track of <code>StockItems</code>.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeThree.png"
+              height="100">
+            <p></p>
+            <p>Note the inclusion of navigabilities. Here’s a sample object diagram based on the class model created thus far.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/stockItemListObjectDiagram.png" height="150">
+            <p></p>
+            <p>Next, apply the façade pattern to shield the SIS internals from the UI.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/withFacade.png" height="200">
+            <p></p>
+            <p>As UI consists of multiple views, the MVC pattern is applied here.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/withMVC.png" height="270">
+            <p></p>
+            <p>Some views need to be updated when the data change; apply the Observer pattern here.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/withObserver.png" height="270">
+            <p></p>
+            <p>In addition, the Singleton pattern can be applied to the façade class.</p>
+        </tip-box>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="other-design-patterns-three">Other Design Patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can recognize some of the GoF design patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>However, most are common, and well known. As an example, GoF book contains 23 design patterns:</p>
+        <ul>
+          <li><strong>Creational</strong>: About object creation. They separate the operation of an application from how its objects are created.
+            <ul>
+              <li>Abstract Factory, Builder, Factory Method, Prototype, Singleton</li>
+            </ul>
+          </li>
+          <li><strong>Structural</strong>: About the composition of objects into larger structures while catering for future extension in structure.
+            <ul>
+              <li>Adapter, Bridge, Composite, Decorator, Façade, Flyweight, Proxy</li>
+            </ul>
+          </li>
+          <li><strong>Behavioral</strong>: Defining how objects interact and how responsibility is distributed among them.
+            <ul>
+              <li>Chain of Responsibility, Command, Interpreter, Template Method, Iterator, Mediator, Memento, Observer, State, Strategy, Visitor</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="using-design-patterns-three">Using Design Patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain pros and cons of design patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>{patterns provide a vocabulary}</p>
+        <p>The more patterns one acquires, the more ‘experienced’ she is. Exposing oneself to a multitude of patterns (at least the context and problem) is a must. Some patterns are domain-specific (e.g. patterns for distributed applications), some are created
+          in-house (e.g. patterns in the company/project) and some can be self-created (e.g. from past experience).</p>
+        <p>When using patterns, be careful not to overuse them. Do not throw patterns at a problem at every opportunity. Patterns come with overhead such as adding more classes or increasing the levels of abstraction. Use them only when they are needed.
+          Before applying a pattern, make sure that:</p>
+        <ul>
+          <li>there is substantial improvement in the design, not just superficial.</li>
+          <li>the associated tradeoffs are carefully considered. There are times when a design pattern is not appropriate (or an overkill).</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="other-types-of-patterns-three">Other Types of Patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain how patterns exist beyond software design domain <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>The notion of capturing design ideas as &quot;patterns&quot; is usually attributed to Christopher Alexander. He is a building architect noted for his theories about design. His book <em>Timeless way of building</em> talks about “design patterns”
+          for constructing buildings.</p>
+        <p>Here is a sample pattern from that book:</p>
+        <blockquote>
+          <p>When a room has a window with a view, the window becomes a focal point: people are attracted to the window and want to look through it. The furniture in the room creates a second focal point: everyone is attracted toward whatever point the furniture
+            aims them at (usually the center of the room or a TV). This makes people feel uncomfortable. They want to look out the window, and toward the other focus at the same time. If you rearrange the furniture, so that its focal point becomes the
+            window, then everyone will suddenly notice that the room is much more “comfortable”</p>
+        </blockquote>
+        <p>Apparently, patterns and anti-patterns are found in the field of building architecture. This is because they are general concepts applicable to any domain, not just software design. In software engineering, there are many general types of patterns:
+          Analysis patterns, Design patterns, Testing patterns, Architectural patterns, Project management patterns, and so on.</p>
+        <p>In fact, the abstraction occurrence pattern is more of an analysis pattern than a design pattern, while MVC is more of an architectural pattern.</p>
+        <p>New patterns can be created too. If a common problem needs to be solved frequently that leads to a non-obvious and better solution, it can be formulated as a pattern so that it can be reused by others. However, don’t reinvent the wheel; the pattern
+          might already exist.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\markbind\js\vue.min.js"></script>
+<script src="..\markbind\js\vue-strap.min.js"></script>
+<script src="..\markbind\js\setup.js"></script>
+</html>

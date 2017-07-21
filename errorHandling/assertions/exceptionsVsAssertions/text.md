@@ -19,7 +19,9 @@ Exceptions and assertions are two complementary ways of handling errors in softw
 
 Both assertions and exceptions should be used in code.  
 
-
 </div>
+
+<div id="extras">
+<div>
 
 </div>

@@ -19,7 +19,9 @@ In terms of timing and frequency, there are two general approaches to integratio
 
 Whether using frequent integration or one-time late integration, there is still a need to decide the order in which components are to be integrated. There are several approaches to doing this, as explained next.
 
-
 </div>
+
+<div id="extras">
+<div>
 
 </div>

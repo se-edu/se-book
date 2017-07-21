@@ -38,6 +38,9 @@
             </ol>
             <p>Whether using frequent integration or one-time late integration, there is still a need to decide the order in which components are to be integrated. There are several approaches to doing this, as explained next.</p>
           </div>
+          <div>
+            <div></div>
+          </div>
         </div>
       </panel>
     </div>
@@ -55,36 +58,34 @@
           <div>
             <p>In the <em>big-bang integration</em> approach, all components are integrated at the same time. This approach is not recommended because it will uncover too many problems at the same time which could make debugging and bug-fixing more complex
               than when problems are uncovered incrementally.</p>
-            <panel header=":paperclip: Extras" expandable="" type="seamless" expanded="">
-              <panel header=":mortar_board: Learning Outcomes" expandable="" type="seamless">
+          </div>
+          <div>
+            <div>
+              <panel header=":muscle: Exercises" type="info" expandable="">
                 <div>
-                  <panel type="success" expandable=""><span slot="header"><div><p>null</p></div></span>
-                    <div>
-                      <panel header="Q: Give two arguments in support and two arguments against the following statement.">
-                        <question has-input="true">
-                          <p>Give two arguments in support and two arguments against the following statement.</p>
-                          <p><em>Because there is no external client, it is OK to use big bang integration for a school project.</em></p>
-                          <div slot="answer">
-                            <p>Arguments for:</p>
-                            <ul>
-                              <li>It is relatively simple; even big-bang can succeed.</li>
-                              <li>Project duration is short; there is not enough time to integrate in steps.</li>
-                              <li>The system is non-critical, non-production (demo only); the cost of integration issues is relatively small.</li>
-                            </ul>
-                            <p>Arguments against:</p>
-                            <ul>
-                              <li>Inexperienced developers; big-bang more likely to fail</li>
-                              <li>Too many problems may be discovered too late. Submission deadline (fixed) can be missed.</li>
-                              <li>Team members have not worked together before; increases the probability of integration problems.</li>
-                            </ul>
-                          </div>
-                        </question>
-                      </panel>
-                    </div>
+                  <panel header="Q: Give two arguments in support and two arguments against the following statement.">
+                    <question has-input="true">
+                      <p>Give two arguments in support and two arguments against the following statement.</p>
+                      <p><em>Because there is no external client, it is OK to use big bang integration for a school project.</em></p>
+                      <div slot="answer">
+                        <p>Arguments for:</p>
+                        <ul>
+                          <li>It is relatively simple; even big-bang can succeed.</li>
+                          <li>Project duration is short; there is not enough time to integrate in steps.</li>
+                          <li>The system is non-critical, non-production (demo only); the cost of integration issues is relatively small.</li>
+                        </ul>
+                        <p>Arguments against:</p>
+                        <ul>
+                          <li>Inexperienced developers; big-bang more likely to fail</li>
+                          <li>Too many problems may be discovered too late. Submission deadline (fixed) can be missed.</li>
+                          <li>Team members have not worked together before; increases the probability of integration problems.</li>
+                        </ul>
+                      </div>
+                    </question>
                   </panel>
                 </div>
               </panel>
-            </panel>
+            </div>
           </div>
         </div>
       </panel>
@@ -110,60 +111,58 @@
               <li><em>Bottom-up</em> integration: This is the reverse of top-down integration. Advantages and disadvantages are simply the reverse of those of the top-down approach.</li>
               <li><em>Sandwich</em> integration: This is a mix of the top-down and the bottom-up approaches. The idea is to do both top-down and bottom-up so as to “meet up” in the middle.</li>
             </ul>
-            <panel header=":paperclip: Extras" expandable="" type="seamless" expanded="">
-              <panel header=":mortar_board: Learning Outcomes" expandable="" type="seamless">
+          </div>
+          <div>
+            <div>
+              <panel header=":muscle: Exercises" type="info" expandable="">
                 <div>
-                  <panel type="success" expandable=""><span slot="header"><div><p>null</p></div></span>
-                    <div>
-                      <panel header="Q: Suggest an integration strategy for the system represented by following diagram.">
-                        <question has-input="true">
-                          <p>Suggest an integration strategy for the system represented by following diagram. You need not follow a strict top-down, bottom-up, sandwich, or big bang approach. Dashed arrows represent dependencies between classes.</p>
-                          <p>Also take into account the following facts in your test strategy.</p>
-                          <ul>
-                            <li><strong>HospitalUI</strong> will be developed early, so as to get customer feedback early.</li>
-                            <li><strong>HospitalFacade</strong> shields the UI from complexities of the application layer. It simply redirects the method calls received to the appropriate classes below</li>
-                            <li><strong>IO_Helper</strong> is to be reused from an earlier project, with minor modifications</li>
-                            <li>Development of <strong>OutPatient</strong> component has been outsourced, and the delivery is not expected until the 2nd half of the project.</li>
-                          </ul><img src="/se-book/integration/approaches/topDownVsBottomUp/images/hospital.png" height="250">
-                          <p></p>
-                          <div slot="answer">
-                            <p>There can be many acceptable answers to this question. But any good strategy should consider at least some of the below.</p>
-                            <ul>
-                              <li>Since <strong>HospitalUI</strong> will be developed early, it’s OK to integrate it early, using stubs, rather than wait for the rest of the system to finish. (i.e. a top-down integration is suitable for <strong>HospitalUI</strong>)</li>
-                              <li>Because <strong>HospitalFacade</strong> is unlikely to have a lot of business logic, it may not be worth to write stubs to test it (i.e. a bottom-up integration is better for <strong>HospitalFacade</strong>).</li>
-                              <li>Since <strong>IO_Helper</strong> is to be reused from an earlier project, we can finish it early. This is especially suitable since there are many classes that use it. Therefore <strong>IO_Helper</strong> can be integrated
-                                with the dependent classes in bottom-up fashion.</li>
-                              <li>Since <strong>OutPatient</strong> class may be delayed, we may have to integrate <strong>PatientMgr</strong> using a stub.</li>
-                              <li><strong>TypeA</strong>, <strong>TypeB</strong>, and <strong>TypeC</strong> seem to be tightly coupled. It may be a good idea to test them together.</li>
-                            </ul>
-                            <p>Given below is one possible integration test strategy. Relative positioning also indicates a rough timeline.</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/hospitalIntegration.png" height="250">
-                            <p></p>
-                          </div>
-                        </question>
-                      </panel>
-                    </div>
-                    <div>
-                      <panel header="Q: Describe the order in which components will be integrated with one another if the following integration strategies were adopted.">
-                        <question has-input="false">
-                          <p>Consider the architecture given below. Describe the order in which components will be integrated with one another if the following integration strategies were adopted.</p>
-                          <p>a) top-down b) bottom-up c) sandwich</p>
-                          <p>Note that dashed arrows show dependencies (e.g. A depend on B, C, D and therefore, higher-level than B, C and D).</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/abc.png" height="190">
-                          <p></p>
-                          <div slot="answer">
-                            <p>a) Diagram:</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/aAnswer.png" height="230">
-                            <p></p>
-                            <p>b) Diagram:</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/bAnswer.png" height="230">
-                            <p></p>
-                            <p>c) Diagram:</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/cAnswer.png" height="230">
-                            <p></p>
-                          </div>
-                        </question>
-                      </panel>
-                    </div>
+                  <panel header="Q: Suggest an integration strategy for the system represented by following diagram.">
+                    <question has-input="true">
+                      <p>Suggest an integration strategy for the system represented by following diagram. You need not follow a strict top-down, bottom-up, sandwich, or big bang approach. Dashed arrows represent dependencies between classes.</p>
+                      <p>Also take into account the following facts in your test strategy.</p>
+                      <ul>
+                        <li><strong>HospitalUI</strong> will be developed early, so as to get customer feedback early.</li>
+                        <li><strong>HospitalFacade</strong> shields the UI from complexities of the application layer. It simply redirects the method calls received to the appropriate classes below</li>
+                        <li><strong>IO_Helper</strong> is to be reused from an earlier project, with minor modifications</li>
+                        <li>Development of <strong>OutPatient</strong> component has been outsourced, and the delivery is not expected until the 2nd half of the project.</li>
+                      </ul><img src="/se-book/integration/approaches/topDownVsBottomUp/images/hospital.png" height="250">
+                      <p></p>
+                      <div slot="answer">
+                        <p>There can be many acceptable answers to this question. But any good strategy should consider at least some of the below.</p>
+                        <ul>
+                          <li>Since <strong>HospitalUI</strong> will be developed early, it’s OK to integrate it early, using stubs, rather than wait for the rest of the system to finish. (i.e. a top-down integration is suitable for <strong>HospitalUI</strong>)</li>
+                          <li>Because <strong>HospitalFacade</strong> is unlikely to have a lot of business logic, it may not be worth to write stubs to test it (i.e. a bottom-up integration is better for <strong>HospitalFacade</strong>).</li>
+                          <li>Since <strong>IO_Helper</strong> is to be reused from an earlier project, we can finish it early. This is especially suitable since there are many classes that use it. Therefore <strong>IO_Helper</strong> can be integrated with
+                            the dependent classes in bottom-up fashion.</li>
+                          <li>Since <strong>OutPatient</strong> class may be delayed, we may have to integrate <strong>PatientMgr</strong> using a stub.</li>
+                          <li><strong>TypeA</strong>, <strong>TypeB</strong>, and <strong>TypeC</strong> seem to be tightly coupled. It may be a good idea to test them together.</li>
+                        </ul>
+                        <p>Given below is one possible integration test strategy. Relative positioning also indicates a rough timeline.</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/hospitalIntegration.png" height="250">
+                        <p></p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+                <div>
+                  <panel header="Q: Describe the order in which components will be integrated with one another if the following integration strategies were adopted.">
+                    <question has-input="false">
+                      <p>Consider the architecture given below. Describe the order in which components will be integrated with one another if the following integration strategies were adopted.</p>
+                      <p>a) top-down b) bottom-up c) sandwich</p>
+                      <p>Note that dashed arrows show dependencies (e.g. A depend on B, C, D and therefore, higher-level than B, C and D).</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/abc.png" height="190">
+                      <p></p>
+                      <div slot="answer">
+                        <p>a) Diagram:</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/aAnswer.png" height="230">
+                        <p></p>
+                        <p>b) Diagram:</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/bAnswer.png" height="230">
+                        <p></p>
+                        <p>c) Diagram:</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/cAnswer.png" height="230">
+                        <p></p>
+                      </div>
+                    </question>
                   </panel>
                 </div>
               </panel>
-            </panel>
+            </div>
           </div>
         </div>
       </panel>

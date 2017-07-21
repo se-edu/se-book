@@ -54,4 +54,7 @@ Option 2 is more defensive because the `Mine` is immediately linked to a `MinedC
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

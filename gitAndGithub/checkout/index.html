@@ -12,40 +12,46 @@
 <div id="app" class="container-fluid">
     <link rel="stylesheet" href="/se-book/css/textbook.css">
 <div class="website-content">
-  <p><span class="dimmed"><strong><span>Git and Github ➡️ </span></strong>
-    </span>
-  </p>
   <div>
-    <h4 id="checkout-two">Checkout <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-  </div>
-  <tip-box type="success">
+    <panel header="%%Prerequisites%%" expandable="" expanded="">
+      <div></div>
+    </panel>
+    <p></p>
+    <tip-box type="success">
+      <div>
+        <p>🏆 Can load a specific version of a Git repo <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+      </div>
+    </tip-box>
+    <p><span class="dimmed"><strong><span>Tools ➡️ Git and GitHub ➡️
+</span></strong>
+      </span>
+    </p>
     <div>
-      <p>🏆 Can load a specific version of a Git repo <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+      <h4 id="checkout-two">Checkout <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
     </div>
-  </tip-box>
-  <div id="main">
-    <div>
-      <p>
-        <panel src="/se-book\revisionControl\usingHistory\embed._include_.html" header="Revision Control: Using History" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-      </p>
-      <p></p>
-      <p>Git can show you what changed in each commit.</p>
-      <tabs>
-        <tab header="SourceTree">
-          <div>
-            <p>To see which files changed in a commit, click on the commit. To see what changed in a specific file in that commit, click on the file name.</p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_1.png" height="220">
-            <p></p>
-          </div>
-        </tab>
-        <tab header="CLI">
-          <div>
-            <pre><code class="hljs sh">git show &lt; part-of-commit-hash &gt;
+    <div id="main">
+      <div>
+        <p>
+          <panel src="/se-book\revisionControl\usingHistory\embed._include_.html" header="Revision Control: Using History" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+        </p>
+        <p></p>
+        <p>Git can show you what changed in each commit.</p>
+        <tabs>
+          <tab header="SourceTree">
+            <div>
+              <p>To see which files changed in a commit, click on the commit. To see what changed in a specific file in that commit, click on the file name.</p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_1.png" height="220">
+              <p></p>
+            </div>
+          </tab>
+          <tab header="CLI">
+            <div>
+              <pre><code class="hljs sh">git show &lt; part-of-commit-hash &gt;
 </code></pre>
-            <p>Example:</p>
-            <pre class="hljs"><code>git show 251b4cf
+              <p>Example:</p>
+              <pre class="hljs"><code>git show 251b4cf
 </code></pre>
-            <p>-&gt;</p>
-            <pre><code class="hljs diff">commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3
+              <p>-&gt;</p>
+              <pre><code class="hljs diff">commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3
 Author: … &lt; … &gt;
 Date:   Sat Jul 8 16:50:27 2017 +0800
 
@@ -61,69 +67,73 @@ index 15b57f7..17f4528 100644
 <span class="hljs-addition">+berries</span>
  cherries
 </code></pre>
-          </div>
-        </tab>
-      </tabs>
-      <p>Git can also show you the difference between two points in the history of the repo.</p>
-      <tabs>
-        <tab header="SourceTree">
-          <div>
-            <p>Select the two points you want to compare using <code>Ctrl+Click</code></p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_2.png" height="200">
-            <p></p>
-            <p>The same method can be used to compare the current state of the working directory (which might have uncommitted changes) to a point in the history.</p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_3.png" height="100">
-            <p></p>
-          </div>
-        </tab>
-        <tab header="CLI">
-          <div>
-            <p>The <code>diff</code> command can be used to view the differences between two points of the history.</p>
-            <ul>
-              <li><code>git diff</code> : shows the changes (uncommitted) since the last commit</li>
-              <li><code>git diff 0023cdd..fcd6199</code>: shows the changes between the points indicated by by commit hashes</li>
-              <li><code>git diff v1.0..HEAD</code>: shows changes that happened from the commit tagged as <code>v1.0</code> to the most recent commit.</li>
-            </ul>
-            <p>Resources:</p>
-            <ul>
-              <li><a href="https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/diffs">Git-Tower Tutorial: Inspecting Changes with Diffs</a></li>
-              <li><a href="https://stackoverflow.com/questions/8640838/how-do-i-navigate-in-the-results-of-diff">How to view the next page of a <code>git</code> command result</a></li>
-            </ul>
-          </div>
-        </tab>
-      </tabs>
-      <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to stash them first to prevent them from being overwritten.</p>
-      <tabs>
-        <tab header="SourceTree">
-          <div>
-            <p>Double-click the commit you want to load to the working directory, or right-click on that commit and choose .</p>
-            <p>Click <code>OK</code> to the warning about ‘detached HEAD’ (similar to below).</p><img src="/se-book/gitAndGithub/checkout/images/warning.png" height="140">
-            <p></p>
-            <p>The specified version is now loaded to the working folder, as indicated by the <code>HEAD</code> label. <code>HEAD</code> is a reference to the currently checked out commit.</p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_4.png"
-              height="100">
-            <p></p>
-            <p>If you checkout a commit that come before the commit in which you added the <code>.gitignore</code> file, Git will now show ignored fiels as ‘unstaged modifications’ because at that stage Git hasn’t been told to ignore those files.</p>
-            <img
-              src="/se-book/gitAndGithub/checkout/images/sourcetree_5.png" height="260">
+            </div>
+          </tab>
+        </tabs>
+        <p>Git can also show you the difference between two points in the history of the repo.</p>
+        <tabs>
+          <tab header="SourceTree">
+            <div>
+              <p>Select the two points you want to compare using <code>Ctrl+Click</code></p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_2.png" height="200">
               <p></p>
-              <p>To go back to the latest commit, double-click it.</p>
-          </div>
-        </tab>
-        <tab header="CLI">
-          <div>
-            <p>Use the <code>checkout &lt;commit-identifier&gt;</code> command to change the working directory to the state it was in at a specific past commit.</p>
-            <ul>
-              <li><code>git checkout v1.0</code>: loads the state as at commit tagged <code>v1.0</code></li>
-              <li><code>git checkout 0023cdd</code>: loads the state as at commit with the hash <code>0023cdd</code></li>
-              <li><code>git checkout HEAD~2</code>: loads the state that is 2 commits behind the most recent commit</li>
-            </ul>
-            <p>For now, you can ignore the warning about ‘detached HEAD’.</p>
-            <p>Use the <code>checkout &lt;branch-name&gt;</code> to go back to the most recent commit of the current branch (the default branch in git is named <code>master</code>)</p>
-            <ul>
-              <li><code>git checkout master</code></li>
-            </ul>
-            <p></p>
-          </div>
-        </tab>
-      </tabs>
+              <p>The same method can be used to compare the current state of the working directory (which might have uncommitted changes) to a point in the history.</p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_3.png" height="100">
+              <p></p>
+            </div>
+          </tab>
+          <tab header="CLI">
+            <div>
+              <p>The <code>diff</code> command can be used to view the differences between two points of the history.</p>
+              <ul>
+                <li><code>git diff</code> : shows the changes (uncommitted) since the last commit</li>
+                <li><code>git diff 0023cdd..fcd6199</code>: shows the changes between the points indicated by by commit hashes</li>
+                <li><code>git diff v1.0..HEAD</code>: shows changes that happened from the commit tagged as <code>v1.0</code> to the most recent commit.</li>
+              </ul>
+              <p>Resources:</p>
+              <ul>
+                <li><a href="https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/diffs">Git-Tower Tutorial: Inspecting Changes with Diffs</a></li>
+                <li><a href="https://stackoverflow.com/questions/8640838/how-do-i-navigate-in-the-results-of-diff">How to view the next page of a <code>git</code> command result</a></li>
+              </ul>
+            </div>
+          </tab>
+        </tabs>
+        <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to stash them first to prevent them from being overwritten.</p>
+        <tabs>
+          <tab header="SourceTree">
+            <div>
+              <p>Double-click the commit you want to load to the working directory, or right-click on that commit and choose .</p>
+              <p>Click <code>OK</code> to the warning about ‘detached HEAD’ (similar to below).</p><img src="/se-book/gitAndGithub/checkout/images/warning.png" height="140">
+              <p></p>
+              <p>The specified version is now loaded to the working folder, as indicated by the <code>HEAD</code> label. <code>HEAD</code> is a reference to the currently checked out commit.</p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_4.png"
+                height="100">
+              <p></p>
+              <p>If you checkout a commit that come before the commit in which you added the <code>.gitignore</code> file, Git will now show ignored fiels as ‘unstaged modifications’ because at that stage Git hasn’t been told to ignore those files.</p>
+              <img
+                src="/se-book/gitAndGithub/checkout/images/sourcetree_5.png" height="260">
+                <p></p>
+                <p>To go back to the latest commit, double-click it.</p>
+            </div>
+          </tab>
+          <tab header="CLI">
+            <div>
+              <p>Use the <code>checkout &lt;commit-identifier&gt;</code> command to change the working directory to the state it was in at a specific past commit.</p>
+              <ul>
+                <li><code>git checkout v1.0</code>: loads the state as at commit tagged <code>v1.0</code></li>
+                <li><code>git checkout 0023cdd</code>: loads the state as at commit with the hash <code>0023cdd</code></li>
+                <li><code>git checkout HEAD~2</code>: loads the state that is 2 commits behind the most recent commit</li>
+              </ul>
+              <p>For now, you can ignore the warning about ‘detached HEAD’.</p>
+              <p>Use the <code>checkout &lt;branch-name&gt;</code> to go back to the most recent commit of the current branch (the default branch in git is named <code>master</code>)</p>
+              <ul>
+                <li><code>git checkout master</code></li>
+              </ul>
+              <p></p>
+            </div>
+          </tab>
+        </tabs>
+      </div>
+      <div>
+        <div></div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,1 +1,1 @@
-:trophy: Can explain what are class diagrams on an advanced level :three:
+:trophy: Can use advanced class diagrams :three:

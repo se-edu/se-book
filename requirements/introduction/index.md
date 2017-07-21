@@ -2,15 +2,8 @@
 
 <div class="website-content">
 
-%%**Requirements :arrow_right:**%%
-
-## Introduction
-
-<div id="main">
-
-<include src="./basics/embed.md" />
+<include src="full.md" />
 
 </div>
 
-</div>
 </div>

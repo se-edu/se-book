@@ -1,1 +1,1 @@
-:trophy: Can explain what are use case diagrams :two:
+:trophy: Can explain use case diagrams :two:

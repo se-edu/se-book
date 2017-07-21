@@ -1,6 +1,5 @@
-<panel type="success" expandable>
-  <span slot="header"><include src="outcomes.md#outcome-explain" /></span>
+<panel header=":muscle: Exercises" type="info" expandable>
   <include src="q-essay-manager.md" />
-	<include src="q-essay-marriage.md" />
-	<include src="q-essay-account.md" />
+  <include src="q-essay-marriage.md" />
+  <include src="q-essay-account.md" />
 </panel>

@@ -32,7 +32,9 @@
   <include src="../../practices/deleteTemporaryCode/index.md#main" />
 </panel>
 
-
 </div>
+
+<div id="extras">
+<div>
 
 </div>

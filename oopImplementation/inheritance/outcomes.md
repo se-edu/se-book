@@ -1,1 +1,1 @@
-:trophy: Can implement inheritance :one:
+:trophy: Can implement basic inheritance :one:

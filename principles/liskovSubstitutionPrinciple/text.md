@@ -43,4 +43,7 @@ In the above scenario,
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

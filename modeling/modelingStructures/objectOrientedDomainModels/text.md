@@ -38,7 +38,9 @@ The above OO domain model omits the ladder class for simplicity. It can be inclu
 
 **OODM notation is similar to class diagram notation but typically omit methods and navigability.**
 
-
 </div>
+
+<div id="extras">
+<div>
 
 </div>

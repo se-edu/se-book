@@ -74,4 +74,7 @@ More examples:
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

@@ -12,7 +12,7 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oop/associations/associationClasses/topicPanel.md" header="OOP: Associations: Association Classes" is-open></dynamic-panel>
+<dynamic-panel src="../../oopDesign/associations/associationClasses/embed.md" header="OOP: Associations: Association Classes" is-open></dynamic-panel>
 
 <p/>
 
@@ -33,5 +33,8 @@ At implementation level, an association class is most likely implemented as foll
 </tip-box>
 
 </div>
+
+<div id="extras">
+<div>
 
 </div>

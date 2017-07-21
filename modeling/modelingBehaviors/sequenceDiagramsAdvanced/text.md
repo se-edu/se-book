@@ -12,8 +12,11 @@
 
 <div id="body">
 
-<dynamic-panel src="../../../uml/sequenceDiagrams/parallelPaths/topicPanel.md" header="UML: Sequence Diagrams: Parallel Paths" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/parallelPaths/embed.md" header="UML: Sequence Diagrams: Parallel Paths" is-open></dynamic-panel>
 
 </div>
+
+<div id="extras">
+<div>
 
 </div>

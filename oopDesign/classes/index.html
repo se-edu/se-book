@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Object Oriented Programming: Classes</title>
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <p><span class="dimmed"><strong>Object Oriented Programming ➡️</strong></span></p>
+  <h2 id="objects">Objects</h2>
+  <div id="main">
+    <div>
+      <div>
+        <h4 id="basic-one">Basic <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain the relationship between classes and object <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p>Writing an OOP program is essentially writing instructions that the computer uses to create the virtual world of object network and providing it the inputs to produce the outcome we want. It turns out sometimes multiple objects have the same
+              behavior because they are of the same kind. Instructions for creating a one kind (or ‘class’) of objects can be done in one go and use that same instructions to instantiate (i.e. create) objects of that kind. We call such instructions a
+              <em>Class</em>.</p>
+            <tip-box>
+              <p>Example:</p>
+              <p>When writing an OOP program to calculate the average age, instructions for creating objects Adam, Beth, Charlie, and Daisy will be very similar because they are all of the same kind : they all represent ‘persons’ with same interface, same
+                kind of data (i.e. name, DoB, etc.), and the same kind of behavior (i.e. getAge(Date), getName(), etc.). Therefore, we can have a class called Person containing instructions on how to create Person objects and use that class to instantiate
+                objects Adam, Beth, Charlie, and Daisy. Similarly, we need classes AgeList, Calculator, and Main classes to instantiate one each of AgeList, Calculator, and Main objects.</p>
+            </tip-box>
+            <p>
+              <panel src="/se-book\uml\classDiagrams\classes\topicPanel._include_.html" header="UML: Class Diagrams: Classes" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+              <panel src="/se-book\uml\objectDiagrams\objects\embed._include_.html" header="UML: Object Diagrams: Objects" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+            </p>
+            <p></p>
+            <tip-box><img src="/se-book/oopDesign/classes/basic/images/person.png" height="100">
+              <p></p>
+              <p><code>Person</code> class and some example instances of the <code>Person</code> class.</p>
+            </tip-box>
+          </div>
+          <div>
+            <div></div>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <div>
+        <h4 id="class-level-members-two">Class Level Members <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain class-level members <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p>While all objects of a class has the same attributes, each object has its own copy of the attribute value.</p>
+            <tip-box>
+              <p>Example:</p>
+              <p>All <code>Person</code> objects have the Name attribute but the value of that attribute varies between <code>Person</code> objects.</p>
+            </tip-box>
+            <p>However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Those are
+              called <em>class level</em> attributes.</p>
+            <tip-box>
+              <p>Example:</p>
+              <p>The attribute totalPersons should be maintained centrally and shared by all <code>Person</code> objects rather than copied at each <code>Person</code> object.</p>
+            </tip-box>
+            <p>Similarly, when a normal method is being called, a message is being sent to the receiving object and the result may depend on the receiving object.</p>
+            <tip-box>
+              <p>Example:</p>
+              <p>Sending the getName() message to Adam object results in the response “Adam” while sending the same message to the Beth object gets the response “Beth”.</p>
+            </tip-box>
+            <p>However, there can be methods related to a specific class but not suitable for sending message to a specific object of that class. Those are called class-level methods.</p>
+            <tip-box>
+              <p>Example:</p>
+              <p>The method getTotalPersons() is not suitable to send to a specific <code>Person</code> object.</p>
+            </tip-box>
+            <p>Class-level attributes and methods are collectively called <em>class-level members</em> (also called <em>static members</em> sometimes because some programming languages use the keyword <code>static</code> to identify class-level members).
+              They are to be accessed using the class name rather than an instance of the class.</p>
+            <p>
+              <panel src="/se-book\uml\classDiagrams\classLevelMembers\topicPanel._include_.html" header="UML: Class Diagrams: Class Level Members" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+            </p>
+            <p></p><img src="/se-book/oopDesign/classes/classLevelMembers/images/person.png" height="100">
+            <p></p>
+          </div>
+          <div>
+            <div></div>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <div>
+        <h4 id="enumerations-two">Enumerations <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain the meaning of enumerations <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p>Enumerations are primarily a collection of values that can be considered a data type.</p>
+            <p>
+              <panel src="/se-book\uml\classDiagrams\enumerations\topicPanel._include_.html" header="UML: Class Diagrams: Enumerations" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+            </p>
+            <p></p>
+            <tip-box>
+              <p>Example:</p><img src="/se-book/oopDesign/classes/enumerations/images/priority.png" height="100">
+              <p></p>
+              <p>Priority: HIGH, MEDIUM, LOW</p>
+            </tip-box>
+          </div>
+          <div>
+            <div></div>
+          </div>
+        </div>
+      </panel>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\markbind\js\setup.js"></script>
+</html>

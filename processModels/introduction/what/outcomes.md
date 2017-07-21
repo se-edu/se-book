@@ -1,1 +1,1 @@
-:trophy: Can explain what are SLDC process models :one:
+:trophy: Can explain SLDC process models :one:

@@ -20,7 +20,9 @@ Examples: writing plugins for Eclipse so that it can be used as an IDE for diffe
 *	**Your code calls the library code while the framework code calls your code.**
 Frameworks use a technique called _inversion of control_, also called the “Hollywood principle” (i.e. don’t call us, we’ll call you!). That is, you write code that will be called by the framework, e.g. writing test methods that will be called by the JUnit framework. In the case of libraries, written code calls libraries.
 
-
 </div>
+
+<div id="extras">
+<div>
 
 </div>

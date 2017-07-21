@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Refactoring [Printable]</title>
+    <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <div id="main">
+    <h1 id="refactoring">Refactoring</h1>
+    <div>
+      <div>
+        <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain refactoring <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>The first version of the code you write may not be of production quality. It is acceptable to first concentrate on making the code work, rather than worry over the quality of the code, SO LONG AS you improve the quality later. This process of
+          <strong>improving a program's internal structure without modifying its external behavior</strong> is called <em>refactoring</em>.</p>
+        <ul>
+          <li>Refactoring is not about discarding poorly-written code and re-writing it from scratch. It is the process of improving the code in very small steps until it achieves production quality.</li>
+          <li>By definition, refactoring is different from bug fixing or any other modifications that alter the external behavior of the component in concern.</li>
+        </ul>
+        <p>Given below are two common refactorings (taken from
+          <popover effect="fade" placement="top">
+            refactoring-catalog <span slot="content"><span><a href="">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></span></span>
+          </popover>
+          ).</p>
+        <tip-box>
+          <p>Refactoring Name: <strong>Consolidate Duplicate Conditional Fragments</strong></p>
+          <p>Situation: The same fragment of code is in all branches of a conditional expression.</p>
+          <p>Method: Move it outside of the expression.</p>
+          <p>Example:</p>
+          <pre><code class="hljs java"><span class="hljs-comment">//before</span>
+<span class="hljs-keyword">if</span> (isSpecialDeal()) {
+    total = price * <span class="hljs-number">0.95</span>;
+    send();
+} <span class="hljs-keyword">else</span> {
+    total = price * <span class="hljs-number">0.98</span>;
+    send();
+}
+</code></pre>
+          <pre><code class="hljs java"><span class="hljs-comment">//after</span>
+<span class="hljs-keyword">if</span> (isSpecialDeal()){
+    total = price * <span class="hljs-number">0.95</span>;
+} <span class="hljs-keyword">else</span> {
+    total = price * <span class="hljs-number">0.98</span>;
+}
+send();
+</code></pre>
+        </tip-box>
+        <tip-box>
+          <p>Refactoring Name: <strong>Extract Method</strong></p>
+          <p>Situation: You have a code fragment that can be grouped together.</p>
+          <p>Method: Turn the fragment into a method whose name explains the purpose of the method.</p>
+          <p>Example:</p>
+          <pre><code class="hljs java"><span class="hljs-comment">//before</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
+    printBanner();
+
+<span class="hljs-comment">//print details</span>
+    System.out.println(<span class="hljs-string">"name:	"</span> + name);
+    System.out.println(<span class="hljs-string">"amount	"</span> + getOutstanding());
+}
+</code></pre>
+          <pre><code class="hljs java"><span class="hljs-comment">//after</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
+    printBanner();
+    printDetails(getOutstanding());
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printDetails</span> <span class="hljs-params">(<span class="hljs-keyword">double</span> outstanding)</span> </span>{
+    System.out.println(<span class="hljs-string">"name:	"</span> + name);
+    System.out.println(<span class="hljs-string">"amount	"</span> + outstanding);
+}
+</code></pre>
+        </tip-box>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="how-two">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can apply some basic refactoring <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>Given below are some more commonly used refactorings. A more comprehensive list is available at
+          <popover effect="fade" placement="top">
+            refactoring-catalog <span slot="content"><span><a href="">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></span></span>
+          </popover>
+          .</p>
+        <ol>
+          <li><a href="https://refactoring.com/catalog/consolidateConditionalExpression.html">Consolidate Conditional Expression</a></li>
+          <li><a href="https://refactoring.com/catalog/decomposeConditional.html">Decompose Conditional</a></li>
+          <li><a href="https://refactoring.com/catalog/inlineMethod.html">Inline Method</a></li>
+          <li><a href="https://refactoring.com/catalog/removeDoubleNegative.html">Remove Double Negative</a></li>
+          <li><a href="https://refactoring.com/catalog/replaceMagicNumberWithSymbolicConstant.html">Replace Magic Number with Symbolic Constant</a></li>
+          <li><a href="https://refactoring.com/catalog/replaceNestedConditionalWithGuardClauses.html">Replace Nested Conditional with Guard Clauses</a></li>
+          <li><a href="https://refactoring.com/catalog/replaceParameterWithExplicitMethods.html">Replace Parameter with Explicit Methods</a></li>
+          <li><a href="https://refactoring.com/catalog/reverseConditional.html">Reverse Conditional</a></li>
+          <li><a href="https://refactoring.com/catalog/splitLoop.html">Split Loop</a></li>
+          <li><a href="https://refactoring.com/catalog/splitTemporaryVariable.html">Split Temporary Variable</a></li>
+        </ol>
+        <tip-box type="info">
+          <p>Tip: Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
+        </tip-box>
+        <tip-box type="important">
+          <p>Important: Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.</p>
+        </tip-box>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="when-three">When <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can decide when to apply a given refactoring <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>Whether a refactoring improves the code or degrades it depends on the situation. That is why some refactorings are ‘opposites’ of each other (e.g. <em>extract method vs inline method</em>).</p>
+        <p>It is important to refactor frequently so as to avoid the accumulation of ‘messy’ code which might get out of control.</p>
+        <p>How much refactoring is too much refactoring? It is too much refactoring when the benefits no longer justify the cost. The costs and the benefits depend on the context.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\markbind\js\vue.min.js"></script>
+<script src="..\markbind\js\vue-strap.min.js"></script>
+<script src="..\markbind\js\setup.js"></script>
+</html>

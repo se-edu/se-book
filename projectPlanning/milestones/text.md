@@ -31,4 +31,7 @@ Milestones for the Minesweeper project, iteration 1
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

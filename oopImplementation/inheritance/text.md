@@ -12,12 +12,15 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oop/inheritance/topicPanel.md" header="OOP: Inheritance" is-open></dynamic-panel>
+<dynamic-panel src="../../oopDesign/inheritance/index.md" header="OOP: Inheritance" is-open></dynamic-panel>
 
 <p/>
 
 [Oracle’s Java Tutorials: Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)
 
 </div>
+
+<div id="extras">
+<div>
 
 </div>

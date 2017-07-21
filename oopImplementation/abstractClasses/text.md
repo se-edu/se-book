@@ -12,12 +12,15 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oop/inheritance/abstractClasses/topicPanel.md" header="OOP: Inheritance: Abstract Classes" is-open></dynamic-panel>
+<dynamic-panel src="../../oopDesign/inheritance/abstractClasses/embed.md" header="OOP: Inheritance: Abstract Classes" is-open></dynamic-panel>
 
 <p/>
 
 [Oracle’s Java Tutorials: Abstract Methods and Classes](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)
 
 </div>
+
+<div id="extras">
+<div>
 
 </div>

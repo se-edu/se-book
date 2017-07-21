@@ -5,7 +5,7 @@ If you installed SourceTree, you can click the `Terminal` button to open a GitBa
 <img src="{{baseUrl}}/gitAndGithub/init/images/cli_1.png" height="100" />
 <p/>
 
-Navigate to the `things` folder.
+Navigate to the `things` directory.
 
 Use the command `git init` which should initialize the repo.
 

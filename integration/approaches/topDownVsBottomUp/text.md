@@ -21,15 +21,11 @@ For incremental integration efforts, the following three incremental integration
 *	_Bottom-up_ integration: This is the reverse of top-down integration. Advantages and disadvantages are simply the reverse of those of the top-down approach.
 *	_Sandwich_ integration: This is a mix of the top-down and the bottom-up approaches. The idea is to do both top-down and bottom-up so as to “meet up” in the middle.
 
-<!-- extras ------------------------------------------------------------------------------------ -->
+</div>
 
-<panel header=":paperclip: Extras" expandable type="seamless" expanded>
+<div id="extras">
 
-  <panel header=":mortar_board: Learning Outcomes" expandable type="seamless">
-    <include src="exercises.md" />
-  </panel>
-
-</panel>
+<include src="exercises.md" />
 
 </div>
 

@@ -44,7 +44,9 @@ public class Foo{
 
 </tip-box>
 
-
 </div>
+
+<div id="extras">
+<div>
 
 </div>

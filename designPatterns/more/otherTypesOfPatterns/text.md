@@ -27,15 +27,11 @@ In fact, the abstraction occurrence pattern is more of an analysis pattern than 
 
 New patterns can be created too. If a common problem needs to be solved frequently that leads to a non-obvious and better solution, it can be formulated as a pattern so that it can be reused by others. However, don’t reinvent the wheel; the pattern might already exist.
 
-<!-- extras ------------------------------------------------------------------------------------ -->
+</div>
 
-<panel header=":paperclip: Extras" expandable type="seamless" expanded>
+<div id="extras">
 
-  <panel header=":mortar_board: Learning Outcomes" expandable type="seamless">
-    <include src="exercises.md" />
-  </panel>
-
-</panel>
+<include src="exercises.md" />
 
 </div>
 

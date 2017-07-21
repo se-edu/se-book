@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T Textbook - Code Quality [Printable]</title>
+    <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\markbind\css\github.min.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <div id="main">
+    <h1 id="code-quality">Code Quality</h1>
+    <h2 id="introduction">Introduction</h2>
+    <div>
+      <div>
+        <h4 id="basic-one">Basic <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain the importance of code quality <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <blockquote>
+          <p>Always code as if the person who ends up maintaining your code will be a violent psychopath who knows where you live.</p>
+          <p>-- Martin Golding</p>
+        </blockquote>
+        <p>{Explain why code quality is important}</p>
+      </div>
+    </div>
+    <h2 id="guideline-maximise-readability">Guideline: Maximise Readability</h2>
+    <div>
+      <div>
+        <h4 id="introduction-one">Introduction <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain the importance of readability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>Among various dimensions of code quality, such as run-time efficiency, security, and robustness, one of the most important is understandability. This is because in any non-trivial team project, team members expect their code to be read, understood,
+          and modified by other developers later on. Here we interpret ‘good quality code’ primarily as code that is easy for developers to work with.</p>
+        <p>The two code samples given below achieve the same functionality, but one is easier to read.</p>
+        <p>{give more versions of the code, ask to find bug}</p>
+        <tip-box>
+          <p>Example:</p>
+          <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> subsidy;
+    <span class="hljs-keyword">if</span> (!age) {
+        <span class="hljs-keyword">if</span> (!sub) {
+            <span class="hljs-keyword">if</span> (!notFullTime) {
+                subsidy = <span class="hljs-number">500</span>;
+            } <span class="hljs-keyword">else</span> {
+                subsidy = <span class="hljs-number">250</span>;
+            }
+        } <span class="hljs-keyword">else</span> {
+            subsidy = <span class="hljs-number">250</span>;
+        }
+    } <span class="hljs-keyword">else</span> {
+        subsidy = -<span class="hljs-number">1</span>;
+    }
+    <span class="hljs-keyword">return</span> subsidy;
+}
+</code></pre>
+          <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> subsidy;
+    <span class="hljs-keyword">if</span> (isSenior) {
+        subsidy = REJECT_SENIOR;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {
+        subsidy = SUBSIDISED_SUBSIDY;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {
+        subsidy = FULLTIME_SUBSIDY * RATIO;
+    } <span class="hljs-keyword">else</span> {
+        subsidy = FULLTIME_SUBSIDY;
+    }
+    <span class="hljs-keyword">return</span> subsidy;
+}
+</code></pre>
+          <p>Code comparison: same function, different quality</p>
+        </tip-box>
+        <blockquote>
+          <p>The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague.</p>
+          <p>-- Edsger Dijkstra</p>
+        </blockquote>
+        <p>Even if we do not intend to pass the code to someone else, code quality is still important because we all become 'strangers' to our own code someday.</p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="basic-one-2">Basic <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can follow basic guidelines for improving readability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <panel header="**Avoid Long Methods**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>Be wary when a method is longer than the computer screen, and take corrective action when it goes beyond 30 LOC (lines of code). The bigger the haystack, the harder it is to find a needle.</p>
+            </div>
+          </div>
+        </panel>
+        <panel header="**Avoid Deep Nesting**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>According to the Linux 1.3.53 CodingStyle documentation, <em>&quot;if you need more than 3 levels of indentation, you're screwed anyway, and should fix your program&quot;.</em></p>
+              <p>In particular, avoid <em>arrowhead</em> style code.</p>
+              <tip-box>
+                <p>Example:</p><img src="/se-book/codeQuality/practices/avoidDeepNesting/images/arrowheadStyle.png" height="250">
+                <p></p>
+              </tip-box>
+            </div>
+          </div>
+        </panel>
+        <panel header="**Avoid Complicated Expressions**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate the
+                final value).</p>
+            </div>
+          </div>
+        </panel>
+        <panel header="**Avoid Magic Numbers**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>When the code has a number that does not explain the meaning of the number, we call that a magic number (as in “the number appears as if by magic”).</p>
+              <tip-box>
+                <p>Example:</p>
+                <table class="markbind-table table">
+                  <thead>
+                    <tr>
+                      <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
+                      <th><img src="/se-book/images/Good.png" alt="" title="Good"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>return 3.14236;</code></td>
+                      <td><code>return 9</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>return PI</code></td>
+                      <td><code>MAX_SIZE-1</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </tip-box>
+              <p>As you can see, using a named constant makes the code easier to understand because the name tells us more about the meaning of the number. Similarly, we can have ‘magic’ values of other data types.</p>
+              <tip-box>
+                <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                <pre><code class="hljs java"><span class="hljs-keyword">return</span> “Error <span class="hljs-number">1432</span>”;  <span class="hljs-comment">// A magic string!</span>
+</code></pre>
+              </tip-box>
+            </div>
+          </div>
+        </panel>
+        <panel header="**Make the Code Obvious**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>Make the code as explicit as possible, even if the language syntax allows them to be implicit. Here are some examples:</p>
+              <ul>
+                <li>Use explicit type conversion instead of implicit type conversion.</li>
+                <li>Use parentheses/braces to show grouping even when they can be skipped.</li>
+                <li>Use enumerations when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0,1,2 to denote the states 'starting', 'enabled', and 'disabled'
+                  respectively, declare 'state' as type <code>SystemState</code> and define an enumeration <code>SystemState</code> that has values <code>'STARTING'</code>, <code>'ENABLED'</code>, and <code>'DISABLED'</code>.</li>
+                <li>When statements should follow a particular order, try to make it obvious (with appropriate naming, or at least comments). For example, if you name two functions <code>'taskA()'</code> and <code>'taskB()'</code>, it is not obvious which
+                  one should be called first. Contrast this with naming the functions <code>'phaseOne()'</code> and <code>'phaseTwo()'</code> instead. This is especially important when statements in one function must be called before the other one.</li>
+              </ul>
+            </div>
+          </div>
+        </panel>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="intermediate-two">Intermediate <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can follow intermediate guidelines for improving readability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <panel header="**Structure Code Logically**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>Lay out the code so that it adheres to the logical structure. The code should read like a story. Just like we use section breaks, chapters and paragraphs to organize a story, use classes, methods, indentation and line spacing in your code
+                to group related segments of the code. For example, you can use blank lines to group related statements together. Sometimes, the correctness of your code does not depend on the order in which you perform certain intermediary steps. Nevertheless,
+                this order may affect the clarity of the story you are trying to tell. Choose the order that makes the story most readable.</p>
+            </div>
+          </div>
+        </panel>
+        <panel header="**Do not 'Trip Up' the Reader**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>Avoid things that would make the reader go ‘huh?’, such as,</p>
+              <ul>
+                <li>unused parameters in the method signature</li>
+                <li>similar things look different</li>
+                <li>different things that look similar</li>
+                <li>multiple statements in the same line</li>
+                <li>data flow anomalies such as, pre-assigning values to variables and modifying it without any use of the pre-assigned value</li>
+              </ul>
+            </div>
+          </div>
+        </panel>
+        <panel header="**Practice KISSing**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>As the old adage goes, &quot;keep it simple, stupid” (KISS). Do not try to write ‘clever’ code. For example, do not dismiss the brute-force yet simple solution in favor of a complicated one because of some ‘supposed benefits’ such as faster
+                performance or better reuse unless you have a strong justification.</p>
+              <blockquote>
+                <p>Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.</p>
+                <p>--Brian W. Kernighan</p>
+              </blockquote>
+              <blockquote>
+                <p>Programs must be written for people to read, and only incidentally for machines to execute.</p>
+                <p>--Abelson and Sussman</p>
+              </blockquote>
+              <blockquote>
+                <p>Premature optimization is the root of all evil in programming.</p>
+                <p>--<a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a></p>
+              </blockquote>
+            </div>
+          </div>
+        </panel>
+        <panel header="**SLAP Hard**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>Avoid varying the level of abstraction within a code fragment. Note: The <em>Productive Programmer</em> (by Neal Ford) calls this the <em>SLAP principle</em> i.e. Single Level of Abstraction Per method.</p>
+              <tip-box>
+                <p>Example:</p>
+                <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                <pre><code class="hljs java">readData();
+salary = basic*rise+<span class="hljs-number">1000</span>;
+tax = (taxable?salary*<span class="hljs-number">0.07</span>:<span class="hljs-number">0</span>);
+displayResult();
+</code></pre>
+                <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                <pre><code class="hljs java">readData();
+processData();
+displayResult();
+</code></pre>
+              </tip-box>
+              <tip-box type="primary">
+                <div>
+                  <p><strong>Abstraction</strong>:</p>
+                  <p>Most programs are written to solve complex problems involving large amounts of intricate details. It is impossible to deal with all these details at the same time. The guiding principle of abstraction stipulates that we capture only
+                    details that are relevant to the current perspective or the task at hand. For example, within a certain software component, we might deal with a ‘user’ data type, while ignoring the details contained in the user data item. These details
+                    have been ‘abstracted away’ as they do not affect the task of that software component. This is called <em>data abstraction</em>. On the other hand, <em>control abstraction</em> abstracts away details of the actual control flow to focus
+                    on tasks at a simplified level. For example, <code>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p>
+                  <p>Abstraction can be applied repeatedly to obtain higher and <em>higher levels of abstractions</em>. For example, a <code>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a bit.
+                    Similarly, <code>execute(Game)</code> is at a higher level than <code>print(Char)</code> which is at a higher than an Assembly language instruction <code>MOV</code>.</p>
+                </div>
+              </tip-box>
+            </div>
+          </div>
+        </panel>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="advanced-three">Advanced <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can follow advanced guidelines for improving readability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <panel header="**Make the Happy Path Prominent**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unintended. It is the ‘unusual’ cases that should be indented. Someone reading
+                the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
+              <tip-box>
+                <p>Example:</p>
+                <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                <pre><code class="hljs java"><span class="hljs-keyword">if</span> (!isUnusualCase) {
+    <span class="hljs-keyword">if</span> (!isErrorCase) {
+        start();
+        process();
+        cleanup();
+        exit();
+    } <span class="hljs-keyword">else</span> {
+        handleError();
+    }
+} <span class="hljs-keyword">else</span> {
+    handleUnusualCase();
+}
+</code></pre>
+                <ul>
+                  <li>Alternative conditions are separated from their handling.</li>
+                  <li>Main path is nested deeply.</li>
+                </ul>
+                <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isUnusualCase) { <span class="hljs-comment">//Guard Clause</span>
+    handleUnusualCase();
+    <span class="hljs-keyword">return</span>;
+}
+
+<span class="hljs-keyword">if</span> (isErrorCase) { <span class="hljs-comment">//Guard Clause</span>
+    handleError();
+    <span class="hljs-keyword">return</span>;
+}
+
+start();
+process();
+cleanup();
+exit();
+</code></pre>
+                <ul>
+                  <li>Alternative paths dealt with first so that the reader doesn't have to remember them for long.</li>
+                  <li>The main path is un-indented.</li>
+                </ul>
+              </tip-box>
+            </div>
+          </div>
+        </panel>
+      </div>
+    </div>
+    <h2 id="guideline-follow-a-standard">Guideline: Follow a Standard</h2>
+    <div>
+      <div>
+        <h4 id="introduction-one-2">Introduction <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain the need for following a standard <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>A coding standard is usually specific to a programming language and specifies guidelines such as the location of opening and closing braces, indentation styles and naming styles (e.g. whether to use Hungarian style, Pascal casing, Camel casing,
+          etc.). It is important that the whole team/company use the same coding standard and that standard is commonly used in the industry. Doing so will make it easier for others to work with your code, be they members from the same team or transferred
+          from another team/company. IDEs can help to enforce some parts of a coding standard e.g. indentation rules.</p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="basic-one-3">Basic <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can follow simple mechanical style rules <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>{Some simple style rules for Java}</p>
+        <panel header="Basic Indentation" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p><strong>Basic indentation should be 4 spaces (not tabs).</strong></p>
+              <pre><code class="hljs java"><span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; nElements; i++) {
+    a[i] = <span class="hljs-number">0</span>;
+}
+</code></pre>
+            </div>
+          </div>
+        </panel>
+        <panel header="Line Length" type="seamless" alt="line length">
+          <div>
+            <div>
+              <p><strong>Lines should be no longer than 110 (soft limit) - 120 chars (hard limit).</strong></p>
+              <p>Place the line breaks to improve readability. It is ok to exceed 110 char limit for a line, but not by too much. You can configure Eclipse to break lines after 110 chars, but sometimes the automatic line break does not give readability.
+                In such cases, you can decide where to put the line break to have best readability.</p>
+            </div>
+          </div>
+        </panel>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="intermediate-two-2">Intermediate <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can follow intermediate style rules <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>{Some intermediate style rules for Java}</p>
+      </div>
+    </div>
+    <h2 id="guideline-name-well">Guideline: Name Well</h2>
+    <div>
+      <div>
+        <h4 id="introduction-one-3">Introduction <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain the need for good names in code <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>Proper naming improves the readability. It also reduces bugs caused by ambiguities regarding the intent of a variable or method.</p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="basic-one-4">Basic <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can follow basic guidelines for naming <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <panel header="**Use Nouns for Things and Verbs for Actions**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p><strong>Use nouns for classes/variables and verbs for methods/functions.</strong></p>
+              <p>Use nouns for classes/variables and verbs for methods. For example, <code>LimitChecker</code> is a better choice for a class name than <code>CheckLimit</code></p>
+              <p>Distinguish clearly between single valued and multivalued variables (e.g. <code>Person</code> student, <code>ArrayList&lt;Person&gt;</code> students).</p>
+              <tip-box>
+                <p>Example:</p>
+                <table class="markbind-table table">
+                  <thead>
+                    <tr>
+                      <th>Name for a</th>
+                      <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
+                      <th><img src="/se-book/images/Good.png" alt="" title="Good"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Class</td>
+                      <td><code>CheckLimit</code></td>
+                      <td><code>LimitChecker</code></td>
+                    </tr>
+                    <tr>
+                      <td>method</td>
+                      <td><code>result()</code></td>
+                      <td><code>calculate()</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </tip-box>
+            </div>
+          </div>
+        </panel>
+        <panel header="**Use Standard Words**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>Use correct spelling in names. Avoid 'texting-style' spelling. Avoid foreign language words, slang, and names that are only meaningful within specific contexts such as private jokes.</p>
+            </div>
+          </div>
+        </panel>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="intermediate-two-3">Intermediate <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can follow intermediate guidelines for naming <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <panel header="**Use Name to Explain**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>A name is not just for differentiation; it should explain the named entity to the reader in an accurately and at a sufficient level of detail.</p>
+              <p>For example, <code>processStuff()</code> is a bad choice for a method; what 'stuff' and what 'process'?. On the other hand, <code>removeWhiteSpaceFromInput()</code> is a better choice. Other bad examples include <code>flag</code>, <code>temp</code>,
+                <code>i</code> (unless used as a conventional control variable for a loop).</p>
+              <p>If the name has multiple words, they should be in a sensible order.</p>
+              <p>Imagine going to the doctor's and saying &quot;My eye1 is swollen&quot;! Don’t use numbers or case to distinguish names (<code>value1</code> vs <code>value2</code>, <code>Value</code> vs <code>value</code>) unless there is a strong justification.</p>
+              <tip-box>
+                <p>Example:</p>
+                <table class="markbind-table table">
+                  <thead>
+                    <tr>
+                      <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
+                      <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
+                      <th><img src="/se-book/images/Good.png" alt="" title="Good"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>value1</code>, <code>value2</code></td>
+                      <td><code>value</code>, <code>Value</code></td>
+                      <td><code>originalValue</code>, <code>finalValue</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </tip-box>
+            </div>
+          </div>
+        </panel>
+        <panel header="**Not Too Long, Not Too Short**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>While it is preferable not to have lengthy names, names that are 'too short' are even worse. If you must abbreviate or use acronyms, do it consistently. Explain their full meaning at an obvious location.</p>
+            </div>
+          </div>
+        </panel>
+        <panel header="**Avoid Misleading Names**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>Related things should be named similarly, while unrelated things should NOT.</p>
+              <p>Avoid misleading names (e.g. those with multiple meanings), similar sounding names, hard to read ones (e.g. avoid ambiguities like &quot;is that a lowercase L, capital I or number 1?&quot;, or &quot;is that number 0 or letter O?&quot;),
+                almost similar names.</p>
+            </div>
+          </div>
+        </panel>
+      </div>
+    </div>
+    <h2 id="guideline-avoid-unsafe-shortcuts">Guideline: Avoid Unsafe Shortcuts</h2>
+    <div>
+      <div>
+        <h4 id="introduction-one-4">Introduction <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain the need for avoiding error-prone shortcuts <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>It is safer to use language constructs in the way they are meant to be used, even if the language allows shortcuts. Some such coding practices are common sources of bugs. Know them and avoid them.</p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="basic-one-5">Basic <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can follow basic guidelines for avoiding unsafe shortcuts <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <panel header="**Use the Default Branch**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>Always include a default branch in case statements.</p>
+              <p>Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the 'default' branch to detect errors (i.e. if execution reached the 'default' branch, throw an exception).
+                This also applies to the final 'else' of an if-else construct. That is, the final 'else' should mean 'everything else', and not the final option. Do not use 'else' when an 'if' condition can be explicitly specified, unless there is absolutely
+                no other possibility.</p>
+              <tip-box>
+                <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                <pre><code class="hljs java"><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;
+<span class="hljs-keyword">else</span> print <span class="hljs-string">"blue"</span>;
+</code></pre>
+                <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                <pre><code class="hljs java"><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;
+<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (blue) print <span class="hljs-string">"blue"</span>;
+<span class="hljs-keyword">else</span> error(<span class="hljs-string">"incorrect input"</span>);
+</code></pre>
+              </tip-box>
+            </div>
+          </div>
+        </panel>
+        <panel header="**Don't Recycle Variables or Parameters**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <ul>
+                <li>Use one variable for one purpose. Do not reuse a variable for a different purpose other than its intended one, just because the data type is the same.</li>
+                <li>Do not reuse formal parameters as local variables inside the method.</li>
+              </ul>
+              <tip-box>
+                <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{
+    length = length * width;
+    <span class="hljs-keyword">return</span> length;
+}
+
+</code></pre>
+                <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{
+    <span class="hljs-keyword">double</span> area;
+    area = length * width;
+    <span class="hljs-keyword">return</span> area;
+}
+</code></pre>
+              </tip-box>
+            </div>
+          </div>
+        </panel>
+        <panel header="**Avoid Empty Catch Blocks**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>Never write an empty 'catch' statement.</p>
+            </div>
+          </div>
+        </panel>
+        <panel header="**Delete Dead Code**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>We all feel reluctant to delete code we have painstakingly written, even if we have no use for that code any more (&quot;I spent a lot of time writing that code; what if we need it again?&quot;). Consider all code as baggage you have to
+                carry; get rid of unused code the moment it becomes redundant. If you need that code again, simply recover it from the revision control tool you are using. Deleting code you wrote previously is a sign that you are improving.</p>
+            </div>
+          </div>
+        </panel>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="intermediate-two-4">Intermediate <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can follow intermediate guidelines for avoiding unsafe shortcuts <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <panel header="**Minimise Scope of Variables**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>Global variables may be the most convenient way to pass information around, but they do create implicit links between code segments that use the global variable. Avoid them as much as possible.</p>
+            </div>
+          </div>
+        </panel>
+        <panel header="**Prefer Stateless Methods**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>{to be added}</p>
+            </div>
+          </div>
+        </panel>
+        <panel header="**Minimise Code Duplication**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>The book &quot;<a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X">The Pragmatic Programmer</a>&quot; calls this the DRY (Don't Repeat Yourself) principle. Code duplication, especially when you copy-paste-modify
+                code, often indicates a poor quality implementation. While it may not be possible to have zero duplication, always think twice before duplicating code; most often there is a better alternative.</p>
+              <blockquote>
+                <p>Programs should be written and polished until they acquire publication quality.</p>
+                <p>--<a href="https://en.wikipedia.org/wiki/Niklaus_Wirth">Niklaus Wirth</a></p>
+              </blockquote>
+            </div>
+          </div>
+        </panel>
+        <panel header="**Delete Temporary Code**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>We all get into situations where we need to write some code momentarily that we intend to dispose of replace with better code later. Such code should be marked in some obvious way (e.g. using an embarrassing print message) so that you will
+                not forget to remove them later. It is irresponsible to retain such code in a product release.</p>
+            </div>
+          </div>
+        </panel>
+      </div>
+    </div>
+    <h2 id="guideline-comment-minimally-but-sufficiently">Guideline: Comment Minimally, But Sufficiently</h2>
+    <div>
+      <div>
+        <h4 id="introduction-one-5">Introduction <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can explain the need for commenting minimally but sufficiently <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <blockquote>
+          <p>Good code is its own best documentation. As you’re about to add a comment, ask yourself, ‘How can I improve the code so that this comment isn’t needed?’ Improve the code and then document it to make it even clearer.</p>
+          <p>--<a href="https://en.wikipedia.org/wiki/Steve_McConnell">Steve McConnell</a></p>
+        </blockquote>
+        <p>Some think commenting heavily increases the 'code quality'. This is not so. Avoid writing comments to explain bad code. Improve the code to make it self-explanatory.</p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="basic-one-6">Basic <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can follow basic guidelines for writing code comments <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <panel header="**Do Not Repeat the Obvious**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>If the parameter name clearly indicates its purpose, refrain from repeating the description in a comment just for the sake of 'good documentation'.</p>
+            </div>
+          </div>
+        </panel>
+        <panel header="**Write to the Reader**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>Do not write comments as if they are private notes to self. Instead, write them well enough to be understood by another programmer. One type of comments that is almost always useful is the <em>header comment</em> that you write for a file,
+                class, or an operation to explain its purpose.</p>
+            </div>
+          </div>
+        </panel>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h4 id="intermediate-two-5">Intermediate <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box type="success">
+        <div>
+          <p>🏆 Can follow intermediate guidelines for writing code comments <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <panel header="**Explain WHAT and WHY, not HOW**" type="seamless" alt="indentation">
+          <div>
+            <div>
+              <p>When you write comments, use them to explain <em>why</em> and <em>what</em> aspect of the code, rather than the <em>how</em> aspect. The former is usually not apparent in the code and writing it down adds value to the code. The latter should
+                already be apparent from the code.</p>
+            </div>
+          </div>
+        </panel>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\markbind\js\vue.min.js"></script>
+<script src="..\markbind\js\vue-strap.min.js"></script>
+<script src="..\markbind\js\setup.js"></script>
+</html>

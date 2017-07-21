@@ -32,4 +32,7 @@ This principle can be applied at the class level, as well as on higher levels. F
 
 </div>
 
+<div id="extras">
+<div>
+
 </div>

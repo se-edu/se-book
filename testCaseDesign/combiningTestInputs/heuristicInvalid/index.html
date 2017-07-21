@@ -12,120 +12,130 @@
 <div id="app" class="container-fluid">
     <link rel="stylesheet" href="/se-book/css/textbook.css">
 <div class="website-content">
-  <p><span class="dimmed"><strong><span>Test Case Design ➡️ Combining Test Inputs ➡️</span></strong>
-    </span>
-  </p>
   <div>
-    <h4 id="heuristic-no-more-than-one-invalid-input-in-a-test-case-two">Heuristic: No More Than One Invalid Input In A Test Case <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-  </div>
-  <tip-box type="success">
+    <panel header="%%Prerequisites%%" expandable="" expanded="">
+      <div></div>
+    </panel>
+    <p></p>
+    <tip-box type="success">
+      <div>
+        <p>🏆 Can apply heuristic ‘no more than one invalid input in a test case’ <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+      </div>
+    </tip-box>
+    <p><span class="dimmed"><strong><span>Quality Assurance ➡️ Test Case Design ➡️
+</span></strong>
+      </span>
+    </p>
     <div>
-      <p>🏆 Can apply heuristic ‘no more than one invalid input in a test case’ <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+      <h4 id="heuristic-no-more-than-one-invalid-input-in-a-test-case-two">Heuristic: No More Than One Invalid Input In A Test Case <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
     </div>
-  </tip-box>
-  <div id="main">
-    <div>
-      <p>Consider the test cases designed in
-        <trigger for="modal:heuristic-valid-test-case" trigger="click">Heuristic: each valid input at least once in a positive test case</trigger>.</p>
-      <modal title="**Heuristic: each valid input at least once in a positive test case**" id="modal:heuristic-valid-test-case">
-        <div>
-          <table class="markbind-table table">
-            <thead>
-              <tr>
-                <th style="text-align:center">Case</th>
-                <th style="text-align:center">fruitName</th>
-                <th style="text-align:center">unitPrice</th>
-                <th style="text-align:center">Expected</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="text-align:center">1</td>
-                <td style="text-align:center">Apple</td>
-                <td style="text-align:center">1</td>
-                <td style="text-align:center">Print round label</td>
-              </tr>
-              <tr>
-                <td style="text-align:center">2</td>
-                <td style="text-align:center">Banana</td>
-                <td style="text-align:center">20</td>
-                <td style="text-align:center">Print oval label</td>
-              </tr>
-              <tr>
-                <td style="text-align:center">2.1</td>
-                <td style="text-align:center">Cherry</td>
-                <td style="text-align:center">VV/IV</td>
-                <td style="text-align:center">Print square label</td>
-              </tr>
-              <tr>
-                <td style="text-align:center">3</td>
-                <td style="text-align:center">VV</td>
-                <td style="text-align:center">0</td>
-                <td style="text-align:center">Error message “invalid price”</td>
-              </tr>
-              <tr>
-                <td style="text-align:center">4</td>
-                <td style="text-align:center">Dog</td>
-                <td style="text-align:center">-1</td>
-                <td style="text-align:center">Error message “invalid fruit&quot;</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
-        </div>
-      </modal>
-      <p>After running these test cases can we be sure that the error message “invalid price” is shown for negative prices? Answer: No. Reason: <code>-1</code> -- the only input that is a negative price – is in a test case that produces the error message
-        “invalid fruit”.</p>
-      <p>In this case a useful heuristic to apply is ‘no more than one invalid input in a test case’. After applying that, we get the following test cases.</p>
-      <table class="markbind-table table">
-        <thead>
-          <tr>
-            <th style="text-align:center">Case</th>
-            <th style="text-align:center">fruitName</th>
-            <th style="text-align:center">unitPrice</th>
-            <th style="text-align:center">Expected</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">Apple</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">Print round label</td>
-          </tr>
-          <tr>
-            <td style="text-align:center">2</td>
-            <td style="text-align:center">Banana</td>
-            <td style="text-align:center">20</td>
-            <td style="text-align:center">Print oval label</td>
-          </tr>
-          <tr>
-            <td style="text-align:center">2.1</td>
-            <td style="text-align:center">Cherry</td>
-            <td style="text-align:center">VV/IV</td>
-            <td style="text-align:center">Print square label</td>
-          </tr>
-          <tr>
-            <td style="text-align:center">3</td>
-            <td style="text-align:center">VV</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">Error message “invalid price”</td>
-          </tr>
-          <tr>
-            <td style="text-align:center">4</td>
-            <td style="text-align:center">VV</td>
-            <td style="text-align:center">-1</td>
-            <td style="text-align:center">Error message “invalid price&quot;</td>
-          </tr>
-          <tr>
-            <td style="text-align:center">4.1</td>
-            <td style="text-align:center">Dog</td>
-            <td style="text-align:center">VV</td>
-            <td style="text-align:center">Error message “invalid fruit&quot;</td>
-          </tr>
-        </tbody>
-      </table>
-      <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
+    <div id="main">
+      <div>
+        <p>Consider the test cases designed in
+          <trigger for="modal:heuristic-valid-test-case" trigger="click">Heuristic: each valid input at least once in a positive test case</trigger>.</p>
+        <modal title="**Heuristic: each valid input at least once in a positive test case**" id="modal:heuristic-valid-test-case">
+          <div>
+            <table class="markbind-table table">
+              <thead>
+                <tr>
+                  <th style="text-align:center">Case</th>
+                  <th style="text-align:center">fruitName</th>
+                  <th style="text-align:center">unitPrice</th>
+                  <th style="text-align:center">Expected</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align:center">1</td>
+                  <td style="text-align:center">Apple</td>
+                  <td style="text-align:center">1</td>
+                  <td style="text-align:center">Print round label</td>
+                </tr>
+                <tr>
+                  <td style="text-align:center">2</td>
+                  <td style="text-align:center">Banana</td>
+                  <td style="text-align:center">20</td>
+                  <td style="text-align:center">Print oval label</td>
+                </tr>
+                <tr>
+                  <td style="text-align:center">2.1</td>
+                  <td style="text-align:center">Cherry</td>
+                  <td style="text-align:center">VV/IV</td>
+                  <td style="text-align:center">Print square label</td>
+                </tr>
+                <tr>
+                  <td style="text-align:center">3</td>
+                  <td style="text-align:center">VV</td>
+                  <td style="text-align:center">0</td>
+                  <td style="text-align:center">Error message “invalid price”</td>
+                </tr>
+                <tr>
+                  <td style="text-align:center">4</td>
+                  <td style="text-align:center">Dog</td>
+                  <td style="text-align:center">-1</td>
+                  <td style="text-align:center">Error message “invalid fruit&quot;</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
+          </div>
+        </modal>
+        <p>After running these test cases can we be sure that the error message “invalid price” is shown for negative prices? Answer: No. Reason: <code>-1</code> -- the only input that is a negative price – is in a test case that produces the error message
+          “invalid fruit”.</p>
+        <p>In this case a useful heuristic to apply is ‘no more than one invalid input in a test case’. After applying that, we get the following test cases.</p>
+        <table class="markbind-table table">
+          <thead>
+            <tr>
+              <th style="text-align:center">Case</th>
+              <th style="text-align:center">fruitName</th>
+              <th style="text-align:center">unitPrice</th>
+              <th style="text-align:center">Expected</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:center">1</td>
+              <td style="text-align:center">Apple</td>
+              <td style="text-align:center">1</td>
+              <td style="text-align:center">Print round label</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">2</td>
+              <td style="text-align:center">Banana</td>
+              <td style="text-align:center">20</td>
+              <td style="text-align:center">Print oval label</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">2.1</td>
+              <td style="text-align:center">Cherry</td>
+              <td style="text-align:center">VV/IV</td>
+              <td style="text-align:center">Print square label</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">3</td>
+              <td style="text-align:center">VV</td>
+              <td style="text-align:center">0</td>
+              <td style="text-align:center">Error message “invalid price”</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">4</td>
+              <td style="text-align:center">VV</td>
+              <td style="text-align:center">-1</td>
+              <td style="text-align:center">Error message “invalid price&quot;</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">4.1</td>
+              <td style="text-align:center">Dog</td>
+              <td style="text-align:center">VV</td>
+              <td style="text-align:center">Error message “invalid fruit&quot;</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
+      </div>
+      <div>
+        <div></div>
+      </div>
     </div>
   </div>
 </div>
