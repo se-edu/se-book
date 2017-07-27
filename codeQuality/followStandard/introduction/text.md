@@ -17,6 +17,9 @@ A coding standard is usually specific to a programming language and specifies gu
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

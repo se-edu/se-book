@@ -109,6 +109,9 @@ The high level tasks structure can be further refined into subtasks.
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

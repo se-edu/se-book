@@ -1,4 +1,4 @@
-<panel header="Q: Explain the link (if any) between regression and coupling.">
+<panel header=":lock::key: Explain the link (if any) between regression and coupling.">
 <question has-input="true">
 
 Explain the link (if any) between regression and coupling.

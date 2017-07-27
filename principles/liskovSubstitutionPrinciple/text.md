@@ -44,6 +44,9 @@ In the above scenario,
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

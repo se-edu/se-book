@@ -1,1 +1,1 @@
-:trophy: Can explain iterative models :one:
+:trophy: Can explain iterative process models :one:

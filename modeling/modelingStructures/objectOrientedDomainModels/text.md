@@ -41,6 +41,9 @@ The above OO domain model omits the ladder class for simplicity. It can be inclu
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

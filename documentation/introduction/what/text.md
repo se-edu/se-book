@@ -21,6 +21,9 @@ Developer-to-developer documentation can be in one of two forms:
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

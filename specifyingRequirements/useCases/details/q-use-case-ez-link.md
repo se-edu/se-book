@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
-<panel header="Q: EZ-Link top-up use case :two:">
+<panel header=":lock::key: EZ-Link top-up use case :two:">
 <question has-input="true">
 
 Complete the following use case (MSS, extensions, etc.). Note that you should not blindly follow how the existing EZ-Link machine operates since it will prevent you from designing a better system.  You should consider all possible extensions without complicating the use case too much.

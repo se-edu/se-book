@@ -50,6 +50,9 @@ The _visibility_ of attributes and operations is used to indicate the level of a
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 </div>
 
 </div>

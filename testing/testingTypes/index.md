@@ -14,6 +14,7 @@ Testing can be categorized based on the level of testing, the objective of testi
 <include src="./integrationTesting/topicPanel.md" />
 <include src="./systemTesting/topicPanel.md" />
 <include src="./alphaBetaTesting/topicPanel.md" />
+<include src="./dogfooding/topicPanel.md" />
 <include src="./developerTesting/topicPanel.md" />
 <include src="./exploratoryVsScriptedTesting/topicPanel.md" />
 <include src="./acceptanceTesting/topicPanel.md" />

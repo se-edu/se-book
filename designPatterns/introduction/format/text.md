@@ -24,6 +24,9 @@ The common format to describe a pattern consists of the following components:
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

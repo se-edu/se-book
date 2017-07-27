@@ -1,1 +1,1 @@
-:trophy: Can explain law of demeter :three:
+:trophy: Can explain the Law of Demeter :three:

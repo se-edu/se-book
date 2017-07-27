@@ -1,4 +1,4 @@
-<panel header="Q: Explain the Law of Demeter using code examples.">
+<panel header=":lock::key: Explain the Law of Demeter using code examples.">
 <question has-input="true">
 
 Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.

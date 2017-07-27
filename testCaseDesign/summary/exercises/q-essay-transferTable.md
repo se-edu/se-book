@@ -1,4 +1,4 @@
-<panel header="Q: transferTable :three:">
+<panel header=":lock::key: transferTable :three:">
 <question has-input="true">
 
 Given below is an operation description taken from a restaurant booking system. Use equivalence partitions and boundary value analysis technique to design a set of test cases for it.

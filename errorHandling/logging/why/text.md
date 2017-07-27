@@ -19,6 +19,9 @@ A good logging system records some system information regularly. When bad things
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

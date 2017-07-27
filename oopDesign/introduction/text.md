@@ -38,6 +38,9 @@ Object Oriented Programming is a widely used programming paradigm. Here is an in
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

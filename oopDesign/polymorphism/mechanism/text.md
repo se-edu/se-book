@@ -21,6 +21,9 @@ There are three issues that are at the center of how polymorphism is achieved: _
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

@@ -1,4 +1,4 @@
-<panel header="Q: Is the code given below a defensive translation of the associations shown in the class diagram?">
+<panel header=":lock::key: Is the code given below a defensive translation of the associations shown in the class diagram?">
 <question has-input="true">
 
 (a) Is the code given below a defensive translation of the associations shown in the class diagram? Explain your answer.
@@ -6,7 +6,7 @@
 ```java
 class Teacher{
     private Student favStudent;
-    
+
     void setFavStudent(Student s){
         favStudent = s;
     }

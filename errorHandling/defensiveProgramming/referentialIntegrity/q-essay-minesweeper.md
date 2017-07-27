@@ -1,4 +1,4 @@
-<panel header="Q: Implement the Player and Region classes using a more defensive approach.">
+<panel header=":lock::key: Implement the Player and Region classes using a more defensive approach.">
 <question has-input="true">
 
 Imagine that we now support the following feature in our Minesweeper game.

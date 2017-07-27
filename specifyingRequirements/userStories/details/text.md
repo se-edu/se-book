@@ -92,6 +92,9 @@ User stories for a travel website (credit: Mike Cohen)
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

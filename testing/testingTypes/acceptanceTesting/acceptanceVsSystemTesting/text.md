@@ -41,6 +41,9 @@ A system could work perfectly on the development environment, but fail in the de
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 </div>
 
 </div>

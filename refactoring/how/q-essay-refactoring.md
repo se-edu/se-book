@@ -1,4 +1,4 @@
-<panel header="Q: Do you agree with the following statement? Justify your answer.">
+<panel header=":lock::key: Do you agree with the following statement? Justify your answer.">
 <question has-input="true">
 
 Do you agree with the following statement? Justify your answer.

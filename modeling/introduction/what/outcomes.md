@@ -1,1 +1,1 @@
-:trophy: Can explain what are models used for :two:
+:trophy: Can explain models :two:

@@ -19,6 +19,9 @@ Here are some tips on writing effective documentation.
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 </div>
 
 </div>

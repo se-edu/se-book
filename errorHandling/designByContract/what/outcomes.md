@@ -1,1 +1,1 @@
-:trophy: Can explain DbC approach :three:
+:trophy: Can explain the Design-by-Contract approach :three:

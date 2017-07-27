@@ -36,6 +36,9 @@ VV/IV = Any Invalid or Valid Value VV=Any Valid Value
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

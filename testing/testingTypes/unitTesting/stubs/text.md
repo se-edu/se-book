@@ -15,6 +15,9 @@ During unit testing, stubs are used in place of collaborating objects in order t
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 </div>
 
 </div>

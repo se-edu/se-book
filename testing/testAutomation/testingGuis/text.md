@@ -26,6 +26,9 @@ One approach to overcome the challenges of testing GUIs is to minimize logic asp
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

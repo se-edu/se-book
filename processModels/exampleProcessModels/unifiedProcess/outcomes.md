@@ -1,1 +1,1 @@
-:trophy: Can explain unified process :three:
+:trophy: Can explain the Unified Process :three:

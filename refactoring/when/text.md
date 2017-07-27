@@ -21,6 +21,9 @@ How much refactoring is too much refactoring? It is too much refactoring when th
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

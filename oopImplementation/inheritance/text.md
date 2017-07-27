@@ -12,7 +12,7 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oopDesign/inheritance/index.md" header="OOP: Inheritance" is-open></dynamic-panel>
+<dynamic-panel src="../../oopDesign/inheritance/basic/embed.md" header="OOP: Inheritance: Basic" is-open></dynamic-panel>
 
 <p/>
 
@@ -21,6 +21,9 @@
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

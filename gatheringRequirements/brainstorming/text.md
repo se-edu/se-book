@@ -21,6 +21,9 @@ In a brainstorming session there are no "bad" ideas. The aim is to _generate ide
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>
