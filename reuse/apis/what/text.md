@@ -37,6 +37,9 @@ In this case the API is a collection of Web request formats GitHub server accept
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

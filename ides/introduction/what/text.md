@@ -46,6 +46,9 @@ Some experienced developers, in particular those with a UNIX background, prefer 
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 </div>
 
 </div>

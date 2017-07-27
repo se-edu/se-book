@@ -29,6 +29,9 @@ Exploratory testing is ‘the simultaneous learning, test design, and test execu
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 </div>
 
 </div>

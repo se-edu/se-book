@@ -64,6 +64,9 @@ Class-level attributes and methods are collectively called _class-level members_
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

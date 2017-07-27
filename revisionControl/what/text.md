@@ -36,7 +36,7 @@
 >
 > -- [adapted from <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]
 
-It follows from the explanation above that using an RCS frees us from having to keep copies of all the past versions on our hard disk. If the RCS spans multiple machines, it also **reduces the risk of ‘losing everything’ in case of a hard disk crash**. 
+It follows from the explanation above that using an RCS frees us from having to keep copies of all the past versions on our hard disk. If the RCS spans multiple machines, it also **reduces the risk of ‘losing everything’ in case of a hard disk crash**.
 
 <popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide :mag:" placement="right">
   <div slot="content">
@@ -47,6 +47,9 @@ It follows from the explanation above that using an RCS frees us from having to 
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

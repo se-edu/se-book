@@ -1,1 +1,1 @@
-:trophy: Can explain the use how design modelling can be used before implementation :one:
+:trophy: Can explain how modelling can be used before implementation :one:

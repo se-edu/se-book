@@ -30,6 +30,9 @@ Modern software projects often depend on third party libraries that evolve const
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

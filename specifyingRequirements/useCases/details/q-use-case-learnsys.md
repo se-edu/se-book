@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
-<panel header="Q: LearnSys – reply to post use case :two:">
+<panel header=":lock::key: LearnSys – reply to post use case :two:">
 <question has-input="true">
 
 Complete the following use case (MSS, extensions, etc.).

@@ -1,1 +1,1 @@
-:trophy: Can explain agile models :two:
+:trophy: Can explain agile process models :two:

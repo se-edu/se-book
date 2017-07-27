@@ -75,6 +75,10 @@
 
 <dynamic-panel src="../design/introduction/multilevelDesign/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/multilevelDesign/outcomes.md" inline />
 
+<dynamic-panel src="../design/introduction/topDownBottomUp/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/topDownBottomUp/outcomes.md" inline />
+
+<dynamic-panel src="../design/introduction/agileDesign/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/agileDesign/outcomes.md" inline />
+
 
 ### Design Principles
 
@@ -536,6 +540,7 @@
 
 <dynamic-panel src="../testing/testingTypes/alphaBetaTesting/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../testing/testingTypes/alphaBetaTesting/what/outcomes.md" inline />
 
+<dynamic-panel src="../testing/testingTypes/dogfooding/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../testing/testingTypes/dogfooding/what/outcomes.md" inline />
 
 <dynamic-panel src="../testing/testingTypes/developerTesting/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../testing/testingTypes/developerTesting/what/outcomes.md" inline />
 
@@ -885,4 +890,3 @@
 <dynamic-panel src="../principles/yagniPrinciple/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/yagniPrinciple/outcomes.md" inline />
 
 <dynamic-panel src="../principles/dryPrinciple/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/dryPrinciple/outcomes.md" inline />
-

@@ -25,6 +25,9 @@ Non-functional requirements are easier to miss. We should spend extra effort in 
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

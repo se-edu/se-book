@@ -33,6 +33,9 @@ Design (b) is more flexible (and less coupled) because now the `Payroll` class n
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

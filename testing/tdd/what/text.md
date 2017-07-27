@@ -17,6 +17,9 @@ Typically, tests are written after writing the SUT. However, TDD advocates writi
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

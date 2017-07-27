@@ -1,4 +1,4 @@
-<panel header="Q: Adding features to Minesweeper AD :three:">
+<panel header=":lock::key: Adding features to Minesweeper AD :three:">
 <question has-input="true">
 
 Given below is the high-level game logic of the Minesweeper, drawn from the point of view of the player.

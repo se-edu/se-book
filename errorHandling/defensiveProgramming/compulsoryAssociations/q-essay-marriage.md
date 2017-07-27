@@ -1,4 +1,4 @@
-<panel header="Q: Implement the classes below using the defensive coding approach.">
+<panel header=":lock::key: Implement the classes below using the defensive coding approach.">
 <question has-input="true">
 
 Implement the classes with appropriate references and operations to establish the association among the classes. Follow the defensive coding approach. Let the Marriage class handle setting/removal of reference.

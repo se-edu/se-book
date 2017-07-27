@@ -22,6 +22,9 @@ Both assertions and exceptions should be used in code.
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

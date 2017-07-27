@@ -7,7 +7,7 @@
 ## Introduction
 <panel header="================================================================"
     type="seamless" alt="introduction">
-  <include src="introduction/index.md#main" />
+  <include src="introduction/embed.md" />
 </panel>
 
 ## Objects

@@ -1,4 +1,4 @@
-<panel header="Q: setWife :three:">
+<panel header=":lock::key: setWife :three:">
 <question has-input="true">
 
 Use equivalence partitions and boundary values to choose test inputs for testing the setWife operation in the Man class.

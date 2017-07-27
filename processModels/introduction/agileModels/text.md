@@ -40,6 +40,9 @@ There are a number of agile processes in the development world today. eXtreme Pr
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

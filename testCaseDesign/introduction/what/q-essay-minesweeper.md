@@ -1,4 +1,4 @@
-<panel header="Q: Explain the why exhaustive testing is not possible using the newGame operation of the Logic class in the Minesweeper case study as an example.">
+<panel header=":lock::key: Explain the why exhaustive testing is not possible using the newGame operation of the Logic class in the Minesweeper case study as an example.">
 <question has-input="true">
 
 Explain the why exhaustive testing is not possible using the newGame operation of the Logic class in the Minesweeper case study as an example.

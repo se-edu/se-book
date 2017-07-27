@@ -28,6 +28,9 @@ Cloud computing can deliver computing services at three levels:
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

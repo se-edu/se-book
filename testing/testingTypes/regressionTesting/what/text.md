@@ -17,6 +17,9 @@ Regression testing is more effective when it is done frequently, after each smal
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 </div>
 
 </div>

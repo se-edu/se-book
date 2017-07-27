@@ -1,4 +1,4 @@
-<panel header="Q: Explain how polymorphism is used in the Observer pattern.">
+<panel header=":lock::key: Explain how polymorphism is used in the Observer pattern.">
 <question has-input="true">
 
 Explain how polymorphism is used in the Observer pattern.

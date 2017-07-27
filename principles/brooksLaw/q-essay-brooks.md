@@ -1,4 +1,4 @@
-<panel header="Q: Do the Brook’s Law apply to a school project? Justify.">
+<panel header=":lock::key: Do the Brook’s Law apply to a school project? Justify.">
 <question has-input="true">
 
 Do the Brook’s Law apply to a school project? Justify.

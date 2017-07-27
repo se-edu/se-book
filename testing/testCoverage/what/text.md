@@ -35,6 +35,9 @@ Here are some examples of different coverage criteria:
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

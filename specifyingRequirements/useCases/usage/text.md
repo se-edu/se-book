@@ -53,6 +53,9 @@ One of the main disadvantages of use cases is that they are not good for capturi
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

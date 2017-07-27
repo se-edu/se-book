@@ -1,4 +1,4 @@
-<panel header="Q: List test cases you would use to test ‘TriangleDetector’.">
+<panel header=":lock::key: List test cases you would use to test ‘TriangleDetector’.">
 <question has-input="true">
 
 A sample output from a text-based program ‘TriangleDetector’ is given below that determines whether the three input numbers make up the three sides of a valid triangle. A sample output is shown below. List test cases you would use to test ‘TriangleDetector’. Two sample test cases are given below.
