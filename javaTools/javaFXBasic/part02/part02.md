@@ -1,12 +1,10 @@
 # JavaFx 8 tutorial - Part 2: Model and TableView
 
-Adapted (with permissions) from [Marco Jakob's JavaFX 8 tutorial](http://code.makery.ch/library/javafx-8-tutorial/). Thanks to [Marco Jakob](https://github.com/marcojakob) for allowing us to adapt this tutorial for IntelliJ.
-
 ## Introduction
 
 In this tutorial, we will create the other parts of the application (mainly the model and the controller). We will also use `ObservableList` and `*Property` to bind our list of new model's `Person`s, and their individual details, to the view, with the controller as the "middleman".
 
-![](images/address-app-final-screenshot.png)
+![]({{baseUrl}}/javaTools/javaFXBasic/part02/images/address-app-final-screenshot.png)
 
 ## Create the Model class
 
@@ -327,15 +325,15 @@ We're' almost there! But one thing is missing: We haven't told our `PersonOvervi
 
 1. Open `PersonOverview.fxml` with the SceneBuilder.
 1. Open the Controller group on the left side (just below Hierarchy), and select the `seedu.address.view.PersonOverviewController` as the controller class.
-![](images/hook-view-controller.png)
+![]({{baseUrl}}/javaTools/javaFXBasic/part02/images/hook-view-controller.png)
 
 1. Select the `TableView` in the Hierarchy group.
 1. In the Inspector view, under the Code group, set 'fx:id' to `personTable`.
-![](images/hook-view-person-table.png)
+![]({{baseUrl}}/javaTools/javaFXBasic/part02/images/hook-view-person-table.png)
 
 1. Do the same for the table columns. Select `firstNameColumn` and `lastNameColumn` for the 'fx:id' respectively.
 1. For each label in the second column of the grid pane, choose the corresponding 'fx:id'.
-![](images/hook-view-labels.png)
+![]({{baseUrl}}/javaTools/javaFXBasic/part02/images/hook-view-labels.png)
 
 1. Save the `.fxml` file.
 
@@ -343,16 +341,9 @@ We're' almost there! But one thing is missing: We haven't told our `PersonOvervi
 
 When you start your application now, you should see something like this:
 
-![](images/address-app-final-screenshot.png)
+![]({{baseUrl}}/javaTools/javaFXBasic/part02/images/address-app-final-screenshot.png)
 
 Congratulations! The application now shows the list of `Person`s in the view!
 
 You may notice that selecting a person in the `TableView` does nothing to the labels at the right side. That is because the user interaction portion has not been programmed yet, which we will cover in the next part of the tutorial.
 
-## What's Next
-
-After going through the two parts, you should be familiar with working with IntelliJ. You can continue with the original tutorial (which is written for Eclipse), with the following links:
-
-* [Part 3: Interacting with the User](http://code.makery.ch/library/javafx-8-tutorial/part3/)
-* [Part 4: CSS Styling](http://code.makery.ch/library/javafx-8-tutorial/part4/)
-* [Part 5: Storing Data as XML](http://code.makery.ch/library/javafx-8-tutorial/part5/)
