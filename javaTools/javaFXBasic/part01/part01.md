@@ -2,9 +2,10 @@
 
 ## Introduction
 
-This tutorial will teach you how to create a new JavaFX application in IntelliJ, and to use the SceneBuilder to create a layouts for your application. 
+This tutorial will teach you how to create a new JavaFX application in IntelliJ, and to use the SceneBuilder to create a layouts for your application.
 
-![image]({{baseUrl}}/javaTools/javaFXBasic/part01/images/address-app-final-screenshot.png "Final Screenshot")
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/address-app-final-screenshot.png" alt="Final Screenshot" height="350" />
+<p/>
 
 ## Prerequisites
 
@@ -24,23 +25,29 @@ If this is the first time using IntelliJ, you need to tell IntelliJ where to fin
 
 ### Configuring JDK 8
 
-1. On the Welcome screen, press `Configure` :arrow_right: `Project Default` :arrow_right: `Project Structure`.<br/>
-    ![Welcome Screen]({{baseUrl}}/javaTools/javaFXBasic/part01/images/config-jdk-welcome-screen.png)
-    * If you already have a project open, go to the Welcome screen by going to `File` :arrow_right: `Close Project`.
+1. On the Welcome screen, press `Configure` :arrow_right: `Project Default` :arrow_right: `Project Structure`.
 
-1. Under `Project SDK:`, press `New...` :arrow_right: `JDK`.
-1. Select the directory that you install JDK on, and press `OK`.<br/>
-![JDK 8 under Project Structure]({{baseUrl}}/javaTools/javaFXBasic/part01/images/config-jdk-project-structure.png)
+  <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/config-jdk-welcome-screen.png" alt="Welcome Screen" height="380" />
+  <p/>
 
-1. Press `OK` again.
+  * If you already have a project open, go to the Welcome screen by going to `File` :arrow_right: `Close Project`.
+
+2. Under `Project SDK:`, press `New...` :arrow_right: `JDK`.
+3. Select the directory that you install JDK on, and press `OK`.
+
+  <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/config-jdk-project-structure.png" alt="JDK 8 under Project Structure" height="350" />
+  <p/>
+
+4. Press `OK` again.
 
 ### Configuring Scene Builder
 
 1. On the Welcome screen, press `Configure` :arrow_right: `Settings`.
-1. On the left hand side, select `Languages & Frameworks` :arrow_right: `JavaFX`
-1. Under `Path to SceneBuilder:`, select the path to where SceneBuilder is installed (e.g. `C:\Users\Admin\AppData\Local\SceneBuilder\SceneBuilder.exe` on Windows)
+2. On the left hand side, select `Languages & Frameworks` :arrow_right: `JavaFX`
+3. Under `Path to SceneBuilder:`, select the path to where SceneBuilder is installed (e.g. `C:\Users\Admin\AppData\Local\SceneBuilder\SceneBuilder.exe` on Windows)
 
-![Scene Builder settings]({{baseUrl}}/javaTools/javaFXBasic/part01/images/config-scene-builder-settings.png)
+  <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/config-scene-builder-settings.png" alt="Scene Builder settings" height="350" />
+  <p/>
 
 <tip-box type="info" header="Helpful Links">
 
@@ -57,13 +64,15 @@ Additionally, [Oracle also has a tutorial on JavaFX](http://docs.oracle.com/java
 ## Create a new JavaFX Project
 
 1. On the Welcome screen, press `Create New Project`.
-    * If you already have a project, you can create a new project by going `File` :arrow_right: `New` :arrow_right: `Project...`.
-1. On the left side, select `JavaFX`. Make sure that the Project SDK is set to `1.8` and `JavaFX Application` is selected.<br/>
-![New Project]({{baseUrl}}/javaTools/javaFXBasic/part01/images/new-project.png)
+  * If you already have a project, you can create a new project by going `File` :arrow_right: `New` :arrow_right: `Project...`.
+2. On the left side, select `JavaFX`. Make sure that the Project SDK is set to `1.8` and `JavaFX Application` is selected.
 
-1. Press `Next`.
-1. Give a name for the application (e.g. `AddressApp`), and specify a suitable location.
-1. Press `Finish`. If prompted to create a new directory, just press `OK`.
+  <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/new-project.png" alt="New Project" height="350" />
+  <p/>
+
+3. Press `Next`.
+4. Give a name for the application (e.g. `AddressApp`), and specify a suitable location.
+5. Press `Finish`. If prompted to create a new directory, just press `OK`.
 
 Remove the `sample` package and its content. We will manually create our own package and resources in our tutorial.
 
@@ -75,7 +84,8 @@ In We will create a package for each of the component. Ensure that your Project 
 * `seedu.address.model` - contains the _model_ classes (i.e. the part that deals with data)
 * `seedu.address.view` - contains the _views_ (i.e. the part that deals with presenting the data to the user)
 
-![New packages]({{baseUrl}}/javaTools/javaFXBasic/part01/images/new-packages.png)
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/new-packages.png" alt="New Packages" height="200" />
+<p/>
 
 <tip-box type="info">
 
@@ -104,78 +114,108 @@ If IntelliJ prompts for a location of the SceneBuilder executable, make sure to 
 
 </tip-box>
 
-1. Select the `Anchor Pane` in your Hierarchy, and adjust the size under Layout (right side). (Pref Width: 600, Pref Height: 300)<br>
-![]({{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-main-anchor.png)
+1. Select the `Anchor Pane` in your Hierarchy, and adjust the size under Layout (right side). (Pref Width: 600, Pref Height: 300)
 
-1. Add a `Split Pane (Horizontal Flow)` (under `Containers`) by dragging it from the Library into the main area. Right-click the `Split Pane` in the Hierarchy view and select `Fit to Parent`.<br>
-![]({{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-fit-to-parent.png)
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-main-anchor.png" height="350" />
+<p/>
 
-1. Drag a `TableView` (under `Controls` in Library view) into the left side of the `SplitPane`. Select the `TableView` (not a Column) and set the following layout constraints in the Inspector to the `TableView`. Inside an `AnchorPane` you can always set anchors to the four borders<br> (see [this page](http://docs.oracle.com/javase/8/javafx/layout-tutorial/builtin_layouts.htm) for more information on Layouts).<br>
-![]({{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-table-anchors.png)
+2. Add a `Split Pane (Horizontal Flow)` (under `Containers`) by dragging it from the Library into the main area. Right-click the `Split Pane` in the Hierarchy view and select `Fit to Parent`.
 
-1. Go to the menu `Preview` :arrow_right: `Show Preview in Window` to see whether the layout configuration is done correctly. Try resizing the window. The `TableView` should resize together with the window as it is anchored to the borders.
-1. Change the column text (under Properties) to "First Name" and "Last Name".<br>
-![]({{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-table-columns.png)
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-fit-to-parent.png" height="250" />
+<p/>
 
-1. Select the `TableView` and choose `constrainted-resize` for the 'Column Resize Policy'. This ensures that the columns will always fill up the entire available space.<br>
-![]({{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-table-columns-resize.png)
+3. Drag a `TableView` (under `Controls` in Library view) into the left side of the `SplitPane`. Select the `TableView` (not a Column) and set the following layout constraints in the Inspector to the `TableView`. Inside an `AnchorPane` you can always set anchors to the four borders (see [this page](http://docs.oracle.com/javase/8/javafx/layout-tutorial/builtin_layouts.htm) for more information on Layouts).
 
-1. Add a `Label` on the right side with the text "Person Details:". Adjust the layout using anchors (Top: 5, Left: 5. Right: Blank, Bottom: Blank).<br>
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-table-anchors.png" height="250" />
+<p/>
+
+4. Go to the menu `Preview` :arrow_right: `Show Preview in Window` to see whether the layout configuration is done correctly. Try resizing the window. The `TableView` should resize together with the window as it is anchored to the borders.
+
+5. Change the column text (under Properties) to "First Name" and "Last Name".
+
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-table-columns.png" height="250" />
+<p/>
+
+6. Select the `TableView` and choose `constrainted-resize` for the 'Column Resize Policy'. This ensures that the columns will always fill up the entire available space.
+
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-table-columns-resize.png" height="200" />
+<p/>
+
+7. Add a `Label` on the right side with the text "Person Details:". Adjust the layout using anchors (Top: 5, Left: 5. Right: Blank, Bottom: Blank).
+
 <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-title-label.png" width="800" />
+<p/>
 
-<tip-box type="tip"> 
+<tip-box type="tip">
 
 You can use the Search Bar at the top of Library/Inspector to find the respective controls/properties.
 
 </tip-box>
 
-1. Add a `GridPane` on the right side. Select it, and adjust its layout using anchors (Top: 30, Left: 5, Right: 5, Bottom: Blank).<br>
-![]({{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-grid-pane-1.png)
+8. Add a `GridPane` on the right side. Select it, and adjust its layout using anchors (Top: 30, Left: 5, Right: 5, Bottom: Blank).
 
-1. Add the following labels to the cells, such that the grid is of this form:
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-grid-pane-1.png" width="600" />
+<p/>
 
-| First Name | Label |
-| --- | --- |
-| Last Name | Label |
-| Street | Label |
-| City | Label |
-| Postal Code | Label |
-| Birthday | Label |
+9. Add the following labels to the cells, such that the grid is of this form:
 
-<tip-box type="tip"> 
+| First Name   | Label |
+| ------------ | ----- |
+| Last Name    | Label |
+| Street       | Label |
+| City         | Label |
+| Postal Code  | Label |
+| Birthday     | Label |
+
+<tip-box type="tip">
 
 To add a row to the GridPane, select an existing row number, right click the row number and choose "Add Row Below".
 
 </tip-box>
 
-![]({{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-grid-pane-2.png)
-![]({{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-grid-pane-3.png)
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-grid-pane-2.png" height="250" />
+<p/>
 
-1. Add a `ButtonBar` at the bottom. Add three buttons to the bar ("New...", "Edit...","Delete"). Adjust the anchors so that it stays at the bottom right (Top: Blank, Left: Blank, Right: 10, Bottom: 5).<br>
-![]({{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-button-bar.png)
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-grid-pane-3.png" height="280" />
+<p/>
 
-1. Now you should see something like the following. Use the `Preview` menu to test its resizing behaviour.<br>
-![]({{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-final.png)
+10. Add a `ButtonBar` at the bottom. Add three buttons to the bar ("New...", "Edit...","Delete"). Adjust the anchors so that it stays at the bottom right (Top: Blank, Left: Blank, Right: 10, Bottom: 5).
 
-1. Save the `.fxml` file.
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-button-bar.png" height="50" />
+<p/>
+
+11. Now you should see something like the following. Use the `Preview` menu to test its resizing behaviour.
+
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-final.png" height="300" />
+<p/>
+
+12. Save the `.fxml` file.
 
 ## Create the Main Application
 
 The `PersonOverview.fxml` that we just created only contains the content of our entire application. We need another FXML for our root layout, which will contain a menu bar and wraps `PersonOverview.fxml`.
 
 1. Inside IntelliJ, right click on the `view` package, and press `New` :arrow_right: `FXML file`. For the file name, type `RootLayout.fxml`.
-1. Right-click on `RootLayout.fxml` and choose `Open with Scene Builder`.
-1. Delete the `AnchorPane`. We will use another pane for our root layout.<br>
-![]({{baseUrl}}/javaTools/javaFXBasic/part01/images/create-main-app-delete-anchor-pane.png)
+2. Right-click on `RootLayout.fxml` and choose `Open with Scene Builder`.
+3. Delete the `AnchorPane`. We will use another pane for our root layout.
 
-1. Add `BorderPane` by dragging it from the Library view into the main area.<br>
-![]({{baseUrl}}/javaTools/javaFXBasic/part01/images/create-main-app-add-border-pane.png)
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/create-main-app-delete-anchor-pane.png" height="230" />
+<p/>
 
-1. Resize the `BorderPane` (Pref Width: 600, Pref Height: 400)<br>
-![]({{baseUrl}}/javaTools/javaFXBasic/part01/images/create-main-app-resize.png)
+4. Add `BorderPane` by dragging it from the Library view into the main area.
 
-1. Add a `MenuBar` into the `insert TOP` slot. We will not implement menu functionality for now.<br>
-![]({{baseUrl}}/javaTools/javaFXBasic/part01/images/create-main-app-menu-bar.png)
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/create-main-app-add-border-pane.png" height="380" />
+<p/>
+
+5. Resize the `BorderPane` (Pref Width: 600, Pref Height: 400)
+
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/create-main-app-resize.png" height="280" />
+<p/>
+
+6. Add a `MenuBar` into the `insert TOP` slot. We will not implement menu functionality for now.
+
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/create-main-app-menu-bar.png" height="100" />
+<p/>
 
 ## The JavaFX Main Class
 
@@ -187,7 +227,8 @@ The generated `MainApp.java` class extends from `Application` and contains two m
 
 As you see, the `start(...)` method receives a `Stage` as parameter. The following graphic illustrates the structure of every JavaFX application:
 
-![]({{baseUrl}}/javaTools/javaFXBasic/part01/images/javafx-hierarchy.png)
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/javafx-hierarchy.png" height="350" />
+<p/>
 
 Image Source: http://www.oracle.com
 
@@ -279,7 +320,8 @@ The various comments should give you some hints about what's going on.
 
 If you run the application now (right click `MainApp.java` and select `Run MainApp.main()`), you should see something like this:
 
-![]({{baseUrl}}/javaTools/javaFXBasic/part01/images/address-app-final-screenshot.png)
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/address-app-final-screenshot.png" height="350" />
+<p/>
 
 ## Possible Issues
 
@@ -293,4 +335,3 @@ javafx.fxml.LoadException:
 To solve this issue, open `PersonOverview.fxml` normally in IntelliJ and ensure that there is no such attribute around:
 
 `fx:controller="seedu.address.view.PersonOverview"`
-

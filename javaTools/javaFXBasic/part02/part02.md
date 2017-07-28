@@ -4,7 +4,8 @@
 
 In this tutorial, we will create the other parts of the application (mainly the model and the controller). We will also use `ObservableList` and `*Property` to bind our list of new model's `Person`s, and their individual details, to the view, with the controller as the "middleman".
 
-![]({{baseUrl}}/javaTools/javaFXBasic/part02/images/address-app-final-screenshot.png)
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part02/images/address-app-final-screenshot.png" height="350" />
+<p/>
 
 ## Create the Model class
 
@@ -133,7 +134,7 @@ public class Person {
 ### Explanations
 
 * With JavaFX, it is common to use `*Property` for all fields of a model class. A `Property` allows us, for example, to automatically be notified when the `lastName` or any other variable is changed. This helps us keep the view in sync with the data.
-  * To learn more about `*Property`, refer to [Using JavaFX Properties and Binding](http://docs.oracle.com/javase/8/javafx/properties-binding-tutorial/binding.htm)
+* To learn more about `*Property`, refer to [Using JavaFX Properties and Binding](http://docs.oracle.com/javase/8/javafx/properties-binding-tutorial/binding.htm)
 * `LocalDate`, the type that we are using for `birthday`, is part of the [new Date and Time API for JDK 8](http://docs.oracle.com/javase/tutorial/datetime/iso/)
 
 ## A List of Persons
@@ -148,12 +149,12 @@ Among all these collections, we need the `ObservableList`. To create a new `Obse
 
 **MainApp.java**
 ```java
-    // ... AFTER THE OTHER VARIABLES ...
+// ... AFTER THE OTHER VARIABLES ...
 
-    /**
-     * The data as an observable list of {@link Person}.
-     */
-    private ObservableList<Person> personData = FXCollections.observableArrayList();
+/**
+* The data as an observable list of {@link Person}.
+*/
+private ObservableList<Person> personData = FXCollections.observableArrayList();
 
     /**
      * Constructor
@@ -187,15 +188,21 @@ We have our model and view. Let's get our data into our table. We'll need a cont
 
 Create a normal Java class inside the `view` package called `PersonOverviewController`.
 
-> Note:
-> We must put the class inside the same package as `PersonOverview.fxml`, otherwise the SceneBuilder won't be able to find it.
+<tip-box type="tip">
+
+Note: We must put the class inside the same package as `PersonOverview.fxml`, otherwise the SceneBuilder won't be able to find it.
+
+</tip-box>
 
 We will add some instance variables that give us access to the table and the labels inside the view. The fields and some methods have a special `@FXML` annotation. This is necessary in order for the `.fxml` file to have access to private fields and private methods. After we have everything set up in the `.fxml` file, the application will automatically fill the variables when the `.fxml` file is loaded.
 
 So let's add the following code:
 
-> Note:
-> Remember to always use the `javafx` imports, NOT `awt` or `swing`.
+<tip-box type="tip">
+
+Note: Remember to always use the `javafx` imports, NOT `awt` or `swing`.
+
+</tip-box>
 
 **PersonOverviewController.java**
 ```java
@@ -210,11 +217,11 @@ import seedu.address.model.Person;
 
 public class PersonOverviewController {
     @FXML
-    private TableView<Person> personTable;
+    private TableView< Person> personTable;
     @FXML
-    private TableColumn<Person, String> firstNameColumn;
+    private TableColumn< Person, String> firstNameColumn;
     @FXML
-    private TableColumn<Person, String> lastNameColumn;
+    private TableColumn< Person, String> lastNameColumn;
 
     @FXML
     private Label firstNameLabel;
@@ -268,82 +275,95 @@ public class PersonOverviewController {
 * The `initialize()` method is automatically called after the `.fxml` file has been loaded. At this time, all the FXML fields should have been initialized already.
 * The `setCellValueFactory(...)` that we set on the table colums are used to determine which field inside the `Person` objects should be used for the particular column. The arrow `->` indicates that we're using a Java 8 feature called Lambdas. (Another option would be to use a [`PropertyValueFactory`](http://docs.oracle.com/javase/8/javafx/api/), but this is not type-safe).
 
-> Note:
-> We're only using `StringProperty` values for our table columns in this example. When you want to use `IntegerProperty` or `DoubleProperty`, the `setCellValueFactory(...)` must have an additional `asObject()`:
+<tip-box type="tip">
 
-> `myIntegerColumn.setCellValueFactory(cellData ->
-      cellData.getValue().myIntegerProperty().asObject());`
+Note:
 
-> This is necessary because of a bad design decision of JavaFX (see [this discussion](https://community.oracle.com/thread/2575601) for more details).
+We're only using `StringProperty` values for our table columns in this example. When you want to use `IntegerProperty` or `DoubleProperty`, the `setCellValueFactory(...)` must have an additional `asObject()`:
+
+```java
+myIntegerColumn.setCellValueFactory(cellData ->
+    cellData.getValue().myIntegerProperty().asObject());
+```
+
+This is necessary because of a bad design decision of JavaFX (see [this discussion](https://community.oracle.com/thread/2575601) for more details).
+
+</tip-box>
 
 ### Connecting MainApp with the PersonOverviewController
 
 The `setMainApp(...)` method must be called by the `MainApp` class. This gives us a way to access the `MainApp` object and get the list of `Persons` and other things. Add the following three lines to `showPersonOverview()` the method:
 
 **MainApp.java - additional lines to add to showPersonOverview() method**
+
 ```java
+// (.... root layout statement goes here ....)
 
-        // (.... root layout statement goes here ....)
+// Give the controller access to the main app.
+    PersonOverviewController controller = loader.getController();
+    controller.setMainApp(this);
 
-        // Give the controller access to the main app.
-        PersonOverviewController controller = loader.getController();
-        controller.setMainApp(this);
-
-    // (.... catch statement goes here ....)
-
+// (.... catch statement goes here ....)
 ```
 
 Your `showPersonOverview()` method in `MainApp` should now look like this:
 
 **MainApp.java - new showPersonOverview() method**
+
 ```java
-    /**
-     * Shows the person overview inside the root layout.
-     */
-    public void showPersonOverview() {
-        try {
-            // Load person overview.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/PersonOverview.fxml"));
-            AnchorPane personOverview = loader.load();
+/**
+* Shows the person overview inside the root layout.
+*/
+public void showPersonOverview() {
+    try {
+        // Load person overview.
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(MainApp.class.getResource("view/PersonOverview.fxml"));
+        AnchorPane personOverview = loader.load();
 
-            // Set person overview into the center of root layout.
-            rootLayout.setCenter(personOverview);
+        // Set person overview into the center of root layout.
+        rootLayout.setCenter(personOverview);
 
-            // Give the controller access to the main app.
-            PersonOverviewController controller = loader.getController();
-            controller.setMainApp(this);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        // Give the controller access to the main app.
+        PersonOverviewController controller = loader.getController();
+        controller.setMainApp(this);
+    } catch (IOException e) {
+        e.printStackTrace();
     }
+}
 ```
 
 ## Hook the View to the controller
 
-We're' almost there! But one thing is missing: We haven't told our `PersonOverview.fxml` file which controller to use, and which element should match to which field inside the controller.
+We're almost there! But one thing is missing: We haven't told our `PersonOverview.fxml` file which controller to use, and which element should match to which field inside the controller.
 
 1. Open `PersonOverview.fxml` with the SceneBuilder.
-1. Open the Controller group on the left side (just below Hierarchy), and select the `seedu.address.view.PersonOverviewController` as the controller class.
-![]({{baseUrl}}/javaTools/javaFXBasic/part02/images/hook-view-controller.png)
+2. Open the Controller group on the left side (just below Hierarchy), and select the `seedu.address.view.PersonOverviewController` as the controller class.
 
-1. Select the `TableView` in the Hierarchy group.
-1. In the Inspector view, under the Code group, set 'fx:id' to `personTable`.
-![]({{baseUrl}}/javaTools/javaFXBasic/part02/images/hook-view-person-table.png)
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part02/images/hook-view-controller.png" height="350" />
+<p/>
 
-1. Do the same for the table columns. Select `firstNameColumn` and `lastNameColumn` for the 'fx:id' respectively.
-1. For each label in the second column of the grid pane, choose the corresponding 'fx:id'.
-![]({{baseUrl}}/javaTools/javaFXBasic/part02/images/hook-view-labels.png)
+3. Select the `TableView` in the Hierarchy group.
+4. In the Inspector view, under the Code group, set 'fx:id' to `personTable`.
 
-1. Save the `.fxml` file.
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part02/images/hook-view-person-table.png" height="250" />
+<p/>
+
+5. Do the same for the table columns. Select `firstNameColumn` and `lastNameColumn` for the 'fx:id' respectively.
+6. For each label in the second column of the grid pane, choose the corresponding 'fx:id'.
+
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part02/images/hook-view-labels.png" width="650" />
+<p/>
+
+7. Save the `.fxml` file.
 
 ## Start the Application
 
 When you start your application now, you should see something like this:
 
-![]({{baseUrl}}/javaTools/javaFXBasic/part02/images/address-app-final-screenshot.png)
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part02/images/address-app-final-screenshot.png" height="350" />
+<p/>
 
 Congratulations! The application now shows the list of `Person`s in the view!
 
 You may notice that selecting a person in the `TableView` does nothing to the labels at the right side. That is because the user interaction portion has not been programmed yet, which we will cover in the next part of the tutorial.
-
