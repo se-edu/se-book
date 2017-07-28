@@ -2,7 +2,7 @@
 
 <div id="title">
 
-#### Alternate Paths :two:
+#### Introduction :two:
 
 </div>
 
