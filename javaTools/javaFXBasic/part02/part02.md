@@ -217,11 +217,11 @@ import seedu.address.model.Person;
 
 public class PersonOverviewController {
     @FXML
-    private TableView<Person> personTable;
+    private TableView< Person> personTable;
     @FXML
-    private TableColumn<Person, String> firstNameColumn;
+    private TableColumn< Person, String> firstNameColumn;
     @FXML
-    private TableColumn<Person, String> lastNameColumn;
+    private TableColumn< Person, String> lastNameColumn;
 
     @FXML
     private Label firstNameLabel;
