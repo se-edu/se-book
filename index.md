@@ -4,6 +4,13 @@
 
 ## Software Engineering for Self-Directed Learners
 
+### About this Book
+
+* [Acknowledgements](about/acknowledgements.html)
+* [How to use this book](about/usage.html)
+
+### Software Engineering
+
 <include src="softwareEngineering/topicToc.md" />
 
 ### Requirements
