@@ -1,1 +1,1 @@
-Project Management :arrow_right: Teamwork :arrow_right:
+Project Management &rarr; Teamwork &rarr;

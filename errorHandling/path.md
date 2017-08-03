@@ -1,1 +1,1 @@
-Implementation :arrow_right: Error Handling :arrow_right:
+Implementation &rarr; Error Handling &rarr;

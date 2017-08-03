@@ -1,1 +1,1 @@
-Design :arrow_right: Architecture :arrow_right:
+Design &rarr; Architecture &rarr;

@@ -1,1 +1,1 @@
-Design :arrow_right: Design Patterns :arrow_right:
+Design &rarr; Design Patterns &rarr;

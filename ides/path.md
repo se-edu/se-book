@@ -1,1 +1,1 @@
-Implementation :arrow_right: IDEs :arrow_right:
+Implementation &rarr; IDEs &rarr;

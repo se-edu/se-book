@@ -1,1 +1,1 @@
-Tools :arrow_right: Intellij IDEA :arrow_right:
+Tools &rarr; Intellij IDEA &rarr;

@@ -1,1 +1,1 @@
-Coding Best Practices :arrow_right:
+Coding Best Practices &rarr;

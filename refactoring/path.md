@@ -1,1 +1,1 @@
-Implementation :arrow_right: Refactoring :arrow_right:
+Implementation &rarr; Refactoring &rarr;

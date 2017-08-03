@@ -1,1 +1,1 @@
-Software Engineering :arrow_right:
+Software Engineering &rarr;

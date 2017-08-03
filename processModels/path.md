@@ -1,1 +1,1 @@
-Project Management :arrow_right: SLDC Process Models :arrow_right:
+Project Management &rarr; SLDC Process Models &rarr;

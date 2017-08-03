@@ -1,1 +1,1 @@
-Requirements :arrow_right: Requirements :arrow_right:
+Requirements &rarr; Requirements &rarr;

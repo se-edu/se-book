@@ -1,1 +1,1 @@
-Supplmentary :arrow_right: Principles :arrow_right:
+Supplmentary &rarr; Principles &rarr;
