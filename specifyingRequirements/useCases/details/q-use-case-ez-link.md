@@ -22,7 +22,7 @@ Complete the following use case (MSS, extensions, etc.). Note that you should no
       <li>Use case: UC2 top-up EZ-Link card</li>
       <li>Actor: EZ-Link card user</li>
       <li>Preconditions: All hardware in working order.</li>
-      <li>Guarantees: MSS -> the card will be topped-up.</li>
+      <li>Guarantees: MSS &rarr; the card will be topped-up.</li>
       <li>MSS:
         <ol>
           <li>User places the card on the reader.</li>
@@ -65,7 +65,7 @@ Notes:
       <li>Use case: UC03 process NETS payment</li>
       <li>Actor: EZ-Link card user</li>
       <li>Preconditions: A transaction requiring payment is underway.</li>
-      <li>Guarantees: MSS -> Transaction amount is transferred from user account to EZ-Link company account.</li>
+      <li>Guarantees: MSS &rarr; Transaction amount is transferred from user account to EZ-Link company account.</li>
       <li>MSS:
         <ol>
           <li>System requests to insert ATM card.</li>

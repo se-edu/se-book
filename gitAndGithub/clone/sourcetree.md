@@ -1,4 +1,4 @@
-File -> `Clone / New…` and provide the URL and the destination directory.
+File &rarr; `Clone / New…` and provide the URL and the destination directory.
 
 You can use the `clone` command to clone a repo.
 
