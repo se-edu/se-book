@@ -632,8 +632,6 @@
 
 <dynamic-panel src="../revisionControl/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../revisionControl/what/outcomes.md" inline />
 
-<dynamic-panel src="../revisionControl/otherNames/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../revisionControl/otherNames/outcomes.md" inline />
-
 <dynamic-panel src="../revisionControl/repositories/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../revisionControl/repositories/outcomes.md" inline />
 
 <dynamic-panel src="../revisionControl/savingHistory/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../revisionControl/savingHistory/outcomes.md" inline />
