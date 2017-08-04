@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Java :arrow_right: </div>
+<div id="path">Java &rarr; </div>
 
 <div id="title">
 

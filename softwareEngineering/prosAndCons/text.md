@@ -1,4 +1,4 @@
-<div id="path">Software Engineering :arrow_right: </div>
+<div id="path">Software Engineering &rarr; </div>
 
 <div id="title">
 

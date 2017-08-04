@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Documentation :arrow_right:**%%
+%%**Documentation &rarr;**%%
 
 ## Introduction
 

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Quality Assurance :arrow_right: Introduction :arrow_right:</div>
+<div id="path">Quality Assurance &rarr; Introduction &rarr;</div>
 
 <div id="title">
 

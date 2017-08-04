@@ -1,4 +1,4 @@
-<div id="path">UML :arrow_right: Class Diagrams :arrow_right:</div>
+<div id="path">UML &rarr; Class Diagrams &rarr;</div>
 
 <div id="title">
 

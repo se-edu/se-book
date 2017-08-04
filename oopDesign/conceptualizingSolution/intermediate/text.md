@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming :arrow_right: Conceptualizing an OOP Solution :arrow_right:</div>
+<div id="path">Object Oriented Programming &rarr; Conceptualizing an OOP Solution &rarr;</div>
 
 <div id="title">
 

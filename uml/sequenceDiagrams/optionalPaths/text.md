@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">UML :arrow_right: Sequence Diagrams :arrow_right:</div>
+<div id="path">UML &rarr; Sequence Diagrams &rarr;</div>
 
 <div id="title">
 

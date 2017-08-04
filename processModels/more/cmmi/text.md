@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">SLDC Process Models :arrow_right: More :arrow_right:</div>
+<div id="path">SLDC Process Models &rarr; More &rarr;</div>
 
 <div id="title">
 

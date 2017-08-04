@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Principles :arrow_right: Cohesion :arrow_right:</div>
+<div id="path">Software Design Principles &rarr; Cohesion &rarr;</div>
 
 <div id="title">
 

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">UML :arrow_right: Notes :arrow_right: </div>
+<div id="path">UML &rarr; Notes &rarr; </div>
 
 <div id="title">
 

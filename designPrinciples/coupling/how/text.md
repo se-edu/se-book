@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Principles :arrow_right: Coupling :arrow_right:</div>
+<div id="path">Software Design Principles &rarr; Coupling &rarr;</div>
 
 <div id="title">
 

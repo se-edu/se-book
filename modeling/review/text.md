@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Modeling :arrow_right: </div>
+<div id="path">Modeling &rarr; </div>
 
 <div id="title">
 

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Patterns :arrow_right: Observer Pattern :arrow_right:</div>
+<div id="path">Software Design Patterns &rarr; Observer Pattern &rarr;</div>
 
 <div id="title">
 

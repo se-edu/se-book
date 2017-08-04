@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Teamwork :arrow_right: </div>
+<div id="path">Teamwork &rarr; </div>
 
 <div id="title">
 

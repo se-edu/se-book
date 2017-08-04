@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Integration :arrow_right:**%%
+%%**Integration &rarr;**%%
 
 ## Introduction
 

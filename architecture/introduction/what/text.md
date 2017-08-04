@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Software Architecture :arrow_right: Introduction :arrow_right:</div>
+<div id="path">Software Architecture &rarr; Introduction &rarr;</div>
 
 <div id="title">
 

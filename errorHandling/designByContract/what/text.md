@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Error Handling :arrow_right: Design-by-Contract Approach :arrow_right:</div>
+<div id="path">Error Handling &rarr; Design-by-Contract Approach &rarr;</div>
 
 <div id="title">
 

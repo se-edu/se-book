@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Error Handling :arrow_right: Assertions :arrow_right:</div>
+<div id="path">Error Handling &rarr; Assertions &rarr;</div>
 
 <div id="title">
 

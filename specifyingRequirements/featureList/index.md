@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Specifying Requirements :arrow_right:**%%
+%%**Specifying Requirements &rarr;**%%
 
 ## Prose
 

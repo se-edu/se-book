@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Gathering Requirements :arrow_right: </div>
+<div id="path">Gathering Requirements &rarr; </div>
 
 <div id="title">
 

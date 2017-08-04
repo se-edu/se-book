@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">UML :arrow_right: Miscellaneous :arrow_right:</div>
+<div id="path">UML &rarr; Miscellaneous &rarr;</div>
 
 <div id="title">
 

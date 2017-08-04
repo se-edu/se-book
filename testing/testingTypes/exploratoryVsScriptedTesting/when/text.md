@@ -1,4 +1,4 @@
-<div id="path">Testing :arrow_right: Testing Types :arrow_right:</div>
+<div id="path">Testing &rarr; Testing Types &rarr;</div>
 
 <div id="title">
 

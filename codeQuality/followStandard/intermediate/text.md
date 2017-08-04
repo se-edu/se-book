@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Code Quality :arrow_right: Guideline: Follow a Standard :arrow_right:</div>
+<div id="path">Code Quality &rarr; Guideline: Follow a Standard &rarr;</div>
 
 <div id="title">
 

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**UML :arrow_right: Class Diagrams :arrow_right:**%%
+%%**UML &rarr; Class Diagrams &rarr;**%%
 
 ### Association Classes
 

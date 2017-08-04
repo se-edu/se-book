@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Code Quality :arrow_right: Guideline: Avoid Unsafe Shortcuts :arrow_right:</div>
+<div id="path">Code Quality &rarr; Guideline: Avoid Unsafe Shortcuts &rarr;</div>
 
 <div id="title">
 

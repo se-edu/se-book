@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Reuse :arrow_right: Cloud Computing :arrow_right:</div>
+<div id="path">Reuse &rarr; Cloud Computing &rarr;</div>
 
 <div id="title">
 

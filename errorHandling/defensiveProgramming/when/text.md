@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Error Handling :arrow_right: Defensive Programming :arrow_right:</div>
+<div id="path">Error Handling &rarr; Defensive Programming &rarr;</div>
 
 <div id="title">
 

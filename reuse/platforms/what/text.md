@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Reuse :arrow_right: Platforms :arrow_right:</div>
+<div id="path">Reuse &rarr; Platforms &rarr;</div>
 
 <div id="title">
 

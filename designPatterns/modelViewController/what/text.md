@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Patterns :arrow_right: Model View Controller (MVC) Pattern :arrow_right:</div>
+<div id="path">Software Design Patterns &rarr; Model View Controller (MVC) Pattern &rarr;</div>
 
 <div id="title">
 

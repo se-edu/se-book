@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Project Planning :arrow_right: </div>
+<div id="path">Project Planning &rarr; </div>
 
 <div id="title">
 

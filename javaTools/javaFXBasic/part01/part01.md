@@ -25,14 +25,14 @@ If this is the first time using IntelliJ, you need to tell IntelliJ where to fin
 
 ### Configuring JDK 8
 
-1. On the Welcome screen, press `Configure` :arrow_right: `Project Default` :arrow_right: `Project Structure`.
+1. On the Welcome screen, press `Configure` &rarr; `Project Default` &rarr; `Project Structure`.
 
   <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/config-jdk-welcome-screen.png" alt="Welcome Screen" height="380" />
   <p/>
 
-  * If you already have a project open, go to the Welcome screen by going to `File` :arrow_right: `Close Project`.
+  * If you already have a project open, go to the Welcome screen by going to `File` &rarr; `Close Project`.
 
-2. Under `Project SDK:`, press `New...` :arrow_right: `JDK`.
+2. Under `Project SDK:`, press `New...` &rarr; `JDK`.
 3. Select the directory that you install JDK on, and press `OK`.
 
   <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/config-jdk-project-structure.png" alt="JDK 8 under Project Structure" height="350" />
@@ -42,8 +42,8 @@ If this is the first time using IntelliJ, you need to tell IntelliJ where to fin
 
 ### Configuring Scene Builder
 
-1. On the Welcome screen, press `Configure` :arrow_right: `Settings`.
-2. On the left hand side, select `Languages & Frameworks` :arrow_right: `JavaFX`
+1. On the Welcome screen, press `Configure` &rarr; `Settings`.
+2. On the left hand side, select `Languages & Frameworks` &rarr; `JavaFX`
 3. Under `Path to SceneBuilder:`, select the path to where SceneBuilder is installed (e.g. `C:\Users\Admin\AppData\Local\SceneBuilder\SceneBuilder.exe` on Windows)
 
   <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/config-scene-builder-settings.png" alt="Scene Builder settings" height="350" />
@@ -64,7 +64,7 @@ Additionally, [Oracle also has a tutorial on JavaFX](http://docs.oracle.com/java
 ## Create a new JavaFX Project
 
 1. On the Welcome screen, press `Create New Project`.
-  * If you already have a project, you can create a new project by going `File` :arrow_right: `New` :arrow_right: `Project...`.
+  * If you already have a project, you can create a new project by going `File` &rarr; `New` &rarr; `Project...`.
 2. On the left side, select `JavaFX`. Make sure that the Project SDK is set to `1.8` and `JavaFX Application` is selected.
 
   <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/new-project.png" alt="New Project" height="350" />
@@ -78,7 +78,7 @@ Remove the `sample` package and its content. We will manually create our own pac
 
 ## Create the Packages
 
-In We will create a package for each of the component. Ensure that your Project pane is open (<kbd>Alt</kbd>+<kbd>1</kbd>). Right click on the `src` folder, and select `New` :arrow_right: `Package`:
+In We will create a package for each of the component. Ensure that your Project pane is open (<kbd>Alt</kbd>+<kbd>1</kbd>). Right click on the `src` folder, and select `New` &rarr; `Package`:
 
 * `seedu.address` - contains the _controller_ classes (i.e. the part that deals with the business logic)
 * `seedu.address.model` - contains the _model_ classes (i.e. the part that deals with data)
@@ -102,7 +102,7 @@ There are two ways to create the UI:
 
 We will use FXML for most parts, so that we can separate the view and controller from each other. Furthermore, we are able to use the Scene Builder tool to edit our FXML file. That means we will not have to directly work with XML.
 
-Right click on the `view` package, and press `New` :arrow_right: `FXML file`. For the file name, type `PersonOverview.fxml`.
+Right click on the `view` package, and press `New` &rarr; `FXML file`. For the file name, type `PersonOverview.fxml`.
 
 ## Design with Scene Builder
 
@@ -129,7 +129,7 @@ If IntelliJ prompts for a location of the SceneBuilder executable, make sure to 
 <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-table-anchors.png" height="250" />
 <p/>
 
-4. Go to the menu `Preview` :arrow_right: `Show Preview in Window` to see whether the layout configuration is done correctly. Try resizing the window. The `TableView` should resize together with the window as it is anchored to the borders.
+4. Go to the menu `Preview` &rarr; `Show Preview in Window` to see whether the layout configuration is done correctly. Try resizing the window. The `TableView` should resize together with the window as it is anchored to the borders.
 
 5. Change the column text (under Properties) to "First Name" and "Last Name".
 
@@ -195,7 +195,7 @@ To add a row to the GridPane, select an existing row number, right click the row
 
 The `PersonOverview.fxml` that we just created only contains the content of our entire application. We need another FXML for our root layout, which will contain a menu bar and wraps `PersonOverview.fxml`.
 
-1. Inside IntelliJ, right click on the `view` package, and press `New` :arrow_right: `FXML file`. For the file name, type `RootLayout.fxml`.
+1. Inside IntelliJ, right click on the `view` package, and press `New` &rarr; `FXML file`. For the file name, type `RootLayout.fxml`.
 2. Right-click on `RootLayout.fxml` and choose `Open with Scene Builder`.
 3. Delete the `AnchorPane`. We will use another pane for our root layout.
 
@@ -221,7 +221,7 @@ The `PersonOverview.fxml` that we just created only contains the content of our 
 
 Now, we need to create the *main Java class* that starts up our application with the `RootLayout.fxml` and adds the `PersonOverview.fxml` in the center.
 
-Right-click on your `seedu.address` package, and choose `New` :arrow_right: `JavaFXApplication`. For the class name, type `MainApp`.
+Right-click on your `seedu.address` package, and choose `New` &rarr; `JavaFXApplication`. For the class name, type `MainApp`.
 
 The generated `MainApp.java` class extends from `Application` and contains two methods. This is the basic structure that we need to start a JavaFX Application. The most important part for us is the `start(Stage primaryStage)` method. It is automatically called when the application is `launch()` from within the `main()` method.
 

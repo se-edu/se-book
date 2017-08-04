@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Software Design Principles :arrow_right:**%%
+%%**Software Design Principles &rarr;**%%
 
 ## Dependency Inversion Principle
 

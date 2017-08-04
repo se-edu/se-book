@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Integration :arrow_right: Approaches :arrow_right:</div>
+<div id="path">Integration &rarr; Approaches &rarr;</div>
 
 <div id="title">
 

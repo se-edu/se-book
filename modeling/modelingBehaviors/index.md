@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Modeling :arrow_right:**%%
+%%**Modeling &rarr;**%%
 
 ## Modeling Behaviors
 

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">IDEs :arrow_right: Introduction :arrow_right:</div>
+<div id="path">IDEs &rarr; Introduction &rarr;</div>
 
 <div id="title">
 

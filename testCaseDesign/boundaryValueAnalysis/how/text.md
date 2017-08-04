@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Test Case Design :arrow_right: Boundary Value Analysis :arrow_right:</div>
+<div id="path">Test Case Design &rarr; Boundary Value Analysis &rarr;</div>
 
 <div id="title">
 

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Testing :arrow_right: Test Coverage :arrow_right:</div>
+<div id="path">Testing &rarr; Test Coverage &rarr;</div>
 
 <div id="title">
 

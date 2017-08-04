@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**UML :arrow_right:**%%
+%%**UML &rarr;**%%
 
 ## Activity Diagrams
 

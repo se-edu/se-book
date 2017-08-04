@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming :arrow_right: Polymorphism :arrow_right:</div>
+<div id="path">Object Oriented Programming &rarr; Polymorphism &rarr;</div>
 
 <div id="title">
 

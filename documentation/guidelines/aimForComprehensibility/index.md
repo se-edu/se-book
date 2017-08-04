@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Documentation :arrow_right: Guidelines :arrow_right:**%%
+%%**Documentation &rarr; Guidelines &rarr;**%%
 
 ### Guideline: Aim for Comprehensibility
 

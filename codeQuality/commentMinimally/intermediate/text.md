@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Code Quality :arrow_right: Guideline: Comment Minimally, but Sufficiently :arrow_right:</div>
+<div id="path">Code Quality &rarr; Guideline: Comment Minimally, but Sufficiently &rarr;</div>
 
 <div id="title">
 

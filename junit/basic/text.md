@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">JUnit :arrow_right: </div>
+<div id="path">JUnit &rarr; </div>
 
 <div id="title">
 

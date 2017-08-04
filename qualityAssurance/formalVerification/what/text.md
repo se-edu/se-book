@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Quality Assurance :arrow_right: Formal Verification :arrow_right:</div>
+<div id="path">Quality Assurance &rarr; Formal Verification &rarr;</div>
 
 <div id="title">
 

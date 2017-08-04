@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Test Case Design :arrow_right:**%%
+%%**Test Case Design &rarr;**%%
 
 ## More
 

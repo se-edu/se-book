@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Test Case Design :arrow_right: Combining Test Inputs :arrow_right:</div>
+<div id="path">Test Case Design &rarr; Combining Test Inputs &rarr;</div>
 
 <div id="title">
 

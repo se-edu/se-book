@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Object Oriented Programming :arrow_right:**%%
+%%**Object Oriented Programming &rarr;**%%
 
 ## Polymorphism
 
