@@ -1,6 +1,6 @@
 <include src="prereq.md"/><p/>
 
-<tip-box type="success">
+<tip-box>
   <include src="outcomes.md" />
 </tip-box>
 

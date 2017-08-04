@@ -1,5 +1,5 @@
 <include src="text.md#title" />
-<tip-box type="success">
+<tip-box>
   <include src="outcomes.md" />
 </tip-box>
 <panel type="seamless" header=" %%- - - - - - - - - -%%">

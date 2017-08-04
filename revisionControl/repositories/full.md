@@ -1,4 +1,4 @@
-<include src="prereq.md"/><tip-box type="success">
+<include src="prereq.md"/><tip-box>
   <include src="outcomes.md" />
 </tip-box>
 
