@@ -223,6 +223,12 @@ Also known as
 
 ## T
 
+<div id="def-testing">
+
+**Testing**: Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component.  –- source: IEEE
+
+</div>
+
 <div id="def-type-signature">
 
 **Type Signature**: The _type signature_ of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant. 
