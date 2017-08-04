@@ -1,7 +1,3 @@
-<tip-box>
-  <include src="outcomes.md" />
-</tip-box>
-
 %%**<include src="../path.md" inline />**%%
 
 <include src="text.md#title" />
