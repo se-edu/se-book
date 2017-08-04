@@ -50,6 +50,12 @@ Abstraction can be applied repeatedly to obtain higher and _higher levels of abs
 
 </div>
 
+<div id="def-cli">
+
+**CLI App**: An application that has a _Command Line Interface_. i.e. user interacts with the app by typing in commands.
+
+</div>
+
 <div id="def-commit">
 
 **Commit**: Saving the current state of the working folder into the Git revision history.
