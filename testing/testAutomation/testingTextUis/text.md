@@ -59,7 +59,7 @@ Let us assume we are testing a CLI app called `AddressBook` (Example: [se-edu/ad
    
    <tip-box>
    
-   :gift: Resources:
+   :paperclip: Resources:
    * [Using command redirection operators in Windows](http://technet.microsoft.com/en-us/library/bb490982.aspx)
    
    </tip-box>
