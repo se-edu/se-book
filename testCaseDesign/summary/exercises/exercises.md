@@ -1,4 +1,4 @@
-<panel header=":muscle: Exercises" type="info" expandable>
+<panel header=":muscle: Exercises" expandable>
   <include src="q-essay-matricNumbers.md" />
   <include src="q-essay-isValidDate.md" />
   <include src="q-essay-dispatchResources.md" />

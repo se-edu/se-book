@@ -1,4 +1,4 @@
-<panel header=":muscle: Exercises" type="info" expandable>
+<panel header=":muscle: Exercises" expandable>
   <include src="q-essay-sequentialIterative.md" />
 	<include src="q-essay-agilePairTDD.md" />
   <include src="q-tick-trueFalse.md" />

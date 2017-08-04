@@ -1,3 +1,3 @@
-<panel header=":muscle: Exercises" type="info" expandable>
+<panel header=":muscle: Exercises" expandable>
   <include src="q-essay-coupling-levels.md" />
 </panel>
