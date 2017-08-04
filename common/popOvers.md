@@ -7,3 +7,11 @@ _Extreme programming (XP)_ is a software development methodology which is intend
 </div>
 </popover>
 </div>
+
+<div id="sut">
+<popover id="pop:sut" placement="top">
+  <div slot="content">
+    <include src="definitions.md#def-sut" />
+  </div>
+</popover>
+</div>

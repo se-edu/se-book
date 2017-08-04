@@ -221,6 +221,12 @@ Also known as
 
 </div>
 
+<div id="def-sut">
+
+**SUT**: Software Under Test  
+
+</div>
+
 ## T
 
 <div id="def-testing">
