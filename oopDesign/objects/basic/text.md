@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming :arrow_right: Objects :arrow_right:</div>
+<div id="path">Object Oriented Programming &rarr; Objects &rarr;</div>
 
 <div id="title">
 
@@ -53,7 +53,7 @@ For example, it can be tweaked a bit as follows:
 * Use an object called Main to represent your role in the scenario.
 * As there is no physical writing involved, we can replace the Pen and Paper with an object called AgeList that is able to keep a list of ages.
 
-{visual: optimizations:  You -> Main; Pen + Paper -> AgeList}
+{visual: optimizations:  You &rarr; Main; Pen + Paper &rarr; AgeList}
 
 </tip-box>
 
@@ -110,6 +110,9 @@ Examples:
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

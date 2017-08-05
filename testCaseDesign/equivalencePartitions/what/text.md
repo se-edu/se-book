@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Test Case Design :arrow_right: Equivalence Partitions :arrow_right:</div>
+<div id="path">Test Case Design &rarr; Equivalence Partitions &rarr;</div>
 
 <div id="title">
 
@@ -35,6 +35,9 @@ _Equivalence partitioning_ is a technique that uses the above observation to imp
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

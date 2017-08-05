@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Specifying Requirements :arrow_right: Use Cases :arrow_right:</div>
+<div id="path">Specifying Requirements &rarr; Use Cases &rarr;</div>
 
 <div id="title">
 
@@ -53,6 +53,9 @@ One of the main disadvantages of use cases is that they are not good for capturi
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

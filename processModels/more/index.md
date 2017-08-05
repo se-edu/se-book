@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**SLDC Process Models :arrow_right:**%%
+%%**SLDC Process Models &rarr;**%%
 
 ## More
 

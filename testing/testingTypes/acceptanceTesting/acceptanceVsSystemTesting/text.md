@@ -1,4 +1,4 @@
-<div id="path">Testing :arrow_right: Testing Types :arrow_right:</div>
+<div id="path">Testing &rarr; Testing Types &rarr;</div>
 
 <div id="title">
 
@@ -41,6 +41,9 @@ A system could work perfectly on the development environment, but fail in the de
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 </div>
 
 </div>

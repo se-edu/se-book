@@ -1,4 +1,4 @@
-<panel header="Q: Agile processes, Pair programming, Test-driven development :four:">
+<panel header=":lock::key: Agile processes, Pair programming, Test-driven development :four:">
 <question has-input="true">
 
 Find out more about the following three topics and give at least three arguments for and three arguments against each.

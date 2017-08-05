@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Testing :arrow_right:**%%
+%%**Testing &rarr;**%%
 
 ## Introduction
 

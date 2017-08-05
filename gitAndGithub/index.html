@@ -7,6 +7,7 @@
     <title>SEforSDL - Git and Github</title>
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\markbind\css\markbind.css">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -18,7 +19,7 @@
       <div>
         <h4 id="init-one">Init <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can create a local Git repo <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
@@ -31,7 +32,7 @@
             <tabs>
               <tab header="SourceTree">
                 <div>
-                  <p>Click <code>File</code> -&gt; <code>Clone/New…</code></p>
+                  <p>Click <code>File</code> → <code>Clone/New…</code></p>
                   <p>Click on <code>Create</code> button and enter the location of the directory as shown below. Click <code>Create</code></p><img src="/se-book/gitAndGithub/init/images/sourcetree_1.png" height="220">
                   <p></p>
                   <p>Go to the <code>things</code> folder and observe how a hidden folder <code>.git</code> has been created.</p>
@@ -55,7 +56,7 @@ Initialized empty Git repository in c:/repos/things/.git/
                   <p>You can also use the <code>git status</code> command to check the status of the newly-created repo. It should respond with something like the bellow</p>
                   <pre class="hljs"><code>git status
 </code></pre>
-                  <p>-&gt;</p>
+                  <p>⤵️</p>
                   <pre class="hljs"><code># On branch master
 #
 # Initial commit
@@ -76,7 +77,7 @@ nothing to commit (create/copy files and use &quot;git add&quot; to track)
       <div>
         <h4 id="commit-one">Commit <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can commit using Git <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
@@ -84,13 +85,12 @@ nothing to commit (create/copy files and use &quot;git add&quot; to track)
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
+            <p>Create an empty repo as described in the panel below.</p>
             <p>
-              <panel src="/se-book\revisionControl\savingHistory\embed._include_.html" header="Revision Control: Saving History" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+              <panel src="/se-book\gitAndGithub\init\embed._include_.html" name="Git and GitHub: Init" header="Git and GitHub: Init" isOpen="false" no-close="true" no-switch="true"></panel>
             </p>
-            <p></p>
-            <p>Create an empty repo as described <a href="./init/">here</a>.</p>
-            <p>Create a file named <code>fruits.txt</code> in the folder and add some dummy text to it.</p>
-            <tip-box type="primary">
+            <p>Create a file named <code>fruits.txt</code> in the working directory and add some dummy text to it.</p>
+            <tip-box type="definition">
               <div>
                 <p><strong>Working directory</strong>: The directory the repo is based in is called the <em>working directory</em>.</p>
               </div>
@@ -108,28 +108,28 @@ nothing to commit (create/copy files and use &quot;git add&quot; to track)
                   <p>You can use the <code>git status</code> command to check the status of the working directory.</p>
                   <pre><code class="hljs sh">git status
 </code></pre>
-                  <p>-&gt;</p>
-                  <pre class="hljs"><code># On branch master
-#
-# Initial commit
-#
-# Untracked files:
-#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
-#
-#   a.txt
-nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+                  <p>⤵️</p>
+                  <pre><code class="hljs sh"><span class="hljs-comment"># On branch master</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Initial commit</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Untracked files:</span>
+<span class="hljs-comment">#   (use "git add &lt;file&gt;..." to include in what will be committed)</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">#   a.txt</span>
+nothing added to commit but untracked files present (use <span class="hljs-string">"git add"</span> to track)
 </code></pre>
                   <p></p>
                 </div>
               </tab>
             </tabs>
-            <p>Although git has detected the file in the working folder, it will not do anything with the file unless you tell it to. Suppose we want to commit the current state of the file. First, we should stage the file.</p>
-            <tip-box type="primary">
+            <p>Although git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose we want to commit the current state of the file. First, we should stage the file.</p>
+            <tip-box type="definition">
               <div>
                 <p><strong>Commit</strong>: Saving the current state of the working folder into the Git revision history.</p>
               </div>
             </tip-box>
-            <tip-box type="primary">
+            <tip-box type="definition">
               <div>
                 <p><strong>Stage</strong>: Instructing Git to prepare a file for committing.</p>
               </div>
@@ -149,7 +149,7 @@ nothing added to commit but untracked files present (use &quot;git add&quot; to 
                   <pre><code class="hljs sh">git add fruits.txt
 git status
 </code></pre>
-                  <p>-&gt;</p>
+                  <p>⤵️</p>
                   <pre><code class="hljs sh"><span class="hljs-comment"># On branch master</span>
 <span class="hljs-comment">#</span>
 <span class="hljs-comment"># Initial commit</span>
@@ -180,7 +180,7 @@ git status
                   <p>You can use the <code>log</code> command to see the commit history</p>
                   <pre><code class="hljs sh">git <span class="hljs-built_in">log</span>
 </code></pre>
-                  <p>-&gt;</p>
+                  <p>⤵️</p>
                   <pre class="hljs"><code>commit 8fd30a6910efb28bb258cd01be93e481caeab846
 Author: … &lt; … @... &gt;
 Date:   Wed Jul 5 16:06:28 2017 +0800
@@ -207,7 +207,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
       <div>
         <h4 id="ignore-two">Ignore <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can set Git to ignore files <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -215,11 +215,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>
-              <panel src="/se-book\revisionControl\savingHistory\embed._include_.html" header="Revision Control: Saving History" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-            </p>
-            <p></p>
-            <p>Add a file names <code>temp.txt</code> to the <code>things</code> repo you created. Suppose we don’t want this file to be revision controlled by Git. Let’s instructor Git to ignore <code>temp.txt</code></p>
+            <p>Add a file names <code>temp.txt</code> to the <code>things</code> repo you created. Suppose we don’t want this file to be revision controlled by Git. Let’s instruct Git to ignore <code>temp.txt</code></p>
             <tabs>
               <tab header="SourceTree">
                 <div>
@@ -253,7 +249,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
       <div>
         <h4 id="tag-three">Tag <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can tag commits using Git <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>
@@ -297,7 +293,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
       <div>
         <h4 id="checkout-two">Checkout <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can load a specific version of a Git repo <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -324,7 +320,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
                   <p>Example:</p>
                   <pre class="hljs"><code>git show 251b4cf
 </code></pre>
-                  <p>-&gt;</p>
+                  <p>⤵️</p>
                   <pre><code class="hljs diff">commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3
 Author: … &lt; … &gt;
 Date:   Sat Jul 8 16:50:27 2017 +0800
@@ -415,7 +411,7 @@ index 15b57f7..17f4528 100644
       <div>
         <h4 id="stash-four">Stash <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can use Git to stash files <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></p>
         </div>
@@ -435,7 +431,7 @@ index 15b57f7..17f4528 100644
       <div>
         <h4 id="clone-one">Clone <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can clone a remote repo <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
@@ -451,7 +447,7 @@ index 15b57f7..17f4528 100644
             <tabs>
               <tab header="SourceTree">
                 <div>
-                  <p>File -&gt; <code>Clone / New…</code> and provide the URL and the destination directory.</p>
+                  <p>File → <code>Clone / New…</code> and provide the URL and the destination directory.</p>
                   <p>You can use the <code>clone</code> command to clone a repo.</p>
                   <p>Follow instructions in <a href="https://help.github.com/articles/cloning-a-repository/">this</a> page</p>
                 </div>
@@ -474,7 +470,7 @@ index 15b57f7..17f4528 100644
       <div>
         <h4 id="pull-two">Pull <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can pull changes from a repo <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -490,7 +486,7 @@ index 15b57f7..17f4528 100644
                 <div>
                   <h4 id="clone-one-2">Clone <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
                 </div>
-                <tip-box type="success">
+                <tip-box>
                   <div>
                     <p>🏆 Can clone a remote repo <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
                   </div>
@@ -506,7 +502,7 @@ index 15b57f7..17f4528 100644
                       <tabs>
                         <tab header="SourceTree">
                           <div>
-                            <p>File -&gt; <code>Clone / New…</code> and provide the URL and the destination directory.</p>
+                            <p>File → <code>Clone / New…</code> and provide the URL and the destination directory.</p>
                             <p>You can use the <code>clone</code> command to clone a repo.</p>
                             <p>Follow instructions in <a href="https://help.github.com/articles/cloning-a-repository/">this</a> page</p>
                           </div>
@@ -577,7 +573,7 @@ index 15b57f7..17f4528 100644
       <div>
         <h4 id="push-two">Push <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can push to a remote repo <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -622,7 +618,7 @@ index 15b57f7..17f4528 100644
       <div>
         <h4 id="branch-two">Branch <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can use Git branching <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -730,7 +726,7 @@ git checkout feature1
       <div>
         <h4 id="merge-conflicts-three">Merge Conflicts <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can use Git to resolve merge conflicts <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>
@@ -782,7 +778,7 @@ white
       <div>
         <h4 id="create-prs-two">Create PRs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can create PRs on GitHub <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -811,7 +807,7 @@ white
       <div>
         <h4 id="manage-prs-three">Manage PRs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can review and merge PRs on GitHub <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>
@@ -849,7 +845,7 @@ git pull origin master
       <div>
         <h4 id="forking-workflow-four">Forking Workflow <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can follow Forking Workflow <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></p>
         </div>

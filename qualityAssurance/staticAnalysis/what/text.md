@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Quality Assurance :arrow_right: Static Analysis :arrow_right:</div>
+<div id="path">Quality Assurance &rarr; Static Analysis &rarr;</div>
 
 <div id="title">
 

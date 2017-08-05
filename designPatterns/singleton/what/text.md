@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Patterns :arrow_right: Singleton Pattern :arrow_right:</div>
+<div id="path">Software Design Patterns &rarr; Singleton Pattern &rarr;</div>
 
 <div id="title">
 
@@ -36,6 +36,9 @@ Example:
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

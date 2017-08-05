@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming :arrow_right: Associations :arrow_right:</div>
+<div id="path">Object Oriented Programming &rarr; Associations &rarr;</div>
 
 <div id="title">
 
@@ -21,6 +21,9 @@ Another important aspect of setting up an object network is deciding how many ob
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

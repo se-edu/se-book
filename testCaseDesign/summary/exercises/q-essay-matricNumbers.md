@@ -1,4 +1,4 @@
-<panel header="Q: Matric numbers :two:">
+<panel header=":lock::key: Matric numbers :two:">
 <question has-input="true">
 
 Assume students are given matriculation number according to the following format:

@@ -7,6 +7,7 @@
     <title>SEforSDL - Testing [Printable]</title>
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\markbind\css\markbind.css">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -19,47 +20,50 @@
       <div>
         <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
       </tip-box>
       <div>
-        <blockquote>
-          <p>Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component.</p>
-          <p>–- source: IEEE</p>
-        </blockquote><img src="/se-book/testing/introduction/what/images/diagram.png" height="180">
+        <tip-box type="definition">
+          <div>
+            <p><strong>Testing</strong>: Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component. –- source: IEEE</p>
+          </div>
+        </tip-box><img src="/se-book/testing/introduction/what/images/diagram.png" height="180">
         <p></p>
-        <p>Testing entails the execution of a set of test cases. A test case specifies how to perform a test. At a minimum, it specifies the input to the <em>software under test (SUT)</em> and the expected behavior.</p>
+        <p><strong>When testing, we execute a set of <em>test cases</em>.</strong> A test case specifies how to perform a test. At a minimum, it specifies the input to the <em>software under test (SUT)</em> and the expected behavior.</p>
         <tip-box>
-          <p>Example: A minimal test case for testing a browser:</p>
+          <p>📦 Example: A minimal test case for testing a browser:</p>
           <ul>
             <li><strong>Input</strong> – Start the browser using a blank page (vertical scrollbar disabled). Then, load ‘longfile.html’ located in the ‘test data’ folder.</li>
             <li><strong>Expected behavior</strong> – The scrollbar should be automatically enabled upon loading ‘longfile.html’.</li>
           </ul>
         </tip-box>
-        <p>Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.</p>
-        <panel header="Other details a test case can contain :two:" type="seamless">
+        <p><strong>Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.</strong></p>
+        <panel header="%%Other details a test case can contain :two:%%" type="seamless">
           <p>A more elaborate test case can have other details such as those given below.</p>
           <ul>
-            <li>A unique identifier : e.g. TC0034-a</li>
-            <li>A descriptive name: e.g. vertical scrollbar activation for long web pages</li>
-            <li>Objectives: e.g. to check whether the vertical scrollbar is correctly activated when a long web page is loaded to the browser</li>
-            <li>Classification information: e.g. priority - medium, category - UI features</li>
-            <li>Cleanup, if any: e.g. empty the browser cache.</li>
+            <li>A unique identifier : <span class="dimmed">e.g. TC0034-a</span></li>
+            <li>A descriptive name: <span class="dimmed">e.g. vertical scrollbar activation for long web pages</span></li>
+            <li>Objectives: <span class="dimmed">e.g. to check whether the vertical scrollbar is correctly activated when a long web page is loaded to the browser</span></li>
+            <li>Classification information: <span class="dimmed">e.g. priority - medium, category - UI features</span></li>
+            <li>Cleanup, if any: <span class="dimmed">e.g. empty the browser cache.</span></li>
           </ul>
+          <p></p>
         </panel>
+        <p></p>
         <p>For each test case we do the following:</p>
         <ol>
           <li>Feed the input to the SUT</li>
           <li>Observe the actual output</li>
           <li>Compare actual output with the expected output</li>
         </ol>
-        <p>A test case <em>failure</em> is a mismatch between the expected behavior and the actual behavior. A failure is caused by a <em>defect</em> (or a bug).</p>
+        <p><strong>A test case <em>failure</em> is a mismatch between the expected behavior and the actual behavior. A failure is caused by a <em>defect</em> (or a bug).</strong></p>
         <tip-box>
-          <p>Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading ‘longfile.html’. The defect/bug causing that failure could be an uninitialized variable.</p>
+          <p>📦 Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading ‘longfile.html’. The defect/bug causing that failure could be an uninitialized variable.</p>
         </tip-box>
-        <panel header="A deeper look at the definition of testing :three:" type="seamless">
+        <panel header="%%A deeper look at the definition of testing :three:%%" type="seamless">
           <p>Here is another definition of testing:</p>
           <blockquote>
             <p>Software testing consists of the <em>dynamic</em> verification that a program provides <em>expected</em> behaviors on a <em>finite</em> set of test cases, suitably <em>selected</em> from the usually infinite execution domain.</p>
@@ -72,14 +76,16 @@
             <li><em>Selected</em>: In most cases it is not possible to test all scenarios. That means we need to select what scenarios to test.</li>
             <li><em>Expected</em>: Testing requires some knowledge of how the software is expected to behave.</li>
           </ul>
+          <p></p>
         </panel>
+        <p></p>
       </div>
     </div>
     <div>
       <div>
         <h4 id="testability-three">Testability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain testability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>
@@ -94,7 +100,7 @@
       <div>
         <h4 id="what-one-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain unit testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
@@ -107,7 +113,7 @@
       <div>
         <h4 id="stubs-two">Stubs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain stubs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -121,7 +127,7 @@
       <div>
         <h4 id="mocks-three">Mocks <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain mocks <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>
@@ -136,7 +142,7 @@
       <div>
         <h4 id="what-one-3">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain integration testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
@@ -157,7 +163,7 @@
       <div>
         <h4 id="what-one-4">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain system testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
@@ -187,7 +193,7 @@
       <div>
         <h4 id="what-three">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain alpha and beta testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>
@@ -198,12 +204,26 @@
         <p>An <em>open beta release</em> is the release of not-yet-production-quality-but-almost-there software to the general population. For example, Google’s Gmail was in ‘beta’ for many years before the label was finally removed.</p>
       </div>
     </div>
+    <h3 id="dogfooding">Dogfooding</h3>
+    <div>
+      <div>
+        <h4 id="what-three-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box>
+        <div>
+          <p>🏆 Can explain dogfooding <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+        </div>
+      </tip-box>
+      <div>
+        <p>...</p>
+      </div>
+    </div>
     <h3 id="developer-testing">Developer Testing</h3>
     <div>
       <div>
         <h4 id="what-two">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain developer testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -217,7 +237,7 @@
       <div>
         <h4 id="why-two">Why <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain the need for early developer testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -242,7 +262,7 @@
       <div>
         <h4 id="what-two-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain exploratory testing and scripted testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -273,7 +293,7 @@
       <div>
         <h4 id="when-three">When <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain the choice between exploratory testing and scripted testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>
@@ -305,7 +325,7 @@
       <div>
         <h4 id="what-one-5">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain acceptance testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
@@ -320,7 +340,7 @@
       <div>
         <h4 id="acceptance-vs-system-testing-two">Acceptance vs System Testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain the differences between system testing and acceptance testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -373,15 +393,24 @@
       <div>
         <h4 id="what-one-6">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain regression testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
       </tip-box>
       <div>
-        <p>When we modify a system that has been tested, the modification may result in some unintended and undesirable effects on the system. Such an effect is called a <em>regression</em>.</p>
-        <p>To detect and correct regressions, we need to retest all related components. Testing with this intent is called <em>regression testing</em>.</p>
-        <p>Regression testing is more effective when it is done frequently, after each small change. However, doing so can be prohibitively expensive if testing is done manually. Hence, regression testing is more practical when it is automated.</p>
+        <p><strong>When we modify a system, the modification may result in some unintended and undesirable effects on the system. Such an effect is called a <em>regression</em>.</strong></p>
+        <p><strong><em>Regression testing</em> is re-testing the <trigger for="pop:sut">SUT</trigger> to detect regressions.</strong> Noted that to detect regressions, we need to retest all related components, even if they were tested before.</p>
+        <p>Regression testing is more effective when it is done frequently, after each small change. However, doing so can be prohibitively expensive if testing is done manually. Hence, <strong>regression testing is more practical when it is automated</strong>.</p>
+        <div>
+          <popover id="pop:sut" placement="top">
+            <div slot="content">
+              <div>
+                <p><strong>SUT</strong>: Software Under Test</p>
+              </div>
+            </div>
+          </popover>
+        </div>
       </div>
     </div>
     <h2 id="test-automation">Test Automation</h2>
@@ -389,58 +418,106 @@
       <div>
         <h4 id="what-one-7">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain test automation <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
       </tip-box>
       <div>
-        <p>An automated test case can be run programmatically and the result of the test case (pass or fail) is determined programmatically.</p>
+        <tabs>
+          <tab header=":abc:">
+            <p><strong>An automated test case can be run programmatically and the result of the test case (pass or fail) is determined programmatically.</strong> Compared to manual testing, automated testing reduces the effort required to run tests repeatedly
+              and increases precision of testing (because manual testing is susceptible to human errors).</p>
+            <p></p>
+          </tab>
+          <tab header=":tv:"><iframe width="560" height="315" src="https://www.youtube.com/embed/RbSlW8jZFe8?end=79&version=3" frameborder="0" allowfullscreen></iframe>
+            <p></p>
+          </tab>
+        </tabs>
       </div>
     </div>
     <div>
       <div>
-        <h4 id="automated-testing-of-text-uis-one">Automated Testing of Text UIs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+        <h4 id="automated-testing-of-cli-apps-one">Automated Testing of CLI Apps <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
-          <p>🏆 Can semi-automate testing of a text UI <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+          <p>🏆 Can semi-automate testing of CLIs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
       </tip-box>
       <div>
-        <p>A simple way to test a text UI is using input/output re-direction. Let us assume we are testing a program ‘RouteStore’ which has a text UI. First, we store the test input in the text file ‘input.txt’. Similarly, we store the output we expect from
-          the SUT to another text file ‘expected.txt’. Now, we run the program as:</p>
-        <pre class="hljs"><code>java RouteStore &lt; input.txt &gt; output.txt
-// or
-RouteStore.exe &lt; input.txt &gt; output.txt
+        <p><strong>A simple way to semi-automate testing of a <trigger for="pop:cli">CLI</trigger> app is using input/output re-direction.</strong></p>
+        <ul>
+          <li><strong>First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.</strong> e.g., <code>java AddressBook &gt; output.txt</code></li>
+          <li><strong>Next, we compare the actual output file with another file containing the expected output.</strong> e.g., <code>FC output.txt expected.txt</code></li>
+        </ul>
+        <p>Let us assume we are testing a CLI app called <code>AddressBook</code> (Example: <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level1">se-edu/addressbook-level1</a>). Here are the detailed steps:</p>
+        <ol>
+          <li>
+            <p>Store the test input in the text file <code>input.txt</code>.</p>
+            <panel header="%%:package: Example `input.txt`%%" type="seamless">
+              <pre class="hljs"><code>add Valid Name p/12345 valid@email.butNoPrefix
+add Valid Name 12345 e/valid@email.butPhonePrefixMissing
 </code></pre>
-        <p>The above redirects the text in ‘input.txt’ as the input to ‘RouteStore’ and similarly, redirects the output of RouteStore to a text file ‘output.txt’. Note that this does not require any code changes to RouteStore.</p>
-        <panel header="**The ‘>’ operator and the ‘<’ operator. :zero:**"
-          alt="Alternative Header">
-          <p>A command line program written in the usual way (i.e., the way you are used to writing them during the first year programming modules) takes input from keyboard and outputs to the console. That is because those two are default input and output
-            streams, respectively. But you can change that behavior using ‘<code>&lt;</code>’ and ‘<code>&gt;</code>’ operators. For example, if you run <code>TextBuddy</code> in the DOS prompt, the output will be shown in the console. But if you run
-            it like this</p>
-          <pre class="hljs"><code>TextBuddy &gt; output.txt (or java TextBuddy &gt; output.txt)
+            </panel>
+          </li>
+          <li>
+            <p>Store the output we expect from the SUT to another text file <code>expected.txt</code>.</p>
+            <panel header="%%:package: Example `expected.txt`%%" type="seamless">
+              <pre class="hljs"><code>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
+Invalid command format: add 
+
+Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
+Invalid command format: add 
 </code></pre>
-          <p>the Operating System then creates a file ‘output.txt’ and stores the output in that file instead of displaying it in the console. Program output using <code>System.out.println</code> (in Java) and <code>cout</code> (in C++) is directed to the
-            console by default. When you add ‘<code>&gt; output.txt</code>’, the OS redirects the output to ‘output.txt’ instead. No file I/O coding is required. Similarly, adding ‘<code>&lt; input.txt</code>’ (or any other filename) makes the OS redirect
-            the contents of the file as input to the program.</p>
-          <p>The link below explains how Windows does it:
-            <a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">http://technet.microsoft.com/en-us/library/bb490982.aspx</a></p>
-        </panel>
-        <p></p>
-        <p>All we have to do now is to compare ‘output.txt’ with ‘expected.txt’. This can be done using a utility such as Windows FC (i.e. File Compare) command or a GUI tool such as Winmerge. For example, we can run the following two commands.</p>
-        <pre class="hljs"><code>java RouteStore &lt; input.txt &gt; output.txt
-FC output.txt expected.txt
+            </panel>
+          </li>
+          <li>
+            <p>Run the program as given below, which will redirect the text in <code>input.txt</code> as the input to <code>AddressBook</code> and similarly, will redirect the output of AddressBook to a text file <code>output.txt</code>. <span class="dimmed">Note that this does not require any code changes to <code>AddressBook</code>.</span></p>
+            <pre><code class="hljs sh">java AddressBook &lt; input.txt &gt; output.txt
 </code></pre>
-        <p>Note that the above technique is only suitable when testing text UIs, and only if the exact output is known.</p>
+            <panel header="%%More on the `>` operator and the `<` operator. :zero:%%" alt="I/O redirection info" type="seamless">
+              <p>A CLI program takes input from keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code>&lt;</code> and <code>&gt;</code> operators. For
+                example, if you run <code>AddressBook</code> in the DOS prompt, the output will be shown in the console. But if you run it like this</p>
+              <pre><code class="hljs sh">java AddressBook &gt; output.txt 
+</code></pre>
+              <p>the Operating System then creates a file <code>output.txt</code> and stores the output in that file instead of displaying it in the console. Program output using <code>System.out.println</code> is directed to the console by default. When
+                you add <code>&gt; output.txt</code>, the OS redirects the output to <code>output.txt</code> instead. No file I/O coding is required. Similarly, adding <code>&lt; input.txt</code> (or any other filename) makes the OS redirect the contents
+                of the file as input to the program.</p>
+              <tip-box>
+                <p>📎 Resources:</p>
+                <ul>
+                  <li><a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">Using command redirection operators in Windows</a></li>
+                </ul>
+              </tip-box>
+              <p></p>
+            </panel>
+            <p></p>
+          </li>
+          <li>
+            <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such as Winmerge.</p>
+            <pre
+              class="hljs"><code>FC output.txt expected.txt
+</code></pre>
+          </li>
+        </ol>
+        <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output is known.</p>
+        <div>
+          <popover id="pop:cli" placement="top">
+            <div slot="content">
+              <div>
+                <p><strong>CLI App</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p>
+              </div>
+            </div>
+          </popover>
+        </div>
       </div>
     </div>
     <div>
       <div>
         <h4 id="test-automation-using-test-drivers-two">Test Automation Using Test Drivers <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain test drivers <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -500,7 +577,7 @@ FC output.txt expected.txt
       <div>
         <h4 id="test-automation-tools-two">Test Automation Tools <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain test automation tools <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -534,7 +611,7 @@ FC output.txt expected.txt
       <div>
         <h4 id="automated-testing-of-guis-two">Automated Testing of GUIs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain automated GUI testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -560,7 +637,7 @@ FC output.txt expected.txt
       <div>
         <h4 id="what-two-3">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain test coverage <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -612,7 +689,7 @@ FC output.txt expected.txt
       <div>
         <h4 id="how-three">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain how test coverage works <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>
@@ -626,9 +703,9 @@ FC output.txt expected.txt
     <h2 id="dependency-injection">Dependency Injection</h2>
     <div>
       <div>
-        <h4 id="what-three-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+        <h4 id="what-three-3">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain dependency injection <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>
@@ -644,7 +721,7 @@ FC output.txt expected.txt
       <div>
         <h4 id="how-three-2">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain how dependency injection works <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>
@@ -718,7 +795,7 @@ FC output.txt expected.txt
       <div>
         <h4 id="what-two-4">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain TDD <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -732,7 +809,7 @@ FC output.txt expected.txt
       <div>
         <h4 id="how-three-3">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can follow TDD <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>

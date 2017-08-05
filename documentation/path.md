@@ -1,1 +1,1 @@
-Implementation :arrow_right: Documentation :arrow_right:
+Implementation &rarr; Documentation &rarr;

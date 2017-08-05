@@ -7,6 +7,7 @@
     <title>SEforSDL - Revision Control</title>
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\markbind\css\markbind.css">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -18,7 +19,7 @@
       <div>
         <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain revision control <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
@@ -26,76 +27,89 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <blockquote>
-              <p><em>Revision control</em> is the process of managing multiple versions of a piece of information. In its simplest form, this is something that many people do by hand: every time you modify a file, save it under a new name that contains a
-                number, each one higher than the number of the preceding version.</p>
-              <p>Manually managing multiple versions of even a single file is an error-prone task, though, so software tools to help automate this process have long been available. The earliest automated revision control tools were intended to help a single
-                user to manage revisions of a single file. Over the past few decades, the scope of revision control tools has expanded greatly; they now manage multiple files, and help multiple people to work together. The best modern revision control
-                tools have no problem coping with thousands of people working together on projects that consist of hundreds of thousands of files.</p>
-              <p>There are a number of reasons why you or your team might want to use an automated revision control tool for a project. It will track the history and evolution of your project, so you don't have to. For every change, you'll have a log of
-                who made it; why they made it; when they made it; and what the change was.</p>
-              <p>When you're working with other people, <strong>revision control software makes it easier for you to collaborate</strong>. For example, when people more or less simultaneously make potentially incompatible changes, the software will help
-                you to identify and resolve those conflicts.</p>
-              <p><strong>It can help you to recover from mistakes</strong>. If you make a change that later turns out to be an error, you can revert to an earlier version of one or more files. In fact, a really good revision control tool will even help you
-                to efficiently figure out exactly when a problem was introduced.</p>
-              <p><strong>It will help you to work simultaneously on, and manage the drift between, multiple versions of your project.</strong> Most of these reasons are equally valid, at least in theory, whether you're working on a project by yourself, or
-                with a hundred other people.</p>
-              <p>-- [adapted from
-                <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]</p>
-            </blockquote>
-            <p>It follows from the explanation above that using an RCS frees us from having to keep copies of all the past versions on our hard disk. If the RCS spans multiple machines, it also <strong>reduces the risk of ‘losing everything’ in case of a hard disk crash</strong>.</p>
-            <popover
-              id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide :mag:" placement="right">
-              <div slot="content">
-                <div>
-                  <p><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> by Bryan O'Sullivan retrieve on 2012/07/11</p>
-                </div>
-              </div>
-              </popover>
-          </div>
-          <div>
-            <div></div>
-          </div>
-        </div>
-      </panel>
-    </div>
-    <div>
-      <div>
-        <h4 id="other-names-three">Other Names <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
-      </div>
-      <tip-box type="success">
-        <div>
-          <p>🏆 Can identify other names for revision control <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
-        </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
-        <div>
-          <div>
-            <p>Revision control is a diverse field, so much so that it is referred to by many names and acronyms. Here are a few of the more common variations you'll encounter:</p>
-            <ul>
-              <li>Revision control system (RCS)</li>
-              <li>Software configuration management (SCM), or configuration management</li>
-              <li>Source code management</li>
-              <li>Source code control, or source control</li>
-              <li>Version control system (VCS)</li>
-            </ul>
-            <p>Some people claim that these terms actually have different meanings, but in practice they overlap so much that there's no agreed or even useful way to tease them apart.</p>
-            <p>-- [adapted from
-              <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]</p>
+            <p><strong><em>Revision Control Software (RCS)</em> are the software tools that automate the process of <em>Revision Control</em> i.e. managing revisions of software artifacts.</strong></p>
+            <p>Revision control is also known as <em>Version Control Software (VCS)</em>, and a few other names. Here, we use the terms <em>revision</em> and <em>version</em> interchangeably.</p>
+            <tabs>
+              <tab header=":abc:">
+                <blockquote>
+                  <p><em>Revision control</em> is the process of managing multiple versions of a piece of information. In its simplest form, this is something that many people do by hand: every time you modify a file, save it under a new name that contains
+                    a number, each one higher than the number of the preceding version.</p>
+                  <p>Manually managing multiple versions of even a single file is an error-prone task, though, so software tools to help automate this process have long been available. The earliest automated revision control tools were intended to help a
+                    single user to manage revisions of a single file. Over the past few decades, the scope of revision control tools has expanded greatly; they now manage multiple files, and help multiple people to work together. The best modern revision
+                    control tools have no problem coping with thousands of people working together on projects that consist of hundreds of thousands of files.</p>
+                  <p>There are a number of reasons why you or your team might want to use an automated revision control tool for a project. It will track the history and evolution of your project, so you don't have to. For every change, you'll have a log
+                    of who made it; why they made it; when they made it; and what the change was.</p>
+                  <p>When you're working with other people, <strong>revision control software makes it easier for you to collaborate</strong>. For example, when people more or less simultaneously make potentially incompatible changes, the software will help
+                    you to identify and resolve those conflicts.</p>
+                  <p><strong>It can help you to recover from mistakes</strong>. If you make a change that later turns out to be an error, you can revert to an earlier version of one or more files. In fact, a really good revision control tool will even help
+                    you to efficiently figure out exactly when a problem was introduced.</p>
+                  <p><strong>It will help you to work simultaneously on, and manage the drift between, multiple versions of your project.</strong> Most of these reasons are equally valid, at least in theory, whether you're working on a project by yourself,
+                    or with a hundred other people.</p>
+                  <p>-- [adapted from
+                    <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]</p>
+                </blockquote>
+              </tab>
+              <tab header=":tv:">
+                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/M-O8ZNW9icQ" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+              </tab>
+            </tabs>
             <popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide :mag:" placement="right">
               <div slot="content">
                 <div>
-                  <p><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> by Bryan O'Sullivan retrieve on 2012/07/11</p>
+                  <p><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> by Bryan O'Sullivan retrieved on 2012/07/11</p>
                 </div>
               </div>
             </popover>
           </div>
           <div>
             <div>
-              <div id="extras">
-                <div></div>
-              </div>
+              <panel header=":muscle: Exercises" expandable="">
+                <div>
+                  <panel header=":lock::key: What does RCS stand for?">
+                    <question has-input="true">
+                      <div slot="answer">
+                        <p>Revision Control Software</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+                <div>
+                  <panel header=":lock::key: What is a Revision?">
+                    <question has-input="true">
+                      <p>In the context of RCS, what is a <em>Revision</em>? Give an example.</p>
+                      <div slot="answer">
+                        <p>Versions of a piece of information. For example, take a file containing program code. If you modify the code and save the file, you have a new version of that file.</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+                <div>
+                  <panel header=":lock::key: Which of these is not considered a benefit of a typical RCS?">
+                    <question>
+                      <ul class="task-list">
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Help a single user manage revisions of a single file</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Help a developer recover from a incorrect modification to a code file</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Makes it easier for a group of developers to collaborate on a project</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Manage the drift between multiple versions of your project</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Detect when multiple developers make incompatible changes to the same file</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. All of them are benefits of RCS</li>
+                      </ul>
+                      <div slot="answer">
+                        <p>f</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+                <div>
+                  <panel header=":lock: Explain RCS in a team project context">
+                    <question has-input="true">
+                      <p>Suppose You are doing a team project with Tom, Dick, and Harry but those three have not even heard the term RCS. How do you explain RCS to them as briefly as possible, using the project as an example?</p>
+                    </question>
+                  </panel>
+                </div>
+              </panel>
             </div>
+            <div></div>
           </div>
         </div>
       </panel>
@@ -104,7 +118,7 @@
       <div>
         <h4 id="repositories-one">Repositories <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain repositories <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
@@ -112,10 +126,34 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>Suppose you want to apply revision control on files in a directory called <code>ProjectFoo</code>. In that case you need to set up a <em>repo</em> (short for repository) in <code>ProjectFoo</code> directory, which is referred to as the <em>working directory</em>              of the repo. The repository is the database where the meta-data about the revision history are stored. For example, Git uses a hidden folder named <code>.git</code> inside the working directory.</p>
-            <p>You can have multiple repos in your computer, each repo revision-controlling files of a different working directly, for examples, files of different projects.</p>
+            <tip-box type="definition">
+              <div>
+                <p><strong>Repository</strong> (<em>repo</em> for short): The database of the history of a directory being tracked by an RCS software (e.g. Git).</p>
+              </div>
+            </tip-box>
+            <tabs>
+              <tab header=":abc:">
+                <p>Suppose you want to apply revision control on files in a directory called <code>ProjectFoo</code>. In that case you need to set up a <em>repo</em> (short for repository) in <code>ProjectFoo</code> directory, which is referred to as the
+                  <em>working directory</em> of the repo. The repository is the database where the meta-data about the revision history are stored. For example, Git uses a hidden folder named <code>.git</code> inside the working directory.</p>
+                <p>You can have multiple repos in your computer, each repo revision-controlling files of a different working directly, for examples, files of different projects.</p>
+              </tab>
+              <tab header=":tv:">
+                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/mLnxwlCEIb8" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+              </tab>
+            </tabs>
           </div>
           <div>
+            <div>
+              <panel header=":muscle: Exercises" expandable="">
+                <div>
+                  <panel header=":lock: What is a repo?">
+                    <question has-input="true">
+                      <p>In the context of RCS, what is a <em>repo</em>?</p>
+                    </question>
+                  </panel>
+                </div>
+              </panel>
+            </div>
             <div></div>
           </div>
         </div>
@@ -125,7 +163,7 @@
       <div>
         <h4 id="saving-history-one">Saving History <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain saving history <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
@@ -133,11 +171,23 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>In a repo, we can specify which files to track and which files to ignore. Some files such a temporary log files created during the build/test process should not be revision-controlled.</p>
-            <p><strong><em>Committing</em></strong> saves a snapshot of the current state of the tracked files in the revision control history. Such a snapshot is also called a <strong><em>commit</em></strong> (i.e. the noun).</p>
-            <p>When we are ready to commit, we should first <strong><em>stage</em></strong> the specific changes we want to commit. This intermediate step allows us to commit only some changes while saving other changes for a later commit.</p>
-            <p>Each commit in a repo is a recorded point in the history of the project that is uniquely identified by an auto-generated hash e.g. <code>a16043703f28e5b3dab95915f5c5e5bf4fdc5fc1</code>. We can tag a specific commit with a more easily identifiable
-              name e.g. <code>v1.0.2</code></p>
+            <h5 id="tracking-and-ignoring">Tracking and Ignoring</h5>
+            <p><strong>In a repo, we can specify which files to track and which files to ignore.</strong> Some files such a temporary log files created during the build/test process should not be revision-controlled.</p>
+            <h5 id="staging-and-committing">Staging and Committing</h5>
+            <tabs>
+              <tab header=":abc:">
+                <p><strong><em>Committing</em> saves a snapshot of the current state of the tracked files in the revision control history. Such a snapshot is also called a <em>commit</em> (i.e. the noun).</strong></p>
+                <p><strong>When we are ready to commit, we should first <em>stage</em> the specific changes we want to commit.</strong> This intermediate step allows us to commit only some changes while saving other changes for a later commit.</p>
+                <p></p>
+              </tab>
+              <tab header=":tv:">
+                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/7exFDGHgQcw" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                <p></p>
+              </tab>
+            </tabs>
+            <h5 id="identifying-points-in-history">Identifying Points in History</h5>
+            <p><strong>Each commit in a repo is a recorded point in the history of the project that is uniquely identified by an auto-generated hash</strong> e.g. <code>a16043703f28e5b3dab95915f5c5e5bf4fdc5fc1</code>.</p>
+            <p><strong>We can tag a specific commit with a more easily identifiable name</strong> e.g. <code>v1.0.2</code></p>
           </div>
           <div>
             <div></div>
@@ -149,7 +199,7 @@
       <div>
         <h4 id="using-history-two">Using History <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain using history <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -171,7 +221,7 @@
       <div>
         <h4 id="remote-repositories-two">Remote Repositories <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain remote repositories <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -195,7 +245,7 @@
       <div>
         <h4 id="branching-two">Branching <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain branching <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -220,7 +270,7 @@
       <div>
         <h4 id="drcs-vs-crcs-three">DRCS vs CRCS <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain DRCS vs CRCS <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>
@@ -248,7 +298,7 @@
       <div>
         <h4 id="forking-flow-three">Forking Flow <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain forking workflow <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>
@@ -280,7 +330,7 @@
       <div>
         <h4 id="feature-branch-flow-three">Feature Branch Flow <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain feature branch flow <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>
@@ -302,7 +352,7 @@
       <div>
         <h4 id="centralized-flow-two">Centralized Flow <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain centralised flow <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>

@@ -7,18 +7,25 @@
     <title>SEforSDL - Git and Github: Commit</title>
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
 </head>
 <body>
 <div id="app" class="container-fluid">
     <link rel="stylesheet" href="/se-book/css/textbook.css">
 <div class="website-content">
+  <tip-box>
+    <div>
+      <p>🏆 Can commit using Git <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+    </div>
+  </tip-box>
   <div>
-    <tip-box type="success">
-      <div>
-        <p>🏆 Can commit using Git <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
-      </div>
-    </tip-box>
-    <p><span class="dimmed"><strong><span>Tools ➡️ Git and GitHub ➡️
+    <div>
+      <panel header="%%Prerequisites%%" expandable="" expanded="">
+        <panel src="/se-book\revisionControl\savingHistory\full._include_.html" header="Revision Control: Saving History" isOpen="false" no-close="true" no-switch="true"></panel>
+      </panel>
+    </div>
+    <p></p>
+    <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong>
       </span>
     </p>
@@ -27,13 +34,12 @@
     </div>
     <div id="main">
       <div>
+        <p>Create an empty repo as described in the panel below.</p>
         <p>
-          <panel src="/se-book\revisionControl\savingHistory\embed._include_.html" header="Revision Control: Saving History" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+          <panel src="/se-book\gitAndGithub\init\embed._include_.html" name="Git and GitHub: Init" header="Git and GitHub: Init" isOpen="false" no-close="true" no-switch="true"></panel>
         </p>
-        <p></p>
-        <p>Create an empty repo as described <a href="./init/">here</a>.</p>
-        <p>Create a file named <code>fruits.txt</code> in the folder and add some dummy text to it.</p>
-        <tip-box type="primary">
+        <p>Create a file named <code>fruits.txt</code> in the working directory and add some dummy text to it.</p>
+        <tip-box type="definition">
           <div>
             <p><strong>Working directory</strong>: The directory the repo is based in is called the <em>working directory</em>.</p>
           </div>
@@ -51,28 +57,28 @@
               <p>You can use the <code>git status</code> command to check the status of the working directory.</p>
               <pre><code class="hljs sh">git status
 </code></pre>
-              <p>-&gt;</p>
-              <pre class="hljs"><code># On branch master
-#
-# Initial commit
-#
-# Untracked files:
-#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
-#
-#   a.txt
-nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+              <p>⤵️</p>
+              <pre><code class="hljs sh"><span class="hljs-comment"># On branch master</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Initial commit</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Untracked files:</span>
+<span class="hljs-comment">#   (use "git add &lt;file&gt;..." to include in what will be committed)</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">#   a.txt</span>
+nothing added to commit but untracked files present (use <span class="hljs-string">"git add"</span> to track)
 </code></pre>
               <p></p>
             </div>
           </tab>
         </tabs>
-        <p>Although git has detected the file in the working folder, it will not do anything with the file unless you tell it to. Suppose we want to commit the current state of the file. First, we should stage the file.</p>
-        <tip-box type="primary">
+        <p>Although git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose we want to commit the current state of the file. First, we should stage the file.</p>
+        <tip-box type="definition">
           <div>
             <p><strong>Commit</strong>: Saving the current state of the working folder into the Git revision history.</p>
           </div>
         </tip-box>
-        <tip-box type="primary">
+        <tip-box type="definition">
           <div>
             <p><strong>Stage</strong>: Instructing Git to prepare a file for committing.</p>
           </div>
@@ -92,7 +98,7 @@ nothing added to commit but untracked files present (use &quot;git add&quot; to 
               <pre><code class="hljs sh">git add fruits.txt
 git status
 </code></pre>
-              <p>-&gt;</p>
+              <p>⤵️</p>
               <pre><code class="hljs sh"><span class="hljs-comment"># On branch master</span>
 <span class="hljs-comment">#</span>
 <span class="hljs-comment"># Initial commit</span>
@@ -123,7 +129,7 @@ git status
               <p>You can use the <code>log</code> command to see the commit history</p>
               <pre><code class="hljs sh">git <span class="hljs-built_in">log</span>
 </code></pre>
-              <p>-&gt;</p>
+              <p>⤵️</p>
               <pre class="hljs"><code>commit 8fd30a6910efb28bb258cd01be93e481caeab846
 Author: … &lt; … @... &gt;
 Date:   Wed Jul 5 16:06:28 2017 +0800

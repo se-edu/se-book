@@ -9,7 +9,7 @@ You can use the `log` command to see the commit history
 ```sh
 git log
 ```
-->
+:arrow_heading_down:
 ```
 commit 8fd30a6910efb28bb258cd01be93e481caeab846
 Author: … < … @... >

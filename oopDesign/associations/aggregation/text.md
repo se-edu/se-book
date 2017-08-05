@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming :arrow_right: Associations :arrow_right:</div>
+<div id="path">Object Oriented Programming &rarr; Associations &rarr;</div>
 
 <div id="title">
 
@@ -28,6 +28,9 @@ The distinction between composition and aggregation is rather blurred. Martin Fo
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

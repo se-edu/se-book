@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming :arrow_right: </div>
+<div id="path">Object Oriented Programming &rarr; </div>
 
 <div id="title">
 
@@ -38,6 +38,9 @@ Object Oriented Programming is a widely used programming paradigm. Here is an in
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

@@ -1,9 +1,4 @@
-<tip-box type="success">
-  <div>
-    <p>🏆 Can explain law of demeter <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
-  </div>
-</tip-box>
-<p><span class="dimmed"><strong><span>Supplmentary ➡️ Principles ➡️
+<p><span class="dimmed"><strong><span>Supplmentary → Principles →
 </span></strong>
   </span>
 </p>
@@ -48,9 +43,9 @@
   </div>
   <div>
     <div>
-      <panel header=":muscle: Exercises" type="info" expandable="">
+      <panel header=":muscle: Exercises" expandable="">
         <div>
-          <panel header="Q: Explain the Law of Demeter using code examples.">
+          <panel header=":lock::key: Explain the Law of Demeter using code examples.">
             <question has-input="true">
               <p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
               <div slot="answer">
@@ -63,6 +58,53 @@
                   <li><code>timer.start(); //this does not violate LoD since timer appears to be an internal component (i.e. a variable) of Logic itself.</code></li>
                   <li><code>Cell c = new Cell(); c.init(); // this does not violate LoD since c was created inside the operation.</code></li>
                 </ul>
+              </div>
+            </question>
+          </panel>
+        </div>
+        <div>
+          <panel header=":lock::key: True or False?">
+            <question>
+              <p>This violates Law of Demeter.</p>
+              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
+    Goo g =  <span class="hljs-keyword">new</span> Goo();
+    g.doSomething();
+}
+</code></pre>
+              <ul class="task-list">
+                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+              </ul>
+              <div slot="answer">
+                <ul class="task-list">
+                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
+                </ul>
+                <p>Explanation: The line “g.doSomething()” does not violate LoD because it is OK to invoke methods of objects created within a method.</p>
+              </div>
+            </question>
+          </panel>
+        </div>
+        <div>
+          <panel header=":lock::key: True or False?">
+            <question>
+              <p>Pick the odd one out.</p>
+              <ul class="task-list">
+                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Law of Demeter.</li>
+                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Don’t add people to a late project.</li>
+                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Don’t talk to strangers.</li>
+                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Principle of least knowledge.</li>
+                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Coupling.</li>
+              </ul>
+              <div slot="answer">
+                <ul class="task-list">
+                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Law of Demeter.</li>
+                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. Don’t add people to a late project.</li>
+                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Don’t talk to strangers.</li>
+                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Principle of least knowledge.</li>
+                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Coupling.</li>
+                </ul>
+                <p>Explanation: Law of Demeter, which aims to reduce coupling, is also known as ‘Don’t talk to strangers’ and ‘Principle of least knowledge’</p>
               </div>
             </question>
           </panel>

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Error Handling :arrow_right: Exceptions :arrow_right:</div>
+<div id="path">Error Handling &rarr; Exceptions &rarr;</div>
 
 <div id="title">
 
@@ -31,6 +31,9 @@ Advantages of exception handling in this way:
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Software Architecture :arrow_right: Architecture Diagrams :arrow_right:</div>
+<div id="path">Software Architecture &rarr; Architecture Diagrams &rarr;</div>
 
 <div id="title">
 

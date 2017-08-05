@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Software Design Patterns :arrow_right:**%%
+%%**Software Design Patterns &rarr;**%%
 
 ## Command Pattern
 

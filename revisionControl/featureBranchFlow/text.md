@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Revision Control :arrow_right: </div>
+<div id="path">Revision Control &rarr; </div>
 
 <div id="title">
 

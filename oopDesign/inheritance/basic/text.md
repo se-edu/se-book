@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming :arrow_right: Inheritance :arrow_right:</div>
+<div id="path">Object Oriented Programming &rarr; Inheritance &rarr;</div>
 
 <div id="title">
 

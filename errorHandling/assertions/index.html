@@ -7,19 +7,20 @@
     <title>SEforSDL - Error Handling: Assertions</title>
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
 </head>
 <body>
 <div id="app" class="container-fluid">
     <link rel="stylesheet" href="/se-book/css/textbook.css">
 <div class="website-content">
-  <p><span class="dimmed"><strong>Error Handling ➡️</strong></span></p>
+  <p><span class="dimmed"><strong>Error Handling →</strong></span></p>
   <h2 id="assertions">Assertions</h2>
   <div id="main">
     <div>
       <div>
         <h4 id="what-two">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain assertions <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -50,7 +51,7 @@ setTimeout(timeout); <span class="hljs-comment">// line 3</span>
       <div>
         <h4 id="how-two">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can use assertions <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -80,7 +81,7 @@ setTimeout(timeout); <span class="hljs-comment">// line 3</span>
       <div>
         <h4 id="when-three">When <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can use assertions optimally <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>
@@ -91,6 +92,74 @@ setTimeout(timeout); <span class="hljs-comment">// line 3</span>
             <p>Refer <a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#usage">this document</a> from Oracle to learn where to use assertions and where not to.</p>
           </div>
           <div>
+            <div></div>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <div>
+        <h4 id="exceptions-vs-assertions-two">Exceptions vs Assertions <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box>
+        <div>
+          <p>🏆 Can choose between assertions and exceptions <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p>Exceptions and assertions are two complementary ways of handling errors in software but they serve different purposes.</p>
+            <ul>
+              <li>The raising of an exception indicates an unusual condition created by the user (e.g. user inputs an unacceptable input) or the environment (e.g., a file needed for the program is missing).</li>
+              <li>An assertion failure indicates the programmer made a mistake in the code (e.g., a null value is returned from a method that is not supposed to return null under any circumstances).</li>
+            </ul>
+            <p>Both assertions and exceptions should be used in code.</p>
+          </div>
+          <div>
+            <div>
+              <panel header=":muscle: Exercises" expandable="">
+                <div>
+                  <panel header=":lock::key: Calculator">
+                    <question>
+                      <p>A Calculator program crashes with an ‘assertion failure’ message when you try to find the square root of a negative number.</p>
+                      <ul class="task-list">
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. This is a correct use of assertions.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. The application should have terminated with an exception instead.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. The program has a bug.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. All statements above are incorrect.</li>
+                      </ul>
+                      <div slot="answer">
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. This is a correct use of assertions.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. The application should have terminated with an exception instead.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> c. The program has a bug.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. All statements above are incorrect.</li>
+                        </ul>
+                        <p>Explanation: An assertion failure indicates a bug in the code. (b) is not acceptable because of the word &quot;terminated&quot;. The application should not fail at all for this input. But it could have used an exception to handle
+                          the situation internally.</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+                <div>
+                  <panel header=":lock::key: Which of these is the correct statement?">
+                    <question>
+                      <ul class="task-list">
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Use assertions to indicate programmer messed up; Use exceptions to indicate the user or the environment messed up.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Use exceptions to indicate programmer messed up; Use assertions to indicate the user or the environment messed up.</li>
+                      </ul>
+                      <div slot="answer">
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. Use assertions to indicate programmer messed up; Use exceptions to indicate the user or the environment messed up.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Use exceptions to indicate programmer messed up; Use assertions to indicate the user or the environment messed up.</li>
+                        </ul>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+              </panel>
+            </div>
             <div></div>
           </div>
         </div>

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Specifying Requirements :arrow_right: Feature List :arrow_right:</div>
+<div id="path">Specifying Requirements &rarr; Feature List &rarr;</div>
 
 <div id="title">
 

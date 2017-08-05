@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming :arrow_right: Objects :arrow_right:</div>
+<div id="path">Object Oriented Programming &rarr; Objects &rarr;</div>
 
 <div id="title">
 
@@ -24,6 +24,9 @@ An object is an _encapsulation_ some data and related functions. i.e.,
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">SLDC Process Models :arrow_right: Introduction :arrow_right:</div>
+<div id="path">SLDC Process Models &rarr; Introduction &rarr;</div>
 
 <div id="title">
 
@@ -40,6 +40,9 @@ There are a number of agile processes in the development world today. eXtreme Pr
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

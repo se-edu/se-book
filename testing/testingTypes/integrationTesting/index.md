@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Testing :arrow_right: Testing Types :arrow_right:**%%
+%%**Testing &rarr; Testing Types &rarr;**%%
 
 ### Integration Testing
 

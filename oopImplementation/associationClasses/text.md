@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming :arrow_right: </div>
+<div id="path">Object Oriented Programming &rarr; </div>
 
 <div id="title">
 
@@ -35,6 +35,9 @@ At implementation level, an association class is most likely implemented as foll
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

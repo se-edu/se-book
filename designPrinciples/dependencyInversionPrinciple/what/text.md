@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Principles :arrow_right: Dependency Inversion Principle :arrow_right:</div>
+<div id="path">Software Design Principles &rarr; Dependency Inversion Principle &rarr;</div>
 
 <div id="title">
 
@@ -33,6 +33,9 @@ Design (b) is more flexible (and less coupled) because now the `Payroll` class n
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

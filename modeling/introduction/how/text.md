@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Modeling :arrow_right: Introduction :arrow_right:</div>
+<div id="path">Modeling &rarr; Introduction &rarr;</div>
 
 <div id="title">
 
@@ -52,6 +52,9 @@ _Model-driven development (MDD)_, also called _Model-driven engineering_, is an 
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

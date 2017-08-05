@@ -1,1 +1,1 @@
-Java :arrow_right: Code Style :arrow_right:
+Java &rarr; Code Style &rarr;

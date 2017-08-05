@@ -1,1 +1,1 @@
-Design :arrow_right: Object Oriented Programming :arrow_right:
+Design &rarr; Object Oriented Programming &rarr;

@@ -1,4 +1,4 @@
-<div id="path">Software Engineering :arrow_right: </div>
+<div id="path">Software Engineering &rarr; </div>
 
 <div id="title">
 
@@ -8,12 +8,11 @@
 
 <div id="body">
 
-> Software Engineering is the application of a systematic, disciplined, quantifiable approach to the development, operation,
-> and maintenance of software"
->
-> —- IEEE Standard Glossary of Software Engineering Terminology
+<tip-box type="definition"> 
+  <include src="../../common/definitions.md#def-se" />
+</tip-box>
 
-The following description of the _Joys of the Programming Craft_ was taken from Chapter 1 of the famous book _The Mythical Man-Month_, by Frederick P. Brooks.
+The following description of the _Joys of the Programming Craft_ was taken from Chapter 1 of the famous book <trigger for="modal:mmm" trigger="click">_The Mythical Man-Month_, by Frederick P. Brooks</trigger>.
 
 > **Why is programming fun? What delights may its practitioner expect as his reward?**
 >
@@ -80,6 +79,34 @@ The following description of the _Joys of the Programming Craft_ was taken from 
 >
 > This then is programming, both a tar pit in which many efforts have floundered and a creative activity with joys
 >  and woes all its own. For many, the joys far outweigh the woes....  
+
+<modal title="**:book: The Mythical Man-Month: Essays on Software Engineering**" id="modal:mmm">
+
+<table>
+<tr>
+<td>
+<img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Mythical_man-month_%28book_cover%29.jpg" height="250" /> 
+</td>
+<td>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Fred_Brooks.jpg/800px-Fred_Brooks.jpg" height="250" />
+</td>
+<tr>
+<td>
+
+<sub>[[Text and book cover source: Wikipedia](https://en.wikipedia.org/wiki/The_Mythical_Man-Month)]</sub> 
+ 
+</td>
+<td>
+
+<sub>[[Fred Brooks photo source](https://commons.wikimedia.org/wiki/File:Fred_Brooks.jpg)]</sub>
+
+</td>
+</tr>
+</table>
+
+_The Mythical Man-Month: Essays on Software Engineering_ is a book on software engineering and project management by Fred Brooks, whose central theme is that "adding manpower to a late software project makes it later". This idea is known as Brooks's law, and is presented along with the second-system effect and advocacy of prototyping. 
+
+</modal>
 
 </div>
 

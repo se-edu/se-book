@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Error Handling :arrow_right: Logging :arrow_right:</div>
+<div id="path">Error Handling &rarr; Logging &rarr;</div>
 
 <div id="title">
 

@@ -1,1 +1,1 @@
-Quality Assurance :arrow_right: Test Case Design :arrow_right:
+Quality Assurance &rarr; Test Case Design &rarr;

@@ -1,6 +1,4 @@
-<include src="prereq.md"/><tip-box type="success">
-  <include src="outcomes.md" />
-</tip-box>
+<include src="prereq.md"/><p/>
 
 %%**<include src="../path.md" inline />**%%
 

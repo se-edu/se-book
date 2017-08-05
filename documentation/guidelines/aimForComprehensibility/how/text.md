@@ -1,4 +1,4 @@
-<div id="path">Documentation :arrow_right: Guidelines :arrow_right:</div>
+<div id="path">Documentation &rarr; Guidelines &rarr;</div>
 
 <div id="title">
 
@@ -19,6 +19,9 @@ Here are some tips on writing effective documentation.
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 </div>
 
 </div>

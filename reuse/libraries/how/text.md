@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Reuse :arrow_right: Libraries :arrow_right:</div>
+<div id="path">Reuse &rarr; Libraries &rarr;</div>
 
 <div id="title">
 

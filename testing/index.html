@@ -7,6 +7,7 @@
     <title>SEforSDL - Testing</title>
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\markbind\css\markbind.css">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -20,7 +21,7 @@
         <div>
           <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
         </div>
-        <tip-box type="success">
+        <tip-box>
           <div>
             <p>🏆 Can explain testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
           </div>
@@ -28,41 +29,44 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <blockquote>
-                <p>Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component.</p>
-                <p>–- source: IEEE</p>
-              </blockquote><img src="/se-book/testing/introduction/what/images/diagram.png" height="180">
+              <tip-box type="definition">
+                <div>
+                  <p><strong>Testing</strong>: Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component. –- source: IEEE</p>
+                </div>
+              </tip-box><img src="/se-book/testing/introduction/what/images/diagram.png" height="180">
               <p></p>
-              <p>Testing entails the execution of a set of test cases. A test case specifies how to perform a test. At a minimum, it specifies the input to the <em>software under test (SUT)</em> and the expected behavior.</p>
+              <p><strong>When testing, we execute a set of <em>test cases</em>.</strong> A test case specifies how to perform a test. At a minimum, it specifies the input to the <em>software under test (SUT)</em> and the expected behavior.</p>
               <tip-box>
-                <p>Example: A minimal test case for testing a browser:</p>
+                <p>📦 Example: A minimal test case for testing a browser:</p>
                 <ul>
                   <li><strong>Input</strong> – Start the browser using a blank page (vertical scrollbar disabled). Then, load ‘longfile.html’ located in the ‘test data’ folder.</li>
                   <li><strong>Expected behavior</strong> – The scrollbar should be automatically enabled upon loading ‘longfile.html’.</li>
                 </ul>
               </tip-box>
-              <p>Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.</p>
-              <panel header="Other details a test case can contain :two:" type="seamless">
+              <p><strong>Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.</strong></p>
+              <panel header="%%Other details a test case can contain :two:%%" type="seamless">
                 <p>A more elaborate test case can have other details such as those given below.</p>
                 <ul>
-                  <li>A unique identifier : e.g. TC0034-a</li>
-                  <li>A descriptive name: e.g. vertical scrollbar activation for long web pages</li>
-                  <li>Objectives: e.g. to check whether the vertical scrollbar is correctly activated when a long web page is loaded to the browser</li>
-                  <li>Classification information: e.g. priority - medium, category - UI features</li>
-                  <li>Cleanup, if any: e.g. empty the browser cache.</li>
+                  <li>A unique identifier : <span class="dimmed">e.g. TC0034-a</span></li>
+                  <li>A descriptive name: <span class="dimmed">e.g. vertical scrollbar activation for long web pages</span></li>
+                  <li>Objectives: <span class="dimmed">e.g. to check whether the vertical scrollbar is correctly activated when a long web page is loaded to the browser</span></li>
+                  <li>Classification information: <span class="dimmed">e.g. priority - medium, category - UI features</span></li>
+                  <li>Cleanup, if any: <span class="dimmed">e.g. empty the browser cache.</span></li>
                 </ul>
+                <p></p>
               </panel>
+              <p></p>
               <p>For each test case we do the following:</p>
               <ol>
                 <li>Feed the input to the SUT</li>
                 <li>Observe the actual output</li>
                 <li>Compare actual output with the expected output</li>
               </ol>
-              <p>A test case <em>failure</em> is a mismatch between the expected behavior and the actual behavior. A failure is caused by a <em>defect</em> (or a bug).</p>
+              <p><strong>A test case <em>failure</em> is a mismatch between the expected behavior and the actual behavior. A failure is caused by a <em>defect</em> (or a bug).</strong></p>
               <tip-box>
-                <p>Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading ‘longfile.html’. The defect/bug causing that failure could be an uninitialized variable.</p>
+                <p>📦 Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading ‘longfile.html’. The defect/bug causing that failure could be an uninitialized variable.</p>
               </tip-box>
-              <panel header="A deeper look at the definition of testing :three:" type="seamless">
+              <panel header="%%A deeper look at the definition of testing :three:%%" type="seamless">
                 <p>Here is another definition of testing:</p>
                 <blockquote>
                   <p>Software testing consists of the <em>dynamic</em> verification that a program provides <em>expected</em> behaviors on a <em>finite</em> set of test cases, suitably <em>selected</em> from the usually infinite execution domain.</p>
@@ -75,9 +79,23 @@
                   <li><em>Selected</em>: In most cases it is not possible to test all scenarios. That means we need to select what scenarios to test.</li>
                   <li><em>Expected</em>: Testing requires some knowledge of how the software is expected to behave.</li>
                 </ul>
+                <p></p>
               </panel>
+              <p></p>
             </div>
-            <div></div>
+            <div>
+              <div>
+                <panel header=":muscle: Exercises" expandable="">
+                  <div>
+                    <panel header=":lock: Relate testing, test cases, failure, and defect">
+                      <question has-input="">
+                        <p>Explain how the concepts of testing, test case, test failure, and defect are related to each other.</p>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
+            </div>
           </div>
         </panel>
       </div>
@@ -85,7 +103,7 @@
         <div>
           <h4 id="testability-three">Testability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
         </div>
-        <tip-box type="success">
+        <tip-box>
           <div>
             <p>🏆 Can explain testability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
           </div>
@@ -115,7 +133,7 @@
               <div>
                 <h4 id="what-one-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
               </div>
-              <tip-box type="success">
+              <tip-box>
                 <div>
                   <p>🏆 Can explain unit testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
                 </div>
@@ -133,7 +151,7 @@
               <div>
                 <h4 id="stubs-two">Stubs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
               </div>
-              <tip-box type="success">
+              <tip-box>
                 <div>
                   <p>🏆 Can explain stubs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
                 </div>
@@ -144,7 +162,29 @@
                     <p>During unit testing, stubs are used in place of collaborating objects in order to isolate the SUT from those objects. Doing so prevents bugs within the collaborating objects from interfering with the test.</p>
                     <p><strong>A stub has the same interface as the collaborator it replaces, but its implementation is meant to be so simple that it cannot have any bugs. It mimics the responses of the collaborating object, but only for the inputs used for testing.</strong>                      That is, it does not know how to respond to any other inputs. These mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
                   </div>
-                  <div></div>
+                  <div>
+                    <div>
+                      <panel header=":muscle: Exercises" expandable="">
+                        <div>
+                          <panel header=":lock::key: True or False?">
+                            <question>
+                              <p>Stubs and drivers help us test a component in isolation from other interacting components.</p>
+                              <ul class="task-list">
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                              </ul>
+                              <div slot="answer">
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. True</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                                </ul>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
                 </div>
               </panel>
             </div>
@@ -152,7 +192,7 @@
               <div>
                 <h4 id="mocks-three">Mocks <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
               </div>
-              <tip-box type="success">
+              <tip-box>
                 <div>
                   <p>🏆 Can explain mocks <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
                 </div>
@@ -178,7 +218,7 @@
               <div>
                 <h4 id="what-one-3">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
               </div>
-              <tip-box type="success">
+              <tip-box>
                 <div>
                   <p>🏆 Can explain integration testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
                 </div>
@@ -211,7 +251,7 @@
               <div>
                 <h4 id="what-one-4">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
               </div>
-              <tip-box type="success">
+              <tip-box>
                 <div>
                   <p>🏆 Can explain system testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
                 </div>
@@ -253,7 +293,7 @@
               <div>
                 <h4 id="what-three">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
               </div>
-              <tip-box type="success">
+              <tip-box>
                 <div>
                   <p>🏆 Can explain alpha and beta testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
                 </div>
@@ -273,6 +313,53 @@
         </panel>
       </div>
       <div>
+        <h3 id="dogfooding">Dogfooding</h3>
+        <panel type="seamless" header="%%-----------------------------------------%%">
+          <div>
+            <div>
+              <div>
+                <h4 id="what-three-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+              </div>
+              <tip-box>
+                <div>
+                  <p>🏆 Can explain dogfooding <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+                </div>
+              </tip-box>
+              <panel type="seamless" header=" %%- - - - - - - - - -%%">
+                <div>
+                  <div>
+                    <p>...</p>
+                  </div>
+                  <div>
+                    <div>
+                      <panel header=":muscle: Exercises" expandable="">
+                        <div>
+                          <panel header=":lock::key: True or False?">
+                            <question>
+                              <p>‘dogfooding’ can help us improve product designs. (If you don’t know the meaning of this term, a Web search is in order 😃</p>
+                              <ul class="task-list">
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                              </ul>
+                              <div slot="answer">
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. True</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                                </ul>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </panel>
+            </div>
+          </div>
+        </panel>
+      </div>
+      <div>
         <h3 id="developer-testing">Developer Testing</h3>
         <panel type="seamless" header="%%-----------------------------------------%%">
           <div>
@@ -280,7 +367,7 @@
               <div>
                 <h4 id="what-two">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
               </div>
-              <tip-box type="success">
+              <tip-box>
                 <div>
                   <p>🏆 Can explain developer testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
                 </div>
@@ -299,7 +386,7 @@
               <div>
                 <h4 id="why-two">Why <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
               </div>
-              <tip-box type="success">
+              <tip-box>
                 <div>
                   <p>🏆 Can explain the need for early developer testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
                 </div>
@@ -321,9 +408,9 @@
                   </div>
                   <div>
                     <div>
-                      <panel header=":muscle: Exercises" type="info" expandable="">
+                      <panel header=":muscle: Exercises" expandable="">
                         <div>
-                          <panel header="Q: Discuss advantages and disadvantages of developers testing their own code.">
+                          <panel header=":lock::key: Discuss advantages and disadvantages of developers testing their own code.">
                             <question has-input="true">
                               <p>Discuss advantages and disadvantages of developers testing their own code.</p>
                               <div slot="answer">
@@ -345,6 +432,36 @@
                             </question>
                           </panel>
                         </div>
+                        <div>
+                          <panel header=":lock::key: True or False?">
+                            <question>
+                              <p>A) The cost of fixing a bug goes down as we reach the product release.</p>
+                              <ul class="task-list">
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                              </ul>
+                              <p>B) Developers should pass their code to testers for unit testing as soon as the implementation is done.</p>
+                              <ul class="task-list">
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                              </ul>
+                              <div slot="answer">
+                                <p>A) The cost of fixing a bug goes down as we reach the product release.</p>
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
+                                </ul>
+                                <p>Explanation: No, the cost goes up over time.</p>
+                                <p>B) Developers should pass their code to testers for unit testing as soon as the implementation is done.</p>
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
+                                </ul>
+                                <p>Explanation: Unit testing is a type of ‘developer testing’. It is not done by testers.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
                       </panel>
                     </div>
                   </div>
@@ -362,7 +479,7 @@
               <div>
                 <h4 id="what-two-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
               </div>
-              <tip-box type="success">
+              <tip-box>
                 <div>
                   <p>🏆 Can explain exploratory testing and scripted testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
                 </div>
@@ -390,7 +507,68 @@
                       </div>
                     </popover>
                   </div>
-                  <div></div>
+                  <div>
+                    <div>
+                      <panel header=":muscle: Exercises" expandable="">
+                        <div>
+                          <panel header=":lock::key: True or False?">
+                            <question>
+                              <p>A) Scripted testing requires tests to be written in a scripting language; Manual testing is called exploratory testing.</p>
+                              <ul class="task-list">
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                              </ul>
+                              <p>B) Scripted testing is better than exploratory testing.</p>
+                              <ul class="task-list">
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                              </ul>
+                              <div slot="answer">
+                                <p>A) Scripted testing requires tests to be written in a scripting language; Manual testing is called exploratory testing.</p>
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
+                                </ul>
+                                <p>Explanation: “Scripted” means test cases are predetermined. They need not be an executable script. However, exploratory testing is usually manual.</p>
+                                <p>B) Scripted testing is better than exploratory testing.</p>
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
+                                </ul>
+                                <p>Explanation: Each has pros and cons. Relying on only one is not recommended. A combination is better.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel header=":lock::key: Which testing technique is better?">
+                            <question>
+                              <p>Which testing technique is better?</p>
+                              <ul class="task-list">
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. error guessing</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. bug hunting</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. attack-based testing</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. reactive testing</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. I don’t know. I haven’t heard these terms before.</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. These are different names used to describe exploratory testing.</li>
+                              </ul>
+                              <div slot="answer">
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. error guessing</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. bug hunting</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. attack-based testing</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. reactive testing</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. I don’t know. I haven’t heard these terms before.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> f. These are different names used to describe exploratory testing.</li>
+                                </ul>
+                                <p>Explanation: These terms are mentioned in the handout.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
                 </div>
               </panel>
             </div>
@@ -398,7 +576,7 @@
               <div>
                 <h4 id="when-three">When <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
               </div>
-              <tip-box type="success">
+              <tip-box>
                 <div>
                   <p>🏆 Can explain the choice between exploratory testing and scripted testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
                 </div>
@@ -428,7 +606,7 @@
                   </div>
                   <div>
                     <div>
-                      <panel header=":muscle: Exercises" type="info" expandable="">
+                      <panel header=":muscle: Exercises" expandable="">
                         <div>
                           <panel header="Q: Explain the concept of exploratory testing using Minesweeper as an example.">
                             <question has-input="true">
@@ -456,7 +634,7 @@
               <div>
                 <h4 id="what-one-5">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
               </div>
-              <tip-box type="success">
+              <tip-box>
                 <div>
                   <p>🏆 Can explain acceptance testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
                 </div>
@@ -476,7 +654,7 @@
               <div>
                 <h4 id="acceptance-vs-system-testing-two">Acceptance vs System Testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
               </div>
-              <tip-box type="success">
+              <tip-box>
                 <div>
                   <p>🏆 Can explain the differences between system testing and acceptance testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
                 </div>
@@ -525,7 +703,41 @@
                       <p>A system could work perfectly on the development environment, but fail in the deployment environment due to subtle differences between the two.</p>
                     </tip-box>
                   </div>
-                  <div></div>
+                  <div>
+                    <div>
+                      <panel header=":muscle: Exercises" expandable="">
+                        <div>
+                          <panel header=":lock::key: Choose the least correct statement about system testing and acceptance testing.">
+                            <question>
+                              <p>Choose the least correct statement about system testing and acceptance testing.</p>
+                              <ul class="task-list">
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Both system testing and acceptance testing typically involve the whole system.</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. System testing is typically more extensive than acceptance testing.</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. System testing can include testing for non-functional qualities.</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Acceptance testing typically has more user involvement than system testing.</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. In smaller projects, the developers may do system testing as well, in addition to developer testing.</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. If system testing is adequately done, we need not do acceptance testing.</li>
+                              </ul>
+                              <div slot="answer">
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Both system testing and acceptance testing typically involve the whole system.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. System testing is typically more extensive than acceptance testing.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. System testing can include testing for non-functional qualities.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Acceptance testing typically has more user involvement than system testing.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. In smaller projects, the developers may do system testing as well, in addition to developer testing.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> f. If system testing is adequately done, we need not do acceptance testing.</li>
+                                </ul>
+                                <p>Explanation:</p>
+                                <p>System testing can aim for full coverage and can go beyond the system specification. Therefore, system testing is typically more extensive than acceptance testing.</p>
+                                <p>Passing system tests does not necessarily mean passing acceptance testing. One reason for this is system tests are usually done on testbed environments while acceptance tests are usually done on the deployment environment.
+                                  Another reason is system testing is done against the system specification while acceptance tests can discover mismatches between system specification and user requirements (i.e. validation failures).</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
                 </div>
               </panel>
             </div>
@@ -540,7 +752,7 @@
               <div>
                 <h4 id="what-one-6">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
               </div>
-              <tip-box type="success">
+              <tip-box>
                 <div>
                   <p>🏆 Can explain regression testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
                 </div>
@@ -548,11 +760,48 @@
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p>When we modify a system that has been tested, the modification may result in some unintended and undesirable effects on the system. Such an effect is called a <em>regression</em>.</p>
-                    <p>To detect and correct regressions, we need to retest all related components. Testing with this intent is called <em>regression testing</em>.</p>
-                    <p>Regression testing is more effective when it is done frequently, after each small change. However, doing so can be prohibitively expensive if testing is done manually. Hence, regression testing is more practical when it is automated.</p>
+                    <p><strong>When we modify a system, the modification may result in some unintended and undesirable effects on the system. Such an effect is called a <em>regression</em>.</strong></p>
+                    <p><strong><em>Regression testing</em> is re-testing the <trigger for="pop:sut">SUT</trigger> to detect regressions.</strong> Noted that to detect regressions, we need to retest all related components, even if they were tested before.</p>
+                    <p>Regression testing is more effective when it is done frequently, after each small change. However, doing so can be prohibitively expensive if testing is done manually. Hence, <strong>regression testing is more practical when it is automated</strong>.</p>
+                    <div>
+                      <popover id="pop:sut" placement="top">
+                        <div slot="content">
+                          <div>
+                            <p><strong>SUT</strong>: Software Under Test</p>
+                          </div>
+                        </div>
+                      </popover>
+                    </div>
                   </div>
-                  <div></div>
+                  <div>
+                    <div>
+                      <panel header=":muscle: Exercises" expandable="">
+                        <div>
+                          <panel header=":lock::key: Regression Testing defintion T/F?">
+                            <question>
+                              <p>Regression testing is the automated re-testing of a software after it has been modified.</p>
+                              <ul radio-group="w5saa" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="w5saa" type="radio"> a. True</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="w5saa" type="radio"> b. False</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="w5saa" type="radio"> c. Partially true</label></li>
+                              </ul>
+                              <div slot="answer">
+                                <p>c.</p>
+                                <p>Explanation: Regression testing <mark>need not be automated</mark> but automation is highly recommended.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel header=":lock: Explain regression testing">
+                            <question has-input="">
+                              <p>Explain why and when you would do regression testing in a software project.</p>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
                 </div>
               </panel>
             </div>
@@ -568,7 +817,7 @@
         <div>
           <h4 id="what-one-7">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
         </div>
-        <tip-box type="success">
+        <tip-box>
           <div>
             <p>🏆 Can explain test automation <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
           </div>
@@ -576,7 +825,16 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>An automated test case can be run programmatically and the result of the test case (pass or fail) is determined programmatically.</p>
+              <tabs>
+                <tab header=":abc:">
+                  <p><strong>An automated test case can be run programmatically and the result of the test case (pass or fail) is determined programmatically.</strong> Compared to manual testing, automated testing reduces the effort required to run tests
+                    repeatedly and increases precision of testing (because manual testing is susceptible to human errors).</p>
+                  <p></p>
+                </tab>
+                <tab header=":tv:"><iframe width="560" height="315" src="https://www.youtube.com/embed/RbSlW8jZFe8?end=79&version=3" frameborder="0" allowfullscreen></iframe>
+                  <p></p>
+                </tab>
+              </tabs>
             </div>
             <div></div>
           </div>
@@ -584,43 +842,81 @@
       </div>
       <div>
         <div>
-          <h4 id="automated-testing-of-text-uis-one">Automated Testing of Text UIs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+          <h4 id="automated-testing-of-cli-apps-one">Automated Testing of CLI Apps <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
         </div>
-        <tip-box type="success">
+        <tip-box>
           <div>
-            <p>🏆 Can semi-automate testing of a text UI <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+            <p>🏆 Can semi-automate testing of CLIs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
           </div>
         </tip-box>
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>A simple way to test a text UI is using input/output re-direction. Let us assume we are testing a program ‘RouteStore’ which has a text UI. First, we store the test input in the text file ‘input.txt’. Similarly, we store the output we expect
-                from the SUT to another text file ‘expected.txt’. Now, we run the program as:</p>
-              <pre class="hljs"><code>java RouteStore &lt; input.txt &gt; output.txt
-// or
-RouteStore.exe &lt; input.txt &gt; output.txt
+              <p><strong>A simple way to semi-automate testing of a <trigger for="pop:cli">CLI</trigger> app is using input/output re-direction.</strong></p>
+              <ul>
+                <li><strong>First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.</strong> e.g., <code>java AddressBook &gt; output.txt</code></li>
+                <li><strong>Next, we compare the actual output file with another file containing the expected output.</strong> e.g., <code>FC output.txt expected.txt</code></li>
+              </ul>
+              <p>Let us assume we are testing a CLI app called <code>AddressBook</code> (Example: <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level1">se-edu/addressbook-level1</a>). Here are the detailed steps:</p>
+              <ol>
+                <li>
+                  <p>Store the test input in the text file <code>input.txt</code>.</p>
+                  <panel header="%%:package: Example `input.txt`%%" type="seamless">
+                    <pre class="hljs"><code>add Valid Name p/12345 valid@email.butNoPrefix
+add Valid Name 12345 e/valid@email.butPhonePrefixMissing
 </code></pre>
-              <p>The above redirects the text in ‘input.txt’ as the input to ‘RouteStore’ and similarly, redirects the output of RouteStore to a text file ‘output.txt’. Note that this does not require any code changes to RouteStore.</p>
-              <panel header="**The ‘>’ operator and the ‘<’ operator. :zero:**"
-                alt="Alternative Header">
-                <p>A command line program written in the usual way (i.e., the way you are used to writing them during the first year programming modules) takes input from keyboard and outputs to the console. That is because those two are default input and
-                  output streams, respectively. But you can change that behavior using ‘<code>&lt;</code>’ and ‘<code>&gt;</code>’ operators. For example, if you run <code>TextBuddy</code> in the DOS prompt, the output will be shown in the console. But
-                  if you run it like this</p>
-                <pre class="hljs"><code>TextBuddy &gt; output.txt (or java TextBuddy &gt; output.txt)
+                  </panel>
+                </li>
+                <li>
+                  <p>Store the output we expect from the SUT to another text file <code>expected.txt</code>.</p>
+                  <panel header="%%:package: Example `expected.txt`%%" type="seamless">
+                    <pre class="hljs"><code>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
+Invalid command format: add 
+
+Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
+Invalid command format: add 
 </code></pre>
-                <p>the Operating System then creates a file ‘output.txt’ and stores the output in that file instead of displaying it in the console. Program output using <code>System.out.println</code> (in Java) and <code>cout</code> (in C++) is directed
-                  to the console by default. When you add ‘<code>&gt; output.txt</code>’, the OS redirects the output to ‘output.txt’ instead. No file I/O coding is required. Similarly, adding ‘<code>&lt; input.txt</code>’ (or any other filename) makes
-                  the OS redirect the contents of the file as input to the program.</p>
-                <p>The link below explains how Windows does it:
-                  <a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">http://technet.microsoft.com/en-us/library/bb490982.aspx</a></p>
-              </panel>
-              <p></p>
-              <p>All we have to do now is to compare ‘output.txt’ with ‘expected.txt’. This can be done using a utility such as Windows FC (i.e. File Compare) command or a GUI tool such as Winmerge. For example, we can run the following two commands.</p>
-              <pre
-                class="hljs"><code>java RouteStore &lt; input.txt &gt; output.txt
-FC output.txt expected.txt
+                  </panel>
+                </li>
+                <li>
+                  <p>Run the program as given below, which will redirect the text in <code>input.txt</code> as the input to <code>AddressBook</code> and similarly, will redirect the output of AddressBook to a text file <code>output.txt</code>. <span class="dimmed">Note that this does not require any code changes to <code>AddressBook</code>.</span></p>
+                  <pre><code class="hljs sh">java AddressBook &lt; input.txt &gt; output.txt
 </code></pre>
-                <p>Note that the above technique is only suitable when testing text UIs, and only if the exact output is known.</p>
+                  <panel header="%%More on the `>` operator and the `<` operator. :zero:%%" alt="I/O redirection info" type="seamless">
+                    <p>A CLI program takes input from keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code>&lt;</code> and <code>&gt;</code> operators.
+                      For example, if you run <code>AddressBook</code> in the DOS prompt, the output will be shown in the console. But if you run it like this</p>
+                    <pre><code class="hljs sh">java AddressBook &gt; output.txt 
+</code></pre>
+                    <p>the Operating System then creates a file <code>output.txt</code> and stores the output in that file instead of displaying it in the console. Program output using <code>System.out.println</code> is directed to the console by default.
+                      When you add <code>&gt; output.txt</code>, the OS redirects the output to <code>output.txt</code> instead. No file I/O coding is required. Similarly, adding <code>&lt; input.txt</code> (or any other filename) makes the OS redirect
+                      the contents of the file as input to the program.</p>
+                    <tip-box>
+                      <p>📎 Resources:</p>
+                      <ul>
+                        <li><a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">Using command redirection operators in Windows</a></li>
+                      </ul>
+                    </tip-box>
+                    <p></p>
+                  </panel>
+                  <p></p>
+                </li>
+                <li>
+                  <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such as Winmerge.</p>
+                  <pre
+                    class="hljs"><code>FC output.txt expected.txt
+</code></pre>
+                </li>
+              </ol>
+              <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output is known.</p>
+              <div>
+                <popover id="pop:cli" placement="top">
+                  <div slot="content">
+                    <div>
+                      <p><strong>CLI App</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p>
+                    </div>
+                  </div>
+                </popover>
+              </div>
             </div>
             <div></div>
           </div>
@@ -630,7 +926,7 @@ FC output.txt expected.txt
         <div>
           <h4 id="test-automation-using-test-drivers-two">Test Automation Using Test Drivers <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
         </div>
-        <tip-box type="success">
+        <tip-box>
           <div>
             <p>🏆 Can explain test drivers <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
           </div>
@@ -697,7 +993,7 @@ FC output.txt expected.txt
         <div>
           <h4 id="test-automation-tools-two">Test Automation Tools <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
         </div>
-        <tip-box type="success">
+        <tip-box>
           <div>
             <p>🏆 Can explain test automation tools <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
           </div>
@@ -739,7 +1035,7 @@ FC output.txt expected.txt
         <div>
           <h4 id="automated-testing-of-guis-two">Automated Testing of GUIs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
         </div>
-        <tip-box type="success">
+        <tip-box>
           <div>
             <p>🏆 Can explain automated GUI testing <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
           </div>
@@ -763,6 +1059,28 @@ FC output.txt expected.txt
                 number of such manual test cases can be reduced as most of the system has been tested using automated API testing.</p>
             </div>
             <div>
+              <div>
+                <panel header=":muscle: Exercises" expandable="">
+                  <div>
+                    <panel header=":lock::key: True or False?">
+                      <question>
+                        <p>GUI testing is usually easier than API testing because it doesn’t require any extra coding.</p>
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                        </ul>
+                        <div slot="answer">
+                          <ul class="task-list">
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
+                          </ul>
+                          <p>Explanation: The handout section on ‘GUI testing’ describes why GUI testing is more difficult than API testing.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
               <div></div>
             </div>
           </div>
@@ -777,7 +1095,7 @@ FC output.txt expected.txt
         <div>
           <h4 id="what-two-3">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
         </div>
-        <tip-box type="success">
+        <tip-box>
           <div>
             <p>🏆 Can explain test coverage <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
           </div>
@@ -827,6 +1145,34 @@ FC output.txt expected.txt
               </ul>
             </div>
             <div>
+              <div>
+                <panel header=":muscle: Exercises" expandable="">
+                  <div>
+                    <panel header=":lock::key: Which of these gives us the highest intensity of testing?">
+                      <question>
+                        <p>Top-down design is better than bottom-up design.</p>
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. 100% statement coverage</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. 100% path coverage</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. 100% branch coverage</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. 100% condition coverage</li>
+                        </ul>
+                        <div slot="answer">
+                          <ul class="task-list">
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. 100% statement coverage</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. 100% path coverage</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. 100% branch coverage</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. 100% condition coverage</li>
+                          </ul>
+                          <p>Explanation: 100% path coverage implies all possible execution paths through the SUT have been tested. This is essentially ‘exhaustive testing’. While this is very hard to achieve for a non-trivial SUT, it technically gives us
+                            the highest intensity of testing. If all tests pass at 100% path coverage, the SUT code can be considered ‘bug free’. However, note that path coverage does not include paths that are missing from the code altogether because
+                            the programmer left them out by mistake.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
               <div></div>
             </div>
           </div>
@@ -836,7 +1182,7 @@ FC output.txt expected.txt
         <div>
           <h4 id="how-three">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
         </div>
-        <tip-box type="success">
+        <tip-box>
           <div>
             <p>🏆 Can explain how test coverage works <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
           </div>
@@ -861,9 +1207,9 @@ FC output.txt expected.txt
     <div>
       <div>
         <div>
-          <h4 id="what-three-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+          <h4 id="what-three-3">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
         </div>
-        <tip-box type="success">
+        <tip-box>
           <div>
             <p>🏆 Can explain dependency injection <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
           </div>
@@ -886,7 +1232,7 @@ FC output.txt expected.txt
         <div>
           <h4 id="how-three-2">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
         </div>
-        <tip-box type="success">
+        <tip-box>
           <div>
             <p>🏆 Can explain how dependency injection works <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
           </div>
@@ -957,6 +1303,33 @@ FC output.txt expected.txt
 </code></pre>
             </div>
             <div>
+              <div>
+                <panel header=":muscle: Exercises" expandable="">
+                  <div>
+                    <panel header=":lock::key: Choose the INCORRECT statement about dependency injection">
+                      <question>
+                        <p>Choose the INCORRECT statement about dependency injection</p>
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. It is a technique for increasing dependencies</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. It is useful for unit testing.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. It can be done using polymorphism.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. It can be used to substitute a component with a stub.</li>
+                        </ul>
+                        <div slot="answer">
+                          <ul class="task-list">
+                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. It is a technique for increasing dependencies</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. It is useful for unit testing.</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. It can be done using polymorphism.</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. It can be used to substitute a component with a stub.</li>
+                          </ul>
+                          <p>Explanation: It is a technique we can use to substitute an existing component with another, without breaking its dependent components. It is useful when we want to test a component in isolation but the SUT (i.e., component under
+                            test) depends on other components. Using dependency injection, we can substitute those other components with test-friendly stubs. This is often done using polymorphism.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
               <div></div>
             </div>
           </div>
@@ -971,7 +1344,7 @@ FC output.txt expected.txt
         <div>
           <h4 id="what-two-4">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
         </div>
-        <tip-box type="success">
+        <tip-box>
           <div>
             <p>🏆 Can explain TDD <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
           </div>
@@ -983,6 +1356,40 @@ FC output.txt expected.txt
                 behavior. While TDD has its fair share of detractors, there are many who consider it a good way to reduce defects.</p>
             </div>
             <div>
+              <div>
+                <panel header=":muscle: Exercises" expandable="">
+                  <div>
+                    <panel header=":lock::key: True or False?">
+                      <question>
+                        <p>A) In TDD, we write all the test cases before we start writing functional code.</p>
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                        </ul>
+                        <p>B) Testing tools such as Junit require us to follow TDD.</p>
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                        </ul>
+                        <div slot="answer">
+                          <p>A) In TDD, we write all the test cases before we start writing functional code.</p>
+                          <ul class="task-list">
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
+                          </ul>
+                          <p>Explanation: No, not <em>all</em>. We proceed in small steps, writing tests and functional code in tandem, but writing the test before we write the corresponding functional code.</p>
+                          <p>B) Testing tools such as Junit require us to follow TDD.</p>
+                          <ul class="task-list">
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
+                          </ul>
+                          <p>Explanation: They can be used for TDD, but they can be used without TDD too.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
               <div></div>
             </div>
           </div>
@@ -992,7 +1399,7 @@ FC output.txt expected.txt
         <div>
           <h4 id="how-three-3">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
         </div>
-        <tip-box type="success">
+        <tip-box>
           <div>
             <p>🏆 Can follow TDD <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
           </div>

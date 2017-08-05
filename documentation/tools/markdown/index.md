@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Documentation :arrow_right: Tools :arrow_right:**%%
+%%**Documentation &rarr; Tools &rarr;**%%
 
 ### Markdown
 

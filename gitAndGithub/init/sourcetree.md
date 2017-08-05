@@ -1,4 +1,4 @@
-Click `File` -> `Clone/New…`
+Click `File` &rarr; `Clone/New…`
 
 Click on `Create` button and enter the location of the directory as shown below. Click `Create`
 

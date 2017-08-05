@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Error Handling :arrow_right: Logging :arrow_right:</div>
+<div id="path">Error Handling &rarr; Logging &rarr;</div>
 
 <div id="title">
 
@@ -19,6 +19,9 @@ A good logging system records some system information regularly. When bad things
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

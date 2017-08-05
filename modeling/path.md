@@ -1,1 +1,1 @@
-Design :arrow_right: Modeling :arrow_right:
+Design &rarr; Modeling &rarr;

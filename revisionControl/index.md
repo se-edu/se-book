@@ -7,7 +7,6 @@
 <div id="main">
 
 <include src="what/embed.md" />
-<include src="otherNames/embed.md" />
 <include src="repositories/embed.md" />
 <include src="savingHistory/embed.md" />
 <include src="usingHistory/embed.md" />

@@ -1,4 +1,4 @@
-<panel header="Q: Discuss the relationship between coupling and testability (testability is a measure of how easily a given component can be tested).">
+<panel header=":lock::key: Discuss the relationship between coupling and testability (testability is a measure of how easily a given component can be tested).">
 <question has-input="true">
 
 Discuss the relationship between coupling and testability (testability is a measure of how easily a given component can be tested).

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Modeling :arrow_right: Modeling Structures :arrow_right:</div>
+<div id="path">Modeling &rarr; Modeling Structures &rarr;</div>
 
 <div id="title">
 
@@ -41,6 +41,9 @@ The above OO domain model omits the ladder class for simplicity. It can be inclu
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

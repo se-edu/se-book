@@ -1,4 +1,4 @@
-<panel header="Q: Discuss advantages and disadvantages of developers testing their own code.">
+<panel header=":lock::key: Discuss advantages and disadvantages of developers testing their own code.">
 <question has-input="true">
 
 Discuss advantages and disadvantages of developers testing their own code.

@@ -1,43 +1,77 @@
-<tip-box type="success">
-  <div>
-    <p>🏆 Can semi-automate testing of a text UI <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
-  </div>
-</tip-box>
-<p><span class="dimmed"><strong><span>Quality Assurance ➡️ Testing ➡️
+<p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
 </span></strong>
   </span>
 </p>
 <div>
-  <h4 id="automated-testing-of-text-uis-one">Automated Testing of Text UIs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+  <h4 id="automated-testing-of-cli-apps-one">Automated Testing of CLI Apps <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
 </div>
 <div id="main">
   <div>
-    <p>A simple way to test a text UI is using input/output re-direction. Let us assume we are testing a program ‘RouteStore’ which has a text UI. First, we store the test input in the text file ‘input.txt’. Similarly, we store the output we expect from
-      the SUT to another text file ‘expected.txt’. Now, we run the program as:</p>
-    <pre class="hljs"><code>java RouteStore &lt; input.txt &gt; output.txt
-// or
-RouteStore.exe &lt; input.txt &gt; output.txt
+    <p><strong>A simple way to semi-automate testing of a <trigger for="pop:cli">CLI</trigger> app is using input/output re-direction.</strong></p>
+    <ul>
+      <li><strong>First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.</strong> e.g., <code>java AddressBook &gt; output.txt</code></li>
+      <li><strong>Next, we compare the actual output file with another file containing the expected output.</strong> e.g., <code>FC output.txt expected.txt</code></li>
+    </ul>
+    <p>Let us assume we are testing a CLI app called <code>AddressBook</code> (Example: <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level1">se-edu/addressbook-level1</a>). Here are the detailed steps:</p>
+    <ol>
+      <li>
+        <p>Store the test input in the text file <code>input.txt</code>.</p>
+        <panel header="%%:package: Example `input.txt`%%" type="seamless">
+          <pre class="hljs"><code>add Valid Name p/12345 valid@email.butNoPrefix
+add Valid Name 12345 e/valid@email.butPhonePrefixMissing
 </code></pre>
-    <p>The above redirects the text in ‘input.txt’ as the input to ‘RouteStore’ and similarly, redirects the output of RouteStore to a text file ‘output.txt’. Note that this does not require any code changes to RouteStore.</p>
-    <panel header="**The ‘>’ operator and the ‘<’ operator. :zero:**"
-      alt="Alternative Header">
-      <p>A command line program written in the usual way (i.e., the way you are used to writing them during the first year programming modules) takes input from keyboard and outputs to the console. That is because those two are default input and output streams,
-        respectively. But you can change that behavior using ‘<code>&lt;</code>’ and ‘<code>&gt;</code>’ operators. For example, if you run <code>TextBuddy</code> in the DOS prompt, the output will be shown in the console. But if you run it like this</p>
-      <pre
-        class="hljs"><code>TextBuddy &gt; output.txt (or java TextBuddy &gt; output.txt)
+        </panel>
+      </li>
+      <li>
+        <p>Store the output we expect from the SUT to another text file <code>expected.txt</code>.</p>
+        <panel header="%%:package: Example `expected.txt`%%" type="seamless">
+          <pre class="hljs"><code>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
+Invalid command format: add 
+
+Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
+Invalid command format: add 
 </code></pre>
-        <p>the Operating System then creates a file ‘output.txt’ and stores the output in that file instead of displaying it in the console. Program output using <code>System.out.println</code> (in Java) and <code>cout</code> (in C++) is directed to the
-          console by default. When you add ‘<code>&gt; output.txt</code>’, the OS redirects the output to ‘output.txt’ instead. No file I/O coding is required. Similarly, adding ‘<code>&lt; input.txt</code>’ (or any other filename) makes the OS redirect
-          the contents of the file as input to the program.</p>
-        <p>The link below explains how Windows does it:
-          <a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">http://technet.microsoft.com/en-us/library/bb490982.aspx</a></p>
-    </panel>
-    <p></p>
-    <p>All we have to do now is to compare ‘output.txt’ with ‘expected.txt’. This can be done using a utility such as Windows FC (i.e. File Compare) command or a GUI tool such as Winmerge. For example, we can run the following two commands.</p>
-    <pre class="hljs"><code>java RouteStore &lt; input.txt &gt; output.txt
-FC output.txt expected.txt
+        </panel>
+      </li>
+      <li>
+        <p>Run the program as given below, which will redirect the text in <code>input.txt</code> as the input to <code>AddressBook</code> and similarly, will redirect the output of AddressBook to a text file <code>output.txt</code>. <span class="dimmed">Note that this does not require any code changes to <code>AddressBook</code>.</span></p>
+        <pre><code class="hljs sh">java AddressBook &lt; input.txt &gt; output.txt
 </code></pre>
-    <p>Note that the above technique is only suitable when testing text UIs, and only if the exact output is known.</p>
+        <panel header="%%More on the `>` operator and the `<` operator. :zero:%%" alt="I/O redirection info" type="seamless">
+          <p>A CLI program takes input from keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code>&lt;</code> and <code>&gt;</code> operators. For example,
+            if you run <code>AddressBook</code> in the DOS prompt, the output will be shown in the console. But if you run it like this</p>
+          <pre><code class="hljs sh">java AddressBook &gt; output.txt 
+</code></pre>
+          <p>the Operating System then creates a file <code>output.txt</code> and stores the output in that file instead of displaying it in the console. Program output using <code>System.out.println</code> is directed to the console by default. When you
+            add <code>&gt; output.txt</code>, the OS redirects the output to <code>output.txt</code> instead. No file I/O coding is required. Similarly, adding <code>&lt; input.txt</code> (or any other filename) makes the OS redirect the contents of the
+            file as input to the program.</p>
+          <tip-box>
+            <p>📎 Resources:</p>
+            <ul>
+              <li><a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">Using command redirection operators in Windows</a></li>
+            </ul>
+          </tip-box>
+          <p></p>
+        </panel>
+        <p></p>
+      </li>
+      <li>
+        <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such as Winmerge.</p>
+        <pre
+          class="hljs"><code>FC output.txt expected.txt
+</code></pre>
+      </li>
+    </ol>
+    <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output is known.</p>
+    <div>
+      <popover id="pop:cli" placement="top">
+        <div slot="content">
+          <div>
+            <p><strong>CLI App</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p>
+          </div>
+        </div>
+      </popover>
+    </div>
   </div>
   <div></div>
 </div>

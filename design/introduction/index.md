@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Software Design :arrow_right:**%%
+%%**Software Design &rarr;**%%
 
 ## Introduction
 
@@ -10,6 +10,8 @@
 
 <include src="basic/embed.md" />
 <include src="multilevelDesign/embed.md" />
+<include src="topDownBottomUp/embed.md" />
+<include src="agileDesign/embed.md" />
 
 </div>
 

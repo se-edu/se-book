@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Software Architecture :arrow_right: Architectural Styles :arrow_right:**%%
+%%**Software Architecture &rarr; Architectural Styles &rarr;**%%
 
 ### More
 

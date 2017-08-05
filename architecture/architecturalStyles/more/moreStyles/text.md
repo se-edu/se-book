@@ -1,4 +1,4 @@
-<div id="path">Architecture :arrow_right: Architectural Styles :arrow_right:</div>
+<div id="path">Architecture &rarr; Architectural Styles &rarr;</div>
 
 <div id="title">
 

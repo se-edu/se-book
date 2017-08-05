@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Testing :arrow_right: Dependency Injection :arrow_right:</div>
+<div id="path">Testing &rarr; Dependency Injection &rarr;</div>
 
 <div id="title">
 
@@ -84,6 +84,9 @@ class SalaryManagerStub extends SalaryManager {
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

@@ -7,19 +7,20 @@
     <title>SEforSDL - Object Oriented Programming: Inheritance</title>
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
 </head>
 <body>
 <div id="app" class="container-fluid">
     <link rel="stylesheet" href="/se-book/css/textbook.css">
 <div class="website-content">
-  <p><span class="dimmed"><strong>Object Oriented Programming ➡️</strong></span></p>
+  <p><span class="dimmed"><strong>Object Oriented Programming →</strong></span></p>
   <h2 id="inheritance">Inheritance</h2>
   <div id="main">
     <div>
       <div>
         <h4 id="basic-one">Basic <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain the interfaces concept and relate it to Java interfaces <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -79,7 +80,7 @@
       <div>
         <h4 id="overriding-one">Overriding <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain method overriding <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
@@ -103,7 +104,7 @@
       <div>
         <h4 id="overloading-two">Overloading <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain method overloading <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -114,39 +115,41 @@
             <p>Method overloading arises when there are multiple operations with the <strong>same name but different type signatures.</strong></p>
             <tip-box type="primary">
               <div>
-                <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant. Here
-                  are some examples:</p>
-                <table class="markbind-table table">
-                  <thead>
-                    <tr>
-                      <th style="text-align:center">Method</th>
-                      <th style="text-align:center">Type Signature</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td style="text-align:center">int add(int X, int Y)</td>
-                      <td style="text-align:center">(int, int)</td>
-                    </tr>
-                    <tr>
-                      <td style="text-align:center">void add(int A, int B)</td>
-                      <td style="text-align:center">(int, int)</td>
-                    </tr>
-                    <tr>
-                      <td style="text-align:center">void m(int X, double Y)</td>
-                      <td style="text-align:center">(int, double)</td>
-                    </tr>
-                    <tr>
-                      <td style="text-align:center">void m(double X, int Y)</td>
-                      <td style="text-align:center">(double, int)</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </tip-box>
-            <tip-box>
-              <p>Example:</p>
-              <pre class="hljs"><code>class Account {
+                <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.</p>
+                <panel
+                  type="seamless" header="%%Examples%%">
+                  <table class="markbind-table table">
+                    <thead>
+                      <tr>
+                        <th style="text-align:center">Method</th>
+                        <th style="text-align:center">Type Signature</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="text-align:center">int add(int X, int Y)</td>
+                        <td style="text-align:center">(int, int)</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">void add(int A, int B)</td>
+                        <td style="text-align:center">(int, int)</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">void m(int X, double Y)</td>
+                        <td style="text-align:center">(int, double)</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">void m(double X, int Y)</td>
+                        <td style="text-align:center">(double, int)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+      </panel>
+      </div>
+      </tip-box>
+      <tip-box>
+        <p>Example:</p>
+        <pre class="hljs"><code>class Account {
     Account () {
         // Signature: ()
         ...
@@ -157,24 +160,24 @@
     }
 }
 </code></pre>
-              <pre class="hljs"><code>void calculateCAP (String matric) { ... }
+        <pre class="hljs"><code>void calculateCAP (String matric) { ... }
 void calculateCAP (int[] averages) { ... }
 </code></pre>
-              <p>The constructor <code>Account</code> and method <code>calculateCAP</code> has been overloaded.</p>
-            </tip-box>
-            <p>Overloading is used to indicate that multiple operations do similar things but take different parameters. An operation can be overloaded inside the same class or in a sub/super classes.</p>
-          </div>
-          <div>
-            <div></div>
-          </div>
-        </div>
+        <p>The constructor <code>Account</code> and method <code>calculateCAP</code> has been overloaded.</p>
+      </tip-box>
+      <p>Overloading is used to indicate that multiple operations do similar things but take different parameters. An operation can be overloaded inside the same class or in a sub/super classes.</p>
+      </div>
+      <div>
+        <div></div>
+      </div>
+      </div>
       </panel>
     </div>
     <div>
       <div>
         <h4 id="interfaces-two">Interfaces <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain the interfaces concept and relate it to Java interfaces <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -209,7 +212,7 @@ void calculateCAP (int[] averages) { ... }
       <div>
         <h4 id="abstract-classes-two">Abstract Classes <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain abstract classes <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
@@ -238,7 +241,7 @@ void calculateCAP (int[] averages) { ... }
       <div>
         <h4 id="dynamic-and-static-binding-three">Dynamic and Static Binding <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain dynamic and static binding <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>
@@ -293,7 +296,7 @@ void calculateCAP (int[] averages) { ... }
       <div>
         <h4 id="substitutability-two">Substitutability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
-      <tip-box type="success">
+      <tip-box>
         <div>
           <p>🏆 Can explain substitutability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>

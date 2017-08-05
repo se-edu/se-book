@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Patterns :arrow_right: Abstraction Occurrence Pattern :arrow_right:</div>
+<div id="path">Software Design Patterns &rarr; Abstraction Occurrence Pattern &rarr;</div>
 
 <div id="title">
 

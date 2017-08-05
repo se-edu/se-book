@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Testing :arrow_right: TDD :arrow_right:</div>
+<div id="path">Testing &rarr; TDD &rarr;</div>
 
 <div id="title">
 
@@ -17,6 +17,9 @@ Typically, tests are written after writing the SUT. However, TDD advocates writi
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

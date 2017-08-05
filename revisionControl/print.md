@@ -7,7 +7,6 @@
 # Revision Control
 
 <include src="what/print.md" />
-<include src="otherNames/print.md" />
 <include src="repositories/print.md" />
 <include src="savingHistory/print.md" />
 <include src="usingHistory/print.md" />

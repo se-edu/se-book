@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Principles :arrow_right: </div>
+<div id="path">Principles &rarr; </div>
 
 <div id="title">
 
@@ -44,6 +44,9 @@ In the above scenario,
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

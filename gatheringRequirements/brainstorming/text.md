@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Gathering Requirements :arrow_right: </div>
+<div id="path">Gathering Requirements &rarr; </div>
 
 <div id="title">
 
@@ -21,6 +21,9 @@ In a brainstorming session there are no "bad" ideas. The aim is to _generate ide
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

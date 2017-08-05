@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Code Quality :arrow_right:**%%
+%%**Code Quality &rarr;**%%
 
 ## Guideline: Follow a Standard
 

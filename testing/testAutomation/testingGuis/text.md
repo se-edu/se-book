@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Testing :arrow_right: Test Automation :arrow_right:</div>
+<div id="path">Testing &rarr; Test Automation &rarr;</div>
 
 <div id="title">
 
@@ -26,6 +26,9 @@ One approach to overcome the challenges of testing GUIs is to minimize logic asp
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

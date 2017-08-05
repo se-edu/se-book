@@ -1,4 +1,4 @@
-<panel header="Q: isValidDate :two:">
+<panel header=":lock::key: isValidDate :two:">
 <question has-input="true">
 
 Identify a set of equivalence partitions for testing isValidDate(String date) method. The method checks if the parameter date is a day that falls in the period 1880/01/01 to 2030/12/31 (both inclusive). The date is given in the format yyyy/mm/dd.  

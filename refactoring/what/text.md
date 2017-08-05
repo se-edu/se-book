@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Refactoring :arrow_right: </div>
+<div id="path">Refactoring &rarr; </div>
 
 <div id="title">
 
@@ -95,6 +95,9 @@ void printDetails (double outstanding) {
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

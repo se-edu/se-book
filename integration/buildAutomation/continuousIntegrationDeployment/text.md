@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Integration :arrow_right: Build Automation :arrow_right:</div>
+<div id="path">Integration &rarr; Build Automation &rarr;</div>
 
 <div id="title">
 

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Testing :arrow_right: Test Coverage :arrow_right:</div>
+<div id="path">Testing &rarr; Test Coverage &rarr;</div>
 
 <div id="title">
 
@@ -35,6 +35,9 @@ Here are some examples of different coverage criteria:
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Documentation :arrow_right: Introduction :arrow_right:</div>
+<div id="path">Documentation &rarr; Introduction &rarr;</div>
 
 <div id="title">
 
@@ -21,6 +21,9 @@ Developer-to-developer documentation can be in one of two forms:
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

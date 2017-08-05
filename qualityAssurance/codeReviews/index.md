@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Quality Assurance :arrow_right:**%%
+%%**Quality Assurance &rarr;**%%
 
 ## Code Reviews
 

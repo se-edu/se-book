@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming :arrow_right: Polymorphism :arrow_right:</div>
+<div id="path">Object Oriented Programming &rarr; Polymorphism &rarr;</div>
 
 <div id="title">
 
@@ -21,6 +21,9 @@ There are three issues that are at the center of how polymorphism is achieved: _
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

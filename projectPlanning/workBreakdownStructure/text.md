@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Project Planning :arrow_right: </div>
+<div id="path">Project Planning &rarr; </div>
 
 <div id="title">
 
@@ -109,6 +109,9 @@ The high level tasks structure can be further refined into subtasks.
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

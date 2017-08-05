@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
-<panel header="Q: LearnSys – reply to post use case :two:">
+<panel header=":lock::key: LearnSys – reply to post use case :two:">
 <question has-input="true">
 
 Complete the following use case (MSS, extensions, etc.).
@@ -22,7 +22,7 @@ Complete the following use case (MSS, extensions, etc.).
       <li>Use case: UC01 reply to post in the forum</li>
       <li>Actor: Student</li>
       <li>Preconditions: Student is logged in and has permission to post in the forum. The post to which the Student replies already exists.</li>
-      <li>Guarantees: MSS -> post will be added to the forum.</li>
+      <li>Guarantees: MSS &rarr; post will be added to the forum.</li>
       <li>MSS:
         <ol>
           <li>Student chooses to reply to an existing post.</li>

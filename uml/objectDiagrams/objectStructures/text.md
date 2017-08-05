@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">UML :arrow_right: Object Diagrams :arrow_right:</div>
+<div id="path">UML &rarr; Object Diagrams &rarr;</div>
 
 <div id="title">
 
@@ -29,6 +29,9 @@ Example:
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

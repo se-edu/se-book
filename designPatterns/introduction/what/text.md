@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Patterns :arrow_right: Introduction :arrow_right:</div>
+<div id="path">Software Design Patterns &rarr; Introduction &rarr;</div>
 
 <div id="title">
 
@@ -34,6 +34,9 @@ After repeated attempts at solving such problems, better solutions are discovere
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

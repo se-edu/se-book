@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Quality Assurance :arrow_right: Formal Verification :arrow_right:</div>
+<div id="path">Quality Assurance &rarr; Formal Verification &rarr;</div>
 
 <div id="title">
 
@@ -28,6 +28,9 @@ Therefore, formal verifications are more commonly used in safety-critical softwa
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

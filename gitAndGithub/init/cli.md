@@ -26,7 +26,7 @@ You can also use the `git status` command to check the status of the newly-creat
 ```
 git status
 ```
-->
+:arrow_heading_down:
 ```
 # On branch master
 #

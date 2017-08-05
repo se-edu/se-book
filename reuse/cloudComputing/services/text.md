@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Reuse :arrow_right: Cloud Computing :arrow_right:</div>
+<div id="path">Reuse &rarr; Cloud Computing &rarr;</div>
 
 <div id="title">
 
@@ -28,6 +28,9 @@ Cloud computing can deliver computing services at three levels:
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

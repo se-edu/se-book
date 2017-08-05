@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Specifying Requirements :arrow_right: Prose :arrow_right:</div>
+<div id="path">Specifying Requirements &rarr; Prose &rarr;</div>
 
 <div id="title">
 

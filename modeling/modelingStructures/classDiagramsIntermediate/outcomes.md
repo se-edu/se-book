@@ -1,1 +1,1 @@
-:trophy: Can explain class diagrams on an intermediate level :two:
+:trophy: Can use intermediate-level class diagrams :two:

@@ -1,1 +1,1 @@
-Quality Assurance :arrow_right: Quality Assurance :arrow_right:
+Quality Assurance &rarr; Quality Assurance &rarr;

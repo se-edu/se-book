@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Code Quality :arrow_right: Guideline: Maximise Readability :arrow_right:</div>
+<div id="path">Code Quality &rarr; Guideline: Maximise Readability &rarr;</div>
 
 <div id="title">
 
@@ -35,6 +35,9 @@
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

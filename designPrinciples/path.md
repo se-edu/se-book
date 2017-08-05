@@ -1,1 +1,1 @@
-Design :arrow_right: Design Principles :arrow_right:
+Design &rarr; Design Principles &rarr;

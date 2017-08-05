@@ -1,4 +1,4 @@
-<div id="path">Testing :arrow_right: Testing Types :arrow_right:</div>
+<div id="path">Testing &rarr; Testing Types &rarr;</div>
 
 <div id="title">
 
@@ -29,6 +29,9 @@ Exploratory testing is ‘the simultaneous learning, test design, and test execu
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 </div>
 
 </div>

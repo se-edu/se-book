@@ -31,6 +31,6 @@
 
 * [bryan-mercurial-guide]
 
-  <div id="bryan-mercurial-guide">[Mercurial: The Definitive Guide](http://hgbook.red-bean.com/) by Bryan O'Sullivan retrieve on 2012/07/11</div>
+  <div id="bryan-mercurial-guide">[Mercurial: The Definitive Guide](http://hgbook.red-bean.com/) by Bryan O'Sullivan retrieved on 2012/07/11</div>
 
 </div>

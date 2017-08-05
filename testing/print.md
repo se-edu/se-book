@@ -31,6 +31,10 @@
 
 <include src="testingTypes/alphaBetaTesting/what/print.md" />
 
+### Dogfooding
+
+<include src="testingTypes/dogfooding/what/print.md" />
+
 ### Developer Testing
 
 <include src="testingTypes/developerTesting/what/print.md" />

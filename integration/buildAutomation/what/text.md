@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Integration :arrow_right: Build Automation :arrow_right:</div>
+<div id="path">Integration &rarr; Build Automation &rarr;</div>
 
 <div id="title">
 
@@ -30,6 +30,9 @@ Modern software projects often depend on third party libraries that evolve const
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

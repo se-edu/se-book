@@ -1,4 +1,4 @@
-<div id="path">Documentation :arrow_right: Guidelines :arrow_right:</div>
+<div id="path">Documentation &rarr; Guidelines &rarr;</div>
 
 <div id="title">
 

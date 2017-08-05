@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Error Handling :arrow_right: Defensive Programming :arrow_right:</div>
+<div id="path">Error Handling &rarr; Defensive Programming &rarr;</div>
 
 <div id="title">
 
@@ -24,6 +24,9 @@ The degree of defensiveness depends on many factors such as:
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

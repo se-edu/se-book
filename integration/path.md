@@ -1,1 +1,1 @@
-Implementation :arrow_right: Integration :arrow_right:
+Implementation &rarr; Integration &rarr;

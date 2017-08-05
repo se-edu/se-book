@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Git and Github :arrow_right: </div>
+<div id="path">Git and Github &rarr; </div>
 
 <div id="title">
 
@@ -12,17 +12,14 @@
 
 <div id="body">
 
-<dynamic-panel src="../../revisionControl/savingHistory/embed.md" header="Revision Control: Saving History" is-open></dynamic-panel>
-<p/>
+Create an empty repo as described in the panel below.
 
-Create an empty repo as described [here](./init/).
+<include src="../init/embed.md" name="Git and GitHub: Init" dynamic />
 
-Create a file named `fruits.txt` in the folder and add some dummy text to it.
+Create a file named `fruits.txt` in the working directory and add some dummy text to it.
 
-<tip-box type="primary">
-
-<include src="../../common/definitions.md#def-working-directory" />
-
+<tip-box type="definition">
+  <include src="../../common/definitions.md#def-working-directory" />
 </tip-box>
 
 Observe how the file is detected by Git.
@@ -36,18 +33,14 @@ Observe how the file is detected by Git.
   </tab>
 </tabs>
 
-Although git has detected the file in the working folder, it will not do anything with the file unless you tell it to. Suppose we want to commit the current state of the file. First, we should stage the file.
+Although git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose we want to commit the current state of the file. First, we should stage the file.
 
-<tip-box type="primary">
-
-<include src="../../common/definitions.md#def-commit" />
-
+<tip-box type="definition">
+  <include src="../../common/definitions.md#def-commit" />
 </tip-box>
 
-<tip-box type="primary">
-
-<include src="../../common/definitions.md#def-stage" />
-
+<tip-box type="definition">
+  <include src="../../common/definitions.md#def-stage" />
 </tip-box>
 
 <tabs>

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Principles :arrow_right: </div>
+<div id="path">Principles &rarr; </div>
 
 <div id="title">
 
@@ -33,6 +33,9 @@ This principle can be applied at the class level, as well as on higher levels. F
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

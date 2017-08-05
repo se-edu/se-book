@@ -1,4 +1,4 @@
-<panel header="Q: For the Manager class, write an addAccount() method.">
+<panel header=":lock::key: For the Manager class, write an addAccount() method.">
 <question has-input="true">
 
 For the Manager class shown below, write an addAccount() method that

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Reuse :arrow_right: APIs :arrow_right:</div>
+<div id="path">Reuse &rarr; APIs &rarr;</div>
 
 <div id="title">
 
@@ -37,6 +37,9 @@ In this case the API is a collection of Web request formats GitHub server accept
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

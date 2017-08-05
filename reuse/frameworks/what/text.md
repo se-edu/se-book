@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Reuse :arrow_right: Frameworks :arrow_right:</div>
+<div id="path">Reuse &rarr; Frameworks &rarr;</div>
 
 <div id="title">
 
@@ -75,6 +75,9 @@ More examples:
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

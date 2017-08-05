@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Error Handling :arrow_right: Introduction :arrow_right:</div>
+<div id="path">Error Handling &rarr; Introduction &rarr;</div>
 
 <div id="title">
 

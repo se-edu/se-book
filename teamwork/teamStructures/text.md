@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Teamwork :arrow_right: </div>
+<div id="path">Teamwork &rarr; </div>
 
 <div id="title">
 
@@ -38,6 +38,9 @@ In a large, resource-intensive, complex project, this could be a good team struc
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

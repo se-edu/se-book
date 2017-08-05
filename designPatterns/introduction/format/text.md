@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Patterns :arrow_right: Introduction :arrow_right:</div>
+<div id="path">Software Design Patterns &rarr; Introduction &rarr;</div>
 
 <div id="title">
 
@@ -24,6 +24,9 @@ The common format to describe a pattern consists of the following components:
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

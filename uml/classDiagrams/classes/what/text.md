@@ -1,4 +1,4 @@
-<div id="path">UML :arrow_right: Class Diagrams :arrow_right:</div>
+<div id="path">UML &rarr; Class Diagrams &rarr;</div>
 
 <div id="title">
 
@@ -50,6 +50,9 @@ The _visibility_ of attributes and operations is used to indicate the level of a
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 </div>
 
 </div>

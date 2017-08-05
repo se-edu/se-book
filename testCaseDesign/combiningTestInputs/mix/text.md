@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Test Case Design :arrow_right: Combining Test Inputs :arrow_right:</div>
+<div id="path">Test Case Design &rarr; Combining Test Inputs &rarr;</div>
 
 <div id="title">
 
@@ -110,6 +110,9 @@ Next, let us assume that there is a dependency between the inputs examScore and 
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

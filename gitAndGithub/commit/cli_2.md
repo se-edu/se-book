@@ -4,7 +4,7 @@ You can use the `stage` or the `add` command (they are synonyms, `add` is the mo
 git add fruits.txt
 git status
 ```
-->
+:arrow_heading_down:
 ```sh
 # On branch master
 #
