@@ -209,6 +209,12 @@ Also known as
 
 </div>
 
+<div id="def-se">
+
+**Software Engineering**: Software Engineering is the application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software" <sub>-- IEEE Standard Glossary of Software Engineering Terminology</sub>
+
+</div>
+
 <div id="def-stage">
 
 **Stage**: Instructing Git to prepare a file for committing.
