@@ -4,13 +4,39 @@
 
 # Using This Book
 
+* [Browser Compatibility](#browsers)
+* [Information Layers](#layers)
+* [Conventions Used](#conventions)
+* [Saving as PDF files](#saving)
+* [Printing](#printing)
+
+<div id="browsers">
+
 ## Browser Compatibility
 
 This book is best viewed using the Chrome browser.
 
-## Conventions Used
+</div>
+<div id="layers">
 
-Tabs indicate alternative formats of the same content (e.g. video vs text). You can choose the one you like and ignore the other tabs. 
+## Information Layers
+
+The book tries to 'layer' information so that readers can decide to omit less important layers if they wish to. 
+
+More important information are **in bold** or ==highlighted== while less important information are %%dimmed%% or in collapsed panels such as the below.
+
+<panel header="%%Some more less important info in a panel%%">
+
+Less important info
+
+</panel><p/>
+<panel header="%%Some less important info in a boarder-less panel%%" type="seamless">
+
+Less important info
+
+</panel><p/>
+
+**Tabs indicate alternative formats of the same content** (e.g. video vs text). You can choose the one you like and ignore the other tabs. 
 
 <tip-box>
 
@@ -28,6 +54,13 @@ Video describing X
 </tabs>
 
 </tip-box>
+
+**Sections tagged as :zero: can be ignored because they are tangential info** that are strictly not within the scope of the topic.
+
+</div>
+<div id="conventions">
+
+## Conventions Used
 
 Boxed-text styles:
 
@@ -70,6 +103,9 @@ Meaning of icons:
 * :lock: question without answer
 * :lock::key: question with answer
 
+</div>
+<div id="saving">
+
 ## Saving as PDF Files
 
 1. Use Chrome to load the page you want to save as pdf.
@@ -78,9 +114,14 @@ Meaning of icons:
 
 1. Set the destination to `Save as PDF`, then click `Save` to save a copy of the file in PDF format. For best results, use the settings indicated in the screenshot below.<br/>
   <img src="{{baseUrl}}/about/images/chromeSaveAsPdf.png" />
+
+</div>
+<div id="printing">
   
 ## Printing
 
 The :scroll: icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here](../common/print.html)
+
+</div>
 
 </div>
