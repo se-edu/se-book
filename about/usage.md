@@ -77,7 +77,7 @@ Meaning of icons:
 1. Click on the `Print` option in Chrome’s menu.
 
 1. Set the destination to `Save as PDF`, then click `Save` to save a copy of the file in PDF format. For best results, use the settings indicated in the screenshot below.<br/>
-  <img src="{{baseURl}}/about/images/chromeSaveAsPdf.png" />
+  <img src="{{baseUrl}}/about/images/chromeSaveAsPdf.png" />
   
 ## Printing
 
