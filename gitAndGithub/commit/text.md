@@ -78,6 +78,7 @@ Next, add two more files `colors.txt` and `shapes.txt` to the same working direc
 </div>
 
 <div id="extras">
+  <include src="resources.md"/>
 </div>
 
 </div>
