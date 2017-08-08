@@ -1,3 +1,1 @@
-<panel header="%%Prerequisites%%" expandable expanded>
-  <dynamic-panel src="../pull/full.md" header="%%Tools &rarr; Git & GitHub &rarr; Pull%%" />
-</panel>
+<dynamic-panel src="../pull/full.md" header=":mortar_board: %%Tools &rarr; Git & GitHub &rarr; Pull%%" />

@@ -36,6 +36,14 @@ Less important info
 
 </panel><p/>
 
+**Dash lines indicate collapsed content.** Click on them to expand:
+
+<panel type="seamless" header="%%--------------------------------------%%">
+
+Some content
+
+</panel><p/>
+
 **Tabs indicate alternative formats of the same content** (e.g. video vs text). You can choose the one you like and ignore the other tabs. 
 
 <tip-box>
@@ -108,8 +116,9 @@ Boxed-text styles:
 Meaning of icons:
 
 * :one: :two: :three: :four: : indication of the depth of the topic, in order of increasing depth (:one: is the least depth)
-* :zero: tangential info, can be ignored if not interested
+* :zero: : tangential info, can be ignored if not interested
 * :trophy: : learning outcomes
+* :mortar_board: : prerequisite learning outcome
 * :package: : examples
 * :paperclip: : resources
 * :muscle: : exercises
