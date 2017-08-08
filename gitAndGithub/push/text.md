@@ -12,13 +12,15 @@
 
 <div id="body">
 
-1. Fork the sample repo.
+1. Fork the [samplerepo-things](https://github.com/nus-cs2103-AY1718S1/samplerepo-things): 
 
-  * Navigate to the sample repo on GitHub
-  * Click on the `Fork` button on the top-right corner
-  * <img src="{{baseUrl}}/gitAndGithub/push/images/fork.png" height="30" />
+   <panel type="seamless" header="%%How to fork a repo?%%">
+    
+    Navigate to the  on GitHub and click on the <img src="{{baseUrl}}/gitAndGithub/push/images/fork.png" height="30" /> button on the top-right corner.
+    
+   </panel><p/>
 
-2. Clone the frok (not the original) to your computer.
+2. Clone the fork (not the original) to your computer.
 3. Create some commits in your repo.
 4. Push the new commits to your fork on GitHub
 

@@ -1,1 +1,1 @@
-`git push origin master` enter Github username and password when prompted.
+Use the command `git push origin master`. Enter Github username and password when prompted.

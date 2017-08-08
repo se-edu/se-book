@@ -10,7 +10,7 @@ This is what you will see.
 <img src="{{baseUrl}}/gitAndGithub/pull/images/sourcetree_2.png" height="150" />
 <p/>
 
-Note the following:
+Note the following (cross refer the screenshot above):
 
-* The local repo is now at this commit, marked by the `master` label.
-* `origin/master` shows what is the latest commit in the `master` branch in the remote repo.
+(a) The local repo is now at this commit, marked by the `master` label.<br>
+(b) `origin/master` shows what is the latest commit in the `master` branch in the remote repo.
