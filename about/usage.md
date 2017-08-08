@@ -25,7 +25,7 @@ The book tries to 'layer' information so that readers can decide to omit less im
 
 More important information are **in bold** or ==highlighted== while less important information are %%dimmed%% or in collapsed panels such as the below.
 
-<panel header="%%Some more less important info in a panel%%">
+<panel header="%%Some less important info in a panel%%">
 
 Less important info
 

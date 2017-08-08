@@ -12,7 +12,7 @@
 
 <div id="body">
 
-Whether a refactoring improves the code or degrades it depends on the situation.  That is why some refactorings are ‘opposites’ of each other (e.g. _extract method vs inline method_).
+Whether a refactoring improves or degrades the code depends on the situation.  That is why some refactorings are ‘opposites’ of each other (e.g. _extract method vs inline method_).
 
 It is important to refactor frequently so as to avoid the accumulation of ‘messy’ code which might get out of control.
 
