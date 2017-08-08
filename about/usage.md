@@ -139,7 +139,7 @@ Meaning of icons:
   
 ## Printing
 
-The :scroll: icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here](../common/print.html)
+The :scroll: icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here]({{baseUrl}}/common/print.html)
 
 </div>
 
