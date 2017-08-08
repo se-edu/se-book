@@ -12,9 +12,6 @@
 
 <div id="body">
 
-<dynamic-panel src="../../revisionControl/usingHistory/embed.md" header="Revision Control: Using History" is-open></dynamic-panel>
-<p/>
-
 Git can show you what changed in each commit.
 
 <tabs>

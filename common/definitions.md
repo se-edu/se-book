@@ -189,6 +189,12 @@ Also known as
 
 ## R
 
+<div id="def-rcs">
+
+**RCS** :  Revision Control Software.
+
+</div>
+
 <div id="def-repo">
 
 **Repository** (_repo_ for short):  The database of the history of a directory being tracked by an RCS software (e.g. Git).
