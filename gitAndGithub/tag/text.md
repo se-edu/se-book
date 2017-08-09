@@ -12,8 +12,7 @@
 
 <div id="body">
 
-<dynamic-panel src="../../revisionControl/savingHistory/embed.md" header="Revision Control: Saving History" is-open></dynamic-panel>
-<p/>
+Let's tag a commit in a local repo you have (e.g. the `sampelrepo-things` repo)
 
 <tabs>
   <tab header="SourceTree">
