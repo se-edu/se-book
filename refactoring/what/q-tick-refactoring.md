@@ -1,4 +1,4 @@
-<panel header=":lock::key: Refactoring">
+<panel header=":lock::key: Results of Refactoring">
 <question>
 
 Choose the correct statement

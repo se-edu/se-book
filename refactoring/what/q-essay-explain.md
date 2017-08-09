@@ -1,4 +1,4 @@
-<panel header=":lock: Refactoring">
+<panel header=":lock: Explain Refactoring">
 <question has-input>
 
 Explain what is refactoring and why it is not the same as rewriting, bug fixing, or adding features.

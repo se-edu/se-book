@@ -25,10 +25,10 @@ Improving code structure can have many secondary benefits: e.g.
 
 </tip-box>
 
-Given below are two common refactorings (taken from <trigger trigger="click" for="modal:refactoring-catalog"> refactoring-catalog </trigger>).
+Given below are two common refactorings (taken from <trigger trigger="click" for="modal:refactoring-catalog-what"> refactoring-catalog </trigger>).
 
-<modal title="**Refactoring Catalog**" id="modal:refactoring-catalog">
-  <include src="../../common/references.md#refactoring-catalog" inline/>
+<modal title="**Refactoring Catalog**" id="modal:refactoring-catalog-what">
+  <include src="../../common/references.md#refactoring-catalog"/>
 </modal>
 
 <tip-box>
@@ -91,6 +91,18 @@ void printDetails (double outstanding) {
     System.out.println("amount	" + outstanding);
 }
 ```
+
+</tip-box>
+
+<tip-box type="info">
+
+Tip: Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.
+
+</tip-box>
+
+<tip-box type="important">
+
+Important: Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.
 
 </tip-box>
 
