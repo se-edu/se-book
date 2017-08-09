@@ -25,9 +25,9 @@ Improving code structure can have many secondary benefits: e.g.
 
 </tip-box>
 
-Given below are two common refactorings (taken from <trigger for="modal:refactoring-catalog"> refactoring-catalog </trigger>).
+Given below are two common refactorings (taken from <trigger trigger="click" for="modal:refactoring-catalog"> refactoring-catalog </trigger>).
 
-<modal title="**Enterprise Applications**" id="modal:refactoring-catalog">
+<modal title="**Refactoring Catalog**" id="modal:refactoring-catalog">
   <include src="../../common/references.md#refactoring-catalog" inline/>
 </modal>
 
