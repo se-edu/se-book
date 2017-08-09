@@ -16,7 +16,7 @@
 >
 > -- Martin Golding
 
-**<trigger for="pop:production-code">Production code</trigger> needs to be of high quality**. While there are many aspects to code quality such as security, efficiency, performance, etc., **one of the most important aspects of code quality is _readability_**, i.e. how easy it is to read/understand the code.
+**<trigger for="pop:production-code">Production code</trigger> needs to be of high quality**. Given how the world is becoming increasingly dependent of software, poor quality code is something we cannot afford to tolerate.
 
 <popover id="pop:production-code" title=":mag: Production Code" placement="top">
   <div slot="content">

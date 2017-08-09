@@ -16,10 +16,10 @@ When the code has a number that does not explain the meaning of the number, we c
 
 Example:
 
-| ![][Bad]           | ![][Good]       |
-| ------------------ |-----------------|
-| `return 3.14236;`  | `return 9`      |     
-| `return PI`        | `MAX_SIZE-1`    |
+| ![][Bad]           | ![][Good]              |
+| ------------------ |------------------------|
+| `return 3.14236;`  |          `return PI`   |     
+|   `return 9`       | `return MAX_SIZE-1`    |
 
 </tip-box>
 

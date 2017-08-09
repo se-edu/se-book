@@ -34,7 +34,7 @@ displayResult();
 
 </tip-box>
 
-<tip-box type="primary">
+<tip-box type="info">
 <include src="../../../common/definitions.md#def-abstraction" />
 </tip-box>
 
