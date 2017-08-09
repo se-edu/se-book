@@ -22,7 +22,11 @@
 
 * [refactoring-catalog]
 
-	<div id="refactoring-catalog">[http://refactoring.com/catalog/]() - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/#refactoring)</div>
+  <span id="refactoring-catalog">
+  
+  [http://refactoring.com/catalog/](http://refactoring.com/catalog/) - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/#refactoring)
+  
+  </span>
 
 
 * [bach-et-explained]
