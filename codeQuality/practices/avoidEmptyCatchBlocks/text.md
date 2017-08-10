@@ -10,7 +10,7 @@
 
 <div id="body">
 
-Never write an empty 'catch' statement.
+Never write an empty `catch` statement. At least give a comment to explain why the `catch` block is left empty.
 
 </div>
 
