@@ -132,6 +132,13 @@ Meaning of icons:
 * :lock::key: question with answer
 
 </div>
+<div id="searching">
+
+## Searching
+
+The book currently does not have a _search_ feature. The workaround is to load [the printable version of the book]({{baseUrl}}/common/print.html) (which loads the entire book into one page, minus the exercises) and use the Browser's search function.
+
+</div>
 <div id="saving">
 
 ## Saving as PDF Files
