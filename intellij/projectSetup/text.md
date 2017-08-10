@@ -24,6 +24,10 @@
 
 @[youtube](c0efB_CKOYo)
 
+A little bit more detailed explanation %%(from CodeLaunch)%% with some additional info at the end.
+
+@[youtube](https://www.youtube.com/watch?v=S764o0mAXhg)
+
   </tab>
 </tabs>
 

@@ -807,8 +807,6 @@
 
 <dynamic-panel src="../intellij/debuggingBasic/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../intellij/debuggingBasic/outcomes.md" inline />
 
-<dynamic-panel src="../intellij/debuggingIntermediate/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../intellij/debuggingIntermediate/outcomes.md" inline />
-
 <dynamic-panel src="../intellij/refactoring/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../intellij/refactoring/outcomes.md" inline />
 
 
