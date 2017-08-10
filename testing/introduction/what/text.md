@@ -25,8 +25,8 @@
 
 :package: Example: A minimal test case for testing a browser:
 
-* **Input** – Start the browser using a blank page (vertical scrollbar disabled). Then, load ‘longfile.html’ located in the ‘test data’ folder.
-* **Expected behavior** – The scrollbar should be automatically enabled upon loading ‘longfile.html’.
+* **Input** – Start the browser using a blank page (vertical scrollbar disabled). Then, load `longfile.html` located in the `test data` folder.
+* **Expected behavior** – The scrollbar should be automatically enabled upon loading `longfile.html`.
 
 </tip-box>
 
