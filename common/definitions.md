@@ -87,7 +87,7 @@ Abstraction can be applied repeatedly to obtain higher and _higher levels of abs
 
 <div id="def-dry-principle">
 
-**DRY (Don't Repeat Yourself) Principle**: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system
+**DRY (Don't Repeat Yourself) Principle**: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub>_The Pragmatic Programmer_, by Andy Hunt and Dave Thomas</sub>
 
 </div>
 

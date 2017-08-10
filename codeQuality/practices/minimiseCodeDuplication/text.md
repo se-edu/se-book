@@ -10,11 +10,13 @@
 
 <div id="body">
 
-The book "[The Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X)" calls this the DRY (Don't Repeat Yourself) principle. Code duplication, especially when you copy-paste-modify code, often indicates a poor quality implementation. While it may not be possible to have zero duplication, always think twice before duplicating code; most often there is a better alternative.
+**Code duplication, especially when you copy-paste-modify code, often indicates a poor quality implementation.** While it may not be possible to have zero duplication, always think twice before duplicating code; most often there is a better alternative.
 
-> Programs should be written and polished until they acquire publication quality.
->
-> --[Niklaus Wirth](https://en.wikipedia.org/wiki/Niklaus_Wirth)  
+This guideline is closely related to the <trigger for="modal:duplication-dry" trigger="click">DRY Principle<trigger>. 
+
+<modal title="**:mag: DRY Principle**" id="modal:duplication-dry">
+  <include src="../../../principles/dryPrinciple/full.md" />
+</modal>
 
 </div>
 

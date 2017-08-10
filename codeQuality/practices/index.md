@@ -98,16 +98,8 @@
   <include src="minimiseVariableScope/index.md#main" />
 </panel>
 
-<panel type="seamless" header="**Prefer Stateless Methods**" alt="stateless methods">
-  <include src="preferStatelessMethods/index.md#main" />
-</panel>
-
 <panel type="seamless" header="**Minimise Code Duplication**" alt="minimise duplication">
   <include src="minimiseCodeDuplication/index.md#main" />
-</panel>
-
-<panel type="seamless" header="**Delete Temporary Code**" alt="temporary code">
-  <include src="deleteTemporaryCode/index.md#main" />
 </panel>
 
 ## Comment Minimally, but Sufficiently

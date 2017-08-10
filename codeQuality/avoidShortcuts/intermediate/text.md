@@ -12,24 +12,12 @@
 
 <div id="body">
 
-<panel header="**Minimise Scope of Variables**"
-    type="seamless" alt="indentation">
+<panel header="**Minimise Scope of Variables**" type="seamless">
   <include src="../../practices/minimiseVariableScope/index.md#main" />
 </panel>
 
-<panel header="**Prefer Stateless Methods**"
-    type="seamless" alt="indentation">
-  <include src="../../practices/preferStatelessMethods/index.md#main" />
-</panel>
-
-<panel header="**Minimise Code Duplication**"
-    type="seamless" alt="indentation">
+<panel header="**Minimise Code Duplication**" type="seamless">
   <include src="../../practices/minimiseCodeDuplication/index.md#main" />
-</panel>
-
-<panel header="**Delete Temporary Code**"
-    type="seamless" alt="indentation">
-  <include src="../../practices/deleteTemporaryCode/index.md#main" />
 </panel>
 
 </div>
