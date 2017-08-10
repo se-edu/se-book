@@ -27,10 +27,10 @@ Suppose you want to create a repository in an empty directory `things`
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree.md" />
-  </tab>
+  <hr></tab>
   <tab header="CLI">
     <include src="./cli.md" />
-  </tab>
+  <hr></tab>
 </tabs>
 
 </div>

@@ -17,10 +17,10 @@ Let's tag a commit in a local repo you have (e.g. the `sampelrepo-things` repo)
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree.md" />
-  </tab>
+  <hr></tab>
   <tab header="CLI">
     <include src="./cli.md" />
-  </tab>
+  <hr></tab>
 </tabs>
 
 </div>

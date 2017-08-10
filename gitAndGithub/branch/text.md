@@ -22,10 +22,10 @@ Take any repo you have on your computer. Observe that you are in the branch call
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree_1.md" />
-  </tab>
+  <hr></tab>
   <tab header="CLI">
     <include src="./cli_1.md" />
-  </tab>
+  <hr></tab>
 </tabs>
 
 2. Create some commits in the new branch.
@@ -35,10 +35,10 @@ Take any repo you have on your computer. Observe that you are in the branch call
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree_2.md" />
-  </tab>
+  <hr></tab>
   <tab header="CLI">
     <include src="./cli_2.md" />
-  </tab>
+  <hr></tab>
 </tabs>
 
 4. Add a commit to the master branch. Let’s imagine it’s a bug fix.
@@ -56,10 +56,10 @@ Take any repo you have on your computer. Observe that you are in the branch call
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree_3.md" />
-  </tab>
+  <hr></tab>
   <tab header="CLI">
     <include src="./cli_3.md" />
-  </tab>
+  <hr></tab>
 </tabs>
 
 7. Add another commit to the `feature1` branch

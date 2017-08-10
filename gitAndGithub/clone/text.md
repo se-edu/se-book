@@ -27,10 +27,10 @@ Git repo URL: `https://github.com/nus-cs2103-AY1718S1/samplerepo-things.git` (no
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree.md" />
-  </tab>
+  <hr></tab>
   <tab header="CLI">
     <include src="./cli.md" />
-  </tab>
+  <hr></tab>
 </tabs>
 
 </div>

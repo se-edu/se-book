@@ -53,12 +53,12 @@ Some content
   
 Some textual description of X
 
-  </tab>
+  <hr></tab>
   <tab header=":tv:">
 
 Video describing X
 
-  </tab>
+  <hr></tab>
 </tabs>
 
 </tip-box>

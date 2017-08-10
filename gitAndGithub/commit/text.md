@@ -27,10 +27,10 @@ Observe how the file is detected by Git.
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree_1.md" />
-  </tab>
+  <hr></tab>
   <tab header="CLI">
     <include src="./cli_1.md" />
-  </tab>
+  <hr></tab>
 </tabs>
 
 Although git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose we want to commit the current state of the file. First, we should stage the file.
@@ -46,10 +46,10 @@ Although git has detected the file in the working directory, it will not do anyt
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree_2.md" />
-  </tab>
+  <hr></tab>
   <tab header="CLI">
     <include src="./cli_2.md" />
-  </tab>
+  <hr></tab>
 </tabs>
 
 Next, we can commit the staged version of `fruits.txt`
@@ -57,10 +57,10 @@ Next, we can commit the staged version of `fruits.txt`
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree_3.md" />
-  </tab>
+  <hr></tab>
   <tab header="CLI">
     <include src="./cli_3.md" />
-  </tab>
+  <hr></tab>
 </tabs>
 
 Note the existence of something called the `master` branch. Git allows you to have multiple branches (i.e. it is a way to evolve the content in parallel) and Git creates a default branch named `master` on which the commits go on by default.
