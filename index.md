@@ -87,11 +87,9 @@
 
 <include src="principles/topicToc.md" />
 
-* [Definitions](common/definitions.html)
-* [References](common/references.html)
-* [Learning Outcomes](common/outcomes.html)
-* [Printable :scroll:](common/print.html)
-
-<include src="java/style/topicToc.md" />
+* [List of Definitions](common/definitions.html)
+* [List of References](common/references.html)
+* [List of Learning Outcomes](common/outcomes.html)
+* [Printable Version :scroll:](common/print.html)
 
 </div>
