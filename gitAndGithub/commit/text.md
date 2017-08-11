@@ -12,9 +12,7 @@
 
 <div id="body">
 
-Create an empty repo as described in the panel below.
-
-<include src="../init/embed.md" name="Git and GitHub: Init" dynamic />
+Create an empty repo.
 
 Create a file named `fruits.txt` in the working directory and add some dummy text to it.
 

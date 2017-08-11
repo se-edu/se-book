@@ -1,1 +1,1 @@
-<dynamic-panel src="../../revisionControl/savingHistory/full.md" header=":mortar_board: %%Project Management &rarr; Revision Control &rarr; Saving History%%" />
+<dynamic-panel src="../init/full.md" header=":mortar_board: %%Git & GitHub &rarr; Init%%" />
