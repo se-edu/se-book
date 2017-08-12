@@ -14,7 +14,7 @@
 
 ### Browser Compatibility
 
-This book is best viewed using the Chrome browser.
+This book is best viewed using the ==Chrome browser==.
 
 </div>
 <div id="layers">
