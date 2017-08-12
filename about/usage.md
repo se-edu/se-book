@@ -12,18 +12,18 @@
 
 <div id="browsers">
 
-## Browser Compatibility
+### Browser Compatibility
 
 This book is best viewed using the Chrome browser.
 
 </div>
 <div id="layers">
 
-## Information Layers
+### Information Layers
 
 The book tries to 'layer' information so that readers can decide to omit less important layers if they wish to. 
 
-More important information are **in bold** or ==highlighted== while less important information are %%dimmed%% or in collapsed panels such as the below.
+**More important information are in bold** or ==highlighted== while %%less important information are dimmed%% or in collapsed panels such as the below.
 
 <panel header="%%Some less important info in a panel%%">
 
@@ -68,7 +68,7 @@ Video describing X
 </div>
 <div id="conventions">
 
-## Conventions Used
+### Conventions Used
 
 Meaning of some shortened headings:
 
@@ -134,14 +134,14 @@ Meaning of icons:
 </div>
 <div id="searching">
 
-## Searching
+### Searching
 
 The book currently does not have a _search_ feature. The workaround is to load [the printable version of the book]({{baseUrl}}/common/print.html) (which loads the entire book into one page, minus the exercises) and use the Browser's search function.
 
 </div>
 <div id="saving">
 
-## Saving as PDF Files
+### Saving as PDF Files
 
 1. Use Chrome to load the page you want to save as pdf.
 
@@ -153,7 +153,7 @@ The book currently does not have a _search_ feature. The workaround is to load [
 </div>
 <div id="printing">
   
-## Printing
+### Printing
 
 The :scroll: icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here]({{baseUrl}}/common/print.html)
 
