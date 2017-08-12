@@ -23,12 +23,12 @@ Suppose you want to apply revision control on files in a directory called `Proje
 
 You can have multiple repos in your computer, each repo revision-controlling files of a different working directly, for examples, files of different projects.
 
-  </tab>
+  <hr></tab>
   <tab header=":tv:">
 
 @[youtube](mLnxwlCEIb8)
 
-  </tab>
+  <hr></tab>
 </tabs>
 
 </div>

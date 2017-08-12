@@ -12,20 +12,20 @@
 
 <div id="browsers">
 
-## Browser Compatibility
+### Browser Compatibility
 
-This book is best viewed using the Chrome browser.
+This book is best viewed using the ==Chrome browser==.
 
 </div>
 <div id="layers">
 
-## Information Layers
+### Information Layers
 
 The book tries to 'layer' information so that readers can decide to omit less important layers if they wish to. 
 
-More important information are **in bold** or ==highlighted== while less important information are %%dimmed%% or in collapsed panels such as the below.
+**More important information are in bold** or ==highlighted== while %%less important information are dimmed%% or in collapsed panels such as the below.
 
-<panel header="%%Some more less important info in a panel%%">
+<panel header="%%Some less important info in a panel%%">
 
 Less important info
 
@@ -33,6 +33,14 @@ Less important info
 <panel header="%%Some less important info in a boarder-less panel%%" type="seamless">
 
 Less important info
+
+</panel><p/>
+
+**Dash lines indicate collapsed content.** Click on them to expand:
+
+<panel type="seamless" header="%%--------------------------------------%%">
+
+Some content
 
 </panel><p/>
 
@@ -45,12 +53,12 @@ Less important info
   
 Some textual description of X
 
-  </tab>
+  <hr></tab>
   <tab header=":tv:">
 
 Video describing X
 
-  </tab>
+  <hr></tab>
 </tabs>
 
 </tip-box>
@@ -60,7 +68,26 @@ Video describing X
 </div>
 <div id="conventions">
 
-## Conventions Used
+### Conventions Used
+
+Meaning of some shortened headings:
+
+* **What** : the **meaning** of the concept in concern 
+
+  <include name="%%Example%%" src="../refactoring/what/full.md" dynamic />
+
+* **Why** : the **motivation** behind the concept in concern
+
+  <include name="%%Example%%" src="../errorHandling/logging/why/full.md" dynamic />
+  
+* **How** : the **usage** of the concept in concern 
+
+  <include name="%%Example%%" src="../refactoring/how/full.md" dynamic />
+  
+* **When** : the **pros and cons** of the concept in concern, **when to use** the concept 
+
+  <include name="%%Example%%" src="../refactoring/when/full.md" dynamic />
+  
 
 Boxed-text styles:
 
@@ -89,8 +116,9 @@ Boxed-text styles:
 Meaning of icons:
 
 * :one: :two: :three: :four: : indication of the depth of the topic, in order of increasing depth (:one: is the least depth)
-* :zero: tangential info, can be ignored if not interested
+* :zero: : tangential info, can be ignored if not interested
 * :trophy: : learning outcomes
+* :mortar_board: : prerequisite learning outcome
 * :package: : examples
 * :paperclip: : resources
 * :muscle: : exercises
@@ -104,9 +132,16 @@ Meaning of icons:
 * :lock::key: question with answer
 
 </div>
+<div id="searching">
+
+### Searching
+
+The book currently does not have a _search_ feature. The workaround is to load [the printable version of the book]({{baseUrl}}/common/print.html) (which loads the entire book into one page, minus the exercises) and use the Browser's search function.
+
+</div>
 <div id="saving">
 
-## Saving as PDF Files
+### Saving as PDF Files
 
 1. Use Chrome to load the page you want to save as pdf.
 
@@ -118,9 +153,9 @@ Meaning of icons:
 </div>
 <div id="printing">
   
-## Printing
+### Printing
 
-The :scroll: icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here](../common/print.html)
+The :scroll: icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here]({{baseUrl}}/common/print.html)
 
 </div>
 

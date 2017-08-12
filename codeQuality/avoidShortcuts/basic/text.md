@@ -12,23 +12,19 @@
 
 <div id="body">
 
-<panel header="**Use the Default Branch**"
-    type="seamless" alt="indentation">
+<panel header="**Use the Default Branch**" type="seamless">
   <include src="../../practices/useDefaultBranch/index.md#main" />
 </panel>
 
-<panel header="**Don't Recycle Variables or Parameters**"
-    type="seamless" alt="indentation">
+<panel header="**Don't Recycle Variables or Parameters**" type="seamless">
   <include src="../../practices/dontRecycleVarsOrParams/index.md#main" />
 </panel>
 
-<panel header="**Avoid Empty Catch Blocks**"
-    type="seamless" alt="indentation">
+<panel header="**Avoid Empty Catch Blocks**" type="seamless">
   <include src="../../practices/avoidEmptyCatchBlocks/index.md#main" />
 </panel>
 
-<panel header="**Delete Dead Code**"
-    type="seamless" alt="indentation">
+<panel header="**Delete Dead Code**" type="seamless">
   <include src="../../practices/deleteDeadCode/index.md#main" />
 </panel>
 

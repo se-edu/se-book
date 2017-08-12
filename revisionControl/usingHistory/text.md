@@ -12,9 +12,13 @@
 
 <div id="body">
 
-We can view the history of a project as a series of past commits and also **_diff_** (i.e. to see the differences) between two points in the history.
+**<trigger for="pop:rcs">RCS</trigger> tools store the history of the working directory as a series of commits.** This means we should commit after each change that we want the RCS to 'remember' for us.
+ 
+**To see what changed between two points of the history, you can ask the RCS tool to  ==_diff_== the two commits in concern.**
 
-We can **_checkout_** any commit in the history (i.e. load the state of files as at that commit) to the working directory. Therefore, we can traverse the history of the project simply by checking out the commits we are interested in.
+**To restore the state of the working directory at a point in the past, you can ==_checkout_== the commit in concern.** i.e., we can traverse the history of the working directory simply by checking out the commits we are interested in.
+
+<include src="../../common/popOvers.md#rcs" />
 
 </div>
 

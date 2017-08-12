@@ -25,24 +25,33 @@
         </div>
       </tip-box>
       <div>
-        <p>The first version of the code you write may not be of production quality. It is acceptable to first concentrate on making the code work, rather than worry over the quality of the code, SO LONG AS you improve the quality later. This process of
-          <strong>improving a program's internal structure without modifying its external behavior</strong> is called <em>refactoring</em>.</p>
+        <p>The first version of the code you write may not be of production quality. It is acceptable to first concentrate on making the code work, rather than worry over the quality of the code, as long as you improve the quality later. This process of
+          <strong>improving a program's internal structure in small steps without modifying its external behavior is called <em>refactoring</em>.</strong></p>
         <ul>
-          <li>Refactoring is not about discarding poorly-written code and re-writing it from scratch. It is the process of improving the code in very small steps until it achieves production quality.</li>
-          <li>By definition, refactoring is different from bug fixing or any other modifications that alter the external behavior of the component in concern.</li>
+          <li><strong>Refactoring is not rewriting</strong>: Discarding poorly-written code entirely and re-writing it from scratch is not refactoring because refactoring needs to be done in small steps.</li>
+          <li><strong>Refactoring is not bug fixing</strong>: By definition, refactoring is different from bug fixing or any other modifications that alter the external behavior (e.g. adding a feature) of the component in concern.</li>
         </ul>
+        <tip-box type="tip">
+          <p>Improving code structure can have many secondary benefits: e.g.</p>
+          <ul>
+            <li>hidden bugs become easier to spot</li>
+            <li>improve performance (sometimes, simpler code runs faster than complex code because simpler code is easier for the compiler to optimize).</li>
+          </ul>
+        </tip-box>
         <p>Given below are two common refactorings (taken from
-          <popover effect="fade" placement="top">
-            refactoring-catalog <span slot="content"><span><a href="">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></span></span>
-          </popover>
-          ).</p>
+          <trigger trigger="click" for="modal:refactoring-catalog-what"> refactoring-catalog </trigger>).</p>
+        <modal title="**Refactoring Catalog**" id="modal:refactoring-catalog-what">
+          <div>
+            <p><a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring:
+              <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></p>
+          </div>
+        </modal>
         <tip-box>
           <p>Refactoring Name: <strong>Consolidate Duplicate Conditional Fragments</strong></p>
           <p>Situation: The same fragment of code is in all branches of a conditional expression.</p>
           <p>Method: Move it outside of the expression.</p>
           <p>Example:</p>
-          <pre><code class="hljs java"><span class="hljs-comment">//before</span>
-<span class="hljs-keyword">if</span> (isSpecialDeal()) {
+          <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isSpecialDeal()) {
     total = price * <span class="hljs-number">0.95</span>;
     send();
 } <span class="hljs-keyword">else</span> {
@@ -50,8 +59,8 @@
     send();
 }
 </code></pre>
-          <pre><code class="hljs java"><span class="hljs-comment">//after</span>
-<span class="hljs-keyword">if</span> (isSpecialDeal()){
+          <p>⤵️</p>
+          <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isSpecialDeal()){
     total = price * <span class="hljs-number">0.95</span>;
 } <span class="hljs-keyword">else</span> {
     total = price * <span class="hljs-number">0.98</span>;
@@ -64,8 +73,7 @@ send();
           <p>Situation: You have a code fragment that can be grouped together.</p>
           <p>Method: Turn the fragment into a method whose name explains the purpose of the method.</p>
           <p>Example:</p>
-          <pre><code class="hljs java"><span class="hljs-comment">//before</span>
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
+          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
     printBanner();
 
 <span class="hljs-comment">//print details</span>
@@ -73,8 +81,8 @@ send();
     System.out.println(<span class="hljs-string">"amount	"</span> + getOutstanding());
 }
 </code></pre>
-          <pre><code class="hljs java"><span class="hljs-comment">//after</span>
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
+          <p>⤵️</p>
+          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
     printBanner();
     printDetails(getOutstanding());
 }
@@ -84,6 +92,12 @@ send();
     System.out.println(<span class="hljs-string">"amount	"</span> + outstanding);
 }
 </code></pre>
+        </tip-box>
+        <tip-box type="info">
+          <p>Tip: Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
+        </tip-box>
+        <tip-box type="important">
+          <p>Important: Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.</p>
         </tip-box>
       </div>
     </div>
@@ -98,10 +112,13 @@ send();
       </tip-box>
       <div>
         <p>Given below are some more commonly used refactorings. A more comprehensive list is available at
-          <popover effect="fade" placement="top">
-            refactoring-catalog <span slot="content"><span><a href="">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></span></span>
-          </popover>
-          .</p>
+          <trigger trigger="click" for="modal:refactoring-catalog-how"> refactoring-catalog </trigger>.</p>
+        <modal title="**Refactoring Catalog**" id="modal:refactoring-catalog-how">
+          <div>
+            <p><a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring:
+              <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></p>
+          </div>
+        </modal>
         <ol>
           <li><a href="https://refactoring.com/catalog/consolidateConditionalExpression.html">Consolidate Conditional Expression</a></li>
           <li><a href="https://refactoring.com/catalog/decomposeConditional.html">Decompose Conditional</a></li>
@@ -114,12 +131,6 @@ send();
           <li><a href="https://refactoring.com/catalog/splitLoop.html">Split Loop</a></li>
           <li><a href="https://refactoring.com/catalog/splitTemporaryVariable.html">Split Temporary Variable</a></li>
         </ol>
-        <tip-box type="info">
-          <p>Tip: Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
-        </tip-box>
-        <tip-box type="important">
-          <p>Important: Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.</p>
-        </tip-box>
       </div>
     </div>
     <div>
@@ -132,9 +143,7 @@ send();
         </div>
       </tip-box>
       <div>
-        <p>Whether a refactoring improves the code or degrades it depends on the situation. That is why some refactorings are ‘opposites’ of each other (e.g. <em>extract method vs inline method</em>).</p>
-        <p>It is important to refactor frequently so as to avoid the accumulation of ‘messy’ code which might get out of control.</p>
-        <p>How much refactoring is too much refactoring? It is too much refactoring when the benefits no longer justify the cost. The costs and the benefits depend on the context.</p>
+        <p>We know that it is important to refactor frequently so as to avoid the accumulation of ‘messy’ code which might get out of control. But how much refactoring is too much refactoring? <strong>It is too much refactoring when the benefits no longer justify the cost.</strong>          The costs and the benefits depend on the context. That is why some refactorings are ‘opposites’ of each other (e.g. <em>extract method vs inline method</em>).</p>
       </div>
     </div>
   </div>

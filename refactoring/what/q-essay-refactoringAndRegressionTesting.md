@@ -1,9 +1,17 @@
-<panel header=":lock::key: Do you agree with the following statement? Justify your answer.">
+<panel header=":lock::key: Do you agree with the following statement? Refactoring and regression testing">
 <question has-input="true">
 
 Do you agree with the following statement? Justify your answer.
 
-Statement: Whenever we refactor code to fix bugs, we need not do regression testing if the bug fix was minor.
+Statement: `Whenever we refactor code to fix bugs, we need not do regression testing if the bug fix was minor.`
+
+
+<div slot="hint">
+
+There are two flaws in the given statement.
+
+</div>
+
 
 <div slot="answer">
 

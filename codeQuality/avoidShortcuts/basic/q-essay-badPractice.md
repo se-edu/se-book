@@ -1,45 +1,47 @@
-<panel header=":lock::key: Which one of these is NOT a bad practice?">
+<panel header=":lock::key: Which oare unsafe practices?">
 <question>
 
-Which one of these is NOT a bad practice?
+Which of these are unsafe coding practices?
 
-A) Case statements without a ‘default’ clause
+- [ ] a. `case` statements without a `default` clause
 
-B) Omitting braces when a code block has only one statement
+- [ ] b. Omitting braces when a code block has only one statement
 
-e.g writing this
+    e.g writing this
+    
+    ```
+    if(isProper)
+        return PROPER_AMOUNT;
+    ```
+    
+    instead of
+    
+    ```
+    if(isProper){
+        return PROPER_AMOUNT;
+    }
+    ```
 
-```
-if(isProper)
-    return PROPER_AMOUNT;
-```
+- [ ] c. Using a variable just to explain what’s going on
 
-instead of
-
-```
-if(isProper){
-    return PROPER_AMOUNT;
-}
-```
-
-C) Using a variable just to explain what’s going on
-
-e.g.,
-
-```
-boolean isProper = notNull && notEmpty;
-return isProper;
-```
-
-instead of
-
-```
-return notNull && notEmpty;
-```
+    e.g.writing this
+    
+    ```
+    boolean isProper = notNull && notEmpty;
+    return isProper;
+    ```
+    
+    instead of
+    
+    ```
+    return notNull && notEmpty;
+    ```
 
 <div slot="answer">
 
-C). The extra variable helps to make the code more understandable because it makes the intent of the formula clearer. The other two are error-prone shortcuts to be avoided.
+a, b.
+ 
+Reason why [c] is not a bad practice: The extra variable helps to make the code more understandable because it makes the intent of the formula clearer. 
 
 </div>
 </question>

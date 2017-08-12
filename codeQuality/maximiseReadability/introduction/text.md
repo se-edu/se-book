@@ -12,15 +12,15 @@
 
 <div id="body">
 
-Among various dimensions of code quality, such as run-time efficiency, security, and robustness, one of the most important is understandability. This is because in any non-trivial team project, team members expect their code to be read, understood, and modified by other developers later on. Here we interpret ‘good quality code’ primarily as code that is easy for developers to work with.
+> Programs should be written and polished until they acquire publication quality. <sub>--[Niklaus Wirth](https://en.wikipedia.org/wiki/Niklaus_Wirth)</sub>
+
+**Among various dimensions of code quality, such as run-time efficiency, security, and robustness, one of the most important is understandability.** This is because in any non-trivial software project, code needs to be read, understood, and modified by other developers later on. Even if we do not intend to pass the code to someone else, code quality is still important because we all become 'strangers' to our own code someday.
 
 The two code samples given below achieve the same functionality, but one is easier to read.
 
-{give more versions of the code, ask to find bug}
-
 <tip-box>
 
-Example:
+Example: Same function, different readability
 
 ![][Bad]
 ```java
@@ -60,16 +60,8 @@ int calculateSubsidy() {
 }
 ```
 
-Code comparison: same function, different quality
-
 </tip-box>
 
-> The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things
-> he avoids clever tricks like the plague.
->
-> -- Edsger Dijkstra
-
-Even if we do not intend to pass the code to someone else, code quality is still important because we all become 'strangers' to our own code someday.
 
 [Bad]: {{baseUrl}}/images/Bad.png "Bad"
 [Good]: {{baseUrl}}/images/Good.png "Good"

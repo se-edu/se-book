@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="/se-book/css/textbook.css">
 <div class="website-content">
   <div id="main">
+    <hr>
+    <h1 id="book-software-engineering-for-self-directed-learners">BOOK: SOFTWARE ENGINEERING FOR SELF-DIRECTED LEARNERS</h1>
+    <hr>
+    <hr>
+    <h1 id="section-introduction">SECTION: INTRODUCTION</h1>
     <div>
       <h1 id="software-engineering">Software Engineering</h1>
       <div>
@@ -85,9 +90,10 @@
         </div>
       </div>
     </div>
-    <h1 id="requirements">Requirements</h1>
+    <hr>
+    <h1 id="section-requirements">SECTION: REQUIREMENTS</h1>
     <div>
-      <h1 id="requirements-2">Requirements</h1>
+      <h1 id="requirements">Requirements</h1>
       <div>
         <div>
           <h4 id="introduction-one">Introduction <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
@@ -1000,9 +1006,10 @@
         </div>
       </div>
     </div>
-    <h1 id="design">Design</h1>
+    <hr>
+    <h1 id="section-design">SECTION: DESIGN</h1>
     <div>
-      <h1 id="design-2">Design</h1>
+      <h1 id="design">Design</h1>
       <h2 id="introduction">Introduction</h2>
       <div>
         <div>
@@ -3482,7 +3489,8 @@ studentList.addUi(statusUi);
         </div>
       </div>
     </div>
-    <h1 id="implementation">Implementation</h1>
+    <hr>
+    <h1 id="section-implementation">SECTION: IMPLEMENTATION</h1>
     <div>
       <h1 id="ides">IDEs</h1>
       <h2 id="introduction-7">Introduction</h2>
@@ -3496,12 +3504,12 @@ studentList.addUi(statusUi);
           </div>
         </tip-box>
         <div>
-          <p><strong>Professional software engineers often write code using sophisticated editors called <em>Integrated Development Environments (IDEs)</em>. IDEs support all development-related work within the same tool.</strong></p>
+          <p><strong>Professional software engineers often write code using <em>Integrated Development Environments (IDEs)</em>. IDEs support all development-related work within the same tool.</strong></p>
           <p>An IDE generally consists of:</p>
           <ul>
             <li>A source code editor that includes features such as syntax coloring, auto-completion, easy code navigation, error highlighting, and code-snippet generation.</li>
             <li>A compiler and/or an interpreter (together with other build automation support) that facilitates the compilation/linking/running/deployment of a program.</li>
-            <li>A debugger that allows program errors to be located.</li>
+            <li>A debugger that allows the developer to execute the program one step at a time to observe the run-time behavior in order to locate bugs.</li>
             <li>Other tools that aid various aspects of coding e.g. support for automated testing, drag-and-drop construction of UI components, version management support, simulation of the target runtime platform, and modeling support.</li>
           </ul>
           <p>Examples of popular IDEs: Eclipse, Intellij IDEA, NetBeans, Visual Studio, DevC++, DrJava, XCode</p>
@@ -3521,15 +3529,26 @@ studentList.addUi(statusUi);
           </div>
         </tip-box>
         <div>
-          <p><em>Debugging</em> is the process of discovering defects in the program. Here are some approaches to debugging:</p>
+          <p><strong><em>Debugging</em> is the process of discovering defects in the program.</strong> Here are some approaches to debugging:</p>
           <ul>
-            <li><strong>By inserting temporary print statements</strong>: This is an ad-hoc approach in which print statements are inserted in the program to output variable values, as well as program states. While this approach is simple, it incurs extra
-              effort when inserting and removing the print statements. Moreover, unnecessary program modification increases the risk of introducing errors into the program. These print statements, if not promptly removed, may even appear unexpectedly
-              in the production version. Therefore, this approach is not recommended.</li>
-            <li><strong>By manually tracing through the code</strong>: Otherwise known as ‘eye-balling’, this approach has its merits. However, it is a difficult, time consuming, and error-prone technique. Indeed, the effectiveness of manual debugging is
-              highly dependent on one’s programming proficiency.</li>
-            <li><strong>Using a debugger</strong>: A debugger tool allows us to pause the execution, then step through one statement at a time while examining the internal state if necessary. Most IDEs come with an inbuilt debugger. This is the recommended
-              approach for debugging.</li>
+            <li>
+              <p><strong>By inserting temporary print statements</strong>: This is an ad-hoc approach in which print statements are inserted in the program to print information relevant to debugging, such as variable values. e.g. <code>Exiting process() method, x is 5.347</code>.
+                This approach is not recommended due to these reasons.</p>
+              <ul>
+                <li>Incurs extra effort when inserting and removing the print statements.</li>
+                <li>Unnecessary program modifications increases the risk of introducing errors into the program.</li>
+                <li>These print statements, if not promptly removed, may even appear unexpectedly in the production version.</li>
+              </ul>
+            </li>
+            <li>
+              <p><strong>By manually tracing through the code</strong>: Otherwise known as ‘eye-balling’, this approach doesn't have the cons of the previous approach, but it too is not recommended (other than a 'quick try') due to these reasons:</p>
+              <ul>
+                <li>It is difficult, time consuming, and error-prone technique. If you didn't spot the error while writing code, you might not spot the error when reading code too.</li>
+              </ul>
+            </li>
+            <li>
+              <p><strong>Using a debugger</strong>: A debugger tool allows you to pause the execution, then step through one statement at a time while examining the internal state if necessary. Most IDEs come with an inbuilt debugger. <strong>This is the recommended approach for debugging</strong>.</p>
+            </li>
           </ul>
         </div>
       </div>
@@ -3548,10 +3567,15 @@ studentList.addUi(statusUi);
         </tip-box>
         <div>
           <blockquote>
-            <p>Always code as if the person who ends up maintaining your code will be a violent psychopath who knows where you live.</p>
-            <p>-- Martin Golding</p>
+            <p>Always code as if the person who ends up maintaining your code will be a violent psychopath who knows where you live. <sub>-- Martin Golding</sub></p>
           </blockquote>
-          <p>{Explain why code quality is important}</p>
+          <p><strong><trigger for="pop:production-code">Production code</trigger> needs to be of high quality</strong>. Given how the world is becoming increasingly dependent of software, poor quality code is something we cannot afford to tolerate.</p>
+          <popover
+            id="pop:production-code" title=":mag: Production Code" placement="top">
+            <div slot="content">
+              Code being used in an actual product with actual users
+            </div>
+            </popover>
         </div>
       </div>
       <h2 id="guideline-maximise-readability">Guideline: Maximise Readability</h2>
@@ -3565,12 +3589,14 @@ studentList.addUi(statusUi);
           </div>
         </tip-box>
         <div>
-          <p>Among various dimensions of code quality, such as run-time efficiency, security, and robustness, one of the most important is understandability. This is because in any non-trivial team project, team members expect their code to be read, understood,
-            and modified by other developers later on. Here we interpret ‘good quality code’ primarily as code that is easy for developers to work with.</p>
+          <blockquote>
+            <p>Programs should be written and polished until they acquire publication quality. <sub>--<a href="https://en.wikipedia.org/wiki/Niklaus_Wirth">Niklaus Wirth</a></sub></p>
+          </blockquote>
+          <p><strong>Among various dimensions of code quality, such as run-time efficiency, security, and robustness, one of the most important is understandability.</strong> This is because in any non-trivial software project, code needs to be read, understood,
+            and modified by other developers later on. Even if we do not intend to pass the code to someone else, code quality is still important because we all become 'strangers' to our own code someday.</p>
           <p>The two code samples given below achieve the same functionality, but one is easier to read.</p>
-          <p>{give more versions of the code, ask to find bug}</p>
           <tip-box>
-            <p>Example:</p>
+            <p>Example: Same function, different readability</p>
             <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
             <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{
     <span class="hljs-keyword">int</span> subsidy;
@@ -3605,13 +3631,7 @@ studentList.addUi(statusUi);
     <span class="hljs-keyword">return</span> subsidy;
 }
 </code></pre>
-            <p>Code comparison: same function, different quality</p>
           </tip-box>
-          <blockquote>
-            <p>The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague.</p>
-            <p>-- Edsger Dijkstra</p>
-          </blockquote>
-          <p>Even if we do not intend to pass the code to someone else, code quality is still important because we all become 'strangers' to our own code someday.</p>
         </div>
       </div>
       <div>
@@ -3624,14 +3644,14 @@ studentList.addUi(statusUi);
           </div>
         </tip-box>
         <div>
-          <panel header="**Avoid Long Methods**" type="seamless" alt="indentation">
+          <panel header="**Avoid Long Methods**" type="seamless">
             <div>
               <div>
                 <p>Be wary when a method is longer than the computer screen, and take corrective action when it goes beyond 30 LOC (lines of code). The bigger the haystack, the harder it is to find a needle.</p>
               </div>
             </div>
           </panel>
-          <panel header="**Avoid Deep Nesting**" type="seamless" alt="indentation">
+          <panel header="**Avoid Deep Nesting**" type="seamless">
             <div>
               <div>
                 <p>According to the Linux 1.3.53 CodingStyle documentation, <em>&quot;if you need more than 3 levels of indentation, you're screwed anyway, and should fix your program&quot;.</em></p>
@@ -3643,15 +3663,18 @@ studentList.addUi(statusUi);
               </div>
             </div>
           </panel>
-          <panel header="**Avoid Complicated Expressions**" type="seamless" alt="indentation">
+          <panel header="**Avoid Complicated Expressions**" type="seamless">
             <div>
               <div>
                 <p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate
                   the final value).</p>
+                <blockquote>
+                  <p>The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. <sub>-- Edsger Dijkstra</sub></p>
+                </blockquote>
               </div>
             </div>
           </panel>
-          <panel header="**Avoid Magic Numbers**" type="seamless" alt="indentation">
+          <panel header="**Avoid Magic Numbers**" type="seamless">
             <div>
               <div>
                 <p>When the code has a number that does not explain the meaning of the number, we call that a magic number (as in “the number appears as if by magic”).</p>
@@ -3667,11 +3690,11 @@ studentList.addUi(statusUi);
                     <tbody>
                       <tr>
                         <td><code>return 3.14236;</code></td>
-                        <td><code>return 9</code></td>
+                        <td><code>return PI</code></td>
                       </tr>
                       <tr>
-                        <td><code>return PI</code></td>
-                        <td><code>MAX_SIZE-1</code></td>
+                        <td><code>return 9</code></td>
+                        <td><code>return MAX_SIZE-1</code></td>
                       </tr>
                     </tbody>
                   </table>
@@ -3685,7 +3708,7 @@ studentList.addUi(statusUi);
               </div>
             </div>
           </panel>
-          <panel header="**Make the Code Obvious**" type="seamless" alt="indentation">
+          <panel header="**Make the Code Obvious**" type="seamless">
             <div>
               <div>
                 <p>Make the code as explicit as possible, even if the language syntax allows them to be implicit. Here are some examples:</p>
@@ -3712,7 +3735,7 @@ studentList.addUi(statusUi);
           </div>
         </tip-box>
         <div>
-          <panel header="**Structure Code Logically**" type="seamless" alt="indentation">
+          <panel header="**Structure Code Logically**" type="seamless">
             <div>
               <div>
                 <p>Lay out the code so that it adheres to the logical structure. The code should read like a story. Just like we use section breaks, chapters and paragraphs to organize a story, use classes, methods, indentation and line spacing in your code
@@ -3721,7 +3744,7 @@ studentList.addUi(statusUi);
               </div>
             </div>
           </panel>
-          <panel header="**Do not 'Trip Up' the Reader**" type="seamless" alt="indentation">
+          <panel header="**Do not 'Trip Up' the Reader**" type="seamless">
             <div>
               <div>
                 <p>Avoid things that would make the reader go ‘huh?’, such as,</p>
@@ -3735,27 +3758,41 @@ studentList.addUi(statusUi);
               </div>
             </div>
           </panel>
-          <panel header="**Practice KISSing**" type="seamless" alt="indentation">
+          <panel header="**Practice KISSing**" type="seamless">
             <div>
               <div>
-                <p>As the old adage goes, &quot;keep it simple, stupid” (KISS). Do not try to write ‘clever’ code. For example, do not dismiss the brute-force yet simple solution in favor of a complicated one because of some ‘supposed benefits’ such as faster
-                  performance or better reuse unless you have a strong justification.</p>
+                <p>As the old adage goes, <strong>&quot;keep it simple, stupid” (KISS).  Do not try to write ‘clever’ code.</strong> For example, do not dismiss the brute-force yet simple solution in favor of a complicated one because of some ‘supposed benefits’
+                  such as 'better reusability' unless you have a strong justification.</p>
                 <blockquote>
-                  <p>Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.</p>
-                  <p>--Brian W. Kernighan</p>
+                  <p>Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it. <sub>--Brian W. Kernighan </sub></p>
                 </blockquote>
                 <blockquote>
-                  <p>Programs must be written for people to read, and only incidentally for machines to execute.</p>
-                  <p>--Abelson and Sussman</p>
-                </blockquote>
-                <blockquote>
-                  <p>Premature optimization is the root of all evil in programming.</p>
-                  <p>--<a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a></p>
+                  <p>Programs must be written for people to read, and only incidentally for machines to execute. <sub>--Abelson and Sussman</sub></p>
                 </blockquote>
               </div>
             </div>
           </panel>
-          <panel header="**SLAP Hard**" type="seamless" alt="indentation">
+          <panel header="**Avoid Premature Optimizations**" type="seamless">
+            <div>
+              <div>
+                <p><strong>Optimizing code prematurely has several drawbacks</strong>:</p>
+                <ul>
+                  <li><strong>We may not know which parts are the real performance bottlenecks</strong>. This is especially the case when the code undergoes transformations (e.g. compiling, minifying, transpiling, etc.) before it becomes an executable. Ideally,
+                    you should use a profiler tool to identify the actual bottlenecks of the code first, and optimize only those parts.</li>
+                  <li><strong>Optimizing can complicate the code</strong>, affecting correctness and understandability</li>
+                  <li><strong>Hand-optimized code can be harder for the compiler to optimize</strong> the code (the simpler the code, the easier for the compiler to optimize it)</li>
+                </ul>
+                <p>A popular saying in the industry is <strong><em>make it work, make it right, make it fast</em></strong> which means in most cases getting the code to perform correctly should take priority over optimizing it. If the code doesn't work correctly,
+                  it has no value on matter how fast/efficient it it.</p>
+                <blockquote>
+                  <p>Premature optimization is the root of all evil in programming. <sub>--<a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a></sub></p>
+                </blockquote>
+                <p>Note that <strong>there are cases where optimizing takes priority over other things</strong><span class="dimmed">e.g. when writing code for resource constrained environments</span>. This guideline simply a caution that you should optimize
+                  only when it is really needed.</p>
+              </div>
+            </div>
+          </panel>
+          <panel header="**SLAP Hard**" type="seamless">
             <div>
               <div>
                 <p>Avoid varying the level of abstraction within a code fragment. Note: The <em>Productive Programmer</em> (by Neal Ford) calls this the <em>SLAP principle</em> i.e. Single Level of Abstraction Per method.</p>
@@ -3773,7 +3810,7 @@ processData();
 displayResult();
 </code></pre>
                 </tip-box>
-                <tip-box type="primary">
+                <tip-box type="info">
                   <div>
                     <p><strong>Abstraction</strong>:</p>
                     <p>Most programs are written to solve complex problems involving large amounts of intricate details. It is impossible to deal with all these details at the same time. The guiding principle of abstraction stipulates that we capture only
@@ -3799,17 +3836,17 @@ displayResult();
           </div>
         </tip-box>
         <div>
-          <panel header="**Make the Happy Path Prominent**" type="seamless" alt="indentation">
+          <panel header="**Make the Happy Path Prominent**" type="seamless">
             <div>
               <div>
-                <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unintended. It is the ‘unusual’ cases that should be indented. Someone reading
-                  the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
+                <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unintended as much as possible. It is the ‘unusual’ cases that should be indented.
+                  Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
                 <tip-box>
                   <p>Example:</p>
                   <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
-                  <pre><code class="hljs java"><span class="hljs-keyword">if</span> (!isUnusualCase) {
+                  <pre><code class="hljs java"><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span>
     <span class="hljs-keyword">if</span> (!isErrorCase) {
-        start();
+        start();    <span class="hljs-comment">//main path</span>
         process();
         cleanup();
         exit();
@@ -3817,11 +3854,12 @@ displayResult();
         handleError();
     }
 } <span class="hljs-keyword">else</span> {
-    handleUnusualCase();
+    handleUnusualCase(); <span class="hljs-comment">//handling that unusual condition</span>
 }
 </code></pre>
+                  <p>In the code above,</p>
                   <ul>
-                    <li>Alternative conditions are separated from their handling.</li>
+                    <li>Unusual condition detection is separated from their handling.</li>
                     <li>Main path is nested deeply.</li>
                   </ul>
                   <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
@@ -3840,9 +3878,10 @@ process();
 cleanup();
 exit();
 </code></pre>
+                  <p>In the contrast, the above code</p>
                   <ul>
-                    <li>Alternative paths dealt with first so that the reader doesn't have to remember them for long.</li>
-                    <li>The main path is un-indented.</li>
+                    <li>deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.</li>
+                    <li>keeps the main path un-indented.</li>
                   </ul>
                 </tip-box>
               </div>
@@ -3861,9 +3900,13 @@ exit();
           </div>
         </tip-box>
         <div>
-          <p>A coding standard is usually specific to a programming language and specifies guidelines such as the location of opening and closing braces, indentation styles and naming styles (e.g. whether to use Hungarian style, Pascal casing, Camel casing,
-            etc.). It is important that the whole team/company use the same coding standard and that standard is commonly used in the industry. Doing so will make it easier for others to work with your code, be they members from the same team or transferred
-            from another team/company. IDEs can help to enforce some parts of a coding standard e.g. indentation rules.</p>
+          <p><strong>One essential way to improve code quality is to follow a consistent style. That is why software engineers follow follow a strict coding standard (aka <em>style guide</em>).</strong></p>
+          <p><strong>The aim of a coding standard is to make the entire code base look like it was written by one person</strong>. A coding standard is usually specific to a programming language and specifies guidelines such as the location of opening and
+            closing braces, indentation styles and naming styles (e.g. whether to use Hungarian style, Pascal casing, Camel casing, etc.). It is important that the whole team/company use the same coding standard and that standard is not generally consistent
+            with typical industry practices. Doing so will make it easier for others to work with your code, be they members from the same team or transferred from another team/company.</p>
+          <tip-box type="tip">
+            <p>IDEs can help to enforce some parts of a coding standard e.g. indentation rules.</p>
+          </tip-box>
         </div>
       </div>
       <div>
@@ -3876,27 +3919,7 @@ exit();
           </div>
         </tip-box>
         <div>
-          <p>{Some simple style rules for Java}</p>
-          <panel header="Basic Indentation" type="seamless" alt="indentation">
-            <div>
-              <div>
-                <p><strong>Basic indentation should be 4 spaces (not tabs).</strong></p>
-                <pre><code class="hljs java"><span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; nElements; i++) {
-    a[i] = <span class="hljs-number">0</span>;
-}
-</code></pre>
-              </div>
-            </div>
-          </panel>
-          <panel header="Line Length" type="seamless" alt="line length">
-            <div>
-              <div>
-                <p><strong>Lines should be no longer than 110 (soft limit) - 120 chars (hard limit).</strong></p>
-                <p>Place the line breaks to improve readability. It is ok to exceed 110 char limit for a line, but not by too much. You can configure Eclipse to break lines after 110 chars, but sometimes the automatic line break does not give readability.
-                  In such cases, you can decide where to put the line break to have best readability.</p>
-              </div>
-            </div>
-          </panel>
+          <p>Go through the <a href="https://github.com/oss-generic/process/blob/master/codingStandards/CodingStandard-Java.md">provided Java coding standard</a> and learn the <em>basic</em> style rules.</p>
         </div>
       </div>
       <div>
@@ -3909,7 +3932,7 @@ exit();
           </div>
         </tip-box>
         <div>
-          <p>{Some intermediate style rules for Java}</p>
+          <p>Go through the <a href="https://github.com/oss-generic/process/blob/master/codingStandards/CodingStandard-Java.md">provided Java coding standard</a> and learn the <em>intermediate</em> style rules.</p>
         </div>
       </div>
       <h2 id="guideline-name-well">Guideline: Name Well</h2>
@@ -3924,6 +3947,9 @@ exit();
         </tip-box>
         <div>
           <p>Proper naming improves the readability. It also reduces bugs caused by ambiguities regarding the intent of a variable or method.</p>
+          <blockquote>
+            <p>There are only two hard things in Computer Science: cache invalidation and naming things. <sub>-- Phil Karlton</sub></p>
+          </blockquote>
         </div>
       </div>
       <div>
@@ -3940,10 +3966,8 @@ exit();
             <div>
               <div>
                 <p><strong>Use nouns for classes/variables and verbs for methods/functions.</strong></p>
-                <p>Use nouns for classes/variables and verbs for methods. For example, <code>LimitChecker</code> is a better choice for a class name than <code>CheckLimit</code></p>
-                <p>Distinguish clearly between single valued and multivalued variables (e.g. <code>Person</code> student, <code>ArrayList&lt;Person&gt;</code> students).</p>
                 <tip-box>
-                  <p>Example:</p>
+                  <p>Examples:</p>
                   <table class="markbind-table table">
                     <thead>
                       <tr>
@@ -3966,13 +3990,19 @@ exit();
                     </tbody>
                   </table>
                 </tip-box>
+                <p><strong>Distinguish clearly between single valued and multivalued variables.</strong></p>
+                <tip-box>
+                  <p>Examples:</p>
+                  <p><code>Person student</code><br><code>ArrayList&lt;Person&gt; students</code></p>
+                  <p></p>
+                </tip-box>
               </div>
             </div>
           </panel>
           <panel header="**Use Standard Words**" type="seamless" alt="indentation">
             <div>
               <div>
-                <p>Use correct spelling in names. Avoid 'texting-style' spelling. Avoid foreign language words, slang, and names that are only meaningful within specific contexts such as private jokes.</p>
+                <p>Use correct spelling in names. Avoid 'texting-style' spelling. <strong>Avoid foreign language words, slang, and names that are only meaningful within specific contexts/times</strong><span class="dimmed">e.g. terms from private jokes, a TV show currently popular in your country</span></p>
               </div>
             </div>
           </panel>
@@ -3991,13 +4021,53 @@ exit();
           <panel header="**Use Name to Explain**" type="seamless" alt="indentation">
             <div>
               <div>
-                <p>A name is not just for differentiation; it should explain the named entity to the reader in an accurately and at a sufficient level of detail.</p>
-                <p>For example, <code>processStuff()</code> is a bad choice for a method; what 'stuff' and what 'process'?. On the other hand, <code>removeWhiteSpaceFromInput()</code> is a better choice. Other bad examples include <code>flag</code>, <code>temp</code>,
-                  <code>i</code> (unless used as a conventional control variable for a loop).</p>
-                <p>If the name has multiple words, they should be in a sensible order.</p>
-                <p>Imagine going to the doctor's and saying &quot;My eye1 is swollen&quot;! Don’t use numbers or case to distinguish names (<code>value1</code> vs <code>value2</code>, <code>Value</code> vs <code>value</code>) unless there is a strong justification.</p>
+                <p><strong>A name is not just for differentiation; it should explain the named entity to the reader in an accurately and at a sufficient level of detail.</strong></p>
                 <tip-box>
-                  <p>Example:</p>
+                  <p>Examples:</p>
+                  <table class="markbind-table table">
+                    <thead>
+                      <tr>
+                        <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
+                        <th><img src="/se-book/images/Good.png" alt="" title="Good"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>processInput()</code> (what 'process'?)</td>
+                        <td><code>removeWhiteSpaceFromInput()</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>flag</code></td>
+                        <td><code>isValidInput</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>temp</code></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </tip-box>
+                <p><strong>If the name has multiple words, they should be in a sensible order.</strong></p>
+                <tip-box>
+                  <p>Examples:</p>
+                  <table class="markbind-table table">
+                    <thead>
+                      <tr>
+                        <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
+                        <th><img src="/se-book/images/Good.png" alt="" title="Good"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>bySizeOrder()</code></td>
+                        <td><code>orderBySize()</code></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </tip-box>
+                <p>Imagine going to the doctor's and saying &quot;My eye1 is swollen&quot;! Don’t use numbers or case to distinguish names.</p>
+                <tip-box>
+                  <p>Examples:</p>
                   <table class="markbind-table table">
                     <thead>
                       <tr>
@@ -4028,9 +4098,63 @@ exit();
           <panel header="**Avoid Misleading Names**" type="seamless" alt="indentation">
             <div>
               <div>
-                <p>Related things should be named similarly, while unrelated things should NOT.</p>
-                <p>Avoid misleading names (e.g. those with multiple meanings), similar sounding names, hard to read ones (e.g. avoid ambiguities like &quot;is that a lowercase L, capital I or number 1?&quot;, or &quot;is that number 0 or letter O?&quot;),
-                  almost similar names.</p>
+                <p><strong>Related things should be named similarly, while unrelated things should NOT.</strong></p>
+                <tip-box>
+                  <p>Example: Consider these variables</p>
+                  <ul>
+                    <li><code>colorBlack</code> : hex value for color black</li>
+                    <li><code>colorWhite</code> : hex value for color white</li>
+                    <li><code>colorBlue</code> : number of times blue is used</li>
+                    <li><code>hexForRed</code> : : hex value for color red</li>
+                  </ul>
+                  <p>This is misleading because <code>colorBlue</code> is named similar to <code>colorWhite</code> and <code>colorBlack</code> but has a different purpose while <code>hexForRed</code> is named differently but has very similar purpose to the
+                    first two variables. The following is better:</p>
+                  <ul>
+                    <li><code>hexForBlack</code><code>hexForWhite</code><code>hexForRed</code></li>
+                    <li><code>blueColorCount</code></li>
+                  </ul>
+                </tip-box>
+                <p>Avoid misleading or ambiguous names (e.g. those with multiple meanings), similar sounding names, hard-to-pronounce ones (e.g. avoid ambiguities like &quot;is that a lowercase L, capital I or number 1?&quot;, or &quot;is that number 0 or
+                  letter O?&quot;), almost similar names.</p>
+                <tip-box>
+                  <p>Examples:</p>
+                  <table class="markbind-table table">
+                    <thead>
+                      <tr>
+                        <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
+                        <th><img src="/se-book/images/Good.png" alt="" title="Good"></th>
+                        <th>Reason</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>phase0</code></td>
+                        <td><code>phaseZero</code></td>
+                        <td>Is that zero or letter O?</td>
+                      </tr>
+                      <tr>
+                        <td><code>rwrLgtDirn</code></td>
+                        <td><code>rowerLegitDirection</code></td>
+                        <td>Hard to pronounce</td>
+                      </tr>
+                      <tr>
+                        <td><code>right</code><code>left</code><code>wrong</code></td>
+                        <td><code>rightDirection</code><code>leftDirection</code><code>wrongResponse</code></td>
+                        <td><code>right</code> is for 'correct' or 'opposite of 'left'?</td>
+                      </tr>
+                      <tr>
+                        <td><code>redBooks</code><code>readBooks</code></td>
+                        <td><code>redColorBooks</code><code>booksRead</code></td>
+                        <td><code>red</code> and <code>read</code> (past tense) sounds the same</td>
+                      </tr>
+                      <tr>
+                        <td><code>FiletMignon</code></td>
+                        <td><code>egg</code></td>
+                        <td>If the requirement is just a name of a food, <code>egg</code> is a much easier to type/say choice than <code>FiletMignon</code></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </tip-box>
               </div>
             </div>
           </panel>
@@ -4060,13 +4184,13 @@ exit();
           </div>
         </tip-box>
         <div>
-          <panel header="**Use the Default Branch**" type="seamless" alt="indentation">
+          <panel header="**Use the Default Branch**" type="seamless">
             <div>
               <div>
-                <p>Always include a default branch in case statements.</p>
-                <p>Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the 'default' branch to detect errors (i.e. if execution reached the 'default' branch, throw an exception).
-                  This also applies to the final 'else' of an if-else construct. That is, the final 'else' should mean 'everything else', and not the final option. Do not use 'else' when an 'if' condition can be explicitly specified, unless there is absolutely
-                  no other possibility.</p>
+                <p>Always include a default branch in <code>case</code> statements.</p>
+                <p>Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the 'default' branch to detect errors (i.e. if execution reached the <code>default</code> branch, throw
+                  an exception). This also applies to the final <code>else</code> of an <code>if-else</code> construct. That is, the final <code>else</code> should mean 'everything else', and not the final option. Do not use <code>else</code> when an
+                  <code>if</code> condition can be explicitly specified, unless there is absolutely no other possibility.</p>
                 <tip-box>
                   <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
                   <pre><code class="hljs java"><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;
@@ -4081,7 +4205,7 @@ exit();
               </div>
             </div>
           </panel>
-          <panel header="**Don't Recycle Variables or Parameters**" type="seamless" alt="indentation">
+          <panel header="**Don't Recycle Variables or Parameters**" type="seamless">
             <div>
               <div>
                 <ul>
@@ -4107,14 +4231,14 @@ exit();
               </div>
             </div>
           </panel>
-          <panel header="**Avoid Empty Catch Blocks**" type="seamless" alt="indentation">
+          <panel header="**Avoid Empty Catch Blocks**" type="seamless">
             <div>
               <div>
-                <p>Never write an empty 'catch' statement.</p>
+                <p>Never write an empty <code>catch</code> statement. At least give a comment to explain why the <code>catch</code> block is left empty.</p>
               </div>
             </div>
           </panel>
-          <panel header="**Delete Dead Code**" type="seamless" alt="indentation">
+          <panel header="**Delete Dead Code**" type="seamless">
             <div>
               <div>
                 <p>We all feel reluctant to delete code we have painstakingly written, even if we have no use for that code any more (&quot;I spent a lot of time writing that code; what if we need it again?&quot;). Consider all code as baggage you have to
@@ -4134,37 +4258,57 @@ exit();
           </div>
         </tip-box>
         <div>
-          <panel header="**Minimise Scope of Variables**" type="seamless" alt="indentation">
+          <panel header="**Minimise Scope of Variables**" type="seamless">
             <div>
               <div>
-                <p>Global variables may be the most convenient way to pass information around, but they do create implicit links between code segments that use the global variable. Avoid them as much as possible.</p>
-              </div>
-            </div>
-          </panel>
-          <panel header="**Prefer Stateless Methods**" type="seamless" alt="indentation">
-            <div>
-              <div>
-                <p>{to be added}</p>
-              </div>
-            </div>
-          </panel>
-          <panel header="**Minimise Code Duplication**" type="seamless" alt="indentation">
-            <div>
-              <div>
-                <p>The book &quot;<a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X">The Pragmatic Programmer</a>&quot; calls this the DRY (Don't Repeat Yourself) principle. Code duplication, especially when you copy-paste-modify
-                  code, often indicates a poor quality implementation. While it may not be possible to have zero duplication, always think twice before duplicating code; most often there is a better alternative.</p>
+                <p><strong>Minimize global variables</strong>. Global variables may be the most convenient way to pass information around, but they do create implicit links between code segments that use the global variable. Avoid them as much as possible.</p>
+                <p><strong>Define variables in the least possible scope</strong>. For example, if the variable is used only within the <code>if</code> block of the conditional statement, it should be declared inside that <code>if</code> block.</p>
                 <blockquote>
-                  <p>Programs should be written and polished until they acquire publication quality.</p>
-                  <p>--<a href="https://en.wikipedia.org/wiki/Niklaus_Wirth">Niklaus Wirth</a></p>
+                  <p><strong>The most powerful technique for minimizing the scope of a local variable is to declare it where it is first used.</strong><sub>-- <em>Effective Java</em>, by Joshua Bloch</sub></p>
                 </blockquote>
+                <p>📎 Resources:</p>
+                <ul>
+                  <li><a href="https://refactoring.com/catalog/reduceScopeOfVariable.html">Refactoring: Reduce Scope of Variable</a></li>
+                </ul>
               </div>
             </div>
           </panel>
-          <panel header="**Delete Temporary Code**" type="seamless" alt="indentation">
+          <panel header="**Minimise Code Duplication**" type="seamless">
             <div>
               <div>
-                <p>We all get into situations where we need to write some code momentarily that we intend to dispose of replace with better code later. Such code should be marked in some obvious way (e.g. using an embarrassing print message) so that you
-                  will not forget to remove them later. It is irresponsible to retain such code in a product release.</p>
+                <p><strong>Code duplication, especially when you copy-paste-modify code, often indicates a poor quality implementation.</strong> While it may not be possible to have zero duplication, always think twice before duplicating code; most often
+                  there is a better alternative.</p>
+                <p>This guideline is closely related to the
+                  <trigger for="modal:duplication-dry" trigger="click">DRY Principle
+                    <trigger>.</trigger>
+                  </trigger>
+                </p>
+                <modal title="**:mag: DRY Principle**" id="modal:duplication-dry">
+                  <div>
+                    <p><span class="dimmed"><strong><span>Supplmentary → Principles →
+</span></strong>
+                      </span>
+                    </p>
+                    <div>
+                      <h4 id="dry-principle-three">DRY Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <tip-box type="primary">
+                          <div>
+                            <p><strong>DRY (Don't Repeat Yourself) Principle</strong>: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub><em>The Pragmatic Programmer</em>, by Andy Hunt and Dave Thomas</sub></p>
+                          </div>
+                        </tip-box>
+                        <p>This principle guards against duplication of information. The functionality implemented twice is a violation of the DRY principle even if the two implementations are different. Similarly, the value a system-wide timeout being defined
+                          in multiple places is a violation of DRY.</p>
+                      </div>
+                      <div>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </modal>
+                <p></p>
               </div>
             </div>
           </panel>
@@ -4248,24 +4392,33 @@ exit();
           </div>
         </tip-box>
         <div>
-          <p>The first version of the code you write may not be of production quality. It is acceptable to first concentrate on making the code work, rather than worry over the quality of the code, SO LONG AS you improve the quality later. This process of
-            <strong>improving a program's internal structure without modifying its external behavior</strong> is called <em>refactoring</em>.</p>
+          <p>The first version of the code you write may not be of production quality. It is acceptable to first concentrate on making the code work, rather than worry over the quality of the code, as long as you improve the quality later. This process of
+            <strong>improving a program's internal structure in small steps without modifying its external behavior is called <em>refactoring</em>.</strong></p>
           <ul>
-            <li>Refactoring is not about discarding poorly-written code and re-writing it from scratch. It is the process of improving the code in very small steps until it achieves production quality.</li>
-            <li>By definition, refactoring is different from bug fixing or any other modifications that alter the external behavior of the component in concern.</li>
+            <li><strong>Refactoring is not rewriting</strong>: Discarding poorly-written code entirely and re-writing it from scratch is not refactoring because refactoring needs to be done in small steps.</li>
+            <li><strong>Refactoring is not bug fixing</strong>: By definition, refactoring is different from bug fixing or any other modifications that alter the external behavior (e.g. adding a feature) of the component in concern.</li>
           </ul>
+          <tip-box type="tip">
+            <p>Improving code structure can have many secondary benefits: e.g.</p>
+            <ul>
+              <li>hidden bugs become easier to spot</li>
+              <li>improve performance (sometimes, simpler code runs faster than complex code because simpler code is easier for the compiler to optimize).</li>
+            </ul>
+          </tip-box>
           <p>Given below are two common refactorings (taken from
-            <popover effect="fade" placement="top">
-              refactoring-catalog <span slot="content"><span><a href="">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></span></span>
-            </popover>
-            ).</p>
+            <trigger trigger="click" for="modal:refactoring-catalog-what"> refactoring-catalog </trigger>).</p>
+          <modal title="**Refactoring Catalog**" id="modal:refactoring-catalog-what">
+            <div>
+              <p><a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring:
+                <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></p>
+            </div>
+          </modal>
           <tip-box>
             <p>Refactoring Name: <strong>Consolidate Duplicate Conditional Fragments</strong></p>
             <p>Situation: The same fragment of code is in all branches of a conditional expression.</p>
             <p>Method: Move it outside of the expression.</p>
             <p>Example:</p>
-            <pre><code class="hljs java"><span class="hljs-comment">//before</span>
-<span class="hljs-keyword">if</span> (isSpecialDeal()) {
+            <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isSpecialDeal()) {
     total = price * <span class="hljs-number">0.95</span>;
     send();
 } <span class="hljs-keyword">else</span> {
@@ -4273,8 +4426,8 @@ exit();
     send();
 }
 </code></pre>
-            <pre><code class="hljs java"><span class="hljs-comment">//after</span>
-<span class="hljs-keyword">if</span> (isSpecialDeal()){
+            <p>⤵️</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isSpecialDeal()){
     total = price * <span class="hljs-number">0.95</span>;
 } <span class="hljs-keyword">else</span> {
     total = price * <span class="hljs-number">0.98</span>;
@@ -4287,8 +4440,7 @@ send();
             <p>Situation: You have a code fragment that can be grouped together.</p>
             <p>Method: Turn the fragment into a method whose name explains the purpose of the method.</p>
             <p>Example:</p>
-            <pre><code class="hljs java"><span class="hljs-comment">//before</span>
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
+            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
     printBanner();
 
 <span class="hljs-comment">//print details</span>
@@ -4296,8 +4448,8 @@ send();
     System.out.println(<span class="hljs-string">"amount	"</span> + getOutstanding());
 }
 </code></pre>
-            <pre><code class="hljs java"><span class="hljs-comment">//after</span>
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
+            <p>⤵️</p>
+            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
     printBanner();
     printDetails(getOutstanding());
 }
@@ -4307,6 +4459,12 @@ send();
     System.out.println(<span class="hljs-string">"amount	"</span> + outstanding);
 }
 </code></pre>
+          </tip-box>
+          <tip-box type="info">
+            <p>Tip: Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
+          </tip-box>
+          <tip-box type="important">
+            <p>Important: Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.</p>
           </tip-box>
         </div>
       </div>
@@ -4321,10 +4479,13 @@ send();
         </tip-box>
         <div>
           <p>Given below are some more commonly used refactorings. A more comprehensive list is available at
-            <popover effect="fade" placement="top">
-              refactoring-catalog <span slot="content"><span><a href="">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></span></span>
-            </popover>
-            .</p>
+            <trigger trigger="click" for="modal:refactoring-catalog-how"> refactoring-catalog </trigger>.</p>
+          <modal title="**Refactoring Catalog**" id="modal:refactoring-catalog-how">
+            <div>
+              <p><a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring:
+                <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></p>
+            </div>
+          </modal>
           <ol>
             <li><a href="https://refactoring.com/catalog/consolidateConditionalExpression.html">Consolidate Conditional Expression</a></li>
             <li><a href="https://refactoring.com/catalog/decomposeConditional.html">Decompose Conditional</a></li>
@@ -4337,12 +4498,6 @@ send();
             <li><a href="https://refactoring.com/catalog/splitLoop.html">Split Loop</a></li>
             <li><a href="https://refactoring.com/catalog/splitTemporaryVariable.html">Split Temporary Variable</a></li>
           </ol>
-          <tip-box type="info">
-            <p>Tip: Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
-          </tip-box>
-          <tip-box type="important">
-            <p>Important: Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.</p>
-          </tip-box>
         </div>
       </div>
       <div>
@@ -4355,9 +4510,7 @@ send();
           </div>
         </tip-box>
         <div>
-          <p>Whether a refactoring improves the code or degrades it depends on the situation. That is why some refactorings are ‘opposites’ of each other (e.g. <em>extract method vs inline method</em>).</p>
-          <p>It is important to refactor frequently so as to avoid the accumulation of ‘messy’ code which might get out of control.</p>
-          <p>How much refactoring is too much refactoring? It is too much refactoring when the benefits no longer justify the cost. The costs and the benefits depend on the context.</p>
+          <p>We know that it is important to refactor frequently so as to avoid the accumulation of ‘messy’ code which might get out of control. But how much refactoring is too much refactoring? <strong>It is too much refactoring when the benefits no longer justify the cost.</strong>            The costs and the benefits depend on the context. That is why some refactorings are ‘opposites’ of each other (e.g. <em>extract method vs inline method</em>).</p>
         </div>
       </div>
     </div>
@@ -5789,9 +5942,10 @@ jean.setBoyfriend(yong);
         </div>
       </div>
     </div>
-    <h1 id="quality-assurance">Quality Assurance</h1>
+    <hr>
+    <h1 id="section-quality-assurance">SECTION: QUALITY ASSURANCE</h1>
     <div>
-      <h1 id="quality-assurance-2">Quality Assurance</h1>
+      <h1 id="quality-assurance">Quality Assurance</h1>
       <h2 id="introduction-13">Introduction</h2>
       <div>
         <div>
@@ -5948,8 +6102,8 @@ jean.setBoyfriend(yong);
           <tip-box>
             <p>📦 Example: A minimal test case for testing a browser:</p>
             <ul>
-              <li><strong>Input</strong> – Start the browser using a blank page (vertical scrollbar disabled). Then, load ‘longfile.html’ located in the ‘test data’ folder.</li>
-              <li><strong>Expected behavior</strong> – The scrollbar should be automatically enabled upon loading ‘longfile.html’.</li>
+              <li><strong>Input</strong> – Start the browser using a blank page (vertical scrollbar disabled). Then, load <code>longfile.html</code> located in the <code>test data</code> folder.</li>
+              <li><strong>Expected behavior</strong> – The scrollbar should be automatically enabled upon loading <code>longfile.html</code>.</li>
             </ul>
           </tip-box>
           <p><strong>Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.</strong></p>
@@ -5978,8 +6132,7 @@ jean.setBoyfriend(yong);
           <panel header="%%A deeper look at the definition of testing :three:%%" type="seamless">
             <p>Here is another definition of testing:</p>
             <blockquote>
-              <p>Software testing consists of the <em>dynamic</em> verification that a program provides <em>expected</em> behaviors on a <em>finite</em> set of test cases, suitably <em>selected</em> from the usually infinite execution domain.</p>
-              <p>-– source: SWEBOKv3</p>
+              <p>Software testing consists of the <em>dynamic</em> verification that a program provides <em>expected</em> behaviors on a <em>finite</em> set of test cases, suitably <em>selected</em> from the usually infinite execution domain. <sub>-– source: <a href="https://www.computer.org/web/swebok/v3">Software Engineering Book of Knowledge V3</a></sub></p>
             </blockquote>
             <p>Some things to note (indicated by keywords in the above definition):</p>
             <ul>
@@ -6341,10 +6494,14 @@ jean.setBoyfriend(yong);
             <tab header=":abc:">
               <p><strong>An automated test case can be run programmatically and the result of the test case (pass or fail) is determined programmatically.</strong> Compared to manual testing, automated testing reduces the effort required to run tests repeatedly
                 and increases precision of testing (because manual testing is susceptible to human errors).</p>
-              <p></p>
+              <p>
+                <hr>
+              </p>
             </tab>
             <tab header=":tv:"><iframe width="560" height="315" src="https://www.youtube.com/embed/RbSlW8jZFe8?end=79&version=3" frameborder="0" allowfullscreen></iframe>
-              <p></p>
+              <p>
+                <hr>
+              </p>
             </tab>
           </tabs>
         </div>
@@ -8052,7 +8209,8 @@ A negative test case: i = null;
         </div>
       </div>
     </div>
-    <h1 id="project-management">Project Management</h1>
+    <hr>
+    <h1 id="section-project-management">SECTION: PROJECT MANAGEMENT</h1>
     <div>
       <h1 id="revision-control">Revision Control</h1>
       <div>
@@ -8086,9 +8244,11 @@ A negative test case: i = null;
                 <p>-- [adapted from
                   <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]</p>
               </blockquote>
+              <hr>
             </tab>
             <tab header=":tv:">
               <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/M-O8ZNW9icQ" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+              <hr>
             </tab>
           </tabs>
           <popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide :mag:" placement="right">
@@ -8119,9 +8279,11 @@ A negative test case: i = null;
             <tab header=":abc:">
               <p>Suppose you want to apply revision control on files in a directory called <code>ProjectFoo</code>. In that case you need to set up a <em>repo</em> (short for repository) in <code>ProjectFoo</code> directory, which is referred to as the <em>working directory</em>                of the repo. The repository is the database where the meta-data about the revision history are stored. For example, Git uses a hidden folder named <code>.git</code> inside the working directory.</p>
               <p>You can have multiple repos in your computer, each repo revision-controlling files of a different working directly, for examples, files of different projects.</p>
+              <hr>
             </tab>
             <tab header=":tv:">
               <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/mLnxwlCEIb8" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+              <hr>
             </tab>
           </tabs>
         </div>
@@ -8143,11 +8305,15 @@ A negative test case: i = null;
             <tab header=":abc:">
               <p><strong><em>Committing</em> saves a snapshot of the current state of the tracked files in the revision control history. Such a snapshot is also called a <em>commit</em> (i.e. the noun).</strong></p>
               <p><strong>When we are ready to commit, we should first <em>stage</em> the specific changes we want to commit.</strong> This intermediate step allows us to commit only some changes while saving other changes for a later commit.</p>
-              <p></p>
+              <p>
+                <hr>
+              </p>
             </tab>
             <tab header=":tv:">
               <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/7exFDGHgQcw" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-              <p></p>
+              <p>
+                <hr>
+              </p>
             </tab>
           </tabs>
           <h5 id="identifying-points-in-history">Identifying Points in History</h5>
@@ -8165,9 +8331,19 @@ A negative test case: i = null;
           </div>
         </tip-box>
         <div>
-          <p>We can view the history of a project as a series of past commits and also <strong><em>diff</em></strong> (i.e. to see the differences) between two points in the history.</p>
-          <p>We can <strong><em>checkout</em></strong> any commit in the history (i.e. load the state of files as at that commit) to the working directory. Therefore, we can traverse the history of the project simply by checking out the commits we are interested
-            in.</p>
+          <p><strong><trigger for="pop:rcs">RCS</trigger> tools store the history of the working directory as a series of commits.</strong> This means we should commit after each change that we want the RCS to 'remember' for us.</p>
+          <p><strong>To see what changed between two points of the history, you can ask the RCS tool to  <mark><em>diff</em></mark> the two commits in concern.</strong></p>
+          <p><strong>To restore the state of the working directory at a point in the past, you can <mark><em>checkout</em></mark> the commit in concern.</strong> i.e., we can traverse the history of the working directory simply by checking out the commits
+            we are interested in.</p>
+          <div>
+            <popover id="pop:rcs" placement="top">
+              <div slot="content">
+                <div>
+                  <p><strong>RCS</strong> : Revision Control Software.</p>
+                </div>
+              </div>
+            </popover>
+          </div>
         </div>
       </div>
       <div>
@@ -8180,11 +8356,19 @@ A negative test case: i = null;
           </div>
         </tip-box>
         <div>
-          <p>Remote repositories are copies of a repo that are hosted on remote computers.</p>
-          <p>To get a copy of a remote repo on your computer, we can perform a <strong><em>clone</em></strong> operation which recreates a local repo that contains the same version history as the remote repo.</p>
-          <p>After cloning a remote repo, we can first add commits to our local repo and then <strong><em>push</em></strong> those commits to the remote repo (provided we have write-access to it)</p>
-          <p>Remote repos are often used when multi-persons projects. Suppose someone has pushed some new commits to a remote repo. We can <strong><em>pull</em></strong> those changes which will bring our local repo up-to-date with the remote repo.</p>
-          <p>{add forks and pull requests}</p>
+          <p><strong>Remote repositories are copies of a repo that are hosted on remote computers.</strong> They are especially useful for sharing the revision history of a codebase among team members of a multi-person project. <span class="dimmed">They can also serve as a remote backup of your code base.</span></p>
+          <p><strong>You can <mark><em>clone</em></mark> a remote repo onto your computer</strong> which will create a copy of a remote repo on your computer, including the version history as the remote repo.</p>
+          <p><strong>You can <mark><em>push</em></mark> new commits in your clone to the remote repo</strong> which will copy the new commits onto the remote repo. Note that pushing to a remote repo requires you to have write-access to it.</p>
+          <p><strong>You can <mark><em>pull</em></mark> from the remote repos to receive new commits in the remote repo</strong>. Pulling is used to <em>sync</em> your local repo with latest changes to the remote repo.</p>
+          <p>While it is possible to set up your own remote repo on a server, an easier option is to use a remote repo hosting service such as GitHub or BitBucket.</p>
+          <p><strong>A <mark><em>fork</em></mark> is a remote copy of a remote repo</strong>. If there is a remote repo that you want to push to but you do not have write access to it, you can fork the remote repo, which gives you your own remote repo that
+            you can push to.</p>
+          <p><strong>A <mark><em>pull request</em></mark> is mechanism for contributing code to a remote repo.</strong> It is a formal request sent to the maintainers of the repo asking them to pull your new code to their repo.</p>
+          <div v-closeable="" alt="slideshow: remote repo scenario">
+            <p>Here is a scenario that includes all the concepts introduced above (click on the slide to advance the animation):</p>
+            <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212290&authkey=&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen="" mozallowfullscreen=""
+                allowfullscreen></iframe></div>
+          </div>
         </div>
       </div>
       <div>
@@ -8850,7 +9034,8 @@ A negative test case: i = null;
         </div>
       </div>
     </div>
-    <h1 id="tools-2">Tools</h1>
+    <hr>
+    <h1 id="section-tools">SECTION: TOOLS</h1>
     <div>
       <h1 id="uml">UML</h1>
       <h2 id="class-diagrams">Class Diagrams</h2>
@@ -9629,11 +9814,17 @@ A negative test case: i = null;
               <ul>
                 <li><a href="https://www.jetbrains.com/help/idea/creating-running-and-packaging-your-first-java-application.html">[Intellij Official Tutorial] <strong>Creating, Running and Packaging Your First Java Application</strong></a></li>
               </ul>
-              <p></p>
+              <p>
+                <hr>
+              </p>
             </tab>
             <tab header=":tv:">
               <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/c0efB_CKOYo" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-              <p></p>
+              <p>A little bit more detailed explanation <span class="dimmed">(from CodeLaunch)</span> with some additional info at the end.</p>
+              <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/S764o0mAXhg" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+              <p>
+                <hr>
+              </p>
             </tab>
           </tabs>
           <h5 id="importing-a-project-to-intellij-idea">Importing a Project to Intellij IDEA</h5>
@@ -9676,7 +9867,10 @@ A negative test case: i = null;
           </div>
         </tip-box>
         <div>
-          <p>...</p>
+          <div v-closeable="" alt="video: Intellij shortcuts">
+            <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/KsVWdGOnHZU" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+            <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/EvXpgL2iho4" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+          </div>
         </div>
       </div>
       <div>
@@ -9689,20 +9883,13 @@ A negative test case: i = null;
           </div>
         </tip-box>
         <div>
-          <p>{Simple Break points, Stepping through code }</p>
-        </div>
-      </div>
-      <div>
-        <div>
-          <h4 id="debugging-intermediate-three">Debugging: Intermediate <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
-        </div>
-        <tip-box>
-          <div>
-            <p>🏆 Can use sophisticated breakpoints optimize debugging <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+          <div v-closeable="" alt="video: debugging in Intellij">
+            <p>This video (from LaunchCode) gives a pretty good explanation of how to use the Intellij IDEA debugger.</p>
+            <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/1bCgzjatcr4" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
           </div>
-        </tip-box>
-        <div>
-          <p>{Other types of break points}</p>
+          <ul>
+            <li><a href="https://www.jetbrains.com/help/idea/debugger-basics.html">Intellij IDEA Documentation: Debugging Basics</a> - Can be used as a reference document when you want to recall how to use a debugging feature.</li>
+          </ul>
         </div>
       </div>
       <div>
@@ -9715,7 +9902,16 @@ A negative test case: i = null;
           </div>
         </tip-box>
         <div>
-          <p>...</p>
+          <div v-closeable="" alt="Videos: Automated refactoring using IDE">
+            <p>This video explains how to automate the 'Extract parameter' refactoring using Intellij IDEA. Most other refactorings available works similarly. i.e. <code>select the code to refactor</code> → <code>find the refactoring in the context menu</code>              or <code>use the keyboard shortcut</code>.</p>
+            <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/fg3Q5pt4E80" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+            <p>Here's another video explaining how to change a method signature as part of refactoring.</p>
+            <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/p6Tsw_3cXow" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+          </div>
+          <p></p>
+          <ul>
+            <li><a href="https://www.jetbrains.com/help/idea/introduction-to-refactoring.html">Introduction to Refactoring (in Intellij IDEA)</a> : An article on refactorings available in Intellij IDEA.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -9731,6 +9927,12 @@ A negative test case: i = null;
           </div>
         </tip-box>
         <div>
+          <panel header="%%:paperclip: Git Overview :three:%%">
+            <p>Soon you are going to take your first step in using Git. If you would like to see a quick overview of the full Git landscape before jumping in, watch the video below.</p>
+            <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/v40b3ExbM0c" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+            <p></p>
+          </panel>
+          <p></p>
           <p>Install <a href="https://www.sourcetreeapp.com/">SourceTree</a> which is Git + a GUI for Git.</p>
           <p>Suppose you want to create a repository in an empty directory <code>things</code></p>
           <tabs>
@@ -9742,6 +9944,7 @@ A negative test case: i = null;
                 <p>Go to the <code>things</code> folder and observe how a hidden folder <code>.git</code> has been created.</p>
                 <p>Note: If you are on Windows, you might have to <a href="https://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">configure Windows Explorer to show hidden files</a>.</p>
               </div>
+              <hr>
             </tab>
             <tab header="CLI">
               <div>
@@ -9768,6 +9971,7 @@ Initialized empty Git repository in c:/repos/things/.git/
 nothing to commit (create/copy files and use &quot;git add&quot; to track)
 </code></pre>
               </div>
+              <hr>
             </tab>
           </tabs>
         </div>
@@ -9782,10 +9986,7 @@ nothing to commit (create/copy files and use &quot;git add&quot; to track)
           </div>
         </tip-box>
         <div>
-          <p>Create an empty repo as described in the panel below.</p>
-          <p>
-            <panel src="/se-book\gitAndGithub\init\embed._include_.html" name="Git and GitHub: Init" header="Git and GitHub: Init" isOpen="false" no-close="true" no-switch="true"></panel>
-          </p>
+          <p>Create an empty repo.</p>
           <p>Create a file named <code>fruits.txt</code> in the working directory and add some dummy text to it.</p>
           <tip-box type="definition">
             <div>
@@ -9799,6 +10000,7 @@ nothing to commit (create/copy files and use &quot;git add&quot; to track)
                 <p>The file is shown as ‘unstaged’</p><img src="/se-book/gitAndGithub/commit/images/sourcetree_1.png" height="220">
                 <p></p>
               </div>
+              <hr>
             </tab>
             <tab header="CLI">
               <div>
@@ -9818,6 +10020,7 @@ nothing added to commit but untracked files present (use <span class="hljs-strin
 </code></pre>
                 <p></p>
               </div>
+              <hr>
             </tab>
           </tabs>
           <p>Although git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose we want to commit the current state of the file. First, we should stage the file.</p>
@@ -9839,6 +10042,7 @@ nothing added to commit but untracked files present (use <span class="hljs-strin
                 <p><code>fruits.txt</code> should appear in the <code>Staged files</code> panel now.’</p><img src="/se-book/gitAndGithub/commit/images/sourcetree_3.png" height="180">
                 <p></p>
               </div>
+              <hr>
             </tab>
             <tab header="CLI">
               <div>
@@ -9859,6 +10063,7 @@ git status
 </code></pre>
                 <p></p>
               </div>
+              <hr>
             </tab>
           </tabs>
           <p>Next, we can commit the staged version of <code>fruits.txt</code></p>
@@ -9868,6 +10073,7 @@ git status
                 <p>Click the <code>Commit</code> button, enter a commit message e.g. <code>add fruits.txt</code> in to the text box, and click <code>Commit</code></p><img src="/se-book/gitAndGithub/commit/images/sourcetree_4.png" height="300">
                 <p></p>
               </div>
+              <hr>
             </tab>
             <tab header="CLI">
               <div>
@@ -9885,11 +10091,12 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
   Add fruits.txt
 </code></pre>
               </div>
+              <hr>
             </tab>
           </tabs>
           <p>Note the existence of something called the <code>master</code> branch. Git allows you to have multiple branches (i.e. it is a way to evolve the content in parallel) and Git creates a default branch named <code>master</code> on which the commits
             go on by default.</p>
-          <p>Do some changes to fruits.txt (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps we followed before. You should end up with something like this.</p><img src="/se-book/gitAndGithub/commit/images/sourcetree_6.png"
+          <p>Do some changes to <code>fruits.txt</code> (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps we followed before. You should end up with something like this.</p><img src="/se-book/gitAndGithub/commit/images/sourcetree_6.png"
             height="180">
           <p></p>
           <p>Next, add two more files <code>colors.txt</code> and <code>shapes.txt</code> to the same working directory. Add a third commit to record the current state of the working directory.</p><img src="/se-book/gitAndGithub/commit/images/sourcetree_7.png"
@@ -9916,6 +10123,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
                 <pre class="hljs"><code>temp.text
 </code></pre>
               </div>
+              <hr>
             </tab>
             <tab header="CLI">
               <div>
@@ -9923,6 +10131,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
                 <pre class="hljs"><code>temp.text
 </code></pre>
               </div>
+              <hr>
             </tab>
           </tabs>
           <p>The <code>.gitignore</code> file tells Git which files to ignore when tracking revision history. That file itself can be either revision controlled or ignored.</p>
@@ -9942,10 +10151,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
           </div>
         </tip-box>
         <div>
-          <p>
-            <panel src="/se-book\revisionControl\savingHistory\embed._include_.html" header="Revision Control: Saving History" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-          </p>
-          <p></p>
+          <p>Let's tag a commit in a local repo you have (e.g. the <code>sampelrepo-things</code> repo)</p>
           <tabs>
             <tab header="SourceTree">
               <div>
@@ -9954,6 +10160,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
                 <p>The added tag will appear in the revision graph view.</p><img src="/se-book/gitAndGithub/tag/images/sourcetree_1.png" height="70">
                 <p></p>
               </div>
+              <hr>
             </tab>
             <tab header="CLI">
               <div>
@@ -9965,6 +10172,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
 </code></pre>
                 <p>To learn how to add a tag to a past commit, go to the <a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">‘Git Basics – Tagging’ page of the git-scm book</a> and refer the ‘Tagging Later’ section.</p>
               </div>
+              <hr>
             </tab>
           </tabs>
         </div>
@@ -9979,10 +10187,6 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
           </div>
         </tip-box>
         <div>
-          <p>
-            <panel src="/se-book\revisionControl\usingHistory\embed._include_.html" header="Revision Control: Using History" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-          </p>
-          <p></p>
           <p>Git can show you what changed in each commit.</p>
           <tabs>
             <tab header="SourceTree">
@@ -9990,6 +10194,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
                 <p>To see which files changed in a commit, click on the commit. To see what changed in a specific file in that commit, click on the file name.</p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_1.png" height="220">
                 <p></p>
               </div>
+              <hr>
             </tab>
             <tab header="CLI">
               <div>
@@ -10016,17 +10221,19 @@ index 15b57f7..17f4528 100644
  cherries
 </code></pre>
               </div>
+              <hr>
             </tab>
           </tabs>
           <p>Git can also show you the difference between two points in the history of the repo.</p>
           <tabs>
             <tab header="SourceTree">
               <div>
-                <p>Select the two points you want to compare using <code>Ctrl+Click</code></p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_2.png" height="200">
+                <p>Select the two points you want to compare using <code>Ctrl+Click</code>.</p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_2.png" height="200">
                 <p></p>
                 <p>The same method can be used to compare the current state of the working directory (which might have uncommitted changes) to a point in the history.</p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_3.png" height="100">
                 <p></p>
               </div>
+              <hr>
             </tab>
             <tab header="CLI">
               <div>
@@ -10036,19 +10243,21 @@ index 15b57f7..17f4528 100644
                   <li><code>git diff 0023cdd..fcd6199</code>: shows the changes between the points indicated by by commit hashes</li>
                   <li><code>git diff v1.0..HEAD</code>: shows changes that happened from the commit tagged as <code>v1.0</code> to the most recent commit.</li>
                 </ul>
-                <p>Resources:</p>
-                <ul>
-                  <li><a href="https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/diffs">Git-Tower Tutorial: Inspecting Changes with Diffs</a></li>
-                  <li><a href="https://stackoverflow.com/questions/8640838/how-do-i-navigate-in-the-results-of-diff">How to view the next page of a <code>git</code> command result</a></li>
-                </ul>
+                <panel header=":paperclip: Resources" expanded="">
+                  <ul>
+                    <li><a href="https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/diffs">Git-Tower Tutorial: Inspecting Changes with Diffs</a></li>
+                    <li><a href="https://stackoverflow.com/questions/8640838/how-do-i-navigate-in-the-results-of-diff">How to view the next page of a <code>git</code> command result</a></li>
+                  </ul>
+                </panel>
               </div>
+              <hr>
             </tab>
           </tabs>
           <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to stash them first to prevent them from being overwritten.</p>
           <tabs>
             <tab header="SourceTree">
               <div>
-                <p>Double-click the commit you want to load to the working directory, or right-click on that commit and choose .</p>
+                <p>Double-click the commit you want to load to the working directory, or right-click on that commit and choose <code>Checkout...</code>.</p>
                 <p>Click <code>OK</code> to the warning about ‘detached HEAD’ (similar to below).</p><img src="/se-book/gitAndGithub/checkout/images/warning.png" height="140">
                 <p></p>
                 <p>The specified version is now loaded to the working folder, as indicated by the <code>HEAD</code> label. <code>HEAD</code> is a reference to the currently checked out commit.</p><img src="/se-book/gitAndGithub/checkout/images/sourcetree_4.png"
@@ -10060,6 +10269,7 @@ index 15b57f7..17f4528 100644
                   <p></p>
                   <p>To go back to the latest commit, double-click it.</p>
               </div>
+              <hr>
             </tab>
             <tab header="CLI">
               <div>
@@ -10076,6 +10286,7 @@ index 15b57f7..17f4528 100644
                 </ul>
                 <p></p>
               </div>
+              <hr>
             </tab>
           </tabs>
         </div>
@@ -10090,7 +10301,21 @@ index 15b57f7..17f4528 100644
           </div>
         </tip-box>
         <div>
-          <p>{todo}</p>
+          <p><strong>You can use the git's <mark><em>stash</em></mark> temporarily shelve (or stash) changes you've made to your working copy</strong> so you can work on something else, and then come back and re-apply them later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
+          <tabs>
+            <tab header="Source Tree">
+              <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
+              <p>
+                <hr>
+              </p>
+            </tab>
+            <tab header="CLI">
+              <p>Follow <a href="https://www.atlassian.com/git/tutorials/git-stash">this article from Atlassian</a>.</p>
+              <p>
+                <hr>
+              </p>
+            </tab>
+          </tabs>
         </div>
       </div>
       <div>
@@ -10103,24 +10328,25 @@ index 15b57f7..17f4528 100644
           </div>
         </tip-box>
         <div>
-          <p>
-            <panel src="/se-book\revisionControl\remoteRepositories\embed._include_.html" header="Revision Control: Remote Repositories" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-          </p>
-          <p></p>
-          <p>Clone the sample repo <mark>{give repo}</mark> to your computer.</p>
+          <p>Clone the sample repo <a href="https://github.com/nus-cs2103-AY1718S1/samplerepo-things">samplerepo-things</a> to your computer.</p>
+          <tip-box type="error">
+            <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project. e.g.
+            </p>
+            <p>Github project URL: <code>https://github.com/nus-cs2103-AY1718S1/samplerepo-things</code><br> Git repo URL: <code>https://github.com/nus-cs2103-AY1718S1/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
+          </tip-box>
           <tabs>
             <tab header="SourceTree">
               <div>
-                <p>File → <code>Clone / New…</code> and provide the URL and the destination directory.</p>
-                <p>You can use the <code>clone</code> command to clone a repo.</p>
-                <p>Follow instructions in <a href="https://help.github.com/articles/cloning-a-repository/">this</a> page</p>
+                <p><code>File</code> → <code>Clone / New…</code> and provide the URL of the repo and the destination directory.</p>
               </div>
+              <hr>
             </tab>
             <tab header="CLI">
               <div>
-                <p><code>origin</code></p>
-                <p>{to do}</p>
+                <p>You can use the <code>clone</code> command to clone a repo.</p>
+                <p>Follow instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p>
               </div>
+              <hr>
             </tab>
           </tabs>
         </div>
@@ -10135,8 +10361,8 @@ index 15b57f7..17f4528 100644
           </div>
         </tip-box>
         <div>
-          <p>Clone the sample repo
-            <trigger for="modal:clone-repository" trigger="click">(instructions)</trigger>.</p>
+          <p>Clone the sample repo as explained in
+            <trigger for="modal:clone-repository" trigger="click">[Textbook » Tools → Git &amp; GitHub → Clone]</trigger>.</p>
           <p>Delete the last two commits to simulate cloning the repo 2 commits ago.</p>
           <modal title="**Clone Repository**" id="modal:clone-repository">
             <div>
@@ -10151,24 +10377,25 @@ index 15b57f7..17f4528 100644
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p>
-                      <panel src="/se-book\revisionControl\remoteRepositories\embed._include_.html" header="Revision Control: Remote Repositories" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-                    </p>
-                    <p></p>
-                    <p>Clone the sample repo <mark>{give repo}</mark> to your computer.</p>
+                    <p>Clone the sample repo <a href="https://github.com/nus-cs2103-AY1718S1/samplerepo-things">samplerepo-things</a> to your computer.</p>
+                    <tip-box type="error">
+                      <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project. e.g.
+                      </p>
+                      <p>Github project URL: <code>https://github.com/nus-cs2103-AY1718S1/samplerepo-things</code><br> Git repo URL: <code>https://github.com/nus-cs2103-AY1718S1/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
+                    </tip-box>
                     <tabs>
                       <tab header="SourceTree">
                         <div>
-                          <p>File → <code>Clone / New…</code> and provide the URL and the destination directory.</p>
-                          <p>You can use the <code>clone</code> command to clone a repo.</p>
-                          <p>Follow instructions in <a href="https://help.github.com/articles/cloning-a-repository/">this</a> page</p>
+                          <p><code>File</code> → <code>Clone / New…</code> and provide the URL of the repo and the destination directory.</p>
                         </div>
+                        <hr>
                       </tab>
                       <tab header="CLI">
                         <div>
-                          <p><code>origin</code></p>
-                          <p>{to do}</p>
+                          <p>You can use the <code>clone</code> command to clone a repo.</p>
+                          <p>Follow instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p>
                         </div>
+                        <hr>
                       </tab>
                     </tabs>
                   </div>
@@ -10187,12 +10414,10 @@ index 15b57f7..17f4528 100644
                 <p></p>
                 <p>This is what you will see.</p><img src="/se-book/gitAndGithub/pull/images/sourcetree_2.png" height="150">
                 <p></p>
-                <p>Note the following:</p>
-                <ul>
-                  <li>The local repo is now at this commit, marked by the <code>master</code> label.</li>
-                  <li><code>origin/master</code> shows what is the latest commit in the <code>master</code> branch in the remote repo.</li>
-                </ul>
+                <p>Note the following (cross refer the screenshot above):</p>
+                <p>(a) The local repo is now at this commit, marked by the <code>master</code> label.<br> (b) <code>origin/master</code> shows what is the latest commit in the <code>master</code> branch in the remote repo.</p>
               </div>
+              <hr>
             </tab>
             <tab header="CLI">
               <div>
@@ -10200,10 +10425,11 @@ index 15b57f7..17f4528 100644
                 <pre class="hljs"><code>git reset --hard HEAD~2
 </code></pre>
               </div>
+              <hr>
             </tab>
           </tabs>
-          <p>Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago. In other words, it is as if somebody has added two more commits to the remote repo since you cloned it. To get those commits to your local repo (i.e.
-            to sync your local repo with upstream repo) you can do a pull.</p>
+          <p>Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago, as if somebody has added two more commits to the remote repo since you cloned it. To get those commits to your local repo (i.e. to sync your local
+            repo with upstream repo) you can do a pull.</p>
           <tabs>
             <tab header="SourceTree">
               <div>
@@ -10212,11 +10438,13 @@ index 15b57f7..17f4528 100644
                 <p>Now you should see something like this where <code>master</code> and <code>origin\master</code> are both pointing the same commit.</p><img src="/se-book/gitAndGithub/pull/images/sourcetree_4.png" height="100">
                 <p></p>
               </div>
+              <hr>
             </tab>
             <tab header="CLI">
               <div>
-                <p><code>git pull origin master</code></p>
+                <p><code>git pull origin</code></p>
               </div>
+              <hr>
             </tab>
           </tabs>
         </div>
@@ -10232,17 +10460,23 @@ index 15b57f7..17f4528 100644
         </tip-box>
         <div>
           <ol>
-            <li>Fork the sample repo.</li>
-          </ol>
-          <ul>
-            <li>Navigate to the sample repo on GitHub</li>
-            <li>Click on the <code>Fork</code> button on the top-right corner</li>
-            <li><img src="/se-book/gitAndGithub/push/images/fork.png" height="30"></li>
-          </ul>
-          <ol start="2">
-            <li>Clone the frok (not the original) to your computer.</li>
-            <li>Create some commits in your repo.</li>
-            <li>Push the new commits to your fork on GitHub</li>
+            <li>
+              <p>Fork the <a href="https://github.com/nus-cs2103-AY1718S1/samplerepo-things">samplerepo-things</a>:</p>
+              <panel type="seamless" header="%%How to fork a repo?%%">
+                <p>Navigate to the on GitHub and click on the <img src="/se-book/gitAndGithub/push/images/fork.png" height="30"> button on the top-right corner.</p>
+                <p></p>
+              </panel>
+              <p></p>
+            </li>
+            <li>
+              <p>Clone the fork (not the original) to your computer.</p>
+            </li>
+            <li>
+              <p>Create some commits in your repo.</p>
+            </li>
+            <li>
+              <p>Push the new commits to your fork on GitHub</p>
+            </li>
           </ol>
           <tabs>
             <tab header="SourceTree">
@@ -10250,11 +10484,13 @@ index 15b57f7..17f4528 100644
                 <p>Click the <code>Push</code> button on the main menu, ensure the settings are as follows in the next dialog, and click the <code>Push</code> button on the dialog.</p><img src="/se-book/gitAndGithub/push/images/sourcetree_1.png" height="150">
                 <p></p>
               </div>
+              <hr>
             </tab>
             <tab header="CLI">
               <div>
-                <p><code>git push origin master</code> enter Github username and password when prompted.</p>
+                <p>Use the command <code>git push origin master</code>. Enter Github username and password when prompted.</p>
               </div>
+              <hr>
             </tab>
           </tabs>
         </div>
@@ -10284,6 +10520,7 @@ index 15b57f7..17f4528 100644
                 <p></p><img src="/se-book/gitAndGithub/branch/images/sourcetree_2.png" height="150">
                 <p></p>
               </div>
+              <hr>
             </tab>
             <tab header="CLI">
               <div>
@@ -10294,6 +10531,7 @@ git checkout feature1
                 <pre class="hljs"><code>git checkout –b feature1
 </code></pre>
               </div>
+              <hr>
             </tab>
           </tabs>
           <ol start="2">
@@ -10310,12 +10548,14 @@ git checkout feature1
                 <p>Double-click the <code>master</code> branch</p><img src="/se-book/gitAndGithub/branch/images/sourcetree_3.png" height="150">
                 <p></p>
               </div>
+              <hr>
             </tab>
             <tab header="CLI">
               <div>
                 <pre class="hljs"><code>git checkout master
 </code></pre>
               </div>
+              <hr>
             </tab>
           </tabs>
           <ol start="4">
@@ -10336,12 +10576,14 @@ git checkout feature1
               <div>
                 <p>Right-click on the <code>master</code> branch and choose <code>merge master into the current branch</code>. Click OK in the next dialog.</p>
               </div>
+              <hr>
             </tab>
             <tab header="CLI">
               <div>
                 <pre class="hljs"><code>git merge master
 </code></pre>
               </div>
+              <hr>
             </tab>
           </tabs>
           <ol start="7">
@@ -11246,7 +11488,8 @@ git pull origin master
         </div>
       </div>
     </div>
-    <h1 id="supplementary">Supplementary</h1>
+    <hr>
+    <h1 id="section-supplementary">SECTION: SUPPLEMENTARY</h1>
     <div>
       <h1 id="principles">Principles</h1>
       <div>
@@ -11399,11 +11642,11 @@ git pull origin master
         <div>
           <p>The five OOP principles given below are known as <em>SOLID Principles</em> (an acronym made up of the first letter of each principle):</p>
           <ul>
-            <li><a href="./singleResponsibilityPrinciple/">Single Responsibility Principle (SRP)</a></li>
-            <li><a href="../designPrinciples/openClosedPrinciple/">Open-Closed Principle (OCP)</a></li>
-            <li><a href="./liskovSubstitutionPrinciple/">Liskov Substitution Principle (LSP)</a></li>
-            <li><a href="./interfaceSegregationPrinciple/">Interface Segregation Principle (ISP)</a></li>
-            <li><a href="./dependencyInversionPrinciple/">Dependency Inversion Principle (DIP)</a></li>
+            <li><a href="/se-book/principles/singleResponsibilityPrinciple/">Single Responsibility Principle (SRP)</a></li>
+            <li><a href="/se-book/designPrinciples/openClosedPrinciple/">Open-Closed Principle (OCP)</a></li>
+            <li><a href="/se-book/principles/liskovSubstitutionPrinciple/">Liskov Substitution Principle (LSP)</a></li>
+            <li><a href="/se-book/principles/interfaceSegregationPrinciple/">Interface Segregation Principle (ISP)</a></li>
+            <li><a href="/se-book/principles/dependencyInversionPrinciple/">Dependency Inversion Principle (DIP)</a></li>
           </ul>
         </div>
       </div>
@@ -11519,7 +11762,7 @@ git pull origin master
       </div>
       <div>
         <div>
-          <h4 id="dry-principle-three">DRY Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+          <h4 id="dry-principle-three-2">DRY Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
         </div>
         <tip-box>
           <div>
@@ -11529,10 +11772,10 @@ git pull origin master
         <div>
           <tip-box type="primary">
             <div>
-              <p><strong>DRY (Don't Repeat Yourself) Principle</strong>: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system</p>
+              <p><strong>DRY (Don't Repeat Yourself) Principle</strong>: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub><em>The Pragmatic Programmer</em>, by Andy Hunt and Dave Thomas</sub></p>
             </div>
           </tip-box>
-          <p>This principle guards against duplication of information. The functionality implemented twice is a violation of this principle even if the two implementations are different. Similarly, the value a system-wide timeout being defined in multiple
+          <p>This principle guards against duplication of information. The functionality implemented twice is a violation of the DRY principle even if the two implementations are different. Similarly, the value a system-wide timeout being defined in multiple
             places is a violation of DRY.</p>
         </div>
       </div>

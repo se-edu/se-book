@@ -1,0 +1,142 @@
+<div>
+  <p>
+    <panel src="/se-book\gitAndGithub\init\full._include_.html" header=":mortar_board: %%Git & GitHub &rarr; Init%%" isOpen="false" no-close="true" no-switch="true"></panel>
+  </p>
+</div>
+<p></p>
+<p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+  </span>
+</p>
+<div>
+  <h4 id="commit-one">Commit <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+</div>
+<div id="main">
+  <div>
+    <p>Create an empty repo.</p>
+    <p>Create a file named <code>fruits.txt</code> in the working directory and add some dummy text to it.</p>
+    <tip-box type="definition">
+      <div>
+        <p><strong>Working directory</strong>: The directory the repo is based in is called the <em>working directory</em>.</p>
+      </div>
+    </tip-box>
+    <p>Observe how the file is detected by Git.</p>
+    <tabs>
+      <tab header="SourceTree">
+        <div>
+          <p>The file is shown as ‘unstaged’</p><img src="/se-book/gitAndGithub/commit/images/sourcetree_1.png" height="220">
+          <p></p>
+        </div>
+        <hr>
+      </tab>
+      <tab header="CLI">
+        <div>
+          <p>You can use the <code>git status</code> command to check the status of the working directory.</p>
+          <pre><code class="hljs sh">git status
+</code></pre>
+          <p>⤵️</p>
+          <pre><code class="hljs sh"><span class="hljs-comment"># On branch master</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Initial commit</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Untracked files:</span>
+<span class="hljs-comment">#   (use "git add &lt;file&gt;..." to include in what will be committed)</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">#   a.txt</span>
+nothing added to commit but untracked files present (use <span class="hljs-string">"git add"</span> to track)
+</code></pre>
+          <p></p>
+        </div>
+        <hr>
+      </tab>
+    </tabs>
+    <p>Although git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose we want to commit the current state of the file. First, we should stage the file.</p>
+    <tip-box type="definition">
+      <div>
+        <p><strong>Commit</strong>: Saving the current state of the working folder into the Git revision history.</p>
+      </div>
+    </tip-box>
+    <tip-box type="definition">
+      <div>
+        <p><strong>Stage</strong>: Instructing Git to prepare a file for committing.</p>
+      </div>
+    </tip-box>
+    <tabs>
+      <tab header="SourceTree">
+        <div>
+          <p>Select the <code>fruits.txt</code> and click on the <code>Stage Selected</code> button</p><img src="/se-book/gitAndGithub/commit/images/sourcetree_2.png" height="100">
+          <p></p>
+          <p><code>fruits.txt</code> should appear in the <code>Staged files</code> panel now.’</p><img src="/se-book/gitAndGithub/commit/images/sourcetree_3.png" height="180">
+          <p></p>
+        </div>
+        <hr>
+      </tab>
+      <tab header="CLI">
+        <div>
+          <p>You can use the <code>stage</code> or the <code>add</code> command (they are synonyms, <code>add</code> is the more popular choice) to stage files.</p>
+          <pre><code class="hljs sh">git add fruits.txt
+git status
+</code></pre>
+          <p>⤵️</p>
+          <pre><code class="hljs sh"><span class="hljs-comment"># On branch master</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Initial commit</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Changes to be committed:</span>
+<span class="hljs-comment">#   (use "git rm --cached &lt;file&gt;..." to unstage)</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">#       new file:   fruits.txt</span>
+<span class="hljs-comment">#</span>
+</code></pre>
+          <p></p>
+        </div>
+        <hr>
+      </tab>
+    </tabs>
+    <p>Next, we can commit the staged version of <code>fruits.txt</code></p>
+    <tabs>
+      <tab header="SourceTree">
+        <div>
+          <p>Click the <code>Commit</code> button, enter a commit message e.g. <code>add fruits.txt</code> in to the text box, and click <code>Commit</code></p><img src="/se-book/gitAndGithub/commit/images/sourcetree_4.png" height="300">
+          <p></p>
+        </div>
+        <hr>
+      </tab>
+      <tab header="CLI">
+        <div>
+          <p>Use the <code>commit</code> command to commit. The <code>-m</code> switch is used to specify the commit message.</p>
+          <pre><code class="hljs sh">git commit -m <span class="hljs-string">"add fruits.txt"</span>
+</code></pre>
+          <p>You can use the <code>log</code> command to see the commit history</p>
+          <pre><code class="hljs sh">git <span class="hljs-built_in">log</span>
+</code></pre>
+          <p>⤵️</p>
+          <pre class="hljs"><code>commit 8fd30a6910efb28bb258cd01be93e481caeab846
+Author: … &lt; … @... &gt;
+Date:   Wed Jul 5 16:06:28 2017 +0800
+
+  Add fruits.txt
+</code></pre>
+        </div>
+        <hr>
+      </tab>
+    </tabs>
+    <p>Note the existence of something called the <code>master</code> branch. Git allows you to have multiple branches (i.e. it is a way to evolve the content in parallel) and Git creates a default branch named <code>master</code> on which the commits go
+      on by default.</p>
+    <p>Do some changes to <code>fruits.txt</code> (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps we followed before. You should end up with something like this.</p><img src="/se-book/gitAndGithub/commit/images/sourcetree_6.png"
+      height="180">
+    <p></p>
+    <p>Next, add two more files <code>colors.txt</code> and <code>shapes.txt</code> to the same working directory. Add a third commit to record the current state of the working directory.</p><img src="/se-book/gitAndGithub/commit/images/sourcetree_7.png"
+      height="150">
+    <p></p>
+  </div>
+  <div>
+    <div>
+      <panel header=":paperclip: Resources" expanded="">
+        <ul>
+          <li><a href="https://try.github.io/levels/1/challenges/4"><strong>Try Git</strong></a> is an online simulation/tutorial of Git basics. You can try its first few steps to solidify what you learned in this LO.</li>
+        </ul>
+      </panel>
+    </div>
+  </div>
+</div>

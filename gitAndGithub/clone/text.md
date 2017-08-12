@@ -12,18 +12,25 @@
 
 <div id="body">
 
-<dynamic-panel src="../../revisionControl/remoteRepositories/embed.md" header="Revision Control: Remote Repositories" is-open></dynamic-panel>
-<p/>
+Clone the sample repo [samplerepo-things](https://github.com/nus-cs2103-AY1718S1/samplerepo-things) to your computer.
 
-Clone the sample repo =={give repo}== to your computer.
+<tip-box type="error"> 
+
+Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project.
+e.g.
+
+Github project URL: `https://github.com/nus-cs2103-AY1718S1/samplerepo-things` <br>
+Git repo URL: `https://github.com/nus-cs2103-AY1718S1/samplerepo-things.git` (note the `.git` at the end)
+
+</tip-box>
 
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree.md" />
-  </tab>
+  <hr></tab>
   <tab header="CLI">
     <include src="./cli.md" />
-  </tab>
+  <hr></tab>
 </tabs>
 
 </div>

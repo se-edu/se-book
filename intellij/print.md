@@ -10,7 +10,6 @@
 <include src="codeNavigation/print.md" />
 <include src="productivityShortcuts/print.md" />
 <include src="debuggingBasic/print.md" />
-<include src="debuggingIntermediate/print.md" />
 <include src="refactoring/print.md" />
 
 </div>

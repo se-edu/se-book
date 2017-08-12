@@ -29,6 +29,9 @@
         <div>
           <div>
             <p>Proper naming improves the readability. It also reduces bugs caused by ambiguities regarding the intent of a variable or method.</p>
+            <blockquote>
+              <p>There are only two hard things in Computer Science: cache invalidation and naming things. <sub>-- Phil Karlton</sub></p>
+            </blockquote>
           </div>
           <div>
             <div></div>
@@ -52,10 +55,8 @@
               <div>
                 <div>
                   <p><strong>Use nouns for classes/variables and verbs for methods/functions.</strong></p>
-                  <p>Use nouns for classes/variables and verbs for methods. For example, <code>LimitChecker</code> is a better choice for a class name than <code>CheckLimit</code></p>
-                  <p>Distinguish clearly between single valued and multivalued variables (e.g. <code>Person</code> student, <code>ArrayList&lt;Person&gt;</code> students).</p>
                   <tip-box>
-                    <p>Example:</p>
+                    <p>Examples:</p>
                     <table class="markbind-table table">
                       <thead>
                         <tr>
@@ -78,13 +79,19 @@
                       </tbody>
                     </table>
                   </tip-box>
+                  <p><strong>Distinguish clearly between single valued and multivalued variables.</strong></p>
+                  <tip-box>
+                    <p>Examples:</p>
+                    <p><code>Person student</code><br><code>ArrayList&lt;Person&gt; students</code></p>
+                    <p></p>
+                  </tip-box>
                 </div>
               </div>
             </panel>
             <panel header="**Use Standard Words**" type="seamless" alt="indentation">
               <div>
                 <div>
-                  <p>Use correct spelling in names. Avoid 'texting-style' spelling. Avoid foreign language words, slang, and names that are only meaningful within specific contexts such as private jokes.</p>
+                  <p>Use correct spelling in names. Avoid 'texting-style' spelling. <strong>Avoid foreign language words, slang, and names that are only meaningful within specific contexts/times</strong><span class="dimmed">e.g. terms from private jokes, a TV show currently popular in your country</span></p>
                 </div>
               </div>
             </panel>
@@ -110,13 +117,53 @@
             <panel header="**Use Name to Explain**" type="seamless" alt="indentation">
               <div>
                 <div>
-                  <p>A name is not just for differentiation; it should explain the named entity to the reader in an accurately and at a sufficient level of detail.</p>
-                  <p>For example, <code>processStuff()</code> is a bad choice for a method; what 'stuff' and what 'process'?. On the other hand, <code>removeWhiteSpaceFromInput()</code> is a better choice. Other bad examples include <code>flag</code>, <code>temp</code>,
-                    <code>i</code> (unless used as a conventional control variable for a loop).</p>
-                  <p>If the name has multiple words, they should be in a sensible order.</p>
-                  <p>Imagine going to the doctor's and saying &quot;My eye1 is swollen&quot;! Don’t use numbers or case to distinguish names (<code>value1</code> vs <code>value2</code>, <code>Value</code> vs <code>value</code>) unless there is a strong justification.</p>
+                  <p><strong>A name is not just for differentiation; it should explain the named entity to the reader in an accurately and at a sufficient level of detail.</strong></p>
                   <tip-box>
-                    <p>Example:</p>
+                    <p>Examples:</p>
+                    <table class="markbind-table table">
+                      <thead>
+                        <tr>
+                          <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
+                          <th><img src="/se-book/images/Good.png" alt="" title="Good"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code>processInput()</code> (what 'process'?)</td>
+                          <td><code>removeWhiteSpaceFromInput()</code></td>
+                        </tr>
+                        <tr>
+                          <td><code>flag</code></td>
+                          <td><code>isValidInput</code></td>
+                        </tr>
+                        <tr>
+                          <td><code>temp</code></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </tip-box>
+                  <p><strong>If the name has multiple words, they should be in a sensible order.</strong></p>
+                  <tip-box>
+                    <p>Examples:</p>
+                    <table class="markbind-table table">
+                      <thead>
+                        <tr>
+                          <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
+                          <th><img src="/se-book/images/Good.png" alt="" title="Good"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code>bySizeOrder()</code></td>
+                          <td><code>orderBySize()</code></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </tip-box>
+                  <p>Imagine going to the doctor's and saying &quot;My eye1 is swollen&quot;! Don’t use numbers or case to distinguish names.</p>
+                  <tip-box>
+                    <p>Examples:</p>
                     <table class="markbind-table table">
                       <thead>
                         <tr>
@@ -147,9 +194,63 @@
             <panel header="**Avoid Misleading Names**" type="seamless" alt="indentation">
               <div>
                 <div>
-                  <p>Related things should be named similarly, while unrelated things should NOT.</p>
-                  <p>Avoid misleading names (e.g. those with multiple meanings), similar sounding names, hard to read ones (e.g. avoid ambiguities like &quot;is that a lowercase L, capital I or number 1?&quot;, or &quot;is that number 0 or letter O?&quot;),
-                    almost similar names.</p>
+                  <p><strong>Related things should be named similarly, while unrelated things should NOT.</strong></p>
+                  <tip-box>
+                    <p>Example: Consider these variables</p>
+                    <ul>
+                      <li><code>colorBlack</code> : hex value for color black</li>
+                      <li><code>colorWhite</code> : hex value for color white</li>
+                      <li><code>colorBlue</code> : number of times blue is used</li>
+                      <li><code>hexForRed</code> : : hex value for color red</li>
+                    </ul>
+                    <p>This is misleading because <code>colorBlue</code> is named similar to <code>colorWhite</code> and <code>colorBlack</code> but has a different purpose while <code>hexForRed</code> is named differently but has very similar purpose to
+                      the first two variables. The following is better:</p>
+                    <ul>
+                      <li><code>hexForBlack</code><code>hexForWhite</code><code>hexForRed</code></li>
+                      <li><code>blueColorCount</code></li>
+                    </ul>
+                  </tip-box>
+                  <p>Avoid misleading or ambiguous names (e.g. those with multiple meanings), similar sounding names, hard-to-pronounce ones (e.g. avoid ambiguities like &quot;is that a lowercase L, capital I or number 1?&quot;, or &quot;is that number 0
+                    or letter O?&quot;), almost similar names.</p>
+                  <tip-box>
+                    <p>Examples:</p>
+                    <table class="markbind-table table">
+                      <thead>
+                        <tr>
+                          <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
+                          <th><img src="/se-book/images/Good.png" alt="" title="Good"></th>
+                          <th>Reason</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code>phase0</code></td>
+                          <td><code>phaseZero</code></td>
+                          <td>Is that zero or letter O?</td>
+                        </tr>
+                        <tr>
+                          <td><code>rwrLgtDirn</code></td>
+                          <td><code>rowerLegitDirection</code></td>
+                          <td>Hard to pronounce</td>
+                        </tr>
+                        <tr>
+                          <td><code>right</code><code>left</code><code>wrong</code></td>
+                          <td><code>rightDirection</code><code>leftDirection</code><code>wrongResponse</code></td>
+                          <td><code>right</code> is for 'correct' or 'opposite of 'left'?</td>
+                        </tr>
+                        <tr>
+                          <td><code>redBooks</code><code>readBooks</code></td>
+                          <td><code>redColorBooks</code><code>booksRead</code></td>
+                          <td><code>red</code> and <code>read</code> (past tense) sounds the same</td>
+                        </tr>
+                        <tr>
+                          <td><code>FiletMignon</code></td>
+                          <td><code>egg</code></td>
+                          <td>If the requirement is just a name of a food, <code>egg</code> is a much easier to type/say choice than <code>FiletMignon</code></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </tip-box>
                 </div>
               </div>
             </panel>

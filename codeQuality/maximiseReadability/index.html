@@ -28,12 +28,14 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>Among various dimensions of code quality, such as run-time efficiency, security, and robustness, one of the most important is understandability. This is because in any non-trivial team project, team members expect their code to be read, understood,
-              and modified by other developers later on. Here we interpret ‘good quality code’ primarily as code that is easy for developers to work with.</p>
+            <blockquote>
+              <p>Programs should be written and polished until they acquire publication quality. <sub>--<a href="https://en.wikipedia.org/wiki/Niklaus_Wirth">Niklaus Wirth</a></sub></p>
+            </blockquote>
+            <p><strong>Among various dimensions of code quality, such as run-time efficiency, security, and robustness, one of the most important is understandability.</strong> This is because in any non-trivial software project, code needs to be read, understood,
+              and modified by other developers later on. Even if we do not intend to pass the code to someone else, code quality is still important because we all become 'strangers' to our own code someday.</p>
             <p>The two code samples given below achieve the same functionality, but one is easier to read.</p>
-            <p>{give more versions of the code, ask to find bug}</p>
             <tip-box>
-              <p>Example:</p>
+              <p>Example: Same function, different readability</p>
               <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
               <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{
     <span class="hljs-keyword">int</span> subsidy;
@@ -68,13 +70,7 @@
     <span class="hljs-keyword">return</span> subsidy;
 }
 </code></pre>
-              <p>Code comparison: same function, different quality</p>
             </tip-box>
-            <blockquote>
-              <p>The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague.</p>
-              <p>-- Edsger Dijkstra</p>
-            </blockquote>
-            <p>Even if we do not intend to pass the code to someone else, code quality is still important because we all become 'strangers' to our own code someday.</p>
           </div>
           <div>
             <div></div>
@@ -94,14 +90,14 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <panel header="**Avoid Long Methods**" type="seamless" alt="indentation">
+            <panel header="**Avoid Long Methods**" type="seamless">
               <div>
                 <div>
                   <p>Be wary when a method is longer than the computer screen, and take corrective action when it goes beyond 30 LOC (lines of code). The bigger the haystack, the harder it is to find a needle.</p>
                 </div>
               </div>
             </panel>
-            <panel header="**Avoid Deep Nesting**" type="seamless" alt="indentation">
+            <panel header="**Avoid Deep Nesting**" type="seamless">
               <div>
                 <div>
                   <p>According to the Linux 1.3.53 CodingStyle documentation, <em>&quot;if you need more than 3 levels of indentation, you're screwed anyway, and should fix your program&quot;.</em></p>
@@ -113,15 +109,18 @@
                 </div>
               </div>
             </panel>
-            <panel header="**Avoid Complicated Expressions**" type="seamless" alt="indentation">
+            <panel header="**Avoid Complicated Expressions**" type="seamless">
               <div>
                 <div>
                   <p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate
                     the final value).</p>
+                  <blockquote>
+                    <p>The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. <sub>-- Edsger Dijkstra</sub></p>
+                  </blockquote>
                 </div>
               </div>
             </panel>
-            <panel header="**Avoid Magic Numbers**" type="seamless" alt="indentation">
+            <panel header="**Avoid Magic Numbers**" type="seamless">
               <div>
                 <div>
                   <p>When the code has a number that does not explain the meaning of the number, we call that a magic number (as in “the number appears as if by magic”).</p>
@@ -137,11 +136,11 @@
                       <tbody>
                         <tr>
                           <td><code>return 3.14236;</code></td>
-                          <td><code>return 9</code></td>
+                          <td><code>return PI</code></td>
                         </tr>
                         <tr>
-                          <td><code>return PI</code></td>
-                          <td><code>MAX_SIZE-1</code></td>
+                          <td><code>return 9</code></td>
+                          <td><code>return MAX_SIZE-1</code></td>
                         </tr>
                       </tbody>
                     </table>
@@ -155,7 +154,7 @@
                 </div>
               </div>
             </panel>
-            <panel header="**Make the Code Obvious**" type="seamless" alt="indentation">
+            <panel header="**Make the Code Obvious**" type="seamless">
               <div>
                 <div>
                   <p>Make the code as explicit as possible, even if the language syntax allows them to be implicit. Here are some examples:</p>
@@ -189,7 +188,7 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <panel header="**Structure Code Logically**" type="seamless" alt="indentation">
+            <panel header="**Structure Code Logically**" type="seamless">
               <div>
                 <div>
                   <p>Lay out the code so that it adheres to the logical structure. The code should read like a story. Just like we use section breaks, chapters and paragraphs to organize a story, use classes, methods, indentation and line spacing in your
@@ -198,7 +197,7 @@
                 </div>
               </div>
             </panel>
-            <panel header="**Do not 'Trip Up' the Reader**" type="seamless" alt="indentation">
+            <panel header="**Do not 'Trip Up' the Reader**" type="seamless">
               <div>
                 <div>
                   <p>Avoid things that would make the reader go ‘huh?’, such as,</p>
@@ -212,27 +211,41 @@
                 </div>
               </div>
             </panel>
-            <panel header="**Practice KISSing**" type="seamless" alt="indentation">
+            <panel header="**Practice KISSing**" type="seamless">
               <div>
                 <div>
-                  <p>As the old adage goes, &quot;keep it simple, stupid” (KISS). Do not try to write ‘clever’ code. For example, do not dismiss the brute-force yet simple solution in favor of a complicated one because of some ‘supposed benefits’ such as
-                    faster performance or better reuse unless you have a strong justification.</p>
+                  <p>As the old adage goes, <strong>&quot;keep it simple, stupid” (KISS).  Do not try to write ‘clever’ code.</strong> For example, do not dismiss the brute-force yet simple solution in favor of a complicated one because of some ‘supposed
+                    benefits’ such as 'better reusability' unless you have a strong justification.</p>
                   <blockquote>
-                    <p>Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.</p>
-                    <p>--Brian W. Kernighan</p>
+                    <p>Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it. <sub>--Brian W. Kernighan </sub></p>
                   </blockquote>
                   <blockquote>
-                    <p>Programs must be written for people to read, and only incidentally for machines to execute.</p>
-                    <p>--Abelson and Sussman</p>
-                  </blockquote>
-                  <blockquote>
-                    <p>Premature optimization is the root of all evil in programming.</p>
-                    <p>--<a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a></p>
+                    <p>Programs must be written for people to read, and only incidentally for machines to execute. <sub>--Abelson and Sussman</sub></p>
                   </blockquote>
                 </div>
               </div>
             </panel>
-            <panel header="**SLAP Hard**" type="seamless" alt="indentation">
+            <panel header="**Avoid Premature Optimizations**" type="seamless">
+              <div>
+                <div>
+                  <p><strong>Optimizing code prematurely has several drawbacks</strong>:</p>
+                  <ul>
+                    <li><strong>We may not know which parts are the real performance bottlenecks</strong>. This is especially the case when the code undergoes transformations (e.g. compiling, minifying, transpiling, etc.) before it becomes an executable.
+                      Ideally, you should use a profiler tool to identify the actual bottlenecks of the code first, and optimize only those parts.</li>
+                    <li><strong>Optimizing can complicate the code</strong>, affecting correctness and understandability</li>
+                    <li><strong>Hand-optimized code can be harder for the compiler to optimize</strong> the code (the simpler the code, the easier for the compiler to optimize it)</li>
+                  </ul>
+                  <p>A popular saying in the industry is <strong><em>make it work, make it right, make it fast</em></strong> which means in most cases getting the code to perform correctly should take priority over optimizing it. If the code doesn't work
+                    correctly, it has no value on matter how fast/efficient it it.</p>
+                  <blockquote>
+                    <p>Premature optimization is the root of all evil in programming. <sub>--<a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a></sub></p>
+                  </blockquote>
+                  <p>Note that <strong>there are cases where optimizing takes priority over other things</strong><span class="dimmed">e.g. when writing code for resource constrained environments</span>. This guideline simply a caution that you should optimize
+                    only when it is really needed.</p>
+                </div>
+              </div>
+            </panel>
+            <panel header="**SLAP Hard**" type="seamless">
               <div>
                 <div>
                   <p>Avoid varying the level of abstraction within a code fragment. Note: The <em>Productive Programmer</em> (by Neal Ford) calls this the <em>SLAP principle</em> i.e. Single Level of Abstraction Per method.</p>
@@ -250,7 +263,7 @@ processData();
 displayResult();
 </code></pre>
                   </tip-box>
-                  <tip-box type="primary">
+                  <tip-box type="info">
                     <div>
                       <p><strong>Abstraction</strong>:</p>
                       <p>Most programs are written to solve complex problems involving large amounts of intricate details. It is impossible to deal with all these details at the same time. The guiding principle of abstraction stipulates that we capture only
@@ -269,18 +282,15 @@ displayResult();
             <div>
               <panel header=":muscle: Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: True or False?">
+                  <panel header=":lock::key: Small methods or lengthy methods?">
                     <question>
                       <p>Putting all details in one place can create lengthy methods, but it is preferred over creating many small methods because it makes the code easier to understand.</p>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                      <ul radio-group="regv5" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="regv5" type="radio"> True</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="regv5" type="radio"> False</label></li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
-                        </ul>
+                        <p>False</p>
                         <p>Explanation: If you are using abstraction properly, you DON’T need to see all details to understand something. The whole point of using abstraction is to be able to understand things without knowing as little details as possible.
                           This is why we recommend single level of abstraction per method and top-down coding.</p>
                       </div>
@@ -288,43 +298,32 @@ displayResult();
                   </panel>
                 </div>
                 <div>
-                  <panel header=":lock::key: What is the drawback of trying to optimize code too soon?">
+                  <panel header=":lock::key: Drawbacks of prepature optimizations">
                     <question>
-                      <p>What is the drawback of trying to optimize code too soon?</p>
+                      <p>What are the drawbacks of trying to optimize code too soon?</p>
                       <ul class="task-list">
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. We may not know which parts are the real performance bottleneck</li>
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. When we optimize code manually, it becomes harder for the compiler to optimize</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Optimizing can complicate the code, affecting correctness and understandability</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. All of the above</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. There are no drawbacks. The sooner we optimize, the better it is.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Optimizing can complicate code</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Optimizing can lead to more error-prone code</li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. We may not know which parts are the real performance bottleneck</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. When we optimize code manually, it becomes harder for the compiler to optimize</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Optimizing can complicate the code, affecting correctness and understandability</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> d. All of the above</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. There are no drawbacks. The sooner we optimize, the better it is.</li>
-                        </ul>
+                        <p>a, b, c, d</p>
                       </div>
                     </question>
                   </panel>
                 </div>
                 <div>
-                  <panel header=":lock::key: Common Saying">
+                  <panel header=":lock::key: Common saying: Make it fast,...">
                     <question>
                       <p>This is a common saying among programmers</p>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Make it fast, make it right, make it work</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Make it work, make it right, make it fast</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Make it fast, make it right, now make it faster</li>
+                      <ul radio-group="2tho5" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="2tho5" type="radio"> a. Make it fast, make it right, make it work</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="2tho5" type="radio"> b. Make it work, make it right, make it fast</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="2tho5" type="radio"> c. Make it fast, make it right, now make it faster</label></li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Make it fast, make it right, make it work</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. Make it work, make it right, make it fast</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Make it fast, make it right, now make it faster</li>
-                        </ul>
+                        <p>b</p>
                       </div>
                     </question>
                   </panel>
@@ -348,17 +347,17 @@ displayResult();
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <panel header="**Make the Happy Path Prominent**" type="seamless" alt="indentation">
+            <panel header="**Make the Happy Path Prominent**" type="seamless">
               <div>
                 <div>
-                  <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unintended. It is the ‘unusual’ cases that should be indented. Someone reading
-                    the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
+                  <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unintended as much as possible. It is the ‘unusual’ cases that should be
+                    indented. Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
                   <tip-box>
                     <p>Example:</p>
                     <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
-                    <pre><code class="hljs java"><span class="hljs-keyword">if</span> (!isUnusualCase) {
+                    <pre><code class="hljs java"><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span>
     <span class="hljs-keyword">if</span> (!isErrorCase) {
-        start();
+        start();    <span class="hljs-comment">//main path</span>
         process();
         cleanup();
         exit();
@@ -366,11 +365,12 @@ displayResult();
         handleError();
     }
 } <span class="hljs-keyword">else</span> {
-    handleUnusualCase();
+    handleUnusualCase(); <span class="hljs-comment">//handling that unusual condition</span>
 }
 </code></pre>
+                    <p>In the code above,</p>
                     <ul>
-                      <li>Alternative conditions are separated from their handling.</li>
+                      <li>Unusual condition detection is separated from their handling.</li>
                       <li>Main path is nested deeply.</li>
                     </ul>
                     <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
@@ -389,9 +389,10 @@ process();
 cleanup();
 exit();
 </code></pre>
+                    <p>In the contrast, the above code</p>
                     <ul>
-                      <li>Alternative paths dealt with first so that the reader doesn't have to remember them for long.</li>
-                      <li>The main path is un-indented.</li>
+                      <li>deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.</li>
+                      <li>keeps the main path un-indented.</li>
                     </ul>
                   </tip-box>
                 </div>

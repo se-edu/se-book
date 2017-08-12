@@ -12,11 +12,11 @@
 
 <div id="body">
 
-Given below are some more commonly used refactorings. A more comprehensive list is available at
-  <popover effect="fade" placement="top">
-    refactoring-catalog <span slot="content"><include src="../../common/references.md#refactoring-catalog" inline/></span>
-  </popover>
-.
+Given below are some more commonly used refactorings. A more comprehensive list is available at <trigger trigger="click" for="modal:refactoring-catalog-how"> refactoring-catalog </trigger>.
+
+<modal title="**Refactoring Catalog**" id="modal:refactoring-catalog-how">
+  <include src="../../common/references.md#refactoring-catalog"/>
+</modal>
 
 1. [Consolidate Conditional Expression](https://refactoring.com/catalog/consolidateConditionalExpression.html)
 2. [Decompose Conditional](https://refactoring.com/catalog/decomposeConditional.html)
@@ -29,24 +29,10 @@ Given below are some more commonly used refactorings. A more comprehensive list 
 9. [Split Loop](https://refactoring.com/catalog/splitLoop.html)
 10. [Split Temporary Variable](https://refactoring.com/catalog/splitTemporaryVariable.html)
 
-<tip-box type="info">
-
-Tip: Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.
-
-</tip-box>
-
-<tip-box type="important">
-
-Important: Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.
-
-</tip-box>
-
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+  <include src="exercises.md" />
 </div>
 
 </div>

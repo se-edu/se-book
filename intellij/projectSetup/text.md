@@ -19,12 +19,16 @@
 
 * [[Intellij Official Tutorial] **Creating, Running and Packaging Your First Java Application**](https://www.jetbrains.com/help/idea/creating-running-and-packaging-your-first-java-application.html)
 
-  </tab>
+  <hr></tab>
   <tab header=":tv:">
 
 @[youtube](c0efB_CKOYo)
 
-  </tab>
+A little bit more detailed explanation %%(from CodeLaunch)%% with some additional info at the end.
+
+@[youtube](https://www.youtube.com/watch?v=S764o0mAXhg)
+
+  <hr></tab>
 </tabs>
 
 ##### Importing a Project to Intellij IDEA

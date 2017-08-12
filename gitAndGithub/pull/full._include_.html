@@ -1,3 +1,9 @@
+<div>
+  <p>
+    <panel src="/se-book\gitAndGithub\clone\full._include_.html" header=":mortar_board: %%Tools &rarr; Git & GitHub &rarr; Clone%%" isOpen="false" no-close="true" no-switch="true"></panel>
+  </p>
+</div>
+<p></p>
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong>
   </span>
@@ -7,8 +13,8 @@
 </div>
 <div id="main">
   <div>
-    <p>Clone the sample repo
-      <trigger for="modal:clone-repository" trigger="click">(instructions)</trigger>.</p>
+    <p>Clone the sample repo as explained in
+      <trigger for="modal:clone-repository" trigger="click">[Textbook » Tools → Git &amp; GitHub → Clone]</trigger>.</p>
     <p>Delete the last two commits to simulate cloning the repo 2 commits ago.</p>
     <modal title="**Clone Repository**" id="modal:clone-repository">
       <div>
@@ -23,24 +29,25 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>
-                <panel src="\revisionControl\remoteRepositories\embed._include_.html" header="Revision Control: Remote Repositories" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-              </p>
-              <p></p>
-              <p>Clone the sample repo <mark>{give repo}</mark> to your computer.</p>
+              <p>Clone the sample repo <a href="https://github.com/nus-cs2103-AY1718S1/samplerepo-things">samplerepo-things</a> to your computer.</p>
+              <tip-box type="error">
+                <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project. e.g.
+                </p>
+                <p>Github project URL: <code>https://github.com/nus-cs2103-AY1718S1/samplerepo-things</code><br> Git repo URL: <code>https://github.com/nus-cs2103-AY1718S1/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
+              </tip-box>
               <tabs>
                 <tab header="SourceTree">
                   <div>
-                    <p>File → <code>Clone / New…</code> and provide the URL and the destination directory.</p>
-                    <p>You can use the <code>clone</code> command to clone a repo.</p>
-                    <p>Follow instructions in <a href="https://help.github.com/articles/cloning-a-repository/">this</a> page</p>
+                    <p><code>File</code> → <code>Clone / New…</code> and provide the URL of the repo and the destination directory.</p>
                   </div>
+                  <hr>
                 </tab>
                 <tab header="CLI">
                   <div>
-                    <p><code>origin</code></p>
-                    <p>{to do}</p>
+                    <p>You can use the <code>clone</code> command to clone a repo.</p>
+                    <p>Follow instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p>
                   </div>
+                  <hr>
                 </tab>
               </tabs>
             </div>
@@ -59,12 +66,10 @@
           <p></p>
           <p>This is what you will see.</p><img src="/se-book/gitAndGithub/pull/images/sourcetree_2.png" height="150">
           <p></p>
-          <p>Note the following:</p>
-          <ul>
-            <li>The local repo is now at this commit, marked by the <code>master</code> label.</li>
-            <li><code>origin/master</code> shows what is the latest commit in the <code>master</code> branch in the remote repo.</li>
-          </ul>
+          <p>Note the following (cross refer the screenshot above):</p>
+          <p>(a) The local repo is now at this commit, marked by the <code>master</code> label.<br> (b) <code>origin/master</code> shows what is the latest commit in the <code>master</code> branch in the remote repo.</p>
         </div>
+        <hr>
       </tab>
       <tab header="CLI">
         <div>
@@ -72,10 +77,11 @@
           <pre class="hljs"><code>git reset --hard HEAD~2
 </code></pre>
         </div>
+        <hr>
       </tab>
     </tabs>
-    <p>Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago. In other words, it is as if somebody has added two more commits to the remote repo since you cloned it. To get those commits to your local repo (i.e. to
-      sync your local repo with upstream repo) you can do a pull.</p>
+    <p>Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago, as if somebody has added two more commits to the remote repo since you cloned it. To get those commits to your local repo (i.e. to sync your local repo
+      with upstream repo) you can do a pull.</p>
     <tabs>
       <tab header="SourceTree">
         <div>
@@ -84,11 +90,13 @@
           <p>Now you should see something like this where <code>master</code> and <code>origin\master</code> are both pointing the same commit.</p><img src="/se-book/gitAndGithub/pull/images/sourcetree_4.png" height="100">
           <p></p>
         </div>
+        <hr>
       </tab>
       <tab header="CLI">
         <div>
-          <p><code>git pull origin master</code></p>
+          <p><code>git pull origin</code></p>
         </div>
+        <hr>
       </tab>
     </tabs>
   </div>

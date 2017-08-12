@@ -48,9 +48,11 @@
                   <p>-- [adapted from
                     <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]</p>
                 </blockquote>
+                <hr>
               </tab>
               <tab header=":tv:">
                 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/M-O8ZNW9icQ" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                <hr>
               </tab>
             </tabs>
             <popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide :mag:" placement="right">
@@ -136,9 +138,11 @@
                 <p>Suppose you want to apply revision control on files in a directory called <code>ProjectFoo</code>. In that case you need to set up a <em>repo</em> (short for repository) in <code>ProjectFoo</code> directory, which is referred to as the
                   <em>working directory</em> of the repo. The repository is the database where the meta-data about the revision history are stored. For example, Git uses a hidden folder named <code>.git</code> inside the working directory.</p>
                 <p>You can have multiple repos in your computer, each repo revision-controlling files of a different working directly, for examples, files of different projects.</p>
+                <hr>
               </tab>
               <tab header=":tv:">
                 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/mLnxwlCEIb8" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                <hr>
               </tab>
             </tabs>
           </div>
@@ -178,11 +182,15 @@
               <tab header=":abc:">
                 <p><strong><em>Committing</em> saves a snapshot of the current state of the tracked files in the revision control history. Such a snapshot is also called a <em>commit</em> (i.e. the noun).</strong></p>
                 <p><strong>When we are ready to commit, we should first <em>stage</em> the specific changes we want to commit.</strong> This intermediate step allows us to commit only some changes while saving other changes for a later commit.</p>
-                <p></p>
+                <p>
+                  <hr>
+                </p>
               </tab>
               <tab header=":tv:">
                 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/7exFDGHgQcw" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                <p></p>
+                <p>
+                  <hr>
+                </p>
               </tab>
             </tabs>
             <h5 id="identifying-points-in-history">Identifying Points in History</h5>
@@ -207,9 +215,19 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>We can view the history of a project as a series of past commits and also <strong><em>diff</em></strong> (i.e. to see the differences) between two points in the history.</p>
-            <p>We can <strong><em>checkout</em></strong> any commit in the history (i.e. load the state of files as at that commit) to the working directory. Therefore, we can traverse the history of the project simply by checking out the commits we are
-              interested in.</p>
+            <p><strong><trigger for="pop:rcs">RCS</trigger> tools store the history of the working directory as a series of commits.</strong> This means we should commit after each change that we want the RCS to 'remember' for us.</p>
+            <p><strong>To see what changed between two points of the history, you can ask the RCS tool to  <mark><em>diff</em></mark> the two commits in concern.</strong></p>
+            <p><strong>To restore the state of the working directory at a point in the past, you can <mark><em>checkout</em></mark> the commit in concern.</strong> i.e., we can traverse the history of the working directory simply by checking out the commits
+              we are interested in.</p>
+            <div>
+              <popover id="pop:rcs" placement="top">
+                <div slot="content">
+                  <div>
+                    <p><strong>RCS</strong> : Revision Control Software.</p>
+                  </div>
+                </div>
+              </popover>
+            </div>
           </div>
           <div>
             <div></div>
@@ -229,11 +247,19 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>Remote repositories are copies of a repo that are hosted on remote computers.</p>
-            <p>To get a copy of a remote repo on your computer, we can perform a <strong><em>clone</em></strong> operation which recreates a local repo that contains the same version history as the remote repo.</p>
-            <p>After cloning a remote repo, we can first add commits to our local repo and then <strong><em>push</em></strong> those commits to the remote repo (provided we have write-access to it)</p>
-            <p>Remote repos are often used when multi-persons projects. Suppose someone has pushed some new commits to a remote repo. We can <strong><em>pull</em></strong> those changes which will bring our local repo up-to-date with the remote repo.</p>
-            <p>{add forks and pull requests}</p>
+            <p><strong>Remote repositories are copies of a repo that are hosted on remote computers.</strong> They are especially useful for sharing the revision history of a codebase among team members of a multi-person project. <span class="dimmed">They can also serve as a remote backup of your code base.</span></p>
+            <p><strong>You can <mark><em>clone</em></mark> a remote repo onto your computer</strong> which will create a copy of a remote repo on your computer, including the version history as the remote repo.</p>
+            <p><strong>You can <mark><em>push</em></mark> new commits in your clone to the remote repo</strong> which will copy the new commits onto the remote repo. Note that pushing to a remote repo requires you to have write-access to it.</p>
+            <p><strong>You can <mark><em>pull</em></mark> from the remote repos to receive new commits in the remote repo</strong>. Pulling is used to <em>sync</em> your local repo with latest changes to the remote repo.</p>
+            <p>While it is possible to set up your own remote repo on a server, an easier option is to use a remote repo hosting service such as GitHub or BitBucket.</p>
+            <p><strong>A <mark><em>fork</em></mark> is a remote copy of a remote repo</strong>. If there is a remote repo that you want to push to but you do not have write access to it, you can fork the remote repo, which gives you your own remote repo
+              that you can push to.</p>
+            <p><strong>A <mark><em>pull request</em></mark> is mechanism for contributing code to a remote repo.</strong> It is a formal request sent to the maintainers of the repo asking them to pull your new code to their repo.</p>
+            <div v-closeable="" alt="slideshow: remote repo scenario">
+              <p>Here is a scenario that includes all the concepts introduced above (click on the slide to advance the animation):</p>
+              <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212290&authkey=&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen="" mozallowfullscreen=""
+                  allowfullscreen></iframe></div>
+            </div>
           </div>
           <div>
             <div></div>

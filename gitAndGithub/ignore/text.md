@@ -17,10 +17,10 @@ Add a file names `temp.txt` to the `things` repo you created. Suppose we don’t
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree.md" />
-  </tab>
+  <hr></tab>
   <tab header="CLI">
     <include src="./cli.md" />
-  </tab>
+  <hr></tab>
 </tabs>
 
 The `.gitignore` file tells Git which files to ignore when tracking revision history. That file itself can be either revision controlled or ignored.

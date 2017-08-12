@@ -33,12 +33,12 @@ Revision control is also known as _Version Control Software (VCS)_, and a few ot
 >
 > -- [adapted from <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]
 
-  </tab>
+  <hr></tab>
   <tab header=":tv:">
 
 @[youtube](M-O8ZNW9icQ)
 
-  </tab>
+  <hr></tab>
 </tabs>
 
 <popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide :mag:" placement="right">

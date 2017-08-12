@@ -1,4 +1,4 @@
-Double-click the commit you want to load to the working directory, or right-click on that commit and choose .
+Double-click the commit you want to load to the working directory, or right-click on that commit and choose `Checkout...`.
 
 Click `OK` to the warning about ‘detached HEAD’ (similar to below).
 

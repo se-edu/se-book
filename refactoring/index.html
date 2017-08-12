@@ -27,24 +27,33 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>The first version of the code you write may not be of production quality. It is acceptable to first concentrate on making the code work, rather than worry over the quality of the code, SO LONG AS you improve the quality later. This process
-              of <strong>improving a program's internal structure without modifying its external behavior</strong> is called <em>refactoring</em>.</p>
+            <p>The first version of the code you write may not be of production quality. It is acceptable to first concentrate on making the code work, rather than worry over the quality of the code, as long as you improve the quality later. This process
+              of <strong>improving a program's internal structure in small steps without modifying its external behavior is called <em>refactoring</em>.</strong></p>
             <ul>
-              <li>Refactoring is not about discarding poorly-written code and re-writing it from scratch. It is the process of improving the code in very small steps until it achieves production quality.</li>
-              <li>By definition, refactoring is different from bug fixing or any other modifications that alter the external behavior of the component in concern.</li>
+              <li><strong>Refactoring is not rewriting</strong>: Discarding poorly-written code entirely and re-writing it from scratch is not refactoring because refactoring needs to be done in small steps.</li>
+              <li><strong>Refactoring is not bug fixing</strong>: By definition, refactoring is different from bug fixing or any other modifications that alter the external behavior (e.g. adding a feature) of the component in concern.</li>
             </ul>
+            <tip-box type="tip">
+              <p>Improving code structure can have many secondary benefits: e.g.</p>
+              <ul>
+                <li>hidden bugs become easier to spot</li>
+                <li>improve performance (sometimes, simpler code runs faster than complex code because simpler code is easier for the compiler to optimize).</li>
+              </ul>
+            </tip-box>
             <p>Given below are two common refactorings (taken from
-              <popover effect="fade" placement="top">
-                refactoring-catalog <span slot="content"><span><a href="">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></span></span>
-              </popover>
-              ).</p>
+              <trigger trigger="click" for="modal:refactoring-catalog-what"> refactoring-catalog </trigger>).</p>
+            <modal title="**Refactoring Catalog**" id="modal:refactoring-catalog-what">
+              <div>
+                <p><a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring:
+                  <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></p>
+              </div>
+            </modal>
             <tip-box>
               <p>Refactoring Name: <strong>Consolidate Duplicate Conditional Fragments</strong></p>
               <p>Situation: The same fragment of code is in all branches of a conditional expression.</p>
               <p>Method: Move it outside of the expression.</p>
               <p>Example:</p>
-              <pre><code class="hljs java"><span class="hljs-comment">//before</span>
-<span class="hljs-keyword">if</span> (isSpecialDeal()) {
+              <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isSpecialDeal()) {
     total = price * <span class="hljs-number">0.95</span>;
     send();
 } <span class="hljs-keyword">else</span> {
@@ -52,8 +61,8 @@
     send();
 }
 </code></pre>
-              <pre><code class="hljs java"><span class="hljs-comment">//after</span>
-<span class="hljs-keyword">if</span> (isSpecialDeal()){
+              <p>⤵️</p>
+              <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isSpecialDeal()){
     total = price * <span class="hljs-number">0.95</span>;
 } <span class="hljs-keyword">else</span> {
     total = price * <span class="hljs-number">0.98</span>;
@@ -66,8 +75,7 @@ send();
               <p>Situation: You have a code fragment that can be grouped together.</p>
               <p>Method: Turn the fragment into a method whose name explains the purpose of the method.</p>
               <p>Example:</p>
-              <pre><code class="hljs java"><span class="hljs-comment">//before</span>
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
+              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
     printBanner();
 
 <span class="hljs-comment">//print details</span>
@@ -75,8 +83,8 @@ send();
     System.out.println(<span class="hljs-string">"amount	"</span> + getOutstanding());
 }
 </code></pre>
-              <pre><code class="hljs java"><span class="hljs-comment">//after</span>
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
+              <p>⤵️</p>
+              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
     printBanner();
     printDetails(getOutstanding());
 }
@@ -87,32 +95,59 @@ send();
 }
 </code></pre>
             </tip-box>
+            <tip-box type="info">
+              <p>Tip: Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
+            </tip-box>
+            <tip-box type="important">
+              <p>Important: Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.</p>
+            </tip-box>
           </div>
           <div>
             <div>
               <panel header=":muscle: Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: Refactoring">
+                  <panel header=":lock::key: Results of Refactoring">
                     <question>
-                      <p>Choose the correct statement</p>
+                      <p>Choose the correct statements</p>
                       <ul class="task-list">
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Refactoring can improve understandability</li>
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Refactoring can uncover bugs</li>
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Refactoring can result in better performance</li>
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Refactoring can change the number of methods/classes</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Refactoring can do all of the above</li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Refactoring can improve understandability</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Refactoring can uncover bugs</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Refactoring can result in better performance</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Refactoring can change the number of methods/classes</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> e. Refactoring can do all of the above</li>
+                        <p>a, b, c, d</p>
+                        <p>Explanation:</p>
+                        <ul>
+                          <li>(a, b, c) Although the primary aim of refactoring is to improve internal code structure, there are other secondary benefits.</li>
+                          <li>(d) Some refactorings result in adding/removing methods/classes.</li>
                         </ul>
-                        <p>Explanation: Although the primary aim of refactoring is to improve internal code structure, it in turn can unearth bugs (when the code structure becomes better, hidden bugs become easier to spot) and even improve performance (sometimes,
-                          simpler code runs faster than complex code because simpler code is easier for the compiler to optimize).</p>
                       </div>
+                    </question>
+                  </panel>
+                </div>
+                <div>
+                  <panel header=":lock::key: Do you agree with the following statement? Refactoring and regression testing">
+                    <question has-input="true">
+                      <p>Do you agree with the following statement? Justify your answer.</p>
+                      <p>Statement: <code>Whenever we refactor code to fix bugs, we need not do regression testing if the bug fix was minor.</code></p>
+                      <div slot="hint">
+                        <p>There are two flaws in the given statement.</p>
+                      </div>
+                      <div slot="answer">
+                        <p>DISAGREE.</p>
+                        <ol>
+                          <li>Even a minor change can have major repercussions on the system. We MUST do regression testing after each change, no matter how minor it is.</li>
+                          <li>Fixing bugs is technically not refactoring.</li>
+                        </ol>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+                <div>
+                  <panel header=":lock: Explain Refactoring">
+                    <question has-input="">
+                      <p>Explain what is refactoring and why it is not the same as rewriting, bug fixing, or adding features.</p>
                     </question>
                   </panel>
                 </div>
@@ -136,10 +171,13 @@ send();
         <div>
           <div>
             <p>Given below are some more commonly used refactorings. A more comprehensive list is available at
-              <popover effect="fade" placement="top">
-                refactoring-catalog <span slot="content"><span><a href="">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></span></span>
-              </popover>
-              .</p>
+              <trigger trigger="click" for="modal:refactoring-catalog-how"> refactoring-catalog </trigger>.</p>
+            <modal title="**Refactoring Catalog**" id="modal:refactoring-catalog-how">
+              <div>
+                <p><a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring:
+                  <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></p>
+              </div>
+            </modal>
             <ol>
               <li><a href="https://refactoring.com/catalog/consolidateConditionalExpression.html">Consolidate Conditional Expression</a></li>
               <li><a href="https://refactoring.com/catalog/decomposeConditional.html">Decompose Conditional</a></li>
@@ -152,56 +190,9 @@ send();
               <li><a href="https://refactoring.com/catalog/splitLoop.html">Split Loop</a></li>
               <li><a href="https://refactoring.com/catalog/splitTemporaryVariable.html">Split Temporary Variable</a></li>
             </ol>
-            <tip-box type="info">
-              <p>Tip: Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
-            </tip-box>
-            <tip-box type="important">
-              <p>Important: Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.</p>
-            </tip-box>
           </div>
           <div>
-            <div>
-              <panel header=":muscle: Exercises" expandable="">
-                <div>
-                  <panel header=":lock::key: Do you agree with the following statement? Justify your answer.">
-                    <question has-input="true">
-                      <p>Do you agree with the following statement? Justify your answer.</p>
-                      <p>Statement: Whenever we refactor code to fix bugs, we need not do regression testing if the bug fix was minor.</p>
-                      <div slot="answer">
-                        <p>DISAGREE.</p>
-                        <ol>
-                          <li>Even a minor change can have major repercussions on the system. We MUST do regression testing after each change, no matter how minor it is.</li>
-                          <li>Fixing bugs is technically not refactoring.</li>
-                        </ol>
-                      </div>
-                    </question>
-                  </panel>
-                </div>
-                <div>
-                  <panel header=":lock::key: Which one of these is not a refactoring listed in the catalog of refactorings given at www.refactoring.com?">
-                    <question>
-                      <p>Which one of these is not a refactoring listed in the catalog of refactorings given at <a href="http://www.refactoring.com">www.refactoring.com</a></p>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Rename method</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Decompose conditional</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Remove whitespace</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Replace Magic Number with Symbolic Constant</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Reverse Conditional</li>
-                      </ul>
-                      <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Rename method</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Decompose conditional</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> c. Remove whitespace</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Replace Magic Number with Symbolic Constant</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Reverse Conditional</li>
-                        </ul>
-                      </div>
-                    </question>
-                  </panel>
-                </div>
-              </panel>
-            </div>
+            <div></div>
           </div>
         </div>
       </panel>
@@ -218,9 +209,7 @@ send();
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>Whether a refactoring improves the code or degrades it depends on the situation. That is why some refactorings are ‘opposites’ of each other (e.g. <em>extract method vs inline method</em>).</p>
-            <p>It is important to refactor frequently so as to avoid the accumulation of ‘messy’ code which might get out of control.</p>
-            <p>How much refactoring is too much refactoring? It is too much refactoring when the benefits no longer justify the cost. The costs and the benefits depend on the context.</p>
+            <p>We know that it is important to refactor frequently so as to avoid the accumulation of ‘messy’ code which might get out of control. But how much refactoring is too much refactoring? <strong>It is too much refactoring when the benefits no longer justify the cost.</strong>              The costs and the benefits depend on the context. That is why some refactorings are ‘opposites’ of each other (e.g. <em>extract method vs inline method</em>).</p>
           </div>
           <div>
             <div>
@@ -229,16 +218,12 @@ send();
                   <panel header=":lock::key: ‘Extract method’ and ‘Inline method’ refactorings">
                     <question>
                       <p>‘Extract method’ and ‘Inline method’ refactorings</p>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. are opposites of each other.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. sounds like opposites but they are not.</li>
+                      <ul radio-group="zfqbh" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="zfqbh" type="radio"> a. are opposites of each other.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="zfqbh" type="radio"> b. sounds like opposites but they are not.</label></li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. are opposites of each other.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. sounds like opposites but they are not.</li>
-                        </ul>
-                        <p>Explanation: Yes they are. Mentioned in the handout. Please refer to the handout to find why such opposites exist among recommended refactorings.</p>
+                        <p>a</p>
                       </div>
                     </question>
                   </panel>

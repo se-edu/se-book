@@ -1,3 +1,1 @@
-<panel header="%%Prerequisites%%" expandable expanded>
-  <dynamic-panel src="../../revisionControl/savingHistory/full.md" header="Revision Control: Saving History" />
-</panel>
+<dynamic-panel src="../../revisionControl/savingHistory/full.md" header=":mortar_board: Revision Control: Saving History" />

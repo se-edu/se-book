@@ -12,19 +12,26 @@
 
 **Use nouns for classes/variables and verbs for methods/functions.**
 
-Use nouns for classes/variables and verbs for methods.
-For example, `LimitChecker` is a better choice for a class name than `CheckLimit`
-
-Distinguish clearly between single valued and multivalued variables (e.g. `Person` student, `ArrayList<Person>` students).
-
 <tip-box>
 
-Example:
+Examples:
 
 Name for a | ![][Bad]        | ![][Good]
 -----------|-----------------|----------------
 Class      |`CheckLimit`     | `LimitChecker`           
 method     |`result()`       | `calculate()`  
+
+</tip-box>
+
+
+**Distinguish clearly between single valued and multivalued variables.**
+
+<tip-box>
+
+Examples:
+
+`Person student`<br>
+`ArrayList<Person> students`
 
 </tip-box>
 

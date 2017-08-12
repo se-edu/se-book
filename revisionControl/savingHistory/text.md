@@ -25,12 +25,12 @@
 
 **When we are ready to commit, we should first _stage_ the specific changes we want to commit.** This intermediate step allows us to commit only some changes while saving other changes for a later commit.
 
-  </tab>
+  <hr></tab>
   <tab header=":tv:">
 
 @[youtube](7exFDGHgQcw)
 
-  </tab>
+  <hr></tab>
 </tabs>
 
 ##### Identifying Points in History

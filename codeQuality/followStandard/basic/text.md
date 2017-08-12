@@ -12,16 +12,7 @@
 
 <div id="body">
 
-{Some simple style rules for Java}
-
-<panel header="Basic Indentation"
-    type="seamless" alt="indentation">
-  <include src="../../../java/style/rule-basicIndentation/index.md#main" />
-</panel>
-<panel header="Line Length"
-    type="seamless" alt="line length">
-  <include src="../../../java/style/rule-lineLength/index.md#main" />
-</panel>
+Go through the [provided Java coding standard](https://github.com/oss-generic/process/blob/master/codingStandards/CodingStandard-Java.md) and learn the _basic_ style rules.
 
 </div>
 

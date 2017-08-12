@@ -1,3 +1,2 @@
-<panel header="%%Prerequisites%%" expandable expanded>
-  <dynamic-panel src="../../revisionControl/repositories/full.md" header="Revision Control: Repositories" />
-</panel><p/>
+<dynamic-panel src="../../revisionControl/repositories/full.md" header=":mortar_board: %%Project Management &rarr; Revision Control &rarr; Repositories%%" />
+

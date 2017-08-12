@@ -28,13 +28,12 @@
     </div>
     <div id="main">
       <div>
-        <panel header="**Use the Default Branch**" type="seamless" alt="indentation">
+        <panel header="**Use the Default Branch**" type="seamless">
           <div>
             <div>
-              <p>Always include a default branch in case statements.</p>
-              <p>Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the 'default' branch to detect errors (i.e. if execution reached the 'default' branch, throw an exception).
-                This also applies to the final 'else' of an if-else construct. That is, the final 'else' should mean 'everything else', and not the final option. Do not use 'else' when an 'if' condition can be explicitly specified, unless there is absolutely
-                no other possibility.</p>
+              <p>Always include a default branch in <code>case</code> statements.</p>
+              <p>Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the 'default' branch to detect errors (i.e. if execution reached the <code>default</code> branch, throw
+                an exception). This also applies to the final <code>else</code> of an <code>if-else</code> construct. That is, the final <code>else</code> should mean 'everything else', and not the final option. Do not use <code>else</code> when an <code>if</code>                condition can be explicitly specified, unless there is absolutely no other possibility.</p>
               <tip-box>
                 <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
                 <pre><code class="hljs java"><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;
@@ -49,7 +48,7 @@
             </div>
           </div>
         </panel>
-        <panel header="**Don't Recycle Variables or Parameters**" type="seamless" alt="indentation">
+        <panel header="**Don't Recycle Variables or Parameters**" type="seamless">
           <div>
             <div>
               <ul>
@@ -75,14 +74,14 @@
             </div>
           </div>
         </panel>
-        <panel header="**Avoid Empty Catch Blocks**" type="seamless" alt="indentation">
+        <panel header="**Avoid Empty Catch Blocks**" type="seamless">
           <div>
             <div>
-              <p>Never write an empty 'catch' statement.</p>
+              <p>Never write an empty <code>catch</code> statement. At least give a comment to explain why the <code>catch</code> block is left empty.</p>
             </div>
           </div>
         </panel>
-        <panel header="**Delete Dead Code**" type="seamless" alt="indentation">
+        <panel header="**Delete Dead Code**" type="seamless">
           <div>
             <div>
               <p>We all feel reluctant to delete code we have painstakingly written, even if we have no use for that code any more (&quot;I spent a lot of time writing that code; what if we need it again?&quot;). Consider all code as baggage you have to
@@ -95,30 +94,39 @@
         <div>
           <panel header=":muscle: Exercises" expandable="">
             <div>
-              <panel header=":lock::key: Which one of these is NOT a bad practice?">
+              <panel header=":lock::key: Which oare unsafe practices?">
                 <question>
-                  <p>Which one of these is NOT a bad practice?</p>
-                  <p>A) Case statements without a ‘default’ clause</p>
-                  <p>B) Omitting braces when a code block has only one statement</p>
-                  <p>e.g writing this</p>
-                  <pre class="hljs"><code>if(isProper)
+                  <p>Which of these are unsafe coding practices?</p>
+                  <ul class="task-list">
+                    <li class="task-list-item">
+                      <p><input class="task-list-item-checkbox" type="checkbox"> a. <code>case</code> statements without a <code>default</code> clause</p>
+                    </li>
+                    <li class="task-list-item">
+                      <p><input class="task-list-item-checkbox" type="checkbox"> b. Omitting braces when a code block has only one statement</p>
+                      <p>e.g writing this</p>
+                      <pre class="hljs"><code>if(isProper)
     return PROPER_AMOUNT;
 </code></pre>
-                  <p>instead of</p>
-                  <pre class="hljs"><code>if(isProper){
+                      <p>instead of</p>
+                      <pre class="hljs"><code>if(isProper){
     return PROPER_AMOUNT;
 }
 </code></pre>
-                  <p>C) Using a variable just to explain what’s going on</p>
-                  <p>e.g.,</p>
-                  <pre class="hljs"><code>boolean isProper = notNull &amp;&amp; notEmpty;
+                    </li>
+                    <li class="task-list-item">
+                      <p><input class="task-list-item-checkbox" type="checkbox"> c. Using a variable just to explain what’s going on</p>
+                      <p>e.g.writing this</p>
+                      <pre class="hljs"><code>boolean isProper = notNull &amp;&amp; notEmpty;
 return isProper;
 </code></pre>
-                  <p>instead of</p>
-                  <pre class="hljs"><code>return notNull &amp;&amp; notEmpty;
+                      <p>instead of</p>
+                      <pre class="hljs"><code>return notNull &amp;&amp; notEmpty;
 </code></pre>
+                    </li>
+                  </ul>
                   <div slot="answer">
-                    <p>C). The extra variable helps to make the code more understandable because it makes the intent of the formula clearer. The other two are error-prone shortcuts to be avoided.</p>
+                    <p>a, b.</p>
+                    <p>Reason why [c] is not a bad practice: The extra variable helps to make the code more understandable because it makes the intent of the formula clearer.</p>
                   </div>
                 </question>
               </panel>

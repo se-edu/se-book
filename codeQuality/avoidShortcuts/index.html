@@ -48,13 +48,12 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <panel header="**Use the Default Branch**" type="seamless" alt="indentation">
+            <panel header="**Use the Default Branch**" type="seamless">
               <div>
                 <div>
-                  <p>Always include a default branch in case statements.</p>
-                  <p>Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the 'default' branch to detect errors (i.e. if execution reached the 'default' branch, throw an exception).
-                    This also applies to the final 'else' of an if-else construct. That is, the final 'else' should mean 'everything else', and not the final option. Do not use 'else' when an 'if' condition can be explicitly specified, unless there is
-                    absolutely no other possibility.</p>
+                  <p>Always include a default branch in <code>case</code> statements.</p>
+                  <p>Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the 'default' branch to detect errors (i.e. if execution reached the <code>default</code> branch,
+                    throw an exception). This also applies to the final <code>else</code> of an <code>if-else</code> construct. That is, the final <code>else</code> should mean 'everything else', and not the final option. Do not use <code>else</code>                    when an <code>if</code> condition can be explicitly specified, unless there is absolutely no other possibility.</p>
                   <tip-box>
                     <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
                     <pre><code class="hljs java"><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;
@@ -69,7 +68,7 @@
                 </div>
               </div>
             </panel>
-            <panel header="**Don't Recycle Variables or Parameters**" type="seamless" alt="indentation">
+            <panel header="**Don't Recycle Variables or Parameters**" type="seamless">
               <div>
                 <div>
                   <ul>
@@ -95,14 +94,14 @@
                 </div>
               </div>
             </panel>
-            <panel header="**Avoid Empty Catch Blocks**" type="seamless" alt="indentation">
+            <panel header="**Avoid Empty Catch Blocks**" type="seamless">
               <div>
                 <div>
-                  <p>Never write an empty 'catch' statement.</p>
+                  <p>Never write an empty <code>catch</code> statement. At least give a comment to explain why the <code>catch</code> block is left empty.</p>
                 </div>
               </div>
             </panel>
-            <panel header="**Delete Dead Code**" type="seamless" alt="indentation">
+            <panel header="**Delete Dead Code**" type="seamless">
               <div>
                 <div>
                   <p>We all feel reluctant to delete code we have painstakingly written, even if we have no use for that code any more (&quot;I spent a lot of time writing that code; what if we need it again?&quot;). Consider all code as baggage you have
@@ -115,30 +114,39 @@
             <div>
               <panel header=":muscle: Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: Which one of these is NOT a bad practice?">
+                  <panel header=":lock::key: Which oare unsafe practices?">
                     <question>
-                      <p>Which one of these is NOT a bad practice?</p>
-                      <p>A) Case statements without a ‘default’ clause</p>
-                      <p>B) Omitting braces when a code block has only one statement</p>
-                      <p>e.g writing this</p>
-                      <pre class="hljs"><code>if(isProper)
+                      <p>Which of these are unsafe coding practices?</p>
+                      <ul class="task-list">
+                        <li class="task-list-item">
+                          <p><input class="task-list-item-checkbox" type="checkbox"> a. <code>case</code> statements without a <code>default</code> clause</p>
+                        </li>
+                        <li class="task-list-item">
+                          <p><input class="task-list-item-checkbox" type="checkbox"> b. Omitting braces when a code block has only one statement</p>
+                          <p>e.g writing this</p>
+                          <pre class="hljs"><code>if(isProper)
     return PROPER_AMOUNT;
 </code></pre>
-                      <p>instead of</p>
-                      <pre class="hljs"><code>if(isProper){
+                          <p>instead of</p>
+                          <pre class="hljs"><code>if(isProper){
     return PROPER_AMOUNT;
 }
 </code></pre>
-                      <p>C) Using a variable just to explain what’s going on</p>
-                      <p>e.g.,</p>
-                      <pre class="hljs"><code>boolean isProper = notNull &amp;&amp; notEmpty;
+                        </li>
+                        <li class="task-list-item">
+                          <p><input class="task-list-item-checkbox" type="checkbox"> c. Using a variable just to explain what’s going on</p>
+                          <p>e.g.writing this</p>
+                          <pre class="hljs"><code>boolean isProper = notNull &amp;&amp; notEmpty;
 return isProper;
 </code></pre>
-                      <p>instead of</p>
-                      <pre class="hljs"><code>return notNull &amp;&amp; notEmpty;
+                          <p>instead of</p>
+                          <pre class="hljs"><code>return notNull &amp;&amp; notEmpty;
 </code></pre>
+                        </li>
+                      </ul>
                       <div slot="answer">
-                        <p>C). The extra variable helps to make the code more understandable because it makes the intent of the formula clearer. The other two are error-prone shortcuts to be avoided.</p>
+                        <p>a, b.</p>
+                        <p>Reason why [c] is not a bad practice: The extra variable helps to make the code more understandable because it makes the intent of the formula clearer.</p>
                       </div>
                     </question>
                   </panel>
@@ -162,37 +170,57 @@ return isProper;
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <panel header="**Minimise Scope of Variables**" type="seamless" alt="indentation">
+            <panel header="**Minimise Scope of Variables**" type="seamless">
               <div>
                 <div>
-                  <p>Global variables may be the most convenient way to pass information around, but they do create implicit links between code segments that use the global variable. Avoid them as much as possible.</p>
-                </div>
-              </div>
-            </panel>
-            <panel header="**Prefer Stateless Methods**" type="seamless" alt="indentation">
-              <div>
-                <div>
-                  <p>{to be added}</p>
-                </div>
-              </div>
-            </panel>
-            <panel header="**Minimise Code Duplication**" type="seamless" alt="indentation">
-              <div>
-                <div>
-                  <p>The book &quot;<a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X">The Pragmatic Programmer</a>&quot; calls this the DRY (Don't Repeat Yourself) principle. Code duplication, especially when you copy-paste-modify
-                    code, often indicates a poor quality implementation. While it may not be possible to have zero duplication, always think twice before duplicating code; most often there is a better alternative.</p>
+                  <p><strong>Minimize global variables</strong>. Global variables may be the most convenient way to pass information around, but they do create implicit links between code segments that use the global variable. Avoid them as much as possible.</p>
+                  <p><strong>Define variables in the least possible scope</strong>. For example, if the variable is used only within the <code>if</code> block of the conditional statement, it should be declared inside that <code>if</code> block.</p>
                   <blockquote>
-                    <p>Programs should be written and polished until they acquire publication quality.</p>
-                    <p>--<a href="https://en.wikipedia.org/wiki/Niklaus_Wirth">Niklaus Wirth</a></p>
+                    <p><strong>The most powerful technique for minimizing the scope of a local variable is to declare it where it is first used.</strong><sub>-- <em>Effective Java</em>, by Joshua Bloch</sub></p>
                   </blockquote>
+                  <p>📎 Resources:</p>
+                  <ul>
+                    <li><a href="https://refactoring.com/catalog/reduceScopeOfVariable.html">Refactoring: Reduce Scope of Variable</a></li>
+                  </ul>
                 </div>
               </div>
             </panel>
-            <panel header="**Delete Temporary Code**" type="seamless" alt="indentation">
+            <panel header="**Minimise Code Duplication**" type="seamless">
               <div>
                 <div>
-                  <p>We all get into situations where we need to write some code momentarily that we intend to dispose of replace with better code later. Such code should be marked in some obvious way (e.g. using an embarrassing print message) so that you
-                    will not forget to remove them later. It is irresponsible to retain such code in a product release.</p>
+                  <p><strong>Code duplication, especially when you copy-paste-modify code, often indicates a poor quality implementation.</strong> While it may not be possible to have zero duplication, always think twice before duplicating code; most often
+                    there is a better alternative.</p>
+                  <p>This guideline is closely related to the
+                    <trigger for="modal:duplication-dry" trigger="click">DRY Principle
+                      <trigger>.</trigger>
+                    </trigger>
+                  </p>
+                  <modal title="**:mag: DRY Principle**" id="modal:duplication-dry">
+                    <div>
+                      <p><span class="dimmed"><strong><span>Supplmentary → Principles →
+</span></strong>
+                        </span>
+                      </p>
+                      <div>
+                        <h4 id="dry-principle-three">DRY Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <tip-box type="primary">
+                            <div>
+                              <p><strong>DRY (Don't Repeat Yourself) Principle</strong>: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub><em>The Pragmatic Programmer</em>, by Andy Hunt and Dave Thomas</sub></p>
+                            </div>
+                          </tip-box>
+                          <p>This principle guards against duplication of information. The functionality implemented twice is a violation of the DRY principle even if the two implementations are different. Similarly, the value a system-wide timeout being
+                            defined in multiple places is a violation of DRY.</p>
+                        </div>
+                        <div>
+                          <div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </modal>
+                  <p></p>
                 </div>
               </div>
             </panel>

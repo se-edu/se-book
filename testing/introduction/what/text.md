@@ -25,8 +25,8 @@
 
 :package: Example: A minimal test case for testing a browser:
 
-* **Input** – Start the browser using a blank page (vertical scrollbar disabled). Then, load ‘longfile.html’ located in the ‘test data’ folder.
-* **Expected behavior** – The scrollbar should be automatically enabled upon loading ‘longfile.html’.
+* **Input** – Start the browser using a blank page (vertical scrollbar disabled). Then, load `longfile.html` located in the `test data` folder.
+* **Expected behavior** – The scrollbar should be automatically enabled upon loading `longfile.html`.
 
 </tip-box>
 
@@ -62,10 +62,7 @@ For each test case we do the following:
 
 Here is another definition of testing:
 
-> Software testing consists of the _dynamic_ verification that a program provides _expected_ behaviors on a _finite_ set of test cases,
-> suitably _selected_ from the usually infinite execution domain.
->
-> -– source: SWEBOKv3
+> Software testing consists of the _dynamic_ verification that a program provides _expected_ behaviors on a _finite_ set of test cases, suitably _selected_ from the usually infinite execution domain. <sub>-– source: [Software Engineering Book of Knowledge V3](https://www.computer.org/web/swebok/v3)</sub>
 
 Some things to note (indicated by keywords in the above definition):
 

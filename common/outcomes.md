@@ -807,16 +807,14 @@
 
 <dynamic-panel src="../intellij/debuggingBasic/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../intellij/debuggingBasic/outcomes.md" inline />
 
-<dynamic-panel src="../intellij/debuggingIntermediate/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../intellij/debuggingIntermediate/outcomes.md" inline />
-
 <dynamic-panel src="../intellij/refactoring/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../intellij/refactoring/outcomes.md" inline />
 
 
 ### Git and GitHub
 
-<dynamic-panelrc="../gitAndGithub/init/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../gitAndGithub/init/outcomes.md" inline />
+<dynamic-panel src="../gitAndGithub/init/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../gitAndGithub/init/outcomes.md" inline />
 
-<dynamic-panelrc="../gitAndGithub/commit/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../gitAndGithub/commit/outcomes.md" inline />
+<dynamic-panel src="../gitAndGithub/commit/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../gitAndGithub/commit/outcomes.md" inline />
 
 <dynamic-panel src="../gitAndGithub/ignore/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../gitAndGithub/ignore/outcomes.md" inline />
 

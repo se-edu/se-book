@@ -12,8 +12,7 @@
 
 <div id="body">
 
-<panel header="**Make the Happy Path Prominent**"
-    type="seamless" alt="indentation">
+<panel header="**Make the Happy Path Prominent**" type="seamless">
   <include src="../../practices/makeHappyPathProminent/index.md#main" />
 </panel>
 

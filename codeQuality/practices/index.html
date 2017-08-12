@@ -39,6 +39,9 @@
       <div>
         <p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate the final
           value).</p>
+        <blockquote>
+          <p>The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. <sub>-- Edsger Dijkstra</sub></p>
+        </blockquote>
       </div>
     </div>
   </panel>
@@ -58,11 +61,11 @@
             <tbody>
               <tr>
                 <td><code>return 3.14236;</code></td>
-                <td><code>return 9</code></td>
+                <td><code>return PI</code></td>
               </tr>
               <tr>
-                <td><code>return PI</code></td>
-                <td><code>MAX_SIZE-1</code></td>
+                <td><code>return 9</code></td>
+                <td><code>return MAX_SIZE-1</code></td>
               </tr>
             </tbody>
           </table>
@@ -117,19 +120,13 @@
   <panel type="seamless" header="**Practice KISSing**" alt="practice KISSing">
     <div>
       <div>
-        <p>As the old adage goes, &quot;keep it simple, stupid” (KISS). Do not try to write ‘clever’ code. For example, do not dismiss the brute-force yet simple solution in favor of a complicated one because of some ‘supposed benefits’ such as faster performance
-          or better reuse unless you have a strong justification.</p>
+        <p>As the old adage goes, <strong>&quot;keep it simple, stupid” (KISS).  Do not try to write ‘clever’ code.</strong> For example, do not dismiss the brute-force yet simple solution in favor of a complicated one because of some ‘supposed benefits’
+          such as 'better reusability' unless you have a strong justification.</p>
         <blockquote>
-          <p>Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.</p>
-          <p>--Brian W. Kernighan</p>
+          <p>Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it. <sub>--Brian W. Kernighan </sub></p>
         </blockquote>
         <blockquote>
-          <p>Programs must be written for people to read, and only incidentally for machines to execute.</p>
-          <p>--Abelson and Sussman</p>
-        </blockquote>
-        <blockquote>
-          <p>Premature optimization is the root of all evil in programming.</p>
-          <p>--<a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a></p>
+          <p>Programs must be written for people to read, and only incidentally for machines to execute. <sub>--Abelson and Sussman</sub></p>
         </blockquote>
       </div>
     </div>
@@ -152,7 +149,7 @@ processData();
 displayResult();
 </code></pre>
         </tip-box>
-        <tip-box type="primary">
+        <tip-box type="info">
           <div>
             <p><strong>Abstraction</strong>:</p>
             <p>Most programs are written to solve complex problems involving large amounts of intricate details. It is impossible to deal with all these details at the same time. The guiding principle of abstraction stipulates that we capture only details
@@ -169,14 +166,14 @@ displayResult();
   <panel type="seamless" header="**Make the Happy Path Prominent**" alt="happy path">
     <div>
       <div>
-        <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unintended. It is the ‘unusual’ cases that should be indented. Someone reading the
-          code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
+        <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unintended as much as possible. It is the ‘unusual’ cases that should be indented.
+          Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
         <tip-box>
           <p>Example:</p>
           <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
-          <pre><code class="hljs java"><span class="hljs-keyword">if</span> (!isUnusualCase) {
+          <pre><code class="hljs java"><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span>
     <span class="hljs-keyword">if</span> (!isErrorCase) {
-        start();
+        start();    <span class="hljs-comment">//main path</span>
         process();
         cleanup();
         exit();
@@ -184,11 +181,12 @@ displayResult();
         handleError();
     }
 } <span class="hljs-keyword">else</span> {
-    handleUnusualCase();
+    handleUnusualCase(); <span class="hljs-comment">//handling that unusual condition</span>
 }
 </code></pre>
+          <p>In the code above,</p>
           <ul>
-            <li>Alternative conditions are separated from their handling.</li>
+            <li>Unusual condition detection is separated from their handling.</li>
             <li>Main path is nested deeply.</li>
           </ul>
           <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
@@ -207,9 +205,10 @@ process();
 cleanup();
 exit();
 </code></pre>
+          <p>In the contrast, the above code</p>
           <ul>
-            <li>Alternative paths dealt with first so that the reader doesn't have to remember them for long.</li>
-            <li>The main path is un-indented.</li>
+            <li>deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.</li>
+            <li>keeps the main path un-indented.</li>
           </ul>
         </tip-box>
       </div>
@@ -220,10 +219,8 @@ exit();
     <div>
       <div>
         <p><strong>Use nouns for classes/variables and verbs for methods/functions.</strong></p>
-        <p>Use nouns for classes/variables and verbs for methods. For example, <code>LimitChecker</code> is a better choice for a class name than <code>CheckLimit</code></p>
-        <p>Distinguish clearly between single valued and multivalued variables (e.g. <code>Person</code> student, <code>ArrayList&lt;Person&gt;</code> students).</p>
         <tip-box>
-          <p>Example:</p>
+          <p>Examples:</p>
           <table class="markbind-table table">
             <thead>
               <tr>
@@ -246,26 +243,72 @@ exit();
             </tbody>
           </table>
         </tip-box>
+        <p><strong>Distinguish clearly between single valued and multivalued variables.</strong></p>
+        <tip-box>
+          <p>Examples:</p>
+          <p><code>Person student</code><br><code>ArrayList&lt;Person&gt; students</code></p>
+          <p></p>
+        </tip-box>
       </div>
     </div>
   </panel>
   <panel type="seamless" header="**Use Standard Words**" alt="standard words">
     <div>
       <div>
-        <p>Use correct spelling in names. Avoid 'texting-style' spelling. Avoid foreign language words, slang, and names that are only meaningful within specific contexts such as private jokes.</p>
+        <p>Use correct spelling in names. Avoid 'texting-style' spelling. <strong>Avoid foreign language words, slang, and names that are only meaningful within specific contexts/times</strong><span class="dimmed">e.g. terms from private jokes, a TV show currently popular in your country</span></p>
       </div>
     </div>
   </panel>
   <panel type="seamless" header="**Use Name to Explain**" alt="name explain">
     <div>
       <div>
-        <p>A name is not just for differentiation; it should explain the named entity to the reader in an accurately and at a sufficient level of detail.</p>
-        <p>For example, <code>processStuff()</code> is a bad choice for a method; what 'stuff' and what 'process'?. On the other hand, <code>removeWhiteSpaceFromInput()</code> is a better choice. Other bad examples include <code>flag</code>, <code>temp</code>,
-          <code>i</code> (unless used as a conventional control variable for a loop).</p>
-        <p>If the name has multiple words, they should be in a sensible order.</p>
-        <p>Imagine going to the doctor's and saying &quot;My eye1 is swollen&quot;! Don’t use numbers or case to distinguish names (<code>value1</code> vs <code>value2</code>, <code>Value</code> vs <code>value</code>) unless there is a strong justification.</p>
+        <p><strong>A name is not just for differentiation; it should explain the named entity to the reader in an accurately and at a sufficient level of detail.</strong></p>
         <tip-box>
-          <p>Example:</p>
+          <p>Examples:</p>
+          <table class="markbind-table table">
+            <thead>
+              <tr>
+                <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
+                <th><img src="/se-book/images/Good.png" alt="" title="Good"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>processInput()</code> (what 'process'?)</td>
+                <td><code>removeWhiteSpaceFromInput()</code></td>
+              </tr>
+              <tr>
+                <td><code>flag</code></td>
+                <td><code>isValidInput</code></td>
+              </tr>
+              <tr>
+                <td><code>temp</code></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </tip-box>
+        <p><strong>If the name has multiple words, they should be in a sensible order.</strong></p>
+        <tip-box>
+          <p>Examples:</p>
+          <table class="markbind-table table">
+            <thead>
+              <tr>
+                <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
+                <th><img src="/se-book/images/Good.png" alt="" title="Good"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>bySizeOrder()</code></td>
+                <td><code>orderBySize()</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </tip-box>
+        <p>Imagine going to the doctor's and saying &quot;My eye1 is swollen&quot;! Don’t use numbers or case to distinguish names.</p>
+        <tip-box>
+          <p>Examples:</p>
           <table class="markbind-table table">
             <thead>
               <tr>
@@ -296,9 +339,63 @@ exit();
   <panel type="seamless" header="**Avoid Misleading Names**" alt="misleading names">
     <div>
       <div>
-        <p>Related things should be named similarly, while unrelated things should NOT.</p>
-        <p>Avoid misleading names (e.g. those with multiple meanings), similar sounding names, hard to read ones (e.g. avoid ambiguities like &quot;is that a lowercase L, capital I or number 1?&quot;, or &quot;is that number 0 or letter O?&quot;), almost
-          similar names.</p>
+        <p><strong>Related things should be named similarly, while unrelated things should NOT.</strong></p>
+        <tip-box>
+          <p>Example: Consider these variables</p>
+          <ul>
+            <li><code>colorBlack</code> : hex value for color black</li>
+            <li><code>colorWhite</code> : hex value for color white</li>
+            <li><code>colorBlue</code> : number of times blue is used</li>
+            <li><code>hexForRed</code> : : hex value for color red</li>
+          </ul>
+          <p>This is misleading because <code>colorBlue</code> is named similar to <code>colorWhite</code> and <code>colorBlack</code> but has a different purpose while <code>hexForRed</code> is named differently but has very similar purpose to the first
+            two variables. The following is better:</p>
+          <ul>
+            <li><code>hexForBlack</code><code>hexForWhite</code><code>hexForRed</code></li>
+            <li><code>blueColorCount</code></li>
+          </ul>
+        </tip-box>
+        <p>Avoid misleading or ambiguous names (e.g. those with multiple meanings), similar sounding names, hard-to-pronounce ones (e.g. avoid ambiguities like &quot;is that a lowercase L, capital I or number 1?&quot;, or &quot;is that number 0 or letter
+          O?&quot;), almost similar names.</p>
+        <tip-box>
+          <p>Examples:</p>
+          <table class="markbind-table table">
+            <thead>
+              <tr>
+                <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
+                <th><img src="/se-book/images/Good.png" alt="" title="Good"></th>
+                <th>Reason</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>phase0</code></td>
+                <td><code>phaseZero</code></td>
+                <td>Is that zero or letter O?</td>
+              </tr>
+              <tr>
+                <td><code>rwrLgtDirn</code></td>
+                <td><code>rowerLegitDirection</code></td>
+                <td>Hard to pronounce</td>
+              </tr>
+              <tr>
+                <td><code>right</code><code>left</code><code>wrong</code></td>
+                <td><code>rightDirection</code><code>leftDirection</code><code>wrongResponse</code></td>
+                <td><code>right</code> is for 'correct' or 'opposite of 'left'?</td>
+              </tr>
+              <tr>
+                <td><code>redBooks</code><code>readBooks</code></td>
+                <td><code>redColorBooks</code><code>booksRead</code></td>
+                <td><code>red</code> and <code>read</code> (past tense) sounds the same</td>
+              </tr>
+              <tr>
+                <td><code>FiletMignon</code></td>
+                <td><code>egg</code></td>
+                <td>If the requirement is just a name of a food, <code>egg</code> is a much easier to type/say choice than <code>FiletMignon</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </tip-box>
       </div>
     </div>
   </panel>
@@ -306,10 +403,9 @@ exit();
   <panel type="seamless" header="**Use the Default Branch**" alt="default branch">
     <div>
       <div>
-        <p>Always include a default branch in case statements.</p>
-        <p>Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the 'default' branch to detect errors (i.e. if execution reached the 'default' branch, throw an exception).
-          This also applies to the final 'else' of an if-else construct. That is, the final 'else' should mean 'everything else', and not the final option. Do not use 'else' when an 'if' condition can be explicitly specified, unless there is absolutely
-          no other possibility.</p>
+        <p>Always include a default branch in <code>case</code> statements.</p>
+        <p>Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the 'default' branch to detect errors (i.e. if execution reached the <code>default</code> branch, throw an
+          exception). This also applies to the final <code>else</code> of an <code>if-else</code> construct. That is, the final <code>else</code> should mean 'everything else', and not the final option. Do not use <code>else</code> when an <code>if</code>          condition can be explicitly specified, unless there is absolutely no other possibility.</p>
         <tip-box>
           <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
           <pre><code class="hljs java"><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;
@@ -353,7 +449,7 @@ exit();
   <panel type="seamless" header="**Avoid Empty Catch Blocks**" alt="empty catch blocks">
     <div>
       <div>
-        <p>Never write an empty 'catch' statement.</p>
+        <p>Never write an empty <code>catch</code> statement. At least give a comment to explain why the <code>catch</code> block is left empty.</p>
       </div>
     </div>
   </panel>
@@ -368,34 +464,54 @@ exit();
   <panel type="seamless" header="**Minimise Scope of Variables**" alt="variable scope">
     <div>
       <div>
-        <p>Global variables may be the most convenient way to pass information around, but they do create implicit links between code segments that use the global variable. Avoid them as much as possible.</p>
-      </div>
-    </div>
-  </panel>
-  <panel type="seamless" header="**Prefer Stateless Methods**" alt="stateless methods">
-    <div>
-      <div>
-        <p>{to be added}</p>
+        <p><strong>Minimize global variables</strong>. Global variables may be the most convenient way to pass information around, but they do create implicit links between code segments that use the global variable. Avoid them as much as possible.</p>
+        <p><strong>Define variables in the least possible scope</strong>. For example, if the variable is used only within the <code>if</code> block of the conditional statement, it should be declared inside that <code>if</code> block.</p>
+        <blockquote>
+          <p><strong>The most powerful technique for minimizing the scope of a local variable is to declare it where it is first used.</strong><sub>-- <em>Effective Java</em>, by Joshua Bloch</sub></p>
+        </blockquote>
+        <p>📎 Resources:</p>
+        <ul>
+          <li><a href="https://refactoring.com/catalog/reduceScopeOfVariable.html">Refactoring: Reduce Scope of Variable</a></li>
+        </ul>
       </div>
     </div>
   </panel>
   <panel type="seamless" header="**Minimise Code Duplication**" alt="minimise duplication">
     <div>
       <div>
-        <p>The book &quot;<a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X">The Pragmatic Programmer</a>&quot; calls this the DRY (Don't Repeat Yourself) principle. Code duplication, especially when you copy-paste-modify
-          code, often indicates a poor quality implementation. While it may not be possible to have zero duplication, always think twice before duplicating code; most often there is a better alternative.</p>
-        <blockquote>
-          <p>Programs should be written and polished until they acquire publication quality.</p>
-          <p>--<a href="https://en.wikipedia.org/wiki/Niklaus_Wirth">Niklaus Wirth</a></p>
-        </blockquote>
-      </div>
-    </div>
-  </panel>
-  <panel type="seamless" header="**Delete Temporary Code**" alt="temporary code">
-    <div>
-      <div>
-        <p>We all get into situations where we need to write some code momentarily that we intend to dispose of replace with better code later. Such code should be marked in some obvious way (e.g. using an embarrassing print message) so that you will not
-          forget to remove them later. It is irresponsible to retain such code in a product release.</p>
+        <p><strong>Code duplication, especially when you copy-paste-modify code, often indicates a poor quality implementation.</strong> While it may not be possible to have zero duplication, always think twice before duplicating code; most often there is
+          a better alternative.</p>
+        <p>This guideline is closely related to the
+          <trigger for="modal:duplication-dry" trigger="click">DRY Principle
+            <trigger>.</trigger>
+          </trigger>
+        </p>
+        <modal title="**:mag: DRY Principle**" id="modal:duplication-dry">
+          <div>
+            <p><span class="dimmed"><strong><span>Supplmentary → Principles →
+</span></strong>
+              </span>
+            </p>
+            <div>
+              <h4 id="dry-principle-three">DRY Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+            </div>
+            <div id="main">
+              <div>
+                <tip-box type="primary">
+                  <div>
+                    <p><strong>DRY (Don't Repeat Yourself) Principle</strong>: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub><em>The Pragmatic Programmer</em>, by Andy Hunt and Dave Thomas</sub></p>
+                  </div>
+                </tip-box>
+                <p>This principle guards against duplication of information. The functionality implemented twice is a violation of the DRY principle even if the two implementations are different. Similarly, the value a system-wide timeout being defined in
+                  multiple places is a violation of DRY.</p>
+              </div>
+              <div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </modal>
+        <p></p>
       </div>
     </div>
   </panel>

@@ -1,4 +1,4 @@
-Select the two points you want to compare using `Ctrl+Click`
+Select the two points you want to compare using `Ctrl+Click`.
 
 <img src="{{baseUrl}}/gitAndGithub/checkout/images/sourcetree_2.png" height="200" />
 <p/>
