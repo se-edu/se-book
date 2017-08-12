@@ -54,9 +54,13 @@
 <include src="conceptualizingSolution/basic/print.md" />
 <include src="conceptualizingSolution/intermediate/print.md" />
 
-## FAQ
+## Miscellaneous
 
-<include src="faq/print.md" />
+<include src="miscellaneous/print.md" />
+
+## Review
+
+<include src="review/print.md" />
 
 </div>
 

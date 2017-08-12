@@ -6,7 +6,7 @@
 
 <div id="title">
 
-#### FAQ :three:
+#### Miscellaneous :three:
 
 </div>
 
