@@ -49,7 +49,7 @@
 ## FAQ
 <panel header="================================================================"
     type="seamless" alt="faq">
-  <include src="faq/index.md#main" />
+  <include src="faq/embed.md" />
 </panel>
 
 ## Review
