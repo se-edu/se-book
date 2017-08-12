@@ -58,6 +58,10 @@
 
 <include src="faq/print.md" />
 
+## Review
+
+<include src="review/print.md" />
+
 </div>
 
 </div>

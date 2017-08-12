@@ -36,6 +36,10 @@
 <include src="modelingBehaviors/communicationDiagrams/print.md" />
 <include src="modelingBehaviors/stateMachineDiagrams/print.md" />
 
+## Review
+
+<include src="review/print.md" />
+
 </div>
 
 </div>

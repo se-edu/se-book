@@ -52,4 +52,10 @@
   <include src="faq/index.md#main" />
 </panel>
 
+## Review
+<panel header="================================================================"
+    type="seamless" alt="review">
+  <include src="review/embed.md" />
+</panel>
+
 </div>
