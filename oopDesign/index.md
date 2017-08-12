@@ -46,10 +46,10 @@
   <include src="conceptualizingSolution/index.md#main" />
 </panel>
 
-## FAQ
+## Miscellaneous
 <panel header="================================================================"
-    type="seamless" alt="faq">
-  <include src="faq/embed.md" />
+    type="seamless" alt="miscellaneous">
+  <include src="miscellaneous/embed.md" />
 </panel>
 
 ## Review

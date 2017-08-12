@@ -166,7 +166,7 @@
 <dynamic-panel src="../oopDesign/conceptualizingSolution/intermediate/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/conceptualizingSolution/intermediate/outcomes.md" inline />
 
 
-<dynamic-panel src="../oopDesign/faq/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/faq/outcomes.md" inline />
+<dynamic-panel src="../oopDesign/miscellaneous/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/miscellaneous/outcomes.md" inline />
 
 <dynamic-panel src="../oopDesign/review/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/review/outcomes.md" inline />
 
