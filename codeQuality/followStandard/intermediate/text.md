@@ -12,7 +12,7 @@
 
 <div id="body">
 
-Go through the [provided Java coding standard](https://github.com/oss-generic/process/blob/master/codingStandards/CodingStandard-Java.md) and learn the _intermediate_ style rules.
+Go through the [provided Java coding standard](https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html) and learn the _intermediate_ style rules.
 
 </div>
 
