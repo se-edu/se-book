@@ -63,6 +63,18 @@ Video describing X
 
 </tip-box>
 
+**Dotted underlines indicate <trigger for="pop:tooltip-example">tool tips</trigger>** (activated by hovering over it) and **dashed underlines indicate <trigger for="modal:modal-example" trigger="click">modal windows</trigger>** (activated by clicking) containing additional information.
+
+<popover id="pop:tooltip-example" title="Tooltip Example" placement="top">
+  <div slot="content">
+    Additional information
+  </div>
+</popover>
+
+<modal title="Modal Example" id="modal:modal-example">
+  Additional information
+</modal>
+
 **Sections tagged as :zero: can be ignored because they are tangential info** that are strictly not within the scope of the topic.
 
 </div>
