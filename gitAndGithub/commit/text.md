@@ -6,7 +6,7 @@
 
 <div id="title">
 
-#### Commit :one:
+#### Commit :one: [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/gitAndGithub/commit/index.html)
 
 </div>
 

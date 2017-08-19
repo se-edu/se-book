@@ -2,7 +2,7 @@
 
 <div id="title">
 
-#### What :one:
+#### What :one: [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/testing/testingTypes/regressionTesting/what/index.html)
 
 </div>
 

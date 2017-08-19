@@ -6,7 +6,7 @@
 
 <div id="title">
 
-#### What :one:
+#### What :one: [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/testing/introduction/what/index.html)
 
 </div>
 

@@ -2,7 +2,7 @@
 
 <div id="title">
 
-#### Pros and Cons :two:
+#### Pros and Cons :two: [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/softwareEngineering/prosAndCons/index.html)
 
 </div>
 
