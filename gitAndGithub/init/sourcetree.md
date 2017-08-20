@@ -1,6 +1,7 @@
-Click `File` &rarr; `Clone/New…`
+Windows: Click `File` &rarr; `Clone/New…`. Click on `Create` button.<br>
+Mac: `New...` &rarr; `Create New Repository`.
 
-Click on `Create` button and enter the location of the directory as shown below. Click `Create`
+Enter the location of the directory (Windows version shown below) and click `Create`.
 
 <img src="{{baseUrl}}/gitAndGithub/init/images/sourcetree_1.png" height="220" />
 <p/>
