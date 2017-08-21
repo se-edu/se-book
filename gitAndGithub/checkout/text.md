@@ -34,7 +34,7 @@ Git can also show you the difference between two points in the history of the re
   <hr></tab>
 </tabs>
 
-Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to stash them first to prevent them from being overwritten.
+Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to [stash]({{baseUrl}}/gitAndGithub/stash/index.html) them first to prevent them from being overwritten.
 
 <tabs>
   <tab header="SourceTree">

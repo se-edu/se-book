@@ -10,7 +10,7 @@
 
 <div id="body">
 
-**A name is not just for differentiation; it should explain the named entity to the reader in an accurately and at a sufficient level of detail.**
+**A name is not just for differentiation; it should explain the named entity to the reader accurately and at a sufficient level of detail.**
 
 <tip-box>
 

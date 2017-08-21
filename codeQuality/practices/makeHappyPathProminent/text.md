@@ -52,7 +52,7 @@ process();
 cleanup();
 exit();
 ```
-In the contrast, the above code
+In contrast, the above code
 * deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.
 * keeps the main path un-indented.
 

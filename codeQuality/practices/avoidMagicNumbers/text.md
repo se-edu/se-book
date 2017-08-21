@@ -23,7 +23,7 @@ Example:
 
 </tip-box>
 
-As you can see, using a named constant makes the code easier to understand because the name tells us more about the meaning of the number.
+Using a named constant makes the code easier to understand because the name tells us more about the meaning of the number.
 Similarly, we can have ‘magic’ values of other data types.
 
 <tip-box>
