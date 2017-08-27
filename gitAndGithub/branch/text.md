@@ -80,13 +80,13 @@ Observe how the changes you did in the `master` branch (i.e. the imaginary bug f
 <tabs>
   <tab header="SourceTree">
   
-Right-click on the `add-countries` branch and choose `Merge...`. 
+Right-click on the `feature1` branch and choose `Merge...`. 
     
   <hr></tab>
   <tab header="CLI">
   
 ```
-git merge add-countries
+git merge feature1
 ```
     
   <hr></tab>
