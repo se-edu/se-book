@@ -28,17 +28,17 @@
 
 <tip-box>
 
-Consider the following real world scenario:
+:package: A real world scenario viewed as a network of interacting objects:
 
-You are asked to find out the average age of a group of people Adam, Beth, Charlie, and Daisy. Take a piece of paper and pen, go to each person, ask for their age, and note it down. After collecting the age of all four, you enter it into a calculator to find the total. And then, use the same calculator to divide the total by four, to get the average age. This can be viewed as the objects You, Pen, Paper, Calculator, Adam, Beth, Charlie, and Daisy interacting to accomplish to achieve some end result.
+You are asked to find out the average age of a group of people Adam, Beth, Charlie, and Daisy. You take a piece of paper and pen, go to each person, ask for their age, and note it down. After collecting the age of all four, you enter it into a calculator to find the total. And then, use the same calculator to divide the total by four, to get the average age. This can be viewed as the objects You, Pen, Paper, Calculator, Adam, Beth, Charlie, and Daisy interacting to accomplish to achieve some end result.
 
 {visual: real world scenario, objects marked}
-
-</tip-box>
 
 These objects can be considered as connected in a certain network of certain structure.
 
 {visual: object network marked}
+
+</tip-box>
 
 **OOP solutions try to follow a similar object network inside the computer’s memory – a sort of a virtual simulation of the corresponding real world scenario – so that a similar result can be achieved programmatically.**
 
