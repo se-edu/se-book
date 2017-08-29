@@ -1,1 +1,1 @@
-:trophy: Can explain the relationship between classes and object  :one:
+:trophy: Can explain the relationship between classes and objects  :one:

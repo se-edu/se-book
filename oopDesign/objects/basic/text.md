@@ -22,7 +22,7 @@
 > It’s this resemblance to real things that gives objects much of their power and appeal. They can not only model
 > components of real systems, but equally as well fulfill assigned roles as components in software systems.
 >
-> -- [Object-Oriented Programming with Objective-C](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/), Apple
+> <sub>-- [Object-Oriented Programming with Objective-C](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/), Apple </sub>
 
 **Object Oriented Programming (OOP) views the world as a network of interacting objects.**
 
