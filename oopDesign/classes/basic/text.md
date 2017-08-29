@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; Classes &rarr;</div>
-
 <div id="title">
 
 #### Basic :one:
@@ -12,17 +10,21 @@
 
 <div id="body">
 
-Writing an OOP program is essentially writing instructions that the computer uses to create the virtual world of object network and providing it the inputs to produce the outcome we want. It turns out sometimes multiple objects have the same behavior because they are of the same kind. Instructions for creating a one kind (or ‘class’) of objects can be done in one go and use that same instructions to instantiate (i.e. create) objects of that kind. We call such instructions a _Class_.
+**Writing an OOP program is essentially writing instructions that the computer uses to,**
+ 1. **create the virtual world of object network, and**
+ 2. **provide it the inputs to produce the outcome we want.** 
+
+**A ==_class_== contains instructions for creating a specific kind of objects**. It turns out sometimes multiple objects have the same behavior because they are of the same kind. Instructions for creating a one kind (or ‘class’) of objects can be done in one go and use that same instructions to instantiate (i.e. create) objects of that kind. We call such instructions a _Class_.
 
 <tip-box>
 
-Example:
+:package: Classes and objects in an example scenario
 
-When writing an OOP program to calculate the average age, instructions for creating objects Adam, Beth, Charlie, and Daisy will be very similar because they are all of the same kind : they all represent ‘persons’ with same interface, same kind of data (i.e. name, DoB, etc.), and the same kind of behavior (i.e. getAge(Date), getName(), etc.). Therefore, we can have a class called Person containing instructions on how to create Person objects and use that class to instantiate objects Adam, Beth, Charlie, and Daisy. Similarly, we need classes AgeList, Calculator, and Main classes to instantiate one each of AgeList, Calculator, and Main objects.
+When writing an OOP program to calculate the average age of Adam, Beth, Charlie, and Daisy, instructions for creating objects `Adam`, `Beth`, `Charlie`, and `Daisy` will be very similar because they are all of the same kind : they all represent ‘persons’ with the same interface, the same kind of data (i.e. `name`, `DoB`, etc.), and the same kind of behavior (i.e. `getAge(Date)`, `getName()`, etc.). Therefore, we can have a class called `Person` containing instructions on how to create `Person` objects and use that class to instantiate objects `Adam`, `Beth`, `Charlie`, and `Daisy`. Similarly, we need classes `AgeList`, `Calculator`, and `Main` classes to instantiate one each of `AgeList`, `Calculator`, and `Main` objects.
 
 </tip-box>
 
-<dynamic-panel src="../../../uml/classDiagrams/classes/topicPanel.md" header="UML: Class Diagrams: Classes" is-open></dynamic-panel>
+<panel src="../../../uml/classDiagrams/classes/what/full.md" header="UML: Class Diagrams: Classes" />
 <dynamic-panel src="../../../uml/objectDiagrams/objects/embed.md" header="UML: Object Diagrams: Objects" is-open></dynamic-panel>
 
 <p/>
@@ -39,6 +41,9 @@ When writing an OOP program to calculate the average age, instructions for creat
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 <div>
 
 </div>

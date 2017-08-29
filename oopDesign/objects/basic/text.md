@@ -30,30 +30,26 @@
 
 :package: A real world scenario viewed as a network of interacting objects:
 
-You are asked to find out the average age of a group of people Adam, Beth, Charlie, and Daisy. You take a piece of paper and pen, go to each person, ask for their age, and note it down. After collecting the age of all four, you enter it into a calculator to find the total. And then, use the same calculator to divide the total by four, to get the average age. This can be viewed as the objects You, Pen, Paper, Calculator, Adam, Beth, Charlie, and Daisy interacting to accomplish to achieve some end result.
+You are asked to find out the average age of a group of people Adam, Beth, Charlie, and Daisy. You take a piece of paper and pen, go to each person, ask for their age, and note it down. After collecting the age of all four, you enter it into a calculator to find the total. And then, use the same calculator to divide the total by four, to get the average age. This can be viewed as the objects `You`, `Pen`, `Paper`, `Calculator`, `Adam`, `Beth`, `Charlie`, and `Daisy` interacting to accomplish to achieve the end result of calculating the average age of the four persons. These objects can be considered as connected in a certain network of certain structure.
 
-{visual: real world scenario, objects marked}
-
-These objects can be considered as connected in a certain network of certain structure.
-
-{visual: object network marked}
+<!-- TODO {visual: real world scenario, objects and network marked} -->
 
 </tip-box>
 
-**OOP solutions try to follow a similar object network inside the computer’s memory – a sort of a virtual simulation of the corresponding real world scenario – so that a similar result can be achieved programmatically.**
+**OOP solutions try to follow a similar object network inside the computer’s memory** – a sort of a virtual simulation of the corresponding real world scenario – **so that a similar result can be achieved programmatically.**
 
-{visual: Direct mapping}
+<!-- TODO {visual: Direct mapping} -->
 
 **OOP does not demand that the virtual world object network follow the real world exactly.**
 
 <tip-box>
 
-For example, it can be tweaked a bit as follows:
+:package: Our previous example can be tweaked a bit as follows:
 
-* Use an object called Main to represent your role in the scenario.
-* As there is no physical writing involved, we can replace the Pen and Paper with an object called AgeList that is able to keep a list of ages.
+* Use an object called `Main` to represent your role in the scenario.
+* As there is no physical writing involved, we can replace the `Pen` and `Paper` with an object called `AgeList` that is able to keep a list of ages.
 
-{visual: optimizations:  You &rarr; Main; Pen + Paper &rarr; AgeList}
+<!-- TODO {visual: optimizations:  You &rarr; Main; Pen + Paper &rarr; AgeList} -->
 
 </tip-box>
 
@@ -67,16 +63,16 @@ For example, it can be tweaked a bit as follows:
 | Calculator  | x           | x              | Numbers already entered            | Calculate the sum, divide                             |
 | You/Main    | x           | x              | Average age, Sum of ages           | Use other objects to calculate                        |
 
-**Every object has an interface and an implementation.**
+**Every object has an interface and an implementation.** 
 
 Every real world object has an interface that other objects can interact with and an implementation that supports the interface but may not be accessible to the other object.
 
 <tip-box>
 
-Examples:
+:package: The interface and implementation of some real-world objects in our example:
 
 * Calculator: the buttons and the display are part of the interface; circuits are part of the implementation.
-* Adam: In the context of our ‘calculate average age’ example, the interface of Adam consists of requests that adam will respond to, e.g.  “Give age to the nearest year, as at Jan 1st of this year” “State your name”; the implementation includes the mental calculation Adam uses to calculate the age which is not visible to other objects.
+* Adam: In the context of our 'calculate average age' example, the interface of Adam consists of requests that adam will respond to, e.g.  "Give age to the nearest year, as at Jan 1st of this year" "State your name"; the implementation includes the mental calculation Adam uses to calculate the age which is not visible to other objects.
 
 </tip-box>
 
@@ -84,9 +80,9 @@ Similarly, every object in the virtual world has an interface and an implementat
 
 <tip-box>
 
-Examples:
+:package: The interface and implementation of some virtual-world objects in our example:
 
-* Adam: the interface might have a method getAge(Date asAt); the implementation of that method is not visible to other objects.
+* `Adam`: the interface might have a method `getAge(Date asAt)`; the implementation of that method is not visible to other objects.
 
 </tip-box>
 
