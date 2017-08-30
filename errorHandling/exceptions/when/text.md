@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Error Handling &rarr; Exceptions &rarr;</div>
-
 <div id="title">
 
 #### When :three:
@@ -12,7 +10,14 @@
 
 <div id="body">
 
-{to add: do not use exceptions for normal workflow}
+In general, use exceptions only for 'unusual' conditions. Use normal `return` statements to pass control to the caller for conditions that are 'normal'.
+
+<tip-box> 
+
+:paperclip: Resources to learn more about Java Exceptions:
+* [Java Exceptions Tutorial from Oracle](https://docs.oracle.com/javase/tutorial/essential/exceptions/)
+
+</tip-box>
 
 </div>
 
