@@ -10,7 +10,7 @@
 
 <div id="body">
 
-**Exceptions are used to deal with _'unusual' but not entirely unexpected_ situations** that the program might encounter at run time. Exceptions are not program bugs. Rather, they are unusual situations that need to be recovered from, if possible.
+**Exceptions are used to deal with _'unusual' but not entirely unexpected_ situations** that the program might encounter at run time. 
 
 <tip-box type="primary">
 

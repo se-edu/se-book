@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which is not a benefit of exceptions?">
+<panel header=":lock::key: Benefit of exceptions">
 <question>
 
 Which are benefits of exceptions?
