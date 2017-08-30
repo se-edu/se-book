@@ -88,7 +88,7 @@ Similarly, every object in the virtual world has an interface and an implementat
 
 **Objects interact by sending messages.**
 
-Both real world and virtual world object interactions can be viewed as objects sending message to each other. The message can result in the sender object receiving a response and/or the receiving object’s state being changed. Furthermore, the result can vary based on which object received the message, even if the message is identical.
+Both real world and virtual world object interactions can be viewed as objects sending message to each other. The message can result in the sender object receiving a response and/or the receiving object’s state being changed. Furthermore, the result can vary based on which object received the message, even if the message is identical %%(see rows 1 and 2 in the example below)%%.
 
 <tip-box>
 
@@ -97,7 +97,7 @@ Examples:
 | World    | Sender | Receiver                         | Message                              | Response                   | State Change          |
 | :------: |:------:|:--------------------------------:|:------------------------------------:|:--------------------------:|:---------------------:|
 | Real     | You    | Adam                             | "What is your name?"                 | "Adam"                     | -                     |
-| Real     | Same   | Beth                             | Same                                 | "Beth"                     | -                     |
+| Real     | <sub>as above</sub>   | Beth                             | <sub>as above</sub>                                 | "Beth"                     | -                     |
 | Real     | You    | Pen                              | Put nib on paper and apply pressure  | Makes a mark on your paper | Ink level goes down   |
 | Virtual  | Main   | Calculator (current total is 50) | add(int i): int i = 23               | 73                         | total = total + 23    |
 
