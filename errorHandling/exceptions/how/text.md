@@ -32,6 +32,7 @@ Advantages of exception handling in this way:
 
 <div id="extras">
 
+<include src="resources.md" />
 <include src="exercises.md" />
 
 <div>
