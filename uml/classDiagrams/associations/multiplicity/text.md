@@ -1,5 +1,3 @@
-<div id="path">UML &rarr; Class Diagrams &rarr;</div>
-
 <div id="title">
 
 #### Multiplicity :two:
@@ -8,33 +6,34 @@
 
 <div id="body">
 
-A class diagram can also indicate the _multiplicity_ of an association. Multiplicity is the number of objects of a class that participate in the association.
+<img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/association.png" height="120" />
+<p/>
 
 Commonly used multiplicities:
-*	0..1 : optional, can be linked to 0 or 1 objects
-*	1 : compulsory, must be linked to one object at all times.
-*	* : can be linked to 0 or more objects.
-*	n..m : the number of linked objects must be n to m inclusive
+* `0..1` : _optional_, can be linked to 0 or 1 objects
+* `1` : _compulsory_, must be linked to one object at all times.
+* `*` : can be linked to 0 or more objects.
+* `n..m` : the number of linked objects must be `n` to `m` inclusive
 
 <tip-box>
 
-In the diagram below, an Admin object administers (in charge of) any number of students but a Student object must always be under the charge of exactly one Admin object
+:package: In the diagram below, an `Admin` object administers (in charge of) any number of students but a `Student` object must always be under the charge of exactly one `Admin` object
 
-<img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/adminStudent.png" height="100" />
-<p/>
+<img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/adminStudent.png" width="300" />
 
-Example:
-*	Each Student must be supervised by a Professor.
-*	Students have matriculation numbers.  A Professor cannot supervise more than 5 students.
-*	Admin staff handles Professors as well.
+</tip-box>
+<tip-box>
+
+:package: In the diagram below,
+* Each student must be supervised by exactly one professor. i.e. There cannot be a student who doesn't have a supervisor or has multiple supervisors.
+* A professor cannot supervise more than 5 students but can have no students to supervise.
+* An admin can handle any number of professors and any number of students, including none. 
+* A professor/student can be handled by any number of admins, including none.
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/adminProfessorStudent.png" height="70" />
-<p/>
 
 </tip-box>
 
-<img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/association.png" height="120" />
-<p/>
 
 </div>
 

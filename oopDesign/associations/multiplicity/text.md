@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; Associations &rarr;</div>
-
 <div id="title">
 
 #### Multiplicity :two:
@@ -12,9 +10,17 @@
 
 <div id="body">
 
-Another important aspect of setting up an object network is deciding how many objects take part in each association. That aspect is called _multiplicity_.
+**_Multiplicity_ is the aspect of an OOP solution that dictates how many objects take part in each association.** 
 
-<dynamic-panel src="../../../uml/classDiagrams/associations/multiplicity/embed.md" header="UML: Class Diagrams: Associations: Multiplicity" is-open></dynamic-panel>
+<tip-box> 
+
+:package: This class diagram does not tell us multiplicities. For exaple, how many `Calculator` objects can be associated with one `Main` object? How many `Main` objects can be associated with one `Calculator` object? and so on. 
+
+<img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculatorPerson.png" height="100" />
+
+</tip-box>
+
+<dynamic-panel src="../../../uml/classDiagrams/associations/multiplicity/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Multiplicity" />
 
 <p/>
 

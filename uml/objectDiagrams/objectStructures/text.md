@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">UML &rarr; Object Diagrams &rarr;</div>
-
 <div id="title">
 
 #### Object Structures :one:
@@ -19,7 +17,7 @@ Notation:
 
 <tip-box>
 
-Example:
+:package: An example object diagram:
 
 <img src="{{baseUrl}}/uml/objectDiagrams/objectStructures/images/professorStudent.png" height="150" />
 <p/>

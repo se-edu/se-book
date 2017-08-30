@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; Associations &rarr;</div>
-
 <div id="title">
 
 #### Basic :one:
@@ -12,42 +10,49 @@
 
 <div id="body">
 
-Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such connections are called _associations_.
+**Connections between objects are called _associations_.** Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such connections are called _associations_.
 
-<dynamic-panel src="../../../uml/objectDiagrams/objectStructures/embed.md" header="UML: Object Diagrams: Object Structures" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/objectDiagrams/objectStructures/full.md" header=":mortar_board: UML &rarr; Object Diagrams &rarr; Object Structures"></dynamic-panel>
 
 <p/>
 
 <tip-box>
 
-Example:
+:package: An object diagram example showing associations among objects. %%For example, there is an association between the `AgeList` object and the `Main` object.%%
 
 <img src="{{baseUrl}}/oopDesign/associations/basic/images/completeStructure.png" height="120" />
-<p/>
 
 </tip-box>
 
-These object structures can change over time.
+**Object structures can change over time**.
 
 <tip-box>
 
-Example:
+:package: In this example, the object structure has changed %%(from left to right) due to a new `Person` object being added and connected to the `Main` object.%%
 
-<img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculator.png" height="100" />
+<img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculator.png" height="100" /> &nbsp; &rarr; &nbsp; 
 <img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculatorAdam.png" height="100" />
+
+</tip-box>
+
+**Associations can be reflected among classes too.**
+
+<dynamic-panel src="../../../uml/classDiagrams/associations/basic/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Basic"/>
+
+<tip-box> 
+
+:package: An example class diagram showing associations between classes.
+
+<img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculatorPerson.png" height="100" />
 <p/>
 
 </tip-box>
 
-These associations can be reflected among classes too.
+**An association in a class diagram can use _association labels_ and _association roles_ to show additional info.**
 
-<dynamic-panel src="../../../uml/classDiagrams/associations/basic/embed.md" header="UML: Class Diagrams: Associations: Basic" is-open></dynamic-panel>
-<dynamic-panel src="../../../uml/classDiagrams/associations/labels/embed.md" header="UML: Class Diagrams: Associations: Labels" is-open></dynamic-panel>
-<dynamic-panel src="../../../uml/classDiagrams/associations/roles/embed.md" header="UML: Class Diagrams: Associations: Roles" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/classDiagrams/associations/labels/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Labels"/>
+<dynamic-panel src="../../../uml/classDiagrams/associations/roles/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Roles"/>
 
-<p/>
-
-<img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculatorPerson.png" height="100" />
 <p/>
 
 </div>

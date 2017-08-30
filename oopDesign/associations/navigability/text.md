@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; Associations &rarr;</div>
-
 <div id="title">
 
 #### Navigability :one:
@@ -12,9 +10,9 @@
 
 <div id="body">
 
-When two classes are linked by an association, it does not necessarily mean both classes know about each other. The concept of which class in the association knows about the other class is called _navigability_.
+When two classes are linked by an association, it does not necessarily mean both classes know about each other. **The concept of which class in the association knows about the other class is called _navigability_.**
 
-<dynamic-panel src="../../../uml/classDiagrams/associations/navigability/embed.md" header="UML: Class Diagrams: Associations: Navigability" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/classDiagrams/associations/navigability/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Navigability" />
 
 <p/>
 
