@@ -131,28 +131,24 @@
                   and behavior. But almost anything that’s designed to do a job does, too. Even simple things with no moving parts such as an ordinary bottle combine state (how full the bottle is, whether or not it’s open, how warm its contents are) with
                   behavior (the ability to dispense its contents at various flow rates, to be opened or closed, to withstand high or low temperatures).</p>
                 <p>It’s this resemblance to real things that gives objects much of their power and appeal. They can not only model components of real systems, but equally as well fulfill assigned roles as components in software systems.</p>
-                <p>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</p>
+                <p><sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple </sub></p>
               </blockquote>
               <p><strong>Object Oriented Programming (OOP) views the world as a network of interacting objects.</strong></p>
               <tip-box>
-                <p>Consider the following real world scenario:</p>
-                <p>You are asked to find out the average age of a group of people Adam, Beth, Charlie, and Daisy. Take a piece of paper and pen, go to each person, ask for their age, and note it down. After collecting the age of all four, you enter it into
-                  a calculator to find the total. And then, use the same calculator to divide the total by four, to get the average age. This can be viewed as the objects You, Pen, Paper, Calculator, Adam, Beth, Charlie, and Daisy interacting to accomplish
-                  to achieve some end result.</p>
-                <p>{visual: real world scenario, objects marked}</p>
+                <p>📦 A real world scenario viewed as a network of interacting objects:</p>
+                <p>You are asked to find out the average age of a group of people Adam, Beth, Charlie, and Daisy. You take a piece of paper and pen, go to each person, ask for their age, and note it down. After collecting the age of all four, you enter it
+                  into a calculator to find the total. And then, use the same calculator to divide the total by four, to get the average age. This can be viewed as the objects <code>You</code>, <code>Pen</code>, <code>Paper</code>, <code>Calculator</code>,
+                  <code>Adam</code>, <code>Beth</code>, <code>Charlie</code>, and <code>Daisy</code> interacting to accomplish to achieve the end result of calculating the average age of the four persons. These objects can be considered as connected in
+                  a certain network of certain structure.</p>
               </tip-box>
-              <p>These objects can be considered as connected in a certain network of certain structure.</p>
-              <p>{visual: object network marked}</p>
-              <p><strong>OOP solutions try to follow a similar object network inside the computer’s memory – a sort of a virtual simulation of the corresponding real world scenario – so that a similar result can be achieved programmatically.</strong></p>
-              <p>{visual: Direct mapping}</p>
+              <p><strong>OOP solutions try to follow a similar object network inside the computer’s memory</strong> – a sort of a virtual simulation of the corresponding real world scenario – <strong>so that a similar result can be achieved programmatically.</strong></p>
               <p><strong>OOP does not demand that the virtual world object network follow the real world exactly.</strong></p>
               <tip-box>
-                <p>For example, it can be tweaked a bit as follows:</p>
+                <p>📦 Our previous example can be tweaked a bit as follows:</p>
                 <ul>
-                  <li>Use an object called Main to represent your role in the scenario.</li>
-                  <li>As there is no physical writing involved, we can replace the Pen and Paper with an object called AgeList that is able to keep a list of ages.</li>
+                  <li>Use an object called <code>Main</code> to represent your role in the scenario.</li>
+                  <li>As there is no physical writing involved, we can replace the <code>Pen</code> and <code>Paper</code> with an object called <code>AgeList</code> that is able to keep a list of ages.</li>
                 </ul>
-                <p>{visual: optimizations: You → Main; Pen + Paper → AgeList}</p>
               </tip-box>
               <p><strong>Every object has both state (data) and behavior (operations on data).</strong></p>
               <table class="markbind-table table">
@@ -206,23 +202,23 @@
               <p><strong>Every object has an interface and an implementation.</strong></p>
               <p>Every real world object has an interface that other objects can interact with and an implementation that supports the interface but may not be accessible to the other object.</p>
               <tip-box>
-                <p>Examples:</p>
+                <p>📦 The interface and implementation of some real-world objects in our example:</p>
                 <ul>
                   <li>Calculator: the buttons and the display are part of the interface; circuits are part of the implementation.</li>
-                  <li>Adam: In the context of our ‘calculate average age’ example, the interface of Adam consists of requests that adam will respond to, e.g. “Give age to the nearest year, as at Jan 1st of this year” “State your name”; the implementation
-                    includes the mental calculation Adam uses to calculate the age which is not visible to other objects.</li>
+                  <li>Adam: In the context of our 'calculate average age' example, the interface of Adam consists of requests that adam will respond to, e.g. &quot;Give age to the nearest year, as at Jan 1st of this year&quot; &quot;State your name&quot;;
+                    the implementation includes the mental calculation Adam uses to calculate the age which is not visible to other objects.</li>
                 </ul>
               </tip-box>
               <p>Similarly, every object in the virtual world has an interface and an implementation.</p>
               <tip-box>
-                <p>Examples:</p>
+                <p>📦 The interface and implementation of some virtual-world objects in our example:</p>
                 <ul>
-                  <li>Adam: the interface might have a method getAge(Date asAt); the implementation of that method is not visible to other objects.</li>
+                  <li><code>Adam</code>: the interface might have a method <code>getAge(Date asAt)</code>; the implementation of that method is not visible to other objects.</li>
                 </ul>
               </tip-box>
               <p><strong>Objects interact by sending messages.</strong></p>
               <p>Both real world and virtual world object interactions can be viewed as objects sending message to each other. The message can result in the sender object receiving a response and/or the receiving object’s state being changed. Furthermore,
-                the result can vary based on which object received the message, even if the message is identical.</p>
+                the result can vary based on which object received the message, even if the message is identical <span class="dimmed">(see rows 1 and 2 in the example below)</span>.</p>
               <tip-box>
                 <p>Examples:</p>
                 <table class="markbind-table table">
@@ -247,9 +243,9 @@
                     </tr>
                     <tr>
                       <td style="text-align:center">Real</td>
-                      <td style="text-align:center">Same</td>
+                      <td style="text-align:center"><sub>as above</sub></td>
                       <td style="text-align:center">Beth</td>
-                      <td style="text-align:center">Same</td>
+                      <td style="text-align:center"><sub>as above</sub></td>
                       <td style="text-align:center">&quot;Beth&quot;</td>
                       <td style="text-align:center">-</td>
                     </tr>
@@ -277,28 +273,21 @@
               <div>
                 <panel header=":muscle: Exercises" expandable="">
                   <div>
-                    <panel header=":lock::key: Choose the least correct statement.">
-                      <question>
-                        <p>Choose the least correct statement</p>
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. An object is an abstraction of [data + related functions]</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An object is an abstraction of [state + related behavior]</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. An object can contain instance variables and methods</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. An object is an instance of a class</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. An object should not depend on another object</li>
-                        </ul>
-                        <div slot="answer">
-                          <p>Choose the least correct statement</p>
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. An object is an abstraction of [data + related functions]</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An object is an abstraction of [state + related behavior]</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. An object can contain instance variables and methods</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. An object is an instance of a class</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> e. An object should not depend on another object</li>
-                          </ul>
-                          <p>Explanation: The first two statements means the same concept (the ‘state’ of an object is represented by the data values it holds). The third statement explains how that concept is implemented at code level. Objects can interact
-                            with other objects to perform various tasks and therefore may depend on other objects.</p>
-                        </div>
+                    <panel header=":lock: Describe objects in the given scenario">
+                      <question has-input="true">
+                        <p>Consider the following real-world scenario.</p>
+                        <tip-box>
+                          <p>Tom read a Software Engineering textbook and highlighted some of the text in it.
+                          </p>
+                        </tip-box>
+                        <p>Explain the following statements about OOP using the above scenario as an example.</p>
+                        <ol>
+                          <li>Object Oriented Programming (OOP) views the world as a network of interacting objects.</li>
+                          <li>Every object has both state (data) and behavior (operations on data).</li>
+                          <li>Every object has an interface and an implementation.</li>
+                          <li>Objects interact by sending messages.</li>
+                          <li>OOP does not demand that the virtual world object network follow the real world exactly.</li>
+                        </ol>
                       </question>
                     </panel>
                   </div>
@@ -311,7 +300,7 @@
       </div>
       <div>
         <div>
-          <h4 id="objects-as-abstraction-two">Objects as Abstraction <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+          <h4 id="objects-as-abstractions-two">Objects as Abstractions <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
         </div>
         <tip-box>
           <div>
@@ -321,10 +310,11 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>The concept of Object in OOP is an abstraction mechanism because it allows us to abstract away the lower level details (i.e. data and the methods) and work with bigger granularity entities (i.e. objects).</p>
+              <p>The concept of <strong><em>Objects</em> in OOP is an abstraction mechanism because it allows us to abstract away the lower level details and work with bigger granularity entities</strong> i.e. ignore details data formats and the method implementation
+                details and work at the level of objects.</p>
               <tip-box>
-                <p>Example:</p>
-                <p>We can deal with Adam object instead of details such as Adam’s date of birth (DoB), in what format the DoB is stored, the algorithm used to calculate the age from the DoB.</p>
+                <p>📦 We can deal with a <code>Person</code> object that represents the person Adam and query the object for Adam's age instead of dealing with details such as Adam’s date of birth (DoB), in what format the DoB is stored, the algorithm used
+                  to calculate the age from the DoB, etc.</p>
               </tip-box>
             </div>
             <div>
@@ -346,14 +336,11 @@
           <div>
             <div>
               <blockquote>
-                <p>Encapsulation protects an implementation from unintended actions and from inadvertent access. -</p>
-                <p>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</p>
+                <p>Encapsulation protects an implementation from unintended actions and from inadvertent access.<br><sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple </sub></p>
               </blockquote>
-              <p>An object is an <em>encapsulation</em> some data and related functions. i.e.,</p>
-              <ol>
-                <li>It <em>packages</em> those data and related functions together into one self-contained unit.</li>
-                <li>The data is hidden from the outside world (we call this concept <em>information hiding</em>) and are only accessible using the interface.</li>
-              </ol>
+              <p><strong>An object is an <em>encapsulation</em> of some data and related behavior in two aspects:</strong></p>
+              <p><strong>1. The <em>packaging</em> aspect:</strong> An object packages data and related behavior together into one self-contained unit.</p>
+              <p><strong>2. The <em>information hiding</em> aspect:</strong> The data in an object is hidden from the outside world and are only accessible using the object's interface.</p>
             </div>
             <div>
               <div>
@@ -366,13 +353,13 @@
                           <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. An object is an encapsulation because it packages data and behavior into one bundle.</li>
                           <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An object is an encapsulation because it lets us think in terms of higher level concepts such as Students rather than student-related functions and data separately.</li>
                         </ul>
+                        <div slot="hint">
+                          <p>Don't confuse encapsulation with abstraction_.</p>
+                        </div>
                         <div slot="answer">
                           <p>Choose the correct statement</p>
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. An object is an encapsulation because it packages data and behavior into one bundle.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. An object is an encapsulation because it lets us think in terms of higher level concepts such as Students rather than student-related functions and data separately.</li>
-                          </ul>
-                          <p>Explanation: The second statement should be. An object is an <em>abstraction</em> because it lets us think in terms of higher level concepts such as Students rather than student-related functions and data separately.</p>
+                          <p>(a)</p>
+                          <p>Explanation: The second statement should be: An object is an <strong>abstraction</strong><s>encapsulation</s> because it lets ..._</p>
                         </div>
                       </question>
                     </panel>
@@ -395,24 +382,29 @@
         </div>
         <tip-box>
           <div>
-            <p>🏆 Can explain the relationship between classes and object <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+            <p>🏆 Can explain the relationship between classes and objects <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
           </div>
         </tip-box>
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>Writing an OOP program is essentially writing instructions that the computer uses to create the virtual world of object network and providing it the inputs to produce the outcome we want. It turns out sometimes multiple objects have the
-                same behavior because they are of the same kind. Instructions for creating a one kind (or ‘class’) of objects can be done in one go and use that same instructions to instantiate (i.e. create) objects of that kind. We call such instructions
-                a <em>Class</em>.</p>
+              <p><strong>Writing an OOP program is essentially writing instructions that the computer uses to,</strong></p>
+              <ol>
+                <li><strong>create the virtual world of object network, and</strong></li>
+                <li><strong>provide it the inputs to produce the outcome we want.</strong></li>
+              </ol>
+              <p><strong>A <mark><em>class</em></mark> contains instructions for creating a specific kind of objects</strong>. It turns out sometimes multiple objects have the same behavior because they are of the same kind. Instructions for creating a one
+                kind (or ‘class’) of objects can be done in one go and use that same instructions to instantiate (i.e. create) objects of that kind. We call such instructions a <em>Class</em>.</p>
               <tip-box>
-                <p>Example:</p>
-                <p>When writing an OOP program to calculate the average age, instructions for creating objects Adam, Beth, Charlie, and Daisy will be very similar because they are all of the same kind : they all represent ‘persons’ with same interface, same
-                  kind of data (i.e. name, DoB, etc.), and the same kind of behavior (i.e. getAge(Date), getName(), etc.). Therefore, we can have a class called Person containing instructions on how to create Person objects and use that class to instantiate
-                  objects Adam, Beth, Charlie, and Daisy. Similarly, we need classes AgeList, Calculator, and Main classes to instantiate one each of AgeList, Calculator, and Main objects.</p>
+                <p>📦 Classes and objects in an example scenario</p>
+                <p>When writing an OOP program to calculate the average age of Adam, Beth, Charlie, and Daisy, instructions for creating objects <code>Adam</code>, <code>Beth</code>, <code>Charlie</code>, and <code>Daisy</code> will be very similar because
+                  they are all of the same kind : they all represent ‘persons’ with the same interface, the same kind of data (i.e. <code>name</code>, <code>DoB</code>, etc.), and the same kind of behavior (i.e. <code>getAge(Date)</code>, <code>getName()</code>,
+                  etc.). Therefore, we can have a class called <code>Person</code> containing instructions on how to create <code>Person</code> objects and use that class to instantiate objects <code>Adam</code>, <code>Beth</code>, <code>Charlie</code>,
+                  and <code>Daisy</code>. Similarly, we need classes <code>AgeList</code>, <code>Calculator</code>, and <code>Main</code> classes to instantiate one each of <code>AgeList</code>, <code>Calculator</code>, and <code>Main</code> objects.</p>
               </tip-box>
               <p>
-                <panel src="/se-book\uml\classDiagrams\classes\topicPanel._include_.html" header="UML: Class Diagrams: Classes" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-                <panel src="/se-book\uml\objectDiagrams\objects\embed._include_.html" header="UML: Object Diagrams: Objects" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+                <panel src="/se-book\uml\classDiagrams\classes\what\full._include_.html" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Classes" isOpen="false" no-close="true" no-switch="true"></panel>
+                <panel src="/se-book\uml\objectDiagrams\objects\full._include_.html" header=":mortar_board: UML &rarr; Object Diagrams &rarr; Objects" isOpen="false" no-close="true" no-switch="true"></panel>
               </p>
               <p></p>
               <tip-box><img src="/se-book/oopDesign/classes/basic/images/person.png" height="100">
@@ -421,6 +413,48 @@
               </tip-box>
             </div>
             <div>
+              <div>
+                <panel header=":muscle: Exercises" expandable="">
+                  <div>
+                    <panel header=":lock: Identify Classes and Objects">
+                      <question>
+                        <p>Consider the following scenario. If you were to simulate this in an OOP program, what are the classes and the objects you would use? Use UML notation to give your answer.</p>
+                        <tip-box>
+                          John gave a checque to the Cashier pay for the LoTR and GoT books he bought.
+                        </tip-box>
+                        <div slot="hint">
+                          <table class="markbind-table table">
+                            <thead>
+                              <tr>
+                                <th>Class</th>
+                                <th>Objects</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><code>Customer</code></td>
+                                <td><code>John</code></td>
+                              </tr>
+                              <tr>
+                                <td><code>Book</code></td>
+                                <td><code>LoTR</code><code>GoT</code></td>
+                              </tr>
+                              <tr>
+                                <td><code>Cheque</code></td>
+                                <td><code>checqueJohnGave</code></td>
+                              </tr>
+                              <tr>
+                                <td><code>Cashier</code></td>
+                                <td><code>bookshopCashier</code></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
               <div></div>
             </div>
           </div>
@@ -512,18 +546,30 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>Enumerations are primarily a collection of values that can be considered a data type.</p>
+              <p><strong>An <em>Enumeration</em> is a fixed set of values that can be considered as a data type.</strong></p>
+              <p>An enumeration is often useful when using a regular data type such as <code>int</code> or <code>String</code> would allow invalid values to be assigned to a variable. <span class="dimmed">e.g. if a variable can only take values <code>0</code> and <code>1</code>, declaring it as an <code>int</code> would allow invalid values such as <code>2</code> to be assigned to it. But if you define an enumeration called <code>Binary</code> that has values <code>0</code> and <code>1</code> only, a variable of type <code>Binary</code> will never be assigned an invalid value such as <code>2</code> because the compiler is able to catch the error.</span></p>
               <p>
-                <panel src="/se-book\uml\classDiagrams\enumerations\topicPanel._include_.html" header="UML: Class Diagrams: Enumerations" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+                <panel src="/se-book\uml\classDiagrams\enumerations\what\full._include_.html" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Enumerations" isOpen="false" no-close="true" no-switch="true"></panel>
               </p>
               <p></p>
               <tip-box>
-                <p>Example:</p><img src="/se-book/oopDesign/classes/enumerations/images/priority.png" height="100">
+                <p>📦 <code>Priority</code> can be considered an enumeration because it has only three values.</p>
+                <p><code>Priority</code>: <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code></p><img src="/se-book/oopDesign/classes/enumerations/images/priority.png" height="100">
                 <p></p>
-                <p>Priority: HIGH, MEDIUM, LOW</p>
               </tip-box>
             </div>
             <div>
+              <div>
+                <panel header=":muscle: Exercises" expandable="">
+                  <div>
+                    <panel header=":lock: Define WeekDay Enum">
+                      <question has-input="true">
+                        <p>Show (in UML notation) an enumeration called <code>WeekDay</code> to use when the value can only be <code>Monday</code> ... <code>Friday</code>.</p>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
               <div></div>
             </div>
           </div>
@@ -546,27 +592,33 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such connections are called <em>associations</em>.</p>
+              <p><strong>Connections between objects are called <em>associations</em>.</strong> Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such connections are called <em>associations</em>.</p>
               <p>
-                <panel src="/se-book\uml\objectDiagrams\objectStructures\embed._include_.html" header="UML: Object Diagrams: Object Structures" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+                <panel src="/se-book\uml\objectDiagrams\objectStructures\full._include_.html" header=":mortar_board: UML &rarr; Object Diagrams &rarr; Object Structures" isOpen="false" no-close="true" no-switch="true"></panel>
               </p>
               <p></p>
               <tip-box>
-                <p>Example:</p><img src="/se-book/oopDesign/associations/basic/images/completeStructure.png" height="120">
-                <p></p>
-              </tip-box>
-              <p>These object structures can change over time.</p>
+                <p>📦 An object diagram example showing associations among objects. <span class="dimmed">For example, there is an association between the <code>AgeList</code> object and the <code>Main</code> object.</span></p><img src="/se-book/oopDesign/associations/basic/images/completeStructure.png"
+                  height="120"></tip-box>
+              <p><strong>Object structures can change over time</strong>.</p>
               <tip-box>
-                <p>Example:</p><img src="/se-book/oopDesign/associations/basic/images/ageListCalculator.png" height="100"><img src="/se-book/oopDesign/associations/basic/images/ageListCalculatorAdam.png" height="100">
+                <p>📦 In this example, the object structure has changed <span class="dimmed">(from left to right) due to a new <code>Person</code> object being added and connected to the <code>Main</code> object.</span></p>
+                <p><img src="/se-book/oopDesign/associations/basic/images/ageListCalculator.png" height="100">   →
+                  <img src="/se-book/oopDesign/associations/basic/images/ageListCalculatorAdam.png" height="100"></p>
+              </tip-box>
+              <p><strong>Associations can be reflected among classes too.</strong></p>
+              <p>
+                <panel src="/se-book\uml\classDiagrams\associations\basic\full._include_.html" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Basic" isOpen="false" no-close="true" no-switch="true"></panel>
+              </p>
+              <tip-box>
+                <p>📦 An example class diagram showing associations between classes.</p><img src="/se-book/oopDesign/associations/basic/images/ageListCalculatorPerson.png" height="100">
                 <p></p>
               </tip-box>
-              <p>These associations can be reflected among classes too.</p>
+              <p><strong>An association in a class diagram can use <em>association labels</em> and <em>association roles</em> to show additional info.</strong></p>
               <p>
-                <panel src="/se-book\uml\classDiagrams\associations\basic\embed._include_.html" header="UML: Class Diagrams: Associations: Basic" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-                <panel src="/se-book\uml\classDiagrams\associations\labels\embed._include_.html" header="UML: Class Diagrams: Associations: Labels" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-                <panel src="/se-book\uml\classDiagrams\associations\roles\embed._include_.html" header="UML: Class Diagrams: Associations: Roles" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+                <panel src="/se-book\uml\classDiagrams\associations\labels\full._include_.html" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Labels" isOpen="false" no-close="true" no-switch="true"></panel>
+                <panel src="/se-book\uml\classDiagrams\associations\roles\full._include_.html" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Roles" isOpen="false" no-close="true" no-switch="true"></panel>
               </p>
-              <p></p><img src="/se-book/oopDesign/associations/basic/images/ageListCalculatorPerson.png" height="100">
               <p></p>
             </div>
             <div>
@@ -587,9 +639,9 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>When two classes are linked by an association, it does not necessarily mean both classes know about each other. The concept of which class in the association knows about the other class is called <em>navigability</em>.</p>
+              <p>When two classes are linked by an association, it does not necessarily mean both classes know about each other. <strong>The concept of which class in the association knows about the other class is called <em>navigability</em>.</strong></p>
               <p>
-                <panel src="/se-book\uml\classDiagrams\associations\navigability\embed._include_.html" header="UML: Class Diagrams: Associations: Navigability" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+                <panel src="/se-book\uml\classDiagrams\associations\navigability\full._include_.html" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Navigability" isOpen="false" no-close="true" no-switch="true"></panel>
               </p>
               <p></p>
             </div>
@@ -600,18 +652,14 @@
                     <panel header=":lock::key: What does the navigability given by this diagram mean?">
                       <question><img src="/se-book/oopDesign/associations/navigability/images/unitItem.png" height="100">
                         <p></p>
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A Unit object knows about the Item object it is linked to</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An Item object knows about the Unit object it is linked to</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Depends on the programming language</li>
+                        <ul radio-group="p8nqj" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="p8nqj" type="radio"> a. A <code>Unit</code> object knows about the <code>Item</code> object it is linked to</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="p8nqj" type="radio"> b. An <code>Item</code> object knows about the <code>Unit</code> object it is linked to</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="p8nqj" type="radio"> c. Depends on the programming language</label></li>
                         </ul>
                         <div slot="answer">
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. A Unit object knows about the Item object it is linked to</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An Item object knows about the Unit object it is linked to</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Depends on the programming language</li>
-                          </ul>
-                          <p>Explanation: The diagram indicates that Unit item should know about the Item object. In the implementation, the Unit object will hold a Unit object in one of its variables.</p>
+                          <p>(a)</p>
+                          <p>Explanation: The diagram indicates that <code>Unit</code> item should know about the <code>Item</code> object. In the implementation, the <code>Unit</code> object will hold a <code>Unit</code> object in one of its variables.</p>
                         </div>
                       </question>
                     </panel>
@@ -635,9 +683,11 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>Another important aspect of setting up an object network is deciding how many objects take part in each association. That aspect is called <em>multiplicity</em>.</p>
+              <p><strong><em>Multiplicity</em> is the aspect of an OOP solution that dictates how many objects take part in each association.</strong></p>
+              <tip-box>
+                <p>📦 This class diagram does not tell us multiplicities. For exaple, how many <code>Calculator</code> objects can be associated with one <code>Main</code> object? How many <code>Main</code> objects can be associated with one <code>Calculator</code>                  object? and so on.</p><img src="/se-book/oopDesign/associations/basic/images/ageListCalculatorPerson.png" height="100"></tip-box>
               <p>
-                <panel src="/se-book\uml\classDiagrams\associations\multiplicity\embed._include_.html" header="UML: Class Diagrams: Associations: Multiplicity" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+                <panel src="/se-book\uml\classDiagrams\associations\multiplicity\full._include_.html" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Multiplicity" isOpen="false" no-close="true" no-switch="true"></panel>
               </p>
               <p></p>
             </div>
@@ -649,18 +699,13 @@
                       <question><img src="/se-book/oopDesign/associations/multiplicity/images/unitItem.png" height="100">
                         <p></p>
                         <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A Unit object can be linked to any number of Item objects</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An Item object must be linked 1,2,3 or 4 Unit objects.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A Unit object must be linked 1,2,3, or 4 Item objects</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. A Item object can be linked 1,2,3, or 4 of other Item objects.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A <code>Unit</code> object can be linked to any number of <code>Item</code> objects</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An <code>Item</code> object must be linked 1,2,3 or 4 <code>Unit</code> objects.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A <code>Unit</code> object must be linked 1,2,3, or 4 <code>Item</code> objects</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. A <code>Item</code> object can be 0 or more <code>Unit</code> objects.</li>
                         </ul>
                         <div slot="answer">
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A Unit object can be linked to any number of Item objects</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An Item object must be linked 1,2,3 or 4 Unit objects.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> c. A Unit object must be linked 1,2,3, or 4 Item objects</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. A Item object can be linked 1,2,3, or 4 of other Item objects.</li>
-                          </ul>
+                          <p>(c)(d)</p>
                         </div>
                       </question>
                     </panel>
@@ -1527,10 +1572,115 @@ class Academic extends Staff {
       </div>
     </div>
   </panel>
-  <h2 id="faq">FAQ</h2>
-  <panel header="================================================================" type="seamless" alt="faq">
+  <h2 id="miscellaneous">Miscellaneous</h2>
+  <panel header="================================================================" type="seamless" alt="miscellaneous">
     <div>
-      <p>null</p>
+      <div>
+        <h4 id="miscellaneous-three">Miscellaneous <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box>
+        <div>
+          <p>🏆 Can answer frequently asked OOP questions <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p><strong>What’s the difference between a Class, an Abstract Class, and an Interface? <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></strong></p>
+            <ul>
+              <li>An interface is a behavior specification with no implementation.</li>
+              <li>A class is a behavior specification + implementation.</li>
+              <li>An abstract class is a behavior specification + a possibly incomplete implementation.</li>
+            </ul>
+            <p><strong>How does overriding differ from <em>overloading</em>? <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></strong></p>
+            <p>Overloading is used to indicate that multiple operations do similar things but take different parameters. Overloaded methods have the same method name but different method signatures and possibly different return types.</p>
+            <p>Overriding is when a sub-class redefines an operation using the same method name and the same type signature. Overridden methods have the same name, same method signature, and same return type.</p>
+          </div>
+          <div>
+            <div></div>
+          </div>
+        </div>
+      </panel>
+    </div>
+  </panel>
+  <h2 id="review">Review</h2>
+  <panel header="================================================================" type="seamless" alt="review">
+    <div>
+      <div>
+        <h4 id="review-one">Review <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box>
+        <div>
+          <p>🏆 Can combine some OOP concepts <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p>...</p>
+          </div>
+          <div>
+            <div>
+              <panel header=":muscle: Exercises" expandable="">
+                <div>
+                  <panel header=":lock::key: In the context of OOP, what is the relationship between abstraction and encapsulation?">
+                    <panel header="%%Prerequisites%%" expandable="" expanded="">
+                      <panel src="/se-book\oopDesign\objects\encapsulation\full._include_.html" header="OOP: Objects: Encapsulation" isOpen="false" no-close="true" no-switch="true"></panel>
+                      <panel src="/se-book\oopDesign\objects\abstraction\full._include_.html" header="OOP: Objects: Abstraction" isOpen="false" no-close="true" no-switch="true"></panel>
+                    </panel>
+                    <p></p>
+                    <question>
+                      In the context of OOP, what is the relationship between abstraction and encapsulation?
+                      <ul radio-group="r6ywl" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="r6ywl" type="radio"> a. They are the same thing</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="r6ywl" type="radio"> b. They are opposites</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="r6ywl" type="radio"> c. Encapsulation strengthens abstraction</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="r6ywl" type="radio"> d. Abstraction strengthens encapsulation</label></li>
+                      </ul>
+                      <div slot="answer">
+                        <ul radio-group="j0ybm" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" checked name="j0ybm" type="radio"> c. Encapsulation strengthens abstraction</label></li>
+                        </ul>
+                        <p>Explanation: We can have abstraction without encapsulation. For example, we can <em>think</em> in terms of student entities when we code in C (a procedural language). But when we use a language that has encapsulation too (e.g.,
+                          in Java/C++/C#), we can package all student related data and functions into one construct (i.e. a class). This makes the ‘student’ abstraction stronger because now we can not only think in terms of students, the program can perform
+                          actions using objects that represent student entities.</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+                <div>
+                  <panel header=":lock::key: Which of these do not belong to four main OO principles?">
+                    <panel header="%%Prerequisites%%" expandable="" expanded="">
+                      <panel src="/se-book\oopDesign\objects\abstraction\full._include_.html" header="OOP: Objects: Abstraction" isOpen="false" no-close="true" no-switch="true"></panel>
+                      <panel src="/se-book\oopDesign\objects\encapsulation\full._include_.html" header="OOP: Objects: Encapsulation" isOpen="false" no-close="true" no-switch="true"></panel>
+                      <panel src="/se-book\oopDesign\inheritance\basic\full._include_.html" header="OOP: Inheritance: Basic" isOpen="false" no-close="true" no-switch="true"></panel>
+                      <panel src="/se-book\oopDesign\inheritance\substitutability\full._include_.html" header="OOP: Inheritance: Substitutability" isOpen="false" no-close="true" no-switch="true"></panel>
+                      <panel src="/se-book\oopDesign\polymorphism\introduction\full._include_.html" header="OOP: Polymorphism: Introduction" isOpen="false" no-close="true" no-switch="true"></panel>
+                    </panel>
+                    <p></p>
+                    <question>
+                      Which of these do not belong to four main OO principles?
+                      <ul radio-group="iotji" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="iotji" type="radio"> a. Abstraction</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="iotji" type="radio"> b. Encapsulation</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="iotji" type="radio"> c. Inheritance</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="iotji" type="radio"> d. Substitutability</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="iotji" type="radio"> e. Polymorphism</label></li>
+                      </ul>
+                      <div slot="answer">
+                        <ul radio-group="yy0ui" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" checked name="yy0ui" type="radio"> d. Substitutability</label></li>
+                        </ul>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+              </panel>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </panel>
     </div>
   </panel>
 </div>

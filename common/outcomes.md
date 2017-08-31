@@ -166,7 +166,9 @@
 <dynamic-panel src="../oopDesign/conceptualizingSolution/intermediate/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/conceptualizingSolution/intermediate/outcomes.md" inline />
 
 
-<dynamic-panel src="../oopDesign/faq/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/faq/outcomes.md" inline />
+<dynamic-panel src="../oopDesign/miscellaneous/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/miscellaneous/outcomes.md" inline />
+
+<dynamic-panel src="../oopDesign/review/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/review/outcomes.md" inline />
 
 
 ### Modeling
@@ -220,6 +222,8 @@
 <dynamic-panel src="../modeling/modelingBehaviors/communicationDiagrams/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../modeling/modelingBehaviors/communicationDiagrams/outcomes.md" inline />
 
 <dynamic-panel src="../modeling/modelingBehaviors/stateMachineDiagrams/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../modeling/modelingBehaviors/stateMachineDiagrams/outcomes.md" inline />
+
+<dynamic-panel src="../modeling/review/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../modeling/review/outcomes.md" inline />
 
 
 ### Architecture
@@ -441,6 +445,8 @@
 <dynamic-panel src="../integration/buildAutomation/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../integration/buildAutomation/what/outcomes.md" inline />
 
 <dynamic-panel src="../integration/buildAutomation/continuousIntegrationDeployment/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../integration/buildAutomation/continuousIntegrationDeployment/outcomes.md" inline />
+
+<dynamic-panel src="../integration/review/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../integration/review/outcomes.md" inline />
 
 
 ### OOP Implementation
@@ -886,3 +892,9 @@
 <dynamic-panel src="../principles/yagniPrinciple/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/yagniPrinciple/outcomes.md" inline />
 
 <dynamic-panel src="../principles/dryPrinciple/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/dryPrinciple/outcomes.md" inline />
+
+<dynamic-panel src="../principles/review/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/review/outcomes.md" inline />
+
+### Review
+
+<dynamic-panel src="../review/review/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../review/review/outcomes.md" inline />

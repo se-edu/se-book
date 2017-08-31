@@ -54,9 +54,8 @@
         </blockquote>
         <p><strong>Among various dimensions of code quality, such as run-time efficiency, security, and robustness, one of the most important is understandability.</strong> This is because in any non-trivial software project, code needs to be read, understood,
           and modified by other developers later on. Even if we do not intend to pass the code to someone else, code quality is still important because we all become 'strangers' to our own code someday.</p>
-        <p>The two code samples given below achieve the same functionality, but one is easier to read.</p>
         <tip-box>
-          <p>Example: Same function, different readability</p>
+          <p>Example: The two code samples given below achieve the same functionality, but one is easier to read.</p>
           <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
           <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{
     <span class="hljs-keyword">int</span> subsidy;
@@ -114,8 +113,10 @@
         <panel header="**Avoid Deep Nesting**" type="seamless">
           <div>
             <div>
-              <p>According to the Linux 1.3.53 CodingStyle documentation, <em>&quot;if you need more than 3 levels of indentation, you're screwed anyway, and should fix your program&quot;.</em></p>
-              <p>In particular, avoid <em>arrowhead</em> style code.</p>
+              <blockquote>
+                <p>If you need more than 3 levels of indentation, you're screwed anyway, and should fix your program. <sub>--Linux 1.3.53 CodingStyle</sub></p>
+              </blockquote>
+              <p>In particular, avoid <a href="https://blog.codinghorror.com/flattening-arrow-code/"><em>arrowhead</em> style code</a>.</p>
               <tip-box>
                 <p>Example:</p><img src="/se-book/codeQuality/practices/avoidDeepNesting/images/arrowheadStyle.png" height="250">
                 <p></p>
@@ -128,6 +129,22 @@
             <div>
               <p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate the
                 final value).</p>
+              <tip-box>
+                <p>Example:</p>
+                <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                <pre><code class="hljs java"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);
+</code></pre>
+                <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                <pre><code class="hljs java">
+<span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;
+<span class="hljs-keyword">boolean</span> isSameSize = previousSize != length;
+<span class="hljs-keyword">boolean</span> isValidCode = isWithinSizeLimit || isSameSize;
+
+<span class="hljs-keyword">boolean</span> isUrgent = typeCode == URGENT;
+
+<span class="hljs-keyword">return</span> isValidCode &amp;&amp; isUrgent;
+</code></pre>
+              </tip-box>
               <blockquote>
                 <p>The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. <sub>-- Edsger Dijkstra</sub></p>
               </blockquote>
@@ -159,7 +176,7 @@
                   </tbody>
                 </table>
               </tip-box>
-              <p>As you can see, using a named constant makes the code easier to understand because the name tells us more about the meaning of the number. Similarly, we can have ‘magic’ values of other data types.</p>
+              <p>Using a named constant makes the code easier to understand because the name tells us more about the meaning of the number. Similarly, we can have ‘magic’ values of other data types.</p>
               <tip-box>
                 <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
                 <pre><code class="hljs java"><span class="hljs-keyword">return</span> “Error <span class="hljs-number">1432</span>”;  <span class="hljs-comment">// A magic string!</span>
@@ -240,14 +257,15 @@
                 <li><strong>We may not know which parts are the real performance bottlenecks</strong>. This is especially the case when the code undergoes transformations (e.g. compiling, minifying, transpiling, etc.) before it becomes an executable. Ideally,
                   you should use a profiler tool to identify the actual bottlenecks of the code first, and optimize only those parts.</li>
                 <li><strong>Optimizing can complicate the code</strong>, affecting correctness and understandability</li>
-                <li><strong>Hand-optimized code can be harder for the compiler to optimize</strong> the code (the simpler the code, the easier for the compiler to optimize it)</li>
+                <li><strong>Hand-optimized code can be harder for the compiler to optimize</strong> (the simpler the code, the easier for the compiler to optimize it). In many cases a compiler can do a better job of optimizing the runtime code if you don't
+                  get in the way by trying to hand-optimize the source code.</li>
               </ul>
               <p>A popular saying in the industry is <strong><em>make it work, make it right, make it fast</em></strong> which means in most cases getting the code to perform correctly should take priority over optimizing it. If the code doesn't work correctly,
                 it has no value on matter how fast/efficient it it.</p>
               <blockquote>
                 <p>Premature optimization is the root of all evil in programming. <sub>--<a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a></sub></p>
               </blockquote>
-              <p>Note that <strong>there are cases where optimizing takes priority over other things</strong><span class="dimmed">e.g. when writing code for resource constrained environments</span>. This guideline simply a caution that you should optimize
+              <p>Note that <strong>there are cases where optimizing takes priority over other things</strong><span class="dimmed">e.g. when writing code for resource-constrained environments</span>. This guideline simply a caution that you should optimize
                 only when it is really needed.</p>
             </div>
           </div>
@@ -299,7 +317,7 @@ displayResult();
         <panel header="**Make the Happy Path Prominent**" type="seamless">
           <div>
             <div>
-              <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unintended as much as possible. It is the ‘unusual’ cases that should be indented.
+              <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unindented as much as possible. It is the ‘unusual’ cases that should be indented.
                 Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
               <tip-box>
                 <p>Example:</p>
@@ -338,7 +356,7 @@ process();
 cleanup();
 exit();
 </code></pre>
-                <p>In the contrast, the above code</p>
+                <p>In contrast, the above code</p>
                 <ul>
                   <li>deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.</li>
                   <li>keeps the main path un-indented.</li>
@@ -360,13 +378,14 @@ exit();
         </div>
       </tip-box>
       <div>
-        <p><strong>One essential way to improve code quality is to follow a consistent style. That is why software engineers follow follow a strict coding standard (aka <em>style guide</em>).</strong></p>
+        <p><strong>One essential way to improve code quality is to follow a consistent style. That is why software engineers follow a strict coding standard (aka <em>style guide</em>).</strong></p>
         <p><strong>The aim of a coding standard is to make the entire code base look like it was written by one person</strong>. A coding standard is usually specific to a programming language and specifies guidelines such as the location of opening and
-          closing braces, indentation styles and naming styles (e.g. whether to use Hungarian style, Pascal casing, Camel casing, etc.). It is important that the whole team/company use the same coding standard and that standard is not generally consistent
-          with typical industry practices. Doing so will make it easier for others to work with your code, be they members from the same team or transferred from another team/company.</p>
-        <tip-box type="tip">
+          closing braces, indentation styles and naming styles (e.g. whether to use Hungarian style, Pascal casing, Camel casing, etc.). It is important that the whole team/company use the same coding standard and that standard is not generally inconsistent
+          with typical industry practices. <span class="dimmed">If a company's coding standards is very different from what is used typically in the industry, new recruits will take longer to get used to the company's coding style.</span></p>
+        <tip-box
+          type="tip">
           <p>IDEs can help to enforce some parts of a coding standard e.g. indentation rules.</p>
-        </tip-box>
+          </tip-box>
       </div>
     </div>
     <div>
@@ -379,7 +398,7 @@ exit();
         </div>
       </tip-box>
       <div>
-        <p>Go through the <a href="https://github.com/oss-generic/process/blob/master/codingStandards/CodingStandard-Java.md">provided Java coding standard</a> and learn the <em>basic</em> style rules.</p>
+        <p>Go through the <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html">provided Java coding standard</a> and learn the <em>basic</em> style rules.</p>
       </div>
     </div>
     <div>
@@ -392,7 +411,7 @@ exit();
         </div>
       </tip-box>
       <div>
-        <p>Go through the <a href="https://github.com/oss-generic/process/blob/master/codingStandards/CodingStandard-Java.md">provided Java coding standard</a> and learn the <em>intermediate</em> style rules.</p>
+        <p>Go through the <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html">provided Java coding standard</a> and learn the <em>intermediate</em> style rules.</p>
       </div>
     </div>
     <h2 id="guideline-name-well">Guideline: Name Well</h2>
@@ -406,7 +425,7 @@ exit();
         </div>
       </tip-box>
       <div>
-        <p>Proper naming improves the readability. It also reduces bugs caused by ambiguities regarding the intent of a variable or method.</p>
+        <p>Proper naming improves the readability. It also reduces bugs caused by ambiguities regarding the intent of a variable or a method.</p>
         <blockquote>
           <p>There are only two hard things in Computer Science: cache invalidation and naming things. <sub>-- Phil Karlton</sub></p>
         </blockquote>
@@ -481,7 +500,7 @@ exit();
         <panel header="**Use Name to Explain**" type="seamless" alt="indentation">
           <div>
             <div>
-              <p><strong>A name is not just for differentiation; it should explain the named entity to the reader in an accurately and at a sufficient level of detail.</strong></p>
+              <p><strong>A name is not just for differentiation; it should explain the named entity to the reader accurately and at a sufficient level of detail.</strong></p>
               <tip-box>
                 <p>Examples:</p>
                 <table class="markbind-table table">
@@ -785,8 +804,7 @@ exit();
       </tip-box>
       <div>
         <blockquote>
-          <p>Good code is its own best documentation. As you’re about to add a comment, ask yourself, ‘How can I improve the code so that this comment isn’t needed?’ Improve the code and then document it to make it even clearer.</p>
-          <p>--<a href="https://en.wikipedia.org/wiki/Steve_McConnell">Steve McConnell</a></p>
+          <p>Good code is its own best documentation. As you’re about to add a comment, ask yourself, ‘How can I improve the code so that this comment isn’t needed?’ Improve the code and then document it to make it even clearer. <sub>--<a href="https://en.wikipedia.org/wiki/Steve_McConnell">Steve McConnell</a>, Author of <em>Clean Code</em></sub></p>
         </blockquote>
         <p>Some think commenting heavily increases the 'code quality'. This is not so. Avoid writing comments to explain bad code. Improve the code to make it self-explanatory.</p>
       </div>
@@ -804,15 +822,34 @@ exit();
         <panel header="**Do Not Repeat the Obvious**" type="seamless" alt="indentation">
           <div>
             <div>
-              <p>If the parameter name clearly indicates its purpose, refrain from repeating the description in a comment just for the sake of 'good documentation'.</p>
+              <p>If the code is self-explanatory, refrain from repeating the description in a comment just for the sake of 'good documentation'.</p>
+              <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+              <pre><code class="hljs java"><span class="hljs-comment">// increment x</span>
+x++;
+
+<span class="hljs-comment">//trim the input</span>
+trimInput();
+</code></pre>
             </div>
           </div>
         </panel>
         <panel header="**Write to the Reader**" type="seamless" alt="indentation">
           <div>
             <div>
-              <p>Do not write comments as if they are private notes to self. Instead, write them well enough to be understood by another programmer. One type of comments that is almost always useful is the <em>header comment</em> that you write for a file,
-                class, or an operation to explain its purpose.</p>
+              <p>Do not write comments as if they are private notes to self. Instead, write them well enough to be understood by another programmer. One type of comments that is almost always useful is the <em>header comment</em> that you write for a class
+                or an operation to explain its purpose.</p>
+              <p><img src="/se-book/images/Bad.png" alt="" title="Bad"><span class="dimmed">Reason: this comment will only make sense to the person who wrote it</span></p>
+              <pre><code class="hljs java"><span class="hljs-comment">// a quick trim function used to fix bug I detected overnight</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">trimInput</span><span class="hljs-params">()</span></span>{
+    ....
+}
+</code></pre>
+              <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+              <pre><code class="hljs java"><span class="hljs-comment">/** Trims the input of leading and trailing spaces */</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">trimInput</span><span class="hljs-params">()</span></span>{
+    ....
+}
+</code></pre>
             </div>
           </div>
         </panel>
@@ -831,8 +868,36 @@ exit();
         <panel header="**Explain WHAT and WHY, not HOW**" type="seamless" alt="indentation">
           <div>
             <div>
-              <p>When you write comments, use them to explain <em>why</em> and <em>what</em> aspect of the code, rather than the <em>how</em> aspect. The former is usually not apparent in the code and writing it down adds value to the code. The latter should
-                already be apparent from the code.</p>
+              <p>Comments should explain <em>what</em> and <em>why</em> aspect of the code, rather than the <em>how</em> aspect.</p>
+              <p>👍 <strong>What</strong> : The specification of what the code <em>supposed</em> to do. The reader can compare such comments to the implementation to verify if the implementation is correct</p>
+              <tip-box>
+                <p>📦 Example: This method is possibly buggy because the implementation does not seem to match the comment. In this case the comment could help the reader to detect the bug.</p>
+                <pre><code class="hljs java"><span class="hljs-comment">/** Removes all spaces from the {<span class="hljs-doctag">@code</span> input} */</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">compact</span><span class="hljs-params">(String input)</span></span>{
+    input.trim();
+}
+</code></pre>
+              </tip-box>
+              <p>👍 <strong>Why</strong> : The rationale for the current implementation.</p>
+              <tip-box>
+                <p>📦 Example: Without this comment, the reader will not know the reason for calling this method.</p>
+                <pre><code class="hljs java"><span class="hljs-comment">// Remove spaces to comply with IE23.5 formatting rules</span>
+compact(input);
+</code></pre>
+              </tip-box>
+              <p>👎 <strong>How</strong> : The explanation for how the code works. This should already be apparent from the code, if the code is self-explanatory. Adding comments to explain the same thing is redundant.</p>
+              <tip-box>
+                <p>📦 Example:</p>
+                <p><img src="/se-book/images/Bad.png" alt="" title="Bad"><span class="dimmed">Reason: Comment explains how the code works.</span></p>
+                <pre><code class="hljs java"><span class="hljs-comment">// return true if both left end and right end are correct or the size has not incremented</span>
+<span class="hljs-keyword">return</span> (left &amp;&amp; right) || (input.size() == size);
+</code></pre>
+                <p><img src="/se-book/images/Good.png" alt="" title="Good"><span class="dimmed">Reason: Code refactored to be self-explanatory. Comment no longer needed.</span></p>
+                <pre><code class="hljs java">
+<span class="hljs-keyword">boolean</span> isSameSize = (input.size() == size) ;
+<span class="hljs-keyword">return</span> (isLeftEndCorrect &amp;&amp; isRightEndCorrect) || isSameSize;
+</code></pre>
+              </tip-box>
             </div>
           </div>
         </panel>

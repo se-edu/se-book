@@ -10,9 +10,9 @@
 
 <div id="body">
 
-According to the Linux 1.3.53 CodingStyle documentation, _"if you need more than 3 levels of indentation, you're screwed anyway, and should fix your program"._
+>If you need more than 3 levels of indentation, you're screwed anyway, and should fix your program. <sub>--Linux 1.3.53 CodingStyle</sub>
 
-In particular, avoid _arrowhead_ style code.
+In particular, avoid [_arrowhead_ style code](https://blog.codinghorror.com/flattening-arrow-code/).
 
 <tip-box>
 

@@ -87,6 +87,8 @@
 
 <include src="principles/topicToc.md" />
 
+<include src="review/topicToc.md" />
+
 * [List of Definitions](common/definitions.html)
 * [List of References](common/references.html)
 * [List of Learning Outcomes](common/outcomes.html)

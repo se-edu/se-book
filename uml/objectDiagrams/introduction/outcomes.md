@@ -1,1 +1,1 @@
-:trophy: Can explain the purpose of UML object diagrams :one:
+:trophy: Can explain/identify object diagrams :one:

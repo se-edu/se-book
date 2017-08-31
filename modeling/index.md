@@ -18,13 +18,13 @@
 
 ## Modeling Behaviors
 <panel header="================================================================"
-    type="seamless" alt="Modeling Behaviors">
+    type="seamless" alt="modeling behaviors">
   <include src="modelingBehaviors/index.md#main" />
 </panel>
 
 ## Review
 <panel header="================================================================"
-    type="seamless" alt="Modeling Behaviors">
+    type="seamless" alt="review">
   <include src="review/embed.md" />
 </panel>
 

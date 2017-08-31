@@ -25,16 +25,9 @@
         </div>
       </tip-box>
       <div>
-        <p>
-          <panel src="/se-book\oopDesign\classes\basic\embed._include_.html" header="OOP: Classes: Basic" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-        </p>
-        <p></p>
-        <p>Here are some tutorials you can refer to (from Oracle’s official Java tutorials) to learn how to implement basic OOP constructs. classes in Java, go to and follow the next few steps in there.</p>
-        <p>Other relevant tutorials:</p>
+        <p>Given below is a tutorial you can refer to (from Oracle’s official Java tutorials) to learn how to implement java classes, in the unlikely case you don't know how to do that already.</p>
         <ul>
-          <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html">Classes, methods, variables – Start from the linked page and follow the next few steps in the tutorial</a></li>
-          <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html">Class-level members</a></li>
-          <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">Enumerations</a></li>
+          <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html">Classes, methods, variables</a> – Start from the linked page and follow the next few steps in the tutorial</li>
         </ul>
       </div>
     </div>
@@ -48,15 +41,10 @@
         </div>
       </tip-box>
       <div>
-        <p>
-          <panel src="/se-book\oopDesign\associations\basic\embed._include_.html" header="OOP: Associations: Basic" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-          <panel src="/se-book\oopDesign\associations\multiplicity\embed._include_.html" header="OOP: Associations: Multiplicity" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-          <panel src="/se-book\oopDesign\associations\navigability\embed._include_.html" header="OOP: Associations: Navigability" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-        </p>
         <p></p>
-        <p>We use instance level variables to implement associations.</p>
-        <tip-box>
-          <p>Example:</p><img src="/se-book/oopImplementation/associations/images/logicMinefield.png" height="40">
+        <p><strong>We use instance level variables to implement associations.</strong></p>
+        <p><strong>A normal instance-level variable gives us a <code>0..1</code> multiplicity</strong> (also called <em>optional associations</em>) because a variable can hold a reference to a single object or <code>null</code>.</p>
+        <tip-box><img src="/se-book/oopImplementation/associations/images/logicMinefield.png" height="40">
           <p></p>
           <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
     Minefield minefield;
@@ -67,15 +55,18 @@
     ...
 }
 </code></pre>
-          <p>A normal instance-level variable gives us a 0..1 multiplicity (also called <em>optional associations</em>) because a variable can hold a reference to a single object or null.</p><img src="/se-book/oopImplementation/associations/images/logicConfigGenerator.png"
-            height="40">
+        </tip-box>
+        <p><strong>A variable can be used to implement a <code>1</code> multiplicity too</strong> (also called <em>compulsory associations</em>).</p>
+        <tip-box><img src="/se-book/oopImplementation/associations/images/logicConfigGenerator.png" height="40">
           <p></p>
           <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
-    ConfigGenerator cg;
+    ConfigGenerator cg = <span class="hljs-keyword">new</span> ConfigGenerator();
     ...
 }
 </code></pre>
-          <p>A variable can be used to implement a 1-multiplicity too (also called <em>compulsory associations</em>).</p><img src="/se-book/oopImplementation/associations/images/fooBar.png" height="40">
+        </tip-box>
+        <p><strong>Bi-directional associations require matching variables in both classes.</strong></p>
+        <tip-box><img src="/se-book/oopImplementation/associations/images/fooBar.png" height="40">
           <p></p>
           <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
     Bar bar;
@@ -87,8 +78,9 @@
     ...
 }
 </code></pre>
-          <p>Bi-directional associations require matching variables in both classes.</p>
-          <p>To implement other multiplicities, choose a suitable data structure such as Arrays, ArrayLists, HashMaps, Sets, etc.</p>
+        </tip-box>
+        <p><strong>To implement other multiplicities, choose a suitable data structure</strong> such as Arrays, ArrayLists, HashMaps, Sets, etc.</p>
+        <tip-box>
           <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
     Cell[][] cell;
     ...

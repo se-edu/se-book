@@ -17,6 +17,7 @@
 <include src="brooksLaw/print.md" />
 <include src="yagniPrinciple/print.md" />
 <include src="dryPrinciple/print.md" />
+<include src="review/print.md" />
 
 </div>
 

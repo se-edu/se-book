@@ -1,1 +1,1 @@
-:trophy: Can draw objects shown in UML notation :one:
+:trophy: Can draw UML objects :one:

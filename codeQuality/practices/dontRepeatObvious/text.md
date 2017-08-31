@@ -10,7 +10,18 @@
 
 <div id="body">
 
-If the parameter name clearly indicates its purpose, refrain from repeating the description in a comment just for the sake of 'good documentation'.
+If the code is self-explanatory, refrain from repeating the description in a comment just for the sake of 'good documentation'.
+
+![][Bad]
+```java
+// increment x
+x++;
+
+//trim the input
+trimInput();
+```
+
+[Bad]: {{baseUrl}}/images/Bad.png "Bad"
 
 </div>
 

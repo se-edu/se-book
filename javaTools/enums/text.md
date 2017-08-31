@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Java &rarr; </div>
-
 <div id="title">
 
 #### Use Enums :two:
@@ -12,7 +10,7 @@
 
 <div id="body">
 
-...
+Note that while enumerations are usually a simple set of fixed values, Java enumerations can have behaviors too. To learn how to implement enumerations, read [this tutorial (from Oracle)](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)
 
 </div>
 

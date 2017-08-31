@@ -1,5 +1,3 @@
-<div id="path">UML &rarr; Class Diagrams &rarr;</div>
-
 <div id="title">
 
 #### What :two:
@@ -8,13 +6,15 @@
 
 <div id="body">
 
-An `<< enumeration >>` is used to indicate that an attribute can only take on a fixed set of values.
+Notation:
+
+<img src="{{baseUrl}}/uml/classDiagrams/enumerations/what/images/notation.png" width="150" />
 
 <tip-box>
 
-Example:
+:package: In the class diagram below, there are two enumerations in use:
 
-<img src="{{baseUrl}}/uml/classDiagrams/enumerations/what/images/playerTurn.png" height="150" />
+<img src="{{baseUrl}}/uml/classDiagrams/enumerations/what/images/playerTurn.png" width="600" />
 <p/>
 
 </tip-box>

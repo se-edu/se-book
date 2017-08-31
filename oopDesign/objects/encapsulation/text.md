@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; Objects &rarr;</div>
-
 <div id="title">
 
 #### Encapsulation Of Objects :two:
@@ -12,14 +10,13 @@
 
 <div id="body">
 
-> Encapsulation protects an implementation from unintended actions and from inadvertent access. -
->
-> -- [Object-Oriented Programming with Objective-C](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/), Apple
+> Encapsulation protects an implementation from unintended actions and from inadvertent access.<br> <sub>-- [Object-Oriented Programming with Objective-C](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/), Apple </sub>
 
-An object is an _encapsulation_ some data and related functions. i.e.,
+**An object is an _encapsulation_ of some data and related behavior in two aspects:**
 
-1. It _packages_ those data and related functions together into one self-contained unit.
-2. The data is hidden from the outside world (we call this concept _information hiding_) and are only accessible using the interface.
+**1. The _packaging_ aspect:** An object packages data and related behavior together into one self-contained unit.
+
+**2. The _information hiding_ aspect:** The data in an object is hidden from the outside world and are only accessible using the object's interface.
 
 </div>
 

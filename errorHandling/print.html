@@ -28,7 +28,7 @@
       <div>
         <blockquote>
           <p>Well-written applications include error-handling code that allows them to recover gracefully from unexpected errors. When an error occurs, the application may need to request user intervention, or it may be able to recover on its own. In extreme
-            cases, the application may log the user off or shut down the system. <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms679320(v=vs.85).aspx">(source)</a></p>
+            cases, the application may log the user off or shut down the system. --<sub><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms679320(v=vs.85).aspx">(source)</a></sub></p>
         </blockquote>
       </div>
     </div>
@@ -43,7 +43,7 @@
         </div>
       </tip-box>
       <div>
-        <p>Exceptions are used to deal with ‘unusual’ but not entirely unexpected situations that the program might encounter at run time.</p>
+        <p><strong>Exceptions are used to deal with <em>'unusual' but not entirely unexpected</em> situations</strong> that the program might encounter at run time.</p>
         <tip-box type="primary">
           <div>
             <p><strong>Exception</strong>:</p>
@@ -53,13 +53,12 @@
           </div>
         </tip-box>
         <tip-box>
-          <p>Examples:</p>
+          <p>📦 Examples:</p>
           <ul>
             <li>A network connection encounters a timeout due to a slow server.</li>
             <li>The code tries to read a file from the hard disk but the file is corrupted and cannot be read.</li>
           </ul>
         </tip-box>
-        <p>Exceptions are not program bugs. Rather, they are unusual situations that need to be recovered from, if possible.</p>
       </div>
     </div>
     <div>
@@ -72,18 +71,20 @@
         </div>
       </tip-box>
       <div>
-        <p>However, the code segment that encountered the unusual situation might not know how to recover from it. That is why most languages allow a method to encapsulate the unusual situation in an Exception object and ‘throw’ that object so that another
-          piece of code can ‘catch’ it and deal with it. Usually, an exception thrown by a method is caught by the caller method. If the called method does not know how to deal with the exception it caught, it will throw the Exception object to its own
-          caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the method call stack until it is received by the main method and thrown to the runtime, thus halting the system. In the Java code given
-          below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code> method inside a <code>try{ }</code> block and has a <code>catch{ }</code>          block to specify what to do if the exception is actually thrown.</p>
+        <p><strong>Most languages allow a method to encapsulate the unusual situation in an Exception object and 'throw' that object so that another piece of code can 'catch' it and deal with it.</strong> This is especially useful when code segment that
+          encountered the unusual situation does not know how to deal with it.</p>
+        <p><strong>Exception objects can propagate up the method call hierarchy until it is dealt with.</strong> Usually, an exception thrown by a method is caught by the caller method. If the called method does not know how to deal with the exception it
+          caught, it will throw the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the method call stack until it is received by the main method and thrown to the
+          runtime, thus halting the system.</p>
         <tip-box>
-          <p>Example:</p><img src="/se-book/errorHandling/exceptions/how/images/processInput.png" height="320">
+          <p>📦 In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code> method inside a <code>try{ }</code> block
+            and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p><img src="/se-book/errorHandling/exceptions/how/images/processInput.png" height="320">
           <p></p>
         </tip-box>
         <p>Advantages of exception handling in this way:</p>
         <ul>
           <li>The ability to propagate error information through the call stack.</li>
-          <li>The separation of code that deals with ‘unusual’ situations from the code that does the ‘usual’ work.</li>
+          <li>The separation of code that deals with 'unusual' situations from the code that does the 'usual' work.</li>
         </ul>
       </div>
     </div>
@@ -97,7 +98,7 @@
         </div>
       </tip-box>
       <div>
-        <p>{to add: do not use exceptions for normal workflow}</p>
+        <p>In general, use exceptions only for 'unusual' conditions. Use normal <code>return</code> statements to pass control to the caller for conditions that are 'normal'.</p>
       </div>
     </div>
     <h2 id="assertions">Assertions</h2>

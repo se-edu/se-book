@@ -1,7 +1,7 @@
-<panel header=":lock::key: Comments">
+<panel header=":lock::key: Comments should cover: What? Why? How?">
 <question>
 
-In general, comments should NOT be used to describe
+In general, comments should describe, 
 
 - [ ] a. WHAT the code does
 - [ ] b. WHY the code does something
@@ -9,11 +9,9 @@ In general, comments should NOT be used to describe
 
 <div slot="answer">
 
-- [ ] a. WHAT the code does
-- [ ] b. WHY the code does something
-- [x] c. HOW the code does something
+a, b
 
-Explanation: How the code does something should be apparent from the code itself. However, comments can help the reader in describing WHAT and WHY aspects of the code. This was discussed during the lecture.
+Explanation: How the code does something should be apparent from the code itself. However, comments can help the reader in describing WHAT and WHY aspects of the code. 
 
 </div>
 </question>

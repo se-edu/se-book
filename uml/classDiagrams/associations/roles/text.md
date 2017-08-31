@@ -1,5 +1,3 @@
-<div id="path">UML &rarr; Class Diagrams &rarr;</div>
-
 <div id="title">
 
 #### Roles :two:
@@ -8,30 +6,47 @@
 
 <div id="body">
 
-‘Role’ labels are optionally used to indicate the role played by the classes in the association.
+**_Association Role_ labels are used to indicate the role played by the classes in the association.**
+
+<img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/association.png" height="120" />
+<p/>
 
 <tip-box>
 
-Example:
+:package: This association represents a marriage between a `Man` object and a `Woman` object. The respective roles played by objects of these two classes are `husband` and `wife`. 
 
-<img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/husbandWife.png" height="70" />
+<img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/husbandWife.png" width="300" />
 <p/>
 
-This association represents a marriage between a Man object and a Woman object. The respective roles played by objects of these two classes are husband and wife.
+Note how the variable names match closely with the association roles.
+
+```java
+class Man{
+    Woman wife;
+}
+
+class Woman{
+    Man husband;
+}
+```
 
 </tip-box>
 
 <tip-box>
 
-Example:
+:package: The role of `Student` objects in this association is `charges` %%(i.e. Admin is in charge of students)%%
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/adminStudent.png" height="70" />
 <p/>
 
+```java
+class Admin{
+    List<Student> charges;
+}
+```
+
 </tip-box>
 
-<img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/association.png" height="120" />
-<p/>
 
 </div>
 

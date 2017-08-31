@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; </div>
-
 <div id="title">
 
 #### Classes :one:
@@ -12,17 +10,8 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oopDesign/classes/basic/embed.md" header="OOP: Classes: Basic" is-open></dynamic-panel>
-
-<p/>
-
-Here are some tutorials you can refer to (from Oracle’s official Java tutorials) to learn how to implement basic OOP constructs. classes in Java, go to and follow the next few steps in there.
-
-Other relevant tutorials:
-
-*	[Classes, methods, variables – Start from the linked page and follow the next few steps in the tutorial](https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html)
-*	[Class-level members](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html)
-*	[Enumerations](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)
+Given below is a tutorial you can refer to (from Oracle’s official Java tutorials) to learn how to implement java classes, in the unlikely case you don't know how to do that already. 
+* [Classes, methods, variables](https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html) – Start from the linked page and follow the next few steps in the tutorial
 
 </div>
 

@@ -19,6 +19,12 @@
     </div>
   </tip-box>
   <div>
+    <div>
+      <p>
+        <panel src="/se-book\gitAndGithub\branch\full._include_.html" header=":mortar_board: %%Tools &rarr; Git & GitHub &rarr; Branching%%" isOpen="false" no-close="true" no-switch="true"></panel>
+      </p>
+    </div>
+    <p></p>
     <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong>
       </span>
@@ -28,16 +34,54 @@
     </div>
     <div id="main">
       <div>
-        <ol>
-          <li>Fork the se-edu/samplerepo-pr-practice. Clone it into your computer.</li>
-          <li>Create a branch named <code>add-foo</code> in your clone. Add a commit which adds/modifies some new text.</li>
-          <li>Push the branch to the fork.</li>
-          <li>Create a Pull Request from the <code>add-foo</code> branch in your fork to the <code>master</code> branch of the same fork (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>), as described
-            in <a href="https://help.github.com/articles/creating-a-pull-request/">https://help.github.com/articles/creating-a-pull-request/</a></li>
-          <li>Go back to your local repo, and create a new branch <code>add-bar</code> off the <code>master</code> branch. It is very important that you switch back to <code>master</code> before you create the new branch. If not, the rew branch will be created
-            off the current branch <code>add-foo</code>.</li>
-          <li>Add a commit to <code>add-bar</code> that modifies the same part of the repo modified in the previous PR. Push to the fork and create a new PR similar to before.</li>
-        </ol>
+        <p><strong>1. Fork the <a href="https://github.com/nus-cs2103-AY1718S1/samplerepo-pr-practice">samplerepo-pr-practice</a> onto your GitHub account. Clone it onto your computer.</strong></p>
+        <p><strong>2. Create a branch named <code>add-intro</code> in your clone. Add a couple of commits</strong> which adds/modifies an <em>Introduction</em> section to the <a href="http://README.md">README.md</a>. Example:</p>
+        <pre><code class="hljs md">
+<span class="hljs-section"># Introduction</span>
+Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects. This repo can be used to practice creating PRs.
+
+</code></pre>
+        <p><strong>3. Push the <code>add-intro</code> branch to your fork.</strong></p>
+        <tabs>
+          <tab header="SourceTree"><img src="/se-book/gitAndGithub/createPRs/images/pushBranchToFork.png" height="300">
+            <p></p>
+            <hr>
+          </tab>
+          <tab header="CLI">
+            <pre class="hljs"><code>git push origin add-intro
+</code></pre>
+            <hr>
+          </tab>
+        </tabs>
+        <p><strong>4. Create a Pull Request from the <code>add-intro</code> branch in your fork to the <code>master</code> branch of the same fork</strong> (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>),
+          as described below.</p>
+        <p>4a. Go to the GitHub page of your fork (i.e. <code>https://github.com/{your_username}/samplerepo-pr-practice</code>), click on the <code>Pull Requests</code> tab, and then click on <code>New Pull Request</code> button.</p><img src="/se-book/gitAndGithub/createPRs/images/createPrButton.png"
+          width="800">
+        <p></p>
+        <p>4b. Select both <code>base fork</code> and <code>head fork</code> to be your fork (by default, the <code>base fork</code> is set to the upstream repo <code>nus-cs2103-AY1718S1/samplerepo-pr-practice</code>).</p><img src="/se-book/gitAndGithub/createPRs/images/selectBase.png"
+          width="800">
+        <p></p>
+        <tip-box type="info">
+          <p>The <em>base fork</em> is where changes should be applied. The <em>head fork</em> contains the changes you would like to be applied.</p>
+        </tip-box>
+        <p>4c. (1) Set the base branch to <code>master</code> and head branch to <code>add-intro</code>, (2) confirm the <em>diff</em> contains the changes you propose to merge in this PR <span class="dimmed">(i.e. confirm that you did not accidentally include extra commits in the branch)</span>,
+          and (3) click the <code>Create pull request</code> button.</p><img src="/se-book/gitAndGithub/createPRs/images/checkDiff.png" width="800">
+        <p></p>
+        <p>4d. (1) Set PR name, (2) set PR description, and (3) Click the <code>Create pull request</code> button.</p><img src="/se-book/gitAndGithub/createPRs/images/setPrName.png" width="600">
+        <p></p>
+        <p><strong>5. In your local repo, create a new branch <code>add-summary</code></strong> off the <code>master</code> branch.</p>
+        <tip-box type="warning">
+          <p>When creating the new branch, it is very important that you switch back to the <code>master</code> branch first. If not, the new branch will be created off the current branch <code>add-intro</code>.</p>
+        </tip-box>
+        <p><strong>6. Add a commit in the <code>add-summary</code> branch</strong> that adds a <em>Summary</em> section to the <code>README.md</code>, in exactly the same place you added the <em>Introduction</em> section earlier.</p><img src="/se-book/gitAndGithub/createPRs/images/addSummaryBranch.png"
+          width="400">
+        <p></p>
+        <p><strong>7. Push the <code>add-summary</code> to your fork and create a new PR</strong> similar to before.</p>
+        <panel header=":paperclip: Resources" expanded="">
+          <ul>
+            <li><a href="https://help.github.com/articles/creating-a-pull-request/">GitHub's own documentation on creating a PR</a></li>
+          </ul>
+        </panel>
       </div>
       <div>
         <div></div>

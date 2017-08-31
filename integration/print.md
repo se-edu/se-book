@@ -21,6 +21,10 @@
 <include src="buildAutomation/what/print.md" />
 <include src="buildAutomation/continuousIntegrationDeployment/print.md" />
 
+## Review
+
+<include src="review/print.md" />
+
 </div>
 
 </div>

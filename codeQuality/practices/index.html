@@ -25,8 +25,10 @@
   <panel type="seamless" header="**Avoid Deep Nesting**" alt="long methods">
     <div>
       <div>
-        <p>According to the Linux 1.3.53 CodingStyle documentation, <em>&quot;if you need more than 3 levels of indentation, you're screwed anyway, and should fix your program&quot;.</em></p>
-        <p>In particular, avoid <em>arrowhead</em> style code.</p>
+        <blockquote>
+          <p>If you need more than 3 levels of indentation, you're screwed anyway, and should fix your program. <sub>--Linux 1.3.53 CodingStyle</sub></p>
+        </blockquote>
+        <p>In particular, avoid <a href="https://blog.codinghorror.com/flattening-arrow-code/"><em>arrowhead</em> style code</a>.</p>
         <tip-box>
           <p>Example:</p><img src="/se-book/codeQuality/practices/avoidDeepNesting/images/arrowheadStyle.png" height="250">
           <p></p>
@@ -39,6 +41,22 @@
       <div>
         <p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate the final
           value).</p>
+        <tip-box>
+          <p>Example:</p>
+          <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+          <pre><code class="hljs java"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);
+</code></pre>
+          <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+          <pre><code class="hljs java">
+<span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;
+<span class="hljs-keyword">boolean</span> isSameSize = previousSize != length;
+<span class="hljs-keyword">boolean</span> isValidCode = isWithinSizeLimit || isSameSize;
+
+<span class="hljs-keyword">boolean</span> isUrgent = typeCode == URGENT;
+
+<span class="hljs-keyword">return</span> isValidCode &amp;&amp; isUrgent;
+</code></pre>
+        </tip-box>
         <blockquote>
           <p>The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. <sub>-- Edsger Dijkstra</sub></p>
         </blockquote>
@@ -70,7 +88,7 @@
             </tbody>
           </table>
         </tip-box>
-        <p>As you can see, using a named constant makes the code easier to understand because the name tells us more about the meaning of the number. Similarly, we can have ‘magic’ values of other data types.</p>
+        <p>Using a named constant makes the code easier to understand because the name tells us more about the meaning of the number. Similarly, we can have ‘magic’ values of other data types.</p>
         <tip-box>
           <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
           <pre><code class="hljs java"><span class="hljs-keyword">return</span> “Error <span class="hljs-number">1432</span>”;  <span class="hljs-comment">// A magic string!</span>
@@ -166,7 +184,7 @@ displayResult();
   <panel type="seamless" header="**Make the Happy Path Prominent**" alt="happy path">
     <div>
       <div>
-        <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unintended as much as possible. It is the ‘unusual’ cases that should be indented.
+        <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unindented as much as possible. It is the ‘unusual’ cases that should be indented.
           Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
         <tip-box>
           <p>Example:</p>
@@ -205,7 +223,7 @@ process();
 cleanup();
 exit();
 </code></pre>
-          <p>In the contrast, the above code</p>
+          <p>In contrast, the above code</p>
           <ul>
             <li>deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.</li>
             <li>keeps the main path un-indented.</li>
@@ -262,7 +280,7 @@ exit();
   <panel type="seamless" header="**Use Name to Explain**" alt="name explain">
     <div>
       <div>
-        <p><strong>A name is not just for differentiation; it should explain the named entity to the reader in an accurately and at a sufficient level of detail.</strong></p>
+        <p><strong>A name is not just for differentiation; it should explain the named entity to the reader accurately and at a sufficient level of detail.</strong></p>
         <tip-box>
           <p>Examples:</p>
           <table class="markbind-table table">
@@ -519,23 +537,70 @@ exit();
   <panel type="seamless" header="**Do Not Repeat the Obvious**" alt="repeat obvious">
     <div>
       <div>
-        <p>If the parameter name clearly indicates its purpose, refrain from repeating the description in a comment just for the sake of 'good documentation'.</p>
+        <p>If the code is self-explanatory, refrain from repeating the description in a comment just for the sake of 'good documentation'.</p>
+        <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+        <pre><code class="hljs java"><span class="hljs-comment">// increment x</span>
+x++;
+
+<span class="hljs-comment">//trim the input</span>
+trimInput();
+</code></pre>
       </div>
     </div>
   </panel>
   <panel type="seamless" header="**Write to the Reader**" alt="write reader">
     <div>
       <div>
-        <p>Do not write comments as if they are private notes to self. Instead, write them well enough to be understood by another programmer. One type of comments that is almost always useful is the <em>header comment</em> that you write for a file, class,
-          or an operation to explain its purpose.</p>
+        <p>Do not write comments as if they are private notes to self. Instead, write them well enough to be understood by another programmer. One type of comments that is almost always useful is the <em>header comment</em> that you write for a class or
+          an operation to explain its purpose.</p>
+        <p><img src="/se-book/images/Bad.png" alt="" title="Bad"><span class="dimmed">Reason: this comment will only make sense to the person who wrote it</span></p>
+        <pre><code class="hljs java"><span class="hljs-comment">// a quick trim function used to fix bug I detected overnight</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">trimInput</span><span class="hljs-params">()</span></span>{
+    ....
+}
+</code></pre>
+        <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+        <pre><code class="hljs java"><span class="hljs-comment">/** Trims the input of leading and trailing spaces */</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">trimInput</span><span class="hljs-params">()</span></span>{
+    ....
+}
+</code></pre>
       </div>
     </div>
   </panel>
   <panel type="seamless" header="**Explain WHAT and WHY, not HOW**" alt="explain what why how">
     <div>
       <div>
-        <p>When you write comments, use them to explain <em>why</em> and <em>what</em> aspect of the code, rather than the <em>how</em> aspect. The former is usually not apparent in the code and writing it down adds value to the code. The latter should already
-          be apparent from the code.</p>
+        <p>Comments should explain <em>what</em> and <em>why</em> aspect of the code, rather than the <em>how</em> aspect.</p>
+        <p>👍 <strong>What</strong> : The specification of what the code <em>supposed</em> to do. The reader can compare such comments to the implementation to verify if the implementation is correct</p>
+        <tip-box>
+          <p>📦 Example: This method is possibly buggy because the implementation does not seem to match the comment. In this case the comment could help the reader to detect the bug.</p>
+          <pre><code class="hljs java"><span class="hljs-comment">/** Removes all spaces from the {<span class="hljs-doctag">@code</span> input} */</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">compact</span><span class="hljs-params">(String input)</span></span>{
+    input.trim();
+}
+</code></pre>
+        </tip-box>
+        <p>👍 <strong>Why</strong> : The rationale for the current implementation.</p>
+        <tip-box>
+          <p>📦 Example: Without this comment, the reader will not know the reason for calling this method.</p>
+          <pre><code class="hljs java"><span class="hljs-comment">// Remove spaces to comply with IE23.5 formatting rules</span>
+compact(input);
+</code></pre>
+        </tip-box>
+        <p>👎 <strong>How</strong> : The explanation for how the code works. This should already be apparent from the code, if the code is self-explanatory. Adding comments to explain the same thing is redundant.</p>
+        <tip-box>
+          <p>📦 Example:</p>
+          <p><img src="/se-book/images/Bad.png" alt="" title="Bad"><span class="dimmed">Reason: Comment explains how the code works.</span></p>
+          <pre><code class="hljs java"><span class="hljs-comment">// return true if both left end and right end are correct or the size has not incremented</span>
+<span class="hljs-keyword">return</span> (left &amp;&amp; right) || (input.size() == size);
+</code></pre>
+          <p><img src="/se-book/images/Good.png" alt="" title="Good"><span class="dimmed">Reason: Code refactored to be self-explanatory. Comment no longer needed.</span></p>
+          <pre><code class="hljs java">
+<span class="hljs-keyword">boolean</span> isSameSize = (input.size() == size) ;
+<span class="hljs-keyword">return</span> (isLeftEndCorrect &amp;&amp; isRightEndCorrect) || isSameSize;
+</code></pre>
+        </tip-box>
       </div>
     </div>
   </panel>

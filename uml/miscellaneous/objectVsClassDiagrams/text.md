@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">UML &rarr; Miscellaneous &rarr;</div>
-
 <div id="title">
 
 #### Object vs Class Diagrams :two:
