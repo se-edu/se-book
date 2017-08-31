@@ -1,7 +1,7 @@
-<panel header=":lock::key: Choose the incorrect statement about models.">
+<panel header=":lock::key: Statements about models">
 <question>
 
-Choose the incorrect statement about models.
+Choose the correct statements about models.
 
 - [ ] a. Models are abstractions.
 - [ ] b. Models can be used for communication.
@@ -11,11 +11,7 @@ Choose the incorrect statement about models.
 
 <div slot="answer">
 
-- [ ] a. Models are abstractions.
-- [ ] b. Models can be used for communication.
-- [ ] c. Models can be used for analysis of a problem.
-- [x] d. Generating models from code is useless.
-- [ ] e. Models can be used as blueprints for generating code.
+(a) (b) (c) (e)
 
 Explanation: Models generated from code can be used for understanding, analysing, and communicating about the code.
 
