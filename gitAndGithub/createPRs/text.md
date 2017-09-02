@@ -46,7 +46,10 @@ git push origin add-intro
 <img src="{{baseUrl}}/gitAndGithub/createPRs/images/createPrButton.png" width="800" />
 <p/>
 
-4b. Select both `base fork` and `head fork` to be your fork (by default, the `base fork` is set to the upstream repo `nus-cs2103-AY1718S1/samplerepo-pr-practice`).
+4b. Select `base fork` and `head fork` as follows:
+
+* `base fork`: your own fork (i.e. `{your user name}/samplerepo-pr-practice`, ==NOT `nus-cs2103-AY1718S1/samplerepo-pr-practice`==)
+* `head fork`: your own fork.
 
 <img src="{{baseUrl}}/gitAndGithub/createPRs/images/selectBase.png" width="800" />
 <p/>
