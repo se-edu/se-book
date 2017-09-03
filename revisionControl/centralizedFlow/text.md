@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Revision Control &rarr; </div>
-
 <div id="title">
 
 #### Centralized Flow :two:
@@ -12,13 +10,12 @@
 
 <div id="body">
 
-This is similar to the feature branch workflow except all changes are done in the master branch.
-
-More info: https://www.atlassian.com/git/tutorials/comparing-workflows#centralized-workflow
+**The _centralized workflow_ is similar to the feature branch workflow except all changes are done in the master branch.**
 
 </div>
 
 <div id="extras">
+  <include src="resources.md" />
 <div>
 
 </div>
