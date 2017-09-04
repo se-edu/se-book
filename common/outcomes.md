@@ -137,7 +137,7 @@
 <dynamic-panel src="../oopDesign/associations/associationClasses/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/associations/associationClasses/outcomes.md" inline />
 
 
-<dynamic-panel src="../oopDesign/inheritance/basic/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/inheritance/basic/outcomes.md" inline />
+<dynamic-panel src="../oopDesign/inheritance/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/inheritance/what/outcomes.md" inline />
 
 <dynamic-panel src="../oopDesign/inheritance/overriding/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/inheritance/overriding/outcomes.md" inline />
 

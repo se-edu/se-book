@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; </div>
-
 <div id="title">
 
 #### Inheritance :one:
@@ -12,18 +10,30 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oopDesign/inheritance/basic/embed.md" header="OOP: Inheritance: Basic" is-open></dynamic-panel>
+<tabs> 
+  <tab header=":abc:">
 
-<p/>
+To learn how to implement inheritance in Java, you can follow [[Oracle’s Java Tutorials: Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)]
 
-[Oracle’s Java Tutorials: Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)
+  <hr></tab>
+  <tab header=":tv:">
+
+A very beginner-friendly video about implementing Java inheritance.
+
+@[youtube](9JpNY-XAseg)
+
+  <hr></tab>
+</tabs>
+
+<tip-box type="tip">
+
+Java requires all class to have a parent class. If you do not specify a parent class, Java automatically assigns the `Object` class as the parent class.
+  
+</tip-box>
 
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
 <div>
 
 </div>
