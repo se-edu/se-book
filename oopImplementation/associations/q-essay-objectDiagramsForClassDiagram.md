@@ -16,7 +16,7 @@ i.e. apply step 1 &rarr; [diagram 1] &rarr; apply step 2 on diagarm 1 &rarr; [di
 
 3. `Bruce`'s contact number is the same as `Alfred`'s.
 
-4. `Alfred` is also the guardian of another person. That person lists `Alfred`s home address is his home address as well as office address.
+4. `Alfred` is also the guardian of another person. That person lists `Alfred`s home address as his home address as well as office address.
 
 5. `Alfred` has a an office address at `Wayne Industries` building which is different from his home address (i.e. `Bat Cave`).
 
