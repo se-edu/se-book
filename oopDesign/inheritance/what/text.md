@@ -65,7 +65,7 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 
 <tip-box>
 
-:package: Two inheritance hierarchies/trees:
+:package: Two inheritance hierarchies/trees are given below. Note that `Parrot` _is a_ `Bird` as well as it _is an_ `Animal`. 
 
 <img src="{{baseUrl}}/oopDesign/inheritance/what/images/inheritanceTreesExamples.png" width="500" />
 <p/>
