@@ -1,6 +1,6 @@
-<include src="prereq.md"/><p/> 
+<include src="prereq.md"/><p/>
 
-%%**<include src="../../path.md" inline />**%%
+%%**<include src="../path.md" inline />**%%
 
 <include src="text.md#title" />
 
@@ -10,3 +10,4 @@
 <include src="text.md#extras" />
 
 </div>
+

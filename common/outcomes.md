@@ -453,6 +453,8 @@
 
 <dynamic-panel src="../oopImplementation/classes/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopImplementation/classes/outcomes.md" inline />
 
+<dynamic-panel src="../oopImplementation/classLevelMembers/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopImplementation/classLevelMembers/outcomes.md" inline />
+
 <dynamic-panel src="../oopImplementation/associations/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopImplementation/associations/outcomes.md" inline />
 
 <dynamic-panel src="../oopImplementation/dependencies/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopImplementation/dependencies/outcomes.md" inline />

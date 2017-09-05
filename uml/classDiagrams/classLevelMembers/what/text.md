@@ -1,18 +1,16 @@
-<div id="path">UML &rarr; Class Diagrams &rarr;</div>
-
 <div id="title">
 
-#### What :two:
+#### Class-Level Members :two:
 
 </div>
 
 <div id="body">
 
-In UML class diagrams, underlines are used to denote class-level attributes and variables.
+In UML class diagrams, **underlines denote class-level attributes and variables.**
 
 <tip-box>
 
-Example:
+:package: In the class below, `totalStudents` attribute and the `getTotalStudents` method are class-level.
 
 <img src="{{baseUrl}}/uml/classDiagrams/classLevelMembers/what/images/student.png" height="120" />
 <p/>

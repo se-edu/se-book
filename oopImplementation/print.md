@@ -7,6 +7,7 @@
 # Object Oriented Programming
 
 <include src="classes/print.md" />
+<include src="classLevelMembers/print.md" />
 <include src="associations/print.md" />
 <include src="dependencies/print.md" />
 <include src="composition/print.md" />

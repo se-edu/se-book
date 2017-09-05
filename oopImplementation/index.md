@@ -7,6 +7,7 @@
 <div id="main">
 
 <include src="classes/embed.md" />
+<include src="classLevelMembers/embed.md" />
 <include src="associations/embed.md" />
 <include src="dependencies/embed.md" />
 <include src="composition/embed.md" />
