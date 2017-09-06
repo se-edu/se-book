@@ -12,26 +12,26 @@
 
 <div id="body">
 
-A composition is an association that represents a strong “whole-part” relationship. When the “whole” is destroyed, “parts” are destroyed too.
+**A composition is an association that represents a strong _whole-part_ relationship.** When the _whole_ is destroyed, _parts_ are destroyed too.
 
-<dynamic-panel src="../../../uml/classDiagrams/composition/topicPanel.md" header="UML: Class Diagrams: Composition" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/classDiagrams/composition/what/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Composition" />
 
 <p/>
 
 <tip-box>
 
-Example:
+:package: A `Board` (used for playing board games) consists of `Square` objects.
 
 <img src="{{baseUrl}}/oopDesign/associations/composition/images/boardSquare.png" height="50" />
 <p/>
 
 </tip-box>
 
-In addition, composition also implies that **there cannot be cyclical links**. In the example below, the notation represents a ‘sub-folder’ relationship between two folders while implying that a Folder cannot be a sub-folder of itself. If the diamond is removed, it is no longer a composition relationship and technically, allows a folder to be subfolder of itself.
+**Composition also implies that there cannot be cyclical links**. 
 
 <tip-box>
 
-Example:
+:package: In this ‘sub-folder’ association, a `Folder` cannot be a sub-folder of itself. If the diamond is removed, it is no longer a composition relationship and technically, allows a folder to be sub-folder of itself.
 
 <img src="{{baseUrl}}/oopDesign/associations/composition/images/folder.png" height="80" />
 <p/>

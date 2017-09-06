@@ -1,20 +1,23 @@
-<div id="path">UML &rarr; Class Diagrams &rarr;</div>
-
 <div id="title">
 
-#### What :two:
+#### Composition :two:
 
 </div>
 
 <div id="body">
 
-We use a solid diamond symbol to denote composition.
+**UML uses a solid diamond symbol to denote composition.**
+
+Notation:
+
+<img src="{{baseUrl}}/uml/classDiagrams/composition/what/images/notation.png" width="220" />
+<p/>
 
 <tip-box>
 
-Example:
+:package: A `Book` consists of `Chapter` objects. When the `Book` object is destroyed, its `Chapter` objects are destroyed too.
 
-<img src="{{baseUrl}}/uml/classDiagrams/composition/what/images/boardSquare.png" height="150" />
+<img src="{{baseUrl}}/uml/classDiagrams/composition/what/images/bookChapter.png" width="220" />
 <p/>
 
 </tip-box>
