@@ -1,27 +1,27 @@
-<div id="path">UML &rarr; Class Diagrams &rarr;</div>
-
 <div id="title">
 
-#### What :three:
+#### Associations as Attributes :three:
 
 </div>
 
 <div id="body">
 
-An attribute is sometimes used to represent an association. The diagram below depicts a multiplayer _Square Game_ being played on a board comprising of one hundred squares. Each of the squares may be occupied with any number of Pieces, each belonging to a certain player. A piece may or may not be on a square.  Note how the association `’is on’` can be replaced by an `isOn` attribute of the `Piece` class. In order to realize the 0..1 multiplicity, the isOn attribute can either be null or hold a reference to a Square object.
+**An association can be shown as an attribute instead of a line.** 
+
+Association multiplicities and the default value too can be shown as part of the attribute using the following notation. Both are optional. 
+
+`name: type [multiplicity]  = default value`
 
 <tip-box>
 
-<img src="{{baseUrl}}/uml/classDiagrams/associationsAsAttributes/what/images/squareMultiplicity.png" height="300" />
+:package: The diagram below depicts a multi-player _Square Game_ being played on a board comprising of 100 squares. Each of the squares may be occupied with any number of pieces, each belonging to a certain player. 
+
+A `Piece` may or may not be on a `Square`.  Note how that association can be replaced by an `isOn` attribute of the `Piece` class. The `isOn` attribute can either be `null` or hold a reference to a `Square` object, matching the `0..1` multiplicity of the association it replaces. The default value is `null`.
+
+<img src="{{baseUrl}}/uml/classDiagrams/associationsAsAttributes/what/images/squareMultiplicity.png" width="600" />
 <p/>
 
-</tip-box>
-
-In addition, association multiplicities of two or more can be made as part of the attribute using
-
-* name: type ==[multiplicity]==  = default value
-
-<tip-box>
+The association that a `Board` has 100 `Sqaure`s can be shown in either of these two ways: 
 
 <img src="{{baseUrl}}/uml/classDiagrams/associationsAsAttributes/what/images/board.png" height="70" />
 <p/>

@@ -1,1 +1,1 @@
-:trophy: Can interpret dependencies in a class diagram :three:
+:trophy: Can use dependencies in a class diagram :three:

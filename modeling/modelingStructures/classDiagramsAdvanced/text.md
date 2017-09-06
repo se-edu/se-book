@@ -12,7 +12,8 @@
 
 <div id="body">
 
-<dynamic-panel src="../../../oopDesign/associations/aggregation/embed.md" header="OOP: Associations: Aggregation" is-open></dynamic-panel>
+<dynamic-panel src="../../../oopDesign/inheritance/interfaces/embed.md" header="OOP: Inheritance: Interfaces" is-open></dynamic-panel>
+<dynamic-panel src="../../../oopDesign/inheritance/abstractClasses/embed.md" header="OOP: Inheritance: Abstract Classes" is-open></dynamic-panel>
 <dynamic-panel src="../../../oopDesign/associations/associationClasses/embed.md" header="OOP: Associations: Association Classes" is-open></dynamic-panel>
 
 </div>
