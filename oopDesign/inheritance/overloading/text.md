@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; Inheritance &rarr;</div>
-
 <div id="title">
 
 #### Overloading :two:
@@ -12,7 +10,7 @@
 
 <div id="body">
 
-Method overloading arises when there are multiple operations with the **same name but different type signatures.**
+**Method overloading is when there are multiple methods with the same name but different type signatures.** Overloading is used to indicate that multiple operations do similar things but take different parameters. 
 
 <tip-box type="primary">
 
@@ -22,31 +20,17 @@ Method overloading arises when there are multiple operations with the **same nam
 
 <tip-box>
 
-Example:
+:package: In the class below, the `calculate` method is overloaded because the two methods have the same name but different type signatures `(String)` and `(int[])`
 
-```
-class Account {
-    Account () {
-        // Signature: ()
-        ...
-    }
-    Account (String name, String number, double balance) {
-        // Signature: (String, String, double)
-        ...
-    }
+```java
+class RatingCalculator{
+    void calculate(String matric) { ... }
+    void calculate(int[] averages) { ... }
 }
 ```
 
-```
-void calculateCAP (String matric) { ... }
-void calculateCAP (int[] averages) { ... }
-```
-
-The constructor `Account` and method `calculateCAP` has been overloaded.
-
 </tip-box>
 
-Overloading is used to indicate that multiple operations do similar things but take different parameters. An operation can be overloaded inside the same class or in a sub/super classes.
 
 </div>
 

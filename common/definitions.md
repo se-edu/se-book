@@ -259,12 +259,12 @@ Also known as
 
 <panel type="seamless" header="%%Examples%%">
 
-| Method                         | Type Signature        |
-| :----------------------------: | :-------------------: |
-| int add(int X, int Y)          | (int, int)            |
-| void add(int A, int B)         | (int, int)            |
-| void m(int X, double Y)        | (int, double)         |
-| void m(double X, int Y)        | (double, int)         |
+| Method                           | Type Signature          |
+| :------------------------------: | :---------------------: |
+| `int add(int X, int Y)`          | `(int, int)`            |
+| `void add(int A, int B)`         | `(int, int)`            |
+| `void m(int X, double Y)`        | `(int, double)`         |
+| `void m(double X, int Y)`        | `(double, int)`         |
 
 </panel>
 
