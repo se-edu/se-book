@@ -1,4 +1,4 @@
-<panel header="Resources" expanded type="default">
+<panel header=":paperclip:  Resources" expanded>
 
 * [An explanation of the SRP](http://www.oodesign.com/single-responsibility-principle.html) from www.oodesign.com
 * [Another explanation (more detailed)](http://code.tutsplus.com/tutorials/solid-part-1-the-single-responsibility-principle--net-36074) 

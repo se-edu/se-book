@@ -211,7 +211,7 @@ Also known as
 
 <div id="def-single-responsibility-principle">
 
-**Single Responsibility Principle (SRP)**: A class should have one, and only one, reason to change. -- Robert C. Martin
+**Single Responsibility Principle (SRP)**: A class should have one, and only one, reason to change. <sub>-- Robert C. Martin</sub>
 
 </div>
 
