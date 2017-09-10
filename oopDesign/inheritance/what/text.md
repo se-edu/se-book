@@ -52,7 +52,7 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 <tip-box>
 
 :package: In this class diagrams of a _Snakes and Ladders_ board game,
-* `SnakeHeadSquare` _is a_ `Square`
+* `SnakeHeadSquare` _is a_ `Square` %%&nbsp;(a `SnakeHeadSquare` is a square in which the head of a snake appears)%%
 * `SnakeTailSquare` _is a_ `Square`
 
 <img src="{{baseUrl}}/oopDesign/inheritance/what/images/boardSquare.png" height="250" />
