@@ -45,7 +45,6 @@
 ## Polymorphism
 
 <include src="polymorphism/introduction/print.md" />
-<include src="polymorphism/basic/print.md" />
 <include src="polymorphism/mechanism/print.md" />
 
 ## Conceptualizing an OOP Solution

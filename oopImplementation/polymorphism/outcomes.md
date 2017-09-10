@@ -1,1 +1,1 @@
-:trophy: Can implement polymorphic behavior :two:
+:trophy: Can implement polymorphism :two:

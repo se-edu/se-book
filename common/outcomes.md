@@ -154,8 +154,6 @@
 
 <dynamic-panel src="../oopDesign/polymorphism/introduction/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/polymorphism/introduction/outcomes.md" inline />
 
-<dynamic-panel src="../oopDesign/polymorphism/basic/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/polymorphism/basic/outcomes.md" inline />
-
 <dynamic-panel src="../oopDesign/polymorphism/mechanism/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/polymorphism/mechanism/outcomes.md" inline />
 
 
