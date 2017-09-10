@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; </div>
-
 <div id="title">
 
 #### Overriding :one:
@@ -12,11 +10,45 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oopDesign/inheritance/overriding/embed.md" header="OOP: Inheritance: Overriding" is-open></dynamic-panel>
+<tip-box> 
 
-<p/>
+:package: A simple example where the `Report#print()` method is overridden by `EvaluationReport#print()` method: 
 
-[Oracle’s Java Tutorials: Overriding](https://docs.oracle.com/javase/tutorial/java/IandI/override.html)
+```java
+
+class Report{
+
+    void print(){
+        System.out.println("Printing report");
+    }
+
+}
+
+class EvaluationReport extends Report{
+
+    @Override  // this annotation is optional
+    void print(){
+        System.out.println("Printing evaluation report");
+    }
+
+}
+
+class ReportMain{
+
+    public static void main(String[] args){
+        Report report = new Report();
+        report.print(); // prints "Printing report"
+
+        EvaluationReport evaluationReport = new EvaluationReport();
+        evaluationReport.print(); // prints "Printing evaluation report"
+    }
+}
+
+```
+
+</tip-box>
+
+* [Java - Overriding](https://www.tutorialspoint.com/java/java_overriding.htm) -- a tutorial by tutorialspoint.com
 
 </div>
 

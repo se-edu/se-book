@@ -1,0 +1,1 @@
+<dynamic-panel src="../../inheritance/what/full.md" header="%%:mortar_board: OOP &rarr; Inheritance &rarr; What%%" />

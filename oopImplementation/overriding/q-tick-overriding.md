@@ -1,24 +1,22 @@
-<panel header=":lock::key: Which one of these overrides another method?">
+<panel header=":lock::key: Which methods override?">
 <question>
+
+Which of these methods override another method?
 
 <img src="{{baseUrl}}/oopImplementation/overriding/images/overriding.png" height="220" />
 <p/>
 
-- [ ] a. a
-- [ ] b. b
-- [ ] c. c
-- [ ] d. d
-- [ ] e. e
+- [ ] a
+- [ ] b
+- [ ] c
+- [ ] d
+- [ ] e
 
 <div slot="answer">
 
-- [ ] a. a
-- [ ] b. b
-- [ ] c. c
-- [x] d. d
-- [ ] e. e
+d
 
-Explanation: Method overriding requires a method in a child class to use the same method name and same parameter sequence used by one of its ancestors
+Explanation: Method overriding requires a method in a _child class_ to use the same method name and same parameter sequence used by one of its ancestors
 
 </div>
 </question>

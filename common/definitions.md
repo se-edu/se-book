@@ -181,9 +181,7 @@ Also known as
 
 **Polymorphism**:
 
-> The ability of different objects to respond, each in its own way, to identical messages is called polymorphism.
->
-> -- [Object-Oriented Programming with Objective-C](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/), Apple
+> The ability of different objects to respond, each in its own way, to identical messages is called polymorphism. <sub>-- [Object-Oriented Programming with Objective-C](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/), Apple</sub>
 
 </div>
 

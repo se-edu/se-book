@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; Polymorphism &rarr;</div>
-
 <div id="title">
 
 #### Basic :two:
@@ -12,16 +10,16 @@
 
 <div id="body">
 
-To retain the multiple types while still allowing some parts of the system to treat them as one type, _inheritance_ can be used.
+**We can use inheritance to achieve polymorphism**.
 
 <tip-box>
 
-Example:
+:package: Given below is the minimum code for `Staff`, `Admin`, and `Academic` classes.
 
-<img src="{{baseUrl}}/oopDesign/polymorphism/basic/images/staff.png" height="200" />
+<img src="{{baseUrl}}/oopDesign/polymorphism/basic/images/polymorphicPayroll.png" height="200" />
 <p/>
 
-Given below is the minimum code for `Staff`, `Admin`, and `Academic` classes.
+
 
 ```
 class Staff {
@@ -52,6 +50,19 @@ class Academic extends Staff {
         salary = salary * percent * 2;
     }
 }
+
+//------------------------------------------
+
+class Payroll {
+    ArrayList< Staff > staff;
+    // ...
+
+    void adjustSalary(int byPercent) {
+        for (Staff s: staff) {
+            s.adjustSalary(byPercent);
+        }
+    }
+}
 ```
 
 </tip-box>
@@ -59,6 +70,7 @@ class Academic extends Staff {
 </div>
 
 <div id="extras">
+  <include src="resources.md" />
 <div>
 
 </div>

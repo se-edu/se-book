@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; Polymorphism &rarr;</div>
-
 <div id="title">
 
 #### Introduction :two:
@@ -22,7 +20,7 @@ Take the example of writing a payroll application for a university to facilitate
 
 <tip-box>
 
-Example:
+:package: Calling `adjustSalary()` method for each Staff type:
 
 <img src="{{baseUrl}}/oopDesign/polymorphism/introduction/images/payroll.png" height="150" />
 <p/>
@@ -48,7 +46,7 @@ class Payroll1 {
 
 </tip-box>
 
-Note how processing is similar for the two staff types. It is **as if the type of staff members is irrelevant** to how they are processed inside this operation! If that is the case, can the staff type be “abstracted away” from this operation? After all, why keep irrelevant details? Here is such an implementation of `adjustSalary(int)`:
+Note how processing is similar for the two staff types. It is as if the type of staff members is irrelevant to how they are processed inside this operation! If that is the case, can the staff type be "abstracted away" from this method? Here is such an implementation of `adjustSalary(int)`:
 
 <tip-box>
 
@@ -82,7 +80,7 @@ The above code is better in several ways:
 
 This does not mean we are getting rid of the `Academic` and `Admin` classes completely and replacing them with a more general class called `Staff`. Rather, this part of the code “treats” both `Admin` and `Academic` objects as one type called `Staff`.
 
-For example, `ArrayList` staff contains both `Admin` and `Academic` objects although it treats all of them as `Staff` objects. However, when the `adjustSalary(int)` operation of these objects is called, the resulting salary adjustment will be different for `Admin` objects and `Academic` objects. Therefore, **different types of objects are treated as a single general type, but yet each type of object exhibits a different kind of behavior**. This is called _polymorphism_ (literally, it means “ability to take many forms”). In this example, an object that is perceived as type `Staff` can be an `Admin` object or an `Academic` object.
+For example, `ArrayList` staff contains both `Admin` and `Academic` objects although it treats all of them as `Staff` objects. However, when the `adjustSalary(int)` operation of these objects is called, the resulting salary adjustment will be different for `Admin` objects and `Academic` objects. Therefore, different types of objects are treated as a single general type, but yet each type of object exhibits a different kind of behavior. This is called _polymorphism_ (literally, it means “ability to take many forms”). In this example, an object that is perceived as type `Staff` can be an `Admin` object or an `Academic` object.
 
 
 </div>
