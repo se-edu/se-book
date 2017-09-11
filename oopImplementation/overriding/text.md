@@ -10,6 +10,8 @@
 
 <div id="body">
 
+**To override a method inherited from an ancestor class, simply re-implement the method in the target class.** 
+
 <tip-box> 
 
 :package: A simple example where the `Report#print()` method is overridden by `EvaluationReport#print()` method: 
@@ -48,12 +50,13 @@ class ReportMain{
 
 </tip-box>
 
-* [Java - Overriding](https://www.tutorialspoint.com/java/java_overriding.htm) -- a tutorial by tutorialspoint.com
+
 
 </div>
 
 <div id="extras">
 
+<include src="resources.md" />
 <include src="exercises.md" />
 
 <div>
