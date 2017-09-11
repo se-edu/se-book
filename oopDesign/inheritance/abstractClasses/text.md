@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; Inheritance &rarr;</div>
-
 <div id="title">
 
 #### Abstract Classes :two:
@@ -12,17 +10,21 @@
 
 <div id="body">
 
-An abstract class is a class that is declared abstract. Abstract classes cannot be instantiated, but they can be subclassed.
+<tip-box type="definition">
 
-An abstract class can include abstract methods. An abstract method is simply the method interface without the implementation.
+<include src="../../../common/definitions.md#def-abstractClass" /> 
+  
+</tip-box>
 
-<dynamic-panel src="../../../uml/classDiagrams/abstractClasses/topicPanel.md" header="UML: Class Diagrams: Abstract Classes" is-open></dynamic-panel>
+**An abstract method is simply the method interface without the implementation.** 
+
+<dynamic-panel src="../../../uml/classDiagrams/abstractClasses/what/full.md" header=":mortar_board:UML &rarr; Class Diagrams &rarr; Abstract Classes" />
 
 <p/>
 
 <tip-box>
 
-Example:
+:package: The `Account` class has an abstract method (`addInterest()`).
 
 <img src="{{baseUrl}}/oopDesign/inheritance/abstractClasses/images/account.png" height="220" />
 <p/>
