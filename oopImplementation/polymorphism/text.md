@@ -14,14 +14,16 @@
 
 <tip-box>
 
-:package: Given below is the minimum code for `Staff`, `Admin`, and `Academic` classes.
+:package: Continuing with the example given in [<trigger trigger="click" for="modal:oopImpl-polymorphism">:mortar_board: OOP &rarr; Polymorphism &rarr; Introduction </trigger>], given below is the minimum code for `Staff`, `Admin`, and `Academic` classes that achieves the desired polymorphism.
+
+<modal title="" id="modal:oopImpl-polymorphism">
+  <include src="../../oopDesign/polymorphism/introduction/full.md"/>
+</modal>
 
 <img src="{{baseUrl}}/oopImplementation/polymorphism/images/polymorphicPayroll.png" height="200" />
 <p/>
 
-
-
-```
+```java
 class Staff {
     String name;
     double salary;
