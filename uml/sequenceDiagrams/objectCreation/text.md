@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">UML &rarr; Sequence Diagrams &rarr;</div>
-
 <div id="title">
 
 #### Object Creation :two:
@@ -17,16 +15,12 @@ Notation:
 <img src="{{baseUrl}}/uml/sequenceDiagrams/objectCreation/images/notation.png" height="180" />
 <p/>
 
-<tip-box type="info">
-
 * The arrow that represents the constructor arrives at the side of the box representing the instance.
 * The activation bar represents the period the constructor is active.
 
-</tip-box>
-
 <tip-box>
 
-Example:
+:package: The `Logic` object creates a `Minefield` object.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/objectCreation/images/logicMinefield.png" height="150" />
 <p/>
