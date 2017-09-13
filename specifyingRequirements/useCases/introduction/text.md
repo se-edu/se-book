@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Specifying Requirements &rarr; Use Cases &rarr;</div>
-
 <div id="title">
 
 #### Introduction :one:
@@ -12,18 +10,19 @@
 
 <div id="body">
 
-<tip-box type="primary">
+<tip-box type="definition">
 <include src="../../../common/definitions.md#def-use-case" />
 </tip-box>
 
-A **use case** describes an _interaction between the user and the system_ for a _specific functionality_ of the system.
+**A use case describes an _interaction between the user and the system_ for a _specific functionality_ of the system.**
 
-<panel header="%%Use case examples%%" expanded>
+<tip-box> 
 
-<panel header="Example 1: ‘check account balance’ use case for an ATM" type="seamless" expanded>
+<panel header=":package: Example 1: ‘check account balance’ use case for an ATM" type="seamless" expanded>
 
 * System: <popover effect="fade" placement="right" content="Automated Teller Machine">
 ATM </popover>
+Actor: Customer
 * Use Case: Check account balance
   1. User inserts an ATM card
   2. ATM prompts for PIN
@@ -35,22 +34,27 @@ ATM </popover>
 
 </panel>
 
-<panel header="Example 2" type="seamless">
-...
+<panel header="%%:package: Example 2: 'upload file' use case of an LMS%%" type="seamless">
+
+* System: A Learning Management System (LMS)
+* Actor: Student
+* Use Case: Upload file
+  1. Student requests to upload file
+  2. LMS requests for the file location
+  3. Student specifies the file location
+  4. LMS uploads the file
+  
 </panel>
 
-<panel header="Example 3" type="seamless">
-...
-</panel>
+</tip-box>
 
-</panel>
 
 <p/>
 
-<trigger for="modal:uml" trigger="click">UML</trigger> includes a diagram type called use case diagrams that can illustrate use cases of a system visually, providing a visual ‘table of contents’ of the use cases of a system. In the example below, note how use cases are shown as ovals and user roles relevant to each use case are shown as stick figures.
+**<trigger for="modal:uml" trigger="click">UML</trigger> includes a diagram type called use case diagrams that can illustrate use cases of a system visually**, providing a visual ‘table of contents’ of the use cases of a system. In the example below, note how use cases are shown as ovals and user roles relevant to each use case are shown as stick figures.
 
 <modal title="**Unified Modeling Language (UML)**" id="modal:uml">
-  <include src="uml.md" />
+  <include src="../../../common/definitions.md#def-uml" />
 </modal>
 
 <p/>
@@ -59,7 +63,7 @@ ATM </popover>
 
 <p/>
 
-_Use cases_ can be used to capture the functional requirements of a system.
+**Use cases capture the _functional requirements_ of a system.**
 
 </div>
 

@@ -1,8 +1,10 @@
-<panel header=":lock::key: Which of these cannot appear as part of a use case description?">
+<panel header=":lock::key: Parts of a use case descriptions">
 <question>
 
+Which of these cannot appear as part of a use case description?
+
 - [ ] a. Use case identifier
-- [ ] b. Precondition
+- [ ] b. Preconditions
 - [ ] c. Guarantees
 - [ ] d. References to another use case
 - [ ] e. Main Success Scenario
@@ -12,14 +14,7 @@
 
 <div slot="answer">
 
-- [ ] a. Use case identifier
-- [ ] b. Precondition
-- [ ] c. Guarantees
-- [ ] d. References to another use case
-- [ ] e. Main Success Scenario
-- [x] f. Performance requirements
-- [ ] g. Extensions
-- [ ] h. Inclusions
+(f)
 
 Explanation: Performance requirements are non-functional requirements. They are not captured in use cases.
 

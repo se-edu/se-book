@@ -124,7 +124,7 @@ Abstraction can be applied repeatedly to obtain higher and _higher levels of abs
 
 <div id="def-feature-list">
 
-**Feature List**: A list of features (or functionalities) _grouped according to some criteria_ such as priority (e.g. must-have, nice-to-have, etc. ), order of delivery, object or process related (e.g. order-related, invoice-related, etc.)
+**Feature List**: A list of features of a product _grouped according to some criteria_ such as aspect, priority, order of delivery, etc.
 
 </div>
 
@@ -278,6 +278,12 @@ Also known as
 
 ## U
 
+<div id="def-uml">
+
+[**Unified Modeling Language (UML)**](http://www.uml.org/#UML2.0) is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the _de facto_ modeling notation used in the industry. 
+
+</div>
+
 <div id="def-use-case">
 
 **Use Case**: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an <trigger for="pop:actor">actor</trigger>.[ :book: : <popover effect="fade" placement="top" >uml-user-guide<span slot="content"><include src="./references.md#uml-user-guide" inline/></span></popover>]
@@ -292,7 +298,7 @@ Also known as
 
 <div id="def-user-story">
 
-**User story**: User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. <sup>[[Mike Cohn](https://www.mountaingoatsoftware.com/agile/user-stories)]
+**User story**: User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. <sub>[[Mike Cohn](https://www.mountaingoatsoftware.com/agile/user-stories)]</sub>
 
 </div>
 

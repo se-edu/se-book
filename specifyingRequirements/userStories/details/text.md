@@ -35,7 +35,7 @@ We can add more characteristics to the `{user role}` to provide more context to 
 
 </tip-box>
 
-**We can write user stories at various levels**. High-level user stories, called _**epics**_ (or _themes_) cover bigger functionality. We can then break down these epics to multiple user stories of normal size.
+**We can write user stories at various levels**. High-level user stories, called ==_epics_== (or _themes_) cover bigger functionality. We can then break down these epics to multiple user stories of normal size.
 
 <tip-box>
 
@@ -53,11 +53,13 @@ We can add more characteristics to the `{user role}` to provide more context to 
 
 <tip-box>
 
-* As a lecturer, I can view the forum post count of each student so that I can identify the activity level of students in the forum.<br/>
-  Conditions:<br/>
-  [ ] Separate post count for each forum should be shown<br/>
-  [ ] Total post count of a student should be shown<br/>
-  [ ] The list should be sortable by student name and post count
+* _As a_ lecturer, _I can_ view the forum post count of each student _so that_ I can identify the activity level of students in the forum.
+  
+Conditions:
+
+- [ ] Separate post count for each forum should be shown
+- [ ] Total post count of a student should be shown
+- [ ] The list should be sortable by student name and post count
 
 </tip-box>
 
