@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Specifying Requirements &rarr; Use Cases &rarr;</div>
-
 <div id="title">
 
 #### Identifying :one:
@@ -16,22 +14,19 @@ A use case is an interaction between a system and its _actors_.
 
 **Actors in Use Cases**
 
-<tip-box type="primary">
+<tip-box type="definition">
 <include src="../../../common/definitions.md#def-actor" />
 </tip-box>
 
 <tip-box>
 
-* Software system: LearnSys (a fictitious
-<popover effect="fade" placement="right" content="Learning Management System">
-    LMS
-</popover>
-).
-* Actors: Guest, Student, Staff, Admin, ExamSys (an exam management system), LibSys (a library management system).
+:package: Some example actors for a Learning Management System
+
+* Actors: Guest, Student, Staff, Admin, <tooltip content="an exam management system">ExamSys</tooltip>, <tooltip content="a library management system">LibSys</tooltip>.
 
 </tip-box>
 
-A use case can involve multiple actors.
+**A use case can involve multiple actors.**
 
 <tip-box>
 
@@ -41,7 +36,7 @@ A use case can involve multiple actors.
 
 </tip-box>
 
-An actor can be involved in many use cases.
+**An actor can be involved in many use cases.**
 
 <tip-box>
 
@@ -51,7 +46,7 @@ An actor can be involved in many use cases.
 
 </tip-box>
 
-A single person/system can play many roles.
+**A single person/system can play many roles.**
 
 <tip-box>
 
@@ -61,7 +56,7 @@ A single person/system can play many roles.
 
 </tip-box>
 
-Many persons/systems can play a single role.
+**Many persons/systems can play a single role.**
 
 <tip-box>
 
@@ -71,11 +66,13 @@ Many persons/systems can play a single role.
 
 </tip-box>
 
-{some guidance on identifying actors and use cases}
+<!-- TODO: {some guidance on identifying actors and use cases} -->
 
-Use cases can be specified at _various levels of detail_.
+**Use cases can be specified at _various levels of detail_.**
 
 <tip-box>
+
+:package: Consider the three use cases given below. Clearly, (a) is at a higher level than (b) and (b) is at a higher level than (c).
 
 * System: LearnSys
 * Use case:
@@ -85,8 +82,6 @@ Use cases can be specified at _various levels of detail_.
 
 </tip-box>
 
-Consider the three use cases given above for the LearnSys system. Clearly, (a) is at a higher level than (b) and (b) is at a higher level than (c).
-
 <tip-box type="warning">
 
 While modeling user-system interactions,
@@ -95,8 +90,6 @@ While modeling user-system interactions,
 :bulb: Be mindful at which level of details you are working on and not to mix use cases of different levels.
 
 </tip-box>
-
-{some guidance on using diagrams vs other means}
 
 </div>
 

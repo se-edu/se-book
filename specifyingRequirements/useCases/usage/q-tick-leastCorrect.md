@@ -1,5 +1,7 @@
-<panel header=":lock::key: Choose the least correct statement about use cases.">
+<panel header=":lock::key: Statement about use cases.">
 <question>
+
+Which of these are correct?
 
 - [ ] a. Use case are not very suitable for capturing non-functional requirements.
 - [ ] b. Use case diagrams are less detailed than textual use cases.
@@ -8,10 +10,7 @@
 
 <div slot="answer">
 
-- [ ] a. Use case are not very suitable for capturing non-functional requirements.
-- [ ] b. Use case diagrams are less detailed than textual use cases.
-- [x] c. Use cases are better than user stories.
-- [ ] d. Use cases can be expressed at different levels of abstraction.
+(c)
 
 Explanation: It is not correct to say one format is better than the other. It depends on the context.
 

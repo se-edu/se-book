@@ -51,7 +51,7 @@ Actor: Customer
 
 <p/>
 
-**<trigger for="modal:uml" trigger="click">UML</trigger> includes a diagram type called use case diagrams that can illustrate use cases of a system visually**, providing a visual ‘table of contents’ of the use cases of a system. In the example below, note how use cases are shown as ovals and user roles relevant to each use case are shown as stick figures.
+**<trigger for="modal:uml" trigger="click">UML</trigger> includes a diagram type called use case diagrams that can illustrate use cases of a system visually**, providing a visual ‘table of contents’ of the use cases of a system. In the example below, note how use cases are shown as ovals and user roles relevant to each use case are shown as stick figures connected to the corresponding ovals.
 
 <modal title="**Unified Modeling Language (UML)**" id="modal:uml">
   <include src="../../../common/definitions.md#def-uml" />

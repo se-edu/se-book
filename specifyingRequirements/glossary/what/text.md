@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Specifying Requirements &rarr; Glossary &rarr;</div>
-
 <div id="title">
 
 #### What :one:
@@ -12,13 +10,13 @@
 
 <div id="body">
 
-<tip-box type="primary">
+<tip-box type="definition">
 <include src="../../../common/definitions.md#def-glossary" />
 </tip-box>
 
-As an example, here is a partial glossary from a variant of the Snakes and Ladders game:
-
 <tip-box>
+
+:package: Here is a partial glossary from a variant of the Snakes and Ladders game:
 
 * Conditional square: A square that specifies a specific face value which a player has to throw before his/her piece can leave the square.
 * Normal square: a normal square does not have any conditions, snakes, or ladders in it.
