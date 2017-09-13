@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Gathering Requirements &rarr; </div>
-
 <div id="title">
 
 #### Observation :one:
@@ -12,7 +10,7 @@
 
 <div id="body">
 
-Observation of users in their natural work environment is a common technique used to understand the tasks and the environment of the user. Interaction logging on an existing system can also be used to gather information about how an existing system is being used.
+**Observing users in their natural work environment can uncover product requirements.** Usage data of an existing system can also be used to gather information about how an existing system is being used, which can help in building a better replacement %%&nbsp;e.g. to find the situations where the user makes mistakes when using the current system%%.
 
 </div>
 

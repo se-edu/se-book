@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Gathering Requirements &rarr; </div>
-
 <div id="title">
 
 #### User Surveys :one:
@@ -12,7 +10,7 @@
 
 <div id="body">
 
-Carefully designed **questionnaires** can be used to _solicit responses and opinions_ from a large number of users regarding any current system or a new innovation.
+**Surveys can be used to _solicit responses and opinions_ from a large number of stakeholders** regarding a current product or a new product.
 
 </div>
 
