@@ -1,1 +1,1 @@
-:trophy: Can interpret basic sequence diagrams :one:
+:trophy: Can draw basic sequence diagrams :one:

@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Revision Control &rarr; </div>
-
 <div id="title">
 
 #### Feature Branch Flow :three:
@@ -12,16 +10,15 @@
 
 <div id="body">
 
-This is similar to forking workflow except there are no forks or PRs. Everyone is pushing/pulling from the same remote repo.
+**_Feature branch_ workflow is similar to forking workflow except there are no forks or PRs.** Everyone is pushing/pulling from the same remote repo. The phrase _feature branch_ is used because each new feature (or bug fix, or any other modification) is done in a separate branch. 
 
 <img src="{{baseUrl}}/revisionControl/featureBranchFlow/images/diagram.png" height="330" />
 <p/>
 
-More info: https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow
-
 </div>
 
 <div id="extras">
+  <include src="resources.md" />
 <div>
 
 </div>

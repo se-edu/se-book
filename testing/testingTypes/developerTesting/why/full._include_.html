@@ -1,3 +1,5 @@
+<div></div>
+<p></p>
 <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Developer Testing →
 </span></strong>
   </span>
@@ -7,72 +9,65 @@
 </div>
 <div id="main">
   <div>
-    <p>At first it might seem logical to have the system built in its entirety first and then getting it tested by professional testers. Here are the downsides of that approach.</p>
+    <p><strong>Delaying testing until the full product is complete has a number of disadvantages:</strong></p>
     <ul>
-      <li>Locating the cause of such a test case failure is difficult due to a large search space; in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple inter-related
-        bugs.</li>
-      <li>Fixing a bug found during such testing could result in major rework, especially if the bug originated during the design or during requirements specification (i.e. a faulty design or faulty requirements).</li>
-      <li>One bug might 'hide' other bugs, which could emerge only after the first bug is fixed.</li>
-      <li>Too many bugs found during system testing can lead to delivery delays.</li>
+      <li><strong>Locating the cause of such a test case failure is difficult due to a large search space;</strong> in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple
+        inter-related bugs.</li>
+      <li><strong>Fixing a bug found during such testing could result in major rework</strong>, especially if the bug originated during the design or during requirements specification (i.e. a faulty design or faulty requirements).</li>
+      <li><strong>One bug might 'hide' other bugs</strong>, which could emerge only after the first bug is fixed.</li>
+      <li><strong>The delivery may have to be delayed</strong> if too many bugs were found during testing.</li>
     </ul>
-    <p>Due to the above reasons, it is better to do early developers testing. In fact, there is a widely accepted rule of thumb that says <em>the earlier a bug is found, the easier and cheaper to have it fixed</em>, as illustrated by the graph below.</p>
-    <img
-      src="/se-book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
-      <p></p>
+    <p><strong>Therefore, it is better to do early testing</strong>, as hinted by the popular rule of thumb given below, also illustrated by the graph below it.</p>
+    <blockquote>
+      <p>The earlier a bug is found, the easier and cheaper to have it fixed.</p>
+    </blockquote><img src="/se-book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
+    <p></p>
+    <p>Such early testing of partially developed software is usually, and by necessity, done by the developers themselves i.e. developer testing.</p>
   </div>
   <div>
     <div>
       <panel header=":muscle: Exercises" expandable="">
         <div>
-          <panel header=":lock::key: Discuss advantages and disadvantages of developers testing their own code.">
+          <panel header=":lock::key: implications of developers testing their own code">
             <question has-input="true">
-              <p>Discuss advantages and disadvantages of developers testing their own code.</p>
+              <p>Discuss pros and cons of developers testing their own code.</p>
               <div slot="answer">
-                <p>Advantages:</p>
+                <p>Pros:</p>
                 <ul>
                   <li>Can be done early (the earlier we find a bug, the cheaper it is to fix).</li>
                   <li>Can be done at lower levels, for examples, at operation and class level (testers usually test the system at UI level).</li>
-                  <li>It is possible to do more thorough testing since developers know the expected external behavior as well as the internal structure of the component.</li>
-                  <li>It forces developers to take responsibility for their own work (they cannot claim that “testing is the job of the testers”).</li>
+                  <li>It is possible to do more thorough testing because developers know the expected external behavior as well as the internal structure of the component.</li>
+                  <li>It forces developers to take responsibility for their own work (they cannot claim that &quot;testing is the job of the testers&quot;).</li>
                 </ul>
-                <p>Disadvantages:</p>
+                <p>Cons:</p>
                 <ul>
-                  <li>Developer may unconsciously test only situations that he knows to work (i.e. test it too “gently”).</li>
-                  <li>Developer may be blind to his own mistakes (if he did not consider a certain combination of input while writing code, he is likely to miss it again during testing).</li>
-                  <li>Developer may have misunderstood what the SUT is supposed to do in the first place.</li>
-                  <li>Developer may lack the testing expertise.</li>
+                  <li>A developer may unconsciously test only situations that he knows to work (i.e. test it too 'gently').</li>
+                  <li>A developer may be blind to his own mistakes (if he did not consider a certain combination of input while writing code, it is possible for him to miss it again during testing).</li>
+                  <li>A developer may have misunderstood what the SUT is supposed to do in the first place.</li>
+                  <li>A developer may lack the testing expertise.</li>
                 </ul>
               </div>
             </question>
           </panel>
         </div>
         <div>
-          <panel header=":lock::key: True or False?">
+          <panel header=":lock::key: Cost of bug fixing over time">
             <question>
-              <p>A) The cost of fixing a bug goes down as we reach the product release.</p>
-              <ul class="task-list">
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
-              </ul>
-              <p>B) Developers should pass their code to testers for unit testing as soon as the implementation is done.</p>
-              <ul class="task-list">
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+              <p>The cost of fixing a bug goes down as we reach the product release.</p>
+              <ul radio-group="zmpef" class="radio-list">
+                <li class="radio-list-item"><label><input class="radio-list-input" name="zmpef" type="radio"> True</label></li>
+                <li class="radio-list-item"><label><input class="radio-list-input" name="zmpef" type="radio"> False</label></li>
               </ul>
               <div slot="answer">
-                <p>A) The cost of fixing a bug goes down as we reach the product release.</p>
-                <ul class="task-list">
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
-                </ul>
-                <p>Explanation: No, the cost goes up over time.</p>
-                <p>B) Developers should pass their code to testers for unit testing as soon as the implementation is done.</p>
-                <ul class="task-list">
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
-                </ul>
-                <p>Explanation: Unit testing is a type of ‘developer testing’. It is not done by testers.</p>
+                <p>False. The cost goes up over time.</p>
               </div>
+            </question>
+          </panel>
+        </div>
+        <div>
+          <panel header=":lock: Why early testing?">
+            <question has-input="true">
+              <p>Explain why early testing by developers is important.</p>
             </question>
           </panel>
         </div>

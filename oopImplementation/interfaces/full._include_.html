@@ -1,3 +1,9 @@
+<div>
+  <p>
+    <panel src="/se-book\oopDesign\inheritance\interfaces\full._include_.html" header="%%:mortar_board: Design &rarr; OOP &rarr; Inheritance &rarr; Interfaces%%" isOpen="false" no-close="true" no-switch="true"></panel>
+  </p>
+</div>
+<p></p>
 <p><span class="dimmed"><strong><span>Implementation → Object Oriented Programming →
 </span></strong>
   </span>
@@ -7,13 +13,70 @@
 </div>
 <div id="main">
   <div>
-    <p>
-      <panel src="/se-book\oopDesign\inheritance\interfaces\embed._include_.html" header="OOP: Inheritance: Interfaces" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-    </p>
-    <p></p>
-    <p><a href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html">Oracle’s Java Tutorials: Interfaces</a></p>
+    <p><strong>Java allows multiple inheritance among interfaces. A Java class can <em>implement</em> multiple interfaces</strong> (and inherit from one class).</p>
+    <tip-box>
+      <p>📦 The design below is allowed by Java.</p><img src="/se-book/oopDesign/inheritance/interfaces/images/studentStaff.png" height="250">
+      <p></p>
+      <ol>
+        <li><code>Staff</code> interface inherits (note the solid lines) the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
+        <li><code>TA</code> class implements both <code>Student</code> interface and the <code>Staff</code> interface.</li>
+        <li>Because of point 1 above, <code>TA</code> class has to implement all methods in the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
+        <li>Because of points 1,2,3, a <code>TA</code><em>is a</em><code>Staff</code>, <em>is a</em><code>TaxPayer</code> and <em>is a</em><code>Citizen</code>.</li>
+      </ol>
+    </tip-box>
+    <p><strong>Java uses the <code>interface</code> keyword to declare interfaces and <code>implements</code> keyword to indicate that a class implements a given interface.</strong> Inheritance among interfaces uses the <code>extends</code> keyword, just
+      like inheritance among classes.</p>
+    <tip-box>
+      <p>📦 The code for the example design given in the previous example:</p>
+      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">TaxPayer</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">payTax</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Citizen</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">vote</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Staff</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Citizen</span>, <span class="hljs-title">TaxPayer</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">work</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Student</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">learn</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TA</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Student</span>, <span class="hljs-title">Staff</span></span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">payTax</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">vote</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">work</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">learn</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+    </tip-box>
   </div>
   <div>
+    <div>
+      <panel header=":paperclip: Resources" expanded="">
+        <ul>
+          <li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html">Oracle’s Java Tutorials: Interfaces</a></li>
+        </ul>
+      </panel>
+    </div>
     <div></div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-<panel header="Q: What's wrong with this user story? :one:">
+<panel header="Q: What's wrong with this user story?">
 <question has-input="true">
 
 Critique the following user story taken from a software project to build an e-commerce website. 
@@ -8,7 +8,8 @@ Critique the following user story taken from a software project to build an e-co
 <div slot="hint">
 
 Refer to the definition of a user story.
-<include src="../../../common/definitions.md#def-user-story" />
+
+<include src="../../../common/definitions.md#def-user-story" inline/>
 
 </div>
 <div slot="answer">

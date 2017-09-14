@@ -46,7 +46,10 @@ git push origin add-intro
 <img src="{{baseUrl}}/gitAndGithub/createPRs/images/createPrButton.png" width="800" />
 <p/>
 
-4b. Select both `base fork` and `head fork` to be your fork (by default, the `base fork` is set to the upstream repo `nus-cs2103-AY1718S1/samplerepo-pr-practice`).
+4b. Select `base fork` and `head fork` as follows:
+
+* `base fork`: your own fork (i.e. `{your user name}/samplerepo-pr-practice`, ==NOT `nus-cs2103-AY1718S1/samplerepo-pr-practice`==)
+* `head fork`: your own fork.
 
 <img src="{{baseUrl}}/gitAndGithub/createPRs/images/selectBase.png" width="800" />
 <p/>
@@ -68,12 +71,17 @@ The _base fork_ is where changes should be applied. The _head fork_ contains the
 <img src="{{baseUrl}}/gitAndGithub/createPRs/images/setPrName.png" width="600" />
 <p/>
 
+<tip-box type="important"> 
+
+A common newbie mistake when creating branch-based PRs is to mix commits of one PR with another. To learn how to avoid that mistake, you are encouraged to continue and create another PR as explained below.
+  
+</tip-box>
 
 **5. In your local repo, create a new branch `add-summary`** off the `master` branch. 
 
 <tip-box type="warning"> 
 
-When creating the new branch, it is very important that you switch back to the `master` branch first. If not, the new branch will be created off the current branch `add-intro`.
+When creating the new branch, it is very important that you switch back to the `master` branch first. If not, the new branch will be created off the current branch `add-intro`. And that is how you end up having commits of the first PR in the second PR as well.
 
 </tip-box>
 

@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr;</div>
-
 <div id="title">
 
 #### Composition :two:
@@ -12,7 +10,7 @@
 
 <div id="body">
 
-Composition too is implemented using a normal variable. If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’ object.
+**Composition too is implemented using a normal variable.** If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’ object.
 
 <tip-box>
 
@@ -23,7 +21,7 @@ Example:
 
 ```java
 class Car {
-    Engine engine;
+    private Engine engine;
   ...
 }
 ```

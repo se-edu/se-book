@@ -1,7 +1,7 @@
-<panel header=":lock::key: Choose the incorrect statement about abstract classes.">
+<panel header=":lock::key: Statements about abstract classes">
 <question>
 
-Choose the incorrect statement about abstract classes.
+Choose the correct statements about abstract classes and <tooltip content="classes that are not abstract">concrete classes</tooltip>.
 
 - [ ] a. A concrete class can contain an abstract method.
 - [ ] b. An abstract class can contain concrete methods.
@@ -10,10 +10,7 @@ Choose the incorrect statement about abstract classes.
 
 <div slot="answer">
 
-- [x] a. A concrete class can contain an abstract method.
-- [ ] b. An abstract class can contain concrete methods.
-- [ ] c. An abstract class need not contain any concrete methods.
-- [ ] d. An abstract class cannot be instantiated.
+(b)(c)(d)
 
 Explanation: A concrete class cannot contain even a single abstract method. 
 

@@ -19,6 +19,12 @@
     </div>
   </tip-box>
   <div>
+    <div>
+      <p>
+        <panel src="/se-book\oopDesign\inheritance\overriding\full._include_.html" header="%%:mortar_board: OOP &rarr; Inheritance &rarr; Overriding%%" isOpen="false" no-close="true" no-switch="true"></panel>
+      </p>
+    </div>
+    <p></p>
     <p><span class="dimmed"><strong><span>Implementation → Object Oriented Programming →
 </span></strong>
       </span>
@@ -28,35 +34,66 @@
     </div>
     <div id="main">
       <div>
-        <p>
-          <panel src="/se-book\oopDesign\inheritance\overriding\embed._include_.html" header="OOP: Inheritance: Overriding" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-        </p>
-        <p></p>
-        <p><a href="https://docs.oracle.com/javase/tutorial/java/IandI/override.html">Oracle’s Java Tutorials: Overriding</a></p>
+        <p><strong>To override a method inherited from an ancestor class, simply re-implement the method in the target class.</strong></p>
+        <tip-box>
+          <p>📦 A simple example where the <code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method:</p>
+          <pre><code class="hljs java">
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Report</span></span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
+        System.out.println(<span class="hljs-string">"Printing report"</span>);
+    }
+
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EvaluationReport</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Report</span></span>{
+
+    <span class="hljs-meta">@Override</span>  <span class="hljs-comment">// this annotation is optional</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
+        System.out.println(<span class="hljs-string">"Printing evaluation report"</span>);
+    }
+
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReportMain</span></span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        Report report = <span class="hljs-keyword">new</span> Report();
+        report.print(); <span class="hljs-comment">// prints "Printing report"</span>
+
+        EvaluationReport evaluationReport = <span class="hljs-keyword">new</span> EvaluationReport();
+        evaluationReport.print(); <span class="hljs-comment">// prints "Printing evaluation report"</span>
+    }
+}
+
+</code></pre>
+        </tip-box>
       </div>
       <div>
         <div>
+          <panel header=":paperclip: Resources" expanded="">
+            <ul>
+              <li><a href="https://www.tutorialspoint.com/java/java_overriding.htm">Java - Overriding</a> -- a tutorial by <a href="http://tutorialspoint.com">tutorialspoint.com</a></li>
+            </ul>
+          </panel>
+        </div>
+        <div>
           <panel header=":muscle: Exercises" expandable="">
             <div>
-              <panel header=":lock::key: Which one of these overrides another method?">
-                <question><img src="/se-book/oopImplementation/overriding/images/overriding.png" height="220">
+              <panel header=":lock::key: Which methods override?">
+                <question>
+                  <p>Which of these methods override another method?</p><img src="/se-book/oopImplementation/overriding/images/overriding.png" height="220">
                   <p></p>
                   <ul class="task-list">
-                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. a</li>
-                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. b</li>
-                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. c</li>
-                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. d</li>
-                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. e</li>
+                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
+                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b</li>
+                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c</li>
+                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d</li>
+                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e</li>
                   </ul>
                   <div slot="answer">
-                    <ul class="task-list">
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. a</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. b</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. c</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> d. d</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. e</li>
-                    </ul>
-                    <p>Explanation: Method overriding requires a method in a child class to use the same method name and same parameter sequence used by one of its ancestors</p>
+                    <p>d</p>
+                    <p>Explanation: Method overriding requires a method in a <em>child class</em> to use the same method name and same parameter sequence used by one of its ancestors</p>
                   </div>
                 </question>
               </panel>

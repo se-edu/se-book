@@ -1,1 +1,1 @@
-:trophy: Can explain abstract classes :two:
+:trophy: Can implement abstract classes :two:

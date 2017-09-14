@@ -1,1 +1,1 @@
-:trophy: Can explain centralised flow :two:
+:trophy: Can explain centralized flow :two:

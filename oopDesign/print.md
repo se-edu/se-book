@@ -34,7 +34,7 @@
 
 ## Inheritance
 
-<include src="inheritance/basic/print.md" />
+<include src="inheritance/what/print.md" />
 <include src="inheritance/overriding/print.md" />
 <include src="inheritance/overloading/print.md" />
 <include src="inheritance/interfaces/print.md" />
@@ -45,7 +45,6 @@
 ## Polymorphism
 
 <include src="polymorphism/introduction/print.md" />
-<include src="polymorphism/basic/print.md" />
 <include src="polymorphism/mechanism/print.md" />
 
 ## Conceptualizing an OOP Solution

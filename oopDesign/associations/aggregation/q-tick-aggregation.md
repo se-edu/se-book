@@ -1,15 +1,14 @@
-<panel header=":lock::key: Which one of these is recommended not to use in UML diagrams because it adds more confusion than clarity?">
+<panel header=":lock::key: Which one is not recommended to use?">
 <question>
 
 Which one of these is recommended not to use in UML diagrams because it adds more confusion than clarity?
 
-- [ ] a. Composition symbol
-- [ ] b. Aggregation symbol
+- ( ) a. Composition symbol
+- ( ) b. Aggregation symbol
 
 <div slot="answer">
 
-- [ ] a. Composition symbol
-- [x] b. Aggregation symbol
+(b)
 
 </div>
 </question>

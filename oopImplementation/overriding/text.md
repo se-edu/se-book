@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; </div>
-
 <div id="title">
 
 #### Overriding :one:
@@ -12,16 +10,53 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oopDesign/inheritance/overriding/embed.md" header="OOP: Inheritance: Overriding" is-open></dynamic-panel>
+**To override a method inherited from an ancestor class, simply re-implement the method in the target class.** 
 
-<p/>
+<tip-box> 
 
-[Oracle’s Java Tutorials: Overriding](https://docs.oracle.com/javase/tutorial/java/IandI/override.html)
+:package: A simple example where the `Report#print()` method is overridden by `EvaluationReport#print()` method: 
+
+```java
+
+class Report{
+
+    void print(){
+        System.out.println("Printing report");
+    }
+
+}
+
+class EvaluationReport extends Report{
+
+    @Override  // this annotation is optional
+    void print(){
+        System.out.println("Printing evaluation report");
+    }
+
+}
+
+class ReportMain{
+
+    public static void main(String[] args){
+        Report report = new Report();
+        report.print(); // prints "Printing report"
+
+        EvaluationReport evaluationReport = new EvaluationReport();
+        evaluationReport.print(); // prints "Printing evaluation report"
+    }
+}
+
+```
+
+</tip-box>
+
+
 
 </div>
 
 <div id="extras">
 
+<include src="resources.md" />
 <include src="exercises.md" />
 
 <div>

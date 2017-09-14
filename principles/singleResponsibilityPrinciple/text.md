@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Principles &rarr; </div>
-
 <div id="title">
 
 #### Single Responsibility Principle :two:
@@ -22,9 +20,7 @@ If a class has only one responsibility, it needs to change only when there is a 
 
 <tip-box>
 
-Example:
-
-Consider a `TextUi` class that does parsing of the user commands as well as interacting with the user. That class needs to change when the formatting of the UI changes as well as when the syntax of the user command changes. Hence, such a class does not follow the SRP.
+:package: Consider a `TextUi` class that does parsing of the user commands as well as interacting with the user. That class needs to change when the formatting of the UI changes as well as when the syntax of the user command changes. Hence, such a class does not follow the SRP.
 
 </tip-box>
 

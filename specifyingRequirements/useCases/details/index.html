@@ -19,7 +19,9 @@
     </div>
   </tip-box>
   <div>
-    <p><span class="dimmed"><strong><span>Requirements → Specifying Requirements →
+    <div></div>
+    <p></p>
+    <p><span class="dimmed"><strong><span>Requirements → Specifying Requirements → Use Cases →
 </span></strong>
       </span>
     </p>
@@ -31,156 +33,167 @@
         <p><strong>Writing use case steps</strong></p>
         <div>
           <link rel="stylesheet" href="/se-book/css/common.css">
-          <p>The main body of the use case is the sequence of steps that describes the interaction between the system and the actors. Each step is given as a simple statement.</p>
+          <p><strong>The main body of the use case is the sequence of steps that describes the interaction between the system and the actors.</strong> Each step is given as a simple statement describing who does what.</p>
           <tip-box>
-            <div>
-              <ul>
-                <li>Use case:
-                  <popover effect="fade" placement="right" content="Each use case can be given a unique identification for easier cross reference."> UC01 </popover> conduct survey
-                  <ol>
-                    <li>Staff creates the survey.</li>
-                    <li>Student completes the survey.</li>
-                    <li>Staff views the survey results.</li>
-                    <li class="custom-bullet-point">Use case ends.</li>
-                  </ol>
-                </li>
-              </ul>
-            </div>
+            <p>📦 An example of the main body of a use case.</p>
+            <ol>
+              <li>Student requests to upload file</li>
+              <li>LMS requests for the file location</li>
+              <li>Student specifies the file location</li>
+              <li>LMS uploads the file</li>
+            </ol>
           </tip-box>
-          <p>A use case describes only the externally visible behavior, not internal details, of a system.</p>
-          <p>{give example}</p>
-          <p>Every step should clearly show <em>who</em> does <em>what</em>. A step gives the <strong>intention</strong> of the actor (not the mechanics). That means UI details are usually omitted. The idea is to leave as much flexibility to the UI designer
-            as possible. That is, the use case specification should be as general as possible (less specific) about the UI. For example,</p>
+          <p><strong>A use case describes only the externally visible behavior, not internal details, of a system</strong> i.e. should not mention give details that are not part of the interaction between the user and the system.</p>
           <tip-box>
-            <p><code>User right-clicks the text box and chooses ‘clear’</code>: This contains UI-specific details and is not a good use case step.</p>
-            <p><code>User clears the input</code>: This is better because it omits UI-specific details.</p>
+            <p>📦 This example use case step refers to behaviors not externally visible .</p>
+            <ol>
+              <li>LMS <mark>saves the file into the cache</mark> and indicates success.</li>
+            </ol>
           </tip-box>
-          <p>The following is an illustration of how we can include repetitive steps in a scenario.</p>
+          <p><strong>A step gives the intention of the actor (not the mechanics).</strong> That means UI details are usually omitted. The idea is to leave as much flexibility to the UI designer as possible. That is, the use case specification should be as
+            general as possible (less specific) about the UI.</p>
           <tip-box>
-            <div>
-              <ul>
-                <li>Software System: Square game</li>
-                <li>Use case: UC02 - Play a Game</li>
-                <li>Actors: Player (multiple players)
-                  <ol>
-                    <li>A Player starts the game.</li>
-                    <li>SquareGame asks for player names.</li>
-                    <li>Each Player enters his own name.</li>
-                    <li>SquareGame shows the order of play.</li>
-                    <li>SquareGame prompts for the current Player to throw die.</li>
-                    <li>Current Player adjusts the throw speed.</li>
-                    <li>Current Player triggers the die throw.</li>
-                    <li>Square Game shows the face value of the die.</li>
-                    <li>Square Game moves the Player's piece accordingly.</li>
-                    <li class="custom-bullet-point"><b>Steps 5-9 are repeated for each Player, and for as many rounds as required until a Player reaches the 100th square.</b></li>
-                    <li class="custom-bullet-point">10. Square Game shows the Winner.</li>
-                    <li class="custom-bullet-point">Use case ends.</li>
-                  </ol>
-                </li>
-              </ul>
-            </div>
+            <p>❌ User right-clicks the text box and chooses ‘clear’ <span class="dimmed"> : this contains UI-specific details and is not a good use case step)</span></p>
+            <p>✅ User clears the input <span class="dimmed"> : this is better because it omits UI-specific details</span></p>
+          </tip-box>
+          <p>This is how you can include repetitive steps in a scenario.</p>
+          <tip-box>
+            <p>Software System: Square game Use case:
+              <popover effect="fade" placement="right" content="Each use case can be given a unique identification for easier cross reference."> UC02 </popover> - Play a Game Actors: Player (multiple players)</p>
+            <ol>
+              <li>A Player starts the game.</li>
+              <li>SquareGame asks for player names.</li>
+              <li>Each Player enters his own name.</li>
+              <li>SquareGame shows the order of play.</li>
+              <li>SquareGame prompts for the current Player to throw die.</li>
+              <li>Current Player adjusts the throw speed.</li>
+              <li>Current Player triggers the die throw.</li>
+              <li>Square Game shows the face value of the die.</li>
+              <li>Square Game moves the Player's piece accordingly.<br><mark>Steps 5-9 are repeated for each Player, and for as many rounds as required until a Player reaches the 100th square.</mark></li>
+              <li>Square Game shows the Winner.</li>
+            </ol>
+            <p>  Use case ends.</p>
           </tip-box>
         </div>
-        <p><strong>Main success scenario</strong></p>
         <div>
           <link rel="stylesheet" href="/se-book/css/common.css">
-          <p>The Main Success Scenario (MSS) describes the most straightforward interaction for a given use case, which assumes that nothing goes wrong. This is also called the <em>Basic Course of Action</em> or the <em>Main Flow of Events</em> of a use
-            case. Given below is another example of an MSS.</p>
+          <p><strong>The <mark><em>Main Success Scenario (MSS)</em></mark> describes the most straightforward interaction for a given use case, which assumes that nothing goes wrong.</strong> This is also called the <em>Basic Course of Action</em> or the
+            <em>Main Flow of Events</em> of a use case.</p>
           <tip-box>
-            <div>
-              <ul>
-                <li>System: Online Banking System (OBS)</li>
-                <li>Use case: UC23 - Transfer Money</li>
-                <li>Actor: User</li>
-                <li>MSS:
-                  <ol>
-                    <li>User chooses to transfer money.</li>
-                    <li>OBS requests for details of the transfer.</li>
-                    <li>User enters the requested details.</li>
-                    <li>OBS requests for confirmation.</li>
-                    <li>OBS transfers the money and displays the new account balance.</li>
-                    <li class="custom-bullet-point">Use case ends.</li>
-                  </ol>
-                </li>
-                <li> Extensions:
-                  <ol class="custom-bullet-list">
-                    <li>3a. OBS detects an error in the entered data.
-                      <ol class="custom-bullet-list">
-                        <li>3a1. OBS requests for the correct data.</li>
-                        <li>3a2. User enters new data.</li>
-                        <li>Steps 3a1-3a2 are repeated until the data entered are correct.</li>
-                        <li>Use case resumes from step 4.</li>
-                      </ol>
-                    </li>
-                    <li>3b. User requests to effect the transfer in a future date.
-                      <ol class="custom-bullet-list">
-                        <li>3b1. OBS requests for confirmation.</li>
-                        <li>3b2. User confirms future transfer.</li>
-                        <li>Use case ends.</li>
-                      </ol>
-                    </li>
-                    <li>*a. At any time, User chooses to cancel the transfer.
-                      <ol class="custom-bullet-list">
-                        <li>*a1. OBS requests to confirm the cancellation.</li>
-                        <li>*a2. User confirms the cancellation.</li>
-                        <li>Use case ends.</li>
-                      </ol>
-                    </li>
-                    <li>*b. At any time, 120 seconds lapse without any input from the User.
-                      <ol class="custom-bullet-list">
-                        <li>*b1. OBS cancels the transfer.</li>
-                        <li>*b2. OBS informs the User of the cancellation.</li>
-                        <li>Use case ends.</li>
-                      </ol>
-                    </li>
-                  </ol>
-                </li>
-              </ul>
-            </div>
-            <p>Note how the MSS assumes that all entered details are correct and ignores problems such as timeouts, network outages etc. MSS does not tell us what happens if the user enters incorrect data.</p>
+            <ul>
+              <li>System: Online Banking System (OBS)</li>
+              <li>Use case: UC23 - Transfer Money</li>
+              <li>Actor: User</li>
+              <li>MSS:
+                <ol>
+                  <li>User chooses to transfer money.</li>
+                  <li>OBS requests for details of the transfer.</li>
+                  <li>User enters the requested details.</li>
+                  <li>OBS requests for confirmation.</li>
+                  <li>OBS transfers the money and displays the new account balance.</li>
+                  <li class="custom-bullet-point">Use case ends.</li>
+                </ol>
+              </li>
+            </ul>
+            <p>Note how the MSS assumes that all entered details are correct and ignores problems such as timeouts, network outages etc. Fro example, MSS does not tell us what happens if the user enters an incorrect data.</p>
           </tip-box>
         </div>
-        <p><strong>Extensions</strong></p>
         <div>
-          <p><em>Extensions</em>, given below the MSS, are &quot;add-on&quot;s to the MSS. They are also called <em>exceptional flow of events</em> or <em>alternative flow of events</em>. They describe variations of the scenario that can happen if certain
-            things are not as expected by the MSS. Extensions appear below the MSS. Note that the numbering style is not a rule but just a convention. The third extension, labeled as ‘*a’ can happen at any step (hence, the ‘*’).</p>
-          <p>When separating extensions from the MSS, keep in mind that the MSS should be self-contained. That is, the MSS should give us a complete usage scenario. Also note that it is not useful to mention events such as power failures or system crashes
-            as extensions because the system cannot function beyond such catastrophic failures.</p><img src="/se-book/specifyingRequirements/useCases/details/images/extension.png" height="250">
-          <p></p>
-          <p><code>&lt;&lt; extend &gt;&gt;</code> relationship between use cases is used to capture extensions to the use cases. Note how the arrow is pointing the other way.</p>
-        </div>
-        <p><strong>Inclusions</strong></p>
-        <div>
-          <link rel="stylesheet" href="/se-book/css/common.css">
-          <p>A use case can &quot;include&quot; another use case. Underlined text is commonly used to show an inclusion of a use case. Inclusions are useful,</p>
+          <p><strong><mark><em>Extensions</em></mark> are &quot;add-on&quot;s to the MSS that describe <em>exceptional/alternative flow of events</em>.</strong> They describe variations of the scenario that can happen if certain things are not as expected
+            by the MSS. Extensions appear below the MSS.</p>
+          <tip-box>
+            <p>📦 This example adds some extensions to the use case in the previous example.</p>
+            <ul>
+              <li>System: Online Banking System (OBS)</li>
+              <li>Use case: UC23 - Transfer Money</li>
+              <li>Actor: User</li>
+              <li>MSS:
+                <ol>
+                  <li>User chooses to transfer money.</li>
+                  <li>OBS requests for details of the transfer.</li>
+                  <li>User enters the requested details.</li>
+                  <li>OBS requests for confirmation.</li>
+                  <li>OBS transfers the money and displays the new account balance.</li>
+                  <li class="custom-bullet-point">Use case ends.</li>
+                </ol>
+              </li>
+              <li> Extensions:
+                <ol class="custom-bullet-list">
+                  <li>3a. OBS detects an error in the entered data.
+                    <ol class="custom-bullet-list">
+                      <li>3a1. OBS requests for the correct data.</li>
+                      <li>3a2. User enters new data.</li>
+                      <li>Steps 3a1-3a2 are repeated until the data entered are correct.</li>
+                      <li>Use case resumes from step 4.</li>
+                    </ol>
+                  </li>
+                  <li>3b. User requests to effect the transfer in a future date.
+                    <ol class="custom-bullet-list">
+                      <li>3b1. OBS requests for confirmation.</li>
+                      <li>3b2. User confirms future transfer.</li>
+                      <li>Use case ends.</li>
+                    </ol>
+                  </li>
+                  <li>*a. At any time, User chooses to cancel the transfer.
+                    <ol class="custom-bullet-list">
+                      <li>*a1. OBS requests to confirm the cancellation.</li>
+                      <li>*a2. User confirms the cancellation.</li>
+                      <li>Use case ends.</li>
+                    </ol>
+                  </li>
+                  <li>*b. At any time, 120 seconds lapse without any input from the User.
+                    <ol class="custom-bullet-list">
+                      <li>*b1. OBS cancels the transfer.</li>
+                      <li>*b2. OBS informs the User of the cancellation.</li>
+                      <li>Use case ends.</li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </tip-box>
+          <p>Note that the numbering style is not a universal rule but a widely used convention. Based on that convention,</p>
           <ul>
-            <li>When you don't want to clutter a use case with too many low-level steps.</li>
-            <li>When a set of steps is repeated in multiple use cases.</li>
+            <li>either of the extensions marked <code>3a.</code> and <code>3b.</code> can happen just after step <code>3</code> of the MSS.</li>
+            <li>the extension marked as <code>*a.</code> can happen at any step (hence, the <code>*</code>).</li>
           </ul>
-          <tip-box>
-            <div>
-              <ul>
-                <li>Software System: LearnSys</li>
-                <li>Use case: UC01 - Conduct Survey</li>
-                <li>Actors: Staff, Student</li>
-                <li>MSS:
-                  <ol>
-                    <li>Staff <span class="underline">creates the survey <b>(UC44).</b></span></li>
-                    <li>Student <span class="underline">completes the survey <b>(UC50).</b></span></li>
-                    <li>Staff views the survey results.</li>
-                    <li class="custom-bullet-point">Use case ends.</li>
-                  </ol>
-                </li>
-              </ul>
-            </div>
-          </tip-box>
-          <p>We use a dotted arrow and a <code>&lt;&lt; include &gt;&gt;</code> annotation to show use case inclusions in a use case diagram.</p><img src="/se-book/specifyingRequirements/useCases/details/images/inclusion.png" height="250">
+          <p>When separating extensions from the MSS, keep in mind that the <strong>MSS should be self-contained</strong>. That is, the MSS should give us a complete usage scenario.</p>
+          <p>Also note that it is not useful to mention events such as power failures or system crashes as extensions because the system cannot function beyond such catastrophic failures.</p><img src="/se-book/specifyingRequirements/useCases/details/images/extension.png"
+            height="250">
           <p></p>
+          <p>In use case diagrams you can use the <code>&lt;&lt; extend &gt;&gt;</code> arrows to show extensions. Note the direction of the arrow is from the extension to the use case it extends and the arrow uses a dashed line.</p>
         </div>
-        <p><strong>Use case preconditions</strong></p>
         <div>
           <link rel="stylesheet" href="/se-book/css/common.css">
-          <p>Preconditions specify the specific state we expect the system to be in before the use case starts.</p>
+          <p><strong>A use case can <mark>include</mark> another use case.</strong> Underlined text is commonly used to show an inclusion of a use case.</p>
+          <tip-box>
+            <p>📦 This use case includes two other use cases, one in step 1 and one in step 2.</p>
+            <ul>
+              <li>Software System: LearnSys</li>
+              <li>Use case: UC01 - Conduct Survey</li>
+              <li>Actors: Staff, Student</li>
+              <li>MSS:
+                <ol>
+                  <li>Staff <span class="underline">creates the survey <b>(UC44).</b></span></li>
+                  <li>Student <span class="underline">completes the survey <b>(UC50).</b></span></li>
+                  <li>Staff views the survey results.</li>
+                  <li class="custom-bullet-point">Use case ends.</li>
+                </ol>
+              </li>
+            </ul>
+          </tip-box>
+          <p>Inclusions are useful,</p>
+          <ul>
+            <li>when you don't want to clutter a use case with too many low-level steps.</li>
+            <li>when a set of steps is repeated in multiple use cases.</li>
+          </ul>
+          <p>We use a dotted arrow and a <code>&lt;&lt; include &gt;&gt;</code> annotation to show use case inclusions in a use case diagram. Note how the arrow direction is different from the <code>&lt;&lt; extend &gt;&gt;</code> arrows.</p><img src="/se-book/specifyingRequirements/useCases/details/images/inclusion.png"
+            height="250">
+          <p></p>
+        </div>
+        <div>
+          <link rel="stylesheet" href="/se-book/css/common.css">
+          <p><strong><mark><em>Preconditions</em></mark> specify the specific state we expect the system to be in before the use case starts.</strong></p>
           <tip-box>
             <div>
               <ul>
@@ -200,10 +213,9 @@
           </tip-box>
           <p></p>
         </div>
-        <p><strong>Use case guarantees</strong></p>
         <div>
           <link rel="stylesheet" href="/se-book/css/common.css">
-          <p><em>Guarantees</em> specify what the use case promises to give us at the end of its operation.</p>
+          <p><strong><mark><em>Guarantees</em></mark> specify what the use case promises to give us at the end of its operation.</strong></p>
           <tip-box>
             <div>
               <ul>
@@ -212,7 +224,7 @@
                 <li>Actor: User</li>
                 <li>Preconditions: User is logged in.</li>
                 <li><b>Guarantees:
-        <ul><li>Money will be transferred to the destination account.</li><li>All steps of the transaction will be logged.</li></ul></b></li>
+        <ul><li>Money will be deducted from the source account only if the transfer to the destination account is successful</li><li>The transfer will not result in the account balance going below the minimum balance required.</li></ul></b></li>
                 <li>MSS:
                   <ol>
                     <li>User chooses to transfer money.</li>
@@ -231,13 +243,13 @@
           <panel header=":muscle: Exercises" expandable="">
             <div>
               <link rel="stylesheet" href="/se-book/css/common.css">
-              <panel header=":lock::key: EZ-Link top-up use case :two:">
+              <panel header=":lock::key: EZ-Link top-up use case">
                 <question has-input="true">
-                  <p>Complete the following use case (MSS, extensions, etc.). Note that you should not blindly follow how the existing EZ-Link machine operates since it will prevent you from designing a better system. You should consider all possible extensions
-                    without complicating the use case too much.</p>
+                  <p>Complete the following use case (MSS, extensions, etc.). Note that you should not blindly follow how the existing
+                    <tooltip content="A type of a cash card topup machine">EZ-Link machine</tooltip> operates because it will prevent you from designing a better system. You should consider all possible extensions without complicating the use case too much.</p>
                   <tip-box>
                     <ul>
-                      <li>System: EZ-Link machine (those found at MRTs)</li>
+                      <li>System: EZ-Link machine</li>
                       <li>Use case: UC2 top-up EZ-Link card</li>
                       <li>Actor: EZ-Link card user</li>
                     </ul>
@@ -337,12 +349,12 @@
             </div>
             <div>
               <link rel="stylesheet" href="/se-book/css/common.css">
-              <panel header=":lock::key: LearnSys – reply to post use case :two:">
+              <panel header=":lock::key: LearnSys – reply to post use case">
                 <question has-input="true">
                   <p>Complete the following use case (MSS, extensions, etc.).</p>
                   <tip-box>
                     <ul>
-                      <li>System: LearnSys</li>
+                      <li>System: LearnSys (an online Learning Management System)</li>
                       <li>Use case: UC01 reply to post in the forum</li>
                       <li>Actor: Student</li>
                     </ul>
@@ -355,7 +367,6 @@
                           <li>Use case: UC01 reply to post in the forum</li>
                           <li>Actor: Student</li>
                           <li>Preconditions: Student is logged in and has permission to post in the forum. The post to which the Student replies already exists.</li>
-                          <li>Guarantees: MSS &rarr; post will be added to the forum.</li>
                           <li>MSS:
                             <ol>
                               <li>Student chooses to reply to an existing post.</li>
@@ -421,11 +432,12 @@
               </panel>
             </div>
             <div>
-              <panel header=":lock::key: Which of these cannot appear as part of a use case description?">
+              <panel header=":lock::key: Parts of a use case descriptions">
                 <question>
+                  <p>Which of these cannot appear as part of a use case description?</p>
                   <ul class="task-list">
                     <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Use case identifier</li>
-                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Precondition</li>
+                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Preconditions</li>
                     <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Guarantees</li>
                     <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. References to another use case</li>
                     <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Main Success Scenario</li>
@@ -434,16 +446,7 @@
                     <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> h. Inclusions</li>
                   </ul>
                   <div slot="answer">
-                    <ul class="task-list">
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Use case identifier</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Precondition</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Guarantees</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. References to another use case</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Main Success Scenario</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> f. Performance requirements</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> g. Extensions</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> h. Inclusions</li>
-                    </ul>
+                    <p>(f)</p>
                     <p>Explanation: Performance requirements are non-functional requirements. They are not captured in use cases.</p>
                   </div>
                 </question>
@@ -453,6 +456,7 @@
               <link rel="stylesheet" href="/se-book/css/common.css">
               <panel header=":lock::key: What’s wrong with this use case?">
                 <question>
+                  <p>Identify problems with this use case description.</p>
                   <div>
                     <ul>
                       <li>System: EZ-Link machine (those found at MRTs)</li>
@@ -493,19 +497,11 @@
                     <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. The extension given is in fact an inclusion.</li>
                     <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. No post conditions are given.</li>
                     <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. ‘Use case ends’ is duplicated.</li>
-                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. Nothing.</li>
                   </ul>
                   <div slot="answer">
-                    <ul class="task-list">
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. It does not consider ‘system crash’ scenario.</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. It does not contain enough UI details.</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. The extension given is in fact an inclusion.</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. No post conditions are given.</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. ‘Use case ends’ is duplicated.</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> f. Nothing.</li>
-                    </ul>
-                    <p>Explanation: Handout explains why catastrophic failures such as ‘system crash’ need not be included in a use case. A use case is not supposed to contain UI details. Post conditions are optional. It is not a problem to have multiple
-                      exit points for a use case.</p>
+                    <p>None.</p>
+                    <p>Explanation: Catastrophic failures such as ‘system crash’ need not be included in a use case. A use case is not supposed to contain UI details. Post conditions are optional. It is not a problem to have multiple exit points for a use
+                      case.</p>
                   </div>
                 </question>
               </panel>

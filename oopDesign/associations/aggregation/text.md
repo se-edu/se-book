@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; Associations &rarr;</div>
-
 <div id="title">
 
 #### Aggregation :three:
@@ -12,18 +10,30 @@
 
 <div id="body">
 
-_Aggregation_ represents a ‘container-contained’ relationship. It is a weaker relationship than composition.
+**_Aggregation_ represents a _container-contained_ relationship.** It is a weaker relationship than composition.
 
-<dynamic-panel src="../../../uml/classDiagrams/aggregation/topicPanel.md" header="UML: Class Diagrams: Aggregation" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/classDiagrams/aggregation/what/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Aggregation" />
 
 <p/>
+
+<tip-box> 
+
+:package: `Club` acts as a _container_ for `Person` objects. `Person` objects can survive without a `Club` object.
 
 <img src="{{baseUrl}}/oopDesign/associations/aggregation/images/clubPerson.png" height="80" />
 <p/>
 
+</tip-box>
+
+
+<tip-box type="tip"> 
+
 **Aggregation vs Composition**
 
-The distinction between composition and aggregation is rather blurred. Martin Fowler’s famous book _UML Distilled_ advocates omitting the aggregation symbol altogether as using it adds more confusion than clarity.
+The distinction between composition (&#9670;) and aggregation (&#9671;) is rather blurred. Martin Fowler’s famous book _UML Distilled_ advocates omitting the aggregation symbol altogether because using it adds more confusion than clarity.
+
+</tip-box>
+
 
 </div>
 

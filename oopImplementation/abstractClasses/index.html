@@ -19,28 +19,62 @@
     </div>
   </tip-box>
   <div>
+    <div>
+      <p>
+        <panel src="/se-book\oopDesign\inheritance\abstractClasses\full._include_.html" header="%%:mortar_board: Design &rarr; OOP &rarr; Inheritance &rarr; Abstract Classes%%" isOpen="false" no-close="true" no-switch="true"></panel>
+      </p>
+    </div>
+    <p></p>
     <p><span class="dimmed"><strong><span>Implementation → Object Oriented Programming →
 </span></strong>
       </span>
     </p>
     <div>
-      <h4 id="abstract-classes-one">Abstract Classes <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      <h4 id="abstract-classes-two">Abstract Classes <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
     </div>
     <div id="main">
       <div>
-        <p>
-          <panel src="/se-book\oopDesign\inheritance\abstractClasses\embed._include_.html" header="OOP: Inheritance: Abstract Classes" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-        </p>
-        <p></p>
-        <p><a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">Oracle’s Java Tutorials: Abstract Methods and Classes</a></p>
+        <p><strong>Use the <code>abstract</code> keyword to identify abstract classes/methods.</strong></p>
+        <tip-box>
+          <p>📦 Partial code below gives an example of how to declare abstract classes/methods.</p><img src="/se-book/oopDesign/inheritance/abstractClasses/images/account.png" height="220">
+          <p></p>
+          <pre><code class="hljs java"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+    
+    <span class="hljs-keyword">int</span> number;
+    
+    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span></span>;
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">close</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CurrentAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+        </tip-box>
+        <p>In Java, if a class contains an abstract method, the class itself should be an abstract class <span class="dimmed"> i.e. if any methods of the class is 'incomplete', the class itself is 'incomplete'</span>.</p>
       </div>
       <div>
         <div>
+          <panel header=":paperclip: Resources" expanded="">
+            <ul>
+              <li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">Oracle’s Java Tutorials: Abstract Methods and Classes</a></li>
+            </ul>
+          </panel>
+        </div>
+        <div>
           <panel header=":muscle: Exercises" expandable="">
             <div>
-              <panel header=":lock::key: Choose the incorrect statement about abstract classes.">
+              <panel header=":lock::key: Statements about abstract classes">
                 <question>
-                  <p>Choose the incorrect statement about abstract classes.</p>
+                  <p>Choose the correct statements about abstract classes and
+                    <tooltip content="classes that are not abstract">concrete classes</tooltip>.</p>
                   <ul class="task-list">
                     <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A concrete class can contain an abstract method.</li>
                     <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An abstract class can contain concrete methods.</li>
@@ -48,12 +82,7 @@
                     <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. An abstract class cannot be instantiated.</li>
                   </ul>
                   <div slot="answer">
-                    <ul class="task-list">
-                      <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. A concrete class can contain an abstract method.</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An abstract class can contain concrete methods.</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. An abstract class need not contain any concrete methods.</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. An abstract class cannot be instantiated.</li>
-                    </ul>
+                    <p>(b)(c)(d)</p>
                     <p>Explanation: A concrete class cannot contain even a single abstract method.</p>
                   </div>
                 </question>

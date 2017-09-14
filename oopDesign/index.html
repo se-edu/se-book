@@ -475,54 +475,49 @@
               <p>While all objects of a class has the same attributes, each object has its own copy of the attribute value.</p>
               <tip-box>
                 <p>Example:</p>
-                <p>All <code>Person</code> objects have the Name attribute but the value of that attribute varies between <code>Person</code> objects.</p>
+                <p>All <code>Person</code> objects have the <code>Name</code> attribute but the value of that attribute varies between <code>Person</code> objects.</p>
               </tip-box>
-              <p>However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Those
-                are called <em>class level</em> attributes.</p>
+              <p>However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Such <strong>variables whose value is shared by all instances of a class are called <mark><em>class level</em> attributes</mark></strong>.</p>
               <tip-box>
                 <p>Example:</p>
-                <p>The attribute totalPersons should be maintained centrally and shared by all <code>Person</code> objects rather than copied at each <code>Person</code> object.</p>
+                <p>The attribute <code>totalPersons</code> should be maintained centrally and shared by all <code>Person</code> objects rather than copied at each <code>Person</code> object.</p>
               </tip-box>
               <p>Similarly, when a normal method is being called, a message is being sent to the receiving object and the result may depend on the receiving object.</p>
               <tip-box>
                 <p>Example:</p>
-                <p>Sending the getName() message to Adam object results in the response “Adam” while sending the same message to the Beth object gets the response “Beth”.</p>
+                <p>Sending the <code>getName()</code> message to <code>Adam</code> object results in the response <code>&quot;Adam&quot;</code> while sending the same message to the <code>Beth</code> object gets the response <code>&quot;Beth&quot;</code>.</p>
               </tip-box>
-              <p>However, there can be methods related to a specific class but not suitable for sending message to a specific object of that class. Those are called class-level methods.</p>
+              <p>However, there can be methods related to a specific class but not suitable for sending message to a specific object of that class. Such <strong>methods that are called using the class instead of a specific instance are called <mark>class-level methods</mark></strong>.</p>
               <tip-box>
                 <p>Example:</p>
-                <p>The method getTotalPersons() is not suitable to send to a specific <code>Person</code> object.</p>
+                <p>The method <code>getTotalPersons()</code> is not suitable to send to a specific <code>Person</code> object <span class="dimmed">because a specific object of the <code>Person</code> class should not know about the total number of <code>Person</code> objects</span>.</p>
               </tip-box>
-              <p>Class-level attributes and methods are collectively called <em>class-level members</em> (also called <em>static members</em> sometimes because some programming languages use the keyword <code>static</code> to identify class-level members).
-                They are to be accessed using the class name rather than an instance of the class.</p>
+              <p><strong>Class-level attributes and methods are collectively called <mark><em>class-level members</em></mark></strong> (also called <em>static members</em> sometimes because some programming languages use the keyword <code>static</code> to
+                identify class-level members). <strong>They are to be accessed using the class name rather than an instance of the class</strong>.</p>
               <p>
-                <panel src="/se-book\uml\classDiagrams\classLevelMembers\topicPanel._include_.html" header="UML: Class Diagrams: Class Level Members" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+                <panel src="/se-book\uml\classDiagrams\classLevelMembers\what\full._include_.html" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Class Level Members" isOpen="false" no-close="true" no-switch="true"></panel>
               </p>
-              <p></p><img src="/se-book/oopDesign/classes/classLevelMembers/images/person.png" height="100">
+              <p></p>
+              <p>📦 A <code>Student</code> class with a class-level attribute and a method:</p><img src="/se-book/oopDesign/classes/classLevelMembers/images/person.png" height="100">
               <p></p>
             </div>
             <div>
               <div>
                 <panel header=":muscle: Exercises" expandable="">
                   <div>
-                    <panel header=":lock::key: Which of these is most suitable as a class-level variable?">
+                    <panel header=":lock::key: Suitable as a class-level variables">
                       <question>
-                        <p>Which of these is most suitable as a class-level variable?</p>
+                        <p>Which of these are suitable as class-level variables?</p>
                         <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. system: multi-player Pacman game, Class: Player, variable: totalScore</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. system: eLearning system, class: Course, variable: totalStudents</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. system: ToDo manager, class: Task, variable: totalPendingTasks</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. system: any, class: ArrayList, variable: total (i.e., total items in a given ArrayList object)</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. system: multi-player Pac Man game, Class: <code>Player</code>, variable: <code>totalScore</code></li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. system: eLearning system, class: <code>Course</code>, variable: <code>totalStudents</code></li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. system: ToDo manager, class: <code>Task</code>, variable: <code>totalPendingTasks</code></li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. system: any, class: <code>ArrayList</code>, variable: <code>total</code> (i.e., total items in a given <code>ArrayList</code> object)</li>
                         </ul>
                         <div slot="answer">
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. system: multi-player Pacman game, Class: Player, variable: totalScore</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. system: eLearning system, class: Course, variable: totalStudents</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> c. system: ToDo manager, class: Task, variable: totalPendingTasks</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. system: any, class: ArrayList, variable: total (i.e., total items in a given ArrayList object)</li>
-                          </ul>
-                          <p>Explanation: totalPendingTasks should not be managed by individual Task objects and therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level as their value varies
-                            from instance to instance. e.g., totalStudents for one Course object will differ from totalStudents of another.</p>
+                          <p>(c)</p>
+                          <p>Explanation: <code>totalPendingTasks</code> should not be managed by individual <code>Task</code> objects and therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level
+                            as their value varies from instance to instance. e.g., <code>totalStudents</code> for one <code>Course</code> object will differ from <code>totalStudents</code> of another.</p>
                         </div>
                       </question>
                     </panel>
@@ -652,10 +647,10 @@
                     <panel header=":lock::key: What does the navigability given by this diagram mean?">
                       <question><img src="/se-book/oopDesign/associations/navigability/images/unitItem.png" height="100">
                         <p></p>
-                        <ul radio-group="p8nqj" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="p8nqj" type="radio"> a. A <code>Unit</code> object knows about the <code>Item</code> object it is linked to</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="p8nqj" type="radio"> b. An <code>Item</code> object knows about the <code>Unit</code> object it is linked to</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="p8nqj" type="radio"> c. Depends on the programming language</label></li>
+                        <ul radio-group="jxg7b" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="jxg7b" type="radio"> a. A <code>Unit</code> object knows about the <code>Item</code> object it is linked to</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="jxg7b" type="radio"> b. An <code>Item</code> object knows about the <code>Unit</code> object it is linked to</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="jxg7b" type="radio"> c. Depends on the programming language</label></li>
                         </ul>
                         <div slot="answer">
                           <p>(a)</p>
@@ -723,15 +718,15 @@
         </div>
         <tip-box>
           <div>
-            <p>🏆 Can explain the meaning of dependencies in the context of UML class diagrams <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+            <p>🏆 Can explain dependencies among classes <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
           </div>
         </tip-box>
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>In some cases, objects that are not directly linked in the object network can still interact with each other. These are a weaker form of associations we call <em>dependencies</em>.</p>
+              <p>Dependencies are objects that are not directly linked in the object network can still interact with each other. These are a weaker form of associations we call <em>dependencies</em>.</p>
               <p>
-                <panel src="/se-book\uml\classDiagrams\dependencies\topicPanel._include_.html" header="UML: Class Diagrams: Dependencies" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+                <panel src="/se-book\uml\classDiagrams\dependencies\what\full._include_.html" header="UML: Class Diagrams: Dependencies" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
               </p>
               <p></p>
             </div>
@@ -753,19 +748,19 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>A composition is an association that represents a strong “whole-part” relationship. When the “whole” is destroyed, “parts” are destroyed too.</p>
+              <p><strong>A composition is an association that represents a strong <em>whole-part</em> relationship.</strong> When the <em>whole</em> is destroyed, <em>parts</em> are destroyed too.</p>
               <p>
-                <panel src="/se-book\uml\classDiagrams\composition\topicPanel._include_.html" header="UML: Class Diagrams: Composition" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+                <panel src="/se-book\uml\classDiagrams\composition\what\full._include_.html" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Composition" isOpen="false" no-close="true" no-switch="true"></panel>
               </p>
               <p></p>
               <tip-box>
-                <p>Example:</p><img src="/se-book/oopDesign/associations/composition/images/boardSquare.png" height="50">
+                <p>📦 A <code>Board</code> (used for playing board games) consists of <code>Square</code> objects.</p><img src="/se-book/oopDesign/associations/composition/images/boardSquare.png" height="50">
                 <p></p>
               </tip-box>
-              <p>In addition, composition also implies that <strong>there cannot be cyclical links</strong>. In the example below, the notation represents a ‘sub-folder’ relationship between two folders while implying that a Folder cannot be a sub-folder
-                of itself. If the diamond is removed, it is no longer a composition relationship and technically, allows a folder to be subfolder of itself.</p>
+              <p><strong>Composition also implies that there cannot be cyclical links</strong>.</p>
               <tip-box>
-                <p>Example:</p><img src="/se-book/oopDesign/associations/composition/images/folder.png" height="80">
+                <p>📦 In this ‘sub-folder’ association, a <code>Folder</code> cannot be a sub-folder of itself. If the diamond is removed, it is no longer a composition relationship and technically, allows a folder to be sub-folder of itself.</p><img src="/se-book/oopDesign/associations/composition/images/folder.png"
+                  height="80">
                 <p></p>
               </tip-box>
             </div>
@@ -787,31 +782,34 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p><em>Aggregation</em> represents a ‘container-contained’ relationship. It is a weaker relationship than composition.</p>
+              <p><strong><em>Aggregation</em> represents a <em>container-contained</em> relationship.</strong> It is a weaker relationship than composition.</p>
               <p>
-                <panel src="/se-book\uml\classDiagrams\aggregation\topicPanel._include_.html" header="UML: Class Diagrams: Aggregation" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+                <panel src="/se-book\uml\classDiagrams\aggregation\what\full._include_.html" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Aggregation" isOpen="false" no-close="true" no-switch="true"></panel>
               </p>
-              <p></p><img src="/se-book/oopDesign/associations/aggregation/images/clubPerson.png" height="80">
               <p></p>
-              <p><strong>Aggregation vs Composition</strong></p>
-              <p>The distinction between composition and aggregation is rather blurred. Martin Fowler’s famous book <em>UML Distilled</em> advocates omitting the aggregation symbol altogether as using it adds more confusion than clarity.</p>
+              <tip-box>
+                <p>📦 <code>Club</code> acts as a <em>container</em> for <code>Person</code> objects. <code>Person</code> objects can survive without a <code>Club</code> object.</p><img src="/se-book/oopDesign/associations/aggregation/images/clubPerson.png"
+                  height="80">
+                <p></p>
+              </tip-box>
+              <tip-box type="tip">
+                <p><strong>Aggregation vs Composition</strong></p>
+                <p>The distinction between composition (◆) and aggregation (◇) is rather blurred. Martin Fowler’s famous book <em>UML Distilled</em> advocates omitting the aggregation symbol altogether because using it adds more confusion than clarity.</p>
+              </tip-box>
             </div>
             <div>
               <div>
                 <panel header=":muscle: Exercises" expandable="">
                   <div>
-                    <panel header=":lock::key: Which one of these is recommended not to use in UML diagrams because it adds more confusion than clarity?">
+                    <panel header=":lock::key: Which one is not recommended to use?">
                       <question>
                         <p>Which one of these is recommended not to use in UML diagrams because it adds more confusion than clarity?</p>
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Composition symbol</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Aggregation symbol</li>
+                        <ul radio-group="q0d1b" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="q0d1b" type="radio"> a. Composition symbol</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="q0d1b" type="radio"> b. Aggregation symbol</label></li>
                         </ul>
                         <div slot="answer">
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Composition symbol</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. Aggregation symbol</li>
-                          </ul>
+                          <p>(b)</p>
                         </div>
                       </question>
                     </panel>
@@ -859,57 +857,62 @@
     <div>
       <div>
         <div>
-          <h4 id="basic-one-4">Basic <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+          <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
         </div>
         <tip-box>
           <div>
-            <p>🏆 Can explain the interfaces concept and relate it to Java interfaces <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+            <p>🏆 Can explain the meaning of inheritance <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
           </div>
         </tip-box>
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>Sometimes, it helps to be able to define a new class based on another class. For example, to be able to define an <code>EvaluationReport</code> class based on a <code>Report</code> class so that the <code>EvaluationReport</code> class does
-                not have to duplicate code that is already implemented in the <code>Report</code> class. This can be achieved using the object-oriented concept of <em>inheritance</em>.</p>
+              <p><strong>The OOP concept <em>Inheritance</em> allows you to define a new class based on an existing class.</strong> For example, you can use inheritance to define an <code>EvaluationReport</code> class based on an existing <code>Report</code>                class so that the <code>EvaluationReport</code> class does not have to duplicate code that is already implemented in the <code>Report</code> class.</p>
               <p>
-                <panel src="/se-book\uml\classDiagrams\classInheritance\topicPanel._include_.html" header="UML: Class Diagrams: Inheritance" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+                <panel src="/se-book\uml\classDiagrams\classInheritance\what\full._include_.html" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Inheritance" isOpen="false" no-close="true" no-switch="true"></panel>
               </p>
               <p></p>
               <tip-box>
-                <p>Example:</p><img src="/se-book/oopDesign/inheritance/basic/images/report.png" height="120">
+                <p>📦 Example: The <code>EvaluationReport</code> inherits the <code>wordCount</code> attribute and the <code>print()</code> method from the <em>base class</em><code>Report</code>.</p><img src="/se-book/oopDesign/inheritance/what/images/report.png"
+                  height="120">
                 <p></p>
               </tip-box>
-              <p>In the example above, The <code>EvaluationReport</code> inherits the wordCount attribute and the print() method from the base class <code>Report</code>.</p>
               <ul>
-                <li>Other names for Base class: <em>Parent class, Super class</em></li>
-                <li>Other names for Derived class: <em>Extended class, Child class, Sub class</em></li>
+                <li>Other names for Base class: <em>Parent</em> class, <em>Super</em> class</li>
+                <li>Other names for Derived class: <em>Extended</em> class, <em>Child</em> class, <em>Derived</em> class</li>
               </ul>
-              <p>Applying inheritance concept on a group of similar classes can result in the common parts among classes being extracted into more general classes. In the example below, <code>Man</code> and <code>Woman</code> behaves the same way for the
-                ‘owes money’ association. However, the two classes cannot be simply replaced with a more general class <code>Person</code> because of the need to distinguish between <code>Man</code> and <code>Woman</code> for the ‘marriage’ association.
-                A solution is to add the <code>Person</code> class as a super class and let <code>Man</code> and <code>Woman</code> inherit from <code>Person</code>.</p>
+              <p><strong>A super class is said to be <em>more general</em> than the sub class.</strong> Conversely, a sub class is said to be more <em>specialized</em> than the super class.</p>
+              <p><strong>Applying inheritance on a group of similar classes can result in the common parts among classes being extracted into more general classes.</strong></p>
               <tip-box>
-                <p>Example:</p><img src="/se-book/oopDesign/inheritance/basic/images/manWoman.png" height="250">
+                <p>📦 <code>Man</code> and <code>Woman</code> behaves the same way for the 'owes money' association. However, the two classes cannot be simply replaced with a more general class <code>Person</code> because of the need to distinguish between
+                  <code>Man</code> and <code>Woman</code> for the ‘marriage’ association. A solution is to add the <code>Person</code> class as a super class and let <code>Man</code> and <code>Woman</code> inherit from <code>Person</code>.</p><img src="/se-book/oopDesign/inheritance/what/images/manWoman.png"
+                  height="250">
                 <p></p>
               </tip-box>
-              <p>Inheritance implies the derived class can be considered as a <em>sub-type</em> of the base class (and the base class is a <em>super-type</em> of the derived class), resulting in an ‘is a’ relationship ; for example, in the class diagrams
-                of a <em>Snakes and Ladders</em> board game given below:</p>
-              <ul>
-                <li>SnakeHeadSquare <em>is a</em> Square.</li>
-                <li>SnakeTailSquare <em>is a</em> Square.</li>
-              </ul>
-              <tip-box type="info">
+              <p><strong>Inheritance implies the derived class can be considered as a <em>sub-type</em> of the base class (and the base class is a <em>super-type</em> of the derived class), resulting in an <em>is a</em> relationship.</strong></p>
+              <tip-box
+                type="info">
                 <p>Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type relationship.</p>
-              </tip-box>
-              <tip-box>
-                <p>Example:</p><img src="/se-book/oopDesign/inheritance/basic/images/boardSquare.png" height="250">
-                <p></p>
-              </tip-box>
-              <p>{explain inheritance hierarchies}</p>
-              <p>In the example below, the <code>TA</code> class inherits from <code>Staff</code> as well as <code>Student</code>. Such multiple inheritance is allowed among C++ classes but not among Java classes.</p>
-              <tip-box>
-                <p>Example:</p><img src="/se-book/oopDesign/inheritance/basic/images/studentStaff.png" height="200">
-                <p></p>
-              </tip-box>
+                </tip-box>
+                <tip-box>
+                  <p>📦 In this class diagrams of a <em>Snakes and Ladders</em> board game,</p>
+                  <ul>
+                    <li><code>SnakeHeadSquare</code><em>is a</em><code>Square</code><span class="dimmed"> (a <code>SnakeHeadSquare</code> is a square in which the head of a snake appears)</span></li>
+                    <li><code>SnakeTailSquare</code><em>is a</em><code>Square</code></li>
+                  </ul><img src="/se-book/oopDesign/inheritance/what/images/boardSquare.png" height="250">
+                  <p></p>
+                </tip-box>
+                <p><strong>Inheritance relationships through a chain of classes can result in inheritance <em>hierarchies</em> (aka inheritance <em>trees</em>).</strong></p>
+                <tip-box>
+                  <p>📦 Two inheritance hierarchies/trees are given below. Note that <code>Parrot</code><em>is a</em><code>Bird</code> as well as it <em>is an</em><code>Animal</code>.</p><img src="/se-book/oopDesign/inheritance/what/images/inheritanceTreesExamples.png"
+                    width="500">
+                  <p></p>
+                </tip-box>
+                <p><strong><em>Multiple Inheritance</em> is when a class inherits <em>directly</em> from multiple classes.</strong> Multiple inheritance is allowed among C++ classes but not among Java classes.</p>
+                <tip-box>
+                  <p>📦 The <code>TA</code> class inherits from the <code>Staff</code> class <em>and</em> the <code>Student</code>.</p><img src="/se-book/oopDesign/inheritance/what/images/studentStaff.png" height="200">
+                  <p></p>
+                </tip-box>
             </div>
             <div>
               <div></div>
@@ -929,84 +932,80 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>A sub-class can change the behavior inherited from the parent class by simply re-implementing it. This is called <em>overriding</em>. Overridden methods have the same name, same type signature, and same return type.</p>
+              <p><strong>Method <em>overriding</em> is when a sub-class changes the behavior inherited from the parent class</strong> by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.</p>
               <tip-box>
-                <p>Example:</p><img src="/se-book/oopDesign/inheritance/overriding/images/report.png" height="150">
-                <p></p>
-              </tip-box>
-            </div>
-            <div>
-              <div></div>
-            </div>
-          </div>
-        </panel>
-      </div>
-      <div>
-        <div>
-          <h4 id="overloading-two">Overloading <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-        </div>
-        <tip-box>
-          <div>
-            <p>🏆 Can explain method overloading <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
-          </div>
-        </tip-box>
-        <panel type="seamless" header=" %%- - - - - - - - - -%%">
-          <div>
-            <div>
-              <p>Method overloading arises when there are multiple operations with the <strong>same name but different type signatures.</strong></p>
-              <tip-box type="primary">
-                <div>
-                  <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.</p>
-                  <panel
-                    type="seamless" header="%%Examples%%">
-                    <table class="markbind-table table">
-                      <thead>
-                        <tr>
-                          <th style="text-align:center">Method</th>
-                          <th style="text-align:center">Type Signature</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td style="text-align:center">int add(int X, int Y)</td>
-                          <td style="text-align:center">(int, int)</td>
-                        </tr>
-                        <tr>
-                          <td style="text-align:center">void add(int A, int B)</td>
-                          <td style="text-align:center">(int, int)</td>
-                        </tr>
-                        <tr>
-                          <td style="text-align:center">void m(int X, double Y)</td>
-                          <td style="text-align:center">(int, double)</td>
-                        </tr>
-                        <tr>
-                          <td style="text-align:center">void m(double X, int Y)</td>
-                          <td style="text-align:center">(double, int)</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                <p>📦 In the diagram below,</p>
+                <ul>
+                  <li><code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method.</li>
+                  <li><code>Report#write(String)</code> method is overridden by <code>EvaluationReport#write(String)</code> method.</li>
+                  <li><code>Report#read():String</code> method is <strong>NOT</strong> overridden by <code>EvaluationReport#read(int):String</code> method. <span class="dimmed"> Reason: the two methods have different signatures; <code>EvaluationReport#read(int):String</code><trigger trigger="click" for="modal:overriding-overloading"><em>overloads</em></trigger> (rather than overrides) the <code>Report#read():String</code> method.</span></li>
+                </ul>
+                <modal title="**Overloading**" id="modal:overriding-overloading">
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Design → Object Oriented Programming →
+</span></strong>
+                      </span>
+                    </p>
+                    <div>
+                      <h4 id="overloading-two">Overloading <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <p><strong>Method overloading is when there are multiple methods with the same name but different type signatures.</strong> Overloading is used to indicate that multiple operations do similar things but take different parameters.</p>
+                        <tip-box
+                          type="primary">
+                          <div>
+                            <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.</p>
+                            <panel
+                              type="seamless" header="%%Examples%%">
+                              <table class="markbind-table table">
+                                <thead>
+                                  <tr>
+                                    <th style="text-align:center">Method</th>
+                                    <th style="text-align:center">Type Signature</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td style="text-align:center"><code>int add(int X, int Y)</code></td>
+                                    <td style="text-align:center"><code>(int, int)</code></td>
+                                  </tr>
+                                  <tr>
+                                    <td style="text-align:center"><code>void add(int A, int B)</code></td>
+                                    <td style="text-align:center"><code>(int, int)</code></td>
+                                  </tr>
+                                  <tr>
+                                    <td style="text-align:center"><code>void m(int X, double Y)</code></td>
+                                    <td style="text-align:center"><code>(int, double)</code></td>
+                                  </tr>
+                                  <tr>
+                                    <td style="text-align:center"><code>void m(double X, int Y)</code></td>
+                                    <td style="text-align:center"><code>(double, int)</code></td>
+                                  </tr>
+                                </tbody>
+                              </table>
         </panel>
         </div>
         </tip-box>
         <tip-box>
-          <p>Example:</p>
-          <pre class="hljs"><code>class Account {
-    Account () {
-        // Signature: ()
-        ...
-    }
-    Account (String name, String number, double balance) {
-        // Signature: (String, String, double)
-        ...
-    }
+          <p>📦 In the class below, the <code>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code>(String)</code> and <code>(int[])</code></p>
+          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RatingCalculator</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculate</span><span class="hljs-params">(String matric)</span> </span>{ ... }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculate</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] averages)</span> </span>{ ... }
 }
 </code></pre>
-          <pre class="hljs"><code>void calculateCAP (String matric) { ... }
-void calculateCAP (int[] averages) { ... }
-</code></pre>
-          <p>The constructor <code>Account</code> and method <code>calculateCAP</code> has been overloaded.</p>
         </tip-box>
-        <p>Overloading is used to indicate that multiple operations do similar things but take different parameters. An operation can be overloaded inside the same class or in a sub/super classes.</p>
+        </div>
+        <div>
+          <div></div>
+        </div>
+        </div>
+        </div>
+        </modal><img src="/se-book/oopDesign/inheritance/overriding/images/report.png" height="150">
+        <p></p>
+        </tip-box>
         </div>
         <div>
           <div></div>
@@ -1016,32 +1015,102 @@ void calculateCAP (int[] averages) { ... }
   </div>
   <div>
     <div>
-      <h4 id="interfaces-two">Interfaces <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      <h4 id="overloading-two-2">Overloading <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
     </div>
     <tip-box>
       <div>
-        <p>🏆 Can explain the interfaces concept and relate it to Java interfaces <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        <p>🏆 Can explain method overloading <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
       </div>
     </tip-box>
     <panel type="seamless" header=" %%- - - - - - - - - -%%">
       <div>
         <div>
-          <p>In OO, an <em>interface</em> is a behavior specification.</p>
+          <p><strong>Method overloading is when there are multiple methods with the same name but different type signatures.</strong> Overloading is used to indicate that multiple operations do similar things but take different parameters.</p>
+          <tip-box type="primary">
+            <div>
+              <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.</p>
+              <panel
+                type="seamless" header="%%Examples%%">
+                <table class="markbind-table table">
+                  <thead>
+                    <tr>
+                      <th style="text-align:center">Method</th>
+                      <th style="text-align:center">Type Signature</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align:center"><code>int add(int X, int Y)</code></td>
+                      <td style="text-align:center"><code>(int, int)</code></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center"><code>void add(int A, int B)</code></td>
+                      <td style="text-align:center"><code>(int, int)</code></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center"><code>void m(int X, double Y)</code></td>
+                      <td style="text-align:center"><code>(int, double)</code></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center"><code>void m(double X, int Y)</code></td>
+                      <td style="text-align:center"><code>(double, int)</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+    </panel>
+    </div>
+    </tip-box>
+    <tip-box>
+      <p>📦 In the class below, the <code>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code>(String)</code> and <code>(int[])</code></p>
+      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RatingCalculator</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculate</span><span class="hljs-params">(String matric)</span> </span>{ ... }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculate</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] averages)</span> </span>{ ... }
+}
+</code></pre>
+    </tip-box>
+    </div>
+    <div>
+      <div></div>
+    </div>
+    </div>
+    </panel>
+  </div>
+  <div>
+    <div>
+      <h4 id="interfaces-two">Interfaces <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+    </div>
+    <tip-box>
+      <div>
+        <p>🏆 Can explain interfaces <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+      </div>
+    </tip-box>
+    <panel type="seamless" header=" %%- - - - - - - - - -%%">
+      <div>
+        <div>
+          <p><strong>An <em>interface</em> is a behavior specification</strong> i.e. a collection of
+            <tooltip content="Just the method signature without any implementation">method specifications</tooltip>. If a class
+            <tooltip content="implements all methods specified in an interface">implements the interface</tooltip>, it means the class is able to support the behaviors specified by the said interface.</p>
+          <blockquote>
+            <p>There are a number of situations in software engineering when it is important for disparate groups of programmers to agree to a &quot;contract&quot; that spells out how their software interacts. Each group should be able to write their code
+              without any knowledge of how the other group's code is written. Generally speaking, interfaces are such contracts. <sub>--<a href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html">Oracle Docs on Java</a><sub></sub></sub>
+            </p>
+          </blockquote>
           <p>
-            <panel src="/se-book\uml\classDiagrams\interfaces\topicPanel._include_.html" header="UML: Class Diagrams: Interface" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+            <panel src="/se-book\uml\classDiagrams\interfaces\what\full._include_.html" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Interface" isOpen="false" no-close="true" no-switch="true"></panel>
           </p>
           <p></p>
           <tip-box>
-            <p>Example:</p><img src="/se-book/oopDesign/inheritance/interfaces/images/staff.png" height="250">
-            <p></p>
+            <p>📦 <code>SalariedStaff</code> is an interface that contains two methods <code>setSalary(int)</code> and <code>getSalary()</code>. <code>AcademicStaff</code> implements the <code>SalariedStaff</code> interface. <span class="dimmed"> That means an <code>AcademicStaff</code> object is able to support the behaviors <code>setSalary(int)</code> and <code>getSalary()</code>. That's why the same two methods also appear under the methods implemented by the <code>AcademicStaff</code> class (in blue)</span></p>
+            <img
+              src="/se-book/oopDesign/inheritance/interfaces/images/staff.png" height="250">
+              <p></p>
           </tip-box>
-          <p>If a class implements all operations specified in an interface, it is said that the class ‘implements’ the interface. Another term for this is <em>interface inheritance</em>. E.g. <code>AcademicStaff</code><em>implements</em> the <code>SalariedStaff</code>            interface.</p>
-          <p>Similar to the class inheritance, a class implementing an interface too results in an <em>is-a</em> relationship. E.g. <code>AcademicStaff</code><em>is a</em><code>SalariedStaff</code>.</p>
-          <p>Java allows multiple inheritance among interfaces. It also allows a class to implement multiple interfaces. The design given below is allowed in Java.</p>
+          <p><strong>A class implementing an interface results in an <em>is-a</em> relationship</strong>, just like in class inheritance.</p>
           <tip-box>
-            <p>Example:</p><img src="/se-book/oopDesign/inheritance/interfaces/images/studentStaff.png" height="250">
-            <p></p>
+            <p>📦 In the example above, <code>AcademicStaff</code><em>is a</em><code>SalariedStaff</code>. An <code>AcademicStaff</code> object can be used anywhere a <code>SalariedStaff</code> object is expected e.g. <code>SalariedStaff ss = new AcademicStaff()</code>.</p>
+            <p><span class="dimmed"> Similarly, <code>AdminStaff</code><em>is a</em><code>SalariedStaff</code> too.</span></p>
           </tip-box>
+          <p></p>
         </div>
         <div>
           <div></div>
@@ -1055,20 +1124,25 @@ void calculateCAP (int[] averages) { ... }
     </div>
     <tip-box>
       <div>
-        <p>🏆 Can explain abstract classes <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        <p>🏆 Can implement abstract classes <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
       </div>
     </tip-box>
     <panel type="seamless" header=" %%- - - - - - - - - -%%">
       <div>
         <div>
-          <p>An abstract class is a class that is declared abstract. Abstract classes cannot be instantiated, but they can be subclassed.</p>
-          <p>An abstract class can include abstract methods. An abstract method is simply the method interface without the implementation.</p>
+          <tip-box type="definition">
+            <div>
+              <p><strong>Abstract Class</strong>:</p>
+              <p>An <em>abstract class</em> is a class that is declared <code>abstract</code>—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed. <sub>-- <a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">Oracle's Java Documentation</a></sub></p>
+            </div>
+          </tip-box>
+          <p><strong>An abstract method is simply the method interface without the implementation.</strong></p>
           <p>
-            <panel src="/se-book\uml\classDiagrams\abstractClasses\topicPanel._include_.html" header="UML: Class Diagrams: Abstract Classes" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
+            <panel src="/se-book\uml\classDiagrams\abstractClasses\what\full._include_.html" header=":mortar_board:UML &rarr; Class Diagrams &rarr; Abstract Classes" isOpen="false" no-close="true" no-switch="true"></panel>
           </p>
           <p></p>
           <tip-box>
-            <p>Example:</p><img src="/se-book/oopDesign/inheritance/abstractClasses/images/account.png" height="220">
+            <p>📦 The <code>Account</code> class has an abstract method (<code>addInterest()</code>).</p><img src="/se-book/oopDesign/inheritance/abstractClasses/images/account.png" height="220">
             <p></p>
           </tip-box>
         </div>
@@ -1186,8 +1260,7 @@ void calculateCAP (int[] averages) { ... }
                 <div>
                   <p><strong>Polymorphism</strong>:</p>
                   <blockquote>
-                    <p>The ability of different objects to respond, each in its own way, to identical messages is called polymorphism.</p>
-                    <p>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</p>
+                    <p>The ability of different objects to respond, each in its own way, to identical messages is called polymorphism. <sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
                   </blockquote>
                 </div>
               </tip-box>
@@ -1195,7 +1268,7 @@ void calculateCAP (int[] averages) { ... }
                 executed whenever the university initiates a salary adjustment for its staff. However, the adjustment formula is different for different staff categories, say admin and academic. Here is one possible way of designing the classes in the
                 <code>Payroll</code> system.</p>
               <tip-box>
-                <p>Example:</p><img src="/se-book/oopDesign/polymorphism/introduction/images/payroll.png" height="150">
+                <p>📦 Calling <code>adjustSalary()</code> method for each Staff type:</p><img src="/se-book/oopDesign/polymorphism/introduction/images/payroll.png" height="150">
                 <p></p>
                 <p>Here is the implementation of the adjustSalary(int) operation from the above design.</p>
                 <pre class="hljs"><code>class Payroll1 {
@@ -1214,8 +1287,8 @@ void calculateCAP (int[] averages) { ... }
 }
 </code></pre>
               </tip-box>
-              <p>Note how processing is similar for the two staff types. It is <strong>as if the type of staff members is irrelevant</strong> to how they are processed inside this operation! If that is the case, can the staff type be “abstracted away” from
-                this operation? After all, why keep irrelevant details? Here is such an implementation of <code>adjustSalary(int)</code>:</p>
+              <p>Note how processing is similar for the two staff types. It is as if the type of staff members is irrelevant to how they are processed inside this operation! If that is the case, can the staff type be &quot;abstracted away&quot; from this
+                method? Here is such an implementation of <code>adjustSalary(int)</code>:</p>
               <tip-box>
                 <pre class="hljs"><code>class Payroll2 {
     ArrayList&lt; Staff &gt; staff;
@@ -1244,62 +1317,9 @@ void calculateCAP (int[] averages) { ... }
               </ul>
               <p>This does not mean we are getting rid of the <code>Academic</code> and <code>Admin</code> classes completely and replacing them with a more general class called <code>Staff</code>. Rather, this part of the code “treats” both <code>Admin</code>                and <code>Academic</code> objects as one type called <code>Staff</code>.</p>
               <p>For example, <code>ArrayList</code> staff contains both <code>Admin</code> and <code>Academic</code> objects although it treats all of them as <code>Staff</code> objects. However, when the <code>adjustSalary(int)</code> operation of these
-                objects is called, the resulting salary adjustment will be different for <code>Admin</code> objects and <code>Academic</code> objects. Therefore, <strong>different types of objects are treated as a single general type, but yet each type of object exhibits a different kind of behavior</strong>.
-                This is called <em>polymorphism</em> (literally, it means “ability to take many forms”). In this example, an object that is perceived as type <code>Staff</code> can be an <code>Admin</code> object or an <code>Academic</code> object.</p>
-            </div>
-            <div>
-              <div></div>
-            </div>
-          </div>
-        </panel>
-      </div>
-      <div>
-        <div>
-          <h4 id="basic-two">Basic <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-        </div>
-        <tip-box>
-          <div>
-            <p>🏆 Can describe the basics of OOP polymorphism <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
-          </div>
-        </tip-box>
-        <panel type="seamless" header=" %%- - - - - - - - - -%%">
-          <div>
-            <div>
-              <p>To retain the multiple types while still allowing some parts of the system to treat them as one type, <em>inheritance</em> can be used.</p>
-              <tip-box>
-                <p>Example:</p><img src="/se-book/oopDesign/polymorphism/basic/images/staff.png" height="200">
-                <p></p>
-                <p>Given below is the minimum code for <code>Staff</code>, <code>Admin</code>, and <code>Academic</code> classes.</p>
-                <pre class="hljs"><code>class Staff {
-    String name;
-    double salary;
-
-    void adjustSalary(int percent) {
-        // do nothing
-    }
-}
-
-//------------------------------------------
-
-class Admin extends Staff {
-
-    @Override
-    void adjustSalary(int percent) {
-        salary = salary * percent;
-    }
-}
-
-//------------------------------------------
-
-class Academic extends Staff {
-
-    @Override
-    void adjustSalary(int percent) {
-        salary = salary * percent * 2;
-    }
-}
-</code></pre>
-              </tip-box>
+                objects is called, the resulting salary adjustment will be different for <code>Admin</code> objects and <code>Academic</code> objects. Therefore, different types of objects are treated as a single general type, but yet each type of object
+                exhibits a different kind of behavior. This is called <em>polymorphism</em> (literally, it means “ability to take many forms”). In this example, an object that is perceived as type <code>Staff</code> can be an <code>Admin</code> object
+                or an <code>Academic</code> object.</p>
             </div>
             <div>
               <div></div>
@@ -1398,7 +1418,7 @@ class Academic extends Staff {
       </div>
       <div>
         <div>
-          <h4 id="basic-two-2">Basic <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+          <h4 id="basic-two">Basic <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
         </div>
         <tip-box>
           <div>
@@ -1631,15 +1651,15 @@ class Academic extends Staff {
                     <p></p>
                     <question>
                       In the context of OOP, what is the relationship between abstraction and encapsulation?
-                      <ul radio-group="r6ywl" class="radio-list">
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="r6ywl" type="radio"> a. They are the same thing</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="r6ywl" type="radio"> b. They are opposites</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="r6ywl" type="radio"> c. Encapsulation strengthens abstraction</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="r6ywl" type="radio"> d. Abstraction strengthens encapsulation</label></li>
+                      <ul radio-group="ozova" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="ozova" type="radio"> a. They are the same thing</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="ozova" type="radio"> b. They are opposites</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="ozova" type="radio"> c. Encapsulation strengthens abstraction</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="ozova" type="radio"> d. Abstraction strengthens encapsulation</label></li>
                       </ul>
                       <div slot="answer">
-                        <ul radio-group="j0ybm" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" checked name="j0ybm" type="radio"> c. Encapsulation strengthens abstraction</label></li>
+                        <ul radio-group="775ig" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" checked name="775ig" type="radio"> c. Encapsulation strengthens abstraction</label></li>
                         </ul>
                         <p>Explanation: We can have abstraction without encapsulation. For example, we can <em>think</em> in terms of student entities when we code in C (a procedural language). But when we use a language that has encapsulation too (e.g.,
                           in Java/C++/C#), we can package all student related data and functions into one construct (i.e. a class). This makes the ‘student’ abstraction stronger because now we can not only think in terms of students, the program can perform
@@ -1653,23 +1673,23 @@ class Academic extends Staff {
                     <panel header="%%Prerequisites%%" expandable="" expanded="">
                       <panel src="/se-book\oopDesign\objects\abstraction\full._include_.html" header="OOP: Objects: Abstraction" isOpen="false" no-close="true" no-switch="true"></panel>
                       <panel src="/se-book\oopDesign\objects\encapsulation\full._include_.html" header="OOP: Objects: Encapsulation" isOpen="false" no-close="true" no-switch="true"></panel>
-                      <panel src="/se-book\oopDesign\inheritance\basic\full._include_.html" header="OOP: Inheritance: Basic" isOpen="false" no-close="true" no-switch="true"></panel>
+                      <panel src="/se-book\oopDesign\inheritance\what\full._include_.html" header="OOP: Inheritance: Basic" isOpen="false" no-close="true" no-switch="true"></panel>
                       <panel src="/se-book\oopDesign\inheritance\substitutability\full._include_.html" header="OOP: Inheritance: Substitutability" isOpen="false" no-close="true" no-switch="true"></panel>
                       <panel src="/se-book\oopDesign\polymorphism\introduction\full._include_.html" header="OOP: Polymorphism: Introduction" isOpen="false" no-close="true" no-switch="true"></panel>
                     </panel>
                     <p></p>
                     <question>
                       Which of these do not belong to four main OO principles?
-                      <ul radio-group="iotji" class="radio-list">
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="iotji" type="radio"> a. Abstraction</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="iotji" type="radio"> b. Encapsulation</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="iotji" type="radio"> c. Inheritance</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="iotji" type="radio"> d. Substitutability</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="iotji" type="radio"> e. Polymorphism</label></li>
+                      <ul radio-group="mry8w" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="mry8w" type="radio"> a. Abstraction</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="mry8w" type="radio"> b. Encapsulation</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="mry8w" type="radio"> c. Inheritance</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="mry8w" type="radio"> d. Substitutability</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="mry8w" type="radio"> e. Polymorphism</label></li>
                       </ul>
                       <div slot="answer">
-                        <ul radio-group="yy0ui" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" checked name="yy0ui" type="radio"> d. Substitutability</label></li>
+                        <ul radio-group="1zg3n" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" checked name="1zg3n" type="radio"> d. Substitutability</label></li>
                         </ul>
                       </div>
                     </question>

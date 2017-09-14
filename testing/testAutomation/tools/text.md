@@ -12,9 +12,11 @@
 
 <div id="body">
 
-JUnit is a tool for automated testing of Java programs. Similar tools are available for other languages.
+**JUnit is a tool for automated testing of Java programs.** Similar tools are available for other languages.
 
-Below is the code of an automated test for Payroll class, written using JUnit libraries.
+<tip-box> 
+
+:package: This an automated test for a `Payroll` class, written using JUnit libraries.
 
 ```java
 public class PayrollTestJUnit {
@@ -35,8 +37,9 @@ public class PayrollTestJUnit {
     }
 }
 ```
+</tip-box>
 
-Most modern IDEs come packaged with integrated support for testing tools. The figure below shows the JUnit output when running some JUnit tests using the Eclipse IDE.
+Most modern IDEs has integrated support for testing tools. The figure below shows the JUnit output when running some JUnit tests using the Eclipse IDE.
 
 <img src="{{baseUrl}}/testing/testAutomation/tools/images/junit.png" height="190" />
 <p/>

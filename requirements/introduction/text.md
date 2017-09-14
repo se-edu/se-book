@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Requirements &rarr; </div>
-
 <div id="title">
 
 #### Introduction :one:
@@ -12,7 +10,7 @@
 
 <div id="body">
 
-A _software requirement_ specifies a need to be fulfilled by the software product.
+**A _software requirement_ specifies a need to be fulfilled by the software product.**
 
 A software project may be,
 * a _brown-field_ project: develop a product to replace/update an existing software product
@@ -22,8 +20,13 @@ In either case, requirements gathered, analyzed, specified, and managed.
 
 Requirements come from _stakeholders_.
 
+<tip-box type="info"> 
+  <include src="../../common/definitions.md#def-stakeholder"/>  
+</tip-box>
+
 Identifying requirements is not as straightforward as it sounds. It is not as simple as writing a wish list.
-{more details}
+
+<!-- TODO: add more details -->
 
 </div>
 

@@ -823,8 +823,11 @@ Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects.
         <p>4a. Go to the GitHub page of your fork (i.e. <code>https://github.com/{your_username}/samplerepo-pr-practice</code>), click on the <code>Pull Requests</code> tab, and then click on <code>New Pull Request</code> button.</p><img src="/se-book/gitAndGithub/createPRs/images/createPrButton.png"
           width="800">
         <p></p>
-        <p>4b. Select both <code>base fork</code> and <code>head fork</code> to be your fork (by default, the <code>base fork</code> is set to the upstream repo <code>nus-cs2103-AY1718S1/samplerepo-pr-practice</code>).</p><img src="/se-book/gitAndGithub/createPRs/images/selectBase.png"
-          width="800">
+        <p>4b. Select <code>base fork</code> and <code>head fork</code> as follows:</p>
+        <ul>
+          <li><code>base fork</code>: your own fork (i.e. <code>{your user name}/samplerepo-pr-practice</code>, <mark>NOT <code>nus-cs2103-AY1718S1/samplerepo-pr-practice</code></mark>)</li>
+          <li><code>head fork</code>: your own fork.</li>
+        </ul><img src="/se-book/gitAndGithub/createPRs/images/selectBase.png" width="800">
         <p></p>
         <tip-box type="info">
           <p>The <em>base fork</em> is where changes should be applied. The <em>head fork</em> contains the changes you would like to be applied.</p>
@@ -834,9 +837,14 @@ Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects.
         <p></p>
         <p>4d. (1) Set PR name, (2) set PR description, and (3) Click the <code>Create pull request</code> button.</p><img src="/se-book/gitAndGithub/createPRs/images/setPrName.png" width="600">
         <p></p>
+        <tip-box type="important">
+          <p>A common newbie mistake when creating branch-based PRs is to mix commits of one PR with another. To learn how to avoid that mistake, you are encouraged to continue and create another PR as explained below.
+          </p>
+        </tip-box>
         <p><strong>5. In your local repo, create a new branch <code>add-summary</code></strong> off the <code>master</code> branch.</p>
         <tip-box type="warning">
-          <p>When creating the new branch, it is very important that you switch back to the <code>master</code> branch first. If not, the new branch will be created off the current branch <code>add-intro</code>.</p>
+          <p>When creating the new branch, it is very important that you switch back to the <code>master</code> branch first. If not, the new branch will be created off the current branch <code>add-intro</code>. And that is how you end up having commits
+            of the first PR in the second PR as well.</p>
         </tip-box>
         <p><strong>6. Add a commit in the <code>add-summary</code> branch</strong> that adds a <em>Summary</em> section to the <code>README.md</code>, in exactly the same place you added the <em>Introduction</em> section earlier.</p><img src="/se-book/gitAndGithub/createPRs/images/addSummaryBranch.png"
           width="400">
@@ -902,37 +910,51 @@ git pull origin master
         </div>
       </tip-box>
       <div>
-        <p>
-          <panel src="/se-book\revisionControl\forkingWorkflow\embed._include_.html" header="Revision Control: Forking Workflow" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-        </p>
         <p></p>
         <ol>
-          <li>Create a GitHub organization for your team.</li>
-          <li>One member: create a repo in the org and put some files in it.</li>
-          <li>All team members fork the repo.</li>
-          <li>All create PRs but ensure each person changes a different file (to avoid conflicts).</li>
-          <li>Review and merge PRs. i.e. for each PR</li>
+          <li>
+            <p><strong>One member: set up the team org and the team repo.</strong></p>
+            <ul>
+              <li><strong><a href="https://help.github.com/articles/creating-a-new-organization-from-scratch/">Create a GitHub organization</a></strong> for your team. The org name is up to you. We'll refer to this organization as <em>team org</em> from now
+                on.</li>
+              <li><strong><a href="https://help.github.com/enterprise/2.10/admin/guides/user-management/creating-teams/">Add a team </a></strong> called <code>developers</code> to your team org.</li>
+              <li><strong><a href="https://help.github.com/enterprise/2.0/admin/guides/user-management/adding-or-inviting-people-to-teams/">Add your team members</a></strong> to the <code>developers</code> team.</li>
+              <li><strong>Fork <a href="https://github.com/se-edu/samplerepo-workflow-practice">se-edu/samplerepo-workflow-practice</a> to your team org</strong>. We'll refer to this as the <em>team repo</em>.</li>
+              <li><strong><a href="https://help.github.com/articles/managing-team-access-to-an-organization-repository/">Add the forked repo</a> to the <code>developers</code> team.</strong> Give write access.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Each team member: create PRs via own fork</strong></p>
+            <ul>
+              <li><strong>Fork that repo</strong> from your team org to your own GitHub account.</li>
+              <li><strong>Create a PR</strong> to add a file <code>yourName.md</code><span class="dimmed"> (e.g. <code>jonhDoe.md</code>) </span> containing a brief resume of yourself <span class="dimmed"> (branch → commit → push → create PR)</span></li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>For each PR: review, update, and merge.</strong></p>
+            <ul>
+              <li>A team member (not the PR author): Review the PR by adding comments (can be just dummy comments).</li>
+              <li>PR author: Update the PR by pushing more commits to it, to simulate updating the PR based on review comments.</li>
+              <li>Another team member: Merge the PR using the GitHub interface.</li>
+              <li>All members: <a href="https://help.github.com/articles/syncing-a-fork/">Sync your local repo (and your fork) with upstream repo</a>. In this case, your <em>upstream repo</em> is the repo in your team org.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Create conflicting PRs.</strong></p>
+            <ul>
+              <li>Each team member: Create a PR to add yourself under the <code>Team Members</code> section in the <code>README.md</code>.</li>
+              <li>One member: in the <code>master</code> branch, remove John Doe and Jane Doe from the <code>README.md</code>, commit, and push to the main repo.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Merge conflicting PRs one at a time.</strong> Before merging a PR, you’ll have to resolve conflicts. Steps:</p>
+            <ul>
+              <li>[Optional] A member can inform the PR author (by posting a comment) that there is a conflict in the PR.</li>
+              <li>PR author: Pull the <code>master</code> branch from the repo in your team org. Merge the pulled <code>master</code> branch to your PR branch. Resolve the merge conflict that crops up during the merge. Push the updated PR branch to your fork.</li>
+              <li>Another member or the PR author: When GitHub does not indicate a conflict anymore, you can go ahead and merge the PR.</li>
+            </ul>
+          </li>
         </ol>
-        <ul>
-          <li>A team member (not the PR author): Review the PR by adding comments (can be just dummy comments).</li>
-          <li>PR author: Update the PR by pushing more commits to it, to simulate updating the PR based on review comments.</li>
-          <li>Maintainer: Merge the PR using the GitHub interface.</li>
-          <li>All: Sync fork with upstream changes.</li>
-        </ul>
-        <ol start="6">
-          <li>Create conflicting PRs.</li>
-        </ol>
-        <ul>
-          <li>All: Create PRs modifying the same part of the same file.</li>
-          <li>Maintainer: in the master branch, create a commit that modifies the same part of the same file. Push to the main repo.</li>
-        </ul>
-        <ol start="7">
-          <li>Merge PRs one at a time. Before merging a PR, PR you’ll have to resolve conflicts. Steps:</li>
-        </ol>
-        <ul>
-          <li>Maintainer: informs the PR author (by posting a comment) that there is a conflict in the PR.</li>
-          <li>PR author: Pull the <code>master</code> branch. Merge <code>master</code> to your PR branch. Resolve the merge conflict that corps up during the merge.</li>
-        </ul>
       </div>
     </div>
   </div>

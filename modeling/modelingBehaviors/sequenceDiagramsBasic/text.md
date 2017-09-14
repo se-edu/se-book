@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Modeling &rarr; Modeling Behaviors &rarr;</div>
-
 <div id="title">
 
 #### Sequence Diagrams - Basic :one:
@@ -12,14 +10,41 @@
 
 <div id="body">
 
-<dynamic-panel src="../../../uml/sequenceDiagrams/basic/embed.md" header="UML: Sequence Diagrams: Basic" is-open></dynamic-panel>
-<dynamic-panel src="../../../uml/sequenceDiagrams/objectCreation/embed.md" header="UML: Sequence Diagrams: Object Creation" is-open></dynamic-panel>
-<dynamic-panel src="../../../uml/sequenceDiagrams/loops/embed.md" header="UML: Sequence Diagrams: Loops" is-open></dynamic-panel>
-<dynamic-panel src="../../../uml/sequenceDiagrams/minimalNotation/embed.md" header="UML: Sequence Diagrams: Minimal Notation" is-open></dynamic-panel>
+<tip-box> 
+
+:package: Consider the code below.
+
+```java
+class Machine {
+
+    Unit producePrototype() {
+        Unit prototype = new Unit();
+        for (int i = 0; i < 5; i++) {
+            prototype.stressTest();
+        }
+        return prototype;
+    }
+}
+
+class Unit {
+
+    public void stressTest() {
+
+    }
+}
+
+```
+Here is the sequence diagram to model the interactions for the method call `procudePrototype()` on a `Machine` object.
+
+<img src="{{baseUrl}}/modeling/modelingBehaviors/sequenceDiagramsBasic/images/Machine.png" width="450" />
+<p/>
+
+</tip-box>
 
 </div>
 
 <div id="extras">
+  <include src="exercises.md" />
 <div>
 
 </div>

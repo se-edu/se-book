@@ -6,6 +6,14 @@
 
 ## A
 
+<div id="def-abstractClass">
+
+**Abstract Class**:
+
+An _abstract class_ is a class that is declared `abstract`—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed. <sub>-- [Oracle's Java Documentation](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)</sub>
+
+</div>
+
 <div id="def-abstraction">
 
 **Abstraction**:
@@ -116,7 +124,7 @@ Abstraction can be applied repeatedly to obtain higher and _higher levels of abs
 
 <div id="def-feature-list">
 
-**Feature List**: A list of features (or functionalities) _grouped according to some criteria_ such as priority (e.g. must-have, nice-to-have, etc. ), order of delivery, object or process related (e.g. order-related, invoice-related, etc.)
+**Feature List**: A list of features of a product _grouped according to some criteria_ such as aspect, priority, order of delivery, etc.
 
 </div>
 
@@ -181,9 +189,7 @@ Also known as
 
 **Polymorphism**:
 
-> The ability of different objects to respond, each in its own way, to identical messages is called polymorphism.
->
-> -- [Object-Oriented Programming with Objective-C](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/), Apple
+> The ability of different objects to respond, each in its own way, to identical messages is called polymorphism. <sub>-- [Object-Oriented Programming with Objective-C](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/), Apple</sub>
 
 </div>
 
@@ -211,7 +217,7 @@ Also known as
 
 <div id="def-single-responsibility-principle">
 
-**Single Responsibility Principle (SRP)**: A class should have one, and only one, reason to change. -- Robert C. Martin
+**Single Responsibility Principle (SRP)**: A class should have one, and only one, reason to change. <sub>-- Robert C. Martin</sub>
 
 </div>
 
@@ -259,18 +265,24 @@ Also known as
 
 <panel type="seamless" header="%%Examples%%">
 
-| Method                         | Type Signature        |
-| :----------------------------: | :-------------------: |
-| int add(int X, int Y)          | (int, int)            |
-| void add(int A, int B)         | (int, int)            |
-| void m(int X, double Y)        | (int, double)         |
-| void m(double X, int Y)        | (double, int)         |
+| Method                           | Type Signature          |
+| :------------------------------: | :---------------------: |
+| `int add(int X, int Y)`          | `(int, int)`            |
+| `void add(int A, int B)`         | `(int, int)`            |
+| `void m(int X, double Y)`        | `(int, double)`         |
+| `void m(double X, int Y)`        | `(double, int)`         |
 
 </panel>
 
 </div>
 
 ## U
+
+<div id="def-uml">
+
+[**Unified Modeling Language (UML)**](http://www.uml.org/#UML2.0) is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the _de facto_ modeling notation used in the industry. 
+
+</div>
 
 <div id="def-use-case">
 
@@ -286,7 +298,7 @@ Also known as
 
 <div id="def-user-story">
 
-**User story**: User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. <sup>[[Mike Cohn](https://www.mountaingoatsoftware.com/agile/user-stories)]
+**User story**: User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. <sub>[[Mike Cohn](https://www.mountaingoatsoftware.com/agile/user-stories)]</sub>
 
 </div>
 

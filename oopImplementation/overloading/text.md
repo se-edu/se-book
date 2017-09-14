@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; </div>
-
 <div id="title">
 
 #### Overloading :one:
@@ -12,13 +10,42 @@
 
 <div id="body">
 
-<dynamic-panel src="../../oopDesign/inheritance/overloading/embed.md" header="OOP: Inheritance: Overloading" is-open></dynamic-panel>
+An operation can be overloaded inside the same class or in sub/super classes.
+
+<tip-box>
+
+:package: The constructor of the `Account` class below is _overloaded because there are two constructors with different signatures: `()` and `(String, String, double)`. Furthermore, the `save` method in the `Account` class is overloaded in the child class `SavingAccount`.
+
+```java
+class Account {
+    Account () {
+        ...
+    }
+    
+    Account (String name, String number, double balance) {
+        ...
+    }
+    
+    void save(int amount){
+        ...
+    }
+}
+
+class SavingAccount extends Account{
+    
+    void save(Double amount){
+        ...
+    }
+}
+```
+</tip-box>
 
 <p/>
 
 </div>
 
 <div id="extras">
+  <include src="resources.md" />
 <div>
 
 </div>

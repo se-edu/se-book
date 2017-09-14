@@ -44,20 +44,78 @@
       </div>
       <tip-box>
         <div>
-          <p>🏆 Can interpret basic sequence diagrams <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+          <p>🏆 Can draw basic sequence diagrams <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
       </tip-box>
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>
-              <panel src="/se-book\uml\sequenceDiagrams\basic\embed._include_.html" header="UML: Sequence Diagrams: Basic" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-              <panel src="/se-book\uml\sequenceDiagrams\objectCreation\embed._include_.html" header="UML: Sequence Diagrams: Object Creation" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-              <panel src="/se-book\uml\sequenceDiagrams\loops\embed._include_.html" header="UML: Sequence Diagrams: Loops" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-              <panel src="/se-book\uml\sequenceDiagrams\minimalNotation\embed._include_.html" header="UML: Sequence Diagrams: Minimal Notation" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-            </p>
+            <tip-box>
+              <p>📦 Consider the code below.</p>
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Machine</span> </span>{
+
+    <span class="hljs-function">Unit <span class="hljs-title">producePrototype</span><span class="hljs-params">()</span> </span>{
+        Unit prototype = <span class="hljs-keyword">new</span> Unit();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+            prototype.stressTest();
+        }
+        <span class="hljs-keyword">return</span> prototype;
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Unit</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stressTest</span><span class="hljs-params">()</span> </span>{
+
+    }
+}
+
+</code></pre>
+              <p>Here is the sequence diagram to model the interactions for the method call <code>procudePrototype()</code> on a <code>Machine</code> object.</p><img src="/se-book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/Machine.png" width="450">
+              <p></p>
+            </tip-box>
           </div>
           <div>
+            <div>
+              <panel header=":muscle: Exercises" expandable="">
+                <div>
+                  <panel header=":lock: Draw a Sequence Diagram for code snippet">
+                    <question>
+                      <p>Consider the code below:</p>
+                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
+    Tag tag;
+    String name;
+
+    Person(String personName, String tagName){
+        name = personName;
+        tag = <span class="hljs-keyword">new</span> Tag(tagName);
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span></span>{
+    Tag(String value){
+        <span class="hljs-comment">//...</span>
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PersonList</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addPerson</span><span class="hljs-params">(Person p)</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+                      <p>Draw a sequence diagram to illustrate the object interactions that happen in the code snippet below:</p>
+                      <pre><code class="hljs java">PersonList personList = <span class="hljs-keyword">new</span> PersonList();
+<span class="hljs-keyword">while</span> (hasRoom){
+    Person p = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Adam"</span>, <span class="hljs-string">"friend"</span>);
+    personList.addPerson(p);
+}
+</code></pre>
+                    </question>
+                  </panel>
+                </div>
+              </panel>
+            </div>
             <div></div>
           </div>
         </div>

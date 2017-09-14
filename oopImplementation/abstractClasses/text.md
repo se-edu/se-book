@@ -2,26 +2,54 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; </div>
-
 <div id="title">
 
-#### Abstract Classes :one:
+#### Abstract Classes :two:
 
 </div>
 
 <div id="body">
 
-<dynamic-panel src="../../oopDesign/inheritance/abstractClasses/embed.md" header="OOP: Inheritance: Abstract Classes" is-open></dynamic-panel>
+**Use the `abstract` keyword to identify abstract classes/methods.**
 
+<tip-box> 
+
+:package: Partial code below gives an example of how to declare abstract classes/methods.
+
+<img src="{{baseUrl}}/oopDesign/inheritance/abstractClasses/images/account.png" height="220" />
 <p/>
 
-[Oracle’s Java Tutorials: Abstract Methods and Classes](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)
+```java
+abstract class Account {
+    
+    int number;
+    
+    abstract void addInterest();
+    
+    void close(){
+        //...
+    }
+}
+
+class CurrentAccount extends Account{
+
+    @Override
+    void addInterest() {
+        //...
+    }
+}
+```
+
+</tip-box>
+
+In Java, if a class contains an abstract method, the class itself should be an abstract class %%&nbsp;i.e. if any methods of the class is 'incomplete', the class itself is 'incomplete'%%.
+
 
 </div>
 
 <div id="extras">
 
+<include src="resources.md" />
 <include src="exercises.md" />
 
 <div>

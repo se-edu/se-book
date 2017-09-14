@@ -1,13 +1,13 @@
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
-<panel header=":lock::key: EZ-Link top-up use case :two:">
+<panel header=":lock::key: EZ-Link top-up use case">
 <question has-input="true">
 
-Complete the following use case (MSS, extensions, etc.). Note that you should not blindly follow how the existing EZ-Link machine operates since it will prevent you from designing a better system.  You should consider all possible extensions without complicating the use case too much.
+Complete the following use case (MSS, extensions, etc.). Note that you should not blindly follow how the existing  <tooltip content="A type of a cash card topup machine">EZ-Link machine</tooltip> operates because it will prevent you from designing a better system.  You should consider all possible extensions without complicating the use case too much.
 
 <tip-box>
 
-* System: EZ-Link machine (those found at MRTs)
+* System: EZ-Link machine
 * Use case: UC2 top-up EZ-Link card
 * Actor: EZ-Link card user
 
@@ -52,9 +52,9 @@ Complete the following use case (MSS, extensions, etc.). Note that you should no
   </div>
 
 Notes:
-*	We assume that the only way to cancel a transaction is by removing the card.
-*	By not breaking step 4 into further steps, we avoid committing to a particular mechanism to enter data. For example, we are free to accept all data in one screen.
-*	In step 5, we assume that the input mechanism does not allow any incorrect data.
+* We assume that the only way to cancel a transaction is by removing the card.
+* By not breaking step 4 into further steps, we avoid committing to a particular mechanism to enter data. For example, we are free to accept all data in one screen.
+* In step 5, we assume that the input mechanism does not allow any incorrect data.
 
 </tip-box>
 

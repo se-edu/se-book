@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr;</div>
-
 <div id="title">
 
 #### Aggregation :two:
@@ -12,11 +10,11 @@
 
 <div id="body">
 
-Implementation is similar to that of aggregation except the ‘containee’ object can exist even after the ‘container’ object is deleted.
+Implementation is similar to that of composition except the _containee_ object can exist even after the _container_ object is deleted.
 
 <tip-box>
 
-Example:
+:package: Example:
 
 <img src="{{baseUrl}}/oopImplementation/aggregation/images/carPerson.png" height="40" />
 <p/>

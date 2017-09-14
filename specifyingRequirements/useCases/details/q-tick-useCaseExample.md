@@ -3,6 +3,8 @@
 <panel header=":lock::key: What’s wrong with this use case?">
 <question>
 
+Identify problems with this use case description.
+
 <div>
   <ul>
     <li>System: EZ-Link machine (those found at MRTs)</li>
@@ -43,18 +45,12 @@
 - [ ] c. The extension given is in fact an inclusion.
 - [ ] d. No post conditions are given.
 - [ ] e. ‘Use case ends’ is duplicated.
-- [ ] f. Nothing.
 
 <div slot="answer">
 
-- [ ] a. It does not consider ‘system crash’ scenario.
-- [ ] b. It does not contain enough UI details.
-- [ ] c. The extension given is in fact an inclusion.
-- [ ] d. No post conditions are given.
-- [ ] e. ‘Use case ends’ is duplicated.
-- [x] f. Nothing.
+None.
 
-Explanation: Handout explains why catastrophic failures such as ‘system crash’ need not be included in a use case. A use case is not supposed to contain UI details. Post conditions are optional. It is not a problem to have multiple exit points for a use case.
+Explanation: Catastrophic failures such as ‘system crash’ need not be included in a use case. A use case is not supposed to contain UI details. Post conditions are optional. It is not a problem to have multiple exit points for a use case.
 
 </div>
 </question>

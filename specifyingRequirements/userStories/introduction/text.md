@@ -12,18 +12,19 @@
 
 <div id="body">
 
-<tip-box type="primary">
+<tip-box type="definition">
 <include src="../../../common/definitions.md#def-user-story" />
 </tip-box>
 
 **A common format** for writing user stories is:
 
-<tip-box type="primary">
+<tip-box type="definition">
 <include src="../../../common/definitions.md#def-user-story-format" />
 </tip-box>
 
 <tip-box>
-Examples (from a Learning Management System):
+
+:package: Examples (from a Learning Management System):
 
 1. As a student, I can download files uploaded by lecturers, so that I can get my own copy of the files
 2. As a lecturer, I can create discussion forums, so that students can discuss things online

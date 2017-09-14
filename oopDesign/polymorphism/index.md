@@ -9,7 +9,6 @@
 <div id="main">
 
 <include src="introduction/embed.md" />
-<include src="basic/embed.md" />
 <include src="mechanism/embed.md" />
 
 </div>

@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Gathering Requirements &rarr; </div>
-
 <div id="title">
 
 #### Prototyping :one:
@@ -12,44 +10,41 @@
 
 <div id="body">
 
-<tip-box type="primary">
+<tip-box type="definition">
 
 <include src="../../common/definitions.md#def-prototyping" />
 
 </tip-box>
 
-Early UI prototyping, i.e. sketching the user interface for the intended product, is a good technique to uncover requirements, in particular, those related to _how users interact with the system_. UI prototypes are often used in brainstorming sessions, or in meetings with the users to get quick feedback from them.
+**Prototyping can uncover requirements, in particular, those related to _how users interact with the system_.** UI prototypes are often used in brainstorming sessions, or in meetings with the users to get quick feedback from them.
 
-<panel header="%%Prototype examples%%" expanded>
+<tip-box> 
 
-<panel header="Text UI prototype" type="seamless" expanded>
+<panel header=":package: Simple text UI prototype for a primitive CLI (Command Line Interface) Minesweeper:" type="seamless" expanded>
 <img src="{{baseUrl}}/gatheringRequirements/prototyping/images/textPrototypeCLI.png" height="350" />
 
-%%<sup>Simple text UI prototype for a primitive CLI (Command Line Interface) Minesweeper.</sup>%%
-
 </panel>
 
-<panel header="GUI prototype" type="seamless">
+<panel header=":package: A simple GUI prototype for the same Minesweeper, created using Powerpoint:" type="seamless">
+
 <img src="{{baseUrl}}/gatheringRequirements/prototyping/images/guiPrototypeMinesweeper.jpg" height="250" />
 
-%%<sup>Simple GUI prototype for the same Minesweeper, created using Powerpoint</sup>%%
-
 </panel>
 
-<panel header="Balsamiq prototype" type="seamless">
+<panel header=":package: A prototype for a mobile app, created using the UI prototyping tool Balsmiq:" type="seamless">
+
 <img src="{{baseUrl}}/gatheringRequirements/prototyping/images/balsamiqPrototypeGUI.jpg" height="500" />
 
-<sup>source: http://balsamiq.com/products/mockups</sup>
+%%<sup>[source: http://balsamiq.com/products/mockups]</sup>%%
 
 </panel>
 
-</panel>
-
+</tip-box>
 <p/>
 
-<tip-box type="info">
+<tip-box type="tip">
 
-Prototyping can also be used as a technique for _discovering_ as well as _specifying_ what to build.
+Prototyping can be used for _discovering_ as well as _specifying_ requirements %%&nbsp;e.g. a UI prototype can serve as a specification of what to build%%.
 
 </tip-box>
 

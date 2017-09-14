@@ -1,31 +1,14 @@
-<panel header=":lock::key: True or False?">
+<panel header=":lock::key: Cost of bug fixing over time">
 <question>
 
-A) The cost of fixing a bug goes down as we reach the product release.
+The cost of fixing a bug goes down as we reach the product release.
 
-- [ ] a. True
-- [ ] b. False
-
-B) Developers should pass their code to testers for unit testing as soon as the implementation is done.
-
-- [ ] a. True
-- [ ] b. False
+- ( ) True
+- ( ) False
 
 <div slot="answer">
 
-A) The cost of fixing a bug goes down as we reach the product release.
-
-- [ ] a. True
-- [x] b. False
-
-Explanation: No, the cost goes up over time.
-
-B) Developers should pass their code to testers for unit testing as soon as the implementation is done.
-
-- [ ] a. True
-- [x] b. False
-
-Explanation: Unit testing is a type of ‘developer testing’. It is not done by testers.
+False. The cost goes up over time.
 
 </div>
 </question>

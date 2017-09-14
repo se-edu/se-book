@@ -4,7 +4,7 @@
 
 %%**Object Oriented Programming &rarr;**%%
 
-## Objects
+## Classes
 
 <div id="main">
 

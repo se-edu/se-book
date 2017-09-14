@@ -228,8 +228,7 @@
         </div>
       </tip-box>
       <div>
-        <p>Developer testing is the testing done by the developers themselves as opposed to professional testers or end users.</p>
-        <p>Examples of developer testing: unit testing, integration testing</p>
+        <p><strong><em>Developer testing</em> is the testing done by the developers themselves</strong> as opposed to professional testers or end-users.</p>
       </div>
     </div>
     <div>
@@ -242,18 +241,20 @@
         </div>
       </tip-box>
       <div>
-        <p>At first it might seem logical to have the system built in its entirety first and then getting it tested by professional testers. Here are the downsides of that approach.</p>
+        <p><strong>Delaying testing until the full product is complete has a number of disadvantages:</strong></p>
         <ul>
-          <li>Locating the cause of such a test case failure is difficult due to a large search space; in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple inter-related
-            bugs.</li>
-          <li>Fixing a bug found during such testing could result in major rework, especially if the bug originated during the design or during requirements specification (i.e. a faulty design or faulty requirements).</li>
-          <li>One bug might 'hide' other bugs, which could emerge only after the first bug is fixed.</li>
-          <li>Too many bugs found during system testing can lead to delivery delays.</li>
+          <li><strong>Locating the cause of such a test case failure is difficult due to a large search space;</strong> in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due
+            to multiple inter-related bugs.</li>
+          <li><strong>Fixing a bug found during such testing could result in major rework</strong>, especially if the bug originated during the design or during requirements specification (i.e. a faulty design or faulty requirements).</li>
+          <li><strong>One bug might 'hide' other bugs</strong>, which could emerge only after the first bug is fixed.</li>
+          <li><strong>The delivery may have to be delayed</strong> if too many bugs were found during testing.</li>
         </ul>
-        <p>Due to the above reasons, it is better to do early developers testing. In fact, there is a widely accepted rule of thumb that says <em>the earlier a bug is found, the easier and cheaper to have it fixed</em>, as illustrated by the graph below.</p>
-        <img
-          src="/se-book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
-          <p></p>
+        <p><strong>Therefore, it is better to do early testing</strong>, as hinted by the popular rule of thumb given below, also illustrated by the graph below it.</p>
+        <blockquote>
+          <p>The earlier a bug is found, the easier and cheaper to have it fixed.</p>
+        </blockquote><img src="/se-book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
+        <p></p>
+        <p>Such early testing of partially developed software is usually, and by necessity, done by the developers themselves i.e. developer testing.</p>
       </div>
     </div>
     <h3 id="exploratory-vs-scripted-testing">Exploratory vs Scripted Testing</h3>
@@ -525,30 +526,10 @@ Invalid command format: add
         </div>
       </tip-box>
       <div>
-        <p>Automated testing requires test drivers. A test driver is a module written specifically for ‘driving’ the <em>SUT (Software Under Test)</em> for the purpose of testing i.e. invoking the SUT with test inputs and verifying the behavior is as expected.
-          In the code example given below, <code>PayrollTest</code> is a test driver for the <code>Payroll</code> class that ‘drives’ the <code>PayRoll</code> class by sending it test inputs and printing out the output. However, it does not verify if
-          the output is as expected.</p>
-        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestDriver</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        <span class="hljs-comment">//test setup</span>
-        Payroll p = <span class="hljs-keyword">new</span> Payroll();
-
-        <span class="hljs-comment">//test case 1</span>
-        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});
-        print(<span class="hljs-string">"Test 1 output "</span> + p.totalSalary());
-
-        <span class="hljs-comment">//test case 2</span>
-        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});
-        print(<span class="hljs-string">"Test 2 output "</span> + p.totalSalary());
-
-        <span class="hljs-comment">//more tests</span>
-        System.out.println(<span class="hljs-string">"Testing completed"</span>);
-    }
-    ...
-}
-</code></pre>
-        <p>The <code>PayrollTest</code> class below not only drives the SUT Payroll class using test inputs, it also automatically verifies that output for each test input in as expected.</p>
-        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestAtd</span> </span>{
+        <p><strong>A test driver is the code that ‘drives’ the <tooltip content="Software Under Test">SUT</tooltip> for the purpose of testing</strong> i.e. invoking the SUT with test inputs and verifying the behavior is as expected.</p>
+        <tip-box>
+          <p>📦 <code>PayrollTest</code> ‘drives’ the <code>PayRoll</code> class by sending it test inputs and verifies if the output is as expected.</p>
+          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestDriver</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
 
         <span class="hljs-comment">//test setup</span>
@@ -573,6 +554,7 @@ Invalid command format: add
     }
 }
 </code></pre>
+        </tip-box>
       </div>
     </div>
     <div>
@@ -585,9 +567,10 @@ Invalid command format: add
         </div>
       </tip-box>
       <div>
-        <p>JUnit is a tool for automated testing of Java programs. Similar tools are available for other languages.</p>
-        <p>Below is the code of an automated test for Payroll class, written using JUnit libraries.</p>
-        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestJUnit</span> </span>{
+        <p><strong>JUnit is a tool for automated testing of Java programs.</strong> Similar tools are available for other languages.</p>
+        <tip-box>
+          <p>📦 This an automated test for a <code>Payroll</code> class, written using JUnit libraries.</p>
+          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestJUnit</span> </span>{
 
     <span class="hljs-meta">@Test</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testTotalSalary</span><span class="hljs-params">()</span></span>{
@@ -605,7 +588,8 @@ Invalid command format: add
     }
 }
 </code></pre>
-        <p>Most modern IDEs come packaged with integrated support for testing tools. The figure below shows the JUnit output when running some JUnit tests using the Eclipse IDE.</p><img src="/se-book/testing/testAutomation/tools/images/junit.png" height="190">
+        </tip-box>
+        <p>Most modern IDEs has integrated support for testing tools. The figure below shows the JUnit output when running some JUnit tests using the Eclipse IDE.</p><img src="/se-book/testing/testAutomation/tools/images/junit.png" height="190">
         <p></p>
       </div>
     </div>

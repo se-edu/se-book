@@ -1,0 +1,1 @@
+<dynamic-panel src="../../oopDesign/inheritance/abstractClasses/full.md" header="%%:mortar_board: Design &rarr; OOP &rarr; Inheritance &rarr; Abstract Classes%%" />

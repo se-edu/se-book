@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">UML &rarr; Sequence Diagrams &rarr;</div>
-
 <div id="title">
 
 #### Loops :two:
@@ -19,7 +17,7 @@ Notation:
 
 <tip-box>
 
-Example:
+:package: The `Player` calls the `mark x,y` command or `clear x y` command repeatedly until the game is won or lost.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/loops/images/playerText.png" height="300" />
 <p/>

@@ -137,7 +137,7 @@
 <dynamic-panel src="../oopDesign/associations/associationClasses/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/associations/associationClasses/outcomes.md" inline />
 
 
-<dynamic-panel src="../oopDesign/inheritance/basic/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/inheritance/basic/outcomes.md" inline />
+<dynamic-panel src="../oopDesign/inheritance/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/inheritance/what/outcomes.md" inline />
 
 <dynamic-panel src="../oopDesign/inheritance/overriding/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/inheritance/overriding/outcomes.md" inline />
 
@@ -153,8 +153,6 @@
 
 
 <dynamic-panel src="../oopDesign/polymorphism/introduction/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/polymorphism/introduction/outcomes.md" inline />
-
-<dynamic-panel src="../oopDesign/polymorphism/basic/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/polymorphism/basic/outcomes.md" inline />
 
 <dynamic-panel src="../oopDesign/polymorphism/mechanism/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/polymorphism/mechanism/outcomes.md" inline />
 
@@ -452,6 +450,8 @@
 ### OOP Implementation
 
 <dynamic-panel src="../oopImplementation/classes/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopImplementation/classes/outcomes.md" inline />
+
+<dynamic-panel src="../oopImplementation/classLevelMembers/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopImplementation/classLevelMembers/outcomes.md" inline />
 
 <dynamic-panel src="../oopImplementation/associations/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopImplementation/associations/outcomes.md" inline />
 
