@@ -34,7 +34,7 @@ public class Person {
     private final StringProperty street;
     private final IntegerProperty postalCode;
     private final StringProperty city;
-    private final ObjectProperty<LocalDate> birthday;
+    private final ObjectProperty< LocalDate > birthday;
 
     /**
      * Default constructor.
@@ -54,7 +54,7 @@ public class Person {
         this.street = new SimpleStringProperty("some street");
         this.postalCode = new SimpleIntegerProperty(1234);
         this.city = new SimpleStringProperty("some city");
-        this.birthday = new SimpleObjectProperty<LocalDate>(LocalDate.of(1999, 2, 21));
+        this.birthday = new SimpleObjectProperty< LocalDate >(LocalDate.of(1999, 2, 21));
     }
 
     public String getFirstName() {
@@ -125,7 +125,7 @@ public class Person {
         this.birthday.set(birthday);
     }
 
-    public ObjectProperty<LocalDate> birthdayProperty() {
+    public ObjectProperty< LocalDate > birthdayProperty() {
         return birthday;
     }
 }
