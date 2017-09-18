@@ -409,9 +409,6 @@
 <dynamic-panel src="../errorHandling/logging/how/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../errorHandling/logging/how/outcomes.md" inline />
 
 
-<dynamic-panel src="../errorHandling/assertions/exceptionsVsAssertions/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../errorHandling/assertions/exceptionsVsAssertions/outcomes.md" inline />
-
-
 <dynamic-panel src="../errorHandling/defensiveProgramming/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../errorHandling/defensiveProgramming/what/outcomes.md" inline />
 
 <dynamic-panel src="../errorHandling/defensiveProgramming/compulsoryAssociations/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../errorHandling/defensiveProgramming/compulsoryAssociations/outcomes.md" inline />
