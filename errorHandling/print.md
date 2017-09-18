@@ -26,7 +26,6 @@
 ## Logging
 
 <include src="logging/what/print.md" />
-<include src="logging/why/print.md" />
 <include src="logging/how/print.md" />
 
 ## Defensive Programming

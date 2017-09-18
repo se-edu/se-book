@@ -406,8 +406,6 @@
 
 <dynamic-panel src="../errorHandling/logging/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../errorHandling/logging/what/outcomes.md" inline />
 
-<dynamic-panel src="../errorHandling/logging/why/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../errorHandling/logging/why/outcomes.md" inline />
-
 <dynamic-panel src="../errorHandling/logging/how/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../errorHandling/logging/how/outcomes.md" inline />
 
 
