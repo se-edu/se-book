@@ -1,15 +1,14 @@
 <panel header=":lock::key: True or False?">
 <question>
 
-Defining component APIs early allows components to be developed in parallel.
+Defining component APIs early is useful for developing components in parallel.
 
-- [ ] a. True
-- [ ] b. False
+- ( ) True
+- ( ) False
 
 <div slot="answer">
 
-- [x] a. True
-- [ ] b. False
+True
 
 Explanation: Yes, once we know the precise behavior expected of each component, we can start developing them in parallel.
 
