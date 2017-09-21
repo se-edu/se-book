@@ -90,7 +90,7 @@ Meaning of some shortened headings:
 
 * **Why** : the **motivation** behind the concept in concern
 
-  <include name="%%Example%%" src="../errorHandling/logging/why/full.md" dynamic />
+  <include name="%%Example%%" src="../documentation/guidelines/goTopDown/why/full.md" dynamic />
   
 * **How** : the **usage** of the concept in concern 
 

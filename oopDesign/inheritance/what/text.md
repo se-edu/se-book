@@ -26,7 +26,7 @@
 </tip-box>
 
 * Other names for Base class: _Parent_ class, _Super_ class
-* Other names for Derived class: _Extended_ class, _Child_ class, _Derived_ class
+* Other names for Derived class: _Child_ class, _Sub_ class, _Extended_ class
 
 **A super class is said to be _more general_ than the sub class.** Conversely, a sub class is said to be more _specialized_ than the super class.
 

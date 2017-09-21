@@ -28,50 +28,31 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>Logging is the deliberate recording of certain information during a program execution.</p>
-          </div>
-          <div>
-            <div></div>
-          </div>
-        </div>
-      </panel>
-    </div>
-    <div>
-      <div>
-        <h4 id="why-two">Why <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-      </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can explain the motivation for logging <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
-        </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
-        <div>
-          <div>
-            <p><em>Logging</em> can be useful for troubleshooting problems the error handling code could not prevent (due to the failure to cater for certain situations).</p>
-            <p>A good logging system records some system information regularly. When bad things happen to a system, their associated log files may provide indications of what went wrong and action can then be taken to prevent it from happening again. This
-              is the same reason why airplanes have ‘black boxes’.</p>
+            <p><strong><em>Logging</em> is the deliberate recording of certain information during a program execution for future reference.</strong> Logs are typically written to a log file but it is also possible to log information in other ways <span class="dimmed"> e.g. into a database or a remote server</span>.</p>
+            <p><strong><em>Logging</em> can be useful for troubleshooting problems</strong>. A good logging system records some system information regularly. When bad things happen to a system <span class="dimmed"> e.g. an unanticipated failure</span>, their
+              associated log files may provide indications of what went wrong and action can then be taken to prevent it from happening again.</p>
+            <div v-closeable="" alt="blackbox photo">
+              <tip-box>
+                <p>💡 <strong>A log file is like the <tooltip content="flight data recorders">black box</tooltip> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.</p>
+                <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br><sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub></p>
+              </tip-box>
+            </div>
           </div>
           <div>
             <div>
               <panel header=":muscle: Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: Why is logging like having the ‘black box’ in aircrafts?">
+                  <panel header=":lock::key: Logging vs blackbox">
                     <question>
-                      <p>Why is logging like having the ‘black box’ in aircrafts?</p>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Because they can be used to find more info about how the system behaved before an ‘incident’.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Because they are hidden from the view of normal users.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Because they both can be in hardcopy form or digital form.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Because they are hard to open by normal users.</li>
+                      <p>Why is logging like having the 'black box' in an airplane?</p>
+                      <ul radio-group="zhdvk" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="zhdvk" type="radio"> a. Because they can be used to find more info about how the system behaved before/during an ‘incident’.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="zhdvk" type="radio"> b. Because they are hidden from the view of normal users.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="zhdvk" type="radio"> c. Because they both can be in hardcopy form or digital form.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="zhdvk" type="radio"> d. Because they are hard to open by normal users.</label></li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. Because they can be used to find more info about how the system behaved before an ‘incident’.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Because they are hidden from the view of normal users.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Because they both can be in hardcopy form or digital form.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Because they are hard to open by normal users.</li>
-                        </ul>
+                        <p>(a)</p>
                       </div>
                     </question>
                   </panel>
@@ -95,11 +76,11 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>While it is relatively easy to implement a customized logging system (e.g. by inserting file I/O statements to write to a log file), most programming environments come with logging systems that allow more sophisticated forms of logging. For
-              example, being able to enable and disable logging easily or to change the logging intensity/verbosity (i.e. how much information to record).</p>
-            <p>Given below is a sample Java code that uses Java’s default logging mechanism. When running the code, the logging level can be set to WARNING so that log messages specified as INFO level will not be written to the log file at all.</p>
+            <p><strong>Most programming environments come with logging systems that allow sophisticated forms of logging.</strong> They have features such as the ability to enable and disable logging easily or to change the logging
+              <tooltip content="how much information to record">intensity</tooltip>.</p>
             <tip-box>
-              <p>Example:</p>
+              <p>📦 This sample Java code uses Java’s default logging mechanism. When running the code, the logging level can be set to <code>WARNING</code> so that log messages specified as <code>INFO</code> level (which is a lower level than <code>WARNING</code>)
+                will not be written to the log file at all.</p>
               <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.logging.*;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
@@ -109,6 +90,7 @@
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bar</span><span class="hljs-params">()</span> </span>{
         <span class="hljs-comment">// log a message at INFO level</span>
         logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);
+        
         <span class="hljs-keyword">try</span> {
             processInput();
         } <span class="hljs-keyword">catch</span> (Exception ex) {
@@ -122,6 +104,26 @@
             </tip-box>
           </div>
           <div>
+            <div>
+              <panel header=":paperclip: Resources" expanded="">
+                <p><strong>Tutorials</strong>:</p>
+                <ul>
+                  <li><a href="http://www.vogella.com/tutorials/Logging/article.html"><strong>Java Logging API - Tutorial</strong></a> -- A tutorial by <em>Lars Vogella</em></li>
+                  <li><a href="http://tutorials.jenkov.com/java-logging/index.html"><strong>Java Logging Tutorial</strong></a> -- An alternative tutorial by <em>Jakob Jenkov</em></li>
+                </ul>
+                <div v-closeable="" alt="video:logging">
+                  <ul>
+                    <li>A video tutorial by <em>SimplyCoded</em>:<br></li>
+                  </ul>
+                  <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/W0_Man88Z3Q" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                </div>
+                <p><strong>Best Practices</strong>:</p>
+                <ul>
+                  <li><a href="https://www.javacodegeeks.com/2011/01/10-tips-proper-application-logging.html"><strong>10 Tips for Proper Application Logging</strong></a> -- by <em>Tomasz Nurkiewicz</em></li>
+                  <li><a href="http://commons.apache.org/proper/commons-logging/guide.html#Message_PrioritiesLevels"><strong>What each logging level means</strong></a> -- conventions recommended by <em>Apache Project</em></li>
+                </ul>
+              </panel>
+            </div>
             <div></div>
           </div>
         </div>

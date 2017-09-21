@@ -1,1 +1,1 @@
-:trophy: Can name some of the build automation tools :one:
+:trophy: Can explain build automation tools :one:

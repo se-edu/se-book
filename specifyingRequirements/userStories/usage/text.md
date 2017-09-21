@@ -28,6 +28,30 @@ impatient user | to be able experience reasonable response time from the website
 
 </tip-box>
 
+<div id="usageTips">
+
+Given their lightweight nature, **user stories are quite handy for recording requirements during early requirements gathering**. 
+
+<tip-box> 
+
+:bulb: Here are some tips for using user stories for early stages of requirement gathering:
+
+* **Define the target user:**  
+  Decide our target user's profile (e.g. a student, office worker, programmer, sales person) and work patterns (e.g. Does he work in groups or alone? Does he share his computer with others?). A clear understanding of the target user will help when deciding the importance of a user story.
+* **Don't be too hasty to discard 'unusual' user stories:**  
+  Those might make your product unique and stand out from the rest, at least for some potential users.
+* **Don't go into too much details:**  
+  For example, consider this user story: `As a user, I want to see a list of tasks that needs my attention most at the present time, so that I pay attention to them first.`<br> 
+  When discussing this user story, don't worry about what tasks should be considered _needs my attention most at the present time_. Those details can be worked out later.
+* **Don't be biased by preconceived product ideas:**  
+  When you are at the stage of identifying user needs, clear your mind of ideas you have about what your end product will look like. 
+* **Don't discuss implementation details or whether you are actually going to implement it:**  
+  When gathering requirements, your decision is whether the user's need is important enough for you to want to fulfil it. Implementation details can be discussed later. If a user story turns out to be too difficult to implement later, you can always omit it from the implementation plan. 
+   
+</tip-box>
+
+</div>
+
 <modal id="modal:xp-user-stories" title=":bookmark: User stories vs traditional requirement specifications, according to XP">
 
 <include src="../../../common/popOvers.md#xp" inline /> uses User stories to capture requirements.

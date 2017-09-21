@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">UML &rarr; Sequence Diagrams &rarr;</div>
-
 <div id="title">
 
 #### Alternative Paths :two:
@@ -12,7 +10,7 @@
 
 <div id="body">
 
-We use `alt` frames to indicate alternative paths.
+**UML uses `alt` frames to indicate alternative paths.**
 
 Notation:
 
@@ -21,7 +19,7 @@ Notation:
 
 <tip-box>
 
-Example:
+:package: `Minefield` calls the `Cell#setMine` if the cell is supposed to be a mined cell, and calls the `Cell:setMineCount(...)` method otherwise.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/alternativePaths/images/minefieldCell.png" height="180" />
 <p/>

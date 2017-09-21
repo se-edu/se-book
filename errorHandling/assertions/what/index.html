@@ -19,7 +19,9 @@
     </div>
   </tip-box>
   <div>
-    <p><span class="dimmed"><strong><span>Implementation → Error Handling →
+    <div></div>
+    <p></p>
+    <p><span class="dimmed"><strong><span>Implementation → Error Handling → Assertions →
 </span></strong>
       </span>
     </p>
@@ -28,17 +30,19 @@
     </div>
     <div id="main">
       <div>
-        <p>Assertions are <strong>used to confirm assumptions about the program state</strong>. An assertion can be used to express something like ‘when the execution comes to this point, the variable v cannot be null’. This implies that if v is null at
-          that point, the code has a bug. If the runtime detects such an ‘assertion failure’ (think of it as an ‘assumption violation), the runtime will typically take some drastic action such as terminating the execution with an error message. This is
-          because an assertion failure is a confirmation of the code having a bug and the sooner the execution stops, the safer it is.</p>
+        <p><strong><em>Assertions</em> are used to define assumptions about the program state so that the runtime can verify them.</strong> An assertion failure indicates a possible bug in the code <span class="dimmed">because the code has resulted in a program state that violates an assumption about how the code <em>should</em> behave</span>.</p>
         <tip-box>
-          <p>Example:</p>
+          <p>📦 An assertion can be used to express something like <em>when the execution comes to this point, the variable <code>v</code> cannot be null</em>.</p>
+        </tip-box>
+        <p><strong>If the runtime detects an <em>assertion failure</em>, it typically take some drastic action</strong> such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner
+          the execution stops, the safer it is.</p>
+        <tip-box>
+          <p>📦 In the Java code below, the assertion in line 2 verifies the assumption that <code>timeout</code> returned by <code>Config.getTimeout()</code> is greater than 0. The only reason for it to return a zero or lower value in line 1 is the presence
+            of a bug in the system.</p>
           <pre><code class="hljs java"><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); <span class="hljs-comment">// line 1</span>
 <span class="hljs-keyword">assert</span> timeout &gt; <span class="hljs-number">0</span>; <span class="hljs-comment">// line 2</span>
 setTimeout(timeout); <span class="hljs-comment">// line 3</span>
 </code></pre>
-          <p>In the Java code given above, the assertion in line 2 verifies the assumption that <code>timeout</code> returned by <code>Config.getTimeout()</code> is greater than 0. The only reason for it to return a zero or lower value in line 1 is the presence
-            of a bug in the system.</p>
         </tip-box>
       </div>
       <div>

@@ -12,7 +12,7 @@
 
 <div id="body">
 
-We use `par` frames to indicate parallel paths.
+**UML uses `par` frames to indicate parallel paths.**
 
 Notation:
 
@@ -21,12 +21,16 @@ Notation:
 
 <tip-box>
 
-Example:
+:package: `Logic` is calling methods `CloudServer#poll()` and `LocalServer#poll()` in parallel.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/parallelPaths/images/logicServerData.png" height="150" />
 <p/>
 
-In this example Logic is polling both CloudServer and LocalServer objects in parallel.
+<tip-box> 
+
+:bulb: If you show parallel paths in a sequence diagram, the corresponding Java implementation is likely to be _multi-threaded_ %%&nbsp; because a normal Java program cannot do multiple things at the same time%%.
+
+</tip-box>
 
 </tip-box>
 

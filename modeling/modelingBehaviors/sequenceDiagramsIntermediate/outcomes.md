@@ -1,1 +1,1 @@
-:trophy: Can interpret intermediate sequence diagrams :two:
+:trophy: Can draw intermediate-level sequence diagrams :two:

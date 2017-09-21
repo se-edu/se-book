@@ -11,7 +11,6 @@
 <include src="what/embed.md" />
 <include src="how/embed.md" />
 <include src="when/embed.md" />
-<include src="exceptionsVsAssertions/embed.md" />
 
 </div>
 

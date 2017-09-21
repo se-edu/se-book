@@ -21,12 +21,10 @@
 <include src="assertions/what/print.md" />
 <include src="assertions/how/print.md" />
 <include src="assertions/when/print.md" />
-<include src="assertions/exceptionsVsAssertions/print.md" />
 
 ## Logging
 
 <include src="logging/what/print.md" />
-<include src="logging/why/print.md" />
 <include src="logging/how/print.md" />
 
 ## Defensive Programming

@@ -1,20 +1,16 @@
-<panel header=":lock::key: Tools">
+<panel header=":lock::key: _Gradle_ is a tool for ...">
 <question>
 
-_Gradle_ and _Maven_ are tools used for,
+Gradle_is used used for,
 
 - [ ] a. better revision control
 - [ ] b. build automation
-- [ ] c. generating UML diagrams from code
+- [ ] c. UML diagramming
 - [ ] d. project collaboration
-
 
 <div slot="answer">
 
-- [ ] a. better revision control
-- [x] b. build automation
-- [ ] c. generating UML diagrams from code
-- [ ] d. project collaboration
+(b)
 
 </div>
 </question>

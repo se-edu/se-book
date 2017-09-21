@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Error Handling &rarr; Logging &rarr;</div>
-
 <div id="title">
 
 #### How :two:
@@ -12,13 +10,11 @@
 
 <div id="body">
 
-While it is relatively easy to implement a customized logging system (e.g. by inserting file I/O statements to write to a log file), most programming environments come with logging systems that allow more sophisticated forms of logging. For example, being able to enable and disable logging easily or to change the logging intensity/verbosity (i.e. how much information to record).
-
-Given below is a sample Java code that uses Java’s default logging mechanism. When running the code, the logging level can be set to WARNING so that log messages specified as INFO level will not be written to the log file at all.
+**Most programming environments come with logging systems that allow sophisticated forms of logging.** They have features such as the ability to enable and disable logging easily or to change the logging <tooltip content="how much information to record">intensity</tooltip>.
 
 <tip-box>
 
-Example:
+:package: This sample Java code uses Java’s default logging mechanism. When running the code, the logging level can be set to `WARNING` so that log messages specified as `INFO` level (which is a lower level than `WARNING`) will not be written to the log file at all.
 
 ```java
 import java.util.logging.*;
@@ -30,6 +26,7 @@ public class Foo{
     public void bar() {
         // log a message at INFO level
         logger.log(Level.INFO, "going to start processing");
+        
         try {
             processInput();
         } catch (Exception ex) {
@@ -47,6 +44,7 @@ public class Foo{
 </div>
 
 <div id="extras">
+  <include src="resources.md" />
 <div>
 
 </div>

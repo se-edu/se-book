@@ -112,17 +112,19 @@
         </div>
       </tip-box>
       <div>
-        <p>Assertions are <strong>used to confirm assumptions about the program state</strong>. An assertion can be used to express something like ‘when the execution comes to this point, the variable v cannot be null’. This implies that if v is null at
-          that point, the code has a bug. If the runtime detects such an ‘assertion failure’ (think of it as an ‘assumption violation), the runtime will typically take some drastic action such as terminating the execution with an error message. This is
-          because an assertion failure is a confirmation of the code having a bug and the sooner the execution stops, the safer it is.</p>
+        <p><strong><em>Assertions</em> are used to define assumptions about the program state so that the runtime can verify them.</strong> An assertion failure indicates a possible bug in the code <span class="dimmed">because the code has resulted in a program state that violates an assumption about how the code <em>should</em> behave</span>.</p>
         <tip-box>
-          <p>Example:</p>
+          <p>📦 An assertion can be used to express something like <em>when the execution comes to this point, the variable <code>v</code> cannot be null</em>.</p>
+        </tip-box>
+        <p><strong>If the runtime detects an <em>assertion failure</em>, it typically take some drastic action</strong> such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner
+          the execution stops, the safer it is.</p>
+        <tip-box>
+          <p>📦 In the Java code below, the assertion in line 2 verifies the assumption that <code>timeout</code> returned by <code>Config.getTimeout()</code> is greater than 0. The only reason for it to return a zero or lower value in line 1 is the presence
+            of a bug in the system.</p>
           <pre><code class="hljs java"><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); <span class="hljs-comment">// line 1</span>
 <span class="hljs-keyword">assert</span> timeout &gt; <span class="hljs-number">0</span>; <span class="hljs-comment">// line 2</span>
 setTimeout(timeout); <span class="hljs-comment">// line 3</span>
 </code></pre>
-          <p>In the Java code given above, the assertion in line 2 verifies the assumption that <code>timeout</code> returned by <code>Config.getTimeout()</code> is greater than 0. The only reason for it to return a zero or lower value in line 1 is the presence
-            of a bug in the system.</p>
         </tip-box>
       </div>
     </div>
@@ -136,16 +138,29 @@ setTimeout(timeout); <span class="hljs-comment">// line 3</span>
         </div>
       </tip-box>
       <div>
-        <p>It is recommended that assertions be used liberally in the code. If required, assertions can be disabled without modifying the code. For example, ‘<code>java -enableassertions HelloWorld</code>’ will run <code>HelloWorld</code> with assertions
-          enabled while ‘<code>java -disableassertions HelloWorld</code>’ will run it without verifying assertions.</p>
+        <p>Use the <code>assert</code> keyword to define assertions.</p>
+        <tip-box>
+          <p>📦 This assertion will fail with the message <code>x should be 0</code> if <code>x</code> is not 0 at this point.</p>
+          <pre><code class="hljs java">x = getX();
+<span class="hljs-keyword">assert</span> x == <span class="hljs-number">0</span> : <span class="hljs-string">"x should be 0"</span>;`
+...
+</code></pre>
+        </tip-box>
+        <p><strong>Assertions can be disabled without modifying the code.</strong></p>
+        <tip-box>
+          <p>📦 <code>java -enableassertions HelloWorld</code> (or <code>java -ea HelloWorld</code>) will run <code>HelloWorld</code> with assertions enabled while <code>java -disableassertions HelloWorld</code> will run it without verifying assertions.</p>
+        </tip-box>
+        <tip-box type="important">
+          <p><strong>Java disables assertions by default.</strong> This could create a situation where you think all assertions are being verified as <code>true</code> while in fact they are not being verified at all. Therefore, remember to enable assertions
+            when you run the program if you want them to be in effect.</p>
+        </tip-box>
+        <tip-box>
+          <p>💡 Enable assertions in Intellij (<a href="https://stackoverflow.com/questions/18168257/where-to-add-compiler-options-like-ea-in-intellij-idea">how?</a>) and get an assertion to fail temporarily (e.g. insert an <code>assert false</code> into
+            the code temporarily) to confirm assertions are being verified.</p>
+        </tip-box>
         <tip-box type="info">
-          <p>Notes:</p>
-          <ol>
-            <li>The assertions mentioned above have a different purpose from the Assertions used in unit testing frameworks such as JUnit. Unit testing assertions are located outside the functional program and used for explicit testing of the program before
-              the system is put into use. The assertions discussed here are located inside the functional program and they verify assumptions while the system is running.</li>
-            <li>Some runtime environments disable assertions by default. This could create a situation where the developer thinks all assertions are being verified as true while in fact they are not being verified at all. Therefore, remember to enable assertions
-              when you run the program if you want them to be in effect.</li>
-          </ol>
+          <p><strong>Java <code>asset</code> vs JUnit assertions</strong>: They are similar in purpose but JUnit assertions are more powerful and customized for testing. In addition, JUnit assertions are not disabled by default. We recommend you use JUnit
+            assertions in test code and Java <code>assert</code> in functional code.</p>
         </tip-box>
       </div>
     </div>
@@ -159,25 +174,21 @@ setTimeout(timeout); <span class="hljs-comment">// line 3</span>
         </div>
       </tip-box>
       <div>
-        <p>Refer <a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#usage">this document</a> from Oracle to learn where to use assertions and where not to.</p>
-      </div>
-    </div>
-    <div>
-      <div>
-        <h4 id="exceptions-vs-assertions-two">Exceptions vs Assertions <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-      </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can choose between assertions and exceptions <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
-        </div>
-      </tip-box>
-      <div>
-        <p>Exceptions and assertions are two complementary ways of handling errors in software but they serve different purposes.</p>
+        <p><strong>It is recommended that assertions be used liberally in the code.</strong> Their impact on performance is considered low and worth the additional safety they provide.</p>
+        <p><strong>Do not use assertions to do <em>work</em></strong> because assertions can be disabled. If not, your program will stop working when assertions are not enabled.</p>
+        <tip-box>
+          <p>📦 The code below will not invoke the <code>writeFile()</code> method when assertions are disabled. <span class="dimmed"> If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.</span></p>
+          <pre><code class="hljs java">...
+<span class="hljs-function"><span class="hljs-keyword">assert</span> <span class="hljs-title">writeFile</span><span class="hljs-params">()</span> : "File writing is supposed to return <span class="hljs-keyword">true</span>"</span>;
+</code></pre>
+        </tip-box>
+        <p><strong>Assertions are suitable for verifying assumptions about <em>Internal Invariants</em>, <em>Control-Flow Invariants</em>,
+<em>Preconditions</em>, <em>Postconditions</em>, and <em>Class Invariants</em>.</strong> Refer to [<a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#usage">Programming with Assertions (second half)</a>] to learn more.</p>
+        <p><strong>Exceptions and assertions are two complementary ways of handling errors in software but they serve different purposes.</strong> Therefore, both assertions and exceptions should be used in code.</p>
         <ul>
-          <li>The raising of an exception indicates an unusual condition created by the user (e.g. user inputs an unacceptable input) or the environment (e.g., a file needed for the program is missing).</li>
-          <li>An assertion failure indicates the programmer made a mistake in the code (e.g., a null value is returned from a method that is not supposed to return null under any circumstances).</li>
+          <li>The raising of an exception indicates an unusual condition created by the user <span class="dimmed"> (e.g.  user inputs an unacceptable input)</span> or the environment <span class="dimmed"> (e.g., a file needed for the program is missing)</span>.</li>
+          <li>An assertion failure indicates the programmer made a mistake in the code <span class="dimmed"> (e.g., a null value is returned from a method that is not supposed to return null under any circumstances)</span>.</li>
         </ul>
-        <p>Both assertions and exceptions should be used in code.</p>
       </div>
     </div>
     <h2 id="logging">Logging</h2>
@@ -191,22 +202,15 @@ setTimeout(timeout); <span class="hljs-comment">// line 3</span>
         </div>
       </tip-box>
       <div>
-        <p>Logging is the deliberate recording of certain information during a program execution.</p>
-      </div>
-    </div>
-    <div>
-      <div>
-        <h4 id="why-two">Why <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-      </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can explain the motivation for logging <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        <p><strong><em>Logging</em> is the deliberate recording of certain information during a program execution for future reference.</strong> Logs are typically written to a log file but it is also possible to log information in other ways <span class="dimmed"> e.g. into a database or a remote server</span>.</p>
+        <p><strong><em>Logging</em> can be useful for troubleshooting problems</strong>. A good logging system records some system information regularly. When bad things happen to a system <span class="dimmed"> e.g. an unanticipated failure</span>, their
+          associated log files may provide indications of what went wrong and action can then be taken to prevent it from happening again.</p>
+        <div v-closeable="" alt="blackbox photo">
+          <tip-box>
+            <p>💡 <strong>A log file is like the <tooltip content="flight data recorders">black box</tooltip> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.</p>
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br><sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub></p>
+          </tip-box>
         </div>
-      </tip-box>
-      <div>
-        <p><em>Logging</em> can be useful for troubleshooting problems the error handling code could not prevent (due to the failure to cater for certain situations).</p>
-        <p>A good logging system records some system information regularly. When bad things happen to a system, their associated log files may provide indications of what went wrong and action can then be taken to prevent it from happening again. This is
-          the same reason why airplanes have ‘black boxes’.</p>
       </div>
     </div>
     <div>
@@ -219,11 +223,11 @@ setTimeout(timeout); <span class="hljs-comment">// line 3</span>
         </div>
       </tip-box>
       <div>
-        <p>While it is relatively easy to implement a customized logging system (e.g. by inserting file I/O statements to write to a log file), most programming environments come with logging systems that allow more sophisticated forms of logging. For example,
-          being able to enable and disable logging easily or to change the logging intensity/verbosity (i.e. how much information to record).</p>
-        <p>Given below is a sample Java code that uses Java’s default logging mechanism. When running the code, the logging level can be set to WARNING so that log messages specified as INFO level will not be written to the log file at all.</p>
+        <p><strong>Most programming environments come with logging systems that allow sophisticated forms of logging.</strong> They have features such as the ability to enable and disable logging easily or to change the logging
+          <tooltip content="how much information to record">intensity</tooltip>.</p>
         <tip-box>
-          <p>Example:</p>
+          <p>📦 This sample Java code uses Java’s default logging mechanism. When running the code, the logging level can be set to <code>WARNING</code> so that log messages specified as <code>INFO</code> level (which is a lower level than <code>WARNING</code>)
+            will not be written to the log file at all.</p>
           <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.logging.*;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
@@ -233,6 +237,7 @@ setTimeout(timeout); <span class="hljs-comment">// line 3</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bar</span><span class="hljs-params">()</span> </span>{
         <span class="hljs-comment">// log a message at INFO level</span>
         logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);
+        
         <span class="hljs-keyword">try</span> {
             processInput();
         } <span class="hljs-keyword">catch</span> (Exception ex) {

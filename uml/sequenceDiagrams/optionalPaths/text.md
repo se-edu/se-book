@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">UML &rarr; Sequence Diagrams &rarr;</div>
-
 <div id="title">
 
 #### Optional Paths :two:
@@ -12,7 +10,7 @@
 
 <div id="body">
 
-We use `opt` frames to indicate optional paths.
+**UML uses `opt` frames to indicate optional paths.**
 
 Notation:
 
@@ -21,7 +19,7 @@ Notation:
 
 <tip-box>
 
-Example:
+:package: `Logic#markCellAt(...)` calls `Timer#start()` only if it is the first move of the player. 
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/optionalPaths/images/logicTimer.png" height="150" />
 <p/>

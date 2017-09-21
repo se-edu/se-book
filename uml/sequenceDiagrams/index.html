@@ -112,11 +112,14 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>In languages such as Java that supports automatic memory management, although object deletion is not that important, the above notation can still be used to show the point at which the object ceased to be used.</p>
+            <p><strong>UML uses an <code>X</code> at the end of the lifeline of an object to show it's deletion.</strong></p>
+            <tip-box>
+              <p>💡 Although object deletion is not that important in languages such as Java that support automatic memory management, you can still show object deletion in UML diagrams to indicate the point at which the object ceases to be used.</p>
+            </tip-box>
             <p>Notation:</p><img src="/se-book/uml/sequenceDiagrams/objectDeletion/images/notation.png" height="100">
             <p></p>
             <tip-box>
-              <p>Example:</p><img src="/se-book/uml/sequenceDiagrams/objectDeletion/images/logicMinefield.png" height="120">
+              <p>📦 Note how the diagrams shows the deletion of the <code>Minefield</code> object</p><img src="/se-book/uml/sequenceDiagrams/objectDeletion/images/logicMinefield.png" height="120">
               <p></p>
             </tip-box>
           </div>
@@ -163,12 +166,14 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>This is how we show a method of an object calling another method of the same object.</p>
+            <p><strong>UML can show a method of an object calling another of its own methods.</strong></p>
             <p>Notation:</p><img src="/se-book/uml/sequenceDiagrams/selfInvocation/images/notation.png" height="120">
             <p></p>
             <tip-box>
-              <p>Example:</p><img src="/se-book/uml/sequenceDiagrams/selfInvocation/images/logic.png" height="100">
-              <p></p><img src="/se-book/uml/sequenceDiagrams/selfInvocation/images/object.png" height="150">
+              <p>📦 The <code>markCellAt(...)</code> method of a <code>Logic</code> object is calling its own <code>updateState(...)</code> method.</p><img src="/se-book/uml/sequenceDiagrams/selfInvocation/images/logic.png" height="100">
+              <p></p>
+              <p>📦 In this variation, the <code>Book#write()</code> method is calling the <code>Chapter#getText()</code> method which in turn does a <em>call back</em> by calling the <code>getAuthor()</code> method of the calling object.</p><img src="/se-book/uml/sequenceDiagrams/selfInvocation/images/callBack.png"
+                height="150">
               <p></p>
             </tip-box>
           </div>
@@ -190,11 +195,12 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>We use <code>alt</code> frames to indicate alternative paths.</p>
+            <p><strong>UML uses <code>alt</code> frames to indicate alternative paths.</strong></p>
             <p>Notation:</p><img src="/se-book/uml/sequenceDiagrams/alternativePaths/images/notation.png" height="100">
             <p></p>
             <tip-box>
-              <p>Example:</p><img src="/se-book/uml/sequenceDiagrams/alternativePaths/images/minefieldCell.png" height="180">
+              <p>📦 <code>Minefield</code> calls the <code>Cell#setMine</code> if the cell is supposed to be a mined cell, and calls the <code>Cell:setMineCount(...)</code> method otherwise.</p><img src="/se-book/uml/sequenceDiagrams/alternativePaths/images/minefieldCell.png"
+                height="180">
               <p></p>
             </tip-box>
           </div>
@@ -216,11 +222,11 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>We use <code>opt</code> frames to indicate optional paths.</p>
+            <p><strong>UML uses <code>opt</code> frames to indicate optional paths.</strong></p>
             <p>Notation:</p><img src="/se-book/uml/sequenceDiagrams/optionalPaths/images/notation.png" height="50">
             <p></p>
             <tip-box>
-              <p>Example:</p><img src="/se-book/uml/sequenceDiagrams/optionalPaths/images/logicTimer.png" height="150">
+              <p>📦 <code>Logic#markCellAt(...)</code> calls <code>Timer#start()</code> only if it is the first move of the player.</p><img src="/se-book/uml/sequenceDiagrams/optionalPaths/images/logicTimer.png" height="150">
               <p></p>
             </tip-box>
           </div>
@@ -242,13 +248,15 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>We use <code>par</code> frames to indicate parallel paths.</p>
+            <p><strong>UML uses <code>par</code> frames to indicate parallel paths.</strong></p>
             <p>Notation:</p><img src="/se-book/uml/sequenceDiagrams/parallelPaths/images/notation.png" height="100">
             <p></p>
             <tip-box>
-              <p>Example:</p><img src="/se-book/uml/sequenceDiagrams/parallelPaths/images/logicServerData.png" height="150">
+              <p>📦 <code>Logic</code> is calling methods <code>CloudServer#poll()</code> and <code>LocalServer#poll()</code> in parallel.</p><img src="/se-book/uml/sequenceDiagrams/parallelPaths/images/logicServerData.png" height="150">
               <p></p>
-              <p>In this example Logic is polling both CloudServer and LocalServer objects in parallel.</p>
+              <tip-box>
+                <p>💡 If you show parallel paths in a sequence diagram, the corresponding Java implementation is likely to be <em>multi-threaded</em><span class="dimmed">  because a normal Java program cannot do multiple things at the same time</span>.</p>
+              </tip-box>
             </tip-box>
           </div>
           <div>
@@ -269,12 +277,15 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>We use a <em>ref frame</em> to allow a segment of the interaction to be omitted and detailed in another diagram.</p>
+            <p><strong>UML uses <em>ref frame</em> to allow a segment of the interaction to be omitted and shown as a separate sequence diagram.</strong> Reference frames help us to break complicated sequence diagrams into multiple parts or simply to omit
+              details we are not interested in showing.</p>
             <p>Notation:</p><img src="/se-book/uml/sequenceDiagrams/referenceFrames/images/notation.png" height="100">
             <p></p>
             <tip-box>
-              <p>Example:</p><img src="/se-book/uml/sequenceDiagrams/referenceFrames/images/playerTextLogic.png" height="250">
-              <p></p><img src="/se-book/uml/sequenceDiagrams/referenceFrames/images/textLogic.png" height="170">
+              <p>📦 The details of the <code>get minefield appearance</code> interactions have been omitted from the diagram.</p><img src="/se-book/uml/sequenceDiagrams/referenceFrames/images/playerTextLogic.png" height="250">
+              <p></p>
+              <p>Those details are shown in a separate sequence diagram given below.
+                <img src="/se-book/uml/sequenceDiagrams/referenceFrames/images/textLogic.png" height="170"></p>
               <p></p>
             </tip-box>
           </div>
