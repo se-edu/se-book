@@ -1,4 +1,4 @@
-<panel header=":lock: Draw a Sequence Diagram for code snippet">
+<panel header=":lock: Find notation errors in sequence diagram">
 <question>
 
 Find notation mistakes in the sequence diagram below:
