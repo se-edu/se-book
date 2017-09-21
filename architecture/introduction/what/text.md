@@ -34,37 +34,6 @@ Main components:
 
 **The architecture is typically designed by the _software architect_**, who provides the technical vision of the system and makes high-level (i.e. architecture-level) technical decisions about the project.
 
-<div v-closeable alt="architecture diagram examples">
-
-<tip-box>
-
-:package: Some example architecture diagrams from elsewhere:
-
-<tabs> 
-  <tab header="Example 1">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Accelerator_Architecture.png" width="400"/><br>
-<sub>[source: https://commons.wikimedia.org](https://commons.wikimedia.org/wiki/File:Accelerator_Architecture.png)</sub>
-
-  <hr></tab>
-  <tab header="Example 2">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png" width="400"/><br>
-<sub>[source: https://commons.wikimedia.org](https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png)</sub>
-
-  <hr></tab>
-  <tab header="Example 3">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg" width="400"/><br>
-<sub>[source: https://commons.wikimedia.org](https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg)</sub>
-
-  <hr></tab>
-</tabs>
-
-</tip-box>
-
-</div>
-
 
 <!-- TODO: 
 The logical view (satisfying the functional requirements) vs. the process view (concurrency issues) vs. the physical view (distribution issues) vs. the development view (how the design is broken down into implementation units with explicit representation of the dependencies among the units). -->
