@@ -52,6 +52,12 @@ Given their lightweight nature, **user stories are quite handy for recording req
 
 </div>
 
+While use cases can be recorded on <tooltip content="e.g. index cards or sticky notes">physical paper</tooltip> in the initial stages, an online tool is more suitable for longer-term management of user stories, especially if the team is not <tooltip content="physically in the same location">co-located</tooltip>.
+
+<panel header="**Tool Examples**: How to use some example online tools to manage user stories">
+  <include src="tools.md" />
+</panel>
+
 <modal id="modal:xp-user-stories" title=":bookmark: User stories vs traditional requirement specifications, according to XP">
 
 <include src="../../../common/popOvers.md#xp" inline /> uses User stories to capture requirements.
