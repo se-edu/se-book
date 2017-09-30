@@ -19,7 +19,7 @@
 
 :package: A possible architecture for a _Minesweeper_ game
 
-<img src="{{baseUrl}}/architecture/introduction/what/images/minesweeper.png" height="220" /><span>&nbsp;&nbsp;...&nbsp;&nbsp;</span>
+<img src="{{baseUrl}}/architecture/introduction/what/images/minesweeper.png" height="220" /><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <img src="{{baseUrl}}/architecture/introduction/what/images/minesweeperArchitecture.png" height="160" />
 <p/>
 
