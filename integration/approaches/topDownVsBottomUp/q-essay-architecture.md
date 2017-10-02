@@ -1,4 +1,4 @@
-<panel header="Q: Integration order">
+<panel header=":lock::key: Integration order">
 <question has-input="false">
 
 Consider the architecture given below. Describe the order in which components will be integrated with one another if the following integration strategies were adopted.

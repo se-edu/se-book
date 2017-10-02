@@ -1,4 +1,4 @@
-<panel header="Q: Suggest an integration strategy">
+<panel header=":lock::key: Suggest an integration strategy">
 <question has-input="true">
 
 Suggest an integration strategy for the system represented by following diagram. You need not follow a strict top-down, bottom-up, sandwich, or big bang approach. Dashed arrows represent dependencies between classes.
