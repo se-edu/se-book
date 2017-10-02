@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**In the _n-tier_ style, higher layers make use of services provided by lower layers.** Lower layers are independent of higher layers.
+**In the _n-tier_ style, higher layers make use of services provided by lower layers.** Lower layers are independent of higher layers. Other names: _multi-layered_, _layered_.
 
 <img src="{{baseUrl}}/architecture/architecturalStyles/nTier/what/images/nTier.png" height="150" />
 
