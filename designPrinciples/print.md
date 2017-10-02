@@ -13,7 +13,6 @@
 ## Coupling
 
 <include src="coupling/what/print.md" />
-<include src="coupling/why/print.md" />
 <include src="coupling/how/print.md" />
 <include src="coupling/types/print.md" />
 

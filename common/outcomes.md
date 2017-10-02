@@ -86,8 +86,6 @@
 
 <dynamic-panel src="../designPrinciples/coupling/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/coupling/what/outcomes.md" inline />
 
-<dynamic-panel src="../designPrinciples/coupling/why/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/coupling/why/outcomes.md" inline />
-
 <dynamic-panel src="../designPrinciples/coupling/how/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/coupling/how/outcomes.md" inline />
 
 <dynamic-panel src="../designPrinciples/coupling/types/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/coupling/types/outcomes.md" inline />
