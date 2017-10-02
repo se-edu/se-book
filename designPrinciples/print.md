@@ -20,7 +20,6 @@
 ## Cohesion
 
 <include src="cohesion/what/print.md" />
-<include src="cohesion/why/print.md" />
 <include src="cohesion/how/print.md" />
 
 ## Open-Closed Principle

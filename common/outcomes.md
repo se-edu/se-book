@@ -96,8 +96,6 @@
 
 <dynamic-panel src="../designPrinciples/cohesion/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/cohesion/what/outcomes.md" inline />
 
-<dynamic-panel src="../designPrinciples/cohesion/why/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/cohesion/why/outcomes.md" inline />
-
 <dynamic-panel src="../designPrinciples/dependencyInversionPrinciple/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/dependencyInversionPrinciple/what/outcomes.md" inline />
 
 <dynamic-panel src="../designPrinciples/openClosedPrinciple/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/openClosedPrinciple/what/outcomes.md" inline />
