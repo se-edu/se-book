@@ -71,7 +71,7 @@
 
 ### Software Design
 
-<dynamic-panel src="../design/introduction/basic/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/basic/outcomes.md" inline />
+<dynamic-panel src="../design/introduction/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/what/outcomes.md" inline />
 
 <dynamic-panel src="../design/introduction/multilevelDesign/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/multilevelDesign/outcomes.md" inline />
 
