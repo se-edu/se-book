@@ -168,6 +168,14 @@ Also known as
 
 </div>
 
+## O
+
+<div id="def-open-closed-principle">
+
+**Open-Closed Principle (OCP)**: A module should be _open_ for extension but _closed_ for modification. That is, modules should be written so that they can be extended, without requiring them to be modified. <sub>-- proposed by Bertrand Meyer in 1988</sub>
+
+</div>
+
 ## P
 
 <div id="def-prototyping">
