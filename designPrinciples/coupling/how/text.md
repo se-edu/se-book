@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Principles &rarr; Coupling &rarr;</div>
-
 <div id="title">
 
 #### How :two:
@@ -12,16 +10,49 @@
 
 <div id="body">
 
-In general component A is coupled to B if a change to B could _potentially_ require a change in A.
+**X is _coupled_ to Y if a change to Y can ==potentially== require a change in X**.
 
-Some examples:
+<tip-box> 
 
-*	_component A_ has access to the internal structure of _component B_ (this results in a very high level of coupling);
-*	_component A_ and B depend on the same global variable;
-*	_component A_ calls _component B_;
-*	_component A_ receives an object of _component B_ as a parameter or a return value;
-*	_component A_ inherits from _component B_;
-*	_components A_ and _B_ are required to follow the same data format or communication protocol.
+:package: If `Foo` class calls the method `Bar#read()`, `Foo` is coupled to `Bar` because a change to `Bar` can potentially (but not always) require a change in the `Foo` class %%&nbsp;e.g. if the signature of the `Bar#read()` is changed, `Foo` needs to change as well, but a change to the `Bar#write()` method may not require a change in the `Foo` class because `Foo` does not call `Bar#write()`%%. 
+
+<panel type="seamless" header="%%code for the above example%%">
+
+```java
+class Foo{
+    ...
+    new Bar().read();
+    ...
+}
+
+class Bar{
+    void read(){
+        ...
+    }
+    
+    void write(){
+        ...
+    }
+}
+```
+</panel>
+
+</tip-box>
+
+
+<tip-box> 
+
+:package: Some examples of coupling: `A` is coupled to `B` if,
+
+* `A` has access to the internal structure of `B` (this results in a very high level of coupling)
+* `A` and B depend on the same global variable
+* `A` calls `B`
+* `A` receives an object of `B` as a parameter or a return value
+* `A` inherits from `B`
+* `A` and `B` are required to follow the same data format or communication protocol
+
+</tip-box>
+
 
 </div>
 
