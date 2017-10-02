@@ -1,1 +1,1 @@
-:trophy: Can explain how integration approaches vary based on top-down or bottom-up integration :three:
+:trophy: Can explain how integration approaches vary based on the order of integration :three:

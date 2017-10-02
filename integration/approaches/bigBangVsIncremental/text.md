@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Integration &rarr; Approaches &rarr;</div>
-
 <div id="title">
 
 #### Big-Bang vs Incremental Integration :two:
@@ -12,7 +10,17 @@
 
 <div id="body">
 
-In the _big-bang integration_ approach, all components are integrated at the same time. This approach is not recommended because it will uncover too many problems at the same time which could make debugging and bug-fixing more complex than when problems are uncovered incrementally.
+**_Big-bang integration_: integrate all components at the same time.** 
+
+<tip-box type="wrong"> 
+
+Big-bang is not recommended because it will uncover too many problems at the same time which could make debugging and bug-fixing more complex than when problems are uncovered incrementally.
+
+</tip-box>
+
+**_Incremental integration_: integrate few components at a time.** This approach is better than the big-bang integration because it surfaces integration problems in a more manageable way.
+
+<!-- TODO: add animated slides -->
 
 </div>
 
