@@ -6,24 +6,51 @@
 
 <div id="body">
 
-**_Unit testing_ : testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly.** 
-
-**A proper unit test requires the _unit_ being tested ==in isolation==.** Doing so prevents bugs within the <tooltip content="code the unit depends on">dependencies</tooltip> from influencing with the test %%&nbsp;i.e. bugs outside of the unit should not affect the unit tests%%.
+**_Unit testing_ : testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly.**
+ 
+In OOP code, it is common to write one or more unit tests for each public method of a class.
 
 <tip-box> 
 
-:package: If a `Person` class depends on a `Tag` class and an `Address` class, unit testing the `Person` class requires isolating the `Person` class from the `Tag` class and the `Address` class.
+:package: Here are the code skeletons for a `Foo` class containing two methods and a `FooTest` class that contains JUnit tests for those two methods.
 
+```java
+class Foo{
+    String read(){
+        //...
+    }
+    
+    void write(String input){
+        //...
+    }
+    
+}
+
+class FooTest{
+    
+    @Test
+    void read(){
+        //a unit test for Foo#read() method
+    }
+    
+    @Test
+    void write_emptyInput_exceptionThrown(){
+        //a unit tests for Foo#write(String) method
+    }  
+    
+    @Test
+    void write_normalInput_writtenCorrectly(){
+        //another unit tests for Foo#write(String) method
+    }
+}
+```
 </tip-box>
 
-**_Stubs_ can isolate the <popover content="Software Under Test (in this case, the _unit_ being tested)">SUT</popover> from its dependencies**. A stub has the same interface as the collaborator it replaces, but its implementation is meant to be so simple that it cannot have any bugs. It mimics the responses of the collaborating object, but only for the inputs used for testing. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.
 
-In addition to Stubs, there are other type of replacements you can use during testing. E.g. _Mocks_, _Fakes_, _Dummies_, _Spies_.
 
 </div>
 
 <div id="extras">
-  <include src="resources.md" />
 </div>
 
 </div>
