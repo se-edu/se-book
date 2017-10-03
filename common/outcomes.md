@@ -526,8 +526,6 @@
 
 <dynamic-panel src="../testing/testingTypes/unitTesting/stubs/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../testing/testingTypes/unitTesting/stubs/outcomes.md" inline />
 
-<dynamic-panel src="../testing/testingTypes/unitTesting/mocks/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../testing/testingTypes/unitTesting/mocks/outcomes.md" inline />
-
 
 <dynamic-panel src="../testing/testingTypes/integrationTesting/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../testing/testingTypes/integrationTesting/what/outcomes.md" inline />
 

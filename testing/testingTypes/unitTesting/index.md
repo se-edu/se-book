@@ -10,7 +10,6 @@
 
 <include src="./what/embed.md" />
 <include src="./stubs/embed.md" />
-<include src="./mocks/embed.md" />
 
 </div>
 </div>
