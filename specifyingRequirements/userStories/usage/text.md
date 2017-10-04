@@ -36,10 +36,12 @@ Given their lightweight nature, **user stories are quite handy for recording req
 
 :bulb: Here are some tips for using user stories for early stages of requirement gathering:
 
-* **Define the target user:**  
-  Decide our target user's profile (e.g. a student, office worker, programmer, sales person) and work patterns (e.g. Does he work in groups or alone? Does he share his computer with others?). A clear understanding of the target user will help when deciding the importance of a user story.
+* **Define the _target user_:**  
+  Decide your target user's profile (e.g. a student, office worker, programmer, sales person) and work patterns (e.g. Does he work in groups or alone? Does he share his computer with others?). A clear understanding of the target user will help when deciding the importance of a user story. You can even give this user a name. %%&nbsp;e.g. Target user Jean is a university student studying in a non-IT field. She interacts with a lot of people due to her involvement in university clubs/societies. ...%%
+* **Define the _problem scope_:**
+  Decide that exact problem you are going to solve for the target user. %%&nbsp;e.g. Help Jean keep track of all her school contacts%%
 * **Don't be too hasty to discard 'unusual' user stories:**  
-  Those might make your product unique and stand out from the rest, at least for some potential users.
+  Those might make your product unique and stand out from the rest, at least for the target users.
 * **Don't go into too much details:**  
   For example, consider this user story: `As a user, I want to see a list of tasks that needs my attention most at the present time, so that I pay attention to them first.`<br> 
   When discussing this user story, don't worry about what tasks should be considered _needs my attention most at the present time_. Those details can be worked out later.
