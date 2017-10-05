@@ -20,7 +20,13 @@ Big-bang is not recommended because it will uncover too many problems at the sam
 
 **_Incremental integration_: integrate few components at a time.** This approach is better than the big-bang integration because it surfaces integration problems in a more manageable way.
 
-<!-- TODO: add animated slides -->
+<div v-closeable alt="slideshow: comparison">
+
+Here is an animation that compares the two approaches: 
+
+@[powerpoint](https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212315&authkey=AG4cur5IrM7vr7M&em=2)
+
+</div>
 
 </div>
 
