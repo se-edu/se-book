@@ -172,7 +172,7 @@ Also known as
 
 <div id="def-open-closed-principle">
 
-**Open-Closed Principle (OCP)**: A module should be _open_ for extension but _closed_ for modification. That is, modules should be written so that they can be extended, without requiring them to be modified. <sub>-- proposed by Bertrand Meyer in 1988</sub>
+**Open-Closed Principle (OCP)**: A module should be _open_ for extension but _closed_ for modification. That is, modules should be written so that they can be extended, without requiring them to be modified. <sub>-- proposed by [Bertrand Meyer](https://en.wikipedia.org/wiki/Bertrand_Meyer)</sub>
 
 </div>
 
@@ -215,7 +215,7 @@ Also known as
 
 <div id="def-separation-concerns-principle">
 
-**Separation of Concerns Principle (SoC)**: To achieve better modularity, separate the code into distinct sections, such that each section addresses a separate _concern_. -- Edsger W. Dijkstra
+**Separation of Concerns Principle (SoC)**: To achieve better modularity, separate the code into distinct sections, such that each section addresses a separate _concern_. -- Proposed by [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra)
 
 </div>
 
