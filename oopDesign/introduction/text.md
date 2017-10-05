@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; </div>
-
 <div id="title">
 
 #### Introduction :one:
@@ -12,7 +10,7 @@
 
 <div id="body">
 
-Object Oriented Programming is a widely used programming paradigm. Here is an introductory explanation of OOP from Apple:
+**Object-Oriented Programming (OOP) is a _programming paradigm_.** A programming paradigm guides programmers to analyze programming problems, and structure programming solutions, in a specific way. 
 
 > Programming languages have traditionally divided the world into two parts—data and operations on data.
 > Data is static and immutable, except as the operations may change it. The procedures and functions that
@@ -31,9 +29,25 @@ Object Oriented Programming is a widely used programming paradigm. Here is an in
 > It groups operations and data into modular units called objects and lets you combine objects into structured networks
 > to form a complete program. In an object-oriented programming language, objects and object interactions are the basic elements of design.
 >
-> -- [Object-Oriented Programming with Objective-C](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/), Apple
+> <sub>-- [Object-Oriented Programming with Objective-C](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/), Apple</sub>
 
-{mention other programming paradigms}
+Some other examples of programming paradigms are:
+
+Paradigm | Programming Languages
+-------- | ---------------------
+[_Procedural Programming_ paradigm](https://en.wikipedia.org/wiki/Procedural_programming)| C
+[_Functional Programming_ paradigm](https://en.wikipedia.org/wiki/Functional_programming)| F#, Haskel, Scala
+[_Logic Programming_ paradigm](https://en.wikipedia.org/wiki/Logic_programming) | Prolog
+
+**Some programming languages support multiple paradigms.**
+
+<tip-box> 
+
+:package: Java is primarily an OOP language but it supports limited forms of functional programming and it can be used to (although not recommended) write procedural code. %%&nbsp;e.g. [se-edu/addressbook-level1](https://github.com/se-edu/addressbook-level1)%%
+
+:package: JavaScript and Python support functional, procedural, and OOP programming.
+
+</tip-box>
 
 </div>
 

@@ -22,12 +22,10 @@
 
 <tip-box>
 
-:package: In the Java code below, the assertion in line 2 verifies the assumption that `timeout` returned by `Config.getTimeout()` is greater than 0. The only reason for it to return a zero or lower value in line 1 is the presence of a bug in the system.
+:package: In the Java code below, suppose we set an assertion that `timeout` returned by `Config.getTimeout()` is greater than `0`. Now, if the `Config.getTimeout()` returned `-1` in a specific execution of this line, the runtime can detect it as a _assertion failure_ -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result of a bug -- and take some drastic action such as terminating the execution.
 
 ```java
-int timeout = Config.getTimeout(); // line 1
-assert timeout > 0; // line 2
-setTimeout(timeout); // line 3
+int timeout = Config.getTimeout(); 
 ```
 
 </tip-box>

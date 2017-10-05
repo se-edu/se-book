@@ -22,7 +22,7 @@
 >
 > <sub>-- [Object-Oriented Programming with Objective-C](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/), Apple </sub>
 
-**Object Oriented Programming (OOP) views the world as a network of interacting objects.**
+**Object Oriented Programming (OOP) views the world as _a network of interacting objects_.**
 
 <tip-box>
 
@@ -34,11 +34,11 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 
 </tip-box>
 
-**OOP solutions try to follow a similar object network inside the computer’s memory** – a sort of a virtual simulation of the corresponding real world scenario – **so that a similar result can be achieved programmatically.**
+**OOP solutions try to create a similar object network inside the computer’s memory** – a sort of a virtual simulation of the corresponding real world scenario – **so that a similar result can be achieved programmatically.**
 
 <!-- TODO {visual: Direct mapping} -->
 
-**OOP does not demand that the virtual world object network follow the real world exactly.**
+**OOP does not demand that the virtual world object network follow the real world _exactly_.**
 
 <tip-box>
 

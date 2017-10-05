@@ -71,7 +71,7 @@
 
 ### Software Design
 
-<dynamic-panel src="../design/introduction/basic/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/basic/outcomes.md" inline />
+<dynamic-panel src="../design/introduction/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/what/outcomes.md" inline />
 
 <dynamic-panel src="../design/introduction/multilevelDesign/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/multilevelDesign/outcomes.md" inline />
 
@@ -86,8 +86,6 @@
 
 <dynamic-panel src="../designPrinciples/coupling/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/coupling/what/outcomes.md" inline />
 
-<dynamic-panel src="../designPrinciples/coupling/why/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/coupling/why/outcomes.md" inline />
-
 <dynamic-panel src="../designPrinciples/coupling/how/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/coupling/how/outcomes.md" inline />
 
 <dynamic-panel src="../designPrinciples/coupling/types/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/coupling/types/outcomes.md" inline />
@@ -95,8 +93,6 @@
 <dynamic-panel src="../designPrinciples/cohesion/how/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/cohesion/how/outcomes.md" inline />
 
 <dynamic-panel src="../designPrinciples/cohesion/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/cohesion/what/outcomes.md" inline />
-
-<dynamic-panel src="../designPrinciples/cohesion/why/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/cohesion/why/outcomes.md" inline />
 
 <dynamic-panel src="../designPrinciples/dependencyInversionPrinciple/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/dependencyInversionPrinciple/what/outcomes.md" inline />
 
@@ -529,8 +525,6 @@
 <dynamic-panel src="../testing/testingTypes/unitTesting/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../testing/testingTypes/unitTesting/what/outcomes.md" inline />
 
 <dynamic-panel src="../testing/testingTypes/unitTesting/stubs/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../testing/testingTypes/unitTesting/stubs/outcomes.md" inline />
-
-<dynamic-panel src="../testing/testingTypes/unitTesting/mocks/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../testing/testingTypes/unitTesting/mocks/outcomes.md" inline />
 
 
 <dynamic-panel src="../testing/testingTypes/integrationTesting/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../testing/testingTypes/integrationTesting/what/outcomes.md" inline />

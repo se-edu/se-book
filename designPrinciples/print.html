@@ -26,16 +26,27 @@
         </div>
       </tip-box>
       <div>
-        <tip-box type="primary">
+        <tip-box type="defintion">
           <div>
-            <p><strong>Abstraction</strong>:</p>
-            <p>Most programs are written to solve complex problems involving large amounts of intricate details. It is impossible to deal with all these details at the same time. The guiding principle of abstraction stipulates that we capture only details
-              that are relevant to the current perspective or the task at hand. For example, within a certain software component, we might deal with a ‘user’ data type, while ignoring the details contained in the user data item. These details have been
-              ‘abstracted away’ as they do not affect the task of that software component. This is called <em>data abstraction</em>. On the other hand, <em>control abstraction</em> abstracts away details of the actual control flow to focus on tasks at
-              a simplified level. For example, <code>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p>
-            <p>Abstraction can be applied repeatedly to obtain higher and <em>higher levels of abstractions</em>. For example, a <code>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a bit. Similarly,
-              <code>execute(Game)</code> is at a higher level than <code>print(Char)</code> which is at a higher than an Assembly language instruction <code>MOV</code>.</p>
+            <p><strong>Abstraction</strong>: Abstraction is a technique for dealing with complexity. It works by establishing a level of complexity on which a person interacts with the system, suppressing the more complex details below the current level.</p>
           </div>
+        </tip-box>
+        <p>Most programs are written to solve complex problems involving large amounts of intricate details. It is impossible to deal with all these details at the same time. The guiding principle of abstraction stipulates that we capture only details that
+          are relevant to the current perspective or the task at hand.</p>
+        <p><strong>Ignoring lower level data items and thinking in terms of bigger entities is called <em>data abstraction</em>.</strong></p>
+        <tip-box>
+          <p>📦 Within a certain software component, we might deal with a <em>user</em> data type, while ignoring the details contained in the user data item such as <em>name</em>, and <em>date of birth</em>. These details have been ‘abstracted away’ as
+            they do not affect the task of that software component.</p>
+        </tip-box>
+        <p><strong><em>Control abstraction</em> abstracts away details of the actual control flow to focus on tasks at a simplified level.</strong></p>
+        <tip-box>
+          <p>📦 <code>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p>
+          <p></p>
+        </tip-box>For example,
+        <p><strong>Abstraction can be applied repeatedly to obtain progressively <em>higher levels of abstractions</em>.</strong></p>
+        <tip-box>
+          <p>📦 An example of different levels of data abstraction: a <code>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a bit.</p>
+          <p>📦 An example of different levels of control abstraction: <code>execute(Game)</code> is at a higher level than <code>print(Char)</code> which is at a higher than an Assembly language instruction <code>MOV</code>.</p>
         </tip-box>
       </div>
     </div>
@@ -50,31 +61,16 @@
         </div>
       </tip-box>
       <div>
-        <p><em>Coupling</em> is a measure of the degree of <em>dependence</em> between components, classes, methods, etc. Low coupling indicates that a component is less dependent on other components. In the example below, design A appears to have a more
-          coupling between the components than design B.</p>
+        <p><strong><em>Coupling</em> is a measure of the degree of <em>dependence</em></strong> between components, classes, methods, etc. Low coupling indicates that a component is less dependent on other components. <strong>High coupling (aka <em>tight</em> coupling or <em>strong</em> coupling) is discouraged</strong>          due to the following disadvantages:</p>
+        <ul>
+          <li><strong>Maintenance is harder</strong> because a change in one module could cause changes in other modules coupled to it (i.e. a ripple effect).</li>
+          <li><strong>Integration is harder</strong> because multiple components coupled with each other have to be integrated at the same time.</li>
+          <li><strong>Testing and reuse of the module is harder</strong> due to its dependence on other modules.</li>
+        </ul>
         <tip-box>
-          <p>Example:</p><img src="/se-book/designPrinciples/coupling/what/images/playerPuzzleManager.png" height="220">
+          <p>📦 In the example below, design <code>A</code> appears to have a more coupling between the components than design <code>B</code>.</p><img src="/se-book/designPrinciples/coupling/what/images/playerPuzzleManager.png" height="220">
           <p></p>
         </tip-box>
-      </div>
-    </div>
-    <div>
-      <div>
-        <h4 id="why-one">Why <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
-      </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can justify the need to reduce coupling <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
-        </div>
-      </tip-box>
-      <div>
-        <p>Highly coupled (also referred to as tightly coupled or strongly coupled) systems display the following disadvantages:</p>
-        <ul>
-          <li>A change in one module usually forces changes in other modules coupled to it (i.e. a ripple effect).</li>
-          <li>Integration is harder because multiple components coupled with each other have to be integrated at the same time.</li>
-          <li>Testing and reuse of the module is harder due to its dependence on other modules.</li>
-        </ul>
-        <p>In the case of high-coupling (i.e. relatively high dependency), a change in one component may require changes in other coupled components. Therefore, we should strive to achieve a low-coupled design.</p>
       </div>
     </div>
     <div>
@@ -87,16 +83,41 @@
         </div>
       </tip-box>
       <div>
-        <p>In general component A is coupled to B if a change to B could <em>potentially</em> require a change in A.</p>
-        <p>Some examples:</p>
-        <ul>
-          <li><em>component A</em> has access to the internal structure of <em>component B</em> (this results in a very high level of coupling);</li>
-          <li><em>component A</em> and B depend on the same global variable;</li>
-          <li><em>component A</em> calls <em>component B</em>;</li>
-          <li><em>component A</em> receives an object of <em>component B</em> as a parameter or a return value;</li>
-          <li><em>component A</em> inherits from <em>component B</em>;</li>
-          <li><em>components A</em> and <em>B</em> are required to follow the same data format or communication protocol.</li>
-        </ul>
+        <p><strong>X is <em>coupled</em> to Y if a change to Y can <mark>potentially</mark> require a change in X</strong>.</p>
+        <tip-box>
+          <p>📦 If <code>Foo</code> class calls the method <code>Bar#read()</code>, <code>Foo</code> is coupled to <code>Bar</code> because a change to <code>Bar</code> can potentially (but not always) require a change in the <code>Foo</code> class
+            <span
+              class="dimmed"> e.g. if the signature of the <code>Bar#read()</code> is changed, <code>Foo</code> needs to change as well, but a change to the <code>Bar#write()</code> method may not require a change in the <code>Foo</code> class because <code>Foo</code>              does not call <code>Bar#write()</code></span>.</p>
+          <panel type="seamless" header="%%code for the above example%%">
+            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+    ...
+    <span class="hljs-keyword">new</span> Bar().read();
+    ...
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{
+        ...
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">()</span></span>{
+        ...
+    }
+}
+</code></pre>
+          </panel>
+        </tip-box>
+        <tip-box>
+          <p>📦 Some examples of coupling: <code>A</code> is coupled to <code>B</code> if,</p>
+          <ul>
+            <li><code>A</code> has access to the internal structure of <code>B</code> (this results in a very high level of coupling)</li>
+            <li><code>A</code> and B depend on the same global variable</li>
+            <li><code>A</code> calls <code>B</code></li>
+            <li><code>A</code> receives an object of <code>B</code> as a parameter or a return value</li>
+            <li><code>A</code> inherits from <code>B</code></li>
+            <li><code>A</code> and <code>B</code> are required to follow the same data format or communication protocol</li>
+          </ul>
+        </tip-box>
       </div>
     </div>
     <div>
@@ -109,7 +130,16 @@
         </div>
       </tip-box>
       <div>
-        <p>Temporal coupling etc.</p>
+        <p>Some examples of different coupling types:</p>
+        <ul>
+          <li><strong>Content coupling</strong>: one module modifies or relies on the internal workings of another module <span class="dimmed"> e.g., accessing local data of another module</span></li>
+          <li><strong>Common/Global coupling</strong>: two modules share the same global data</li>
+          <li><strong>Control coupling</strong>: one module controlling the flow of another, by passing it information on what to do <span class="dimmed"> e.g., passing a flag</span></li>
+          <li><strong>Data coupling</strong>: one module sharing data with another module <span class="dimmed"> e.g. via passing parameters</span></li>
+          <li><strong>External coupling</strong>: two modules share an externally imposed convention <span class="dimmed"> e.g., data formats, communication protocols, device interfaces</span>.</li>
+          <li><strong>Subclass coupling</strong>: a class inherits from another class. Note that a child class is coupled to the parent class but not the other way around.</li>
+          <li><strong>Temporal coupling</strong>: two actions are bundled together just because they happen to occur at the same time <span class="dimmed"> e.g. extracting a contiguous block of code as a method although the code block contains statements unrelated to each other</span></li>
+        </ul>
       </div>
     </div>
     <h2 id="cohesion">Cohesion</h2>
@@ -123,26 +153,14 @@
         </div>
       </tip-box>
       <div>
-        <p><em>Cohesion</em> is a measure of how strongly-related and focused the various responsibilities of a component are. A highly-cohesive component keeps related functionalities together while keeping out all other unrelated things.</p>
-      </div>
-    </div>
-    <div>
-      <div>
-        <h4 id="why-one-2">Why <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
-      </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can justify the need to increase cohesion <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
-        </div>
-      </tip-box>
-      <div>
-        <p>The following are some disadvantages of low cohesion (or “weak cohesion”).</p>
+        <p><strong><em>Cohesion</em> is a measure of how strongly-related and focused the various responsibilities of a component are.</strong> A highly-cohesive component keeps related functionalities together while keeping out all other unrelated things.</p>
+        <p><strong>Higher cohesion is better.</strong> Disadvantages of low cohesion (aka <em>weak</em> cohesion):</p>
         <ul>
           <li>Impedes the understandability of modules as it is difficult to express module functionalities at a higher level.</li>
-          <li>Difficulty in maintaining modules because a localized adjustment in the requirements can result in changes spread across the system since requirement-related functionality is implemented across many components of the system.</li>
-          <li>Modules become less reusable because they do not represent logical units of functionality.</li>
+          <li>Lowers maintainability because a module can be modified due to unrelated causes <span class="dimmed"> (reason: the module contains code unrelated to each other)</span> or many many modules may need to be modified to achieve a small change in
+            behavior <span class="dimmed"> (reason: because the code realated to that change is not localized to a single module)</span>.</li>
+          <li>Lowers reusability of modules because they do not represent logical units of functionality.</li>
         </ul>
-        <p>One should strive for high cohesion to facilitate code maintenance and reuse.</p>
       </div>
     </div>
     <div>
@@ -155,15 +173,15 @@
         </div>
       </tip-box>
       <div>
-        <p>Cohesion can be present in many forms. For example,</p>
+        <p><strong>Cohesion can be present in many forms</strong>. Some examples:</p>
         <ul>
           <li>Code related to a single concept is kept together, e.g. the Student component handles everything related to students.</li>
           <li>Code that is invoked close together in time is kept together, e.g. all code related to initializing the system is kept together.</li>
-          <li>Code that manipulates the same data structure is kept together, e.g. the GameArchive component handles everything related to the storage and retrieval of game sessions.</li>
+          <li>Code that manipulates the same data structure is kept together, e.g. the <code>GameArchive</code> component handles everything related to the storage and retrieval of game sessions.</li>
         </ul>
-        <p>The components in the following sequence diagram show low cohesion because user interactions are handled by many components. Its cohesion can be improved by moving all user interactions to the UI component.</p>
         <tip-box>
-          <p>Example:</p><img src="/se-book/designPrinciples/cohesion/how/images/uiLogicStorage.png" height="220">
+          <p>📦 The components in the following sequence diagram show low cohesion because user interactions are handled by many components. Its cohesion can be improved by moving all user interactions to the UI component.</p><img src="/se-book/designPrinciples/cohesion/how/images/uiLogicStorage.png"
+            height="220">
           <p></p>
         </tip-box>
       </div>
@@ -180,16 +198,22 @@
       </tip-box>
       <div>
         <p>While it is possible to isolate the functionalities of a software system into modules, there is no way to remove interaction between modules. When modules interact with each other, coupling naturally increases. Consequently, it is harder to localize
-          any changes to the software system. In 1988, Bertrand Meyer proposed a guiding principle to alleviate this problem. The principle, known as the <em>open-closed principle</em>, states: “A module should be <em>open</em> for extension but <em>closed</em>          for modification”. That is, modules should be written so that they can be extended, without requiring them to be modified. In other words, changing what the modules do without changing the source code of the modules.</p>
-        <p>In object-oriented programming, these two seemingly opposing requirements can be achieved in various ways. This often requires separating the <em>specification (interface)</em> of a module from its <em>implementation</em>.</p>
+          any changes to the software system. The Open-Close Principle aims to alleviate this problem.</p>
+        <tip-box type="definition">
+          <div>
+            <p><strong>Open-Closed Principle (OCP)</strong>: A module should be <em>open</em> for extension but <em>closed</em> for modification. That is, modules should be written so that they can be extended, without requiring them to be modified. <sub>-- proposed by Bertrand Meyer in 1988</sub></p>
+          </div>
+        </tip-box>
+        <p>In object-oriented programming, OCP can be achieved in various ways. This often requires separating the <em>specification (i.e. interface)</em> of a module from its <em>implementation</em>.</p>
         <tip-box>
-          <p>Example:</p><img src="/se-book/designPrinciples/openClosedPrinciple/what/images/commandQueue.png" height="170">
+          <p>📦 In the design given below, the behavior of the <code>CommandQueue</code> class can be altered by adding more concrete <code>Command</code> subclasses. For example, by including a <code>Delete</code> class alongside <code>List</code>, <code>Sort</code>,
+            and <code>Reset</code>, the <code>CommandQueue</code> can now perform delete commands without modifying its code at all. That is, its behavior was extended without having to modify its code. Hence, it was open to extensions, but closed to
+            modification.</p><img src="/se-book/designPrinciples/openClosedPrinciple/what/images/commandQueue.png" height="170">
           <p></p>
-          <p>The behavior of the <code>CommandQueue</code> class can be altered by adding more concrete <code>Command</code> subclasses. For example, by including a <code>Delete</code> class alongside <code>List</code>, <code>Sort</code>, and <code>Reset</code>,
-            the <code>CommandQueue</code> can now perform delete commands without modifying its code at all. Indeed, its behavior was extended without having to open up and modify its code. Hence, it was open to extensions, but closed to modification.</p>
         </tip-box>
         <tip-box>
-          <p>The behavior of a Java generic class can be altered by passing it a different class as a parameter. In the code below, the <code>ArrayList</code> class behaves as a container of <code>Students</code> in one instance and as a container of <code>Admin</code>            objects in the other instance, without having to change its code. That is, the behavior of the <code>ArrayList</code> class is extended without modifying its code.</p>
+          <p>📦 The behavior of a Java generic class can be altered by passing it a different class as a parameter. In the code below, the <code>ArrayList</code> class behaves as a container of <code>Students</code> in one instance and as a container of
+            <code>Admin</code> objects in the other instance, without having to change its code. That is, the behavior of the <code>ArrayList</code> class is extended without modifying its code.</p>
           <pre><code class="hljs java">ArrayList students = <span class="hljs-keyword">new</span> ArrayList&lt; Student &gt;();
 ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt;();  	
 </code></pre>

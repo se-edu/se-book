@@ -35,11 +35,10 @@
             <p><strong>If the runtime detects an <em>assertion failure</em>, it typically take some drastic action</strong> such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner
               the execution stops, the safer it is.</p>
             <tip-box>
-              <p>📦 In the Java code below, the assertion in line 2 verifies the assumption that <code>timeout</code> returned by <code>Config.getTimeout()</code> is greater than 0. The only reason for it to return a zero or lower value in line 1 is the
-                presence of a bug in the system.</p>
-              <pre><code class="hljs java"><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); <span class="hljs-comment">// line 1</span>
-<span class="hljs-keyword">assert</span> timeout &gt; <span class="hljs-number">0</span>; <span class="hljs-comment">// line 2</span>
-setTimeout(timeout); <span class="hljs-comment">// line 3</span>
+              <p>📦 In the Java code below, suppose we set an assertion that <code>timeout</code> returned by <code>Config.getTimeout()</code> is greater than <code>0</code>. Now, if the <code>Config.getTimeout()</code> returned <code>-1</code> in a specific
+                execution of this line, the runtime can detect it as a <em>assertion failure</em> -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result of a bug -- and take some drastic
+                action such as terminating the execution.</p>
+              <pre><code class="hljs java"><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); 
 </code></pre>
             </tip-box>
           </div>
@@ -140,11 +139,11 @@ setTimeout(timeout); <span class="hljs-comment">// line 3</span>
                   <panel header=":lock::key: Assertions failure in Calculator">
                     <question>
                       <p>A Calculator program crashes with an ‘assertion failure’ message when you try to find the square root of a negative number.</p>
-                      <ul radio-group="snf2t" class="radio-list">
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="snf2t" type="radio"> a. This is a correct use of assertions.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="snf2t" type="radio"> b. The application should have terminated with an exception instead.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="snf2t" type="radio"> c. The program has a bug.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="snf2t" type="radio"> d. All statements above are incorrect.</label></li>
+                      <ul radio-group="zdb9w" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="zdb9w" type="radio"> a. This is a correct use of assertions.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="zdb9w" type="radio"> b. The application should have terminated with an exception instead.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="zdb9w" type="radio"> c. The program has a bug.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="zdb9w" type="radio"> d. All statements above are incorrect.</label></li>
                       </ul>
                       <div slot="answer">
                         <p>(c)</p>

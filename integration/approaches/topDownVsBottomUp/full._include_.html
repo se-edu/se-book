@@ -1,4 +1,10 @@
-<p><span class="dimmed"><strong><span>Implementation → Integration →
+<div>
+  <p>
+    <panel src="/se-book\integration\approaches\bigBangVsIncremental\full._include_.html" header="%%:mortar_board: Implementation &rarr; Integration &rarr; Approaches &rarr; Big-Bang Vs Incremental%%" isOpen="false" no-close="true" no-switch="true"></panel>
+  </p>
+</div>
+<p></p>
+<p><span class="dimmed"><strong><span>Implementation → Integration → Approaches →
 </span></strong>
   </span>
 </p>
@@ -6,41 +12,54 @@
   <h4 id="top-down-vs-bottom-up-integration-three">Top-Down vs Bottom-Up Integration <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
 </div>
 <div id="main">
-  <div>
-    <p>For incremental integration efforts, the following three incremental integration approaches are more suitable.</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/approaches.png" height="100">
+  <div><img src="/se-book/integration/approaches/topDownVsBottomUp/images/approaches.png" height="100">
     <p></p>
-    <ul>
-      <li><em>Top-down</em> integration: In top-down integration, higher-level components are integrated before bringing in the lower-level components. One advantage of this approach is that higher-level problems can be discovered early. One disadvantage
-        is that this requires the use of dummy or skeletal components (i.e. stubs) in place of lower level components until the real lower-level components are integrated to the system. Otherwise, higher-level components cannot function as they depend
-        on lower level ones.</li>
-      <li><em>Bottom-up</em> integration: This is the reverse of top-down integration. Advantages and disadvantages are simply the reverse of those of the top-down approach.</li>
-      <li><em>Sandwich</em> integration: This is a mix of the top-down and the bottom-up approaches. The idea is to do both top-down and bottom-up so as to “meet up” in the middle.</li>
-    </ul>
+    <p><strong>Based on the order in which components are integrated, incremental integration can be done in three ways.</strong></p>
+    <p><strong><em>Top-down</em> integration: higher-level components are integrated before bringing in the lower-level components.</strong> One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that this
+      requires the use of
+      <trigger for="pop:topdown-stub">stubs</trigger> in place of lower level components until the real lower-level components are integrated to the system. Otherwise, higher-level components cannot function as they depend on lower level ones.</p>
+    <popover id="pop:topdown-stub" title=":mag:"
+      placement="top">
+      <div slot="content">
+        <div>
+          <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined
+            inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
+        </div>
+      </div>
+    </popover>
+    <p><strong><em>Bottom-up</em> integration: the reverse of top-down integration.</strong> Note that when integrating lower level components,
+      <tooltip content="additional code written to provide inputs to a component via an API">drivers</tooltip> may be needed to test the integrated components <span class="dimmed"> because the UI may not be integrated yet</span>, just like top-down integration needs stubs.</p>
+    <p><strong><em>Sandwich</em> integration: a mix of the top-down and the bottom-up approaches.</strong> The idea is to do both top-down and bottom-up so as to 'meet' in the middle.</p>
+    <div v-closeable="" alt="slideshow: comparison">
+      <p>Here is an animation that compares the three approaches:</p>
+      <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212318&authkey=AD27jxfKqq3nqpQ&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen=""
+          mozallowfullscreen="" allowfullscreen></iframe></div>
+    </div>
   </div>
   <div>
     <div>
       <panel header=":muscle: Exercises" expandable="">
         <div>
-          <panel header="Q: Suggest an integration strategy for the system represented by following diagram.">
+          <panel header=":lock::key: Suggest an integration strategy">
             <question has-input="true">
               <p>Suggest an integration strategy for the system represented by following diagram. You need not follow a strict top-down, bottom-up, sandwich, or big bang approach. Dashed arrows represent dependencies between classes.</p>
               <p>Also take into account the following facts in your test strategy.</p>
               <ul>
-                <li><strong>HospitalUI</strong> will be developed early, so as to get customer feedback early.</li>
-                <li><strong>HospitalFacade</strong> shields the UI from complexities of the application layer. It simply redirects the method calls received to the appropriate classes below</li>
-                <li><strong>IO_Helper</strong> is to be reused from an earlier project, with minor modifications</li>
-                <li>Development of <strong>OutPatient</strong> component has been outsourced, and the delivery is not expected until the 2nd half of the project.</li>
+                <li><code>HospitalUI</code> will be developed early, so as to get customer feedback early.</li>
+                <li><code>HospitalFacade</code> shields the UI from complexities of the application layer. It simply redirects the method calls received to the appropriate classes below</li>
+                <li><code>IO_Helper</code> is to be reused from an earlier project, with minor modifications</li>
+                <li>Development of <code>OutPatient</code> component has been outsourced, and the delivery is not expected until the 2nd half of the project.</li>
               </ul><img src="/se-book/integration/approaches/topDownVsBottomUp/images/hospital.png" height="250">
               <p></p>
               <div slot="answer">
                 <p>There can be many acceptable answers to this question. But any good strategy should consider at least some of the below.</p>
                 <ul>
-                  <li>Since <strong>HospitalUI</strong> will be developed early, it’s OK to integrate it early, using stubs, rather than wait for the rest of the system to finish. (i.e. a top-down integration is suitable for <strong>HospitalUI</strong>)</li>
-                  <li>Because <strong>HospitalFacade</strong> is unlikely to have a lot of business logic, it may not be worth to write stubs to test it (i.e. a bottom-up integration is better for <strong>HospitalFacade</strong>).</li>
-                  <li>Since <strong>IO_Helper</strong> is to be reused from an earlier project, we can finish it early. This is especially suitable since there are many classes that use it. Therefore <strong>IO_Helper</strong> can be integrated with the dependent
+                  <li>Because <code>HospitalUI</code> will be developed early, it’s OK to integrate it early, using stubs, rather than wait for the rest of the system to finish. (i.e. a top-down integration is suitable for <code>HospitalUI</code>)</li>
+                  <li>Because <code>HospitalFacade</code> is unlikely to have a lot of business logic, it may not be worth to write stubs to test it (i.e. a bottom-up integration is better for <code>HospitalFacade</code>).</li>
+                  <li>Because <code>IO_Helper</code> is to be reused from an earlier project, we can finish it early. This is especially suitable since there are many classes that use it. Therefore <code>IO_Helper</code> can be integrated with the dependent
                     classes in bottom-up fashion.</li>
-                  <li>Since <strong>OutPatient</strong> class may be delayed, we may have to integrate <strong>PatientMgr</strong> using a stub.</li>
-                  <li><strong>TypeA</strong>, <strong>TypeB</strong>, and <strong>TypeC</strong> seem to be tightly coupled. It may be a good idea to test them together.</li>
+                  <li>Because <code>OutPatient</code> class may be delayed, we may have to integrate <code>PatientMgr</code> using a stub.</li>
+                  <li><code>TypeA</code>, <code>TypeB</code>, and <code>TypeC</code> seem to be tightly coupled. It may be a good idea to test them together.</li>
                 </ul>
                 <p>Given below is one possible integration test strategy. Relative positioning also indicates a rough timeline.</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/hospitalIntegration.png" height="250">
                 <p></p>
@@ -49,7 +68,7 @@
           </panel>
         </div>
         <div>
-          <panel header="Q: Describe the order in which components will be integrated with one another if the following integration strategies were adopted.">
+          <panel header=":lock::key: Integration order">
             <question has-input="false">
               <p>Consider the architecture given below. Describe the order in which components will be integrated with one another if the following integration strategies were adopted.</p>
               <p>a) top-down b) bottom-up c) sandwich</p>

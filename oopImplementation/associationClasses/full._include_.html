@@ -1,3 +1,9 @@
+<div>
+  <p>
+    <panel src="/se-book\oopDesign\associations\associationClasses\full._include_.html" header="%%:mortar_board: OOP &rarr; Associations &rarr; Association Classes%%" isOpen="false" no-close="true" no-switch="true"></panel>
+  </p>
+</div>
+<p></p>
 <p><span class="dimmed"><strong><span>Implementation → Object Oriented Programming →
 </span></strong>
   </span>
@@ -7,38 +13,47 @@
 </div>
 <div id="main">
   <div>
-    <p>
-      <panel src="/se-book\oopDesign\associations\associationClasses\embed._include_.html" header="OOP: Associations: Association Classes" is-open="" isOpen="false" no-close="true" no-switch="true"></panel>
-    </p>
-    <p></p>
     <p>Note that while a special notation is used to indicate an association class, there is no special way to implement an association class.</p>
     <tip-box>
-      <p>Example:</p><img src="/se-book/oopImplementation/associationClasses/images/manWoman.png" height="120">
+      <p>Example:</p><img src="/se-book/oopImplementation/associationClasses/images/manWoman.png" height="140">
       <p></p>
-      <p>At implementation level, an association class is most likely implemented as follows.</p><img src="/se-book/oopImplementation/associationClasses/images/manWomanImplementation.png" height="120">
+      <p>At implementation level, an association class is most likely implemented as follows.</p><img src="/se-book/oopImplementation/associationClasses/images/manWomanImplementation.png" height="140">
       <p></p>
+      <panel type="seamless" header="%%See code%%">
+        <pre><code class="hljs java">
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Marriage</span></span>{
+    
+    <span class="hljs-comment">//all fields are compulsory</span>
+    Man husband;
+    Woman wife;
+    Date date;
+    String licenseNumber;
+    
+    Marriage (Man husband, Woman wife, Date date, String licenseNumber){
+        <span class="hljs-comment">//set fiels</span>
+    }
+}
+
+</code></pre>
+      </panel>
     </tip-box>
   </div>
   <div>
     <div>
       <panel header=":muscle: Exercises" expandable="">
         <div>
-          <panel header=":lock::key: Which one of these is the least suitable as an Association Class?">
-            <question><img src="/se-book/oopImplementation/associationClasses/images/exerciseDiagram.png" height="330">
+          <panel header=":lock::key: Which are suitable as an Association Class?">
+            <question>
+              <p>Which one of these is the suitable as an Association Class?</p><img src="/se-book/oopImplementation/associationClasses/images/exerciseDiagram.png" height="330">
               <p></p>
               <ul class="task-list">
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. a</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. b</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. c</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. d</li>
+                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
+                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b</li>
+                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c</li>
+                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d</li>
               </ul>
               <div slot="answer">
-                <ul class="task-list">
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. a</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. b</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> c. c</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. d</li>
-                </ul>
+                <p>(a)(b)<s>(c)</s>(d)</p>
                 <p>Explanation: Mileage is a property of the car, and not specifically about the association between the Driver and the Car. If Mileage was defined as the total number of miles that car was driven by that driver, then it would be suitable
                   as an association class.</p>
               </div>

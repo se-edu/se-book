@@ -1,0 +1,1 @@
+<dynamic-panel src="../../introduction/what/full.md" header="%%:mortar_board: Implementation &rarr; Integration &rarr; Introduction &rarr; What%%" />

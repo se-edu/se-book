@@ -1,7 +1,7 @@
-<panel header="Q: Compare the cohesion of the following two versions of the EmailMessage class. Which one is more cohesive and why?">
+<panel header=":lock::key: Which class is more cohesive?">
 <question has-input="true">
 
-Compare the cohesion of the following two versions of the EmailMessage class. Which one is more cohesive and why?
+Compare the cohesion of the following two versions of the `EmailMessage` class. Which one is more cohesive and why?
 
 ```java
 // version-1
@@ -49,7 +49,7 @@ class EmailMessage {
 
 Version 2 is less cohesive.
 
-**Explanation**: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, we can improve the cohesion of both versions by removing the sendMessage functionality. Although sending message is related to emails, this class is supposed to represent an email message, not an email server.
+Explanation: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, we can improve the cohesion of both versions by removing the sendMessage functionality. Although sending message is related to emails, this class is supposed to represent an email message, not an email server.
 
 </div>
 </question>

@@ -20,12 +20,7 @@
     <p>An <em>abstract class</em> is a class that is declared <code>abstract</code>—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed. <sub>-- <a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">Oracle's Java Documentation</a></sub></p>
   </div>
   <div id="def-abstraction">
-    <p><strong>Abstraction</strong>:</p>
-    <p>Most programs are written to solve complex problems involving large amounts of intricate details. It is impossible to deal with all these details at the same time. The guiding principle of abstraction stipulates that we capture only details that are
-      relevant to the current perspective or the task at hand. For example, within a certain software component, we might deal with a ‘user’ data type, while ignoring the details contained in the user data item. These details have been ‘abstracted away’
-      as they do not affect the task of that software component. This is called <em>data abstraction</em>. On the other hand, <em>control abstraction</em> abstracts away details of the actual control flow to focus on tasks at a simplified level. For example,
-      <code>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p>
-    <p>Abstraction can be applied repeatedly to obtain higher and <em>higher levels of abstractions</em>. For example, a <code>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a bit. Similarly, <code>execute(Game)</code>      is at a higher level than <code>print(Char)</code> which is at a higher than an Assembly language instruction <code>MOV</code>.</p>
+    <p><strong>Abstraction</strong>: Abstraction is a technique for dealing with complexity. It works by establishing a level of complexity on which a person interacts with the system, suppressing the more complex details below the current level.</p>
   </div>
   <div id="def-actor">
     <p><strong>Actor</strong>: An actor (in a use case) is a role played by a user. An actor can be a human or another system. Actors are not part of the system; they reside outside the system.</p>
@@ -113,6 +108,10 @@
   <div id="def-liskov-substitution-principle">
     <p><strong>Liskov Substitution Principle (LSP)</strong>: Derived classes must be substitutable for their base classes. -- Barbara Liskov</p>
   </div>
+  <h2 id="o">O</h2>
+  <div id="def-open-closed-principle">
+    <p><strong>Open-Closed Principle (OCP)</strong>: A module should be <em>open</em> for extension but <em>closed</em> for modification. That is, modules should be written so that they can be extended, without requiring them to be modified. <sub>-- proposed by Bertrand Meyer in 1988</sub></p>
+  </div>
   <h2 id="p">P</h2>
   <div id="def-prototyping">
     <p><strong>Prototype</strong>: A prototype is a <em>mock up, a scaled down version, or a partial system constructed</em></p>
@@ -156,78 +155,84 @@
     <p><strong>Static analysis</strong>: Static analysis is the analysis of code without actually executing the code.</p>
   </div>
   <div id="def-sut">
-    <p><strong>SUT</strong>: Software Under Test</p>
-  </div>
-  <h2 id="t">T</h2>
-  <div id="def-testing">
-    <p><strong>Testing</strong>: Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component. –- source: IEEE</p>
-  </div>
-  <div id="def-type-signature">
-    <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.</p>
-    <panel type="seamless"
-      header="%%Examples%%">
-      <table class="markbind-table table">
-        <thead>
-          <tr>
-            <th style="text-align:center">Method</th>
-            <th style="text-align:center">Type Signature</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="text-align:center"><code>int add(int X, int Y)</code></td>
-            <td style="text-align:center"><code>(int, int)</code></td>
-          </tr>
-          <tr>
-            <td style="text-align:center"><code>void add(int A, int B)</code></td>
-            <td style="text-align:center"><code>(int, int)</code></td>
-          </tr>
-          <tr>
-            <td style="text-align:center"><code>void m(int X, double Y)</code></td>
-            <td style="text-align:center"><code>(int, double)</code></td>
-          </tr>
-          <tr>
-            <td style="text-align:center"><code>void m(double X, int Y)</code></td>
-            <td style="text-align:center"><code>(double, int)</code></td>
-          </tr>
-        </tbody>
-      </table>
-    </panel>
-  </div>
-  <h2 id="u">U</h2>
-  <div id="def-uml">
-    <p><a href="http://www.uml.org/#UML2.0"><strong>Unified Modeling Language (UML)</strong></a> is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady
-      Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently
-      the <em>de facto</em> modeling notation used in the industry.</p>
-  </div>
-  <div id="def-use-case">
-    <p><strong>Use Case</strong>: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an
-      <trigger for="pop:actor">actor</trigger>.[ 📖 :
-      <popover effect="fade" placement="top">uml-user-guide<span slot="content"><span><em><strong>The Unified Modeling Language User Guide</strong></em>, 2e, G Booch, J Rumbaugh, and I Jacobson </span></span>
-      </popover>]</p>
-    <popover id="pop:actor" title=":mag:" placement="top">
-      <div slot="content">
-        <div>
-          <p><strong>Actor</strong>: An actor (in a use case) is a role played by a user. An actor can be a human or another system. Actors are not part of the system; they reside outside the system.</p>
+    <div id="def-stub">
+      <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined
+        inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
+    </div>
+    <div id="def-sut">
+      <p><strong>SUT</strong>: Software Under Test</p>
+    </div>
+    <h2 id="t">T</h2>
+    <div id="def-testing">
+      <p><strong>Testing</strong>: Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component. –- source: IEEE</p>
+    </div>
+    <div id="def-type-signature">
+      <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.</p>
+      <panel type="seamless"
+        header="%%Examples%%">
+        <table class="markbind-table table">
+          <thead>
+            <tr>
+              <th style="text-align:center">Method</th>
+              <th style="text-align:center">Type Signature</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:center"><code>int add(int X, int Y)</code></td>
+              <td style="text-align:center"><code>(int, int)</code></td>
+            </tr>
+            <tr>
+              <td style="text-align:center"><code>void add(int A, int B)</code></td>
+              <td style="text-align:center"><code>(int, int)</code></td>
+            </tr>
+            <tr>
+              <td style="text-align:center"><code>void m(int X, double Y)</code></td>
+              <td style="text-align:center"><code>(int, double)</code></td>
+            </tr>
+            <tr>
+              <td style="text-align:center"><code>void m(double X, int Y)</code></td>
+              <td style="text-align:center"><code>(double, int)</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </panel>
+    </div>
+    <h2 id="u">U</h2>
+    <div id="def-uml">
+      <p><a href="http://www.uml.org/#UML2.0"><strong>Unified Modeling Language (UML)</strong></a> is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady
+        Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently
+        the <em>de facto</em> modeling notation used in the industry.</p>
+    </div>
+    <div id="def-use-case">
+      <p><strong>Use Case</strong>: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an
+        <trigger for="pop:actor">actor</trigger>.[ 📖 :
+        <popover effect="fade" placement="top">uml-user-guide<span slot="content"><span><em><strong>The Unified Modeling Language User Guide</strong></em>, 2e, G Booch, J Rumbaugh, and I Jacobson </span></span>
+        </popover>]</p>
+      <popover id="pop:actor" title=":mag:" placement="top">
+        <div slot="content">
+          <div>
+            <p><strong>Actor</strong>: An actor (in a use case) is a role played by a user. An actor can be a human or another system. Actors are not part of the system; they reside outside the system.</p>
+          </div>
         </div>
-      </div>
-    </popover>
+      </popover>
+    </div>
+    <div id="def-user-story">
+      <p><strong>User story</strong>: User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. <sub>[<a href="https://www.mountaingoatsoftware.com/agile/user-stories">Mike Cohn</a>]</sub></p>
+    </div>
+    <div id="def-user-story-format">
+      <p><strong>User story format</strong>: <code>As a {user type/role} I can {function} so that {benefit}</code></p>
+    </div>
+    <h2 id="w">W</h2>
+    <div id="def-working-directory">
+      <p><strong>Working directory</strong>: The directory the repo is based in is called the <em>working directory</em>.</p>
+    </div>
+    <h2 id="y">Y</h2>
+    <div id="def-yagni-principle">
+      <p><strong>YAGNI (You Aren't Gonna Need It!) Principle</strong>: Do not add code simply because ‘you might need it in the future’.</p>
+    </div>
+    <hr>
   </div>
-  <div id="def-user-story">
-    <p><strong>User story</strong>: User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. <sub>[<a href="https://www.mountaingoatsoftware.com/agile/user-stories">Mike Cohn</a>]</sub></p>
-  </div>
-  <div id="def-user-story-format">
-    <p><strong>User story format</strong>: <code>As a {user type/role} I can {function} so that {benefit}</code></p>
-  </div>
-  <h2 id="w">W</h2>
-  <div id="def-working-directory">
-    <p><strong>Working directory</strong>: The directory the repo is based in is called the <em>working directory</em>.</p>
-  </div>
-  <h2 id="y">Y</h2>
-  <div id="def-yagni-principle">
-    <p><strong>YAGNI (You Aren't Gonna Need It!) Principle</strong>: Do not add code simply because ‘you might need it in the future’.</p>
-  </div>
-  <hr>
 </div>
 </div>
 </body>

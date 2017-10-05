@@ -40,15 +40,21 @@
         </div>
       </tip-box>
       <div>
-        <p>In terms of timing and frequency, there are two general approaches to integration:</p>
-        <ol>
-          <li><em>Late and one-time</em>: In an extreme case of this approach, developers wait till all components are completed and integrate all finished components just before the release. This approach is not recommended because integration often causes
-            many component incompatibilities (due to previous miscommunications and misunderstandings) to surface which can lead to delivery delays: Late integration → incompatibilities found → major rework required → cannot meet the delivery date.</li>
-          <li><em>Early and frequent</em>: The other approach is to integrate early and evolve in parallel in small steps, re-integrating frequently. For example, a working skeleton can be written first (i.e. it compiles and runs but does not produce any
-            useful output). This can be done by one developer, possibly the one in charge of integration. After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate the
-            new code to the main system.</li>
-        </ol>
-        <p>Whether using frequent integration or one-time late integration, there is still a need to decide the order in which components are to be integrated. There are several approaches to doing this, as explained next.</p>
+        <p><strong>In terms of timing and frequency, there are two general approaches to integration: <em>late and one-time</em>, <em>early and frequent</em>.</strong></p>
+        <p><strong><em>Late and one-time</em>: wait till all components are completed and integrate all finished components near the end of the project.</strong></p>
+        <tip-box type="wrong">
+          <p>This approach is not recommended because integration often causes many component incompatibilities (due to previous miscommunications and misunderstandings) to surface which can lead to delivery delays <span class="dimmed"> i.e. Late integration → incompatibilities found → major rework required → cannot meet the delivery date</span>.</p>
+        </tip-box>
+        <p><strong><em>Early and frequent</em>: integrate early and evolve each part in parallel, in small steps, re-integrating frequently.</strong></p>
+        <tip-box>
+          <p>📦 A <em><tooltip content="it compiles and runs but does not produce any useful output">walking skeleton</tooltip></em> can be written first. This can be done by one developer, possibly the one in charge of integration. After that, all developers
+            can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate the new code to the main system.</p>
+        </tip-box>
+        <div v-closeable="" alt="slideshow: comparison">
+          <p>Here is an animation that compares the two approaches:</p>
+          <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212312&authkey=AHtrsZMwQmNcyAE&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen=""
+              mozallowfullscreen="" allowfullscreen></iframe></div>
+        </div>
       </div>
     </div>
     <div>
@@ -61,8 +67,16 @@
         </div>
       </tip-box>
       <div>
-        <p>In the <em>big-bang integration</em> approach, all components are integrated at the same time. This approach is not recommended because it will uncover too many problems at the same time which could make debugging and bug-fixing more complex than
-          when problems are uncovered incrementally.</p>
+        <p><strong><em>Big-bang integration</em>: integrate all components at the same time.</strong></p>
+        <tip-box type="wrong">
+          <p>Big-bang is not recommended because it will uncover too many problems at the same time which could make debugging and bug-fixing more complex than when problems are uncovered incrementally.</p>
+        </tip-box>
+        <p><strong><em>Incremental integration</em>: integrate few components at a time.</strong> This approach is better than the big-bang integration because it surfaces integration problems in a more manageable way.</p>
+        <div v-closeable="" alt="slideshow: comparison">
+          <p>Here is an animation that compares the two approaches:</p>
+          <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212315&authkey=AG4cur5IrM7vr7M&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen=""
+              mozallowfullscreen="" allowfullscreen></iframe></div>
+        </div>
       </div>
     </div>
     <div>
@@ -71,19 +85,32 @@
       </div>
       <tip-box>
         <div>
-          <p>🏆 Can explain how integration approaches vary based on top-down or bottom-up integration <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+          <p>🏆 Can explain how integration approaches vary based on the order of integration <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
         </div>
       </tip-box>
-      <div>
-        <p>For incremental integration efforts, the following three incremental integration approaches are more suitable.</p><img src="/se-book/integration/approaches/topDownVsBottomUp/images/approaches.png" height="100">
+      <div><img src="/se-book/integration/approaches/topDownVsBottomUp/images/approaches.png" height="100">
         <p></p>
-        <ul>
-          <li><em>Top-down</em> integration: In top-down integration, higher-level components are integrated before bringing in the lower-level components. One advantage of this approach is that higher-level problems can be discovered early. One disadvantage
-            is that this requires the use of dummy or skeletal components (i.e. stubs) in place of lower level components until the real lower-level components are integrated to the system. Otherwise, higher-level components cannot function as they depend
-            on lower level ones.</li>
-          <li><em>Bottom-up</em> integration: This is the reverse of top-down integration. Advantages and disadvantages are simply the reverse of those of the top-down approach.</li>
-          <li><em>Sandwich</em> integration: This is a mix of the top-down and the bottom-up approaches. The idea is to do both top-down and bottom-up so as to “meet up” in the middle.</li>
-        </ul>
+        <p><strong>Based on the order in which components are integrated, incremental integration can be done in three ways.</strong></p>
+        <p><strong><em>Top-down</em> integration: higher-level components are integrated before bringing in the lower-level components.</strong> One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that
+          this requires the use of
+          <trigger for="pop:topdown-stub">stubs</trigger> in place of lower level components until the real lower-level components are integrated to the system. Otherwise, higher-level components cannot function as they depend on lower level ones.</p>
+        <popover id="pop:topdown-stub" title=":mag:"
+          placement="top">
+          <div slot="content">
+            <div>
+              <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined
+                inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
+            </div>
+          </div>
+        </popover>
+        <p><strong><em>Bottom-up</em> integration: the reverse of top-down integration.</strong> Note that when integrating lower level components,
+          <tooltip content="additional code written to provide inputs to a component via an API">drivers</tooltip> may be needed to test the integrated components <span class="dimmed"> because the UI may not be integrated yet</span>, just like top-down integration needs stubs.</p>
+        <p><strong><em>Sandwich</em> integration: a mix of the top-down and the bottom-up approaches.</strong> The idea is to do both top-down and bottom-up so as to 'meet' in the middle.</p>
+        <div v-closeable="" alt="slideshow: comparison">
+          <p>Here is an animation that compares the three approaches:</p>
+          <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212318&authkey=AD27jxfKqq3nqpQ&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen=""
+              mozallowfullscreen="" allowfullscreen></iframe></div>
+        </div>
       </div>
     </div>
     <h2 id="build-automation">Build Automation</h2>

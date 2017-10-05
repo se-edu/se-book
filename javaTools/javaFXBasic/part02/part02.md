@@ -154,7 +154,7 @@ Among all these collections, we need the `ObservableList`. To create a new `Obse
 /**
 * The data as an observable list of {@link Person}.
 */
-private ObservableList<Person> personData = FXCollections.observableArrayList();
+private ObservableList< Person > personData = FXCollections.observableArrayList();
 
     /**
      * Constructor
@@ -175,7 +175,7 @@ private ObservableList<Person> personData = FXCollections.observableArrayList();
     /**
      * Returns the data as an observable list of {@link Person}.
      */
-    public ObservableList<Person> getPersonData() {
+    public ObservableList< Person > getPersonData() {
         return personData;
     }
 

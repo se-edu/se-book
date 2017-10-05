@@ -25,9 +25,9 @@ Take the example of writing a payroll application for a university to facilitate
 <img src="{{baseUrl}}/oopDesign/polymorphism/introduction/images/payroll.png" height="150" />
 <p/>
 
-Here is the implementation of the adjustSalary(int) operation from the above design.
+Here is the implementation of the `adjustSalary(int)` operation from the above design.
 
-```
+```java
 class Payroll1 {
     ArrayList< Admin > admins;
     ArrayList< Academic > academics;
@@ -50,7 +50,7 @@ Note how processing is similar for the two staff types. It is as if the type of 
 
 <tip-box>
 
-```
+```java
 class Payroll2 {
     ArrayList< Staff > staff;
     // ...
@@ -64,7 +64,7 @@ class Payroll2 {
 ```
 
 Notice the following:
-* Only one data structure `ArrayList<Staff>`. It contains both `Admin` and `Academic` objects but treats them as `Staff` objects
+* Only one data structure `ArrayList< Staff >`. It contains both `Admin` and `Academic` objects but treats them as `Staff` objects
 * Only one loop
 * Outcome of the `s.adjustSalary(byPercent)` method call depends on whether `s` is an `Academic` or `Admin` object
 

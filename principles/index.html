@@ -247,7 +247,7 @@
     </div>
     <div>
       <div>
-        <h4 id="separation-of-concerns-three">Separation of Concerns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+        <h4 id="separation-of-concerns-principle-three">Separation of Concerns Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
       <tip-box>
         <div>
@@ -262,37 +262,182 @@
                 <p><strong>Separation of Concerns Principle (SoC)</strong>: To achieve better modularity, separate the code into distinct sections, such that each section addresses a separate <em>concern</em>. -- Edsger W. Dijkstra</p>
               </div>
             </tip-box>
-            <p>A concern in this context is a set of information that affects the code of a computer program.</p>
-            <p>Examples for <em>concerns</em>:</p>
-            <ul>
-              <li>A specific feature, such as the code related to <code>add employee</code> feature</li>
-              <li>A specific aspect, such as the code related to <code>persistence</code> or <code>security</code></li>
-              <li>A specific entity, such as the code related to the <code>Employee</code> entity</li>
-            </ul>
-            <p>Applying SoC reduces functional overlaps among code sections and also limits the ripple effect when changes are introduced to a specific part of the system.</p>
-            <p>This principle can be applied at the class level, as well as on higher levels. For example, the n-tier architecture utilizes this principle. Each layer in the architecture has a well-defined functionality that has no functional overlap with
-              each other. A correct application of this principle should lead to higher cohesion and lower coupling.</p>
+            <p>A <em>concern</em> in this context is a set of information that affects the code of a computer program.</p>
+            <tip-box>
+              <p>📦 Examples for <em>concerns</em>:</p>
+              <ul>
+                <li>A specific feature, such as the code related to <code>add employee</code> feature</li>
+                <li>A specific aspect, such as the code related to <code>persistence</code> or <code>security</code></li>
+                <li>A specific entity, such as the code related to the <code>Employee</code> entity</li>
+              </ul>
+            </tip-box>
+            <p><strong>Applying <tooltip content="Separation of Concerns">SoC</tooltip> reduces functional overlaps among code sections and also limits the ripple effect when changes are introduced to a specific part of the system.</strong></p>
+            <tip-box>
+              <p>📦 If the code related to <em>persistence</em> is separated from the code related to <em>security</em>, a change to how the data are persisted will not need changes to how the security is implemented.</p>
+            </tip-box>
+            <p><strong>This principle can be applied at the class level, as well as on higher levels.</strong></p>
+            <tip-box>
+              <p>📦 The
+                <trigger trigger="click" for="modal:soc-nTier">n-tier architecture</trigger> utilizes this principle. Each layer in the architecture has a well-defined functionality that has no functional overlap with each other.</p>
+            </tip-box>
+            <modal title="TextBook &raquo;" id="modal:soc-nTier">
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Design → Architecture → Styles → n-Tier Style
+</span></strong>
+                  </span>
+                </p>
+                <div>
+                  <h4 id="what-one-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p><strong>In the <em>n-tier</em> style, higher layers make use of services provided by lower layers.</strong> Lower layers are independent of higher layers. Other names: <em>multi-layered</em>, <em>layered</em>.</p><img src="/se-book/architecture/architecturalStyles/nTier/what/images/nTier.png"
+                      height="150">
+                    <tip-box>
+                      <p>📦 Operating systems and network communication software often use n-tier style.
+                        <img src="/se-book/architecture/architecturalStyles/nTier/what/images/nTierExamples.png" height="150"></p>
+                    </tip-box>
+                    <p></p>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </modal>
+            <p><strong>This principle should lead to higher <trigger trigger="click" for="soc-cohesion">cohesion</trigger> and lower <trigger trigger="click" for="soc-coupling">coupling</trigger>.</strong></p>
+            <modal title="TextBook &raquo;" id="soc-coupling">
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Design → Design Principles → Coupling →
+</span></strong>
+                  </span>
+                </p>
+                <div>
+                  <h4 id="what-one-3">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p><strong><em>Coupling</em> is a measure of the degree of <em>dependence</em></strong> between components, classes, methods, etc. Low coupling indicates that a component is less dependent on other components. <strong>High coupling (aka <em>tight</em> coupling or <em>strong</em> coupling) is discouraged</strong>                      due to the following disadvantages:</p>
+                    <ul>
+                      <li><strong>Maintenance is harder</strong> because a change in one module could cause changes in other modules coupled to it (i.e. a ripple effect).</li>
+                      <li><strong>Integration is harder</strong> because multiple components coupled with each other have to be integrated at the same time.</li>
+                      <li><strong>Testing and reuse of the module is harder</strong> due to its dependence on other modules.</li>
+                    </ul>
+                    <tip-box>
+                      <p>📦 In the example below, design <code>A</code> appears to have a more coupling between the components than design <code>B</code>.</p><img src="/se-book/designPrinciples/coupling/what/images/playerPuzzleManager.png" height="220">
+                      <p></p>
+                    </tip-box>
+                  </div>
+                  <div>
+                    <div>
+                      <panel header=":muscle: Exercises" expandable="">
+                        <div>
+                          <panel header=":lock::key: Coupling levels of alternative designs">
+                            <question has-input="true">
+                              <p>Discuss the coupling levels of alternative designs <em>x</em> and <em>y</em>.</p>
+                              <tip-box><img src="/se-book/designPrinciples/coupling/what/images/alternativeDesigns.png" height="180">
+                                <p></p>
+                              </tip-box>
+                              <div slot="answer">
+                                <p>Overall coupling levels in <em>x</em> and <em>y</em> seem to be similar (neither has more dependencies than the other). (Note that the number of dependency links is not a definitive measure of the level of coupling. Some
+                                  links may be stronger than the others.). However, in <em>x</em>, <code>A</code> is highly-coupled to the rest of the system while <code>B</code>, <code>C</code>, <code>D</code>, and <code>E</code> are standalone (do not
+                                  depend on anything else). In <em>y</em>, no component is as highly-coupled as <code>A</code> of <em>x</em>. However, only <code>D</code> and <code>E</code> are standalone.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel header=":lock::key: regressions and coupling.">
+                            <question has-input="true">
+                              <p>Explain the link (if any) between regressions and coupling.</p>
+                              <div slot="answer">
+                                <p>When the system is highly-coupled, the risk of regressions is higher too <span class="dimmed"> e.g. when component <code>A</code> is modified, all components ‘coupled’ to component <code>A</code> risk ‘unintended behavioral changes’</span>.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel header=":lock::key: Coupling and testability">
+                            <question has-input="true">
+                              <p>Discuss the relationship between coupling and
+                                <tooltip content="a measure of how easily a given component can be tested">testability</tooltip>.</p>
+                              <div slot="answer">
+                                <p>Coupling decreases testability because if the
+                                  <tooltip content="Software Under Test">SUT</tooltip> is coupled to many other components it becomes difficult to test the SUI in isolation of its dependencies.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel header=":lock::key: Statements about coupling">
+                            <question>
+                              <p>Choose the correct statements.</p>
+                              <ul class="task-list">
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. As coupling increases, testability decreases.</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. As coupling increases, the risk of regression increases.</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. As coupling increases, the value of automated regression testing increases.</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. As coupling increases, integration becomes easier as everything is connected together.</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. As coupling increases, maintainability decreases.</li>
+                              </ul>
+                              <div slot="answer">
+                                <p>(a)(b)(c)<s>(d)</s>(e)</p>
+                                <p>Explanation: High coupling means either more components require to be integrated at once in a big-bang fashion (increasing the risk of things going wrong) or more drivers and stubs are required when integrating incrementally.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </modal>
+            <modal title="TextBook &raquo;" id="soc-cohesion">
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Design → Design Principles → Cohesion →
+</span></strong>
+                  </span>
+                </p>
+                <div>
+                  <h4 id="what-one-4">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p><strong><em>Cohesion</em> is a measure of how strongly-related and focused the various responsibilities of a component are.</strong> A highly-cohesive component keeps related functionalities together while keeping out all other unrelated
+                      things.</p>
+                    <p><strong>Higher cohesion is better.</strong> Disadvantages of low cohesion (aka <em>weak</em> cohesion):</p>
+                    <ul>
+                      <li>Impedes the understandability of modules as it is difficult to express module functionalities at a higher level.</li>
+                      <li>Lowers maintainability because a module can be modified due to unrelated causes <span class="dimmed"> (reason: the module contains code unrelated to each other)</span> or many many modules may need to be modified to achieve a small
+                        change in behavior <span class="dimmed"> (reason: because the code realated to that change is not localized to a single module)</span>.</li>
+                      <li>Lowers reusability of modules because they do not represent logical units of functionality.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </modal>
           </div>
           <div>
             <div>
               <panel header=":muscle: Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: Choose the correct statement.">
+                  <panel header=":lock::key: correct statement about SoC">
                     <question>
                       <p>“Only the GUI class should interact with the user. The GUI class should only concern itself with user interactions”. This statement follows from,</p>
                       <ul class="task-list">
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A software design should promote separation of concerns in a design.</li>
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. A software design should increase cohesion of its components.</li>
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A software design should follow single responsibility principle.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. All of the above.</li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A software design should promote separation of concerns in a design.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. A software design should increase cohesion of its components.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A software design should follow single responsibility principle.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> d. All of the above.</li>
-                        </ul>
+                        <p>(a)(b)(c)</p>
                         <p>Explanation: By making ‘user interaction’ GUI class’ sole responsibility, we increase its cohesion. This is also in line with separation of concerns (i.e., we separated the concern of user interaction) and single responsibility
                           principle (GUI class has only one responsibility).</p>
                       </div>
@@ -588,16 +733,16 @@
                     <p></p>
                     <question>
                       Pick the odd one out.
-                      <ul radio-group="88ha7" class="radio-list">
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="88ha7" type="radio"> a. Separation of Concerns Principle.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="88ha7" type="radio"> b. Open Closed Principle.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="88ha7" type="radio"> c. Liskov Substitution Principle.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="88ha7" type="radio"> d. Interface Segregation Principle.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="88ha7" type="radio"> e. Dependency Inversion Principle.</label></li>
+                      <ul radio-group="e6t7q" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="e6t7q" type="radio"> a. Separation of Concerns Principle.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="e6t7q" type="radio"> b. Open Closed Principle.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="e6t7q" type="radio"> c. Liskov Substitution Principle.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="e6t7q" type="radio"> d. Interface Segregation Principle.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="e6t7q" type="radio"> e. Dependency Inversion Principle.</label></li>
                       </ul>
                       <div slot="answer">
-                        <ul radio-group="jpk4r" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" checked name="jpk4r" type="radio"> a. Separation of Concerns Principle.</label></li>
+                        <ul radio-group="key4g" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" checked name="key4g" type="radio"> a. Separation of Concerns Principle.</label></li>
                         </ul>
                         <p>Explanation: These five principles make up the SOLID principles, but only if SCP is replaced by SRP.</p>
                       </div>

@@ -12,27 +12,26 @@
     <p><strong>Most programming environments come with logging systems that allow sophisticated forms of logging.</strong> They have features such as the ability to enable and disable logging easily or to change the logging
       <tooltip content="how much information to record">intensity</tooltip>.</p>
     <tip-box>
-      <p>📦 This sample Java code uses Java’s default logging mechanism. When running the code, the logging level can be set to <code>WARNING</code> so that log messages specified as <code>INFO</code> level (which is a lower level than <code>WARNING</code>)
-        will not be written to the log file at all.</p>
+      <p>📦 This sample Java code uses Java’s default logging mechanism.</p>
+      <p>First, import the relevant Java package:</p>
       <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.logging.*;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
-    <span class="hljs-comment">// Obtain a suitable logger.</span>
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bar</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">// log a message at INFO level</span>
-        logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);
-        
-        <span class="hljs-keyword">try</span> {
-            processInput();
-        } <span class="hljs-keyword">catch</span> (Exception ex) {
-            <span class="hljs-comment">//log a message at WARNING level</span>
-            logger.log(Level.WARNING, <span class="hljs-string">"processing error"</span>, ex);
-        }
-        logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
-    }
+</code></pre>
+      <p>Next, create a <code>Logger</code>:</p>
+      <pre><code class="hljs java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);
+</code></pre>
+      <p>Now, you can use the <code>Logger</code> object to log information. Note the use of
+        <popover content="`INFO`, `WARNING` etc.">logging level</popover> for each message. When running the code, the logging level can be set to <code>WARNING</code> so that log messages specified as <code>INFO</code> level (which is a lower level than <code>WARNING</code>) will not be written
+        to the log file at all.</p>
+      <pre><code class="hljs java"><span class="hljs-comment">// log a message at INFO level</span>
+logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);
+<span class="hljs-comment">//...</span>
+processInput();
+<span class="hljs-keyword">if</span>(error){
+    <span class="hljs-comment">//log a message at WARNING level</span>
+    logger.log(Level.WARNING, <span class="hljs-string">"processing error"</span>, ex);
 }
+<span class="hljs-comment">//...</span>
+logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
 </code></pre>
     </tip-box>
   </div>

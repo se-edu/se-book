@@ -28,7 +28,40 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>Unit testing involves testing individual units (methods, classes, subsystems, …) and finding out whether each piece works correctly in isolation. A proper unit test require the unit we are testing to be isolated from other code.</p>
+            <p><strong><em>Unit testing</em> : testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly.</strong></p>
+            <p>In OOP code, it is common to write one or more unit tests for each public method of a class.</p>
+            <tip-box>
+              <p>📦 Here are the code skeletons for a <code>Foo</code> class containing two methods and a <code>FooTest</code> class that contains JUnit tests for those two methods.</p>
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+    <span class="hljs-function">String <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(String input)</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+    
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FooTest</span></span>{
+    
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//a unit test for Foo#read() method</span>
+    }
+    
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write_emptyInput_exceptionThrown</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//a unit tests for Foo#write(String) method</span>
+    }  
+    
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write_normalInput_writtenCorrectly</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//another unit tests for Foo#write(String) method</span>
+    }
+}
+</code></pre>
+            </tip-box>
           </div>
           <div></div>
         </div>
@@ -40,31 +73,110 @@
       </div>
       <tip-box>
         <div>
-          <p>🏆 Can explain stubs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+          <p>🏆 Can use stubs to isolate an SUT from its dependencies <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
       </tip-box>
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>During unit testing, stubs are used in place of collaborating objects in order to isolate the SUT from those objects. Doing so prevents bugs within the collaborating objects from interfering with the test.</p>
-            <p><strong>A stub has the same interface as the collaborator it replaces, but its implementation is meant to be so simple that it cannot have any bugs. It mimics the responses of the collaborating object, but only for the inputs used for testing.</strong>              That is, it does not know how to respond to any other inputs. These mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
+            <p><strong>A proper unit test requires the <em>unit</em> to be tested <mark>in isolation</mark></strong> so that bugs in the
+              <tooltip content="code the unit depends on">dependencies</tooltip> cannot influence the test <span class="dimmed"> i.e. bugs outside of the unit should not affect the unit tests</span>.</p>
+            <tip-box>
+              <p>📦 If a <code>Logic</code> class depends on a <code>Storage</code> class, unit testing the <code>Logic</code> class requires isolating the <code>Logic</code> class from the <code>Storage</code> class.</p>
+            </tip-box>
+            <p><strong><em>Stubs</em> can isolate the <popover content="Software Under Test (in this case, the _unit_ being tested)">SUT</popover> from its dependencies</strong>.</p>
+            <tip-box type="definition">
+              <div>
+                <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined
+                  inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
+              </div>
+            </tip-box>
+            <tip-box>
+              <p>📦 Consider the code below:</p>
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
+    Storage s;
+
+    Logic(Storage s) {
+        <span class="hljs-keyword">this</span>.s = s;
+    }
+
+    <span class="hljs-function">String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Name: "</span> + s.getName(index);
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Storage</span> </span>{
+    <span class="hljs-function">String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatabaseStorage</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Storage</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+        <span class="hljs-keyword">return</span> readValueFromDatabase(index);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> String <span class="hljs-title">readValueFromDatabase</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+        <span class="hljs-comment">// retrieve name from the database</span>
+    }
+}
+</code></pre>
+              <p>Normally, you would use the <code>Logic</code> class as follows (not how the <code>Logic</code> object depends on a <code>DatabaseStorage</code> object to perform the <code>getName()</code> operation):</p>
+              <pre><code class="hljs java">Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> DatabaseStorage());
+String name = logic.getName(<span class="hljs-number">23</span>);
+</code></pre>
+              <p>You can test it like this:</p>
+              <pre><code class="hljs java"><span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+    Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> DatabaseStorage());
+    assertEquals(<span class="hljs-string">"Name: John"</span>, logic.getName(<span class="hljs-number">5</span>));
+}
+</code></pre>
+              <p>However, this <code>logic</code> object being tested is making use of a <code>DataBaseStorage</code> object which means a bug in the <code>DatabaseStorage</code> class can affect the test. Therefore, this test is not testing <code>Logic</code><em>in isolation from its dependencies</em>                and hence it is not a pure unit test.</p>
+              <p>Here is a stub class you can use in place of <code>DatabaseStorage</code>:</p>
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StorageStub</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Storage</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+        <span class="hljs-keyword">if</span>(index == <span class="hljs-number">5</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Adam"</span>;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> UnsupportedOperationException();
+        }
+    }
+}
+</code></pre>
+              <p>Note how the stub has the same interface as the real dependency, is so simple that it is unlikely to contain bugs, and is pre-configured to respond with a hard-coded response, presumably, the correct response <code>DatabaseStorage</code>                is expected to return for the given test input.</p>
+              <p>Here is how you can use the stub to write a unit test. This test is not affected by any bugs in the <code>DatabaseStorage</code> class and hence is a pure unit test.</p>
+              <pre><code class="hljs java"><span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+    Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> StorageStub());
+    assertEquals(<span class="hljs-string">"Name: Adam"</span>, logic.getName(<span class="hljs-number">5</span>));
+}
+</code></pre>
+            </tip-box>
+            <p>In addition to Stubs, there are other type of replacements you can use during testing. E.g. <em>Mocks</em>, <em>Fakes</em>, <em>Dummies</em>, <em>Spies</em>.</p>
           </div>
           <div>
             <div>
+              <panel header=":paperclip: Resources" expanded="">
+                <ul>
+                  <li><a href="https://martinfowler.com/articles/mocksArentStubs.html"><strong>Mocks Aren't Stubs</strong></a><em>by</em> Martin Fowler -- An in-depth article about how Stubs differ from other types of test helpers.</li>
+                </ul>
+              </panel>
+            </div>
+            <div>
               <panel header=":muscle: Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: True or False?">
+                  <panel header=":lock::key: Purpose of stubs">
                     <question>
-                      <p>Stubs and drivers help us test a component in isolation from other interacting components.</p>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                      <p>Stubs help us to test a component in isolation from its dependencies.</p>
+                      <ul radio-group="jvy6j" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="jvy6j" type="radio"> True</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="jvy6j" type="radio"> False</label></li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. True</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
-                        </ul>
+                        <p>True</p>
                       </div>
                     </question>
                   </panel>
@@ -72,25 +184,6 @@
               </panel>
             </div>
           </div>
-        </div>
-      </panel>
-    </div>
-    <div>
-      <div>
-        <h4 id="mocks-three">Mocks <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
-      </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can explain mocks <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
-        </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
-        <div>
-          <div>
-            <p>In addition to Stubs, there are other type of replacements we use during testing. E.g. <em>Mocks, Fakes, Dummies, Spies.</em></p>
-            <p>Refer <a href="https://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs">this article</a> for a more elaborate description.</p>
-          </div>
-          <div></div>
         </div>
       </panel>
     </div>

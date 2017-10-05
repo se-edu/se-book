@@ -67,17 +67,17 @@
                   <tip-box>
                     <p>📦 Calling <code>adjustSalary()</code> method for each Staff type:</p><img src="/se-book/oopDesign/polymorphism/introduction/images/payroll.png" height="150">
                     <p></p>
-                    <p>Here is the implementation of the adjustSalary(int) operation from the above design.</p>
-                    <pre class="hljs"><code>class Payroll1 {
+                    <p>Here is the implementation of the <code>adjustSalary(int)</code> operation from the above design.</p>
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll1</span> </span>{
     ArrayList&lt; Admin &gt; admins;
     ArrayList&lt; Academic &gt; academics;
-    // ...
+    <span class="hljs-comment">// ...</span>
 
-    void adjustSalary(int byPercent) {
-        for (Admin ad: admins) {
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
+        <span class="hljs-keyword">for</span> (Admin ad: admins) {
             ad.adjustSalary(byPercent);
         }
-        for (Academic ac: academics) {
+        <span class="hljs-keyword">for</span> (Academic ac: academics) {
             ac.adjustSalary(byPercent);
         }
     }
@@ -87,12 +87,12 @@
                   <p>Note how processing is similar for the two staff types. It is as if the type of staff members is irrelevant to how they are processed inside this operation! If that is the case, can the staff type be &quot;abstracted away&quot; from
                     this method? Here is such an implementation of <code>adjustSalary(int)</code>:</p>
                   <tip-box>
-                    <pre class="hljs"><code>class Payroll2 {
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll2</span> </span>{
     ArrayList&lt; Staff &gt; staff;
-    // ...
+    <span class="hljs-comment">// ...</span>
 
-    void adjustSalary(int byPercent) {
-        for (Staff s: staff) {
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
+        <span class="hljs-keyword">for</span> (Staff s: staff) {
             s.adjustSalary(byPercent);
         }
     }
@@ -100,11 +100,10 @@
 </code></pre>
                     <p>Notice the following:</p>
                     <ul>
-                      <li>Only one data structure <code>ArrayList&lt;Staff&gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
+                      <li>Only one data structure <code>ArrayList&lt; Staff &gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
                       <li>Only one loop</li>
                       <li>Outcome of the <code>s.adjustSalary(byPercent)</code> method call depends on whether <code>s</code> is an <code>Academic</code> or <code>Admin</code> object</li>
                     </ul>
-                    <p></p>
                   </tip-box>
                   <p>The above code is better in several ways:</p>
                   <ul>

@@ -29,18 +29,23 @@
         <div>
           <div>
             <p>While it is possible to isolate the functionalities of a software system into modules, there is no way to remove interaction between modules. When modules interact with each other, coupling naturally increases. Consequently, it is harder to
-              localize any changes to the software system. In 1988, Bertrand Meyer proposed a guiding principle to alleviate this problem. The principle, known as the <em>open-closed principle</em>, states: “A module should be <em>open</em> for extension
-              but <em>closed</em> for modification”. That is, modules should be written so that they can be extended, without requiring them to be modified. In other words, changing what the modules do without changing the source code of the modules.</p>
-            <p>In object-oriented programming, these two seemingly opposing requirements can be achieved in various ways. This often requires separating the <em>specification (interface)</em> of a module from its <em>implementation</em>.</p>
+              localize any changes to the software system. The Open-Close Principle aims to alleviate this problem.</p>
+            <tip-box type="definition">
+              <div>
+                <p><strong>Open-Closed Principle (OCP)</strong>: A module should be <em>open</em> for extension but <em>closed</em> for modification. That is, modules should be written so that they can be extended, without requiring them to be modified.
+                  <sub>-- proposed by Bertrand Meyer in 1988</sub></p>
+              </div>
+            </tip-box>
+            <p>In object-oriented programming, OCP can be achieved in various ways. This often requires separating the <em>specification (i.e. interface)</em> of a module from its <em>implementation</em>.</p>
             <tip-box>
-              <p>Example:</p><img src="/se-book/designPrinciples/openClosedPrinciple/what/images/commandQueue.png" height="170">
+              <p>📦 In the design given below, the behavior of the <code>CommandQueue</code> class can be altered by adding more concrete <code>Command</code> subclasses. For example, by including a <code>Delete</code> class alongside <code>List</code>,
+                <code>Sort</code>, and <code>Reset</code>, the <code>CommandQueue</code> can now perform delete commands without modifying its code at all. That is, its behavior was extended without having to modify its code. Hence, it was open to extensions,
+                but closed to modification.</p><img src="/se-book/designPrinciples/openClosedPrinciple/what/images/commandQueue.png" height="170">
               <p></p>
-              <p>The behavior of the <code>CommandQueue</code> class can be altered by adding more concrete <code>Command</code> subclasses. For example, by including a <code>Delete</code> class alongside <code>List</code>, <code>Sort</code>, and <code>Reset</code>,
-                the <code>CommandQueue</code> can now perform delete commands without modifying its code at all. Indeed, its behavior was extended without having to open up and modify its code. Hence, it was open to extensions, but closed to modification.</p>
             </tip-box>
             <tip-box>
-              <p>The behavior of a Java generic class can be altered by passing it a different class as a parameter. In the code below, the <code>ArrayList</code> class behaves as a container of <code>Students</code> in one instance and as a container of
-                <code>Admin</code> objects in the other instance, without having to change its code. That is, the behavior of the <code>ArrayList</code> class is extended without modifying its code.</p>
+              <p>📦 The behavior of a Java generic class can be altered by passing it a different class as a parameter. In the code below, the <code>ArrayList</code> class behaves as a container of <code>Students</code> in one instance and as a container
+                of <code>Admin</code> objects in the other instance, without having to change its code. That is, the behavior of the <code>ArrayList</code> class is extended without modifying its code.</p>
               <pre><code class="hljs java">ArrayList students = <span class="hljs-keyword">new</span> ArrayList&lt; Student &gt;();
 ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt;();  	
 </code></pre>
@@ -50,22 +55,17 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
             <div>
               <panel header=":muscle: Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: Choose the correct statement.">
+                  <panel header=":lock::key: Meaning of OCP">
                     <question>
                       <p>Which of these is closest to the meaning of the open-closed principle?</p>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. We should be able to change a software module’s behavior without modifying its code.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. A software module should remain open to modification as long as possible.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A software module should be either open to modification and closed to extension.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Open source software rocks. Closed source software sucks.</li>
+                      <ul radio-group="4udr3" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="4udr3" type="radio"> a. We should be able to change a software module’s behavior without modifying its code.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="4udr3" type="radio"> b. A software module should remain open to modification as long as possible.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="4udr3" type="radio"> c. A software module should be open to modification and closed to extension.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="4udr3" type="radio"> d. Open source software rocks. Closed source software sucks.</label></li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. We should be able to change a software module’s behavior without modifying its code.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. A software module should remain open to modification as long as possible.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A software module should be either open to modification and closed to extension.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Open source software rocks. Closed source software sucks.</li>
-                        </ul>
+                        <p>(a)</p>
                         <p>Explanation: Please refer the handout for the definition of OCP.</p>
                       </div>
                     </question>

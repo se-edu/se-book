@@ -10,7 +10,7 @@
 
 <div id="body">
 
-Avoid varying the level of abstraction within a code fragment.
+Avoid varying the level of <trigger trigger="click" for="modal:slap-abstraction">abstraction</trigger> within a code fragment.
 Note: The _Productive Programmer_ (by Neal Ford) calls this the _SLAP principle_ i.e. Single Level of Abstraction Per method.
 
 <tip-box>
@@ -34,9 +34,9 @@ displayResult();
 
 </tip-box>
 
-<tip-box type="info">
-<include src="../../../common/definitions.md#def-abstraction" />
-</tip-box>
+<modal title="" id="modal:slap-abstraction">
+  <include src="../../../designPrinciples/abstraction/what/full.md"/>
+</modal>
 
 [Bad]: {{baseUrl}}/images/Bad.png "Bad"
 [Good]: {{baseUrl}}/images/Good.png "Good"

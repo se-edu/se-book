@@ -75,10 +75,10 @@ A use case is an interaction between a system and its _actors_.
 :package: Consider the three use cases given below. Clearly, (a) is at a higher level than (b) and (b) is at a higher level than (c).
 
 * System: LearnSys
-* Use case:
-  1. Conduct a survey
-  2. Take the survey
-  3. Answer survey question
+* Use cases:<br>
+  a. Conduct a survey<br>
+  b. Take the survey<br>
+  c. Answer survey question
 
 </tip-box>
 

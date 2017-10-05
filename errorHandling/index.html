@@ -186,11 +186,10 @@
               <p><strong>If the runtime detects an <em>assertion failure</em>, it typically take some drastic action</strong> such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner
                 the execution stops, the safer it is.</p>
               <tip-box>
-                <p>📦 In the Java code below, the assertion in line 2 verifies the assumption that <code>timeout</code> returned by <code>Config.getTimeout()</code> is greater than 0. The only reason for it to return a zero or lower value in line 1 is the
-                  presence of a bug in the system.</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); <span class="hljs-comment">// line 1</span>
-<span class="hljs-keyword">assert</span> timeout &gt; <span class="hljs-number">0</span>; <span class="hljs-comment">// line 2</span>
-setTimeout(timeout); <span class="hljs-comment">// line 3</span>
+                <p>📦 In the Java code below, suppose we set an assertion that <code>timeout</code> returned by <code>Config.getTimeout()</code> is greater than <code>0</code>. Now, if the <code>Config.getTimeout()</code> returned <code>-1</code> in a specific
+                  execution of this line, the runtime can detect it as a <em>assertion failure</em> -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result of a bug -- and take some drastic
+                  action such as terminating the execution.</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); 
 </code></pre>
               </tip-box>
             </div>
@@ -291,11 +290,11 @@ setTimeout(timeout); <span class="hljs-comment">// line 3</span>
                     <panel header=":lock::key: Assertions failure in Calculator">
                       <question>
                         <p>A Calculator program crashes with an ‘assertion failure’ message when you try to find the square root of a negative number.</p>
-                        <ul radio-group="2u8xq" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="2u8xq" type="radio"> a. This is a correct use of assertions.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="2u8xq" type="radio"> b. The application should have terminated with an exception instead.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="2u8xq" type="radio"> c. The program has a bug.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="2u8xq" type="radio"> d. All statements above are incorrect.</label></li>
+                        <ul radio-group="aabka" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="aabka" type="radio"> a. This is a correct use of assertions.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="aabka" type="radio"> b. The application should have terminated with an exception instead.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="aabka" type="radio"> c. The program has a bug.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="aabka" type="radio"> d. All statements above are incorrect.</label></li>
                         </ul>
                         <div slot="answer">
                           <p>(c)</p>
@@ -350,7 +349,7 @@ setTimeout(timeout); <span class="hljs-comment">// line 3</span>
                 their associated log files may provide indications of what went wrong and action can then be taken to prevent it from happening again.</p>
               <div v-closeable="" alt="blackbox photo">
                 <tip-box>
-                  <p>💡 <strong>A log file is like the <tooltip content="flight data recorders">black box</tooltip> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.</p>
+                  <p>💡 <strong>A log file is like the <tooltip content="flight data recorder">black box</tooltip> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.</p>
                   <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br><sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub></p>
                 </tip-box>
               </div>
@@ -362,11 +361,11 @@ setTimeout(timeout); <span class="hljs-comment">// line 3</span>
                     <panel header=":lock::key: Logging vs blackbox">
                       <question>
                         <p>Why is logging like having the 'black box' in an airplane?</p>
-                        <ul radio-group="gtzgc" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="gtzgc" type="radio"> a. Because they can be used to find more info about how the system behaved before/during an ‘incident’.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="gtzgc" type="radio"> b. Because they are hidden from the view of normal users.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="gtzgc" type="radio"> c. Because they both can be in hardcopy form or digital form.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="gtzgc" type="radio"> d. Because they are hard to open by normal users.</label></li>
+                        <ul radio-group="n2c14" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="n2c14" type="radio"> a. Because they can be used to find more info about how the system behaved before/during an ‘incident’.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="n2c14" type="radio"> b. Because they are hidden from the view of normal users.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="n2c14" type="radio"> c. Because they both can be in hardcopy form or digital form.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="n2c14" type="radio"> d. Because they are hard to open by normal users.</label></li>
                         </ul>
                         <div slot="answer">
                           <p>(a)</p>
@@ -396,27 +395,26 @@ setTimeout(timeout); <span class="hljs-comment">// line 3</span>
               <p><strong>Most programming environments come with logging systems that allow sophisticated forms of logging.</strong> They have features such as the ability to enable and disable logging easily or to change the logging
                 <tooltip content="how much information to record">intensity</tooltip>.</p>
               <tip-box>
-                <p>📦 This sample Java code uses Java’s default logging mechanism. When running the code, the logging level can be set to <code>WARNING</code> so that log messages specified as <code>INFO</code> level (which is a lower level than <code>WARNING</code>)
-                  will not be written to the log file at all.</p>
+                <p>📦 This sample Java code uses Java’s default logging mechanism.</p>
+                <p>First, import the relevant Java package:</p>
                 <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.logging.*;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
-    <span class="hljs-comment">// Obtain a suitable logger.</span>
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bar</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">// log a message at INFO level</span>
-        logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);
-        
-        <span class="hljs-keyword">try</span> {
-            processInput();
-        } <span class="hljs-keyword">catch</span> (Exception ex) {
-            <span class="hljs-comment">//log a message at WARNING level</span>
-            logger.log(Level.WARNING, <span class="hljs-string">"processing error"</span>, ex);
-        }
-        logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
-    }
+</code></pre>
+                <p>Next, create a <code>Logger</code>:</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);
+</code></pre>
+                <p>Now, you can use the <code>Logger</code> object to log information. Note the use of
+                  <popover content="`INFO`, `WARNING` etc.">logging level</popover> for each message. When running the code, the logging level can be set to <code>WARNING</code> so that log messages specified as <code>INFO</code> level (which is a lower level than <code>WARNING</code>) will not
+                  be written to the log file at all.</p>
+                <pre><code class="hljs java"><span class="hljs-comment">// log a message at INFO level</span>
+logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);
+<span class="hljs-comment">//...</span>
+processInput();
+<span class="hljs-keyword">if</span>(error){
+    <span class="hljs-comment">//log a message at WARNING level</span>
+    logger.log(Level.WARNING, <span class="hljs-string">"processing error"</span>, ex);
 }
+<span class="hljs-comment">//...</span>
+logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
 </code></pre>
               </tip-box>
             </div>

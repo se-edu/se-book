@@ -1,5 +1,3 @@
-<div id="path">Testing &rarr; Testing Types &rarr;</div>
-
 <div id="title">
 
 #### What :one:
@@ -8,21 +6,27 @@
 
 <div id="body">
 
-In system testing we take the _whole system_ and test it _against the system specification_.
+**_System testing_: take the _whole system_ and test it _against the system specification_.**
 
 System testing is typically done by a testing team (also called a QA team).
 
-System test cases are based on the specified external behavior of the system. Sometimes, system tests go beyond the bounds defined in the specification. This is useful when testing that the system fails ‘gracefully’ having pushed beyond its limits.
+**System test cases are based on the specified external behavior of the system.** Sometimes, system tests go beyond the bounds defined in the specification. This is useful when testing that the system fails 'gracefully' having pushed beyond its limits.
 
 <tip-box>
 
-Example:
+:package: Suppose the SUT is a browser capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully if pushed beyond its limits. 
 
-Take the example of an SUT (software under test) that is a browser capable of handling web pages containing up to 5000 characters. A test case can involve loading a web page containing more than 5000 characters. The expected ‘graceful’ behavior would be to ‘abort the loading of the page and show a meaningful error message’. This test case would fail if the browser attempted to load the large file anyway and crashed.
+```
+Test case: load a web page that is too big
+* Input: load a web page containing more than 5000 characters. 
+* Expected behavior: abort the loading of the page and show a meaningful error message. 
+```
+
+This test case would fail if the browser attempted to load the large file anyway and crashed.
 
 </tip-box>
 
-System testing includes testing against non-functional requirements too. Here are some examples.
+**System testing includes testing against non-functional requirements too.** Here are some examples.
 
 * _Performance testing_ –  to ensure the system responds quickly.
 * _Load testing_ (also called _stress testing_ or _scalability testing_) – to ensure the system can work under heavy load.

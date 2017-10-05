@@ -140,7 +140,40 @@
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p>Unit testing involves testing individual units (methods, classes, subsystems, …) and finding out whether each piece works correctly in isolation. A proper unit test require the unit we are testing to be isolated from other code.</p>
+                    <p><strong><em>Unit testing</em> : testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly.</strong></p>
+                    <p>In OOP code, it is common to write one or more unit tests for each public method of a class.</p>
+                    <tip-box>
+                      <p>📦 Here are the code skeletons for a <code>Foo</code> class containing two methods and a <code>FooTest</code> class that contains JUnit tests for those two methods.</p>
+                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+    <span class="hljs-function">String <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(String input)</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+    
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FooTest</span></span>{
+    
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//a unit test for Foo#read() method</span>
+    }
+    
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write_emptyInput_exceptionThrown</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//a unit tests for Foo#write(String) method</span>
+    }  
+    
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write_normalInput_writtenCorrectly</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//another unit tests for Foo#write(String) method</span>
+    }
+}
+</code></pre>
+                    </tip-box>
                   </div>
                   <div></div>
                 </div>
@@ -152,31 +185,110 @@
               </div>
               <tip-box>
                 <div>
-                  <p>🏆 Can explain stubs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+                  <p>🏆 Can use stubs to isolate an SUT from its dependencies <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
                 </div>
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p>During unit testing, stubs are used in place of collaborating objects in order to isolate the SUT from those objects. Doing so prevents bugs within the collaborating objects from interfering with the test.</p>
-                    <p><strong>A stub has the same interface as the collaborator it replaces, but its implementation is meant to be so simple that it cannot have any bugs. It mimics the responses of the collaborating object, but only for the inputs used for testing.</strong>                      That is, it does not know how to respond to any other inputs. These mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
+                    <p><strong>A proper unit test requires the <em>unit</em> to be tested <mark>in isolation</mark></strong> so that bugs in the
+                      <tooltip content="code the unit depends on">dependencies</tooltip> cannot influence the test <span class="dimmed"> i.e. bugs outside of the unit should not affect the unit tests</span>.</p>
+                    <tip-box>
+                      <p>📦 If a <code>Logic</code> class depends on a <code>Storage</code> class, unit testing the <code>Logic</code> class requires isolating the <code>Logic</code> class from the <code>Storage</code> class.</p>
+                    </tip-box>
+                    <p><strong><em>Stubs</em> can isolate the <popover content="Software Under Test (in this case, the _unit_ being tested)">SUT</popover> from its dependencies</strong>.</p>
+                    <tip-box type="definition">
+                      <div>
+                        <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set
+                          of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
+                      </div>
+                    </tip-box>
+                    <tip-box>
+                      <p>📦 Consider the code below:</p>
+                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
+    Storage s;
+
+    Logic(Storage s) {
+        <span class="hljs-keyword">this</span>.s = s;
+    }
+
+    <span class="hljs-function">String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Name: "</span> + s.getName(index);
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Storage</span> </span>{
+    <span class="hljs-function">String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatabaseStorage</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Storage</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+        <span class="hljs-keyword">return</span> readValueFromDatabase(index);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> String <span class="hljs-title">readValueFromDatabase</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+        <span class="hljs-comment">// retrieve name from the database</span>
+    }
+}
+</code></pre>
+                      <p>Normally, you would use the <code>Logic</code> class as follows (not how the <code>Logic</code> object depends on a <code>DatabaseStorage</code> object to perform the <code>getName()</code> operation):</p>
+                      <pre><code class="hljs java">Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> DatabaseStorage());
+String name = logic.getName(<span class="hljs-number">23</span>);
+</code></pre>
+                      <p>You can test it like this:</p>
+                      <pre><code class="hljs java"><span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+    Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> DatabaseStorage());
+    assertEquals(<span class="hljs-string">"Name: John"</span>, logic.getName(<span class="hljs-number">5</span>));
+}
+</code></pre>
+                      <p>However, this <code>logic</code> object being tested is making use of a <code>DataBaseStorage</code> object which means a bug in the <code>DatabaseStorage</code> class can affect the test. Therefore, this test is not testing <code>Logic</code><em>in isolation from its dependencies</em>                        and hence it is not a pure unit test.</p>
+                      <p>Here is a stub class you can use in place of <code>DatabaseStorage</code>:</p>
+                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StorageStub</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Storage</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+        <span class="hljs-keyword">if</span>(index == <span class="hljs-number">5</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Adam"</span>;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> UnsupportedOperationException();
+        }
+    }
+}
+</code></pre>
+                      <p>Note how the stub has the same interface as the real dependency, is so simple that it is unlikely to contain bugs, and is pre-configured to respond with a hard-coded response, presumably, the correct response <code>DatabaseStorage</code>                        is expected to return for the given test input.</p>
+                      <p>Here is how you can use the stub to write a unit test. This test is not affected by any bugs in the <code>DatabaseStorage</code> class and hence is a pure unit test.</p>
+                      <pre><code class="hljs java"><span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+    Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> StorageStub());
+    assertEquals(<span class="hljs-string">"Name: Adam"</span>, logic.getName(<span class="hljs-number">5</span>));
+}
+</code></pre>
+                    </tip-box>
+                    <p>In addition to Stubs, there are other type of replacements you can use during testing. E.g. <em>Mocks</em>, <em>Fakes</em>, <em>Dummies</em>, <em>Spies</em>.</p>
                   </div>
                   <div>
                     <div>
+                      <panel header=":paperclip: Resources" expanded="">
+                        <ul>
+                          <li><a href="https://martinfowler.com/articles/mocksArentStubs.html"><strong>Mocks Aren't Stubs</strong></a><em>by</em> Martin Fowler -- An in-depth article about how Stubs differ from other types of test helpers.</li>
+                        </ul>
+                      </panel>
+                    </div>
+                    <div>
                       <panel header=":muscle: Exercises" expandable="">
                         <div>
-                          <panel header=":lock::key: True or False?">
+                          <panel header=":lock::key: Purpose of stubs">
                             <question>
-                              <p>Stubs and drivers help us test a component in isolation from other interacting components.</p>
-                              <ul class="task-list">
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                              <p>Stubs help us to test a component in isolation from its dependencies.</p>
+                              <ul radio-group="w4ogj" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="w4ogj" type="radio"> True</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="w4ogj" type="radio"> False</label></li>
                               </ul>
                               <div slot="answer">
-                                <ul class="task-list">
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. True</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
-                                </ul>
+                                <p>True</p>
                               </div>
                             </question>
                           </panel>
@@ -184,25 +296,6 @@
                       </panel>
                     </div>
                   </div>
-                </div>
-              </panel>
-            </div>
-            <div>
-              <div>
-                <h4 id="mocks-three">Mocks <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
-              </div>
-              <tip-box>
-                <div>
-                  <p>🏆 Can explain mocks <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
-                </div>
-              </tip-box>
-              <panel type="seamless" header=" %%- - - - - - - - - -%%">
-                <div>
-                  <div>
-                    <p>In addition to Stubs, there are other type of replacements we use during testing. E.g. <em>Mocks, Fakes, Dummies, Spies.</em></p>
-                    <p>Refer <a href="https://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs">this article</a> for a more elaborate description.</p>
-                  </div>
-                  <div></div>
                 </div>
               </panel>
             </div>
@@ -225,15 +318,12 @@
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p>In <em>Integration testing</em> we test whether different parts of the software ‘work together’ (i.e. integrates) as expected. Here, we assume the individual parts have been unit tested already. Therefore, integration tests aim to
-                      discover bugs in the ‘glue code’ that are often the result of misunderstanding of what the parts are supposed to do vs what the parts are actually doing. For example let us assume a class <code>Car</code> users classes <code>Engine</code>                      and <code>Wheel</code>.</p>
-                    <ul>
-                      <li>First, we should unit test <code>Engine</code> and <code>Wheel</code>.</li>
-                      <li>Next, we should unit test <code>Car</code> in isolation of <code>Engine</code> and <code>Wheel</code>, using stubs for <code>Engine</code> and <code>Wheel</code>.</li>
-                      <li>After that, we can do an integration test for <code>Car</code> using it together with the <code>Engine</code> and <code>Wheel</code> classes to ensure the <code>Car</code> integrates properly with the <code>Engine</code> and the
-                        <code>Wheel</code>.</li>
-                    </ul>
-                    <p>In the example above, if the <code>Car</code> class assumed a <code>Wheel</code> can support 200 mph speed but the <code>Wheel</code> can only support 150 mph, it is the integration test that is supposed to uncover this discrepancy.</p>
+                    <p><strong><em>Integration testing</em> : testing whether different parts of the software <em>work together</em> (i.e. integrates) as expected.</strong> Integration tests aim to discover bugs in the 'glue code' related to how components
+                      interact with each other. These bugs are often the result of misunderstanding of what the parts are supposed to do vs what the parts are actually doing.</p>
+                    <tip-box>
+                      <p>📦 Suppose a class <code>Car</code> users classes <code>Engine</code> and <code>Wheel</code>. If the <code>Car</code> class assumed a <code>Wheel</code> can support 200 mph speed but the <code>Wheel</code> can only support 150 mph,
+                        it is the integration test that is supposed to uncover this discrepancy.</p>
+                    </tip-box>
                   </div>
                   <div></div>
                 </div>
@@ -258,16 +348,19 @@
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p>In system testing we take the <em>whole system</em> and test it <em>against the system specification</em>.</p>
+                    <p><strong><em>System testing</em>: take the <em>whole system</em> and test it <em>against the system specification</em>.</strong></p>
                     <p>System testing is typically done by a testing team (also called a QA team).</p>
-                    <p>System test cases are based on the specified external behavior of the system. Sometimes, system tests go beyond the bounds defined in the specification. This is useful when testing that the system fails ‘gracefully’ having pushed beyond
-                      its limits.</p>
+                    <p><strong>System test cases are based on the specified external behavior of the system.</strong> Sometimes, system tests go beyond the bounds defined in the specification. This is useful when testing that the system fails 'gracefully'
+                      having pushed beyond its limits.</p>
                     <tip-box>
-                      <p>Example:</p>
-                      <p>Take the example of an SUT (software under test) that is a browser capable of handling web pages containing up to 5000 characters. A test case can involve loading a web page containing more than 5000 characters. The expected ‘graceful’
-                        behavior would be to ‘abort the loading of the page and show a meaningful error message’. This test case would fail if the browser attempted to load the large file anyway and crashed.</p>
+                      <p>📦 Suppose the SUT is a browser capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully if pushed beyond its limits.</p>
+                      <pre class="hljs"><code>Test case: load a web page that is too big
+* Input: load a web page containing more than 5000 characters. 
+* Expected behavior: abort the loading of the page and show a meaningful error message. 
+</code></pre>
+                      <p>This test case would fail if the browser attempted to load the large file anyway and crashed.</p>
                     </tip-box>
-                    <p>System testing includes testing against non-functional requirements too. Here are some examples.</p>
+                    <p><strong>System testing includes testing against non-functional requirements too.</strong> Here are some examples.</p>
                     <ul>
                       <li><em>Performance testing</em> – to ensure the system responds quickly.</li>
                       <li><em>Load testing</em> (also called <em>stress testing</em> or <em>scalability testing</em>) – to ensure the system can work under heavy load.</li>
@@ -300,9 +393,9 @@
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p><em>Alpha testing</em> is performed by the users, under controlled conditions set by the software development team.</p>
-                    <p><em>Beta testing</em> is performed by a selected subset of target users of the system in their natural work setting.</p>
-                    <p>An <em>open beta release</em> is the release of not-yet-production-quality-but-almost-there software to the general population. For example, Google’s Gmail was in ‘beta’ for many years before the label was finally removed.</p>
+                    <p><strong><em>Alpha testing</em> is performed by the users, under controlled conditions set by the software development team.</strong></p>
+                    <p><strong><em>Beta testing</em> is performed by a selected subset of target users of the system in their natural work setting.</strong></p>
+                    <p>An <em>open beta release</em> is the release of not-yet-production-quality-but-almost-there software to the general population. For example, Google’s Gmail was in 'beta' for many years before the label was finally removed.</p>
                   </div>
                   <div></div>
                 </div>
@@ -437,9 +530,9 @@
                           <panel header=":lock::key: Cost of bug fixing over time">
                             <question>
                               <p>The cost of fixing a bug goes down as we reach the product release.</p>
-                              <ul radio-group="qi93x" class="radio-list">
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="qi93x" type="radio"> True</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="qi93x" type="radio"> False</label></li>
+                              <ul radio-group="2ztxk" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="2ztxk" type="radio"> True</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="2ztxk" type="radio"> False</label></li>
                               </ul>
                               <div slot="answer">
                                 <p>False. The cost goes up over time.</p>
@@ -634,9 +727,9 @@
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p><em>Acceptance testing</em>, also called <em>User Acceptance Testing (UAT)</em>, is a type of validation test carried out to show that the delivered system meets the requirements of the customer.</p>
+                    <p><strong><em>Acceptance testing</em> (aka <em>User Acceptance Testing (UAT)</em>): test the delivered system to ensure it meets the user requirements.</strong></p>
                     <p>Acceptance tests give an assurance to the customer that the system does what it is intended to do. Acceptance test cases are often defined at the beginning of the project, usually based on the use case specification. Successful completion
-                      of UAT is often a prerequisite to the project signoff.</p>
+                      of UAT is often a prerequisite to the project sign-off.</p>
                   </div>
                   <div></div>
                 </div>
@@ -659,49 +752,69 @@
                     <table class="markbind-table table">
                       <thead>
                         <tr>
-                          <th style="text-align:center">System Testing</th>
-                          <th style="text-align:center">Acceptance Testing</th>
+                          <th style="text-align:left">System Testing</th>
+                          <th style="text-align:left">Acceptance Testing</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td style="text-align:center">Done against the system specification</td>
-                          <td style="text-align:center">Done against the requirements specification (see note 1 below)</td>
+                          <td style="text-align:left">Done against the system specification</td>
+                          <td style="text-align:left">Done against the requirements specification</td>
                         </tr>
                         <tr>
-                          <td style="text-align:center">Done by testers of the project team</td>
-                          <td style="text-align:center">Done by a team that represents the customer</td>
+                          <td style="text-align:left">Done by testers of the project team</td>
+                          <td style="text-align:left">Done by a team that represents the customer</td>
                         </tr>
                         <tr>
-                          <td style="text-align:center">Done on the development environment or a test bed</td>
-                          <td style="text-align:center">Done on the deployment site or on a close simulation of the deployment site</td>
+                          <td style="text-align:left">Done on the development environment or a test bed</td>
+                          <td style="text-align:left">Done on the deployment site or on a close simulation of the deployment site</td>
                         </tr>
                         <tr>
-                          <td style="text-align:center">Both positive and negative test cases</td>
-                          <td style="text-align:center">More focus on positive test cases</td>
+                          <td style="text-align:left">Both positive and negative test cases</td>
+                          <td style="text-align:left">More focus on positive test cases</td>
                         </tr>
                       </tbody>
                     </table>
                     <tip-box>
                       <p><strong>Requirement Specification vs System Specification</strong></p>
                       <p>The requirement specification need not be the same as the system specification. Some example differences:</p>
-                      <ul>
-                        <li>Requirements specification could be limited to how the system behaves in normal working conditions while the system specification can also include details on how it will fail gracefully when pushed beyond limits, how to recover,</li>
-                        <li>System specification could contain additional APIs not available for users (for the use of developers/testers), etc • Requirement specification could be written in terms of problems that need to be solved (e.g. provide a method
-                          to locate an email quickly) while the system specification could be written in terms of how the system solve those problems (e.g. explain the email search feature).</li>
-                      </ul>
-                      <p>However, in many cases one document serves as both a requirement specification and a system specification.</p>
-                      <p><strong>Importance of testing on the deployment environment</strong></p>
-                      <p>A system could work perfectly on the development environment, but fail in the deployment environment due to subtle differences between the two.</p>
+                      <table class="markbind-table table">
+                        <thead>
+                          <tr>
+                            <th style="text-align:left">Requirements Specification</th>
+                            <th style="text-align:left">System Specification</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td style="text-align:left">limited to how the system behaves in normal working conditions</td>
+                            <td style="text-align:left">can also include details on how it will fail gracefully when pushed beyond limits, how to recover, etc. specification</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left">written in terms of problems that need to be solved (e.g. provide a method to locate an email quickly)</td>
+                            <td style="text-align:left">written in terms of how the system solve those problems (e.g. explain the email search feature)</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left">specifies the interface available for intended end-users</td>
+                            <td style="text-align:left">could contain additional APIs not available for end-users (for the use of developers/testers)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <p>However, <strong>in many cases one document serves as both a requirement specification and a system specification.</strong></p>
                     </tip-box>
+                    <p><strong>Passing system tests does not necessarily mean passing acceptance testing.</strong> Some examples:</p>
+                    <ul>
+                      <li>The system might work on the testbed environments but might not work the same way in the deployment environment, due to subtle differences between the two environments.</li>
+                      <li>The system might conform to the system specification but could fail to solve the problem it was supposed to solve for the user, due to flaws in the system design.</li>
+                    </ul>
                   </div>
                   <div>
                     <div>
                       <panel header=":muscle: Exercises" expandable="">
                         <div>
-                          <panel header=":lock::key: Choose the least correct statement about system testing and acceptance testing.">
+                          <panel header=":lock::key: Statements about system testing and acceptance testing.">
                             <question>
-                              <p>Choose the least correct statement about system testing and acceptance testing.</p>
+                              <p>Choose the correct statements about system testing and acceptance testing.</p>
                               <ul class="task-list">
                                 <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Both system testing and acceptance testing typically involve the whole system.</li>
                                 <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. System testing is typically more extensive than acceptance testing.</li>
@@ -711,18 +824,10 @@
                                 <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. If system testing is adequately done, we need not do acceptance testing.</li>
                               </ul>
                               <div slot="answer">
-                                <ul class="task-list">
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Both system testing and acceptance testing typically involve the whole system.</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. System testing is typically more extensive than acceptance testing.</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. System testing can include testing for non-functional qualities.</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Acceptance testing typically has more user involvement than system testing.</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. In smaller projects, the developers may do system testing as well, in addition to developer testing.</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> f. If system testing is adequately done, we need not do acceptance testing.</li>
-                                </ul>
+                                <p>(a)(b)(c)(d)(e)<s>(f)</s></p>
                                 <p>Explanation:</p>
-                                <p>System testing can aim for full coverage and can go beyond the system specification. Therefore, system testing is typically more extensive than acceptance testing.</p>
-                                <p>Passing system tests does not necessarily mean passing acceptance testing. One reason for this is system tests are usually done on testbed environments while acceptance tests are usually done on the deployment environment.
-                                  Another reason is system testing is done against the system specification while acceptance tests can discover mismatches between system specification and user requirements (i.e. validation failures).</p>
+                                <p>(b) is correct because system testing can aim to cover all specified behaviors and can even go beyond the system specification. Therefore, system testing is typically more extensive than acceptance testing.</p>
+                                <p>(f) is incorrect because it is possible for a system to pass system tests but fail acceptance tests.</p>
                               </div>
                             </question>
                           </panel>
@@ -759,7 +864,83 @@
                       <popover id="pop:sut" placement="top">
                         <div slot="content">
                           <div>
-                            <p><strong>SUT</strong>: Software Under Test</p>
+                            <div id="def-stub">
+                              <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited
+                                set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
+                            </div>
+                            <div id="def-sut">
+                              <p><strong>SUT</strong>: Software Under Test</p>
+                            </div>
+                            <h2 id="t">T</h2>
+                            <div id="def-testing">
+                              <p><strong>Testing</strong>: Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component. –- source: IEEE</p>
+                            </div>
+                            <div id="def-type-signature">
+                              <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is
+                                significant.</p>
+                              <panel type="seamless" header="%%Examples%%">
+                                <table class="markbind-table table">
+                                  <thead>
+                                    <tr>
+                                      <th style="text-align:center">Method</th>
+                                      <th style="text-align:center">Type Signature</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td style="text-align:center"><code>int add(int X, int Y)</code></td>
+                                      <td style="text-align:center"><code>(int, int)</code></td>
+                                    </tr>
+                                    <tr>
+                                      <td style="text-align:center"><code>void add(int A, int B)</code></td>
+                                      <td style="text-align:center"><code>(int, int)</code></td>
+                                    </tr>
+                                    <tr>
+                                      <td style="text-align:center"><code>void m(int X, double Y)</code></td>
+                                      <td style="text-align:center"><code>(int, double)</code></td>
+                                    </tr>
+                                    <tr>
+                                      <td style="text-align:center"><code>void m(double X, int Y)</code></td>
+                                      <td style="text-align:center"><code>(double, int)</code></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </panel>
+                            </div>
+                            <h2 id="u">U</h2>
+                            <div id="def-uml">
+                              <p><a href="http://www.uml.org/#UML2.0"><strong>Unified Modeling Language (UML)</strong></a> is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists
+                                James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence,
+                                the term ‘Unified’ in UML). UML is currently the <em>de facto</em> modeling notation used in the industry.</p>
+                            </div>
+                            <div id="def-use-case">
+                              <p><strong>Use Case</strong>: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an
+                                <trigger for="pop:actor">actor</trigger>.[ 📖 :
+                                <popover effect="fade" placement="top">uml-user-guide<span slot="content"><span><em><strong>The Unified Modeling Language User Guide</strong></em>, 2e, G Booch, J Rumbaugh, and I Jacobson </span></span>
+                                </popover>]</p>
+                              <popover id="pop:actor" title=":mag:" placement="top">
+                                <div slot="content">
+                                  <div>
+                                    <p><strong>Actor</strong>: An actor (in a use case) is a role played by a user. An actor can be a human or another system. Actors are not part of the system; they reside outside the system.</p>
+                                  </div>
+                                </div>
+                              </popover>
+                            </div>
+                            <div id="def-user-story">
+                              <p><strong>User story</strong>: User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. <sub>[<a href="https://www.mountaingoatsoftware.com/agile/user-stories">Mike Cohn</a>]</sub></p>
+                            </div>
+                            <div id="def-user-story-format">
+                              <p><strong>User story format</strong>: <code>As a {user type/role} I can {function} so that {benefit}</code></p>
+                            </div>
+                            <h2 id="w">W</h2>
+                            <div id="def-working-directory">
+                              <p><strong>Working directory</strong>: The directory the repo is based in is called the <em>working directory</em>.</p>
+                            </div>
+                            <h2 id="y">Y</h2>
+                            <div id="def-yagni-principle">
+                              <p><strong>YAGNI (You Aren't Gonna Need It!) Principle</strong>: Do not add code simply because ‘you might need it in the future’.</p>
+                            </div>
+                            <hr>
                           </div>
                         </div>
                       </popover>
@@ -772,10 +953,10 @@
                           <panel header=":lock::key: Regression Testing defintion T/F?">
                             <question>
                               <p>Regression testing is the automated re-testing of a software after it has been modified.</p>
-                              <ul radio-group="nmxee" class="radio-list">
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="nmxee" type="radio"> a. True</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="nmxee" type="radio"> b. False</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="nmxee" type="radio"> c. Partially true</label></li>
+                              <ul radio-group="yuaaz" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="yuaaz" type="radio"> a. True</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="yuaaz" type="radio"> b. False</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="yuaaz" type="radio"> c. Partially true</label></li>
                               </ul>
                               <div slot="answer">
                                 <p>c.</p>
@@ -1032,38 +1213,41 @@ Invalid command format: add
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>If a software product has a GUI component, all product-level testing (i.e. the types of testing mentioned above) need to be done using the GUI. However, testing the GUI is much harder than testing the CLI (command line interface) or API,
+              <p>If a software product has a GUI component, all product-level testing (i.e. the types of testing mentioned above) need to be done using the GUI. However, <strong>testing the GUI is much harder than testing the CLI (command line interface) or API</strong>,
                 for the following reasons:</p>
               <ul>
-                <li>Most GUIs contain a large number of different operations, many of which can be performed in any arbitrary order.</li>
+                <li>Most GUIs can support a large number of different operations, many of which can be performed in any arbitrary order.</li>
                 <li>GUI operations are more difficult to automate than API testing. Reliably automating GUI operations and automatically verifying whether the GUI behaves as expected is harder than calling an operation and comparing its return value with
-                  an expected value. Therefore, automated regression testing of GUIs is rather difficult. However, there are testing tools that can automate GUI testing. For example, TestFx and support automated testing of JavaFX GUIs and Selenium (
-                  <a
-                    href="http://seleniumhq.org/">http://seleniumhq.org/</a>) can be used to automate testing of Web application UIs. VisualStudio supports ‘record replay’ type of GUI test automation.</li>
+                  an expected value. Therefore, automated regression testing of GUIs is rather difficult.</li>
                 <li>The appearance of a GUI (and sometimes even behavior) can be different across platforms and even environments. For example, a GUI can behave differently based on whether it is minimized or maximized, in focus or out of focus, and in a
                   high resolution display or a low resolution display.</li>
               </ul><img src="/se-book/testing/testAutomation/testingGuis/images/diagram.png" height="120">
               <p></p>
-              <p>One approach to overcome the challenges of testing GUIs is to minimize logic aspects in the GUI. Then, bypass the GUI to test the rest of the system using automated API testing. While this still requires the GUI to be tested manually, the
-                number of such manual test cases can be reduced as most of the system has been tested using automated API testing.</p>
+              <p><strong>One approach to overcome the challenges of testing GUIs is to minimize logic aspects in the GUI.</strong> Then, bypass the GUI to test the rest of the system using automated API testing. While this still requires the GUI to be tested
+                manually, the number of such manual test cases can be reduced as most of the system has been tested using automated API testing.</p>
+              <p><strong>There are testing tools that can automate GUI testing.</strong></p>
+              <tip-box>
+                <p>📦 Some tools used for automated GUI testing:</p>
+                <ul>
+                  <li><strong>TestFx</strong> can do automated testing of JavaFX GUIs<br></li>
+                  <li><a href="http://seleniumhq.org/"><strong>Selenium</strong></a> can be used to automate testing of Web application UIs<br></li>
+                  <li><strong>VisualStudio</strong> supports ‘record replay’ type of GUI test automation.</li>
+                </ul>
+              </tip-box>
             </div>
             <div>
               <div>
                 <panel header=":muscle: Exercises" expandable="">
                   <div>
-                    <panel header=":lock::key: True or False?">
+                    <panel header=":lock::key: API testing vs GUI testing">
                       <question>
                         <p>GUI testing is usually easier than API testing because it doesn’t require any extra coding.</p>
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                        <ul radio-group="82j9e" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="82j9e" type="radio"> True</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="82j9e" type="radio"> False</label></li>
                         </ul>
                         <div slot="answer">
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
-                          </ul>
-                          <p>Explanation: The handout section on ‘GUI testing’ describes why GUI testing is more difficult than API testing.</p>
+                          <p>False</p>
                         </div>
                       </question>
                     </panel>

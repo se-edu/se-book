@@ -17,7 +17,6 @@
 
 <include src="testingTypes/unitTesting/what/print.md" />
 <include src="testingTypes/unitTesting/stubs/print.md" />
-<include src="testingTypes/unitTesting/mocks/print.md" />
 
 ### Integration Testing
 

@@ -1,15 +1,14 @@
-<panel header=":lock::key: True or False?">
+<panel header=":lock::key: Purpose of stubs">
 <question>
 
-Stubs and drivers help us test a component in isolation from other interacting components.
+Stubs help us to test a component in isolation from its dependencies.
 
-- [ ] a. True
-- [ ] b. False
+- ( ) True
+- ( ) False
 
 <div slot="answer">
 
-- [x] a. True
-- [ ] b. False
+True
 
 </div>
 </question>

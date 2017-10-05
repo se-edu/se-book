@@ -13,14 +13,12 @@
 ## Coupling
 
 <include src="coupling/what/print.md" />
-<include src="coupling/why/print.md" />
 <include src="coupling/how/print.md" />
 <include src="coupling/types/print.md" />
 
 ## Cohesion
 
 <include src="cohesion/what/print.md" />
-<include src="cohesion/why/print.md" />
 <include src="cohesion/how/print.md" />
 
 ## Open-Closed Principle
