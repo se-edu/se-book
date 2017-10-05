@@ -14,7 +14,14 @@
 
 </tip-box>
 
-**_Stubs_ can isolate the <popover content="Software Under Test (in this case, the _unit_ being tested)">SUT</popover> from its dependencies**. A stub has the same interface as the dependency it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the dependency, but only for the inputs used for testing. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.
+**_Stubs_ can isolate the <popover content="Software Under Test (in this case, the _unit_ being tested)">SUT</popover> from its dependencies**. 
+
+<tip-box type="definition"> 
+
+<include src="../../../../common/definitions.md#def-stub" />
+
+</tip-box>
+
 
 <tip-box> 
 
@@ -71,7 +78,11 @@ class StorageStub implements Storage {
 
     @Override
     public String getName(int index) {
-        return "Adam";
+        if(index == 5) {
+            return "Adam";
+        } else {
+            throw new UnsupportedOperationException();
+        }
     }
 }
 ```
@@ -86,9 +97,9 @@ void getName() {
 }
 ```
 
-In addition to Stubs, there are other type of replacements you can use during testing. E.g. _Mocks_, _Fakes_, _Dummies_, _Spies_.
-
 </tip-box>
+
+In addition to Stubs, there are other type of replacements you can use during testing. E.g. _Mocks_, _Fakes_, _Dummies_, _Spies_.
 
 </div>
 

@@ -15,9 +15,15 @@
 
 **Based on the order in which components are integrated, incremental integration can be done in three ways.**
 
-**_Top-down_ integration: higher-level components are integrated before bringing in the lower-level components.** One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that this requires the use of <tooltip content="dummy or skeletal components">stubs</tooltip> in place of lower level components until the real lower-level components are integrated to the system. Otherwise, higher-level components cannot function as they depend on lower level ones.
+**_Top-down_ integration: higher-level components are integrated before bringing in the lower-level components.** One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that this requires the use of <trigger for="pop:topdown-stub">stubs</trigger> in place of lower level components until the real lower-level components are integrated to the system. Otherwise, higher-level components cannot function as they depend on lower level ones.
 
-**_Bottom-up_ integration: the reverse of top-down integration.** Advantages and disadvantages are simply the reverse of those of the top-down approach.
+<popover id="pop:topdown-stub" title=":mag:" placement="top">
+  <div slot="content">
+    <include src="../../../common/definitions.md#def-stub" />
+  </div>
+</popover>
+
+**_Bottom-up_ integration: the reverse of top-down integration.** Note that when integrating lower level components, <tooltip content="additional code written to provide inputs to a component via an API">drivers</tooltip> may be needed to test the integrated components %%&nbsp;because the UI may not be integrated yet%%, just like top-down integration needs stubs.
 
 **_Sandwich_ integration: a mix of the top-down and the bottom-up approaches.** The idea is to do both top-down and bottom-up so as to 'meet' in the middle.
 
