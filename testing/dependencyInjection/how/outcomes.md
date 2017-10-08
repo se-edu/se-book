@@ -1,1 +1,1 @@
-:trophy: Can explain how dependency injection works :three:
+:trophy: Can use dependency injection :three:
