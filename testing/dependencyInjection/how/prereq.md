@@ -1,0 +1,1 @@
+<dynamic-panel src="../what/full.md" header="%%:mortar_board: Quality Assurance &rarr; Testing &rarr; Dependency Injection &rarr; What%%" />
