@@ -45,7 +45,7 @@ class Bar{
 :package: Some examples of coupling: `A` is coupled to `B` if,
 
 * `A` has access to the internal structure of `B` (this results in a very high level of coupling)
-* `A` and B depend on the same global variable
+* `A` and `B` depend on the same global variable
 * `A` calls `B`
 * `A` receives an object of `B` as a parameter or a return value
 * `A` inherits from `B`
