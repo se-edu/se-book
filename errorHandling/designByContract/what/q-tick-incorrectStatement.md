@@ -1,7 +1,7 @@
-<panel header=":lock::key: What is the incorrect statement about the Design-by-contract approach to coding?">
+<panel header=":lock::key: Statements about the Design-by-contract approach?">
 <question>
 
-What is the incorrect statement about the Design-by-contract approach to coding?
+Which statements are correct?
 
 - [ ] a. It is not natively supported by Java and C++.
 - [ ] b. It is an alternative to OOP.
@@ -10,11 +10,9 @@ What is the incorrect statement about the Design-by-contract approach to coding?
 
 <div slot="answer">
 
-- [ ] a. It is not natively supported by Java and C++.
-- [x] b. It is an alternative to OOP.
-- [ ] c. It assumes the caller of a method is responsible for ensuring all preconditions are met.
+(a)~~(b)~~(c)(d)
 
-Explanation: DbC is not an alternative to OOP. We can use DbC in an OOP solution. DbC is an alternative to defensive programming.
+Explanation: DbC is not an alternative to OOP. We can use DbC in an OOP solution. 
 
 </div>
 </question>
