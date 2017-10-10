@@ -1,18 +1,26 @@
-<panel header=":lock::key: Defensive Implementation">
+<panel header=":lock::key: Is this defensive?">
 <question>
 
-This is a defensive implementation of the association.
-
-<img src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="150" />
+<img src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45" />
 <p/>
 
-- [ ] a. True
-- [ ] b. False
+```java
+class City{
+    Country country;
+    
+    void setCountry(Country country){
+        this.country = country;
+    }
+}
+```
+This is a defensive implementation of the association.
+
+- ( ) True
+- ( ) False
 
 <div slot="answer">
 
-- [ ] a. True
-- [x] b. False
+False
 
 Explanation: While the design requires a City to be connected to exactly one Country, the code allows it to be connected to zero Country objects (by passing null to the setCountry() method).
 
