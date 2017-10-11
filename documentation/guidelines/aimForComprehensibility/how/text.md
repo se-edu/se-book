@@ -1,6 +1,6 @@
 <div id="title">
 
-#### Aim for Com :two:
+#### How :two:
 
 </div>
 
