@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Quality Assurance &rarr; Introduction &rarr;</div>
-
 <div id="title">
 
 #### What :one:
@@ -12,7 +10,7 @@
 
 <div id="body">
 
-Software Quality assurance (QA for short) is the process of ensuring that the software being built has the required levels of quality.
+**Software _Quality Assurance_ (QA) is the process of ensuring that the software being built has the required levels of quality.**
 
 While testing is the most common activity used in QA, there are other complementary techniques such as _static analysis, code reviews,_ and _formal verification_.
 

@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Quality Assurance &rarr; Formal Verification &rarr;</div>
-
 <div id="title">
 
 #### What :two:
@@ -12,18 +10,24 @@
 
 <div id="body">
 
-Formal verification uses mathematical techniques to prove the correctness of a program.
+**Formal verification uses mathematical techniques to prove the correctness of a program.**
+
+<div v-closeable alt=""> 
+
+:tv: An introduction to Formal Methods by [Eric Hehner](http://www.cs.utoronto.ca/~hehner/)
+
+@[youtube](89fKiaMxHrA)
+
+</div>
 
 Advantages:
 
-* Formal verification can be used to prove the absence of errors. In contrast, testing can only prove the presence of error, not the absence.
+* **Formal verification can be used to prove the absence of errors**. In contrast, testing can only prove the presence of error, not their absence.
 
 Disadvantages:
 
 * It only proves the compliance with the specification, but not the actual utility of the software.
-* It requires highly specialized notations and knowledge which makes it an expensive technique to administer.
-
-Therefore, formal verifications are more commonly used in safety-critical software such as flight control systems.
+* It requires highly specialized notations and knowledge which makes it an expensive technique to administer. Therefore, **formal verifications are more commonly used in safety-critical software such as flight control systems**.
 
 </div>
 

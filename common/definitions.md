@@ -184,6 +184,14 @@ Also known as
 
 ## P
 
+<div id="def-pair-programming">
+
+**Pair Programming**: 
+
+>Pair programming is an agile software development technique in which two programmers work together at one workstation. One, the driver, writes code while the other, the observer or navigator, reviews each line of code as it is typed in. The two programmers switch roles frequently. <sub>[[source: Wikipedia](https://en.wikipedia.org/wiki/Pair_programming)]</sub>
+
+</div>
+
 <div id="def-prototyping">
 
 **Prototype**: A prototype is a _mock up, a scaled down version, or a partial system constructed_
