@@ -16,7 +16,7 @@
 
 LSP sounds same as <trigger large trigger="click" for="modal:lsp-substitutability">substitutability</trigger> but it goes beyond substitutability; **LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.** As we know, Java has language support for substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.
 
-<modal title="Textbook &raquo;" id="modal:lsp-substitutability">
+<modal large title="Textbook &raquo;" id="modal:lsp-substitutability">
   <include src="../../oopDesign/inheritance/substitutability/full.md"/>
 </modal> 
 
@@ -37,7 +37,7 @@ In the above scenario,
 * `Admin` class follows LSP because it fulfills `Payroll`’s expectation of `Staff` objects (i.e. it works for all positive values). Substituting `Admin` objects for Staff objects will not break the `Payroll` class functionality.
 * `Academic` class violates LSP because it will not work for percent values over `100` as expected by the `Payroll` class. Substituting `Academic` objects for `Staff` objects can potentially break the `Payroll` class functionality.
 
-<panel type="seamless" header="Another example">
+<panel type="seamless" header="%%Another example%%">
 
 :package: The `Rectangle#resize()` can take any integers for `height` and `width`. This contract is violated by the subclass `Square#resize()` because it does not accept a `height` that is different from the `width`. 
 
