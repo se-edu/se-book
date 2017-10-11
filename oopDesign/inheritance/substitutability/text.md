@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; Inheritance &rarr;</div>
-
 <div id="title">
 
 #### Substitutability :two:
@@ -12,28 +10,29 @@
 
 <div id="body">
 
-<tip-box>
+**Every instance of a subclass is an instance of the superclass, but not vice-versa.** As a result, inheritance allows _substitutability_ : the ability to substitute a child class object where a parent class object is expected.
 
-Example:
+<tip-box> 
 
-<img src="{{baseUrl}}/oopDesign/inheritance/substitutability/images/staff.png" height="50" />
+<img src="{{baseUrl}}/oopDesign/inheritance/substitutability/images/staff.png" height="80" />
 <p/>
 
-</tip-box>
+:package: an `Academic` is an instance of a `Staff`, but a `Staff` is not necessarily an instance of an `Academic`.  i.e. wherever an object of the superclass is expected, it can be substituted by an object of any of its subclasses. 
 
-Every instance of a subclass is an instance of the superclass, but not vice-versa. For example, an `Academic` is an instance of a `Staff`, but a `Staff` is not necessarily an instance of an `Academic`. As a result, inheritance allows _substitutability_. i.e. wherever an object of the superclass is expected, it can be substituted by an object of any of its subclasses. For example, the following code is valid because an `AcademicStaff` object is substitutable as a `Staff` object.
+The following code is valid because an `AcademicStaff` object is substitutable as a `Staff` object.
 
-```
+```java
 Staff staff = new AcademicStaff (); // OK
 ```
 
-But the following code is not because `staff` is declared as a `Staff` type (see above) and therefore its value may or may not be of  type `AcademicStaff`, which is the type expected by variable `academicStaff`.
+But the following code is not valid %%&nbsp;because `staff` is declared as a `Staff` type and therefore its value may or may not be of  type `AcademicStaff`, which is the type expected by variable `academicStaff`.%%
 
 ```
+Staff staff;
+...
 AcademicStaff academicStaff = staff; // Not OK
 ```
-
-{link up with Liskov Substitution Principle}
+</tip-box>
 
 </div>
 

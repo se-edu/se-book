@@ -1,0 +1,1 @@
+<dynamic-panel src="../../../oopDesign/inheritance/what/full.md" header="%%:mortar_board: Design &rarr; Object Oriented Programming &rarr; Inheritance &rarr; What%%" />

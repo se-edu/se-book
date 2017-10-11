@@ -95,6 +95,12 @@ An _abstract class_ is a class that is declared `abstract`—it may or may not i
 
 </div>
 
+<div id="def-dynamic-binding">
+
+**Dynamic Binding** (<tooltip content="There are subtle differences between late binding and dynamic binding, but they are beyond the scope of this document">aka late binding</tooltip>) : a mechanism where method calls in code are <tooltip content="deciding which method implementation to execure">resolved</tooltip> at <tooltip content="at the moment the method call is executed">runtime</tooltip>, rather than at compile time.
+
+</div>
+
 ## E
 
 <div id="def-enterprise-application">
@@ -164,7 +170,7 @@ Also known as
 
 <div id="def-liskov-substitution-principle">
 
-**Liskov Substitution Principle (LSP)**: Derived classes must be substitutable for their base classes. -- Barbara Liskov
+**Liskov Substitution Principle (LSP)**: Derived classes must be substitutable for their base classes. <sub>-- proposed by [Barbara Liskov](https://en.wikipedia.org/wiki/Barbara_Liskov)</sub>
 
 </div>
 
@@ -246,6 +252,12 @@ Also known as
 <div id="def-static-analysis">
 
 **Static analysis**: Static analysis is the analysis of code without actually executing the code.  
+
+</div>
+
+<div id="def-static-binding">
+
+**Static binding** (aka early binding): When a method call is resolved at compile time.  
 
 </div>
 

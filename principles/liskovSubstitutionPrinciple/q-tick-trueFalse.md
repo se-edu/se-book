@@ -1,17 +1,16 @@
-<panel header=":lock::key: True or False?">
+<panel header=":lock::key: Is this LSP?">
 <question>
 
-If a subclass imposes more restrictive conditions than its parent class, it violates Liskov substitution principle.
+If a subclass imposes more restrictive conditions than its parent class, it violates Liskov Substitution Principle.
 
-- [ ] a. True
-- [ ] b. False
+- ( ) True
+- ( ) False
 
 <div slot="answer">
 
-- [x] a. True
-- [ ] b. False
+True.
 
-Explanation: If the subclass is more restrictive than the parent class, a piece of code that worked with the parent class may not work with the child class. Hence, the substitutability does not exist and Liskov substitution principle is violated. 
+Explanation: If the subclass is more restrictive than the parent class, code that worked with the parent class may not work with the child class. Hence, the substitutability does not exist and LSP has been violated. 
 
 </div>
 </question>
