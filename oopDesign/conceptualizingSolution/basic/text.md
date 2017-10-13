@@ -68,6 +68,20 @@ Given below are the interactions between the player and the Text UI for the whol
 <img src="{{baseUrl}}/oopDesign/conceptualizingSolution/basic/images/playerTextLoop.png" height="300" />
 <p/>
 
+</tip-box><p>
+
+<tip-box type="tip"> 
+
+Note that <tooltip content="using sequence diagramsn">a similar technique</tooltip> can be used when discovering/defining the architecture-level APIs.
+
+<div v-closeable alt="Tic-Tac-Toe Video"> 
+
+:tv: Defining the architecture-level APIs for a small Tic-Tac-Toe game:
+
+@[youtube](Un80XoRT1ME)
+
+</div>
+
 </tip-box>
 
 </div>
