@@ -21,6 +21,7 @@
 <tip-box> 
 
 <panel header=":package: Simple text UI prototype for a primitive CLI (Command Line Interface) Minesweeper:" type="seamless" expanded>
+
 <img src="{{baseUrl}}/gatheringRequirements/prototyping/images/textPrototypeCLI.png" height="350" />
 
 </panel>
