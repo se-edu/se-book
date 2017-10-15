@@ -1,1 +1,1 @@
-<dynamic-panel bottom-switch src="../notes/full.md" header="%%:mortar_board: UML &rarr; Notes%%" />
+<dynamic-panel src="../notes/full.md" header="%%:mortar_board: UML &rarr; Notes%%" />

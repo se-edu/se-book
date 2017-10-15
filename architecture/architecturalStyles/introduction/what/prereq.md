@@ -1,1 +1,1 @@
-<dynamic-panel bottom-switch src="../../../introduction/what/full.md" header="%%:mortar_board: Design &rarr; Architecture &rarr; Introduction &rarr; What%%" />
+<dynamic-panel src="../../../introduction/what/full.md" header="%%:mortar_board: Design &rarr; Architecture &rarr; Introduction &rarr; What%%" />

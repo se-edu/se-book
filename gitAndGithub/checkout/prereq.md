@@ -1,1 +1,1 @@
-<dynamic-panel bottom-switch src="../../revisionControl/usingHistory/full.md" header=":mortar_board: %%Project Management &rarr; Revision Control &rarr; Using History%%" />
+<dynamic-panel src="../../revisionControl/usingHistory/full.md" header=":mortar_board: %%Project Management &rarr; Revision Control &rarr; Using History%%" />

@@ -1,1 +1,1 @@
-<dynamic-panel bottom-switch src="../what/full.md" header="%%:mortar_board: Quality Assurance &rarr; Testing &rarr; Integration Testing &rarr; What &rarr;%%" />
+<dynamic-panel src="../what/full.md" header="%%:mortar_board: Quality Assurance &rarr; Testing &rarr; Integration Testing &rarr; What &rarr;%%" />

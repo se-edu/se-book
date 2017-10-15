@@ -10,9 +10,9 @@
 
 <div id="body">
 
-<dynamic-panel bottom-switch src="../../../oopDesign/associations/basic/full.md" header=":mortar_board: Design &rarr; OOP &rarr; Associations &rarr; Basic" is-open></dynamic-panel>
-<dynamic-panel bottom-switch src="../../../oopDesign/associations/navigability/full.md" header=":mortar_board: Design :&rarr; OOP &rarr; Associations &rarr; Navigability" is-open></dynamic-panel>
-<dynamic-panel bottom-switch src="../../../oopDesign/associations/multiplicity/full.md" header=":mortar_board: Design &rarr; OOP &rarr; Associations &rarr; Multiplicity" is-open></dynamic-panel>
+<dynamic-panel src="../../../oopDesign/associations/basic/full.md" header=":mortar_board: Design &rarr; OOP &rarr; Associations &rarr; Basic" is-open></dynamic-panel>
+<dynamic-panel src="../../../oopDesign/associations/navigability/full.md" header=":mortar_board: Design :&rarr; OOP &rarr; Associations &rarr; Navigability" is-open></dynamic-panel>
+<dynamic-panel src="../../../oopDesign/associations/multiplicity/full.md" header=":mortar_board: Design &rarr; OOP &rarr; Associations &rarr; Multiplicity" is-open></dynamic-panel>
 
 </div>
 

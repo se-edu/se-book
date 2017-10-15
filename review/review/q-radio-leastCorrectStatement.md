@@ -1,7 +1,7 @@
 <panel header=":lock::key: Choose the least  correct statement.">
 
 <panel header="%%Prerequisites%%" expandable expanded>
-  <dynamic-panel bottom-switch src="../../designPatterns/introduction/what/full.md" header="Design Patterns: Introduction: What" />
+  <dynamic-panel src="../../designPatterns/introduction/what/full.md" header="Design Patterns: Introduction: What" />
 </panel>
 
 <p/>

@@ -1,2 +1,2 @@
-<dynamic-panel bottom-switch src="../introduction/full.md" header="%%:mortar_board: Requirements &rarr; Specifying Requirements &rarr; Use Cases &rarr; Introduction%%" />
-<dynamic-panel bottom-switch src="../identifying/full.md" header="%%:mortar_board: Requirements &rarr; Specifying Requirements &rarr; Use Cases &rarr; Identifying%%" />
+<dynamic-panel src="../introduction/full.md" header="%%:mortar_board: Requirements &rarr; Specifying Requirements &rarr; Use Cases &rarr; Introduction%%" />
+<dynamic-panel src="../identifying/full.md" header="%%:mortar_board: Requirements &rarr; Specifying Requirements &rarr; Use Cases &rarr; Identifying%%" />

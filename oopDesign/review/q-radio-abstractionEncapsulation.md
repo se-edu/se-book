@@ -1,8 +1,8 @@
 <panel header=":lock::key: In the context of OOP, what is the relationship between abstraction and encapsulation?">
 
 <panel header="%%Prerequisites%%" expandable expanded>
-  <dynamic-panel bottom-switch src="../objects/encapsulation/full.md" header="OOP: Objects: Encapsulation" />
-  <dynamic-panel bottom-switch src="../objects/abstraction/full.md" header="OOP: Objects: Abstraction" />
+  <dynamic-panel src="../objects/encapsulation/full.md" header="OOP: Objects: Encapsulation" />
+  <dynamic-panel src="../objects/abstraction/full.md" header="OOP: Objects: Abstraction" />
 </panel>
 
 <p/>

@@ -86,19 +86,19 @@ Meaning of some shortened headings:
 
 * **What** : the **meaning** of the concept in concern 
 
-  <include name="%%Example%%" src="../refactoring/what/full.md" bottom-switch dynamic />
+  <include name="%%Example%%" src="../refactoring/what/full.md" dynamic />
 
 * **Why** : the **motivation** behind the concept in concern
 
-  <include name="%%Example%%" src="../documentation/guidelines/goTopDown/why/full.md" bottom-switch dynamic />
+  <include name="%%Example%%" src="../documentation/guidelines/goTopDown/why/full.md" dynamic />
   
 * **How** : the **usage** of the concept in concern 
 
-  <include name="%%Example%%" src="../refactoring/how/full.md" bottom-switch dynamic />
+  <include name="%%Example%%" src="../refactoring/how/full.md" dynamic />
   
 * **When** : the **pros and cons** of the concept in concern, **when to use** the concept 
 
-  <include name="%%Example%%" src="../refactoring/when/full.md" bottom-switch dynamic />
+  <include name="%%Example%%" src="../refactoring/when/full.md" dynamic />
   
 
 Boxed-text styles:

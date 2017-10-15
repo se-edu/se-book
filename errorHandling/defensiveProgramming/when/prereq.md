@@ -1,1 +1,1 @@
-<dynamic-panel bottom-switch src="../what/full.md" header="%%:mortar_board: Implementation &rarr; Error Handling &rarr; Defensive Programming &rarr; What%%" />
+<dynamic-panel src="../what/full.md" header="%%:mortar_board: Implementation &rarr; Error Handling &rarr; Defensive Programming &rarr; What%%" />

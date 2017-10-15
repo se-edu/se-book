@@ -1,1 +1,1 @@
-<dynamic-panel bottom-switch src="../../oopDesign/associations/aggregation/full.md" header="%%:mortar_board: Design &rarr; OOP &rarr; Associations &rarr; Aggregation%%" />
+<dynamic-panel src="../../oopDesign/associations/aggregation/full.md" header="%%:mortar_board: Design &rarr; OOP &rarr; Associations &rarr; Aggregation%%" />

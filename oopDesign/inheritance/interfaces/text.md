@@ -14,7 +14,7 @@
 
 >There are a number of situations in software engineering when it is important for disparate groups of programmers to agree to a "contract" that spells out how their software interacts. Each group should be able to write their code without any knowledge of how the other group's code is written. Generally speaking, interfaces are such contracts. <sub>--[Oracle Docs on Java](https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html)<sub>
 
-<dynamic-panel bottom-switch src="../../../uml/classDiagrams/interfaces/what/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Interface" />
+<dynamic-panel src="../../../uml/classDiagrams/interfaces/what/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Interface" />
 <p/>
 
 <tip-box>
