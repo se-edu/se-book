@@ -12,7 +12,7 @@
 
 **Connections between objects are called _associations_.** Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such connections are called _associations_.
 
-<dynamic-panel src="../../../uml/objectDiagrams/objectStructures/full.md" header=":mortar_board: UML &rarr; Object Diagrams &rarr; Object Structures"></dynamic-panel>
+<dynamic-panel bottom-switch src="../../../uml/objectDiagrams/objectStructures/full.md" header=":mortar_board: UML &rarr; Object Diagrams &rarr; Object Structures"></dynamic-panel>
 
 <p/>
 
@@ -37,7 +37,7 @@
 
 **Associations can be reflected among classes too.**
 
-<dynamic-panel src="../../../uml/classDiagrams/associations/basic/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Basic"/>
+<dynamic-panel bottom-switch src="../../../uml/classDiagrams/associations/basic/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Basic"/>
 
 <tip-box> 
 
@@ -50,8 +50,8 @@
 
 **An association in a class diagram can use _association labels_ and _association roles_ to show additional info.**
 
-<dynamic-panel src="../../../uml/classDiagrams/associations/labels/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Labels"/>
-<dynamic-panel src="../../../uml/classDiagrams/associations/roles/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Roles"/>
+<dynamic-panel bottom-switch src="../../../uml/classDiagrams/associations/labels/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Labels"/>
+<dynamic-panel bottom-switch src="../../../uml/classDiagrams/associations/roles/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Roles"/>
 
 <p/>
 

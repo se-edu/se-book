@@ -24,7 +24,7 @@ At implementation level, an association class is most likely implemented as foll
 <img src="{{baseUrl}}/oopImplementation/associationClasses/images/manWomanImplementation.png" height="140" />
 <p/>
 
-<dynamic-panel type="seamless" src="code-marriage.md" header="%%See code%%" />
+<dynamic-panel bottom-switch type="seamless" src="code-marriage.md" header="%%See code%%" />
 
 </tip-box>
 

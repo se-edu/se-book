@@ -20,7 +20,7 @@
 
 </tip-box>
 
-<dynamic-panel src="../../../uml/classDiagrams/associations/multiplicity/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Multiplicity" />
+<dynamic-panel bottom-switch src="../../../uml/classDiagrams/associations/multiplicity/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Multiplicity" />
 
 <p/>
 

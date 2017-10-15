@@ -1,11 +1,11 @@
 <panel header=":lock::key: Pick the odd one out.">
 
 <panel header="%%Prerequisites%%" expandable expanded>
-  <dynamic-panel src="../../revisionControl/what/full.md" header="Revision Control: What" />
-  <dynamic-panel src="../../projectPlanning/ganttCharts/full.md" header="Project Planning: Gantt Charts" />
-  <dynamic-panel src="../../projectPlanning/issueTrackers/full.md" header="Project Planning: Issue Trackers" />
-  <dynamic-panel src="../../projectPlanning/pertCharts/full.md" header="Project Planning: PERT Charts" />
-  <dynamic-panel src="../../projectPlanning/workBreakdownStructure/full.md" header="Project Planning: Work Breakdown Structure" />
+  <dynamic-panel bottom-switch src="../../revisionControl/what/full.md" header="Revision Control: What" />
+  <dynamic-panel bottom-switch src="../../projectPlanning/ganttCharts/full.md" header="Project Planning: Gantt Charts" />
+  <dynamic-panel bottom-switch src="../../projectPlanning/issueTrackers/full.md" header="Project Planning: Issue Trackers" />
+  <dynamic-panel bottom-switch src="../../projectPlanning/pertCharts/full.md" header="Project Planning: PERT Charts" />
+  <dynamic-panel bottom-switch src="../../projectPlanning/workBreakdownStructure/full.md" header="Project Planning: Work Breakdown Structure" />
 </panel>
 
 <p/>

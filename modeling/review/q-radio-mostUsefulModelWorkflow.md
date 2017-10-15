@@ -1,11 +1,11 @@
 <panel header=":lock::key: Which one of these is the most useful to model a workflow?">
 
 <panel header="%%Prerequisites%%" expandable expanded>
-  <dynamic-panel src="../modelingStructures/classDiagramsBasic/full.md" header="Modeling: Modeling Structures: Class Diagrams" />
-  <dynamic-panel src="../modelingStructures/objectDiagrams/full.md" header="Modeling: Modeling Structures: Object Diagrams" />
-  <dynamic-panel src="../modelingBehaviors/activityDiagrams/full.md" header="Modeling: Modeling Behaviors: Activity Diagrams" />
-	<dynamic-panel src="../modelingBehaviors/stateMachineDiagrams/full.md" header="Modeling: Modeling Behaviors: State Machine Diagrams" />
-  <dynamic-panel src="../modelingBehaviors/useCaseDiagrams/full.md" header="Modeling: Modeling Behaviors: Use Case Diagrams" />
+  <dynamic-panel bottom-switch src="../modelingStructures/classDiagramsBasic/full.md" header="Modeling: Modeling Structures: Class Diagrams" />
+  <dynamic-panel bottom-switch src="../modelingStructures/objectDiagrams/full.md" header="Modeling: Modeling Structures: Object Diagrams" />
+  <dynamic-panel bottom-switch src="../modelingBehaviors/activityDiagrams/full.md" header="Modeling: Modeling Behaviors: Activity Diagrams" />
+	<dynamic-panel bottom-switch src="../modelingBehaviors/stateMachineDiagrams/full.md" header="Modeling: Modeling Behaviors: State Machine Diagrams" />
+  <dynamic-panel bottom-switch src="../modelingBehaviors/useCaseDiagrams/full.md" header="Modeling: Modeling Behaviors: Use Case Diagrams" />
 </panel>
 
 <p/>

@@ -1,2 +1,2 @@
-<dynamic-panel src="../../../modeling/modelingBehaviors/sequenceDiagramsBasic/full.md" header="%%:mortar_board: Design &rarr; Modeling &rarr; Modeling Behaviors &rarr; Sequence Diagrams &rarr; Basic%%" />
-<dynamic-panel src="../../../modeling/modelingStructures/classDiagramsBasic/full.md" header="%%:mortar_board: Design &rarr; Modeling &rarr; Modeling Structures &rarr; Class Diagrams &rarr; Basic%%" />
+<dynamic-panel bottom-switch src="../../../modeling/modelingBehaviors/sequenceDiagramsBasic/full.md" header="%%:mortar_board: Design &rarr; Modeling &rarr; Modeling Behaviors &rarr; Sequence Diagrams &rarr; Basic%%" />
+<dynamic-panel bottom-switch src="../../../modeling/modelingStructures/classDiagramsBasic/full.md" header="%%:mortar_board: Design &rarr; Modeling &rarr; Modeling Structures &rarr; Class Diagrams &rarr; Basic%%" />

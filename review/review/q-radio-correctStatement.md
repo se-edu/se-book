@@ -1,9 +1,9 @@
 <panel header=":lock::key: Choose the correct statement.">
 
 <panel header="%%Prerequisites%%" expandable expanded>
-  <dynamic-panel src="../../requirements/introduction/full.md" header="Requirements: Introduction" />
-  <dynamic-panel src="../../requirements/nonFunctionalRequirements/full.md" header="Requirements: Non-Functional Requirements" />
-  <dynamic-panel src="../../gatheringRequirements/prototyping/full.md" header="Gathering Requirements: Prototyping" />
+  <dynamic-panel bottom-switch src="../../requirements/introduction/full.md" header="Requirements: Introduction" />
+  <dynamic-panel bottom-switch src="../../requirements/nonFunctionalRequirements/full.md" header="Requirements: Non-Functional Requirements" />
+  <dynamic-panel bottom-switch src="../../gatheringRequirements/prototyping/full.md" header="Gathering Requirements: Prototyping" />
 </panel>
 
 <p/>

@@ -1,2 +1,2 @@
-<dynamic-panel src="../what/full.md" header="%%:mortar_board: Error Handling &rarr; Assertions &rarr; What%%" />
-<dynamic-panel src="../../exceptions/what/full.md" header="%%:mortar_board: Error Handling &rarr; Exceptions &rarr; What%%" />
+<dynamic-panel bottom-switch src="../what/full.md" header="%%:mortar_board: Error Handling &rarr; Assertions &rarr; What%%" />
+<dynamic-panel bottom-switch src="../../exceptions/what/full.md" header="%%:mortar_board: Error Handling &rarr; Exceptions &rarr; What%%" />

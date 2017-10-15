@@ -1,1 +1,1 @@
-<dynamic-panel src="../bigBangVsIncremental/full.md" header="%%:mortar_board: Implementation &rarr; Integration &rarr; Approaches &rarr; Big-Bang Vs Incremental%%" />
+<dynamic-panel bottom-switch src="../bigBangVsIncremental/full.md" header="%%:mortar_board: Implementation &rarr; Integration &rarr; Approaches &rarr; Big-Bang Vs Incremental%%" />

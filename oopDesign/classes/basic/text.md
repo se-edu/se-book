@@ -24,8 +24,8 @@ When writing an OOP program to calculate the average age of Adam, Beth, Charlie,
 
 </tip-box>
 
-<dynamic-panel src="../../../uml/classDiagrams/classes/what/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Classes" />
-<dynamic-panel src="../../../uml/objectDiagrams/objects/full.md" header=":mortar_board: UML &rarr; Object Diagrams &rarr; Objects" />
+<dynamic-panel bottom-switch src="../../../uml/classDiagrams/classes/what/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Classes" />
+<dynamic-panel bottom-switch src="../../../uml/objectDiagrams/objects/full.md" header=":mortar_board: UML &rarr; Object Diagrams &rarr; Objects" />
 
 <p/>
 

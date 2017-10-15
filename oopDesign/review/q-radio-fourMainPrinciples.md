@@ -1,11 +1,11 @@
 <panel header=":lock::key: Which of these do not belong to four main OO principles?">
 
 <panel header="%%Prerequisites%%" expandable expanded>
-  <dynamic-panel src="../objects/abstraction/full.md" header="OOP: Objects: Abstraction" />
-  <dynamic-panel src="../objects/encapsulation/full.md" header="OOP: Objects: Encapsulation" />
-  <dynamic-panel src="../inheritance/what/full.md" header="OOP: Inheritance: Basic" />
-  <dynamic-panel src="../inheritance/substitutability/full.md" header="OOP: Inheritance: Substitutability" />
-  <dynamic-panel src="../polymorphism/introduction/full.md" header="OOP: Polymorphism: Introduction" />
+  <dynamic-panel bottom-switch src="../objects/abstraction/full.md" header="OOP: Objects: Abstraction" />
+  <dynamic-panel bottom-switch src="../objects/encapsulation/full.md" header="OOP: Objects: Encapsulation" />
+  <dynamic-panel bottom-switch src="../inheritance/what/full.md" header="OOP: Inheritance: Basic" />
+  <dynamic-panel bottom-switch src="../inheritance/substitutability/full.md" header="OOP: Inheritance: Substitutability" />
+  <dynamic-panel bottom-switch src="../polymorphism/introduction/full.md" header="OOP: Polymorphism: Introduction" />
 </panel>
 
 <p/>

@@ -1,1 +1,1 @@
-<dynamic-panel src="../what/full.md" header="%%:mortar_board: Design &rarr; Design Principles &rarr; Coupling &rarr; What%%" />
+<dynamic-panel bottom-switch src="../what/full.md" header="%%:mortar_board: Design &rarr; Design Principles &rarr; Coupling &rarr; What%%" />
