@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Patterns &rarr; Singleton Pattern &rarr;</div>
-
 <div id="title">
 
 #### Application :two:
@@ -12,7 +10,7 @@
 
 <div id="body">
 
-{to add}
+To be removed
 
 </div>
 

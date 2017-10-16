@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Patterns &rarr; Singleton Pattern &rarr;</div>
-
 <div id="title">
 
 #### Implementation :two:
@@ -11,6 +9,8 @@
 </div>
 
 <div id="body">
+
+Here is the typical implementation of how the Singleton pattern is applied to a class:
 
 ```java
 class Logic {
@@ -27,19 +27,25 @@ class Logic {
         return theOne;
     }
 }
-
-// somewhere else in the system ...
-Logic m = Logic.getInstance();
-
-//instead of ...
-Logic m = new Logic();
 ```
 
 Notes:
 
-*	The constructor is private, which prevents instantiation from outside the class.
-*	The single instance of the singleton class is maintained by a private class-level variable.
-*	Access to this object is provided by a public class-level operation `getInstance()` which instantiates a single copy of the singleton class when it is executed for the first time. Subsequent calls to this operation return the single instance of the class.
+* The constructor is `private`, which prevents instantiation from outside the class.
+* The single instance of the singleton class is maintained by a `private` class-level variable.
+* Access to this object is provided by a `public` class-level operation `getInstance()` which instantiates a single copy of the singleton class when it is executed for the first time. Subsequent calls to this operation return the single instance of the class.
+
+If `Logic` was not a Singleton class, an object is created like this:
+```java
+Logic m = new Logic();
+```
+
+But now, the `Logic` object needs to be accessed like this:
+```java
+Logic m = Logic.getInstance();
+```
+
+
 
 </div>
 

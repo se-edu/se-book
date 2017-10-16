@@ -83,7 +83,7 @@ An _abstract class_ is a class that is declared `abstract`—it may or may not i
 
 </div>
 
-<div id="def-se-design-pattern">
+<div id="def-design-pattern">
 
 **Design Pattern** : An _elegant reusable solution_ to a _commonly recurring problem_ within a _given context_ in software design.
 
