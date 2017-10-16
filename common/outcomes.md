@@ -257,8 +257,6 @@
 
 <dynamic-panel src="../designPatterns/singleton/implementation/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPatterns/singleton/implementation/outcomes.md" inline />
 
-<dynamic-panel src="../designPatterns/singleton/application/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPatterns/singleton/application/outcomes.md" inline />
-
 <dynamic-panel src="../designPatterns/singleton/evaluation/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPatterns/singleton/evaluation/outcomes.md" inline />
 
 

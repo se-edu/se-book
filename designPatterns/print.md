@@ -15,7 +15,6 @@
 
 <include src="singleton/what/print.md" />
 <include src="singleton/implementation/print.md" />
-<include src="singleton/application/print.md" />
 <include src="singleton/evaluation/print.md" />
 
 ## Abstraction Occurrence Pattern
