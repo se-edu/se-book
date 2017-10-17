@@ -12,7 +12,7 @@
 
 Continuing with the example in [<trigger trigger="click" for="modal:conceptualingIntermediate-basic">Design &rarr; Object Oriented Programming &rarr; Conceptualizing OO Solutions &rarr; Basic</trigger>], next let us model how the TextUi interacts with the Logic to support the mark or clear operations until the game is won or lost.
 
-<modal title="" id="modal:conceptualingIntermediate-basic">
+<modal large title="" id="modal:conceptualingIntermediate-basic">
   <include src="../basic/full.md"/>
 </modal>
 
