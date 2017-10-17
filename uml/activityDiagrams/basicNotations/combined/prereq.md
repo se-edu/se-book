@@ -1,0 +1,3 @@
+<dynamic-panel src="../linearPaths/full.md" header="%%:mortar_board: Tools &rarr; UML &rarr; Activity Diagrams &rarr; Linear Paths%%" />
+<dynamic-panel src="../alternatePaths/full.md" header="%%:mortar_board: Tools &rarr; UML &rarr; Activity Diagrams &rarr; Alternate Paths%%" />
+<dynamic-panel src="../parallelPaths/full.md" header="%%:mortar_board: Tools &rarr; UML &rarr; Activity Diagrams &rarr; Parallel Paths%%" />
