@@ -23,6 +23,7 @@ Boundary values are sometimes called corner cases.
 </div>
 
 <div id="extras">
-<div>
+  <include src="exercises.md" />
+</div>
 
 </div>
