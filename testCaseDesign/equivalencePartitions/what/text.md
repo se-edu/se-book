@@ -30,8 +30,8 @@ In general, **most SUTs do not treat each input in a unique way. Instead, they p
 </tip-box>
 
 **By dividing possible inputs into equivalence partitions we can,**
-* **avoid testing too many inputs from one partition.** Testing too many inputs from the same partition is unlikely to find new bugs.
-* **ensure all partitions are tested.** Missing partitions can result in bugs going unnoticed.
+* **avoid testing too many inputs from one partition.** Testing too many inputs from the same partition is unlikely to find new bugs. This increases the efficiency of testing by reducing redundant test cases.
+* **ensure all partitions are tested.** Missing partitions can result in bugs going unnoticed. This increases the effectiveness of testing by increasing the chance of finding bugs.
 
 </div>
 

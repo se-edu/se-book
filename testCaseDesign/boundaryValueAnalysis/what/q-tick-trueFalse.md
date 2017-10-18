@@ -1,15 +1,14 @@
-<panel header=":lock::key: True or False?">
+<panel header=":lock::key: What BVA recommends">
 <question>
 
-Boundary value analysis recommends testing only values that reside on the equivalence class boundary.
+Boundary value analysis recommends testing _only_ values that reside on the equivalence class boundary.
 
-- [ ] a. True
-- [ ] b. False
+- ( ) True
+- ( ) False
 
 <div slot="answer">
 
-- [ ] a. True
-- [x] b. False
+False
 
 Explanation: It does not recommend testing *only* those values *on* the boundary. It merely suggests that values on and around a boundary are more likely to cause errors.
 
