@@ -31,7 +31,11 @@
 
 * [bach-et-explained]
 
-  <div id="bach-et-explained">Exploratory testing explained, an online article by [James Bach](http://www.satisfice.com/aboutjames.shtml) (James Bach is an industry thought leader in software testing). Softcopy available at http://www.satisfice.com/articles/et-article.pdf</div>
+  <div id="bach-et-explained">
+  
+  [**Exploratory Testing Explained**](http://www.satisfice.com/articles/et-article.pdf), an online article by [James Bach](http://www.satisfice.com/aboutjames.shtml)  -- James Bach is an industry thought leader in software testing).
+  
+  </div>
 
 * [bryan-mercurial-guide]
 

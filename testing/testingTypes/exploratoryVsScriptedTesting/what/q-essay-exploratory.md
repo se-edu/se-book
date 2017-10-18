@@ -1,4 +1,4 @@
-<panel header="Q: Explain the concept of exploratory testing using Minesweeper as an example.">
+<panel header=":lock::key: Explain the concept of exploratory testing using Minesweeper as an example.">
 <question has-input="true">
 
 Explain the concept of exploratory testing using Minesweeper as an example.
