@@ -81,6 +81,6 @@ In addition, the Singleton pattern can be applied to the façade class.
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

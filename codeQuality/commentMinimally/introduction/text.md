@@ -19,6 +19,6 @@ Some think commenting heavily increases the 'code quality'. This is not so. Avoi
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

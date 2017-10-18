@@ -60,6 +60,6 @@ class Bar{
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

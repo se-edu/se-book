@@ -26,6 +26,6 @@ To reduce clutter, **activation bars and return arrows may be omitted** if they 
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

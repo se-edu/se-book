@@ -35,6 +35,6 @@ Note that unlike in Object Diagrams, the **class/object name is not underlined i
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

@@ -46,6 +46,6 @@ class SavingAccount extends Account{
 
 <div id="extras">
   <include src="resources.md" />
-<div>
+</div>
 
 </div>

@@ -36,6 +36,6 @@ Design (b) is more flexible (and less coupled) because now the `Payroll` class n
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

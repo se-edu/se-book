@@ -37,6 +37,6 @@ After repeated attempts at solving such problems, better solutions are discovere
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

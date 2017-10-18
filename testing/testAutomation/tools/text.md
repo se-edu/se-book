@@ -47,6 +47,6 @@ Most modern IDEs has integrated support for testing tools. The figure below show
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

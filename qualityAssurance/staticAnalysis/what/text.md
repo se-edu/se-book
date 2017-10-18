@@ -34,6 +34,6 @@ _Linters_ are a subset of static analyzers that specifically aim to locate areas
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

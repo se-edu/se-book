@@ -37,6 +37,6 @@ _Preconditions_, _Postconditions_, and _Class Invariants_.** Refer to [[Programm
 
 <div id="extras">
   <include src="exercises.md" />
-<div>
+</div>
 
 </div>

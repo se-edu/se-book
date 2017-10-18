@@ -26,6 +26,6 @@ The major problem with this model is that requirements of a real-world project a
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

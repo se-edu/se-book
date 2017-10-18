@@ -26,6 +26,6 @@ In a Gantt chart, a solid bar represents the main task, which is generally compo
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

@@ -28,6 +28,6 @@ IDEs can help to enforce some parts of a coding standard e.g. indentation rules.
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

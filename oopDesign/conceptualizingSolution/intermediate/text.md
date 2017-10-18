@@ -144,6 +144,6 @@ When designing components, it is not necessary to draw elaborate UML diagrams ca
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

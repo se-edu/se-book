@@ -25,6 +25,6 @@ Given there are some significant cons, it is recommended that you apply the Sing
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

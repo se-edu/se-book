@@ -39,6 +39,6 @@ Here is an animation that compares the two approaches:
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

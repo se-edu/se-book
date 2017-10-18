@@ -27,6 +27,6 @@ Overriding is when a sub-class redefines an operation using the same method name
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

@@ -17,6 +17,6 @@ Software development goes through different stages such as _requirements, analys
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

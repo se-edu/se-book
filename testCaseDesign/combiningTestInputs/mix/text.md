@@ -113,6 +113,6 @@ Next, let us assume that there is a dependency between the inputs examScore and 
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

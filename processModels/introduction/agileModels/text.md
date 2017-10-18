@@ -43,6 +43,6 @@ There are a number of agile processes in the development world today. eXtreme Pr
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

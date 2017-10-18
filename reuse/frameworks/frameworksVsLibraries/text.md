@@ -26,6 +26,6 @@ Frameworks use a technique called _inversion of control_, also called the “Hol
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

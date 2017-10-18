@@ -55,6 +55,6 @@ assert x == 0 : "x should be 0";`
 
 <div id="extras">
   <include src="resources.md" />
-<div>
+</div>
 
 </div>

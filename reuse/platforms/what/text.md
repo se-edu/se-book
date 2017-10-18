@@ -28,6 +28,6 @@ Two well-known examples of platforms are JavaEE and .NET, both of which sit abov
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

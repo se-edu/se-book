@@ -49,6 +49,6 @@ The logical view (satisfying the functional requirements) vs. the process view (
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

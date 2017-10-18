@@ -19,6 +19,6 @@ Some intermediate JUnit techniques that may be useful:
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

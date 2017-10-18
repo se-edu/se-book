@@ -80,6 +80,6 @@ class TA implements Student, Staff{
 
 <div id="extras">
 <include src="resources.md" />
-<div>
+</div>
 
 </div>

@@ -112,6 +112,6 @@ Important: Refactoring, even if done with the aid of an IDE, may still result in
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

@@ -45,6 +45,6 @@ Here is the sequence diagram to model the interactions for the method call `proc
 
 <div id="extras">
   <include src="exercises.md" />
-<div>
+</div>
 
 </div>

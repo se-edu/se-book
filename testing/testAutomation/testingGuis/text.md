@@ -47,6 +47,6 @@ If a software product has a GUI component, all product-level testing (i.e. the t
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

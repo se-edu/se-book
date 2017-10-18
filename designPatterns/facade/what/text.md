@@ -46,6 +46,6 @@ Include a <tooltip content="a French word that means 'front of a building'">Faç
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

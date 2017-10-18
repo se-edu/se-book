@@ -29,6 +29,6 @@ The breadth-first approach is considered purely ‘iterative’, while depth-fir
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

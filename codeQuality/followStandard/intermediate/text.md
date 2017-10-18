@@ -20,6 +20,6 @@ Go through the [provided Java coding standard](https://oss-generic.github.io/pro
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

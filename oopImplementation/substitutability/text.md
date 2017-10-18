@@ -15,6 +15,6 @@ To be deleted
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

@@ -53,6 +53,6 @@ Revision control is also known as _Version Control Software (VCS)_, and a few ot
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

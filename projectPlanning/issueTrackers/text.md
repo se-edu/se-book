@@ -29,6 +29,6 @@ Issue trackers can also be used as _task trackers_, i.e. to define tasks to be d
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

@@ -19,6 +19,6 @@ Object diagrams model object structures that exist at a given moment of time.
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

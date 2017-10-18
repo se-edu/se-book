@@ -15,6 +15,6 @@ In general, use exceptions only for 'unusual' conditions. Use normal `return` st
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

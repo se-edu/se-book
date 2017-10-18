@@ -52,6 +52,6 @@ Prototyping can be used for _discovering_ as well as _specifying_ requirements %
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

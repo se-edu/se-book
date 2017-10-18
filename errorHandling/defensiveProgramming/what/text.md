@@ -38,6 +38,6 @@ If the returned Config object is not meant to be modified, a defensive programme
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

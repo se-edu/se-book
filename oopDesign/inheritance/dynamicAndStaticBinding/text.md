@@ -77,6 +77,6 @@ void calculateGrade (String matric) { ... }
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

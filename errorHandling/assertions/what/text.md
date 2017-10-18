@@ -33,6 +33,6 @@ int timeout = Config.getTimeout();
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

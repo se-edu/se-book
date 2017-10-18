@@ -20,6 +20,6 @@ We know that it is important to refactor frequently so as to avoid the accumulat
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

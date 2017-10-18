@@ -44,6 +44,6 @@ When writing an OOP program to calculate the average age of Adam, Beth, Charlie,
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

@@ -86,6 +86,6 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

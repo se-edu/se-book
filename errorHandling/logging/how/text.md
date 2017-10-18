@@ -46,6 +46,6 @@ logger.log(Level.INFO, "end of processing");
 
 <div id="extras">
   <include src="resources.md" />
-<div>
+</div>
 
 </div>

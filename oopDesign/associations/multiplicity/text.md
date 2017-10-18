@@ -30,6 +30,6 @@
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

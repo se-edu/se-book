@@ -36,6 +36,6 @@ In some projects, it is not practical to have a very detailed plan for the whole
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

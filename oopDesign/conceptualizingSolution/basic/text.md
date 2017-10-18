@@ -87,6 +87,6 @@ Note that <tooltip content="using sequence diagramsn">a similar technique</toolt
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

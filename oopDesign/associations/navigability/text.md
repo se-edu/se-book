@@ -22,6 +22,6 @@ When two classes are linked by an association, it does not necessarily mean both
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

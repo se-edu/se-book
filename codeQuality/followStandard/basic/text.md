@@ -17,6 +17,6 @@ Go through the [provided Java coding standard](https://oss-generic.github.io/pro
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

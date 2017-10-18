@@ -86,6 +86,6 @@ For example, `ArrayList` staff contains both `Admin` and `Academic` objects alth
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

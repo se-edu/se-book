@@ -15,6 +15,6 @@ You can refer to [Oracle’s official Java tutorial on class-level members](http
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

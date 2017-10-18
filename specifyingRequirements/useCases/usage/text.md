@@ -59,6 +59,6 @@ Use cases should be easy to read. Note that there is no strict rule about writin
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

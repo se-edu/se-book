@@ -26,6 +26,6 @@ Let's tag a commit in a local repo you have (e.g. the `sampelrepo-things` repo)
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

@@ -17,6 +17,6 @@ Cloud computing is the delivery of computing as a service over the network, rath
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

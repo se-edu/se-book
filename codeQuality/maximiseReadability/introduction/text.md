@@ -67,6 +67,6 @@ int calculateSubsidy() {
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

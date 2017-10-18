@@ -68,6 +68,6 @@ Actor: Customer
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

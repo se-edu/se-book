@@ -24,6 +24,6 @@ When using patterns, be careful not to overuse them. Do not throw patterns at a 
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

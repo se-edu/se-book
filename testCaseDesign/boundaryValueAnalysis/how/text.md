@@ -95,6 +95,6 @@ Stack with: one element, two elements, no empty spaces, only one empty space
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

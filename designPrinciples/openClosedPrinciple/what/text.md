@@ -43,6 +43,6 @@ ArrayList admins = new ArrayList< Admin >();
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

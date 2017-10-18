@@ -19,6 +19,6 @@ Dependencies are objects that are not directly linked in the object network can 
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

@@ -15,6 +15,6 @@ Note that while enumerations are usually a simple set of fixed values, Java enum
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

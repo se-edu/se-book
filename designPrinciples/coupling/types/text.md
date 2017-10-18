@@ -23,6 +23,6 @@ Some examples of different coupling types:
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

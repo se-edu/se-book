@@ -24,6 +24,6 @@ However, most are common, and well known. As an example, GoF book contains 23 de
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

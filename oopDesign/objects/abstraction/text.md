@@ -21,6 +21,6 @@ The concept of **_Objects_ in OOP is an abstraction mechanism because it allows 
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

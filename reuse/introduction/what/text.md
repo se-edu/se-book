@@ -17,6 +17,6 @@ Reusability is a major theme in software engineering practices. By reusing tried
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

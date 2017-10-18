@@ -25,6 +25,6 @@ Whether something belongs under validation or verification is not that important
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

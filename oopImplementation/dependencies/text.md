@@ -40,6 +40,6 @@ The code does not indicate an association between the two classes because the `T
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

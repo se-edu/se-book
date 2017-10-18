@@ -81,6 +81,6 @@ This code will fail if it is called as `maekSameSize(new Rectangle(12,8), new Sq
 
 <div id="extras">
   <include src="exercises.md" />
-<div>
+</div>
 
 </div>

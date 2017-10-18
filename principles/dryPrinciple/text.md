@@ -29,6 +29,6 @@ This principle guards against duplication of information.
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

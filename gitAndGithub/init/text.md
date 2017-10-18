@@ -36,6 +36,6 @@ Suppose you want to create a repository in an empty directory `things`
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

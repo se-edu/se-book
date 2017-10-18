@@ -17,6 +17,6 @@ While testing is the most common activity used in QA, there are other complement
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

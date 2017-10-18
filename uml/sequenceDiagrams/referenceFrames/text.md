@@ -33,6 +33,6 @@ Those details are shown in a separate sequence diagram given below.
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

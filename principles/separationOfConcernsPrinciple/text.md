@@ -63,6 +63,6 @@ A _concern_ in this context is a set of information that affects the code of a c
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

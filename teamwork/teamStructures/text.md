@@ -39,6 +39,6 @@ In a large, resource-intensive, complex project, this could be a good team struc
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

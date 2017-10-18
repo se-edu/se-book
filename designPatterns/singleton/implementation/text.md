@@ -50,6 +50,6 @@ Logic m = Logic.getInstance();
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

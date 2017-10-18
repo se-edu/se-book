@@ -24,6 +24,6 @@ Languages such as Eiffel have native support for DbC. For example, preconditions
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

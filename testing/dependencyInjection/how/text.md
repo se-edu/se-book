@@ -93,6 +93,6 @@ class SalaryManagerStub extends SalaryManager {
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

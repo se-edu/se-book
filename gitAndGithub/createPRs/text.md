@@ -101,6 +101,6 @@ When creating the new branch, it is very important that you switch back to the `
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

@@ -46,6 +46,6 @@ For 100% condition coverage, three test cases are required
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

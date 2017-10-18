@@ -28,6 +28,6 @@ When developing large systems, if you define the API of each components early, t
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

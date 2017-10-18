@@ -44,6 +44,6 @@ There are two different kinds of requirements:
 
 <div id="extras">
 <include src="exercises.md" />
-<div>
+</div>
 
 </div>

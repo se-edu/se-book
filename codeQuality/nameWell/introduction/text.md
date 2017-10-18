@@ -19,6 +19,6 @@ Proper naming improves the readability. It also reduces bugs caused by ambiguiti
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

@@ -29,6 +29,6 @@ Here's another video explaining how to change a method signature as part of refa
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

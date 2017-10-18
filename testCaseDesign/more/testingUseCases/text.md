@@ -25,6 +25,6 @@ To increase <trigger trigger="click" for="modal:usebaseBased-EandE">E&E of testi
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

@@ -25,6 +25,6 @@ The suitable degree of defensiveness depends on many factors such as:
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

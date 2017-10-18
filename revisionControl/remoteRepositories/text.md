@@ -38,6 +38,6 @@ Here is a scenario that includes all the concepts introduced above (click on the
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

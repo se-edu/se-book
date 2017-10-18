@@ -34,6 +34,6 @@ At implementation level, an association class is most likely implemented as foll
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

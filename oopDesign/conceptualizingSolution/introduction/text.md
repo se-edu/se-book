@@ -28,6 +28,6 @@ To answer those questions, you can analyze the how the objects of these classes 
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

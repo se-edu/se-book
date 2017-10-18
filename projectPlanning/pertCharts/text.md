@@ -40,6 +40,6 @@ A PERT chart can help determine the following important information:
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

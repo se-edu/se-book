@@ -36,6 +36,6 @@ Git repo URL: `https://github.com/nus-cs2103-AY1718S1/samplerepo-things.git` (no
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

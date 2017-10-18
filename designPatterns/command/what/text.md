@@ -43,6 +43,6 @@ The `<< Client >>` creates a `<< ConcreteCommand >>` object, and passes it to th
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

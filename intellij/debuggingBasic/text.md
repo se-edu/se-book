@@ -25,6 +25,6 @@ This video (from LaunchCode) gives a pretty good explanation of how to use the I
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

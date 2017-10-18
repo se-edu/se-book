@@ -67,6 +67,6 @@ The method `getTotalPersons()` is not suitable to send to a specific `Person` ob
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

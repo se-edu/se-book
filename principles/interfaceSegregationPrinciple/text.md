@@ -47,6 +47,6 @@ public class Payroll {
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

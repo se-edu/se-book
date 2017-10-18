@@ -35,6 +35,6 @@ You can have multiple repos in your computer, each repo revision-controlling fil
 
 <div id="extras">
 <include src="exercises.md" />
-<div>
+</div>
 
 </div>

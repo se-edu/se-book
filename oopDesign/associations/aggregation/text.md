@@ -41,6 +41,6 @@ The distinction between composition (&#9670;) and aggregation (&#9671;) is rathe
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

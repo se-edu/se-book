@@ -66,6 +66,6 @@ Note that you could have merged the `add-summary` branch to the `master` branch 
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

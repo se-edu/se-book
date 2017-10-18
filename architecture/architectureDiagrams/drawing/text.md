@@ -28,6 +28,6 @@ While architecture diagrams have no standard notation, try to follow these basic
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

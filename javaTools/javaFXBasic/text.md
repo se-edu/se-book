@@ -31,6 +31,6 @@ After going through the two parts above, you should be familiar with building ba
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

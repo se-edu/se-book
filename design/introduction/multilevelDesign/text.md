@@ -61,6 +61,6 @@ Here are examples of lower level designs of some components of the same software
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

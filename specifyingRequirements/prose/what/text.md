@@ -30,6 +30,6 @@ Avoid using lengthy prose to describe requirements; they can be hard to follow.
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>
