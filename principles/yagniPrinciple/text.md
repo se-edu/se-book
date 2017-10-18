@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Principles &rarr; </div>
-
 <div id="title">
 
 #### YAGNI Principle :four:
@@ -12,7 +10,7 @@
 
 <div id="body">
 
-<tip-box type="primary">
+<tip-box type="definition">
 
 <include src="../../common/definitions.md#def-yagni-principle" />
 
