@@ -283,6 +283,8 @@
 
 <dynamic-panel src="../designPatterns/more/otherTypesOfPatterns/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPatterns/more/otherTypesOfPatterns/outcomes.md" inline />
 
+<dynamic-panel src="../designPatterns/more/vsPrinciples/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPatterns/more/vsPrinciples/outcomes.md" inline />
+
 
 ## Implementation
 
@@ -857,8 +859,6 @@
 ## Supplementary
 
 ### SE Principles
-
-<dynamic-panel src="../principles/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/what/outcomes.md" inline />
 
 <dynamic-panel src="../principles/singleResponsibilityPrinciple/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/singleResponsibilityPrinciple/outcomes.md" inline />
 

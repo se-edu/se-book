@@ -6,7 +6,6 @@
 
 # Principles
 
-<include src="what/print.md" />
 <include src="singleResponsibilityPrinciple/print.md" />
 <include src="interfaceSegregationPrinciple/print.md" />
 <include src="liskovSubstitutionPrinciple/print.md" />

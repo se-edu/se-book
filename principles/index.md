@@ -6,7 +6,6 @@
 
 <div id="main">
 
-<include src="what/embed.md" />
 <include src="singleResponsibilityPrinciple/embed.md" />
 <include src="interfaceSegregationPrinciple/embed.md" />
 <include src="liskovSubstitutionPrinciple/embed.md" />
