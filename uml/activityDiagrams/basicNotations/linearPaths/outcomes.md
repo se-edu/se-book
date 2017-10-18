@@ -1,1 +1,1 @@
-:trophy: Can use linear paths in activity diagrams :two:
+:trophy: Can interpret linear paths in activity diagrams :two:

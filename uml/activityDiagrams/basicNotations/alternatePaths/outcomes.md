@@ -1,1 +1,1 @@
-:trophy: Can use alternate paths in activity diagrams :two:
+:trophy: Can interpret alternate paths in activity diagrams :two:

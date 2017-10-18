@@ -1,5 +1,3 @@
-<div id="path">UML &rarr; Activity Diagrams &rarr;</div>
-
 <div id="title">
 
 #### Swimlanes :four:
@@ -8,12 +6,18 @@
 
 <div id="body">
 
-It is possible to _partition_ an activity diagram to show who is doing which action. Such partitioned activity diagrams are sometime called _swimlane diagrams_.
+**It is possible to _partition_ an activity diagram to show who is doing which action. Such partitioned activity diagrams are sometime called _swimlane diagrams_.**
+
+<tip-box> 
+
+:package: A simple example of a swimlane diagram:
 
 <img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/swimlanes/images/diagram.png" height="220" />
 <p/>
 
-Note: Only essential elements of ADs are covered in this handout.
+</tip-box>
+
+
 
 </div>
 
