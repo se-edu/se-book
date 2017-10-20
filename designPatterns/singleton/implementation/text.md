@@ -14,7 +14,7 @@ Here is the typical implementation of how the Singleton pattern is applied to a 
 
 ```java
 class Logic {
-    private Logic theOne = null;
+    private static Logic theOne = null;
 
     private Logic() {
         ...
