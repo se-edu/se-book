@@ -50,7 +50,7 @@ class Account {
         }
         guarantor = g;
     }
-    public setGuarantor (Guarantor m){
+    public void setGuarantor (Guarantor g){
         if (g == null) {
             stopSystemWithMessage("multiplicity violated. Null Guarantor");
         }
