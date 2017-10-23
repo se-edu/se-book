@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Code Quality &rarr; Guideline: Maximise Readability &rarr;</div>
-
 <div id="title">
 
 #### Intermediate :two:

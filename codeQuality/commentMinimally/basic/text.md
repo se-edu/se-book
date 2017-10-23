@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Code Quality &rarr; Guideline: Comment Minimally, but Sufficiently &rarr;</div>
-
 <div id="title">
 
 #### Basic :one:

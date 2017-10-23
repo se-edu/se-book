@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Code Quality &rarr; Guideline: Follow a Standard &rarr;</div>
-
 <div id="title">
 
 #### Introduction :one:

@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Code Quality &rarr; Guideline: Name Well &rarr;</div>
-
 <div id="title">
 
 #### Basic :one:
