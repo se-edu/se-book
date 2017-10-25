@@ -1,17 +1,15 @@
-<panel header=":lock::key: Which one of these is most suited for an application of the _Abstraction Occurrence_ pattern?">
+<panel header=":lock::key: Apply pattern?">
 <question>
 
 Which one of these is most suited for an application of the Abstraction Occurrence pattern?
 
-- [ ] a. Stagings of a stage drama at various theatres
-- [ ] b. Teachers and their students
-- [ ] c. Modules and exams/assignments given by those modules
+- ( ) a. Stagings of a stage drama at various theatres
+- ( ) b. Teachers and their students
+- ( ) c. Modules and exams/assignments given by those modules
 
 <div slot="answer">
 
-- [x] a. Stagings of a stage drama at various theatres
-- [ ] b. Teachers and their students
-- [ ] c. Modules and exams/assignments given by those modules
+(a)
 
 Explanation:
 

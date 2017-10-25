@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Patterns &rarr; Model View Controller (MVC) Pattern &rarr;</div>
-
 <div id="title">
 
 #### What :two:
@@ -24,22 +22,20 @@ To reduce coupling resulting from the interlinked nature of the features describ
 
 To decouple data, presentation, and control logic of an application by separating them into three different components: Model, View and Controller.
 
-*	View: Displays data, interacts with the user, and pulls data from the model if necessary.
-*	Controller: Detects UI events such as mouse clicks, button pushes and takes follow up action. Updates/changes the model/view when necessary.
-*	Model: Stores and maintains data. Updates views if necessary.
+* _View_: Displays data, interacts with the user, and pulls data from the model if necessary.
+* _Controller_: Detects UI events such as mouse clicks, button pushes and takes follow up action. Updates/changes the model/view when necessary.
+* _Model_: Stores and maintains data. Updates views if necessary.
 
 The relationship between the components can be observed in the diagram below. Typically, the UI is the combination of view and controller.
 
-<tip-box>
-
-Example:
-
-<img src="{{baseUrl}}/designPatterns/modelViewController/what/images/classDiagram.png" height="150" />
+<img src="{{baseUrl}}/designPatterns/modelViewController/what/images/classDiagram.png" width="400" />
 <p/>
 
-Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving data of one student.
+<tip-box>
 
-<img src="{{baseUrl}}/designPatterns/modelViewController/what/images/sequenceDiagram.png" height="220" />
+:package: Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving data of one student.
+
+<img src="{{baseUrl}}/designPatterns/modelViewController/what/images/sequenceDiagram.png" width="500" />
 <p/>
 
 In the diagram above, when the user clicks on a button using the UI, the ‘click’ event is caught and handled by the `UiController`.
