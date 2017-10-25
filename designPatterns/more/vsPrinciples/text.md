@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Principles &rarr; </div>
-
 <div id="title">
 
 #### Design Patterns vs Design Principles :one:
