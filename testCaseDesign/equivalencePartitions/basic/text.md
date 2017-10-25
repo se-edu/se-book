@@ -16,9 +16,9 @@
 
 :package: These could be EPs for the <trigger for="pop:epBasic-isValidMonth">isValidMonth</trigger> example:
 
-* [MIN_INT ... 0] : below the range that produces `true`
+* [MIN_INT ... 0] : **below** the range that produces `true`
 * [1 … 12] : the range that produces `true`
-* [13 … MAX_INT] : above the range that produces `true`
+* [13 … MAX_INT] : **above** the range that produces `true`
 
 </tip-box>
 
