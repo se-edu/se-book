@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">SLDC Process Models &rarr; More &rarr;</div>
-
 <div id="title">
 
 #### CMMI :four:

@@ -1,15 +1,14 @@
-<panel header=":lock::key: True or False?">
+<panel header=":lock::key: the two basic process models">
 <question>
 
 The sequential model and the waterfall model are the two most basic process models.
 
-- [ ] a. True
-- [ ] b. False
+- ( ) True
+- ( ) False
 
 <div slot="answer">
 
-- [ ] a. True
-- [x] b. False
+False
 
 Explanation: The sequential model and the waterfall model are the same thing. The second basic model is the iterative model.
 

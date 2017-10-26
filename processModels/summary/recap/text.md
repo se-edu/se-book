@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">SLDC Process Models &rarr; Summary &rarr;</div>
-
 <div id="title">
 
 #### Recap :three:
@@ -11,12 +9,13 @@
 </div>
 
 <div id="body">
-<div>
+
+This section has some exercise that cover multiple topics related to SDLC process models.
+
+</div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+ <include src="exercises.md" />
 </div>
 
 </div>
