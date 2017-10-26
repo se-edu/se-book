@@ -10,7 +10,7 @@
 
 <div id="body">
 
-The notion of capturing design ideas as "patterns" is usually attributed to [Christopher Alexander](Christopher Alexander). He is a building architect noted for his theories about design. His book _Timeless way of building_ talks about "design patterns" for constructing buildings.
+The notion of capturing design ideas as "patterns" is usually attributed to [Christopher Alexander](https://en.wikipedia.org/wiki/Christopher_Alexander). He is a building architect noted for his theories about design. His book _Timeless way of building_ talks about "design patterns" for constructing buildings.
 
 Here is a sample pattern from that book:
 

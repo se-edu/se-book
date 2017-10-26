@@ -12,15 +12,17 @@
 
 <div id="body">
 
-Consider the test cases designed in <trigger for="modal:heuristic-valid-test-case" trigger="click">Heuristic: each valid input at least once in a positive test case</trigger>.
+Consider the <trigger for="modal:heuristic-valid-test-case" trigger="click">test cases designed in [Heuristic: each valid input at least once in a positive test case]</trigger>.
 
-<modal title="**Heuristic: each valid input at least once in a positive test case**" id="modal:heuristic-valid-test-case">
+<modal large title="**Extract from Quality Assurance &rarr; Test Case Design &rarr; Combining Test Inputs &rarr; Heuristic: each valid input at least once in a positive test case**" id="modal:heuristic-valid-test-case">
   <include src="../heuristicValid/text.md#heuristic-valid-test-case" />
 </modal>
 
-After running these test cases can we be sure that the error message “invalid price” is shown for negative prices? Answer: No. Reason: `-1`  -- the only input that is a negative price – is in a test case that produces the error message “invalid fruit”.
+After running these test cases can you be sure that the error message “invalid price” is shown for negative prices? Answer: No. Reason: `-1`  -- the only input that is a negative price – is in a test case that produces the error message “invalid fruit”.
 
-In this case a useful heuristic to apply is ‘no more than one invalid input in a test case’. After applying that, we get the following test cases.
+In this case a useful heuristic to apply is **no more than one invalid input in a test case**. After applying that, we get the following test cases.
+
+<tip-box> 
 
 | Case   | fruitName  | unitPrice  | Expected                       |
 | :----: | :--------: | :--------: | :----------------------------: |
@@ -33,12 +35,12 @@ In this case a useful heuristic to apply is ‘no more than one invalid input in
 
 VV/IV = Any Invalid or Valid Value VV=Any Valid Value
 
+</tip-box>
+
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+  <include src="exercises.md" />
 </div>
 
 </div>
