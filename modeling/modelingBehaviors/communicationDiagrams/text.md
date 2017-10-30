@@ -10,7 +10,7 @@
 
 <div id="body">
 
-** A _Communication diagrams_ are like sequence diagrams but emphasize the data links between the various participants in the interaction rather than the sequence of interactions.**
+**A _Communication diagrams_ are like sequence diagrams but emphasize the data links between the various participants in the interaction rather than the sequence of interactions.**
 
 <tip-box> 
 
