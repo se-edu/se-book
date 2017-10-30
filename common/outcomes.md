@@ -466,8 +466,6 @@
 
 <dynamic-panel src="../oopImplementation/polymorphism/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopImplementation/polymorphism/outcomes.md" inline />
 
-<dynamic-panel src="../oopImplementation/substitutability/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopImplementation/substitutability/outcomes.md" inline />
-
 
 ### Reuse
 

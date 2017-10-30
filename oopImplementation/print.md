@@ -19,7 +19,6 @@
 <include src="interfaces/print.md" />
 <include src="abstractClasses/print.md" />
 <include src="polymorphism/print.md" />
-<include src="substitutability/print.md" />
 
 </div>
 

@@ -41,7 +41,7 @@ In the above scenario,
 
 :package: The `Rectangle#resize()` can take any integers for `height` and `width`. This contract is violated by the subclass `Square#resize()` because it does not accept a `height` that is different from the `width`. 
 
-<img src="{{baseUrl}}/oopImplementation/substitutability/images/rectangleSquare.png" height="120" />
+<img src="{{baseUrl}}/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120" />
 <p/>
 
 ```java
