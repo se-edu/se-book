@@ -1,1 +1,1 @@
-All about SLDC process models
+All about SDLC process models

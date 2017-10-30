@@ -11,6 +11,47 @@
 <hr>
 <hr>
 
+
+* [**SECTION: INTRODUCTION**](#section-introduction)
+  * [Software Engineering](#software-engineering)
+* [**SECTION: REQUIREMENTS**](#section-requirements) 
+  * [Requirements](#requirements)
+  * [Gathering Requirements](#gathering-requirements)
+  * [Specifying Requirements](#specifying-requirements)
+* [**SECTION: DESIGN**](#section-design) 
+  * [Design](#design)
+  * [Design Principles](#design-principles)
+  * [Object Oriented Programming](#object-oriented-programming)
+  * [Modeling](#modeling)
+  * [Architecture](#software-architecture)
+  * [Design Patterns](#software-design-patterns)
+* [**SECTION: IMPLEMENTATION**](#section-implementation) 
+  * [IDEs](#ides)
+  * [Code Quality](#code-quality)
+  * [Refactoring](#refactoring)
+  * [Documentation](#documentation)
+  * [Error Handling](#error-handling)
+  * [Integration](#integration)
+  * [OOP](#implementing-oop)
+  * [Reuse](#reuse)
+* [**SECTION: QUALITY ASSURANCE**](#section-quality-assurance) 
+  * [Quality Assurance](#quality-assurance)
+  * [Testing](#testing)
+  * [Test Case Design](#test-case-design)
+* [**SECTION: PROJECT MANAGEMENT**](#section-project-management) 
+  * [Revision Control](#revision-control)
+  * [Project Planning](#project-planning)
+  * [Teamwork](#teamwork)
+  * [SDLC Process Models](#sdlc-process-models)
+* [**SECTION: TOOLS**](#section-tools) 
+  * [UML](#uml)
+  * [Intellij IDEA](#intellij-idea)
+  * [Git and Github](#git-and-github)
+  * [Java](#java)
+  * [JUnit](#junit)
+* [**SECTION: SUPPLEMENTARY**](#section-supplementary) 
+  * [Principles](#principles)
+
 # SECTION: INTRODUCTION
 
 <include src="../softwareEngineering/print.md#main" />
@@ -80,6 +121,10 @@
 
 <include src="../principles/print.md#main" />
 <!-- TODO: add review -->
+
+<hr>
+
+%%[END OF BOOK]%%
 
 </div>
 
