@@ -1,5 +1,3 @@
-<div id="path">Documentation &rarr; Tools &rarr;</div>
-
 <div id="title">
 
 #### What :two:

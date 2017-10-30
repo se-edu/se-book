@@ -33,12 +33,12 @@
 ### JavaDoc
 
 <include src="tools/javaDoc/what/print.md" />
-<include src="tools/javaDoc/how/print.md" />
+<!-- TODO: add how -->
 
 ### Markdown
 
 <include src="tools/markdown/what/print.md" />
-<include src="tools/markdown/how/print.md" />
+<!-- TODO: add how -->
 
 ### AsciiDoc
 

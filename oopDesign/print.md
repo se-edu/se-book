@@ -57,9 +57,7 @@
 
 <include src="miscellaneous/print.md" />
 
-## Review
-
-<include src="review/print.md" />
+<!-- TODO: add review -->
 
 </div>
 

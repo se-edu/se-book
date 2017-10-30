@@ -56,7 +56,7 @@ Given their lightweight nature, **user stories are quite handy for recording req
 
 While use cases can be recorded on <tooltip content="e.g. index cards or sticky notes">physical paper</tooltip> in the initial stages, an online tool is more suitable for longer-term management of user stories, especially if the team is not <tooltip content="physically in the same location">co-located</tooltip>.
 
-<panel header="**Tool Examples**: How to use some example online tools to manage user stories">
+<panel header="**Tool Examples**: How to use some example online tools to manage user stories" alt="tool examples">
   <include src="tools.md" />
 </panel>
 
