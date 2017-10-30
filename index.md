@@ -87,7 +87,7 @@
 
 <include src="principles/topicToc.md" />
 
-<include src="review/topicToc.md" />
+<!-- TODO: add review -->
 
 * [List of Definitions](common/definitions.html)
 * [List of References](common/references.html)

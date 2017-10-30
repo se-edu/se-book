@@ -16,7 +16,7 @@
 <include src="brooksLaw/embed.md" />
 <include src="yagniPrinciple/embed.md" />
 <include src="dryPrinciple/embed.md" />
-<include src="review/embed.md" />
+<!-- TODO: add review -->
 
 </div>
 

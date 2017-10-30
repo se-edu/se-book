@@ -79,7 +79,7 @@
 # SECTION: SUPPLEMENTARY
 
 <include src="../principles/print.md#main" />
-<include src="../review/print.md#main" />
+<!-- TODO: add review -->
 
 </div>
 
