@@ -18,7 +18,7 @@
 
   <span id="uml-user-guide">_**The Unified Modeling Language User Guide**_, 2e, G Booch, J Rumbaugh, and I Jacobson </span>
 
-* [uml-distilled] <div id="uml-distilled">UML distilled by Martin Fowler </div>
+* [uml-distilled] <span id="uml-distilled">UML distilled by Martin Fowler </span>
 
 * [refactoring-catalog]
 

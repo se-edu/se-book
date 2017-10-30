@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Modeling &rarr; Modeling Structures &rarr;</div>
-
 <div id="title">
 
 #### Component Diagrams :four:
@@ -12,13 +10,17 @@
 
 <div id="body">
 
-A UML **component diagram** is used to show how a system is divided into components and how they are connected to each other through interfaces.
+**A _component diagram_ is used to show how a system is divided into components and how they are connected to each other through interfaces.**
 
-<img src="{{baseUrl}}/modeling/modelingStructures/componentDiagrams/images/diagram.png" height="500" />
-<p/>
+<tip-box> 
 
-Source: https://en.wikipedia.org/wiki/Component_diagram
+:package: An example component diagram:
 
+<img src="{{baseUrl}}/modeling/modelingStructures/componentDiagrams/images/diagram.png" height="500" /><br>
+
+<sub>source:[https://commons.wikimedia.org](https://en.wikipedia.org/wiki/Component_diagram)</sub>
+
+</tip-box>
 </div>
 
 <div id="extras">
