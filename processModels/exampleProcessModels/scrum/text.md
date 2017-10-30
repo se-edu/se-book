@@ -13,11 +13,11 @@
 This description of Scrum was adapted from Wikipedia [retrieved on 18/10/2011], emphasis added:
 
 <tip-box>
-Scrum is a process skeleton that contains sets of practices and predefined roles. The main roles in Scrum are:
 
-* The ScrumMaster, who maintains the processes (typically in lieu of a project manager)
-* The Product Owner, who represents the stakeholders and the business
-* The Team, a cross-functional group who do the actual analysis, design, implementation, testing, etc.
+**Scrum is a process skeleton that contains sets of practices and predefined roles. The main roles in Scrum are:**
+* **The Scrum Master**, who maintains the processes (typically in lieu of a project manager)
+* **The Product Owner**, who represents the stakeholders and the business
+* **The Team**, a cross-functional group who do the actual analysis, design, implementation, testing, etc.
 
 **A Scrum project is divided into iterations called Sprints.** A sprint is the basic unit of development in Scrum. Sprints tend to last between one week and one month, and are a timeboxed (i.e. restricted to a specific duration) effort of a constant length.
 
