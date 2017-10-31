@@ -29,12 +29,39 @@ Scrum is a process skeleton that contains sets of practices and predefined roles
 
 **A key principle of Scrum is its recognition that during a project the customers can change their minds about what they want and need** (often called requirements churn), and that unpredicted challenges cannot be easily addressed in a traditional predictive or planned manner. As such, Scrum adopts an empirical approach—accepting that the problem cannot be fully understood or defined, focusing instead on maximizing the team’s ability to deliver quickly and respond to emerging requirements.
 
-Like other agile development methodologies, Scrum can be implemented through a wide range of tools. Many companies use universal software tools, such as spreadsheets to build and maintain artifacts such as the sprint backlog. There are also open-source and proprietary software packages dedicated to management of products under the Scrum process. Other organizations implement Scrum without the use of any software tools, and maintain their artifacts in hard-copy forms such as paper, whiteboards, and sticky notes. The diagram below illustrates the essence of the Scrum process.
-
 <img src="{{baseUrl}}/processModels/exampleProcessModels/scrum/images/diagram.png" height="250" />
 <p/>
 
 </tip-box>
+
+**_Daily Scrum_ is another key scrum practice**. The description below was adapted from [https://www.mountaingoatsoftware.com](https://www.mountaingoatsoftware.com/agile/scrum/meetings/daily-scrum) (emphasis added):
+
+<tip-box> 
+
+**In Scrum, on each day of a sprint, the team holds a daily scrum meeting called the "daily scrum.”** Meetings are typically held in the same location and at the same time each day. Ideally, a daily scrum meeting is held in the morning, as it helps set the context for the coming day's work. These scrum meetings are strictly time-boxed to 15 minutes. This keeps the discussion brisk but relevant.
+
+...
+
+**During the daily scrum, each team member answers the following three questions:**
+* What did you do yesterday?
+* What will you do today?
+* Are there any impediments in your way?
+
+...
+
+The daily scrum meeting is not used as a problem-solving or issue resolution meeting. **Issues that are raised are taken offline and usually dealt with by the relevant subgroup immediately after the meeting.**
+
+</tip-box>
+
+<div v-closeable alt="Scrum video"> 
+
+:tv: Intro to Scrum in Under 10 Minutes <sub>(This is not an endorsement of the product mentioned in the video)</sub>
+
+@[youtube](XU0llRltyFM)
+
+</div>
+
+
 
 </div>
 
