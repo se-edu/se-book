@@ -41,7 +41,7 @@ class Table{
 
 </tip-box>
 
-**The 'Operations' compartment and/or the 'Attributes' compartment may be omitted** if such details are not important for the task at hand.
+**The 'Operations' compartment and/or the 'Attributes' compartment may be omitted** if such details are not important for the task at hand. 'Attributes' always appear above the 'Operations' compartment. All operations should be in one compartment rather than each operation in a separate compartment. Same goes for attributes.
 
 <tip-box>
 
