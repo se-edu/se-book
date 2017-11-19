@@ -24,7 +24,7 @@ Explanation: While many languages support the OO paradigm, OO is not a language 
 
 B) Choose the correct statement
 
-(a)(b)(d)
+(a)~~(b)~~(c)(d)
 
 Explanation: C follows the procedural paradigm. Yes, we can write procedural code using OO languages e.g., AddressBook-level1.
 
