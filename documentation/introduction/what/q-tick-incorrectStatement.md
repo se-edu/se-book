@@ -10,7 +10,7 @@ Choose the incorrect statement about API documentation.
 
 <div slot="answer">
 
-(a)(b)~~(c)~~(d)
+(c)
 
 Explanation: As APIs describe services a component provide to the rest of the system, they should be defined and documented early in the project to avoid misunderstanding among developers.
 
