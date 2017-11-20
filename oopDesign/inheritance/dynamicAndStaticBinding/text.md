@@ -52,7 +52,7 @@ However, at runtime the `adjustSalary(int)` operation of the actual object will 
 
 <tip-box>
 
-:package: Note how the constructor is overridden in the class below. The method call `new Account()` is bound to the first constructor at compile time.
+:package: Note how the constructor is overloaded in the class below. The method call `new Account()` is bound to the first constructor at compile time.
 
 ```java
 class Account {
