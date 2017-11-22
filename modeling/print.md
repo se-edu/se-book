@@ -15,8 +15,8 @@
 ## Modeling Structures
 
 <include src="modelingStructures/classDiagramsBasic/print.md" />
-<include src="modelingStructures/classDiagramsIntermediate/print.md" />
-<include src="modelingStructures/classDiagramsAdvanced/print.md" />
+<!-- <include src="modelingStructures/classDiagramsIntermediate/print.md" /> -->
+<!-- <include src="modelingStructures/classDiagramsAdvanced/print.md" /> -->
 <include src="modelingStructures/objectDiagrams/print.md" />
 <include src="modelingStructures/objectOrientedDomainModels/print.md" />
 <include src="modelingStructures/deploymentDiagrams/print.md" />
@@ -28,8 +28,8 @@
 
 <include src="modelingBehaviors/activityDiagrams/print.md" />
 <include src="modelingBehaviors/sequenceDiagramsBasic/print.md" />
-<include src="modelingBehaviors/sequenceDiagramsIntermediate/print.md" />
-<include src="modelingBehaviors/sequenceDiagramsAdvanced/print.md" />
+<!-- <include src="modelingBehaviors/sequenceDiagramsIntermediate/print.md" /> -->
+<!-- <include src="modelingBehaviors/sequenceDiagramsAdvanced/print.md" /> -->
 <include src="modelingBehaviors/useCaseDiagrams/print.md" />
 <include src="modelingBehaviors/timingDiagrams/print.md" />
 <include src="modelingBehaviors/interactionOverviewDiagrams/print.md" />

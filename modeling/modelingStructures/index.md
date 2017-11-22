@@ -9,8 +9,8 @@
 <div id="main">
 
 <include src="classDiagramsBasic/embed.md" />
-<include src="classDiagramsIntermediate/embed.md" />
-<include src="classDiagramsAdvanced/embed.md" />
+<!-- <include src="classDiagramsIntermediate/embed.md" /> -->
+<!-- <include src="classDiagramsAdvanced/embed.md" /> -->
 <include src="objectDiagrams/embed.md" />
 <include src="objectOrientedDomainModels/embed.md" />
 <include src="deploymentDiagrams/embed.md" />

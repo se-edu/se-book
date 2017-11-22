@@ -14,8 +14,14 @@
 
 **Activity diagrams model workflows.**
 
+<tip-box> 
 
-Sequence diagrams model object interactions for specific scenarios
+:package: An example activity diagram:
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Activity_conducting.svg"><br>
+<sub>[[source:wikipeida](https://en.wikipedia.org/wiki/Activity_diagram)]</sub>
+
+</tip-box>
 
 </div>
 

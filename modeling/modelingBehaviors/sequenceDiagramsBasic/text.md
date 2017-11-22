@@ -10,6 +10,8 @@
 
 <div id="body">
 
+**Sequence diagrams model interactions between entities for a given scenario.**
+
 <tip-box> 
 
 :package: Consider the code below.
