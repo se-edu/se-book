@@ -12,9 +12,8 @@
 
 <div id="body">
 
-Activity diagrams model workflows
+**Activity diagrams model workflows.**
 
-More…
 
 Sequence diagrams model object interactions for specific scenarios
 

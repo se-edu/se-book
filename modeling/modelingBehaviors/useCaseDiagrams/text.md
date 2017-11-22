@@ -12,9 +12,7 @@
 
 <div id="body">
 
-Use case diagrams model the mapping between features of a system and its user roles
-
-More…
+**Use case diagrams model the mapping between features of a system and its user roles.**
 
 </div>
 
