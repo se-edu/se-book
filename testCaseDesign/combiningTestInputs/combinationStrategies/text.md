@@ -53,7 +53,7 @@ Selected values for each input:
 | Test Case   | p1      | p2      | p3      |
 | :---------: | :-----: | :-----: | :-----: |
 | 1           | a       | 1       | T       |
-| 2           | b       | 1       | F       |
+| 2           | b       | 2       | F       |
 | 3           | c       | 3       | VV/IV   |
 
 VV/IV = Any Valid Value / Any Invalid Value
