@@ -61,7 +61,7 @@ In this case a useful heuristic to apply is **each valid input must appear at le
 | :----: | :--------: | :--------: | :----------------------------: |
 | 1      | Apple      | 1          | Print round label              |
 | 2      | Banana     | 20         | Print oval label               |
-| 2.1    | Cherry     | VV/IV      | Print square label             |
+| 2.1    | Cherry     | VV      | Print square label             |
 | 3      | VV         | :exclamation: 0 | Error message “invalid price”  |
 | 4      | :exclamation: Dog | :exclamation: -1 | Error message “invalid fruit"  |
 
