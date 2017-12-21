@@ -16,7 +16,7 @@ An _abstract class_ is a class that is declared `abstract`—it may or may not i
 
 <div id="def-abstraction">
 
-**Abstraction**: Abstraction is a technique for dealing with complexity. It works by establishing a level of complexity on which a person interacts with the system, suppressing the more complex details below the current level. 
+**Abstraction** is a technique for dealing with complexity. It works by establishing a level of complexity (or an aspect) we are interested in, and suppressing the more complex details below that level (or irrelevant to that aspect). 
 
 </div>
 

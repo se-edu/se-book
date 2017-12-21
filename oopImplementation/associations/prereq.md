@@ -1,3 +1,1 @@
-<dynamic-panel src="../../oopDesign/associations/basic/embed.md" header="%%:mortar_board: OOP &rarr; Associations &rarr; Basic%%" />
-<dynamic-panel src="../../oopDesign/associations/multiplicity/embed.md" header="%%:mortar_board: OOP &rarr; Associations &rarr; Multiplicity%%" />
-<dynamic-panel src="../../oopDesign/associations/navigability/embed.md" header="%%:mortar_board: OOP &rarr; Associations &rarr; Navigability%%" />
+<dynamic-panel src="../../modeling/modelingStructures/classDiagramsBasic/full.md" header="%%:mortar_board: Design &rarr; Modelling Structure &rarr; Class Diagrams%%" />

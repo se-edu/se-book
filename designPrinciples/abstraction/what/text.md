@@ -10,7 +10,7 @@
 
 <div id="body">
 
-<tip-box type="defintion">
+<tip-box type="definition">
 <include src="../../../common/definitions.md#def-abstraction" />
 </tip-box>
 

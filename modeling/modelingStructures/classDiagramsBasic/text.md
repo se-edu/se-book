@@ -10,15 +10,19 @@
 
 <div id="body">
 
-**Class diagrams model the classes and how they are connected to each other**.
+**UML Class diagrams and object diagrams use used to model class structures**.
 
-<tip-box> 
+<dynamic-panel src="../../../uml/classDiagrams/introduction/what/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Introduction &rarr; What" />
+<dynamic-panel src="../../../uml/objectDiagrams/introduction/full.md" header=":mortar_board: UML &rarr; Object Diagrams &rarr; Introduction" />
 
-:package: An example class diagram:
+**One basic element used in a class/object diagram is _associations_.**
 
-<img src="{{baseUrl}}/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600" />
+<dynamic-panel src="../../../oopDesign/associations/basic/full.md" header=":mortar_board: OOP &rarr; Associations &rarr; Basic" />
 
-</tip-box>
+**Associations have additional properties such as _multiplicity_ and _navigability_.**
+
+<dynamic-panel src="../../../oopDesign/associations/multiplicity/full.md" header=":mortar_board: OOP &rarr; Associations &rarr; Multiplicity" />
+<dynamic-panel src="../../../oopDesign/associations/navigability/full.md" header=":mortar_board: OOP &rarr; Associations &rarr; Navigability" />
 
 </div>
 
