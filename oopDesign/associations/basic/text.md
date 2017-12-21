@@ -10,9 +10,9 @@
 
 <div id="body">
 
-**Connections between objects are called _associations_.** Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such connections are called _associations_.
+Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such **connections between objects are called _associations_.**
 
-<dynamic-panel src="../../../uml/objectDiagrams/objectStructures/full.md" header=":mortar_board: UML &rarr; Object Diagrams &rarr; Object Structures"></dynamic-panel>
+<dynamic-panel src="../../../uml/objectDiagrams/associations/what/full.md" header=":mortar_board: UML &rarr; Object Diagrams &rarr; Associations &rarr; What"></dynamic-panel>
 
 <p/>
 
@@ -24,18 +24,18 @@
 
 </tip-box>
 
-**Object structures can change over time**.
+**Associations in an object structure can change over time**.
 
 <tip-box>
 
-:package: In this example, the object structure has changed %%(from left to right) due to a new `Person` object being added and connected to the `Main` object.%%
+:package: In this example, the associations in the object structure have changed %%(from left to right) due to a new `Person` object being connected to the `Main` object.%%
 
 <img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculator.png" height="100" /> &nbsp; &rarr; &nbsp; 
 <img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculatorAdam.png" height="100" />
 
 </tip-box>
 
-**Associations can be reflected among classes too.**
+**Associations among objects are reflected correspondingly in the class diagram too**, as it is the class diagram that dictates the nature of the associations allowed in the object structures.
 
 <dynamic-panel src="../../../uml/classDiagrams/associations/basic/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Basic"/>
 
@@ -47,13 +47,6 @@
 <p/>
 
 </tip-box>
-
-**An association in a class diagram can use _association labels_ and _association roles_ to show additional info.**
-
-<dynamic-panel src="../../../uml/classDiagrams/associations/labels/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Labels"/>
-<dynamic-panel src="../../../uml/classDiagrams/associations/roles/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Roles"/>
-
-<p/>
 
 </div>
 

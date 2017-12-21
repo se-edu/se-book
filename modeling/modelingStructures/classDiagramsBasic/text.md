@@ -4,25 +4,41 @@
 
 <div id="title">
 
-#### Class Diagrams :one:
+#### Class Diagrams (Basics) :one:
 
 </div>
 
 <div id="body">
 
-**UML Class diagrams and object diagrams use used to model class structures**.
-
-<dynamic-panel src="../../../uml/classDiagrams/introduction/what/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Introduction &rarr; What" />
-<dynamic-panel src="../../../uml/objectDiagrams/introduction/full.md" header=":mortar_board: UML &rarr; Object Diagrams &rarr; Introduction" />
-
-**One basic element used in a class/object diagram is _associations_.**
+**_Associations_ among objects/classes play an important role in an OO solution.**
 
 <dynamic-panel src="../../../oopDesign/associations/basic/full.md" header=":mortar_board: OOP &rarr; Associations &rarr; Basic" />
 
-**Associations have additional properties such as _multiplicity_ and _navigability_.**
+The most basic class diagram is a bunch of classes with some solid lines among them to represent associations, such as this one.
 
-<dynamic-panel src="../../../oopDesign/associations/multiplicity/full.md" header=":mortar_board: OOP &rarr; Associations &rarr; Multiplicity" />
-<dynamic-panel src="../../../oopDesign/associations/navigability/full.md" header=":mortar_board: OOP &rarr; Associations &rarr; Navigability" />
+<tip-box> 
+
+:package: An example class diagram showing associations between classes.
+<p/><img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculatorPerson.png" height="100" />
+<p/>
+
+</tip-box> 
+
+In addition, **associations can show additional decorations such as _association labels_, _association roles_, _multiplicity_ and _navigability_** to add more information to a class diagram.
+
+<dynamic-panel src="../../../../book/uml/classDiagrams/associations/labels/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Labels"/>
+<dynamic-panel src="../../../../book/uml/classDiagrams/associations/roles/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Roles"/>
+<dynamic-panel src="../../../../book/oopDesign/associations/multiplicity/full.md" header=":mortar_board: OOP &rarr; Associations &rarr; Multiplicity" />
+<dynamic-panel src="../../../../book/oopDesign/associations/navigability/full.md" header=":mortar_board: OOP &rarr; Associations &rarr; Navigability" />
+
+<tip-box> 
+
+:package: Here is the same class diagram shown earlier but with some additional information included: 
+<p/><img src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/ageListCalculatorPerson.png" width="450" />
+<p/>
+
+</tip-box>
+
 
 </div>
 
