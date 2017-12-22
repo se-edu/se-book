@@ -16,7 +16,7 @@ The five OOP principles given below are known as _SOLID Principles_ (an acronym 
   <include src="../../principles/singleResponsibilityPrinciple/full.md" />
 </panel>
 <panel type="seamless" header="**O**pen-Closed Principle (OCP)">
-  <include src="../../designPrinciples/openClosedPrinciple/what/full.md" />
+  <include src="../../principles/openClosedPrinciple/full.md" />
 </panel>
 <panel type="seamless" header="**L**iskov Substitution Principle (LSP)">
   <include src="../../principles/liskovSubstitutionPrinciple/full.md" />

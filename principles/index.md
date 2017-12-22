@@ -10,6 +10,7 @@
 <include src="interfaceSegregationPrinciple/embed.md" />
 <include src="liskovSubstitutionPrinciple/embed.md" />
 <include src="dependencyInversionPrinciple/embed.md" />
+<include src="openClosedPrinciple/embed.md" />
 <include src="solidPrinciples/embed.md" />
 <include src="separationOfConcernsPrinciple/embed.md" />
 <include src="lawOfDemeter/embed.md" />

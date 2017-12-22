@@ -22,12 +22,6 @@
   <include src="cohesion/index.md#main" />
 </panel>
 
-## Open-Closed Principle
-<panel header="================================================================"
-    type="seamless" alt="open closed">
-  <include src="openClosedPrinciple/index.md#main" />
-</panel>
-
 ## Dependency Inversion Principle
 <panel header="================================================================"
     type="seamless" alt="dependency inversion">

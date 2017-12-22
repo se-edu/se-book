@@ -96,8 +96,6 @@
 
 <dynamic-panel src="../designPrinciples/dependencyInversionPrinciple/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/dependencyInversionPrinciple/what/outcomes.md" inline />
 
-<dynamic-panel src="../designPrinciples/openClosedPrinciple/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/openClosedPrinciple/what/outcomes.md" inline />
-
 
 ### Object Oriented Programming
 
@@ -865,6 +863,8 @@
 <dynamic-panel src="../principles/liskovSubstitutionPrinciple/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/liskovSubstitutionPrinciple/outcomes.md" inline />
 
 <dynamic-panel src="../principles/dependencyInversionPrinciple/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/dependencyInversionPrinciple/outcomes.md" inline />
+
+<dynamic-panel src="../principles/openClosedPrinciple/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/openClosedPrinciple/outcomes.md" inline />
 
 <dynamic-panel src="../principles/solidPrinciples/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/solidPrinciples/outcomes.md" inline />
 

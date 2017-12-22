@@ -10,6 +10,7 @@
 <include src="interfaceSegregationPrinciple/print.md" />
 <include src="liskovSubstitutionPrinciple/print.md" />
 <include src="dependencyInversionPrinciple/print.md" />
+<include src="openClosedPrinciple/print.md" />
 <include src="solidPrinciples/print.md" />
 <include src="separationOfConcernsPrinciple/print.md" />
 <include src="lawOfDemeter/print.md" />

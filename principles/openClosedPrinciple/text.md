@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### What :one:
+#### Open-Closed Principle :one:
 
 </div>
 
@@ -13,7 +13,7 @@
 While it is possible to isolate the functionalities of a software system into modules, there is no way to remove interaction between modules. When modules interact with each other, coupling naturally increases. Consequently, it is harder to localize any changes to the software system. The Open-Close Principle aims to alleviate this problem. 
 
 <tip-box type="definition"> 
-  <include src="../../../common/definitions.md#def-open-closed-principle"/>
+  <include src="../../common/definitions.md#def-open-closed-principle"/>
 </tip-box>
 
 In object-oriented programming, OCP can be achieved in various ways. This often requires separating the _specification (i.e. interface)_ of a module from its _implementation_.
@@ -22,7 +22,7 @@ In object-oriented programming, OCP can be achieved in various ways. This often 
 
 :package: In the design given below, the behavior of the `CommandQueue` class can be altered by adding more concrete `Command` subclasses. For example, by including a `Delete` class alongside `List`, `Sort`, and `Reset`, the `CommandQueue` can now perform delete commands without modifying its code at all. That is, its behavior was extended without having to modify its code. Hence, it was open to extensions, but closed to modification.
 
-<img src="{{baseUrl}}/designPrinciples/openClosedPrinciple/what/images/commandQueue.png" height="170" />
+<img src="{{baseUrl}}/principles/openClosedPrinciple/images/commandQueue.png" height="170" />
 <p/>
 
 </tip-box>

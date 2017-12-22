@@ -162,11 +162,7 @@
 
 <include src="../principles/print.md#main" />
 
-## Open-Closed Principle
-
-<include src="../designPrinciples/openClosedPrinciple/what/print.md" />
-
-## Dependency Inversion Principle
+### Dependency Inversion Principle
 
 <include src="../designPrinciples/dependencyInversionPrinciple/what/print.md" />
 
