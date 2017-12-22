@@ -35,6 +35,8 @@
 
 <include src="designPatterns/topicToc.md" />
 
+<include src="designApproaches/topicToc.md" />
+
 ### Implementation
 
 <include src="ides/topicToc.md" />

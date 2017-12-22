@@ -25,6 +25,7 @@
   * [Modeling](#modeling)
   * [Architecture](#software-architecture)
   * [Design Patterns](#software-design-patterns)
+  * [Design Approaches](#design-approaches)
 * [**SECTION: IMPLEMENTATION**](#section-implementation) 
   * [IDEs](#ides)
   * [Code Quality](#code-quality)
@@ -88,12 +89,7 @@
 
 <include src="../architecture/print.md#main" />
 <include src="../designPatterns/print.md#main" />
-
-## Design Approaches
-
-<include src="../design/introduction/multilevelDesign/print.md" />
-<include src="../design/introduction/topDownBottomUp/print.md" />
-<include src="../design/introduction/agileDesign/print.md" />
+<include src="../designApproaches/print.md#main" />
 
 <hr>
 

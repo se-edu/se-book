@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-%%**Software Design Fundamentals &rarr;**%%
-
 ## Cohesion
 
 <div id="main">

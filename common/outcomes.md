@@ -73,12 +73,6 @@
 
 <dynamic-panel src="../design/introduction/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/what/outcomes.md" inline />
 
-<dynamic-panel src="../design/introduction/multilevelDesign/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/multilevelDesign/outcomes.md" inline />
-
-<dynamic-panel src="../design/introduction/topDownBottomUp/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/topDownBottomUp/outcomes.md" inline />
-
-<dynamic-panel src="../design/introduction/agileDesign/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/agileDesign/outcomes.md" inline />
-
 
 ### Design Fundamentals
 
@@ -281,6 +275,13 @@
 
 <dynamic-panel src="../designPatterns/more/vsPrinciples/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPatterns/more/vsPrinciples/outcomes.md" inline />
 
+## Design Approaches
+
+<dynamic-panel src="../designApproaches/multilevelDesign/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designApproaches/multilevelDesign/what/outcomes.md" inline />
+
+<dynamic-panel src="../designApproaches/topDownBottomUp/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designApproaches/topDownBottomUp/what/outcomes.md" inline />
+
+<dynamic-panel src="../designApproaches/agileDesign/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designApproaches/agileDesign/what/outcomes.md" inline />
 
 ## Implementation
 
