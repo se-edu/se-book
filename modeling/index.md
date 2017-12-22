@@ -22,6 +22,12 @@
   <include src="modelingBehaviors/index.md#main" />
 </panel>
 
+## Modeling a Solution
+<panel header="================================================================"
+    type="seamless" alt="conceptualizing a solution">
+  <include src="modelingASolution/index.md#main" />
+</panel>
+
 ## Review
 <panel header="================================================================"
     type="seamless" alt="review">

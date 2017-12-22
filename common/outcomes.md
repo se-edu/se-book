@@ -142,14 +142,6 @@
 
 <dynamic-panel src="../oopDesign/polymorphism/mechanism/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/polymorphism/mechanism/outcomes.md" inline />
 
-
-<dynamic-panel src="../oopDesign/conceptualizingSolution/introduction/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/conceptualizingSolution/introduction/outcomes.md" inline />
-
-<dynamic-panel src="../oopDesign/conceptualizingSolution/basic/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/conceptualizingSolution/basic/outcomes.md" inline />
-
-<dynamic-panel src="../oopDesign/conceptualizingSolution/intermediate/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/conceptualizingSolution/intermediate/outcomes.md" inline />
-
-
 <dynamic-panel src="../oopDesign/miscellaneous/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/miscellaneous/outcomes.md" inline />
 
 <dynamic-panel src="../oopDesign/review/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/review/outcomes.md" inline />
@@ -206,6 +198,14 @@
 <dynamic-panel src="../modeling/modelingBehaviors/communicationDiagrams/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../modeling/modelingBehaviors/communicationDiagrams/outcomes.md" inline />
 
 <dynamic-panel src="../modeling/modelingBehaviors/stateMachineDiagrams/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../modeling/modelingBehaviors/stateMachineDiagrams/outcomes.md" inline />
+
+
+<dynamic-panel src="../modeling/modelingASolution/introduction/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../modeling/modelingASolution/introduction/outcomes.md" inline />
+
+<dynamic-panel src="../modeling/modelingASolution/basic/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../modeling/modelingASolution/basic/outcomes.md" inline />
+
+<dynamic-panel src="../modeling/modelingASolution/intermediate/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../modeling/modelingASolution/intermediate/outcomes.md" inline />
+
 
 <dynamic-panel src="../modeling/review/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../modeling/review/outcomes.md" inline />
 

@@ -79,14 +79,6 @@
 <include src="../design/print.md#main" />
 <include src="../designFundamentals/print.md#main" />
 <include src="../modeling/print.md#main" />
-
-
-## Modeling a Solution
-
-<include src="../oopDesign/conceptualizingSolution/introduction/print.md" />
-<include src="../oopDesign/conceptualizingSolution/basic/print.md" />
-<include src="../oopDesign/conceptualizingSolution/intermediate/print.md" />
-
 <include src="../architecture/print.md#main" />
 <include src="../designPatterns/print.md#main" />
 <include src="../designApproaches/print.md#main" />

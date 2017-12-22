@@ -10,20 +10,20 @@
 
 <div id="body">
 
-As mentioned in [<trigger trigger="click" for="modal:basicModelling-modelingIntro">Design &rarr; Object Oriented Programming &rarr; Conceptualizing OO Solutions &rarr; Introduction</trigger>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.
+As mentioned in [<trigger trigger="click" for="modal:basicModelling-modelingIntro">Design &rarr; Modeling &rarr; Modeling a Solutions &rarr; Introduction</trigger>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.
 
 <modal title="Textbook &raquo;" id="modal:basicModelling-modelingIntro">
   <include src="../introduction/full.md"/>
 </modal>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/introduction/images/textLogicMinefieldCell.png" height="50" />
+<img src="{{baseUrl}}/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50" />
 <p/>
 
 Let us start by modelling a sample interaction between the person playing the game and the TextUi object.
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/basic/images/playerText.png" height="300" />
+<img src="{{baseUrl}}/modeling/modelingASolution/basic/images/playerText.png" height="300" />
 <p/>
 
 `newgame` and `clear x y` represent commands typed by the `Player` on the `TextUi`.
@@ -34,7 +34,7 @@ How does the `TextUi` object carry out the requests it has received from player?
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/basic/images/playerTextLogic.png" height="280" />
+<img src="{{baseUrl}}/modeling/modelingASolution/basic/images/playerTextLogic.png" height="280" />
 <p/>
 
 W = Width of the minefield; H =  Height of the minefield
@@ -46,7 +46,7 @@ The `Logic` methods we conceptualized in our modelling so far are:
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/basic/images/textLogicMinefieldCell.png" height="115" />
+<img src="{{baseUrl}}/modeling/modelingASolution/basic/images/textLogicMinefieldCell.png" height="115" />
 
 </tip-box>
 
@@ -54,7 +54,7 @@ Now, let us look at what other objects and interactions are needed to support th
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/basic/images/logicMinefield.png" height="150" />
+<img src="{{baseUrl}}/modeling/modelingASolution/basic/images/logicMinefield.png" height="150" />
 
 </tip-box>
 
@@ -65,7 +65,7 @@ Given below are the interactions between the player and the Text UI for the whol
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/basic/images/playerTextLoop.png" height="300" />
+<img src="{{baseUrl}}/modeling/modelingASolution/basic/images/playerTextLoop.png" height="300" />
 <p/>
 
 </tip-box><p>

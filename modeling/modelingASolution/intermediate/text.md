@@ -10,7 +10,7 @@
 
 <div id="body">
 
-Continuing with the example in [<trigger trigger="click" for="modal:conceptualingIntermediate-basic">Design &rarr; Object Oriented Programming &rarr; Conceptualizing OO Solutions &rarr; Basic</trigger>], next let us model how the TextUi interacts with the Logic to support the mark or clear operations until the game is won or lost.
+Continuing with the example in [<trigger trigger="click" for="modal:conceptualingIntermediate-basic">Design &rarr; Modeling &rarr; Modeling a Solution &rarr; Basic</trigger>], next let us model how the TextUi interacts with the Logic to support the mark or clear operations until the game is won or lost.
 
 <modal large title="" id="modal:conceptualingIntermediate-basic">
   <include src="../basic/full.md"/>
@@ -18,10 +18,10 @@ Continuing with the example in [<trigger trigger="click" for="modal:conceptualin
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/intermediate/images/playerTextLogicRef.png" height="250" />
+<img src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/playerTextLogicRef.png" height="250" />
 <p/>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/intermediate/images/textLogicSd.png" height="210" />
+<img src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/textLogicSd.png" height="210" />
 
 </tip-box>
 
@@ -41,7 +41,7 @@ Here is the updated class diagram:
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/intermediate/images/textLogicMinefieldCell.png" height="200" />
+<img src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/textLogicMinefieldCell.png" height="200" />
 
 </tip-box>
 
@@ -51,7 +51,7 @@ Suppose `Logic` supports a `reset()` operation. We can model it like this:
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/intermediate/images/logicMinefieldReset.png" height="100" />
+<img src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicMinefieldReset.png" height="100" />
 
 </tip-box>
 
@@ -59,7 +59,7 @@ Our current model assumes that the `Minefield` object has enough information (i.
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/intermediate/images/logicMinefieldNewGame.png" height="85" />
+<img src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicMinefieldNewGame.png" height="85" />
 <p/>
 
 </tip-box>
@@ -68,7 +68,7 @@ An alternative is to have a `ConfigGenerator` object that generates a string con
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/intermediate/images/logicConfigGenerator.png" height="170" />
+<img src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicConfigGenerator.png" height="170" />
 <p/>
 
 </tip-box>
@@ -77,7 +77,7 @@ In addition, `getWidth()`, `getHeight()`, `markCellAt(x,y)` and `clearCellAt(x,y
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/intermediate/images/logicMinefieldFunctions.png" height="180" />
+<img src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicMinefieldFunctions.png" height="180" />
 
 </tip-box>
 
@@ -85,7 +85,7 @@ The updated class diagram:
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/intermediate/images/textLogicMinefieldCellConfigGenerator.png" height="250" />
+<img src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/textLogicMinefieldCellConfigGenerator.png" height="250" />
 
 </tip-box>
 
@@ -98,7 +98,7 @@ Here’s the SD for option 1.
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/intermediate/images/logicMinefieldGetGameState.png" height="180" />
+<img src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicMinefieldGetGameState.png" height="180" />
 
 </tip-box>
 
@@ -106,7 +106,7 @@ Here’s the SD for option 2. Here, assume that the game state is updated after 
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/intermediate/images/logicMinefieldUpdateState.png" height="250" />
+<img src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicMinefieldUpdateState.png" height="250" />
 
 </tip-box>
 
@@ -114,7 +114,7 @@ It is now time to explore what happens inside the `Minefield` constructor? One w
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/intermediate/images/minefieldCellAlt.png" height="200" />
+<img src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/minefieldCellAlt.png" height="200" />
 
 </tip-box>
 
@@ -123,7 +123,7 @@ Now let us assume that `Minesweeper` supports a ‘timing’ feature.
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/intermediate/images/logicTimerOpt.png" height="130" />
+<img src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicTimerOpt.png" height="130" />
 
 </tip-box>
 
@@ -131,7 +131,7 @@ Updated class diagram:
 
 <tip-box>
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/intermediate/images/fullClassDiagram.png" height="250" />
+<img src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/fullClassDiagram.png" height="250" />
 
 </tip-box>
 

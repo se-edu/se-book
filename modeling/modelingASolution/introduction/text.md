@@ -14,7 +14,7 @@
 
 Suppose You are planning to implement a simple minesweeper game that has a text based UI and a GUI. Given below is a possible OOP design for the game.
 
-<img src="{{baseUrl}}/oopDesign/conceptualizingSolution/introduction/images/textLogicMinefieldCell.png" height="50" />
+<img src="{{baseUrl}}/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50" />
 <p/>
 
 Before jumping into coding, you may want to find out things such as,

@@ -4,7 +4,7 @@
 
 %%**Object Oriented Programming &rarr;**%%
 
-## Conceptualizing an OOP Solution
+## Modeling a Solution
 
 <div id="main">
 

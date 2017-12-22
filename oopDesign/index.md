@@ -40,12 +40,6 @@
   <include src="polymorphism/index.md#main" />
 </panel>
 
-## Conceptualizing an OOP Solution
-<panel header="================================================================"
-    type="seamless" alt="conceptualizing oop solution">
-  <include src="conceptualizingSolution/index.md#main" />
-</panel>
-
 ## Miscellaneous
 <panel header="================================================================"
     type="seamless" alt="miscellaneous">
