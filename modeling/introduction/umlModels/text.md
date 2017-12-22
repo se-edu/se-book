@@ -14,8 +14,6 @@ The following diagram uses the class diagram notation to show the different type
 
 <tip-box> 
 
-:package: An example deployment diagram:
-
 <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/UML_diagrams_overview.svg" width="800" /><br>
 <sub>source:[https://en.wikipedia.org/](https://en.wikipedia.org/wiki/Unified_Modeling_Language)</sub>
 </tip-box>
