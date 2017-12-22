@@ -17,10 +17,7 @@
 
 <tip-box>
 
-:package:  The components in the following sequence diagram show low cohesion because user interactions are handled by many components. Its cohesion can be improved by moving all user interactions to the UI component.
-
-<img src="{{baseUrl}}/designFundamentals/cohesion/how/images/uiLogicStorage.png" height="220" />
-<p/>
+:package:  Suppose a Payroll application contains a class that deals with writing data to the database. If the class include some code to show an error dialog to the user if the database is unreachable, that class is not cohesive because it seems to be interacting with the user as well as the database.
 
 </tip-box>
 
