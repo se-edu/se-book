@@ -162,10 +162,6 @@
 
 <include src="../principles/print.md#main" />
 
-### Dependency Inversion Principle
-
-<include src="../designPrinciples/dependencyInversionPrinciple/what/print.md" />
-
 <!-- TODO: add review -->
 
 <hr>

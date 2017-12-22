@@ -22,10 +22,4 @@
   <include src="cohesion/index.md#main" />
 </panel>
 
-## Dependency Inversion Principle
-<panel header="================================================================"
-    type="seamless" alt="dependency inversion">
-  <include src="dependencyInversionPrinciple/index.md#main" />
-</panel>
-
 </div>

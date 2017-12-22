@@ -1,1 +1,1 @@
-:trophy: Can explain dependency inversion principle :four:
+:trophy: Can explain dependency inversion principle (DIP) :one:

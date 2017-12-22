@@ -94,8 +94,6 @@
 
 <dynamic-panel src="../designPrinciples/cohesion/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/cohesion/what/outcomes.md" inline />
 
-<dynamic-panel src="../designPrinciples/dependencyInversionPrinciple/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/dependencyInversionPrinciple/what/outcomes.md" inline />
-
 
 ### Object Oriented Programming
 
