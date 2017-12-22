@@ -58,6 +58,13 @@
 
 <hr>
 
+# SECTION: OOP with UML
+
+<include src="../oopDesign/print.md#main" />
+<include src="../oopImplementation/print.md#main" />
+
+<hr>
+
 # SECTION: REQUIREMENTS
 
 <include src="../requirements/print.md#main" />
@@ -68,12 +75,47 @@
 
 # SECTION: DESIGN
 
-<include src="../design/print.md#main" />
-<include src="../designPrinciples/print.md#main" />
-<include src="../oopDesign/print.md#main" />
+# Design
+
+## Introduction
+
+<include src="../design/introduction/what/print.md" />
+
+## Abstraction
+
+<include src="../designPrinciples/abstraction/what/print.md" />
+
+## Coupling
+
+<include src="../designPrinciples/coupling/what/print.md" />
+<include src="../designPrinciples/coupling/how/print.md" />
+<include src="../designPrinciples/coupling/types/print.md" />
+
+## Cohesion
+
+<include src="../designPrinciples/cohesion/what/print.md" />
+<include src="../designPrinciples/cohesion/how/print.md" />
+
+
+
 <include src="../modeling/print.md#main" />
+
+
+## Modeling a Solution
+
+<include src="../oopDesign/conceptualizingSolution/introduction/print.md" />
+<include src="../oopDesign/conceptualizingSolution/basic/print.md" />
+<include src="../oopDesign/conceptualizingSolution/intermediate/print.md" />
+
+<include src="../designPrinciples/print.md#main" />
 <include src="../architecture/print.md#main" />
 <include src="../designPatterns/print.md#main" />
+
+## Design Approaches
+
+<include src="../design/introduction/multilevelDesign/print.md" />
+<include src="../design/introduction/topDownBottomUp/print.md" />
+<include src="../design/introduction/agileDesign/print.md" />
 
 <hr>
 
@@ -85,7 +127,6 @@
 <include src="../documentation/print.md#main" />
 <include src="../errorHandling/print.md#main" />
 <include src="../integration/print.md#main" />
-<include src="../oopImplementation/print.md#main" />
 <include src="../reuse/print.md#main" />
 
 <hr>
@@ -120,6 +161,15 @@
 # SECTION: SUPPLEMENTARY
 
 <include src="../principles/print.md#main" />
+
+## Open-Closed Principle
+
+<include src="../designPrinciples/openClosedPrinciple/what/print.md" />
+
+## Dependency Inversion Principle
+
+<include src="../designPrinciples/dependencyInversionPrinciple/what/print.md" />
+
 <!-- TODO: add review -->
 
 <hr>

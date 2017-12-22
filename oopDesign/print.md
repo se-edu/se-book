@@ -47,12 +47,6 @@
 <include src="polymorphism/introduction/print.md" />
 <include src="polymorphism/mechanism/print.md" />
 
-## Conceptualizing an OOP Solution
-
-<include src="conceptualizingSolution/introduction/print.md" />
-<include src="conceptualizingSolution/basic/print.md" />
-<include src="conceptualizingSolution/intermediate/print.md" />
-
 ## Miscellaneous
 
 <include src="miscellaneous/print.md" />
