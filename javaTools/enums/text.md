@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Use Enums :two:
+#### Enums :two:
 
 </div>
 
