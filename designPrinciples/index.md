@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-# Software Design Principles
+# Design Fundamentals
 
 ## Abstraction
 <panel header="================================================================"

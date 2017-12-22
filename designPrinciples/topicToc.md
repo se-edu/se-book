@@ -1,4 +1,4 @@
-* [Design Principles](./designPrinciples/)
+* [Design Fundamentals](./designPrinciples/)
   <trigger for="pop:design-principles-preview">:mag:</trigger>[:scroll:](designPrinciples/print.html)
 
 <popover id="pop:design-principles-preview" title="Software Design Principles :mag:" placement="right">

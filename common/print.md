@@ -20,7 +20,7 @@
   * [Specifying Requirements](#specifying-requirements)
 * [**SECTION: DESIGN**](#section-design) 
   * [Design](#design)
-  * [Design Principles](#design-principles)
+  * [Design Fundamentals](#design-fundamentals)
   * [Object Oriented Programming](#object-oriented-programming)
   * [Modeling](#modeling)
   * [Architecture](#software-architecture)
@@ -58,7 +58,7 @@
 
 <hr>
 
-# SECTION: OOP with UML
+# SECTION: OOP (with UML)
 
 <include src="../oopDesign/print.md#main" />
 <include src="../oopImplementation/print.md#main" />
@@ -75,29 +75,8 @@
 
 # SECTION: DESIGN
 
-# Design
-
-## Introduction
-
-<include src="../design/introduction/what/print.md" />
-
-## Abstraction
-
-<include src="../designPrinciples/abstraction/what/print.md" />
-
-## Coupling
-
-<include src="../designPrinciples/coupling/what/print.md" />
-<include src="../designPrinciples/coupling/how/print.md" />
-<include src="../designPrinciples/coupling/types/print.md" />
-
-## Cohesion
-
-<include src="../designPrinciples/cohesion/what/print.md" />
-<include src="../designPrinciples/cohesion/how/print.md" />
-
-
-
+<include src="../design/print.md#main" />
+<include src="../designPrinciples/print.md#main" />
 <include src="../modeling/print.md#main" />
 
 
