@@ -19,7 +19,7 @@
 
 :package:  The components in the following sequence diagram show low cohesion because user interactions are handled by many components. Its cohesion can be improved by moving all user interactions to the UI component.
 
-<img src="{{baseUrl}}/designPrinciples/cohesion/how/images/uiLogicStorage.png" height="220" />
+<img src="{{baseUrl}}/designFundamentals/cohesion/how/images/uiLogicStorage.png" height="220" />
 <p/>
 
 </tip-box>

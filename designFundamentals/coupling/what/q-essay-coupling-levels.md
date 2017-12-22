@@ -5,7 +5,7 @@ Discuss the coupling levels of alternative designs _x_ and _y_.
 
 <tip-box>
 
-<img src="{{baseUrl}}/designPrinciples/coupling/what/images/alternativeDesigns.png" height="180" />
+<img src="{{baseUrl}}/designFundamentals/coupling/what/images/alternativeDesigns.png" height="180" />
 <p/>
 
 </tip-box>

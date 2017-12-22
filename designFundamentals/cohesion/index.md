@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Software Design Principles &rarr;**%%
+%%**Software Design Fundamentals &rarr;**%%
 
 ## Cohesion
 

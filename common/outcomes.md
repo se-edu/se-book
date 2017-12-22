@@ -80,19 +80,19 @@
 <dynamic-panel src="../design/introduction/agileDesign/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/agileDesign/outcomes.md" inline />
 
 
-### Design Principles
+### Design Fundamentals
 
-<dynamic-panel src="../designPrinciples/abstraction/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/abstraction/what/outcomes.md" inline />
+<dynamic-panel src="../designFundamentals/abstraction/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designFundamentals/abstraction/what/outcomes.md" inline />
 
-<dynamic-panel src="../designPrinciples/coupling/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/coupling/what/outcomes.md" inline />
+<dynamic-panel src="../designFundamentals/coupling/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designFundamentals/coupling/what/outcomes.md" inline />
 
-<dynamic-panel src="../designPrinciples/coupling/how/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/coupling/how/outcomes.md" inline />
+<dynamic-panel src="../designFundamentals/coupling/how/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designFundamentals/coupling/how/outcomes.md" inline />
 
-<dynamic-panel src="../designPrinciples/coupling/types/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/coupling/types/outcomes.md" inline />
+<dynamic-panel src="../designFundamentals/coupling/types/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designFundamentals/coupling/types/outcomes.md" inline />
 
-<dynamic-panel src="../designPrinciples/cohesion/how/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/cohesion/how/outcomes.md" inline />
+<dynamic-panel src="../designFundamentals/cohesion/how/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designFundamentals/cohesion/how/outcomes.md" inline />
 
-<dynamic-panel src="../designPrinciples/cohesion/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/cohesion/what/outcomes.md" inline />
+<dynamic-panel src="../designFundamentals/cohesion/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designFundamentals/cohesion/what/outcomes.md" inline />
 
 
 ### Object Oriented Programming

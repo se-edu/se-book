@@ -51,10 +51,10 @@ A _concern_ in this context is a set of information that affects the code of a c
 **This principle should lead to higher <trigger trigger="click" for="soc-cohesion">cohesion</trigger> and lower <trigger trigger="click" for="soc-coupling">coupling</trigger>.**
 
 <modal title="TextBook &raquo;" id="soc-coupling">
-  <include src="../../designPrinciples/coupling/what/full.md"/>
+  <include src="../../designFundamentals/coupling/what/full.md"/>
 </modal>
 <modal title="TextBook &raquo;" id="soc-cohesion">
-  <include src="../../designPrinciples/cohesion/what/full.md"/>
+  <include src="../../designFundamentals/cohesion/what/full.md"/>
 </modal>
 
 </div>

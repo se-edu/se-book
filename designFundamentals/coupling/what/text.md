@@ -20,7 +20,7 @@
 
 :package: In the example below, design `A` appears to have a more coupling between the components than design `B`.
 
-<img src="{{baseUrl}}/designPrinciples/coupling/what/images/playerPuzzleManager.png" height="220" />
+<img src="{{baseUrl}}/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220" />
 <p/>
 
 </tip-box>

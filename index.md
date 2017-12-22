@@ -25,7 +25,7 @@
 
 <include src="design/topicToc.md" />
 
-<include src="designPrinciples/topicToc.md" />
+<include src="designFundamentals/topicToc.md" />
 
 <include src="oopDesign/topicToc.md" />
 

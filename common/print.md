@@ -76,7 +76,7 @@
 # SECTION: DESIGN
 
 <include src="../design/print.md#main" />
-<include src="../designPrinciples/print.md#main" />
+<include src="../designFundamentals/print.md#main" />
 <include src="../modeling/print.md#main" />
 
 
@@ -86,7 +86,6 @@
 <include src="../oopDesign/conceptualizingSolution/basic/print.md" />
 <include src="../oopDesign/conceptualizingSolution/intermediate/print.md" />
 
-<include src="../designPrinciples/print.md#main" />
 <include src="../architecture/print.md#main" />
 <include src="../designPatterns/print.md#main" />
 
