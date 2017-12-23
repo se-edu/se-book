@@ -734,6 +734,13 @@
 <dynamic-panel src="../uml/classDiagrams/interfaces/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/classDiagrams/interfaces/what/outcomes.md" inline />
 
 
+<dynamic-panel src="../uml/objectDiagrams/introduction/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/objectDiagrams/introduction/outcomes.md" inline />
+
+<dynamic-panel src="../uml/objectDiagrams/objects/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/objectDiagrams/objects/outcomes.md" inline />
+
+<dynamic-panel src="../uml/objectDiagrams/associations/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/objectDiagrams/associations/what/outcomes.md" inline />
+
+
 <dynamic-panel src="../uml/sequenceDiagrams/introduction/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/sequenceDiagrams/introduction/outcomes.md" inline />
 
 <dynamic-panel src="../uml/sequenceDiagrams/basic/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/sequenceDiagrams/basic/outcomes.md" inline />
@@ -755,13 +762,6 @@
 <dynamic-panel src="../uml/sequenceDiagrams/referenceFrames/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/sequenceDiagrams/referenceFrames/outcomes.md" inline />
 
 <dynamic-panel src="../uml/sequenceDiagrams/minimalNotation/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/sequenceDiagrams/minimalNotation/outcomes.md" inline />
-
-
-<dynamic-panel src="../uml/objectDiagrams/introduction/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/objectDiagrams/introduction/outcomes.md" inline />
-
-<dynamic-panel src="../uml/objectDiagrams/objects/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/objectDiagrams/objects/outcomes.md" inline />
-
-<dynamic-panel src="../uml/objectDiagrams/objectStructures/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/objectDiagrams/objectStructures/outcomes.md" inline />
 
 
 <dynamic-panel src="../uml/activityDiagrams/introduction/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/activityDiagrams/introduction/what/outcomes.md" inline />
