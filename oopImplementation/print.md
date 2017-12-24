@@ -4,7 +4,7 @@
 
 <div id="main">
 
-# Implementing OOP
+# OOP - Implementation
 
 <include src="classes/print.md" />
 <include src="classLevelMembers/print.md" />
