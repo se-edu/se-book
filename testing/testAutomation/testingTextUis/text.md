@@ -16,7 +16,7 @@
   * **First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.**<br> e.g., `java AddressBook < input.txt > output.txt`
   * **Next, we compare the actual output file with another file containing the expected output.**<br> e.g., `FC output.txt expected.txt`
 
-Let us assume we are testing a CLI app called `AddressBook` (Example: [se-edu/addressbook-level1](https://github.com/nus-cs2103-AY1718S1/addressbook-level1)). Here are the detailed steps:
+Let us assume we are testing a CLI app called `AddressBook` (Example: [se-edu/addressbook-level1](https://github.com/nus-cs2103-AY1718S2/addressbook-level1)). Here are the detailed steps:
 
 1. Store the test input in the text file `input.txt`. 
  

@@ -10,7 +10,7 @@
 
 <div id="body">
 
-**1. Fork the [samplerepo-pr-practice](https://github.com/nus-cs2103-AY1718S1/samplerepo-pr-practice) onto your GitHub account. Clone it onto your computer.**
+**1. Fork the [samplerepo-pr-practice](https://github.com/nus-cs2103-AY1718S2/samplerepo-pr-practice) onto your GitHub account. Clone it onto your computer.**
 
 **2. Create a branch named `add-intro` in your clone. Add a couple of commits** which adds/modifies an _Introduction_ section to the README.md. Example:
 
@@ -48,7 +48,7 @@ git push origin add-intro
 
 4b. Select `base fork` and `head fork` as follows:
 
-* `base fork`: your own fork (i.e. `{your user name}/samplerepo-pr-practice`, ==NOT `nus-cs2103-AY1718S1/samplerepo-pr-practice`==)
+* `base fork`: your own fork (i.e. `{your user name}/samplerepo-pr-practice`, ==NOT `nus-cs2103-AY1718S2/samplerepo-pr-practice`==)
 * `head fork`: your own fork.
 
 <img src="{{baseUrl}}/gitAndGithub/createPRs/images/selectBase.png" width="800" />
