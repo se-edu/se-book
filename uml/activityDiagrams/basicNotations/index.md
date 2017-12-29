@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**UML &rarr; Activity Diagrams &rarr;**%%
+%%**UML → Activity Diagrams →**%%
 
 ### Basic Notations
 

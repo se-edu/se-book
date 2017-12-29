@@ -1,1 +1,1 @@
-Quality Assurance &rarr; Test Case Design &rarr; Boundary Value Analysis &rarr;
+Quality Assurance → Test Case Design → Boundary Value Analysis →

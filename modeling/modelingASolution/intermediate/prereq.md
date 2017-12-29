@@ -1,2 +1,2 @@
-<dynamic-panel src="../../../modeling/modelingBehaviors/sequenceDiagramsIntermediate/full.md" header="%%:mortar_board: Design &rarr; Modeling &rarr; Modeling Behaviors &rarr; Sequence Diagrams &rarr; Intermediate%%" />
-<dynamic-panel src="../../../modeling/modelingStructures/classDiagramsIntermediate/full.md" header="%%:mortar_board: Design &rarr; Modeling &rarr; Modeling Structures &rarr; Class Diagrams &rarr; Intermediate%%" />
+<dynamic-panel src="../../../modeling/modelingBehaviors/sequenceDiagramsIntermediate/full.md" header="%%:mortar_board: Design → Modeling → Modeling Behaviors → Sequence Diagrams → Intermediate%%" />
+<dynamic-panel src="../../../modeling/modelingStructures/classDiagramsIntermediate/full.md" header="%%:mortar_board: Design → Modeling → Modeling Structures → Class Diagrams → Intermediate%%" />

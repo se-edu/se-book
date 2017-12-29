@@ -1,1 +1,1 @@
-Tools &rarr; UML &rarr; Sequence Diagrams &rarr;
+Tools → UML → Sequence Diagrams →

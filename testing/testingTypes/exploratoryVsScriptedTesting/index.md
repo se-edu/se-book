@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Testing &rarr; Testing Types &rarr;**%%
+%%**Testing → Testing Types →**%%
 
 ### Exploratory vs Scripted Testing
 

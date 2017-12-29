@@ -1,1 +1,1 @@
-Design &rarr; Object Oriented Programming &rarr; Inheritance &rarr;
+Design → Object Oriented Programming → Inheritance →

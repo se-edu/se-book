@@ -1,1 +1,1 @@
-Implementation &rarr; Reuse &rarr; Platforms &rarr;
+Implementation → Reuse → Platforms →

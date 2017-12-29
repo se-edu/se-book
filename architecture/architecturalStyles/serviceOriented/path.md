@@ -1,1 +1,1 @@
-Design &rarr; Architecture &rarr; Styles &rarr; Service-Oriented Style
+Design → Architecture → Styles → Service-Oriented Style

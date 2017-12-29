@@ -1,1 +1,1 @@
-Implementation &rarr; Documentation &rarr; Tools &rarr; AsciiDoc
+Implementation → Documentation → Tools → AsciiDoc

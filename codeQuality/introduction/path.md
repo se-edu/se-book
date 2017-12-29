@@ -1,1 +1,1 @@
-Implementation &rarr; Code Quality &rarr; Introduction &rarr;
+Implementation → Code Quality → Introduction →

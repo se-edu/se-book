@@ -1,1 +1,1 @@
-Design &rarr; Object Oriented Programming &rarr; Objects &rarr;
+Design → Object Oriented Programming → Objects →

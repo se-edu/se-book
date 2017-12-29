@@ -1,1 +1,1 @@
-Design &rarr; Design Patterns &rarr; Singleton &rarr;
+Design → Design Patterns → Singleton →

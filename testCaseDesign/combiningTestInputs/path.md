@@ -1,1 +1,1 @@
-Quality Assurance &rarr; Test Case Design &rarr; Combining Test Inputs &rarr;
+Quality Assurance → Test Case Design → Combining Test Inputs →

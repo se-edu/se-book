@@ -12,7 +12,7 @@
 
 **_Associations_ among objects/classes play an important role in an OO solution.**
 
-<dynamic-panel src="../../../oopDesign/associations/basic/full.md" header=":mortar_board: OOP &rarr; Associations &rarr; Basic" />
+<dynamic-panel src="../../../oopDesign/associations/basic/full.md" header=":mortar_board: OOP → Associations → Basic" />
 
 The most basic class diagram is a bunch of classes with some solid lines among them to represent associations, such as this one.
 
@@ -26,10 +26,10 @@ The most basic class diagram is a bunch of classes with some solid lines among t
 
 In addition, **associations can show additional decorations such as _association labels_, _association roles_, _multiplicity_ and _navigability_** to add more information to a class diagram.
 
-<dynamic-panel src="../../../../book/uml/classDiagrams/associations/labels/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Labels"/>
-<dynamic-panel src="../../../../book/uml/classDiagrams/associations/roles/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Roles"/>
-<dynamic-panel src="../../../../book/oopDesign/associations/multiplicity/full.md" header=":mortar_board: OOP &rarr; Associations &rarr; Multiplicity" />
-<dynamic-panel src="../../../../book/oopDesign/associations/navigability/full.md" header=":mortar_board: OOP &rarr; Associations &rarr; Navigability" />
+<dynamic-panel src="../../../../book/uml/classDiagrams/associations/labels/full.md" header=":mortar_board: UML → Class Diagrams → Associations → Labels"/>
+<dynamic-panel src="../../../../book/uml/classDiagrams/associations/roles/full.md" header=":mortar_board: UML → Class Diagrams → Associations → Roles"/>
+<dynamic-panel src="../../../../book/oopDesign/associations/multiplicity/full.md" header=":mortar_board: OOP → Associations → Multiplicity" />
+<dynamic-panel src="../../../../book/oopDesign/associations/navigability/full.md" header=":mortar_board: OOP → Associations → Navigability" />
 
 <tip-box> 
 

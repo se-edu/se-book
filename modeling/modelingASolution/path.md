@@ -1,1 +1,1 @@
-Design &rarr; Modeling &rarr; Modeling a Solution &rarr;
+Design → Modeling → Modeling a Solution →

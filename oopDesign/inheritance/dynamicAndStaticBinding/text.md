@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; Inheritance &rarr;</div>
+<div id="path">Object Oriented Programming → Inheritance →</div>
 
 <div id="title">
 
@@ -18,7 +18,7 @@
 
 **<trigger trigger="click" for="modal:dynamicAndStatic-overriding">Overridden methods</trigger> are resolved using dynamic binding, and therefore resolves to the implementation in the actual type of the object.**
 
-<modal large title="Textbook &raquo;" id="modal:dynamicAndStatic-overriding">
+<modal large title="Textbook »" id="modal:dynamicAndStatic-overriding">
   <include src="../../../oopImplementation/overriding/full.md"/>
 </modal>
 
@@ -46,7 +46,7 @@ However, at runtime the `adjustSalary(int)` operation of the actual object will 
 
 **In contrast, <trigger trigger="click" for="modal:dynamicAndStatic-overloading">overloaded</trigger> methods are resolved using static binding.**
 
-<modal large title="Textbook &raquo;" id="modal:dynamicAndStatic-overloading">
+<modal large title="Textbook »" id="modal:dynamicAndStatic-overloading">
   <include src="../../../oopImplementation/overloading/full.md"/>
 </modal>
 

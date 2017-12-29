@@ -10,9 +10,9 @@
 
 <div id="body">
 
-As mentioned in [<trigger trigger="click" for="modal:basicModelling-modelingIntro">Design &rarr; Modeling &rarr; Modeling a Solutions &rarr; Introduction</trigger>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.
+As mentioned in [<trigger trigger="click" for="modal:basicModelling-modelingIntro">Design → Modeling → Modeling a Solutions → Introduction</trigger>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.
 
-<modal title="Textbook &raquo;" id="modal:basicModelling-modelingIntro">
+<modal title="Textbook »" id="modal:basicModelling-modelingIntro">
   <include src="../introduction/full.md"/>
 </modal>
 

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Git and Github &rarr; </div>
+<div id="path">Git and Github → </div>
 
 <div id="title">
 

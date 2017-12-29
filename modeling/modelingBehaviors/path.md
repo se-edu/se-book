@@ -1,1 +1,1 @@
-Design &rarr; Modelling &rarr; Modelling Behaviors
+Design → Modelling → Modelling Behaviors

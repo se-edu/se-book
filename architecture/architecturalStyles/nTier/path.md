@@ -1,1 +1,1 @@
-Design &rarr; Architecture &rarr; Styles &rarr; n-Tier Style
+Design → Architecture → Styles → n-Tier Style

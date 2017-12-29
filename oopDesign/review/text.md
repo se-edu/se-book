@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; </div>
+<div id="path">Object Oriented Programming → </div>
 
 <div id="title">
 

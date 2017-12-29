@@ -1,1 +1,1 @@
-Quality Assurance &rarr; Testing &rarr; Alpha/Beta Testing &rarr;
+Quality Assurance → Testing → Alpha/Beta Testing →

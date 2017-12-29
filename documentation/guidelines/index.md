@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Documentation &rarr;**%%
+%%**Documentation →**%%
 
 ## Guidelines
 

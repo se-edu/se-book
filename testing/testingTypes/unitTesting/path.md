@@ -1,1 +1,1 @@
-Quality Assurance &rarr; Testing &rarr; Unit Testing &rarr;
+Quality Assurance → Testing → Unit Testing →

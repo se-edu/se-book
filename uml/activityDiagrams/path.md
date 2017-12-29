@@ -1,1 +1,1 @@
-Tools &rarr; UML &rarr; Activity Diagrams &rarr; 
+Tools → UML → Activity Diagrams → 

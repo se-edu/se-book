@@ -1,1 +1,1 @@
-Implementation &rarr; Documentation &rarr; Guidelines &rarr; Aim for Comprehensibility &rarr;
+Implementation → Documentation → Guidelines → Aim for Comprehensibility →

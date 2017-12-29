@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Git and Github &rarr; </div>
+<div id="path">Git and Github → </div>
 
 <div id="title">
 
@@ -12,7 +12,7 @@
 
 <div id="body">
 
-Clone the sample repo as explained in <trigger for="modal:clone-repository" trigger="click">[Textbook &raquo; Tools &rarr; Git & GitHub &rarr; Clone]</trigger>.
+Clone the sample repo as explained in <trigger for="modal:clone-repository" trigger="click">[Textbook » Tools → Git & GitHub → Clone]</trigger>.
 
 Delete the last two commits to simulate cloning the repo 2 commits ago.
 

@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: Continuing with the example given in [<trigger trigger="click" for="modal:oopImpl-polymorphism">:mortar_board: OOP &rarr; Polymorphism &rarr; Introduction </trigger>], given below is the minimum code for `Staff`, `Admin`, and `Academic` classes that achieves the desired polymorphism.
+:package: Continuing with the example given in [<trigger trigger="click" for="modal:oopImpl-polymorphism">:mortar_board: OOP → Polymorphism → Introduction </trigger>], given below is the minimum code for `Staff`, `Admin`, and `Academic` classes that achieves the desired polymorphism.
 
 <modal title="" id="modal:oopImpl-polymorphism">
   <include src="../../oopDesign/polymorphism/introduction/full.md"/>

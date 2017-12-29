@@ -1,4 +1,4 @@
-<div id="path">Testing &rarr; Testing Types &rarr;</div>
+<div id="path">Testing → Testing Types →</div>
 
 <div id="title">
 

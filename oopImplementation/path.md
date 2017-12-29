@@ -1,1 +1,1 @@
-Implementation &rarr; Object Oriented Programming &rarr;
+Implementation → Object Oriented Programming →

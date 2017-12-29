@@ -1,1 +1,1 @@
-Implementation &rarr; Integration &rarr; Build Automation &rarr;
+Implementation → Integration → Build Automation →

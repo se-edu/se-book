@@ -1,1 +1,1 @@
-Requirements &rarr; Specifying Requirements &rarr; Prose &rarr;
+Requirements → Specifying Requirements → Prose →

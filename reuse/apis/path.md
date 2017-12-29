@@ -1,1 +1,1 @@
-Implementation &rarr; Reuse &rarr; APIs &rarr;
+Implementation → Reuse → APIs →

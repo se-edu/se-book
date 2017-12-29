@@ -1,1 +1,1 @@
-Tools &rarr; Java &rarr;
+Tools → Java →

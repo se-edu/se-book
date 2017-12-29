@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Software Architecture &rarr; Architectural Styles &rarr;**%%
+%%**Software Architecture → Architectural Styles →**%%
 
 ### Event-driven Architectural Style
 

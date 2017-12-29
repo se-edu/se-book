@@ -12,7 +12,7 @@
 
 Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such **connections between objects are called _associations_.**
 
-<dynamic-panel src="../../../uml/objectDiagrams/associations/what/full.md" header=":mortar_board: UML &rarr; Object Diagrams &rarr; Associations &rarr; What"></dynamic-panel>
+<dynamic-panel src="../../../uml/objectDiagrams/associations/what/full.md" header=":mortar_board: UML → Object Diagrams → Associations → What"></dynamic-panel>
 
 <p/>
 
@@ -30,14 +30,14 @@ Objects in an OO solution need to be connected to each other to form a network s
 
 :package: In this example, the associations in the object structure have changed %%(from left to right) due to a new `Person` object being connected to the `Main` object.%%
 
-<img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculator.png" height="100" /> &nbsp; &rarr; &nbsp; 
+<img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculator.png" height="100" /> &nbsp; → &nbsp; 
 <img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculatorAdam.png" height="100" />
 
 </tip-box>
 
 **Associations among objects are reflected correspondingly in the class diagram too**, as it is the class diagram that dictates the nature of the associations allowed in the object structures.
 
-<dynamic-panel src="../../../uml/classDiagrams/associations/basic/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Associations &rarr; Basic"/>
+<dynamic-panel src="../../../uml/classDiagrams/associations/basic/full.md" header=":mortar_board: UML → Class Diagrams → Associations → Basic"/>
 
 <tip-box> 
 

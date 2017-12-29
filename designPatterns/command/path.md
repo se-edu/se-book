@@ -1,1 +1,1 @@
-Design &rarr; Design Patterns &rarr; Command Pattern &rarr;
+Design → Design Patterns → Command Pattern →

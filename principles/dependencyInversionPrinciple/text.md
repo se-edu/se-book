@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Principles &rarr; Dependency Inversion Principle &rarr;</div>
+<div id="path">Software Design Principles → Dependency Inversion Principle →</div>
 
 <div id="title">
 

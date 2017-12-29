@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Modeling &rarr;**%%
+%%**Modeling →**%%
 
 ## Modeling Structures
 

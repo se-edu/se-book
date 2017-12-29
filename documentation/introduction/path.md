@@ -1,1 +1,1 @@
-Implementation &rarr; Documentation &rarr; Introduction &rarr;
+Implementation → Documentation → Introduction →

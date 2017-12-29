@@ -1,1 +1,1 @@
-Design &rarr; Architecture &rarr;
+Design → Architecture →

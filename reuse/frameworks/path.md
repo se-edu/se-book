@@ -1,1 +1,1 @@
-Implementation &rarr; Reuse &rarr; Frameworks &rarr;
+Implementation → Reuse → Frameworks →

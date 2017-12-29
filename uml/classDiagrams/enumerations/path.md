@@ -1,1 +1,1 @@
-Tools &rarr; UML &rarr; Class Diagrams &rarr; Enumerations &rarr;
+Tools → UML → Class Diagrams → Enumerations →

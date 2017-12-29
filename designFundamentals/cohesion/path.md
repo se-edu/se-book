@@ -1,1 +1,1 @@
-Design &rarr; Design Fundamentals &rarr; Cohesion &rarr;
+Design → Design Fundamentals → Cohesion →

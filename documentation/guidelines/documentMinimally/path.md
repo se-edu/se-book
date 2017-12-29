@@ -1,1 +1,1 @@
-Implementation &rarr; Documentation &rarr; Guidelines &rarr; Minimal but Sufficient &rarr;
+Implementation → Documentation → Guidelines → Minimal but Sufficient →

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Documentation &rarr; Tools &rarr;**%%
+%%**Documentation → Tools →**%%
 
 ### AsciiDoc
 

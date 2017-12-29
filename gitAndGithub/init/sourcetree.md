@@ -1,5 +1,5 @@
-Windows: Click `File` &rarr; `Clone/New…`. Click on `Create` button.<br>
-Mac: `New...` &rarr; `Create New Repository`.
+Windows: Click `File` → `Clone/New…`. Click on `Create` button.<br>
+Mac: `New...` → `Create New Repository`.
 
 Enter the location of the directory (Windows version shown below) and click `Create`.
 

@@ -1,1 +1,1 @@
-Implementation &rarr; Code Quality &rarr; Style &rarr;
+Implementation → Code Quality → Style →

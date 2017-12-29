@@ -1,1 +1,1 @@
-Implementation &rarr; Code Quality &rarr; Naming &rarr;
+Implementation → Code Quality → Naming →

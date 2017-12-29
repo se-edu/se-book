@@ -1,1 +1,1 @@
-Quality Assurance &rarr; Testing &rarr; Dependency Injection &rarr;
+Quality Assurance → Testing → Dependency Injection →

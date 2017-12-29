@@ -1,1 +1,1 @@
-Implementation &rarr; Error Handling &rarr; Introduction &rarr;
+Implementation → Error Handling → Introduction →

@@ -1,1 +1,1 @@
-Design &rarr; Introduction &rarr;
+Design → Introduction →

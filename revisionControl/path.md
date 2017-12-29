@@ -1,1 +1,1 @@
-Project Management &rarr; Revision Control &rarr;
+Project Management → Revision Control →

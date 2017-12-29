@@ -1,1 +1,1 @@
-Implementation &rarr; Documentation &rarr; Tools &rarr; JavaDoc
+Implementation → Documentation → Tools → JavaDoc

@@ -1,1 +1,1 @@
-Quality Assurance &rarr; Testing &rarr; System Testing &rarr;
+Quality Assurance → Testing → System Testing →

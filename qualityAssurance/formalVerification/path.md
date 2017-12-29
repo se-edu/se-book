@@ -1,1 +1,1 @@
-Quality Assurance &rarr; Quality Assurance &rarr; Formal Verification &rarr;
+Quality Assurance → Quality Assurance → Formal Verification →

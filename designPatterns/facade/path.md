@@ -1,1 +1,1 @@
-Design &rarr; Design Patterns &rarr; Facade Pattern &rarr;
+Design → Design Patterns → Facade Pattern →

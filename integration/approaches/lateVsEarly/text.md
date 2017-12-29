@@ -16,7 +16,7 @@
 
 <tip-box type="wrong">
  
-  This approach is not recommended because integration often causes many component incompatibilities (due to previous miscommunications and misunderstandings) to surface which can lead to delivery delays %%&nbsp;i.e. Late integration &rarr; incompatibilities found &rarr; major rework required &rarr; cannot meet the delivery date%%.
+  This approach is not recommended because integration often causes many component incompatibilities (due to previous miscommunications and misunderstandings) to surface which can lead to delivery delays %%&nbsp;i.e. Late integration → incompatibilities found → major rework required → cannot meet the delivery date%%.
 
 </tip-box>
 

@@ -1,1 +1,1 @@
-Implementation &rarr; Code Quality &rarr; Readability &rarr;
+Implementation → Code Quality → Readability →

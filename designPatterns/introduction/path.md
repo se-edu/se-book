@@ -1,1 +1,1 @@
-Design &rarr; Design Patterns &rarr; Introduction &rarr;
+Design → Design Patterns → Introduction →

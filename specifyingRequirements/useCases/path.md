@@ -1,1 +1,1 @@
-Requirements &rarr; Specifying Requirements &rarr; Use Cases &rarr;
+Requirements → Specifying Requirements → Use Cases →

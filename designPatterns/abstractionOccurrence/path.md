@@ -1,1 +1,1 @@
-Design &rarr; Design Patterns &rarr; Abstraction Occurrence Pattern &rarr;
+Design → Design Patterns → Abstraction Occurrence Pattern →

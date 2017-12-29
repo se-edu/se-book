@@ -1,1 +1,1 @@
-<dynamic-panel src="../heuristicValid/full.md" header="%%:mortar_board: Quality Assurance &rarr; Test Case Design &rarr; Combining Test Inputs &rarr; Heuristic: Each Valid Input at Least Once in a Positive Test Case%%" />
+<dynamic-panel src="../heuristicValid/full.md" header="%%:mortar_board: Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: Each Valid Input at Least Once in a Positive Test Case%%" />

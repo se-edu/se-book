@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Intellij IDEA &rarr; </div>
+<div id="path">Intellij IDEA → </div>
 
 <div id="title">
 
@@ -14,7 +14,7 @@
 
 <div v-closeable alt="Videos: Automated refactoring using IDE">
 
-This video explains how to automate the 'Extract parameter' refactoring using Intellij IDEA. Most other refactorings available works similarly. i.e. `select the code to refactor` &rarr; `find the refactoring in the context menu` or `use the keyboard shortcut`.
+This video explains how to automate the 'Extract parameter' refactoring using Intellij IDEA. Most other refactorings available works similarly. i.e. `select the code to refactor` → `find the refactoring in the context menu` or `use the keyboard shortcut`.
 
 @[youtube](fg3Q5pt4E80)
 

@@ -1,1 +1,1 @@
-Design &rarr; Design Patterns &rarr; MVC Pattern &rarr;
+Design → Design Patterns → MVC Pattern →

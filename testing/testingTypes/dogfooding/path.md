@@ -1,1 +1,1 @@
-Quality Assurance &rarr; Testing &rarr; Dogfooding &rarr;
+Quality Assurance → Testing → Dogfooding →

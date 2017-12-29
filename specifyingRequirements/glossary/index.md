@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Specifying Requirements &rarr;**%%
+%%**Specifying Requirements →**%%
 
 ## Glossary
 

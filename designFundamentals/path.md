@@ -1,1 +1,1 @@
-Design &rarr; Design Fundamentals &rarr;
+Design → Design Fundamentals →

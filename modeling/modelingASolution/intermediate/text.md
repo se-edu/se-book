@@ -10,7 +10,7 @@
 
 <div id="body">
 
-Continuing with the example in [<trigger trigger="click" for="modal:conceptualingIntermediate-basic">Design &rarr; Modeling &rarr; Modeling a Solution &rarr; Basic</trigger>], next let us model how the TextUi interacts with the Logic to support the mark or clear operations until the game is won or lost.
+Continuing with the example in [<trigger trigger="click" for="modal:conceptualingIntermediate-basic">Design → Modeling → Modeling a Solution → Basic</trigger>], next let us model how the TextUi interacts with the Logic to support the mark or clear operations until the game is won or lost.
 
 <modal large title="" id="modal:conceptualingIntermediate-basic">
   <include src="../basic/full.md"/>

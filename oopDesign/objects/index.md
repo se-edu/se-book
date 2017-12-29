@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Object Oriented Programming &rarr;**%%
+%%**Object Oriented Programming →**%%
 
 ## Objects
 

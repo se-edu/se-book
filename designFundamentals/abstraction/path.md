@@ -1,1 +1,1 @@
-Design &rarr; Design Fundamentals &rarr; Abstraction &rarr;
+Design → Design Fundamentals → Abstraction →

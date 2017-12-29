@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Reuse &rarr; APIs &rarr;</div>
+<div id="path">Reuse → APIs →</div>
 
 <div id="title">
 

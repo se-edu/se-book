@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Java &rarr; </div>
+<div id="path">Java → </div>
 
 <div id="title">
 

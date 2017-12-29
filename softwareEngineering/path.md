@@ -1,1 +1,1 @@
-Software Engineering &rarr;
+Software Engineering →

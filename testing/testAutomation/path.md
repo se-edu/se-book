@@ -1,1 +1,1 @@
-Quality Assurance &rarr; Testing &rarr; Test Automation &rarr;
+Quality Assurance → Testing → Test Automation →

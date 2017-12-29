@@ -31,7 +31,7 @@ A _class diagram_ is a diagram drawn using the UML modelling notation.<br>
 
 **A _model_ provides a simpler view of a complex entity because a model captures only a selected aspect.** This omission of some aspects implies models are <trigger trigger="click" for="modal:modellingIntro-abstraction">abstractions</trigger>.
 
-<modal large title="%%Textbook &raquo;%%" id="modal:modellingIntro-abstraction">
+<modal large title="%%Textbook »%%" id="modal:modellingIntro-abstraction">
   <include src="../../../../book/designFundamentals/abstraction/what/full.md"/>
 </modal>
 

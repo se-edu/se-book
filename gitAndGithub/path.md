@@ -1,1 +1,1 @@
-Tools &rarr; Git and GitHub &rarr;
+Tools → Git and GitHub →

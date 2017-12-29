@@ -14,11 +14,11 @@
 
 To increase <trigger trigger="click" for="modal:usebaseBased-EandE">E&E of testing</trigger>, high-priority use cases are given more attention. For example, a <trigger trigger="click" for="modal:usecaseBased-scripted">scripted approach</trigger> can be used to test high priority test cases, while an exploratory approach is used to test other areas of concern that could emerge during testing.
 
-<modal large title="Quality Assurance &rarr; Test Case Design &rarr; Introduction &rarr; (extract) E&E of testing" id="modal:usebaseBased-EandE">
+<modal large title="Quality Assurance → Test Case Design → Introduction → (extract) E&E of testing" id="modal:usebaseBased-EandE">
   <include src="../../introduction/what/text.md#e-and-e"/>
 </modal>
 
-<modal large title="Textbook &raquo;" id="modal:usecaseBased-scripted">
+<modal large title="Textbook »" id="modal:usecaseBased-scripted">
   <include src="../../../testing/testingTypes/exploratoryVsScriptedTesting/what/full.md"/>
 </modal>
 

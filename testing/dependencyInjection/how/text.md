@@ -10,7 +10,7 @@
 
 <div id="body">
 
-**Polymorphism can be used to implement dependency injection**, as can be seen in the example given in <trigger trigger="click" for="modal:useDi-stub">[Quality Assurance &rarr; Testing &rarr; Unit Testing &rarr; Stubs]</trigger> where a stub is injected to replace a dependency.
+**Polymorphism can be used to implement dependency injection**, as can be seen in the example given in <trigger trigger="click" for="modal:useDi-stub">[Quality Assurance → Testing → Unit Testing → Stubs]</trigger> where a stub is injected to replace a dependency.
 
 <modal large title="" id="modal:useDi-stub">
   <include src="../../testingTypes/unitTesting/stubs/full.md"/>

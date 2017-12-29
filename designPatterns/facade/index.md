@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Software Design Patterns &rarr;**%%
+%%**Software Design Patterns →**%%
 
 ## Facade Pattern
 

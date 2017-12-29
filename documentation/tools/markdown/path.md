@@ -1,1 +1,1 @@
-Implementation &rarr; Documentation &rarr; Tools &rarr; Markdown
+Implementation → Documentation → Tools → Markdown

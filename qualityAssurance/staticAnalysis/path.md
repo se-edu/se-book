@@ -1,1 +1,1 @@
-Quality Assurance &rarr; Quality Assurance &rarr; Static Analysis &rarr;
+Quality Assurance → Quality Assurance → Static Analysis →

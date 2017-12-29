@@ -1,1 +1,1 @@
-Quality Assurance &rarr; Quality Assurance &rarr; Introduction &rarr;
+Quality Assurance → Quality Assurance → Introduction →

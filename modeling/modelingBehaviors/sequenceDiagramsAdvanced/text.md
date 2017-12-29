@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Modeling &rarr; Modeling Behaviors &rarr;</div>
+<div id="path">Modeling → Modeling Behaviors →</div>
 
 <div id="title">
 

@@ -1,4 +1,4 @@
-<div id="path">Documentation &rarr; Guidelines &rarr;</div>
+<div id="path">Documentation → Guidelines →</div>
 
 <div id="title">
 

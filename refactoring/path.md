@@ -1,1 +1,1 @@
-Implementation &rarr; Refactoring &rarr;
+Implementation → Refactoring →

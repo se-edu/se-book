@@ -1,1 +1,1 @@
-Quality Assurance &rarr; Quality Assurance &rarr; Code Reviews &rarr;
+Quality Assurance → Quality Assurance → Code Reviews →

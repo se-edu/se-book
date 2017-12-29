@@ -20,7 +20,7 @@
 
 </tip-box>
 
-<dynamic-panel src="../../../uml/classDiagrams/associationClasses/what/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Association Classes"/><p/>
+<dynamic-panel src="../../../uml/classDiagrams/associationClasses/what/full.md" header=":mortar_board: UML → Class Diagrams → Association Classes"/><p/>
 
 
 </div>

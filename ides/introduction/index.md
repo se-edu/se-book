@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**IDEs &rarr;**%%
+%%**IDEs →**%%
 
 ## Introduction
 

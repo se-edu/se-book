@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Testing &rarr;**%%
+%%**Testing →**%%
 
 ## Dependency Injection
 

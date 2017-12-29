@@ -1,1 +1,1 @@
-Design Approaches &rarr; Agile Design &rarr;
+Design Approaches → Agile Design →

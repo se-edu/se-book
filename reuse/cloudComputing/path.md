@@ -1,1 +1,1 @@
-Implementation &rarr; Reuse &rarr; Cloud Computing &rarr;
+Implementation → Reuse → Cloud Computing →

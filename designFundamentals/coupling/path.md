@@ -1,1 +1,1 @@
-Design &rarr; Design Fundamentals &rarr; Coupling &rarr;
+Design → Design Fundamentals → Coupling →

@@ -1,1 +1,1 @@
-Design &rarr; Design Approaches &rarr;
+Design → Design Approaches →

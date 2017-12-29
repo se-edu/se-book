@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Testing &rarr; TDD &rarr;</div>
+<div id="path">Testing → TDD →</div>
 
 <div id="title">
 

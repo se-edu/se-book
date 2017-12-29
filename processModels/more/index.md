@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**SDLC Process Models &rarr;**%%
+%%**SDLC Process Models →**%%
 
 ## More
 

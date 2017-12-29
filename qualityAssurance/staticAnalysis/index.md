@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Quality Assurance &rarr;**%%
+%%**Quality Assurance →**%%
 
 ## Static Analysis
 

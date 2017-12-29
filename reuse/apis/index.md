@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Reuse &rarr;**%%
+%%**Reuse →**%%
 
 ## APIs
 

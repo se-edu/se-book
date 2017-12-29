@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Refactoring &rarr; </div>
+<div id="path">Refactoring → </div>
 
 <div id="title">
 

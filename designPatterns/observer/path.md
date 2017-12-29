@@ -1,1 +1,1 @@
-Design &rarr; Design Patterns &rarr; Observer Pattern &rarr;
+Design → Design Patterns → Observer Pattern →

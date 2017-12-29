@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Testing &rarr; Test Automation &rarr;</div>
+<div id="path">Testing → Test Automation →</div>
 
 <div id="title">
 

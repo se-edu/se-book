@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**UML &rarr; Class Diagrams &rarr;**%%
+%%**UML → Class Diagrams →**%%
 
 ### Interfaces
 

@@ -1,1 +1,1 @@
-Implementation &rarr; Reuse &rarr; Libraries &rarr;
+Implementation → Reuse → Libraries →

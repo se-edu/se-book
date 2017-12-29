@@ -1,1 +1,1 @@
-Implementation &rarr; Code Quality &rarr; Error-Prone Practices &rarr;
+Implementation → Code Quality → Error-Prone Practices →
