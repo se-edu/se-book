@@ -11,7 +11,7 @@
 <div id="body">
 
 <panel header="**Explain WHAT and WHY, not HOW**"
-    type="seamless" alt="indentation">
+    type="seamless" alt="indentation" expanded>
   <include src="../../practices/explainWhatWhyNotHow/index.md#main" />
 </panel>
 

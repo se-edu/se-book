@@ -10,23 +10,23 @@
 
 <div id="body">
 
-<panel header="**Avoid Long Methods**" type="seamless">
+<panel header="**Avoid Long Methods**" type="seamless" expanded>
   <include src="../../practices/avoidLongMethods/index.md#main" />
 </panel>
 
-<panel header="**Avoid Deep Nesting**" type="seamless">
+<panel header="**Avoid Deep Nesting**" type="seamless" expanded>
   <include src="../../practices/avoidDeepNesting/index.md#main" />
 </panel>
 
-<panel header="**Avoid Complicated Expressions**" type="seamless">
+<panel header="**Avoid Complicated Expressions**" type="seamless" expanded>
   <include src="../../practices/avoidComplicatedExpressions/index.md#main" />
 </panel>
 
-<panel header="**Avoid Magic Numbers**" type="seamless">
+<panel header="**Avoid Magic Numbers**" type="seamless" expanded>
   <include src="../../practices/avoidMagicNumbers/index.md#main" />
 </panel>
 
-<panel header="**Make the Code Obvious**" type="seamless">
+<panel header="**Make the Code Obvious**" type="seamless" expanded>
   <include src="../../practices/makeCodeObvious/index.md#main" />
 </panel>
 

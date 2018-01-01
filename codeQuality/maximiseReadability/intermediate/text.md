@@ -10,23 +10,23 @@
 
 <div id="body">
 
-<panel header="**Structure Code Logically**" type="seamless">
+<panel header="**Structure Code Logically**" type="seamless" expanded>
   <include src="../../practices/structureCodeLogically/index.md#main" />
 </panel>
 
-<panel header="**Do not 'Trip Up' the Reader**" type="seamless">
+<panel header="**Do not 'Trip Up' the Reader**" type="seamless" expanded>
   <include src="../../practices/dontTripReader/index.md#main" />
 </panel>
 
-<panel header="**Practice KISSing**" type="seamless">
+<panel header="**Practice KISSing**" type="seamless" expanded>
   <include src="../../practices/practiceKISSing/index.md#main" />
 </panel>
 
-<panel header="**Avoid Premature Optimizations**" type="seamless">
+<panel header="**Avoid Premature Optimizations**" type="seamless" expanded>
   <include src="../../practices/avoidPrematureOptimizations/index.md#main" />
 </panel>
 
-<panel header="**SLAP Hard**" type="seamless">
+<panel header="**SLAP Hard**" type="seamless" expanded>
   <include src="../../practices/slapHard/index.md#main" />
 </panel>
 
