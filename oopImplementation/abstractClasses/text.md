@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Abstract Classes :two:
+#### Implementing Abstract Classes :two:
 
 </div>
 

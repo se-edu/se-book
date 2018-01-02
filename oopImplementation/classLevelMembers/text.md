@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Class-Level Members :one:
+#### Implementing Class-Level Members :one:
 
 </div>
 

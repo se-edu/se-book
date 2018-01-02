@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Composition :two:
+#### Implementing Composition :two:
 
 </div>
 

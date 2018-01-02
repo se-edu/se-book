@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Association Classes :three:
+#### Implementing Association Classes :three:
 
 </div>
 

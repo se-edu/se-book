@@ -6,7 +6,7 @@
 
 <div id="title">
 
-#### Dependencies :two:
+#### Implementing Dependencies :two:
 
 </div>
 
