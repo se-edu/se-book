@@ -18,7 +18,7 @@ Use the `assert` keyword to define assertions.
 
 ```java
 x = getX();
-assert x == 0 : "x should be 0";`
+assert x == 0 : "x should be 0";
 ...
 ```
 
@@ -47,7 +47,7 @@ assert x == 0 : "x should be 0";`
 
 <tip-box type="info"> 
 
-**Java `asset` vs JUnit assertions**: They are similar in purpose but JUnit assertions are more powerful and customized for testing. In addition, JUnit assertions are not disabled by default. We recommend you use JUnit assertions in test code and Java `assert` in functional code. 
+**Java `assert` vs JUnit assertions**: They are similar in purpose but JUnit assertions are more powerful and customized for testing. In addition, JUnit assertions are not disabled by default. We recommend you use JUnit assertions in test code and Java `assert` in functional code. 
 
 </tip-box>
 
