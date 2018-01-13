@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">
+<div id="body">
 
 # Acknowledgements
 
@@ -12,4 +13,5 @@
   
 * [Rebekah Low](https://github.com/rebekahlow-jy): For programming the initial version of this book in [MarkBind](https://markbind.github.io/) format.
 
+</div>
 </div>
