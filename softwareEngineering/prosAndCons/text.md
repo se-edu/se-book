@@ -42,7 +42,8 @@ The following description of the _Joys of the Programming Craft_ was taken from 
 > showing things that never were nor could be.
 >
 > Programming then is fun because it gratifies creative longings built deep within us and delights sensibilities we have in common with all men.  
->
+
+
 > **Not all is delight, however, and knowing the inherent woes makes it easier to bear them when they appear.**
 >
 > First, one must perform perfectly. The computer resembles the magic of legend in this respect, too. If one character,
