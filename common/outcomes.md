@@ -776,8 +776,6 @@
 
 <dynamic-panel src="../uml/activityDiagrams/basicNotations/swimlanes/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/activityDiagrams/basicNotations/swimlanes/outcomes.md" inline />
 
-<dynamic-panel src="../uml/activityDiagrams/basicNotations/combined/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/activityDiagrams/basicNotations/combined/outcomes.md" inline />
-
 
 <dynamic-panel src="../uml/notes/notes/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/notes/notes/outcomes.md" inline />
 

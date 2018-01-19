@@ -3,4 +3,3 @@
 <include src="./parallelPaths/outcomes.md" />
 <include src="./rakes/outcomes.md" />
 <include src="./swimlanes/outcomes.md" />
-<include src="./combined/outcomes.md" />

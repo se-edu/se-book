@@ -47,6 +47,7 @@ In some workflows, multiple paths happen in parallel. ADs use _fork_ and _join_ 
 </div>
 
 <div id="extras">
+  <include src="exercises.md" />
 </div>
 
 </div>

@@ -13,7 +13,6 @@
 <include src="./parallelPaths/embed.md" />
 <include src="./rakes/embed.md" />
 <include src="./swimlanes/embed.md" />
-<include src="./combined/embed.md" />
 
 </div>
 </div>
