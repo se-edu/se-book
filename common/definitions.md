@@ -312,7 +312,7 @@ Also known as
 
 <div id="def-uml">
 
-[**Unified Modeling Language (UML)**](http://www.uml.org/#UML2.0) is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the _de facto_ modeling notation used in the industry. 
+[**Unified Modeling Language (UML)**](http://www.uml.org/#UML2.0) is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the _de facto_ modeling notation used in the software industry. 
 
 </div>
 

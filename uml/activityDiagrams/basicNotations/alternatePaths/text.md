@@ -6,11 +6,11 @@
 
 <div id="body">
 
-**_Branch nodes_ shows the start of alternate paths.** Each control flow exiting a branch node has a _guard condition_ : a boolean condition that should be true for execution to take that path. Only one of the guard condition can be true at any time.
+**A _branch node_ shows the start of alternate paths.** Each control flow exiting a branch node has a _guard condition_ : a boolean condition that should be true for execution to take that path. Only one of the guard condition can be true at any time.
  
-**_Merge nodes_ show the end of alternate paths.** 
+**A _merge node_ shows the end of alternate paths.** 
 
-Both branch nodes and merge nodes are diamond shapes.
+Both branch nodes and merge nodes are ==diamond shapes==. Guard conditions must be in ==square brackets==.
 
 <img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/notation.png" height="180" />
 
@@ -26,6 +26,7 @@ Both branch nodes and merge nodes are diamond shapes.
 </div>
 
 <div id="extras">
+  <include src="exercises.md" />
 </div>
 
 </div>
