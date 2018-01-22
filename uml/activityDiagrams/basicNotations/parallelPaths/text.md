@@ -8,7 +8,7 @@
 
 **_Fork_ nodes indicate the start of <tooltip content="parallel">concurrent</tooltip> flows of control.** 
 
-**_Join_ nodes indicate the end of parallel paths.
+**_Join_ nodes indicate the end of parallel paths.**
 
 Both have the same notation: a bar.   
 
