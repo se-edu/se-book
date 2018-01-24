@@ -1,3 +1,3 @@
 <panel header=":muscle: Exercises" expandable>
-  <include src="q-tick-associationCLasses.md" />
+  <include src="q-tick-associationClasses.md" />
 </panel>
