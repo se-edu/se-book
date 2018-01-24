@@ -11,7 +11,7 @@
 Given below are some guidelines to write developer documentation, particularly applicable to documents targeted at developer-as-maintainer.
 
 <include src="./goTopDown/topicPanel.md" />
-<include src="./aimforComprehensibility/topicPanel.md" />
+<include src="./aimForComprehensibility/topicPanel.md" />
 <include src="./documentMinimally/topicPanel.md" />
 
 </div>
