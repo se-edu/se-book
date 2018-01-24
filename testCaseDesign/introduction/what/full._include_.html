@@ -1,4 +1,6 @@
-<p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design →
+<div></div>
+<p></p>
+<p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design → Introduction →
 </span></strong>
   </span>
 </p>
@@ -7,15 +9,15 @@
 </div>
 <div id="main">
   <div>
-    <p>Testing all possible ways of using an SUT often requires an infinite number of test cases. Except for trivial SUTs, exhaustive testing is not practical.</p>
+    <p><strong>Except for trivial <tooltip content="Software Under Test">SUTs</tooltip>, <tooltip content="testing all possible cases">exhaustive testing</tooltip> is not practical</strong> because such testing often requires a massive/infinite number of
+      test cases.</p>
     <tip-box>
-      <p>Example:</p>
-      <p>Consider the test cases for adding a String object to a Collection:</p>
+      <p>📦 Consider the test cases for adding a <code>String</code> object to a <code>Collection</code> object:</p>
       <ul>
         <li>Add an item to an empty collection.</li>
         <li>Add an item when there is one item in the collection.</li>
         <li>Add an item when there are 2, 3, .... n items in the collection.</li>
-        <li>Add an item that has an English, a French, a Spanish, … word.</li>
+        <li>Add an item that has an English, a French, a Spanish, ... word.</li>
         <li>Add an item that is the same as an existing item.</li>
         <li>Add an item immediately after adding another item.</li>
         <li>Add an item immediately after system startup.</li>
@@ -24,26 +26,30 @@
       <p>Exhaustive testing of this operation can take many more test cases.</p>
     </tip-box>
     <blockquote>
-      <p>Program testing can be used to show the presence of bugs, but never to show their absence!</p>
-      <p>--Edsger Dijkstra</p>
+      <p>Program testing can be used to show the presence of bugs, but never to show their absence!<br><sub>--Edsger Dijkstra</sub></p>
     </blockquote>
-    <p>Every test case adds to the cost of testing. In some systems, a single test case can cost thousands of dollars (e.g. on-field testing of flight-control software). Therefore, test cases have to be designed to make the best use of testing resources.
-      In particular:</p>
-    <ul>
-      <li>Testing should be effective, i.e. it finds a high % of existing bugs. A set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system.</li>
-      <li>Testing should be efficient, i.e. it has a high rate of success (bugs found/test cases). A set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects.</li>
-    </ul>
-    <p>For testing to be E&amp;E, each new test we add should be targeting a potential fault that is not already targeted by existing test cases. There are test case design techniques that can help us improve E&amp;E (Effectiveness and Efficiency) of testing.
-      E.g. Equivalence Partitioning, Boundary Value Analysis</p>
+    <div id="e-and-e">
+      <p><strong>Every test case adds to the cost of testing.</strong> In some systems, a single test case can cost thousands of dollars <span class="dimmed"> e.g. on-field testing of flight-control software</span>. Therefore, <strong>test cases need to be designed to make the best use of testing resources.</strong>        In particular:</p>
+      <ul>
+        <li>
+          <p><strong>Testing should be <em>effective</em></strong> i.e., it finds a high % of existing bugs <span class="dimmed"> e.g., a set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system</span>.</p>
+        </li>
+        <li>
+          <p><strong>Testing should be <em>efficient</em></strong> i.e., it has a high rate of success (bugs found/test cases) <span class="dimmed"> a set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects</span>.</p>
+        </li>
+      </ul>
+      <p><strong>For testing to be <tooltip content="Efficient and Effective">E&amp;E</tooltip>, each new test we add should be targeting a potential fault that is not already targeted by existing test cases.</strong> There are test case design techniques
+        that can help us improve E&amp;E of testing.</p>
+    </div>
   </div>
   <div>
     <div>
       <panel header=":muscle: Exercises" expandable="">
         <div>
-          <panel header=":lock::key: List test cases you would use to test ‘TriangleDetector’.">
+          <panel header=":lock::key: Test cases for `TriangleDetector`">
             <question has-input="true">
-              <p>A sample output from a text-based program ‘TriangleDetector’ is given below that determines whether the three input numbers make up the three sides of a valid triangle. A sample output is shown below. List test cases you would use to test
-                ‘TriangleDetector’. Two sample test cases are given below.</p>
+              <p>Given below is the sample output from a text-based program <code>TriangleDetector</code> ithat determines whether the three input numbers make up the three sides of a valid triangle. List test cases you would use to test this software. Two
+                sample test cases are given below.</p>
               <pre class="hljs"><code>C:\&gt; java TriangleDetector
 Enter side 1: 34
 Enter side 2: 34
@@ -59,12 +65,12 @@ Enter side 1:
                 <p>In addition to obvious test cases such as</p>
                 <ul>
                   <li>sum of two sides == third,</li>
-                  <li>sum of two sides &lt; third, …</li>
+                  <li>sum of two sides &lt; third ...</li>
                 </ul>
                 <p>We may also devise some interesting test cases such as the ones depicted below.</p>
                 <p>Note that their applicability depends on the context in which the software is operating.</p>
                 <ul>
-                  <li>Non-integer number, negative numbers, 0, numbers formatted differently (e.g. 13F), very large numbers (e.g. MAX_INT), numbers with many decimal places, empty string, …</li>
+                  <li>Non-integer number, negative numbers, 0, numbers formatted differently (e.g. 13F), very large numbers (e.g. MAX_INT), numbers with many decimal places, empty string, ...</li>
                   <li>Check many triangles one after the other (will the system run out of memory?)</li>
                   <li>Backspace, tab, CTRL+C , …</li>
                   <li>Introduce a long delay between entering data (will the program be affected by, say the screensaver?), minimize and restore window during the operation, hibernate the system in the middle of a calculation, start with invalid inputs (the
@@ -77,25 +83,25 @@ Enter side 1:
           </panel>
         </div>
         <div>
-          <panel header=":lock::key: Explain the why exhaustive testing is not possible using the newGame operation of the Logic class in the Minesweeper case study as an example.">
+          <panel header=":lock::key: Exhaustive testing in Minesweeper">
             <question has-input="true">
-              <p>Explain the why exhaustive testing is not possible using the newGame operation of the Logic class in the Minesweeper case study as an example.</p>
+              <p>Explain the why exhaustive testing is not practical using the example of testing <code>Logic#newGame()</code> operation in the Minesweeper game.</p>
               <div slot="answer">
                 <p>Consider this sequence of test cases:</p>
                 <ul>
-                  <li>Test case 1. Start Minesweeper. Activate newGame() and see if it works.</li>
-                  <li>Test case 2. Start Minesweeper. Activate newGame(). Activate newGame() again and see if it works.</li>
-                  <li>Test case 3. Start Minesweeper. Activate newGame() three times consecutively and see if it works.</li>
+                  <li>Test case 1. Start Minesweeper. Activate <code>newGame()</code> and see if it works.</li>
+                  <li>Test case 2. Start Minesweeper. Activate <code>newGame()</code>. Activate <code>newGame()</code> again and see if it works.</li>
+                  <li>Test case 3. Start Minesweeper. Activate <code>newGame()</code> three times consecutively and see if it works.</li>
                   <li>…</li>
-                  <li>Test case 267. Start Minesweeper. Activate newGame() 267 times consecutively and see if it works.</li>
+                  <li>Test case 267. Start Minesweeper. Activate <code>newGame()</code> 267 times consecutively and see if it works.</li>
                 </ul>
-                <p>Well, you get the idea. Exhaustive testing of newGame() is not possible.</p>
+                <p>Well, you get the idea. Exhaustive testing of <code>newGame()</code> is not practical.</p>
               </div>
             </question>
           </panel>
         </div>
         <div>
-          <panel header=":lock::key: Choose the correct statement.">
+          <panel header=":lock::key: Statements about E&E of testing">
             <question>
               <p>Improving efficiency and effectiveness of test case design can,</p>
               <ul class="task-list">
@@ -105,18 +111,9 @@ Enter side 1:
                 <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. save effort on writing and maintaining tests.</li>
                 <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. minimize redundant test cases.</li>
                 <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. forces us to understand the SUT better.</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> g. do all of the above.</li>
               </ul>
               <div slot="answer">
-                <ul class="task-list">
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. improve the quality of the SUT.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. save money.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. save time spent on test execution.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. save effort on writing and maintaining tests.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. minimize redundant test cases.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. forces us to understand the SUT better.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> g. do all of the above.</li>
-                </ul>
+                <p>(a)(b)(c)(d)(e)(f)</p>
               </div>
             </question>
           </panel>

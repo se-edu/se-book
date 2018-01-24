@@ -1,1 +1,1 @@
-Implementation &rarr; Integration &rarr; Approaches &rarr;
+Implementation → Integration → Approaches →

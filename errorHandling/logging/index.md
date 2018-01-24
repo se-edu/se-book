@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Error Handling &rarr;**%%
+%%**Error Handling →**%%
 
 ## Logging
 

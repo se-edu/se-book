@@ -1,1 +1,1 @@
-Design &rarr; Modeling &rarr;
+Design → Modeling →

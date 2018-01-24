@@ -28,15 +28,28 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>A defensive programmer codes under the assumption “if we leave room for things to go wrong, they <em>will</em> go wrong”. Therefore, a defensive programmer proactively tries to eliminate any room for things to go wrong.</p>
+            <p><strong>A defensive programmer codes under the assumption &quot;if we leave room for things to go wrong, they <em>will</em> go wrong&quot;.</strong> Therefore, a defensive programmer proactively tries to eliminate any room for things to go
+              wrong.</p>
             <tip-box>
-              <p>Example:</p>
-              <p>{Defensive copying}</p>
+              <p>📦 Consider a <code>MainApp#getConfig()</code> a method that returns a <code>Config</code> object containing configuration data. A typical implementation is given below:</p>
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainApp</span></span>{
+    Config config;
+    
+    <span class="hljs-comment">/** Returns the config object */</span>
+    <span class="hljs-function">Config <span class="hljs-title">getConfig</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> config;
+    }
+}
+</code></pre>
+              <p>If the returned Config object is not meant to be modified, a defensive programmer might use a more <em>defensive</em> implementation given below. <span class="dimmed">  This is more defensive because even if the returned <code>Config</code> object is modified (although it is not meant to be) it will not affect the <code>config</code> object inside the <code>MainApp</code> object.</span></p>
+              <pre><code class="hljs java">    <span class="hljs-comment">/** Returns a copy of the config object */</span>
+    <span class="hljs-function">Config <span class="hljs-title">getConfig</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> config.copy(); <span class="hljs-comment">//return a defensive copy</span>
+    }
+</code></pre>
             </tip-box>
           </div>
-          <div>
-            <div></div>
-          </div>
+          <div></div>
         </div>
       </panel>
     </div>
@@ -52,10 +65,11 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>Consider two classes, Account and Guarantor, with an association as shown in the following diagram:</p>
+            <p>Consider two classes, <code>Account</code> and <code>Guarantor</code>, with an association as shown in the following diagram:</p>
             <tip-box>
               <p>Example:</p><img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50">
               <p></p>
+              <p>Here, the association is compulsory i.e. an <code>Account</code> object should always be linked to a <code>Guarantor</code>. One way to implement this is to simply use a reference variable, like this:</p>
               <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
     Guarantor guarantor;
 
@@ -64,37 +78,39 @@
     }
 }
 </code></pre>
-              <p>Here, the association is compulsory i.e. an <code>Account</code> object should always be linked to a <code>Guarantor</code>. One way to implement this is to simply use a reference variable as above. However, what if someone else in the team
-                used the <code>Account</code> class as:</p>
+              <p>However, what if someone else used the <code>Account</code> class like this?</p>
               <pre><code class="hljs java">Account a = <span class="hljs-keyword">new</span> Account();
 a.setGuarantor(<span class="hljs-keyword">null</span>);
 </code></pre>
-              <p>This results in an <code>Account</code> without a <code>Guarantor</code>! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. To proactively enforce the multiplicity
-                constraint, a solution is offered as follows:</p>
+              <p>This results in an <code>Account</code> without a <code>Guarantor</code>! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. We can make the code more defensive
+                by proactively enforcing the multiplicity constraint, like this:</p>
               <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
     <span class="hljs-keyword">private</span> Guarantor guarantor;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span></span>{
-        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) stopSystemWithMessage(“multiplicity violated. Null Guarantor ”);
+        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {
+            stopSystemWithMessage(<span class="hljs-string">"multiplicity violated. Null Guarantor"</span>);
+        }
         guarantor = g;
     }
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">setGuarantor</span> <span class="hljs-params">(Guarantor m)</span></span>{
-        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) stopSystemWithMessage(“multiplicity violated. Null Guarantor”);
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span> <span class="hljs-params">(Guarantor g)</span></span>{
+        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {
+            stopSystemWithMessage(<span class="hljs-string">"multiplicity violated. Null Guarantor"</span>);
+        }
         guarantor = g;
     }
     …
 }
 </code></pre>
-              <p>In the class Account, <code>guarantor</code> has to be declared as a private variable to prevent the value from being changed from outside the class.</p>
             </tip-box>
           </div>
           <div>
             <div>
               <panel header=":muscle: Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: For the Manager class, write an addAccount() method.">
+                  <panel header=":lock::key: Write a `Manager#addAccount()`">
                     <question has-input="true">
-                      <p>For the Manager class shown below, write an addAccount() method that</p>
+                      <p>For the <code>Manager</code> class shown below, write an <code>addAccount()</code> method that</p>
                       <ul>
                         <li>restricts the maximum number of Accounts to 8</li>
                         <li>avoids adding duplicate Accounts</li>
@@ -107,31 +123,33 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     <span class="hljs-keyword">private</span> ArrayList&lt; Account &gt; theAccounts ;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addAccount</span><span class="hljs-params">(Account acc)</span> <span class="hljs-keyword">throws</span> Exception </span>{
-        <span class="hljs-keyword">if</span> (theAccounts.size( ) == <span class="hljs-number">8</span>)
+        <span class="hljs-keyword">if</span> (theAccounts.size( ) == <span class="hljs-number">8</span>){
             <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception (<span class="hljs-string">"adding more than 8 accounts"</span>);
-
+        }
+        
         <span class="hljs-keyword">if</span> (!theAccounts.contains(acc)) {
-            theAccounts.add(acc) ;
+            theAccounts.add(acc);
         }
     }
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeAccount</span><span class="hljs-params">(Account acc)</span> </span>{
-        theAccounts.remove(acc) ;
+        theAccounts.remove(acc);
     }
-} <span class="hljs-comment">//end class</span>
+}
 </code></pre>
                       </div>
                     </question>
                   </panel>
                 </div>
                 <div>
-                  <panel header=":lock::key: Implement the classes below using the defensive coding approach.">
+                  <panel header=":lock::key: Implement `Marriage`">
                     <question has-input="true">
-                      <p>Implement the classes with appropriate references and operations to establish the association among the classes. Follow the defensive coding approach. Let the Marriage class handle setting/removal of reference.</p><img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/manMarriageWoman.jpg"
-                        height="55">
-                      <p></p>
-                      <div slot="answer">
-                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Marriage</span> </span>{
+                      <p>Implement the classes defensively with appropriate references and operations to establish the association among the classes. Follow the defensive coding approach. Let the <code>Marriage</code> class handle setting/removal of reference.</p>
+                      <img
+                        src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/manMarriageWoman.jpg" height="55">
+                        <p></p>
+                        <div slot="answer">
+                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Marriage</span> </span>{
     <span class="hljs-keyword">private</span> Man husband = <span class="hljs-keyword">null</span>;
     <span class="hljs-keyword">private</span> Woman wife = <span class="hljs-keyword">null</span>;
 
@@ -152,7 +170,7 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> Man <span class="hljs-title">getHusband</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
         <span class="hljs-keyword">if</span>(husband == <span class="hljs-keyword">null</span>) {
-            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(“error state”);
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"error state"</span>);
         } <span class="hljs-keyword">else</span> {
             <span class="hljs-keyword">return</span> husband;
         }
@@ -160,7 +178,7 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> Woman <span class="hljs-title">getWife</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
         <span class="hljs-keyword">if</span>(wife == <span class="hljs-keyword">null</span>) {
-            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(“error state”);
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"error state"</span>);
         } <span class="hljs-keyword">else</span> {
             <span class="hljs-keyword">return</span> wife;
         }
@@ -169,23 +187,23 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     <span class="hljs-comment">// removal of both ends of 'Marriage'</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">divorce</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
         <span class="hljs-keyword">if</span> (husband==<span class="hljs-keyword">null</span> || wife==<span class="hljs-keyword">null</span>) {
-            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(“no marriage”);
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"no marriage"</span>);
         }
         husband.removeFromMarriage(<span class="hljs-keyword">this</span>);
         husband = <span class="hljs-keyword">null</span>;
         wife.removeFromMarriage(<span class="hljs-keyword">this</span>);
         wife = <span class="hljs-keyword">null</span>;
     }
-} <span class="hljs-comment">// end class</span>
+} 
 </code></pre>
-                      </div>
+                        </div>
                     </question>
                   </panel>
                 </div>
                 <div>
-                  <panel header=":lock::key: Give a suitable defensive implementation to the Account class.">
+                  <panel header=":lock::key: Immutable `Account` class">
                     <question has-input="true">
-                      <p>Give a suitable defensive implementation to the Account class in the following class diagram. Note that “{immutable}” means once the association is formed, it cannot be changed.</p><img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png"
+                      <p>Give a suitable defensive implementation to the <code>Account</code> class in the following class diagram. Note that “{immutable}” means once the association is formed, it cannot be changed.</p><img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png"
                         height="80">
                       <p></p>
                       <div slot="answer">
@@ -206,19 +224,24 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
                   </panel>
                 </div>
                 <div>
-                  <panel header=":lock::key: Defensive Implementation">
-                    <question>
-                      <p>This is a defensive implementation of the association.</p><img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="150">
+                  <panel header=":lock::key: Is this defensive?">
+                    <question><img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45">
                       <p></p>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">City</span></span>{
+    Country country;
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setCountry</span><span class="hljs-params">(Country country)</span></span>{
+        <span class="hljs-keyword">this</span>.country = country;
+    }
+}
+</code></pre>
+                      <p>This is a defensive implementation of the association.</p>
+                      <ul radio-group="7ug8m" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="7ug8m" type="radio"> True</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="7ug8m" type="radio"> False</label></li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
-                        </ul>
+                        <p>False</p>
                         <p>Explanation: While the design requires a City to be connected to exactly one Country, the code allows it to be connected to zero Country objects (by passing null to the setCountry() method).</p>
                       </div>
                     </question>
@@ -242,25 +265,26 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>Consider the association given below. Here, a MinedCell cannot exist without a Mine and vice versa. The only way to enforce this is by simultaneous object creation. However, in Java and C++, only one object can be created at a time. Given
-              below are two alternatives. Both options violate the multiplicity for a short period of time.</p>
-            <tip-box>
-              <p>Example:</p><img src="/se-book/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png" height="50">
-              <p></p>
-              <p>Option 1:</p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
+            <p>Consider the association given below. A defensive implementation requires to ensure a <code>MinedCell</code> cannot exist without a <code>Mine</code> and vice versa which requires simultaneous object creation. However, Java can only create
+              one object at a time. Given below are two alternatives implementations, both of which violate the multiplicity for a short period of time.</p><img src="/se-book/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png"
+              height="50">
+            <p></p>
+            <p>Option 1:</p>
+            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
     <span class="hljs-keyword">private</span> Mine mine;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinedCell</span><span class="hljs-params">(Mine m)</span></span>{
-        <span class="hljs-keyword">if</span> (m == <span class="hljs-keyword">null</span>) error;
+        <span class="hljs-keyword">if</span> (m == <span class="hljs-keyword">null</span>) {
+            showError();
+        }
         mine = m;
     }
     …
 }
 </code></pre>
-              <p>Option 1 forces us to keep a <code>Mine</code> without a <code>MinedCell</code> (until the <code>MinedCell</code> is created).</p>
-              <p>Option 2:</p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
+            <p>Option 1 forces us to keep a <code>Mine</code> without a <code>MinedCell</code> (until the <code>MinedCell</code> is created).</p>
+            <p>Option 2:</p>
+            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
     <span class="hljs-keyword">private</span> Mine mine;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinedCell</span><span class="hljs-params">()</span></span>{
@@ -269,12 +293,9 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     …
 }
 </code></pre>
-              <p>Option 2 is more defensive because the <code>Mine</code> is immediately linked to a <code>MinedCell</code>.</p>
-            </tip-box>
+            <p>Option 2 is more defensive because the <code>Mine</code> is immediately linked to a <code>MinedCell</code>.</p>
           </div>
-          <div>
-            <div></div>
-          </div>
+          <div></div>
         </div>
       </panel>
     </div>
@@ -290,11 +311,9 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p>
-            <tip-box>
-              <p>Example:</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
-              <p></p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
+            <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
+            <p></p>
+            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
     Woman girlfriend;
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setGirlfriend</span><span class="hljs-params">(Woman w)</span> </span>{
@@ -303,7 +322,7 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     …
 }
 </code></pre>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
+            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
     Man boyfriend;
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setBoyfriend</span><span class="hljs-params">(Man m)</span> </span>{
@@ -311,30 +330,24 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     }
 }
 </code></pre>
-            </tip-box>
-            <p>The two classes are meant to be used as shown in (c) below. Now see what happens if the two classes were used as in (d) below. Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive
-              enough to stop this “love triangle”. In such a situation, we say that <em>the referential integrity has been violated</em>. It simply means <em>there is an inconsistency in object references</em>.</p>
-            <tip-box>
-              <p>c)</p>
-              <pre><code class="hljs java">Woman jean;
+            <p>The two classes are meant to be used as follows:</p>
+            <pre><code class="hljs java">Woman jean;
 Man james;
 …
 james.setGirlfriend(jean);
 jean.setBoyfriend(james);
 </code></pre>
-            </tip-box>
-            <tip-box>
-              <p>d)</p>
-              <pre><code class="hljs java">Woman jean; Man james, yong;
+            <p>Suppose the two classes were used this instead:</p>
+            <pre><code class="hljs java">Woman jean; Man james, yong;
 …
 james.setGirlfriend(jean);  
 jean.setBoyfriend(yong);  
-</code></pre><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
-              <p></p>
-            </tip-box>
+</code></pre>
+            <p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this &quot;love triangle&quot;. In such a situation, we say that <em>the referential integrity has been violated</em>.
+              It simply means <em>there is an inconsistency in object references</em>.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
+            <p></p>
             <p>One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.</p>
-            <tip-box>
-              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
+            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
     <span class="hljs-keyword">private</span> Man boyfriend;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setBoyfriend</span><span class="hljs-params">(Man m)</span> </span>{
@@ -354,7 +367,7 @@ jean.setBoyfriend(yong);
     ...
 }
 </code></pre>
-              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span></span>{
+            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span></span>{
     <span class="hljs-keyword">private</span> Woman girlfriend;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGirlfriend</span><span class="hljs-params">(Woman w)</span> </span>{
@@ -373,32 +386,37 @@ jean.setBoyfriend(yong);
    ...
 }
 </code></pre>
-            </tip-box>
             <p>When the code <code>james.setGirlfriend(jean)</code> is executed, the code ensures that <code>james</code> break up with any current girlfriend before he accepts <code>jean</code> as the girlfriend. Furthermore, the code ensures that <code>jean</code>              breaks up with any existing boyfriends and accepts <code>james</code> as the boyfriend.</p>
           </div>
           <div>
             <div>
               <panel header=":muscle: Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: Implement the Player and Region classes using a more defensive approach.">
+                  <panel header=":lock::key: Implement `Player` and `Region`">
                     <question has-input="true">
                       <p>Imagine that we now support the following feature in our Minesweeper game.</p>
                       <tip-box>
-                        <p>Feature ID: multiplayer Description: A minefield is divided into mine regions. Each region is assigned to a single player. Players can swap regions. To win the game, all regions must be cleared.</p>
+                        <p>Feature ID: multiplayer<br> Description: A minefield is divided into mine regions. Each region is assigned to a single player. Players can swap regions. To win the game, all regions must be cleared.</p>
                       </tip-box>
                       <p>Given below is an extract from our class diagram.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100">
                       <p></p>
                       <p>Minimally, this can be implemented like this.</p>
                       <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Player</span></span>{
     Region region;
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setRegion</span><span class="hljs-params">(Region r)</span> </span>{ region = r;}
-    <span class="hljs-function">Region <span class="hljs-title">getRegion</span><span class="hljs-params">()</span> </span>{<span class="hljs-keyword">return</span> region;}
-} <span class="hljs-comment">// Region class is similar</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setRegion</span><span class="hljs-params">(Region r)</span> </span>{
+        region = r;
+    }
+    <span class="hljs-function">Region <span class="hljs-title">getRegion</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> region;
+    }
+} 
+
+<span class="hljs-comment">// Region class is similar</span>
 </code></pre>
-                      <p>However, this is not very defensive. For example, a user of this class can pass a null to either of the methods, thus violating the multiplicity of the relationship.</p>
+                      <p>However, this is not very defensive. For example, a user of this class can pass a <code>null</code> to either of the methods, thus violating the multiplicity of the relationship.</p>
                       <p>Implement the two classes using a more defensive approach. Take note of the bidirectional link which requires us to preserve referential integrity at all times.</p>
                       <div slot="answer">
-                        <p>In this solution, we assume Regions can be created without Players (note that we cannot be 100% defensive all the time). The usage will be something like this:</p>
+                        <p>In this solution, we assume <code>Regions</code> can be created without <code>Players</code> (note that we cannot be 100% defensive all the time). The usage will be something like this:</p>
                         <pre><code class="hljs java">Region r1 = <span class="hljs-keyword">new</span> Region();
 Player p1 = <span class="hljs-keyword">new</span> Player(r1);
 Region r2 = <span class="hljs-keyword">new</span> Region();
@@ -431,8 +449,11 @@ r1.setPlayer(p2);
     }
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removePlayer</span><span class="hljs-params">(Player disconnectingPlayer)</span> </span>{
-        <span class="hljs-keyword">if</span> (myPlayer == disconnectingPlayer) myPlayer = <span class="hljs-keyword">null</span>;
-        <span class="hljs-keyword">else</span> stopSystemWithErrorMessage(<span class="hljs-string">"Unknown Player trying to disconnect"</span>)
+        <span class="hljs-keyword">if</span> (myPlayer == disconnectingPlayer){
+            myPlayer = <span class="hljs-keyword">null</span>;
+        } <span class="hljs-keyword">else</span> {
+            stopSystemWithErrorMessage(<span class="hljs-string">"Unknown Player trying to disconnect"</span>);
+        }
     }
 
     <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stopSystemWithErrorMessage</span><span class="hljs-params">(String msg)</span> </span>{
@@ -459,12 +480,15 @@ r1.setPlayer(p2);
             myRegion.removePlayer(<span class="hljs-keyword">this</span>);
         }
         myRegion = newRegion;
+        
         <span class="hljs-comment">// set the reverse link</span>
         myRegion.setPlayer(<span class="hljs-keyword">this</span>);
     }
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeRegion</span><span class="hljs-params">(Region disconnectingRegion)</span> </span>{
-        <span class="hljs-keyword">if</span> (myRegion == disconnectingRegion) myRegion = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">if</span> (myRegion == disconnectingRegion) {
+            myRegion = <span class="hljs-keyword">null</span>;
+        }
     }
 
     <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stopSystemWithErrorMessage</span><span class="hljs-params">(String msg)</span> </span>{
@@ -478,15 +502,15 @@ r1.setPlayer(p2);
                   </panel>
                 </div>
                 <div>
-                  <panel header=":lock::key: Implement the bidirectional association between Bank and Account.">
+                  <panel header=":lock::key: Bidirectional association between `Bank` and `Account`">
                     <question has-input="true">
-                      <p>Implement this bidirectional association. Note that the Bank uses accNumber attribute to uniquely identify an Account object. Assume the Bank class is responsible for maintaining the links between objects.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg"
-                        height="60">
+                      <p>Implement this bidirectional association. Note that the <code>Bank</code> uses <code>accNumber</code> attribute to uniquely identify an <code>Account</code> object. Assume the <code>Bank</code> class is responsible for maintaining
+                        the links between objects.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60">
                       <p></p>
                       <div slot="answer">
-                        <p>The code below contains a method in the Bank class to create an account; the bank field in the new account is thereby filled by the bank creating it.</p>
-                        <p>We assume that once an Account has been assigned to one Bank, it cannot be assigned to a different Bank. Once the Account is removed from the Bank, it will not be used any more (hence, no need to remove the link from Account to
-                          Bank).</p>
+                        <p>The code below contains a method in the <code>Bank</code> class to create an account; the bank field in the new account is thereby filled by the bank creating it.</p>
+                        <p>We assume that once an <code>Account</code> has been assigned to one <code>Bank</code>, it cannot be assigned to a different <code>Bank</code>. Once the <code>Account</code> is removed from the <code>Bank</code>, it will not be
+                          used any more (hence, no need to remove the link from <code>Account</code> to <code>Bank</code>).</p>
                         <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> accNumber ;
     <span class="hljs-keyword">private</span> Bank theBank ;
@@ -527,22 +551,22 @@ r1.setPlayer(p2);
                   </panel>
                 </div>
                 <div>
-                  <panel header=":lock::key: Is the code given below a defensive translation of the associations shown in the class diagram?">
+                  <panel header=":lock::key: Is the code defensive? `Teacher` and `Student`">
                     <question has-input="true">
                       <p>(a) Is the code given below a defensive translation of the associations shown in the class diagram? Explain your answer.</p>
                       <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Teacher</span></span>{
-    <span class="hljs-keyword">private</span> Student favStudent;
+    <span class="hljs-keyword">private</span> Student favoriteStudent;
 
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setFavStudent</span><span class="hljs-params">(Student s)</span></span>{
-        favStudent = s;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setFavoriteStudent</span><span class="hljs-params">(Student s)</span></span>{
+        favoriteStudent = s;
     }
 }
 </code></pre>
                       <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span></span>{
-    <span class="hljs-keyword">private</span> Teacher favTeacher;
+    <span class="hljs-keyword">private</span> Teacher favoriteTeacher;
 
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setFavTeacher</span><span class="hljs-params">(Teacher t)</span></span>{
-        favTeacher = t;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setFavoriteTeacher</span><span class="hljs-params">(Teacher t)</span></span>{
+        favoriteTeacher = t;
     }
 }
 </code></pre><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80">
@@ -551,20 +575,24 @@ r1.setPlayer(p2);
                         height="80">
                       <p></p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWomanAssoc.png" height="60">
                       <p></p>
-                      <p>(c) Show a defensive implementation of the remove(Member m) of the Club class given below.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60">
+                      <p>(c) Show a defensive implementation of the <code>remove(Member m)</code> of the <code>Club</code> class given below.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60">
                       <p></p>
                       <div slot="answer">
                         <p>(a) Yes. Each links is mutable and unidirectional. A simple reference variable is suitable to hold the link.</p>
-                        <p><code>Teacher</code> class can be made even more defensive by introducing a <code>resetFavStudent()</code> method to unlink the current favorite student from a teacher. In that case, <code>setFavStudent(Student)</code> method should
-                          not accept null. This approach is more defensive because it prevents a null value being passed to <code>setFavStudent(Student)</code> by mistake and being interpreted as a request to delink the current favorite student from the
-                          Teacher object.</p>
+                        <p><code>Teacher</code> class can be made even more defensive by introducing a <code>resetFavoriteStudent()</code> method to unlink the current favorite student from a teacher. In that case, <code>setFavoriteStudent(Student)</code>                          method should not accept null. This approach is more defensive because it prevents a null value being passed to <code>setFavoriteStudent(Student)</code> by mistake and being interpreted as a request to de-link the current favorite
+                          student from the <code>Teacher</code> object.</p>
                         <p>(b) First diagram has unidirectional links. Second has a bidirectional link. RI is only applicable to the second.</p>
                         <p>(c)</p>
                         <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">removeMember</span><span class="hljs-params">(Member m)</span> </span>{
-    <span class="hljs-keyword">if</span> (m==<span class="hljs-keyword">null</span>) <span class="hljs-keyword">throw</span> exception(“<span class="hljs-keyword">this</span> is <span class="hljs-keyword">null</span>, not a member!”);
-    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(member_count == <span class="hljs-number">10</span>) <span class="hljs-keyword">throw</span> exception(“we need at least <span class="hljs-number">10</span> members to survive!”);
-    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!isMember(m)) <span class="hljs-keyword">throw</span> exception (“<span class="hljs-keyword">this</span> fellow is not a member of our club!”);
-    <span class="hljs-keyword">else</span> members.remove(m); <span class="hljs-comment">// members is a data structure such as ArrayList</span>
+    <span class="hljs-keyword">if</span> (m==<span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">throw</span> exception(<span class="hljs-string">"this is null, not a member!"</span>);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(member_count == <span class="hljs-number">10</span>) {
+        <span class="hljs-keyword">throw</span> exception(<span class="hljs-string">"we need at least 10 members to survive!"</span>);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!isMember(m)) {
+        <span class="hljs-keyword">throw</span> exception (<span class="hljs-string">"this fellow is not a member of our club!"</span>);
+    } <span class="hljs-keyword">else</span> {
+        members.remove(m); <span class="hljs-comment">// members is a data structure such as ArrayList</span>
+    }
 }
 </code></pre>
                       </div>
@@ -575,16 +603,13 @@ r1.setPlayer(p2);
                   <panel header=":lock::key: True or False?">
                     <question>
                       <p>Bidirectional associations, if not implemented properly, can result in referential integrity violations.</p>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                      <ul radio-group="o21g0" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="o21g0" type="radio"> True</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="o21g0" type="radio"> False</label></li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. True</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
-                        </ul>
-                        <p>Explanation: Bidirectional associations require two objects to link to each other. When one of these links is not consistent with the other, we have a RI violation.</p>
+                        <p>True</p>
+                        <p>Explanation: Bidirectional associations require two objects to link to each other. When one of these links is not consistent with the other, we have a referential integrity violation.</p>
                       </div>
                     </question>
                   </panel>
@@ -607,13 +632,13 @@ r1.setPlayer(p2);
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>It is not necessary to be 100% defensive all the time. While defensive code may be less prone to be misused or abused, such code can also be more complicated and slower to run.</p>
-            <p>The degree of defensiveness depends on many factors such as:</p>
+            <p><strong>It is not necessary to be 100% defensive all the time.</strong> While defensive code may be less prone to be misused or abused, such code can also be more complicated and slower to run.</p>
+            <p>The suitable degree of defensiveness depends on many factors such as:</p>
             <ul>
-              <li>How critical is the reliability of the system?</li>
+              <li>How critical is the system?</li>
               <li>Will the code be used by programmers other than the author?</li>
               <li>The level of programming language support for defensive programming</li>
-              <li>The overhead of being defensive.</li>
+              <li>The overhead of being defensive</li>
             </ul>
           </div>
           <div>
@@ -629,17 +654,9 @@ r1.setPlayer(p2);
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. can make the code more complex.</li>
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. can make the code less susceptible to misuse.</li>
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. can require extra effort.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. is all of the above.</li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. can make the program slower.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. can make the code longer.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. can make the code more complex.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. can make the code less susceptible to misuse.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. can require extra effort.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> f. is all of the above.</li>
-                        </ul>
+                        <p>(a)(b)(c)(d)(e)</p>
                         <p>Explanation: Defensive programming requires a more checks, possibly making the code longer, more complex, and possibly slower. Use it only when benefits outweigh costs, which is often.</p>
                       </div>
                     </question>
@@ -647,7 +664,6 @@ r1.setPlayer(p2);
                 </div>
               </panel>
             </div>
-            <div></div>
           </div>
         </div>
       </panel>

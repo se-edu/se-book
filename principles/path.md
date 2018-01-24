@@ -1,1 +1,1 @@
-Supplmentary &rarr; Principles &rarr;
+Supplmentary → Principles →

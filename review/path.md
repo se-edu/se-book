@@ -1,1 +1,1 @@
-Review &rarr; Review &rarr;
+Review → Review →

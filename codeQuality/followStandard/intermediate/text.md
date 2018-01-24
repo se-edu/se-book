@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Code Quality &rarr; Guideline: Follow a Standard &rarr;</div>
-
 <div id="title">
 
 #### Intermediate :two:
@@ -20,6 +18,6 @@ Go through the [provided Java coding standard](https://oss-generic.github.io/pro
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

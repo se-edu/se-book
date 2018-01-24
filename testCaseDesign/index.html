@@ -29,15 +29,15 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>Testing all possible ways of using an SUT often requires an infinite number of test cases. Except for trivial SUTs, exhaustive testing is not practical.</p>
+              <p><strong>Except for trivial <tooltip content="Software Under Test">SUTs</tooltip>, <tooltip content="testing all possible cases">exhaustive testing</tooltip> is not practical</strong> because such testing often requires a massive/infinite
+                number of test cases.</p>
               <tip-box>
-                <p>Example:</p>
-                <p>Consider the test cases for adding a String object to a Collection:</p>
+                <p>📦 Consider the test cases for adding a <code>String</code> object to a <code>Collection</code> object:</p>
                 <ul>
                   <li>Add an item to an empty collection.</li>
                   <li>Add an item when there is one item in the collection.</li>
                   <li>Add an item when there are 2, 3, .... n items in the collection.</li>
-                  <li>Add an item that has an English, a French, a Spanish, … word.</li>
+                  <li>Add an item that has an English, a French, a Spanish, ... word.</li>
                   <li>Add an item that is the same as an existing item.</li>
                   <li>Add an item immediately after adding another item.</li>
                   <li>Add an item immediately after system startup.</li>
@@ -46,26 +46,30 @@
                 <p>Exhaustive testing of this operation can take many more test cases.</p>
               </tip-box>
               <blockquote>
-                <p>Program testing can be used to show the presence of bugs, but never to show their absence!</p>
-                <p>--Edsger Dijkstra</p>
+                <p>Program testing can be used to show the presence of bugs, but never to show their absence!<br><sub>--Edsger Dijkstra</sub></p>
               </blockquote>
-              <p>Every test case adds to the cost of testing. In some systems, a single test case can cost thousands of dollars (e.g. on-field testing of flight-control software). Therefore, test cases have to be designed to make the best use of testing
-                resources. In particular:</p>
-              <ul>
-                <li>Testing should be effective, i.e. it finds a high % of existing bugs. A set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system.</li>
-                <li>Testing should be efficient, i.e. it has a high rate of success (bugs found/test cases). A set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects.</li>
-              </ul>
-              <p>For testing to be E&amp;E, each new test we add should be targeting a potential fault that is not already targeted by existing test cases. There are test case design techniques that can help us improve E&amp;E (Effectiveness and Efficiency)
-                of testing. E.g. Equivalence Partitioning, Boundary Value Analysis</p>
+              <div id="e-and-e">
+                <p><strong>Every test case adds to the cost of testing.</strong> In some systems, a single test case can cost thousands of dollars <span class="dimmed"> e.g. on-field testing of flight-control software</span>. Therefore, <strong>test cases need to be designed to make the best use of testing resources.</strong>                  In particular:</p>
+                <ul>
+                  <li>
+                    <p><strong>Testing should be <em>effective</em></strong> i.e., it finds a high % of existing bugs <span class="dimmed"> e.g., a set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system</span>.</p>
+                  </li>
+                  <li>
+                    <p><strong>Testing should be <em>efficient</em></strong> i.e., it has a high rate of success (bugs found/test cases) <span class="dimmed"> a set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects</span>.</p>
+                  </li>
+                </ul>
+                <p><strong>For testing to be <tooltip content="Efficient and Effective">E&amp;E</tooltip>, each new test we add should be targeting a potential fault that is not already targeted by existing test cases.</strong> There are test case design
+                  techniques that can help us improve E&amp;E of testing.</p>
+              </div>
             </div>
             <div>
               <div>
                 <panel header=":muscle: Exercises" expandable="">
                   <div>
-                    <panel header=":lock::key: List test cases you would use to test ‘TriangleDetector’.">
+                    <panel header=":lock::key: Test cases for `TriangleDetector`">
                       <question has-input="true">
-                        <p>A sample output from a text-based program ‘TriangleDetector’ is given below that determines whether the three input numbers make up the three sides of a valid triangle. A sample output is shown below. List test cases you would
-                          use to test ‘TriangleDetector’. Two sample test cases are given below.</p>
+                        <p>Given below is the sample output from a text-based program <code>TriangleDetector</code> ithat determines whether the three input numbers make up the three sides of a valid triangle. List test cases you would use to test this software.
+                          Two sample test cases are given below.</p>
                         <pre class="hljs"><code>C:\&gt; java TriangleDetector
 Enter side 1: 34
 Enter side 2: 34
@@ -81,12 +85,12 @@ Enter side 1:
                           <p>In addition to obvious test cases such as</p>
                           <ul>
                             <li>sum of two sides == third,</li>
-                            <li>sum of two sides &lt; third, …</li>
+                            <li>sum of two sides &lt; third ...</li>
                           </ul>
                           <p>We may also devise some interesting test cases such as the ones depicted below.</p>
                           <p>Note that their applicability depends on the context in which the software is operating.</p>
                           <ul>
-                            <li>Non-integer number, negative numbers, 0, numbers formatted differently (e.g. 13F), very large numbers (e.g. MAX_INT), numbers with many decimal places, empty string, …</li>
+                            <li>Non-integer number, negative numbers, 0, numbers formatted differently (e.g. 13F), very large numbers (e.g. MAX_INT), numbers with many decimal places, empty string, ...</li>
                             <li>Check many triangles one after the other (will the system run out of memory?)</li>
                             <li>Backspace, tab, CTRL+C , …</li>
                             <li>Introduce a long delay between entering data (will the program be affected by, say the screensaver?), minimize and restore window during the operation, hibernate the system in the middle of a calculation, start with invalid
@@ -99,25 +103,25 @@ Enter side 1:
                     </panel>
                   </div>
                   <div>
-                    <panel header=":lock::key: Explain the why exhaustive testing is not possible using the newGame operation of the Logic class in the Minesweeper case study as an example.">
+                    <panel header=":lock::key: Exhaustive testing in Minesweeper">
                       <question has-input="true">
-                        <p>Explain the why exhaustive testing is not possible using the newGame operation of the Logic class in the Minesweeper case study as an example.</p>
+                        <p>Explain the why exhaustive testing is not practical using the example of testing <code>Logic#newGame()</code> operation in the Minesweeper game.</p>
                         <div slot="answer">
                           <p>Consider this sequence of test cases:</p>
                           <ul>
-                            <li>Test case 1. Start Minesweeper. Activate newGame() and see if it works.</li>
-                            <li>Test case 2. Start Minesweeper. Activate newGame(). Activate newGame() again and see if it works.</li>
-                            <li>Test case 3. Start Minesweeper. Activate newGame() three times consecutively and see if it works.</li>
+                            <li>Test case 1. Start Minesweeper. Activate <code>newGame()</code> and see if it works.</li>
+                            <li>Test case 2. Start Minesweeper. Activate <code>newGame()</code>. Activate <code>newGame()</code> again and see if it works.</li>
+                            <li>Test case 3. Start Minesweeper. Activate <code>newGame()</code> three times consecutively and see if it works.</li>
                             <li>…</li>
-                            <li>Test case 267. Start Minesweeper. Activate newGame() 267 times consecutively and see if it works.</li>
+                            <li>Test case 267. Start Minesweeper. Activate <code>newGame()</code> 267 times consecutively and see if it works.</li>
                           </ul>
-                          <p>Well, you get the idea. Exhaustive testing of newGame() is not possible.</p>
+                          <p>Well, you get the idea. Exhaustive testing of <code>newGame()</code> is not practical.</p>
                         </div>
                       </question>
                     </panel>
                   </div>
                   <div>
-                    <panel header=":lock::key: Choose the correct statement.">
+                    <panel header=":lock::key: Statements about E&E of testing">
                       <question>
                         <p>Improving efficiency and effectiveness of test case design can,</p>
                         <ul class="task-list">
@@ -127,18 +131,9 @@ Enter side 1:
                           <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. save effort on writing and maintaining tests.</li>
                           <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. minimize redundant test cases.</li>
                           <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. forces us to understand the SUT better.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> g. do all of the above.</li>
                         </ul>
                         <div slot="answer">
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. improve the quality of the SUT.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. save money.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. save time spent on test execution.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. save effort on writing and maintaining tests.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. minimize redundant test cases.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. forces us to understand the SUT better.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> g. do all of the above.</li>
-                          </ul>
+                          <p>(a)(b)(c)(d)(e)(f)</p>
                         </div>
                       </question>
                     </panel>
@@ -161,19 +156,16 @@ Enter side 1:
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>A <em>positive test case</em> is when the test is designed to produce an expected/valid behavior. A negative test case is designed to produce a behavior that indicates an invalid/unexpected situation, such as an error message.</p>
+              <p><strong>A <em>positive test case</em> is when the test is designed to produce an expected/valid behavior. A negative test case is designed to produce a behavior that indicates an invalid/unexpected situation, such as an error message.</strong></p>
               <tip-box>
-                <p>Example:</p>
-                <pre class="hljs"><code>SUT: print(Integer i) //prints the value of i
-
-A positive test case: i = new Integer(50)
-A negative test case: i = null;
-</code></pre>
+                <p>📦 Consider testing of the method <code>print(Integer i)</code> which prints the value of <code>i</code>.</p>
+                <ul>
+                  <li>A positive test case: <code>i == new Integer(50)</code></li>
+                  <li>A negative test case: <code>i == null;</code></li>
+                </ul>
               </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -189,17 +181,44 @@ A negative test case: i = null;
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>Test case design is said to be following, a categorization based on how much of SUT internal details are considered when designing test cases.</p>
+              <p><strong>Test case design can be of three types, based on how much of SUT internal details are considered when designing test cases:</strong></p>
               <ul>
-                <li><em>Black-box</em> (aka <em>specification-based or responsibility-based</em>) approach: test cases are designed exclusively based on the SUT’s specified external behavior.</li>
-                <li><em>White-box</em> (aka <em>glass-box or structured or implementation-based</em>) approach: test cases are designed based on what is known about the SUT’s implementation, i.e. the code.</li>
-                <li><em>Gray-box</em> approach: test case design uses <em>some</em> important information about the implementation. For example, if the implementation of a sort operation uses an algorithm to sort lists shorter than 1000 items and another
-                  to sort lists longer than 1000 items, more meaningful test cases can then be added to verify the correctness of both algorithms.</li>
+                <li>
+                  <p><strong><em>Black-box</em> (aka <em>specification-based or responsibility-based</em>) approach</strong>: test cases are designed exclusively based on the SUT’s specified external behavior.</p>
+                </li>
+                <li>
+                  <p><strong><em>White-box</em> (aka <em>glass-box or structured or implementation-based</em>) approach</strong>: test cases are designed based on what is known about the SUT’s implementation, i.e. the code.</p>
+                </li>
+                <li>
+                  <p><strong><em>Gray-box</em> approach</strong>: test case design uses <em>some</em> important information about the implementation. For example, if the implementation of a sort operation uses different algorithms to sort lists shorter than
+                    1000 items and lists longer than 1000 items, more meaningful test cases can then be added to verify the correctness of both algorithms.</p>
+                </li>
               </ul>
+              <div v-closeable="" alt="videos: Black-box and white-box testing">
+                <p><sub>Note: these videos are from the <a href="https://www.udacity.com/course/software-development-process--ud805">Udacity course <em>Software Development Process</em> by Georgia Tech</a></sub></p>
+                <tabs>
+                  <tab header=":tv: Black-box vs White-box testing">
+                    <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/jRwwb7iaRsU" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                    <p>
+                      <hr>
+                    </p>
+                  </tab>
+                  <tab header=":tv: Black-box testing example">
+                    <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/6pbB37nFUZw" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                    <p>
+                      <hr>
+                    </p>
+                  </tab>
+                  <tab header=":tv: White-box testing example">
+                    <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/KIAkoae6_jE" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                    <p>
+                      <hr>
+                    </p>
+                  </tab>
+                </tabs>
+              </div>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -221,49 +240,27 @@ A negative test case: i = null;
           <div>
             <div>
               <p>Consider the testing of the following operation.</p>
-              <ul>
-                <li><code>isValidMonth (int m): boolean</code></li>
-                <li>Description: checks if <code>m</code> is in the range [1..12]. returns <code>true</code> if <code>m</code> is in the range, <code>false</code> otherwise.</li>
-              </ul>
+              <tip-box>
+                <div id="isValidMonth">
+                  <p><code>isValidMonth (int m): boolean</code> : returns <code>true</code> if <code>m</code> is in the range [1..12]</p>
+                </div>
+              </tip-box>
               <p>It is inefficient and impractical to test this method for all integer values <code>[-MIN_INT to MAX_INT]</code>. Fortunately, there is no need to test all possible input values. For example, if the input value <code>233</code> failed to
                 produce the correct result, the input <code>234</code> is likely to fail too; there is no need to test both.</p>
-              <p>In general, most SUTs do not treat each input in a unique way. Instead, they process all possible inputs in a small number of distinct ways. That means a range of inputs is treated the same way inside the SUT.</p>
-              <tip-box type="primary">
+              <p>In general, <strong>most SUTs do not treat each input in a unique way. Instead, they process all possible inputs in a small number of distinct ways.</strong> That means a range of inputs is treated the same way inside the SUT.
+                <strong><em>Equivalence partitioning (EP)</em> is a test case design technique that uses the above observation to improve the E&amp;E of testing.</strong></p>
+              <tip-box type="definition">
                 <div>
                   <p><strong>Equivalence partition (aka equivalence class)</strong>: A group of test inputs that are likely to be processed by the SUT in the same way.</p>
                 </div>
               </tip-box>
-              <p><em>Equivalence partitioning</em> is a technique that uses the above observation to improve the E&amp;E of testing. By dividing possible inputs into equivalence partitions we can,</p>
+              <p><strong>By dividing possible inputs into equivalence partitions we can,</strong></p>
               <ul>
-                <li>avoid testing too many inputs from one partisan. Testing too many inputs from the same partition is unlikely to find new bugs.</li>
-                <li>ensure all partitions are tested. Missing partitions can result in bugs going unnoticed.</li>
+                <li><strong>avoid testing too many inputs from one partition.</strong> Testing too many inputs from the same partition is unlikely to find new bugs. This increases the efficiency of testing by reducing redundant test cases.</li>
+                <li><strong>ensure all partitions are tested.</strong> Missing partitions can result in bugs going unnoticed. This increases the effectiveness of testing by increasing the chance of finding bugs.</li>
               </ul>
             </div>
-            <div>
-              <div>
-                <panel header=":muscle: Exercises" expandable="">
-                  <div>
-                    <panel header=":lock::key: True or False?">
-                      <question>
-                        <p>Boundary value analysis recommends testing only values that reside on the equivalence class boundary.</p>
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
-                        </ul>
-                        <div slot="answer">
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
-                          </ul>
-                          <p>Explanation: It does not recommend testing <em>only</em> those values <em>on</em> the boundary. It merely suggests that values on and around a boundary are more likely to cause errors.</p>
-                        </div>
-                      </question>
-                    </panel>
-                  </div>
-                </panel>
-              </div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -279,81 +276,124 @@ A negative test case: i = null;
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>Equivalence partitions (EPs) are usually derived from the specifications of the SUT. Preconditions and postconditions can also help in identifying partitions. For example, these could be EPs for the isValidMonth example:</p>
-              <ul>
-                <li>[MIN_INT ... 0] (below the range that produces ‘true’)</li>
-                <li>[1 … 12] (the range that produces ‘true’)</li>
-                <li>[13 … MAX_INT] (above the range that produces ‘true’)</li>
-              </ul>
-              <p>When the SUT has multiple inputs, we should identify EPs for each input.</p>
+              <p><strong>Equivalence partitions (EPs) are usually derived from the specifications of the SUT.</strong></p>
               <tip-box>
-                <p>Example:</p>
-                <p>{example of a two-parameter method}</p>
+                <p>📦 These could be EPs for the
+                  <trigger for="pop:epBasic-isValidMonth">isValidMonth</trigger> example:</p>
+                <ul>
+                  <li>[MIN_INT ... 0] : <strong>below</strong> the range that produces <code>true</code></li>
+                  <li>[1 … 12] : the range that produces <code>true</code></li>
+                  <li>[13 … MAX_INT] : <strong>above</strong> the range that produces <code>true</code></li>
+                </ul>
+              </tip-box>
+              <popover id="pop:epBasic-isValidMonth" title="`isValidMonth`" placement="top">
+                <div slot="content">
+                  <div>
+                    <p><code>isValidMonth (int m): boolean</code> : returns <code>true</code> if <code>m</code> is in the range [1..12]</p>
+                  </div>
+                </div>
+              </popover>
+              <p>When the SUT has multiple inputs, you should identify EPs for each input.</p>
+              <tip-box>
+                <p>📦 Consider the method <code>duplicate(String s, int n): String</code> which returns a <code>String</code> that contains <code>s</code> repeated <code>n</code> times.</p>
+                <p>Example EPs for <code>s</code>:</p>
+                <ul>
+                  <li>zero-length strings</li>
+                  <li>string containing whitespaces</li>
+                  <li>...</li>
+                </ul>
+                <p>Example EPs for <code>n</code>:</p>
+                <ul>
+                  <li><code>0</code></li>
+                  <li>negative values</li>
+                  <li>...</li>
+                </ul>
+              </tip-box>
+              <p>An EP may not have adjacent values.</p>
+              <tip-box>
+                <p>📦 Consider the method <code>isPrime(int i):boolean</code> that returns true if <code>i</code> is a prime number.</p>
+                <p>EPs for <code>i</code>:</p>
+                <ul>
+                  <li>prime numbers</li>
+                  <li>non-prime numbers</li>
+                </ul>
               </tip-box>
               <p>Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases we have to consider each value as a partition by itself.</p>
               <tip-box>
-                <p>Example:</p>
-                <p>{example where each value is a partition}</p>
+                <p>📦 Consider the method <code>showStatusMessage(GameStatus s):String</code> that returns a unique <code>String</code> for each of the possible value of s (<code>GameStatus</code> is an <code>enum</code>). In this case, each possible value
+                  for <code>s</code> will have to be considered as a partition.</p>
+              </tip-box>
+              <p>Note that the EP technique is merely a heuristic and not an exact science, especially when applied manually (as opposed to using an automated program analysis tool to derive EPs). The partitions derived depend on how one ‘speculates’ the
+                SUT to behave internally. Applying EP under a glass-box or gray-box approach can yield more precise partitions.</p>
+              <tip-box>
+                <p>📦 Consider the method EPs given above for the <code>isValidMonth</code>. A different tester might use these EPs instead:</p>
+                <ul>
+                  <li>[1 … 12] : the range that produces <code>true</code></li>
+                  <li>[all other integers] : the range that produces <code>false</code></li>
+                </ul>
+              </tip-box>
+              <tip-box>
+                <p>📦 Some more examples:</p>
+                <table class="table">
+                  <tr>
+                    <th>Specification</th>
+                    <th>Equivalence partitions</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p><code>isValidFlag(String s): boolean</code><br> Returns <code>true</code> if s is one of [“F”, “T”, “D”]. The comparison is case-sensitive.</p>
+                    </td>
+                    <td>
+                      <p>[“F”] [“T”] [“D”] [“f”, “t”, “d”] [any other string][null]</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p><code>squareRoot(String s): int</code><br> Pre-conditions: s represents a positive integer<br> Returns the square root of <code>s</code> if the square root is an integer; returns <code>0</code> otherwise.</p>
+                    </td>
+                    <td>
+                      <p>[s is not a valid number] [s is a negative integer] [s has an integer square root] [s does not have an integer square root]</p>
+                    </td>
+                  </tr>
+                </table>
               </tip-box>
             </div>
             <div>
               <div>
                 <panel header=":muscle: Exercises" expandable="">
                   <div>
-                    <panel header=":lock::key: Which one of these is least likely to be an equivalence partition for the parameter s of the isValidName method given below?">
+                    <panel header=":lock::key: EPs for isValidName method">
                       <question>
-                        <p>Which one of these is least likely to be an equivalence partition for the parameter s of the isValidName method given below?</p>
+                        <p>Consider this SUT:</p>
                         <tip-box>
-                          <p>isValidName (String s): boolean</p>
-                          <p>Description: returns true if s is not null and not longer than 50 characters.</p>
+                          <p><code>isValidName (String s): boolean</code></p>
+                          <p>Description: returns true if <code>s</code> is not <code>null</code> and not longer than 50 characters.</p>
                         </tip-box>
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. null.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. strings having more than 50 characters.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. strings having 50 or fewer characters.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. strings consisting of numbers instead of letters.</li>
+                        <p>A. Which one of these is least likely to be an equivalence partition for the parameter s of the isValidName method given below?</p>
+                        <ul radio-group="uyr5j" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="uyr5j" type="radio"> a. null.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="uyr5j" type="radio"> b. strings having more than 50 characters.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="uyr5j" type="radio"> c. strings having 50 or fewer characters.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="uyr5j" type="radio"> d. strings consisting of numbers instead of letters.</label></li>
+                        </ul>
+                        <p>B. If you had to choose 3 test cases from the 4 given below, which one will you leave out based on the EP technique?</p>
+                        <ul radio-group="8pk33" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="8pk33" type="radio"> a. A string that is 50 characters long</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="8pk33" type="radio"> b. A string that is 51 characters long</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="8pk33" type="radio"> c. A string that is 40 characters long</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="8pk33" type="radio"> d. null</label></li>
                         </ul>
                         <div slot="answer">
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. null.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. strings having more than 50 characters.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. strings having 50 or fewer characters.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> d. strings consisting of numbers instead of letters.</li>
-                          </ul>
+                          <p>A. (d)</p>
                           <p>Explanation: The description does not mention anything about the content of the string. Therefore, the method is unlikely to behave differently for strings consisting of numbers.</p>
-                        </div>
-                      </question>
-                    </panel>
-                  </div>
-                  <div>
-                    <panel header=":lock::key: Assume you are testing the isValidName method described below. If you had to choose 3 test cases from the 4 given below, which one will you leave out?">
-                      <question>
-                        <p>Assume you are testing the isValidName method described below. If you had to choose 3 test cases from the 4 given below, which one will you leave out?</p>
-                        <tip-box>
-                          <p>isValidName (String s): boolean</p>
-                          <p>Description: returns true if s is not null and not longer than 50 characters.</p>
-                        </tip-box>
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A string that is 50 characters long</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. A string that is 51 characters long</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A string that is 40 characters long</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. null</li>
-                        </ul>
-                        <div slot="answer">
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A string that is 50 characters long</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. A string that is 51 characters long</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> c. A string that is 40 characters long</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. null</li>
-                          </ul>
-                          <p>Explanation: (a) (b) and (d) covers all three equivalence partitions and check the boundaries of them as well. (c) belongs to the same partition as (a).</p>
+                          <p>B. (a) or (c)</p>
+                          <p>Explanation: both belong to the same EP</p>
                         </div>
                       </question>
                     </panel>
                   </div>
                 </panel>
               </div>
-              <div></div>
             </div>
           </div>
         </panel>
@@ -372,121 +412,61 @@ A negative test case: i = null;
             <div>
               <p>When deciding EPs of OOP methods, we need to identify EPs of all data participants that can potentially influence the behaviour of the method, such as,</p>
               <ul>
-                <li>the target object of the operation call</li>
-                <li>input parameters of the operation call</li>
-                <li>other data/objects accessed by the operation such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented)</li>
+                <li>the target object of the method call</li>
+                <li>input parameters of the method call</li>
+                <li>other data/objects accessed by the method such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented)</li>
               </ul>
               <tip-box>
-                <p>Example:</p>
-                <p>Consider the push operation from a DataStack class.</p>
+                <p>📦 Consider this method in the <code>DataStack</code> class:</p>
+                <pre><code class="hljs java"><span class="hljs-comment">/**
+ * Adds o to the top of the stack if the stack is not full.
+ * <span class="hljs-doctag">@throws</span> MutabilityException if the global flag FREEZE==true.
+ * <span class="hljs-doctag">@throws</span> InvalidValueException if  o is null.
+ * <span class="hljs-doctag">@return</span> true if the push operation was a success.
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">push</span><span class="hljs-params">(Object o)</span> </span>{
+    ...
+}
+</code></pre>
+                <p>EPs:</p>
                 <ul>
-                  <li>
-                    <p>Operation: <code>push(Object o): boolean</code></p>
-                  </li>
-                  <li>
-                    <p>Description: Throws <code>MutabilityException</code> if the global flag <code>FREEZE==true</code></p>
-                    <ul>
-                      <li>Else, throws <code>InvalidValueException</code> if <code>o==null</code>.</li>
-                      <li>Else, returns <code>false</code> if the stack is full.</li>
-                      <li>Else, puts <code>o</code> at the top of the <code>DataStack</code> and returns <code>true</code>.</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <p>Here are the equivalence partitions for the push operation.</p>
-                    <ul>
-                      <li><code>DataStack</code> object: [full] [not full]</li>
-                      <li><code>o</code>: [null] [not null]</li>
-                      <li><code>FREEZE</code>: [true][false]</li>
-                    </ul>
-                  </li>
+                  <li><code>DataStack</code> object: [full] [not full]</li>
+                  <li><code>o</code>: [null] [not null]</li>
+                  <li><code>FREEZE</code>: [true][false]</li>
                 </ul>
               </tip-box>
               <tip-box>
-                <p>Example:</p>
-                <p>Consider the Minesweeper system that was explored previously. What are the EPs for the <code>newGame()</code> operation of the <code>Logic</code> component?</p>
+                <p>📦 Consider a simple Minesweeper app. What are the EPs for the <code>newGame()</code> method of the <code>Logic</code> component?</p>
                 <p>As <code>newGame()</code> does not have any parameters, the only obvious participant is the <code>Logic</code> object itself.</p>
-                <p>Note that if the glass-box or the grey-box approach is used, other associated objects that are involved in the operation might also be included as participants. For example, Minefield object can be considered as another participant of
-                  the <code>newGame()</code> operation. Here, the black-box approach is assumed.</p>
-                <p>Next, let us identify equivalence partitions for each participant. Will the <code>newGame</code> operation behave differently for different <code>Logic</code> objects? If yes, how will it differ? In this case, yes, it might behave differently
+                <p>Note that if the glass-box or the grey-box approach is used, other associated objects that are involved in the method might also be included as participants. For example, <code>Minefield</code> object can be considered as another participant
+                  of the <code>newGame()</code> method. Here, the black-box approach is assumed.</p>
+                <p>Next, let us identify equivalence partitions for each participant. Will the <code>newGame()</code> method behave differently for different <code>Logic</code> objects? If yes, how will it differ? In this case, yes, it might behave differently
                   based on the game state. Therefore, the equivalence partitions are:</p>
                 <ul>
-                  <li><code>PRE_GAME</code> (before the game starts, minefield does not exist yet)</li>
-                  <li><code>READY</code> (a new minefield has been created and waiting for player’s first move)</li>
-                  <li><code>IN_PLAY</code> (the current minefield is already in use)</li>
-                  <li><code>WON</code>, <code>LOST</code> (let us assume the <code>newGame</code> behaves the same way for these two values)</li>
+                  <li><code>PRE_GAME</code> : before the game starts, minefield does not exist yet</li>
+                  <li><code>READY</code> : a new minefield has been created and waiting for player’s first move</li>
+                  <li><code>IN_PLAY</code> : the current minefield is already in use</li>
+                  <li><code>WON</code>, <code>LOST</code> : let us assume the <code>newGame</code> behaves the same way for these two values</li>
                 </ul>
               </tip-box>
               <tip-box>
-                <p>Example:</p>
-                <p>Consider the Logic component of the Minesweeper application. What are the EPs for the <code>markCellAt(int x, int y)</code> operation?. The partitions in <strong>bold</strong> represent valid inputs.</p>
+                <p>📦 Consider the <code>Logic</code> component of the Minesweeper application. What are the EPs for the <code>markCellAt(int x, int y)</code> method?. The partitions in <strong>bold</strong> represent valid inputs.</p>
                 <ul>
-                  <li>Logic: PRE_GAME, <strong>READY</strong>, <strong>IN_PLAY</strong>, WON, LOST</li>
-                  <li>x: [MIN_INT..-1] <strong>[0..(W-1)]</strong> [W..MAX_INT] (we assume a minefield size of WxH)</li>
-                  <li>y: [MIN_INT..-1] <strong>[0..(H-1)]</strong> [H..MAX_INT]</li>
-                  <li>Cell at (x,y): <strong>HIDDEN</strong>, MARKED, CLEARED</li>
+                  <li><code>Logic</code>: PRE_GAME, <strong>READY</strong>, <strong>IN_PLAY</strong>, WON, LOST</li>
+                  <li><code>x</code>: [MIN_INT..-1] <strong>[0..(W-1)]</strong> [W..MAX_INT] (we assume a minefield size of WxH)</li>
+                  <li><code>y</code>: [MIN_INT..-1] <strong>[0..(H-1)]</strong> [H..MAX_INT]</li>
+                  <li><code>Cell</code> at <code>(x,y)</code>: <strong>HIDDEN</strong>, MARKED, CLEARED</li>
                 </ul>
-                <p>A test case for the push operation can be a combination of the equivalence partitions. Given below is such a test case.</p>
+                <p>A test case for the push method can be a combination of the equivalence partitions. Given below is such a test case.</p>
                 <ul>
                   <li>id: DataStack_Push_001</li>
                   <li>description: checks whether pushing onto a full stack works correctly</li>
-                  <li>input: ds is full, o!=null, FREEZE==false</li>
-                  <li>expected output: returns false, ds remains unchanged</li>
+                  <li>input: stack is full, o != null, FREEZE == false</li>
+                  <li>expected output: returns false, stack remains unchanged</li>
                 </ul>
               </tip-box>
-              <p>Knowledge of how the SUT behaves is used when deriving equivalence partitions for a given data participant. The table below illustrates some examples.</p>
-              <table class="table">
-                <tr>
-                  <th>Specification</th>
-                  <th>Equivalence partitions</th>
-                </tr>
-                <tr>
-                  <td>
-                    <ul>
-                      <li>isValidFlag(String s): boolean</li>
-                      <li>Returns true if s is one of [“F”, “T”, “D”]. The comparison is case-sensitive.</li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                      <li>[“F”] [“T”] [“D”] [“f”, “t”, “d”] [any other string][null]</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <ul>
-                      <li>squareRoot(String s): int</li>
-                      <li>Pre-conditions: s represents a positive integer</li>
-                      <li>Returns the square root of s if the square root is an integer; returns 0 otherwise.</li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                      <li>[s is not a valid number] [s is a negative integer] [s has an integer square root] [s does not have an integer square root]</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <ul>
-                      <li>isPrimeNumber(int i): boolean</li>
-                      <li>Returns true if i is a prime number</li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                      <li>[prime numbers] [non-prime numbers]</li>
-                      <li>* there are too many prime numbers to consider each one as a separate equivalence partition</li>
-                    </ul>
-                  </td>
-                </tr>
-              </table>
-              <p>Note that the EP technique is merely a heuristic and not an exact science, especially when applied manually (as opposed to using an automated program analysis tool to derive EPs). The partitions derived depend on how one ‘speculates’ the
-                SUT to behave internally. Applying EP under a glass-box or gray-box approach can yield more precise partitions.</p>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -507,14 +487,34 @@ A negative test case: i = null;
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p><em>Boundary Value Analysis (BVA)</em> is another heuristic that can enhance the E&amp;E of test cases designed using equivalence partitioning. It is based on the observation that bugs often result from incorrect handling of boundaries of
-                equivalence partitions. This is not surprising, as the end points of the boundary are often used in branching instructions etc. where the programmer can make mistakes.</p>
-              <p>E.g. <code>markCellAt(int x, int y)</code> operation could contain code such as if <code>(x &gt; 0 &amp;&amp; x &lt; = (W-1))</code> which involves boundaries of x’s equivalence partitions.</p>
-              <p>BVA suggests that when picking test inputs from an equivalence partition, values near boundaries (i.e. boundary values) should be included.</p>
-              <p>Boundary values are sometimes called corner cases.</p>
+              <p><strong><em>Boundary Value Analysis (BVA)</em> is test case design heuristic that is based on the observation that bugs often result from incorrect handling of boundaries of equivalence partitions.</strong> This is not surprising, as the
+                end points of the boundary are often used in branching instructions etc. where the programmer can make mistakes.</p>
+              <tip-box>
+                <p>📦 <code>markCellAt(int x, int y)</code> operation could contain code such as if <code>(x &gt; 0 &amp;&amp; x &lt; = (W-1))</code> which involves boundaries of x’s equivalence partitions.</p>
+              </tip-box>
+              <p><strong>BVA suggests that when picking test inputs from an equivalence partition, values near boundaries (i.e. boundary values) are more likely to find bugs.</strong></p>
+              <p>Boundary values are sometimes called <em>corner cases</em>.</p>
             </div>
             <div>
-              <div></div>
+              <div>
+                <panel header=":muscle: Exercises" expandable="">
+                  <div>
+                    <panel header=":lock::key: What BVA recommends">
+                      <question>
+                        <p>Boundary value analysis recommends testing <em>only</em> values that reside on the equivalence class boundary.</p>
+                        <ul radio-group="v4utv" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="v4utv" type="radio"> True</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="v4utv" type="radio"> False</label></li>
+                        </ul>
+                        <div slot="answer">
+                          <p>False</p>
+                          <p>Explanation: It does not recommend testing <em>only</em> those values <em>on</em> the boundary. It merely suggests that values on and around a boundary are more likely to cause errors.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
             </div>
           </div>
         </panel>
@@ -531,84 +531,60 @@ A negative test case: i = null;
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>Typically, we choose three values around the boundary to test: one value from the boundary, one value just below the boundary, and one value just above the boundary.</p>
-              <p>Some examples:</p>
-              <table class="table">
-                <tr>
-                  <th>Equivalence partition</th>
-                  <th>Some possible boundary values</th>
-                </tr>
-                <tr>
-                  <td>
-                    <ul>
-                      <li>[1-12]</li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                      <li>0,1,2, 11,12,13</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <ul>
-                      <li>[MIN_INT, 0]</li>
-                      <li>* MIN_INT is the minimum possible integer value allowed by the environment.</li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                      <li>MIN_INT, MIN_INT+1, -1, 0 , 1</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <ul>
-                      <li>[any non-null String]</li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                      <li>Empty String, a String of maximum possible length</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <ul>
-                      <li>[prime numbers]</li>
-                      <li>[“F”]</li>
-                      <li>[“A”, “D”, “X”]</li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                      <li>No specific boundary</li>
-                      <li>No specific boundary</li>
-                      <li>No specific boundary</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <ul>
-                      <li>[non-empty Stack]</li>
-                      <li>* we assume a fixed size stack</li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                      <li>Stack with: one element, two elements, no empty spaces, only one empty space</li>
-                    </ul>
-                  </td>
-                </tr>
-              </table>
+              <p><strong>Typically, we choose three values around the boundary to test: one value from the boundary, one value just below the boundary, and one value just above the boundary.</strong> The number of values to pick depends on other factors,
+                such as the cost of each test case.</p>
+              <tip-box>
+                <p>📦 Some examples:</p>
+                <table class="table">
+                  <tr>
+                    <th>Equivalence partition</th>
+                    <th>Some possible boundary values</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>[1-12]</p>
+                    </td>
+                    <td>
+                      <p>0,1,2, 11,12,13</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>[MIN_INT, 0]<br><span class="dimmed">(MIN_INT is the minimum possible integer value allowed by the environment)</span></p>
+                    </td>
+                    <td>
+                      <p>MIN_INT, MIN_INT+1, -1, 0 , 1</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>[any non-null String]</p>
+                    </td>
+                    <td>
+                      <p>Empty String, a String of maximum possible length</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>[prime numbers]<br> [“F”]
+                        <br> [“A”, “D”, “X”]</p>
+                    </td>
+                    <td>
+                      <p>No specific boundary<br> No specific boundary<br> No specific boundary</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>[non-empty Stack]<br><span class="dimmed">(we assume a fixed size stack)</span></p>
+                    </td>
+                    <td>
+                      <p>Stack with: one element, two elements, no empty spaces, only one empty space</p>
+                    </td>
+                  </tr>
+                </table>
+              </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -629,33 +605,50 @@ A negative test case: i = null;
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>Often, an SUT can take multiple inputs. Having selected test values for each input (using equivalence partitioning, boundary value analysis, or some other technique), how are they combined to create test cases?</p>
+              <p><strong>An SUT can take multiple inputs.</strong> You can select values for each input (using equivalence partitioning, boundary value analysis, or some other technique).</p>
               <tip-box>
+                <p>📦 an SUT that takes multiple inputs and some values chosen as values for each input:</p>
                 <ul>
-                  <li>
-                    <p>Scenario: calculateGrade</p>
-                  </li>
-                  <li>
-                    <p>Method to test: calculateGrade(participation, projectGrade, isAbsent, examScore)</p>
-                  </li>
-                  <li>
-                    <p>Values to test (invalid values are <strong>bold</strong>)</p>
-                    <ul>
-                      <li>participation: 0, 1, 19, 20, <strong>21</strong>, <strong>22</strong></li>
-                      <li>projectGrade: A, B, C, D, F</li>
-                      <li>isAbsent: true, false</li>
-                      <li>examScore: 0, 1, 69, 70, <strong>71</strong>, <strong>72</strong></li>
-                    </ul>
-                  </li>
+                  <li>Scenario: calculateGrade</li>
+                  <li>Method to test: calculateGrade(participation, projectGrade, isAbsent, examScore)</li>
+                  <li>Values to test (invalid values are <strong>bold</strong>)</li>
                 </ul>
+                <table class="markbind-table table">
+                  <thead>
+                    <tr>
+                      <th>Input</th>
+                      <th>valid values to test</th>
+                      <th>invalid values to test</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>participation</td>
+                      <td>0, 1, 19, 20</td>
+                      <td>21, 22</td>
+                    </tr>
+                    <tr>
+                      <td>projectGrade</td>
+                      <td>A, B, C, D, F</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>isAbsent</td>
+                      <td>true, false</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>examScore</td>
+                      <td>0, 1, 69, 70,</td>
+                      <td>71, 72</td>
+                    </tr>
+                  </tbody>
+                </table>
               </tip-box>
-              <p>For the calculateGrade scenario above, one obvious solution is to test all possible combinations i.e. test all 6x5x2x6=360 cases. Naturally, this technique has a higher chance of discovering bugs (i.e. effective) but the number of combinations
-                can be too high to test (i.e. not efficient).</p>
-              <p>Therefore, we need smarter ways to combine test inputs that are both effective and efficient.</p>
+              <p><strong>Testing all possible combinations is effective but not efficient.</strong> If you test all possible combinations for the above example, you need to test 6x5x2x6=360 cases. Doing so has a higher chance of discovering bugs (i.e. effective)
+                but the number of test cases can be too high (i.e. not efficient). Therefore, <strong>we need smarter ways to combine test inputs that are both effective and efficient.</strong></p>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -673,8 +666,8 @@ A negative test case: i = null;
             <div>
               <p>Given below are some basic strategies for generating a set of test cases by combining multiple test input combination strategies.</p>
               <tip-box>
-                <p>Scenario: foo</p>
-                <p>SUT: foo(p1 char, p2 int, p3 boolean)</p>
+                <p>📦 Let's assume the SUT has the following three inputs and you have selected the given values for testing:</p>
+                <p>SUT: <code>foo(p1 char, p2 int, p3 boolean)</code></p>
                 <p>Selected values for each input:</p>
                 <table class="markbind-table table">
                   <thead>
@@ -699,9 +692,9 @@ A negative test case: i = null;
                   </tbody>
                 </table>
               </tip-box>
-              <p><strong>a) all combinations</strong>: generate test cases for each unique combination of test inputs</p>
+              <p><strong>all combinations</strong>: generate test cases for each unique combination of test inputs</p>
               <tip-box>
-                <p>Example: the foo scenario requires 3x3x2=18 test cases under the ‘all combinations strategy</p>
+                <p>📦 the strategy generates 3x3x2=18 test cases</p>
                 <table class="markbind-table table">
                   <thead>
                     <tr>
@@ -745,9 +738,9 @@ A negative test case: i = null;
                   </tbody>
                 </table>
               </tip-box>
-              <p><strong>b) at least once</strong>: include each test input at least once</p>
+              <p><strong>at least once</strong>: include each test input at least once.</p>
               <tip-box>
-                <p>Example:</p>
+                <p>📦 this strategy generates 3 test cases.</p>
                 <table class="markbind-table table">
                   <thead>
                     <tr>
@@ -767,7 +760,7 @@ A negative test case: i = null;
                     <tr>
                       <td style="text-align:center">2</td>
                       <td style="text-align:center">b</td>
-                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">2</td>
                       <td style="text-align:center">F</td>
                     </tr>
                     <tr>
@@ -778,12 +771,58 @@ A negative test case: i = null;
                     </tr>
                   </tbody>
                 </table>
-                <p>VV/IV = Any Value</p>
+                <p>VV/IV = Any Valid Value / Any Invalid Value</p>
               </tip-box>
-              <p><strong>c) all pairs</strong>: This strategy creates test cases so that for any given pair of parameters, all combinations between them are tested. It is based on the observations that a bug is rarely the result of more than two interacting
-                factors. The resulting number of test cases is lower than the “all combinations” approach, but higher than the “at least once” approach.</p>
+              <p><strong>all pairs</strong>: This strategy creates test cases so that for any given pair of inputs, all combinations between them are tested. It is based on the observations that a bug is rarely the result of more than two interacting factors.
+                The resulting number of test cases is lower than the &quot;all combinations&quot; strategy, but higher than the &quot;at least once&quot; approach.</p>
               <tip-box>
-                <p>Example: the foo scenario requires 9 test cases to cover all pairs</p>
+                <p>📦 this strategy generates 9 test cases:</p>
+                <panel type="seamless" header="see steps">
+                  <p>Let's first consider inputs p1 and p2:</p>
+                  <table class="markbind-table table">
+                    <thead>
+                      <tr>
+                        <th style="text-align:center">Input</th>
+                        <th style="text-align:center">Values</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="text-align:center">p1</td>
+                        <td style="text-align:center">a, b, c</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">p2</td>
+                        <td style="text-align:center">1, 2, 3</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>These values can generate
+                    <tooltip content="(a,1)(a,2)(a,3)(b,1)(b,2),...">3x3=9 combinations</tooltip>, and the test cases should cover all of them.</p>
+                  <p>Next, let's consider p1 and p3.</p>
+                  <table class="markbind-table table">
+                    <thead>
+                      <tr>
+                        <th style="text-align:center">Input</th>
+                        <th style="text-align:center">Values</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="text-align:center">p1</td>
+                        <td style="text-align:center">a, b, c</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">p3</td>
+                        <td style="text-align:center">T, F</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>These values can generate
+                    <tooltip content="(a,T)(a,F)(b,T)(b,F),...">3x2=6 combinations</tooltip>, and the test cases should cover all of them.</p>
+                  <p>Similarly, inputs p2 and p3 generates another 6 combinations.</p>
+                  <p>The 9 test cases given below covers all those 9+6+6 combinations.</p>
+                </panel>
                 <table class="markbind-table table">
                   <thead>
                     <tr>
@@ -853,7 +892,7 @@ A negative test case: i = null;
               </tip-box>
               <p>A variation of this strategy is to test all pairs of inputs but only for inputs that could influence each other.</p>
               <tip-box>
-                <p>Example: the foo scenario, testing all pairs between p1 and p3 only while ensuring all p3 values are tested at least once</p>
+                <p>📦 Testing all pairs between p1 and p3 only while ensuring all p3 values are tested at least once</p>
                 <table class="markbind-table table">
                   <thead>
                     <tr>
@@ -903,18 +942,16 @@ A negative test case: i = null;
                   </tbody>
                 </table>
               </tip-box>
-              <p><strong>d) random:</strong> In this strategy we generate test cases using one of the other strategies and then pick a subset randomly (presumably because the original set of test cases is too big).</p>
+              <p><strong>d) random:</strong> This strategy generates test cases using one of the other strategies and then pick a subset randomly (presumably because the original set of test cases is too big).</p>
               <p><strong>e) other</strong>: There are other strategies that can be used.</p>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
       <div>
         <div>
-          <h4 id="heuristic-each-valid-input-at-least-once-in-a-positive-test-case-two">Heuristic: Each Valid Input At Least Once In A Positive Test Case <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+          <h4 id="heuristic-each-valid-input-at-least-once-in-a-positive-test-case-two">Heuristic: Each Valid Input at Least Once in a Positive Test Case <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
         </div>
         <tip-box>
           <div>
@@ -924,98 +961,66 @@ A negative test case: i = null;
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
+              <p>Consider the following scenario.</p>
               <tip-box>
-                <p>Scenario: calculateFruitPrice</p>
-                <p>SUT printLabel(fruitName String, unitPrice int)</p>
-                <p>Selected values for each input (invalid values are underlined):</p>
-                <table class="table">
-                  <tr>
-                    <th>Input</th>
-                    <th>Values</th>
-                    <th>Reason</th>
-                  </tr>
-                  <tr>
-                    <td>fruitName</td>
-                    <td>
-                      <ul>
-                        <li>Apple</li>
-                        <li>Banana</li>
-                        <li>Cherry</li>
-                        <li>Dog</li>
-                      </ul>
-                    </td>
-                    <td>
-                      <ul>
-                        <li>Label format is round</li>
-                        <li>Label format is oval</li>
-                        <li>Label format is square</li>
-                        <li>Not a valid fruit</li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>unitPrice</td>
-                    <td>
-                      <ul>
-                        <li>1</li>
-                        <li>20</li>
-                        <li>0</li>
-                        <li>-1</li>
-                      </ul>
-                    </td>
-                    <td>
-                      <ul>
-                        <li>Only one digit</li>
-                        <li>Two digits</li>
-                        <li>Invalid because 0 is not a valid price</li>
-                        <li>Invalid because negative prices are not allowed</li>
-                      </ul>
-                    </td>
-                  </tr>
+                <p>SUT: <code>printLabel(fruitName String, unitPrice int)</code></p>
+                <p><strong>Selected values for</strong><code>fruitName</code> (invalid values are marked with an ❗️ ):</p>
+                <table class="markbind-table table">
+                  <thead>
+                    <tr>
+                      <th>Values</th>
+                      <th>Explanation</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Apple</td>
+                      <td>Label format is round</td>
+                    </tr>
+                    <tr>
+                      <td>Banana</td>
+                      <td>Label format is oval</td>
+                    </tr>
+                    <tr>
+                      <td>Cherry</td>
+                      <td>Label format is square</td>
+                    </tr>
+                    <tr>
+                      <td>❗️ Dog</td>
+                      <td>Not a valid fruit</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p><strong>Selected values for</strong><code>unitPrice</code>:</p>
+                <table class="markbind-table table">
+                  <thead>
+                    <tr>
+                      <th>Values</th>
+                      <th>Explanation</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Only one digit</td>
+                    </tr>
+                    <tr>
+                      <td>20</td>
+                      <td>Two digits</td>
+                    </tr>
+                    <tr>
+                      <td>❗️ 0</td>
+                      <td>Invalid because 0 is not a valid price</td>
+                    </tr>
+                    <tr>
+                      <td>❗️ -1</td>
+                      <td>Invalid because negative prices are not allowed</td>
+                    </tr>
+                  </tbody>
                 </table>
               </tip-box>
               <p>Suppose these are the test cases being considered.</p>
-              <table class="markbind-table table">
-                <thead>
-                  <tr>
-                    <th style="text-align:center">Case</th>
-                    <th style="text-align:center">fruitName</th>
-                    <th style="text-align:center">unitPrice</th>
-                    <th style="text-align:center">Expected</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">Apple</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">Print label</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">Banana</td>
-                    <td style="text-align:center">20</td>
-                    <td style="text-align:center">Print label</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">Cherry</td>
-                    <td style="text-align:center">0</td>
-                    <td style="text-align:center">Error message “invalid price”</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">4</td>
-                    <td style="text-align:center">Dog</td>
-                    <td style="text-align:center">-1</td>
-                    <td style="text-align:center">Error message “invalid fruit&quot;</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p>It looks like the test cases were created using the ‘at least once’ strategy. After running these tests can we confirm that square-format label printing is done correctly? Answer: No. Reason: <code>Cherry</code> -- the only input that can
-                produce a square-format label -- is in a negative test case which produces an error message instead of a label. If there is a bug in the code that prints labels in square-format, these tests cases will not trigger that bug.</p>
-              <p>In this case a useful heuristic to apply is ‘each valid input at least once in a positive test case’ which means exactly what it says. <code>Cherry</code> is a valid test input and we must ensure that it appears at least once in a valid
-                test case. Here are the updated test cases after applying that heuristic.</p>
-              <div id="heuristic-valid-test-case">
+              <tip-box>
                 <table class="markbind-table table">
                   <thead>
                     <tr>
@@ -1030,40 +1035,82 @@ A negative test case: i = null;
                       <td style="text-align:center">1</td>
                       <td style="text-align:center">Apple</td>
                       <td style="text-align:center">1</td>
-                      <td style="text-align:center">Print round label</td>
+                      <td style="text-align:center">Print label</td>
                     </tr>
                     <tr>
                       <td style="text-align:center">2</td>
                       <td style="text-align:center">Banana</td>
                       <td style="text-align:center">20</td>
-                      <td style="text-align:center">Print oval label</td>
-                    </tr>
-                    <tr>
-                      <td style="text-align:center">2.1</td>
-                      <td style="text-align:center">Cherry</td>
-                      <td style="text-align:center">VV/IV</td>
-                      <td style="text-align:center">Print square label</td>
+                      <td style="text-align:center">Print label</td>
                     </tr>
                     <tr>
                       <td style="text-align:center">3</td>
-                      <td style="text-align:center">VV</td>
-                      <td style="text-align:center">0</td>
+                      <td style="text-align:center">Cherry</td>
+                      <td style="text-align:center">❗️ 0</td>
                       <td style="text-align:center">Error message “invalid price”</td>
                     </tr>
                     <tr>
                       <td style="text-align:center">4</td>
-                      <td style="text-align:center">Dog</td>
-                      <td style="text-align:center">-1</td>
+                      <td style="text-align:center">❗️ Dog</td>
+                      <td style="text-align:center">❗️ -1</td>
                       <td style="text-align:center">Error message “invalid fruit&quot;</td>
                     </tr>
                   </tbody>
                 </table>
-                <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
-              </div>
+              </tip-box>
+              <p>It looks like the test cases were created using the ‘at least once’ strategy. After running these tests can we confirm that square-format label printing is done correctly? Answer: No. Reason: <code>Cherry</code> -- the only input that can
+                produce a square-format label -- is in a negative test case which produces an error message instead of a label. If there is a bug in the code that prints labels in square-format, these tests cases will not trigger that bug.</p>
+              <p>In this case a useful heuristic to apply is <strong>each valid input must appear at least once in a positive test case</strong>. <code>Cherry</code> is a valid test input and we must ensure that it appears at least once in a positive test
+                case. Here are the updated test cases after applying that heuristic.</p>
+              <tip-box>
+                <div id="heuristic-valid-test-case">
+                  <table class="markbind-table table">
+                    <thead>
+                      <tr>
+                        <th style="text-align:center">Case</th>
+                        <th style="text-align:center">fruitName</th>
+                        <th style="text-align:center">unitPrice</th>
+                        <th style="text-align:center">Expected</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="text-align:center">1</td>
+                        <td style="text-align:center">Apple</td>
+                        <td style="text-align:center">1</td>
+                        <td style="text-align:center">Print round label</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">2</td>
+                        <td style="text-align:center">Banana</td>
+                        <td style="text-align:center">20</td>
+                        <td style="text-align:center">Print oval label</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">2.1</td>
+                        <td style="text-align:center">Cherry</td>
+                        <td style="text-align:center">VV</td>
+                        <td style="text-align:center">Print square label</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">3</td>
+                        <td style="text-align:center">VV</td>
+                        <td style="text-align:center">❗️ 0</td>
+                        <td style="text-align:center">Error message “invalid price”</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">4</td>
+                        <td style="text-align:center">❗️ Dog</td>
+                        <td style="text-align:center">❗️ -1</td>
+                        <td style="text-align:center">Error message “invalid fruit&quot;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
+                </div>
+              </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -1079,9 +1126,10 @@ A negative test case: i = null;
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>Consider the test cases designed in
-                <trigger for="modal:heuristic-valid-test-case" trigger="click">Heuristic: each valid input at least once in a positive test case</trigger>.</p>
-              <modal title="**Heuristic: each valid input at least once in a positive test case**" id="modal:heuristic-valid-test-case">
+              <p>Consider the
+                <trigger for="modal:heuristic-valid-test-case" trigger="click">test cases designed in [Heuristic: each valid input at least once in a positive test case]</trigger>.</p>
+              <modal large="" title="**Extract from Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: each valid input at least once in a positive test case**"
+                id="modal:heuristic-valid-test-case">
                 <div>
                   <table class="markbind-table table">
                     <thead>
@@ -1108,19 +1156,19 @@ A negative test case: i = null;
                       <tr>
                         <td style="text-align:center">2.1</td>
                         <td style="text-align:center">Cherry</td>
-                        <td style="text-align:center">VV/IV</td>
+                        <td style="text-align:center">VV</td>
                         <td style="text-align:center">Print square label</td>
                       </tr>
                       <tr>
                         <td style="text-align:center">3</td>
                         <td style="text-align:center">VV</td>
-                        <td style="text-align:center">0</td>
+                        <td style="text-align:center">❗️ 0</td>
                         <td style="text-align:center">Error message “invalid price”</td>
                       </tr>
                       <tr>
                         <td style="text-align:center">4</td>
-                        <td style="text-align:center">Dog</td>
-                        <td style="text-align:center">-1</td>
+                        <td style="text-align:center">❗️ Dog</td>
+                        <td style="text-align:center">❗️ -1</td>
                         <td style="text-align:center">Error message “invalid fruit&quot;</td>
                       </tr>
                     </tbody>
@@ -1128,75 +1176,74 @@ A negative test case: i = null;
                   <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
                 </div>
               </modal>
-              <p>After running these test cases can we be sure that the error message “invalid price” is shown for negative prices? Answer: No. Reason: <code>-1</code> -- the only input that is a negative price – is in a test case that produces the error
+              <p>After running these test cases can you be sure that the error message “invalid price” is shown for negative prices? Answer: No. Reason: <code>-1</code> -- the only input that is a negative price – is in a test case that produces the error
                 message “invalid fruit”.</p>
-              <p>In this case a useful heuristic to apply is ‘no more than one invalid input in a test case’. After applying that, we get the following test cases.</p>
-              <table class="markbind-table table">
-                <thead>
-                  <tr>
-                    <th style="text-align:center">Case</th>
-                    <th style="text-align:center">fruitName</th>
-                    <th style="text-align:center">unitPrice</th>
-                    <th style="text-align:center">Expected</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">Apple</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">Print round label</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">Banana</td>
-                    <td style="text-align:center">20</td>
-                    <td style="text-align:center">Print oval label</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">2.1</td>
-                    <td style="text-align:center">Cherry</td>
-                    <td style="text-align:center">VV/IV</td>
-                    <td style="text-align:center">Print square label</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">0</td>
-                    <td style="text-align:center">Error message “invalid price”</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">4</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">-1</td>
-                    <td style="text-align:center">Error message “invalid price&quot;</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">4.1</td>
-                    <td style="text-align:center">Dog</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">Error message “invalid fruit&quot;</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
+              <p>In this case a useful heuristic to apply is <strong>no more than one invalid input in a test case</strong>. After applying that, we get the following test cases.</p>
+              <tip-box>
+                <table class="markbind-table table">
+                  <thead>
+                    <tr>
+                      <th style="text-align:center">Case</th>
+                      <th style="text-align:center">fruitName</th>
+                      <th style="text-align:center">unitPrice</th>
+                      <th style="text-align:center">Expected</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">Apple</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">Print round label</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">2</td>
+                      <td style="text-align:center">Banana</td>
+                      <td style="text-align:center">20</td>
+                      <td style="text-align:center">Print oval label</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">2.1</td>
+                      <td style="text-align:center">Cherry</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">Print square label</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">3</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">❗️0</td>
+                      <td style="text-align:center">Error message “invalid price”</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">4</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">❗️-1</td>
+                      <td style="text-align:center">Error message “invalid price&quot;</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">4.1</td>
+                      <td style="text-align:center">❗️Dog</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">Error message “invalid fruit&quot;</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
+              </tip-box>
             </div>
             <div>
               <div>
                 <panel header=":muscle: Exercises" expandable="">
                   <div>
-                    <panel header=":lock::key: True or False?">
+                    <panel header=":lock::key: Can define test cases precisely">
                       <question>
-                        <p>Applying the heuristics covered in the lecture, we can determine the precise number of test cases required to test any given SUT effectively.</p>
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                        <p>Applying the heuristics covered so far, we can determine the precise number of test cases required to test any given SUT effectively.</p>
+                        <ul radio-group="291be" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="291be" type="radio"> True</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="291be" type="radio"> False</label></li>
                         </ul>
                         <div slot="answer">
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
-                          </ul>
+                          <p>False</p>
                           <p>Explanation: These heuristics are, well, heuristics only. They will help you to make better decisions about test case design. However, they are speculative in nature (especially, when testing in black-box fashion) and cannot
                             give you precise number of test cases.</p>
                         </div>
@@ -1205,7 +1252,6 @@ A negative test case: i = null;
                   </div>
                 </panel>
               </div>
-              <div></div>
             </div>
           </div>
         </panel>
@@ -1222,22 +1268,22 @@ A negative test case: i = null;
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>Consider the calculateGrade scenario.</p>
+              <p>Consider the calculateGrade scenario given below:</p>
               <tip-box>
                 <ul>
                   <li>
                     <p>Scenario: calculateGrade</p>
                   </li>
                   <li>
-                    <p>Method to test: calculateGrade(participation, projectGrade, isAbsent, examScore)</p>
+                    <p>SUT : <code>calculateGrade(participation, projectGrade, isAbsent, examScore)</code></p>
                   </li>
                   <li>
-                    <p>Values to test (invalid values are underlined)</p>
+                    <p>Values to test (invalid values are marked with an ❗️)</p>
                     <ul>
-                      <li>participation: 0, 1, 19, 20, 21, 22</li>
+                      <li>participation: 0, 1, 19, 20, ❗️ 21, ❗️ 22</li>
                       <li>projectGrade: A, B, C, D, F</li>
                       <li>isAbsent: true, false</li>
-                      <li>examScore: 0, 1, 69, 70, 71, 72</li>
+                      <li>examScore: 0, 1, 69, 70, ❗️ 71, ❗️ 72</li>
                     </ul>
                   </li>
                 </ul>
@@ -1291,25 +1337,26 @@ A negative test case: i = null;
                     </tr>
                     <tr>
                       <td style="text-align:center">5</td>
-                      <td style="text-align:center">21</td>
+                      <td style="text-align:center">❗️ 21</td>
                       <td style="text-align:center">F</td>
                       <td style="text-align:center">VV/IV</td>
-                      <td style="text-align:center">71</td>
+                      <td style="text-align:center">❗️ 71</td>
                       <td style="text-align:center">Err Msg</td>
                     </tr>
                     <tr>
                       <td style="text-align:center">6</td>
-                      <td style="text-align:center">22</td>
+                      <td style="text-align:center">❗️ 22</td>
                       <td style="text-align:center">VV/IV</td>
                       <td style="text-align:center">VV/IV</td>
-                      <td style="text-align:center">72</td>
+                      <td style="text-align:center">❗️ 72</td>
                       <td style="text-align:center">Err Msg</td>
                     </tr>
                   </tbody>
                 </table>
                 <p>VV/IV = Any Valid or Invalid Value, Err Msg = Error Message</p>
               </tip-box>
-              <p>Next, let’s apply the ‘each valid input at least once in a positive test case’ heuristic.</p>
+              <p>Next, let’s apply the ‘each valid input at least once in a positive test case’ heuristic. Test case 5 has a valid value for <code>projectGrade=F</code> that doesn't appear in any other positive test case. Let's replace test case 5 with 5.1
+                and 5.2 to rectify that.</p>
               <tip-box>
                 <p><strong>Test cases for calculateGrade V2</strong></p>
                 <table class="markbind-table table">
@@ -1357,7 +1404,7 @@ A negative test case: i = null;
                       <td style="text-align:center">...</td>
                     </tr>
                     <tr>
-                      <td style="text-align:center">5.1</td>
+                      <td style="text-align:center"><mark>5.1</mark></td>
                       <td style="text-align:center">VV</td>
                       <td style="text-align:center">F</td>
                       <td style="text-align:center">VV</td>
@@ -1365,26 +1412,26 @@ A negative test case: i = null;
                       <td style="text-align:center">...</td>
                     </tr>
                     <tr>
-                      <td style="text-align:center">5.2</td>
-                      <td style="text-align:center">21</td>
+                      <td style="text-align:center"><mark>5.2</mark></td>
+                      <td style="text-align:center">❗️ 21</td>
                       <td style="text-align:center">VV/IV</td>
                       <td style="text-align:center">VV/IV</td>
-                      <td style="text-align:center">71</td>
+                      <td style="text-align:center">❗️ 71</td>
                       <td style="text-align:center">Err Msg</td>
                     </tr>
                     <tr>
                       <td style="text-align:center">6</td>
-                      <td style="text-align:center">22</td>
+                      <td style="text-align:center">❗️ 22</td>
                       <td style="text-align:center">VV/IV</td>
                       <td style="text-align:center">VV/IV</td>
-                      <td style="text-align:center">72</td>
+                      <td style="text-align:center">❗️ 72</td>
                       <td style="text-align:center">Err Msg</td>
                     </tr>
                   </tbody>
                 </table>
                 <p>VV = Any Valid Value VV/IV = Any Valid or Invalid Value</p>
               </tip-box>
-              <p>Next, we apply the ‘no more than one invalid input in a test case’ heuristic.</p>
+              <p>Next, we apply the ‘no more than one invalid input in a test case’ heuristic. Test cases 5.2 and 6 don't follow that heuristic. Let's rectify the situation as follows:</p>
               <tip-box>
                 <p><strong>Test cases for calculateGrade V3</strong></p>
                 <table class="markbind-table table">
@@ -1441,41 +1488,41 @@ A negative test case: i = null;
                     </tr>
                     <tr>
                       <td style="text-align:center">5.2</td>
-                      <td style="text-align:center">21</td>
+                      <td style="text-align:center">❗️ 21</td>
+                      <td style="text-align:center"><mark>VV</mark></td>
+                      <td style="text-align:center"><mark>VV</mark></td>
+                      <td style="text-align:center"><mark>VV</mark></td>
+                      <td style="text-align:center">Err Msg</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center"><mark>5.3</mark></td>
+                      <td style="text-align:center">❗️ 22</td>
                       <td style="text-align:center">VV</td>
                       <td style="text-align:center">VV</td>
                       <td style="text-align:center">VV</td>
                       <td style="text-align:center">Err Msg</td>
                     </tr>
                     <tr>
-                      <td style="text-align:center">5.3</td>
-                      <td style="text-align:center">22</td>
+                      <td style="text-align:center"><mark>6.1</mark></td>
                       <td style="text-align:center">VV</td>
                       <td style="text-align:center">VV</td>
                       <td style="text-align:center">VV</td>
+                      <td style="text-align:center">❗️ 71</td>
                       <td style="text-align:center">Err Msg</td>
                     </tr>
                     <tr>
-                      <td style="text-align:center">6.1</td>
+                      <td style="text-align:center"><mark>6.2</mark></td>
                       <td style="text-align:center">VV</td>
                       <td style="text-align:center">VV</td>
                       <td style="text-align:center">VV</td>
-                      <td style="text-align:center">71</td>
-                      <td style="text-align:center">Err Msg</td>
-                    </tr>
-                    <tr>
-                      <td style="text-align:center">6.2</td>
-                      <td style="text-align:center">VV</td>
-                      <td style="text-align:center">VV</td>
-                      <td style="text-align:center">VV</td>
-                      <td style="text-align:center">72</td>
+                      <td style="text-align:center">❗️ 72</td>
                       <td style="text-align:center">Err Msg</td>
                     </tr>
                   </tbody>
                 </table>
               </tip-box>
-              <p>Next, let us assume that there is a dependency between the inputs examScore and isAbsent such that an absent student can only have examScore=0. To cater for the hidden invalid case arising from this, we can add a new test case where isAbsent=true
-                and examScore!=0. In addition, test cases 3-6.2 should have isAbsent=false so that the input remains valid.</p>
+              <p>Next, let us assume that there is a dependency between the inputs <code>examScore</code> and <code>isAbsent</code> such that an absent student can only have <code>examScore=0</code>. To cater for the hidden invalid case arising from this,
+                we can add a new test case where <code>isAbsent=true</code> and <code>examScore!=0</code>. In addition, test cases 3-6.2 should have <code>isAbsent=false</code> so that the input remains valid.</p>
               <tip-box>
                 <p><strong>Test cases for calculateGrade V4</strong></p>
                 <table class="markbind-table table">
@@ -1510,7 +1557,7 @@ A negative test case: i = null;
                       <td style="text-align:center">3</td>
                       <td style="text-align:center">19</td>
                       <td style="text-align:center">C</td>
-                      <td style="text-align:center">false</td>
+                      <td style="text-align:center"><mark>false</mark></td>
                       <td style="text-align:center">69</td>
                       <td style="text-align:center">...</td>
                     </tr>
@@ -1518,7 +1565,7 @@ A negative test case: i = null;
                       <td style="text-align:center">4</td>
                       <td style="text-align:center">20</td>
                       <td style="text-align:center">D</td>
-                      <td style="text-align:center">false</td>
+                      <td style="text-align:center"><mark>false</mark></td>
                       <td style="text-align:center">70</td>
                       <td style="text-align:center">...</td>
                     </tr>
@@ -1526,23 +1573,23 @@ A negative test case: i = null;
                       <td style="text-align:center">5.1</td>
                       <td style="text-align:center">VV</td>
                       <td style="text-align:center">F</td>
-                      <td style="text-align:center">false</td>
+                      <td style="text-align:center"><mark>false</mark></td>
                       <td style="text-align:center">VV</td>
                       <td style="text-align:center">...</td>
                     </tr>
                     <tr>
                       <td style="text-align:center">5.2</td>
-                      <td style="text-align:center">21</td>
+                      <td style="text-align:center">❗️ 21</td>
                       <td style="text-align:center">VV</td>
-                      <td style="text-align:center">false</td>
+                      <td style="text-align:center"><mark>false</mark></td>
                       <td style="text-align:center">VV</td>
                       <td style="text-align:center">Err Msg</td>
                     </tr>
                     <tr>
                       <td style="text-align:center">5.3</td>
-                      <td style="text-align:center">22</td>
+                      <td style="text-align:center">❗️ 22</td>
                       <td style="text-align:center">VV</td>
-                      <td style="text-align:center">false</td>
+                      <td style="text-align:center"><mark>false</mark></td>
                       <td style="text-align:center">VV</td>
                       <td style="text-align:center">Err Msg</td>
                     </tr>
@@ -1550,25 +1597,25 @@ A negative test case: i = null;
                       <td style="text-align:center">6.1</td>
                       <td style="text-align:center">VV</td>
                       <td style="text-align:center">VV</td>
-                      <td style="text-align:center">false</td>
-                      <td style="text-align:center">71</td>
+                      <td style="text-align:center"><mark>false</mark></td>
+                      <td style="text-align:center">❗️ 71</td>
                       <td style="text-align:center">Err Msg</td>
                     </tr>
                     <tr>
                       <td style="text-align:center">6.2</td>
                       <td style="text-align:center">VV</td>
                       <td style="text-align:center">VV</td>
-                      <td style="text-align:center">false</td>
-                      <td style="text-align:center">72</td>
+                      <td style="text-align:center"><mark>false</mark></td>
+                      <td style="text-align:center">❗️ 72</td>
                       <td style="text-align:center">Err Msg</td>
                     </tr>
                     <tr>
-                      <td style="text-align:center">7</td>
-                      <td style="text-align:center">VV</td>
-                      <td style="text-align:center">VV</td>
-                      <td style="text-align:center">true</td>
-                      <td style="text-align:center">!=0</td>
-                      <td style="text-align:center">Err Msg</td>
+                      <td style="text-align:center"><mark>7</mark></td>
+                      <td style="text-align:center"><mark>VV</mark></td>
+                      <td style="text-align:center"><mark>VV</mark></td>
+                      <td style="text-align:center"><mark>true</mark></td>
+                      <td style="text-align:center"><mark>!=0</mark></td>
+                      <td style="text-align:center"><mark>Err Msg</mark></td>
                     </tr>
                   </tbody>
                 </table>
@@ -1578,22 +1625,17 @@ A negative test case: i = null;
               <div>
                 <panel header=":muscle: Exercises" expandable="">
                   <div>
-                    <panel header=":lock::key: Choose the correct statement.">
+                    <panel header=":lock::key: statements about test input combinations">
                       <question>
-                        <p>Which of these is not one of the heuristics recommended when creating test cases with multiple inputs?</p>
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. All invalid test inputs must be tested together.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. It is ok to combine valid values for different inputs.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. No more than one invalid test input should be in a given test case.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Each valid test input should appear at least once in a test case that doesn’t have any invalid inputs.</li>
+                        <p>Which of these contradict the heuristics recommended when creating test cases with multiple inputs?</p>
+                        <ul radio-group="tdaac" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="tdaac" type="radio"> a. All invalid test inputs must be tested together.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="tdaac" type="radio"> b. It is ok to combine valid values for different inputs.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="tdaac" type="radio"> c. No more than one invalid test input should be in a given test case.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="tdaac" type="radio"> d. Each valid test input should appear at least once in a test case that doesn’t have any invalid inputs.</label></li>
                         </ul>
                         <div slot="answer">
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. All invalid test inputs must be tested together.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. It is ok to combine valid values for different inputs.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. No more than one invalid test input should be in a given test case.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Each valid test input should appear at least once in a test case that doesn’t have any invalid inputs.</li>
-                          </ul>
+                          <p>(a) inputs.</p>
                           <p>Explanation: If you test all invalid test inputs together, you will not know if each one of the invalid inputs are handled correctly by the SUT. This is because most SUTs return an error message upon encountering the first invalid
                             input.</p>
                         </div>
@@ -1602,7 +1644,6 @@ A negative test case: i = null;
                   </div>
                 </panel>
               </div>
-              <div></div>
             </div>
           </div>
         </panel>
@@ -1627,12 +1668,121 @@ A negative test case: i = null;
               <p><strong>Use cases can be used for system testing and acceptance testing</strong>. For example, the main success scenario can be one test case while each variation (due to extensions) can form another test case. However, note that use cases
                 do not specify the exact data entered into the system. Instead, it might say something like <code>user enters his personal data into the system</code>. Therefore, the tester has to choose data by considering equivalence partitions and
                 boundary values. The combinations of these could result in one use case producing many test cases.</p>
-              <p>To increase E&amp;E of testing, high-priority use cases are given more attention. For example, a scripted approach can be used to test high priority test cases, while an exploratory approach is used to test other areas of concern that could
-                emerge during testing.</p>
+              <p>To increase
+                <trigger trigger="click" for="modal:usebaseBased-EandE">E&amp;E of testing</trigger>, high-priority use cases are given more attention. For example, a
+                <trigger trigger="click" for="modal:usecaseBased-scripted">scripted approach</trigger> can be used to test high priority test cases, while an exploratory approach is used to test other areas of concern that could emerge during testing.</p>
+              <modal large="" title="Quality Assurance → Test Case Design → Introduction → (extract) E&E of testing"
+                id="modal:usebaseBased-EandE">
+                <div>
+                  <p><strong>Every test case adds to the cost of testing.</strong> In some systems, a single test case can cost thousands of dollars <span class="dimmed"> e.g. on-field testing of flight-control software</span>. Therefore, <strong>test cases need to be designed to make the best use of testing resources.</strong>                    In particular:</p>
+                  <ul>
+                    <li>
+                      <p><strong>Testing should be <em>effective</em></strong> i.e., it finds a high % of existing bugs <span class="dimmed"> e.g., a set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system</span>.</p>
+                    </li>
+                    <li>
+                      <p><strong>Testing should be <em>efficient</em></strong> i.e., it has a high rate of success (bugs found/test cases) <span class="dimmed"> a set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects</span>.</p>
+                    </li>
+                  </ul>
+                  <p><strong>For testing to be <tooltip content="Efficient and Effective">E&amp;E</tooltip>, each new test we add should be targeting a potential fault that is not already targeted by existing test cases.</strong> There are test case design
+                    techniques that can help us improve E&amp;E of testing.</p>
+                </div>
+              </modal>
+              <modal large="" title="Textbook »" id="modal:usecaseBased-scripted">
+                <div>
+                  <div></div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Exploratory and Scripted Testing →
+</span></strong>
+                    </span>
+                  </p>
+                  <div>
+                    <h4 id="what-two-3">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong>Here are two alternative approaches to testing a software: <em>Scripted</em> testing and <em>Exploratory</em> testing</strong></p>
+                      <ol>
+                        <li>
+                          <p><strong>Scripted testing:</strong> First write a set of test cases based on the expected behavior of the SUT, and then perform testing based on that set of test cases.</p>
+                        </li>
+                        <li>
+                          <p><strong>Exploratory testing:</strong> Devise test cases on-the-fly, creating new test cases based on the results of the past test cases.</p>
+                        </li>
+                      </ol>
+                      <p>Exploratory testing is ‘the simultaneous learning, test design, and test execution’
+                        <trigger trigger="click" for="modal:exploratoryWhat-bach-et-explained">[source: bach-et-explained]</trigger> whereby the nature of the follow-up test case is decided based on the behavior of the previous test cases. In other words, running the system and trying out various operations. It is called
+                        <em>exploratory testing</em> because testing is driven by observations during testing. Exploratory testing usually starts with areas identified as error-prone, based on the tester’s past experience with similar systems. One tends
+                        to conduct more tests for those operations where more faults are found.</p>
+                      <tip-box>
+                        <p>📦 Here is an example thought process behind a segment of an exploratory testing session:</p>
+                        <blockquote>
+                          <p>“Hmm... looks like feature x is broken. This usually means feature n and k could be broken too; we need to look at them soon. But before that, let us give a good test run to feature y because users can still use the product if
+                            feature y works, even if x doesn’t work. Now, if feature y doesn’t work 100%, we have a major problem and this has to be made known to the development team sooner rather than later...”</p>
+                        </blockquote>
+                      </tip-box>
+                      <tip-box type="tip">
+                        <p><strong>Exploratory testing is also known as <em>reactive testing, error guessing technique, attack-based testing,</em> and <em>bug hunting</em>.</strong></p>
+                      </tip-box>
+                      <modal id="modal:exploratoryWhat-bach-et-explained" title="bach-et-explained :mag:">
+                        <div>
+                          <p><a href="http://www.satisfice.com/articles/et-article.pdf"><strong>Exploratory Testing Explained</strong></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a> -- James Bach is an industry
+                            thought leader in software testing).</p>
+                        </div>
+                      </modal>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header=":muscle: Exercises" expandable="">
+                          <div>
+                            <panel header=":lock::key: statements about exploratory and scripted testing">
+                              <question>
+                                <p>Scripted testing requires tests to be written in a scripting language; Manual testing is called exploratory testing.</p>
+                                <ul radio-group="k9uae" class="radio-list">
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="k9uae" type="radio"> True</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="k9uae" type="radio"> False</label></li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>A) False</p>
+                                  <p>Explanation: “Scripted” means test cases are predetermined. They need not be an executable script. However, exploratory testing is usually manual.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header=":lock::key: Which testing technique is better?">
+                              <question>
+                                <p>Which testing technique is better?</p>
+                                <ul radio-group="ainfz" class="radio-list">
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="ainfz" type="radio"> a. error guessing</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="ainfz" type="radio"> b. bug hunting</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="ainfz" type="radio"> c. attack-based testing</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="ainfz" type="radio"> d. reactive testing</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="ainfz" type="radio"> e. These are different names used to describe exploratory testing.</label></li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>(e)</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header=":lock::key: Explain the concept of exploratory testing using Minesweeper as an example.">
+                              <question has-input="true">
+                                <p>Explain the concept of exploratory testing using Minesweeper as an example.</p>
+                                <div slot="answer">
+                                  <p>When we test the Minesweeper by simply playing it in various ways, especially trying out those that are likely to be buggy, that would be exploratory testing.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </modal>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -1655,9 +1805,7 @@ A negative test case: i = null;
             <div>
               <p>{todo}</p>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>

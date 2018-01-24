@@ -1,1 +1,1 @@
-Tools &rarr; UML &rarr; Class Diagrams &rarr; Associations &rarr;
+Tools → UML → Class Diagrams → Associations →

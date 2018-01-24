@@ -1,4 +1,4 @@
-<panel header="Q: One of your teammates is proposing to use a recently-released “cool” UI framework for your class project. List the pros and cons of this idea. ">
+<panel header="Q: using a cool UI framework">
 <question has-input="true">
 
 One of your teammates is proposing to use a recently-released “cool” UI framework for your class project. List the pros and cons of this idea.
@@ -12,11 +12,11 @@ Pros
 
 Cons
 
-*	Learning curve may be steep.
-*	May not be stable (it was recently released).
-*	May not allow us to do exactly what we want. While frameworks allow customization, such customization can be limited.
-*	Performance penalties.
-*	Might interfere with learning objectives of the module.
+* Learning curve may be steep.
+* May not be stable (it was recently released).
+* May not allow us to do exactly what we want. While frameworks allow customization, such customization can be limited.
+* Performance penalties.
+* Might interfere with learning objectives of the module.
 
 Note that having more cons does not mean we should not use this framework. Further investigation is required before we can make a final decision.
 

@@ -33,8 +33,8 @@
             <p><strong>Problem</strong></p>
             <p>A normal class can be instantiated multiple times by invoking the constructor.</p>
             <p><strong>Solution</strong></p>
-            <p>The key insight of the solution is that the <em>constructor</em> of the singleton class cannot be <em>public</em>. Because a <em>public constructor</em> will allow others to instantiate the class at will, a <em>private constructor</em> should
-              be used instead. In addition, a public class-level method is provided to access the <em>single instance</em>.</p>
+            <p>Make the constructor of the singleton class <code>private</code>, <span class="dimmed"> because a <code>public</code> constructor will allow others to instantiate the class at will</span>. Provide a <code>public</code> class-level method to
+              access the <em>single instance</em>.</p>
             <tip-box>
               <p>Example:</p><img src="/se-book/designPatterns/singleton/what/images/singleton.png" height="130">
               <p></p>
@@ -44,29 +44,23 @@
             <div>
               <panel header=":muscle: Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: Choose the correct statement.">
+                  <panel header=":lock::key: Statements about the Singleton pattern">
                     <question>
                       <p>We use the Singleton pattern when</p>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. we want an a class with a private constructor.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. we want a single class to hold all functionality of the system.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. we want a class with no more than one instance.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. we want to hide internal structure of a component from its clients.</li>
+                      <ul radio-group="bqiu6" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="bqiu6" type="radio"> a. we want an a class with a private constructor.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="bqiu6" type="radio"> b. we want a single class to hold all functionality of the system.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="bqiu6" type="radio"> c. we want a class with no more than one instance.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="bqiu6" type="radio"> d. we want to hide internal structure of a component from its clients.</label></li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. we want an a class with a private constructor.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. we want a single class to hold all functionality of the system.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> c. we want a class with no more than one instance.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. we want to hide internal structure of a component from its clients.</li>
-                        </ul>
+                        <p>(c)</p>
                       </div>
                     </question>
                   </panel>
                 </div>
               </panel>
             </div>
-            <div></div>
           </div>
         </div>
       </panel>
@@ -77,14 +71,15 @@
       </div>
       <tip-box>
         <div>
-          <p>🏆 Can identify an application of the Singleton design pattern <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+          <p>🏆 Can apply the Singleton design pattern <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
         </div>
       </tip-box>
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
+            <p>Here is the typical implementation of how the Singleton pattern is applied to a class:</p>
             <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
-    <span class="hljs-keyword">private</span> Logic theOne = <span class="hljs-keyword">null</span>;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logic theOne = <span class="hljs-keyword">null</span>;
 
     <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Logic</span><span class="hljs-params">()</span> </span>{
         ...
@@ -97,73 +92,22 @@
         <span class="hljs-keyword">return</span> theOne;
     }
 }
-
-<span class="hljs-comment">// somewhere else in the system ...</span>
-Logic m = Logic.getInstance();
-
-<span class="hljs-comment">//instead of ...</span>
-Logic m = <span class="hljs-keyword">new</span> Logic();
 </code></pre>
             <p>Notes:</p>
             <ul>
-              <li>The constructor is private, which prevents instantiation from outside the class.</li>
-              <li>The single instance of the singleton class is maintained by a private class-level variable.</li>
-              <li>Access to this object is provided by a public class-level operation <code>getInstance()</code> which instantiates a single copy of the singleton class when it is executed for the first time. Subsequent calls to this operation return the
-                single instance of the class.</li>
+              <li>The constructor is <code>private</code>, which prevents instantiation from outside the class.</li>
+              <li>The single instance of the singleton class is maintained by a <code>private</code> class-level variable.</li>
+              <li>Access to this object is provided by a <code>public</code> class-level operation <code>getInstance()</code> which instantiates a single copy of the singleton class when it is executed for the first time. Subsequent calls to this operation
+                return the single instance of the class.</li>
             </ul>
-          </div>
-          <div>
-            <div></div>
-          </div>
-        </div>
-      </panel>
-    </div>
-    <div>
-      <div>
-        <h4 id="application-two">Application <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-      </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can apply the Singleton design pattern <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
-        </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
-        <div>
-          <div>
-            <p>{to add}</p>
-          </div>
-          <div>
-            <div>
-              <panel header=":muscle: Exercises" expandable="">
-                <div>
-                  <panel header="Q: Implement the PassKey system using the Singleton pattern.">
-                    <question has-input="true">
-                      <p>Assume that you are implementing a class called PassKey that can have only three instances at any time. These instances are to be called entryPassKey, exitPassKey and lockPassKey. They are to be created at system startup. All three
-                        instances are immutable (i.e. once created, cannot be changed). As you know, Singleton pattern can limit the number of instances to only one. Explain how you will extend the idea behind the Singleton pattern to implement the Passkey
-                        class. Show code examples where necessary.</p>
-                      <div slot="answer">
-                        <p>There are other acceptable variations.</p>
-                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PassKey</span> </span>{
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> PassKey entryPassKey = <span class="hljs-keyword">new</span> PassKey(); <span class="hljs-comment">// this way, the object is created as a system startup</span>
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> PassKey exitPassKey = <span class="hljs-keyword">new</span> PassKey();
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> PassKey lockPassKey = <span class="hljs-keyword">new</span> PassKey();
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">PassKey</span><span class="hljs-params">()</span> </span>{ ... } <span class="hljs-comment">// private constructor</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> PassKey <span class="hljs-title">getEntryPassKey</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">return</span> entryPassKey; <span class="hljs-comment">// no need to check whether it is null</span>
-    }
-
-    <span class="hljs-comment">// getExitPassKey() and getLockPassKey() are similar.</span>
-    <span class="hljs-comment">// ...</span>
-}
+            <p>If <code>Logic</code> was not a Singleton class, an object is created like this:</p>
+            <pre><code class="hljs java">Logic m = <span class="hljs-keyword">new</span> Logic();
 </code></pre>
-                      </div>
-                    </question>
-                  </panel>
-                </div>
-              </panel>
-            </div>
+            <p>But now, the <code>Logic</code> object needs to be accessed like this:</p>
+            <pre><code class="hljs java">Logic m = Logic.getInstance();
+</code></pre>
           </div>
+          <div></div>
         </div>
       </panel>
     </div>
@@ -179,11 +123,22 @@ Logic m = <span class="hljs-keyword">new</span> Logic();
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>{pros and cons}</p>
+            <p><strong>Pros:</strong></p>
+            <ul>
+              <li>easy to apply</li>
+              <li>effective in achieving its goal with minimal extra work</li>
+              <li>provides an easy way to access the singleton object from anywhere in the code base</li>
+            </ul>
+            <p><strong>Cons:</strong></p>
+            <ul>
+              <li>The singleton object acts like a global variable that increases coupling across the code base.</li>
+              <li>In testing, it is difficult to replace Singleton objects with stubs (static methods cannot be overridden)</li>
+              <li>In testing, singleton objects carry data from one test to another even when we want each test to be independent of the others.</li>
+            </ul>
+            <p>Given there are some significant cons, it is recommended that you apply the Singleton pattern when, in addition to requiring only one instance of a class, there is a risk of creating multiple objects by mistake, and creating such multiple
+              objects has real negative consequences.</p>
           </div>
-          <div>
-            <div></div>
-          </div>
+          <div></div>
         </div>
       </panel>
     </div>

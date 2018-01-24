@@ -44,17 +44,17 @@ A _concern_ in this context is a set of information that affects the code of a c
 
 </tip-box>
 
-<modal title="TextBook &raquo;" id="modal:soc-nTier">
+<modal title="TextBook »" id="modal:soc-nTier">
   <include src="../../architecture/architecturalStyles/nTier/what/full.md"/>
 </modal>
 
 **This principle should lead to higher <trigger trigger="click" for="soc-cohesion">cohesion</trigger> and lower <trigger trigger="click" for="soc-coupling">coupling</trigger>.**
 
-<modal title="TextBook &raquo;" id="soc-coupling">
-  <include src="../../designPrinciples/coupling/what/full.md"/>
+<modal title="TextBook »" id="soc-coupling">
+  <include src="../../designFundamentals/coupling/what/full.md"/>
 </modal>
-<modal title="TextBook &raquo;" id="soc-cohesion">
-  <include src="../../designPrinciples/cohesion/what/full.md"/>
+<modal title="TextBook »" id="soc-cohesion">
+  <include src="../../designFundamentals/cohesion/what/full.md"/>
 </modal>
 
 </div>
@@ -63,6 +63,6 @@ A _concern_ in this context is a set of information that affects the code of a c
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

@@ -1,1 +1,1 @@
-<dynamic-panel src="../../oopDesign/associations/associationClasses/full.md" header="%%:mortar_board: OOP &rarr; Associations &rarr; Association Classes%%" />
+<dynamic-panel src="../../oopDesign/associations/associationClasses/full.md" header="%%:mortar_board: OOP → Associations → Association Classes%%" />

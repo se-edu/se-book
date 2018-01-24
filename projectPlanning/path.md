@@ -1,1 +1,1 @@
-Project Management &rarr; Project Planning &rarr;
+Project Management → Project Planning →

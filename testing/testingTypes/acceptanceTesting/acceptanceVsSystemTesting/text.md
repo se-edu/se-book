@@ -15,7 +15,9 @@ Some differences between system testing and acceptance testing:
 | Done against the system specification | Done against the requirements specification |
 | Done by testers of the project team | Done by a team that represents the customer |
 | Done on the development environment or a test bed | Done on the deployment site or on a close simulation of the deployment site |
-| Both positive and negative test cases | More focus on positive test cases |
+| Both negative and positive test cases | More focus on positive test cases |
+
+%%Note: _negative_ test cases: cases where the SUT is not expected to work normally e.g. incorrect inputs; _positive_ test cases: cases where the SUT is expected to work normally%%
 
 <tip-box>
 

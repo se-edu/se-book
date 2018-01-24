@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Revision Control &rarr; </div>
+<div id="path">Revision Control → </div>
 
 <div id="title">
 
@@ -53,6 +53,6 @@ Revision control is also known as _Version Control Software (VCS)_, and a few ot
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

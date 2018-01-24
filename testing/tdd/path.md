@@ -1,1 +1,1 @@
-Quality Assurance &rarr; Testing &rarr; Test-Driven Development &rarr;
+Quality Assurance → Testing → Test-Driven Development →

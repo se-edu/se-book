@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Intellij IDEA &rarr; </div>
+<div id="path">Intellij IDEA → </div>
 
 <div id="title">
 

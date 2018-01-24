@@ -60,6 +60,12 @@
 
 <include src="classDiagrams/abstractClasses/what/print.md" />
 
+## Object Diagrams
+
+<include src="objectDiagrams/introduction/print.md" />
+<include src="objectDiagrams/objects/print.md" />
+<include src="objectDiagrams/associations/what/print.md" />
+
 ## Sequence Diagrams
 
 <include src="sequenceDiagrams/introduction/print.md" />
@@ -73,12 +79,6 @@
 <include src="sequenceDiagrams/parallelPaths/print.md" />
 <include src="sequenceDiagrams/referenceFrames/print.md" />
 <include src="sequenceDiagrams/minimalNotation/print.md" />
-
-## Object Diagrams
-
-<include src="objectDiagrams/introduction/print.md" />
-<include src="objectDiagrams/objects/print.md" />
-<include src="objectDiagrams/objectStructures/print.md" />
 
 ## Activity Diagrams
 

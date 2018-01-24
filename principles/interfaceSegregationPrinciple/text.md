@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Principles &rarr; </div>
-
 <div id="title">
 
 #### Interface Segregation Principle :four:
@@ -12,7 +10,7 @@
 
 <div id="body">
 
-<tip-box type="primary">
+<tip-box type="definition">
 
 <include src="../../common/definitions.md#def-interface-segregation-principle" />
 
@@ -20,9 +18,7 @@
 
 <tip-box>
 
-Example:
-
-The `Payroll` class should not depend on the `AdminStaff` class because it does not use the `arrangeMeeting()` method. Instead, it should depend on the `SalariedStaff` interface.
+:package: The `Payroll` class should not depend on the `AdminStaff` class because it does not use the `arrangeMeeting()` method. Instead, it should depend on the `SalariedStaff` interface.
 
 ```java
 public class Payroll {
@@ -51,6 +47,6 @@ public class Payroll {
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

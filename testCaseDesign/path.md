@@ -1,1 +1,1 @@
-Quality Assurance &rarr; Test Case Design &rarr;
+Quality Assurance → Test Case Design →

@@ -1,7 +1,7 @@
-<panel header=":lock::key: Implement the classes below using the defensive coding approach.">
+<panel header=":lock::key: Implement `Marriage`">
 <question has-input="true">
 
-Implement the classes with appropriate references and operations to establish the association among the classes. Follow the defensive coding approach. Let the Marriage class handle setting/removal of reference.
+Implement the classes defensively with appropriate references and operations to establish the association among the classes. Follow the defensive coding approach. Let the `Marriage` class handle setting/removal of reference.
 
 <img src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/manMarriageWoman.jpg" height="55" />
 <p/>
@@ -30,7 +30,7 @@ public class Marriage {
 
     public Man getHusband() throws Exception {
         if(husband == null) {
-            throw new Exception(“error state”);
+            throw new Exception("error state");
         } else {
             return husband;
         }
@@ -38,7 +38,7 @@ public class Marriage {
 
     public Woman getWife() throws Exception {
         if(wife == null) {
-            throw new Exception(“error state”);
+            throw new Exception("error state");
         } else {
             return wife;
         }
@@ -47,14 +47,14 @@ public class Marriage {
     // removal of both ends of 'Marriage'
     public void divorce() throws Exception {
         if (husband==null || wife==null) {
-            throw new Exception(“no marriage”);
+            throw new Exception("no marriage");
         }
         husband.removeFromMarriage(this);
         husband = null;
         wife.removeFromMarriage(this);
         wife = null;
     }
-} // end class
+} 
 ```
 
 </div>

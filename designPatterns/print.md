@@ -15,7 +15,6 @@
 
 <include src="singleton/what/print.md" />
 <include src="singleton/implementation/print.md" />
-<include src="singleton/application/print.md" />
 <include src="singleton/evaluation/print.md" />
 
 ## Abstraction Occurrence Pattern
@@ -44,6 +43,7 @@
 <include src="more/otherDesignPatterns/print.md" />
 <include src="more/usingDesignPatterns/print.md" />
 <include src="more/otherTypesOfPatterns/print.md" />
+<include src="more/vsPrinciples/print.md" />
 
 </div>
 

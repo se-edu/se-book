@@ -4,7 +4,7 @@
 
 <div id="main">
 
-# SLDC Process Models
+# SDLC Process Models
 
 ## Introduction
 

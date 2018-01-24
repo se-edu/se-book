@@ -19,7 +19,14 @@
     </div>
   </tip-box>
   <div>
-    <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design →
+    <div>
+      <p>
+        <panel src="/se-book\testCaseDesign\combiningTestInputs\heuristicValid\full._include_.html" header="%%:mortar_board: Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: Each Valid Input at Least Once in a Positive Test Case%%"
+          isOpen="false" no-close="true" no-switch="true"></panel>
+      </p>
+    </div>
+    <p></p>
+    <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design → Combining Test Inputs →
 </span></strong>
       </span>
     </p>
@@ -28,9 +35,10 @@
     </div>
     <div id="main">
       <div>
-        <p>Consider the test cases designed in
-          <trigger for="modal:heuristic-valid-test-case" trigger="click">Heuristic: each valid input at least once in a positive test case</trigger>.</p>
-        <modal title="**Heuristic: each valid input at least once in a positive test case**" id="modal:heuristic-valid-test-case">
+        <p>Consider the
+          <trigger for="modal:heuristic-valid-test-case" trigger="click">test cases designed in [Heuristic: each valid input at least once in a positive test case]</trigger>.</p>
+        <modal large="" title="**Extract from Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: each valid input at least once in a positive test case**"
+          id="modal:heuristic-valid-test-case">
           <div>
             <table class="markbind-table table">
               <thead>
@@ -57,19 +65,19 @@
                 <tr>
                   <td style="text-align:center">2.1</td>
                   <td style="text-align:center">Cherry</td>
-                  <td style="text-align:center">VV/IV</td>
+                  <td style="text-align:center">VV</td>
                   <td style="text-align:center">Print square label</td>
                 </tr>
                 <tr>
                   <td style="text-align:center">3</td>
                   <td style="text-align:center">VV</td>
-                  <td style="text-align:center">0</td>
+                  <td style="text-align:center">❗️ 0</td>
                   <td style="text-align:center">Error message “invalid price”</td>
                 </tr>
                 <tr>
                   <td style="text-align:center">4</td>
-                  <td style="text-align:center">Dog</td>
-                  <td style="text-align:center">-1</td>
+                  <td style="text-align:center">❗️ Dog</td>
+                  <td style="text-align:center">❗️ -1</td>
                   <td style="text-align:center">Error message “invalid fruit&quot;</td>
                 </tr>
               </tbody>
@@ -77,75 +85,74 @@
             <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
           </div>
         </modal>
-        <p>After running these test cases can we be sure that the error message “invalid price” is shown for negative prices? Answer: No. Reason: <code>-1</code> -- the only input that is a negative price – is in a test case that produces the error message
+        <p>After running these test cases can you be sure that the error message “invalid price” is shown for negative prices? Answer: No. Reason: <code>-1</code> -- the only input that is a negative price – is in a test case that produces the error message
           “invalid fruit”.</p>
-        <p>In this case a useful heuristic to apply is ‘no more than one invalid input in a test case’. After applying that, we get the following test cases.</p>
-        <table class="markbind-table table">
-          <thead>
-            <tr>
-              <th style="text-align:center">Case</th>
-              <th style="text-align:center">fruitName</th>
-              <th style="text-align:center">unitPrice</th>
-              <th style="text-align:center">Expected</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="text-align:center">1</td>
-              <td style="text-align:center">Apple</td>
-              <td style="text-align:center">1</td>
-              <td style="text-align:center">Print round label</td>
-            </tr>
-            <tr>
-              <td style="text-align:center">2</td>
-              <td style="text-align:center">Banana</td>
-              <td style="text-align:center">20</td>
-              <td style="text-align:center">Print oval label</td>
-            </tr>
-            <tr>
-              <td style="text-align:center">2.1</td>
-              <td style="text-align:center">Cherry</td>
-              <td style="text-align:center">VV/IV</td>
-              <td style="text-align:center">Print square label</td>
-            </tr>
-            <tr>
-              <td style="text-align:center">3</td>
-              <td style="text-align:center">VV</td>
-              <td style="text-align:center">0</td>
-              <td style="text-align:center">Error message “invalid price”</td>
-            </tr>
-            <tr>
-              <td style="text-align:center">4</td>
-              <td style="text-align:center">VV</td>
-              <td style="text-align:center">-1</td>
-              <td style="text-align:center">Error message “invalid price&quot;</td>
-            </tr>
-            <tr>
-              <td style="text-align:center">4.1</td>
-              <td style="text-align:center">Dog</td>
-              <td style="text-align:center">VV</td>
-              <td style="text-align:center">Error message “invalid fruit&quot;</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
+        <p>In this case a useful heuristic to apply is <strong>no more than one invalid input in a test case</strong>. After applying that, we get the following test cases.</p>
+        <tip-box>
+          <table class="markbind-table table">
+            <thead>
+              <tr>
+                <th style="text-align:center">Case</th>
+                <th style="text-align:center">fruitName</th>
+                <th style="text-align:center">unitPrice</th>
+                <th style="text-align:center">Expected</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align:center">1</td>
+                <td style="text-align:center">Apple</td>
+                <td style="text-align:center">1</td>
+                <td style="text-align:center">Print round label</td>
+              </tr>
+              <tr>
+                <td style="text-align:center">2</td>
+                <td style="text-align:center">Banana</td>
+                <td style="text-align:center">20</td>
+                <td style="text-align:center">Print oval label</td>
+              </tr>
+              <tr>
+                <td style="text-align:center">2.1</td>
+                <td style="text-align:center">Cherry</td>
+                <td style="text-align:center">VV</td>
+                <td style="text-align:center">Print square label</td>
+              </tr>
+              <tr>
+                <td style="text-align:center">3</td>
+                <td style="text-align:center">VV</td>
+                <td style="text-align:center">❗️0</td>
+                <td style="text-align:center">Error message “invalid price”</td>
+              </tr>
+              <tr>
+                <td style="text-align:center">4</td>
+                <td style="text-align:center">VV</td>
+                <td style="text-align:center">❗️-1</td>
+                <td style="text-align:center">Error message “invalid price&quot;</td>
+              </tr>
+              <tr>
+                <td style="text-align:center">4.1</td>
+                <td style="text-align:center">❗️Dog</td>
+                <td style="text-align:center">VV</td>
+                <td style="text-align:center">Error message “invalid fruit&quot;</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
+        </tip-box>
       </div>
       <div>
         <div>
           <panel header=":muscle: Exercises" expandable="">
             <div>
-              <panel header=":lock::key: True or False?">
+              <panel header=":lock::key: Can define test cases precisely">
                 <question>
-                  <p>Applying the heuristics covered in the lecture, we can determine the precise number of test cases required to test any given SUT effectively.</p>
-                  <ul class="task-list">
-                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                  <p>Applying the heuristics covered so far, we can determine the precise number of test cases required to test any given SUT effectively.</p>
+                  <ul radio-group="f3995" class="radio-list">
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="f3995" type="radio"> True</label></li>
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="f3995" type="radio"> False</label></li>
                   </ul>
                   <div slot="answer">
-                    <ul class="task-list">
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
-                    </ul>
+                    <p>False</p>
                     <p>Explanation: These heuristics are, well, heuristics only. They will help you to make better decisions about test case design. However, they are speculative in nature (especially, when testing in black-box fashion) and cannot give you
                       precise number of test cases.</p>
                   </div>
@@ -154,7 +161,6 @@
             </div>
           </panel>
         </div>
-        <div></div>
       </div>
     </div>
   </div>

@@ -83,7 +83,6 @@
                   </div>
                 </panel>
               </div>
-              <div></div>
             </div>
           </div>
         </panel>
@@ -144,9 +143,7 @@
                 </tip-box>
               </div>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -162,16 +159,23 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>{add more}</p>
-              <tip-box type="info">
-                <p>Tip: Avoid the indiscriminate use of double-headed arrows to show interactions between components.</p><img src="/se-book/architecture/architectureDiagrams/drawing/images/tip.png" height="190">
-                <p></p>
-                <p>Consider the two architecture diagrams of the same software. Because <code>Diagram 2</code> uses double headed arrows, the important fact that GUI has a bi-directional dependency with the Logic component is no longer captured.</p>
+              <p>While architecture diagrams have no standard notation, try to follow these basic guidelines when drawing them.</p>
+              <ul>
+                <li>
+                  <p>Minimize the variety of symbols. If the symbols you choose do not have widely-understood meanings <span class="dimmed"> e.g. A drum symbol is widely-understood as representing a database</span>, explain their meaning.</p>
+                </li>
+                <li>
+                  <p>Avoid the indiscriminate use of double-headed arrows to show interactions between components.</p>
+                </li>
+              </ul>
+              <tip-box>
+                <p>📦Consider the two architecture diagrams of the same software given below. Because <code>Diagram 2</code> uses double headed arrows, the important fact that GUI has a bi-directional dependency with the Logic component is no longer captured.</p>
+                <img
+                  src="/se-book/architecture/architectureDiagrams/drawing/images/tip.png" height="190">
+                  <p></p>
               </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -350,10 +354,10 @@
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p><strong><em>Event-driven</em> style controls the flow of the application by detecting <tooltip content="An event is a notable occurrence that happens inside or outside the software, such as the user clicking a button, a timer running out, minimizing a window, etc.">events</tooltip> and communicating those events to other interested parts of the code for possible actions.</strong>                      This architectural style is often used in GUIs.</p>
+                    <p><strong><em>Event-driven</em> style controls the flow of the application by detecting <tooltip content="An event is a notable occurrence that happens inside or outside the software, such as the user clicking a button, a timer running out, minimizing a window, etc.">events</tooltip> from event <em>emitters</em> and communicating those events to interested event <em>consumers</em> .</strong>                      This architectural style is often used in GUIs.</p><img src="/se-book/architecture/architecturalStyles/eventDriven/what/images/eventDriven.png" height="120">
                     <tip-box>
-                      <p>📦 When the ‘button clicked’ event occurs in a GUI, methods that are tied to the <em>button-click</em> event are called.</p>
-                    </tip-box>
+                      <p>📦 When the ‘button clicked’ event occurs in a GUI, that event can be transmitted to components that are interested in reacting to that event. Similarly, events detected at a Printer port can be transmitted to components related
+                        to operating the Printer. The same event can be sent to multiple consumers too.</p><img src="/se-book/architecture/architecturalStyles/eventDriven/what/images/eventDrivenExamples.png" height="150"></tip-box>
                   </div>
                   <div></div>
                 </div>

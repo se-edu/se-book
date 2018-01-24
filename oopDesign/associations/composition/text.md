@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr; Associations &rarr;</div>
+<div id="path">Object Oriented Programming → Associations →</div>
 
 <div id="title">
 
@@ -14,7 +14,7 @@
 
 **A composition is an association that represents a strong _whole-part_ relationship.** When the _whole_ is destroyed, _parts_ are destroyed too.
 
-<dynamic-panel src="../../../uml/classDiagrams/composition/what/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Composition" />
+<dynamic-panel src="../../../uml/classDiagrams/composition/what/full.md" header=":mortar_board: UML → Class Diagrams → Composition" />
 
 <p/>
 
@@ -41,6 +41,6 @@
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

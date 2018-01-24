@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Modeling &rarr; Modeling Structures &rarr;</div>
+<div id="path">Modeling → Modeling Structures →</div>
 
 <div id="title">
 
@@ -12,13 +12,11 @@
 
 <div id="body">
 
-Object diagrams model object structures that exist at a given moment of time.
-
-<dynamic-panel src="../../../uml/objectDiagrams/objectStructures/embed.md" header="UML: Object Diagrams: Object Structures" is-open></dynamic-panel>
+<include src="../../../uml/objectDiagrams/introduction/text.md#body" />
 
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

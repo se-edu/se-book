@@ -1,4 +1,6 @@
-<p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design →
+<div></div>
+<p></p>
+<p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design → Equivalence Partitions →
 </span></strong>
   </span>
 </p>
@@ -7,80 +9,122 @@
 </div>
 <div id="main">
   <div>
-    <p>Equivalence partitions (EPs) are usually derived from the specifications of the SUT. Preconditions and postconditions can also help in identifying partitions. For example, these could be EPs for the isValidMonth example:</p>
-    <ul>
-      <li>[MIN_INT ... 0] (below the range that produces ‘true’)</li>
-      <li>[1 … 12] (the range that produces ‘true’)</li>
-      <li>[13 … MAX_INT] (above the range that produces ‘true’)</li>
-    </ul>
-    <p>When the SUT has multiple inputs, we should identify EPs for each input.</p>
+    <p><strong>Equivalence partitions (EPs) are usually derived from the specifications of the SUT.</strong></p>
     <tip-box>
-      <p>Example:</p>
-      <p>{example of a two-parameter method}</p>
+      <p>📦 These could be EPs for the
+        <trigger for="pop:epBasic-isValidMonth">isValidMonth</trigger> example:</p>
+      <ul>
+        <li>[MIN_INT ... 0] : <strong>below</strong> the range that produces <code>true</code></li>
+        <li>[1 … 12] : the range that produces <code>true</code></li>
+        <li>[13 … MAX_INT] : <strong>above</strong> the range that produces <code>true</code></li>
+      </ul>
+    </tip-box>
+    <popover id="pop:epBasic-isValidMonth" title="`isValidMonth`" placement="top">
+      <div slot="content">
+        <div>
+          <p><code>isValidMonth (int m): boolean</code> : returns <code>true</code> if <code>m</code> is in the range [1..12]</p>
+        </div>
+      </div>
+    </popover>
+    <p>When the SUT has multiple inputs, you should identify EPs for each input.</p>
+    <tip-box>
+      <p>📦 Consider the method <code>duplicate(String s, int n): String</code> which returns a <code>String</code> that contains <code>s</code> repeated <code>n</code> times.</p>
+      <p>Example EPs for <code>s</code>:</p>
+      <ul>
+        <li>zero-length strings</li>
+        <li>string containing whitespaces</li>
+        <li>...</li>
+      </ul>
+      <p>Example EPs for <code>n</code>:</p>
+      <ul>
+        <li><code>0</code></li>
+        <li>negative values</li>
+        <li>...</li>
+      </ul>
+    </tip-box>
+    <p>An EP may not have adjacent values.</p>
+    <tip-box>
+      <p>📦 Consider the method <code>isPrime(int i):boolean</code> that returns true if <code>i</code> is a prime number.</p>
+      <p>EPs for <code>i</code>:</p>
+      <ul>
+        <li>prime numbers</li>
+        <li>non-prime numbers</li>
+      </ul>
     </tip-box>
     <p>Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases we have to consider each value as a partition by itself.</p>
     <tip-box>
-      <p>Example:</p>
-      <p>{example where each value is a partition}</p>
+      <p>📦 Consider the method <code>showStatusMessage(GameStatus s):String</code> that returns a unique <code>String</code> for each of the possible value of s (<code>GameStatus</code> is an <code>enum</code>). In this case, each possible value for <code>s</code>        will have to be considered as a partition.</p>
+    </tip-box>
+    <p>Note that the EP technique is merely a heuristic and not an exact science, especially when applied manually (as opposed to using an automated program analysis tool to derive EPs). The partitions derived depend on how one ‘speculates’ the SUT to behave
+      internally. Applying EP under a glass-box or gray-box approach can yield more precise partitions.</p>
+    <tip-box>
+      <p>📦 Consider the method EPs given above for the <code>isValidMonth</code>. A different tester might use these EPs instead:</p>
+      <ul>
+        <li>[1 … 12] : the range that produces <code>true</code></li>
+        <li>[all other integers] : the range that produces <code>false</code></li>
+      </ul>
+    </tip-box>
+    <tip-box>
+      <p>📦 Some more examples:</p>
+      <table class="table">
+        <tr>
+          <th>Specification</th>
+          <th>Equivalence partitions</th>
+        </tr>
+        <tr>
+          <td>
+            <p><code>isValidFlag(String s): boolean</code><br> Returns <code>true</code> if s is one of [“F”, “T”, “D”]. The comparison is case-sensitive.</p>
+          </td>
+          <td>
+            <p>[“F”] [“T”] [“D”] [“f”, “t”, “d”] [any other string][null]</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p><code>squareRoot(String s): int</code><br> Pre-conditions: s represents a positive integer<br> Returns the square root of <code>s</code> if the square root is an integer; returns <code>0</code> otherwise.</p>
+          </td>
+          <td>
+            <p>[s is not a valid number] [s is a negative integer] [s has an integer square root] [s does not have an integer square root]</p>
+          </td>
+        </tr>
+      </table>
     </tip-box>
   </div>
   <div>
     <div>
       <panel header=":muscle: Exercises" expandable="">
         <div>
-          <panel header=":lock::key: Which one of these is least likely to be an equivalence partition for the parameter s of the isValidName method given below?">
+          <panel header=":lock::key: EPs for isValidName method">
             <question>
-              <p>Which one of these is least likely to be an equivalence partition for the parameter s of the isValidName method given below?</p>
+              <p>Consider this SUT:</p>
               <tip-box>
-                <p>isValidName (String s): boolean</p>
-                <p>Description: returns true if s is not null and not longer than 50 characters.</p>
+                <p><code>isValidName (String s): boolean</code></p>
+                <p>Description: returns true if <code>s</code> is not <code>null</code> and not longer than 50 characters.</p>
               </tip-box>
-              <ul class="task-list">
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. null.</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. strings having more than 50 characters.</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. strings having 50 or fewer characters.</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. strings consisting of numbers instead of letters.</li>
+              <p>A. Which one of these is least likely to be an equivalence partition for the parameter s of the isValidName method given below?</p>
+              <ul radio-group="hrmsr" class="radio-list">
+                <li class="radio-list-item"><label><input class="radio-list-input" name="hrmsr" type="radio"> a. null.</label></li>
+                <li class="radio-list-item"><label><input class="radio-list-input" name="hrmsr" type="radio"> b. strings having more than 50 characters.</label></li>
+                <li class="radio-list-item"><label><input class="radio-list-input" name="hrmsr" type="radio"> c. strings having 50 or fewer characters.</label></li>
+                <li class="radio-list-item"><label><input class="radio-list-input" name="hrmsr" type="radio"> d. strings consisting of numbers instead of letters.</label></li>
+              </ul>
+              <p>B. If you had to choose 3 test cases from the 4 given below, which one will you leave out based on the EP technique?</p>
+              <ul radio-group="z9ssp" class="radio-list">
+                <li class="radio-list-item"><label><input class="radio-list-input" name="z9ssp" type="radio"> a. A string that is 50 characters long</label></li>
+                <li class="radio-list-item"><label><input class="radio-list-input" name="z9ssp" type="radio"> b. A string that is 51 characters long</label></li>
+                <li class="radio-list-item"><label><input class="radio-list-input" name="z9ssp" type="radio"> c. A string that is 40 characters long</label></li>
+                <li class="radio-list-item"><label><input class="radio-list-input" name="z9ssp" type="radio"> d. null</label></li>
               </ul>
               <div slot="answer">
-                <ul class="task-list">
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. null.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. strings having more than 50 characters.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. strings having 50 or fewer characters.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> d. strings consisting of numbers instead of letters.</li>
-                </ul>
+                <p>A. (d)</p>
                 <p>Explanation: The description does not mention anything about the content of the string. Therefore, the method is unlikely to behave differently for strings consisting of numbers.</p>
-              </div>
-            </question>
-          </panel>
-        </div>
-        <div>
-          <panel header=":lock::key: Assume you are testing the isValidName method described below. If you had to choose 3 test cases from the 4 given below, which one will you leave out?">
-            <question>
-              <p>Assume you are testing the isValidName method described below. If you had to choose 3 test cases from the 4 given below, which one will you leave out?</p>
-              <tip-box>
-                <p>isValidName (String s): boolean</p>
-                <p>Description: returns true if s is not null and not longer than 50 characters.</p>
-              </tip-box>
-              <ul class="task-list">
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A string that is 50 characters long</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. A string that is 51 characters long</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A string that is 40 characters long</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. null</li>
-              </ul>
-              <div slot="answer">
-                <ul class="task-list">
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A string that is 50 characters long</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. A string that is 51 characters long</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> c. A string that is 40 characters long</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. null</li>
-                </ul>
-                <p>Explanation: (a) (b) and (d) covers all three equivalence partitions and check the boundaries of them as well. (c) belongs to the same partition as (a).</p>
+                <p>B. (a) or (c)</p>
+                <p>Explanation: both belong to the same EP</p>
               </div>
             </question>
           </panel>
         </div>
       </panel>
     </div>
-    <div></div>
   </div>
 </div>

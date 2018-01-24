@@ -1,4 +1,6 @@
-<p><span class="dimmed"><strong><span>Design → Design Patterns →
+<div></div>
+<p></p>
+<p><span class="dimmed"><strong><span>Design → Design Patterns → Observer Pattern →
 </span></strong>
   </span>
 </p>
@@ -7,9 +9,8 @@
 </div>
 <div id="main">
   <div>
-    <p>Here is another scenario from the same student management system where the user is adding a new student to the system.</p>
     <tip-box>
-      <p>Example:</p><img src="/se-book/designPatterns/observer/what/images/sequenceDiagram.png" height="300">
+      <p>📦 Here is a scenario from the a student management system where the user is adding a new student to the system.</p><img src="/se-book/designPatterns/observer/what/images/sequenceDiagram.png" height="330">
       <p></p>
       <p>Now, assume the system has two additional views used in parallel by different users:</p>
       <ul>
@@ -17,7 +18,7 @@
         <li><code>StudentStatsUi</code>: that generates statistics of current students.</li>
       </ul>
       <p>When a student is added to the database using <code>NewStudentUi</code> shown above, both <code>StudentListUi</code> and <code>StudentStatsUi</code> should get updated automatically, as shown below.</p><img src="/se-book/designPatterns/observer/what/images/studentListUI.png"
-        height="150">
+        height="180">
       <p></p>
       <p>However, the <code>StudentList</code> object has no knowledge about <code>StudentListUi</code> and <code>StudentStatsUi</code> (note the direction of the navigability) and has no way to inform those objects. This is an example of the type of problem
         addressed by the Observer pattern.</p>
@@ -25,13 +26,12 @@
     <p><strong>Context</strong></p>
     <p>An object (possibly, more than one) is interested to get notified when a change happens to another object. That is, some objects want to ‘observe’ another object.</p>
     <p><strong>Problem</strong></p>
-    <p>A bidirectional link between the two objects is not desirable. However the two entities need to communicate with each other. That is, the ‘observed’ object does not want to be coupled to objects that are ‘observing’ it.</p>
+    <p>The ‘observed’ object does not want to be coupled to objects that are ‘observing’ it.</p>
     <p><strong>Solution</strong></p>
-    <p>The Observer pattern shows us how an object can communicate with other objects while avoiding a direct coupling with them. The solution is to force the communication through an interface known to both parties. A concrete example is given below.</p>
+    <p>Force the communication through an interface known to both parties.</p><img src="/se-book/designPatterns/observer/what/images/studentListObserver.png" height="160">
+    <p></p>
     <tip-box>
-      <p>Example:</p><img src="/se-book/designPatterns/observer/what/images/studentListObserver.png" height="130">
-      <p></p>
-      <p>Here is the Observer pattern applied to the student management system.</p>
+      <p>📦Here is the Observer pattern applied to the student management system.</p>
       <p>During initialization of the system,</p>
       <ol>
         <li>First, create the relevant objects.</li>
@@ -65,9 +65,9 @@ studentList.addUi(statusUi);
     <span class="hljs-comment">//refresh UI by pulling data from StudentList</span>
 }
 </code></pre>
-      <p>Note that StudentList is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.</p>
+      <p>Note that <code>StudentList</code> is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.</p>
     </tip-box>
-    <p>Here is the generic description of the observer pattern:</p><img src="/se-book/designPatterns/observer/what/images/observableInterfaceDiagram.png" height="80">
+    <p>Here is the generic description of the observer pattern:</p><img src="/se-book/designPatterns/observer/what/images/observableInterfaceDiagram.png" height="100">
     <p></p>
     <ul>
       <li><code>&lt;&lt; Observer &gt;&gt;</code> is an interface: any class that implements it can observe an <code>&lt;&lt; Observable &gt;&gt;</code>. Any number of <code>&lt;&lt; Observer &gt;&gt;</code> objects can observe (i.e. listen to changes of)
@@ -81,32 +81,29 @@ studentList.addUi(statusUi);
     <div>
       <panel header=":muscle: Exercises" expandable="">
         <div>
-          <panel header=":lock::key: Explain how polymorphism is used in the Observer pattern.">
+          <panel header=":lock::key: polymorphism and Observer pattern.">
             <question has-input="true">
               <p>Explain how polymorphism is used in the Observer pattern.</p>
-              <div slot="answer"><img src="/se-book/designPatterns/observer/what/images/observableInterfaceNotation.png" height="80">
+              <div slot="answer"><img src="/se-book/designPatterns/observer/what/images/observableInterfaceNotation.png" height="90">
                 <p></p>
                 <p>With respect to the general form of the Observer pattern given above, when the Observable object invokes the <code>notifyObservers()</code> method, it is treating all <code>ConcreteObserver</code> objects as a general type called <code>Observer</code>                  and calling the <code>update()</code> method of each of them. However, the <code>update()</code> method of each <code>ConcreteObserver</code> could potentially show different behavior based on its actual type. That is, <code>update()</code>                  method shows polymorphic behavior.</p>
-                <p>In the example give below, the <code>notifyUIs</code> operation can result in <code>StudentListUi</code> and <code>StudentStatsUi</code> changing their views in two different ways.</p><img src="/se-book/designPatterns/observer/what/images/studentListStudentListObserver.png"
-                  height="160">
+                <p>In the example given below, the <code>notifyUIs</code> operation can result in <code>StudentListUi</code> and <code>StudentStatsUi</code> changing their views in two different ways.</p><img src="/se-book/designPatterns/observer/what/images/studentListStudentListObserver.png"
+                  height="190">
                 <p></p>
               </div>
             </question>
           </panel>
         </div>
         <div>
-          <panel header=":lock::key: True or False?">
+          <panel header=":lock::key: Observer patter usage">
             <question>
               <p>The Observer pattern can be used when we want one object to initiate an activity in another object without having a direct dependency from the first object to the second object.</p>
-              <ul class="task-list">
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+              <ul radio-group="q98bw" class="radio-list">
+                <li class="radio-list-item"><label><input class="radio-list-input" name="q98bw" type="radio"> True</label></li>
+                <li class="radio-list-item"><label><input class="radio-list-input" name="q98bw" type="radio"> False</label></li>
               </ul>
               <div slot="answer">
-                <ul class="task-list">
-                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. True</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
-                </ul>
+                <p>True</p>
                 <p>Explanation: Yes. For example, when applying the Observer pattern to an MVC structure, Views can get notified and update themselves about a change to the Model without the Model having to depend on the Views.</p>
               </div>
             </question>

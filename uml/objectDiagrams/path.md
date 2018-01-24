@@ -1,1 +1,1 @@
-Tools &rarr; UML &rarr; Object Diagrams &rarr; 
+Tools → UML → Object Diagrams → 

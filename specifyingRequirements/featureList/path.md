@@ -1,1 +1,1 @@
-Requirements &rarr; Specifying Requirements &rarr; Feature Lists &rarr;
+Requirements → Specifying Requirements → Feature Lists →

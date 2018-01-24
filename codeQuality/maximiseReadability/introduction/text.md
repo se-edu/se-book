@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Code Quality &rarr; Guideline: Maximise Readability &rarr;</div>
-
 <div id="title">
 
 #### Introduction :one:
@@ -67,6 +65,6 @@ int calculateSubsidy() {
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

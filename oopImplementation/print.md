@@ -4,7 +4,7 @@
 
 <div id="main">
 
-# Object Oriented Programming
+# OOP - Implementation
 
 <include src="classes/print.md" />
 <include src="classLevelMembers/print.md" />
@@ -19,7 +19,6 @@
 <include src="interfaces/print.md" />
 <include src="abstractClasses/print.md" />
 <include src="polymorphism/print.md" />
-<include src="substitutability/print.md" />
 
 </div>
 

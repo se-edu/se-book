@@ -1,23 +1,18 @@
-<panel header=":lock::key: Choose the correct statement.">
+<panel header=":lock::key: Which are frameworks?">
 <question>
 
-Which one of these is not a framework but a library?
+Which one of these are frameworks ?
 
-- [ ] a. JUnit
-- [ ] b. Eclipse
-- [ ] c. Drupal
-- [ ] d. Ruby on Rails
-- [ ] e. They are all frameworks
+- ( ) a. JUnit
+- ( ) b. Eclipse
+- ( ) c. Drupal
+- ( ) d. Ruby on Rails
 
 <div slot="answer">
 
-- [ ] a. JUnit
-- [ ] b. Eclipse
-- [ ] c. Drupal
-- [ ] d. Ruby on Rails
-- [x] e. They are all frameworks
+(a)(b)(c)(d)
 
-Explanation: These are framework examples cited in the handout.
+Explanation: These are frameworks.
 
 </div>
 </question>

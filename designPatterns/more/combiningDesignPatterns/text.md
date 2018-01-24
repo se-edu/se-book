@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Patterns &rarr; More &rarr;</div>
-
 <div id="title">
 
 #### Combining Design Patterns :three:
@@ -12,9 +10,11 @@
 
 <div id="body">
 
-Let us look at a case study that shows how design patterns are used in the design of a class structure for a Stock Inventory System (SIS) for a shop. The shop sells appliances, and accessories for the appliances. SIS simply stores information about each item in the store.
+**Design patterns are usually embedded in a larger design and sometimes applied in combination with other design patterns.**
 
 <tip-box>
+
+:package: Let us look at a case study that shows how design patterns are used in the design of a class structure for a Stock Inventory System (SIS) for a shop. The shop sells appliances, and accessories for the appliances. SIS simply stores information about each item in the store.
 
 **Use Cases**:
 
@@ -24,15 +24,10 @@ Let us look at a case study that shows how design patterns are used in the desig
 * View all available accessories for a given appliance
 * List all items in the store
 
-</tip-box>
 
 SIS can be accessed using multiple terminals. Shop assistants use their own terminals to access SIS, while the shop manager’s terminal continuously displays a list of all items in store. In the future, it is expected that suppliers of items use their own applications to connect to SIS to get real-time information about current stock status.  User authentication is not required for the current version, but may be required in the future.
 
 A step by step explanation of the design is given below. Note that this is one out of many possible designs.  Design patterns are also applied where appropriate.
-
-<tip-box>
-
-Example:
 
 A `StockItem` can be an Appliance or an Accessory.
 
@@ -81,6 +76,6 @@ In addition, the Singleton pattern can be applied to the façade class.
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

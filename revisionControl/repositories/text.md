@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Revision Control &rarr; </div>
+<div id="path">Revision Control → </div>
 
 <div id="title">
 
@@ -35,6 +35,6 @@ You can have multiple repos in your computer, each repo revision-controlling fil
 
 <div id="extras">
 <include src="exercises.md" />
-<div>
+</div>
 
 </div>

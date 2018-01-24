@@ -1,1 +1,1 @@
-Design &rarr; Modelling &rarr; Modelling Structure
+Design → Modelling → Modelling Structure

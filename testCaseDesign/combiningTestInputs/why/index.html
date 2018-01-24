@@ -19,7 +19,9 @@
     </div>
   </tip-box>
   <div>
-    <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design →
+    <div></div>
+    <p></p>
+    <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design → Combining Test Inputs →
 </span></strong>
       </span>
     </p>
@@ -28,33 +30,50 @@
     </div>
     <div id="main">
       <div>
-        <p>Often, an SUT can take multiple inputs. Having selected test values for each input (using equivalence partitioning, boundary value analysis, or some other technique), how are they combined to create test cases?</p>
+        <p><strong>An SUT can take multiple inputs.</strong> You can select values for each input (using equivalence partitioning, boundary value analysis, or some other technique).</p>
         <tip-box>
+          <p>📦 an SUT that takes multiple inputs and some values chosen as values for each input:</p>
           <ul>
-            <li>
-              <p>Scenario: calculateGrade</p>
-            </li>
-            <li>
-              <p>Method to test: calculateGrade(participation, projectGrade, isAbsent, examScore)</p>
-            </li>
-            <li>
-              <p>Values to test (invalid values are <strong>bold</strong>)</p>
-              <ul>
-                <li>participation: 0, 1, 19, 20, <strong>21</strong>, <strong>22</strong></li>
-                <li>projectGrade: A, B, C, D, F</li>
-                <li>isAbsent: true, false</li>
-                <li>examScore: 0, 1, 69, 70, <strong>71</strong>, <strong>72</strong></li>
-              </ul>
-            </li>
+            <li>Scenario: calculateGrade</li>
+            <li>Method to test: calculateGrade(participation, projectGrade, isAbsent, examScore)</li>
+            <li>Values to test (invalid values are <strong>bold</strong>)</li>
           </ul>
+          <table class="markbind-table table">
+            <thead>
+              <tr>
+                <th>Input</th>
+                <th>valid values to test</th>
+                <th>invalid values to test</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>participation</td>
+                <td>0, 1, 19, 20</td>
+                <td>21, 22</td>
+              </tr>
+              <tr>
+                <td>projectGrade</td>
+                <td>A, B, C, D, F</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>isAbsent</td>
+                <td>true, false</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>examScore</td>
+                <td>0, 1, 69, 70,</td>
+                <td>71, 72</td>
+              </tr>
+            </tbody>
+          </table>
         </tip-box>
-        <p>For the calculateGrade scenario above, one obvious solution is to test all possible combinations i.e. test all 6x5x2x6=360 cases. Naturally, this technique has a higher chance of discovering bugs (i.e. effective) but the number of combinations
-          can be too high to test (i.e. not efficient).</p>
-        <p>Therefore, we need smarter ways to combine test inputs that are both effective and efficient.</p>
+        <p><strong>Testing all possible combinations is effective but not efficient.</strong> If you test all possible combinations for the above example, you need to test 6x5x2x6=360 cases. Doing so has a higher chance of discovering bugs (i.e. effective)
+          but the number of test cases can be too high (i.e. not efficient). Therefore, <strong>we need smarter ways to combine test inputs that are both effective and efficient.</strong></p>
       </div>
-      <div>
-        <div></div>
-      </div>
+      <div></div>
     </div>
   </div>
 </div>

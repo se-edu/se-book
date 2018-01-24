@@ -2,11 +2,11 @@
 
 <div class="website-content">
 
-<div id="path">Java &rarr; </div>
+<div id="path">Java → </div>
 
 <div id="title">
 
-#### Use Varargs :three:  [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/javaTools/varargs/index.html)
+#### Varargs :three:  [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/javaTools/varargs/index.html)
 
 </div>
 

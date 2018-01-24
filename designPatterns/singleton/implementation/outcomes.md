@@ -1,1 +1,1 @@
-:trophy: Can identify an application of the Singleton design pattern :two:
+:trophy: Can apply the Singleton design pattern :two:

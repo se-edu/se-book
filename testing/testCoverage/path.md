@@ -1,1 +1,1 @@
-Quality Assurance &rarr; Testing &rarr; Test Coverage &rarr;
+Quality Assurance → Testing → Test Coverage →

@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Modeling &rarr; Modeling Behaviors &rarr;</div>
-
 <div id="title">
 
 #### Interaction Overview Diagrams :four:
@@ -12,16 +10,22 @@
 
 <div id="body">
 
-**Interaction overview** diagrams are a combination of activity diagrams and sequence diagrams.
+**An _Interaction overview_ diagrams is a combination of activity diagrams and sequence diagrams**.
+
+<tip-box> 
+
+:package: An example:
 
 <img src="{{baseUrl}}/modeling/modelingBehaviors/interactionOverviewDiagrams/images/diagram.png" height="420" />
 <p/>
 
-Source: https://en.wikipedia.org/wiki/Interaction_overview_diagram
+<sub>source:[https://commons.wikimedia.org](https://en.wikipedia.org/wiki/Interaction_overview_diagram)</sub>
+
+</tip-box>
 
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

@@ -47,7 +47,7 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 * Use an object called `Main` to represent your role in the scenario.
 * As there is no physical writing involved, we can replace the `Pen` and `Paper` with an object called `AgeList` that is able to keep a list of ages.
 
-<!-- TODO {visual: optimizations:  You &rarr; Main; Pen + Paper &rarr; AgeList} -->
+<!-- TODO {visual: optimizations:  You → Main; Pen + Paper → AgeList} -->
 
 </tip-box>
 
@@ -107,6 +107,6 @@ Examples:
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

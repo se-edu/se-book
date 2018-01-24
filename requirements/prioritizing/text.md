@@ -41,6 +41,6 @@ A common approach is to group requirements into priority categories. Note that a
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

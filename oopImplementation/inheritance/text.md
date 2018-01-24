@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Inheritance :one:
+#### Implementing Inheritance :one:
 
 </div>
 
@@ -34,6 +34,6 @@ Java requires all class to have a parent class. If you do not specify a parent c
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

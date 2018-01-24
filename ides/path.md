@@ -1,1 +1,1 @@
-Implementation &rarr; IDEs &rarr;
+Implementation → IDEs →

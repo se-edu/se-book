@@ -1,0 +1,1 @@
+<dynamic-panel src="../what/full.md" header="%%:mortar_board: Implementation → Error Handling → Defensive Programming → What%%" />

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Code Quality &rarr;**%%
+%%**Code Quality →**%%
 
 ## Guideline: Maximise Readability
 

@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Code Quality &rarr; Guideline: Avoid Unsafe Shortcuts &rarr;</div>
-
 <div id="title">
 
 #### Introduction :one:
@@ -17,6 +15,6 @@ It is safer to use language constructs in the way they are meant to be used, eve
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

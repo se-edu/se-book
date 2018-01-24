@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Modeling &rarr; Modeling Behaviors &rarr;</div>
-
 <div id="title">
 
 #### Timing Diagrams :four:
@@ -12,21 +10,22 @@
 
 <div id="body">
 
-**Timing diagrams** focus on timing constraints.
+**A _timing diagram_ focus on timing constraints.**
+
+<tip-box> 
+
+:package: Here is an example timing diagram:
 
 <img src="{{baseUrl}}/modeling/modelingBehaviors/timingDiagrams/images/diagram.png" height="280" />
-<p/>
+<br>
 
-Adapted from:
-<popover id="pop:uml-distilled">
-  <div slot="content">
-    <include src="../../../common/references.md#uml-distilled" />
-  </div>
-</popover>
+<sub>Adapted from: _UML Distilled_ by Martin Fowler</sub>
+
+</tip-box>
 
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

@@ -12,7 +12,7 @@
 
 **The OOP concept _Inheritance_ allows you to define a new class based on an existing class.** For example, you can use inheritance to define an `EvaluationReport` class based on an existing `Report` class so that the `EvaluationReport` class does not have to duplicate code that is already implemented in the `Report` class. 
 
-<dynamic-panel src="../../../uml/classDiagrams/classInheritance/what/full.md" header=":mortar_board: UML &rarr; Class Diagrams &rarr; Inheritance" />
+<dynamic-panel src="../../../uml/classDiagrams/classInheritance/what/full.md" header=":mortar_board: UML → Class Diagrams → Inheritance" />
 
 <p/>
 
@@ -86,6 +86,6 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

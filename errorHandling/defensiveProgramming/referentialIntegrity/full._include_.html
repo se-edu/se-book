@@ -1,4 +1,10 @@
-<p><span class="dimmed"><strong><span>Implementation → Error Handling →
+<div>
+  <p>
+    <panel src="/se-book\errorHandling\defensiveProgramming\what\full._include_.html" header="%%:mortar_board: Implementation → Error Handling → Defensive Programming → What%%" isOpen="false" no-close="true" no-switch="true"></panel>
+  </p>
+</div>
+<p></p>
+<p><span class="dimmed"><strong><span>Implementation → Error Handling → Defensive Programming →
 </span></strong>
   </span>
 </p>
@@ -7,11 +13,9 @@
 </div>
 <div id="main">
   <div>
-    <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p>
-    <tip-box>
-      <p>Example:</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
-      <p></p>
-      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
+    <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
+    <p></p>
+    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
     Woman girlfriend;
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setGirlfriend</span><span class="hljs-params">(Woman w)</span> </span>{
@@ -20,7 +24,7 @@
     …
 }
 </code></pre>
-      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
+    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
     Man boyfriend;
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setBoyfriend</span><span class="hljs-params">(Man m)</span> </span>{
@@ -28,30 +32,24 @@
     }
 }
 </code></pre>
-    </tip-box>
-    <p>The two classes are meant to be used as shown in (c) below. Now see what happens if the two classes were used as in (d) below. Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive
-      enough to stop this “love triangle”. In such a situation, we say that <em>the referential integrity has been violated</em>. It simply means <em>there is an inconsistency in object references</em>.</p>
-    <tip-box>
-      <p>c)</p>
-      <pre><code class="hljs java">Woman jean;
+    <p>The two classes are meant to be used as follows:</p>
+    <pre><code class="hljs java">Woman jean;
 Man james;
 …
 james.setGirlfriend(jean);
 jean.setBoyfriend(james);
 </code></pre>
-    </tip-box>
-    <tip-box>
-      <p>d)</p>
-      <pre><code class="hljs java">Woman jean; Man james, yong;
+    <p>Suppose the two classes were used this instead:</p>
+    <pre><code class="hljs java">Woman jean; Man james, yong;
 …
 james.setGirlfriend(jean);  
 jean.setBoyfriend(yong);  
-</code></pre><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
-      <p></p>
-    </tip-box>
+</code></pre>
+    <p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this &quot;love triangle&quot;. In such a situation, we say that <em>the referential integrity has been violated</em>.
+      It simply means <em>there is an inconsistency in object references</em>.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
+    <p></p>
     <p>One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.</p>
-    <tip-box>
-      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
+    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
     <span class="hljs-keyword">private</span> Man boyfriend;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setBoyfriend</span><span class="hljs-params">(Man m)</span> </span>{
@@ -71,7 +69,7 @@ jean.setBoyfriend(yong);
     ...
 }
 </code></pre>
-      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span></span>{
+    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span></span>{
     <span class="hljs-keyword">private</span> Woman girlfriend;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGirlfriend</span><span class="hljs-params">(Woman w)</span> </span>{
@@ -90,32 +88,37 @@ jean.setBoyfriend(yong);
    ...
 }
 </code></pre>
-    </tip-box>
     <p>When the code <code>james.setGirlfriend(jean)</code> is executed, the code ensures that <code>james</code> break up with any current girlfriend before he accepts <code>jean</code> as the girlfriend. Furthermore, the code ensures that <code>jean</code>      breaks up with any existing boyfriends and accepts <code>james</code> as the boyfriend.</p>
   </div>
   <div>
     <div>
       <panel header=":muscle: Exercises" expandable="">
         <div>
-          <panel header=":lock::key: Implement the Player and Region classes using a more defensive approach.">
+          <panel header=":lock::key: Implement `Player` and `Region`">
             <question has-input="true">
               <p>Imagine that we now support the following feature in our Minesweeper game.</p>
               <tip-box>
-                <p>Feature ID: multiplayer Description: A minefield is divided into mine regions. Each region is assigned to a single player. Players can swap regions. To win the game, all regions must be cleared.</p>
+                <p>Feature ID: multiplayer<br> Description: A minefield is divided into mine regions. Each region is assigned to a single player. Players can swap regions. To win the game, all regions must be cleared.</p>
               </tip-box>
               <p>Given below is an extract from our class diagram.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100">
               <p></p>
               <p>Minimally, this can be implemented like this.</p>
               <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Player</span></span>{
     Region region;
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setRegion</span><span class="hljs-params">(Region r)</span> </span>{ region = r;}
-    <span class="hljs-function">Region <span class="hljs-title">getRegion</span><span class="hljs-params">()</span> </span>{<span class="hljs-keyword">return</span> region;}
-} <span class="hljs-comment">// Region class is similar</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setRegion</span><span class="hljs-params">(Region r)</span> </span>{
+        region = r;
+    }
+    <span class="hljs-function">Region <span class="hljs-title">getRegion</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> region;
+    }
+} 
+
+<span class="hljs-comment">// Region class is similar</span>
 </code></pre>
-              <p>However, this is not very defensive. For example, a user of this class can pass a null to either of the methods, thus violating the multiplicity of the relationship.</p>
+              <p>However, this is not very defensive. For example, a user of this class can pass a <code>null</code> to either of the methods, thus violating the multiplicity of the relationship.</p>
               <p>Implement the two classes using a more defensive approach. Take note of the bidirectional link which requires us to preserve referential integrity at all times.</p>
               <div slot="answer">
-                <p>In this solution, we assume Regions can be created without Players (note that we cannot be 100% defensive all the time). The usage will be something like this:</p>
+                <p>In this solution, we assume <code>Regions</code> can be created without <code>Players</code> (note that we cannot be 100% defensive all the time). The usage will be something like this:</p>
                 <pre><code class="hljs java">Region r1 = <span class="hljs-keyword">new</span> Region();
 Player p1 = <span class="hljs-keyword">new</span> Player(r1);
 Region r2 = <span class="hljs-keyword">new</span> Region();
@@ -148,8 +151,11 @@ r1.setPlayer(p2);
     }
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removePlayer</span><span class="hljs-params">(Player disconnectingPlayer)</span> </span>{
-        <span class="hljs-keyword">if</span> (myPlayer == disconnectingPlayer) myPlayer = <span class="hljs-keyword">null</span>;
-        <span class="hljs-keyword">else</span> stopSystemWithErrorMessage(<span class="hljs-string">"Unknown Player trying to disconnect"</span>)
+        <span class="hljs-keyword">if</span> (myPlayer == disconnectingPlayer){
+            myPlayer = <span class="hljs-keyword">null</span>;
+        } <span class="hljs-keyword">else</span> {
+            stopSystemWithErrorMessage(<span class="hljs-string">"Unknown Player trying to disconnect"</span>);
+        }
     }
 
     <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stopSystemWithErrorMessage</span><span class="hljs-params">(String msg)</span> </span>{
@@ -176,12 +182,15 @@ r1.setPlayer(p2);
             myRegion.removePlayer(<span class="hljs-keyword">this</span>);
         }
         myRegion = newRegion;
+        
         <span class="hljs-comment">// set the reverse link</span>
         myRegion.setPlayer(<span class="hljs-keyword">this</span>);
     }
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeRegion</span><span class="hljs-params">(Region disconnectingRegion)</span> </span>{
-        <span class="hljs-keyword">if</span> (myRegion == disconnectingRegion) myRegion = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">if</span> (myRegion == disconnectingRegion) {
+            myRegion = <span class="hljs-keyword">null</span>;
+        }
     }
 
     <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stopSystemWithErrorMessage</span><span class="hljs-params">(String msg)</span> </span>{
@@ -195,14 +204,15 @@ r1.setPlayer(p2);
           </panel>
         </div>
         <div>
-          <panel header=":lock::key: Implement the bidirectional association between Bank and Account.">
+          <panel header=":lock::key: Bidirectional association between `Bank` and `Account`">
             <question has-input="true">
-              <p>Implement this bidirectional association. Note that the Bank uses accNumber attribute to uniquely identify an Account object. Assume the Bank class is responsible for maintaining the links between objects.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg"
-                height="60">
+              <p>Implement this bidirectional association. Note that the <code>Bank</code> uses <code>accNumber</code> attribute to uniquely identify an <code>Account</code> object. Assume the <code>Bank</code> class is responsible for maintaining the links
+                between objects.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60">
               <p></p>
               <div slot="answer">
-                <p>The code below contains a method in the Bank class to create an account; the bank field in the new account is thereby filled by the bank creating it.</p>
-                <p>We assume that once an Account has been assigned to one Bank, it cannot be assigned to a different Bank. Once the Account is removed from the Bank, it will not be used any more (hence, no need to remove the link from Account to Bank).</p>
+                <p>The code below contains a method in the <code>Bank</code> class to create an account; the bank field in the new account is thereby filled by the bank creating it.</p>
+                <p>We assume that once an <code>Account</code> has been assigned to one <code>Bank</code>, it cannot be assigned to a different <code>Bank</code>. Once the <code>Account</code> is removed from the <code>Bank</code>, it will not be used any
+                  more (hence, no need to remove the link from <code>Account</code> to <code>Bank</code>).</p>
                 <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> accNumber ;
     <span class="hljs-keyword">private</span> Bank theBank ;
@@ -243,22 +253,22 @@ r1.setPlayer(p2);
           </panel>
         </div>
         <div>
-          <panel header=":lock::key: Is the code given below a defensive translation of the associations shown in the class diagram?">
+          <panel header=":lock::key: Is the code defensive? `Teacher` and `Student`">
             <question has-input="true">
               <p>(a) Is the code given below a defensive translation of the associations shown in the class diagram? Explain your answer.</p>
               <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Teacher</span></span>{
-    <span class="hljs-keyword">private</span> Student favStudent;
+    <span class="hljs-keyword">private</span> Student favoriteStudent;
 
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setFavStudent</span><span class="hljs-params">(Student s)</span></span>{
-        favStudent = s;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setFavoriteStudent</span><span class="hljs-params">(Student s)</span></span>{
+        favoriteStudent = s;
     }
 }
 </code></pre>
               <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span></span>{
-    <span class="hljs-keyword">private</span> Teacher favTeacher;
+    <span class="hljs-keyword">private</span> Teacher favoriteTeacher;
 
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setFavTeacher</span><span class="hljs-params">(Teacher t)</span></span>{
-        favTeacher = t;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setFavoriteTeacher</span><span class="hljs-params">(Teacher t)</span></span>{
+        favoriteTeacher = t;
     }
 }
 </code></pre><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80">
@@ -267,19 +277,25 @@ r1.setPlayer(p2);
                 height="80">
               <p></p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWomanAssoc.png" height="60">
               <p></p>
-              <p>(c) Show a defensive implementation of the remove(Member m) of the Club class given below.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60">
+              <p>(c) Show a defensive implementation of the <code>remove(Member m)</code> of the <code>Club</code> class given below.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60">
               <p></p>
               <div slot="answer">
                 <p>(a) Yes. Each links is mutable and unidirectional. A simple reference variable is suitable to hold the link.</p>
-                <p><code>Teacher</code> class can be made even more defensive by introducing a <code>resetFavStudent()</code> method to unlink the current favorite student from a teacher. In that case, <code>setFavStudent(Student)</code> method should not
-                  accept null. This approach is more defensive because it prevents a null value being passed to <code>setFavStudent(Student)</code> by mistake and being interpreted as a request to delink the current favorite student from the Teacher object.</p>
+                <p><code>Teacher</code> class can be made even more defensive by introducing a <code>resetFavoriteStudent()</code> method to unlink the current favorite student from a teacher. In that case, <code>setFavoriteStudent(Student)</code> method
+                  should not accept null. This approach is more defensive because it prevents a null value being passed to <code>setFavoriteStudent(Student)</code> by mistake and being interpreted as a request to de-link the current favorite student from
+                  the <code>Teacher</code> object.</p>
                 <p>(b) First diagram has unidirectional links. Second has a bidirectional link. RI is only applicable to the second.</p>
                 <p>(c)</p>
                 <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">removeMember</span><span class="hljs-params">(Member m)</span> </span>{
-    <span class="hljs-keyword">if</span> (m==<span class="hljs-keyword">null</span>) <span class="hljs-keyword">throw</span> exception(“<span class="hljs-keyword">this</span> is <span class="hljs-keyword">null</span>, not a member!”);
-    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(member_count == <span class="hljs-number">10</span>) <span class="hljs-keyword">throw</span> exception(“we need at least <span class="hljs-number">10</span> members to survive!”);
-    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!isMember(m)) <span class="hljs-keyword">throw</span> exception (“<span class="hljs-keyword">this</span> fellow is not a member of our club!”);
-    <span class="hljs-keyword">else</span> members.remove(m); <span class="hljs-comment">// members is a data structure such as ArrayList</span>
+    <span class="hljs-keyword">if</span> (m==<span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">throw</span> exception(<span class="hljs-string">"this is null, not a member!"</span>);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(member_count == <span class="hljs-number">10</span>) {
+        <span class="hljs-keyword">throw</span> exception(<span class="hljs-string">"we need at least 10 members to survive!"</span>);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!isMember(m)) {
+        <span class="hljs-keyword">throw</span> exception (<span class="hljs-string">"this fellow is not a member of our club!"</span>);
+    } <span class="hljs-keyword">else</span> {
+        members.remove(m); <span class="hljs-comment">// members is a data structure such as ArrayList</span>
+    }
 }
 </code></pre>
               </div>
@@ -290,16 +306,13 @@ r1.setPlayer(p2);
           <panel header=":lock::key: True or False?">
             <question>
               <p>Bidirectional associations, if not implemented properly, can result in referential integrity violations.</p>
-              <ul class="task-list">
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+              <ul radio-group="kas0p" class="radio-list">
+                <li class="radio-list-item"><label><input class="radio-list-input" name="kas0p" type="radio"> True</label></li>
+                <li class="radio-list-item"><label><input class="radio-list-input" name="kas0p" type="radio"> False</label></li>
               </ul>
               <div slot="answer">
-                <ul class="task-list">
-                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. True</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
-                </ul>
-                <p>Explanation: Bidirectional associations require two objects to link to each other. When one of these links is not consistent with the other, we have a RI violation.</p>
+                <p>True</p>
+                <p>Explanation: Bidirectional associations require two objects to link to each other. When one of these links is not consistent with the other, we have a referential integrity violation.</p>
               </div>
             </question>
           </panel>

@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Test Case Design &rarr; Combining Test Inputs &rarr;</div>
-
 <div id="title">
 
 #### Test Input Combination Strategies :two:
@@ -16,9 +14,9 @@ Given below are some basic strategies for generating a set of test cases by comb
 
 <tip-box>
 
-Scenario: foo
+:package: Let's assume the SUT has the following three inputs and you have selected the given values for testing:
 
-SUT: foo(p1 char, p2 int, p3 boolean)
+SUT: `foo(p1 char, p2 int, p3 boolean)`
 
 Selected values for each input:
 
@@ -30,11 +28,11 @@ Selected values for each input:
 
 </tip-box>
 
-**a) all combinations**: generate test cases for each unique combination of test inputs
+**all combinations**: generate test cases for each unique combination of test inputs
 
 <tip-box>
 
-Example: the foo scenario requires 3x3x2=18 test cases under the ‘all combinations strategy
+:package: the strategy generates 3x3x2=18 test cases
 
 | Test Case   | p1      | p2      | p3      |
 | :---------: | :-----: | :-----: | :-----: |
@@ -46,27 +44,53 @@ Example: the foo scenario requires 3x3x2=18 test cases under the ‘all combinat
 
 </tip-box>
 
-**b) at least once**: include each test input at least once
+**at least once**: include each test input at least once.
 
 <tip-box>
 
-Example:
+:package: this strategy generates 3 test cases.
 
 | Test Case   | p1      | p2      | p3      |
 | :---------: | :-----: | :-----: | :-----: |
 | 1           | a       | 1       | T       |
-| 2           | b       | 1       | F       |
+| 2           | b       | 2       | F       |
 | 3           | c       | 3       | VV/IV   |
 
-VV/IV = Any Value
+VV/IV = Any Valid Value / Any Invalid Value
 
 </tip-box>
 
-**c) all pairs**: This strategy creates test cases so that for any given pair of parameters, all combinations between them are tested. It is based on the observations that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the “all combinations” approach, but higher than the “at least once” approach.
+**all pairs**: This strategy creates test cases so that for any given pair of inputs, all combinations between them are tested. It is based on the observations that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the "all combinations" strategy, but higher than the "at least once" approach.
 
 <tip-box>
 
-Example: the foo scenario requires 9 test cases to cover all pairs
+:package: this strategy generates 9 test cases:
+
+<panel type="seamless" header="see steps">
+
+Let's first consider inputs p1 and p2:
+
+| Input   | Values      |
+| :-----: | :---------: |
+| p1      | a, b, c     |
+| p2      | 1, 2, 3     |
+
+These values can generate <tooltip content="(a,1)(a,2)(a,3)(b,1)(b,2),...">3x3=9 combinations</tooltip>, and the test cases should cover all of them.
+
+Next, let's consider p1 and p3.
+
+| Input   | Values      |
+| :-----: | :---------: |
+| p1      | a, b, c     |
+| p3      | T, F        |
+
+These values can generate <tooltip content="(a,T)(a,F)(b,T)(b,F),...">3x2=6 combinations</tooltip>, and the test cases should cover all of them.
+
+Similarly, inputs p2 and p3 generates another 6 combinations. 
+
+The 9 test cases given below covers all those 9+6+6 combinations.
+
+</panel>
 
 | Test Case   | p1      | p2      | p3      |
 | :---------: | :-----: | :-----: | :-----: |
@@ -86,7 +110,7 @@ A variation of this strategy is to test all pairs of inputs but only for inputs 
 
 <tip-box>
 
-Example: the foo scenario, testing all pairs between p1 and p3 only while ensuring all p3 values are tested at least once
+:package: Testing all pairs between p1 and p3 only while ensuring all p3 values are tested at least once
 
 | Test Case   | p1      | p2      | p3      |
 | :---------: | :-----: | :-----: | :-----: |
@@ -99,13 +123,13 @@ Example: the foo scenario, testing all pairs between p1 and p3 only while ensuri
 
 </tip-box>
 
-**d) random:** In this strategy we generate test cases using one of the other strategies and then pick a subset randomly (presumably because the original set of test cases is too big).
+**d) random:** This strategy generates test cases using one of the other strategies and then pick a subset randomly (presumably because the original set of test cases is too big).
 
 **e) other**: There are other strategies that can be used.
 
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

@@ -16,7 +16,7 @@ An _abstract class_ is a class that is declared `abstract`—it may or may not i
 
 <div id="def-abstraction">
 
-**Abstraction**: Abstraction is a technique for dealing with complexity. It works by establishing a level of complexity on which a person interacts with the system, suppressing the more complex details below the current level. 
+**Abstraction** is a technique for dealing with complexity. It works by establishing a level of complexity (or an aspect) we are interested in, and suppressing the more complex details below that level (or irrelevant to that aspect). 
 
 </div>
 
@@ -83,7 +83,7 @@ An _abstract class_ is a class that is declared `abstract`—it may or may not i
 
 </div>
 
-<div id="def-se-design-pattern">
+<div id="def-design-pattern">
 
 **Design Pattern** : An _elegant reusable solution_ to a _commonly recurring problem_ within a _given context_ in software design.
 
@@ -92,6 +92,12 @@ An _abstract class_ is a class that is declared `abstract`—it may or may not i
 <div id="def-dry-principle">
 
 **DRY (Don't Repeat Yourself) Principle**: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub>_The Pragmatic Programmer_, by Andy Hunt and Dave Thomas</sub>
+
+</div>
+
+<div id="def-dynamic-binding">
+
+**Dynamic Binding** (<tooltip content="There are subtle differences between late binding and dynamic binding, but they are beyond the scope of this document">aka late binding</tooltip>) : a mechanism where method calls in code are <tooltip content="deciding which method implementation to execure">resolved</tooltip> at <tooltip content="at the moment the method call is executed">runtime</tooltip>, rather than at compile time.
 
 </div>
 
@@ -164,7 +170,7 @@ Also known as
 
 <div id="def-liskov-substitution-principle">
 
-**Liskov Substitution Principle (LSP)**: Derived classes must be substitutable for their base classes. -- Barbara Liskov
+**Liskov Substitution Principle (LSP)**: Derived classes must be substitutable for their base classes. <sub>-- proposed by [Barbara Liskov](https://en.wikipedia.org/wiki/Barbara_Liskov)</sub>
 
 </div>
 
@@ -172,11 +178,19 @@ Also known as
 
 <div id="def-open-closed-principle">
 
-**Open-Closed Principle (OCP)**: A module should be _open_ for extension but _closed_ for modification. That is, modules should be written so that they can be extended, without requiring them to be modified. <sub>-- proposed by Bertrand Meyer in 1988</sub>
+**Open-Closed Principle (OCP)**: A module should be _open_ for extension but _closed_ for modification. That is, modules should be written so that they can be extended, without requiring them to be modified. <sub>-- proposed by [Bertrand Meyer](https://en.wikipedia.org/wiki/Bertrand_Meyer)</sub>
 
 </div>
 
 ## P
+
+<div id="def-pair-programming">
+
+**Pair Programming**: 
+
+>Pair programming is an agile software development technique in which two programmers work together at one workstation. One, the driver, writes code while the other, the observer or navigator, reviews each line of code as it is typed in. The two programmers switch roles frequently. <sub>[[source: Wikipedia](https://en.wikipedia.org/wiki/Pair_programming)]</sub>
+
+</div>
 
 <div id="def-prototyping">
 
@@ -215,7 +229,7 @@ Also known as
 
 <div id="def-separation-concerns-principle">
 
-**Separation of Concerns Principle (SoC)**: To achieve better modularity, separate the code into distinct sections, such that each section addresses a separate _concern_. -- Edsger W. Dijkstra
+**Separation of Concerns Principle (SoC)**: To achieve better modularity, separate the code into distinct sections, such that each section addresses a separate _concern_. -- Proposed by [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra)
 
 </div>
 
@@ -246,6 +260,12 @@ Also known as
 <div id="def-static-analysis">
 
 **Static analysis**: Static analysis is the analysis of code without actually executing the code.  
+
+</div>
+
+<div id="def-static-binding">
+
+**Static binding** (aka early binding): When a method call is resolved at compile time.  
 
 </div>
 
@@ -292,7 +312,7 @@ Also known as
 
 <div id="def-uml">
 
-[**Unified Modeling Language (UML)**](http://www.uml.org/#UML2.0) is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the _de facto_ modeling notation used in the industry. 
+[**Unified Modeling Language (UML)**](http://www.uml.org/#UML2.0) is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the _de facto_ modeling notation used in the software industry. 
 
 </div>
 

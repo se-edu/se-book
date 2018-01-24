@@ -25,6 +25,6 @@
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

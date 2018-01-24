@@ -1,5 +1,3 @@
-<div id="path">Testing &rarr; Testing Types &rarr;</div>
-
 <div id="title">
 
 #### What :three:
@@ -8,7 +6,7 @@
 
 <div id="body">
 
-...
+**_Eating your own dog food_ (aka dogfooding), is a creators of a product use their own product to test the product.**
 
 </div>
 

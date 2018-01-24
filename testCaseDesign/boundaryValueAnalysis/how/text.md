@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Test Case Design &rarr; Boundary Value Analysis &rarr;</div>
-
 <div id="title">
 
 #### How :two:
@@ -12,9 +10,11 @@
 
 <div id="body">
 
-Typically, we choose three values around the boundary to test: one value from the boundary, one value just below the boundary, and one value just above the boundary.
+**Typically, we choose three values around the boundary to test: one value from the boundary, one value just below the boundary, and one value just above the boundary.** The number of values to pick depends on other factors, such as the cost of each test case.
 
-Some examples:
+<tip-box> 
+
+:package: Some examples:
 
 <table class="table">
   <tr>
@@ -22,76 +22,79 @@ Some examples:
     <th>Some possible boundary values</th>
   </tr>
   <tr>
-    <td>
-      <ul>
-        <li>[1-12]</li>
-      </ul>
-    </td>
-    <td>
-      <ul>
-        <li>0,1,2, 11,12,13</li>
-      </ul>
-    </td>
+  <td>
+      
+[1-12]
+      
+  </td>
+  <td>
+      
+0,1,2, 11,12,13
+      
+  </td>
   </tr>
   <tr>
-    <td>
-      <ul>
-        <li>[MIN_INT, 0]</li>
-        <li>* MIN_INT is the minimum possible integer value allowed by the environment.</li>
-      </ul>
-    </td>
-    <td>
-      <ul>
-        <li>MIN_INT, MIN_INT+1, -1, 0 , 1</li>
-      </ul>
-    </td>
+  <td>
+      
+[MIN_INT, 0]<br>
+%%(MIN_INT is the minimum possible integer value allowed by the environment)%%
+      
+  </td>
+  <td>
+      
+MIN_INT, MIN_INT+1, -1, 0 , 1
+      
+  </td>
   </tr>
   <tr>
-    <td>
-      <ul>
-        <li>[any non-null String]</li>
-      </ul>
-    </td>
-    <td>
-      <ul>
-        <li>Empty String, a String of maximum possible length</li>
-      </ul>
-    </td>
+  <td>
+      
+[any non-null String]
+      
+  </td>
+  <td>
+      
+Empty String, a String of maximum possible length
+      
+  </td>
   </tr>
   <tr>
-    <td>
-      <ul>
-        <li>[prime numbers]</li>
-        <li>[“F”]</li>
-        <li>[“A”, “D”, “X”]</li>
-      </ul>
-    </td>
-    <td>
-      <ul>
-        <li>No specific boundary</li>
-        <li>No specific boundary</li>
-        <li>No specific boundary</li>
-      </ul>
-    </td>
+  <td>
+      
+[prime numbers]<br>
+[“F”]<br>
+[“A”, “D”, “X”]
+      
+  </td>
+  <td>
+      
+No specific boundary<br>
+No specific boundary<br>
+No specific boundary
+      
+  </td>
   </tr>
   <tr>
-    <td>
-      <ul>
-        <li>[non-empty Stack]</li>
-        <li>* we assume a fixed size stack</li>
-      </ul>
-    </td>
-    <td>
-      <ul>
-        <li>Stack with: one element, two elements, no empty spaces, only one empty space</li>
-      </ul>
-    </td>
+  <td>
+      
+[non-empty Stack]<br>
+%%(we assume a fixed size stack)%%
+      
+  </td>
+  <td>
+      
+Stack with: one element, two elements, no empty spaces, only one empty space
+      
+  </td>
   </tr>
 </table>
+
+</tip-box>
+
 
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

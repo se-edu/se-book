@@ -29,49 +29,27 @@
         <div>
           <div>
             <p>Consider the testing of the following operation.</p>
-            <ul>
-              <li><code>isValidMonth (int m): boolean</code></li>
-              <li>Description: checks if <code>m</code> is in the range [1..12]. returns <code>true</code> if <code>m</code> is in the range, <code>false</code> otherwise.</li>
-            </ul>
+            <tip-box>
+              <div id="isValidMonth">
+                <p><code>isValidMonth (int m): boolean</code> : returns <code>true</code> if <code>m</code> is in the range [1..12]</p>
+              </div>
+            </tip-box>
             <p>It is inefficient and impractical to test this method for all integer values <code>[-MIN_INT to MAX_INT]</code>. Fortunately, there is no need to test all possible input values. For example, if the input value <code>233</code> failed to produce
               the correct result, the input <code>234</code> is likely to fail too; there is no need to test both.</p>
-            <p>In general, most SUTs do not treat each input in a unique way. Instead, they process all possible inputs in a small number of distinct ways. That means a range of inputs is treated the same way inside the SUT.</p>
-            <tip-box type="primary">
+            <p>In general, <strong>most SUTs do not treat each input in a unique way. Instead, they process all possible inputs in a small number of distinct ways.</strong> That means a range of inputs is treated the same way inside the SUT.
+              <strong><em>Equivalence partitioning (EP)</em> is a test case design technique that uses the above observation to improve the E&amp;E of testing.</strong></p>
+            <tip-box type="definition">
               <div>
                 <p><strong>Equivalence partition (aka equivalence class)</strong>: A group of test inputs that are likely to be processed by the SUT in the same way.</p>
               </div>
             </tip-box>
-            <p><em>Equivalence partitioning</em> is a technique that uses the above observation to improve the E&amp;E of testing. By dividing possible inputs into equivalence partitions we can,</p>
+            <p><strong>By dividing possible inputs into equivalence partitions we can,</strong></p>
             <ul>
-              <li>avoid testing too many inputs from one partisan. Testing too many inputs from the same partition is unlikely to find new bugs.</li>
-              <li>ensure all partitions are tested. Missing partitions can result in bugs going unnoticed.</li>
+              <li><strong>avoid testing too many inputs from one partition.</strong> Testing too many inputs from the same partition is unlikely to find new bugs. This increases the efficiency of testing by reducing redundant test cases.</li>
+              <li><strong>ensure all partitions are tested.</strong> Missing partitions can result in bugs going unnoticed. This increases the effectiveness of testing by increasing the chance of finding bugs.</li>
             </ul>
           </div>
-          <div>
-            <div>
-              <panel header=":muscle: Exercises" expandable="">
-                <div>
-                  <panel header=":lock::key: True or False?">
-                    <question>
-                      <p>Boundary value analysis recommends testing only values that reside on the equivalence class boundary.</p>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
-                      </ul>
-                      <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
-                        </ul>
-                        <p>Explanation: It does not recommend testing <em>only</em> those values <em>on</em> the boundary. It merely suggests that values on and around a boundary are more likely to cause errors.</p>
-                      </div>
-                    </question>
-                  </panel>
-                </div>
-              </panel>
-            </div>
-            <div></div>
-          </div>
+          <div></div>
         </div>
       </panel>
     </div>
@@ -87,81 +65,124 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>Equivalence partitions (EPs) are usually derived from the specifications of the SUT. Preconditions and postconditions can also help in identifying partitions. For example, these could be EPs for the isValidMonth example:</p>
-            <ul>
-              <li>[MIN_INT ... 0] (below the range that produces ‘true’)</li>
-              <li>[1 … 12] (the range that produces ‘true’)</li>
-              <li>[13 … MAX_INT] (above the range that produces ‘true’)</li>
-            </ul>
-            <p>When the SUT has multiple inputs, we should identify EPs for each input.</p>
+            <p><strong>Equivalence partitions (EPs) are usually derived from the specifications of the SUT.</strong></p>
             <tip-box>
-              <p>Example:</p>
-              <p>{example of a two-parameter method}</p>
+              <p>📦 These could be EPs for the
+                <trigger for="pop:epBasic-isValidMonth">isValidMonth</trigger> example:</p>
+              <ul>
+                <li>[MIN_INT ... 0] : <strong>below</strong> the range that produces <code>true</code></li>
+                <li>[1 … 12] : the range that produces <code>true</code></li>
+                <li>[13 … MAX_INT] : <strong>above</strong> the range that produces <code>true</code></li>
+              </ul>
+            </tip-box>
+            <popover id="pop:epBasic-isValidMonth" title="`isValidMonth`" placement="top">
+              <div slot="content">
+                <div>
+                  <p><code>isValidMonth (int m): boolean</code> : returns <code>true</code> if <code>m</code> is in the range [1..12]</p>
+                </div>
+              </div>
+            </popover>
+            <p>When the SUT has multiple inputs, you should identify EPs for each input.</p>
+            <tip-box>
+              <p>📦 Consider the method <code>duplicate(String s, int n): String</code> which returns a <code>String</code> that contains <code>s</code> repeated <code>n</code> times.</p>
+              <p>Example EPs for <code>s</code>:</p>
+              <ul>
+                <li>zero-length strings</li>
+                <li>string containing whitespaces</li>
+                <li>...</li>
+              </ul>
+              <p>Example EPs for <code>n</code>:</p>
+              <ul>
+                <li><code>0</code></li>
+                <li>negative values</li>
+                <li>...</li>
+              </ul>
+            </tip-box>
+            <p>An EP may not have adjacent values.</p>
+            <tip-box>
+              <p>📦 Consider the method <code>isPrime(int i):boolean</code> that returns true if <code>i</code> is a prime number.</p>
+              <p>EPs for <code>i</code>:</p>
+              <ul>
+                <li>prime numbers</li>
+                <li>non-prime numbers</li>
+              </ul>
             </tip-box>
             <p>Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases we have to consider each value as a partition by itself.</p>
             <tip-box>
-              <p>Example:</p>
-              <p>{example where each value is a partition}</p>
+              <p>📦 Consider the method <code>showStatusMessage(GameStatus s):String</code> that returns a unique <code>String</code> for each of the possible value of s (<code>GameStatus</code> is an <code>enum</code>). In this case, each possible value
+                for <code>s</code> will have to be considered as a partition.</p>
+            </tip-box>
+            <p>Note that the EP technique is merely a heuristic and not an exact science, especially when applied manually (as opposed to using an automated program analysis tool to derive EPs). The partitions derived depend on how one ‘speculates’ the SUT
+              to behave internally. Applying EP under a glass-box or gray-box approach can yield more precise partitions.</p>
+            <tip-box>
+              <p>📦 Consider the method EPs given above for the <code>isValidMonth</code>. A different tester might use these EPs instead:</p>
+              <ul>
+                <li>[1 … 12] : the range that produces <code>true</code></li>
+                <li>[all other integers] : the range that produces <code>false</code></li>
+              </ul>
+            </tip-box>
+            <tip-box>
+              <p>📦 Some more examples:</p>
+              <table class="table">
+                <tr>
+                  <th>Specification</th>
+                  <th>Equivalence partitions</th>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code>isValidFlag(String s): boolean</code><br> Returns <code>true</code> if s is one of [“F”, “T”, “D”]. The comparison is case-sensitive.</p>
+                  </td>
+                  <td>
+                    <p>[“F”] [“T”] [“D”] [“f”, “t”, “d”] [any other string][null]</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><code>squareRoot(String s): int</code><br> Pre-conditions: s represents a positive integer<br> Returns the square root of <code>s</code> if the square root is an integer; returns <code>0</code> otherwise.</p>
+                  </td>
+                  <td>
+                    <p>[s is not a valid number] [s is a negative integer] [s has an integer square root] [s does not have an integer square root]</p>
+                  </td>
+                </tr>
+              </table>
             </tip-box>
           </div>
           <div>
             <div>
               <panel header=":muscle: Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: Which one of these is least likely to be an equivalence partition for the parameter s of the isValidName method given below?">
+                  <panel header=":lock::key: EPs for isValidName method">
                     <question>
-                      <p>Which one of these is least likely to be an equivalence partition for the parameter s of the isValidName method given below?</p>
+                      <p>Consider this SUT:</p>
                       <tip-box>
-                        <p>isValidName (String s): boolean</p>
-                        <p>Description: returns true if s is not null and not longer than 50 characters.</p>
+                        <p><code>isValidName (String s): boolean</code></p>
+                        <p>Description: returns true if <code>s</code> is not <code>null</code> and not longer than 50 characters.</p>
                       </tip-box>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. null.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. strings having more than 50 characters.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. strings having 50 or fewer characters.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. strings consisting of numbers instead of letters.</li>
+                      <p>A. Which one of these is least likely to be an equivalence partition for the parameter s of the isValidName method given below?</p>
+                      <ul radio-group="mk61x" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="mk61x" type="radio"> a. null.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="mk61x" type="radio"> b. strings having more than 50 characters.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="mk61x" type="radio"> c. strings having 50 or fewer characters.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="mk61x" type="radio"> d. strings consisting of numbers instead of letters.</label></li>
+                      </ul>
+                      <p>B. If you had to choose 3 test cases from the 4 given below, which one will you leave out based on the EP technique?</p>
+                      <ul radio-group="8dbmv" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="8dbmv" type="radio"> a. A string that is 50 characters long</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="8dbmv" type="radio"> b. A string that is 51 characters long</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="8dbmv" type="radio"> c. A string that is 40 characters long</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="8dbmv" type="radio"> d. null</label></li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. null.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. strings having more than 50 characters.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. strings having 50 or fewer characters.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> d. strings consisting of numbers instead of letters.</li>
-                        </ul>
+                        <p>A. (d)</p>
                         <p>Explanation: The description does not mention anything about the content of the string. Therefore, the method is unlikely to behave differently for strings consisting of numbers.</p>
-                      </div>
-                    </question>
-                  </panel>
-                </div>
-                <div>
-                  <panel header=":lock::key: Assume you are testing the isValidName method described below. If you had to choose 3 test cases from the 4 given below, which one will you leave out?">
-                    <question>
-                      <p>Assume you are testing the isValidName method described below. If you had to choose 3 test cases from the 4 given below, which one will you leave out?</p>
-                      <tip-box>
-                        <p>isValidName (String s): boolean</p>
-                        <p>Description: returns true if s is not null and not longer than 50 characters.</p>
-                      </tip-box>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A string that is 50 characters long</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. A string that is 51 characters long</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A string that is 40 characters long</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. null</li>
-                      </ul>
-                      <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A string that is 50 characters long</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. A string that is 51 characters long</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> c. A string that is 40 characters long</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. null</li>
-                        </ul>
-                        <p>Explanation: (a) (b) and (d) covers all three equivalence partitions and check the boundaries of them as well. (c) belongs to the same partition as (a).</p>
+                        <p>B. (a) or (c)</p>
+                        <p>Explanation: both belong to the same EP</p>
                       </div>
                     </question>
                   </panel>
                 </div>
               </panel>
             </div>
-            <div></div>
           </div>
         </div>
       </panel>
@@ -180,121 +201,61 @@
           <div>
             <p>When deciding EPs of OOP methods, we need to identify EPs of all data participants that can potentially influence the behaviour of the method, such as,</p>
             <ul>
-              <li>the target object of the operation call</li>
-              <li>input parameters of the operation call</li>
-              <li>other data/objects accessed by the operation such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented)</li>
+              <li>the target object of the method call</li>
+              <li>input parameters of the method call</li>
+              <li>other data/objects accessed by the method such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented)</li>
             </ul>
             <tip-box>
-              <p>Example:</p>
-              <p>Consider the push operation from a DataStack class.</p>
+              <p>📦 Consider this method in the <code>DataStack</code> class:</p>
+              <pre><code class="hljs java"><span class="hljs-comment">/**
+ * Adds o to the top of the stack if the stack is not full.
+ * <span class="hljs-doctag">@throws</span> MutabilityException if the global flag FREEZE==true.
+ * <span class="hljs-doctag">@throws</span> InvalidValueException if  o is null.
+ * <span class="hljs-doctag">@return</span> true if the push operation was a success.
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">push</span><span class="hljs-params">(Object o)</span> </span>{
+    ...
+}
+</code></pre>
+              <p>EPs:</p>
               <ul>
-                <li>
-                  <p>Operation: <code>push(Object o): boolean</code></p>
-                </li>
-                <li>
-                  <p>Description: Throws <code>MutabilityException</code> if the global flag <code>FREEZE==true</code></p>
-                  <ul>
-                    <li>Else, throws <code>InvalidValueException</code> if <code>o==null</code>.</li>
-                    <li>Else, returns <code>false</code> if the stack is full.</li>
-                    <li>Else, puts <code>o</code> at the top of the <code>DataStack</code> and returns <code>true</code>.</li>
-                  </ul>
-                </li>
-                <li>
-                  <p>Here are the equivalence partitions for the push operation.</p>
-                  <ul>
-                    <li><code>DataStack</code> object: [full] [not full]</li>
-                    <li><code>o</code>: [null] [not null]</li>
-                    <li><code>FREEZE</code>: [true][false]</li>
-                  </ul>
-                </li>
+                <li><code>DataStack</code> object: [full] [not full]</li>
+                <li><code>o</code>: [null] [not null]</li>
+                <li><code>FREEZE</code>: [true][false]</li>
               </ul>
             </tip-box>
             <tip-box>
-              <p>Example:</p>
-              <p>Consider the Minesweeper system that was explored previously. What are the EPs for the <code>newGame()</code> operation of the <code>Logic</code> component?</p>
+              <p>📦 Consider a simple Minesweeper app. What are the EPs for the <code>newGame()</code> method of the <code>Logic</code> component?</p>
               <p>As <code>newGame()</code> does not have any parameters, the only obvious participant is the <code>Logic</code> object itself.</p>
-              <p>Note that if the glass-box or the grey-box approach is used, other associated objects that are involved in the operation might also be included as participants. For example, Minefield object can be considered as another participant of the
-                <code>newGame()</code> operation. Here, the black-box approach is assumed.</p>
-              <p>Next, let us identify equivalence partitions for each participant. Will the <code>newGame</code> operation behave differently for different <code>Logic</code> objects? If yes, how will it differ? In this case, yes, it might behave differently
+              <p>Note that if the glass-box or the grey-box approach is used, other associated objects that are involved in the method might also be included as participants. For example, <code>Minefield</code> object can be considered as another participant
+                of the <code>newGame()</code> method. Here, the black-box approach is assumed.</p>
+              <p>Next, let us identify equivalence partitions for each participant. Will the <code>newGame()</code> method behave differently for different <code>Logic</code> objects? If yes, how will it differ? In this case, yes, it might behave differently
                 based on the game state. Therefore, the equivalence partitions are:</p>
               <ul>
-                <li><code>PRE_GAME</code> (before the game starts, minefield does not exist yet)</li>
-                <li><code>READY</code> (a new minefield has been created and waiting for player’s first move)</li>
-                <li><code>IN_PLAY</code> (the current minefield is already in use)</li>
-                <li><code>WON</code>, <code>LOST</code> (let us assume the <code>newGame</code> behaves the same way for these two values)</li>
+                <li><code>PRE_GAME</code> : before the game starts, minefield does not exist yet</li>
+                <li><code>READY</code> : a new minefield has been created and waiting for player’s first move</li>
+                <li><code>IN_PLAY</code> : the current minefield is already in use</li>
+                <li><code>WON</code>, <code>LOST</code> : let us assume the <code>newGame</code> behaves the same way for these two values</li>
               </ul>
             </tip-box>
             <tip-box>
-              <p>Example:</p>
-              <p>Consider the Logic component of the Minesweeper application. What are the EPs for the <code>markCellAt(int x, int y)</code> operation?. The partitions in <strong>bold</strong> represent valid inputs.</p>
+              <p>📦 Consider the <code>Logic</code> component of the Minesweeper application. What are the EPs for the <code>markCellAt(int x, int y)</code> method?. The partitions in <strong>bold</strong> represent valid inputs.</p>
               <ul>
-                <li>Logic: PRE_GAME, <strong>READY</strong>, <strong>IN_PLAY</strong>, WON, LOST</li>
-                <li>x: [MIN_INT..-1] <strong>[0..(W-1)]</strong> [W..MAX_INT] (we assume a minefield size of WxH)</li>
-                <li>y: [MIN_INT..-1] <strong>[0..(H-1)]</strong> [H..MAX_INT]</li>
-                <li>Cell at (x,y): <strong>HIDDEN</strong>, MARKED, CLEARED</li>
+                <li><code>Logic</code>: PRE_GAME, <strong>READY</strong>, <strong>IN_PLAY</strong>, WON, LOST</li>
+                <li><code>x</code>: [MIN_INT..-1] <strong>[0..(W-1)]</strong> [W..MAX_INT] (we assume a minefield size of WxH)</li>
+                <li><code>y</code>: [MIN_INT..-1] <strong>[0..(H-1)]</strong> [H..MAX_INT]</li>
+                <li><code>Cell</code> at <code>(x,y)</code>: <strong>HIDDEN</strong>, MARKED, CLEARED</li>
               </ul>
-              <p>A test case for the push operation can be a combination of the equivalence partitions. Given below is such a test case.</p>
+              <p>A test case for the push method can be a combination of the equivalence partitions. Given below is such a test case.</p>
               <ul>
                 <li>id: DataStack_Push_001</li>
                 <li>description: checks whether pushing onto a full stack works correctly</li>
-                <li>input: ds is full, o!=null, FREEZE==false</li>
-                <li>expected output: returns false, ds remains unchanged</li>
+                <li>input: stack is full, o != null, FREEZE == false</li>
+                <li>expected output: returns false, stack remains unchanged</li>
               </ul>
             </tip-box>
-            <p>Knowledge of how the SUT behaves is used when deriving equivalence partitions for a given data participant. The table below illustrates some examples.</p>
-            <table class="table">
-              <tr>
-                <th>Specification</th>
-                <th>Equivalence partitions</th>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li>isValidFlag(String s): boolean</li>
-                    <li>Returns true if s is one of [“F”, “T”, “D”]. The comparison is case-sensitive.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>[“F”] [“T”] [“D”] [“f”, “t”, “d”] [any other string][null]</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li>squareRoot(String s): int</li>
-                    <li>Pre-conditions: s represents a positive integer</li>
-                    <li>Returns the square root of s if the square root is an integer; returns 0 otherwise.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>[s is not a valid number] [s is a negative integer] [s has an integer square root] [s does not have an integer square root]</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li>isPrimeNumber(int i): boolean</li>
-                    <li>Returns true if i is a prime number</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>[prime numbers] [non-prime numbers]</li>
-                    <li>* there are too many prime numbers to consider each one as a separate equivalence partition</li>
-                  </ul>
-                </td>
-              </tr>
-            </table>
-            <p>Note that the EP technique is merely a heuristic and not an exact science, especially when applied manually (as opposed to using an automated program analysis tool to derive EPs). The partitions derived depend on how one ‘speculates’ the SUT
-              to behave internally. Applying EP under a glass-box or gray-box approach can yield more precise partitions.</p>
           </div>
-          <div>
-            <div></div>
-          </div>
+          <div></div>
         </div>
       </panel>
     </div>

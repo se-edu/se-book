@@ -1,1 +1,1 @@
-Tools &rarr; UML &rarr;
+Tools → UML →

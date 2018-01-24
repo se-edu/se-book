@@ -21,13 +21,14 @@
 <tip-box> 
 
 <panel header=":package: Simple text UI prototype for a primitive CLI (Command Line Interface) Minesweeper:" type="seamless" expanded>
-<img src="{{baseUrl}}/gatheringRequirements/prototyping/images/textPrototypeCLI.png" height="350" />
+
+<img src="{{baseUrl}}/gatheringRequirements/prototyping/images/textPrototypeCLI.png" height="350" /><p/>
 
 </panel>
 
 <panel header=":package: A simple GUI prototype for the same Minesweeper, created using Powerpoint:" type="seamless">
 
-<img src="{{baseUrl}}/gatheringRequirements/prototyping/images/guiPrototypeMinesweeper.jpg" height="250" />
+<img src="{{baseUrl}}/gatheringRequirements/prototyping/images/guiPrototypeMinesweeper.jpg" height="250" /><p/>
 
 </panel>
 
@@ -51,6 +52,6 @@ Prototyping can be used for _discovering_ as well as _specifying_ requirements %
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

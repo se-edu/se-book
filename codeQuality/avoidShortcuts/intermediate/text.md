@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Code Quality &rarr; Guideline: Avoid Unsafe Shortcuts &rarr;</div>
-
 <div id="title">
 
 #### Intermediate :two:
@@ -12,17 +10,17 @@
 
 <div id="body">
 
-<panel header="**Minimise Scope of Variables**" type="seamless">
+<panel header="**Minimise Scope of Variables**" type="seamless" type="seamless">
   <include src="../../practices/minimiseVariableScope/index.md#main" />
 </panel>
 
-<panel header="**Minimise Code Duplication**" type="seamless">
+<panel header="**Minimise Code Duplication**" type="seamless" type="seamless">
   <include src="../../practices/minimiseCodeDuplication/index.md#main" />
 </panel>
 
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

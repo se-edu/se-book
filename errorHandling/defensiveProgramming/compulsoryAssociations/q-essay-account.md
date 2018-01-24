@@ -1,7 +1,7 @@
-<panel header=":lock::key: Give a suitable defensive implementation to the Account class.">
+<panel header=":lock::key: Immutable `Account` class">
 <question has-input="true">
 
-Give a suitable defensive implementation to the Account class in the following class diagram. Note that “{immutable}” means once the association is formed, it cannot be changed.
+Give a suitable defensive implementation to the `Account` class in the following class diagram. Note that “{immutable}” means once the association is formed, it cannot be changed.
 
 <img src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png" height="80" />
 <p/>

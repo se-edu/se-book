@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Git and Github &rarr; </div>
+<div id="path">Git and Github → </div>
 
 <div id="title">
 
@@ -31,6 +31,6 @@ The `.gitignore` file tells Git which files to ignore when tracking revision his
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

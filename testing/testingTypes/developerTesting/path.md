@@ -1,1 +1,1 @@
-Quality Assurance &rarr; Testing &rarr; Developer Testing &rarr;
+Quality Assurance → Testing → Developer Testing →

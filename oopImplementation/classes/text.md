@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Classes :one:
+#### Implementing Classes :one:
 
 </div>
 
@@ -16,6 +16,6 @@ Given below is a tutorial you can refer to (from Oracle’s official Java tutori
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

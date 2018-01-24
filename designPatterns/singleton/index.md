@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Software Design Patterns &rarr;**%%
+%%**Software Design Patterns →**%%
 
 ## Singleton Pattern
 
@@ -10,7 +10,6 @@
 
 <include src="what/embed.md" />
 <include src="implementation/embed.md" />
-<include src="application/embed.md" />
 <include src="evaluation/embed.md" />
 
 </div>

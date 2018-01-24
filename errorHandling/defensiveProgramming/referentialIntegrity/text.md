@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Error Handling &rarr; Defensive Programming &rarr;</div>
-
 <div id="title">
 
 #### Enforcing Referential Integrity :three:
@@ -14,9 +12,6 @@
 
 A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).
 
-<tip-box>
-
-Example:
 
 <img src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140" />
 <p/>
@@ -42,13 +37,8 @@ class Woman {
 }
 ```
 
-</tip-box>
+The two classes are meant to be used as follows: 
 
-The two classes are meant to be used as shown in (c) below. Now see what happens if the two classes were used as in (d) below. Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this “love triangle”. In such a situation, we say that _the referential integrity has been violated_. It simply means _there is an inconsistency in object references_.
-
-<tip-box>
-
-c)
 ```java
 Woman jean;
 Man james;
@@ -56,12 +46,8 @@ Man james;
 james.setGirlfriend(jean);
 jean.setBoyfriend(james);
 ```
+Suppose the two classes were used this instead: 
 
-</tip-box>
-
-<tip-box>
-
-d)
 ```java
 Woman jean; Man james, yong;
 …
@@ -69,14 +55,12 @@ james.setGirlfriend(jean);
 jean.setBoyfriend(yong);  
 ```
 
+Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this "love triangle". In such a situation, we say that _the referential integrity has been violated_. It simply means _there is an inconsistency in object references_.
+
 <img src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50" />
 <p/>
 
-</tip-box>
-
 One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.
-
-<tip-box>
 
 ```java
 public class Woman {
@@ -120,8 +104,6 @@ public class Man{
    ...
 }
 ```
-
-</tip-box>
 
 When the code `james.setGirlfriend(jean)` is executed, the code ensures that `james` break up with any current girlfriend before he accepts `jean` as the girlfriend. Furthermore, the code ensures that `jean` breaks up with any existing boyfriends and accepts `james` as the boyfriend.
 

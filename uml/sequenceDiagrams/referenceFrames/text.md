@@ -24,7 +24,7 @@ Notation:
 <img src="{{baseUrl}}/uml/sequenceDiagrams/referenceFrames/images/playerTextLogic.png" height="250" />
 <p/>
 
-Those details are shown in a separate sequence diagram given below.
+Those details are shown in a separate sequence diagram given below.<br>
 <img src="{{baseUrl}}/uml/sequenceDiagrams/referenceFrames/images/textLogic.png" height="170" />
 <p/>
 
@@ -33,6 +33,6 @@ Those details are shown in a separate sequence diagram given below.
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

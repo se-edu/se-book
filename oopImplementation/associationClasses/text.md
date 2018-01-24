@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Association Classes :three:
+#### Implementing Association Classes :three:
 
 </div>
 
@@ -24,25 +24,8 @@ At implementation level, an association class is most likely implemented as foll
 <img src="{{baseUrl}}/oopImplementation/associationClasses/images/manWomanImplementation.png" height="140" />
 <p/>
 
-<panel type="seamless" header="%%See code%%">
+<dynamic-panel type="seamless" src="code-marriage.md" header="%%See code%%" />
 
-```java
-
-class Marriage{
-    
-    //all fields are compulsory
-    Man husband;
-    Woman wife;
-    Date date;
-    String licenseNumber;
-    
-    Marriage (Man husband, Woman wife, Date date, String licenseNumber){
-        //set fiels
-    }
-}
-
-```
-</panel>
 </tip-box>
 
 </div>
@@ -51,6 +34,6 @@ class Marriage{
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

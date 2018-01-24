@@ -10,7 +10,7 @@
 
 <div id="body">
 
-**0. Observe that you are normally in the branch called `master`.** For this, you can take any repo you have on your computer (e.g. a clone of the [samplerepo-things](https://github.com/nus-cs2103-AY1718S1/samplerepo-things)). 
+**0. Observe that you are normally in the branch called `master`.** For this, you can take any repo you have on your computer (e.g. a clone of the [samplerepo-things](https://github.com/nus-cs2103-AY1718S2/samplerepo-things)). 
 
 <tabs>
   <tab header="SourceTree">
@@ -123,6 +123,6 @@ That is because **Git does a ==_fast forward_ merge== if possible**. Seeing that
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

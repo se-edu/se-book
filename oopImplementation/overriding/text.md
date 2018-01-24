@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Overriding :one:
+#### Implementing Overriding :one:
 
 </div>
 
@@ -59,6 +59,6 @@ class ReportMain{
 <include src="resources.md" />
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

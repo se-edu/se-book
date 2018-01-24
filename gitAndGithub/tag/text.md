@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Git and Github &rarr; </div>
+<div id="path">Git and Github → </div>
 
 <div id="title">
 
@@ -26,6 +26,6 @@ Let's tag a commit in a local repo you have (e.g. the `sampelrepo-things` repo)
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

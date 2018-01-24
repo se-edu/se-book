@@ -2,11 +2,11 @@
 
 <div class="website-content">
 
-<div id="path">Object Oriented Programming &rarr;</div>
+<div id="path">Object Oriented Programming →</div>
 
 <div id="title">
 
-#### Dependencies :two:
+#### Implementing Dependencies :two:
 
 </div>
 
@@ -40,6 +40,6 @@ The code does not indicate an association between the two classes because the `T
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

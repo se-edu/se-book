@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Error Handling &rarr; Defensive Programming &rarr;</div>
-
 <div id="title">
 
 #### Enforcing Compulsory Associations :two:
@@ -12,7 +10,7 @@
 
 <div id="body">
 
-Consider two classes, Account and Guarantor, with an association as shown in the following diagram:
+Consider two classes, `Account` and `Guarantor`, with an association as shown in the following diagram:
 
 <tip-box>
 
@@ -20,6 +18,8 @@ Example:
 
 <img src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50" />
 <p/>
+
+Here, the association is compulsory i.e. an `Account` object should always be linked to a `Guarantor`. One way to implement this is to simply use a reference variable, like this:
 
 ```java
 class Account {
@@ -31,32 +31,34 @@ class Account {
 }
 ```
 
-Here, the association is compulsory i.e. an `Account` object should always be linked to a `Guarantor`. One way to implement this is to simply use a reference variable as above. However, what if someone else in the team used the `Account` class as:
+However, what if someone else used the `Account` class like this?
 
 ```java
 Account a = new Account();
 a.setGuarantor(null);
 ```
 
-This results in an `Account` without a `Guarantor`! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. To proactively enforce the multiplicity constraint, a solution is offered as follows:
+This results in an `Account` without a `Guarantor`! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. We can make the code more defensive by proactively enforcing the multiplicity constraint, like this:
 
 ```java
 class Account {
     private Guarantor guarantor;
 
     public Account(Guarantor g){
-        if (g == null) stopSystemWithMessage(“multiplicity violated. Null Guarantor ”);
+        if (g == null) {
+            stopSystemWithMessage("multiplicity violated. Null Guarantor");
+        }
         guarantor = g;
     }
-    public setGuarantor (Guarantor m){
-        if (g == null) stopSystemWithMessage(“multiplicity violated. Null Guarantor”);
+    public void setGuarantor (Guarantor g){
+        if (g == null) {
+            stopSystemWithMessage("multiplicity violated. Null Guarantor");
+        }
         guarantor = g;
     }
     …
 }
 ```
-
-In the class Account, `guarantor` has to be declared as a private variable to prevent the value from being changed from outside the class.
 
 </tip-box>
 

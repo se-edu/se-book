@@ -1,4 +1,4 @@
-<panel header=":lock::key: True or False?">
+<panel header=":lock::key: LoD violation?">
 <question>
 
 This violates Law of Demeter.
@@ -10,15 +10,14 @@ void foo(Bar b) {
 }
 ```
 
-- [ ] a. True
-- [ ] b. False
+- ( ) True
+- ( ) False
 
 <div slot="answer">
 
-- [ ] a. True
-- [x] b. False
+False
 
-Explanation: The line “g.doSomething()” does not violate LoD because it is OK to invoke methods of objects created within a method. 
+Explanation: The line `g.doSomething()` does not violate LoD because it is OK to invoke methods of objects created within a method. 
 
 </div>
 </question>

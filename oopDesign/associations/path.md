@@ -1,1 +1,1 @@
-Design &rarr; Object Oriented Programming &rarr; Associations &rarr;
+Design → Object Oriented Programming → Associations →

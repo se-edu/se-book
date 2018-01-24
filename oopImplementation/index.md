@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-# Object Oriented Programming
+# OOP - Implementation
 
 <div id="main">
 
@@ -19,7 +19,6 @@
 <include src="interfaces/embed.md" />
 <include src="abstractClasses/embed.md" />
 <include src="polymorphism/embed.md" />
-<include src="substitutability/embed.md" />
 
 </div>
 

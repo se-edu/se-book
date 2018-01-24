@@ -10,10 +10,10 @@
 
 <div id="body">
 
-There are two different kinds of requirements:  
+There are two kinds of requirements:  
 
-1. **==Functional requirements== specify what the system should do.**
-2. **==Non-functional requirements== specify the constraints under which system is developed and operated.** 
+1. **_Functional requirements_ specify what the system should do.**
+2. **_Non-functional requirements_ specify the constraints under which system is developed and operated.** 
 
 <tip-box> 
 
@@ -44,6 +44,6 @@ There are two different kinds of requirements:
 
 <div id="extras">
 <include src="exercises.md" />
-<div>
+</div>
 
 </div>

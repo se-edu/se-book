@@ -1,1 +1,1 @@
-Requirements &rarr; Specifying Requirements &rarr;
+Requirements → Specifying Requirements →

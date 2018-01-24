@@ -29,6 +29,6 @@
 
 <div id="extras">
   <include src="resources.md" />
-<div>
+</div>
 
 </div>

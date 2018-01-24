@@ -19,7 +19,9 @@
     </div>
   </tip-box>
   <div>
-    <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design →
+    <div></div>
+    <p></p>
+    <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design → Equivalence Partitions →
 </span></strong>
       </span>
     </p>
@@ -29,49 +31,27 @@
     <div id="main">
       <div>
         <p>Consider the testing of the following operation.</p>
-        <ul>
-          <li><code>isValidMonth (int m): boolean</code></li>
-          <li>Description: checks if <code>m</code> is in the range [1..12]. returns <code>true</code> if <code>m</code> is in the range, <code>false</code> otherwise.</li>
-        </ul>
+        <tip-box>
+          <div id="isValidMonth">
+            <p><code>isValidMonth (int m): boolean</code> : returns <code>true</code> if <code>m</code> is in the range [1..12]</p>
+          </div>
+        </tip-box>
         <p>It is inefficient and impractical to test this method for all integer values <code>[-MIN_INT to MAX_INT]</code>. Fortunately, there is no need to test all possible input values. For example, if the input value <code>233</code> failed to produce
           the correct result, the input <code>234</code> is likely to fail too; there is no need to test both.</p>
-        <p>In general, most SUTs do not treat each input in a unique way. Instead, they process all possible inputs in a small number of distinct ways. That means a range of inputs is treated the same way inside the SUT.</p>
-        <tip-box type="primary">
+        <p>In general, <strong>most SUTs do not treat each input in a unique way. Instead, they process all possible inputs in a small number of distinct ways.</strong> That means a range of inputs is treated the same way inside the SUT.
+          <strong><em>Equivalence partitioning (EP)</em> is a test case design technique that uses the above observation to improve the E&amp;E of testing.</strong></p>
+        <tip-box type="definition">
           <div>
             <p><strong>Equivalence partition (aka equivalence class)</strong>: A group of test inputs that are likely to be processed by the SUT in the same way.</p>
           </div>
         </tip-box>
-        <p><em>Equivalence partitioning</em> is a technique that uses the above observation to improve the E&amp;E of testing. By dividing possible inputs into equivalence partitions we can,</p>
+        <p><strong>By dividing possible inputs into equivalence partitions we can,</strong></p>
         <ul>
-          <li>avoid testing too many inputs from one partisan. Testing too many inputs from the same partition is unlikely to find new bugs.</li>
-          <li>ensure all partitions are tested. Missing partitions can result in bugs going unnoticed.</li>
+          <li><strong>avoid testing too many inputs from one partition.</strong> Testing too many inputs from the same partition is unlikely to find new bugs. This increases the efficiency of testing by reducing redundant test cases.</li>
+          <li><strong>ensure all partitions are tested.</strong> Missing partitions can result in bugs going unnoticed. This increases the effectiveness of testing by increasing the chance of finding bugs.</li>
         </ul>
       </div>
-      <div>
-        <div>
-          <panel header=":muscle: Exercises" expandable="">
-            <div>
-              <panel header=":lock::key: True or False?">
-                <question>
-                  <p>Boundary value analysis recommends testing only values that reside on the equivalence class boundary.</p>
-                  <ul class="task-list">
-                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
-                  </ul>
-                  <div slot="answer">
-                    <ul class="task-list">
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
-                    </ul>
-                    <p>Explanation: It does not recommend testing <em>only</em> those values <em>on</em> the boundary. It merely suggests that values on and around a boundary are more likely to cause errors.</p>
-                  </div>
-                </question>
-              </panel>
-            </div>
-          </panel>
-        </div>
-        <div></div>
-      </div>
+      <div></div>
     </div>
   </div>
 </div>

@@ -1,1 +1,1 @@
-Tools &rarr; JUnit &rarr;
+Tools → JUnit →

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Documentation &rarr; Guidelines &rarr;**%%
+%%**Documentation → Guidelines →**%%
 
 ### Guideline: Go Top-down, Not Bottom-up
 

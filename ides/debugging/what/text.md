@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">IDEs &rarr; Debugging &rarr;</div>
+<div id="path">IDEs → Debugging →</div>
 
 <div id="title">
 

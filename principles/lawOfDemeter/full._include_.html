@@ -1,3 +1,5 @@
+<div></div>
+<p></p>
 <p><span class="dimmed"><strong><span>Supplmentary → Principles →
 </span></strong>
   </span>
@@ -7,7 +9,7 @@
 </div>
 <div id="main">
   <div>
-    <tip-box type="primary">
+    <tip-box type="definition">
       <div>
         <p><strong>Law of Demeter (LoD)</strong>:</p>
         <ul>
@@ -21,31 +23,35 @@
         </ul>
       </div>
     </tip-box>
-    <p>More concretely, a method m of an object O should invoke only the methods of the following kinds of objects:</p>
+    <p>More concretely, a method <code>m</code> of an object <code>O</code> should invoke only the methods of the following kinds of objects:</p>
     <ul>
       <li>The object <code>O</code> itself</li>
       <li>Objects passed as parameters of <code>m</code></li>
       <li>Objects created/instantiated in <code>m</code></li>
-      <li>Objects from the direct association of <code>O</code></li>
+      <li>Objects from the
+        <tooltip content="objects that are held by instance variables of">direct association of</tooltip><code>O</code></li>
     </ul>
     <tip-box>
-      <p>Example:</p>
-      <p>The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and <code>g.doSomething()</code>        is analogous to ‘talking to a stranger’.</p>
+      <p>📦 The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and
+        <code>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
       <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
     Goo g = b.getGoo();
     g.doSomething();
 }
 </code></pre>
     </tip-box>
-    <p>Limiting the interaction to a closely related group of classes aims to reduce coupling. In the example able, <code>foo</code> is already coupled to <code>Bar</code>. Upholding LoD avoids <code>foo</code> being coupled to <code>Goo</code>.</p>
-    <p>An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed
-      to see Adam’s posts unless Adam is a friend of yours as well.</p>
+    <p><strong>LoD aims to reduce coupling by limiting the interaction to a closely related group of classes.</strong></p>
+    <tip-box>
+      <p>📦 In the example above, <code>foo</code> is already coupled to <code>Bar</code>. Upholding LoD avoids <code>foo</code> being coupled to <code>Goo</code> as well.</p>
+      <p>📦 An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed
+        to see Adam’s posts unless Adam is a friend of yours as well.</p>
+    </tip-box>
   </div>
   <div>
     <div>
       <panel header=":muscle: Exercises" expandable="">
         <div>
-          <panel header=":lock::key: Explain the Law of Demeter using code examples.">
+          <panel header=":lock::key: Examples for LoD">
             <question has-input="true">
               <p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
               <div slot="answer">
@@ -53,17 +59,17 @@
                 <p><code>setMinefield(Minefiled mf):void</code></p>
                 <p>Consider the following that can happen inside this operation.</p>
                 <ul>
-                  <li><code>mf.init(); //this does not violate LoD since LoD allows calling operations of parameters received.</code></li>
-                  <li><code>mf.getCell(1,3).clear(); //this violates LoD since Logic is handling Cell objects deep inside Minefield. Instead, it should be mf.clearCellAt(1,3);</code></li>
-                  <li><code>timer.start(); //this does not violate LoD since timer appears to be an internal component (i.e. a variable) of Logic itself.</code></li>
-                  <li><code>Cell c = new Cell(); c.init(); // this does not violate LoD since c was created inside the operation.</code></li>
+                  <li><code>mf.init();</code>: this does not violate LoD since LoD allows calling operations of parameters received.</li>
+                  <li><code>mf.getCell(1,3).clear();</code>: //this violates LoD because <code>Logic</code> is handling <code>Cell</code> objects deep inside <code>Minefield</code>. Instead, it should be <code>mf.clearCellAt(1,3);</code></li>
+                  <li><code>timer.start();</code>: //this does not violate LoD because <code>timer</code> appears to be an internal component (i.e. a variable) of <code>Logic</code> itself.</li>
+                  <li><code>Cell c = new Cell();</code><code>c.init();</code>: // this does not violate LoD because <code>c</code> was created inside the operation.</li>
                 </ul>
               </div>
             </question>
           </panel>
         </div>
         <div>
-          <panel header=":lock::key: True or False?">
+          <panel header=":lock::key: LoD violation?">
             <question>
               <p>This violates Law of Demeter.</p>
               <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
@@ -71,22 +77,19 @@
     g.doSomething();
 }
 </code></pre>
-              <ul class="task-list">
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+              <ul radio-group="5is02" class="radio-list">
+                <li class="radio-list-item"><label><input class="radio-list-input" name="5is02" type="radio"> True</label></li>
+                <li class="radio-list-item"><label><input class="radio-list-input" name="5is02" type="radio"> False</label></li>
               </ul>
               <div slot="answer">
-                <ul class="task-list">
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
-                </ul>
-                <p>Explanation: The line “g.doSomething()” does not violate LoD because it is OK to invoke methods of objects created within a method.</p>
+                <p>False</p>
+                <p>Explanation: The line <code>g.doSomething()</code> does not violate LoD because it is OK to invoke methods of objects created within a method.</p>
               </div>
             </question>
           </panel>
         </div>
         <div>
-          <panel header=":lock::key: True or False?">
+          <panel header=":lock::key: Odd one out">
             <question>
               <p>Pick the odd one out.</p>
               <ul class="task-list">
@@ -97,14 +100,8 @@
                 <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Coupling.</li>
               </ul>
               <div slot="answer">
-                <ul class="task-list">
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Law of Demeter.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. Don’t add people to a late project.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Don’t talk to strangers.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Principle of least knowledge.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Coupling.</li>
-                </ul>
-                <p>Explanation: Law of Demeter, which aims to reduce coupling, is also known as ‘Don’t talk to strangers’ and ‘Principle of least knowledge’</p>
+                <p>(b)</p>
+                <p>Explanation: Law of Demeter, which aims to reduce coupling, is also known as ‘Don’t talk to strangers’ and ‘Principle of least knowledge’.</p>
               </div>
             </question>
           </panel>

@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Patterns &rarr; More &rarr;</div>
-
 <div id="title">
 
 #### Other Design Patterns :three:
@@ -12,18 +10,18 @@
 
 <div id="body">
 
-However, most are common, and well known. As an example, GoF book contains 23 design patterns:
+**The most famous source of design patterns is the ["Gang of Four" (GoF) book](https://en.wikipedia.org/wiki/Design_Patterns) which contains 23 design patterns divided into three categories**:
 
-*	**Creational**: About object creation. They separate the operation of an application from how its objects are created.
-    *	Abstract Factory, Builder, Factory Method, Prototype, Singleton
-*	**Structural**: About the composition of objects into larger structures while catering for future extension in structure.
-    *	Adapter, Bridge, Composite, Decorator, Façade, Flyweight, Proxy
+* **Creational**: About object creation. They separate the operation of an application from how its objects are created.
+    * Abstract Factory, Builder, Factory Method, Prototype, Singleton
+* **Structural**: About the composition of objects into larger structures while catering for future extension in structure.
+    * Adapter, Bridge, Composite, Decorator, Façade, Flyweight, Proxy
 * **Behavioral**: Defining how objects interact and how responsibility is distributed among them.
-    *	Chain of Responsibility, Command, Interpreter, Template Method, Iterator, Mediator, Memento, Observer, State, Strategy, Visitor
+    * Chain of Responsibility, Command, Interpreter, Template Method, Iterator, Mediator, Memento, Observer, State, Strategy, Visitor
 
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

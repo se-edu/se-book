@@ -17,26 +17,6 @@
   <div id="main">
     <div>
       <div>
-        <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
-      </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can explain software engineering principles <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
-        </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
-        <div>
-          <div>
-            <p>Different principles have varying degrees of formality – rules, opinions, rules of thumb, observations, and axioms. Hence, their applicability is wider with correspondingly greater overlap as compared to patterns.</p>
-          </div>
-          <div>
-            <div></div>
-          </div>
-        </div>
-      </panel>
-    </div>
-    <div>
-      <div>
         <h4 id="single-responsibility-principle-two">Single Responsibility Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
       <tip-box>
@@ -84,14 +64,13 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <tip-box type="primary">
+            <tip-box type="definition">
               <div>
                 <p><strong>Interface Segregation Principle (ISP)</strong>: No client should be forced to depend on methods it does not use.</p>
               </div>
             </tip-box>
             <tip-box>
-              <p>Example:</p>
-              <p>The <code>Payroll</code> class should not depend on the <code>AdminStaff</code> class because it does not use the <code>arrangeMeeting()</code> method. Instead, it should depend on the <code>SalariedStaff</code> interface.</p>
+              <p>📦 The <code>Payroll</code> class should not depend on the <code>AdminStaff</code> class because it does not use the <code>arrangeMeeting()</code> method. Instead, it should depend on the <code>SalariedStaff</code> interface.</p>
               <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll</span> </span>{
     <span class="hljs-comment">//...    </span>
     <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalaries</span><span class="hljs-params">(AdminStaff adminStaff)</span></span>{ <span class="hljs-comment">//violates ISP</span>
@@ -110,9 +89,7 @@
               <p></p>
             </tip-box>
           </div>
-          <div>
-            <div></div>
-          </div>
+          <div></div>
         </div>
       </panel>
     </div>
@@ -128,92 +105,238 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <tip-box type="primary">
+            <tip-box type="definition">
               <div>
-                <p><strong>Liskov Substitution Principle (LSP)</strong>: Derived classes must be substitutable for their base classes. -- Barbara Liskov</p>
+                <p><strong>Liskov Substitution Principle (LSP)</strong>: Derived classes must be substitutable for their base classes. <sub>-- proposed by <a href="https://en.wikipedia.org/wiki/Barbara_Liskov">Barbara Liskov</a></sub></p>
               </div>
             </tip-box>
-            <p>In other words, if a program module is using a super class, then the reference to the super class can be replaced with a sub class without affecting the functionality of the program module.</p>
-            <p>As we know, Java already allows substituting objects of sub classes where an object of the super class is expected. However, that does not mean that doing so will not break the functionality of the code. To follow LSP, we should be careful
-              not to contradict the behavior specified by the super class.</p>
+            <p>LSP sounds same as
+              <trigger large="" trigger="click" for="modal:lsp-substitutability">substitutability</trigger> but it goes beyond substitutability; <strong>LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.</strong> As we know, Java has language support for substitutability.
+              However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.</p>
+            <modal large="" title="Textbook »" id="modal:lsp-substitutability">
+              <div>
+                <div>
+                  <p>
+                    <panel src="/se-book\oopDesign\inheritance\what\full._include_.html" header="%%:mortar_board: Design → Object Oriented Programming → Inheritance → What%%" isOpen="false" no-close="true" no-switch="true"></panel>
+                  </p>
+                </div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Design → Object Oriented Programming → Inheritance →
+</span></strong>
+                  </span>
+                </p>
+                <div>
+                  <h4 id="substitutability-two">Substitutability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p><strong>Every instance of a subclass is an instance of the superclass, but not vice-versa.</strong> As a result, inheritance allows <em>substitutability</em> : the ability to substitute a child class object where a parent class object
+                      is expected.</p>
+                    <tip-box><img src="/se-book/oopDesign/inheritance/substitutability/images/staff.png" height="80">
+                      <p></p>
+                      <p>📦 an <code>Academic</code> is an instance of a <code>Staff</code>, but a <code>Staff</code> is not necessarily an instance of an <code>Academic</code>. i.e. wherever an object of the superclass is expected, it can be substituted
+                        by an object of any of its subclasses.</p>
+                      <p>The following code is valid because an <code>AcademicStaff</code> object is substitutable as a <code>Staff</code> object.</p>
+                      <pre><code class="hljs java">Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span>
+</code></pre>
+                      <p>But the following code is not valid <span class="dimmed"> because <code>staff</code> is declared as a <code>Staff</code> type and therefore its value may or may not be of  type <code>AcademicStaff</code>, which is the type expected by variable <code>academicStaff</code>.</span></p>
+                      <pre
+                        class="hljs"><code>Staff staff;
+...
+AcademicStaff academicStaff = staff; // Not OK
+</code></pre>
+                    </tip-box>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </modal>
             <tip-box>
-              <p>Example:</p><img src="/se-book/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200">
+              <p>📦 Suppose the <code>Payroll</code> class depends on the <code>adjustMySalary(int percent)</code> method of the <code>Staff</code> class. Furthermore, the <code>Staff</code> class states that the <code>adjustMySalary</code> method will work
+                for all positive percent values. Both <code>Admin</code> and <code>Academic</code> classes override the <code>adjustMySalary</code> method.</p><img src="/se-book/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200">
               <p></p>
-              <p>Suppose the <code>Payroll</code> class depends on the <code>adjustMySalary(int percent)</code> method of the <code>Staff</code> class. Furthermore, the <code>Staff</code> class states that the <code>adjustMySalary</code> method will work
-                for all positive percent values. Both <code>Admin</code> and <code>Academic</code> classes override the <code>adjustMySalary</code> method. Now consider the following:</p>
+              <p>Now consider the following:</p>
               <ul>
                 <li><code>Admin#adjustMySalary</code> method works for both negative and positive percent values.</li>
-                <li><code>Academic#adjustMySalary</code> method works for percent values 1..100 only.</li>
+                <li><code>Academic#adjustMySalary</code> method works for percent values <code>1..100</code> only.</li>
               </ul>
               <p>In the above scenario,</p>
               <ul>
                 <li><code>Admin</code> class follows LSP because it fulfills <code>Payroll</code>’s expectation of <code>Staff</code> objects (i.e. it works for all positive values). Substituting <code>Admin</code> objects for Staff objects will not break
                   the <code>Payroll</code> class functionality.</li>
-                <li><code>Academic</code> class violates LSP because it will not work for percent values over 100 as expected by the <code>Payroll</code> class. Substituting <code>Academic</code> objects for <code>Staff</code> objects can potentially break
-                  the <code>Payroll</code> class functionality.</li>
+                <li><code>Academic</code> class violates LSP because it will not work for percent values over <code>100</code> as expected by the <code>Payroll</code> class. Substituting <code>Academic</code> objects for <code>Staff</code> objects can potentially
+                  break the <code>Payroll</code> class functionality.</li>
               </ul>
+              <panel type="seamless" header="%%Another example%%">
+                <p>📦 The <code>Rectangle#resize()</code> can take any integers for <code>height</code> and <code>width</code>. This contract is violated by the subclass <code>Square#resize()</code> because it does not accept a <code>height</code> that is
+                  different from the <code>width</code>.</p><img src="/se-book/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120">
+                <p></p>
+                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{
+    ...
+    <span class="hljs-comment">/** sets the size to given height and width*/</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{
+        ...
+    }
+}
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Square</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Rectangle</span> </span>{
+    
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{
+        <span class="hljs-keyword">if</span> (height != width) {
+            <span class="hljs-comment">//error</span>
+       }
+    }
+}
+</code></pre>
+                <p>Now consider the following method that is written to work with the <code>Rectangle</code> class.</p>
+                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">makeSameSize</span><span class="hljs-params">(Rectangle original, Rectangle toResize)</span></span>{
+    toResize.resize(original.getHeight(), original.getWidth());
+}
+</code></pre>
+                <p>This code will fail if it is called as <code>maekSameSize(new Rectangle(12,8), new Square(4, 4))</code> That is, <code>Square</code> class is not substitutable for the <code>Rectangle</code> class.</p>
+              </panel>
             </tip-box>
           </div>
           <div>
             <div>
               <panel header=":muscle: Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: True or False?">
+                  <panel header=":lock::key: Is this LSP?">
                     <question>
-                      <p>If a subclass imposes more restrictive conditions than its parent class, it violates Liskov substitution principle.</p>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                      <p>If a subclass imposes more restrictive conditions than its parent class, it violates Liskov Substitution Principle.</p>
+                      <ul radio-group="5fkpb" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="5fkpb" type="radio"> True</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="5fkpb" type="radio"> False</label></li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. True</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
-                        </ul>
-                        <p>Explanation: If the subclass is more restrictive than the parent class, a piece of code that worked with the parent class may not work with the child class. Hence, the substitutability does not exist and Liskov substitution principle
-                          is violated.</p>
+                        <p>True.</p>
+                        <p>Explanation: If the subclass is more restrictive than the parent class, code that worked with the parent class may not work with the child class. Hence, the substitutability does not exist and LSP has been violated.</p>
                       </div>
                     </question>
                   </panel>
                 </div>
               </panel>
             </div>
-            <div></div>
           </div>
         </div>
       </panel>
     </div>
     <div>
       <div>
-        <h4 id="dependency-inversion-principle-four">Dependency Inversion Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></h4>
+        <h4 id="dependency-inversion-principle-one">Dependency Inversion Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
       </div>
       <tip-box>
         <div>
-          <p>🏆 Can explain dependency inversion principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></p>
+          <p>🏆 Can explain dependency inversion principle (DIP) <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
         </div>
       </tip-box>
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <tip-box type="primary">
-              <div>
-                <p><strong>Dependency Inversion Principle</strong>:</p>
-                <ol>
-                  <li>High-level modules should not depend on low-level modules. Both should depend on abstractions.</li>
-                  <li>Abstractions should not depend on details. Details should depend on abstractions.</li>
-                </ol>
-              </div>
-            </tip-box>
+            <p>The <em>Dependency Inversion Principle</em> states that,</p>
+            <ol>
+              <li>High-level modules should not depend on low-level modules. Both should depend on abstractions.</li>
+              <li>Abstractions should not depend on details. Details should depend on abstractions.</li>
+            </ol>
             <tip-box>
-              <p>Example:</p>
-              <p>In design (a), the higher level class <code>Payroll</code> depends on the lower level class <code>Employee</code>, a violation of DIP. In design (b), both <code>Payroll</code> and <code>Employee</code> depends on the <code>Payee</code> interface
-                (note that inheritance is a dependency). Design (b) is more flexible (and less coupled) because now the <code>Payroll</code> class need not change when the <code>Employee</code> class changes. Here, <code>Payee</code> is the abstraction
-                and is owned by the <code>Payroll</code> class.</p><img src="/se-book/principles/dependencyInversionPrinciple/images/payroll.png" height="130">
+              <p>Example:</p><img src="/se-book/principles/dependencyInversionPrinciple/images/payrollEmployee.png" height="130">
               <p></p>
+              <p>In design (a), the higher level class <code>Payroll</code> depends on the lower level class <code>Employee</code>, a violation of DIP. In design (b), both <code>Payroll</code> and <code>Employee</code> depends on the Payee interface (note
+                that inheritance is a dependency).</p>
+              <p>Design (b) is more flexible (and less coupled) because now the <code>Payroll</code> class need not change when the <code>Employee</code> class changes.</p>
             </tip-box>
           </div>
           <div>
-            <div></div>
+            <div>
+              <panel header=":muscle: Exercises" expandable="">
+                <div>
+                  <panel header=":lock::key: Which of these statements is true about the Dependency Inversion Principle.">
+                    <question>
+                      <p>Which of these statements is true about the Dependency Inversion Principle.</p>
+                      <ul class="task-list">
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. It can complicate the design/implementation by introducing extra abstractions, but it has some benefits.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. It is often used during testing, to replace dependencies with mocks.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. It reduces dependencies in a design.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. It advocates making higher level classes to depend on lower level classes.</li>
+                      </ul>
+                      <div slot="answer">
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. It can complicate the design/implementation by introducing extra abstractions, but it has some benefits.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. It is often used during testing, to replace dependencies with mocks.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. It reduces dependencies in a design.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. It advocates making higher level classes to depend on lower level classes.</li>
+                        </ul>
+                        <p>Explanation: Replacing dependencies with mocks is Dependency Injection, not DIP. DIP does not reduce dependencies, rather, it changes the direction of dependencies. Yes, it can introduce extra abstractions but often the benefit
+                          can outweigh the extra complications.</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+              </panel>
+            </div>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <div>
+        <h4 id="open-closed-principle-one">Open-Closed Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box>
+        <div>
+          <p>🏆 Can explain open-closed principle (OCP) <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p>While it is possible to isolate the functionalities of a software system into modules, there is no way to remove interaction between modules. When modules interact with each other, coupling naturally increases. Consequently, it is harder to
+              localize any changes to the software system. The Open-Close Principle aims to alleviate this problem.</p>
+            <tip-box type="definition">
+              <div>
+                <p><strong>Open-Closed Principle (OCP)</strong>: A module should be <em>open</em> for extension but <em>closed</em> for modification. That is, modules should be written so that they can be extended, without requiring them to be modified.
+                  <sub>-- proposed by <a href="https://en.wikipedia.org/wiki/Bertrand_Meyer">Bertrand Meyer</a></sub></p>
+              </div>
+            </tip-box>
+            <p>In object-oriented programming, OCP can be achieved in various ways. This often requires separating the <em>specification (i.e. interface)</em> of a module from its <em>implementation</em>.</p>
+            <tip-box>
+              <p>📦 In the design given below, the behavior of the <code>CommandQueue</code> class can be altered by adding more concrete <code>Command</code> subclasses. For example, by including a <code>Delete</code> class alongside <code>List</code>,
+                <code>Sort</code>, and <code>Reset</code>, the <code>CommandQueue</code> can now perform delete commands without modifying its code at all. That is, its behavior was extended without having to modify its code. Hence, it was open to extensions,
+                but closed to modification.</p><img src="/se-book/principles/openClosedPrinciple/images/commandQueue.png" height="170">
+              <p></p>
+            </tip-box>
+            <tip-box>
+              <p>📦 The behavior of a Java generic class can be altered by passing it a different class as a parameter. In the code below, the <code>ArrayList</code> class behaves as a container of <code>Students</code> in one instance and as a container
+                of <code>Admin</code> objects in the other instance, without having to change its code. That is, the behavior of the <code>ArrayList</code> class is extended without modifying its code.</p>
+              <pre><code class="hljs java">ArrayList students = <span class="hljs-keyword">new</span> ArrayList&lt; Student &gt;();
+ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt;();  	
+</code></pre>
+            </tip-box>
+          </div>
+          <div>
+            <div>
+              <panel header=":muscle: Exercises" expandable="">
+                <div>
+                  <panel header=":lock::key: Meaning of OCP">
+                    <question>
+                      <p>Which of these is closest to the meaning of the open-closed principle?</p>
+                      <ul radio-group="1tmja" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="1tmja" type="radio"> a. We should be able to change a software module’s behavior without modifying its code.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="1tmja" type="radio"> b. A software module should remain open to modification as long as possible.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="1tmja" type="radio"> c. A software module should be open to modification and closed to extension.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="1tmja" type="radio"> d. Open source software rocks. Closed source software sucks.</label></li>
+                      </ul>
+                      <div slot="answer">
+                        <p>(a)</p>
+                        <p>Explanation: Please refer the handout for the definition of OCP.</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+              </panel>
+            </div>
           </div>
         </div>
       </panel>
@@ -231,17 +354,337 @@
         <div>
           <div>
             <p>The five OOP principles given below are known as <em>SOLID Principles</em> (an acronym made up of the first letter of each principle):</p>
-            <ul>
-              <li><a href="/se-book/principles/singleResponsibilityPrinciple/">Single Responsibility Principle (SRP)</a></li>
-              <li><a href="/se-book/designPrinciples/openClosedPrinciple/">Open-Closed Principle (OCP)</a></li>
-              <li><a href="/se-book/principles/liskovSubstitutionPrinciple/">Liskov Substitution Principle (LSP)</a></li>
-              <li><a href="/se-book/principles/interfaceSegregationPrinciple/">Interface Segregation Principle (ISP)</a></li>
-              <li><a href="/se-book/principles/dependencyInversionPrinciple/">Dependency Inversion Principle (DIP)</a></li>
-            </ul>
+            <panel type="seamless" header="**S**ingle Responsibility Principle (SRP)">
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Supplmentary → Principles →
+</span></strong>
+                  </span>
+                </p>
+                <div>
+                  <h4 id="single-responsibility-principle-two-2">Single Responsibility Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <tip-box type="primary">
+                      <div>
+                        <p><strong>Single Responsibility Principle (SRP)</strong>: A class should have one, and only one, reason to change. <sub>-- Robert C. Martin</sub></p>
+                      </div>
+                    </tip-box>
+                    <p>If a class has only one responsibility, it needs to change only when there is a change to that responsibility.</p>
+                    <tip-box>
+                      <p>📦 Consider a <code>TextUi</code> class that does parsing of the user commands as well as interacting with the user. That class needs to change when the formatting of the UI changes as well as when the syntax of the user command
+                        changes. Hence, such a class does not follow the SRP.</p>
+                    </tip-box>
+                  </div>
+                  <div>
+                    <div>
+                      <panel header=":paperclip:  Resources" expanded="">
+                        <ul>
+                          <li><a href="http://www.oodesign.com/single-responsibility-principle.html">An explanation of the SRP</a> from <a href="http://www.oodesign.com">www.oodesign.com</a></li>
+                          <li><a href="http://code.tutsplus.com/tutorials/solid-part-1-the-single-responsibility-principle--net-36074">Another explanation (more detailed)</a> by Patkos Csaba</li>
+                          <li><a href="https://drive.google.com/file/d/0ByOwmqah_nuGNHEtcU5OekdDMkk/view">A book chapter on SRP</a> - A book chapter on SRP, written by the father of the principle itself Robert C Martin.</li>
+                        </ul>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" header="**O**pen-Closed Principle (OCP)">
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Supplmentary → Principles →
+</span></strong>
+                  </span>
+                </p>
+                <div>
+                  <h4 id="open-closed-principle-one-2">Open-Closed Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p>While it is possible to isolate the functionalities of a software system into modules, there is no way to remove interaction between modules. When modules interact with each other, coupling naturally increases. Consequently, it is
+                      harder to localize any changes to the software system. The Open-Close Principle aims to alleviate this problem.</p>
+                    <tip-box type="definition">
+                      <div>
+                        <p><strong>Open-Closed Principle (OCP)</strong>: A module should be <em>open</em> for extension but <em>closed</em> for modification. That is, modules should be written so that they can be extended, without requiring them to be modified.
+                          <sub>-- proposed by <a href="https://en.wikipedia.org/wiki/Bertrand_Meyer">Bertrand Meyer</a></sub></p>
+                      </div>
+                    </tip-box>
+                    <p>In object-oriented programming, OCP can be achieved in various ways. This often requires separating the <em>specification (i.e. interface)</em> of a module from its <em>implementation</em>.</p>
+                    <tip-box>
+                      <p>📦 In the design given below, the behavior of the <code>CommandQueue</code> class can be altered by adding more concrete <code>Command</code> subclasses. For example, by including a <code>Delete</code> class alongside <code>List</code>,
+                        <code>Sort</code>, and <code>Reset</code>, the <code>CommandQueue</code> can now perform delete commands without modifying its code at all. That is, its behavior was extended without having to modify its code. Hence, it was open
+                        to extensions, but closed to modification.</p><img src="/se-book/principles/openClosedPrinciple/images/commandQueue.png" height="170">
+                      <p></p>
+                    </tip-box>
+                    <tip-box>
+                      <p>📦 The behavior of a Java generic class can be altered by passing it a different class as a parameter. In the code below, the <code>ArrayList</code> class behaves as a container of <code>Students</code> in one instance and as a container
+                        of <code>Admin</code> objects in the other instance, without having to change its code. That is, the behavior of the <code>ArrayList</code> class is extended without modifying its code.</p>
+                      <pre><code class="hljs java">ArrayList students = <span class="hljs-keyword">new</span> ArrayList&lt; Student &gt;();
+ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt;();  	
+</code></pre>
+                    </tip-box>
+                  </div>
+                  <div>
+                    <div>
+                      <panel header=":muscle: Exercises" expandable="">
+                        <div>
+                          <panel header=":lock::key: Meaning of OCP">
+                            <question>
+                              <p>Which of these is closest to the meaning of the open-closed principle?</p>
+                              <ul radio-group="ou487" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="ou487" type="radio"> a. We should be able to change a software module’s behavior without modifying its code.</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="ou487" type="radio"> b. A software module should remain open to modification as long as possible.</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="ou487" type="radio"> c. A software module should be open to modification and closed to extension.</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="ou487" type="radio"> d. Open source software rocks. Closed source software sucks.</label></li>
+                              </ul>
+                              <div slot="answer">
+                                <p>(a)</p>
+                                <p>Explanation: Please refer the handout for the definition of OCP.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" header="**L**iskov Substitution Principle (LSP)">
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Supplmentary → Principles →
+</span></strong>
+                  </span>
+                </p>
+                <div>
+                  <h4 id="liskov-substitution-principle-three-2">Liskov Substitution Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <tip-box type="definition">
+                      <div>
+                        <p><strong>Liskov Substitution Principle (LSP)</strong>: Derived classes must be substitutable for their base classes. <sub>-- proposed by <a href="https://en.wikipedia.org/wiki/Barbara_Liskov">Barbara Liskov</a></sub></p>
+                      </div>
+                    </tip-box>
+                    <p>LSP sounds same as
+                      <trigger large="" trigger="click" for="modal:lsp-substitutability">substitutability</trigger> but it goes beyond substitutability; <strong>LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.</strong> As we know, Java has language support for
+                      substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.</p>
+                    <modal large="" title="Textbook »" id="modal:lsp-substitutability">
+                      <div>
+                        <div>
+                          <p>
+                            <panel src="/se-book\oopDesign\inheritance\what\full._include_.html" header="%%:mortar_board: Design → Object Oriented Programming → Inheritance → What%%" isOpen="false" no-close="true" no-switch="true"></panel>
+                          </p>
+                        </div>
+                        <p></p>
+                        <p><span class="dimmed"><strong><span>Design → Object Oriented Programming → Inheritance →
+</span></strong>
+                          </span>
+                        </p>
+                        <div>
+                          <h4 id="substitutability-two-2">Substitutability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+                        </div>
+                        <div id="main">
+                          <div>
+                            <p><strong>Every instance of a subclass is an instance of the superclass, but not vice-versa.</strong> As a result, inheritance allows <em>substitutability</em> : the ability to substitute a child class object where a parent class
+                              object is expected.</p>
+                            <tip-box><img src="/se-book/oopDesign/inheritance/substitutability/images/staff.png" height="80">
+                              <p></p>
+                              <p>📦 an <code>Academic</code> is an instance of a <code>Staff</code>, but a <code>Staff</code> is not necessarily an instance of an <code>Academic</code>. i.e. wherever an object of the superclass is expected, it can be substituted
+                                by an object of any of its subclasses.</p>
+                              <p>The following code is valid because an <code>AcademicStaff</code> object is substitutable as a <code>Staff</code> object.</p>
+                              <pre><code class="hljs java">Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span>
+</code></pre>
+                              <p>But the following code is not valid <span class="dimmed"> because <code>staff</code> is declared as a <code>Staff</code> type and therefore its value may or may not be of  type <code>AcademicStaff</code>, which is the type expected by variable <code>academicStaff</code>.</span></p>
+                              <pre
+                                class="hljs"><code>Staff staff;
+...
+AcademicStaff academicStaff = staff; // Not OK
+</code></pre>
+                            </tip-box>
+                          </div>
+                          <div></div>
+                        </div>
+                      </div>
+                    </modal>
+                    <tip-box>
+                      <p>📦 Suppose the <code>Payroll</code> class depends on the <code>adjustMySalary(int percent)</code> method of the <code>Staff</code> class. Furthermore, the <code>Staff</code> class states that the <code>adjustMySalary</code> method
+                        will work for all positive percent values. Both <code>Admin</code> and <code>Academic</code> classes override the <code>adjustMySalary</code> method.</p><img src="/se-book/principles/liskovSubstitutionPrinciple/images/payroll.png"
+                        height="200">
+                      <p></p>
+                      <p>Now consider the following:</p>
+                      <ul>
+                        <li><code>Admin#adjustMySalary</code> method works for both negative and positive percent values.</li>
+                        <li><code>Academic#adjustMySalary</code> method works for percent values <code>1..100</code> only.</li>
+                      </ul>
+                      <p>In the above scenario,</p>
+                      <ul>
+                        <li><code>Admin</code> class follows LSP because it fulfills <code>Payroll</code>’s expectation of <code>Staff</code> objects (i.e. it works for all positive values). Substituting <code>Admin</code> objects for Staff objects will not
+                          break the <code>Payroll</code> class functionality.</li>
+                        <li><code>Academic</code> class violates LSP because it will not work for percent values over <code>100</code> as expected by the <code>Payroll</code> class. Substituting <code>Academic</code> objects for <code>Staff</code> objects
+                          can potentially break the <code>Payroll</code> class functionality.</li>
+                      </ul>
+                      <panel type="seamless" header="%%Another example%%">
+                        <p>📦 The <code>Rectangle#resize()</code> can take any integers for <code>height</code> and <code>width</code>. This contract is violated by the subclass <code>Square#resize()</code> because it does not accept a <code>height</code>                          that is different from the <code>width</code>.</p><img src="/se-book/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120">
+                        <p></p>
+                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{
+    ...
+    <span class="hljs-comment">/** sets the size to given height and width*/</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{
+        ...
+    }
+}
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Square</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Rectangle</span> </span>{
+    
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{
+        <span class="hljs-keyword">if</span> (height != width) {
+            <span class="hljs-comment">//error</span>
+       }
+    }
+}
+</code></pre>
+                        <p>Now consider the following method that is written to work with the <code>Rectangle</code> class.</p>
+                        <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">makeSameSize</span><span class="hljs-params">(Rectangle original, Rectangle toResize)</span></span>{
+    toResize.resize(original.getHeight(), original.getWidth());
+}
+</code></pre>
+                        <p>This code will fail if it is called as <code>maekSameSize(new Rectangle(12,8), new Square(4, 4))</code> That is, <code>Square</code> class is not substitutable for the <code>Rectangle</code> class.</p>
+                      </panel>
+                    </tip-box>
+                  </div>
+                  <div>
+                    <div>
+                      <panel header=":muscle: Exercises" expandable="">
+                        <div>
+                          <panel header=":lock::key: Is this LSP?">
+                            <question>
+                              <p>If a subclass imposes more restrictive conditions than its parent class, it violates Liskov Substitution Principle.</p>
+                              <ul radio-group="2aorx" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="2aorx" type="radio"> True</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="2aorx" type="radio"> False</label></li>
+                              </ul>
+                              <div slot="answer">
+                                <p>True.</p>
+                                <p>Explanation: If the subclass is more restrictive than the parent class, code that worked with the parent class may not work with the child class. Hence, the substitutability does not exist and LSP has been violated.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" header="**I**nterface Segregation Principle (ISP)">
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Supplmentary → Principles →
+</span></strong>
+                  </span>
+                </p>
+                <div>
+                  <h4 id="interface-segregation-principle-four-2">Interface Segregation Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <tip-box type="definition">
+                      <div>
+                        <p><strong>Interface Segregation Principle (ISP)</strong>: No client should be forced to depend on methods it does not use.</p>
+                      </div>
+                    </tip-box>
+                    <tip-box>
+                      <p>📦 The <code>Payroll</code> class should not depend on the <code>AdminStaff</code> class because it does not use the <code>arrangeMeeting()</code> method. Instead, it should depend on the <code>SalariedStaff</code> interface.</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll</span> </span>{
+    <span class="hljs-comment">//...    </span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalaries</span><span class="hljs-params">(AdminStaff adminStaff)</span></span>{ <span class="hljs-comment">//violates ISP</span>
+        <span class="hljs-comment">//...</span>
+    }
+
+}
+</code></pre>
+                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll</span> </span>{
+    <span class="hljs-comment">//...    </span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalaries</span><span class="hljs-params">(SalariedStaff staff)</span></span>{ <span class="hljs-comment">//does not violate ISP</span>
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre><img src="/se-book/principles/interfaceSegregationPrinciple/images/payroll.png" height="200">
+                      <p></p>
+                    </tip-box>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" header="**D**ependency Inversion Principle (DIP)">
+              <div>
+                <p><span class="dimmed"><strong><span>Supplmentary → Principles →
+</span></strong>
+                  </span>
+                </p>
+                <div>
+                  <h4 id="dependency-inversion-principle-one-2">Dependency Inversion Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p>The <em>Dependency Inversion Principle</em> states that,</p>
+                    <ol>
+                      <li>High-level modules should not depend on low-level modules. Both should depend on abstractions.</li>
+                      <li>Abstractions should not depend on details. Details should depend on abstractions.</li>
+                    </ol>
+                    <tip-box>
+                      <p>Example:</p><img src="/se-book/principles/dependencyInversionPrinciple/images/payrollEmployee.png" height="130">
+                      <p></p>
+                      <p>In design (a), the higher level class <code>Payroll</code> depends on the lower level class <code>Employee</code>, a violation of DIP. In design (b), both <code>Payroll</code> and <code>Employee</code> depends on the Payee interface
+                        (note that inheritance is a dependency).</p>
+                      <p>Design (b) is more flexible (and less coupled) because now the <code>Payroll</code> class need not change when the <code>Employee</code> class changes.</p>
+                    </tip-box>
+                  </div>
+                  <div>
+                    <div>
+                      <panel header=":muscle: Exercises" expandable="">
+                        <div>
+                          <panel header=":lock::key: Which of these statements is true about the Dependency Inversion Principle.">
+                            <question>
+                              <p>Which of these statements is true about the Dependency Inversion Principle.</p>
+                              <ul class="task-list">
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. It can complicate the design/implementation by introducing extra abstractions, but it has some benefits.</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. It is often used during testing, to replace dependencies with mocks.</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. It reduces dependencies in a design.</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. It advocates making higher level classes to depend on lower level classes.</li>
+                              </ul>
+                              <div slot="answer">
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. It can complicate the design/implementation by introducing extra abstractions, but it has some benefits.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. It is often used during testing, to replace dependencies with mocks.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. It reduces dependencies in a design.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. It advocates making higher level classes to depend on lower level classes.</li>
+                                </ul>
+                                <p>Explanation: Replacing dependencies with mocks is Dependency Injection, not DIP. DIP does not reduce dependencies, rather, it changes the direction of dependencies. Yes, it can introduce extra abstractions but often the
+                                  benefit can outweigh the extra complications.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel>
           </div>
-          <div>
-            <div></div>
-          </div>
+          <div></div>
         </div>
       </panel>
     </div>
@@ -259,7 +702,7 @@
           <div>
             <tip-box type="primary">
               <div>
-                <p><strong>Separation of Concerns Principle (SoC)</strong>: To achieve better modularity, separate the code into distinct sections, such that each section addresses a separate <em>concern</em>. -- Edsger W. Dijkstra</p>
+                <p><strong>Separation of Concerns Principle (SoC)</strong>: To achieve better modularity, separate the code into distinct sections, such that each section addresses a separate <em>concern</em>. -- Proposed by <a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger W. Dijkstra</a></p>
               </div>
             </tip-box>
             <p>A <em>concern</em> in this context is a set of information that affects the code of a computer program.</p>
@@ -280,7 +723,7 @@
               <p>📦 The
                 <trigger trigger="click" for="modal:soc-nTier">n-tier architecture</trigger> utilizes this principle. Each layer in the architecture has a well-defined functionality that has no functional overlap with each other.</p>
             </tip-box>
-            <modal title="TextBook &raquo;" id="modal:soc-nTier">
+            <modal title="TextBook »" id="modal:soc-nTier">
               <div>
                 <div></div>
                 <p></p>
@@ -289,7 +732,7 @@
                   </span>
                 </p>
                 <div>
-                  <h4 id="what-one-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+                  <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
                 </div>
                 <div id="main">
                   <div>
@@ -306,16 +749,16 @@
               </div>
             </modal>
             <p><strong>This principle should lead to higher <trigger trigger="click" for="soc-cohesion">cohesion</trigger> and lower <trigger trigger="click" for="soc-coupling">coupling</trigger>.</strong></p>
-            <modal title="TextBook &raquo;" id="soc-coupling">
+            <modal title="TextBook »" id="soc-coupling">
               <div>
                 <div></div>
                 <p></p>
-                <p><span class="dimmed"><strong><span>Design → Design Principles → Coupling →
+                <p><span class="dimmed"><strong><span>Design → Design Fundamentals → Coupling →
 </span></strong>
                   </span>
                 </p>
                 <div>
-                  <h4 id="what-one-3">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+                  <h4 id="what-one-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
                 </div>
                 <div id="main">
                   <div>
@@ -326,7 +769,7 @@
                       <li><strong>Testing and reuse of the module is harder</strong> due to its dependence on other modules.</li>
                     </ul>
                     <tip-box>
-                      <p>📦 In the example below, design <code>A</code> appears to have a more coupling between the components than design <code>B</code>.</p><img src="/se-book/designPrinciples/coupling/what/images/playerPuzzleManager.png" height="220">
+                      <p>📦 In the example below, design <code>A</code> appears to have a more coupling between the components than design <code>B</code>.</p><img src="/se-book/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220">
                       <p></p>
                     </tip-box>
                   </div>
@@ -337,7 +780,7 @@
                           <panel header=":lock::key: Coupling levels of alternative designs">
                             <question has-input="true">
                               <p>Discuss the coupling levels of alternative designs <em>x</em> and <em>y</em>.</p>
-                              <tip-box><img src="/se-book/designPrinciples/coupling/what/images/alternativeDesigns.png" height="180">
+                              <tip-box><img src="/se-book/designFundamentals/coupling/what/images/alternativeDesigns.png" height="180">
                                 <p></p>
                               </tip-box>
                               <div slot="answer">
@@ -394,16 +837,16 @@
                 </div>
               </div>
             </modal>
-            <modal title="TextBook &raquo;" id="soc-cohesion">
+            <modal title="TextBook »" id="soc-cohesion">
               <div>
                 <div></div>
                 <p></p>
-                <p><span class="dimmed"><strong><span>Design → Design Principles → Cohesion →
+                <p><span class="dimmed"><strong><span>Design → Design Fundamentals → Cohesion →
 </span></strong>
                   </span>
                 </p>
                 <div>
-                  <h4 id="what-one-4">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+                  <h4 id="what-one-3">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
                 </div>
                 <div id="main">
                   <div>
@@ -417,9 +860,7 @@
                       <li>Lowers reusability of modules because they do not represent logical units of functionality.</li>
                     </ul>
                   </div>
-                  <div>
-                    <div></div>
-                  </div>
+                  <div></div>
                 </div>
               </div>
             </modal>
@@ -446,7 +887,6 @@
                 </div>
               </panel>
             </div>
-            <div></div>
           </div>
         </div>
       </panel>
@@ -463,7 +903,7 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <tip-box type="primary">
+            <tip-box type="definition">
               <div>
                 <p><strong>Law of Demeter (LoD)</strong>:</p>
                 <ul>
@@ -477,16 +917,16 @@
                 </ul>
               </div>
             </tip-box>
-            <p>More concretely, a method m of an object O should invoke only the methods of the following kinds of objects:</p>
+            <p>More concretely, a method <code>m</code> of an object <code>O</code> should invoke only the methods of the following kinds of objects:</p>
             <ul>
               <li>The object <code>O</code> itself</li>
               <li>Objects passed as parameters of <code>m</code></li>
               <li>Objects created/instantiated in <code>m</code></li>
-              <li>Objects from the direct association of <code>O</code></li>
+              <li>Objects from the
+                <tooltip content="objects that are held by instance variables of">direct association of</tooltip><code>O</code></li>
             </ul>
             <tip-box>
-              <p>Example:</p>
-              <p>The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’),
+              <p>📦 The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’),
                 and <code>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
               <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
     Goo g = b.getGoo();
@@ -494,15 +934,18 @@
 }
 </code></pre>
             </tip-box>
-            <p>Limiting the interaction to a closely related group of classes aims to reduce coupling. In the example able, <code>foo</code> is already coupled to <code>Bar</code>. Upholding LoD avoids <code>foo</code> being coupled to <code>Goo</code>.</p>
-            <p>An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be
-              allowed to see Adam’s posts unless Adam is a friend of yours as well.</p>
+            <p><strong>LoD aims to reduce coupling by limiting the interaction to a closely related group of classes.</strong></p>
+            <tip-box>
+              <p>📦 In the example above, <code>foo</code> is already coupled to <code>Bar</code>. Upholding LoD avoids <code>foo</code> being coupled to <code>Goo</code> as well.</p>
+              <p>📦 An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not
+                be allowed to see Adam’s posts unless Adam is a friend of yours as well.</p>
+            </tip-box>
           </div>
           <div>
             <div>
               <panel header=":muscle: Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: Explain the Law of Demeter using code examples.">
+                  <panel header=":lock::key: Examples for LoD">
                     <question has-input="true">
                       <p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
                       <div slot="answer">
@@ -510,17 +953,17 @@
                         <p><code>setMinefield(Minefiled mf):void</code></p>
                         <p>Consider the following that can happen inside this operation.</p>
                         <ul>
-                          <li><code>mf.init(); //this does not violate LoD since LoD allows calling operations of parameters received.</code></li>
-                          <li><code>mf.getCell(1,3).clear(); //this violates LoD since Logic is handling Cell objects deep inside Minefield. Instead, it should be mf.clearCellAt(1,3);</code></li>
-                          <li><code>timer.start(); //this does not violate LoD since timer appears to be an internal component (i.e. a variable) of Logic itself.</code></li>
-                          <li><code>Cell c = new Cell(); c.init(); // this does not violate LoD since c was created inside the operation.</code></li>
+                          <li><code>mf.init();</code>: this does not violate LoD since LoD allows calling operations of parameters received.</li>
+                          <li><code>mf.getCell(1,3).clear();</code>: //this violates LoD because <code>Logic</code> is handling <code>Cell</code> objects deep inside <code>Minefield</code>. Instead, it should be <code>mf.clearCellAt(1,3);</code></li>
+                          <li><code>timer.start();</code>: //this does not violate LoD because <code>timer</code> appears to be an internal component (i.e. a variable) of <code>Logic</code> itself.</li>
+                          <li><code>Cell c = new Cell();</code><code>c.init();</code>: // this does not violate LoD because <code>c</code> was created inside the operation.</li>
                         </ul>
                       </div>
                     </question>
                   </panel>
                 </div>
                 <div>
-                  <panel header=":lock::key: True or False?">
+                  <panel header=":lock::key: LoD violation?">
                     <question>
                       <p>This violates Law of Demeter.</p>
                       <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
@@ -528,22 +971,19 @@
     g.doSomething();
 }
 </code></pre>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
+                      <ul radio-group="3sxsn" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="3sxsn" type="radio"> True</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="3sxsn" type="radio"> False</label></li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. False</li>
-                        </ul>
-                        <p>Explanation: The line “g.doSomething()” does not violate LoD because it is OK to invoke methods of objects created within a method.</p>
+                        <p>False</p>
+                        <p>Explanation: The line <code>g.doSomething()</code> does not violate LoD because it is OK to invoke methods of objects created within a method.</p>
                       </div>
                     </question>
                   </panel>
                 </div>
                 <div>
-                  <panel header=":lock::key: True or False?">
+                  <panel header=":lock::key: Odd one out">
                     <question>
                       <p>Pick the odd one out.</p>
                       <ul class="task-list">
@@ -554,14 +994,8 @@
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Coupling.</li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Law of Demeter.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> b. Don’t add people to a late project.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Don’t talk to strangers.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Principle of least knowledge.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Coupling.</li>
-                        </ul>
-                        <p>Explanation: Law of Demeter, which aims to reduce coupling, is also known as ‘Don’t talk to strangers’ and ‘Principle of least knowledge’</p>
+                        <p>(b)</p>
+                        <p>Explanation: Law of Demeter, which aims to reduce coupling, is also known as ‘Don’t talk to strangers’ and ‘Principle of least knowledge’.</p>
                       </div>
                     </question>
                   </panel>
@@ -584,18 +1018,18 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <tip-box type="primary">
+            <tip-box type="definition">
               <div>
                 <p><strong>Brooks' Law</strong>: Adding people to a late project will make it later. -- Fred Brooks (author of <em>The Mythical Man-Month</em>)</p>
               </div>
             </tip-box>
-            <p>The additional communication overhead will outweigh the benefit of adding extra manpower, especially if done near to a deadline.</p>
+            <p>Explanation: The additional communication overhead will outweigh the benefit of adding extra manpower, especially if done near to a deadline.</p>
           </div>
           <div>
             <div>
               <panel header=":muscle: Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: Do the Brook’s Law apply to a school project? Justify.">
+                  <panel header=":lock::key: Brook’s Law vs school project">
                     <question has-input="true">
                       <p>Do the Brook’s Law apply to a school project? Justify.</p>
                       <div slot="answer">
@@ -606,7 +1040,7 @@
                   </panel>
                 </div>
                 <div>
-                  <panel header=":lock::key: Choose the correct statement.">
+                  <panel header=":lock::key: Which one is related to Brook's law">
                     <question>
                       <p>Which one of these (all attributed to Fred Brooks, the author of the famous SE book <em>The Mythical Man-Month</em>), is called the Brook’s law?</p>
                       <ul class="task-list">
@@ -616,30 +1050,7 @@
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Adding more manpower to an already late project makes it even later.</li>
                       </ul>
                       <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. All programmers are optimists.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Good judgement comes from experience, and experience comes from bad judgement.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. The bearing of a child takes nine months, no matter how many women are assigned.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> d. Adding more manpower to an already late project makes it even later.</li>
-                        </ul>
-                      </div>
-                    </question>
-                  </panel>
-                </div>
-                <div>
-                  <panel header=":lock::key: True or False?">
-                    <question>
-                      <p>The following rule of thumb is applicable to a school project: “The later you find a bug, the more costly it is to fix”</p>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. True</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
-                      </ul>
-                      <div slot="answer">
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> a. True</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. False</li>
-                        </ul>
-                        <p>Explanation: This is explained in one of the worked examples of the handout. Theories that don’t appear ‘applicable’ at first are often applicable to practice if you look at in the right way.</p>
+                        <p>(d)</p>
                       </div>
                     </question>
                   </panel>
@@ -662,7 +1073,7 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <tip-box type="primary">
+            <tip-box type="definition">
               <div>
                 <p><strong>YAGNI (You Aren't Gonna Need It!) Principle</strong>: Do not add code simply because ‘you might need it in the future’.</p>
               </div>
@@ -672,9 +1083,10 @@
           </div>
           <div>
             <div>
-              <panel header="Resources" expanded="" type="default">
-                <p>[Web Article] Yagni <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></p>
-                <p><a href="https://martinfowler.com/bliki/Yagni.html">Yagni</a> – A detailed article explaining YAGNI, written by Martin Fowler.</p>
+              <panel header=":paperclip: Resources" expanded="">
+                <ul>
+                  <li><a href="https://martinfowler.com/bliki/Yagni.html"><strong>Yagni</strong></a> -- A detailed article explaining YAGNI, written by Martin Fowler.</li>
+                </ul>
               </panel>
             </div>
           </div>
@@ -693,66 +1105,18 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <tip-box type="primary">
+            <tip-box type="definition">
               <div>
                 <p><strong>DRY (Don't Repeat Yourself) Principle</strong>: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub><em>The Pragmatic Programmer</em>, by Andy Hunt and Dave Thomas</sub></p>
               </div>
             </tip-box>
-            <p>This principle guards against duplication of information. The functionality implemented twice is a violation of the DRY principle even if the two implementations are different. Similarly, the value a system-wide timeout being defined in multiple
-              places is a violation of DRY.</p>
+            <p>This principle guards against duplication of information.</p>
+            <tip-box>
+              <p>📦 The functionality implemented twice is a violation of the DRY principle even if the two implementations are different.</p>
+              <p>📦 The value a system-wide timeout being defined in multiple places is a violation of DRY.</p>
+            </tip-box>
           </div>
-          <div>
-            <div></div>
-          </div>
-        </div>
-      </panel>
-    </div>
-    <div>
-      <div>
-        <h4 id="review-one">Review <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
-      </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can combine some principles concepts <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
-        </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
-        <div>
-          <div>
-            <p>...</p>
-          </div>
-          <div>
-            <div>
-              <panel header=":muscle: Exercises" expandable="">
-                <div>
-                  <panel header=":lock::key: Pick the odd one out.">
-                    <panel header="%%Prerequisites%%" expandable="" expanded="">
-                      <panel src="/se-book\principles\separationOfConcernsPrinciple\full._include_.html" header="Principles: Separation of Concerns Principle" isOpen="false" no-close="true" no-switch="true"></panel>
-                      <panel src="/se-book\principles\solidPrinciples\full._include_.html" header="Principles: SOLID Principles" isOpen="false" no-close="true" no-switch="true"></panel>
-                    </panel>
-                    <p></p>
-                    <question>
-                      Pick the odd one out.
-                      <ul radio-group="e6t7q" class="radio-list">
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="e6t7q" type="radio"> a. Separation of Concerns Principle.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="e6t7q" type="radio"> b. Open Closed Principle.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="e6t7q" type="radio"> c. Liskov Substitution Principle.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="e6t7q" type="radio"> d. Interface Segregation Principle.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="e6t7q" type="radio"> e. Dependency Inversion Principle.</label></li>
-                      </ul>
-                      <div slot="answer">
-                        <ul radio-group="key4g" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" checked name="key4g" type="radio"> a. Separation of Concerns Principle.</label></li>
-                        </ul>
-                        <p>Explanation: These five principles make up the SOLID principles, but only if SCP is replaced by SRP.</p>
-                      </div>
-                    </question>
-                  </panel>
-                </div>
-              </panel>
-            </div>
-            <div></div>
-          </div>
+          <div></div>
         </div>
       </panel>
     </div>

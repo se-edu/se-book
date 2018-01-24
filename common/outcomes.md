@@ -73,30 +73,20 @@
 
 <dynamic-panel src="../design/introduction/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/what/outcomes.md" inline />
 
-<dynamic-panel src="../design/introduction/multilevelDesign/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/multilevelDesign/outcomes.md" inline />
 
-<dynamic-panel src="../design/introduction/topDownBottomUp/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/topDownBottomUp/outcomes.md" inline />
+### Design Fundamentals
 
-<dynamic-panel src="../design/introduction/agileDesign/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../design/introduction/agileDesign/outcomes.md" inline />
+<dynamic-panel src="../designFundamentals/abstraction/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designFundamentals/abstraction/what/outcomes.md" inline />
 
+<dynamic-panel src="../designFundamentals/coupling/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designFundamentals/coupling/what/outcomes.md" inline />
 
-### Design Principles
+<dynamic-panel src="../designFundamentals/coupling/how/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designFundamentals/coupling/how/outcomes.md" inline />
 
-<dynamic-panel src="../designPrinciples/abstraction/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/abstraction/what/outcomes.md" inline />
+<dynamic-panel src="../designFundamentals/coupling/types/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designFundamentals/coupling/types/outcomes.md" inline />
 
-<dynamic-panel src="../designPrinciples/coupling/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/coupling/what/outcomes.md" inline />
+<dynamic-panel src="../designFundamentals/cohesion/how/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designFundamentals/cohesion/how/outcomes.md" inline />
 
-<dynamic-panel src="../designPrinciples/coupling/how/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/coupling/how/outcomes.md" inline />
-
-<dynamic-panel src="../designPrinciples/coupling/types/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/coupling/types/outcomes.md" inline />
-
-<dynamic-panel src="../designPrinciples/cohesion/how/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/cohesion/how/outcomes.md" inline />
-
-<dynamic-panel src="../designPrinciples/cohesion/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/cohesion/what/outcomes.md" inline />
-
-<dynamic-panel src="../designPrinciples/dependencyInversionPrinciple/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/dependencyInversionPrinciple/what/outcomes.md" inline />
-
-<dynamic-panel src="../designPrinciples/openClosedPrinciple/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPrinciples/openClosedPrinciple/what/outcomes.md" inline />
+<dynamic-panel src="../designFundamentals/cohesion/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designFundamentals/cohesion/what/outcomes.md" inline />
 
 
 ### Object Oriented Programming
@@ -151,14 +141,6 @@
 <dynamic-panel src="../oopDesign/polymorphism/introduction/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/polymorphism/introduction/outcomes.md" inline />
 
 <dynamic-panel src="../oopDesign/polymorphism/mechanism/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/polymorphism/mechanism/outcomes.md" inline />
-
-
-<dynamic-panel src="../oopDesign/conceptualizingSolution/introduction/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/conceptualizingSolution/introduction/outcomes.md" inline />
-
-<dynamic-panel src="../oopDesign/conceptualizingSolution/basic/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/conceptualizingSolution/basic/outcomes.md" inline />
-
-<dynamic-panel src="../oopDesign/conceptualizingSolution/intermediate/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/conceptualizingSolution/intermediate/outcomes.md" inline />
-
 
 <dynamic-panel src="../oopDesign/miscellaneous/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopDesign/miscellaneous/outcomes.md" inline />
 
@@ -217,6 +199,14 @@
 
 <dynamic-panel src="../modeling/modelingBehaviors/stateMachineDiagrams/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../modeling/modelingBehaviors/stateMachineDiagrams/outcomes.md" inline />
 
+
+<dynamic-panel src="../modeling/modelingASolution/introduction/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../modeling/modelingASolution/introduction/outcomes.md" inline />
+
+<dynamic-panel src="../modeling/modelingASolution/basic/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../modeling/modelingASolution/basic/outcomes.md" inline />
+
+<dynamic-panel src="../modeling/modelingASolution/intermediate/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../modeling/modelingASolution/intermediate/outcomes.md" inline />
+
+
 <dynamic-panel src="../modeling/review/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../modeling/review/outcomes.md" inline />
 
 
@@ -257,8 +247,6 @@
 
 <dynamic-panel src="../designPatterns/singleton/implementation/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPatterns/singleton/implementation/outcomes.md" inline />
 
-<dynamic-panel src="../designPatterns/singleton/application/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPatterns/singleton/application/outcomes.md" inline />
-
 <dynamic-panel src="../designPatterns/singleton/evaluation/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPatterns/singleton/evaluation/outcomes.md" inline />
 
 
@@ -285,6 +273,15 @@
 
 <dynamic-panel src="../designPatterns/more/otherTypesOfPatterns/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPatterns/more/otherTypesOfPatterns/outcomes.md" inline />
 
+<dynamic-panel src="../designPatterns/more/vsPrinciples/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designPatterns/more/vsPrinciples/outcomes.md" inline />
+
+## Design Approaches
+
+<dynamic-panel src="../designApproaches/multilevelDesign/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designApproaches/multilevelDesign/what/outcomes.md" inline />
+
+<dynamic-panel src="../designApproaches/topDownBottomUp/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designApproaches/topDownBottomUp/what/outcomes.md" inline />
+
+<dynamic-panel src="../designApproaches/agileDesign/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../designApproaches/agileDesign/what/outcomes.md" inline />
 
 ## Implementation
 
@@ -465,8 +462,6 @@
 <dynamic-panel src="../oopImplementation/abstractClasses/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopImplementation/abstractClasses/outcomes.md" inline />
 
 <dynamic-panel src="../oopImplementation/polymorphism/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopImplementation/polymorphism/outcomes.md" inline />
-
-<dynamic-panel src="../oopImplementation/substitutability/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../oopImplementation/substitutability/outcomes.md" inline />
 
 
 ### Reuse
@@ -739,6 +734,13 @@
 <dynamic-panel src="../uml/classDiagrams/interfaces/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/classDiagrams/interfaces/what/outcomes.md" inline />
 
 
+<dynamic-panel src="../uml/objectDiagrams/introduction/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/objectDiagrams/introduction/outcomes.md" inline />
+
+<dynamic-panel src="../uml/objectDiagrams/objects/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/objectDiagrams/objects/outcomes.md" inline />
+
+<dynamic-panel src="../uml/objectDiagrams/associations/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/objectDiagrams/associations/what/outcomes.md" inline />
+
+
 <dynamic-panel src="../uml/sequenceDiagrams/introduction/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/sequenceDiagrams/introduction/outcomes.md" inline />
 
 <dynamic-panel src="../uml/sequenceDiagrams/basic/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/sequenceDiagrams/basic/outcomes.md" inline />
@@ -762,13 +764,6 @@
 <dynamic-panel src="../uml/sequenceDiagrams/minimalNotation/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/sequenceDiagrams/minimalNotation/outcomes.md" inline />
 
 
-<dynamic-panel src="../uml/objectDiagrams/introduction/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/objectDiagrams/introduction/outcomes.md" inline />
-
-<dynamic-panel src="../uml/objectDiagrams/objects/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/objectDiagrams/objects/outcomes.md" inline />
-
-<dynamic-panel src="../uml/objectDiagrams/objectStructures/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/objectDiagrams/objectStructures/outcomes.md" inline />
-
-
 <dynamic-panel src="../uml/activityDiagrams/introduction/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/activityDiagrams/introduction/what/outcomes.md" inline />
 
 <dynamic-panel src="../uml/activityDiagrams/basicNotations/linearPaths/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/activityDiagrams/basicNotations/linearPaths/outcomes.md" inline />
@@ -780,8 +775,6 @@
 <dynamic-panel src="../uml/activityDiagrams/basicNotations/rakes/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/activityDiagrams/basicNotations/rakes/outcomes.md" inline />
 
 <dynamic-panel src="../uml/activityDiagrams/basicNotations/swimlanes/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/activityDiagrams/basicNotations/swimlanes/outcomes.md" inline />
-
-<dynamic-panel src="../uml/activityDiagrams/basicNotations/combined/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/activityDiagrams/basicNotations/combined/outcomes.md" inline />
 
 
 <dynamic-panel src="../uml/notes/notes/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../uml/notes/notes/outcomes.md" inline />
@@ -860,8 +853,6 @@
 
 ### SE Principles
 
-<dynamic-panel src="../principles/what/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/what/outcomes.md" inline />
-
 <dynamic-panel src="../principles/singleResponsibilityPrinciple/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/singleResponsibilityPrinciple/outcomes.md" inline />
 
 <dynamic-panel src="../principles/interfaceSegregationPrinciple/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/interfaceSegregationPrinciple/outcomes.md" inline />
@@ -869,6 +860,8 @@
 <dynamic-panel src="../principles/liskovSubstitutionPrinciple/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/liskovSubstitutionPrinciple/outcomes.md" inline />
 
 <dynamic-panel src="../principles/dependencyInversionPrinciple/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/dependencyInversionPrinciple/outcomes.md" inline />
+
+<dynamic-panel src="../principles/openClosedPrinciple/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/openClosedPrinciple/outcomes.md" inline />
 
 <dynamic-panel src="../principles/solidPrinciples/full.md" alt=":mag:" header="Details of the LO" minimized /><include src="../principles/solidPrinciples/outcomes.md" inline />
 

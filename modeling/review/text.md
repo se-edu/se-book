@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Modeling &rarr; </div>
+<div id="path">Modeling → </div>
 
 <div id="title">
 
@@ -12,7 +12,7 @@
 
 <div id="body">
 
-...
+
 
 </div>
 
@@ -20,6 +20,6 @@
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

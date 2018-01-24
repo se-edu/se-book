@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - Software Design Fundamentals: Coupling</title>
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <h2 id="coupling">Coupling</h2>
+  <div id="main">
+    <div>
+      <div>
+        <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+      </div>
+      <tip-box>
+        <div>
+          <p>🏆 Can explain coupling <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p><strong><em>Coupling</em> is a measure of the degree of <em>dependence</em></strong> between components, classes, methods, etc. Low coupling indicates that a component is less dependent on other components. <strong>High coupling (aka <em>tight</em> coupling or <em>strong</em> coupling) is discouraged</strong>              due to the following disadvantages:</p>
+            <ul>
+              <li><strong>Maintenance is harder</strong> because a change in one module could cause changes in other modules coupled to it (i.e. a ripple effect).</li>
+              <li><strong>Integration is harder</strong> because multiple components coupled with each other have to be integrated at the same time.</li>
+              <li><strong>Testing and reuse of the module is harder</strong> due to its dependence on other modules.</li>
+            </ul>
+            <tip-box>
+              <p>📦 In the example below, design <code>A</code> appears to have a more coupling between the components than design <code>B</code>.</p><img src="/se-book/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220">
+              <p></p>
+            </tip-box>
+          </div>
+          <div>
+            <div>
+              <panel header=":muscle: Exercises" expandable="">
+                <div>
+                  <panel header=":lock::key: Coupling levels of alternative designs">
+                    <question has-input="true">
+                      <p>Discuss the coupling levels of alternative designs <em>x</em> and <em>y</em>.</p>
+                      <tip-box><img src="/se-book/designFundamentals/coupling/what/images/alternativeDesigns.png" height="180">
+                        <p></p>
+                      </tip-box>
+                      <div slot="answer">
+                        <p>Overall coupling levels in <em>x</em> and <em>y</em> seem to be similar (neither has more dependencies than the other). (Note that the number of dependency links is not a definitive measure of the level of coupling. Some links
+                          may be stronger than the others.). However, in <em>x</em>, <code>A</code> is highly-coupled to the rest of the system while <code>B</code>, <code>C</code>, <code>D</code>, and <code>E</code> are standalone (do not depend on anything
+                          else). In <em>y</em>, no component is as highly-coupled as <code>A</code> of <em>x</em>. However, only <code>D</code> and <code>E</code> are standalone.</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+                <div>
+                  <panel header=":lock::key: regressions and coupling.">
+                    <question has-input="true">
+                      <p>Explain the link (if any) between regressions and coupling.</p>
+                      <div slot="answer">
+                        <p>When the system is highly-coupled, the risk of regressions is higher too <span class="dimmed"> e.g. when component <code>A</code> is modified, all components ‘coupled’ to component <code>A</code> risk ‘unintended behavioral changes’</span>.</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+                <div>
+                  <panel header=":lock::key: Coupling and testability">
+                    <question has-input="true">
+                      <p>Discuss the relationship between coupling and
+                        <tooltip content="a measure of how easily a given component can be tested">testability</tooltip>.</p>
+                      <div slot="answer">
+                        <p>Coupling decreases testability because if the
+                          <tooltip content="Software Under Test">SUT</tooltip> is coupled to many other components it becomes difficult to test the SUI in isolation of its dependencies.</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+                <div>
+                  <panel header=":lock::key: Statements about coupling">
+                    <question>
+                      <p>Choose the correct statements.</p>
+                      <ul class="task-list">
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. As coupling increases, testability decreases.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. As coupling increases, the risk of regression increases.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. As coupling increases, the value of automated regression testing increases.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. As coupling increases, integration becomes easier as everything is connected together.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. As coupling increases, maintainability decreases.</li>
+                      </ul>
+                      <div slot="answer">
+                        <p>(a)(b)(c)<s>(d)</s>(e)</p>
+                        <p>Explanation: High coupling means either more components require to be integrated at once in a big-bang fashion (increasing the risk of things going wrong) or more drivers and stubs are required when integrating incrementally.</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+              </panel>
+            </div>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <div>
+        <h4 id="how-two">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+      </div>
+      <tip-box>
+        <div>
+          <p>🏆 Can reduce coupling <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p><strong>X is <em>coupled</em> to Y if a change to Y can <mark>potentially</mark> require a change in X</strong>.</p>
+            <tip-box>
+              <p>📦 If <code>Foo</code> class calls the method <code>Bar#read()</code>, <code>Foo</code> is coupled to <code>Bar</code> because a change to <code>Bar</code> can potentially (but not always) require a change in the <code>Foo</code> class
+                <span
+                  class="dimmed"> e.g. if the signature of the <code>Bar#read()</code> is changed, <code>Foo</code> needs to change as well, but a change to the <code>Bar#write()</code> method may not require a change in the <code>Foo</code> class because <code>Foo</code>                  does not call <code>Bar#write()</code></span>.</p>
+              <panel type="seamless" header="%%code for the above example%%">
+                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+    ...
+    <span class="hljs-keyword">new</span> Bar().read();
+    ...
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{
+        ...
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">()</span></span>{
+        ...
+    }
+}
+</code></pre>
+              </panel>
+            </tip-box>
+            <tip-box>
+              <p>📦 Some examples of coupling: <code>A</code> is coupled to <code>B</code> if,</p>
+              <ul>
+                <li><code>A</code> has access to the internal structure of <code>B</code> (this results in a very high level of coupling)</li>
+                <li><code>A</code> and <code>B</code> depend on the same global variable</li>
+                <li><code>A</code> calls <code>B</code></li>
+                <li><code>A</code> receives an object of <code>B</code> as a parameter or a return value</li>
+                <li><code>A</code> inherits from <code>B</code></li>
+                <li><code>A</code> and <code>B</code> are required to follow the same data format or communication protocol</li>
+              </ul>
+            </tip-box>
+          </div>
+          <div>
+            <div>
+              <panel header=":muscle: Exercises" expandable="">
+                <div>
+                  <panel header=":lock::key: Which indicate coupling?">
+                    <question>
+                      <p>Which of these indicate a coupling between components A and B?</p>
+                      <ul class="task-list">
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. component A has access to internal structure of component B.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. component A and B are written by the same developer.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. component A calls component B.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. component A receives an object of component B as a parameter.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. component A inherits from component B.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. components A and B have to follow the same data format or communication protocol.</li>
+                      </ul>
+                      <div slot="answer">
+                        <p>(a)<s>(b)</s>(c)(d)(e)(f)</p>
+                        <p>Explanation: Being written by the same developer does not imply a coupling.</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+              </panel>
+            </div>
+          </div>
+        </div>
+      </panel>
+    </div>
+    <div>
+      <div>
+        <h4 id="types-of-coupling-three">Types of Coupling <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+      </div>
+      <tip-box>
+        <div>
+          <p>🏆 Can identify types of coupling <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+        </div>
+      </tip-box>
+      <panel type="seamless" header=" %%- - - - - - - - - -%%">
+        <div>
+          <div>
+            <p>Some examples of different coupling types:</p>
+            <ul>
+              <li><strong>Content coupling</strong>: one module modifies or relies on the internal workings of another module <span class="dimmed"> e.g., accessing local data of another module</span></li>
+              <li><strong>Common/Global coupling</strong>: two modules share the same global data</li>
+              <li><strong>Control coupling</strong>: one module controlling the flow of another, by passing it information on what to do <span class="dimmed"> e.g., passing a flag</span></li>
+              <li><strong>Data coupling</strong>: one module sharing data with another module <span class="dimmed"> e.g. via passing parameters</span></li>
+              <li><strong>External coupling</strong>: two modules share an externally imposed convention <span class="dimmed"> e.g., data formats, communication protocols, device interfaces</span>.</li>
+              <li><strong>Subclass coupling</strong>: a class inherits from another class. Note that a child class is coupled to the parent class but not the other way around.</li>
+              <li><strong>Temporal coupling</strong>: two actions are bundled together just because they happen to occur at the same time <span class="dimmed"> e.g. extracting a contiguous block of code as a method although the code block contains statements unrelated to each other</span></li>
+            </ul>
+          </div>
+          <div></div>
+        </div>
+      </panel>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\markbind\js\setup.js"></script>
+</html>

@@ -1,1 +1,1 @@
-Tools &rarr; Intellij IDEA &rarr;
+Tools → Intellij IDEA →

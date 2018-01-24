@@ -12,7 +12,7 @@
 
 <tip-box type="definition"> 
 
->Design in the creative process of transforming the problem into a solution; the solution is also called design. <sub>-- :book: _Software Engineering Theory and Practice_,  Shari Lawrence; Atlee, Joanne M. Pfleeger</sub>
+Design in the creative process of transforming the problem into a solution; the solution is also called design. <sub>-- :book: _Software Engineering Theory and Practice_,  Shari Lawrence; Atlee, Joanne M. Pfleeger</sub>
 
 </tip-box>
 
@@ -23,6 +23,6 @@
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

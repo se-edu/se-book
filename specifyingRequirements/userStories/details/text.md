@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Specifying Requirements &rarr; User Stories &rarr;</div>
+<div id="path">Specifying Requirements → User Stories →</div>
 
 <div id="title">
 
@@ -97,6 +97,6 @@ User stories for a travel website (credit: Mike Cohen)
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

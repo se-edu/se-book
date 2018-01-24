@@ -28,14 +28,34 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p><em>Boundary Value Analysis (BVA)</em> is another heuristic that can enhance the E&amp;E of test cases designed using equivalence partitioning. It is based on the observation that bugs often result from incorrect handling of boundaries of
-              equivalence partitions. This is not surprising, as the end points of the boundary are often used in branching instructions etc. where the programmer can make mistakes.</p>
-            <p>E.g. <code>markCellAt(int x, int y)</code> operation could contain code such as if <code>(x &gt; 0 &amp;&amp; x &lt; = (W-1))</code> which involves boundaries of x’s equivalence partitions.</p>
-            <p>BVA suggests that when picking test inputs from an equivalence partition, values near boundaries (i.e. boundary values) should be included.</p>
-            <p>Boundary values are sometimes called corner cases.</p>
+            <p><strong><em>Boundary Value Analysis (BVA)</em> is test case design heuristic that is based on the observation that bugs often result from incorrect handling of boundaries of equivalence partitions.</strong> This is not surprising, as the end
+              points of the boundary are often used in branching instructions etc. where the programmer can make mistakes.</p>
+            <tip-box>
+              <p>📦 <code>markCellAt(int x, int y)</code> operation could contain code such as if <code>(x &gt; 0 &amp;&amp; x &lt; = (W-1))</code> which involves boundaries of x’s equivalence partitions.</p>
+            </tip-box>
+            <p><strong>BVA suggests that when picking test inputs from an equivalence partition, values near boundaries (i.e. boundary values) are more likely to find bugs.</strong></p>
+            <p>Boundary values are sometimes called <em>corner cases</em>.</p>
           </div>
           <div>
-            <div></div>
+            <div>
+              <panel header=":muscle: Exercises" expandable="">
+                <div>
+                  <panel header=":lock::key: What BVA recommends">
+                    <question>
+                      <p>Boundary value analysis recommends testing <em>only</em> values that reside on the equivalence class boundary.</p>
+                      <ul radio-group="8rxxb" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="8rxxb" type="radio"> True</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="8rxxb" type="radio"> False</label></li>
+                      </ul>
+                      <div slot="answer">
+                        <p>False</p>
+                        <p>Explanation: It does not recommend testing <em>only</em> those values <em>on</em> the boundary. It merely suggests that values on and around a boundary are more likely to cause errors.</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+              </panel>
+            </div>
           </div>
         </div>
       </panel>
@@ -52,84 +72,60 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>Typically, we choose three values around the boundary to test: one value from the boundary, one value just below the boundary, and one value just above the boundary.</p>
-            <p>Some examples:</p>
-            <table class="table">
-              <tr>
-                <th>Equivalence partition</th>
-                <th>Some possible boundary values</th>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li>[1-12]</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>0,1,2, 11,12,13</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li>[MIN_INT, 0]</li>
-                    <li>* MIN_INT is the minimum possible integer value allowed by the environment.</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>MIN_INT, MIN_INT+1, -1, 0 , 1</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li>[any non-null String]</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>Empty String, a String of maximum possible length</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li>[prime numbers]</li>
-                    <li>[“F”]</li>
-                    <li>[“A”, “D”, “X”]</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>No specific boundary</li>
-                    <li>No specific boundary</li>
-                    <li>No specific boundary</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li>[non-empty Stack]</li>
-                    <li>* we assume a fixed size stack</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>Stack with: one element, two elements, no empty spaces, only one empty space</li>
-                  </ul>
-                </td>
-              </tr>
-            </table>
+            <p><strong>Typically, we choose three values around the boundary to test: one value from the boundary, one value just below the boundary, and one value just above the boundary.</strong> The number of values to pick depends on other factors, such
+              as the cost of each test case.</p>
+            <tip-box>
+              <p>📦 Some examples:</p>
+              <table class="table">
+                <tr>
+                  <th>Equivalence partition</th>
+                  <th>Some possible boundary values</th>
+                </tr>
+                <tr>
+                  <td>
+                    <p>[1-12]</p>
+                  </td>
+                  <td>
+                    <p>0,1,2, 11,12,13</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>[MIN_INT, 0]<br><span class="dimmed">(MIN_INT is the minimum possible integer value allowed by the environment)</span></p>
+                  </td>
+                  <td>
+                    <p>MIN_INT, MIN_INT+1, -1, 0 , 1</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>[any non-null String]</p>
+                  </td>
+                  <td>
+                    <p>Empty String, a String of maximum possible length</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>[prime numbers]<br> [“F”]
+                      <br> [“A”, “D”, “X”]</p>
+                  </td>
+                  <td>
+                    <p>No specific boundary<br> No specific boundary<br> No specific boundary</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>[non-empty Stack]<br><span class="dimmed">(we assume a fixed size stack)</span></p>
+                  </td>
+                  <td>
+                    <p>Stack with: one element, two elements, no empty spaces, only one empty space</p>
+                  </td>
+                </tr>
+              </table>
+            </tip-box>
           </div>
-          <div>
-            <div></div>
-          </div>
+          <div></div>
         </div>
       </panel>
     </div>

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**SLDC Process Models &rarr;**%%
+%%**SDLC Process Models →**%%
 
 ## Example Process Models
 

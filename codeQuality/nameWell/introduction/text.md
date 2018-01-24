@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Code Quality &rarr; Guideline: Name Well &rarr;</div>
-
 <div id="title">
 
 #### Introduction :one:
@@ -19,6 +17,6 @@ Proper naming improves the readability. It also reduces bugs caused by ambiguiti
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

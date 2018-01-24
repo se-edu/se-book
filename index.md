@@ -13,6 +13,12 @@
 
 <include src="softwareEngineering/topicToc.md" />
 
+### Object-Oriented Programming (with UML)
+
+<include src="oopDesign/topicToc.md" />
+
+<include src="oopImplementation/topicToc.md" />
+
 ### Requirements
 
 <include src="requirements/topicToc.md" />
@@ -25,15 +31,15 @@
 
 <include src="design/topicToc.md" />
 
-<include src="designPrinciples/topicToc.md" />
-
-<include src="oopDesign/topicToc.md" />
+<include src="designFundamentals/topicToc.md" />
 
 <include src="modeling/topicToc.md" />
 
 <include src="architecture/topicToc.md" />
 
 <include src="designPatterns/topicToc.md" />
+
+<include src="designApproaches/topicToc.md" />
 
 ### Implementation
 
@@ -48,8 +54,6 @@
 <include src="errorHandling/topicToc.md" />
 
 <include src="integration/topicToc.md" />
-
-<include src="oopImplementation/topicToc.md" />
 
 <include src="reuse/topicToc.md" />
 
@@ -87,7 +91,7 @@
 
 <include src="principles/topicToc.md" />
 
-<include src="review/topicToc.md" />
+<!-- TODO: add review -->
 
 * [List of Definitions](common/definitions.html)
 * [List of References](common/references.html)

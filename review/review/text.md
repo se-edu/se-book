@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Review &rarr; </div>
+<div id="path">Review → </div>
 
 <div id="title">
 
@@ -20,6 +20,6 @@
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

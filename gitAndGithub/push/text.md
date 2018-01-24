@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Git and Github &rarr; </div>
+<div id="path">Git and Github → </div>
 
 <div id="title">
 
@@ -12,7 +12,7 @@
 
 <div id="body">
 
-1. Fork the [samplerepo-things](https://github.com/nus-cs2103-AY1718S1/samplerepo-things) to your GitHub account: 
+1. Fork the [samplerepo-things](https://github.com/nus-cs2103-AY1718S2/samplerepo-things) to your GitHub account: 
 
    <panel type="seamless" header="%%How to fork a repo?%%">
     
@@ -36,6 +36,6 @@
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

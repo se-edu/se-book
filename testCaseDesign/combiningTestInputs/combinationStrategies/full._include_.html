@@ -1,4 +1,6 @@
-<p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design →
+<div></div>
+<p></p>
+<p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design → Combining Test Inputs →
 </span></strong>
   </span>
 </p>
@@ -9,8 +11,8 @@
   <div>
     <p>Given below are some basic strategies for generating a set of test cases by combining multiple test input combination strategies.</p>
     <tip-box>
-      <p>Scenario: foo</p>
-      <p>SUT: foo(p1 char, p2 int, p3 boolean)</p>
+      <p>📦 Let's assume the SUT has the following three inputs and you have selected the given values for testing:</p>
+      <p>SUT: <code>foo(p1 char, p2 int, p3 boolean)</code></p>
       <p>Selected values for each input:</p>
       <table class="markbind-table table">
         <thead>
@@ -35,9 +37,9 @@
         </tbody>
       </table>
     </tip-box>
-    <p><strong>a) all combinations</strong>: generate test cases for each unique combination of test inputs</p>
+    <p><strong>all combinations</strong>: generate test cases for each unique combination of test inputs</p>
     <tip-box>
-      <p>Example: the foo scenario requires 3x3x2=18 test cases under the ‘all combinations strategy</p>
+      <p>📦 the strategy generates 3x3x2=18 test cases</p>
       <table class="markbind-table table">
         <thead>
           <tr>
@@ -81,9 +83,9 @@
         </tbody>
       </table>
     </tip-box>
-    <p><strong>b) at least once</strong>: include each test input at least once</p>
+    <p><strong>at least once</strong>: include each test input at least once.</p>
     <tip-box>
-      <p>Example:</p>
+      <p>📦 this strategy generates 3 test cases.</p>
       <table class="markbind-table table">
         <thead>
           <tr>
@@ -103,7 +105,7 @@
           <tr>
             <td style="text-align:center">2</td>
             <td style="text-align:center">b</td>
-            <td style="text-align:center">1</td>
+            <td style="text-align:center">2</td>
             <td style="text-align:center">F</td>
           </tr>
           <tr>
@@ -114,12 +116,58 @@
           </tr>
         </tbody>
       </table>
-      <p>VV/IV = Any Value</p>
+      <p>VV/IV = Any Valid Value / Any Invalid Value</p>
     </tip-box>
-    <p><strong>c) all pairs</strong>: This strategy creates test cases so that for any given pair of parameters, all combinations between them are tested. It is based on the observations that a bug is rarely the result of more than two interacting factors.
-      The resulting number of test cases is lower than the “all combinations” approach, but higher than the “at least once” approach.</p>
+    <p><strong>all pairs</strong>: This strategy creates test cases so that for any given pair of inputs, all combinations between them are tested. It is based on the observations that a bug is rarely the result of more than two interacting factors. The
+      resulting number of test cases is lower than the &quot;all combinations&quot; strategy, but higher than the &quot;at least once&quot; approach.</p>
     <tip-box>
-      <p>Example: the foo scenario requires 9 test cases to cover all pairs</p>
+      <p>📦 this strategy generates 9 test cases:</p>
+      <panel type="seamless" header="see steps">
+        <p>Let's first consider inputs p1 and p2:</p>
+        <table class="markbind-table table">
+          <thead>
+            <tr>
+              <th style="text-align:center">Input</th>
+              <th style="text-align:center">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:center">p1</td>
+              <td style="text-align:center">a, b, c</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">p2</td>
+              <td style="text-align:center">1, 2, 3</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>These values can generate
+          <tooltip content="(a,1)(a,2)(a,3)(b,1)(b,2),...">3x3=9 combinations</tooltip>, and the test cases should cover all of them.</p>
+        <p>Next, let's consider p1 and p3.</p>
+        <table class="markbind-table table">
+          <thead>
+            <tr>
+              <th style="text-align:center">Input</th>
+              <th style="text-align:center">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:center">p1</td>
+              <td style="text-align:center">a, b, c</td>
+            </tr>
+            <tr>
+              <td style="text-align:center">p3</td>
+              <td style="text-align:center">T, F</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>These values can generate
+          <tooltip content="(a,T)(a,F)(b,T)(b,F),...">3x2=6 combinations</tooltip>, and the test cases should cover all of them.</p>
+        <p>Similarly, inputs p2 and p3 generates another 6 combinations.</p>
+        <p>The 9 test cases given below covers all those 9+6+6 combinations.</p>
+      </panel>
       <table class="markbind-table table">
         <thead>
           <tr>
@@ -189,7 +237,7 @@
     </tip-box>
     <p>A variation of this strategy is to test all pairs of inputs but only for inputs that could influence each other.</p>
     <tip-box>
-      <p>Example: the foo scenario, testing all pairs between p1 and p3 only while ensuring all p3 values are tested at least once</p>
+      <p>📦 Testing all pairs between p1 and p3 only while ensuring all p3 values are tested at least once</p>
       <table class="markbind-table table">
         <thead>
           <tr>
@@ -239,10 +287,8 @@
         </tbody>
       </table>
     </tip-box>
-    <p><strong>d) random:</strong> In this strategy we generate test cases using one of the other strategies and then pick a subset randomly (presumably because the original set of test cases is too big).</p>
+    <p><strong>d) random:</strong> This strategy generates test cases using one of the other strategies and then pick a subset randomly (presumably because the original set of test cases is too big).</p>
     <p><strong>e) other</strong>: There are other strategies that can be used.</p>
   </div>
-  <div>
-    <div></div>
-  </div>
+  <div></div>
 </div>

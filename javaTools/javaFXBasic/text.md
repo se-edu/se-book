@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Java &rarr; </div>
+<div id="path">Java → </div>
 
 <div id="title">
 
@@ -31,6 +31,6 @@ After going through the two parts above, you should be familiar with building ba
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Revision Control &rarr; </div>
+<div id="path">Revision Control → </div>
 
 <div id="title">
 
@@ -38,6 +38,6 @@ Here is a scenario that includes all the concepts introduced above (click on the
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

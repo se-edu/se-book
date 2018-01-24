@@ -10,10 +10,7 @@ Pick the odd one out.
 
 <div slot="answer">
 
-- [ ] a. GitHub
-- [ ] b. SourceForge
-- [ ] c. BitBucket
-- [x] d. SubVersion
+(d)
 
 Explanation: SubVersion is a revision control software (similar to Git). The others are online project management platforms.
 

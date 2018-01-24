@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Aggregation :two:
+#### Implementing Aggregation :two:
 
 </div>
 
@@ -34,6 +34,6 @@ class Car {
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Integration &rarr;**%%
+%%**Integration →**%%
 
 ## Build Automation
 

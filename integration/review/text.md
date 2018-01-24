@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Integration &rarr; </div>
+<div id="path">Integration → </div>
 
 <div id="title">
 
@@ -20,6 +20,6 @@
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

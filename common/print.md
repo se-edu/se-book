@@ -11,9 +11,59 @@
 <hr>
 <hr>
 
+
+* [**SECTION: INTRODUCTION**](#section-introduction)
+  * [Software Engineering](#software-engineering)
+* [**SECTION: OOP (with UML)**](#section-oop-with-uml) 
+  * [OOP - Concepts](#oop-concepts)
+  * [OOP - Implementation](#oop-implementation)
+* [**SECTION: REQUIREMENTS**](#section-requirements) 
+  * [Requirements](#requirements)
+  * [Gathering Requirements](#gathering-requirements)
+  * [Specifying Requirements](#specifying-requirements)
+* [**SECTION: DESIGN**](#section-design) 
+  * [Design](#design)
+  * [Design Fundamentals](#design-fundamentals)
+  * [Modeling](#modeling)
+  * [Architecture](#software-architecture)
+  * [Design Patterns](#software-design-patterns)
+  * [Design Approaches](#design-approaches)
+* [**SECTION: IMPLEMENTATION**](#section-implementation) 
+  * [IDEs](#ides)
+  * [Code Quality](#code-quality)
+  * [Refactoring](#refactoring)
+  * [Documentation](#documentation)
+  * [Error Handling](#error-handling)
+  * [Integration](#integration)
+  * [Reuse](#reuse)
+* [**SECTION: QUALITY ASSURANCE**](#section-quality-assurance) 
+  * [Quality Assurance](#quality-assurance)
+  * [Testing](#testing)
+  * [Test Case Design](#test-case-design)
+* [**SECTION: PROJECT MANAGEMENT**](#section-project-management) 
+  * [Revision Control](#revision-control)
+  * [Project Planning](#project-planning)
+  * [Teamwork](#teamwork)
+  * [SDLC Process Models](#sdlc-process-models)
+* [**SECTION: TOOLS**](#section-tools) 
+  * [UML](#uml)
+  * [Intellij IDEA](#intellij-idea)
+  * [Git and Github](#git-and-github)
+  * [Java](#java)
+  * [JUnit](#junit)
+* [**SECTION: SUPPLEMENTARY**](#section-supplementary) 
+  * [Principles](#principles)
+
 # SECTION: INTRODUCTION
 
 <include src="../softwareEngineering/print.md#main" />
+
+<hr>
+
+# SECTION: OOP (with UML)
+
+<include src="../oopDesign/print.md#main" />
+<include src="../oopImplementation/print.md#main" />
 
 <hr>
 
@@ -28,11 +78,11 @@
 # SECTION: DESIGN
 
 <include src="../design/print.md#main" />
-<include src="../designPrinciples/print.md#main" />
-<include src="../oopDesign/print.md#main" />
+<include src="../designFundamentals/print.md#main" />
 <include src="../modeling/print.md#main" />
 <include src="../architecture/print.md#main" />
 <include src="../designPatterns/print.md#main" />
+<include src="../designApproaches/print.md#main" />
 
 <hr>
 
@@ -44,7 +94,6 @@
 <include src="../documentation/print.md#main" />
 <include src="../errorHandling/print.md#main" />
 <include src="../integration/print.md#main" />
-<include src="../oopImplementation/print.md#main" />
 <include src="../reuse/print.md#main" />
 
 <hr>
@@ -79,7 +128,12 @@
 # SECTION: SUPPLEMENTARY
 
 <include src="../principles/print.md#main" />
-<include src="../review/print.md#main" />
+
+<!-- TODO: add review -->
+
+<hr>
+
+%%[END OF BOOK]%%
 
 </div>
 

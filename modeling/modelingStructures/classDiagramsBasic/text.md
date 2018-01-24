@@ -4,20 +4,46 @@
 
 <div id="title">
 
-#### Class Diagrams - Basic :one:
+#### Class Diagrams (Basics) :one:
 
 </div>
 
 <div id="body">
 
-<dynamic-panel src="../../../oopDesign/associations/basic/full.md" header=":mortar_board: Design &rarr; OOP &rarr; Associations &rarr; Basic" is-open></dynamic-panel>
-<dynamic-panel src="../../../oopDesign/associations/navigability/full.md" header=":mortar_board: Design :&rarr; OOP &rarr; Associations &rarr; Navigability" is-open></dynamic-panel>
-<dynamic-panel src="../../../oopDesign/associations/multiplicity/full.md" header=":mortar_board: Design &rarr; OOP &rarr; Associations &rarr; Multiplicity" is-open></dynamic-panel>
+**_Associations_ among objects/classes play an important role in an OO solution.**
+
+<dynamic-panel src="../../../oopDesign/associations/basic/full.md" header=":mortar_board: OOP → Associations → Basic" />
+
+The most basic class diagram is a bunch of classes with some solid lines among them to represent associations, such as this one.
+
+<tip-box> 
+
+:package: An example class diagram showing associations between classes.
+<p/><img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculatorPerson.png" height="100" />
+<p/>
+
+</tip-box> 
+
+In addition, **associations can show additional decorations such as _association labels_, _association roles_, _multiplicity_ and _navigability_** to add more information to a class diagram.
+
+<dynamic-panel src="../../../../book/uml/classDiagrams/associations/labels/full.md" header=":mortar_board: UML → Class Diagrams → Associations → Labels"/>
+<dynamic-panel src="../../../../book/uml/classDiagrams/associations/roles/full.md" header=":mortar_board: UML → Class Diagrams → Associations → Roles"/>
+<dynamic-panel src="../../../../book/oopDesign/associations/multiplicity/full.md" header=":mortar_board: OOP → Associations → Multiplicity" />
+<dynamic-panel src="../../../../book/oopDesign/associations/navigability/full.md" header=":mortar_board: OOP → Associations → Navigability" />
+
+<tip-box> 
+
+:package: Here is the same class diagram shown earlier but with some additional information included: 
+<p/><img src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/ageListCalculatorPerson.png" width="450" />
+<p/>
+
+</tip-box>
+
 
 </div>
 
 <div id="extras">
   <include src="exercises.md"/>
-<div>
+</div>
 
 </div>

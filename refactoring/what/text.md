@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Refactoring &rarr; </div>
+<div id="path">Refactoring → </div>
 
 <div id="title">
 
@@ -17,9 +17,9 @@ The first version of the code you write may not be of production quality. It is 
 * **Refactoring is not rewriting**: Discarding poorly-written code entirely and re-writing it from scratch is not refactoring because refactoring needs to be done in small steps.
 * **Refactoring is not bug fixing**: By definition, refactoring is different from bug fixing or any other modifications that alter the external behavior (e.g. adding a feature) of the component in concern.
 
-<tip-box type="tip">
+<tip-box>
 
-Improving code structure can have many secondary benefits: e.g.
+:bulb: Improving code structure can have many secondary benefits: e.g.
  * hidden bugs become easier to spot
  * improve performance (sometimes, simpler code runs faster than complex code because simpler code is easier for the compiler to optimize). 
 
@@ -94,9 +94,9 @@ void printDetails (double outstanding) {
 
 </tip-box>
 
-<tip-box type="info">
+<tip-box>
 
-Tip: Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.
+:bulb: Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.
 
 </tip-box>
 
@@ -112,6 +112,6 @@ Important: Refactoring, even if done with the aid of an IDE, may still result in
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

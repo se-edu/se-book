@@ -84,7 +84,8 @@
 </code></pre>
                       </panel>
                     </tip-box>
-                    <p><strong>The 'Operations' compartment and/or the 'Attributes' compartment may be omitted</strong> if such details are not important for the task at hand.</p>
+                    <p><strong>The 'Operations' compartment and/or the 'Attributes' compartment may be omitted</strong> if such details are not important for the task at hand. 'Attributes' always appear above the 'Operations' compartment. All operations
+                      should be in one compartment rather than each operation in a separate compartment. Same goes for attributes.</p>
                     <tip-box><img src="/se-book/uml/classDiagrams/classes/what/images/classes.png" height="100"></tip-box>
                     <p><strong>The <em>visibility</em> of attributes and operations is used to indicate the level of access allowed for each attribute or operation.</strong> The types of visibility and their exact meanings depend on the programming language
                       used. Here are some common visibilities and how they are indicated in a class diagram:</p>
@@ -176,8 +177,11 @@
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p>We use a solid line to show an association between two classes.</p><img src="/se-book/uml/classDiagrams/associations/basic/images/basic.png" height="200">
+                    <p>We use a solid line to show an association between two classes.</p><img src="/se-book/uml/classDiagrams/associations/basic/images/notation.png" width="300">
                     <p></p>
+                    <tip-box>
+                      <p>📦 This example shows an association between the <code>Admin</code> class and the <code>Student</code> class:<br><img src="/se-book/uml/classDiagrams/associations/basic/images/example.png" width="300"></p>
+                    </tip-box>
                   </div>
                   <div></div>
                 </div>
@@ -607,7 +611,7 @@
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p><strong>An interface is shown similar to a class with an additional keyword <code>&lt;&lt; interface &gt;&gt;</code>. Interface inheritance is shown similar to class inheritance except a dashed line is used instead of a solid line.</strong></p>
+                    <p><strong>An interface is shown similar to a class with an additional keyword <code>&lt;&lt; interface &gt;&gt;</code>. When a class implements an interface, it is shown similar to class inheritance except a dashed line is used instead of a solid line.</strong></p>
                     <tip-box>
                       <p>📦 The <code>AcademicStaff</code> and the <code>AdminStaff</code> classes <em>implement</em> the <code>SalariedStaff</code> interface.</p><img src="/se-book/uml/classDiagrams/interfaces/what/images/staff.png" height="250">
                       <p></p>
@@ -674,9 +678,7 @@
                 <p></p>
               </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -704,10 +706,15 @@
               <p>The <code>:TextUi</code> in the above example denotes <em>an unnamed instance of the class TextUi</em>. If there were two instances of <code>TextUi</code> in the diagram, they can be distinguished by naming them e.g. <code>TextUi1:TextUi</code>                and <code>TextUi2:TextUi</code>.</p>
               <p><strong>Arrows representing method calls should be solid arrows while those representing method returns should be dashed arrows</strong>.</p>
               <p>Note that unlike in Object Diagrams, the <strong>class/object name is not underlined in sequence diagrams</strong>.</p>
+              <tip-box>
+                <p>❌ <strong>[Common notation error] Activation bar too long:</strong> The activation bar of a method cannot start before the method call arrives and a method cannot remain active after the method had returned. <span class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar starts <em>before</em> the method <code>Foo#xyz()</code> is called and remains active <em>after</em> the method returns.</span></p>
+                <img
+                  src="/se-book/uml/sequenceDiagrams/basic/images/commonError-activationBarTooLong.png" height="120">
+                  <p>❌ <strong>[Common notation error] Broken activation bar:</strong> The activation bar should remain unbroken from the point the method is called until the method returns. <span class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method <code>Foo#abc()</code> is not contiguous, but appears as two pieces instead.</span></p>
+                  <img
+                    src="/se-book/uml/sequenceDiagrams/basic/images/commonError-brokenActivationBar.png" height="120"></tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -734,9 +741,7 @@
                 <p></p>
               </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -763,9 +768,7 @@
                 <p></p>
               </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -788,9 +791,7 @@
                 <p></p>
               </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -817,9 +818,7 @@
                 <p></p>
               </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -844,9 +843,7 @@
                 <p></p>
               </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -870,9 +867,7 @@
                 <p></p>
               </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -899,9 +894,7 @@
                 </tip-box>
               </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -924,14 +917,11 @@
               <tip-box>
                 <p>📦 The details of the <code>get minefield appearance</code> interactions have been omitted from the diagram.</p><img src="/se-book/uml/sequenceDiagrams/referenceFrames/images/playerTextLogic.png" height="250">
                 <p></p>
-                <p>Those details are shown in a separate sequence diagram given below.
-                  <img src="/se-book/uml/sequenceDiagrams/referenceFrames/images/textLogic.png" height="170"></p>
+                <p>Those details are shown in a separate sequence diagram given below.<br><img src="/se-book/uml/sequenceDiagrams/referenceFrames/images/textLogic.png" height="170"></p>
                 <p></p>
               </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -954,9 +944,7 @@
                 <p></p>
               </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -980,9 +968,7 @@
               <p><strong>An object diagram shows an object structure at a given point of time.</strong></p>
               <tip-box><img src="/se-book/oopDesign/associations/basic/images/completeStructure.png" height="120"></tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -1041,52 +1027,28 @@ Car myCar = <span class="hljs-keyword">new</span> Car(<span class="hljs-number">
                   </div>
                 </panel>
               </div>
-              <div></div>
             </div>
           </div>
         </panel>
       </div>
       <div>
         <div>
-          <h4 id="object-structures-one">Object Structures <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+          <h4 id="what-one-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
         </div>
         <tip-box>
           <div>
-            <p>🏆 Can interpret object diagrams <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+            <p>🏆 Can interpret simple associations among objects <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
           </div>
         </tip-box>
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>Notation:</p><img src="/se-book/uml/objectDiagrams/objectStructures/images/notation.png" height="75">
-              <p></p>
+              <p>A solid line indicates an association between two objects.</p><img src="/se-book/uml/objectDiagrams/associations/what/images/notation.png" width="300">
               <tip-box>
-                <p>📦 An example object diagram:</p><img src="/se-book/uml/objectDiagrams/objectStructures/images/professorStudent.png" height="150">
-                <p></p>
+                <p>📦 An example object diagram showing two associations:<br><img src="/se-book/uml/objectDiagrams/associations/what/images/example.png" width="300"></p>
               </tip-box>
             </div>
-            <div>
-              <div>
-                <panel header=":muscle: Exercises" expandable="">
-                  <div>
-                    <panel header=":lock::key: Choose the correct statement.">
-                      <question><img src="/se-book/uml/objectDiagrams/objectStructures/images/exerciseDiagram.png" height="140">
-                        <p></p>
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. This can be a class diagram.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. This can be an object diagram.</li>
-                        </ul>
-                        <div slot="answer">
-                          <p>(b)</p>
-                          <p>Explanation: Only object diagrams have underlined class names. The underline means 'an instance of the given class'.</p>
-                        </div>
-                      </question>
-                    </panel>
-                  </div>
-                </panel>
-              </div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -1111,8 +1073,10 @@ Car myCar = <span class="hljs-keyword">new</span> Car(<span class="hljs-number">
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p>Workflows define the flow or a connected sequence of steps in which a process or a set of tasks is executed. Understanding the workflow of the problem domain is important if the problem that is to be solved is connected to the workflow.</p>
                     <p><strong>A UML Activity diagram (AD) can model workflows.</strong></p>
+                    <div v-closeable="" alt="">
+                      <p>An example activity diagram:<br><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Activity_conducting.svg"><br><sub>[<a href="https://en.wikipedia.org/wiki/Activity_diagram">source:wikipeida</a>]</sub></p>
+                    </div>
                   </div>
                   <div></div>
                 </div>
@@ -1131,17 +1095,51 @@ Car myCar = <span class="hljs-keyword">new</span> Car(<span class="hljs-number">
               </div>
               <tip-box>
                 <div>
-                  <p>🏆 Can use linear paths in activity diagrams <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+                  <p>🏆 Can interpret linear paths in activity diagrams <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
                 </div>
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p>An activity diagram (AD) consists of a sequence of actions and control flows. An <em>action</em> is a single step in an activity. It is shown as a rectangle with <strong>rounded</strong> edges. A control flow shows the flow of control
-                      from one action to the next. It is shown by drawing a line with an arrow-head to show the direction of the flow.</p><img src="/se-book/uml/activityDiagrams/basicNotations/linearPaths/images/diagram.png" height="230">
-                    <p></p>
+                    <p>An activity diagram (AD) captures an <em>activity</em> of <em>actions</em> and <em>control flows</em> that makes up the activity.</p>
+                    <ul>
+                      <li>An <em>action</em> is a single step in an activity. It is shown as a rectangle with <mark>rounded corners</mark>.</li>
+                      <li>A <em>control flow</em> shows the flow of control from one action to the next. It is shown by drawing a line with an arrow-head to show the direction of the flow.</li>
+                    </ul><img src="/se-book/uml/activityDiagrams/basicNotations/linearPaths/images/notation.png" height="180">
+                    <p>Note the slight difference between the <em>start node</em> and the <em>end node</em> which represent the start and the end of the activity, respectively.</p>
+                    <tip-box>
+                      <p>📦 This activity diagram shows the action sequence of the activity <em>a passenger rides the bus</em>:</p><img src="/se-book/uml/activityDiagrams/basicNotations/linearPaths/images/example.png" width="450"></tip-box>
                   </div>
-                  <div></div>
+                  <div>
+                    <div>
+                      <panel header=":muscle: Exercises" expandable="">
+                        <div>
+                          <panel header=":lock::key: Which activity diagrams are correct?">
+                            <question>
+                              <p>Which of these activity diagrams use the correct UML notation?</p>
+                              <ul class="task-list">
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> i</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> ii</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> iii</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> iv</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> v</li>
+                              </ul><img src="/se-book/uml/activityDiagrams/basicNotations/linearPaths/images/q-correctNotation.png" width="500">
+                              <p></p>
+                              <div slot="answer">
+                                <ul>
+                                  <li>i : 👍 Correct. The arrow-head type does not matter.</li>
+                                  <li>ii : Incorrect. The start and end node notation is swapped.</li>
+                                  <li>iii : Incorrect. Action boxes should have rounded corners.</li>
+                                  <li>iv : 👍 Correct. An activity can have only one action.</li>
+                                  <li>v : Incorrect. There cannot be any double-headed arrows.</li>
+                                </ul>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
                 </div>
               </panel>
             </div>
@@ -1151,22 +1149,53 @@ Car myCar = <span class="hljs-keyword">new</span> Car(<span class="hljs-number">
               </div>
               <tip-box>
                 <div>
-                  <p>🏆 Can use alternate paths in activity diagrams <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+                  <p>🏆 Can interpret alternate paths in activity diagrams <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
                 </div>
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p><em>Branch nodes</em> and <em>merge nodes</em> have the same notation: a <strong>diamond</strong> shape. They are used to show alternative (not parallel) paths through the AD. Each control flow exiting a <em>Branch node</em> has a
-                      guard condition which allows control to flow only if the guard condition is satisfied. Therefore, a <em>guard</em> is a boolean condition that should be true for execution to take a specific path.</p><img src="/se-book/uml/activityDiagrams/basicNotations/alternatePaths/images/diagram.png"
-                      height="230">
-                    <p></p>
+                    <p><strong>A <em>branch node</em> shows the start of alternate paths.</strong> Each control flow exiting a branch node has a <em>guard condition</em> : a boolean condition that should be true for execution to take that path. Only one
+                      of the guard condition can be true at any time.</p>
+                    <p><strong>A <em>merge node</em> shows the end of alternate paths.</strong></p>
+                    <p>Both branch nodes and merge nodes are <mark>diamond shapes</mark>. Guard conditions must be in <mark>square brackets</mark>.</p><img src="/se-book/uml/activityDiagrams/basicNotations/alternatePaths/images/notation.png" height="180">
                     <tip-box>
-                      <p>Example: AD for the Minesweeper (MS) that shows actions done by the player and the game (MS).</p><img src="/se-book/uml/activityDiagrams/basicNotations/alternatePaths/images/minesweeper.png" height="240">
+                      <p>📦 The AD below shows alternate paths involved in the workflow of the activity <em>shop for product</em>:</p><img src="/se-book/uml/activityDiagrams/basicNotations/alternatePaths/images/example.png" height="240">
                       <p></p>
                     </tip-box>
                   </div>
-                  <div></div>
+                  <div>
+                    <div>
+                      <panel header=":muscle: Exercises" expandable="">
+                        <div>
+                          <panel header=":lock::key: Which activity diagrams are correct?">
+                            <question>
+                              <p>Which of these activity diagrams use the correct UML notation?</p>
+                              <ul class="task-list">
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> i</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> ii</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> iii</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> iv</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> v</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> vi</li>
+                              </ul><img src="/se-book/uml/activityDiagrams/basicNotations/alternatePaths/images/q-correctNotation1.png" width="500"><img src="/se-book/uml/activityDiagrams/basicNotations/alternatePaths/images/q-correctNotation2.png" width="500">
+                              <p></p>
+                              <div slot="answer">
+                                <ul>
+                                  <li>i : 👍 Correct. There can be more than two alternate paths.</li>
+                                  <li>ii : 👍 Correct. An alternate path can divide into more branches.</li>
+                                  <li>iii : 👍 Correct. A branch can join other branches.</li>
+                                  <li>iv : Incorrect. At <code>x=5</code> both guard conditions become true.</li>
+                                  <li>v : 👍 Correct. It is fine for a branch to form a loop by going back to the original branch node.</li>
+                                  <li>iv : Incorrect. Guard conditions should be given in square brackets.</li>
+                                </ul>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
                 </div>
               </panel>
             </div>
@@ -1176,17 +1205,50 @@ Car myCar = <span class="hljs-keyword">new</span> Car(<span class="hljs-number">
               </div>
               <tip-box>
                 <div>
-                  <p>🏆 Can use parallel paths in activity diagrams <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+                  <p>🏆 Can interpret parallel paths in activity diagrams <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
                 </div>
               </tip-box>
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p><em>Forks</em> and <em>joins</em> have the same notation: a <strong>bar</strong>. They indicate the start and end of concurrent flows of control. The following diagram shows an example of their use. For <em>join</em>, execution along
-                      all incoming control flows should be complete before the execution starts on the outgoing control flow.</p><img src="/se-book/uml/activityDiagrams/basicNotations/parallelPaths/images/diagram.png" height="220">
-                    <p></p>
+                    <p><strong><em>Fork</em> nodes indicate the start of <tooltip content="parallel">concurrent</tooltip> flows of control.</strong></p>
+                    <p><strong><em>Join</em> nodes indicate the end of parallel paths.</strong></p>
+                    <p>Both have the same notation: a bar.</p>
+                    <p>In a
+                      <tooltip content="paths within a matching fork-join pair">set of parallel paths</tooltip>, execution along <strong>all parallel paths should be complete before the execution can start on the outgoing control flow of the <em>join</em>.</strong></p><img src="/se-book/uml/activityDiagrams/basicNotations/parallelPaths/images/notation.png"
+                      height="130">
+                    <tip-box>
+                      <p>📦 In this activity diagram (from an online shop website) the actions <em>User browsers products</em> and <em>System records browsing data</em> happen in parallel. Both of them need to finish before the <em>log out</em> action can
+                        take place.</p><img src="/se-book/uml/activityDiagrams/basicNotations/parallelPaths/images/example.png" width="260"></tip-box>
                   </div>
-                  <div></div>
+                  <div>
+                    <div>
+                      <panel header=":muscle: Exercises" expandable="">
+                        <div>
+                          <panel header=":lock::key: Which activity diagrams are correct?">
+                            <question>
+                              <p>Which of these activity diagrams use the correct UML notation?</p>
+                              <ul class="task-list">
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> i</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> ii</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> iii</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> iv</li>
+                              </ul><img src="/se-book/uml/activityDiagrams/basicNotations/parallelPaths/images/q-correctNotation.png" width="500">
+                              <p></p>
+                              <div slot="answer">
+                                <ul>
+                                  <li>i : 👍 Correct. There can be more than two parallel paths.</li>
+                                  <li>ii : Incorrect. All parallel paths that started from a fork should end in the same join node.</li>
+                                  <li>iii : Incorrect. Parallel paths must end with a join node.</li>
+                                  <li>iv : 👍 Correct. A parallel path can have multiple actions.</li>
+                                </ul>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
                 </div>
               </panel>
             </div>
@@ -1202,11 +1264,14 @@ Car myCar = <span class="hljs-keyword">new</span> Car(<span class="hljs-number">
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p>Here is the AD for a game of ‘snakes and ladders’.</p><img src="/se-book/uml/activityDiagrams/basicNotations/rakes/images/snakesAndLadders.png" height="230">
-                    <p></p>
-                    <p>The <em>rake</em> symbol (in the “Move piece” action above) is used to show that an action is described in another subsidiary activity diagram elsewhere. That diagram is given below.</p><img src="/se-book/uml/activityDiagrams/basicNotations/rakes/images/movePiece.png"
-                      height="230">
-                    <p></p>
+                    <p><strong>The rake notation is used to indicate that a part of the activity is given as a separate diagram.</strong></p>
+                    <tip-box>
+                      <p>📦 Here is the AD for a game of ‘Snakes and Ladders’.</p><img src="/se-book/uml/activityDiagrams/basicNotations/rakes/images/snakesAndLadders.png" height="230">
+                      <p></p>
+                      <p>The <em>rake</em> symbol (in the <code>Move piece</code> action above) is used to show that the action is described in another subsidiary activity diagram elsewhere. That diagram is given below.</p><img src="/se-book/uml/activityDiagrams/basicNotations/rakes/images/movePiece.png"
+                        height="230">
+                      <p></p>
+                    </tip-box>
                   </div>
                   <div></div>
                 </div>
@@ -1224,83 +1289,13 @@ Car myCar = <span class="hljs-keyword">new</span> Car(<span class="hljs-number">
               <panel type="seamless" header=" %%- - - - - - - - - -%%">
                 <div>
                   <div>
-                    <p>It is possible to <em>partition</em> an activity diagram to show who is doing which action. Such partitioned activity diagrams are sometime called <em>swimlane diagrams</em>.</p><img src="/se-book/uml/activityDiagrams/basicNotations/swimlanes/images/diagram.png"
-                      height="220">
-                    <p></p>
-                    <p>Note: Only essential elements of ADs are covered in this handout.</p>
+                    <p><strong>It is possible to <em>partition</em> an activity diagram to show who is doing which action. Such partitioned activity diagrams are sometime called <em>swimlane diagrams</em>.</strong></p>
+                    <tip-box>
+                      <p>📦 A simple example of a swimlane diagram:</p><img src="/se-book/uml/activityDiagrams/basicNotations/swimlanes/images/diagram.png" height="220">
+                      <p></p>
+                    </tip-box>
                   </div>
                   <div></div>
-                </div>
-              </panel>
-            </div>
-            <div>
-              <div>
-                <h4 id="combined-three">Combined <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
-              </div>
-              <tip-box>
-                <div>
-                  <p>🏆 Can use basic activity diagram notations <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
-                </div>
-              </tip-box>
-              <panel type="seamless" header=" %%- - - - - - - - - -%%">
-                <div>
-                  <div></div>
-                  <div>
-                    <div>
-                      <panel header=":muscle: Exercises" expandable="">
-                        <div>
-                          <panel header=":lock::key: Adding features to Minesweeper AD :three:">
-                            <question has-input="true">
-                              <p>Given below is the high-level game logic of the Minesweeper, drawn from the point of view of the player.</p><img src="/se-book/uml/activityDiagrams/basicNotations/combined/images/minesweeperQuestion.png" height="220">
-                              <p></p>
-                              <p>Incorporate the following new features to the above AD.</p>
-                              <p><strong>(a) timing</strong></p>
-                              <p>Description: The game keeps track of the total time spent on a game. The counting starts from the moment the first cell is cleared/marked and stops when the game is won or lost. Time elapsed is shown to the player after every
-                                mark/clear operation.</p>
-                              <p><strong>(b) standing_ground</strong></p>
-                              <p>Description: At the beginning of the game, the player chooses five cells to be revealed without penalty. This is done one cell at a time. If the cell so selected is mined, it will be marked automatically. The objective is
-                                to give some “standing ground” to the player from which he/she can deduce remaining cells. The player cannot mark or clear cells until the standing ground is selected.</p>
-                              <p><strong>(c) tolerate</strong></p>
-                              <p>Description: Marking a cell incorrectly is tolerated as long as the number of cells does not exceed the total mines. Marked cells can be unmarked. The player is not allowed to mark more cells if the total number of marked
-                                cells equals the total number of mines.</p>
-                              <div slot="answer">
-                                <p><strong>(a) No change to the AD</strong></p>
-                                <p>After incorporating (b)</p><img src="/se-book/uml/activityDiagrams/basicNotations/combined/images/minesweeperAnswerA.png" height="220">
-                                <p></p>
-                                <p>Given above is a minimal change. It is OK to show more details of the ‘clear standing ground’ action or show it as a separate AD.</p>
-                                <p>After incorporating (c)</p><img src="/se-book/uml/activityDiagrams/basicNotations/combined/images/minesweeperAnswerB.png" height="290">
-                                <p></p>
-                                <p>Note that some actions/paths have been deleted. The above diagram uses a diamond as either a branch or a merge (but not both). It is ok to use a diamond as both a merge and branch, as long as it does not lead to ambiguities.</p>
-                              </div>
-                            </question>
-                          </panel>
-                        </div>
-                        <div>
-                          <panel header=":lock::key: Which of these sequence of actions is not allowed by the given activity diagram?">
-                            <question>
-                              <p>Which of these sequence of actions is not allowed by the given activity diagram?</p>
-                              <ul class="task-list">
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. start a b c d end</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. start a b c d e f g c d end</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. start a b c d e g f c d end</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. start a b c d g c d end</li>
-                              </ul><img src="/se-book/uml/activityDiagrams/basicNotations/combined/images/sequence.png" height="190">
-                              <p></p>
-                              <div slot="answer">
-                                <ul class="task-list">
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. start a b c d end</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. start a b c d e f g c d end</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. start a b c d e g f c d end</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> d. start a b c d g c d end</li>
-                                </ul>
-                                <p>Explanation: ‘-e-f-’ and ‘-g-’ are parallel paths. Both paths should complete before the execution reaches c again.</p>
-                              </div>
-                            </question>
-                          </panel>
-                        </div>
-                      </panel>
-                    </div>
-                  </div>
                 </div>
               </panel>
             </div>
@@ -1330,9 +1325,7 @@ Car myCar = <span class="hljs-keyword">new</span> Car(<span class="hljs-number">
                 <p></p>
               </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -1354,9 +1347,7 @@ Car myCar = <span class="hljs-keyword">new</span> Car(<span class="hljs-number">
                 <p></p>
               </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -1379,15 +1370,20 @@ Car myCar = <span class="hljs-keyword">new</span> Car(<span class="hljs-number">
             <div>
               <p>Compared to the notation for a class diagrams, object diagrams differ in the following ways:</p>
               <ul>
-                <li>Instance name may be shown</li>
-                <li>There is a <code>:</code> before the class name</li>
-                <li>Instance and class names are underlined</li>
+                <li>Shows objects instead of classes:
+                  <ul>
+                    <li>Instance name may be shown</li>
+                    <li>There is a <code>:</code> before the class name</li>
+                    <li>Instance and class names are underlined</li>
+                  </ul>
+                </li>
                 <li>Methods are omitted</li>
                 <li>Multiplicities are omitted</li>
               </ul>
-              <p>Both object diagrams are derived from the same class diagram shown earlier. In other words, each of these object diagrams shows ‘an instance of’ the same class diagram.</p>
+              <p>Furthermore, <strong>multiple object diagrams can correspond to a single class diagram</strong>.</p>
               <tip-box>
-                <p>Examples:</p><img src="/se-book/uml/miscellaneous/objectVsClassDiagrams/images/professorStudentAdmin.png" height="85">
+                <p>📦 Both object diagrams are derived from the same class diagram shown earlier. In other words, each of these object diagrams shows ‘an instance of’ the same class diagram.</p><img src="/se-book/uml/miscellaneous/objectVsClassDiagrams/images/professorStudentAdmin.png"
+                  height="85">
                 <p></p><img src="/se-book/uml/miscellaneous/objectVsClassDiagrams/images/professorStudent.png" height="150">
                 <p></p>
               </tip-box>
@@ -1413,7 +1409,6 @@ Car myCar = <span class="hljs-keyword">new</span> Car(<span class="hljs-number">
                   </div>
                 </panel>
               </div>
-              <div></div>
             </div>
           </div>
         </panel>

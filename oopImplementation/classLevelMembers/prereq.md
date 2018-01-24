@@ -1,1 +1,1 @@
-<dynamic-panel src="../../oopDesign/classes/classLevelMembers/full.md" header="%%:mortar_board: Design &rarr; OOP &rarr; Classes &rarr; Class-Level Members%%" />
+<dynamic-panel src="../../oopDesign/classes/classLevelMembers/full.md" header="%%:mortar_board: Design → OOP → Classes → Class-Level Members%%" />

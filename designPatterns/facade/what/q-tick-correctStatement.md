@@ -1,22 +1,19 @@
-<panel header=":lock::key: Choose the correct statement.">
+<panel header=":lock::key: Is this Facade?">
 <question>
 
-In the diagram given below, which pattern is most likely to be in use.
+Does the design below likely to use the Facade pattern?
 
 <img src="{{baseUrl}}/designPatterns/facade/what/images/textStorage.png" height="150" />
 <p/>
 
-- [ ] a. Singleton pattern
-- [ ] b. Observer pattern
-- [ ] c. Facade pattern
+- ( ) True
+- ( ) False
 
 <div slot="answer">
 
-- [ ] a. Singleton pattern
-- [ ] b. Observer pattern
-- [x] c. Facade pattern
+True.
 
-Explanation: While the other two patterns may also be applicable to the given design, Facade is clearly visible (Storage is the << Facade >> class).
+Facade is clearly visible (Storage is the << Facade >> class).
 
 </div>
 </question>

@@ -3,15 +3,14 @@
 
 Bidirectional associations, if not implemented properly, can result in referential integrity violations.
 
-- [ ] a. True
-- [ ] b. False
+- ( ) True
+- ( ) False
 
 <div slot="answer">
 
-- [x] a. True
-- [ ] b. False
+True
 
-Explanation: Bidirectional associations require two objects to link to each other. When one of these links is not consistent with the other, we have a RI violation.
+Explanation: Bidirectional associations require two objects to link to each other. When one of these links is not consistent with the other, we have a referential integrity violation.
 
 </div>
 </question>

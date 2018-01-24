@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Software Design Patterns &rarr;**%%
+%%**Software Design Patterns →**%%
 
 ## More
 
@@ -12,6 +12,7 @@
 <include src="otherDesignPatterns/embed.md" />
 <include src="usingDesignPatterns/embed.md" />
 <include src="otherTypesOfPatterns/embed.md" />
+<include src="vsPrinciples/embed.md" />
 
 </div>
 

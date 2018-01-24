@@ -1,1 +1,1 @@
-Requirements &rarr; Specifying Requirements &rarr; User Stories &rarr;
+Requirements → Specifying Requirements → User Stories →

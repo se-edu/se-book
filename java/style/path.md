@@ -1,1 +1,1 @@
-Java &rarr; Code Style &rarr;
+Java → Code Style →

@@ -15,11 +15,13 @@
 <div class="website-content">
   <tip-box>
     <div>
-      <p>🏆 Can use alternate paths in activity diagrams <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+      <p>🏆 Can interpret alternate paths in activity diagrams <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
     </div>
   </tip-box>
   <div>
-    <p><span class="dimmed"><strong><span>Tools → UML →
+    <div></div>
+    <p></p>
+    <p><span class="dimmed"><strong><span>Tools → UML → Activity Diagrams →
 </span></strong>
       </span>
     </p>
@@ -28,16 +30,47 @@
     </div>
     <div id="main">
       <div>
-        <p><em>Branch nodes</em> and <em>merge nodes</em> have the same notation: a <strong>diamond</strong> shape. They are used to show alternative (not parallel) paths through the AD. Each control flow exiting a <em>Branch node</em> has a guard condition
-          which allows control to flow only if the guard condition is satisfied. Therefore, a <em>guard</em> is a boolean condition that should be true for execution to take a specific path.</p><img src="/se-book/uml/activityDiagrams/basicNotations/alternatePaths/images/diagram.png"
-          height="230">
-        <p></p>
+        <p><strong>A <em>branch node</em> shows the start of alternate paths.</strong> Each control flow exiting a branch node has a <em>guard condition</em> : a boolean condition that should be true for execution to take that path. Only one of the guard
+          condition can be true at any time.</p>
+        <p><strong>A <em>merge node</em> shows the end of alternate paths.</strong></p>
+        <p>Both branch nodes and merge nodes are <mark>diamond shapes</mark>. Guard conditions must be in <mark>square brackets</mark>.</p><img src="/se-book/uml/activityDiagrams/basicNotations/alternatePaths/images/notation.png" height="180">
         <tip-box>
-          <p>Example: AD for the Minesweeper (MS) that shows actions done by the player and the game (MS).</p><img src="/se-book/uml/activityDiagrams/basicNotations/alternatePaths/images/minesweeper.png" height="240">
+          <p>📦 The AD below shows alternate paths involved in the workflow of the activity <em>shop for product</em>:</p><img src="/se-book/uml/activityDiagrams/basicNotations/alternatePaths/images/example.png" height="240">
           <p></p>
         </tip-box>
       </div>
-      <div></div>
+      <div>
+        <div>
+          <panel header=":muscle: Exercises" expandable="">
+            <div>
+              <panel header=":lock::key: Which activity diagrams are correct?">
+                <question>
+                  <p>Which of these activity diagrams use the correct UML notation?</p>
+                  <ul class="task-list">
+                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> i</li>
+                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> ii</li>
+                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> iii</li>
+                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> iv</li>
+                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> v</li>
+                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> vi</li>
+                  </ul><img src="/se-book/uml/activityDiagrams/basicNotations/alternatePaths/images/q-correctNotation1.png" width="500"><img src="/se-book/uml/activityDiagrams/basicNotations/alternatePaths/images/q-correctNotation2.png" width="500">
+                  <p></p>
+                  <div slot="answer">
+                    <ul>
+                      <li>i : 👍 Correct. There can be more than two alternate paths.</li>
+                      <li>ii : 👍 Correct. An alternate path can divide into more branches.</li>
+                      <li>iii : 👍 Correct. A branch can join other branches.</li>
+                      <li>iv : Incorrect. At <code>x=5</code> both guard conditions become true.</li>
+                      <li>v : 👍 Correct. It is fine for a branch to form a loop by going back to the original branch node.</li>
+                      <li>iv : Incorrect. Guard conditions should be given in square brackets.</li>
+                    </ul>
+                  </div>
+                </question>
+              </panel>
+            </div>
+          </panel>
+        </div>
+      </div>
     </div>
   </div>
 </div>

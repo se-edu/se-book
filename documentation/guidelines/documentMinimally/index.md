@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Documentation &rarr; Guidelines &rarr;**%%
+%%**Documentation → Guidelines →**%%
 
 ### Guideline: Document Minimally, but Sufficiently
 

@@ -1,1 +1,1 @@
-Implementation &rarr; Integration &rarr; Introduction &rarr;
+Implementation → Integration → Introduction →

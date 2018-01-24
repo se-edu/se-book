@@ -2,11 +2,11 @@
 
 <div class="website-content">
 
-<div id="path">Java &rarr; </div>
+<div id="path">Java → </div>
 
 <div id="title">
 
-#### Use Collections :two: [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/javaTools/collections/index.html)
+#### Collections :two: [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/javaTools/collections/index.html)
 
 </div>
 

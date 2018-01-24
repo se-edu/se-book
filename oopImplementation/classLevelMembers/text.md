@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Class-Level Members :one:
+#### Implementing Class-Level Members :one:
 
 </div>
 
@@ -15,6 +15,6 @@ You can refer to [Oracle’s official Java tutorial on class-level members](http
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

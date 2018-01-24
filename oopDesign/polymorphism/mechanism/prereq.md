@@ -1,0 +1,3 @@
+<dynamic-panel src="../../../oopImplementation/polymorphism/full.md" header="%%:mortar_board: Implementation → Object Oriented Programming → Polymorphism%%" />
+<dynamic-panel src="../../../oopDesign/inheritance/substitutability/full.md" header="%%:mortar_board: Design → Object Oriented Programming → Inheritance → Substitutability%%" />
+<dynamic-panel src="../../../oopDesign/inheritance/dynamicAndStaticBinding/full.md" header="%%:mortar_board: Design → Object Oriented Programming → Inheritance → Dynamic and Static Binding%%" />

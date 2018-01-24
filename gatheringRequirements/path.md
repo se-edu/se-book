@@ -1,1 +1,1 @@
-Requirements &rarr; Gathering Requirements &rarr;
+Requirements → Gathering Requirements →

@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Git and Github &rarr; </div>
+<div id="path">Git and Github → </div>
 
 <div id="title">
 
@@ -49,6 +49,6 @@ Git can load a specific version of the history to the working directory. Note th
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

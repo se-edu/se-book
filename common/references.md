@@ -18,7 +18,7 @@
 
   <span id="uml-user-guide">_**The Unified Modeling Language User Guide**_, 2e, G Booch, J Rumbaugh, and I Jacobson </span>
 
-* [uml-distilled] <div id="uml-distilled">UML distilled by Martin Fowler </div>
+* [uml-distilled] <span id="uml-distilled">UML distilled by Martin Fowler </span>
 
 * [refactoring-catalog]
 
@@ -31,7 +31,11 @@
 
 * [bach-et-explained]
 
-  <div id="bach-et-explained">Exploratory testing explained, an online article by [James Bach](http://www.satisfice.com/aboutjames.shtml) (James Bach is an industry thought leader in software testing). Softcopy available at http://www.satisfice.com/articles/et-article.pdf</div>
+  <div id="bach-et-explained">
+  
+  [**Exploratory Testing Explained**](http://www.satisfice.com/articles/et-article.pdf), an online article by [James Bach](http://www.satisfice.com/aboutjames.shtml)  -- James Bach is an industry thought leader in software testing).
+  
+  </div>
 
 * [bryan-mercurial-guide]
 

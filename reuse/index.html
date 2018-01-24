@@ -29,12 +29,10 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>Reusability is a major theme in software engineering practices. By reusing tried-and-tested components, the robustness of a new software system can be enhanced while reducing the manpower and time requirement. Reusable components come in
-                many forms; it can be reusing a piece of code, a subsystem, or a whole software.</p>
+              <p>Reuse is a major theme in software engineering practices. <strong>By reusing tried-and-tested components, the robustness of a new software system can be enhanced while reducing the manpower and time requirement.</strong> Reusable components
+                come in many forms; it can be reusing a piece of code, a subsystem, or a whole software.</p>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -50,13 +48,22 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>{to add}</p>
+              <p>While you may be tempted to use many libraries/frameworks/platform that seem to crop up on a regular basis and promise to bring great benefits, note that <strong>there are costs associated with reuse</strong>. Here are some:</p>
+              <ul>
+                <li>The reused code <strong>may be an overkill</strong> (think <em>using a sledgehammer to crack a nut</em>) increasing the size of, or/and degrading the performance of, your software.</li>
+                <li>The reused software <strong>may not be mature/stable enough</strong> to be used in an important product. That means the software can change drastically and rapidly, possibly in ways that break your software.</li>
+                <li>Non-mature software has the <strong>risk of dying off</strong> as fast as they emerged, leaving you with a dependency that is no longer maintained.</li>
+                <li>The license of the reused software (or its dependencies) <strong>restrict how you can use/develop your software</strong>.</li>
+                <li>The reused software <strong>might have bugs, missing features, or security vulnerabilities</strong> that are important to your product but not so important to the maintainers of that software, which means those flaws will not get fixed
+                  as fast as you need them to.</li>
+                <li><strong>Malicious code can sneak into your product</strong> via compromised dependencies.</li>
+              </ul>
             </div>
             <div>
               <div>
                 <panel header=":muscle: Exercises" expandable="">
                   <div>
-                    <panel header="Q: One of your teammates is proposing to use a recently-released “cool” UI framework for your class project. List the pros and cons of this idea. ">
+                    <panel header="Q: using a cool UI framework">
                       <question has-input="true">
                         <p>One of your teammates is proposing to use a recently-released “cool” UI framework for your class project. List the pros and cons of this idea.</p>
                         <div slot="answer">
@@ -133,9 +140,9 @@
                     <panel header=":lock::key: True or False?">
                       <question>
                         <p>Defining component APIs early is useful for developing components in parallel.</p>
-                        <ul radio-group="2p4o4" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="2p4o4" type="radio"> True</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="2p4o4" type="radio"> False</label></li>
+                        <ul radio-group="mpdyn" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="mpdyn" type="radio"> True</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="mpdyn" type="radio"> False</label></li>
                         </ul>
                         <div slot="answer">
                           <p>True</p>
@@ -146,7 +153,6 @@
                   </div>
                 </panel>
               </div>
-              <div></div>
             </div>
           </div>
         </panel>
@@ -197,9 +203,7 @@
                 </ul>
               </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -222,17 +226,11 @@
             <div>
               <p>A library is a collection of modular code that is general and can be used by other programs.</p>
               <tip-box>
-                <p>Example:</p>
-                <p>Java classes you get with the JDK (such as String, ArrayList, HashMap, etc.) are library classes that are provided in the default Java distribution.</p>
-              </tip-box>
-              <tip-box>
-                <p>Example:</p>
-                <p><a href="https://github.com/joestelmach/natty">Natty</a> is a Java library that can be used for parsing strings that represent dates e.g. <code>The 31st of April in the year 2008</code></p>
+                <p>📦 Java classes you get with the JDK (such as <code>String</code>, <code>ArrayList</code>, <code>HashMap</code>, etc.) are library classes that are provided in the default Java distribution.</p>
+                <p>📦 <a href="https://github.com/joestelmach/natty">Natty</a> is a Java library that can be used for parsing strings that represent dates e.g. <code>The 31st of April in the year 2008</code></p>
               </tip-box>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -252,13 +250,12 @@
               <ol>
                 <li>Read the documentation to confirm that its functionality fits your needs</li>
                 <li>Check the license to confirm that it allows reuse in the way you plan to reuse it. For example, some libraries might allow non-commercial use only.</li>
-                <li>Download the library and make it accessible to your project. Alternatively, you can configure your dependency management tool to do it for you.</li>
+                <li>Download the library and make it accessible to your project. Alternatively, you can configure your
+                  <tooltip content="e.g. Gradle">dependency management tool</tooltip> to do it for you.</li>
                 <li>Call the library API from your code where you need to use the library functionality.</li>
               </ol>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -279,33 +276,32 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>The overall structure and execution flow of a specific category of software systems can be very similar. The similarity is an opportunity to reuse at a high scale.</p>
+              <p><strong>The overall structure and execution flow of a specific category of software systems can be very similar. The similarity is an opportunity to reuse at a high scale.</strong></p>
               <tip-box>
-                <p>Running example:</p>
+                <p>📦 Running example:</p>
                 <p>IDEs for different programming languages are similar in how they support editing code, organizing project files, debugging, etc.</p>
               </tip-box>
-              <p>A <em>software framework</em> is a reusable implementation of a software (or part thereof) providing <em>generic</em> functionality that can be selectively customized to produce a <em>specific</em> application.</p>
+              <p><strong>A <em>software framework</em> is a reusable implementation of a software (or part thereof) providing <em>generic</em> functionality that can be selectively customized to produce a <em>specific</em> application.</strong></p>
               <tip-box>
-                <p>Running example:</p>
+                <p>📦 Running example:</p>
                 <p>Eclipse is an IDE framework that can be used to create IDEs for different programming languages.</p>
               </tip-box>
-              <p>Some frameworks provide a complete implementation of a <em>default</em> behavior which makes them immediately usable.</p>
+              <p><strong>Some frameworks provide a complete implementation of a <em>default</em> behavior which makes them immediately usable.</strong></p>
               <tip-box>
-                <p>Running example:</p>
+                <p>📦 Running example:</p>
                 <p>Eclipse is a fully functional Java IDE out-of-the-box.</p>
               </tip-box>
-              <p>A framework facilitates the adaptation and customization of some desired functionality.</p>
+              <p><strong>A framework facilitates the adaptation and customization of some desired functionality.</strong></p>
               <tip-box>
-                <p>Running example:</p>
+                <p>📦 Running example:</p>
                 <p>Eclipse plugin system can be used to create an IDE for different programming languages while reusing most of the existing IDE features of Eclipse. E.g. <a href="https://marketplace.eclipse.org/content/pydev-python-ide-eclipse">https://marketplace.eclipse.org/content/pydev-python-ide-eclipse</a></p>
               </tip-box>
               <p>Some frameworks cover only a specific components or an aspect.</p>
               <tip-box>
-                <p>Example:</p>
-                <p>JavaFx a framework for creating Java GUIs.</p>
+                <p>📦 JavaFx a framework for creating Java GUIs.</p>
               </tip-box>
               <tip-box>
-                <p>More examples:</p>
+                <p>📦 More examples of frameworks</p>
                 <ul>
                   <li>Drupal: a framework for Web-based applications, content management systems in particular. Implemented using PHP</li>
                   <li>Ruby on Rails : another Web-application framework similar to Drupal but uses Ruby instead of PHP</li>
@@ -313,40 +309,7 @@
                 </ul>
               </tip-box>
             </div>
-            <div>
-              <div>
-                <panel header=":muscle: Exercises" expandable="">
-                  <div>
-                    <panel header=":lock::key: Choose the incorrect statement about software frameworks.">
-                      <question>
-                        <p>Choose the incorrect statement about software frameworks.</p>
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. They follow the hollywood principle, otherwise known as ‘inversion of control’</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. They come with full or partial implementation.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. They are more concrete than patterns or principles.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. They are often configurable.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. They are reuse mechanisms.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. They are similar to reusable libraries but bigger.</li>
-                        </ul>
-                        <div slot="answer">
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. They follow the hollywood principle, otherwise known as ‘inversion of control’</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. They come with full or partial implementation.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. They are more concrete than patterns or principles.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. They are often configurable.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. They are reuse mechanisms.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> f. They are similar to reusable libraries but bigger.</li>
-                          </ul>
-                          <p>Explanation: While both libraries and frameworks are reuse mechanisms, and both more concrete than principles and patterns, libraries differ from frameworks in some key ways. One of them is the ‘inversion of control’ used by
-                            frameworks but not libraries. Furthermore, frameworks do not have to be bigger than libraries all the time.</p>
-                        </div>
-                      </question>
-                    </panel>
-                  </div>
-                </panel>
-              </div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -365,12 +328,11 @@
               <p>Although both frameworks and libraries are reuse mechanisms, there are notable differences:</p>
               <ul>
                 <li>
-                  <p><strong>Libraries are meant to be used ‘as is’ while frameworks are meant to be customized/extended.</strong> Examples: writing plugins for Eclipse so that it can be used as an IDE for different languages (C++, PHP, etc.), adding modules
-                    and themes to Drupal, and adding test cases to JUnit .</p>
+                  <p><strong>Libraries are meant to be used ‘as is’ while frameworks are meant to be customized/extended.</strong><span class="dimmed"> e.g., writing plugins for Eclipse so that it can be used as an IDE for different languages (C++, PHP, etc.), adding modules and themes to Drupal, and adding test cases to JUnit</span>.</p>
                 </li>
                 <li>
-                  <p><strong>Your code calls the library code while the framework code calls your code.</strong> Frameworks use a technique called <em>inversion of control</em>, also called the “Hollywood principle” (i.e. don’t call us, we’ll call you!).
-                    That is, you write code that will be called by the framework, e.g. writing test methods that will be called by the JUnit framework. In the case of libraries, written code calls libraries.</p>
+                  <p><strong>Your code calls the library code while the framework code calls your code.</strong><strong>Frameworks use a technique called <em>inversion of control</em>, aka the “Hollywood principle”</strong> (i.e. don’t call us, we’ll call
+                    you!). That is, you write code that will be called by the framework, <span class="dimmed"> e.g. writing test methods that will be called by the JUnit framework.</span> In the case of libraries, your code calls libraries.</p>
                 </li>
               </ul>
             </div>
@@ -378,32 +340,44 @@
               <div>
                 <panel header=":muscle: Exercises" expandable="">
                   <div>
-                    <panel header=":lock::key: Choose the correct statement.">
+                    <panel header=":lock::key: Statement about software frameworks">
                       <question>
-                        <p>Which one of these is not a framework but a library?</p>
+                        <p>Choose correct statements about software frameworks.</p>
                         <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. JUnit</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Eclipse</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Drupal</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Ruby on Rails</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. They are all frameworks</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. They follow the hollywood principle, otherwise known as ‘inversion of control’</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. They come with full or partial implementation.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. They are more concrete than patterns or principles.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. They are often configurable.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. They are reuse mechanisms.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. They are similar to reusable libraries but bigger.</li>
                         </ul>
                         <div slot="answer">
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. JUnit</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Eclipse</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Drupal</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Ruby on Rails</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> e. They are all frameworks</li>
-                          </ul>
-                          <p>Explanation: These are framework examples cited in the handout.</p>
+                          <p>(a)(b)(c)(d)(e)<s>(f)</s></p>
+                          <p>Explanation: While both libraries and frameworks are reuse mechanisms, and both more concrete than principles and patterns, libraries differ from frameworks in some key ways. One of them is the ‘inversion of control’ used by
+                            frameworks but not libraries. Furthermore, frameworks do not have to be bigger than libraries all the time.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                  <div>
+                    <panel header=":lock::key: Which are frameworks?">
+                      <question>
+                        <p>Which one of these are frameworks ?</p>
+                        <ul radio-group="64tv4" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="64tv4" type="radio"> a. JUnit</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="64tv4" type="radio"> b. Eclipse</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="64tv4" type="radio"> c. Drupal</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="64tv4" type="radio"> d. Ruby on Rails</label></li>
+                        </ul>
+                        <div slot="answer">
+                          <p>(a)(b)(c)(d)</p>
+                          <p>Explanation: These are frameworks.</p>
                         </div>
                       </question>
                     </panel>
                   </div>
                 </panel>
               </div>
-              <div></div>
             </div>
           </div>
         </panel>
@@ -425,16 +399,20 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>A <em>platform</em> provides a runtime environment for applications. A platform is often bundled with various libraries, tools, frameworks, and technologies in addition to a runtime environment but the defining characteristic of a software
-                platform is the presence of a runtime environment.</p>
-              <p>Technically, an operating system can be called a platform. For example, Windows PC is a platform for desktop applications while iOS is a platform for mobile apps.</p>
-              <p>Two well-known examples of platforms are JavaEE and .NET, both of which sit above Operating systems layer, and are used to develop <em>enterprise applications</em>. Infrastructure services such as connection pooling, load balancing, remote
-                code execution, transaction management, authentication, security, messaging etc. are done similarly in most
-                <trigger for="modal:enterprise-application" trigger="click">enterprise applications</trigger>. Both JavaEE and .NET provide these services to applications in a customizable way without developers having to implement them from scratch every time.</p>
-              <ul>
-                <li>JavaEE (Java Enterprise Edition) is both a framework and a platform for writing enterprise applications. The runtime used by the JavaEE applications is the JVM (Java Virtual Machine) that can run on different Operating Systems.</li>
-                <li>.NET is a similar platform and a framework. Its runtime is called CLR (Common Language Runtime) and usually used on Windows machines.</li>
-              </ul>
+              <p><strong>A <em>platform</em> provides a runtime environment for applications.</strong> A platform is often bundled with various libraries, tools, frameworks, and technologies in addition to a runtime environment but the defining characteristic
+                of a software platform is the presence of a runtime environment.</p>
+              <tip-box>
+                <p>📦 Technically, an operating system can be called a platform. For example, Windows PC is a platform for desktop applications while iOS is a platform for mobile apps.</p>
+              </tip-box>
+              <tip-box>
+                <p>📦 <strong>Two well-known examples of platforms are JavaEE and .NET</strong>, both of which sit above Operating systems layer, and are used to develop
+                  <trigger for="modal:enterprise-application" trigger="click">enterprise applications</trigger>. Infrastructure services such as connection pooling, load balancing, remote code execution, transaction management, authentication, security, messaging etc. are done similarly in most enterprise applications.
+                  Both JavaEE and .NET provide these services to applications in a customizable way without developers having to implement them from scratch every time.</p>
+                <ul>
+                  <li>JavaEE (Java Enterprise Edition) is both a framework and a platform for writing enterprise applications. The runtime used by the JavaEE applications is the JVM (Java Virtual Machine) that can run on different Operating Systems.</li>
+                  <li>.NET is a similar platform and a framework. Its runtime is called CLR (Common Language Runtime) and usually used on Windows machines.</li>
+                </ul>
+              </tip-box>
               <modal title="**Enterprise Applications**" id="modal:enterprise-application">
                 <div>
                   <p><strong>Enterprise Application</strong>: ‘enterprise applications’ means software applications used at organizations level and therefore has to meet much higher demands (such as in scalability, security, performance, and robustness)
@@ -442,9 +420,7 @@
                 </div>
               </modal>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -465,14 +441,13 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>Cloud computing is the delivery of computing as a service over the network, rather than a product running on a local machine. This means the actual hardware and software is located at a remote location, typically, at a large server farm,
-                while users access them over the network. Maintenance of the hardware and software is managed by the cloud provider while users typically pay for only the amount of services they use. This model is similar to the consumption of electricity;
-                the power company manages the power plant, while the consumers pay them only for the electricity used. The cloud computing model optimizes hardware and software utilization and reduces the cost to consumers. Furthermore, users can scale
-                up/down their utilization at will without having to upgrade their hardware and software. The traditional non-cloud model of computing is similar to everyone buying their own generators to create electricity for their own use.</p>
+              <p><strong>Cloud computing is the delivery of computing as a service over the network</strong>, rather than a product running on a local machine. This means the actual hardware and software is located at a remote location, typically, at a large
+                server farm, while users access them over the network. Maintenance of the hardware and software is managed by the cloud provider while users typically pay for only the amount of services they use. This model is similar to the consumption
+                of electricity; the power company manages the power plant, while the consumers pay them only for the electricity used. The cloud computing model optimizes hardware and software utilization and reduces the cost to consumers. Furthermore,
+                users can scale up/down their utilization at will without having to upgrade their hardware and software. The traditional non-cloud model of computing is similar to everyone buying their own generators to create electricity for their own
+                use.</p>
             </div>
-            <div>
-              <div></div>
-            </div>
+            <div></div>
           </div>
         </panel>
       </div>
@@ -487,23 +462,21 @@
         </tip-box>
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
-            <div><img src="/se-book/reuse/cloudComputing/services/images/services.png" height="330">
-              <p></p>
-              <p>(source: Wikipedia)</p>
+            <div>
+              <p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Cloud_computing.svg" height="500"><br></p>
+              <p><sub>source:<a href="https://en.wikipedia.org/wiki/Cloud_computing">https://commons.wikimedia.org</a></sub></p>
               <p>Cloud computing can deliver computing services at three levels:</p>
               <ol>
                 <li>
-                  <p><strong>Infrastructure as a service (IaaS)</strong>: IaaS delivers computer infrastructure as a service. For example, a user can deploy virtual servers on the cloud instead of buying physical hardware and installing server software on
-                    them. Another example would be a customer using storage space on the cloud for off-site storage of data. Rackspace is an example of an IaaS cloud provider. Amazon Elastic Compute Cloud (Amazon EC2) is another one.</p>
+                  <p><strong>Infrastructure as a service (IaaS) delivers computer infrastructure as a service.</strong> For example, a user can deploy virtual servers on the cloud instead of buying physical hardware and installing server software on them.
+                    Another example would be a customer using storage space on the cloud for off-site storage of data. <span class="dimmed"> Rackspace is an example of an IaaS cloud provider. Amazon Elastic Compute Cloud (Amazon EC2) is another one.</span></p>
                 </li>
                 <li>
-                  <p><strong>Platform as a service (PaaS)</strong>: PaaS provides a platform on which developers can build applications. Developers do not have to worry about infrastructure issues such as deploying servers or load balancing as is required
-                    when using IaaS. Those aspects are automatically taken care of by the platform. The price to pay is reduced flexibility; applications written on PaaS are limited to facilities provided by the platform. A PaaS example is the Google
-                    App Engine where developers can build applications using Java, Python, PHP, or Go whereas Amazon EC2 allows users to deploy application written in any language on their virtual servers.</p>
+                  <p><strong>Platform as a service (PaaS) provides a platform on which developers can build applications.</strong> Developers do not have to worry about infrastructure issues such as deploying servers or load balancing as is required when
+                    using IaaS. Those aspects are automatically taken care of by the platform. The price to pay is reduced flexibility; applications written on PaaS are limited to facilities provided by the platform. <span class="dimmed"> A PaaS example is the Google App Engine where developers can build applications using Java, Python, PHP, or Go whereas Amazon EC2 allows users to deploy application written in any language on their virtual servers.</span></p>
                 </li>
                 <li>
-                  <p><strong>Software as a service (SaaS)</strong>: This is when applications can be accessed over the network instead of installing them on a local machine. For example, Google Docs is an SaaS word processing software, while Microsoft Word
-                    is a traditional word processing software.</p>
+                  <p><strong>Software as a service (SaaS) allows applications to be accessed over the network</strong> instead of installing them on a local machine. <span class="dimmed"> For example, Google Docs is an SaaS word processing software, while Microsoft Word is a traditional word processing software.</span></p>
                 </li>
               </ol>
             </div>
@@ -511,20 +484,16 @@
               <div>
                 <panel header=":muscle: Exercises" expandable="">
                   <div>
-                    <panel header=":lock::key: Choose the correct statement.">
+                    <panel header=":lock::key: Google Calendar in which category?">
                       <question>
-                        <p>Google Calendar belongs to which category of cloud computing services?s</p>
+                        <p>Google Calendar belongs to which category of cloud computing services?</p>
                         <ul class="task-list">
                           <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. IaaS</li>
                           <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. PaaS</li>
                           <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. SaaS</li>
                         </ul>
                         <div slot="answer">
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. IaaS</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. PaaS</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" checked type="checkbox"> c. SaaS</li>
-                          </ul>
+                          <p>(c)</p>
                           <p>Explanation: It is a <em>software</em> as a service. Instead of installing a calendar software on your desktop, we can use the Google Calendar software that lives ‘on the cloud’.</p>
                         </div>
                       </question>
@@ -532,7 +501,6 @@
                   </div>
                 </panel>
               </div>
-              <div></div>
             </div>
           </div>
         </panel>

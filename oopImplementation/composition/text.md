@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Composition :two:
+#### Implementing Composition :two:
 
 </div>
 
@@ -31,6 +31,6 @@ class Car {
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

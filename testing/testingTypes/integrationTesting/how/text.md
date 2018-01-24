@@ -10,7 +10,7 @@
 
 <tip-box> 
 
-:package: Suppose a class `Car` users classes `Engine` and `Wheel`. Here is how you would go about doing pure integration tests:
+:package: Suppose a class `Car` uses classes `Engine` and `Wheel`. Here is how you would go about doing pure integration tests:
 
 a) First, unit test `Engine` and `Wheel`.<br>
 b) Next, unit test `Car` in isolation of `Engine` and `Wheel`, ==using stubs for `Engine` and `Wheel`==.<br>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - Design Approaches</title>
+    <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\markbind\css\markbind.css">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+<div class="website-content">
+  <h1 id="design-approaches">Design Approaches</h1>
+  <h2 id="multi-level-design">Multi-Level Design</h2>
+  <panel header="================================================================" type="seamless" alt="Multilevel Design">
+    <div>
+      <div>
+        <div>
+          <h4 id="multi-level-design-three">Multi-Level Design <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+        </div>
+        <tip-box>
+          <div>
+            <p>🏆 Can explain multi-level design <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
+          </div>
+        </tip-box>
+        <panel type="seamless" header=" %%- - - - - - - - - -%%">
+          <div>
+            <div>
+              <p>In a smaller system, design of the entire system can be shown in one place.</p>
+              <div v-closeable="" alt="single-level design example">
+                <tip-box>
+                  <p>📦 This class diagram of <a href="https://se-edu.github.io/addressbook-level3">se-edu/addressbook-level3</a> depicts the design of the entire software.</p><img src="https://se-edu.github.io/addressbook-level3/doc/images/mainClassDiagram.png"
+                    width="600"></tip-box>
+              </div>
+              <p><strong>Design of bigger systems needs to be done/shown at multiple levels.</strong></p>
+              <div v-closeable="" alt="multi-level design example">
+                <tip-box>
+                  <p>📦 This architecture diagram of <a href="https://se-edu.github.io/addressbook-level4">se-edu/addressbook-level4</a> depicts the high-level design of the software.</p><img src="https://se-edu.github.io/addressbook-level4/images/Architecture.png"
+                    width="600">
+                  <p>Here are examples of lower level designs of some components of the same software:</p>
+                  <tabs>
+                    <tab header="UI"><img src="https://se-edu.github.io/addressbook-level4/images/UiClassDiagram.png" width="600">
+                      <p>
+                        <hr>
+                      </p>
+                    </tab>
+                    <tab header="Logic"><img src="https://se-edu.github.io/addressbook-level4/images/LogicClassDiagram.png" width="600">
+                      <p>
+                        <hr>
+                      </p>
+                    </tab>
+                    <tab header="Storage"><img src="https://se-edu.github.io/addressbook-level4/images/StorageClassDiagram.png" width="600">
+                      <p>
+                        <hr>
+                      </p>
+                    </tab>
+                  </tabs>
+                </tip-box>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </panel>
+      </div>
+    </div>
+  </panel>
+  <h2 id="top-down-and-bottom-up-design">Top-Down and Bottom-Up Design</h2>
+  <panel header="================================================================" type="seamless" alt="Top-Down and Bottom-Up Design">
+    <div>
+      <div>
+        <div>
+          <h4 id="top-down-and-bottom-up-design-four">Top-Down and Bottom-Up Design <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></h4>
+        </div>
+        <tip-box>
+          <div>
+            <p>🏆 Can explain top-down and bottom-up design <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></p>
+          </div>
+        </tip-box>
+        <panel type="seamless" header=" %%- - - - - - - - - -%%">
+          <div>
+            <div>
+              <p><strong>Multi-level design can be done in a top-down manner, bottom-up manner, or as a mix.</strong></p>
+              <ul>
+                <li>Top-down: Design the high-level design first and flesh out the lower levels later. This is especially useful when designing big and novel systems where the high-level design needs to be stable before lower levels can be designed.</li>
+                <li>Bottom-up: Design lower level components first and put them together to create the higher-level systems later. This is not usually scalable for bigger systems. One instance where this approach might work is when designing a variations
+                  of an existing system or re-purposing existing components to build a new system.</li>
+                <li>Mix: Design the top levels using the top-down approach but switch to a bottom-up approach when designing the bottom levels.</li>
+              </ul>
+            </div>
+            <div>
+              <div>
+                <panel header=":muscle: Exercises" expandable="">
+                  <div>
+                    <panel header=":lock::key: Which is better?">
+                      <question>
+                        <p>Top-down design is better than bottom-up design.</p>
+                        <ul radio-group="uhmxj" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="uhmxj" type="radio"> True</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="uhmxj" type="radio"> False</label></li>
+                        </ul>
+                        <div slot="answer">
+                          <p>False</p>
+                          <p>Explanation: Not necessarily. It depends on the situation. Bottom-up design may be preferable when there are lot of existing components we want to reuse.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </div>
+        </panel>
+      </div>
+    </div>
+  </panel>
+  <h2 id="agile-design">Agile Design</h2>
+  <panel header="================================================================" type="seamless" alt="Agile Design">
+    <div>
+      <div>
+        <div>
+          <h4 id="agile-design-four">Agile Design <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></h4>
+        </div>
+        <tip-box>
+          <div>
+            <p>🏆 Can explain agile design <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0034-20e3.png"></p>
+          </div>
+        </tip-box>
+        <panel type="seamless" header=" %%- - - - - - - - - -%%">
+          <div>
+            <div>
+              <p><strong><em>Agile design</em> can be contrasted with <em>full upfront design</em> in the following way</strong>:</p>
+              <blockquote>
+                <p><strong>Agile designs are emergent, they’re not defined up front.</strong> Your overall system design will emerge over time, evolving to fulfill new requirements and take advantage of new technologies as appropriate. Although you will
+                  often do <strong>some initial architectural modeling at the very beginning</strong> of a project, this will be just enough to get your team going. This approach does not produce a fully documented set of models in place before you may
+                  begin coding. <sub>-- adapted from <a href="http://agilemodeling.com/essays/agileDesign.htm">agilemodeling.com</a></sub></p>
+              </blockquote>
+            </div>
+            <div>
+              <div>
+                <panel header=":muscle: Exercises" expandable="">
+                  <div>
+                    <panel header=":lock::key: Statement about agile design">
+                      <question>
+                        <p>Agile design camp expects the design to change over the product’s lifetime.</p>
+                        <ul radio-group="qe4n5" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="qe4n5" type="radio"> True</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="qe4n5" type="radio"> False</label></li>
+                        </ul>
+                        <div slot="answer">
+                          <p>True</p>
+                          <p>Explanation: Yes, that is why they do not believe in spending too much time creating a detailed and full design at the very beginning. However, the architecture is expected to remain relatively stable even in the agile design
+                            approach.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </div>
+        </panel>
+      </div>
+    </div>
+  </panel>
+</div>
+</div>
+</body>
+<script src="..\markbind\js\vue.min.js"></script>
+<script src="..\markbind\js\vue-strap.min.js"></script>
+<script src="..\markbind\js\setup.js"></script>
+</html>

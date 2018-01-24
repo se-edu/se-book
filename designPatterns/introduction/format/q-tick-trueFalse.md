@@ -1,15 +1,14 @@
-<panel header=":lock::key: True or False?">
+<panel header=":lock::key: Anti-patterns required?">
 <question>
 
 When we describe a pattern, we must also specify anti-patterns.
 
-- [ ] a. True
-- [ ] b. False
+- ( ) True
+- ( ) False
 
 <div slot="answer">
 
-- [ ] a. True
-- [x] b. False
+False.
 
 Explanation: Anti-patterns are related to patterns, but they are not a ‘must have’ component of a pattern description.
 

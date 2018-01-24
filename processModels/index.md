@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-# SLDC Process Models
+# SDLC Process Models
 
 ## Introduction
 <panel header="================================================================"

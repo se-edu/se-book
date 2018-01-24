@@ -1,11 +1,11 @@
-<panel header=":lock::key: Implement the Player and Region classes using a more defensive approach.">
+<panel header=":lock::key: Implement `Player` and `Region`">
 <question has-input="true">
 
 Imagine that we now support the following feature in our Minesweeper game.
 
 <tip-box>
 
-Feature ID: multiplayer
+Feature ID: multiplayer<br>
 Description: A minefield is divided into mine regions. Each region is assigned to a single player. Players can swap regions. To win the game, all regions must be cleared.
 
 </tip-box>
@@ -20,18 +20,24 @@ Minimally, this can be implemented like this.
 ```java
 class Player{
     Region region;
-    void setRegion(Region r) { region = r;}
-    Region getRegion() {return region;}
-} // Region class is similar
+    void setRegion(Region r) {
+        region = r;
+    }
+    Region getRegion() {
+        return region;
+    }
+} 
+
+// Region class is similar
 ```
 
-However, this is not very defensive. For example, a user of this class can pass a null to either of the methods, thus violating the multiplicity of the relationship.
+However, this is not very defensive. For example, a user of this class can pass a `null` to either of the methods, thus violating the multiplicity of the relationship.
 
 Implement the two classes using a more defensive approach. Take note of the bidirectional link which requires us to preserve referential integrity at all times.
 
 <div slot="answer">
 
-In this solution, we assume Regions can be created without Players (note that we cannot be 100% defensive all the time). The usage will be something like this:
+In this solution, we assume `Regions` can be created without `Players` (note that we cannot be 100% defensive all the time). The usage will be something like this:
 
 ```java
 Region r1 = new Region();
@@ -69,8 +75,11 @@ public class Region {
     }
 
     public void removePlayer(Player disconnectingPlayer) {
-        if (myPlayer == disconnectingPlayer) myPlayer = null;
-        else stopSystemWithErrorMessage("Unknown Player trying to disconnect")
+        if (myPlayer == disconnectingPlayer){
+            myPlayer = null;
+        } else {
+            stopSystemWithErrorMessage("Unknown Player trying to disconnect");
+        }
     }
 
     private void stopSystemWithErrorMessage(String msg) {
@@ -99,12 +108,15 @@ public class Player {
             myRegion.removePlayer(this);
         }
         myRegion = newRegion;
+        
         // set the reverse link
         myRegion.setPlayer(this);
     }
 
     public void removeRegion(Region disconnectingRegion) {
-        if (myRegion == disconnectingRegion) myRegion = null;
+        if (myRegion == disconnectingRegion) {
+            myRegion = null;
+        }
     }
 
     private void stopSystemWithErrorMessage(String msg) {

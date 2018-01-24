@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**UML &rarr;**%%
+%%**UML →**%%
 
 ## Object Diagrams
 
@@ -10,7 +10,7 @@
 
 <include src="introduction/embed.md" />
 <include src="objects/embed.md" />
-<include src="objectStructures/embed.md" />
+<include src="associations/what/embed.md" />
 
 </div>
 

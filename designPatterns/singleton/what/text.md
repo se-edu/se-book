@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Patterns &rarr; Singleton Pattern &rarr;</div>
-
 <div id="title">
 
 #### What :two:
@@ -22,7 +20,7 @@ A normal class can be instantiated multiple times by invoking the constructor.
 
 **Solution**
 
-The key insight of the solution is that the _constructor_ of the singleton class cannot be _public_. Because a _public constructor_ will allow others to instantiate the class at will, a _private constructor_ should be used instead. In addition, a public class-level method is provided to access the _single instance_.
+Make the constructor of the singleton class `private`, %%&nbsp;because a `public` constructor will allow others to instantiate the class at will%%. Provide a `public` class-level method to access the _single instance_.
 
 <tip-box>
 
@@ -39,6 +37,6 @@ Example:
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

@@ -1,1 +1,1 @@
-Project Management &rarr; Teamwork &rarr;
+Project Management → Teamwork →

@@ -8,7 +8,7 @@ Suppose we wrote a program to follow the class structure given in this class dia
 
 Draw object diagrams to represent the object structures after each of these steps below. Assume that we are trying to minimize the number of total objects.
 
-i.e. apply step 1 &rarr; [diagram 1] &rarr; apply step 2 on diagarm 1 &rarr; [diagarm 2] and so on.
+i.e. apply step 1 → [diagram 1] → apply step 2 on diagarm 1 → [diagarm 2] and so on.
 
 1. There are no persons.
 

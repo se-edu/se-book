@@ -35,6 +35,6 @@ Advantages of exception handling in this way:
 <include src="resources.md" />
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

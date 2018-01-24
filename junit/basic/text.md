@@ -23,6 +23,6 @@ JUnit 4 with IntelliJ: A quick introduction <sub>-- by DrBFraser</sub>
 
 <div id="extras">
   <include src="resources.md" />
-<div>
+</div>
 
 </div>

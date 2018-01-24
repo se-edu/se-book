@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Software Design Patterns &rarr; More &rarr;</div>
-
 <div id="title">
 
 #### Using Design Patterns :three:
@@ -12,18 +10,25 @@
 
 <div id="body">
 
-{patterns provide a vocabulary}
+**Design pattern provides a high-level vocabulary to talk about design.**
 
-The more patterns one acquires, the more ‘experienced’ she is. Exposing oneself to a multitude of patterns (at least the context and problem) is a must. Some patterns are domain-specific (e.g. patterns for distributed applications), some are created in-house (e.g. patterns in the company/project) and some can be self-created (e.g. from past experience).
+<tip-box> 
 
-When using patterns, be careful not to overuse them. Do not throw patterns at a problem at every opportunity. Patterns come with overhead such as adding more classes or increasing the levels of abstraction. Use them only when they are needed. Before applying a pattern, make sure that:
+:package: Someone can say 'apply Observer pattern here' instead of having to describe the mechanics of the solution in detail.
 
-*	there is substantial improvement in  the design, not just superficial.
-*	the associated tradeoffs are carefully considered. There are times when a design pattern is not appropriate (or an overkill).
+</tip-box>
+
+**Knowing more patterns is a way to become more ‘experienced’.** Aim to learn at least the context and the problem of patterns %%&nbsp;so that when you encounter those problems you know where to look for a solution%%. 
+
+**Some patterns are domain-specific** %%&nbsp;e.g. patterns for distributed applications%%, **some are created in-house** %%&nbsp;e.g. patterns in the company/project%% and **some can be self-created** %%&nbsp;e.g. from past experience%%.
+
+**Be careful not to overuse patterns.** Do not throw patterns at a problem at every opportunity. Patterns come with overhead such as adding more classes or increasing the levels of abstraction. Use them only when they are needed. Before applying a pattern, make sure that:
+* there is substantial improvement in  the design, not just superficial.
+* the associated tradeoffs are carefully considered. There are times when a design pattern is not appropriate (or an overkill).
 
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

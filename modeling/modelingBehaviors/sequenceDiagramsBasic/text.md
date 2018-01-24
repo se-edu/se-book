@@ -10,6 +10,8 @@
 
 <div id="body">
 
+**Sequence diagrams model interactions between entities for a given scenario.**
+
 <tip-box> 
 
 :package: Consider the code below.
@@ -34,7 +36,7 @@ class Unit {
 }
 
 ```
-Here is the sequence diagram to model the interactions for the method call `procudePrototype()` on a `Machine` object.
+Here is the sequence diagram to model the interactions for the method call `prouducePrototype()` on a `Machine` object.
 
 <img src="{{baseUrl}}/modeling/modelingBehaviors/sequenceDiagramsBasic/images/Machine.png" width="450" />
 <p/>
@@ -45,6 +47,6 @@ Here is the sequence diagram to model the interactions for the method call `proc
 
 <div id="extras">
   <include src="exercises.md" />
-<div>
+</div>
 
 </div>

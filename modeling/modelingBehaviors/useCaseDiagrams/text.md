@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Modeling &rarr; Modeling Behaviors &rarr;</div>
+<div id="path">Modeling → Modeling Behaviors →</div>
 
 <div id="title">
 
@@ -12,13 +12,19 @@
 
 <div id="body">
 
-Use case diagrams model the mapping between features of a system and its user roles
+**Use case diagrams model the mapping between features of a system and its user roles.**
 
-More…
+<tip-box> 
+
+:package: A simple use case diagram:
+
+<img src="{{baseUrl}}/specifyingRequirements/useCases/introduction/images/ticketMachine.png" height="250" />
+
+</tip-box>
 
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

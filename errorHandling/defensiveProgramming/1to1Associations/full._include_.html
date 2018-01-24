@@ -1,4 +1,10 @@
-<p><span class="dimmed"><strong><span>Implementation → Error Handling →
+<div>
+  <p>
+    <panel src="/se-book\errorHandling\defensiveProgramming\what\full._include_.html" header="%%:mortar_board: Implementation → Error Handling → Defensive Programming → What%%" isOpen="false" no-close="true" no-switch="true"></panel>
+  </p>
+</div>
+<p></p>
+<p><span class="dimmed"><strong><span>Implementation → Error Handling → Defensive Programming →
 </span></strong>
   </span>
 </p>
@@ -7,25 +13,25 @@
 </div>
 <div id="main">
   <div>
-    <p>Consider the association given below. Here, a MinedCell cannot exist without a Mine and vice versa. The only way to enforce this is by simultaneous object creation. However, in Java and C++, only one object can be created at a time. Given below are
-      two alternatives. Both options violate the multiplicity for a short period of time.</p>
-    <tip-box>
-      <p>Example:</p><img src="/se-book/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png" height="50">
-      <p></p>
-      <p>Option 1:</p>
-      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
+    <p>Consider the association given below. A defensive implementation requires to ensure a <code>MinedCell</code> cannot exist without a <code>Mine</code> and vice versa which requires simultaneous object creation. However, Java can only create one object
+      at a time. Given below are two alternatives implementations, both of which violate the multiplicity for a short period of time.</p><img src="/se-book/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png" height="50">
+    <p></p>
+    <p>Option 1:</p>
+    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
     <span class="hljs-keyword">private</span> Mine mine;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinedCell</span><span class="hljs-params">(Mine m)</span></span>{
-        <span class="hljs-keyword">if</span> (m == <span class="hljs-keyword">null</span>) error;
+        <span class="hljs-keyword">if</span> (m == <span class="hljs-keyword">null</span>) {
+            showError();
+        }
         mine = m;
     }
     …
 }
 </code></pre>
-      <p>Option 1 forces us to keep a <code>Mine</code> without a <code>MinedCell</code> (until the <code>MinedCell</code> is created).</p>
-      <p>Option 2:</p>
-      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
+    <p>Option 1 forces us to keep a <code>Mine</code> without a <code>MinedCell</code> (until the <code>MinedCell</code> is created).</p>
+    <p>Option 2:</p>
+    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
     <span class="hljs-keyword">private</span> Mine mine;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinedCell</span><span class="hljs-params">()</span></span>{
@@ -34,10 +40,7 @@
     …
 }
 </code></pre>
-      <p>Option 2 is more defensive because the <code>Mine</code> is immediately linked to a <code>MinedCell</code>.</p>
-    </tip-box>
+    <p>Option 2 is more defensive because the <code>Mine</code> is immediately linked to a <code>MinedCell</code>.</p>
   </div>
-  <div>
-    <div></div>
-  </div>
+  <div></div>
 </div>

@@ -21,7 +21,7 @@ This book is best viewed using the ==Chrome browser==.
 
 ### Information Layers
 
-The book tries to 'layer' information so that readers can decide to omit less important layers if they wish to. 
+The book tries to _layer_ information so that readers can decide to omit less important layers if they wish to. 
 
 **More important information are in bold** or ==highlighted== while %%less important information are dimmed%% or in collapsed panels such as the below.
 

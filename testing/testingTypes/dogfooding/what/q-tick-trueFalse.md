@@ -1,15 +1,14 @@
-<panel header=":lock::key: True or False?">
+<panel header=":lock::key: Dogfooding improves product design?">
 <question>
 
-‘dogfooding’ can help us improve product designs. (If you don’t know the meaning of this term, a Web search is in order :-)
+‘dogfooding’ can help us improve product designs. 
 
-- [ ] a. True
-- [ ] b. False
+- ( ) True
+- ( ) False
 
 <div slot="answer">
 
-- [x] a. True
-- [ ] b. False
+True
 
 </div>
 </question>

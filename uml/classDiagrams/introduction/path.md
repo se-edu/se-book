@@ -1,1 +1,1 @@
-Tools &rarr; UML &rarr; Class Diagrams &rarr; Introduction &rarr;
+Tools → UML → Class Diagrams → Introduction →

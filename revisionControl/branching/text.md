@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-<div id="path">Revision Control &rarr; </div>
+<div id="path">Revision Control → </div>
 
 <div id="title">
 
@@ -28,6 +28,6 @@
 
 <include src="exercises.md" />
 
-<div>
+</div>
 
 </div>

@@ -1,1 +1,1 @@
-Design &rarr; Modelling &rarr; Introduction &rarr;
+Design → Modelling → Introduction →

@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Code Quality &rarr; Guideline: Comment Minimally, but Sufficiently &rarr;</div>
-
 <div id="title">
 
 #### Introduction :one:
@@ -19,6 +17,6 @@ Some think commenting heavily increases the 'code quality'. This is not so. Avoi
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>

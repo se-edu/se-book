@@ -2,7 +2,7 @@
 
 <div class="website-content">
 
-%%**Test Case Design &rarr;**%%
+%%**Test Case Design →**%%
 
 ## Equivalence Partitions
 

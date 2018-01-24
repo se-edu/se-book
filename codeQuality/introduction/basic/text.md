@@ -2,8 +2,6 @@
 
 <div class="website-content">
 
-<div id="path">Code Quality &rarr; Introduction &rarr;</div>
-
 <div id="title">
 
 #### Basic :one:
@@ -25,6 +23,6 @@
 </div>
 
 <div id="extras">
-<div>
+</div>
 
 </div>
