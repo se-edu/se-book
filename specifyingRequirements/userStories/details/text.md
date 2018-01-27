@@ -20,11 +20,7 @@ As a user, I can login to the system ~~so that I can access my data~~
 
 </tip-box>
 
-<tip-box type="warning">
-
-It is recommended to confirm there is a concrete benefit even if you omit it from the user story. If not, we could end up adding features that have no real benefit.
-
-</tip-box>
+:exclamation: It is recommended to confirm there is a concrete benefit even if you omit it from the user story. If not, we could end up adding features that have no real benefit.
 
 We can add more characteristics to the `{user role}` to provide more context to the user story.
 

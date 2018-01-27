@@ -89,6 +89,12 @@ An _abstract class_ is a class that is declared `abstract`—it may or may not i
 
 </div>
 
+<div id="def-domain-expert">
+
+**Domain Expert** : An expert of a discipline to which the product is connected %%&nbsp;e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting%%.
+
+</div>
+
 <div id="def-dry-principle">
 
 **DRY (Don't Repeat Yourself) Principle**: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub>_The Pragmatic Programmer_, by Andy Hunt and Dave Thomas</sub>

@@ -24,7 +24,7 @@
 
 <tip-box>
 
-:package: Examples (from a Learning Management System):
+:package: Examples (from a _Learning Management System_):
 
 1. As a student, I can download files uploaded by lecturers, so that I can get my own copy of the files
 2. As a lecturer, I can create discussion forums, so that students can discuss things online
@@ -34,7 +34,7 @@
 
 <p/>
 
-**We can write user stories on** index cards or sticky notes, and arrange on walls or tables, to facilitate planning and discussion. Alternatively, we can use a software such as [GitHub Project Boards](https://help.github.com/articles/about-project-boards/) to manage user stories digitally.
+**We can write user stories on** index cards or sticky notes, and arrange on walls or tables, to facilitate planning and discussion. Alternatively, we can use a software (e.g., [GitHub Project Boards](https://help.github.com/articles/about-project-boards/), Trello, Google Docs, ...) to manage user stories digitally.
 
 <panel header="%%User stories in use%%" expanded>
 

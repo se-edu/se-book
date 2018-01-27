@@ -16,7 +16,7 @@
 
 <tip-box>
 
-:package: Here is a partial glossary from a variant of the Snakes and Ladders game:
+:package: Here is a partial glossary from a variant of the _Snakes and Ladders_ game:
 
 * Conditional square: A square that specifies a specific face value which a player has to throw before his/her piece can leave the square.
 * Normal square: a normal square does not have any conditions, snakes, or ladders in it.
