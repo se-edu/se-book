@@ -53,13 +53,16 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 
 **Every object has both state (data) and behavior (operations on data).**
 
+<tip-box> 
+
 | Object      | Real World? | Virtual World? | Example of State (i.e. Data)       | Examples of Behavior (i.e. Operations)                |
 | :---------: |:-----------:|:--------------:|:----------------------------------:| :----------------------------------------------------:|
-| Adam        | x           | x              | Name, Date of Birth                | Calculate age based on birthday                       |
-| Pen         | x           |                | Ink color, Amount of ink remaining | Write                                                 |
-| AgeList     |             | x              | Recorded ages                      | Give the number of entries, Accept an entry to record |
-| Calculator  | x           | x              | Numbers already entered            | Calculate the sum, divide                             |
-| You/Main    | x           | x              | Average age, Sum of ages           | Use other objects to calculate                        |
+| Adam        | **🗸** | **🗸** | Name, Date of Birth                | Calculate age based on birthday                       |
+| Pen         | **🗸** | %%-%% | Ink color, Amount of ink remaining | Write                                                 |
+| AgeList     | %%-%% | **🗸** | Recorded ages                      | Give the number of entries, Accept an entry to record |
+| Calculator  | **🗸** | **🗸** | Numbers already entered            | Calculate the sum, divide                             |
+| You/Main    | **🗸** | **🗸** | Average age, Sum of ages           | Use other objects to calculate           
+</tip-box>             |
 
 **Every object has an interface and an implementation.** 
 
