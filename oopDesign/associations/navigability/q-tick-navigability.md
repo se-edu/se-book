@@ -12,7 +12,7 @@
 
 (a)
 
-Explanation: The diagram indicates that `Unit` item should know about the `Item` object. In the implementation, the `Unit` object will hold a `Unit` object in one of its variables.
+Explanation: The diagram indicates that `Unit` object should know about the `Item` object. In the implementation, the `Unit` object will hold a `Unit` object in one of its variables.
 
 </div>
 </question>
