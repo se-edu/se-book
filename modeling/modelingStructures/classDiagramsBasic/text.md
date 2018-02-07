@@ -12,7 +12,7 @@
 
 **_Associations_ among objects/classes play an important role in an OO solution.**
 
-<dynamic-panel src="../../../oopDesign/associations/basic/full.md" header=":mortar_board: OOP → Associations → Basic" />
+<panel src="../../../oopDesign/associations/basic/full.md" header=":mortar_board: OOP → Associations → Basic" expanded/>
 
 The most basic class diagram is a bunch of classes with some solid lines among them to represent associations, such as this one.
 
@@ -26,10 +26,10 @@ The most basic class diagram is a bunch of classes with some solid lines among t
 
 In addition, **associations can show additional decorations such as _association labels_, _association roles_, _multiplicity_ and _navigability_** to add more information to a class diagram.
 
-<dynamic-panel src="../../../../book/uml/classDiagrams/associations/labels/full.md" header=":mortar_board: UML → Class Diagrams → Associations → Labels"/>
-<dynamic-panel src="../../../../book/uml/classDiagrams/associations/roles/full.md" header=":mortar_board: UML → Class Diagrams → Associations → Roles"/>
-<dynamic-panel src="../../../../book/oopDesign/associations/multiplicity/full.md" header=":mortar_board: OOP → Associations → Multiplicity" />
-<dynamic-panel src="../../../../book/oopDesign/associations/navigability/full.md" header=":mortar_board: OOP → Associations → Navigability" />
+<panel src="../../../../book/uml/classDiagrams/associations/labels/full.md" header=":mortar_board: UML → Class Diagrams → Associations → Labels" expanded />
+<panel src="../../../../book/uml/classDiagrams/associations/roles/full.md" header=":mortar_board: UML → Class Diagrams → Associations → Roles" expanded />
+<panel src="../../../../book/oopDesign/associations/multiplicity/full.md" header=":mortar_board: OOP → Associations → Multiplicity" expanded />
+<panel src="../../../../book/oopDesign/associations/navigability/full.md" header=":mortar_board: OOP → Associations → Navigability" expanded />
 
 <tip-box> 
 

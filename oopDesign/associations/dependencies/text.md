@@ -12,7 +12,7 @@
 
 Dependencies are objects that are not directly linked in the object network can still interact with each other. These are a weaker form of associations we call _dependencies_.
 
-<dynamic-panel src="../../../uml/classDiagrams/dependencies/what/full.md" header=":mortar_board: UML: Class Diagrams: Dependencies" is-open></dynamic-panel>
+<panel src="../../../uml/classDiagrams/dependencies/what/full.md" header=":mortar_board: UML: Class Diagrams: Dependencies" expanded />
 
 <p/>
 
