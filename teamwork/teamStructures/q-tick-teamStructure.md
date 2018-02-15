@@ -11,7 +11,7 @@ Which team structure is the most suitable for a school project?
 
 (a)
 
-Explanation: Given that students are all peers and beginners, Egoless team structure seems most suitable for the class project.  
+Explanation: Given that students are all peers and beginners, Egoless team structure seems most suitable for a school project. However, given school projects are low-stakes, short-lived, and small, even the other two team structures can be used for them.  
 
 </div>
 </question>
