@@ -8,7 +8,7 @@
 
 <div id="main">
 
-Given below are some guidelines to write developer documentation, particularly applicable to documents targeted at developer-as-maintainer.
+<include src="./intro.md" />
 
 <include src="./goTopDown/topicPanel.md" />
 <include src="./aimForComprehensibility/topicPanel.md" />

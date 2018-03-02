@@ -12,11 +12,11 @@
 - [ ] i. Syntax assistance e.g., show hints as you type.
 - [ ] j. Code generation e.g., to generate the code required by simply specifying which component/structure you want to implement.
 - [ ] k. Extension. i.e. ability add more functionality to the IDE using plugins.
-- [ ] l. All of the above are present in most IDEs and some have even more features.
+
 
 <div slot="answer">
 
-l
+All.
 
 Explanation: While all of these features may not be present in some IDEs, most do have these features in some form or other.
 
