@@ -30,7 +30,7 @@ Subsequently, some of the signatories of the manifesto went on to create process
 * Instead of doing a very elaborate and detailed design and a project plan for the whole project, the team works based on a rough project plan and a high level design that evolves as the project goes on.
 * Strong emphasis on complete transparency and responsibility sharing among the team members. The team is responsible together for the delivery of the product. Team members are accountable, and regularly and openly share progress with each other and with the user.  
 
-**There are a number of agile processes in the development world today. eXtreme Programming (XP) and Scrum are two of the well-known ones.** 
+**There are a number of agile processes in the development world today. _eXtreme Programming (XP)_ and _Scrum_ are two of the well-known ones.** 
 
 </div>
 
