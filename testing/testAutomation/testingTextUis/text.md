@@ -12,11 +12,12 @@
 
 <div id="body">
 
-**A simple way to semi-automate testing of a <trigger for="pop:cli">CLI</trigger> app is using input/output re-direction.**
-  * **First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.**<br> e.g., `java AddressBook < input.txt > output.txt`
-  * **Next, we compare the actual output file with another file containing the expected output.**<br> e.g., `FC output.txt expected.txt`
+**A simple way to semi-automate testing of a CLI(Command Line Interface) app is by using input/output re-direction.**
 
-Let us assume we are testing a CLI app called `AddressBook` (Example: [se-edu/addressbook-level1](https://github.com/nus-cs2103-AY1718S2/addressbook-level1)). Here are the detailed steps:
+* First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.
+* Next, we compare the actual output file with another file containing the expected output.
+
+Let us assume we are testing a CLI app called `AddressBook`. Here are the detailed steps:
 
 1. Store the test input in the text file `input.txt`. 
  
@@ -47,9 +48,16 @@ Let us assume we are testing a CLI app called `AddressBook` (Example: [se-edu/ad
    ```sh
    java AddressBook < input.txt > output.txt
    ```
+   
+   * :bulb: The way to run a CLI program differs based on the language.<br>
+     e.g., In Python, assuming the code is in `AddressBook.py` file, use the command<br>
+      `python AddressBook.py < input.txt > output.txt`
+   
+   * :bulb: If you are using Windows, use a normal command window to run the app, not a Power Shell window.
+   
    <panel header="%%More on the `>` operator and the `<` operator. :zero:%%" alt="I/O redirection info" type="seamless" >
    
-   A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using ` < ` and ` > ` operators. For example, if you run `AddressBook` in the DOS prompt, the output will be shown in the console, but if you run it like this,
+   A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using ` < ` and ` > ` operators. For example, if you run `AddressBook` in a command window, the output will be shown in the console, but if you run it like this,
    
    ```sh
    java AddressBook > output.txt 
@@ -66,7 +74,7 @@ Let us assume we are testing a CLI app called `AddressBook` (Example: [se-edu/ad
    
    </panel><p/>
 
-1. Next, we compare `output.txt` with the `expected.txt`. This can be done using a utility such as Windows `FC` (i.e. File Compare) command, Unix `diff` command, or a GUI tool such as Winmerge. 
+1. Next, we compare `output.txt` with the `expected.txt`. This can be done using a utility such as Windows `FC` (i.e. File Compare) command, Unix `diff` command, or a GUI tool such as _WinMerge_. 
 
    ```
    FC output.txt expected.txt

@@ -275,8 +275,6 @@ Also known as
 
 </div>
 
-<div id="def-sut">
-
 <div id="def-stub">
 
 **Stub**: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database. 

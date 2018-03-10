@@ -54,7 +54,7 @@ For each test case we do the following:
 
 <tip-box>
 
-:package: Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading ‘longfile.html’. The defect/bug causing that failure could be an uninitialized variable.
+:package: Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading `longfile.html`. The defect/bug causing that failure could be an uninitialized variable.
 
 </tip-box>
 
