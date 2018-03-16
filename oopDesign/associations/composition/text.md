@@ -14,7 +14,7 @@
 
 **A composition is an association that represents a strong _whole-part_ relationship.** When the _whole_ is destroyed, _parts_ are destroyed too.
 
-<panel src="../../../uml/classDiagrams/composition/what/full.md" header=":mortar_board: UML → Class Diagrams → Composition" expanded/>
+<panel src="../../../uml/classDiagrams/composition/what/full.md#titel-and-body" header=":mortar_board: Tools → UML → Class Diagrams → Composition" expanded/>
 
 <p/>
 
