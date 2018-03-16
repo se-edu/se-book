@@ -61,8 +61,9 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 | Pen         | **🗸** | %%-%% | Ink color, Amount of ink remaining | Write                                                 |
 | AgeList     | %%-%% | **🗸** | Recorded ages                      | Give the number of entries, Accept an entry to record |
 | Calculator  | **🗸** | **🗸** | Numbers already entered            | Calculate the sum, divide                             |
-| You/Main    | **🗸** | **🗸** | Average age, Sum of ages           | Use other objects to calculate           
-</tip-box>             |
+| You/Main    | **🗸** | **🗸** | Average age, Sum of ages           | Use other objects to calculate                        |
+
+</tip-box>
 
 **Every object has an interface and an implementation.** 
 

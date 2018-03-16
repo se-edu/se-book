@@ -28,8 +28,8 @@ When writing an OOP program to calculate the average age of Adam, Beth, Charlie,
 
 Let us use the UML notation to illustrate classes and objects under discussion.
 
-<panel src="../../../uml/classDiagrams/classes/what/full.md" header=":mortar_board: UML → Class Diagrams → Classes" expanded />
-<panel src="../../../uml/objectDiagrams/objects/full.md" header=":mortar_board: UML → Object Diagrams → Objects" expanded/>
+<panel src="../../../uml/classDiagrams/classes/what/full.md#title-and-body" header=":mortar_board: Tools → UML → Class Diagrams → Classes" expanded />
+<panel src="../../../uml/objectDiagrams/objects/full.md#title-and-body" header=":mortar_board: Tools → UML → Object Diagrams → Objects" expanded/>
 
 <p/>
 

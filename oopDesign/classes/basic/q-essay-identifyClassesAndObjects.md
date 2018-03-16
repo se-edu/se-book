@@ -5,7 +5,7 @@ Consider the following scenario. If you were to simulate this in an OOP program,
 
 <tip-box> 
   
-John gave a checque to the Cashier pay for the LoTR and GoT books he bought.
+John gave a checque to the Cashier to pay for the LoTR and GoT books he bought.
 
 </tip-box>
 

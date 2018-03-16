@@ -52,7 +52,7 @@ The method `getTotalPersons()` is not suitable to send to a specific `Person` ob
 
 **Class-level attributes and methods are collectively called ==_class-level members_==** (also called _static members_ sometimes because some programming languages use the keyword `static` to identify class-level members). **They are to be accessed using the class name rather than an instance of the class**.
 
-<panel src="../../../uml/classDiagrams/classLevelMembers/what/full.md" header=":mortar_board: UML → Class Diagrams → Class Level Members" expanded />
+<panel src="../../../uml/classDiagrams/classLevelMembers/what/full.md#title-and-body" header=":mortar_board: Tools → UML → Class Diagrams → Class Level Members" expanded />
 
 <p/>
 

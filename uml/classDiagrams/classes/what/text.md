@@ -8,7 +8,7 @@
 
 The basic UML notations used to represent a _class_:<br>
 
-<img src="{{baseUrl}}/uml/classDiagrams/classes/what/images/basicNotation.png" height="100" />
+<img src="{{baseUrl}}/uml/classDiagrams/classes/what/images/basicNotation.png" height="130" />
 <p/>
 
 <tip-box>

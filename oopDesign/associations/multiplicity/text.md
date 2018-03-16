@@ -20,7 +20,7 @@
 
 </tip-box>
 
-<panel src="../../../uml/classDiagrams/associations/multiplicity/full.md" header=":mortar_board: UML → Class Diagrams → Associations → Multiplicity" expanded />
+<panel src="../../../uml/classDiagrams/associations/multiplicity/full.md#title-and-body" header=":mortar_board: UML → Class Diagrams → Associations → Multiplicity" expanded />
 
 <p/>
 
