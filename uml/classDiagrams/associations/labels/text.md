@@ -8,8 +8,7 @@
 
 **_Association labels_ describe the meaning of the association.** The arrow head indicates the direction in which the label is to be read.
 
-<img src="{{baseUrl}}/uml/classDiagrams/associations/labels/images/association.png" width="400" />
-<p/>
+<img src="{{baseUrl}}/uml/classDiagrams/associations/labels/images/notation.png" width="400" />
 
 <tip-box>
 

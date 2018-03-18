@@ -48,6 +48,11 @@ Objects in an OO solution need to be connected to each other to form a network s
 
 </tip-box>
 
+<panel src="../../../uml/classDiagrams/associations/roles/full.md#title-and-body" header=":mortar_board: Tools → UML → Class Diagrams → Associations → Roles" expanded />
+<panel src="../../../uml/classDiagrams/associations/labels/full.md#title-and-body" header=":mortar_board: Tools → UML → Class Diagrams → Associations → Labels" expanded />
+
+
+
 </div>
 
 <div id="extras">
