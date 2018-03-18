@@ -20,23 +20,52 @@ The basic UML notations used to represent a _class_:<br>
 
 <panel type="seamless" header="The equivalent code">
 
-```java
+<table> 
+<tr>
+  <td>
 
+Java :arrow_heading_down:
+
+```java
 class Table{
     
     Integer number;
     Chair[] chairs = null;
     
     Integer getNumber(){
-        ...
+        //...
     }
     
     void setNumber(Integer n){
-        ...
+        //...
     }
 }
-
 ```
+  </td>
+  <td valign="bottom">&nbsp;&nbsp;<br><br></td>
+  <td valign="bottom">
+
+Python :arrow_heading_down:
+
+```python
+class Table:
+    
+  def __init__(self):
+    self.number = 0
+    self.chairs = []
+    
+  def get_number(self):
+    # ...
+  
+    
+  def set_number(self, n):
+    # ...
+    
+```
+  </td>
+</tr>
+</table>
+
 </panel>
 
 </tip-box>
@@ -51,10 +80,21 @@ class Table{
 
 **The _visibility_ of attributes and operations is used to indicate the level of access allowed for each attribute or operation.** The types of visibility and their exact meanings depend on the programming language used. Here are some common visibilities and how they are indicated in a class diagram:
 
-* `+` : `public`
-* `-` : `private`
-* `#` : `protected`
-* `~` : `package private`
+* `+` : public
+* `-` : private
+* `#` : protected
+* `~` : package private
+
+<panel type="seamless" header="How visibilities map to programming language features">
+
+visibility | Java | Python
+-----------|------|-------
+`-`  private | `private` | at least two leading underscores (and at most one trailing underscores) in the name
+`#`  protected | `protected` | one leading underscore in the name
+`+`  public | `public` | all other cases
+`~`  package private | default visibility | not applicable
+
+</panel><p/>
 
 <tip-box>
 

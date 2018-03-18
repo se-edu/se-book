@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/association.png" height="120" />
+<img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/notation.png" height="120" />
 <p/>
 
 Commonly used multiplicities:

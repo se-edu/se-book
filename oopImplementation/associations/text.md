@@ -21,18 +21,7 @@
 <img src="{{baseUrl}}/oopImplementation/associations/images/logicMinefield.png" height="40" />
 <p/>
 
-```java
-class Logic {
-    Minefield minefield;
-    ...
-}
-```
-
-```java
-class Minefield {
-    ...
-}
-```
+<include src="../../uml/classDiagrams/associations/navigability/logic-minefield.md" />
 
 </tip-box>
 
@@ -44,12 +33,27 @@ class Minefield {
 <img src="{{baseUrl}}/oopImplementation/associations/images/logicConfigGenerator.png" height="40" />
 <p/>
 
+<tabs> 
+  <tab header="Java">
+
 ```java
 class Logic {
     ConfigGenerator cg = new ConfigGenerator();
     ...
 }
 ```
+  </tab>
+  <tab header="Python">
+
+```python
+class Logic:
+  
+  def __init__(self):
+    self.config_gen = ConfigGenerator()
+```
+  </tab>
+</tabs><hr>
+
 
 </tip-box>
 
@@ -60,31 +64,78 @@ class Logic {
 <img src="{{baseUrl}}/oopImplementation/associations/images/fooBar.png" height="40" />
 <p/>
 
+<table> 
+<tr>
+  <td>
+
+Java :arrow_heading_down:
 ```java
 class Foo {
     Bar bar;
-    ...
+    //...
 }
-```
 
-```java
+
 class Bar {
     Foo foo;
-    ...
+    //...
 }
+
 ```
+  </td>
+  <td valign="bottom">&nbsp;&nbsp;<br><br></td>
+  <td valign="bottom">
+
+Python :arrow_heading_down:
+```python
+class Foo:
+  
+  def __init__(self, bar):
+    self.bar = bar;
+
+
+class Bar:
+  
+  def __init__(self, foo):
+    self.foo = foo;
+    
+```
+  </td>
+</tr>
+</table>
+
+
 </tip-box>
 
 **To implement other multiplicities, choose a suitable data structure** such as Arrays, ArrayLists, HashMaps, Sets, etc.
 
 <tip-box>
+<table> 
+<tr>
+  <td>
 
+Java :arrow_heading_down:
 ```java
 class Minefield {
     Cell[][] cell;
     ...
 }
 ```
+  </td>
+  <td valign="bottom">&nbsp;&nbsp;<br><br></td>
+  <td valign="bottom">
+
+Python :arrow_heading_down:
+```python
+class Minefield:
+  
+  def __init__(self):
+    self.cells = {1:[], 2:[], 3:[]}
+```
+  </td>
+</tr>
+</table>
+
 
 </tip-box>
 
