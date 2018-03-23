@@ -10,9 +10,9 @@
 
 <div id="body">
 
-**Most languages allow a method to encapsulate the unusual situation in an Exception object and 'throw'/'raise' that object so that another piece of code can 'catch' it and deal with it.** This is especially useful when code segment that encountered the unusual situation does not know how to deal with it.
+**Most languages allow a method/function to encapsulate the unusual situation in an Exception object and 'throw'/'raise' that object so that another piece of code can 'catch' it and deal with it.** This is especially useful when code segment that encountered the unusual situation does not know how to deal with it.
 
-**Exception objects can propagate up the method/function call hierarchy until it is dealt with.** Usually, an exception thrown by a method is caught by the caller method. If the called method does not know how to deal with the exception it caught, it can throw/raise the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the method call stack until it is received by the main method and thrown to the runtime, thus halting the system. 
+**Exception objects can propagate up the function call hierarchy until it is dealt with.** Usually, an exception thrown by a function is caught by the caller function. If the called function does not know how to deal with the exception it caught, it can throw/raise the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the <tooltip content="the hieararchy of function calls">function call stack</tooltip> until it is received by the main function and thrown to the runtime, thus halting the system. 
 
 <tip-box>
 
