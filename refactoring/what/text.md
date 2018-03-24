@@ -25,9 +25,9 @@ The first version of the code you write may not be of production quality. It is 
 
 </tip-box>
 
-Given below are two common refactorings (taken from <trigger trigger="click" for="modal:refactoring-catalog-what"> refactoring-catalog </trigger>).
+Given below are two common refactorings (<trigger trigger="click" for="modal:refactoring-catalog-what">more</trigger>).
 
-<modal title="**Refactoring Catalog**" id="modal:refactoring-catalog-what">
+<modal title="**Refactoring Catalogs**" id="modal:refactoring-catalog-what">
   <include src="../../common/references.md#refactoring-catalog"/>
 </modal>
 
@@ -39,25 +39,20 @@ Situation:  The same fragment of code is in all branches of a conditional expres
 
 Method: Move it outside of the expression.
 
-Example:
-```java
-if (isSpecialDeal()) {
-    total = price * 0.95;
-    send();
-} else {
-    total = price * 0.98;
-    send();
-}
-```
-:arrow_heading_down:
-```java
-if (isSpecialDeal()){
-    total = price * 0.95;
-} else {
-    total = price * 0.98;
-}
-send();
-```
+:package: Example:
+
+<tabs> 
+  <tab header="Java">
+
+<include src="example-consolidate-java.md" />
+
+  </tab>
+  <tab header="Python">
+
+<include src="example-consolidate-python.md" />
+
+</tab>
+</tabs><hr>
 
 </tip-box>
 
@@ -69,28 +64,22 @@ Situation:  You have a code fragment that can be grouped together.
 
 Method: Turn the fragment into a method whose name explains the purpose of the method.
 
-Example:
-```java
-void printOwing() {
-    printBanner();
+:package: Example:
 
-    //print details
-    System.out.println("name:	" + name);
-    System.out.println("amount	" + getOutstanding());
-}
-```
-:arrow_heading_down:
-```java
-void printOwing() {
-    printBanner();
-    printDetails(getOutstanding());
-}
+<tabs> 
+  <tab header="Java">
 
-void printDetails (double outstanding) {
-    System.out.println("name:	" + name);
-    System.out.println("amount	" + outstanding);
-}
-```
+<include src="example-extract-java.md" />
+
+  </tab>
+  <tab header="Python">
+
+<include src="example-extract-python.md" />
+
+</tab>
+</tabs><hr>
+
+
 
 </tip-box>
 
