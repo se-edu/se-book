@@ -16,45 +16,20 @@
 
 <tip-box>
 
-Example: The two code samples given below achieve the same functionality, but one is easier to read.
+:package: The two code samples given below achieve the same functionality, but one is easier to read.
 
-![][Bad]
-```java
-int subsidy() {
-    int subsidy;
-    if (!age) {
-        if (!sub) {
-            if (!notFullTime) {
-                subsidy = 500;
-            } else {
-                subsidy = 250;
-            }
-        } else {
-            subsidy = 250;
-        }
-    } else {
-        subsidy = -1;
-    }
-    return subsidy;
-}
-```
+<tabs> 
+  <tab header="Java">
 
-![][Good]
-```java
-int calculateSubsidy() {
-    int subsidy;
-    if (isSenior) {
-        subsidy = REJECT_SENIOR;
-    } else if (isAlreadySubsidised) {
-        subsidy = SUBSIDISED_SUBSIDY;
-    } else if (isPartTime) {
-        subsidy = FULLTIME_SUBSIDY * RATIO;
-    } else {
-        subsidy = FULLTIME_SUBSIDY;
-    }
-    return subsidy;
-}
-```
+<include src="example-java.md" />
+
+  </tab>
+  <tab header="Python">
+
+<include src="example-python.md" />
+
+</tab>
+</tabs><hr>
 
 </tip-box>
 

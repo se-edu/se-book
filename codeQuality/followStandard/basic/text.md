@@ -10,7 +10,9 @@
 
 <div id="body">
 
-Go through the [provided Java coding standard](https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html) and learn the _basic_ style rules.
+Some coding standards you can adopt:
+* [**Java** coding standard -- by OSS-Generic](https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html)
+* [PEP 8 **Python** Style Guide -- by Python.org](https://www.python.org/dev/peps/pep-0008/)
 
 </div>
 
