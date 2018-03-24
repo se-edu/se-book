@@ -20,14 +20,11 @@
 
 <tip-box>
 
-:package: In the class below, the `calculate` method is overloaded because the two methods have the same name but different type signatures `(String)` and `(int[])`
+:package: In the class below, the `calculate` method is overloaded because the two methods have the same name but different type signatures `(String)` and `(int)`
 
-```java
-class RatingCalculator{
-    void calculate(String matric) { ... }
-    void calculate(int[] averages) { ... }
-}
-```
+* `calculate(String): void`
+* `calculate(int): void`
+
 
 </tip-box>
 
