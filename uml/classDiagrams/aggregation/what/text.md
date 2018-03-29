@@ -8,6 +8,10 @@
 
 **UML uses a hollow diamond is used to indicate an aggregation.**
 
+Notation:
+
+<img src="{{baseUrl}}/uml/classDiagrams/aggregation/what/images/notation.png" height="45" />
+
 <tip-box>
 
 :package: Example:
