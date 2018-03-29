@@ -14,7 +14,7 @@ System testing is typically done by a testing team (also called a QA team).
 
 <tip-box>
 
-:package: Suppose the SUT is a browser capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully if pushed beyond its limits. 
+:package: Suppose the SUT is a browser supposedly capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully if pushed beyond its limits. 
 
 ```
 Test case: load a web page that is too big

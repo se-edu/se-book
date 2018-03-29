@@ -9,7 +9,7 @@
 **Delaying testing until the full product is complete has a number of disadvantages:**
 
 * **Locating the cause of such a test case failure is difficult due to a large search space;** in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple inter-related bugs.
-* **Fixing a bug found during such testing could result in major rework**, especially if the bug originated during the design or during requirements specification (i.e. a faulty design or faulty requirements).
+* **Fixing a bug found during such testing could result in major rework**, especially if the bug originated during the design or during requirements specification %%i.e. a faulty design or faulty requirements%%.
 * **One bug might 'hide' other bugs**, which could emerge only after the first bug is fixed.
 * **The delivery may have to be delayed** if too many bugs were found during testing.
 

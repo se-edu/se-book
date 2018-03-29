@@ -12,13 +12,13 @@
 
 **Formal verification uses mathematical techniques to prove the correctness of a program.**
 
-<div v-closeable alt=""> 
-
-:tv: An introduction to Formal Methods by [Eric Hehner](http://www.cs.utoronto.ca/~hehner/)
+<panel type="seamless" header=":tv: An introduction to Formal Methods">
 
 @[youtube](89fKiaMxHrA)
 
-</div>
+by [Eric Hehner](http://www.cs.utoronto.ca/~hehner/)
+
+</panel><p/>
 
 Advantages:
 

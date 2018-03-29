@@ -23,9 +23,9 @@ Exploratory testing is ‘the simultaneous learning, test design, and test execu
 
 </tip-box>
 
-<tip-box type="tip"> 
+<tip-box> 
 
-**Exploratory testing is also known as _reactive testing, error guessing technique, attack-based testing,_ and _bug hunting_.** 
+:bulb: **Exploratory testing is also known as _reactive testing, error guessing technique, attack-based testing,_ and _bug hunting_.** 
 
 </tip-box>
 

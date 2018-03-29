@@ -50,7 +50,7 @@ An EP may not have adjacent values.
 
 <tip-box> 
 
-:package: Consider the method `isPrime(int i):boolean` that returns true if `i` is a prime number.
+:package: Consider the method `isPrime(int i): boolean` that returns true if `i` is a prime number.
 
 EPs for `i`:
 * prime numbers
@@ -62,7 +62,7 @@ Some inputs have only a small number of possible values and a potentially unique
 
 <tip-box> 
 
-:package: Consider the method `showStatusMessage(GameStatus s):String` that returns a unique `String` for each of the possible value of s (`GameStatus` is an `enum`). In this case, each possible value for `s` will have to be considered as a partition. 
+:package: Consider the method `showStatusMessage(GameStatus s): String` that returns a unique `String` for each of the possible value of s (`GameStatus` is an `enum`). In this case, each possible value for `s` will have to be considered as a partition. 
 
 </tip-box>
 
@@ -89,12 +89,12 @@ Note that the EP technique is merely a heuristic and not an exact science, espec
   <td>
       
 `isValidFlag(String s): boolean`<br>
-Returns `true` if s is one of [“F”, “T”, “D”]. The comparison is case-sensitive.
+Returns `true` if s is one of [`"F"`, `"T"`, `"D"`]. The comparison is case-sensitive.
       
   </td>
   <td>
       
-[“F”] [“T”] [“D”] [“f”, “t”, “d”] [any other string][null]
+[`"F"`] [`"T"`] [`"D"`] [`"f"`, `"t"`, `"d"`] [any other string][null]
       
   </td>
   </tr>
@@ -108,7 +108,7 @@ Returns the square root of `s` if the square root is an integer; returns `0` oth
   </td>
   <td>
       
-[s is not a valid number] [s is a negative integer] [s has an integer square root] [s does not have an integer square root]
+[`s` is not a valid number] [`s` is a negative integer] [`s` has an integer square root] [`s` does not have an integer square root]
       
   </td>
   </tr>

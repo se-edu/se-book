@@ -1,4 +1,4 @@
-<panel header=":lock::key: EPs for isValidName method">
+<panel header=":lock::key: EPs for `isValidName` method">
 <question>
 
 Consider this SUT:
