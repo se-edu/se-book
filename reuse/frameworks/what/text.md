@@ -54,7 +54,7 @@ Some frameworks cover only a specific components or an aspect.
 
 <tip-box>
 
-:package: JavaFx a framework for creating Java GUIs.
+:package: JavaFx a framework for creating Java GUIs. TkInter is a GUI framework for Python.
 
 </tip-box>
 
@@ -62,9 +62,8 @@ Some frameworks cover only a specific components or an aspect.
 
 :package: More examples of frameworks
 
-*	Drupal: a framework for Web-based applications, content management systems in particular. Implemented using PHP
-*	Ruby on Rails : another Web-application framework similar to Drupal but uses Ruby instead of PHP
-*	JUnit: a framework for testing Java code.
+* Frameworks for Web-based applications: Drupal(PHP), Django(Python), Ruby on Rails (Ruby), Spring (Java)
+* Frameworks for testing: JUnit (Java), unittest (Python), Jest (Java Script)
 
 </tip-box>
 

@@ -12,11 +12,11 @@
 
 **Architecture diagrams are free-form diagrams.** There is no universally adopted standard notation for architecture diagrams. Any symbol that reasonably describes the architecture may be used.
 
-<div v-closeable alt="architecture diagram examples">
+<div v-closeable alt="architecture diagram examples" id="architecture-diagram-examples">
 
 <tip-box>
 
-:package: Some example architecture diagrams from elsewhere:
+:package: Some example architecture diagrams:
 
 <tabs> 
   <tab header="TEAMMATES">
