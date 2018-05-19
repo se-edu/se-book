@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Coding Best Practices: [Practice] Explain WHAT, WHY not HOW"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Git and Github [Printable]"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

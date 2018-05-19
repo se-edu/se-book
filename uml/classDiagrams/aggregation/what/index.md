@@ -1,3 +1,7 @@
+<frontmatter>
+title: "UML: Class Diagrams: Aggregation: What"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Modeling: Modeling Structures: Object Oriented Domain Models"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

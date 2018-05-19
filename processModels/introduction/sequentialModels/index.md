@@ -1,3 +1,7 @@
+<frontmatter>
+title: "SDLC Process Models: Introduction: Sequential Models"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

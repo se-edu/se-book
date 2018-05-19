@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Integration: Build Automation: Continuous Integration/Continuous Deployment"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

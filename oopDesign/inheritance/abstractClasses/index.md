@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Object Oriented Programming: Inheritance: Abstract Classes"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

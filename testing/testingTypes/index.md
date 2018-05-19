@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Testing: Testing Types"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

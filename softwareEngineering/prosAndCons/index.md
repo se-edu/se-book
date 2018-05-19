@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Software Engineering: Pros and Cons"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

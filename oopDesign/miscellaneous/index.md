@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Object Oriented Programming: Miscellaneous"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

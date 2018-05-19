@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Test Case Design: Equivalence Partitions"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Revision Control: Using History"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Integration: Approaches: 'Late and One Time' vs 'Early and Frequent'"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

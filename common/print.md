@@ -1,3 +1,7 @@
+<frontmatter>
+title: "CS2103/T Website - Textbook [Printable]"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

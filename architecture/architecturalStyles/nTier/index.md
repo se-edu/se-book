@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Architectural Styles: n-tier Architectural Style"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

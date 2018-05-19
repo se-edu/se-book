@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Testing Types: Integration Testing: What"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

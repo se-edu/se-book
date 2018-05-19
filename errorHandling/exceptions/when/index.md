@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Error Handling: Exceptions: When"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

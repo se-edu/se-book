@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Teamwork: Team Structures"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Design Approaches: Agile Design"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

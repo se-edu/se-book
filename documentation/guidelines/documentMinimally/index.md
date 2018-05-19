@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Documentation: Guidelines: Document Minimally, but Sufficiently"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

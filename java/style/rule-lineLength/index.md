@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Java: Code Style : [Rule] Line Length"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

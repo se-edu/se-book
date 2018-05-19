@@ -1,3 +1,7 @@
+<frontmatter>
+title: "UML: Sequence Diagrams: Alternative Paths"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

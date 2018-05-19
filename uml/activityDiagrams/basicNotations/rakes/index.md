@@ -1,3 +1,7 @@
+<frontmatter>
+title: "UML: Activity Diagrams: Basic Notation: Rakes"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

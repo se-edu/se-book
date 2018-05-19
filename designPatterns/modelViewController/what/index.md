@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Software Design Patterns: Model View Controller: What"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

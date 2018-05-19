@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Documentation: Guidelines: Aim for Comprehensibility"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

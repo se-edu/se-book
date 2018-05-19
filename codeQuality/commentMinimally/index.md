@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Code Quality: [Guideline] Comment Minimally, but Sufficiently"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

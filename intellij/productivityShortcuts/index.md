@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Intellij IDEA: Productivity Shortcuts"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">
