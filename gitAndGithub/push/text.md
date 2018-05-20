@@ -12,7 +12,7 @@
 
 <div id="body">
 
-1. Fork the [samplerepo-things](https://github.com/nus-cs2103-AY1718S2/samplerepo-things) to your GitHub account: 
+1. Fork the [samplerepo-things]({{common_org}}/samplerepo-things) to your GitHub account: 
 
    <panel type="seamless" header="%%How to fork a repo?%%">
     
