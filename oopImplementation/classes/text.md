@@ -10,8 +10,20 @@
 
 <div id="body">
 
-Given below is a tutorial you can refer to (from Oracle’s official Java tutorials) to learn how to implement java classes, in the unlikely case you don't know how to do that already. 
+Given below are some resources on how to implement classes:
+
+<tabs> 
+  <tab header="Java">
+
 * [Classes, methods, variables](https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html) – Start from the linked page and follow the next few steps in the tutorial
+
+  </tab>
+  <tab header="Python">
+
+* [Python Programming Basics: OOP: Classes](https://nus-te3201.github.io/website/programming/toc/oop.html#classes) - Basics of writing classes using Python
+
+  </tab>
+</tabs><hr>
 
 </div>
 

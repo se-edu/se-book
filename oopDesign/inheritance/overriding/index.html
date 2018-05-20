@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -40,7 +41,7 @@
           <ul>
             <li><code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method.</li>
             <li><code>Report#write(String)</code> method is overridden by <code>EvaluationReport#write(String)</code> method.</li>
-            <li><code>Report#read():String</code> method is <strong>NOT</strong> overridden by <code>EvaluationReport#read(int):String</code> method. <span class="dimmed"> Reason: the two methods have different signatures; <code>EvaluationReport#read(int):String</code><trigger trigger="click" for="modal:overriding-overloading"><em>overloads</em></trigger> (rather than overrides) the <code>Report#read():String</code> method.</span></li>
+            <li><code>Report#read():String</code> method is <strong>NOT</strong> overridden by <code>EvaluationReport#read(int):String</code> method. <span class="dimmed"> Reason: the two methods have different signatures; <code>EvaluationReport#read(int):String</code> <trigger trigger="click" for="modal:overriding-overloading"> <em>overloads</em></trigger> (rather than overrides) the <code>Report#read():String</code> method.</span></li>
           </ul>
           <modal title="**Overloading**" id="modal:overriding-overloading">
             <div>
@@ -56,13 +57,11 @@
               <div id="main">
                 <div>
                   <p><strong>Method overloading is when there are multiple methods with the same name but different type signatures.</strong> Overloading is used to indicate that multiple operations do similar things but take different parameters.</p>
-                  <tip-box
-                    type="primary">
+                  <tip-box type="primary">
                     <div>
                       <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.</p>
-                      <panel
-                        type="seamless" header="%%Examples%%">
-                        <table class="markbind-table table">
+                      <panel type="seamless" header="%%Examples%%">
+                        <table class="markbind-table table table-bordered table-striped">
                           <thead>
                             <tr>
                               <th style="text-align:center">Method</th>
@@ -88,23 +87,23 @@
                             </tr>
                           </tbody>
                         </table>
-                        </panel>
+                      </panel>
                     </div>
-        </tip-box>
-        <tip-box>
-          <p>📦 In the class below, the <code>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code>(String)</code> and <code>(int[])</code></p>
-          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RatingCalculator</span></span>{
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculate</span><span class="hljs-params">(String matric)</span> </span>{ ... }
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculate</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] averages)</span> </span>{ ... }
-}
-</code></pre>
-        </tip-box>
-        </div>
-        <div></div>
-        </div>
-        </div>
-        </modal><img src="/se-book/oopDesign/inheritance/overriding/images/report.png" height="150">
-        <p></p>
+                  </tip-box>
+                  <tip-box>
+                    <p>📦 In the class below, the <code>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code>(String)</code> and <code>(int)</code></p>
+                    <ul>
+                      <li><code>calculate(String): void</code></li>
+                      <li><code>calculate(int): void</code></li>
+                    </ul>
+                  </tip-box>
+                </div>
+                <div></div>
+              </div>
+            </div>
+          </modal>
+          <img src="/se-book/oopDesign/inheritance/overriding/images/report.png" height="150">
+          <p></p>
         </tip-box>
       </div>
       <div></div>
@@ -115,5 +114,8 @@
 </body>
 <script src="..\..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\..\..\markbind\js\setup.js"></script>
 </html>

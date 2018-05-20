@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -35,9 +36,13 @@
     <div id="main">
       <div>
         <p><strong>To override a method inherited from an ancestor class, simply re-implement the method in the target class.</strong></p>
-        <tip-box>
-          <p>📦 A simple example where the <code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method:</p>
-          <pre><code class="hljs java">
+        <tabs>
+        
+          <tab header="Java">
+            <div>
+              <tip-box>
+                <p>📦 A simple example where the <code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method:</p>
+                <pre><code class="hljs java">
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Report</span></span>{
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
@@ -65,24 +70,86 @@
         evaluationReport.print(); <span class="hljs-comment">// prints "Printing evaluation report"</span>
     }
 }
-
 </code></pre>
-        </tip-box>
+              </tip-box>
+              <p>📎 Resources:</p>
+              <ul>
+                <li><a href="https://www.tutorialspoint.com/java/java_overriding.htm">Java - Overriding</a> -- a tutorial by <a href="http://tutorialspoint.com">tutorialspoint.com</a></li>
+              </ul>
+            </div>
+          </tab>
+        
+          <tab header="Python">
+            <div>
+              <tip-box>
+                <p>📦 In the example below, <code>Student</code> class overrides the <code>print_info</code> method of its parent class <code>Person</code>:</p>
+                <table>
+                  <tr>
+                  
+                    <td>
+                      <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name)</span>:</span>
+    self.name = name
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span><span class="hljs-params">(self)</span>:</span>
+    print(<span class="hljs-string">'My name is'</span>, self.name)
+    
+</code></pre>
+                      <p></p>
+                    </td>
+                  
+                    <td valign="bottom">  <br><br></td>
+                  
+                    <td valign="bottom">
+                      <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span><span class="hljs-params">(Person)</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, matric)</span>:</span>
+    self.name = name
+    self.matric = matric
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span><span class="hljs-params">(self)</span>:</span>
+    print(self.name, <span class="hljs-string">'is a student'</span>)
+</code></pre>
+                      <p></p>
+                    </td>
+                  </tr>
+                </table>
+                <table>
+                  <tr>
+                  
+                    <td>
+                      <pre><code class="hljs python">amy = Person(<span class="hljs-string">'Amy'</span>)
+amy.print_info()
+
+ben = Student(<span class="hljs-string">'Ben'</span>, <span class="hljs-string">'A12345'</span>)
+ben.print_info()
+</code></pre>
+                      <p></p>
+                    </td>
+                  
+                    <td valign="bottom"> → <br><br></td>
+                  
+                    <td valign="bottom">
+                      <pre class="hljs"><code>My name is Amy
+Ben is a student
+</code></pre>
+                      <p></p>
+                    </td>
+                  </tr>
+                </table>
+              </tip-box>
+            </div>
+          </tab>
+        </tabs>
+        <hr>
       </div>
       <div>
-        <div>
-          <panel header=":paperclip: Resources" expanded="">
-            <ul>
-              <li><a href="https://www.tutorialspoint.com/java/java_overriding.htm">Java - Overriding</a> -- a tutorial by <a href="http://tutorialspoint.com">tutorialspoint.com</a></li>
-            </ul>
-          </panel>
-        </div>
         <div>
           <panel header=":muscle: Exercises" expandable="">
             <div>
               <panel header=":lock::key: Which methods override?">
                 <question>
-                  <p>Which of these methods override another method?</p><img src="/se-book/oopImplementation/overriding/images/overriding.png" height="220">
+                  <p>Which of these methods override another method?</p>
+                  <img src="/se-book/oopImplementation/overriding/images/overriding.png" height="220">
                   <p></p>
                   <ul class="task-list">
                     <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
@@ -108,5 +175,8 @@
 </body>
 <script src="..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\..\markbind\js\setup.js"></script>
 </html>

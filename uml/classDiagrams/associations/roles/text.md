@@ -8,8 +8,7 @@
 
 **_Association Role_ labels are used to indicate the role played by the classes in the association.**
 
-<img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/association.png" height="120" />
-<p/>
+<img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/notation.png" height="60" />
 
 <tip-box>
 
@@ -20,6 +19,11 @@
 
 Note how the variable names match closely with the association roles.
 
+<table> 
+<tr>
+  <td valign="top">
+
+Java :arrow_heading_down:
 ```java
 class Man{
     Woman wife;
@@ -29,6 +33,23 @@ class Woman{
     Man husband;
 }
 ```
+  </td>
+  <td>&nbsp;&nbsp;<br><br></td>
+  <td valign="top">
+
+Python :arrow_heading_down:
+```python
+class Man:
+  def __init__(self):
+    self.wife = None # a Woman object
+
+class Woman:
+   def __init__(self):
+     self.husband = None # a Man object
+```
+  </td>
+</tr>
+</table>
 
 </tip-box>
 
@@ -39,11 +60,29 @@ class Woman{
 <img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/adminStudent.png" height="70" />
 <p/>
 
+<table> 
+<tr>
+  <td valign="top">
+
+Java :arrow_heading_down:
 ```java
 class Admin{
     List<Student> charges;
 }
 ```
+  </td>
+  <td>&nbsp;&nbsp;<br><br></td>
+  <td valign="top">
+
+Python :arrow_heading_down:
+```python
+class Admin:
+  def __init__(self):
+    self.charges = [] # list of Student objects
+```
+  </td>
+</tr>
+</table>
 
 </tip-box>
 

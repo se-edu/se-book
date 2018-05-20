@@ -17,7 +17,6 @@
 :package: Each intermediate product release is a milestone. 
 
 </tip-box>
-For example, 
 
 In some projects, it is not practical to have a very detailed plan for the whole project due to the uncertainty and unavailability of required information. In such cases, we can use a high-level plan for the whole project and a detailed plan for the next few milestones.
 

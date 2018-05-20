@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -34,7 +35,7 @@
       </div>
       <div>
         <p><strong>Exceptions are used to deal with <em>'unusual' but not entirely unexpected</em> situations</strong> that the program might encounter at run time.</p>
-        <tip-box type="primary">
+        <tip-box type="definition">
           <div>
             <p><strong>Exception</strong>:</p>
             <blockquote>
@@ -56,15 +57,29 @@
         <h4 id="how-two">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
       </div>
       <div>
-        <p><strong>Most languages allow a method to encapsulate the unusual situation in an Exception object and 'throw' that object so that another piece of code can 'catch' it and deal with it.</strong> This is especially useful when code segment that
-          encountered the unusual situation does not know how to deal with it.</p>
-        <p><strong>Exception objects can propagate up the method call hierarchy until it is dealt with.</strong> Usually, an exception thrown by a method is caught by the caller method. If the called method does not know how to deal with the exception it
-          caught, it will throw the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the method call stack until it is received by the main method and thrown to the
-          runtime, thus halting the system.</p>
+        <p><strong>Most languages allow a method/function to encapsulate the unusual situation in an Exception object and 'throw'/'raise' that object so that another piece of code can 'catch' it and deal with it.</strong> This is especially useful when code
+          segment that encountered the unusual situation does not know how to deal with it.</p>
+        <p><strong>Exception objects can propagate up the function call hierarchy until it is dealt with.</strong> Usually, an exception thrown by a function is caught by the caller function. If the called function does not know how to deal with the exception
+          it caught, it can throw/raise the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the
+          <tooltip content="the hieararchy of function calls">function call stack</tooltip> until it is received by the main function and thrown to the runtime, thus halting the system.</p>
         <tip-box>
-          <p>📦 In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code> method inside a <code>try{ }</code> block
-            and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p><img src="/se-book/errorHandling/exceptions/how/images/processInput.png" height="320">
-          <p></p>
+          <tabs>
+          
+            <tab header="Java">
+              <p>📦 In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code> method inside a <code>try{ }</code> block
+                and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p>
+              <img src="/se-book/errorHandling/exceptions/how/images/processInput.png" width="400">
+              <p></p>
+              <p></p>
+            </tab>
+          
+            <tab header="Python">
+              <p>📦 In the code given below, <code>process_array</code> function can potentially raise a <code>ValueError</code> exception. Because of that, <code>process_input</code> function invokes <code>process_array</code> function inside a <code>try</code>                clause and has a <code>except</code> clause to specify what to do if the exception is actually raised.</p>
+              <img src="/se-book/errorHandling/exceptions/how/images/example-python.png" width="400">
+              <p></p>
+            </tab>
+          </tabs>
+          <hr>
         </tip-box>
         <p>Advantages of exception handling in this way:</p>
         <ul>
@@ -167,7 +182,8 @@
         <div v-closeable="" alt="blackbox photo">
           <tip-box>
             <p>💡 <strong>A log file is like the <tooltip content="flight data recorder">black box</tooltip> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.</p>
-            <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br><sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub></p>
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br>
+              <sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub></p>
           </tip-box>
         </div>
       </div>
@@ -238,7 +254,8 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
       <div>
         <p>Consider two classes, <code>Account</code> and <code>Guarantor</code>, with an association as shown in the following diagram:</p>
         <tip-box>
-          <p>Example:</p><img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50">
+          <p>Example:</p>
+          <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50">
           <p></p>
           <p>Here, the association is compulsory i.e. an <code>Account</code> object should always be linked to a <code>Guarantor</code>. One way to implement this is to simply use a reference variable, like this:</p>
           <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
@@ -282,7 +299,8 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
       </div>
       <div>
         <p>Consider the association given below. A defensive implementation requires to ensure a <code>MinedCell</code> cannot exist without a <code>Mine</code> and vice versa which requires simultaneous object creation. However, Java can only create one
-          object at a time. Given below are two alternatives implementations, both of which violate the multiplicity for a short period of time.</p><img src="/se-book/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png" height="50">
+          object at a time. Given below are two alternatives implementations, both of which violate the multiplicity for a short period of time.</p>
+        <img src="/se-book/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png" height="50">
         <p></p>
         <p>Option 1:</p>
         <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
@@ -316,7 +334,8 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
         <h4 id="enforcing-referential-integrity-three">Enforcing Referential Integrity <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
       <div>
-        <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
+        <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p>
+        <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
         <p></p>
         <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
     Woman girlfriend;
@@ -349,7 +368,8 @@ james.setGirlfriend(jean);
 jean.setBoyfriend(yong);  
 </code></pre>
         <p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this &quot;love triangle&quot;. In such a situation, we say that <em>the referential integrity has been violated</em>.
-          It simply means <em>there is an inconsistency in object references</em>.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
+          It simply means <em>there is an inconsistency in object references</em>.</p>
+        <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
         <p></p>
         <p>One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.</p>
         <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
@@ -429,5 +449,8 @@ jean.setBoyfriend(yong);
 </body>
 <script src="..\markbind\js\vue.min.js"></script>
 <script src="..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\markbind\js\setup.js"></script>
 </html>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -41,9 +42,10 @@
           </ul>
         </tip-box>
         <popover id="pop:epBasic-isValidMonth" title="`isValidMonth`" placement="top">
+        
           <div slot="content">
             <div>
-              <p><code>isValidMonth (int m): boolean</code> : returns <code>true</code> if <code>m</code> is in the range [1..12]</p>
+              <p><code>isValidMonth(m)</code> : returns <code>true</code> if <code>m</code> (and <code>int</code>) is in the range [1..12]</p>
             </div>
           </div>
         </popover>
@@ -65,7 +67,7 @@
         </tip-box>
         <p>An EP may not have adjacent values.</p>
         <tip-box>
-          <p>📦 Consider the method <code>isPrime(int i):boolean</code> that returns true if <code>i</code> is a prime number.</p>
+          <p>📦 Consider the method <code>isPrime(int i): boolean</code> that returns true if <code>i</code> is a prime number.</p>
           <p>EPs for <code>i</code>:</p>
           <ul>
             <li>prime numbers</li>
@@ -74,7 +76,7 @@
         </tip-box>
         <p>Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases we have to consider each value as a partition by itself.</p>
         <tip-box>
-          <p>📦 Consider the method <code>showStatusMessage(GameStatus s):String</code> that returns a unique <code>String</code> for each of the possible value of s (<code>GameStatus</code> is an <code>enum</code>). In this case, each possible value for
+          <p>📦 Consider the method <code>showStatusMessage(GameStatus s): String</code> that returns a unique <code>String</code> for each of the possible value of s (<code>GameStatus</code> is an <code>enum</code>). In this case, each possible value for
             <code>s</code> will have to be considered as a partition.</p>
         </tip-box>
         <p>Note that the EP technique is merely a heuristic and not an exact science, especially when applied manually (as opposed to using an automated program analysis tool to derive EPs). The partitions derived depend on how one ‘speculates’ the SUT to
@@ -95,10 +97,10 @@
             </tr>
             <tr>
               <td>
-                <p><code>isValidFlag(String s): boolean</code><br> Returns <code>true</code> if s is one of [“F”, “T”, “D”]. The comparison is case-sensitive.</p>
+                <p><code>isValidFlag(String s): boolean</code><br> Returns <code>true</code> if s is one of [<code>&quot;F&quot;</code>, <code>&quot;T&quot;</code>, <code>&quot;D&quot;</code>]. The comparison is case-sensitive.</p>
               </td>
               <td>
-                <p>[“F”] [“T”] [“D”] [“f”, “t”, “d”] [any other string][null]</p>
+                <p>[<code>&quot;F&quot;</code>] [<code>&quot;T&quot;</code>] [<code>&quot;D&quot;</code>] [<code>&quot;f&quot;</code>, <code>&quot;t&quot;</code>, <code>&quot;d&quot;</code>] [any other string][null]</p>
               </td>
             </tr>
             <tr>
@@ -106,7 +108,7 @@
                 <p><code>squareRoot(String s): int</code><br> Pre-conditions: s represents a positive integer<br> Returns the square root of <code>s</code> if the square root is an integer; returns <code>0</code> otherwise.</p>
               </td>
               <td>
-                <p>[s is not a valid number] [s is a negative integer] [s has an integer square root] [s does not have an integer square root]</p>
+                <p>[<code>s</code> is not a valid number] [<code>s</code> is a negative integer] [<code>s</code> has an integer square root] [<code>s</code> does not have an integer square root]</p>
               </td>
             </tr>
           </table>
@@ -116,7 +118,7 @@
         <div>
           <panel header=":muscle: Exercises" expandable="">
             <div>
-              <panel header=":lock::key: EPs for isValidName method">
+              <panel header=":lock::key: EPs for `isValidName` method">
                 <question>
                   <p>Consider this SUT:</p>
                   <tip-box>
@@ -124,18 +126,18 @@
                     <p>Description: returns true if <code>s</code> is not <code>null</code> and not longer than 50 characters.</p>
                   </tip-box>
                   <p>A. Which one of these is least likely to be an equivalence partition for the parameter s of the isValidName method given below?</p>
-                  <ul radio-group="yy9fh" class="radio-list">
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="yy9fh" type="radio"> a. null.</label></li>
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="yy9fh" type="radio"> b. strings having more than 50 characters.</label></li>
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="yy9fh" type="radio"> c. strings having 50 or fewer characters.</label></li>
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="yy9fh" type="radio"> d. strings consisting of numbers instead of letters.</label></li>
+                  <ul radio-group="4c6ed" class="radio-list">
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="4c6ed" type="radio"> a. null.</label></li>
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="4c6ed" type="radio"> b. strings having more than 50 characters.</label></li>
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="4c6ed" type="radio"> c. strings having 50 or fewer characters.</label></li>
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="4c6ed" type="radio"> d. strings consisting of numbers instead of letters.</label></li>
                   </ul>
                   <p>B. If you had to choose 3 test cases from the 4 given below, which one will you leave out based on the EP technique?</p>
-                  <ul radio-group="m3xyf" class="radio-list">
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="m3xyf" type="radio"> a. A string that is 50 characters long</label></li>
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="m3xyf" type="radio"> b. A string that is 51 characters long</label></li>
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="m3xyf" type="radio"> c. A string that is 40 characters long</label></li>
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="m3xyf" type="radio"> d. null</label></li>
+                  <ul radio-group="f35e9" class="radio-list">
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="f35e9" type="radio"> a. A string that is 50 characters long</label></li>
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="f35e9" type="radio"> b. A string that is 51 characters long</label></li>
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="f35e9" type="radio"> c. A string that is 40 characters long</label></li>
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="f35e9" type="radio"> d. null</label></li>
                   </ul>
                   <div slot="answer">
                     <p>A. (d)</p>
@@ -156,5 +158,8 @@
 </body>
 <script src="..\..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\..\..\markbind\js\setup.js"></script>
 </html>

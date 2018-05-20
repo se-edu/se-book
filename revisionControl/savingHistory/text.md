@@ -6,7 +6,7 @@
 
 <div id="title">
 
-#### Saving History :one: [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/revisionControl/savingHistory/index.html)
+#### Saving History :one: [{{glyphicon_new_window}}]({{baseUrl}}/revisionControl/savingHistory/index.html)
 
 </div>
 

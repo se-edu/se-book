@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -42,13 +43,15 @@
                 etc.). Therefore, we can have a class called <code>Person</code> containing instructions on how to create <code>Person</code> objects and use that class to instantiate objects <code>Adam</code>, <code>Beth</code>, <code>Charlie</code>,
                 and <code>Daisy</code>. Similarly, we need classes <code>AgeList</code>, <code>Calculator</code>, and <code>Main</code> classes to instantiate one each of <code>AgeList</code>, <code>Calculator</code>, and <code>Main</code> objects.</p>
             </tip-box>
+
             <p>Let us use the UML notation to illustrate classes and objects under discussion.</p>
             <p>
-              <panel src="/se-book\uml\classDiagrams\classes\what\full._include_.html" header=":mortar_board: UML → Class Diagrams → Classes" isOpen="false" no-close="true" no-switch="true"></panel>
-              <panel src="/se-book\uml\objectDiagrams\objects\full._include_.html" header=":mortar_board: UML → Object Diagrams → Objects" isOpen="false" no-close="true" no-switch="true"></panel>
+              <panel src="/se-book\uml\classDiagrams\classes\what\full._include_.html#title-and-body" header=":mortar_board: Tools → UML → Class Diagrams → Classes" expanded="" fragment="title-and-body"></panel>
+              <panel src="/se-book\uml\objectDiagrams\objects\full._include_.html#title-and-body" header=":mortar_board: Tools → UML → Object Diagrams → Objects" expanded="" fragment="title-and-body"></panel>
             </p>
             <p></p>
-            <tip-box><img src="/se-book/oopDesign/classes/basic/images/person.png" height="100">
+            <tip-box>
+              <img src="/se-book/oopDesign/classes/basic/images/person.png" height="100">
               <p></p>
               <p><code>Person</code> class and some example instances of the <code>Person</code> class.</p>
             </tip-box>
@@ -61,10 +64,10 @@
                     <question>
                       <p>Consider the following scenario. If you were to simulate this in an OOP program, what are the classes and the objects you would use? Use UML notation to give your answer.</p>
                       <tip-box>
-                        John gave a checque to the Cashier pay for the LoTR and GoT books he bought.
+                        John gave a checque to the Cashier to pay for the LoTR and GoT books he bought.
                       </tip-box>
                       <div slot="hint">
-                        <table class="markbind-table table">
+                        <table class="markbind-table table table-bordered table-striped">
                           <thead>
                             <tr>
                               <th>Class</th>
@@ -78,7 +81,7 @@
                             </tr>
                             <tr>
                               <td><code>Book</code></td>
-                              <td><code>LoTR</code><code>GoT</code></td>
+                              <td><code>LoTR</code> <code>GoT</code></td>
                             </tr>
                             <tr>
                               <td><code>Cheque</code></td>
@@ -114,32 +117,26 @@
           <div>
             <p>While all objects of a class has the same attributes, each object has its own copy of the attribute value.</p>
             <tip-box>
-              <p>Example:</p>
-              <p>All <code>Person</code> objects have the <code>Name</code> attribute but the value of that attribute varies between <code>Person</code> objects.</p>
+              <p>📦 All <code>Person</code> objects have the <code>Name</code> attribute but the value of that attribute varies between <code>Person</code> objects.</p>
             </tip-box>
-            <p>However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Such <strong>variables whose value is shared by all instances of a class are called <mark><em>class level</em> attributes</mark></strong>.</p>
+            <p>However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Such <strong>variables whose value is shared by all instances of a class are called <mark><em>class level attributes</em></mark></strong>.</p>
             <tip-box>
-              <p>Example:</p>
-              <p>The attribute <code>totalPersons</code> should be maintained centrally and shared by all <code>Person</code> objects rather than copied at each <code>Person</code> object.</p>
+              <p>📦 The attribute <code>totalPersons</code> should be maintained centrally and shared by all <code>Person</code> objects rather than copied at each <code>Person</code> object.</p>
             </tip-box>
             <p>Similarly, when a normal method is being called, a message is being sent to the receiving object and the result may depend on the receiving object.</p>
             <tip-box>
-              <p>Example:</p>
-              <p>Sending the <code>getName()</code> message to <code>Adam</code> object results in the response <code>&quot;Adam&quot;</code> while sending the same message to the <code>Beth</code> object gets the response <code>&quot;Beth&quot;</code>.</p>
+              <p>📦 Sending the <code>getName()</code> message to <code>Adam</code> object results in the response <code>&quot;Adam&quot;</code> while sending the same message to the <code>Beth</code> object gets the response <code>&quot;Beth&quot;</code>.</p>
             </tip-box>
-            <p>However, there can be methods related to a specific class but not suitable for sending message to a specific object of that class. Such <strong>methods that are called using the class instead of a specific instance are called <mark>class-level methods</mark></strong>.</p>
+            <p>However, there can be methods related to a specific class but not suitable for sending message to a specific object of that class. Such <strong>methods that are called using the class instead of a specific instance are called <mark><em>class-level methods</em></mark></strong>.</p>
             <tip-box>
-              <p>Example:</p>
-              <p>The method <code>getTotalPersons()</code> is not suitable to send to a specific <code>Person</code> object <span class="dimmed">because a specific object of the <code>Person</code> class should not know about the total number of <code>Person</code> objects</span>.</p>
+              <p>📦 The method <code>getTotalPersons()</code> is not suitable to send to a specific <code>Person</code> object <span class="dimmed">because a specific object of the <code>Person</code> class should not know about the total number of <code>Person</code> objects</span>.</p>
             </tip-box>
             <p><strong>Class-level attributes and methods are collectively called <mark><em>class-level members</em></mark></strong> (also called <em>static members</em> sometimes because some programming languages use the keyword <code>static</code> to
               identify class-level members). <strong>They are to be accessed using the class name rather than an instance of the class</strong>.</p>
             <p>
-              <panel src="/se-book\uml\classDiagrams\classLevelMembers\what\full._include_.html" header=":mortar_board: UML → Class Diagrams → Class Level Members" isOpen="false" no-close="true" no-switch="true"></panel>
+              <panel src="/se-book\uml\classDiagrams\classLevelMembers\what\full._include_.html#title-and-body" header=":mortar_board: Tools → UML → Class Diagrams → Class Level Members" expanded="" fragment="title-and-body"></panel>
+              <p></p>
             </p>
-            <p></p>
-            <p>📦 A <code>Student</code> class with a class-level attribute and a method:</p><img src="/se-book/oopDesign/classes/classLevelMembers/images/person.png" height="100">
-            <p></p>
           </div>
           <div>
             <div>
@@ -183,18 +180,20 @@
             <p><strong>An <em>Enumeration</em> is a fixed set of values that can be considered as a data type.</strong></p>
             <p>An enumeration is often useful when using a regular data type such as <code>int</code> or <code>String</code> would allow invalid values to be assigned to a variable. <span class="dimmed">e.g. if a variable can only take values <code>0</code> and <code>1</code>, declaring it as an <code>int</code> would allow invalid values such as <code>2</code> to be assigned to it. But if you define an enumeration called <code>Binary</code> that has values <code>0</code> and <code>1</code> only, a variable of type <code>Binary</code> will never be assigned an invalid value such as <code>2</code> because the compiler is able to catch the error.</span></p>
             <p>
-              <panel src="/se-book\uml\classDiagrams\enumerations\what\full._include_.html" header=":mortar_board: UML → Class Diagrams → Enumerations" isOpen="false" no-close="true" no-switch="true"></panel>
+              <panel src="/se-book\uml\classDiagrams\enumerations\what\full._include_.html" header=":mortar_board: UML → Class Diagrams → Enumerations" expanded=""></panel>
             </p>
             <p></p>
             <tip-box>
               <p>📦 <code>Priority</code> can be considered an enumeration because it has only three values.</p>
-              <p><code>Priority</code>: <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code></p><img src="/se-book/oopDesign/classes/enumerations/images/priority.png" height="100">
+              <p><code>Priority</code>: <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code></p>
+              <img src="/se-book/oopDesign/classes/enumerations/images/priority.png" height="100">
               <p></p>
             </tip-box>
           </div>
           <div>
             <div>
               <panel header=":muscle: Exercises" expandable="">
+              
                 <div>
                   <panel header=":lock: Define WeekDay Enum">
                     <question has-input="true">
@@ -214,5 +213,8 @@
 </body>
 <script src="..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\..\markbind\js\setup.js"></script>
 </html>

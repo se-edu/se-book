@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -27,10 +28,24 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>Given below is a tutorial you can refer to (from Oracle’s official Java tutorials) to learn how to implement java classes, in the unlikely case you don't know how to do that already.</p>
-            <ul>
-              <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html">Classes, methods, variables</a> – Start from the linked page and follow the next few steps in the tutorial</li>
-            </ul>
+            <p>Given below are some resources on how to implement classes:</p>
+            <tabs>
+            
+              <tab header="Java">
+                <ul>
+                  <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html">Classes, methods, variables</a> – Start from the linked page and follow the next few steps in the tutorial</li>
+                </ul>
+                <p></p>
+              </tab>
+            
+              <tab header="Python">
+                <ul>
+                  <li><a href="https://nus-te3201.github.io/website/programming/toc/oop.html#classes">Python Programming Basics: OOP: Classes</a> - Basics of writing classes using Python</li>
+                </ul>
+                <p></p>
+              </tab>
+            </tabs>
+            <hr>
           </div>
           <div></div>
         </div>
@@ -48,8 +63,27 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>You can refer to <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html">Oracle’s official Java tutorial on class-level members</a> to learn how to implement Java class-level members, in the unlikely case you don't know
-              how to do that already.</p>
+            <p>Some resources to learn how to implement class-level members:</p>
+            <tabs>
+            
+              <tab header="Java">
+                <ul>
+                  <li>
+                    <p><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html">Oracle’s official Java tutorial on class-level members</a></p>
+                  </li>
+                </ul>
+              </tab>
+            
+              <tab header="Python">
+
+                <li>
+                  <p><a href="https://nus-te3201.github.io/website/programming/toc/oop.html#class-level-members">Python Programming Basics: OOP: Class-Level Members</a></p>
+                </li>
+
+                <p></p>
+              </tab>
+            </tabs>
+            <hr>
           </div>
           <div></div>
         </div>
@@ -70,48 +104,149 @@
             <p></p>
             <p><strong>We use instance level variables to implement associations.</strong></p>
             <p><strong>A normal instance-level variable gives us a <code>0..1</code> multiplicity</strong> (also called <em>optional associations</em>) because a variable can hold a reference to a single object or <code>null</code>.</p>
-            <tip-box><img src="/se-book/oopImplementation/associations/images/logicMinefield.png" height="40">
+            <tip-box>
+              <img src="/se-book/oopImplementation/associations/images/logicMinefield.png" height="40">
               <p></p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
+              <div>
+                <table>
+                  <tr>
+                  
+                    <td>
+                      <p>Java ⤵️</p>
+                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span></span>{
     Minefield minefield;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span></span>{
     ...
 }
+
+
+
 </code></pre>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
-    ...
-}
+                      <p></p>
+                    </td>
+                  
+                    <td valign="bottom">  <br><br></td>
+                  
+                    <td valign="bottom">
+                      <p>Python ⤵️</p>
+                      <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, minefield)</span>:</span>
+    self.minefield = minefield
+    
+  <span class="hljs-comment"># ...</span>
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
+  <span class="hljs-comment"># ...</span>
 </code></pre>
+                      <p></p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </tip-box>
             <p><strong>A variable can be used to implement a <code>1</code> multiplicity too</strong> (also called <em>compulsory associations</em>).</p>
-            <tip-box><img src="/se-book/oopImplementation/associations/images/logicConfigGenerator.png" height="40">
+            <tip-box>
+              <img src="/se-book/oopImplementation/associations/images/logicConfigGenerator.png" height="40">
               <p></p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
+              <tabs>
+              
+                <tab header="Java">
+                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
     ConfigGenerator cg = <span class="hljs-keyword">new</span> ConfigGenerator();
     ...
 }
 </code></pre>
+                  <p></p>
+                </tab>
+              
+                <tab header="Python">
+                  <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+    self.config_gen = ConfigGenerator()
+</code></pre>
+                  <p></p>
+                </tab>
+              </tabs>
+              <hr>
             </tip-box>
             <p><strong>Bi-directional associations require matching variables in both classes.</strong></p>
-            <tip-box><img src="/se-book/oopImplementation/associations/images/fooBar.png" height="40">
+            <tip-box>
+              <img src="/se-book/oopImplementation/associations/images/fooBar.png" height="40">
               <p></p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
+              <table>
+                <tr>
+                
+                  <td>
+                    <p>Java ⤵️</p>
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
     Bar bar;
-    ...
+    <span class="hljs-comment">//...</span>
 }
-</code></pre>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> </span>{
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> </span>{
     Foo foo;
-    ...
+    <span class="hljs-comment">//...</span>
 }
+
 </code></pre>
+                    <p></p>
+                  </td>
+                
+                  <td valign="bottom">  <br><br></td>
+                
+                  <td valign="bottom">
+                    <p>Python ⤵️</p>
+                    <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, bar)</span>:</span>
+    self.bar = bar;
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span>:</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, foo)</span>:</span>
+    self.foo = foo;
+    
+</code></pre>
+                    <p></p>
+                  </td>
+                </tr>
+              </table>
             </tip-box>
             <p><strong>To implement other multiplicities, choose a suitable data structure</strong> such as Arrays, ArrayLists, HashMaps, Sets, etc.</p>
             <tip-box>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
+              <table>
+                <tr>
+                
+                  <td>
+                    <p>Java ⤵️</p>
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
     Cell[][] cell;
     ...
 }
 </code></pre>
+                    <p></p>
+                  </td>
+                
+                  <td valign="bottom">  <br><br></td>
+                
+                  <td valign="bottom">
+                    <p>Python ⤵️</p>
+                    <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+    self.cells = {<span class="hljs-number">1</span>:[], <span class="hljs-number">2</span>:[], <span class="hljs-number">3</span>:[]}
+</code></pre>
+                    <p></p>
+                  </td>
+                </tr>
+              </table>
             </tip-box>
           </div>
           <div>
@@ -120,13 +255,15 @@
                 <div>
                   <panel header=":lock::key: Class Diagram for code">
                     <question>
-                      <p>Draw a class diagram for the code below. Also draw an object diagram that will represent the object structure after running <code>Main#main()</code>.</p>
-                      <ul>
-                        <li>Make the multiplicities as strict as possible without contradicting the code.</li>
-                        <li>You may omit the <code>Main</code> class from both diagrams.</li>
-                      </ul>
-                      <pre><code class="hljs java">
-<span class="hljs-keyword">import</span> java.util.ArrayList;
+                      <tabs>
+                      
+                        <tab header="Java">
+                          <p>Draw a class diagram for the code below. Also draw an object diagram that will represent the object structure after running <code>Main#main()</code>.</p>
+                          <ul>
+                            <li>Make the multiplicities as strict as possible without contradicting the code.</li>
+                            <li>You may omit the <code>Main</code> class from both diagrams.</li>
+                          </ul>
+                          <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;
 <span class="hljs-keyword">import</span> java.util.List;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
@@ -169,17 +306,58 @@
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Card</span></span>{
     
 }
-
 </code></pre>
-                      <div slot="answer"><img src="/se-book/oopImplementation/associations/images/classDiagramForCodeAnswer.png" width="600"></div>
-                      <p></p>
+                        </tab>
+                      
+                        <tab header="Python">
+                          <p>Draw a class diagram for the code below. Also draw an object diagram that will represent the object structure after running the code. Make the multiplicities as strict as possible without contradicting the code.</p>
+                          <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span>:</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, item)</span>:</span>
+    self.__item = item <span class="hljs-comment"># type: Item</span>
+    
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span>:</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+    self.__previous_boxes = [] <span class="hljs-comment"># type: list of Box objects</span>
+    self.__main_card = <span class="hljs-keyword">None</span>    <span class="hljs-comment"># type: Car</span>
+    self.__sub_card = <span class="hljs-keyword">None</span>     <span class="hljs-comment"># type: Card</span>
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_main_card</span><span class="hljs-params">(self, card)</span>:</span>
+    self.__main_card = card <span class="hljs-comment"># type: Card</span>
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_sub_card</span><span class="hljs-params">(self, card)</span>:</span>
+    self.__sub_card = card <span class="hljs-comment"># type: Card</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_previous_box</span><span class="hljs-params">(self, previous_box)</span>:</span>
+    self.__previous_boxes.append(previous_box)
+    
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Card</span>:</span>
+  <span class="hljs-keyword">pass</span>
+
+
+item1 = Item();
+item2 = Item();
+box1 = Box(item1);
+box2 = Box(item2);
+item2.set_main_card(Card());
+item2.add_previous_box(box1);
+item2.add_previous_box(box2);
+</code></pre>
+                        </tab>
+                      </tabs>
+                      <hr>
+                      <div slot="answer">
+                        <img src="/se-book/oopImplementation/associations/images/classDiagramForCodeAnswer.png" width="600"></div>
                     </question>
                   </panel>
                 </div>
                 <div>
                   <panel header=":lock: Object Diagrams for Class Diagram">
                     <question>
-                      <p>Suppose we wrote a program to follow the class structure given in this class diagram:</p><img src="/se-book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
+                      <p>Suppose we wrote a program to follow the class structure given in this class diagram:</p>
+                      <img src="/se-book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
                       <p></p>
                       <p>Draw object diagrams to represent the object structures after each of these steps below. Assume that we are trying to minimize the number of total objects.</p>
                       <p>i.e. apply step 1 → [diagram 1] → apply step 2 on diagarm 1 → [diagarm 2] and so on.</p>
@@ -201,14 +379,16 @@
                         </li>
                       </ol>
                       <div slot="hint">
-                        <p>After step 2, the diagram should be like this:</p><img src="/se-book/oopImplementation/associations/images/objectDiagramsForClassDiagramHint.png" width="600"></div>
+                        <p>After step 2, the diagram should be like this:</p>
+                        <img src="/se-book/oopImplementation/associations/images/objectDiagramsForClassDiagramHint.png" width="600"></div>
                     </question>
                   </panel>
                 </div>
                 <div>
                   <panel header=":lock: Implement Class Diagram">
                     <question>
-                      <p>Implement the class structure given below:</p><img src="/se-book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
+                      <p>Implement the class structure given below:</p>
+                      <img src="/se-book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
                       <p></p>
                     </question>
                   </panel>
@@ -233,19 +413,51 @@
           <div>
             <p>Dependencies result from interactions between objects that do not result in a long-term link between the said objects.</p>
             <tip-box>
-              <p>Example:</p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TaxProcessor</span></span>{
-    <span class="hljs-keyword">double</span> rate;
+              <p>📦 In the code below, <code>Foo</code> has a dependency on <code>Bar</code> but it is not an association because it is only a
+                <tooltip content="temporary">transient</tooltip> interaction and there is no long term relationship between a <code>Foo</code> object and a <code>Bar</code> object. <span class="dimmed">i.e. the <code>Foo</code> object does not keep the <code>Bar</code> object it receives as a parameter</span>.</p>
+              <table>
+                <tr>
+                
+                  <td>
+                    <p>Java ⤵️</p>
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+    
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculate</span><span class="hljs-params">(Bar bar)</span></span>{
+        <span class="hljs-keyword">return</span> bar.getValue();
+    }
+}
 
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addTax</span><span class="hljs-params">(Taxable t)</span></span>{
-        t.addTax(rate);
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span></span>{
+    <span class="hljs-keyword">int</span> value;
+    
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getValue</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> value;
     }
 }
 </code></pre>
-              <p>The code above results in this dependency.</p><img src="/se-book/oopImplementation/dependencies/images/taxProcessorTaxable.png" height="40">
-              <p></p>
-              <p>The code does not indicate an association between the two classes because the <code>TaxProcessor</code> object does not keep the <code>Taxable</code> object (i.e. it’s only a short-term interaction)</p>
-            </tip-box>
+                    <p></p>
+                  </td>
+                
+                  <td>  <br><br></td>
+                
+                  <td valign="top">
+                    <p>Python ⤵️</p>
+                    <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+    
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate</span><span class="hljs-params">(self, bar)</span>:</span>
+        <span class="hljs-keyword">return</span> bar.value;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span>:</span>
+    
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, value)</span>:</span>
+      self.value = value
+</code></pre>
+                    <p></p>
+                  </td>
+                </tr>
+              </table>
+              <p>The code above results in this dependency.</p>
+              <img src="/se-book/oopImplementation/dependencies/images/fooBarDependency.png" height="40"></tip-box>
           </div>
           <div></div>
         </div>
@@ -266,13 +478,35 @@
             <p><strong>Composition too is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’
               object.</p>
             <tip-box>
-              <p>Example:</p><img src="/se-book/oopImplementation/composition/images/carEngine.png" height="40">
+              <p>Example:</p>
+              <img src="/se-book/oopImplementation/composition/images/carEngine.png" height="40">
               <p></p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> </span>{
+              <table>
+                <tr>
+                
+                  <td valign="top">
+                    <p>Java ⤵️</p>
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> </span>{
     <span class="hljs-keyword">private</span> Engine engine;
   ...
 }
 </code></pre>
+                    <p></p>
+                  </td>
+                
+                  <td>  <br><br></td>
+                
+                  <td valign="top">
+                    <p>Python ⤵️</p>
+                    <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span>:</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+    self.__engine = Engine()
+</code></pre>
+                    <p></p>
+                  </td>
+                </tr>
+              </table>
             </tip-box>
           </div>
           <div></div>
@@ -293,9 +527,14 @@
           <div>
             <p>Implementation is similar to that of composition except the <em>containee</em> object can exist even after the <em>container</em> object is deleted.</p>
             <tip-box>
-              <p>📦 Example:</p><img src="/se-book/oopImplementation/aggregation/images/carPerson.png" height="40">
-              <p></p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> </span>{
+              <p>📦 Example:</p>
+              <img src="/se-book/oopImplementation/aggregation/images/carPerson.png" height="40">
+              <table>
+                <tr>
+                
+                  <td valign="top">
+                    <p>Java ⤵️</p>
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> </span>{
     Person driver;
     ...
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">drive</span><span class="hljs-params">(Person p)</span> </span>{
@@ -303,6 +542,25 @@
     }
 }
 </code></pre>
+                    <p></p>
+                  </td>
+                
+                  <td>  <br><br></td>
+                
+                  <td valign="top">
+                    <p>Python ⤵️</p>
+                    <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span>:</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+    self.__driver = <span class="hljs-keyword">None</span>
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">drive</span><span class="hljs-params">(self, person)</span>:</span>
+    self.__driver = person
+</code></pre>
+                    <p></p>
+                  </td>
+                </tr>
+              </table>
             </tip-box>
           </div>
           <div></div>
@@ -323,9 +581,11 @@
           <div>
             <p>Note that while a special notation is used to indicate an association class, there is no special way to implement an association class.</p>
             <tip-box>
-              <p>Example:</p><img src="/se-book/oopImplementation/associationClasses/images/manWoman.png" height="140">
+              <p>Example:</p>
+              <img src="/se-book/oopImplementation/associationClasses/images/manWoman.png" height="140">
               <p></p>
-              <p>At implementation level, an association class is most likely implemented as follows.</p><img src="/se-book/oopImplementation/associationClasses/images/manWomanImplementation.png" height="140">
+              <p>At implementation level, an association class is most likely implemented as follows.</p>
+              <img src="/se-book/oopImplementation/associationClasses/images/manWomanImplementation.png" height="140">
               <p></p>
               <p>
                 <panel type="seamless" src="/se-book\oopImplementation\associationClasses\code-marriage._include_.html" header="%%See code%%" isOpen="false" no-close="true" no-switch="true"></panel>
@@ -338,7 +598,8 @@
                 <div>
                   <panel header=":lock::key: Which are suitable as an Association Class?">
                     <question>
-                      <p>Which one of these is the suitable as an Association Class?</p><img src="/se-book/oopImplementation/associationClasses/images/exerciseDiagram.png" height="330">
+                      <p>Which one of these is the suitable as an Association Class?</p>
+                      <img src="/se-book/oopImplementation/associationClasses/images/exerciseDiagram.png" height="330">
                       <p></p>
                       <ul class="task-list">
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
@@ -373,24 +634,30 @@
         <div>
           <div>
             <tabs>
-              <tab header=":abc:">
+            
+              <tab header="Java">
                 <p>To learn how to implement inheritance in Java, you can follow [<a href="https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html">Oracle’s Java Tutorials: Inheritance</a>]</p>
+                <panel type="seamless" header=":tv: A very beginner-friendly video about implementing Java inheritance.">
+                  <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/9JpNY-XAseg" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                  <p></p>
+                </panel>
+                <p></p>
+                <p>💡 Java requires all classes to have a parent class. If you do not specify a parent class, Java automatically assigns the <code>Object</code> class as the parent class.</p>
                 <p>
                   <hr>
                 </p>
               </tab>
-              <tab header=":tv:">
-                <p>A very beginner-friendly video about implementing Java inheritance.</p>
-                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/9JpNY-XAseg" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+            
+              <tab header="Python">
+                <ul>
+                  <li><a href="https://nus-te3201.github.io/website/programming/toc/oop.html#inheritance">Python Programming Basics: OOP: Inheritance</a></li>
+                </ul>
+                <p>💡 Python automatically assigns the <code>object</code> class as the parent class.</p>
                 <p>
                   <hr>
                 </p>
               </tab>
             </tabs>
-            <tip-box type="tip">
-              <p>Java requires all class to have a parent class. If you do not specify a parent class, Java automatically assigns the <code>Object</code> class as the parent class.
-              </p>
-            </tip-box>
           </div>
           <div></div>
         </div>
@@ -409,9 +676,13 @@
         <div>
           <div>
             <p><strong>To override a method inherited from an ancestor class, simply re-implement the method in the target class.</strong></p>
-            <tip-box>
-              <p>📦 A simple example where the <code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method:</p>
-              <pre><code class="hljs java">
+            <tabs>
+            
+              <tab header="Java">
+                <div>
+                  <tip-box>
+                    <p>📦 A simple example where the <code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method:</p>
+                    <pre><code class="hljs java">
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Report</span></span>{
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
@@ -439,24 +710,86 @@
         evaluationReport.print(); <span class="hljs-comment">// prints "Printing evaluation report"</span>
     }
 }
-
 </code></pre>
-            </tip-box>
+                  </tip-box>
+                  <p>📎 Resources:</p>
+                  <ul>
+                    <li><a href="https://www.tutorialspoint.com/java/java_overriding.htm">Java - Overriding</a> -- a tutorial by <a href="http://tutorialspoint.com">tutorialspoint.com</a></li>
+                  </ul>
+                </div>
+              </tab>
+            
+              <tab header="Python">
+                <div>
+                  <tip-box>
+                    <p>📦 In the example below, <code>Student</code> class overrides the <code>print_info</code> method of its parent class <code>Person</code>:</p>
+                    <table>
+                      <tr>
+                      
+                        <td>
+                          <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name)</span>:</span>
+    self.name = name
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span><span class="hljs-params">(self)</span>:</span>
+    print(<span class="hljs-string">'My name is'</span>, self.name)
+    
+</code></pre>
+                          <p></p>
+                        </td>
+                      
+                        <td valign="bottom">  <br><br></td>
+                      
+                        <td valign="bottom">
+                          <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span><span class="hljs-params">(Person)</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, matric)</span>:</span>
+    self.name = name
+    self.matric = matric
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span><span class="hljs-params">(self)</span>:</span>
+    print(self.name, <span class="hljs-string">'is a student'</span>)
+</code></pre>
+                          <p></p>
+                        </td>
+                      </tr>
+                    </table>
+                    <table>
+                      <tr>
+                      
+                        <td>
+                          <pre><code class="hljs python">amy = Person(<span class="hljs-string">'Amy'</span>)
+amy.print_info()
+
+ben = Student(<span class="hljs-string">'Ben'</span>, <span class="hljs-string">'A12345'</span>)
+ben.print_info()
+</code></pre>
+                          <p></p>
+                        </td>
+                      
+                        <td valign="bottom"> → <br><br></td>
+                      
+                        <td valign="bottom">
+                          <pre class="hljs"><code>My name is Amy
+Ben is a student
+</code></pre>
+                          <p></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </tip-box>
+                </div>
+              </tab>
+            </tabs>
+            <hr>
           </div>
           <div>
-            <div>
-              <panel header=":paperclip: Resources" expanded="">
-                <ul>
-                  <li><a href="https://www.tutorialspoint.com/java/java_overriding.htm">Java - Overriding</a> -- a tutorial by <a href="http://tutorialspoint.com">tutorialspoint.com</a></li>
-                </ul>
-              </panel>
-            </div>
             <div>
               <panel header=":muscle: Exercises" expandable="">
                 <div>
                   <panel header=":lock::key: Which methods override?">
                     <question>
-                      <p>Which of these methods override another method?</p><img src="/se-book/oopImplementation/overriding/images/overriding.png" height="220">
+                      <p>Which of these methods override another method?</p>
+                      <img src="/se-book/oopImplementation/overriding/images/overriding.png" height="220">
                       <p></p>
                       <ul class="task-list">
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
@@ -491,9 +824,13 @@
         <div>
           <div>
             <p>An operation can be overloaded inside the same class or in sub/super classes.</p>
-            <tip-box>
-              <p>📦 The constructor of the <code>Account</code> class below is <em>overloaded</em> because there are two constructors with different signatures: <code>()</code> and <code>(String, String, double)</code>. Furthermore, the <code>save</code>                method in the <code>Account</code> class is overloaded in the child class <code>SavingAccount</code>.</p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+            <tabs>
+            
+              <tab header="Java">
+                <div>
+                  <tip-box>
+                    <p>📦 The constructor of the <code>Account</code> class below is <em>overloaded</em> because there are two constructors with different signatures: <code>()</code> and <code>(String, String, double)</code>. Furthermore, the <code>save</code>                      method in the <code>Account</code> class is overloaded in the child class <code>SavingAccount</code>.</p>
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
     Account () {
         ...
     }
@@ -514,18 +851,24 @@
     }
 }
 </code></pre>
-            </tip-box>
+                  </tip-box>
+                  <p>📎 Resources:</p>
+                  <ul>
+                    <li><a href="https://www.javatpoint.com/method-overloading-in-java"><strong>Method Overloading in Java</strong></a> a tutorial from <a href="http://javatpoint.com">javatpoint.com</a>. Also mentions the topic of a related topic <mark><em>type promotion</em></mark>.</li>
+                  </ul>
+                </div>
+              </tab>
+            
+              <tab header="Python">
+                <div>
+                  <p>❗️ Python does not have direct support for method overloading.</p>
+                </div>
+              </tab>
+            </tabs>
+            <hr>
             <p></p>
           </div>
-          <div>
-            <div>
-              <panel header=":paperclip: Resources" expanded="">
-                <ul>
-                  <li><a href="https://www.javatpoint.com/method-overloading-in-java"><strong>Method Overloading in Java</strong></a> a tutorial from <a href="http://javatpoint.com">javatpoint.com</a>. Also mentions the topic of a related topic <mark><em>type promotion</em></mark>.</li>
-                </ul>
-              </panel>
-            </div>
-          </div>
+          <div></div>
         </div>
       </panel>
     </div>
@@ -543,13 +886,14 @@
           <div>
             <p><strong>Java allows multiple inheritance among interfaces. A Java class can <em>implement</em> multiple interfaces</strong> (and inherit from one class).</p>
             <tip-box>
-              <p>📦 The design below is allowed by Java.</p><img src="/se-book/oopDesign/inheritance/interfaces/images/studentStaff.png" height="250">
+              <p>📦 The design below is allowed by Java.</p>
+              <img src="/se-book/oopDesign/inheritance/interfaces/images/studentStaff.png" height="250">
               <p></p>
               <ol>
                 <li><code>Staff</code> interface inherits (note the solid lines) the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
                 <li><code>TA</code> class implements both <code>Student</code> interface and the <code>Staff</code> interface.</li>
                 <li>Because of point 1 above, <code>TA</code> class has to implement all methods in the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
-                <li>Because of points 1,2,3, a <code>TA</code><em>is a</em><code>Staff</code>, <em>is a</em><code>TaxPayer</code> and <em>is a</em><code>Citizen</code>.</li>
+                <li>Because of points 1,2,3, a <code>TA</code> <em>is a</em> <code>Staff</code>, <em>is a</em> <code>TaxPayer</code> and <em>is a</em> <code>Citizen</code>.</li>
               </ol>
             </tip-box>
             <p><strong>Java uses the <code>interface</code> keyword to declare interfaces and <code>implements</code> keyword to indicate that a class implements a given interface.</strong> Inheritance among interfaces uses the <code>extends</code> keyword,
@@ -623,7 +967,8 @@
           <div>
             <p><strong>Use the <code>abstract</code> keyword to identify abstract classes/methods.</strong></p>
             <tip-box>
-              <p>📦 Partial code below gives an example of how to declare abstract classes/methods.</p><img src="/se-book/oopDesign/inheritance/abstractClasses/images/account.png" height="220">
+              <p>📦 Partial code below gives an example of how to declare abstract classes/methods.</p>
+              <img src="/se-book/oopDesign/inheritance/abstractClasses/images/account.png" height="220">
               <p></p>
               <pre><code class="hljs java"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
     
@@ -698,6 +1043,7 @@
               <p>📦 Continuing with the example given in [
                 <trigger trigger="click" for="modal:oopImpl-polymorphism">🎓 OOP → Polymorphism → Introduction </trigger>], given below is the minimum code for <code>Staff</code>, <code>Admin</code>, and <code>Academic</code> classes that achieves the desired polymorphism.</p>
               <modal title="" id="modal:oopImpl-polymorphism">
+              
                 <div>
                   <div></div>
                   <p></p>
@@ -722,7 +1068,8 @@
                         will be executed whenever the university initiates a salary adjustment for its staff. However, the adjustment formula is different for different staff categories, say admin and academic. Here is one possible way of designing the
                         classes in the <code>Payroll</code> system.</p>
                       <tip-box>
-                        <p>📦 Calling <code>adjustSalary()</code> method for each Staff type:</p><img src="/se-book/oopDesign/polymorphism/introduction/images/payroll.png" height="150">
+                        <p>📦 Calling <code>adjustSalary()</code> method for each Staff type:</p>
+                        <img src="/se-book/oopDesign/polymorphism/introduction/images/payroll.png" height="150">
                         <p></p>
                         <p>Here is the implementation of the <code>adjustSalary(int)</code> operation from the above design.</p>
                         <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll1</span> </span>{
@@ -777,7 +1124,8 @@
                     <div></div>
                   </div>
                 </div>
-              </modal><img src="/se-book/oopImplementation/polymorphism/images/polymorphicPayroll.png" height="200">
+              </modal>
+              <img src="/se-book/oopImplementation/polymorphism/images/polymorphicPayroll.png" height="200">
               <p></p>
               <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Staff</span> </span>{
     String name;
@@ -842,5 +1190,8 @@
 </body>
 <script src="..\markbind\js\vue.min.js"></script>
 <script src="..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\markbind\js\setup.js"></script>
 </html>

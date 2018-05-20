@@ -6,7 +6,7 @@
 
 <div id="title">
 
-#### Code Navigation :two: [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/intellij/codeNavigation/index.html)
+#### Code Navigation :two: [{{glyphicon_new_window}}]({{baseUrl}}/intellij/codeNavigation/index.html)
 
 </div>
 

@@ -1,13 +1,13 @@
 <panel header=":lock::key: Which one is not a well-defined task?">
 <question>
 
-Which one these is not well-defined task? Context: These are tasks to be put in the issue tracker of your project.
+Which one these project tasks is not well-defined?
 
-- ( ) a. Implement the ‘delete’ feature.
-- ( ) b. Fix Issue 23 in the bug tracker.
+- ( ) a. Implement the 'delete' feature.
+- ( ) b. Fix bug #12315.
 - ( ) c. Do some more testing.
 - ( ) d. Choose a tool to draw UML diagrams.
-- ( ) e. Clarify submission requirements with the professor.
+- ( ) e. Clarify submission requirements with the customer.
 
 <div slot="answer">
 

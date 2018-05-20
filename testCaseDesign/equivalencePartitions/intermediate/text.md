@@ -19,18 +19,13 @@ When deciding EPs of OOP methods, we need to identify EPs of all data participan
 <tip-box>
 
 :package: Consider this method in the `DataStack` class:
+`push(Object o): boolean`
+* Adds o to the top of the stack if the stack is not full.
+* returns `true` if the push operation was a success.
+* throws 
+  * `MutabilityException` if the global flag `FREEZE==true`.
+  * `InvalidValueException` if  o is null.
 
-```java
-/**
- * Adds o to the top of the stack if the stack is not full.
- * @throws MutabilityException if the global flag FREEZE==true.
- * @throws InvalidValueException if  o is null.
- * @return true if the push operation was a success.
- */
-boolean push(Object o) {
-    ...
-}
-```
 EPs:
   * `DataStack` object: [full] [not full]
   * `o`: [null] [not null]
@@ -60,16 +55,9 @@ Next, let us identify equivalence partitions for each participant. Will the `new
 :package: Consider the `Logic` component of the Minesweeper application. What are the EPs for the `markCellAt(int x, int y)` method?. The partitions in **bold** represent valid inputs.
 
 * `Logic`: PRE_GAME, **READY**, **IN_PLAY**, WON, LOST
-* `x`: [MIN_INT..-1] **[0..(W-1)]** [W..MAX_INT] (we assume a minefield size of WxH)
+* `x`: [MIN_INT..-1] **[0..(W-1)]** [W..MAX_INT] %%(we assume a minefield size of WxH)%%
 * `y`: [MIN_INT..-1] **[0..(H-1)]** [H..MAX_INT]
 * `Cell` at `(x,y)`: **HIDDEN**, MARKED, CLEARED
-
-A test case for the push method can be a combination of the equivalence partitions. Given below is such a test case.
-
-* id: DataStack_Push_001
-* description: checks whether pushing onto a full stack works correctly
-* input: stack is full, o != null, FREEZE == false
-* expected output: returns false, stack remains unchanged
 
 </tip-box>
 

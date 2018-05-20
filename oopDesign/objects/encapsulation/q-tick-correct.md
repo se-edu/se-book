@@ -8,7 +8,7 @@ Choose the correct statement
 
 <div slot="hint">
 
-Don't confuse encapsulation with abstraction_.
+Don't confuse encapsulation with abstraction.
 
 </div>
 
@@ -18,7 +18,7 @@ Choose the correct statement
 
 (a)
 
-Explanation: The second statement should be: An object is an **abstraction** ~~encapsulation~~ because it lets ..._
+Explanation: The second statement should be: An object is an **abstraction** ~~encapsulation~~ because it lets ...
 
 </div>
 </question>

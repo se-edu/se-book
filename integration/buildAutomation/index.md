@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Integration: Build Automation"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

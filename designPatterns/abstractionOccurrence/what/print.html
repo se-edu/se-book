@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <div>
+  <h4 id="what-three">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+</div>
+<div>
+  <p><strong>Context</strong></p>
+  <p>There is a group of similar entities that appears to be ‘occurrences’ (or ‘copies’) of the same thing, sharing lots of common information, but also differing in significant ways.</p>
+  <tip-box>
+    <p>📦 In a library, there can be multiple copies of same book title. Each copy shares common information such as book title, author, ISBN etc. However, there are also significant differences like purchase date and barcode number (assumed to be unique
+      for each copy of the book).</p>
+    <p>Other examples:</p>
+    <ul>
+      <li>Episodes of the same TV series</li>
+      <li>Stock items of the same product model (e.g. TV sets of the same model).</li>
+    </ul>
+  </tip-box>
+  <p><strong>Problem</strong></p>
+  <p>Representing the objects mentioned previously as a single class would be problematic because it results in duplication of data which can lead to inconsistencies in data (if some of the duplicates are not updated consistently).</p>
+  <tip-box>
+    <p>📦 Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial numbers.</p>
+    <img src="/se-book/designPatterns/abstractionOccurrence/what/images/book.png" height="200">
+    <p></p>
+    <p>The above solution requires common information to be duplicated by all instances. This will not only waste storage space, but also creates a consistency problem. Suppose that after creating several copies of the same title, the librarian realized
+      that the author name was wrongly spelt. To correct this mistake, the system needs to go through every copy of the same title to make the correction. Also, if a new copy of the title is added later on, the librarian (or the system) has to make sure
+      that all information entered is the same as the existing copies to avoid inconsistency.</p>
+  </tip-box>
+  <p><strong>Anti-pattern</strong></p>
+  <tip-box>
+    <p>📦 Refer to the same Library example given above.</p>
+    <img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookFriends.png" height="240">
+    <p></p>
+    <p>The design above segregates the common and unique information into a class hierarchy. Each book title is represented by a separate class with common data (i.e. Name, Author, ISBN) hard-coded in the class itself. This solution is problematic because
+      each book title is represented as a class, resulting in thousands of classes (one for each title). Every time the library buys new books, the source code of the system will have to be updated with new classes.</p>
+  </tip-box>
+  <p><strong>Solution</strong></p>
+  <p>Let a copy of an entity (e.g. a copy of a book)be represented by two objects instead of one, separating the common and unique information into two classes to avoid duplication.</p>
+  <tip-box>
+    <p>📦 Given below is how the pattern is applied to the Library example:</p>
+    <img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookTitleBookCopy.png" height="260">
+    <p></p>
+    <p>📦 Here's a more generic example:</p>
+    <img src="/se-book/designPatterns/abstractionOccurrence/what/images/beforeAfter.png" height="370">
+    <p></p>
+  </tip-box>
+  <p>The general solution:</p>
+  <img src="/se-book/designPatterns/abstractionOccurrence/what/images/abstractionOccurrence.png" height="40">
+  <p></p>
+  <p>The <code>&lt;&lt; Abstraction &gt;&gt;</code> class should hold all common information, and the unique information should be kept by the <code>&lt;&lt; Occurrence &gt;&gt;</code> class. Note that ‘Abstraction’ and ‘Occurrence’ are not class names,
+    but roles played by each class. Think of this diagram as a <em>meta-model</em> (i.e. a ‘model of a model’) of the <code>BookTitle-BookCopy</code> class diagram given above.</p>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

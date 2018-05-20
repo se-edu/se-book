@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Test Case Design: Summary: Exercises"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

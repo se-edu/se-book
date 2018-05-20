@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -21,32 +22,83 @@
   </div>
   <div id="main">
     <div>
-      <p>When the code has a number that does not explain the meaning of the number, we call that a magic number (as in “the number appears as if by magic”).</p>
+      <p>When the code has a number that does not explain the meaning of the number, we call that a magic number (as in “the number appears as if by magic”). Using a
+        <tooltip content="e.g., `PI`"><em>named constant</em></tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
       <tip-box>
-        <p>Example:</p>
-        <table class="markbind-table table">
-          <thead>
-            <tr>
-              <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
-              <th><img src="/se-book/images/Good.png" alt="" title="Good"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>return 3.14236;</code></td>
-              <td><code>return PI</code></td>
-            </tr>
-            <tr>
-              <td><code>return 9</code></td>
-              <td><code>return MAX_SIZE-1</code></td>
-            </tr>
-          </tbody>
-        </table>
+        <p>📦 Example:</p>
+        <tabs>
+        
+          <tab header="Java">
+            <div>
+              <table>
+                <tr>
+                
+                  <td valign="top">
+                    <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>;
+...
+<span class="hljs-keyword">return</span> <span class="hljs-number">9</span>;
+</code></pre>
+                    <p></p>
+                  </td>
+                
+                  <td>  <br><br></td>
+                
+                  <td valign="top">
+                    <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14236</span>;
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_SIZE = <span class="hljs-number">10</span>;
+...
+<span class="hljs-keyword">return</span> PI;
+...
+<span class="hljs-keyword">return</span> MAX_SIZE-<span class="hljs-number">1</span>;
+</code></pre>
+                    <p></p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </tab>
+        
+          <tab header="Python">
+            <div>
+              <p>Note: Python does not have a way to make a variable a constant. However, you can use a normal variable with an <code>ALL_CAPS</code> name to simulate a constant.</p>
+              <table>
+                <tr>
+                
+                  <td valign="top">
+                    <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                    <pre><code class="hljs python"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>
+...
+<span class="hljs-keyword">return</span> <span class="hljs-number">9</span>
+</code></pre>
+                    <p></p>
+                  </td>
+                
+                  <td>  <br><br></td>
+                
+                  <td valign="top">
+                    <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                    <pre><code class="hljs python">PI = <span class="hljs-number">3.14236</span>
+MAX_SIZE = <span class="hljs-number">10</span>
+...
+<span class="hljs-keyword">return</span> PI
+...
+<span class="hljs-keyword">return</span> MAX_SIZE<span class="hljs-number">-1</span>
+</code></pre>
+                    <p></p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </tab>
+        </tabs>
+        <hr>
       </tip-box>
-      <p>Using a named constant makes the code easier to understand because the name tells us more about the meaning of the number. Similarly, we can have ‘magic’ values of other data types.</p>
+      <p>Similarly, we can have ‘magic’ values of other data types.</p>
       <tip-box>
         <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
-        <pre><code class="hljs java"><span class="hljs-keyword">return</span> “Error <span class="hljs-number">1432</span>”;  <span class="hljs-comment">// A magic string!</span>
+        <pre><code class="hljs java"><span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment">// A magic string!</span>
 </code></pre>
       </tip-box>
     </div>
@@ -56,5 +108,8 @@
 </body>
 <script src="..\..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\..\..\markbind\js\setup.js"></script>
 </html>

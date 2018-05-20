@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <div>
+  <h4 id="enforcing-referential-integrity-three">Enforcing Referential Integrity <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+</div>
+<div>
+  <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p>
+  <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
+  <p></p>
+  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
+    Woman girlfriend;
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setGirlfriend</span><span class="hljs-params">(Woman w)</span> </span>{
+        girlfriend = w;
+    }
+    …
+}
+</code></pre>
+  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
+    Man boyfriend;
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setBoyfriend</span><span class="hljs-params">(Man m)</span> </span>{
+        boyfriend = m;
+    }
+}
+</code></pre>
+  <p>The two classes are meant to be used as follows:</p>
+  <pre><code class="hljs java">Woman jean;
+Man james;
+…
+james.setGirlfriend(jean);
+jean.setBoyfriend(james);
+</code></pre>
+  <p>Suppose the two classes were used this instead:</p>
+  <pre><code class="hljs java">Woman jean; Man james, yong;
+…
+james.setGirlfriend(jean);  
+jean.setBoyfriend(yong);  
+</code></pre>
+  <p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this &quot;love triangle&quot;. In such a situation, we say that <em>the referential integrity has been violated</em>.
+    It simply means <em>there is an inconsistency in object references</em>.</p>
+  <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
+  <p></p>
+  <p>One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.</p>
+  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
+    <span class="hljs-keyword">private</span> Man boyfriend;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setBoyfriend</span><span class="hljs-params">(Man m)</span> </span>{
+        <span class="hljs-keyword">if</span>(boyfriend == m){
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-keyword">if</span> (boyfriend != <span class="hljs-keyword">null</span>) {
+            boyfriend.breakUp();
+        }
+        boyfriend = m;
+        m.setGirlfriend(<span class="hljs-keyword">this</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">breakUp</span><span class="hljs-params">()</span> </span>{
+        boyfriend = <span class="hljs-keyword">null</span>;
+    }   
+    ...
+}
+</code></pre>
+  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span></span>{
+    <span class="hljs-keyword">private</span> Woman girlfriend;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGirlfriend</span><span class="hljs-params">(Woman w)</span> </span>{
+        <span class="hljs-keyword">if</span>(girlfriend == w){
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-keyword">if</span> (girlfriend != <span class="hljs-keyword">null</span>) {
+            girlfriend.breakUp();
+        }
+        girlfriend = w;
+        w.setBoyfriend(<span class="hljs-keyword">this</span>);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">breakUp</span><span class="hljs-params">()</span> </span>{
+        girlfriend = <span class="hljs-keyword">null</span>;
+    }  
+   ...
+}
+</code></pre>
+  <p>When the code <code>james.setGirlfriend(jean)</code> is executed, the code ensures that <code>james</code> break up with any current girlfriend before he accepts <code>jean</code> as the girlfriend. Furthermore, the code ensures that <code>jean</code>    breaks up with any existing boyfriends and accepts <code>james</code> as the boyfriend.</p>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

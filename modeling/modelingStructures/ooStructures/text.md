@@ -42,8 +42,8 @@ However, object structures do not change at random; they change based on a set o
 
 UML Object Diagrams are used to model object structures and UML class diagrams are used to model class structures of an OO solution.
 
-<dynamic-panel src="../../../../book/uml/objectDiagrams/introduction/full.md" header=":mortar_board: UML → Object Diagrams → Introduction" /> 
-<dynamic-panel src="../../../../book/uml/classDiagrams/introduction/what/full.md" header=":mortar_board: UML → Class Diagrams → Introduction → What" />
+<panel src="../../../../book/uml/objectDiagrams/introduction/full.md" header=":mortar_board: UML → Object Diagrams → Introduction" expanded/> 
+<panel src="../../../../book/uml/classDiagrams/introduction/what/full.md" header=":mortar_board: UML → Class Diagrams → Introduction → What" expanded/>
 
 <tip-box> 
 

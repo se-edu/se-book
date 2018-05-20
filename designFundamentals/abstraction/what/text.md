@@ -30,7 +30,7 @@ Most programs are written to solve complex problems involving large amounts of i
 
 :package: `print(“Hello”)` is an abstraction of the actual output mechanism within the computer.
 
-</tip-box>For example, 
+</tip-box> 
 
 **Abstraction can be applied repeatedly to obtain progressively _higher levels of abstractions_.** 
 

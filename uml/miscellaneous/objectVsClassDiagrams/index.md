@@ -1,3 +1,7 @@
+<frontmatter>
+title: "UML: Miscellaneous: Object Diagrams vs Class Diagrams"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

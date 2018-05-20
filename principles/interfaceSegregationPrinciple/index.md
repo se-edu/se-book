@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Principles: Interface Segregation Principle"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

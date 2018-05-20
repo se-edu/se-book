@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -30,7 +31,8 @@
         </blockquote>
         <p>In particular, avoid <a href="https://blog.codinghorror.com/flattening-arrow-code/"><em>arrowhead</em> style code</a>.</p>
         <tip-box>
-          <p>Example:</p><img src="/se-book/codeQuality/practices/avoidDeepNesting/images/arrowheadStyle.png" height="250">
+          <p>Example:</p>
+          <img src="/se-book/codeQuality/practices/avoidDeepNesting/images/arrowheadStyle.png" height="250">
           <p></p>
         </tip-box>
       </div>
@@ -41,13 +43,17 @@
       <div>
         <p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate the final
           value).</p>
-        <tip-box>
-          <p>Example:</p>
-          <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
-          <pre><code class="hljs java"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);
+        <tabs>
+        
+          <tab header="Java">
+            <div>
+              <tip-box>
+                <p>📦 Example:</p>
+                <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                <pre><code class="hljs java"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);
 </code></pre>
-          <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
-          <pre><code class="hljs java">
+                <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                <pre><code class="hljs java">
 <span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;
 <span class="hljs-keyword">boolean</span> isSameSize = previousSize != length;
 <span class="hljs-keyword">boolean</span> isValidCode = isWithinSizeLimit || isSameSize;
@@ -56,7 +62,31 @@
 
 <span class="hljs-keyword">return</span> isValidCode &amp;&amp; isUrgent;
 </code></pre>
-        </tip-box>
+              </tip-box>
+            </div>
+          </tab>
+        
+          <tab header="Python">
+            <div>
+              <tip-box>
+                <p>📦 Example:</p>
+                <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                <pre><code class="hljs python"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) <span class="hljs-keyword">or</span> (previous_size != length)) <span class="hljs-keyword">and</span> (type_code == URGENT)
+</code></pre>
+                <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                <pre><code class="hljs python">is_within_size_limit = length &lt; MAX_LENGTH
+is_same_size = previous_size != length
+is_valid_code = is_within_size_limit <span class="hljs-keyword">or</span> is_same_size
+
+is_urgent = type_code == URGENT
+
+<span class="hljs-keyword">return</span> is_valid_code <span class="hljs-keyword">and</span> is_urgent
+</code></pre>
+              </tip-box>
+            </div>
+          </tab>
+        </tabs>
+        <hr>
         <blockquote>
           <p>The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. <sub>-- Edsger Dijkstra</sub></p>
         </blockquote>
@@ -66,32 +96,83 @@
   <panel type="seamless" header="**Avoid Magic Numbers**" alt="magic numbers">
     <div>
       <div>
-        <p>When the code has a number that does not explain the meaning of the number, we call that a magic number (as in “the number appears as if by magic”).</p>
+        <p>When the code has a number that does not explain the meaning of the number, we call that a magic number (as in “the number appears as if by magic”). Using a
+          <tooltip content="e.g., `PI`"><em>named constant</em></tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
         <tip-box>
-          <p>Example:</p>
-          <table class="markbind-table table">
-            <thead>
-              <tr>
-                <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
-                <th><img src="/se-book/images/Good.png" alt="" title="Good"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>return 3.14236;</code></td>
-                <td><code>return PI</code></td>
-              </tr>
-              <tr>
-                <td><code>return 9</code></td>
-                <td><code>return MAX_SIZE-1</code></td>
-              </tr>
-            </tbody>
-          </table>
+          <p>📦 Example:</p>
+          <tabs>
+          
+            <tab header="Java">
+              <div>
+                <table>
+                  <tr>
+                  
+                    <td valign="top">
+                      <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>;
+...
+<span class="hljs-keyword">return</span> <span class="hljs-number">9</span>;
+</code></pre>
+                      <p></p>
+                    </td>
+                  
+                    <td>  <br><br></td>
+                  
+                    <td valign="top">
+                      <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14236</span>;
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_SIZE = <span class="hljs-number">10</span>;
+...
+<span class="hljs-keyword">return</span> PI;
+...
+<span class="hljs-keyword">return</span> MAX_SIZE-<span class="hljs-number">1</span>;
+</code></pre>
+                      <p></p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </tab>
+          
+            <tab header="Python">
+              <div>
+                <p>Note: Python does not have a way to make a variable a constant. However, you can use a normal variable with an <code>ALL_CAPS</code> name to simulate a constant.</p>
+                <table>
+                  <tr>
+                  
+                    <td valign="top">
+                      <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                      <pre><code class="hljs python"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>
+...
+<span class="hljs-keyword">return</span> <span class="hljs-number">9</span>
+</code></pre>
+                      <p></p>
+                    </td>
+                  
+                    <td>  <br><br></td>
+                  
+                    <td valign="top">
+                      <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                      <pre><code class="hljs python">PI = <span class="hljs-number">3.14236</span>
+MAX_SIZE = <span class="hljs-number">10</span>
+...
+<span class="hljs-keyword">return</span> PI
+...
+<span class="hljs-keyword">return</span> MAX_SIZE<span class="hljs-number">-1</span>
+</code></pre>
+                      <p></p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </tab>
+          </tabs>
+          <hr>
         </tip-box>
-        <p>Using a named constant makes the code easier to understand because the name tells us more about the meaning of the number. Similarly, we can have ‘magic’ values of other data types.</p>
+        <p>Similarly, we can have ‘magic’ values of other data types.</p>
         <tip-box>
           <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
-          <pre><code class="hljs java"><span class="hljs-keyword">return</span> “Error <span class="hljs-number">1432</span>”;  <span class="hljs-comment">// A magic string!</span>
+          <pre><code class="hljs java"><span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment">// A magic string!</span>
 </code></pre>
         </tip-box>
       </div>
@@ -102,16 +183,22 @@
       <div>
         <p>Make the code as explicit as possible, even if the language syntax allows them to be implicit. Here are some examples:</p>
         <ul>
-          <li>Use explicit type conversion instead of implicit type conversion.</li>
-          <li>Use parentheses/braces to show grouping even when they can be skipped.</li>
-          <li>Use enumerations when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0,1,2 to denote the states 'starting', 'enabled', and 'disabled' respectively,
-            declare 'state' as type <code>SystemState</code> and define an enumeration <code>SystemState</code> that has values <code>'STARTING'</code>, <code>'ENABLED'</code>, and <code>'DISABLED'</code>.</li>
-          <li>When statements should follow a particular order, try to make it obvious (with appropriate naming, or at least comments). For example, if you name two functions <code>'taskA()'</code> and <code>'taskB()'</code>, it is not obvious which one should
-            be called first. Contrast this with naming the functions <code>'phaseOne()'</code> and <code>'phaseTwo()'</code> instead. This is especially important when statements in one function must be called before the other one.</li>
+          <li>[<code>Java</code>] Use explicit type conversion instead of implicit type conversion.</li>
+          <li>[<code>Java</code>, <code>Python</code>] Use parentheses/braces to show grouping even when they can be skipped.</li>
+          <li>[<code>Java</code>, <code>Python</code>] Use
+            <trigger trigger="click" for="modal:obviousCode-enums">enumerations</trigger> when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0,1,2 to denote the states 'starting', 'enabled', and 'disabled'
+            respectively, declare 'state' as type <code>SystemState</code> and define an enumeration <code>SystemState</code> that has values <code>'STARTING'</code>, <code>'ENABLED'</code>, and <code>'DISABLED'</code>.</li>
         </ul>
+        <modal title="More about enumerations" id="modal:obviousCode-enums">
+          <ul>
+            <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">More about Java enumerations</a></li>
+            <li><a href="https://docs.python.org/3/library/enum.html">More about Python enumerations</a></li>
+          </ul>
+        </modal>
       </div>
     </div>
   </panel>
+
   <panel type="seamless" header="**Structure Code Logically**" alt="structure logically">
     <div>
       <div>
@@ -169,6 +256,7 @@ displayResult();
 </code></pre>
         </tip-box>
         <modal title="" id="modal:slap-abstraction">
+        
           <div>
             <div></div>
             <p></p>
@@ -197,8 +285,7 @@ displayResult();
                 <p><strong><em>Control abstraction</em> abstracts away details of the actual control flow to focus on tasks at a simplified level.</strong></p>
                 <tip-box>
                   <p>📦 <code>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p>
-                  <p></p>
-                </tip-box>For example,
+                </tip-box>
                 <p><strong>Abstraction can be applied repeatedly to obtain progressively <em>higher levels of abstractions</em>.</strong></p>
                 <tip-box>
                   <p>📦 An example of different levels of data abstraction: a <code>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a bit.</p>
@@ -212,6 +299,7 @@ displayResult();
       </div>
     </div>
   </panel>
+
   <panel type="seamless" header="**Make the Happy Path Prominent**" alt="happy path">
     <div>
       <div>
@@ -270,7 +358,7 @@ exit();
         <p><strong>Use nouns for classes/variables and verbs for methods/functions.</strong></p>
         <tip-box>
           <p>Examples:</p>
-          <table class="markbind-table table">
+          <table class="markbind-table table table-bordered table-striped">
             <thead>
               <tr>
                 <th>Name for a</th>
@@ -292,11 +380,26 @@ exit();
             </tbody>
           </table>
         </tip-box>
-        <p><strong>Distinguish clearly between single valued and multivalued variables.</strong></p>
+        <p><strong>Distinguish clearly between single-valued and multivalued variables.</strong></p>
         <tip-box>
-          <p>Examples:</p>
-          <p><code>Person student</code><br><code>ArrayList&lt;Person&gt; students</code></p>
-          <p></p>
+          <p>📦 Examples:</p>
+          <tabs>
+          
+            <tab header="Java">
+              <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+              <pre><code class="hljs java">Person student;
+ArrayList&lt;Person&gt; students;
+</code></pre>
+            </tab>
+          
+            <tab header="Python">
+              <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+              <pre><code class="hljs python">student = Person(<span class="hljs-string">'Jim'</span>)
+students = [Person(<span class="hljs-string">'Jim'</span>), Person(<span class="hljs-string">'Alice'</span>)]
+</code></pre>
+            </tab>
+          </tabs>
+          <hr>
         </tip-box>
       </div>
     </div>
@@ -304,17 +407,18 @@ exit();
   <panel type="seamless" header="**Use Standard Words**" alt="standard words">
     <div>
       <div>
-        <p>Use correct spelling in names. Avoid 'texting-style' spelling. <strong>Avoid foreign language words, slang, and names that are only meaningful within specific contexts/times</strong><span class="dimmed">e.g. terms from private jokes, a TV show currently popular in your country</span></p>
+        <p>Use correct spelling in names. Avoid 'texting-style' spelling. <strong>Avoid foreign language words, slang, and names that are only meaningful within specific contexts/times</strong> <span class="dimmed">e.g. terms from private jokes, a TV show currently popular in your country</span></p>
       </div>
     </div>
   </panel>
+
   <panel type="seamless" header="**Use Name to Explain**" alt="name explain">
     <div>
       <div>
         <p><strong>A name is not just for differentiation; it should explain the named entity to the reader accurately and at a sufficient level of detail.</strong></p>
         <tip-box>
           <p>Examples:</p>
-          <table class="markbind-table table">
+          <table class="markbind-table table table-bordered table-striped">
             <thead>
               <tr>
                 <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
@@ -340,7 +444,7 @@ exit();
         <p><strong>If the name has multiple words, they should be in a sensible order.</strong></p>
         <tip-box>
           <p>Examples:</p>
-          <table class="markbind-table table">
+          <table class="markbind-table table table-bordered table-striped">
             <thead>
               <tr>
                 <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
@@ -358,7 +462,7 @@ exit();
         <p>Imagine going to the doctor's and saying &quot;My eye1 is swollen&quot;! Don’t use numbers or case to distinguish names.</p>
         <tip-box>
           <p>Examples:</p>
-          <table class="markbind-table table">
+          <table class="markbind-table table table-bordered table-striped">
             <thead>
               <tr>
                 <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
@@ -400,7 +504,7 @@ exit();
           <p>This is misleading because <code>colorBlue</code> is named similar to <code>colorWhite</code> and <code>colorBlack</code> but has a different purpose while <code>hexForRed</code> is named differently but has very similar purpose to the first
             two variables. The following is better:</p>
           <ul>
-            <li><code>hexForBlack</code><code>hexForWhite</code><code>hexForRed</code></li>
+            <li><code>hexForBlack</code> <code>hexForWhite</code> <code>hexForRed</code></li>
             <li><code>blueColorCount</code></li>
           </ul>
         </tip-box>
@@ -408,7 +512,7 @@ exit();
           O?&quot;), almost similar names.</p>
         <tip-box>
           <p>Examples:</p>
-          <table class="markbind-table table">
+          <table class="markbind-table table table-bordered table-striped">
             <thead>
               <tr>
                 <th><img src="/se-book/images/Bad.png" alt="" title="Bad"></th>
@@ -428,13 +532,13 @@ exit();
                 <td>Hard to pronounce</td>
               </tr>
               <tr>
-                <td><code>right</code><code>left</code><code>wrong</code></td>
-                <td><code>rightDirection</code><code>leftDirection</code><code>wrongResponse</code></td>
+                <td><code>right</code> <code>left</code> <code>wrong</code></td>
+                <td><code>rightDirection</code> <code>leftDirection</code> <code>wrongResponse</code></td>
                 <td><code>right</code> is for 'correct' or 'opposite of 'left'?</td>
               </tr>
               <tr>
-                <td><code>redBooks</code><code>readBooks</code></td>
-                <td><code>redColorBooks</code><code>booksRead</code></td>
+                <td><code>redBooks</code> <code>readBooks</code></td>
+                <td><code>redColorBooks</code> <code>booksRead</code></td>
                 <td><code>red</code> and <code>read</code> (past tense) sounds the same</td>
               </tr>
               <tr>
@@ -510,13 +614,14 @@ exit();
       </div>
     </div>
   </panel>
+
   <panel type="seamless" header="**Minimise Scope of Variables**" alt="variable scope">
     <div>
       <div>
         <p><strong>Minimize global variables</strong>. Global variables may be the most convenient way to pass information around, but they do create implicit links between code segments that use the global variable. Avoid them as much as possible.</p>
         <p><strong>Define variables in the least possible scope</strong>. For example, if the variable is used only within the <code>if</code> block of the conditional statement, it should be declared inside that <code>if</code> block.</p>
         <blockquote>
-          <p><strong>The most powerful technique for minimizing the scope of a local variable is to declare it where it is first used.</strong><sub>-- <em>Effective Java</em>, by Joshua Bloch</sub></p>
+          <p><strong>The most powerful technique for minimizing the scope of a local variable is to declare it where it is first used.</strong> <sub>-- <em>Effective Java</em>, by Joshua Bloch</sub></p>
         </blockquote>
         <p>📎 Resources:</p>
         <ul>
@@ -587,21 +692,47 @@ trimInput();
       <div>
         <p>Do not write comments as if they are private notes to self. Instead, write them well enough to be understood by another programmer. One type of comments that is almost always useful is the <em>header comment</em> that you write for a class or
           an operation to explain its purpose.</p>
-        <p><img src="/se-book/images/Bad.png" alt="" title="Bad"><span class="dimmed">Reason: this comment will only make sense to the person who wrote it</span></p>
-        <pre><code class="hljs java"><span class="hljs-comment">// a quick trim function used to fix bug I detected overnight</span>
+        <tip-box>
+          <p>📦 Examples:</p>
+          <tabs>
+          
+            <tab header="Java">
+              <div>
+                <p><img src="/se-book/images/Bad.png" alt="" title="Bad"> <span class="dimmed">Reason: this comment will only make sense to the person who wrote it</span></p>
+                <pre><code class="hljs java"><span class="hljs-comment">// a quick trim function used to fix bug I detected overnight</span>
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">trimInput</span><span class="hljs-params">()</span></span>{
     ....
 }
 </code></pre>
-        <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
-        <pre><code class="hljs java"><span class="hljs-comment">/** Trims the input of leading and trailing spaces */</span>
+                <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                <pre><code class="hljs java"><span class="hljs-comment">/** Trims the input of leading and trailing spaces */</span>
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">trimInput</span><span class="hljs-params">()</span></span>{
     ....
 }
 </code></pre>
+              </div>
+            </tab>
+          
+            <tab header="Python">
+              <div>
+                <p><img src="/se-book/images/Bad.png" alt="" title="Bad"> <span class="dimmed">Reason: this comment will only make sense to the person who wrote it</span></p>
+                <pre><code class="hljs python"><span class="hljs-comment"># a quick trim function used to fix bug I detected overnight</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trim_input</span><span class="hljs-params">()</span>:</span>
+    ...
+</code></pre>
+                <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trim_input</span><span class="hljs-params">()</span>:</span>
+<span class="hljs-string">"""Trim the input of leading and trailing spaces"""</span>
+    ...
+</code></pre>
+              </div>
+            </tab>
+          </tabs>
+        </tip-box>
       </div>
     </div>
   </panel>
+
   <panel type="seamless" header="**Explain WHAT and WHY, not HOW**" alt="explain what why how">
     <div>
       <div>
@@ -625,11 +756,11 @@ compact(input);
         <p>👎 <strong>How</strong> : The explanation for how the code works. This should already be apparent from the code, if the code is self-explanatory. Adding comments to explain the same thing is redundant.</p>
         <tip-box>
           <p>📦 Example:</p>
-          <p><img src="/se-book/images/Bad.png" alt="" title="Bad"><span class="dimmed">Reason: Comment explains how the code works.</span></p>
+          <p><img src="/se-book/images/Bad.png" alt="" title="Bad"> <span class="dimmed">Reason: Comment explains how the code works.</span></p>
           <pre><code class="hljs java"><span class="hljs-comment">// return true if both left end and right end are correct or the size has not incremented</span>
 <span class="hljs-keyword">return</span> (left &amp;&amp; right) || (input.size() == size);
 </code></pre>
-          <p><img src="/se-book/images/Good.png" alt="" title="Good"><span class="dimmed">Reason: Code refactored to be self-explanatory. Comment no longer needed.</span></p>
+          <p><img src="/se-book/images/Good.png" alt="" title="Good"> <span class="dimmed">Reason: Code refactored to be self-explanatory. Comment no longer needed.</span></p>
           <pre><code class="hljs java">
 <span class="hljs-keyword">boolean</span> isSameSize = (input.size() == size) ;
 <span class="hljs-keyword">return</span> (isLeftEndCorrect &amp;&amp; isRightEndCorrect) || isSameSize;
@@ -643,5 +774,8 @@ compact(input);
 </body>
 <script src="..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\..\markbind\js\setup.js"></script>
 </html>

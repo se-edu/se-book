@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Code Quality: [Guideline] Maximise Readability: Introduction"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

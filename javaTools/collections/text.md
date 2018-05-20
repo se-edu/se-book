@@ -6,7 +6,7 @@
 
 <div id="title">
 
-#### Collections :two: [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/javaTools/collections/index.html)
+#### Collections :two: [{{glyphicon_new_window}}]({{baseUrl}}/javaTools/collections/index.html)
 
 </div>
 

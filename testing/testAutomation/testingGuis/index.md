@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Testing: Test Automation: Automated Testing of GUIs"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

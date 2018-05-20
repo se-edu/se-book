@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Error Handling: Defensive Programming: Enforcing Compulsory Associations"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

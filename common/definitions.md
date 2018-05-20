@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Definitions"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">
@@ -86,6 +90,12 @@ An _abstract class_ is a class that is declared `abstract`—it may or may not i
 <div id="def-design-pattern">
 
 **Design Pattern** : An _elegant reusable solution_ to a _commonly recurring problem_ within a _given context_ in software design.
+
+</div>
+
+<div id="def-domain-expert">
+
+**Domain Expert** : An expert of a discipline to which the product is connected %%&nbsp;e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting%%.
 
 </div>
 
@@ -268,8 +278,6 @@ Also known as
 **Static binding** (aka early binding): When a method call is resolved at compile time.  
 
 </div>
-
-<div id="def-sut">
 
 <div id="def-stub">
 

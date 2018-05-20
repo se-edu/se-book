@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Modeling: Modeling Behaviors: Communication Diagrams"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

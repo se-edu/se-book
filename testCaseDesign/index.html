@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -32,7 +33,8 @@
               <p><strong>Except for trivial <tooltip content="Software Under Test">SUTs</tooltip>, <tooltip content="testing all possible cases">exhaustive testing</tooltip> is not practical</strong> because such testing often requires a massive/infinite
                 number of test cases.</p>
               <tip-box>
-                <p>📦 Consider the test cases for adding a <code>String</code> object to a <code>Collection</code> object:</p>
+                <p>📦 Consider the test cases for adding a string object to a
+                  <tooltip content="Java: `ArrayList`,<br>Python: `list`">collection</tooltip>:</p>
                 <ul>
                   <li>Add an item to an empty collection.</li>
                   <li>Add an item when there is one item in the collection.</li>
@@ -46,16 +48,17 @@
                 <p>Exhaustive testing of this operation can take many more test cases.</p>
               </tip-box>
               <blockquote>
-                <p>Program testing can be used to show the presence of bugs, but never to show their absence!<br><sub>--Edsger Dijkstra</sub></p>
+                <p>Program testing can be used to show the presence of bugs, but never to show their absence!<br>
+                  <sub>--Edsger Dijkstra</sub></p>
               </blockquote>
               <div id="e-and-e">
                 <p><strong>Every test case adds to the cost of testing.</strong> In some systems, a single test case can cost thousands of dollars <span class="dimmed"> e.g. on-field testing of flight-control software</span>. Therefore, <strong>test cases need to be designed to make the best use of testing resources.</strong>                  In particular:</p>
                 <ul>
                   <li>
-                    <p><strong>Testing should be <em>effective</em></strong> i.e., it finds a high % of existing bugs <span class="dimmed"> e.g., a set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system</span>.</p>
+                    <p><strong>Testing should be <em>effective</em></strong> i.e., it finds a high percentage of existing bugs <span class="dimmed">e.g., a set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system</span>.</p>
                   </li>
                   <li>
-                    <p><strong>Testing should be <em>efficient</em></strong> i.e., it has a high rate of success (bugs found/test cases) <span class="dimmed"> a set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects</span>.</p>
+                    <p><strong>Testing should be <em>efficient</em></strong> i.e., it has a high rate of success (bugs found/test cases) <span class="dimmed">a set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects</span>.</p>
                   </li>
                 </ul>
                 <p><strong>For testing to be <tooltip content="Efficient and Effective">E&amp;E</tooltip>, each new test we add should be targeting a potential fault that is not already targeted by existing test cases.</strong> There are test case design
@@ -90,9 +93,9 @@ Enter side 1:
                           <p>We may also devise some interesting test cases such as the ones depicted below.</p>
                           <p>Note that their applicability depends on the context in which the software is operating.</p>
                           <ul>
-                            <li>Non-integer number, negative numbers, 0, numbers formatted differently (e.g. 13F), very large numbers (e.g. MAX_INT), numbers with many decimal places, empty string, ...</li>
+                            <li>Non-integer number, negative numbers, <code>0</code>, numbers formatted differently (e.g. <code>13F</code>), very large numbers (e.g. <code>MAX_INT</code>), numbers with many decimal places, empty string, ...</li>
                             <li>Check many triangles one after the other (will the system run out of memory?)</li>
-                            <li>Backspace, tab, CTRL+C , …</li>
+                            <li><kbd>Backspace</kbd>, <kbd>tab</kbd>, <kbd>CTRL+C</kbd> , …</li>
                             <li>Introduce a long delay between entering data (will the program be affected by, say the screensaver?), minimize and restore window during the operation, hibernate the system in the middle of a calculation, start with invalid
                               inputs (the system may perform error handling differently for the very first test case), …</li>
                             <li>Test on different locale.</li>
@@ -105,7 +108,7 @@ Enter side 1:
                   <div>
                     <panel header=":lock::key: Exhaustive testing in Minesweeper">
                       <question has-input="true">
-                        <p>Explain the why exhaustive testing is not practical using the example of testing <code>Logic#newGame()</code> operation in the Minesweeper game.</p>
+                        <p>Explain the why exhaustive testing is not practical using the example of testing <code>newGame()</code> operation in the <code>Logic</code> class of a Minesweeper game.</p>
                         <div slot="answer">
                           <p>Consider this sequence of test cases:</p>
                           <ul>
@@ -194,21 +197,24 @@ Enter side 1:
                     1000 items and lists longer than 1000 items, more meaningful test cases can then be added to verify the correctness of both algorithms.</p>
                 </li>
               </ul>
-              <div v-closeable="" alt="videos: Black-box and white-box testing">
+              <panel type="seamless" header=":tv: %%Black-box and white-box testing%%">
                 <p><sub>Note: these videos are from the <a href="https://www.udacity.com/course/software-development-process--ud805">Udacity course <em>Software Development Process</em> by Georgia Tech</a></sub></p>
                 <tabs>
+                
                   <tab header=":tv: Black-box vs White-box testing">
                     <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/jRwwb7iaRsU" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
                     <p>
                       <hr>
                     </p>
                   </tab>
+                
                   <tab header=":tv: Black-box testing example">
                     <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/6pbB37nFUZw" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
                     <p>
                       <hr>
                     </p>
                   </tab>
+                
                   <tab header=":tv: White-box testing example">
                     <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/KIAkoae6_jE" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
                     <p>
@@ -216,7 +222,7 @@ Enter side 1:
                     </p>
                   </tab>
                 </tabs>
-              </div>
+              </panel>
             </div>
             <div></div>
           </div>
@@ -242,7 +248,7 @@ Enter side 1:
               <p>Consider the testing of the following operation.</p>
               <tip-box>
                 <div id="isValidMonth">
-                  <p><code>isValidMonth (int m): boolean</code> : returns <code>true</code> if <code>m</code> is in the range [1..12]</p>
+                  <p><code>isValidMonth(m)</code> : returns <code>true</code> if <code>m</code> (and <code>int</code>) is in the range [1..12]</p>
                 </div>
               </tip-box>
               <p>It is inefficient and impractical to test this method for all integer values <code>[-MIN_INT to MAX_INT]</code>. Fortunately, there is no need to test all possible input values. For example, if the input value <code>233</code> failed to
@@ -287,9 +293,10 @@ Enter side 1:
                 </ul>
               </tip-box>
               <popover id="pop:epBasic-isValidMonth" title="`isValidMonth`" placement="top">
+              
                 <div slot="content">
                   <div>
-                    <p><code>isValidMonth (int m): boolean</code> : returns <code>true</code> if <code>m</code> is in the range [1..12]</p>
+                    <p><code>isValidMonth(m)</code> : returns <code>true</code> if <code>m</code> (and <code>int</code>) is in the range [1..12]</p>
                   </div>
                 </div>
               </popover>
@@ -311,7 +318,7 @@ Enter side 1:
               </tip-box>
               <p>An EP may not have adjacent values.</p>
               <tip-box>
-                <p>📦 Consider the method <code>isPrime(int i):boolean</code> that returns true if <code>i</code> is a prime number.</p>
+                <p>📦 Consider the method <code>isPrime(int i): boolean</code> that returns true if <code>i</code> is a prime number.</p>
                 <p>EPs for <code>i</code>:</p>
                 <ul>
                   <li>prime numbers</li>
@@ -320,7 +327,7 @@ Enter side 1:
               </tip-box>
               <p>Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases we have to consider each value as a partition by itself.</p>
               <tip-box>
-                <p>📦 Consider the method <code>showStatusMessage(GameStatus s):String</code> that returns a unique <code>String</code> for each of the possible value of s (<code>GameStatus</code> is an <code>enum</code>). In this case, each possible value
+                <p>📦 Consider the method <code>showStatusMessage(GameStatus s): String</code> that returns a unique <code>String</code> for each of the possible value of s (<code>GameStatus</code> is an <code>enum</code>). In this case, each possible value
                   for <code>s</code> will have to be considered as a partition.</p>
               </tip-box>
               <p>Note that the EP technique is merely a heuristic and not an exact science, especially when applied manually (as opposed to using an automated program analysis tool to derive EPs). The partitions derived depend on how one ‘speculates’ the
@@ -341,10 +348,10 @@ Enter side 1:
                   </tr>
                   <tr>
                     <td>
-                      <p><code>isValidFlag(String s): boolean</code><br> Returns <code>true</code> if s is one of [“F”, “T”, “D”]. The comparison is case-sensitive.</p>
+                      <p><code>isValidFlag(String s): boolean</code><br> Returns <code>true</code> if s is one of [<code>&quot;F&quot;</code>, <code>&quot;T&quot;</code>, <code>&quot;D&quot;</code>]. The comparison is case-sensitive.</p>
                     </td>
                     <td>
-                      <p>[“F”] [“T”] [“D”] [“f”, “t”, “d”] [any other string][null]</p>
+                      <p>[<code>&quot;F&quot;</code>] [<code>&quot;T&quot;</code>] [<code>&quot;D&quot;</code>] [<code>&quot;f&quot;</code>, <code>&quot;t&quot;</code>, <code>&quot;d&quot;</code>] [any other string][null]</p>
                     </td>
                   </tr>
                   <tr>
@@ -352,7 +359,7 @@ Enter side 1:
                       <p><code>squareRoot(String s): int</code><br> Pre-conditions: s represents a positive integer<br> Returns the square root of <code>s</code> if the square root is an integer; returns <code>0</code> otherwise.</p>
                     </td>
                     <td>
-                      <p>[s is not a valid number] [s is a negative integer] [s has an integer square root] [s does not have an integer square root]</p>
+                      <p>[<code>s</code> is not a valid number] [<code>s</code> is a negative integer] [<code>s</code> has an integer square root] [<code>s</code> does not have an integer square root]</p>
                     </td>
                   </tr>
                 </table>
@@ -362,7 +369,7 @@ Enter side 1:
               <div>
                 <panel header=":muscle: Exercises" expandable="">
                   <div>
-                    <panel header=":lock::key: EPs for isValidName method">
+                    <panel header=":lock::key: EPs for `isValidName` method">
                       <question>
                         <p>Consider this SUT:</p>
                         <tip-box>
@@ -370,18 +377,18 @@ Enter side 1:
                           <p>Description: returns true if <code>s</code> is not <code>null</code> and not longer than 50 characters.</p>
                         </tip-box>
                         <p>A. Which one of these is least likely to be an equivalence partition for the parameter s of the isValidName method given below?</p>
-                        <ul radio-group="uyr5j" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="uyr5j" type="radio"> a. null.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="uyr5j" type="radio"> b. strings having more than 50 characters.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="uyr5j" type="radio"> c. strings having 50 or fewer characters.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="uyr5j" type="radio"> d. strings consisting of numbers instead of letters.</label></li>
+                        <ul radio-group="4c6ed" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="4c6ed" type="radio"> a. null.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="4c6ed" type="radio"> b. strings having more than 50 characters.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="4c6ed" type="radio"> c. strings having 50 or fewer characters.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="4c6ed" type="radio"> d. strings consisting of numbers instead of letters.</label></li>
                         </ul>
                         <p>B. If you had to choose 3 test cases from the 4 given below, which one will you leave out based on the EP technique?</p>
-                        <ul radio-group="8pk33" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="8pk33" type="radio"> a. A string that is 50 characters long</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="8pk33" type="radio"> b. A string that is 51 characters long</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="8pk33" type="radio"> c. A string that is 40 characters long</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="8pk33" type="radio"> d. null</label></li>
+                        <ul radio-group="f35e9" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="f35e9" type="radio"> a. A string that is 50 characters long</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="f35e9" type="radio"> b. A string that is 51 characters long</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="f35e9" type="radio"> c. A string that is 40 characters long</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="f35e9" type="radio"> d. null</label></li>
                         </ul>
                         <div slot="answer">
                           <p>A. (d)</p>
@@ -417,17 +424,18 @@ Enter side 1:
                 <li>other data/objects accessed by the method such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented)</li>
               </ul>
               <tip-box>
-                <p>📦 Consider this method in the <code>DataStack</code> class:</p>
-                <pre><code class="hljs java"><span class="hljs-comment">/**
- * Adds o to the top of the stack if the stack is not full.
- * <span class="hljs-doctag">@throws</span> MutabilityException if the global flag FREEZE==true.
- * <span class="hljs-doctag">@throws</span> InvalidValueException if  o is null.
- * <span class="hljs-doctag">@return</span> true if the push operation was a success.
- */</span>
-<span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">push</span><span class="hljs-params">(Object o)</span> </span>{
-    ...
-}
-</code></pre>
+                <p>📦 Consider this method in the <code>DataStack</code> class:
+                  <code>push(Object o): boolean</code></p>
+                <ul>
+                  <li>Adds o to the top of the stack if the stack is not full.</li>
+                  <li>returns <code>true</code> if the push operation was a success.</li>
+                  <li>throws
+                    <ul>
+                      <li><code>MutabilityException</code> if the global flag <code>FREEZE==true</code>.</li>
+                      <li><code>InvalidValueException</code> if o is null.</li>
+                    </ul>
+                  </li>
+                </ul>
                 <p>EPs:</p>
                 <ul>
                   <li><code>DataStack</code> object: [full] [not full]</li>
@@ -453,16 +461,9 @@ Enter side 1:
                 <p>📦 Consider the <code>Logic</code> component of the Minesweeper application. What are the EPs for the <code>markCellAt(int x, int y)</code> method?. The partitions in <strong>bold</strong> represent valid inputs.</p>
                 <ul>
                   <li><code>Logic</code>: PRE_GAME, <strong>READY</strong>, <strong>IN_PLAY</strong>, WON, LOST</li>
-                  <li><code>x</code>: [MIN_INT..-1] <strong>[0..(W-1)]</strong> [W..MAX_INT] (we assume a minefield size of WxH)</li>
+                  <li><code>x</code>: [MIN_INT..-1] <strong>[0..(W-1)]</strong> [W..MAX_INT] <span class="dimmed">(we assume a minefield size of WxH)</span></li>
                   <li><code>y</code>: [MIN_INT..-1] <strong>[0..(H-1)]</strong> [H..MAX_INT]</li>
                   <li><code>Cell</code> at <code>(x,y)</code>: <strong>HIDDEN</strong>, MARKED, CLEARED</li>
-                </ul>
-                <p>A test case for the push method can be a combination of the equivalence partitions. Given below is such a test case.</p>
-                <ul>
-                  <li>id: DataStack_Push_001</li>
-                  <li>description: checks whether pushing onto a full stack works correctly</li>
-                  <li>input: stack is full, o != null, FREEZE == false</li>
-                  <li>expected output: returns false, stack remains unchanged</li>
                 </ul>
               </tip-box>
             </div>
@@ -490,7 +491,7 @@ Enter side 1:
               <p><strong><em>Boundary Value Analysis (BVA)</em> is test case design heuristic that is based on the observation that bugs often result from incorrect handling of boundaries of equivalence partitions.</strong> This is not surprising, as the
                 end points of the boundary are often used in branching instructions etc. where the programmer can make mistakes.</p>
               <tip-box>
-                <p>📦 <code>markCellAt(int x, int y)</code> operation could contain code such as if <code>(x &gt; 0 &amp;&amp; x &lt; = (W-1))</code> which involves boundaries of x’s equivalence partitions.</p>
+                <p>📦 <code>markCellAt(int x, int y)</code> operation could contain code such as if <code>(x &gt; 0 &amp;&amp; x &lt;= (W-1))</code> which involves boundaries of x’s equivalence partitions.</p>
               </tip-box>
               <p><strong>BVA suggests that when picking test inputs from an equivalence partition, values near boundaries (i.e. boundary values) are more likely to find bugs.</strong></p>
               <p>Boundary values are sometimes called <em>corner cases</em>.</p>
@@ -502,9 +503,9 @@ Enter side 1:
                     <panel header=":lock::key: What BVA recommends">
                       <question>
                         <p>Boundary value analysis recommends testing <em>only</em> values that reside on the equivalence class boundary.</p>
-                        <ul radio-group="v4utv" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="v4utv" type="radio"> True</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="v4utv" type="radio"> False</label></li>
+                        <ul radio-group="f8ff4" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="f8ff4" type="radio"> True</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="f8ff4" type="radio"> False</label></li>
                         </ul>
                         <div slot="answer">
                           <p>False</p>
@@ -550,7 +551,8 @@ Enter side 1:
                   </tr>
                   <tr>
                     <td>
-                      <p>[MIN_INT, 0]<br><span class="dimmed">(MIN_INT is the minimum possible integer value allowed by the environment)</span></p>
+                      <p>[MIN_INT, 0]<br>
+                        <span class="dimmed">(MIN_INT is the minimum possible integer value allowed by the environment)</span></p>
                     </td>
                     <td>
                       <p>MIN_INT, MIN_INT+1, -1, 0 , 1</p>
@@ -575,7 +577,8 @@ Enter side 1:
                   </tr>
                   <tr>
                     <td>
-                      <p>[non-empty Stack]<br><span class="dimmed">(we assume a fixed size stack)</span></p>
+                      <p>[non-empty Stack]<br>
+                        <span class="dimmed">(we assume a fixed size stack)</span></p>
                     </td>
                     <td>
                       <p>Stack with: one element, two elements, no empty spaces, only one empty space</p>
@@ -613,7 +616,7 @@ Enter side 1:
                   <li>Method to test: calculateGrade(participation, projectGrade, isAbsent, examScore)</li>
                   <li>Values to test (invalid values are <strong>bold</strong>)</li>
                 </ul>
-                <table class="markbind-table table">
+                <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th>Input</th>
@@ -669,7 +672,7 @@ Enter side 1:
                 <p>📦 Let's assume the SUT has the following three inputs and you have selected the given values for testing:</p>
                 <p>SUT: <code>foo(p1 char, p2 int, p3 boolean)</code></p>
                 <p>Selected values for each input:</p>
-                <table class="markbind-table table">
+                <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th style="text-align:center">Input</th>
@@ -695,7 +698,7 @@ Enter side 1:
               <p><strong>all combinations</strong>: generate test cases for each unique combination of test inputs</p>
               <tip-box>
                 <p>📦 the strategy generates 3x3x2=18 test cases</p>
-                <table class="markbind-table table">
+                <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th style="text-align:center">Test Case</th>
@@ -741,7 +744,7 @@ Enter side 1:
               <p><strong>at least once</strong>: include each test input at least once.</p>
               <tip-box>
                 <p>📦 this strategy generates 3 test cases.</p>
-                <table class="markbind-table table">
+                <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th style="text-align:center">Test Case</th>
@@ -779,7 +782,7 @@ Enter side 1:
                 <p>📦 this strategy generates 9 test cases:</p>
                 <panel type="seamless" header="see steps">
                   <p>Let's first consider inputs p1 and p2:</p>
-                  <table class="markbind-table table">
+                  <table class="markbind-table table table-bordered table-striped">
                     <thead>
                       <tr>
                         <th style="text-align:center">Input</th>
@@ -800,7 +803,7 @@ Enter side 1:
                   <p>These values can generate
                     <tooltip content="(a,1)(a,2)(a,3)(b,1)(b,2),...">3x3=9 combinations</tooltip>, and the test cases should cover all of them.</p>
                   <p>Next, let's consider p1 and p3.</p>
-                  <table class="markbind-table table">
+                  <table class="markbind-table table table-bordered table-striped">
                     <thead>
                       <tr>
                         <th style="text-align:center">Input</th>
@@ -823,7 +826,7 @@ Enter side 1:
                   <p>Similarly, inputs p2 and p3 generates another 6 combinations.</p>
                   <p>The 9 test cases given below covers all those 9+6+6 combinations.</p>
                 </panel>
-                <table class="markbind-table table">
+                <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th style="text-align:center">Test Case</th>
@@ -893,7 +896,7 @@ Enter side 1:
               <p>A variation of this strategy is to test all pairs of inputs but only for inputs that could influence each other.</p>
               <tip-box>
                 <p>📦 Testing all pairs between p1 and p3 only while ensuring all p3 values are tested at least once</p>
-                <table class="markbind-table table">
+                <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th style="text-align:center">Test Case</th>
@@ -964,8 +967,8 @@ Enter side 1:
               <p>Consider the following scenario.</p>
               <tip-box>
                 <p>SUT: <code>printLabel(fruitName String, unitPrice int)</code></p>
-                <p><strong>Selected values for</strong><code>fruitName</code> (invalid values are marked with an ❗️ ):</p>
-                <table class="markbind-table table">
+                <p><strong>Selected values for</strong> <code>fruitName</code> (invalid values are marked with an ❗️ ):</p>
+                <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th>Values</th>
@@ -991,8 +994,8 @@ Enter side 1:
                     </tr>
                   </tbody>
                 </table>
-                <p><strong>Selected values for</strong><code>unitPrice</code>:</p>
-                <table class="markbind-table table">
+                <p><strong>Selected values for</strong> <code>unitPrice</code>:</p>
+                <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th>Values</th>
@@ -1021,7 +1024,7 @@ Enter side 1:
               </tip-box>
               <p>Suppose these are the test cases being considered.</p>
               <tip-box>
-                <table class="markbind-table table">
+                <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th style="text-align:center">Case</th>
@@ -1064,7 +1067,7 @@ Enter side 1:
                 case. Here are the updated test cases after applying that heuristic.</p>
               <tip-box>
                 <div id="heuristic-valid-test-case">
-                  <table class="markbind-table table">
+                  <table class="markbind-table table table-bordered table-striped">
                     <thead>
                       <tr>
                         <th style="text-align:center">Case</th>
@@ -1128,10 +1131,9 @@ Enter side 1:
             <div>
               <p>Consider the
                 <trigger for="modal:heuristic-valid-test-case" trigger="click">test cases designed in [Heuristic: each valid input at least once in a positive test case]</trigger>.</p>
-              <modal large="" title="**Extract from Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: each valid input at least once in a positive test case**"
-                id="modal:heuristic-valid-test-case">
+              <modal large="" title="**Extract from Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: each valid input at least once in a positive test case**" id="modal:heuristic-valid-test-case">
                 <div>
-                  <table class="markbind-table table">
+                  <table class="markbind-table table table-bordered table-striped">
                     <thead>
                       <tr>
                         <th style="text-align:center">Case</th>
@@ -1180,7 +1182,7 @@ Enter side 1:
                 message “invalid fruit”.</p>
               <p>In this case a useful heuristic to apply is <strong>no more than one invalid input in a test case</strong>. After applying that, we get the following test cases.</p>
               <tip-box>
-                <table class="markbind-table table">
+                <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th style="text-align:center">Case</th>
@@ -1238,9 +1240,9 @@ Enter side 1:
                     <panel header=":lock::key: Can define test cases precisely">
                       <question>
                         <p>Applying the heuristics covered so far, we can determine the precise number of test cases required to test any given SUT effectively.</p>
-                        <ul radio-group="291be" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="291be" type="radio"> True</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="291be" type="radio"> False</label></li>
+                        <ul radio-group="a7d7f" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="a7d7f" type="radio"> True</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="a7d7f" type="radio"> False</label></li>
                         </ul>
                         <div slot="answer">
                           <p>False</p>
@@ -1291,7 +1293,7 @@ Enter side 1:
               <p>To get the first cut of test cases, let’s apply the ‘at least once’ strategy.</p>
               <tip-box>
                 <p><strong>Test cases for calculateGrade V1</strong></p>
-                <table class="markbind-table table">
+                <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th style="text-align:center">Case No.</th>
@@ -1359,7 +1361,7 @@ Enter side 1:
                 and 5.2 to rectify that.</p>
               <tip-box>
                 <p><strong>Test cases for calculateGrade V2</strong></p>
-                <table class="markbind-table table">
+                <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th style="text-align:center">Case No.</th>
@@ -1434,7 +1436,7 @@ Enter side 1:
               <p>Next, we apply the ‘no more than one invalid input in a test case’ heuristic. Test cases 5.2 and 6 don't follow that heuristic. Let's rectify the situation as follows:</p>
               <tip-box>
                 <p><strong>Test cases for calculateGrade V3</strong></p>
-                <table class="markbind-table table">
+                <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th style="text-align:center">Case No.</th>
@@ -1525,7 +1527,7 @@ Enter side 1:
                 we can add a new test case where <code>isAbsent=true</code> and <code>examScore!=0</code>. In addition, test cases 3-6.2 should have <code>isAbsent=false</code> so that the input remains valid.</p>
               <tip-box>
                 <p><strong>Test cases for calculateGrade V4</strong></p>
-                <table class="markbind-table table">
+                <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th style="text-align:center">Case No.</th>
@@ -1628,11 +1630,11 @@ Enter side 1:
                     <panel header=":lock::key: statements about test input combinations">
                       <question>
                         <p>Which of these contradict the heuristics recommended when creating test cases with multiple inputs?</p>
-                        <ul radio-group="tdaac" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="tdaac" type="radio"> a. All invalid test inputs must be tested together.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="tdaac" type="radio"> b. It is ok to combine valid values for different inputs.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="tdaac" type="radio"> c. No more than one invalid test input should be in a given test case.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="tdaac" type="radio"> d. Each valid test input should appear at least once in a test case that doesn’t have any invalid inputs.</label></li>
+                        <ul radio-group="1da4e" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> a. All invalid test inputs must be tested together.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> b. It is ok to combine valid values for different inputs.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> c. No more than one invalid test input should be in a given test case.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> d. Each valid test input should appear at least once in a test case that doesn’t have any invalid inputs.</label></li>
                         </ul>
                         <div slot="answer">
                           <p>(a) inputs.</p>
@@ -1671,16 +1673,16 @@ Enter side 1:
               <p>To increase
                 <trigger trigger="click" for="modal:usebaseBased-EandE">E&amp;E of testing</trigger>, high-priority use cases are given more attention. For example, a
                 <trigger trigger="click" for="modal:usecaseBased-scripted">scripted approach</trigger> can be used to test high priority test cases, while an exploratory approach is used to test other areas of concern that could emerge during testing.</p>
-              <modal large="" title="Quality Assurance → Test Case Design → Introduction → (extract) E&E of testing"
-                id="modal:usebaseBased-EandE">
+              <modal large="" title="Quality Assurance → Test Case Design → Introduction → (extract) E&E of testing" id="modal:usebaseBased-EandE">
+              
                 <div>
                   <p><strong>Every test case adds to the cost of testing.</strong> In some systems, a single test case can cost thousands of dollars <span class="dimmed"> e.g. on-field testing of flight-control software</span>. Therefore, <strong>test cases need to be designed to make the best use of testing resources.</strong>                    In particular:</p>
                   <ul>
                     <li>
-                      <p><strong>Testing should be <em>effective</em></strong> i.e., it finds a high % of existing bugs <span class="dimmed"> e.g., a set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system</span>.</p>
+                      <p><strong>Testing should be <em>effective</em></strong> i.e., it finds a high percentage of existing bugs <span class="dimmed">e.g., a set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system</span>.</p>
                     </li>
                     <li>
-                      <p><strong>Testing should be <em>efficient</em></strong> i.e., it has a high rate of success (bugs found/test cases) <span class="dimmed"> a set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects</span>.</p>
+                      <p><strong>Testing should be <em>efficient</em></strong> i.e., it has a high rate of success (bugs found/test cases) <span class="dimmed">a set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects</span>.</p>
                     </li>
                   </ul>
                   <p><strong>For testing to be <tooltip content="Efficient and Effective">E&amp;E</tooltip>, each new test we add should be targeting a potential fault that is not already targeted by existing test cases.</strong> There are test case design
@@ -1688,6 +1690,7 @@ Enter side 1:
                 </div>
               </modal>
               <modal large="" title="Textbook »" id="modal:usecaseBased-scripted">
+              
                 <div>
                   <div></div>
                   <p></p>
@@ -1720,8 +1723,8 @@ Enter side 1:
                             feature y works, even if x doesn’t work. Now, if feature y doesn’t work 100%, we have a major problem and this has to be made known to the development team sooner rather than later...”</p>
                         </blockquote>
                       </tip-box>
-                      <tip-box type="tip">
-                        <p><strong>Exploratory testing is also known as <em>reactive testing, error guessing technique, attack-based testing,</em> and <em>bug hunting</em>.</strong></p>
+                      <tip-box>
+                        <p>💡 <strong>Exploratory testing is also known as <em>reactive testing, error guessing technique, attack-based testing,</em> and <em>bug hunting</em>.</strong></p>
                       </tip-box>
                       <modal id="modal:exploratoryWhat-bach-et-explained" title="bach-et-explained :mag:">
                         <div>
@@ -1737,9 +1740,9 @@ Enter side 1:
                             <panel header=":lock::key: statements about exploratory and scripted testing">
                               <question>
                                 <p>Scripted testing requires tests to be written in a scripting language; Manual testing is called exploratory testing.</p>
-                                <ul radio-group="k9uae" class="radio-list">
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="k9uae" type="radio"> True</label></li>
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="k9uae" type="radio"> False</label></li>
+                                <ul radio-group="db31a" class="radio-list">
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="db31a" type="radio"> True</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="db31a" type="radio"> False</label></li>
                                 </ul>
                                 <div slot="answer">
                                   <p>A) False</p>
@@ -1752,12 +1755,12 @@ Enter side 1:
                             <panel header=":lock::key: Which testing technique is better?">
                               <question>
                                 <p>Which testing technique is better?</p>
-                                <ul radio-group="ainfz" class="radio-list">
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="ainfz" type="radio"> a. error guessing</label></li>
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="ainfz" type="radio"> b. bug hunting</label></li>
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="ainfz" type="radio"> c. attack-based testing</label></li>
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="ainfz" type="radio"> d. reactive testing</label></li>
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="ainfz" type="radio"> e. These are different names used to describe exploratory testing.</label></li>
+                                <ul radio-group="9fd35" class="radio-list">
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> a. error guessing</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> b. bug hunting</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> c. attack-based testing</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> d. reactive testing</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> e. These are different names used to describe exploratory testing.</label></li>
                                 </ul>
                                 <div slot="answer">
                                   <p>(e)</p>
@@ -1977,7 +1980,7 @@ Enter side 1:
                                 </li>
                               </ul>
                               <p><strong>Test cases:</strong></p>
-                              <table class="markbind-table table">
+                              <table class="markbind-table table table-bordered table-striped">
                                 <thead>
                                   <tr>
                                     <th style="text-align:center">Test case</th>
@@ -2031,7 +2034,8 @@ Enter side 1:
                       <div>
                         <panel header=":lock::key: add(Item) :three:">
                           <question has-input="true">
-                            <p>Assume you are testing the add(Item) method specified below.</p><img src="/se-book/testCaseDesign/summary/exercises/images/itemList.png" height="100">
+                            <p>Assume you are testing the add(Item) method specified below.</p>
+                            <img src="/se-book/testCaseDesign/summary/exercises/images/itemList.png" height="100">
                             <p></p>
                             <p>Assume i to be the Item being added.</p>
                             <p><strong>Preconditions:</strong></p>
@@ -2057,7 +2061,8 @@ Enter side 1:
                               <p>i: i != null, i == null list: contains(i)==true, contains(i)==false, count() &lt; 10, count() == 10 list == null should NOT be considered.</p>
                               <p>(b)</p>
                               <p>list: count() == 0, count() == 9, count() == 10; count() == [1|2|3|4|5|6|7|8] (1 preferred)</p>
-                              <p>(c)</p><img src="/se-book/testCaseDesign/summary/exercises/images/count.png" height="250">
+                              <p>(c)</p>
+                              <img src="/se-book/testCaseDesign/summary/exercises/images/count.png" height="250">
                               <p></p>
                             </div>
                           </question>
@@ -2066,9 +2071,11 @@ Enter side 1:
                       <div>
                         <panel header=":lock::key: setWife :three:">
                           <question has-input="true">
-                            <p>Use equivalence partitions and boundary values to choose test inputs for testing the setWife operation in the Man class.</p><img src="/se-book/testCaseDesign/summary/exercises/images/manWoman.png" height="90">
+                            <p>Use equivalence partitions and boundary values to choose test inputs for testing the setWife operation in the Man class.</p>
+                            <img src="/se-book/testCaseDesign/summary/exercises/images/manWoman.png" height="90">
                             <p></p>
-                            <div slot="answer"><img src="/se-book/testCaseDesign/summary/exercises/images/manWomanPartitions.png" height="300">
+                            <div slot="answer">
+                              <img src="/se-book/testCaseDesign/summary/exercises/images/manWomanPartitions.png" height="300">
                               <p></p>
                               <p>Partitioning ‘married’ as ‘to same woman’ and ‘to different woman’ seems redundant at first. Arguments for having it:</p>
                               <ul>
@@ -2281,7 +2288,7 @@ Enter side 1:
                             </li>
                           </ul>
                           <p><strong>Test cases:</strong></p>
-                          <table class="markbind-table table">
+                          <table class="markbind-table table table-bordered table-striped">
                             <thead>
                               <tr>
                                 <th style="text-align:center">Test case</th>
@@ -2335,7 +2342,8 @@ Enter side 1:
                   <div>
                     <panel header=":lock::key: add(Item) :three:">
                       <question has-input="true">
-                        <p>Assume you are testing the add(Item) method specified below.</p><img src="/se-book/testCaseDesign/summary/exercises/images/itemList.png" height="100">
+                        <p>Assume you are testing the add(Item) method specified below.</p>
+                        <img src="/se-book/testCaseDesign/summary/exercises/images/itemList.png" height="100">
                         <p></p>
                         <p>Assume i to be the Item being added.</p>
                         <p><strong>Preconditions:</strong></p>
@@ -2361,7 +2369,8 @@ Enter side 1:
                           <p>i: i != null, i == null list: contains(i)==true, contains(i)==false, count() &lt; 10, count() == 10 list == null should NOT be considered.</p>
                           <p>(b)</p>
                           <p>list: count() == 0, count() == 9, count() == 10; count() == [1|2|3|4|5|6|7|8] (1 preferred)</p>
-                          <p>(c)</p><img src="/se-book/testCaseDesign/summary/exercises/images/count.png" height="250">
+                          <p>(c)</p>
+                          <img src="/se-book/testCaseDesign/summary/exercises/images/count.png" height="250">
                           <p></p>
                         </div>
                       </question>
@@ -2370,9 +2379,11 @@ Enter side 1:
                   <div>
                     <panel header=":lock::key: setWife :three:">
                       <question has-input="true">
-                        <p>Use equivalence partitions and boundary values to choose test inputs for testing the setWife operation in the Man class.</p><img src="/se-book/testCaseDesign/summary/exercises/images/manWoman.png" height="90">
+                        <p>Use equivalence partitions and boundary values to choose test inputs for testing the setWife operation in the Man class.</p>
+                        <img src="/se-book/testCaseDesign/summary/exercises/images/manWoman.png" height="90">
                         <p></p>
-                        <div slot="answer"><img src="/se-book/testCaseDesign/summary/exercises/images/manWomanPartitions.png" height="300">
+                        <div slot="answer">
+                          <img src="/se-book/testCaseDesign/summary/exercises/images/manWomanPartitions.png" height="300">
                           <p></p>
                           <p>Partitioning ‘married’ as ‘to same woman’ and ‘to different woman’ seems redundant at first. Arguments for having it:</p>
                           <ul>
@@ -2438,5 +2449,8 @@ Enter side 1:
 </body>
 <script src="..\markbind\js\vue.min.js"></script>
 <script src="..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\markbind\js\setup.js"></script>
 </html>

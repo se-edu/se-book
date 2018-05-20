@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -36,8 +37,12 @@
                   <p><strong><em>Unit testing</em> : testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly.</strong></p>
                   <p>In OOP code, it is common to write one or more unit tests for each public method of a class.</p>
                   <tip-box>
-                    <p>📦 Here are the code skeletons for a <code>Foo</code> class containing two methods and a <code>FooTest</code> class that contains JUnit tests for those two methods.</p>
-                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+                    <p>📦 Here are the code skeletons for a <code>Foo</code> class containing two methods and a <code>FooTest</code> class that contains unit tests for those two methods.</p>
+                    <tabs>
+                    
+                      <tab header="Java">
+                        <div>
+                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
     <span class="hljs-function">String <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{
         <span class="hljs-comment">//...</span>
     }
@@ -66,9 +71,49 @@
     }
 }
 </code></pre>
+                        </div>
+                      </tab>
+                    
+                      <tab header="Python">
+                        <div>
+                          <pre><code class="hljs python"><span class="hljs-keyword">import</span> unittest
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">read</span><span class="hljs-params">(self)</span>:</span>
+      <span class="hljs-comment"># ...</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write</span><span class="hljs-params">(self, input)</span>:</span>
+      <span class="hljs-comment"># ...</span>
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FooTest</span><span class="hljs-params">(unittest.TestCase)</span>:</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_read</span><span class="hljs-params">(sefl)</span>:</span>
+      <span class="hljs-comment"># a unit test for read() method</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_write_emptyIntput_ignored</span><span class="hljs-params">(self)</span>:</span>
+      <span class="hljs-comment"># a unit tests for write(string) method</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_write_normalInput_writtenCorrectly</span><span class="hljs-params">(self)</span>:</span>
+      <span class="hljs-comment"># another unit tests for write(string) method</span>
+</code></pre>
+                        </div>
+                      </tab>
+                    </tabs>
+                    <hr>
                   </tip-box>
                 </div>
-                <div></div>
+                <div>
+                  <div>
+                    <panel header=":paperclip: Resources">
+                      <p><strong>Side readings:</strong></p>
+                      <ul>
+                        <li>[Web article] <a href="http://blog.goyello.com/2011/10/06/three-pillars-of-unit-tests">The three pillars of unit testing</a> - A short article about what makes a good unit test.</li>
+                        <li><a href="http://avandeursen.com/2014/02/22/gotofail-security/">Learning from Apple’s #gotofail Security Bug</a> - How unit testing (and other good coding practices) could have prevented a major security bug.</li>
+                      </ul>
+                    </panel>
+                  </div>
+                </div>
               </div>
             </panel>
           </div>
@@ -137,7 +182,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
     assertEquals(<span class="hljs-string">"Name: John"</span>, logic.getName(<span class="hljs-number">5</span>));
 }
 </code></pre>
-                    <p>However, this <code>logic</code> object being tested is making use of a <code>DataBaseStorage</code> object which means a bug in the <code>DatabaseStorage</code> class can affect the test. Therefore, this test is not testing <code>Logic</code><em>in isolation from its dependencies</em>                      and hence it is not a pure unit test.</p>
+                    <p>However, this <code>logic</code> object being tested is making use of a <code>DataBaseStorage</code> object which means a bug in the <code>DatabaseStorage</code> class can affect the test. Therefore, this test is not testing <code>Logic</code>                      <em>in isolation from its dependencies</em> and hence it is not a pure unit test.</p>
                     <p>Here is a stub class you can use in place of <code>DatabaseStorage</code>:</p>
                     <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StorageStub</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Storage</span> </span>{
 
@@ -176,9 +221,9 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                         <panel header=":lock::key: Purpose of stubs">
                           <question>
                             <p>Stubs help us to test a component in isolation from its dependencies.</p>
-                            <ul radio-group="h42hu" class="radio-list">
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="h42hu" type="radio"> True</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="h42hu" type="radio"> False</label></li>
+                            <ul radio-group="a0303" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> True</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> False</label></li>
                             </ul>
                             <div slot="answer">
                               <p>True</p>
@@ -214,8 +259,8 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                   <p><strong><em>Integration testing</em> : testing whether different parts of the software <em>work together</em> (i.e. integrates) as expected.</strong> Integration tests aim to discover bugs in the 'glue code' related to how components
                     interact with each other. These bugs are often the result of misunderstanding of what the parts are supposed to do vs what the parts are actually doing.</p>
                   <tip-box>
-                    <p>📦 Suppose a class <code>Car</code> users classes <code>Engine</code> and <code>Wheel</code>. If the <code>Car</code> class assumed a <code>Wheel</code> can support 200 mph speed but the <code>Wheel</code> can only support 150 mph,
-                      it is the integration test that is supposed to uncover this discrepancy.</p>
+                    <p>📦 Suppose a class <code>Car</code> users classes <code>Engine</code> and <code>Wheel</code>. If the <code>Car</code> class assumed a <code>Wheel</code> can support 200 mph speed but the actual <code>Wheel</code> can only support 150
+                      mph, it is the integration test that is supposed to uncover this discrepancy.</p>
                   </tip-box>
                 </div>
                 <div></div>
@@ -246,7 +291,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                   <p><strong>System test cases are based on the specified external behavior of the system.</strong> Sometimes, system tests go beyond the bounds defined in the specification. This is useful when testing that the system fails 'gracefully'
                     having pushed beyond its limits.</p>
                   <tip-box>
-                    <p>📦 Suppose the SUT is a browser capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully if pushed beyond its limits.</p>
+                    <p>📦 Suppose the SUT is a browser supposedly capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully if pushed beyond its limits.</p>
                     <pre class="hljs"><code>Test case: load a web page that is too big
 * Input: load a web page containing more than 5000 characters. 
 * Expected behavior: abort the loading of the page and show a meaningful error message. 
@@ -322,9 +367,9 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                         <panel header=":lock::key: Dogfooding improves product design?">
                           <question>
                             <p>‘dogfooding’ can help us improve product designs.</p>
-                            <ul radio-group="ym993" class="radio-list">
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="ym993" type="radio"> True</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="ym993" type="radio"> False</label></li>
+                            <ul radio-group="f7c90" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="f7c90" type="radio"> True</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="f7c90" type="radio"> False</label></li>
                             </ul>
                             <div slot="answer">
                               <p>True</p>
@@ -379,14 +424,15 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                   <ul>
                     <li><strong>Locating the cause of such a test case failure is difficult due to a large search space;</strong> in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also
                       be due to multiple inter-related bugs.</li>
-                    <li><strong>Fixing a bug found during such testing could result in major rework</strong>, especially if the bug originated during the design or during requirements specification (i.e. a faulty design or faulty requirements).</li>
+                    <li><strong>Fixing a bug found during such testing could result in major rework</strong>, especially if the bug originated during the design or during requirements specification <span class="dimmed">i.e. a faulty design or faulty requirements</span>.</li>
                     <li><strong>One bug might 'hide' other bugs</strong>, which could emerge only after the first bug is fixed.</li>
                     <li><strong>The delivery may have to be delayed</strong> if too many bugs were found during testing.</li>
                   </ul>
                   <p><strong>Therefore, it is better to do early testing</strong>, as hinted by the popular rule of thumb given below, also illustrated by the graph below it.</p>
                   <blockquote>
                     <p>The earlier a bug is found, the easier and cheaper to have it fixed.</p>
-                  </blockquote><img src="/se-book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
+                  </blockquote>
+                  <img src="/se-book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
                   <p></p>
                   <p>Such early testing of partially developed software is usually, and by necessity, done by the developers themselves i.e. developer testing.</p>
                 </div>
@@ -420,9 +466,9 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                         <panel header=":lock::key: Cost of bug fixing over time">
                           <question>
                             <p>The cost of fixing a bug goes down as we reach the product release.</p>
-                            <ul radio-group="t8ffp" class="radio-list">
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="t8ffp" type="radio"> True</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="t8ffp" type="radio"> False</label></li>
+                            <ul radio-group="37242" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> True</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> False</label></li>
                             </ul>
                             <div slot="answer">
                               <p>False. The cost goes up over time.</p>
@@ -481,8 +527,8 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                         y works, even if x doesn’t work. Now, if feature y doesn’t work 100%, we have a major problem and this has to be made known to the development team sooner rather than later...”</p>
                     </blockquote>
                   </tip-box>
-                  <tip-box type="tip">
-                    <p><strong>Exploratory testing is also known as <em>reactive testing, error guessing technique, attack-based testing,</em> and <em>bug hunting</em>.</strong></p>
+                  <tip-box>
+                    <p>💡 <strong>Exploratory testing is also known as <em>reactive testing, error guessing technique, attack-based testing,</em> and <em>bug hunting</em>.</strong></p>
                   </tip-box>
                   <modal id="modal:exploratoryWhat-bach-et-explained" title="bach-et-explained :mag:">
                     <div>
@@ -498,9 +544,9 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                         <panel header=":lock::key: statements about exploratory and scripted testing">
                           <question>
                             <p>Scripted testing requires tests to be written in a scripting language; Manual testing is called exploratory testing.</p>
-                            <ul radio-group="0szxt" class="radio-list">
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="0szxt" type="radio"> True</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="0szxt" type="radio"> False</label></li>
+                            <ul radio-group="db31a" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="db31a" type="radio"> True</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="db31a" type="radio"> False</label></li>
                             </ul>
                             <div slot="answer">
                               <p>A) False</p>
@@ -513,12 +559,12 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                         <panel header=":lock::key: Which testing technique is better?">
                           <question>
                             <p>Which testing technique is better?</p>
-                            <ul radio-group="bc6km" class="radio-list">
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="bc6km" type="radio"> a. error guessing</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="bc6km" type="radio"> b. bug hunting</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="bc6km" type="radio"> c. attack-based testing</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="bc6km" type="radio"> d. reactive testing</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="bc6km" type="radio"> e. These are different names used to describe exploratory testing.</label></li>
+                            <ul radio-group="9fd35" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> a. error guessing</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> b. bug hunting</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> c. attack-based testing</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> d. reactive testing</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> e. These are different names used to describe exploratory testing.</label></li>
                             </ul>
                             <div slot="answer">
                               <p>(e)</p>
@@ -579,9 +625,9 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                         <panel header=":lock::key: Which is better?">
                           <question>
                             <p>Scripted testing is better than exploratory testing.</p>
-                            <ul radio-group="vyv17" class="radio-list">
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="vyv17" type="radio"> True</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="vyv17" type="radio"> False</label></li>
+                            <ul radio-group="7d3ff" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="7d3ff" type="radio"> True</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="7d3ff" type="radio"> False</label></li>
                             </ul>
                             <div slot="answer">
                               <p>B) False</p>
@@ -637,7 +683,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                 <div>
                   <p>Acceptance testing comes after system testing. Similar to system testing, acceptance testing involves testing the whole system.</p>
                   <p>Some differences between system testing and acceptance testing:</p>
-                  <table class="markbind-table table">
+                  <table class="markbind-table table table-bordered table-striped">
                     <thead>
                       <tr>
                         <th style="text-align:left">System Testing</th>
@@ -667,7 +713,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                   <tip-box>
                     <p><strong>Requirement Specification vs System Specification</strong></p>
                     <p>The requirement specification need not be the same as the system specification. Some example differences:</p>
-                    <table class="markbind-table table">
+                    <table class="markbind-table table table-bordered table-striped">
                       <thead>
                         <tr>
                           <th style="text-align:left">Requirements Specification</th>
@@ -736,7 +782,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <div>
           <div>
             <div>
-              <h4 id="what-one-5">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"><a href="/se-book/testing/testingTypes/regressionTesting/what/index.html"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></h4>
+              <h4 id="what-one-5">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"> <a href="/se-book/testing/testingTypes/regressionTesting/what/index.html"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></h4>
             </div>
             <tip-box>
               <div>
@@ -747,127 +793,42 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               <div>
                 <div>
                   <p><strong>When we modify a system, the modification may result in some unintended and undesirable effects on the system. Such an effect is called a <em>regression</em>.</strong></p>
-                  <p><strong><em>Regression testing</em> is re-testing the <trigger for="pop:sut">SUT</trigger> to detect regressions.</strong> Noted that to detect regressions, we need to retest all related components, even if they were tested before.</p>
+                  <p><strong><em>Regression testing</em> is re-testing the software to detect regressions.</strong> Note that to detect regressions, we need to retest all related components, even if they were tested before.</p>
                   <p>Regression testing is more effective when it is done frequently, after each small change. However, doing so can be prohibitively expensive if testing is done manually. Hence, <strong>regression testing is more practical when it is automated</strong>.</p>
+                </div>
+                <div>
                   <div>
-                    <popover id="pop:sut" placement="top">
-                      <div slot="content">
-                        <div>
-                          <div id="def-stub">
-                            <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited
-                              set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
-                          </div>
-                          <div id="def-sut">
-                            <p><strong>SUT</strong>: Software Under Test</p>
-                          </div>
-                          <h2 id="t">T</h2>
-                          <div id="def-testing">
-                            <p><strong>Testing</strong>: Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component. –- source: IEEE</p>
-                          </div>
-                          <div id="def-type-signature">
-                            <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.</p>
-                            <panel
-                              type="seamless" header="%%Examples%%">
-                              <table class="markbind-table table">
-                                <thead>
-                                  <tr>
-                                    <th style="text-align:center">Method</th>
-                                    <th style="text-align:center">Type Signature</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td style="text-align:center"><code>int add(int X, int Y)</code></td>
-                                    <td style="text-align:center"><code>(int, int)</code></td>
-                                  </tr>
-                                  <tr>
-                                    <td style="text-align:center"><code>void add(int A, int B)</code></td>
-                                    <td style="text-align:center"><code>(int, int)</code></td>
-                                  </tr>
-                                  <tr>
-                                    <td style="text-align:center"><code>void m(int X, double Y)</code></td>
-                                    <td style="text-align:center"><code>(int, double)</code></td>
-                                  </tr>
-                                  <tr>
-                                    <td style="text-align:center"><code>void m(double X, int Y)</code></td>
-                                    <td style="text-align:center"><code>(double, int)</code></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-            </panel>
-            </div>
-            <h2 id="u">U</h2>
-            <div id="def-uml">
-              <p><a href="http://www.uml.org/#UML2.0"><strong>Unified Modeling Language (UML)</strong></a> is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh,
-                Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML).
-                UML is currently the <em>de facto</em> modeling notation used in the software industry.</p>
-            </div>
-            <div id="def-use-case">
-              <p><strong>Use Case</strong>: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an
-                <trigger for="pop:actor">actor</trigger>.[ 📖 :
-                <popover effect="fade" placement="top">uml-user-guide<span slot="content"><span><em><strong>The Unified Modeling Language User Guide</strong></em>, 2e, G Booch, J Rumbaugh, and I Jacobson </span></span>
-                </popover>]</p>
-              <popover id="pop:actor" title=":mag:" placement="top">
-                <div slot="content">
-                  <div>
-                    <p><strong>Actor</strong>: An actor (in a use case) is a role played by a user. An actor can be a human or another system. Actors are not part of the system; they reside outside the system.</p>
+                    <panel header=":muscle: Exercises" expandable="">
+                      <div>
+                        <panel header=":lock::key: Regression Testing defintion T/F?">
+                          <question>
+                            <p>Regression testing is the automated re-testing of a software after it has been modified.</p>
+                            <ul radio-group="63d56" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="63d56" type="radio"> a. True</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="63d56" type="radio"> b. False</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="63d56" type="radio"> c. Partially true</label></li>
+                            </ul>
+                            <div slot="answer">
+                              <p>c.</p>
+                              <p>Explanation: Regression testing <mark>need not be automated</mark> but automation is highly recommended.</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                      <div>
+                        <panel header=":lock: Explain regression testing">
+                          <question has-input="">
+                            <p>Explain why and when you would do regression testing in a software project.</p>
+                          </question>
+                        </panel>
+                      </div>
+                    </panel>
                   </div>
                 </div>
-              </popover>
-            </div>
-            <div id="def-user-story">
-              <p><strong>User story</strong>: User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. <sub>[<a href="https://www.mountaingoatsoftware.com/agile/user-stories">Mike Cohn</a>]</sub></p>
-            </div>
-            <div id="def-user-story-format">
-              <p><strong>User story format</strong>: <code>As a {user type/role} I can {function} so that {benefit}</code></p>
-            </div>
-            <h2 id="w">W</h2>
-            <div id="def-working-directory">
-              <p><strong>Working directory</strong>: The directory the repo is based in is called the <em>working directory</em>.</p>
-            </div>
-            <h2 id="y">Y</h2>
-            <div id="def-yagni-principle">
-              <p><strong>YAGNI (You Aren't Gonna Need It!) Principle</strong>: Do not add code simply because ‘you might need it in the future’.</p>
-            </div>
-            <hr>
-            </div>
-            </div>
-            </popover>
-            </div>
-            </div>
-            <div>
-              <div>
-                <panel header=":muscle: Exercises" expandable="">
-                  <div>
-                    <panel header=":lock::key: Regression Testing defintion T/F?">
-                      <question>
-                        <p>Regression testing is the automated re-testing of a software after it has been modified.</p>
-                        <ul radio-group="aqxsp" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="aqxsp" type="radio"> a. True</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="aqxsp" type="radio"> b. False</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="aqxsp" type="radio"> c. Partially true</label></li>
-                        </ul>
-                        <div slot="answer">
-                          <p>c.</p>
-                          <p>Explanation: Regression testing <mark>need not be automated</mark> but automation is highly recommended.</p>
-                        </div>
-                      </question>
-                    </panel>
-                  </div>
-                  <div>
-                    <panel header=":lock: Explain regression testing">
-                      <question has-input="">
-                        <p>Explain why and when you would do regression testing in a software project.</p>
-                      </question>
-                    </panel>
-                  </div>
-                </panel>
               </div>
-            </div>
-            </div>
-      </panel>
-      </div>
-      </div>
+            </panel>
+          </div>
+        </div>
       </panel>
     </div>
   </div>
@@ -876,5 +837,8 @@ String name = logic.getName(<span class="hljs-number">23</span>);
 </body>
 <script src="..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\..\markbind\js\setup.js"></script>
 </html>

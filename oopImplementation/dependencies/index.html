@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -30,19 +31,51 @@
       <div>
         <p>Dependencies result from interactions between objects that do not result in a long-term link between the said objects.</p>
         <tip-box>
-          <p>Example:</p>
-          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TaxProcessor</span></span>{
-    <span class="hljs-keyword">double</span> rate;
+          <p>📦 In the code below, <code>Foo</code> has a dependency on <code>Bar</code> but it is not an association because it is only a
+            <tooltip content="temporary">transient</tooltip> interaction and there is no long term relationship between a <code>Foo</code> object and a <code>Bar</code> object. <span class="dimmed">i.e. the <code>Foo</code> object does not keep the <code>Bar</code> object it receives as a parameter</span>.</p>
+          <table>
+            <tr>
+            
+              <td>
+                <p>Java ⤵️</p>
+                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+    
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculate</span><span class="hljs-params">(Bar bar)</span></span>{
+        <span class="hljs-keyword">return</span> bar.getValue();
+    }
+}
 
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addTax</span><span class="hljs-params">(Taxable t)</span></span>{
-        t.addTax(rate);
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span></span>{
+    <span class="hljs-keyword">int</span> value;
+    
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getValue</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> value;
     }
 }
 </code></pre>
-          <p>The code above results in this dependency.</p><img src="/se-book/oopImplementation/dependencies/images/taxProcessorTaxable.png" height="40">
-          <p></p>
-          <p>The code does not indicate an association between the two classes because the <code>TaxProcessor</code> object does not keep the <code>Taxable</code> object (i.e. it’s only a short-term interaction)</p>
-        </tip-box>
+                <p></p>
+              </td>
+            
+              <td>  <br><br></td>
+            
+              <td valign="top">
+                <p>Python ⤵️</p>
+                <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+    
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate</span><span class="hljs-params">(self, bar)</span>:</span>
+        <span class="hljs-keyword">return</span> bar.value;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span>:</span>
+    
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, value)</span>:</span>
+      self.value = value
+</code></pre>
+                <p></p>
+              </td>
+            </tr>
+          </table>
+          <p>The code above results in this dependency.</p>
+          <img src="/se-book/oopImplementation/dependencies/images/fooBarDependency.png" height="40"></tip-box>
       </div>
       <div></div>
     </div>
@@ -52,5 +85,8 @@
 </body>
 <script src="..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\..\markbind\js\setup.js"></script>
 </html>

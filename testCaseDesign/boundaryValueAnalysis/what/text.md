@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: `markCellAt(int x, int y)` operation could contain code such as if `(x > 0 && x < = (W-1))` which involves boundaries of x’s equivalence partitions.
+:package: `markCellAt(int x, int y)` operation could contain code such as if `(x > 0 && x <= (W-1))` which involves boundaries of x’s equivalence partitions.
 
 </tip-box>
  

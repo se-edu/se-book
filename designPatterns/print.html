@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -29,7 +30,7 @@
         <p>In software development, there are certain problems that recur in a certain context.</p>
         <tip-box>
           <p>📦 Some examples of recurring design problems:</p>
-          <table class="markbind-table table">
+          <table class="markbind-table table table-bordered table-striped">
             <thead>
               <tr>
                 <th>Design Context</th>
@@ -81,7 +82,8 @@
         <p>Make the constructor of the singleton class <code>private</code>, <span class="dimmed"> because a <code>public</code> constructor will allow others to instantiate the class at will</span>. Provide a <code>public</code> class-level method to access
           the <em>single instance</em>.</p>
         <tip-box>
-          <p>Example:</p><img src="/se-book/designPatterns/singleton/what/images/singleton.png" height="130">
+          <p>Example:</p>
+          <img src="/se-book/designPatterns/singleton/what/images/singleton.png" height="130">
           <p></p>
         </tip-box>
       </div>
@@ -163,8 +165,8 @@
         <p><strong>Problem</strong></p>
         <p>Representing the objects mentioned previously as a single class would be problematic because it results in duplication of data which can lead to inconsistencies in data (if some of the duplicates are not updated consistently).</p>
         <tip-box>
-          <p>📦 Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial numbers.</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/book.png"
-            height="200">
+          <p>📦 Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial numbers.</p>
+          <img src="/se-book/designPatterns/abstractionOccurrence/what/images/book.png" height="200">
           <p></p>
           <p>The above solution requires common information to be duplicated by all instances. This will not only waste storage space, but also creates a consistency problem. Suppose that after creating several copies of the same title, the librarian realized
             that the author name was wrongly spelt. To correct this mistake, the system needs to go through every copy of the same title to make the correction. Also, if a new copy of the title is added later on, the librarian (or the system) has to make
@@ -172,7 +174,8 @@
         </tip-box>
         <p><strong>Anti-pattern</strong></p>
         <tip-box>
-          <p>📦 Refer to the same Library example given above.</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookFriends.png" height="240">
+          <p>📦 Refer to the same Library example given above.</p>
+          <img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookFriends.png" height="240">
           <p></p>
           <p>The design above segregates the common and unique information into a class hierarchy. Each book title is represented by a separate class with common data (i.e. Name, Author, ISBN) hard-coded in the class itself. This solution is problematic
             because each book title is represented as a class, resulting in thousands of classes (one for each title). Every time the library buys new books, the source code of the system will have to be updated with new classes.</p>
@@ -180,12 +183,15 @@
         <p><strong>Solution</strong></p>
         <p>Let a copy of an entity (e.g. a copy of a book)be represented by two objects instead of one, separating the common and unique information into two classes to avoid duplication.</p>
         <tip-box>
-          <p>📦 Given below is how the pattern is applied to the Library example:</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookTitleBookCopy.png" height="260">
+          <p>📦 Given below is how the pattern is applied to the Library example:</p>
+          <img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookTitleBookCopy.png" height="260">
           <p></p>
-          <p>📦 Here's a more generic example:</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/beforeAfter.png" height="370">
+          <p>📦 Here's a more generic example:</p>
+          <img src="/se-book/designPatterns/abstractionOccurrence/what/images/beforeAfter.png" height="370">
           <p></p>
         </tip-box>
-        <p>The general solution:</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/abstractionOccurrence.png" height="40">
+        <p>The general solution:</p>
+        <img src="/se-book/designPatterns/abstractionOccurrence/what/images/abstractionOccurrence.png" height="40">
         <p></p>
         <p>The <code>&lt;&lt; Abstraction &gt;&gt;</code> class should hold all common information, and the unique information should be kept by the <code>&lt;&lt; Occurrence &gt;&gt;</code> class. Note that ‘Abstraction’ and ‘Occurrence’ are not class names,
           but roles played by each class. Think of this diagram as a <em>meta-model</em> (i.e. a ‘model of a model’) of the <code>BookTitle-BookCopy</code> class diagram given above.</p>
@@ -200,8 +206,8 @@
         <p><strong>Context</strong></p>
         <p>Components need to access functionality deep inside other components.</p>
         <tip-box>
-          <p>📦 The <code>UI</code> component of a <code>Library</code> system might want to access functionality of the <code>Book</code> class contained inside the <code>Logic</code> component.</p><img src="/se-book/designPatterns/facade/what/images/textBook.png"
-            height="120">
+          <p>📦 The <code>UI</code> component of a <code>Library</code> system might want to access functionality of the <code>Book</code> class contained inside the <code>Logic</code> component.</p>
+          <img src="/se-book/designPatterns/facade/what/images/textBook.png" height="120">
           <p></p>
         </tip-box>
         <p><strong>Problem</strong></p>
@@ -210,7 +216,8 @@
         <p>Include a
           <tooltip content="a French word that means 'front of a building'">Façade</tooltip> class that sits between the component internals and users of the component such that all access to the component happens through the Facade class.</p>
         <tip-box>
-          <p>📦 The following class diagram applies the Façade pattern to the <code>Library System</code> example. The <code>LibraryLogic</code> class is the Facade class.</p><img src="/se-book/designPatterns/facade/what/images/textLibraryBook.png" height="120">
+          <p>📦 The following class diagram applies the Façade pattern to the <code>Library System</code> example. The <code>LibraryLogic</code> class is the Facade class.</p>
+          <img src="/se-book/designPatterns/facade/what/images/textLibraryBook.png" height="120">
           <p></p>
         </tip-box>
       </div>
@@ -230,10 +237,12 @@
         <p>Let us examine an example application of the pattern first:</p>
         <tip-box>
           <p>📦 In the example solution below, the <code>CommandCreator</code> creates <code>List</code>, <code>Sort</code>, and <code>Reset Command</code> objects and adds them to the <code>CommandQueue</code> object. The <code>CommandQueue</code> object
-            treats them all as <code>Command</code> objects and performs the execute/undo operation on each of them without knowledge of the specific <code>Command</code> type. When executed, each <code>Command</code> object will access the <code>DataStore</code>            object to carry out its task. The <code>Command</code> class can also be an abstract class or an interface.</p><img src="/se-book/designPatterns/command/what/images/commandCreator.png" height="150">
+            treats them all as <code>Command</code> objects and performs the execute/undo operation on each of them without knowledge of the specific <code>Command</code> type. When executed, each <code>Command</code> object will access the <code>DataStore</code>            object to carry out its task. The <code>Command</code> class can also be an abstract class or an interface.</p>
+          <img src="/se-book/designPatterns/command/what/images/commandCreator.png" height="150">
           <p></p>
         </tip-box>
-        <p>The general form of the solution is as follows.</p><img src="/se-book/designPatterns/command/what/images/clientInvoker.png" height="200">
+        <p>The general form of the solution is as follows.</p>
+        <img src="/se-book/designPatterns/command/what/images/clientInvoker.png" height="200">
         <p></p>
         <p>The <code>&lt;&lt; Client &gt;&gt;</code> creates a <code>&lt;&lt; ConcreteCommand &gt;&gt;</code> object, and passes it to the <code>&lt;&lt; Invoker &gt;&gt;</code>. The <code>&lt;&lt; Invoker &gt;&gt;</code> object treats all commands as a
           general <code>&lt;&lt; Command &gt;&gt;</code> type. <code>&lt;&lt; Invoker &gt;&gt;</code> issues a request by calling <code>execute()</code> on the command. If a command is undoable, <code>&lt;&lt; ConcreteCommand &gt;&gt;</code> will store
@@ -259,10 +268,12 @@
           <li><em>Controller</em>: Detects UI events such as mouse clicks, button pushes and takes follow up action. Updates/changes the model/view when necessary.</li>
           <li><em>Model</em>: Stores and maintains data. Updates views if necessary.</li>
         </ul>
-        <p>The relationship between the components can be observed in the diagram below. Typically, the UI is the combination of view and controller.</p><img src="/se-book/designPatterns/modelViewController/what/images/classDiagram.png" width="400">
+        <p>The relationship between the components can be observed in the diagram below. Typically, the UI is the combination of view and controller.</p>
+        <img src="/se-book/designPatterns/modelViewController/what/images/classDiagram.png" width="400">
         <p></p>
         <tip-box>
-          <p>📦 Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving data of one student.</p><img src="/se-book/designPatterns/modelViewController/what/images/sequenceDiagram.png" width="500">
+          <p>📦 Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving data of one student.</p>
+          <img src="/se-book/designPatterns/modelViewController/what/images/sequenceDiagram.png" width="500">
           <p></p>
           <p>In the diagram above, when the user clicks on a button using the UI, the ‘click’ event is caught and handled by the <code>UiController</code>.</p>
         </tip-box>
@@ -277,15 +288,16 @@
       </div>
       <div>
         <tip-box>
-          <p>📦 Here is a scenario from the a student management system where the user is adding a new student to the system.</p><img src="/se-book/designPatterns/observer/what/images/sequenceDiagram.png" height="330">
+          <p>📦 Here is a scenario from the a student management system where the user is adding a new student to the system.</p>
+          <img src="/se-book/designPatterns/observer/what/images/sequenceDiagram.png" height="330">
           <p></p>
           <p>Now, assume the system has two additional views used in parallel by different users:</p>
           <ul>
             <li><code>StudentListUi</code>: that accesses a list of students and</li>
             <li><code>StudentStatsUi</code>: that generates statistics of current students.</li>
           </ul>
-          <p>When a student is added to the database using <code>NewStudentUi</code> shown above, both <code>StudentListUi</code> and <code>StudentStatsUi</code> should get updated automatically, as shown below.</p><img src="/se-book/designPatterns/observer/what/images/studentListUI.png"
-            height="180">
+          <p>When a student is added to the database using <code>NewStudentUi</code> shown above, both <code>StudentListUi</code> and <code>StudentStatsUi</code> should get updated automatically, as shown below.</p>
+          <img src="/se-book/designPatterns/observer/what/images/studentListUI.png" height="180">
           <p></p>
           <p>However, the <code>StudentList</code> object has no knowledge about <code>StudentListUi</code> and <code>StudentStatsUi</code> (note the direction of the navigability) and has no way to inform those objects. This is an example of the type of
             problem addressed by the Observer pattern.</p>
@@ -295,7 +307,8 @@
         <p><strong>Problem</strong></p>
         <p>The ‘observed’ object does not want to be coupled to objects that are ‘observing’ it.</p>
         <p><strong>Solution</strong></p>
-        <p>Force the communication through an interface known to both parties.</p><img src="/se-book/designPatterns/observer/what/images/studentListObserver.png" height="160">
+        <p>Force the communication through an interface known to both parties.</p>
+        <img src="/se-book/designPatterns/observer/what/images/studentListObserver.png" height="160">
         <p></p>
         <tip-box>
           <p>📦Here is the Observer pattern applied to the student management system.</p>
@@ -334,7 +347,8 @@ studentList.addUi(statusUi);
 </code></pre>
           <p>Note that <code>StudentList</code> is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.</p>
         </tip-box>
-        <p>Here is the generic description of the observer pattern:</p><img src="/se-book/designPatterns/observer/what/images/observableInterfaceDiagram.png" height="100">
+        <p>Here is the generic description of the observer pattern:</p>
+        <img src="/se-book/designPatterns/observer/what/images/observableInterfaceDiagram.png" height="100">
         <p></p>
         <ul>
           <li><code>&lt;&lt; Observer &gt;&gt;</code> is an interface: any class that implements it can observe an <code>&lt;&lt; Observable &gt;&gt;</code>. Any number of <code>&lt;&lt; Observer &gt;&gt;</code> objects can observe (i.e. listen to changes
@@ -366,27 +380,31 @@ studentList.addUi(statusUi);
           <p>SIS can be accessed using multiple terminals. Shop assistants use their own terminals to access SIS, while the shop manager’s terminal continuously displays a list of all items in store. In the future, it is expected that suppliers of items
             use their own applications to connect to SIS to get real-time information about current stock status. User authentication is not required for the current version, but may be required in the future.</p>
           <p>A step by step explanation of the design is given below. Note that this is one out of many possible designs. Design patterns are also applied where appropriate.</p>
-          <p>A <code>StockItem</code> can be an Appliance or an Accessory.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/stockItem.png" height="100">
+          <p>A <code>StockItem</code> can be an Appliance or an Accessory.</p>
+          <img src="/se-book/designPatterns/more/combiningDesignPatterns/images/stockItem.png" height="100">
           <p></p>
-          <p>To track that each <code>Accessory</code> is associated with the correct <code>Appliance</code>, consider the following alternative class structures.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeOne.png"
-            height="120">
+          <p>To track that each <code>Accessory</code> is associated with the correct <code>Appliance</code>, consider the following alternative class structures.</p>
+          <img src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeOne.png" height="120">
           <p></p>
           <p>The third one seems more appropriate (the second one is suitable if accessories can have accessories). Next, consider between keeping a list of <code>Appliances</code>, and a list of <code>StockItems</code>. Which is more appropriate?</p>
-          <img
-            src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeTwo.png" height="100">
-            <p></p>
-            <p>The latter seems more suitable because it can handle both appliances and accessories the same way. Next, an abstraction occurrence pattern is applied to keep track of <code>StockItems</code>.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeThree.png"
-              height="100">
-            <p></p>
-            <p>Note the inclusion of navigabilities. Here’s a sample object diagram based on the class model created thus far.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/stockItemListObjectDiagram.png" height="150">
-            <p></p>
-            <p>Next, apply the façade pattern to shield the SIS internals from the UI.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/withFacade.png" height="200">
-            <p></p>
-            <p>As UI consists of multiple views, the MVC pattern is applied here.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/withMVC.png" height="270">
-            <p></p>
-            <p>Some views need to be updated when the data change; apply the Observer pattern here.</p><img src="/se-book/designPatterns/more/combiningDesignPatterns/images/withObserver.png" height="270">
-            <p></p>
-            <p>In addition, the Singleton pattern can be applied to the façade class.</p>
+          <img src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeTwo.png" height="100">
+          <p></p>
+          <p>The latter seems more suitable because it can handle both appliances and accessories the same way. Next, an abstraction occurrence pattern is applied to keep track of <code>StockItems</code>.</p>
+          <img src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeThree.png" height="100">
+          <p></p>
+          <p>Note the inclusion of navigabilities. Here’s a sample object diagram based on the class model created thus far.</p>
+          <img src="/se-book/designPatterns/more/combiningDesignPatterns/images/stockItemListObjectDiagram.png" height="150">
+          <p></p>
+          <p>Next, apply the façade pattern to shield the SIS internals from the UI.</p>
+          <img src="/se-book/designPatterns/more/combiningDesignPatterns/images/withFacade.png" height="200">
+          <p></p>
+          <p>As UI consists of multiple views, the MVC pattern is applied here.</p>
+          <img src="/se-book/designPatterns/more/combiningDesignPatterns/images/withMVC.png" height="270">
+          <p></p>
+          <p>Some views need to be updated when the data change; apply the Observer pattern here.</p>
+          <img src="/se-book/designPatterns/more/combiningDesignPatterns/images/withObserver.png" height="270">
+          <p></p>
+          <p>In addition, the Singleton pattern can be applied to the façade class.</p>
         </tip-box>
       </div>
     </div>
@@ -425,9 +443,7 @@ studentList.addUi(statusUi);
           <p>📦 Someone can say 'apply Observer pattern here' instead of having to describe the mechanics of the solution in detail.</p>
         </tip-box>
         <p><strong>Knowing more patterns is a way to become more ‘experienced’.</strong> Aim to learn at least the context and the problem of patterns <span class="dimmed"> so that when you encounter those problems you know where to look for a solution</span>.</p>
-        <p><strong>Some patterns are domain-specific</strong><span class="dimmed"> e.g. patterns for distributed applications</span>, <strong>some are created in-house</strong><span class="dimmed"> e.g. patterns in the company/project</span> and <strong>some can be self-created</strong>
-          <span
-            class="dimmed"> e.g. from past experience</span>.</p>
+        <p><strong>Some patterns are domain-specific</strong> <span class="dimmed"> e.g. patterns for distributed applications</span>, <strong>some are created in-house</strong> <span class="dimmed"> e.g. patterns in the company/project</span> and <strong>some can be self-created</strong>          <span class="dimmed"> e.g. from past experience</span>.</p>
         <p><strong>Be careful not to overuse patterns.</strong> Do not throw patterns at a problem at every opportunity. Patterns come with overhead such as adding more classes or increasing the levels of abstraction. Use them only when they are needed.
           Before applying a pattern, make sure that:</p>
         <ul>
@@ -471,5 +487,8 @@ studentList.addUi(statusUi);
 </body>
 <script src="..\markbind\js\vue.min.js"></script>
 <script src="..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\markbind\js\setup.js"></script>
 </html>

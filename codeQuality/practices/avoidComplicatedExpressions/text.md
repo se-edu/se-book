@@ -12,28 +12,16 @@
 
 Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate the final value).
 
-<tip-box>
+<tabs> 
+  <tab header="Java">
 
-Example: 
+<include src="example-java.md" />
+  </tab>
+  <tab header="Python">
 
-![][Bad]
-```java
-return ((length < MAX_LENGTH) || (previousSize != length)) && (typeCode == URGENT);
-```
-
-![][Good]
-```java
-
-boolean isWithinSizeLimit = length < MAX_LENGTH;
-boolean isSameSize = previousSize != length;
-boolean isValidCode = isWithinSizeLimit || isSameSize;
-
-boolean isUrgent = typeCode == URGENT;
-
-return isValidCode && isUrgent;
-```
-
-</tip-box>
+<include src="example-python.md" />
+</tab>
+</tabs><hr>
 
 > The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. <sub>-- Edsger Dijkstra</sub>
 

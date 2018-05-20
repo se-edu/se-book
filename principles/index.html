@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -85,7 +86,8 @@
         <span class="hljs-comment">//...</span>
     }
 }
-</code></pre><img src="/se-book/principles/interfaceSegregationPrinciple/images/payroll.png" height="200">
+</code></pre>
+              <img src="/se-book/principles/interfaceSegregationPrinciple/images/payroll.png" height="200">
               <p></p>
             </tip-box>
           </div>
@@ -114,6 +116,7 @@
               <trigger large="" trigger="click" for="modal:lsp-substitutability">substitutability</trigger> but it goes beyond substitutability; <strong>LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.</strong> As we know, Java has language support for substitutability.
               However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.</p>
             <modal large="" title="Textbook »" id="modal:lsp-substitutability">
+            
               <div>
                 <div>
                   <p>
@@ -132,7 +135,8 @@
                   <div>
                     <p><strong>Every instance of a subclass is an instance of the superclass, but not vice-versa.</strong> As a result, inheritance allows <em>substitutability</em> : the ability to substitute a child class object where a parent class object
                       is expected.</p>
-                    <tip-box><img src="/se-book/oopDesign/inheritance/substitutability/images/staff.png" height="80">
+                    <tip-box>
+                      <img src="/se-book/oopDesign/inheritance/substitutability/images/staff.png" height="80">
                       <p></p>
                       <p>📦 an <code>Academic</code> is an instance of a <code>Staff</code>, but a <code>Staff</code> is not necessarily an instance of an <code>Academic</code>. i.e. wherever an object of the superclass is expected, it can be substituted
                         by an object of any of its subclasses.</p>
@@ -140,8 +144,7 @@
                       <pre><code class="hljs java">Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span>
 </code></pre>
                       <p>But the following code is not valid <span class="dimmed"> because <code>staff</code> is declared as a <code>Staff</code> type and therefore its value may or may not be of  type <code>AcademicStaff</code>, which is the type expected by variable <code>academicStaff</code>.</span></p>
-                      <pre
-                        class="hljs"><code>Staff staff;
+                      <pre class="hljs"><code>Staff staff;
 ...
 AcademicStaff academicStaff = staff; // Not OK
 </code></pre>
@@ -153,7 +156,8 @@ AcademicStaff academicStaff = staff; // Not OK
             </modal>
             <tip-box>
               <p>📦 Suppose the <code>Payroll</code> class depends on the <code>adjustMySalary(int percent)</code> method of the <code>Staff</code> class. Furthermore, the <code>Staff</code> class states that the <code>adjustMySalary</code> method will work
-                for all positive percent values. Both <code>Admin</code> and <code>Academic</code> classes override the <code>adjustMySalary</code> method.</p><img src="/se-book/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200">
+                for all positive percent values. Both <code>Admin</code> and <code>Academic</code> classes override the <code>adjustMySalary</code> method.</p>
+              <img src="/se-book/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200">
               <p></p>
               <p>Now consider the following:</p>
               <ul>
@@ -169,7 +173,8 @@ AcademicStaff academicStaff = staff; // Not OK
               </ul>
               <panel type="seamless" header="%%Another example%%">
                 <p>📦 The <code>Rectangle#resize()</code> can take any integers for <code>height</code> and <code>width</code>. This contract is violated by the subclass <code>Square#resize()</code> because it does not accept a <code>height</code> that is
-                  different from the <code>width</code>.</p><img src="/se-book/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120">
+                  different from the <code>width</code>.</p>
+                <img src="/se-book/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120">
                 <p></p>
                 <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{
     ...
@@ -206,9 +211,9 @@ AcademicStaff academicStaff = staff; // Not OK
                   <panel header=":lock::key: Is this LSP?">
                     <question>
                       <p>If a subclass imposes more restrictive conditions than its parent class, it violates Liskov Substitution Principle.</p>
-                      <ul radio-group="5fkpb" class="radio-list">
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="5fkpb" type="radio"> True</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="5fkpb" type="radio"> False</label></li>
+                      <ul radio-group="55ada" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="55ada" type="radio"> True</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="55ada" type="radio"> False</label></li>
                       </ul>
                       <div slot="answer">
                         <p>True.</p>
@@ -241,7 +246,8 @@ AcademicStaff academicStaff = staff; // Not OK
               <li>Abstractions should not depend on details. Details should depend on abstractions.</li>
             </ol>
             <tip-box>
-              <p>Example:</p><img src="/se-book/principles/dependencyInversionPrinciple/images/payrollEmployee.png" height="130">
+              <p>Example:</p>
+              <img src="/se-book/principles/dependencyInversionPrinciple/images/payrollEmployee.png" height="130">
               <p></p>
               <p>In design (a), the higher level class <code>Payroll</code> depends on the lower level class <code>Employee</code>, a violation of DIP. In design (b), both <code>Payroll</code> and <code>Employee</code> depends on the Payee interface (note
                 that inheritance is a dependency).</p>
@@ -304,7 +310,8 @@ AcademicStaff academicStaff = staff; // Not OK
             <tip-box>
               <p>📦 In the design given below, the behavior of the <code>CommandQueue</code> class can be altered by adding more concrete <code>Command</code> subclasses. For example, by including a <code>Delete</code> class alongside <code>List</code>,
                 <code>Sort</code>, and <code>Reset</code>, the <code>CommandQueue</code> can now perform delete commands without modifying its code at all. That is, its behavior was extended without having to modify its code. Hence, it was open to extensions,
-                but closed to modification.</p><img src="/se-book/principles/openClosedPrinciple/images/commandQueue.png" height="170">
+                but closed to modification.</p>
+              <img src="/se-book/principles/openClosedPrinciple/images/commandQueue.png" height="170">
               <p></p>
             </tip-box>
             <tip-box>
@@ -322,11 +329,11 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                   <panel header=":lock::key: Meaning of OCP">
                     <question>
                       <p>Which of these is closest to the meaning of the open-closed principle?</p>
-                      <ul radio-group="1tmja" class="radio-list">
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="1tmja" type="radio"> a. We should be able to change a software module’s behavior without modifying its code.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="1tmja" type="radio"> b. A software module should remain open to modification as long as possible.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="1tmja" type="radio"> c. A software module should be open to modification and closed to extension.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="1tmja" type="radio"> d. Open source software rocks. Closed source software sucks.</label></li>
+                      <ul radio-group="6906e" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> a. We should be able to change a software module’s behavior without modifying its code.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> b. A software module should remain open to modification as long as possible.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> c. A software module should be open to modification and closed to extension.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> d. Open source software rocks. Closed source software sucks.</label></li>
                       </ul>
                       <div slot="answer">
                         <p>(a)</p>
@@ -417,7 +424,8 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                     <tip-box>
                       <p>📦 In the design given below, the behavior of the <code>CommandQueue</code> class can be altered by adding more concrete <code>Command</code> subclasses. For example, by including a <code>Delete</code> class alongside <code>List</code>,
                         <code>Sort</code>, and <code>Reset</code>, the <code>CommandQueue</code> can now perform delete commands without modifying its code at all. That is, its behavior was extended without having to modify its code. Hence, it was open
-                        to extensions, but closed to modification.</p><img src="/se-book/principles/openClosedPrinciple/images/commandQueue.png" height="170">
+                        to extensions, but closed to modification.</p>
+                      <img src="/se-book/principles/openClosedPrinciple/images/commandQueue.png" height="170">
                       <p></p>
                     </tip-box>
                     <tip-box>
@@ -435,11 +443,11 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                           <panel header=":lock::key: Meaning of OCP">
                             <question>
                               <p>Which of these is closest to the meaning of the open-closed principle?</p>
-                              <ul radio-group="ou487" class="radio-list">
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="ou487" type="radio"> a. We should be able to change a software module’s behavior without modifying its code.</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="ou487" type="radio"> b. A software module should remain open to modification as long as possible.</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="ou487" type="radio"> c. A software module should be open to modification and closed to extension.</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="ou487" type="radio"> d. Open source software rocks. Closed source software sucks.</label></li>
+                              <ul radio-group="6906e" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> a. We should be able to change a software module’s behavior without modifying its code.</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> b. A software module should remain open to modification as long as possible.</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> c. A software module should be open to modification and closed to extension.</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> d. Open source software rocks. Closed source software sucks.</label></li>
                               </ul>
                               <div slot="answer">
                                 <p>(a)</p>
@@ -476,6 +484,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                       <trigger large="" trigger="click" for="modal:lsp-substitutability">substitutability</trigger> but it goes beyond substitutability; <strong>LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.</strong> As we know, Java has language support for
                       substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.</p>
                     <modal large="" title="Textbook »" id="modal:lsp-substitutability">
+                    
                       <div>
                         <div>
                           <p>
@@ -494,7 +503,8 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                           <div>
                             <p><strong>Every instance of a subclass is an instance of the superclass, but not vice-versa.</strong> As a result, inheritance allows <em>substitutability</em> : the ability to substitute a child class object where a parent class
                               object is expected.</p>
-                            <tip-box><img src="/se-book/oopDesign/inheritance/substitutability/images/staff.png" height="80">
+                            <tip-box>
+                              <img src="/se-book/oopDesign/inheritance/substitutability/images/staff.png" height="80">
                               <p></p>
                               <p>📦 an <code>Academic</code> is an instance of a <code>Staff</code>, but a <code>Staff</code> is not necessarily an instance of an <code>Academic</code>. i.e. wherever an object of the superclass is expected, it can be substituted
                                 by an object of any of its subclasses.</p>
@@ -502,8 +512,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                               <pre><code class="hljs java">Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span>
 </code></pre>
                               <p>But the following code is not valid <span class="dimmed"> because <code>staff</code> is declared as a <code>Staff</code> type and therefore its value may or may not be of  type <code>AcademicStaff</code>, which is the type expected by variable <code>academicStaff</code>.</span></p>
-                              <pre
-                                class="hljs"><code>Staff staff;
+                              <pre class="hljs"><code>Staff staff;
 ...
 AcademicStaff academicStaff = staff; // Not OK
 </code></pre>
@@ -515,8 +524,8 @@ AcademicStaff academicStaff = staff; // Not OK
                     </modal>
                     <tip-box>
                       <p>📦 Suppose the <code>Payroll</code> class depends on the <code>adjustMySalary(int percent)</code> method of the <code>Staff</code> class. Furthermore, the <code>Staff</code> class states that the <code>adjustMySalary</code> method
-                        will work for all positive percent values. Both <code>Admin</code> and <code>Academic</code> classes override the <code>adjustMySalary</code> method.</p><img src="/se-book/principles/liskovSubstitutionPrinciple/images/payroll.png"
-                        height="200">
+                        will work for all positive percent values. Both <code>Admin</code> and <code>Academic</code> classes override the <code>adjustMySalary</code> method.</p>
+                      <img src="/se-book/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200">
                       <p></p>
                       <p>Now consider the following:</p>
                       <ul>
@@ -531,7 +540,8 @@ AcademicStaff academicStaff = staff; // Not OK
                           can potentially break the <code>Payroll</code> class functionality.</li>
                       </ul>
                       <panel type="seamless" header="%%Another example%%">
-                        <p>📦 The <code>Rectangle#resize()</code> can take any integers for <code>height</code> and <code>width</code>. This contract is violated by the subclass <code>Square#resize()</code> because it does not accept a <code>height</code>                          that is different from the <code>width</code>.</p><img src="/se-book/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120">
+                        <p>📦 The <code>Rectangle#resize()</code> can take any integers for <code>height</code> and <code>width</code>. This contract is violated by the subclass <code>Square#resize()</code> because it does not accept a <code>height</code>                          that is different from the <code>width</code>.</p>
+                        <img src="/se-book/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120">
                         <p></p>
                         <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{
     ...
@@ -568,9 +578,9 @@ AcademicStaff academicStaff = staff; // Not OK
                           <panel header=":lock::key: Is this LSP?">
                             <question>
                               <p>If a subclass imposes more restrictive conditions than its parent class, it violates Liskov Substitution Principle.</p>
-                              <ul radio-group="2aorx" class="radio-list">
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="2aorx" type="radio"> True</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="2aorx" type="radio"> False</label></li>
+                              <ul radio-group="55ada" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="55ada" type="radio"> True</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="55ada" type="radio"> False</label></li>
                               </ul>
                               <div slot="answer">
                                 <p>True.</p>
@@ -619,7 +629,8 @@ AcademicStaff academicStaff = staff; // Not OK
         <span class="hljs-comment">//...</span>
     }
 }
-</code></pre><img src="/se-book/principles/interfaceSegregationPrinciple/images/payroll.png" height="200">
+</code></pre>
+                      <img src="/se-book/principles/interfaceSegregationPrinciple/images/payroll.png" height="200">
                       <p></p>
                     </tip-box>
                   </div>
@@ -644,7 +655,8 @@ AcademicStaff academicStaff = staff; // Not OK
                       <li>Abstractions should not depend on details. Details should depend on abstractions.</li>
                     </ol>
                     <tip-box>
-                      <p>Example:</p><img src="/se-book/principles/dependencyInversionPrinciple/images/payrollEmployee.png" height="130">
+                      <p>Example:</p>
+                      <img src="/se-book/principles/dependencyInversionPrinciple/images/payrollEmployee.png" height="130">
                       <p></p>
                       <p>In design (a), the higher level class <code>Payroll</code> depends on the lower level class <code>Employee</code>, a violation of DIP. In design (b), both <code>Payroll</code> and <code>Employee</code> depends on the Payee interface
                         (note that inheritance is a dependency).</p>
@@ -724,6 +736,7 @@ AcademicStaff academicStaff = staff; // Not OK
                 <trigger trigger="click" for="modal:soc-nTier">n-tier architecture</trigger> utilizes this principle. Each layer in the architecture has a well-defined functionality that has no functional overlap with each other.</p>
             </tip-box>
             <modal title="TextBook »" id="modal:soc-nTier">
+            
               <div>
                 <div></div>
                 <p></p>
@@ -736,8 +749,8 @@ AcademicStaff academicStaff = staff; // Not OK
                 </div>
                 <div id="main">
                   <div>
-                    <p><strong>In the <em>n-tier</em> style, higher layers make use of services provided by lower layers.</strong> Lower layers are independent of higher layers. Other names: <em>multi-layered</em>, <em>layered</em>.</p><img src="/se-book/architecture/architecturalStyles/nTier/what/images/nTier.png"
-                      height="150">
+                    <p><strong>In the <em>n-tier</em> style, higher layers make use of services provided by lower layers.</strong> Lower layers are independent of higher layers. Other names: <em>multi-layered</em>, <em>layered</em>.</p>
+                    <img src="/se-book/architecture/architecturalStyles/nTier/what/images/nTier.png" height="150">
                     <tip-box>
                       <p>📦 Operating systems and network communication software often use n-tier style.
                         <img src="/se-book/architecture/architecturalStyles/nTier/what/images/nTierExamples.png" height="150"></p>
@@ -750,6 +763,7 @@ AcademicStaff academicStaff = staff; // Not OK
             </modal>
             <p><strong>This principle should lead to higher <trigger trigger="click" for="soc-cohesion">cohesion</trigger> and lower <trigger trigger="click" for="soc-coupling">coupling</trigger>.</strong></p>
             <modal title="TextBook »" id="soc-coupling">
+            
               <div>
                 <div></div>
                 <p></p>
@@ -769,7 +783,8 @@ AcademicStaff academicStaff = staff; // Not OK
                       <li><strong>Testing and reuse of the module is harder</strong> due to its dependence on other modules.</li>
                     </ul>
                     <tip-box>
-                      <p>📦 In the example below, design <code>A</code> appears to have a more coupling between the components than design <code>B</code>.</p><img src="/se-book/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220">
+                      <p>📦 In the example below, design <code>A</code> appears to have a more coupling between the components than design <code>B</code>.</p>
+                      <img src="/se-book/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220">
                       <p></p>
                     </tip-box>
                   </div>
@@ -780,7 +795,8 @@ AcademicStaff academicStaff = staff; // Not OK
                           <panel header=":lock::key: Coupling levels of alternative designs">
                             <question has-input="true">
                               <p>Discuss the coupling levels of alternative designs <em>x</em> and <em>y</em>.</p>
-                              <tip-box><img src="/se-book/designFundamentals/coupling/what/images/alternativeDesigns.png" height="180">
+                              <tip-box>
+                                <img src="/se-book/designFundamentals/coupling/what/images/alternativeDesigns.png" height="180">
                                 <p></p>
                               </tip-box>
                               <div slot="answer">
@@ -838,6 +854,7 @@ AcademicStaff academicStaff = staff; // Not OK
               </div>
             </modal>
             <modal title="TextBook »" id="soc-cohesion">
+            
               <div>
                 <div></div>
                 <p></p>
@@ -923,7 +940,7 @@ AcademicStaff academicStaff = staff; // Not OK
               <li>Objects passed as parameters of <code>m</code></li>
               <li>Objects created/instantiated in <code>m</code></li>
               <li>Objects from the
-                <tooltip content="objects that are held by instance variables of">direct association of</tooltip><code>O</code></li>
+                <tooltip content="objects that are held by instance variables of">direct association of</tooltip> <code>O</code></li>
             </ul>
             <tip-box>
               <p>📦 The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’),
@@ -956,7 +973,7 @@ AcademicStaff academicStaff = staff; // Not OK
                           <li><code>mf.init();</code>: this does not violate LoD since LoD allows calling operations of parameters received.</li>
                           <li><code>mf.getCell(1,3).clear();</code>: //this violates LoD because <code>Logic</code> is handling <code>Cell</code> objects deep inside <code>Minefield</code>. Instead, it should be <code>mf.clearCellAt(1,3);</code></li>
                           <li><code>timer.start();</code>: //this does not violate LoD because <code>timer</code> appears to be an internal component (i.e. a variable) of <code>Logic</code> itself.</li>
-                          <li><code>Cell c = new Cell();</code><code>c.init();</code>: // this does not violate LoD because <code>c</code> was created inside the operation.</li>
+                          <li><code>Cell c = new Cell();</code> <code>c.init();</code>: // this does not violate LoD because <code>c</code> was created inside the operation.</li>
                         </ul>
                       </div>
                     </question>
@@ -971,9 +988,9 @@ AcademicStaff academicStaff = staff; // Not OK
     g.doSomething();
 }
 </code></pre>
-                      <ul radio-group="3sxsn" class="radio-list">
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="3sxsn" type="radio"> True</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="3sxsn" type="radio"> False</label></li>
+                      <ul radio-group="3cf8e" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> True</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> False</label></li>
                       </ul>
                       <div slot="answer">
                         <p>False</p>
@@ -1126,5 +1143,8 @@ AcademicStaff academicStaff = staff; // Not OK
 </body>
 <script src="..\markbind\js\vue.min.js"></script>
 <script src="..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\markbind\js\setup.js"></script>
 </html>

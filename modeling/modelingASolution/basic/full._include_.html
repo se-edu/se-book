@@ -17,6 +17,7 @@
     <p>As mentioned in [
       <trigger trigger="click" for="modal:basicModelling-modelingIntro">Design → Modeling → Modeling a Solutions → Introduction</trigger>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.</p>
     <modal title="Textbook »" id="modal:basicModelling-modelingIntro">
+    
       <div>
         <div></div>
         <p></p>
@@ -30,8 +31,8 @@
         <div id="main">
           <div>
             <p><strong>You can use models to analyze and design a software before you start coding.</strong></p>
-            <p>Suppose You are planning to implement a simple minesweeper game that has a text based UI and a GUI. Given below is a possible OOP design for the game.</p><img src="/se-book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png"
-              height="50">
+            <p>Suppose You are planning to implement a simple minesweeper game that has a text based UI and a GUI. Given below is a possible OOP design for the game.</p>
+            <img src="/se-book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50">
             <p></p>
             <p>Before jumping into coding, you may want to find out things such as,</p>
             <ul>
@@ -44,25 +45,31 @@
           <div></div>
         </div>
       </div>
-    </modal><img src="/se-book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50">
+    </modal>
+    <img src="/se-book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50">
     <p></p>
     <p>Let us start by modelling a sample interaction between the person playing the game and the TextUi object.</p>
-    <tip-box><img src="/se-book/modeling/modelingASolution/basic/images/playerText.png" height="300">
+    <tip-box>
+      <img src="/se-book/modeling/modelingASolution/basic/images/playerText.png" height="300">
       <p></p>
       <p><code>newgame</code> and <code>clear x y</code> represent commands typed by the <code>Player</code> on the <code>TextUi</code>.</p>
     </tip-box>
     <p>How does the <code>TextUi</code> object carry out the requests it has received from player? It would need to interact with other objects of the system. Because the <code>Logic</code> class is the one that controls the game logic, the <code>TextUi</code>      needs to collaborate with <code>Logic</code> to fulfill the <code>newgame</code> request. Let us extend the model to capture that interaction.</p>
-    <tip-box><img src="/se-book/modeling/modelingASolution/basic/images/playerTextLogic.png" height="280">
+    <tip-box>
+      <img src="/se-book/modeling/modelingASolution/basic/images/playerTextLogic.png" height="280">
       <p></p>
       <p>W = Width of the minefield; H = Height of the minefield</p>
     </tip-box>
     <p>The above diagram assumes that <code>W</code> and <code>H</code> are the only information <code>TextUi</code> requires to display the minefield to the <code>Player</code>. Note that there could be other ways of doing this.<br> The <code>Logic</code>      methods we conceptualized in our modelling so far are:</p>
-    <tip-box><img src="/se-book/modeling/modelingASolution/basic/images/textLogicMinefieldCell.png" height="115"></tip-box>
+    <tip-box>
+      <img src="/se-book/modeling/modelingASolution/basic/images/textLogicMinefieldCell.png" height="115"></tip-box>
     <p>Now, let us look at what other objects and interactions are needed to support the <code>newGame()</code> operation. It is likely that a new <code>Minefield</code> object is created when the <code>newGame()</code> method is called.</p>
-    <tip-box><img src="/se-book/modeling/modelingASolution/basic/images/logicMinefield.png" height="150"></tip-box>
+    <tip-box>
+      <img src="/se-book/modeling/modelingASolution/basic/images/logicMinefield.png" height="150"></tip-box>
     <p>Note that the behavior of the <code>Minefield</code> constructor has been abstracted away. It can be designed at a later stage.</p>
     <p>Given below are the interactions between the player and the Text UI for the whole game.</p>
-    <tip-box><img src="/se-book/modeling/modelingASolution/basic/images/playerTextLoop.png" height="300">
+    <tip-box>
+      <img src="/se-book/modeling/modelingASolution/basic/images/playerTextLoop.png" height="300">
       <p></p>
       <p></p>
     </tip-box>

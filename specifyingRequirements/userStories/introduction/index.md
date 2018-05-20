@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Specifying Requirements: User Stories: Introduction"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

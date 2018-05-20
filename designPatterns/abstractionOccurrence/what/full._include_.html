@@ -23,8 +23,8 @@
     <p><strong>Problem</strong></p>
     <p>Representing the objects mentioned previously as a single class would be problematic because it results in duplication of data which can lead to inconsistencies in data (if some of the duplicates are not updated consistently).</p>
     <tip-box>
-      <p>📦 Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial numbers.</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/book.png"
-        height="200">
+      <p>📦 Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial numbers.</p>
+      <img src="/se-book/designPatterns/abstractionOccurrence/what/images/book.png" height="200">
       <p></p>
       <p>The above solution requires common information to be duplicated by all instances. This will not only waste storage space, but also creates a consistency problem. Suppose that after creating several copies of the same title, the librarian realized
         that the author name was wrongly spelt. To correct this mistake, the system needs to go through every copy of the same title to make the correction. Also, if a new copy of the title is added later on, the librarian (or the system) has to make
@@ -32,7 +32,8 @@
     </tip-box>
     <p><strong>Anti-pattern</strong></p>
     <tip-box>
-      <p>📦 Refer to the same Library example given above.</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookFriends.png" height="240">
+      <p>📦 Refer to the same Library example given above.</p>
+      <img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookFriends.png" height="240">
       <p></p>
       <p>The design above segregates the common and unique information into a class hierarchy. Each book title is represented by a separate class with common data (i.e. Name, Author, ISBN) hard-coded in the class itself. This solution is problematic because
         each book title is represented as a class, resulting in thousands of classes (one for each title). Every time the library buys new books, the source code of the system will have to be updated with new classes.</p>
@@ -40,12 +41,15 @@
     <p><strong>Solution</strong></p>
     <p>Let a copy of an entity (e.g. a copy of a book)be represented by two objects instead of one, separating the common and unique information into two classes to avoid duplication.</p>
     <tip-box>
-      <p>📦 Given below is how the pattern is applied to the Library example:</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookTitleBookCopy.png" height="260">
+      <p>📦 Given below is how the pattern is applied to the Library example:</p>
+      <img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookTitleBookCopy.png" height="260">
       <p></p>
-      <p>📦 Here's a more generic example:</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/beforeAfter.png" height="370">
+      <p>📦 Here's a more generic example:</p>
+      <img src="/se-book/designPatterns/abstractionOccurrence/what/images/beforeAfter.png" height="370">
       <p></p>
     </tip-box>
-    <p>The general solution:</p><img src="/se-book/designPatterns/abstractionOccurrence/what/images/abstractionOccurrence.png" height="40">
+    <p>The general solution:</p>
+    <img src="/se-book/designPatterns/abstractionOccurrence/what/images/abstractionOccurrence.png" height="40">
     <p></p>
     <p>The <code>&lt;&lt; Abstraction &gt;&gt;</code> class should hold all common information, and the unique information should be kept by the <code>&lt;&lt; Occurrence &gt;&gt;</code> class. Note that ‘Abstraction’ and ‘Occurrence’ are not class names,
       but roles played by each class. Think of this diagram as a <em>meta-model</em> (i.e. a ‘model of a model’) of the <code>BookTitle-BookCopy</code> class diagram given above.</p>
@@ -85,10 +89,10 @@
           <panel header=":lock::key: Apply pattern?">
             <question>
               <p>Which one of these is most suited for an application of the Abstraction Occurrence pattern?</p>
-              <ul radio-group="bjwrl" class="radio-list">
-                <li class="radio-list-item"><label><input class="radio-list-input" name="bjwrl" type="radio"> a. Stagings of a stage drama at various theatres</label></li>
-                <li class="radio-list-item"><label><input class="radio-list-input" name="bjwrl" type="radio"> b. Teachers and their students</label></li>
-                <li class="radio-list-item"><label><input class="radio-list-input" name="bjwrl" type="radio"> c. Modules and exams/assignments given by those modules</label></li>
+              <ul radio-group="56836" class="radio-list">
+                <li class="radio-list-item"><label><input class="radio-list-input" name="56836" type="radio"> a. Stagings of a stage drama at various theatres</label></li>
+                <li class="radio-list-item"><label><input class="radio-list-input" name="56836" type="radio"> b. Teachers and their students</label></li>
+                <li class="radio-list-item"><label><input class="radio-list-input" name="56836" type="radio"> c. Modules and exams/assignments given by those modules</label></li>
               </ul>
               <div slot="answer">
                 <p>(a)</p>

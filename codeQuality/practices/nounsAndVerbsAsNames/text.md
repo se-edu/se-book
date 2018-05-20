@@ -24,14 +24,32 @@ method     |`result()`       | `calculate()`
 </tip-box>
 
 
-**Distinguish clearly between single valued and multivalued variables.**
+**Distinguish clearly between single-valued and multivalued variables.**
 
 <tip-box>
 
-Examples:
+:package: Examples:
 
-`Person student`<br>
-`ArrayList<Person> students`
+<tabs> 
+  <tab header="Java">
+
+![][Good]
+```java
+Person student;
+ArrayList<Person> students;
+```
+  </tab>
+  <tab header="Python">
+
+![][Good]
+```python
+student = Person('Jim')
+students = [Person('Jim'), Person('Alice')]
+```
+</tab>
+</tabs><hr>
+
+
 
 </tip-box>
 

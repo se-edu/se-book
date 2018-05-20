@@ -16,17 +16,18 @@
       <li>other data/objects accessed by the method such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented)</li>
     </ul>
     <tip-box>
-      <p>📦 Consider this method in the <code>DataStack</code> class:</p>
-      <pre><code class="hljs java"><span class="hljs-comment">/**
- * Adds o to the top of the stack if the stack is not full.
- * <span class="hljs-doctag">@throws</span> MutabilityException if the global flag FREEZE==true.
- * <span class="hljs-doctag">@throws</span> InvalidValueException if  o is null.
- * <span class="hljs-doctag">@return</span> true if the push operation was a success.
- */</span>
-<span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">push</span><span class="hljs-params">(Object o)</span> </span>{
-    ...
-}
-</code></pre>
+      <p>📦 Consider this method in the <code>DataStack</code> class:
+        <code>push(Object o): boolean</code></p>
+      <ul>
+        <li>Adds o to the top of the stack if the stack is not full.</li>
+        <li>returns <code>true</code> if the push operation was a success.</li>
+        <li>throws
+          <ul>
+            <li><code>MutabilityException</code> if the global flag <code>FREEZE==true</code>.</li>
+            <li><code>InvalidValueException</code> if o is null.</li>
+          </ul>
+        </li>
+      </ul>
       <p>EPs:</p>
       <ul>
         <li><code>DataStack</code> object: [full] [not full]</li>
@@ -52,16 +53,9 @@
       <p>📦 Consider the <code>Logic</code> component of the Minesweeper application. What are the EPs for the <code>markCellAt(int x, int y)</code> method?. The partitions in <strong>bold</strong> represent valid inputs.</p>
       <ul>
         <li><code>Logic</code>: PRE_GAME, <strong>READY</strong>, <strong>IN_PLAY</strong>, WON, LOST</li>
-        <li><code>x</code>: [MIN_INT..-1] <strong>[0..(W-1)]</strong> [W..MAX_INT] (we assume a minefield size of WxH)</li>
+        <li><code>x</code>: [MIN_INT..-1] <strong>[0..(W-1)]</strong> [W..MAX_INT] <span class="dimmed">(we assume a minefield size of WxH)</span></li>
         <li><code>y</code>: [MIN_INT..-1] <strong>[0..(H-1)]</strong> [H..MAX_INT]</li>
         <li><code>Cell</code> at <code>(x,y)</code>: <strong>HIDDEN</strong>, MARKED, CLEARED</li>
-      </ul>
-      <p>A test case for the push method can be a combination of the equivalence partitions. Given below is such a test case.</p>
-      <ul>
-        <li>id: DataStack_Push_001</li>
-        <li>description: checks whether pushing onto a full stack works correctly</li>
-        <li>input: stack is full, o != null, FREEZE == false</li>
-        <li>expected output: returns false, stack remains unchanged</li>
       </ul>
     </tip-box>
   </div>

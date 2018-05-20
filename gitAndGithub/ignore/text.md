@@ -6,7 +6,7 @@
 
 <div id="title">
 
-#### Ignore :two: [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/gitAndGithub/ignore/index.html)
+#### Ignore :two: [{{glyphicon_new_window}}]({{baseUrl}}/gitAndGithub/ignore/index.html)
 
 </div>
 

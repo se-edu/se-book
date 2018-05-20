@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Revision Control: Forking Workflow"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

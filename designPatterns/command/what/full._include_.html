@@ -18,10 +18,12 @@
     <p>Let us examine an example application of the pattern first:</p>
     <tip-box>
       <p>📦 In the example solution below, the <code>CommandCreator</code> creates <code>List</code>, <code>Sort</code>, and <code>Reset Command</code> objects and adds them to the <code>CommandQueue</code> object. The <code>CommandQueue</code> object treats
-        them all as <code>Command</code> objects and performs the execute/undo operation on each of them without knowledge of the specific <code>Command</code> type. When executed, each <code>Command</code> object will access the <code>DataStore</code>        object to carry out its task. The <code>Command</code> class can also be an abstract class or an interface.</p><img src="/se-book/designPatterns/command/what/images/commandCreator.png" height="150">
+        them all as <code>Command</code> objects and performs the execute/undo operation on each of them without knowledge of the specific <code>Command</code> type. When executed, each <code>Command</code> object will access the <code>DataStore</code>        object to carry out its task. The <code>Command</code> class can also be an abstract class or an interface.</p>
+      <img src="/se-book/designPatterns/command/what/images/commandCreator.png" height="150">
       <p></p>
     </tip-box>
-    <p>The general form of the solution is as follows.</p><img src="/se-book/designPatterns/command/what/images/clientInvoker.png" height="200">
+    <p>The general form of the solution is as follows.</p>
+    <img src="/se-book/designPatterns/command/what/images/clientInvoker.png" height="200">
     <p></p>
     <p>The <code>&lt;&lt; Client &gt;&gt;</code> creates a <code>&lt;&lt; ConcreteCommand &gt;&gt;</code> object, and passes it to the <code>&lt;&lt; Invoker &gt;&gt;</code>. The <code>&lt;&lt; Invoker &gt;&gt;</code> object treats all commands as a general
       <code>&lt;&lt; Command &gt;&gt;</code> type. <code>&lt;&lt; Invoker &gt;&gt;</code> issues a request by calling <code>execute()</code> on the command. If a command is undoable, <code>&lt;&lt; ConcreteCommand &gt;&gt;</code> will store the state

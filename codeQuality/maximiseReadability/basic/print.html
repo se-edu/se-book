@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <div>
+  <h4 id="basic-one">Basic <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+</div>
+<div>
+  <panel header="**Avoid Long Methods**" type="seamless" expanded="">
+    <div>
+      <div>
+        <p>Be wary when a method is longer than the computer screen, and take corrective action when it goes beyond 30 LOC (lines of code). The bigger the haystack, the harder it is to find a needle.</p>
+      </div>
+    </div>
+  </panel>
+  <panel header="**Avoid Deep Nesting**" type="seamless" expanded="">
+    <div>
+      <div>
+        <blockquote>
+          <p>If you need more than 3 levels of indentation, you're screwed anyway, and should fix your program. <sub>--Linux 1.3.53 CodingStyle</sub></p>
+        </blockquote>
+        <p>In particular, avoid <a href="https://blog.codinghorror.com/flattening-arrow-code/"><em>arrowhead</em> style code</a>.</p>
+        <tip-box>
+          <p>Example:</p>
+          <img src="/se-book/codeQuality/practices/avoidDeepNesting/images/arrowheadStyle.png" height="250">
+          <p></p>
+        </tip-box>
+      </div>
+    </div>
+  </panel>
+  <panel header="**Avoid Complicated Expressions**" type="seamless" expanded="">
+    <div>
+      <div>
+        <p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate the final
+          value).</p>
+        <tabs>
+        
+          <tab header="Java">
+            <div>
+              <tip-box>
+                <p>📦 Example:</p>
+                <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                <pre><code class="hljs java"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);
+</code></pre>
+                <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                <pre><code class="hljs java">
+<span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;
+<span class="hljs-keyword">boolean</span> isSameSize = previousSize != length;
+<span class="hljs-keyword">boolean</span> isValidCode = isWithinSizeLimit || isSameSize;
+
+<span class="hljs-keyword">boolean</span> isUrgent = typeCode == URGENT;
+
+<span class="hljs-keyword">return</span> isValidCode &amp;&amp; isUrgent;
+</code></pre>
+              </tip-box>
+            </div>
+          </tab>
+        
+          <tab header="Python">
+            <div>
+              <tip-box>
+                <p>📦 Example:</p>
+                <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                <pre><code class="hljs python"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) <span class="hljs-keyword">or</span> (previous_size != length)) <span class="hljs-keyword">and</span> (type_code == URGENT)
+</code></pre>
+                <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                <pre><code class="hljs python">is_within_size_limit = length &lt; MAX_LENGTH
+is_same_size = previous_size != length
+is_valid_code = is_within_size_limit <span class="hljs-keyword">or</span> is_same_size
+
+is_urgent = type_code == URGENT
+
+<span class="hljs-keyword">return</span> is_valid_code <span class="hljs-keyword">and</span> is_urgent
+</code></pre>
+              </tip-box>
+            </div>
+          </tab>
+        </tabs>
+        <hr>
+        <blockquote>
+          <p>The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. <sub>-- Edsger Dijkstra</sub></p>
+        </blockquote>
+      </div>
+    </div>
+  </panel>
+  <panel header="**Avoid Magic Numbers**" type="seamless" expanded="">
+    <div>
+      <div>
+        <p>When the code has a number that does not explain the meaning of the number, we call that a magic number (as in “the number appears as if by magic”). Using a
+          <tooltip content="e.g., `PI`"><em>named constant</em></tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
+        <tip-box>
+          <p>📦 Example:</p>
+          <tabs>
+          
+            <tab header="Java">
+              <div>
+                <table>
+                  <tr>
+                  
+                    <td valign="top">
+                      <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>;
+...
+<span class="hljs-keyword">return</span> <span class="hljs-number">9</span>;
+</code></pre>
+                      <p></p>
+                    </td>
+                  
+                    <td>  <br><br></td>
+                  
+                    <td valign="top">
+                      <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14236</span>;
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_SIZE = <span class="hljs-number">10</span>;
+...
+<span class="hljs-keyword">return</span> PI;
+...
+<span class="hljs-keyword">return</span> MAX_SIZE-<span class="hljs-number">1</span>;
+</code></pre>
+                      <p></p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </tab>
+          
+            <tab header="Python">
+              <div>
+                <p>Note: Python does not have a way to make a variable a constant. However, you can use a normal variable with an <code>ALL_CAPS</code> name to simulate a constant.</p>
+                <table>
+                  <tr>
+                  
+                    <td valign="top">
+                      <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                      <pre><code class="hljs python"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>
+...
+<span class="hljs-keyword">return</span> <span class="hljs-number">9</span>
+</code></pre>
+                      <p></p>
+                    </td>
+                  
+                    <td>  <br><br></td>
+                  
+                    <td valign="top">
+                      <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                      <pre><code class="hljs python">PI = <span class="hljs-number">3.14236</span>
+MAX_SIZE = <span class="hljs-number">10</span>
+...
+<span class="hljs-keyword">return</span> PI
+...
+<span class="hljs-keyword">return</span> MAX_SIZE<span class="hljs-number">-1</span>
+</code></pre>
+                      <p></p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </tab>
+          </tabs>
+          <hr>
+        </tip-box>
+        <p>Similarly, we can have ‘magic’ values of other data types.</p>
+        <tip-box>
+          <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+          <pre><code class="hljs java"><span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment">// A magic string!</span>
+</code></pre>
+        </tip-box>
+      </div>
+    </div>
+  </panel>
+  <panel header="**Make the Code Obvious**" type="seamless" expanded="">
+    <div>
+      <div>
+        <p>Make the code as explicit as possible, even if the language syntax allows them to be implicit. Here are some examples:</p>
+        <ul>
+          <li>[<code>Java</code>] Use explicit type conversion instead of implicit type conversion.</li>
+          <li>[<code>Java</code>, <code>Python</code>] Use parentheses/braces to show grouping even when they can be skipped.</li>
+          <li>[<code>Java</code>, <code>Python</code>] Use
+            <trigger trigger="click" for="modal:obviousCode-enums">enumerations</trigger> when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0,1,2 to denote the states 'starting', 'enabled', and 'disabled'
+            respectively, declare 'state' as type <code>SystemState</code> and define an enumeration <code>SystemState</code> that has values <code>'STARTING'</code>, <code>'ENABLED'</code>, and <code>'DISABLED'</code>.</li>
+        </ul>
+        <modal title="More about enumerations" id="modal:obviousCode-enums">
+          <ul>
+            <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">More about Java enumerations</a></li>
+            <li><a href="https://docs.python.org/3/library/enum.html">More about Python enumerations</a></li>
+          </ul>
+        </modal>
+      </div>
+    </div>
+  </panel>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

@@ -6,7 +6,7 @@
 
 <div id="title">
 
-#### Repositories :one: [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/revisionControl/repositories/index.html)
+#### Repositories :one: [{{glyphicon_new_window}}]({{baseUrl}}/revisionControl/repositories/index.html)
 
 </div>
 

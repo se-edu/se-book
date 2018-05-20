@@ -19,11 +19,11 @@ There are two kinds of requirements:
 
 :package: Some examples of non-functional requirement categories:
 
-* Data requirements e.g. size, volatility, persistency etc.,
+* Data requirements e.g. size, <tooltip content="how often do data change">volatility</tooltip>, <tooltip content="saving data permanenetly">persistency</tooltip> etc.,
 * Environment requirements e.g. technical environment in which system would operate or need to be compatible with.
 * Accessibility, Capacity, Compliance with regulations, Documentation, Disaster recovery, Efficiency, Extensibility, Fault tolerance, Interoperability, Maintainability, Privacy, Portability, Quality, Reliability, Response time, Robustness, Scalability, Security, Stability, Testability, and more ...
 
-<panel type="seamless" header=":package: Some concrete examples of NFRs">
+<panel type="seamless" header=":package: Some concrete examples of NFRs" expanded>
 
 * Business/domain rules:   e.g. the size of the minefield cannot be smaller than five.
 * Constraints: e.g.  the system should be backward compatible with data produced by earlier versions of the system; system testers are available only during the last month of the project; the total project cost should not exceed $1.5 million.
@@ -38,7 +38,7 @@ There are two kinds of requirements:
 </tip-box>
 
 
-**Non-functional requirements are easier to miss.** We should spend extra effort in digging them out as early as possible because sometimes they are critical to the success of the software. %%&nbsp;E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.%%
+We should spend extra effort in digging NFRs out as early as possible because **NFRs are easier to miss** %%&nbsp;e.g., stakeholders tend to think of functional requirements first%% and sometimes **they are critical to the success of the software.** %%&nbsp;E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.%%
 
 </div>
 

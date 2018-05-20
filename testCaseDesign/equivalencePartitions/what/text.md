@@ -16,7 +16,7 @@ Consider the testing of the following operation.
 
 <div id="isValidMonth">
 
-`isValidMonth (int m): boolean` : returns `true` if `m` is in the range [1..12]
+`isValidMonth(m)` : returns `true` if `m` (and `int`) is in the range [1..12]
 </div>
 </tip-box>
 

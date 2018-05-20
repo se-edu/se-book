@@ -8,6 +8,7 @@
 <div id="main">
   <div>
     <tip-box type="definition">
+    
       <div>
         <p><strong>Dynamic Binding</strong> (
           <tooltip content="There are subtle differences between late binding and dynamic binding, but they are beyond the scope of this document">aka late binding</tooltip>) : a mechanism where method calls in code are
@@ -16,8 +17,8 @@
       </div>
     </tip-box>
     <p><strong><trigger trigger="click" for="modal:dynamicAndStatic-overriding">Overridden methods</trigger> are resolved using dynamic binding, and therefore resolves to the implementation in the actual type of the object.</strong></p>
-    <modal large="" title="Textbook »"
-      id="modal:dynamicAndStatic-overriding">
+    <modal large="" title="Textbook »" id="modal:dynamicAndStatic-overriding">
+    
       <div>
         <div>
           <p>
@@ -35,9 +36,13 @@
         <div id="main">
           <div>
             <p><strong>To override a method inherited from an ancestor class, simply re-implement the method in the target class.</strong></p>
-            <tip-box>
-              <p>📦 A simple example where the <code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method:</p>
-              <pre><code class="hljs java">
+            <tabs>
+            
+              <tab header="Java">
+                <div>
+                  <tip-box>
+                    <p>📦 A simple example where the <code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method:</p>
+                    <pre><code class="hljs java">
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Report</span></span>{
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
@@ -65,24 +70,86 @@
         evaluationReport.print(); <span class="hljs-comment">// prints "Printing evaluation report"</span>
     }
 }
-
 </code></pre>
-            </tip-box>
+                  </tip-box>
+                  <p>📎 Resources:</p>
+                  <ul>
+                    <li><a href="https://www.tutorialspoint.com/java/java_overriding.htm">Java - Overriding</a> -- a tutorial by <a href="http://tutorialspoint.com">tutorialspoint.com</a></li>
+                  </ul>
+                </div>
+              </tab>
+            
+              <tab header="Python">
+                <div>
+                  <tip-box>
+                    <p>📦 In the example below, <code>Student</code> class overrides the <code>print_info</code> method of its parent class <code>Person</code>:</p>
+                    <table>
+                      <tr>
+                      
+                        <td>
+                          <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name)</span>:</span>
+    self.name = name
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span><span class="hljs-params">(self)</span>:</span>
+    print(<span class="hljs-string">'My name is'</span>, self.name)
+    
+</code></pre>
+                          <p></p>
+                        </td>
+                      
+                        <td valign="bottom">  <br><br></td>
+                      
+                        <td valign="bottom">
+                          <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span><span class="hljs-params">(Person)</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, matric)</span>:</span>
+    self.name = name
+    self.matric = matric
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span><span class="hljs-params">(self)</span>:</span>
+    print(self.name, <span class="hljs-string">'is a student'</span>)
+</code></pre>
+                          <p></p>
+                        </td>
+                      </tr>
+                    </table>
+                    <table>
+                      <tr>
+                      
+                        <td>
+                          <pre><code class="hljs python">amy = Person(<span class="hljs-string">'Amy'</span>)
+amy.print_info()
+
+ben = Student(<span class="hljs-string">'Ben'</span>, <span class="hljs-string">'A12345'</span>)
+ben.print_info()
+</code></pre>
+                          <p></p>
+                        </td>
+                      
+                        <td valign="bottom"> → <br><br></td>
+                      
+                        <td valign="bottom">
+                          <pre class="hljs"><code>My name is Amy
+Ben is a student
+</code></pre>
+                          <p></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </tip-box>
+                </div>
+              </tab>
+            </tabs>
+            <hr>
           </div>
           <div>
-            <div>
-              <panel header=":paperclip: Resources" expanded="">
-                <ul>
-                  <li><a href="https://www.tutorialspoint.com/java/java_overriding.htm">Java - Overriding</a> -- a tutorial by <a href="http://tutorialspoint.com">tutorialspoint.com</a></li>
-                </ul>
-              </panel>
-            </div>
             <div>
               <panel header=":muscle: Exercises" expandable="">
                 <div>
                   <panel header=":lock::key: Which methods override?">
                     <question>
-                      <p>Which of these methods override another method?</p><img src="/se-book/oopImplementation/overriding/images/overriding.png" height="220">
+                      <p>Which of these methods override another method?</p>
+                      <img src="/se-book/oopImplementation/overriding/images/overriding.png" height="220">
                       <p></p>
                       <ul class="task-list">
                         <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
@@ -105,8 +172,8 @@
       </div>
     </modal>
     <tip-box>
-      <p>📦 Consider the code below. The declared type of <code>s</code> is <code>Staff</code> and it appears as if the <code>adjustSalary(int)</code> operation of the <code>Staff</code> class is invoked.</p><img src="/se-book/oopDesign/inheritance/dynamicAndStaticBinding/images/staff.png"
-        height="150">
+      <p>📦 Consider the code below. The declared type of <code>s</code> is <code>Staff</code> and it appears as if the <code>adjustSalary(int)</code> operation of the <code>Staff</code> class is invoked.</p>
+      <img src="/se-book/oopDesign/inheritance/dynamicAndStaticBinding/images/staff.png" height="150">
       <p></p>
       <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
     <span class="hljs-keyword">for</span> (Staff s: staff) {
@@ -118,12 +185,14 @@
         the operation defined in the immediate superclass (in this case, <code>Staff</code> class) will be called.</p>
     </tip-box>
     <tip-box type="definition">
+    
       <div>
         <p><strong>Static binding</strong> (aka early binding): When a method call is resolved at compile time.</p>
       </div>
     </tip-box>
     <p><strong>In contrast, <trigger trigger="click" for="modal:dynamicAndStatic-overloading">overloaded</trigger> methods are resolved using static binding.</strong></p>
     <modal large="" title="Textbook »" id="modal:dynamicAndStatic-overloading">
+    
       <div>
         <div>
           <p>
@@ -141,9 +210,13 @@
         <div id="main">
           <div>
             <p>An operation can be overloaded inside the same class or in sub/super classes.</p>
-            <tip-box>
-              <p>📦 The constructor of the <code>Account</code> class below is <em>overloaded</em> because there are two constructors with different signatures: <code>()</code> and <code>(String, String, double)</code>. Furthermore, the <code>save</code>                method in the <code>Account</code> class is overloaded in the child class <code>SavingAccount</code>.</p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+            <tabs>
+            
+              <tab header="Java">
+                <div>
+                  <tip-box>
+                    <p>📦 The constructor of the <code>Account</code> class below is <em>overloaded</em> because there are two constructors with different signatures: <code>()</code> and <code>(String, String, double)</code>. Furthermore, the <code>save</code>                      method in the <code>Account</code> class is overloaded in the child class <code>SavingAccount</code>.</p>
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
     Account () {
         ...
     }
@@ -164,18 +237,24 @@
     }
 }
 </code></pre>
-            </tip-box>
+                  </tip-box>
+                  <p>📎 Resources:</p>
+                  <ul>
+                    <li><a href="https://www.javatpoint.com/method-overloading-in-java"><strong>Method Overloading in Java</strong></a> a tutorial from <a href="http://javatpoint.com">javatpoint.com</a>. Also mentions the topic of a related topic <mark><em>type promotion</em></mark>.</li>
+                  </ul>
+                </div>
+              </tab>
+            
+              <tab header="Python">
+                <div>
+                  <p>❗️ Python does not have direct support for method overloading.</p>
+                </div>
+              </tab>
+            </tabs>
+            <hr>
             <p></p>
           </div>
-          <div>
-            <div>
-              <panel header=":paperclip: Resources" expanded="">
-                <ul>
-                  <li><a href="https://www.javatpoint.com/method-overloading-in-java"><strong>Method Overloading in Java</strong></a> a tutorial from <a href="http://javatpoint.com">javatpoint.com</a>. Also mentions the topic of a related topic <mark><em>type promotion</em></mark>.</li>
-                </ul>
-              </panel>
-            </div>
-          </div>
+          <div></div>
         </div>
       </div>
     </modal>

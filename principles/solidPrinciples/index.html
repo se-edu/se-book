@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -94,7 +95,8 @@
                 <tip-box>
                   <p>📦 In the design given below, the behavior of the <code>CommandQueue</code> class can be altered by adding more concrete <code>Command</code> subclasses. For example, by including a <code>Delete</code> class alongside <code>List</code>,
                     <code>Sort</code>, and <code>Reset</code>, the <code>CommandQueue</code> can now perform delete commands without modifying its code at all. That is, its behavior was extended without having to modify its code. Hence, it was open to
-                    extensions, but closed to modification.</p><img src="/se-book/principles/openClosedPrinciple/images/commandQueue.png" height="170">
+                    extensions, but closed to modification.</p>
+                  <img src="/se-book/principles/openClosedPrinciple/images/commandQueue.png" height="170">
                   <p></p>
                 </tip-box>
                 <tip-box>
@@ -112,11 +114,11 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                       <panel header=":lock::key: Meaning of OCP">
                         <question>
                           <p>Which of these is closest to the meaning of the open-closed principle?</p>
-                          <ul radio-group="h6is8" class="radio-list">
-                            <li class="radio-list-item"><label><input class="radio-list-input" name="h6is8" type="radio"> a. We should be able to change a software module’s behavior without modifying its code.</label></li>
-                            <li class="radio-list-item"><label><input class="radio-list-input" name="h6is8" type="radio"> b. A software module should remain open to modification as long as possible.</label></li>
-                            <li class="radio-list-item"><label><input class="radio-list-input" name="h6is8" type="radio"> c. A software module should be open to modification and closed to extension.</label></li>
-                            <li class="radio-list-item"><label><input class="radio-list-input" name="h6is8" type="radio"> d. Open source software rocks. Closed source software sucks.</label></li>
+                          <ul radio-group="6906e" class="radio-list">
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> a. We should be able to change a software module’s behavior without modifying its code.</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> b. A software module should remain open to modification as long as possible.</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> c. A software module should be open to modification and closed to extension.</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> d. Open source software rocks. Closed source software sucks.</label></li>
                           </ul>
                           <div slot="answer">
                             <p>(a)</p>
@@ -153,6 +155,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                   <trigger large="" trigger="click" for="modal:lsp-substitutability">substitutability</trigger> but it goes beyond substitutability; <strong>LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.</strong> As we know, Java has language support for substitutability.
                   However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.</p>
                 <modal large="" title="Textbook »" id="modal:lsp-substitutability">
+                
                   <div>
                     <div>
                       <p>
@@ -171,7 +174,8 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                       <div>
                         <p><strong>Every instance of a subclass is an instance of the superclass, but not vice-versa.</strong> As a result, inheritance allows <em>substitutability</em> : the ability to substitute a child class object where a parent class
                           object is expected.</p>
-                        <tip-box><img src="/se-book/oopDesign/inheritance/substitutability/images/staff.png" height="80">
+                        <tip-box>
+                          <img src="/se-book/oopDesign/inheritance/substitutability/images/staff.png" height="80">
                           <p></p>
                           <p>📦 an <code>Academic</code> is an instance of a <code>Staff</code>, but a <code>Staff</code> is not necessarily an instance of an <code>Academic</code>. i.e. wherever an object of the superclass is expected, it can be substituted
                             by an object of any of its subclasses.</p>
@@ -179,8 +183,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                           <pre><code class="hljs java">Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span>
 </code></pre>
                           <p>But the following code is not valid <span class="dimmed"> because <code>staff</code> is declared as a <code>Staff</code> type and therefore its value may or may not be of  type <code>AcademicStaff</code>, which is the type expected by variable <code>academicStaff</code>.</span></p>
-                          <pre
-                            class="hljs"><code>Staff staff;
+                          <pre class="hljs"><code>Staff staff;
 ...
 AcademicStaff academicStaff = staff; // Not OK
 </code></pre>
@@ -192,7 +195,8 @@ AcademicStaff academicStaff = staff; // Not OK
                 </modal>
                 <tip-box>
                   <p>📦 Suppose the <code>Payroll</code> class depends on the <code>adjustMySalary(int percent)</code> method of the <code>Staff</code> class. Furthermore, the <code>Staff</code> class states that the <code>adjustMySalary</code> method will
-                    work for all positive percent values. Both <code>Admin</code> and <code>Academic</code> classes override the <code>adjustMySalary</code> method.</p><img src="/se-book/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200">
+                    work for all positive percent values. Both <code>Admin</code> and <code>Academic</code> classes override the <code>adjustMySalary</code> method.</p>
+                  <img src="/se-book/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200">
                   <p></p>
                   <p>Now consider the following:</p>
                   <ul>
@@ -208,7 +212,8 @@ AcademicStaff academicStaff = staff; // Not OK
                   </ul>
                   <panel type="seamless" header="%%Another example%%">
                     <p>📦 The <code>Rectangle#resize()</code> can take any integers for <code>height</code> and <code>width</code>. This contract is violated by the subclass <code>Square#resize()</code> because it does not accept a <code>height</code> that
-                      is different from the <code>width</code>.</p><img src="/se-book/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120">
+                      is different from the <code>width</code>.</p>
+                    <img src="/se-book/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120">
                     <p></p>
                     <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{
     ...
@@ -245,9 +250,9 @@ AcademicStaff academicStaff = staff; // Not OK
                       <panel header=":lock::key: Is this LSP?">
                         <question>
                           <p>If a subclass imposes more restrictive conditions than its parent class, it violates Liskov Substitution Principle.</p>
-                          <ul radio-group="gehs5" class="radio-list">
-                            <li class="radio-list-item"><label><input class="radio-list-input" name="gehs5" type="radio"> True</label></li>
-                            <li class="radio-list-item"><label><input class="radio-list-input" name="gehs5" type="radio"> False</label></li>
+                          <ul radio-group="55ada" class="radio-list">
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="55ada" type="radio"> True</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="55ada" type="radio"> False</label></li>
                           </ul>
                           <div slot="answer">
                             <p>True.</p>
@@ -296,7 +301,8 @@ AcademicStaff academicStaff = staff; // Not OK
         <span class="hljs-comment">//...</span>
     }
 }
-</code></pre><img src="/se-book/principles/interfaceSegregationPrinciple/images/payroll.png" height="200">
+</code></pre>
+                  <img src="/se-book/principles/interfaceSegregationPrinciple/images/payroll.png" height="200">
                   <p></p>
                 </tip-box>
               </div>
@@ -321,7 +327,8 @@ AcademicStaff academicStaff = staff; // Not OK
                   <li>Abstractions should not depend on details. Details should depend on abstractions.</li>
                 </ol>
                 <tip-box>
-                  <p>Example:</p><img src="/se-book/principles/dependencyInversionPrinciple/images/payrollEmployee.png" height="130">
+                  <p>Example:</p>
+                  <img src="/se-book/principles/dependencyInversionPrinciple/images/payrollEmployee.png" height="130">
                   <p></p>
                   <p>In design (a), the higher level class <code>Payroll</code> depends on the lower level class <code>Employee</code>, a violation of DIP. In design (b), both <code>Payroll</code> and <code>Employee</code> depends on the Payee interface
                     (note that inheritance is a dependency).</p>
@@ -369,5 +376,8 @@ AcademicStaff academicStaff = staff; // Not OK
 </body>
 <script src="..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\..\markbind\js\setup.js"></script>
 </html>

@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Code Quality: [Guideline] Avoid Unsafe Shortcuts: Introduction"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

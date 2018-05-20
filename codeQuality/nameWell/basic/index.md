@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Code Quality: [Guideline] Name Well: Basic"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

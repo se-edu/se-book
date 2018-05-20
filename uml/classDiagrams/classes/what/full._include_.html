@@ -4,84 +4,155 @@
 </span></strong>
   </span>
 </p>
-<div>
-  <h4 id="what-two">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-</div>
-<div id="main">
+<div id="title-and-body">
   <div>
-    <p>The basic UML notations used to represent a <em>class</em>:<br></p><img src="/se-book/uml/classDiagrams/classes/what/images/basicNotation.png" height="100">
-    <p></p>
-    <tip-box>
-      <p>📦 A <code>Table</code> class shown in UML notation:</p><img src="/se-book/uml/classDiagrams/classes/what/images/operations.png" height="150">
+    <h4 id="what-two">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+  </div>
+  <div id="main">
+    <div>
+      <p>The basic UML notations used to represent a <em>class</em>:<br></p>
+      <img src="/se-book/uml/classDiagrams/classes/what/images/basicNotation.png" height="130">
       <p></p>
-      <panel type="seamless" header="The equivalent code">
-        <pre><code class="hljs java">
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Table</span></span>{
+      <tip-box>
+        <p>📦 A <code>Table</code> class shown in UML notation:</p>
+        <img src="/se-book/uml/classDiagrams/classes/what/images/operations.png" height="150">
+        <p></p>
+        <panel type="seamless" header="The equivalent code">
+          <table>
+            <tr>
+            
+              <td>
+                <p>Java ⤵️</p>
+                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Table</span></span>{
     
     Integer number;
     Chair[] chairs = <span class="hljs-keyword">null</span>;
     
     <span class="hljs-function">Integer <span class="hljs-title">getNumber</span><span class="hljs-params">()</span></span>{
-        ...
+        <span class="hljs-comment">//...</span>
     }
     
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setNumber</span><span class="hljs-params">(Integer n)</span></span>{
-        ...
+        <span class="hljs-comment">//...</span>
     }
 }
-
 </code></pre>
+                <p></p>
+              </td>
+            
+              <td valign="bottom">  <br><br></td>
+            
+              <td valign="bottom">
+                <p>Python ⤵️</p>
+                <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Table</span>:</span>
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+    self.number = <span class="hljs-number">0</span>
+    self.chairs = []
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_number</span><span class="hljs-params">(self)</span>:</span>
+    <span class="hljs-comment"># ...</span>
+  
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_number</span><span class="hljs-params">(self, n)</span>:</span>
+    <span class="hljs-comment"># ...</span>
+    
+</code></pre>
+                <p></p>
+              </td>
+            </tr>
+          </table>
+        </panel>
+      </tip-box>
+      <p><strong>The 'Operations' compartment and/or the 'Attributes' compartment may be omitted</strong> if such details are not important for the task at hand. 'Attributes' always appear above the 'Operations' compartment. All operations should be in one
+        compartment rather than each operation in a separate compartment. Same goes for attributes.</p>
+      <tip-box>
+        <img src="/se-book/uml/classDiagrams/classes/what/images/classes.png" height="100"></tip-box>
+      <p><strong>The <em>visibility</em> of attributes and operations is used to indicate the level of access allowed for each attribute or operation.</strong> The types of visibility and their exact meanings depend on the programming language used. Here
+        are some common visibilities and how they are indicated in a class diagram:</p>
+      <ul>
+        <li><code>+</code> : public</li>
+        <li><code>-</code> : private</li>
+        <li><code>#</code> : protected</li>
+        <li><code>~</code> : package private</li>
+      </ul>
+      <panel type="seamless" header="How visibilities map to programming language features">
+        <table class="markbind-table table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>visibility</th>
+              <th>Java</th>
+              <th>Python</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>-</code> private</td>
+              <td><code>private</code></td>
+              <td>at least two leading underscores (and at most one trailing underscores) in the name</td>
+            </tr>
+            <tr>
+              <td><code>#</code> protected</td>
+              <td><code>protected</code></td>
+              <td>one leading underscore in the name</td>
+            </tr>
+            <tr>
+              <td><code>+</code> public</td>
+              <td><code>public</code></td>
+              <td>all other cases</td>
+            </tr>
+            <tr>
+              <td><code>~</code> package private</td>
+              <td>default visibility</td>
+              <td>not applicable</td>
+            </tr>
+          </tbody>
+        </table>
+        <p></p>
       </panel>
-    </tip-box>
-    <p><strong>The 'Operations' compartment and/or the 'Attributes' compartment may be omitted</strong> if such details are not important for the task at hand. 'Attributes' always appear above the 'Operations' compartment. All operations should be in one
-      compartment rather than each operation in a separate compartment. Same goes for attributes.</p>
-    <tip-box><img src="/se-book/uml/classDiagrams/classes/what/images/classes.png" height="100"></tip-box>
-    <p><strong>The <em>visibility</em> of attributes and operations is used to indicate the level of access allowed for each attribute or operation.</strong> The types of visibility and their exact meanings depend on the programming language used. Here are
-      some common visibilities and how they are indicated in a class diagram:</p>
-    <ul>
-      <li><code>+</code> : <code>public</code></li>
-      <li><code>-</code> : <code>private</code></li>
-      <li><code>#</code> : <code>protected</code></li>
-      <li><code>~</code> : <code>package private</code></li>
-    </ul>
-    <tip-box>
-      <p>📦 <code>Table</code> class with visibilities shown:</p><img src="/se-book/uml/classDiagrams/classes/what/images/operationsVisibility.png" height="150">
       <p></p>
-    </tip-box>
-  </div>
-  <div>
+      <tip-box>
+        <p>📦 <code>Table</code> class with visibilities shown:</p>
+        <img src="/se-book/uml/classDiagrams/classes/what/images/operationsVisibility.png" height="150">
+        <p></p>
+      </tip-box>
+    </div>
     <div>
-      <panel header=":muscle: Exercises" expandable="">
-        <div>
-          <panel header=":lock::key: Which classes are correct?">
-            <question>
-              <p>Which of these follow the correct UML notation?</p><img src="/se-book/uml/classDiagrams/classes/what/images/chooseNotation.jpg" height="130">
-              <p></p>
-              <ul class="task-list">
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> 1</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> 2</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> 3</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> 4</li>
-                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> 5</li>
-              </ul>
-              <div slot="answer">
-                <ol>
-                  <li>Incorrect : <em>Attributes</em> compartment should be above the <em>Methods</em> compartment.</li>
-                  <li>Incorrect : All attributes should be inside the same compartment.</li>
-                  <li>Correct</li>
-                  <li>Correct : Both <em>Attributes</em> and <em>Methods</em> compartments can be omitted.</li>
-                  <li>Correct : The <em>Attributes</em> and <em>Methods</em> compartments can be empty.</li>
-                </ol>
-              </div>
-            </question>
-          </panel>
-        </div>
-        <div>
-          <panel header=":lock: Draw Car class">
-            <question>
-              <p>Draw a UML diagram to represent the Car class as given below. Include visibilities.</p>
-              <pre><code class="hljs java">
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span></span>{
+      <div>
+        <panel header=":muscle: Exercises" expandable="">
+          <div>
+            <panel header=":lock::key: Which classes are correct?">
+              <question>
+                <p>Which of these follow the correct UML notation?</p>
+                <img src="/se-book/uml/classDiagrams/classes/what/images/chooseNotation.jpg" height="130">
+                <p></p>
+                <ul class="task-list">
+                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> 1</li>
+                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> 2</li>
+                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> 3</li>
+                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> 4</li>
+                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> 5</li>
+                </ul>
+                <div slot="answer">
+                  <ol>
+                    <li>Incorrect : <em>Attributes</em> compartment should be above the <em>Methods</em> compartment.</li>
+                    <li>Incorrect : All attributes should be inside the same compartment.</li>
+                    <li>Correct</li>
+                    <li>Correct : Both <em>Attributes</em> and <em>Methods</em> compartments can be omitted.</li>
+                    <li>Correct : The <em>Attributes</em> and <em>Methods</em> compartments can be empty.</li>
+                  </ol>
+                </div>
+              </question>
+            </panel>
+          </div>
+          <div>
+            <panel header=":lock: Draw Car class">
+              <question>
+                <p>Draw a UML diagram to represent the <code>Car</code> class as given below. Include visibilities.</p>
+                <tabs>
+                
+                  <tab header="Java">
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span></span>{
     
     Engine engine;
     <span class="hljs-keyword">private</span> List&lt;Wheel&gt;[] wheels = <span class="hljs-keyword">null</span>;
@@ -95,13 +166,32 @@
         ...
     }
 }
-
 </code></pre>
-              <p></p>
-            </question>
-          </panel>
-        </div>
-      </panel>
+                  </tab>
+                
+                  <tab header="Python">
+                    <p>💡 You may omit <code>self</code> from method signatures in the class diagram.</p>
+                    <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span>:</span>
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, model)</span>:</span>
+    self._engine = <span class="hljs-keyword">None</span> <span class="hljs-comment"># type: Engine</span>
+    self.__wheels = []  <span class="hljs-comment"># type: a list of Wheel objects</span>
+    self.model = model  <span class="hljs-comment"># type: string</span>
+    
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">drive</span><span class="hljs-params">(self, speed)</span>:</span> <span class="hljs-comment"># speed is an int</span>
+      self.move(speed)
+    
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__move</span><span class="hljs-params">(self, speed)</span>:</span>
+      <span class="hljs-keyword">pass</span>
+</code></pre>
+                  </tab>
+                </tabs>
+                <hr>
+              </question>
+            </panel>
+          </div>
+        </panel>
+      </div>
     </div>
   </div>
 </div>

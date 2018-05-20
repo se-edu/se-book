@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Software Design Patterns: More: Other Types of Patterns"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

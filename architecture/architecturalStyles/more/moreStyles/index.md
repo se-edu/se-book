@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Architectural Styles: More: More Architectural Styles"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

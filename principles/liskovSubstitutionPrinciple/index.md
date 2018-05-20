@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Principles: Liskov Substitution Principle"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

@@ -12,21 +12,24 @@
 
 Do not write comments as if they are private notes to self. Instead, write them well enough to be understood by another programmer. One type of comments that is almost always useful is the _header comment_ that you write for a class or an operation to explain its purpose.
 
-![][Bad] %%Reason: this comment will only make sense to the person who wrote it%%
-```java
-// a quick trim function used to fix bug I detected overnight
-void trimInput(){
-    ....
-}
-```
+<tip-box> 
 
-![][Good]
-```java
-/** Trims the input of leading and trailing spaces */
-void trimInput(){
-    ....
-}
-```
+:package: Examples:
+
+<tabs> 
+  <tab header="Java">
+
+<include src="example-java.md" />
+
+  </tab>
+  <tab header="Python">
+
+<include src="example-python.md" />
+
+</tab>
+</tabs>
+
+</tip-box>
 
 [Bad]: {{baseUrl}}/images/Bad.png "Bad"
 [Good]: {{baseUrl}}/images/Good.png "Good"

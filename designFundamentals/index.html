@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -45,8 +46,7 @@
               <p><strong><em>Control abstraction</em> abstracts away details of the actual control flow to focus on tasks at a simplified level.</strong></p>
               <tip-box>
                 <p>📦 <code>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p>
-                <p></p>
-              </tip-box>For example,
+              </tip-box>
               <p><strong>Abstraction can be applied repeatedly to obtain progressively <em>higher levels of abstractions</em>.</strong></p>
               <tip-box>
                 <p>📦 An example of different levels of data abstraction: a <code>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a bit.</p>
@@ -81,7 +81,8 @@
                 <li><strong>Testing and reuse of the module is harder</strong> due to its dependence on other modules.</li>
               </ul>
               <tip-box>
-                <p>📦 In the example below, design <code>A</code> appears to have a more coupling between the components than design <code>B</code>.</p><img src="/se-book/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220">
+                <p>📦 In the example below, design <code>A</code> appears to have a more coupling between the components than design <code>B</code>.</p>
+                <img src="/se-book/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220">
                 <p></p>
               </tip-box>
             </div>
@@ -92,7 +93,8 @@
                     <panel header=":lock::key: Coupling levels of alternative designs">
                       <question has-input="true">
                         <p>Discuss the coupling levels of alternative designs <em>x</em> and <em>y</em>.</p>
-                        <tip-box><img src="/se-book/designFundamentals/coupling/what/images/alternativeDesigns.png" height="180">
+                        <tip-box>
+                          <img src="/se-book/designFundamentals/coupling/what/images/alternativeDesigns.png" height="180">
                           <p></p>
                         </tip-box>
                         <div slot="answer">
@@ -165,8 +167,7 @@
               <tip-box>
                 <p>📦 If <code>Foo</code> class calls the method <code>Bar#read()</code>, <code>Foo</code> is coupled to <code>Bar</code> because a change to <code>Bar</code> can potentially (but not always) require a change in the <code>Foo</code> class
                   <span class="dimmed"> e.g. if the signature of the <code>Bar#read()</code> is changed, <code>Foo</code> needs to change as well, but a change to the <code>Bar#write()</code> method may not require a change in the <code>Foo</code> class because <code>Foo</code> does not call <code>Bar#write()</code></span>.</p>
-                <panel
-                  type="seamless" header="%%code for the above example%%">
+                <panel type="seamless" header="%%code for the above example%%">
                   <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
     ...
     <span class="hljs-keyword">new</span> Bar().read();
@@ -183,76 +184,76 @@
     }
 }
 </code></pre>
-        </panel>
-        </tip-box>
-        <tip-box>
-          <p>📦 Some examples of coupling: <code>A</code> is coupled to <code>B</code> if,</p>
-          <ul>
-            <li><code>A</code> has access to the internal structure of <code>B</code> (this results in a very high level of coupling)</li>
-            <li><code>A</code> and <code>B</code> depend on the same global variable</li>
-            <li><code>A</code> calls <code>B</code></li>
-            <li><code>A</code> receives an object of <code>B</code> as a parameter or a return value</li>
-            <li><code>A</code> inherits from <code>B</code></li>
-            <li><code>A</code> and <code>B</code> are required to follow the same data format or communication protocol</li>
-          </ul>
-        </tip-box>
-        </div>
-        <div>
-          <div>
-            <panel header=":muscle: Exercises" expandable="">
+                </panel>
+              </tip-box>
+              <tip-box>
+                <p>📦 Some examples of coupling: <code>A</code> is coupled to <code>B</code> if,</p>
+                <ul>
+                  <li><code>A</code> has access to the internal structure of <code>B</code> (this results in a very high level of coupling)</li>
+                  <li><code>A</code> and <code>B</code> depend on the same global variable</li>
+                  <li><code>A</code> calls <code>B</code></li>
+                  <li><code>A</code> receives an object of <code>B</code> as a parameter or a return value</li>
+                  <li><code>A</code> inherits from <code>B</code></li>
+                  <li><code>A</code> and <code>B</code> are required to follow the same data format or communication protocol</li>
+                </ul>
+              </tip-box>
+            </div>
+            <div>
               <div>
-                <panel header=":lock::key: Which indicate coupling?">
-                  <question>
-                    <p>Which of these indicate a coupling between components A and B?</p>
-                    <ul class="task-list">
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. component A has access to internal structure of component B.</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. component A and B are written by the same developer.</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. component A calls component B.</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. component A receives an object of component B as a parameter.</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. component A inherits from component B.</li>
-                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. components A and B have to follow the same data format or communication protocol.</li>
-                    </ul>
-                    <div slot="answer">
-                      <p>(a)<s>(b)</s>(c)(d)(e)(f)</p>
-                      <p>Explanation: Being written by the same developer does not imply a coupling.</p>
-                    </div>
-                  </question>
+                <panel header=":muscle: Exercises" expandable="">
+                  <div>
+                    <panel header=":lock::key: Which indicate coupling?">
+                      <question>
+                        <p>Which of these indicate a coupling between components A and B?</p>
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. component A has access to internal structure of component B.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. component A and B are written by the same developer.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. component A calls component B.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. component A receives an object of component B as a parameter.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. component A inherits from component B.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. components A and B have to follow the same data format or communication protocol.</li>
+                        </ul>
+                        <div slot="answer">
+                          <p>(a)<s>(b)</s>(c)(d)(e)(f)</p>
+                          <p>Explanation: Being written by the same developer does not imply a coupling.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
                 </panel>
               </div>
-            </panel>
+            </div>
           </div>
-        </div>
-        </div>
-  </panel>
-  </div>
-  <div>
-    <div>
-      <h4 id="types-of-coupling-three">Types of Coupling <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
-    </div>
-    <tip-box>
-      <div>
-        <p>🏆 Can identify types of coupling <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+        </panel>
       </div>
-    </tip-box>
-    <panel type="seamless" header=" %%- - - - - - - - - -%%">
       <div>
         <div>
-          <p>Some examples of different coupling types:</p>
-          <ul>
-            <li><strong>Content coupling</strong>: one module modifies or relies on the internal workings of another module <span class="dimmed"> e.g., accessing local data of another module</span></li>
-            <li><strong>Common/Global coupling</strong>: two modules share the same global data</li>
-            <li><strong>Control coupling</strong>: one module controlling the flow of another, by passing it information on what to do <span class="dimmed"> e.g., passing a flag</span></li>
-            <li><strong>Data coupling</strong>: one module sharing data with another module <span class="dimmed"> e.g. via passing parameters</span></li>
-            <li><strong>External coupling</strong>: two modules share an externally imposed convention <span class="dimmed"> e.g., data formats, communication protocols, device interfaces</span>.</li>
-            <li><strong>Subclass coupling</strong>: a class inherits from another class. Note that a child class is coupled to the parent class but not the other way around.</li>
-            <li><strong>Temporal coupling</strong>: two actions are bundled together just because they happen to occur at the same time <span class="dimmed"> e.g. extracting a contiguous block of code as a method although the code block contains statements unrelated to each other</span></li>
-          </ul>
+          <h4 id="types-of-coupling-three">Types of Coupling <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
         </div>
-        <div></div>
+        <tip-box>
+          <div>
+            <p>🏆 Can identify types of coupling <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
+          </div>
+        </tip-box>
+        <panel type="seamless" header=" %%- - - - - - - - - -%%">
+          <div>
+            <div>
+              <p>Some examples of different coupling types:</p>
+              <ul>
+                <li><strong>Content coupling</strong>: one module modifies or relies on the internal workings of another module <span class="dimmed"> e.g., accessing local data of another module</span></li>
+                <li><strong>Common/Global coupling</strong>: two modules share the same global data</li>
+                <li><strong>Control coupling</strong>: one module controlling the flow of another, by passing it information on what to do <span class="dimmed"> e.g., passing a flag</span></li>
+                <li><strong>Data coupling</strong>: one module sharing data with another module <span class="dimmed"> e.g. via passing parameters</span></li>
+                <li><strong>External coupling</strong>: two modules share an externally imposed convention <span class="dimmed"> e.g., data formats, communication protocols, device interfaces</span>.</li>
+                <li><strong>Subclass coupling</strong>: a class inherits from another class. Note that a child class is coupled to the parent class but not the other way around.</li>
+                <li><strong>Temporal coupling</strong>: two actions are bundled together just because they happen to occur at the same time <span class="dimmed"> e.g. extracting a contiguous block of code as a method although the code block contains statements unrelated to each other</span></li>
+              </ul>
+            </div>
+            <div></div>
+          </div>
+        </panel>
       </div>
-    </panel>
-  </div>
-  </div>
+    </div>
   </panel>
   <h2 id="cohesion">Cohesion</h2>
   <panel header="================================================================" type="seamless" alt="cohesion">
@@ -374,5 +375,8 @@
 </body>
 <script src="..\markbind\js\vue.min.js"></script>
 <script src="..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\markbind\js\setup.js"></script>
 </html>

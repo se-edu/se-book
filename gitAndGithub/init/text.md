@@ -6,7 +6,7 @@
 
 <div id="title">
 
-#### Init :one: [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/gitAndGithub/init/index.html)
+#### Init :one: [{{glyphicon_new_window}}]({{baseUrl}}/gitAndGithub/init/index.html)
 
 </div>
 

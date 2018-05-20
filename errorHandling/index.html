@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -56,7 +57,7 @@
           <div>
             <div>
               <p><strong>Exceptions are used to deal with <em>'unusual' but not entirely unexpected</em> situations</strong> that the program might encounter at run time.</p>
-              <tip-box type="primary">
+              <tip-box type="definition">
                 <div>
                   <p><strong>Exception</strong>:</p>
                   <blockquote>
@@ -88,14 +89,28 @@
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p><strong>Most languages allow a method to encapsulate the unusual situation in an Exception object and 'throw' that object so that another piece of code can 'catch' it and deal with it.</strong> This is especially useful when code segment
-                that encountered the unusual situation does not know how to deal with it.</p>
-              <p><strong>Exception objects can propagate up the method call hierarchy until it is dealt with.</strong> Usually, an exception thrown by a method is caught by the caller method. If the called method does not know how to deal with the exception
-                it caught, it will throw the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the method call stack until it is received by the main method and thrown
-                to the runtime, thus halting the system.</p>
+              <p><strong>Most languages allow a method/function to encapsulate the unusual situation in an Exception object and 'throw'/'raise' that object so that another piece of code can 'catch' it and deal with it.</strong> This is especially useful
+                when code segment that encountered the unusual situation does not know how to deal with it.</p>
+              <p><strong>Exception objects can propagate up the function call hierarchy until it is dealt with.</strong> Usually, an exception thrown by a function is caught by the caller function. If the called function does not know how to deal with the
+                exception it caught, it can throw/raise the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the
+                <tooltip content="the hieararchy of function calls">function call stack</tooltip> until it is received by the main function and thrown to the runtime, thus halting the system.</p>
               <tip-box>
-                <p>📦 In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code> method inside a <code>try{ }</code>                  block and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p><img src="/se-book/errorHandling/exceptions/how/images/processInput.png" height="320">
-                <p></p>
+                <tabs>
+                
+                  <tab header="Java">
+                    <p>📦 In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code> method inside a <code>try{ }</code>                      block and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p>
+                    <img src="/se-book/errorHandling/exceptions/how/images/processInput.png" width="400">
+                    <p></p>
+                    <p></p>
+                  </tab>
+                
+                  <tab header="Python">
+                    <p>📦 In the code given below, <code>process_array</code> function can potentially raise a <code>ValueError</code> exception. Because of that, <code>process_input</code> function invokes <code>process_array</code> function inside a <code>try</code>                      clause and has a <code>except</code> clause to specify what to do if the exception is actually raised.</p>
+                    <img src="/se-book/errorHandling/exceptions/how/images/example-python.png" width="400">
+                    <p></p>
+                  </tab>
+                </tabs>
+                <hr>
               </tip-box>
               <p>Advantages of exception handling in this way:</p>
               <ul>
@@ -121,11 +136,9 @@
                           <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Exceptions allow us to separate normal code from error handling code.</li>
                           <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Exceptions can prevent problems that happen in the environment.</li>
                           <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Exceptions allow us to handle in one location an error raised in another location.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Exceptions allow us to handle in one location similar errors arising in many different locations.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Exceptions can be used to specify potential errors as a part of the method signature</li>
                         </ul>
                         <div slot="answer">
-                          <p>(a) (c) (d) (e)</p>
+                          <p>(a) (c)</p>
                           <p>Explanation: Exceptions cannot <em>prevent</em> problems in the environment. They can only be used to handle and recover from such problems.</p>
                         </div>
                       </question>
@@ -280,11 +293,11 @@
                     <panel header=":lock::key: Assertions failure in Calculator">
                       <question>
                         <p>A Calculator program crashes with an ‘assertion failure’ message when you try to find the square root of a negative number.</p>
-                        <ul radio-group="t5arr" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="t5arr" type="radio"> a. This is a correct use of assertions.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="t5arr" type="radio"> b. The application should have terminated with an exception instead.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="t5arr" type="radio"> c. The program has a bug.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="t5arr" type="radio"> d. All statements above are incorrect.</label></li>
+                        <ul radio-group="f7dad" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="f7dad" type="radio"> a. This is a correct use of assertions.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="f7dad" type="radio"> b. The application should have terminated with an exception instead.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="f7dad" type="radio"> c. The program has a bug.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="f7dad" type="radio"> d. All statements above are incorrect.</label></li>
                         </ul>
                         <div slot="answer">
                           <p>(c)</p>
@@ -339,7 +352,8 @@
               <div v-closeable="" alt="blackbox photo">
                 <tip-box>
                   <p>💡 <strong>A log file is like the <tooltip content="flight data recorder">black box</tooltip> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.</p>
-                  <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br><sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub></p>
+                  <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br>
+                    <sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub></p>
                 </tip-box>
               </div>
             </div>
@@ -350,11 +364,11 @@
                     <panel header=":lock::key: Logging vs blackbox">
                       <question>
                         <p>Why is logging like having the 'black box' in an airplane?</p>
-                        <ul radio-group="v8spp" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="v8spp" type="radio"> a. Because they can be used to find more info about how the system behaved before/during an ‘incident’.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="v8spp" type="radio"> b. Because they are hidden from the view of normal users.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="v8spp" type="radio"> c. Because they both can be in hardcopy form or digital form.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="v8spp" type="radio"> d. Because they are hard to open by normal users.</label></li>
+                        <ul radio-group="6f5b0" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> a. Because they can be used to find more info about how the system behaved before/during an ‘incident’.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> b. Because they are hidden from the view of normal users.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> c. Because they both can be in hardcopy form or digital form.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> d. Because they are hard to open by normal users.</label></li>
                         </ul>
                         <div slot="answer">
                           <p>(a)</p>
@@ -487,7 +501,8 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
             <div>
               <p>Consider two classes, <code>Account</code> and <code>Guarantor</code>, with an association as shown in the following diagram:</p>
               <tip-box>
-                <p>Example:</p><img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50">
+                <p>Example:</p>
+                <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50">
                 <p></p>
                 <p>Here, the association is compulsory i.e. an <code>Account</code> object should always be linked to a <code>Guarantor</code>. One way to implement this is to simply use a reference variable, like this:</p>
                 <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
@@ -534,7 +549,8 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
                         <ul>
                           <li>restricts the maximum number of Accounts to 8</li>
                           <li>avoids adding duplicate Accounts</li>
-                        </ul><img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/managerAccount.jpg" height="55">
+                        </ul>
+                        <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/managerAccount.jpg" height="55">
                         <p></p>
                         <div slot="answer">
                           <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.*;
@@ -565,11 +581,10 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
                     <panel header=":lock::key: Implement `Marriage`">
                       <question has-input="true">
                         <p>Implement the classes defensively with appropriate references and operations to establish the association among the classes. Follow the defensive coding approach. Let the <code>Marriage</code> class handle setting/removal of reference.</p>
-                        <img
-                          src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/manMarriageWoman.jpg" height="55">
-                          <p></p>
-                          <div slot="answer">
-                            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Marriage</span> </span>{
+                        <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/manMarriageWoman.jpg" height="55">
+                        <p></p>
+                        <div slot="answer">
+                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Marriage</span> </span>{
     <span class="hljs-keyword">private</span> Man husband = <span class="hljs-keyword">null</span>;
     <span class="hljs-keyword">private</span> Woman wife = <span class="hljs-keyword">null</span>;
 
@@ -616,15 +631,15 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     }
 } 
 </code></pre>
-                          </div>
+                        </div>
                       </question>
                     </panel>
                   </div>
                   <div>
                     <panel header=":lock::key: Immutable `Account` class">
                       <question has-input="true">
-                        <p>Give a suitable defensive implementation to the <code>Account</code> class in the following class diagram. Note that “{immutable}” means once the association is formed, it cannot be changed.</p><img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png"
-                          height="80">
+                        <p>Give a suitable defensive implementation to the <code>Account</code> class in the following class diagram. Note that “{immutable}” means once the association is formed, it cannot be changed.</p>
+                        <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png" height="80">
                         <p></p>
                         <div slot="answer">
                           <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
@@ -645,7 +660,8 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
                   </div>
                   <div>
                     <panel header=":lock::key: Is this defensive?">
-                      <question><img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45">
+                      <question>
+                        <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45">
                         <p></p>
                         <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">City</span></span>{
     Country country;
@@ -656,9 +672,9 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
 }
 </code></pre>
                         <p>This is a defensive implementation of the association.</p>
-                        <ul radio-group="gyii2" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="gyii2" type="radio"> True</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="gyii2" type="radio"> False</label></li>
+                        <ul radio-group="ac03f" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="ac03f" type="radio"> True</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="ac03f" type="radio"> False</label></li>
                         </ul>
                         <div slot="answer">
                           <p>False</p>
@@ -686,8 +702,8 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
           <div>
             <div>
               <p>Consider the association given below. A defensive implementation requires to ensure a <code>MinedCell</code> cannot exist without a <code>Mine</code> and vice versa which requires simultaneous object creation. However, Java can only create
-                one object at a time. Given below are two alternatives implementations, both of which violate the multiplicity for a short period of time.</p><img src="/se-book/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png"
-                height="50">
+                one object at a time. Given below are two alternatives implementations, both of which violate the multiplicity for a short period of time.</p>
+              <img src="/se-book/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png" height="50">
               <p></p>
               <p>Option 1:</p>
               <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
@@ -731,7 +747,8 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
         <panel type="seamless" header=" %%- - - - - - - - - -%%">
           <div>
             <div>
-              <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
+              <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p>
+              <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
               <p></p>
               <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
     Woman girlfriend;
@@ -764,7 +781,8 @@ james.setGirlfriend(jean);
 jean.setBoyfriend(yong);  
 </code></pre>
               <p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this &quot;love triangle&quot;. In such a situation, we say that <em>the referential integrity has been violated</em>.
-                It simply means <em>there is an inconsistency in object references</em>.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
+                It simply means <em>there is an inconsistency in object references</em>.</p>
+              <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
               <p></p>
               <p>One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.</p>
               <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
@@ -818,7 +836,8 @@ jean.setBoyfriend(yong);
                         <tip-box>
                           <p>Feature ID: multiplayer<br> Description: A minefield is divided into mine regions. Each region is assigned to a single player. Players can swap regions. To win the game, all regions must be cleared.</p>
                         </tip-box>
-                        <p>Given below is an extract from our class diagram.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100">
+                        <p>Given below is an extract from our class diagram.</p>
+                        <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100">
                         <p></p>
                         <p>Minimally, this can be implemented like this.</p>
                         <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Player</span></span>{
@@ -925,7 +944,8 @@ r1.setPlayer(p2);
                     <panel header=":lock::key: Bidirectional association between `Bank` and `Account`">
                       <question has-input="true">
                         <p>Implement this bidirectional association. Note that the <code>Bank</code> uses <code>accNumber</code> attribute to uniquely identify an <code>Account</code> object. Assume the <code>Bank</code> class is responsible for maintaining
-                          the links between objects.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60">
+                          the links between objects.</p>
+                        <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60">
                         <p></p>
                         <div slot="answer">
                           <p>The code below contains a method in the <code>Bank</code> class to create an account; the bank field in the new account is thereby filled by the bank creating it.</p>
@@ -989,13 +1009,16 @@ r1.setPlayer(p2);
         favoriteTeacher = t;
     }
 }
-</code></pre><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80">
+</code></pre>
+                        <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80">
                         <p></p>
-                        <p>(b) In terms of maintaining referential integrity in the implementation, what is the difference between the following two diagrams?</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png"
-                          height="80">
-                        <p></p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWomanAssoc.png" height="60">
+                        <p>(b) In terms of maintaining referential integrity in the implementation, what is the difference between the following two diagrams?</p>
+                        <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80">
                         <p></p>
-                        <p>(c) Show a defensive implementation of the <code>remove(Member m)</code> of the <code>Club</code> class given below.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60">
+                        <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWomanAssoc.png" height="60">
+                        <p></p>
+                        <p>(c) Show a defensive implementation of the <code>remove(Member m)</code> of the <code>Club</code> class given below.</p>
+                        <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60">
                         <p></p>
                         <div slot="answer">
                           <p>(a) Yes. Each links is mutable and unidirectional. A simple reference variable is suitable to hold the link.</p>
@@ -1023,9 +1046,9 @@ r1.setPlayer(p2);
                     <panel header=":lock::key: True or False?">
                       <question>
                         <p>Bidirectional associations, if not implemented properly, can result in referential integrity violations.</p>
-                        <ul radio-group="bjcp6" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="bjcp6" type="radio"> True</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="bjcp6" type="radio"> False</label></li>
+                        <ul radio-group="719bb" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="719bb" type="radio"> True</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="719bb" type="radio"> False</label></li>
                         </ul>
                         <div slot="answer">
                           <p>True</p>
@@ -1144,5 +1167,8 @@ r1.setPlayer(p2);
 </body>
 <script src="..\markbind\js\vue.min.js"></script>
 <script src="..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\markbind\js\setup.js"></script>
 </html>

@@ -17,8 +17,12 @@ Implementation is similar to that of composition except the _containee_ object c
 :package: Example:
 
 <img src="{{baseUrl}}/oopImplementation/aggregation/images/carPerson.png" height="40" />
-<p/>
 
+<table> 
+<tr>
+  <td valign="top">
+
+Java :arrow_heading_down:
 ```java
 class Car {
     Person driver;
@@ -28,6 +32,25 @@ class Car {
     }
 }
 ```
+  </td>
+  <td>&nbsp;&nbsp;<br><br></td>
+  <td valign="top">
+
+Python :arrow_heading_down:
+```python
+class Car:
+  
+  def __init__(self):
+    self.__driver = None
+    
+  def drive(self, person):
+    self.__driver = person
+```
+  </td>
+</tr>
+</table>
+
+
 
 </tip-box>
 

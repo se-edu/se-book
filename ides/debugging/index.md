@@ -1,3 +1,7 @@
+<frontmatter>
+title: "IDEs: Debugging"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

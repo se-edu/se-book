@@ -22,7 +22,7 @@
 
 * System: <popover effect="fade" placement="right" content="Automated Teller Machine">
 ATM </popover>
-Actor: Customer
+* Actor: Customer
 * Use Case: Check account balance
   1. User inserts an ATM card
   2. ATM prompts for PIN

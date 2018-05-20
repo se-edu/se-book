@@ -19,22 +19,31 @@
         <li>improve performance (sometimes, simpler code runs faster than complex code because simpler code is easier for the compiler to optimize).</li>
       </ul>
     </tip-box>
-    <p>Given below are two common refactorings (taken from
-      <trigger trigger="click" for="modal:refactoring-catalog-what"> refactoring-catalog </trigger>).</p>
-    <modal title="**Refactoring Catalog**" id="modal:refactoring-catalog-what">
+    <p>Given below are two common refactorings (
+      <trigger trigger="click" for="modal:refactoring-catalog-what">more</trigger>).</p>
+    <modal title="**Refactoring Catalogs**" id="modal:refactoring-catalog-what">
       <div>
-        <p><a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring:
-          <a
-            href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a>
-        </p>
+        <ul>
+          <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring:
+            <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
+          <li>Python: <a href="https://refactoring.guru/refactoring/catalog">https://refactoring.guru/refactoring/catalog</a> -- A catalog of refactorings applicable to Python code.</li>
+        </ul>
       </div>
     </modal>
     <tip-box>
       <p>Refactoring Name: <strong>Consolidate Duplicate Conditional Fragments</strong></p>
       <p>Situation: The same fragment of code is in all branches of a conditional expression.</p>
       <p>Method: Move it outside of the expression.</p>
-      <p>Example:</p>
-      <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isSpecialDeal()) {
+      <p>📦 Example:</p>
+      <tabs>
+      
+        <tab header="Java">
+          <div>
+            <table>
+              <tr>
+              
+                <td valign="top">
+                  <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isSpecialDeal()) {
     total = price * <span class="hljs-number">0.95</span>;
     send();
 } <span class="hljs-keyword">else</span> {
@@ -42,21 +51,72 @@
     send();
 }
 </code></pre>
-      <p>⤵️</p>
-      <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isSpecialDeal()){
+                  <p></p>
+                </td>
+              
+                <td valign="center"> → </td>
+              
+                <td valign="top">
+                  <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isSpecialDeal()){
     total = price * <span class="hljs-number">0.95</span>;
 } <span class="hljs-keyword">else</span> {
     total = price * <span class="hljs-number">0.98</span>;
 }
 send();
+
 </code></pre>
+                  <p></p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </tab>
+      
+        <tab header="Python">
+          <div>
+            <table>
+              <tr>
+              
+                <td valign="top">
+                  <pre><code class="hljs python"><span class="hljs-keyword">if</span> is_special_deal:
+    total = price * <span class="hljs-number">0.95</span>
+    send()
+<span class="hljs-keyword">else</span>:
+    total = price * <span class="hljs-number">0.98</span>
+    send()
+</code></pre>
+                  <p></p>
+                </td>
+              
+                <td valign="center"> → </td>
+              
+                <td valign="top">
+                  <pre><code class="hljs python"><span class="hljs-keyword">if</span> is_special_deal:
+    total = price * <span class="hljs-number">0.95</span>
+<span class="hljs-keyword">else</span>:
+    total = price * <span class="hljs-number">0.98</span>
+    
+send()
+</code></pre>
+                  <p></p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </tab>
+      </tabs>
+      <hr>
     </tip-box>
     <tip-box>
       <p>Refactoring Name: <strong>Extract Method</strong></p>
       <p>Situation: You have a code fragment that can be grouped together.</p>
       <p>Method: Turn the fragment into a method whose name explains the purpose of the method.</p>
-      <p>Example:</p>
-      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
+      <p>📦 Example:</p>
+      <tabs>
+      
+        <tab header="Java">
+          <div>
+            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
     printBanner();
 
     <span class="hljs-comment">//print details</span>
@@ -64,8 +124,8 @@ send();
     System.out.println(<span class="hljs-string">"amount	"</span> + getOutstanding());
 }
 </code></pre>
-      <p>⤵️</p>
-      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
+            <p>⤵️</p>
+            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
     printBanner();
     printDetails(getOutstanding());
 }
@@ -75,6 +135,31 @@ send();
     System.out.println(<span class="hljs-string">"amount	"</span> + outstanding);
 }
 </code></pre>
+          </div>
+        </tab>
+      
+        <tab header="Python">
+          <div>
+            <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span>
+    print_banner()
+
+    //<span class="hljs-keyword">print</span> details
+    print(<span class="hljs-string">"name:	"</span> + name)
+    print(<span class="hljs-string">"amount	"</span> + get_outstanding())
+</code></pre>
+            <p>⤵️</p>
+            <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span>
+    print_banner()
+    print_details(get_outstanding())
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_details</span><span class="hljs-params">(amount)</span>:</span>
+    print(<span class="hljs-string">"name:	"</span> + name)
+    print(<span class="hljs-string">"amount	"</span> + amount)
+</code></pre>
+          </div>
+        </tab>
+      </tabs>
+      <hr>
     </tip-box>
     <tip-box>
       <p>💡 Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>

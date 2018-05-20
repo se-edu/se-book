@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Book - Software Engineering for Self-Directed Learners"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

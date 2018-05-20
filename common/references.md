@@ -1,3 +1,7 @@
+<frontmatter>
+title: "References"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">
@@ -24,7 +28,8 @@
 
   <span id="refactoring-catalog">
   
-  [http://refactoring.com/catalog/](http://refactoring.com/catalog/) - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/#refactoring)
+  * Java: [http://refactoring.com/catalog/](http://refactoring.com/catalog/) - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/#refactoring)
+  * Python: [https://refactoring.guru/refactoring/catalog](https://refactoring.guru/refactoring/catalog) -- A catalog of refactorings applicable to Python code.
   
   </span>
 

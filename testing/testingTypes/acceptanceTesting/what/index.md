@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Testing Types: Acceptance Testing: What"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

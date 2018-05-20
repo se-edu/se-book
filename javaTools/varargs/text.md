@@ -6,7 +6,7 @@
 
 <div id="title">
 
-#### Varargs :three:  [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/javaTools/varargs/index.html)
+#### Varargs :three:  [{{glyphicon_new_window}}]({{baseUrl}}/javaTools/varargs/index.html)
 
 </div>
 

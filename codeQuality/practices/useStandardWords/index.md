@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Coding Best Practices: [Practice] Use Standard Words"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

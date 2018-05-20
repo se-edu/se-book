@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -18,7 +19,7 @@
   <div id="main">
     <div>
       <div>
-        <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"><a href="/se-book/testing/testAutomation/what/index.html"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></h4>
+        <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"> <a href="/se-book/testing/testAutomation/what/index.html"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></h4>
       </div>
       <tip-box>
         <div>
@@ -29,6 +30,7 @@
         <div>
           <div>
             <tabs>
+            
               <tab header=":abc:">
                 <p><strong>An automated test case can be run programmatically and the result of the test case (pass or fail) is determined programmatically.</strong> Compared to manual testing, automated testing reduces the effort required to run tests repeatedly
                   and increases precision of testing (because manual testing is susceptible to human errors).</p>
@@ -36,7 +38,9 @@
                   <hr>
                 </p>
               </tab>
-              <tab header=":tv:"><iframe width="560" height="315" src="https://www.youtube.com/embed/RbSlW8jZFe8?end=79&version=3" frameborder="0" allowfullscreen></iframe>
+            
+              <tab header=":tv:">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RbSlW8jZFe8?end=79&version=3" frameborder="0" allowfullscreen></iframe>
                 <p>
                   <hr>
                 </p>
@@ -49,9 +53,7 @@
                 <p><strong>Side readings:</strong></p>
                 <ul>
                   <li>[Quora post] <a href="href=%22http://www.quora.com/What-are-good-ways-to-avoid-bugs-while-programming/answer/Mattias-Petter-Johansson">What is the best way to avoid bugs</a></li>
-                  <li>[Web article] <a href="http://blog.goyello.com/2011/10/06/three-pillars-of-unit-tests">The three pillars of unit testing</a> - A short article about what makes a good unit test.</li>
                   <li>[Quora post] <a href="http://www.quora.com/What-kind-of-automated-testing-should-a-startup-have-from-the-beginning-through-the-first-six-months-of-live-operation/answer/Zach-Brock">Is automated testing relevant to startups?</a></li>
-                  <li><a href="http://avandeursen.com/2014/02/22/gotofail-security/">Learning from Apple’s #gotofail Security Bug</a> - How unit testing (and other good coding practices) could have prevented a major security bug.</li>
                 </ul>
               </panel>
             </div>
@@ -61,7 +63,7 @@
     </div>
     <div>
       <div>
-        <h4 id="automated-testing-of-cli-apps-one">Automated Testing of CLI Apps <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"><a href="/se-book/testing/testAutomation/testingTextUis/index.html"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></h4>
+        <h4 id="automated-testing-of-cli-apps-one">Automated Testing of CLI Apps <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"> <a href="/se-book/testing/testAutomation/testingTextUis/index.html"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></h4>
       </div>
       <tip-box>
         <div>
@@ -71,12 +73,12 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p><strong>A simple way to semi-automate testing of a <trigger for="pop:cli">CLI</trigger> app is using input/output re-direction.</strong></p>
+            <p><strong>A simple way to semi-automate testing of a CLI(Command Line Interface) app is by using input/output re-direction.</strong></p>
             <ul>
-              <li><strong>First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.</strong><br> e.g., <code>java AddressBook &lt; input.txt &gt; output.txt</code></li>
-              <li><strong>Next, we compare the actual output file with another file containing the expected output.</strong><br> e.g., <code>FC output.txt expected.txt</code></li>
+              <li>First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.</li>
+              <li>Next, we compare the actual output file with another file containing the expected output.</li>
             </ul>
-            <p>Let us assume we are testing a CLI app called <code>AddressBook</code> (Example: <a href="https://github.com/nus-cs2103-AY1718S2/addressbook-level1">se-edu/addressbook-level1</a>). Here are the detailed steps:</p>
+            <p>Let us assume we are testing a CLI app called <code>AddressBook</code>. Here are the detailed steps:</p>
             <ol>
               <li>
                 <p>Store the test input in the text file <code>input.txt</code>.</p>
@@ -101,9 +103,18 @@ Invalid command format: add
                 <p>Run the program as given below, which will redirect the text in <code>input.txt</code> as the input to <code>AddressBook</code> and similarly, will redirect the output of AddressBook to a text file <code>output.txt</code>. <span class="dimmed">Note that this does not require any code changes to <code>AddressBook</code>.</span></p>
                 <pre><code class="hljs sh">java AddressBook &lt; input.txt &gt; output.txt
 </code></pre>
+                <ul>
+                  <li>
+                    <p>💡 The way to run a CLI program differs based on the language.<br> e.g., In Python, assuming the code is in <code>AddressBook.py</code> file, use the command<br>
+                      <code>python AddressBook.py &lt; input.txt &gt; output.txt</code></p>
+                  </li>
+                  <li>
+                    <p>💡 If you are using Windows, use a normal command window to run the app, not a Power Shell window.</p>
+                  </li>
+                </ul>
                 <panel header="%%More on the `>` operator and the `<` operator. :zero:%%" alt="I/O redirection info" type="seamless">
                   <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code>&lt;</code> and <code>&gt;</code> operators.
-                    For example, if you run <code>AddressBook</code> in the DOS prompt, the output will be shown in the console, but if you run it like this,</p>
+                    For example, if you run <code>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
                   <pre><code class="hljs sh">java AddressBook &gt; output.txt 
 </code></pre>
                   <p>the Operating System then creates a file <code>output.txt</code> and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding <code>&lt; input.txt</code> (or any other
@@ -119,9 +130,8 @@ Invalid command format: add
                 <p></p>
               </li>
               <li>
-                <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such as Winmerge.</p>
-                <pre
-                  class="hljs"><code>FC output.txt expected.txt
+                <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such as <em>WinMerge</em>.</p>
+                <pre class="hljs"><code>FC output.txt expected.txt
 </code></pre>
               </li>
             </ol>
@@ -220,7 +230,8 @@ Invalid command format: add
 }
 </code></pre>
             </tip-box>
-            <p>Most modern IDEs has integrated support for testing tools. The figure below shows the JUnit output when running some JUnit tests using the Eclipse IDE.</p><img src="/se-book/testing/testAutomation/tools/images/junit.png" height="190">
+            <p>Most modern IDEs has integrated support for testing tools. The figure below shows the JUnit output when running some JUnit tests using the Eclipse IDE.</p>
+            <img src="/se-book/testing/testAutomation/tools/images/junit.png" height="190">
             <p></p>
           </div>
           <div></div>
@@ -247,7 +258,8 @@ Invalid command format: add
                 expected value. Therefore, automated regression testing of GUIs is rather difficult.</li>
               <li>The appearance of a GUI (and sometimes even behavior) can be different across platforms and even environments. For example, a GUI can behave differently based on whether it is minimized or maximized, in focus or out of focus, and in a high
                 resolution display or a low resolution display.</li>
-            </ul><img src="/se-book/testing/testAutomation/testingGuis/images/diagram.png" height="120">
+            </ul>
+            <img src="/se-book/testing/testAutomation/testingGuis/images/diagram.png" height="120">
             <p></p>
             <p><strong>One approach to overcome the challenges of testing GUIs is to minimize logic aspects in the GUI.</strong> Then, bypass the GUI to test the rest of the system using automated API testing. While this still requires the GUI to be tested
               manually, the number of such manual test cases can be reduced as most of the system has been tested using automated API testing.</p>
@@ -278,9 +290,9 @@ Invalid command format: add
                   <panel header=":lock::key: API testing vs GUI testing">
                     <question>
                       <p>GUI testing is usually easier than API testing because it doesn’t require any extra coding.</p>
-                      <ul radio-group="ibrll" class="radio-list">
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="ibrll" type="radio"> True</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="ibrll" type="radio"> False</label></li>
+                      <ul radio-group="dc574" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="dc574" type="radio"> True</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="dc574" type="radio"> False</label></li>
                       </ul>
                       <div slot="answer">
                         <p>False</p>
@@ -300,5 +312,8 @@ Invalid command format: add
 </body>
 <script src="..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\..\markbind\js\setup.js"></script>
 </html>

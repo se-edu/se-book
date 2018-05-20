@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -67,7 +68,8 @@
           <div>
             <p>Consider two classes, <code>Account</code> and <code>Guarantor</code>, with an association as shown in the following diagram:</p>
             <tip-box>
-              <p>Example:</p><img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50">
+              <p>Example:</p>
+              <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50">
               <p></p>
               <p>Here, the association is compulsory i.e. an <code>Account</code> object should always be linked to a <code>Guarantor</code>. One way to implement this is to simply use a reference variable, like this:</p>
               <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
@@ -114,7 +116,8 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
                       <ul>
                         <li>restricts the maximum number of Accounts to 8</li>
                         <li>avoids adding duplicate Accounts</li>
-                      </ul><img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/managerAccount.jpg" height="55">
+                      </ul>
+                      <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/managerAccount.jpg" height="55">
                       <p></p>
                       <div slot="answer">
                         <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.*;
@@ -145,11 +148,10 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
                   <panel header=":lock::key: Implement `Marriage`">
                     <question has-input="true">
                       <p>Implement the classes defensively with appropriate references and operations to establish the association among the classes. Follow the defensive coding approach. Let the <code>Marriage</code> class handle setting/removal of reference.</p>
-                      <img
-                        src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/manMarriageWoman.jpg" height="55">
-                        <p></p>
-                        <div slot="answer">
-                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Marriage</span> </span>{
+                      <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/manMarriageWoman.jpg" height="55">
+                      <p></p>
+                      <div slot="answer">
+                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Marriage</span> </span>{
     <span class="hljs-keyword">private</span> Man husband = <span class="hljs-keyword">null</span>;
     <span class="hljs-keyword">private</span> Woman wife = <span class="hljs-keyword">null</span>;
 
@@ -196,15 +198,15 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     }
 } 
 </code></pre>
-                        </div>
+                      </div>
                     </question>
                   </panel>
                 </div>
                 <div>
                   <panel header=":lock::key: Immutable `Account` class">
                     <question has-input="true">
-                      <p>Give a suitable defensive implementation to the <code>Account</code> class in the following class diagram. Note that “{immutable}” means once the association is formed, it cannot be changed.</p><img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png"
-                        height="80">
+                      <p>Give a suitable defensive implementation to the <code>Account</code> class in the following class diagram. Note that “{immutable}” means once the association is formed, it cannot be changed.</p>
+                      <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png" height="80">
                       <p></p>
                       <div slot="answer">
                         <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
@@ -225,7 +227,8 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
                 </div>
                 <div>
                   <panel header=":lock::key: Is this defensive?">
-                    <question><img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45">
+                    <question>
+                      <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45">
                       <p></p>
                       <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">City</span></span>{
     Country country;
@@ -236,9 +239,9 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
 }
 </code></pre>
                       <p>This is a defensive implementation of the association.</p>
-                      <ul radio-group="7ug8m" class="radio-list">
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="7ug8m" type="radio"> True</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="7ug8m" type="radio"> False</label></li>
+                      <ul radio-group="ac03f" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="ac03f" type="radio"> True</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="ac03f" type="radio"> False</label></li>
                       </ul>
                       <div slot="answer">
                         <p>False</p>
@@ -266,8 +269,8 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
         <div>
           <div>
             <p>Consider the association given below. A defensive implementation requires to ensure a <code>MinedCell</code> cannot exist without a <code>Mine</code> and vice versa which requires simultaneous object creation. However, Java can only create
-              one object at a time. Given below are two alternatives implementations, both of which violate the multiplicity for a short period of time.</p><img src="/se-book/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png"
-              height="50">
+              one object at a time. Given below are two alternatives implementations, both of which violate the multiplicity for a short period of time.</p>
+            <img src="/se-book/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png" height="50">
             <p></p>
             <p>Option 1:</p>
             <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
@@ -311,7 +314,8 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
+            <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p>
+            <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
             <p></p>
             <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
     Woman girlfriend;
@@ -344,7 +348,8 @@ james.setGirlfriend(jean);
 jean.setBoyfriend(yong);  
 </code></pre>
             <p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this &quot;love triangle&quot;. In such a situation, we say that <em>the referential integrity has been violated</em>.
-              It simply means <em>there is an inconsistency in object references</em>.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
+              It simply means <em>there is an inconsistency in object references</em>.</p>
+            <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
             <p></p>
             <p>One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.</p>
             <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
@@ -398,7 +403,8 @@ jean.setBoyfriend(yong);
                       <tip-box>
                         <p>Feature ID: multiplayer<br> Description: A minefield is divided into mine regions. Each region is assigned to a single player. Players can swap regions. To win the game, all regions must be cleared.</p>
                       </tip-box>
-                      <p>Given below is an extract from our class diagram.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100">
+                      <p>Given below is an extract from our class diagram.</p>
+                      <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100">
                       <p></p>
                       <p>Minimally, this can be implemented like this.</p>
                       <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Player</span></span>{
@@ -505,7 +511,8 @@ r1.setPlayer(p2);
                   <panel header=":lock::key: Bidirectional association between `Bank` and `Account`">
                     <question has-input="true">
                       <p>Implement this bidirectional association. Note that the <code>Bank</code> uses <code>accNumber</code> attribute to uniquely identify an <code>Account</code> object. Assume the <code>Bank</code> class is responsible for maintaining
-                        the links between objects.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60">
+                        the links between objects.</p>
+                      <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60">
                       <p></p>
                       <div slot="answer">
                         <p>The code below contains a method in the <code>Bank</code> class to create an account; the bank field in the new account is thereby filled by the bank creating it.</p>
@@ -569,13 +576,16 @@ r1.setPlayer(p2);
         favoriteTeacher = t;
     }
 }
-</code></pre><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80">
+</code></pre>
+                      <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80">
                       <p></p>
-                      <p>(b) In terms of maintaining referential integrity in the implementation, what is the difference between the following two diagrams?</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png"
-                        height="80">
-                      <p></p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWomanAssoc.png" height="60">
+                      <p>(b) In terms of maintaining referential integrity in the implementation, what is the difference between the following two diagrams?</p>
+                      <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80">
                       <p></p>
-                      <p>(c) Show a defensive implementation of the <code>remove(Member m)</code> of the <code>Club</code> class given below.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60">
+                      <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWomanAssoc.png" height="60">
+                      <p></p>
+                      <p>(c) Show a defensive implementation of the <code>remove(Member m)</code> of the <code>Club</code> class given below.</p>
+                      <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60">
                       <p></p>
                       <div slot="answer">
                         <p>(a) Yes. Each links is mutable and unidirectional. A simple reference variable is suitable to hold the link.</p>
@@ -603,9 +613,9 @@ r1.setPlayer(p2);
                   <panel header=":lock::key: True or False?">
                     <question>
                       <p>Bidirectional associations, if not implemented properly, can result in referential integrity violations.</p>
-                      <ul radio-group="o21g0" class="radio-list">
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="o21g0" type="radio"> True</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="o21g0" type="radio"> False</label></li>
+                      <ul radio-group="719bb" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="719bb" type="radio"> True</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="719bb" type="radio"> False</label></li>
                       </ul>
                       <div slot="answer">
                         <p>True</p>
@@ -674,5 +684,8 @@ r1.setPlayer(p2);
 </body>
 <script src="..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\..\markbind\js\setup.js"></script>
 </html>

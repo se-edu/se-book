@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Documentation: Aim for Comprehensibility: How"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

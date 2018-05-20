@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Coding Best Practices: [Practice] Do Not Recycle Variables or Parameters"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

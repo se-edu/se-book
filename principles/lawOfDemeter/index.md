@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Principles: Law of Demeter"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

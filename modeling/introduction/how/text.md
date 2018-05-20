@@ -29,11 +29,18 @@ b) **To communicate information among stakeholders.**  Models can be used as a v
 
 :package: Some examples of using models to communicate:
 
-1. An architect can use an architecture diagram to explain the high-level design of the software to developers.
+1. We can use an <trigger trigger="click" for="modal:modelingIntro-archiDiagrams">architecture diagram</trigger> to explain the high-level design of the software to developers.
 2. A business analyst can use a use case diagram to explain to the customer the functionality of the system.
 3. A class diagram can be reverse-engineered from code so as to help explain the design of a component to a new developer.
 
 </tip-box>
+
+<modal large title="Architecture Diagrams" id="modal:modelingIntro-archiDiagrams">
+
+An _architecture diagram_ depicts the high-level design of a software.
+
+  <include src="../../../../book/architecture/architectureDiagrams/reading/text.md#architecture-diagram-examples"/>
+</modal>
 
 c) **As a blueprint for creating software.** Models can be used as instructions for building software.
 

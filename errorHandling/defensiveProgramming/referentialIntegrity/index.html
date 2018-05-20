@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -34,7 +35,8 @@
     </div>
     <div id="main">
       <div>
-        <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
+        <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p>
+        <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
         <p></p>
         <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
     Woman girlfriend;
@@ -67,7 +69,8 @@ james.setGirlfriend(jean);
 jean.setBoyfriend(yong);  
 </code></pre>
         <p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this &quot;love triangle&quot;. In such a situation, we say that <em>the referential integrity has been violated</em>.
-          It simply means <em>there is an inconsistency in object references</em>.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
+          It simply means <em>there is an inconsistency in object references</em>.</p>
+        <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
         <p></p>
         <p>One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.</p>
         <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
@@ -121,7 +124,8 @@ jean.setBoyfriend(yong);
                   <tip-box>
                     <p>Feature ID: multiplayer<br> Description: A minefield is divided into mine regions. Each region is assigned to a single player. Players can swap regions. To win the game, all regions must be cleared.</p>
                   </tip-box>
-                  <p>Given below is an extract from our class diagram.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100">
+                  <p>Given below is an extract from our class diagram.</p>
+                  <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100">
                   <p></p>
                   <p>Minimally, this can be implemented like this.</p>
                   <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Player</span></span>{
@@ -228,7 +232,8 @@ r1.setPlayer(p2);
               <panel header=":lock::key: Bidirectional association between `Bank` and `Account`">
                 <question has-input="true">
                   <p>Implement this bidirectional association. Note that the <code>Bank</code> uses <code>accNumber</code> attribute to uniquely identify an <code>Account</code> object. Assume the <code>Bank</code> class is responsible for maintaining the
-                    links between objects.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60">
+                    links between objects.</p>
+                  <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60">
                   <p></p>
                   <div slot="answer">
                     <p>The code below contains a method in the <code>Bank</code> class to create an account; the bank field in the new account is thereby filled by the bank creating it.</p>
@@ -292,13 +297,16 @@ r1.setPlayer(p2);
         favoriteTeacher = t;
     }
 }
-</code></pre><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80">
+</code></pre>
+                  <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80">
                   <p></p>
-                  <p>(b) In terms of maintaining referential integrity in the implementation, what is the difference between the following two diagrams?</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png"
-                    height="80">
-                  <p></p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWomanAssoc.png" height="60">
+                  <p>(b) In terms of maintaining referential integrity in the implementation, what is the difference between the following two diagrams?</p>
+                  <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80">
                   <p></p>
-                  <p>(c) Show a defensive implementation of the <code>remove(Member m)</code> of the <code>Club</code> class given below.</p><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60">
+                  <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWomanAssoc.png" height="60">
+                  <p></p>
+                  <p>(c) Show a defensive implementation of the <code>remove(Member m)</code> of the <code>Club</code> class given below.</p>
+                  <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60">
                   <p></p>
                   <div slot="answer">
                     <p>(a) Yes. Each links is mutable and unidirectional. A simple reference variable is suitable to hold the link.</p>
@@ -327,9 +335,9 @@ r1.setPlayer(p2);
               <panel header=":lock::key: True or False?">
                 <question>
                   <p>Bidirectional associations, if not implemented properly, can result in referential integrity violations.</p>
-                  <ul radio-group="vuba3" class="radio-list">
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="vuba3" type="radio"> True</label></li>
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="vuba3" type="radio"> False</label></li>
+                  <ul radio-group="719bb" class="radio-list">
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="719bb" type="radio"> True</label></li>
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="719bb" type="radio"> False</label></li>
                   </ul>
                   <div slot="answer">
                     <p>True</p>
@@ -348,5 +356,8 @@ r1.setPlayer(p2);
 </body>
 <script src="..\..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\..\..\markbind\js\setup.js"></script>
 </html>

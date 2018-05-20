@@ -17,7 +17,7 @@
 
 <tip-box>
 
-:package: a PERT chart for the Minesweeper project
+:package: an example PERT chart for a simple software project
 
 <img src="{{baseUrl}}/projectPlanning/pertCharts/images/pert.jpg" height="320" /><br>
 `md` = man days

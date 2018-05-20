@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -23,17 +24,17 @@
         <p><strong>A <em>software requirement</em> specifies a need to be fulfilled by the software product.</strong></p>
         <p>A software project may be,</p>
         <ul>
-          <li>a <em>brown-field</em> project: develop a product to replace/update an existing software product</li>
-          <li>a <em>green-field</em> project: develop a totally new system with no precedent</li>
+          <li>a <em>brown-field</em> project i.e., develop a product to replace/update an existing software product</li>
+          <li>a <em>green-field</em> project i.e., develop a totally new system with no precedent</li>
         </ul>
-        <p>In either case, requirements gathered, analyzed, specified, and managed.</p>
-        <p>Requirements come from <em>stakeholders</em>.</p>
+        <p>In either case, requirements need to be gathered, analyzed, specified, and managed.</p>
+        <p><strong>Requirements come from <em>stakeholders</em>.</strong></p>
         <tip-box type="info">
           <div>
             <p><strong>Stakeholder</strong>: A party that is potentially affected by the software project. e.g. users, sponsors, developers, interest groups, government agencies, etc.</p>
           </div>
         </tip-box>
-        <p>Identifying requirements is not as straightforward as it sounds. It is not as simple as writing a wish list.</p>
+        <p>Identifying requirements is often not easy. For example, stakeholders may not be aware of their precise needs, may not know how to communicate their requirements correctly, may not be willing to spend effort in identifying requirements, etc.</p>
       </div>
     </div>
     <div>
@@ -49,12 +50,14 @@
         <tip-box>
           <p>📦 Some examples of non-functional requirement categories:</p>
           <ul>
-            <li>Data requirements e.g. size, volatility, persistency etc.,</li>
+            <li>Data requirements e.g. size,
+              <tooltip content="how often do data change">volatility</tooltip>,
+              <tooltip content="saving data permanenetly">persistency</tooltip> etc.,</li>
             <li>Environment requirements e.g. technical environment in which system would operate or need to be compatible with.</li>
             <li>Accessibility, Capacity, Compliance with regulations, Documentation, Disaster recovery, Efficiency, Extensibility, Fault tolerance, Interoperability, Maintainability, Privacy, Portability, Quality, Reliability, Response time, Robustness, Scalability,
               Security, Stability, Testability, and more ...</li>
           </ul>
-          <panel type="seamless" header=":package: Some concrete examples of NFRs">
+          <panel type="seamless" header=":package: Some concrete examples of NFRs" expanded="">
             <ul>
               <li>Business/domain rules: e.g. the size of the minefield cannot be smaller than five.</li>
               <li>Constraints: e.g. the system should be backward compatible with data produced by earlier versions of the system; system testers are available only during the last month of the project; the total project cost should not exceed $1.5 million.</li>
@@ -68,7 +71,7 @@
             </ul>
           </panel>
         </tip-box>
-        <p><strong>Non-functional requirements are easier to miss.</strong> We should spend extra effort in digging them out as early as possible because sometimes they are critical to the success of the software. <span class="dimmed"> E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.</span></p>
+        <p>We should spend extra effort in digging NFRs out as early as possible because <strong>NFRs are easier to miss</strong> <span class="dimmed"> e.g., stakeholders tend to think of functional requirements first</span> and sometimes <strong>they are critical to the success of the software.</strong>          <span class="dimmed"> E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.</span></p>
       </div>
     </div>
     <div>
@@ -81,7 +84,7 @@
         <tip-box>
           <p>📦 An example scheme for categorizing requirements:</p>
           <ul>
-            <li><code>Essential</code>: The product must have this requirement fulfilled else it does not get user acceptance</li>
+            <li><code>Essential</code>: The product must have this requirement fulfilled or else it does not get user acceptance</li>
             <li><code>Typical</code>: Most similar systems have this feature although the product can survive without it.</li>
             <li><code>Novel</code>: New features that could differentiate this product from the rest.</li>
           </ul>
@@ -89,14 +92,15 @@
           <ul>
             <li><code>High</code>, <code>Medium</code>, <code>Low</code></li>
             <li><code>Must-have</code>, <code>Nice-to-have</code>, <code>Unlikely-to-have</code></li>
+            <li><code>Level 0</code>, <code>Level 1</code>, <code>Level 2</code>, ...</li>
           </ul>
         </tip-box>
-        <p><strong>Some requirements can be discarded if they are considered ‘out of scope’.</strong></p>
+        <p><strong>Some requirements can be discarded if they are considered ‘out of <em><tooltip content="the extent to which the software features should go">scope</tooltip></em>’.</strong></p>
         <tip-box>
-          <p>📦 The requirement given below is for a Calendar application. Stakeholder of the software (e.g. product designers) might decide that keeping track of the time taken for tasks is not in the scope of the software.</p>
-          <ul>
-            <li>The software records the actual time taken by each task and show the difference between the <em>actual</em> and <em>scheduled</em> time for the task.</li>
-          </ul>
+          <p>📦 The requirement given below is for a Calendar application. Stakeholder of the software (e.g. product designers) might decide the following requirement is not in the scope of the software.</p>
+          <blockquote>
+            <p>The software records the actual time taken by each task and show the difference between the <em>actual</em> and <em>scheduled</em> time for the task.</p>
+          </blockquote>
         </tip-box>
       </div>
     </div>
@@ -142,5 +146,8 @@
 </body>
 <script src="..\markbind\js\vue.min.js"></script>
 <script src="..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\markbind\js\setup.js"></script>
 </html>

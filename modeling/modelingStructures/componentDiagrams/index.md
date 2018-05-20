@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Modeling: Modeling Structures: Component Diagrams"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

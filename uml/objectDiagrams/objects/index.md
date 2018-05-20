@@ -1,3 +1,7 @@
+<frontmatter>
+title: "UML: Object Diagrams: Objects"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

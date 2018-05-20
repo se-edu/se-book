@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -29,7 +30,8 @@
         <div>
           <div>
             <p><strong>An object diagram shows an object structure at a given point of time.</strong></p>
-            <tip-box><img src="/se-book/oopDesign/associations/basic/images/completeStructure.png" height="120"></tip-box>
+            <tip-box>
+              <img src="/se-book/oopDesign/associations/basic/images/completeStructure.png" height="120"></tip-box>
           </div>
           <div></div>
         </div>
@@ -47,7 +49,8 @@
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>Notation:</p><img src="/se-book/uml/objectDiagrams/objects/images/notation.png" height="85">
+            <p>Notation:</p>
+            <img src="/se-book/uml/objectDiagrams/objects/images/notation.png" height="85">
             <p></p>
             <p>Notes:</p>
             <ul>
@@ -58,7 +61,8 @@
               <li>Object name can be omitted too e.g. <code>:Car</code> which is meant to say 'an <em>unnamed</em> instance of a Car object'.</li>
             </ul>
             <tip-box>
-              <p>📦 Some example objects:</p><img src="/se-book/uml/objectDiagrams/objects/images/professorStudent.png" height="65">
+              <p>📦 Some example objects:</p>
+              <img src="/se-book/uml/objectDiagrams/objects/images/professorStudent.png" height="65">
               <p></p>
             </tip-box>
           </div>
@@ -68,23 +72,40 @@
                 <div>
                   <panel header=":lock: Draw Car object">
                     <question>
-                      <p>Draw a UML diagram to represent the Car object created by the following code.</p>
-                      <pre><code class="hljs java">
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span></span>{
+                      <p>Draw a UML diagram to represent the <code>Car</code> object created by the following code.</p>
+                      <tabs>
+                      
+                        <tab header="Java">
+                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span></span>{
     
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> price;
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> speed;
     
     Car(<span class="hljs-keyword">double</span> price, <span class="hljs-keyword">int</span> speed){
-        ...
+        <span class="hljs-comment">//...</span>
     }
 }
 
-<span class="hljs-comment">// somewhere else in the code base</span>
+<span class="hljs-comment">// somewhere else in the code</span>
 
 Car myCar = <span class="hljs-keyword">new</span> Car(<span class="hljs-number">13.5</span>, <span class="hljs-number">200</span>);
-
 </code></pre>
+                        </tab>
+                      
+                        <tab header="Python">
+                          <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span>:</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, price, speed)</span>:</span>
+    self.__price = price <span class="hljs-comment"># type: float</span>
+    self.__speed = speed <span class="hljs-comment"># type: int</span>
+    
+
+<span class="hljs-comment"># somewhere else in the code</span>
+my_car = Car(<span class="hljs-number">13.5</span>, <span class="hljs-number">200</span>);  
+</code></pre>
+                        </tab>
+                      </tabs>
+                      <hr>
                     </question>
                   </panel>
                 </div>
@@ -106,9 +127,11 @@ Car myCar = <span class="hljs-keyword">new</span> Car(<span class="hljs-number">
       <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
           <div>
-            <p>A solid line indicates an association between two objects.</p><img src="/se-book/uml/objectDiagrams/associations/what/images/notation.png" width="300">
+            <p>A solid line indicates an association between two objects.</p>
+            <img src="/se-book/uml/objectDiagrams/associations/what/images/notation.png" width="300">
             <tip-box>
-              <p>📦 An example object diagram showing two associations:<br><img src="/se-book/uml/objectDiagrams/associations/what/images/example.png" width="300"></p>
+              <p>📦 An example object diagram showing two associations:<br>
+                <img src="/se-book/uml/objectDiagrams/associations/what/images/example.png" width="300"></p>
             </tip-box>
           </div>
           <div></div>
@@ -121,5 +144,8 @@ Car myCar = <span class="hljs-keyword">new</span> Car(<span class="hljs-number">
 </body>
 <script src="..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
 <script src="..\..\markbind\js\setup.js"></script>
 </html>

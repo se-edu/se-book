@@ -12,7 +12,7 @@
 
 **The OOP concept _Inheritance_ allows you to define a new class based on an existing class.** For example, you can use inheritance to define an `EvaluationReport` class based on an existing `Report` class so that the `EvaluationReport` class does not have to duplicate code that is already implemented in the `Report` class. 
 
-<dynamic-panel src="../../../uml/classDiagrams/classInheritance/what/full.md" header=":mortar_board: UML → Class Diagrams → Inheritance" />
+<dynamic-panel src="../../../uml/classDiagrams/classInheritance/what/full.md#title-and-body" header=":mortar_board: UML → Class Diagrams → Inheritance" expanded/>
 
 <p/>
 
@@ -72,7 +72,7 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 
 </tip-box>
 
-**_Multiple Inheritance_ is when a class inherits _directly_ from multiple classes.** Multiple inheritance is allowed among C++ classes but not among Java classes.
+**_Multiple Inheritance_ is when a class inherits _directly_ from multiple classes.** Multiple inheritance among classes is allowed in some languages (e.g., Python, C++) but not in other languages (e.g., Java, C#).
 
 <tip-box>
 

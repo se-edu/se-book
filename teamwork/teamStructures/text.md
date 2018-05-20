@@ -17,7 +17,7 @@ Given below are three commonly used team structures in software development. Irr
 
 **Egoless team**
 
-In this structure, **every team member is equal in terms of responsibility and accountability**. When any decision is required, consensus must be reached. This team structure is also known as a democratic team structure.  This team structure usually finds a good solution to a relatively hard problem as all team members contribute ideas.
+In this structure, **every team member is equal in terms of responsibility and accountability**. When any decision is required, consensus must be reached. This team structure is also known as a _democratic_ team structure.  This team structure usually finds a good solution to a relatively hard problem as all team members contribute ideas.
 
 However, the democratic nature of the team structure bears a higher risk of falling apart due to the absence of an authority figure to manage the team and resolve conflicts.
 

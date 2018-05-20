@@ -1,3 +1,7 @@
+<frontmatter>
+title: "Quality Assurance: Static Analysis"
+</frontmatter>
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">
