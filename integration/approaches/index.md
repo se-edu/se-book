@@ -12,9 +12,9 @@ title: "Integration: Approaches"
 
 <div id="main">
 
-<include src="lateVsEarly/embed.md" />
-<include src="bigBangVsIncremental/embed.md" />
-<include src="topDownVsBottomUp/embed.md" />
+<include src="lateVsEarly/embed.md" boilerplate  />
+<include src="bigBangVsIncremental/embed.md" boilerplate  />
+<include src="topDownVsBottomUp/embed.md" boilerplate  />
 
 </div>
 

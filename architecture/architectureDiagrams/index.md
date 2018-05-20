@@ -12,8 +12,8 @@ title: "Software Architecture: Architecture Diagrams"
 
 <div id="main">
 
-<include src="reading/embed.md" />
-<include src="drawing/embed.md" />
+<include src="reading/embed.md" boilerplate  />
+<include src="drawing/embed.md" boilerplate  />
 
 </div>
 

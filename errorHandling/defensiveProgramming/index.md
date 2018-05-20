@@ -12,11 +12,11 @@ title: "Error Handling: Defensive Programming"
 
 <div id="main">
 
-<include src="what/embed.md" />
-<include src="compulsoryAssociations/embed.md" />
-<include src="1to1Associations/embed.md" />
-<include src="referentialIntegrity/embed.md" />
-<include src="when/embed.md" />
+<include src="what/embed.md" boilerplate  />
+<include src="compulsoryAssociations/embed.md" boilerplate  />
+<include src="1to1Associations/embed.md" boilerplate  />
+<include src="referentialIntegrity/embed.md" boilerplate  />
+<include src="when/embed.md" boilerplate  />
 
 </div>
 

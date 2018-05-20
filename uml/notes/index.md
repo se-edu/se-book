@@ -8,8 +8,8 @@
 
 <div id="main">
 
-<include src="notes/embed.md" />
-<include src="constraints/embed.md" />
+<include src="notes/embed.md" boilerplate  />
+<include src="constraints/embed.md" boilerplate  />
 
 </div>
 

@@ -12,8 +12,8 @@ title: "Test Case Design: Summary"
 
 <div id="main">
 
-<include src="recap/embed.md" />
-<include src="exercises/embed.md" />
+<include src="recap/embed.md" boilerplate  />
+<include src="exercises/embed.md" boilerplate  />
 
 </div>
 

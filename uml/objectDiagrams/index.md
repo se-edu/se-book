@@ -12,9 +12,9 @@ title: "UML: Object Diagrams"
 
 <div id="main">
 
-<include src="introduction/embed.md" />
-<include src="objects/embed.md" />
-<include src="associations/what/embed.md" />
+<include src="introduction/embed.md" boilerplate  />
+<include src="objects/embed.md" boilerplate  />
+<include src="associations/what/embed.md" boilerplate  />
 
 </div>
 

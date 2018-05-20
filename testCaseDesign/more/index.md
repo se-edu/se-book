@@ -12,7 +12,7 @@ title: "Test Case Design: More"
 
 <div id="main">
 
-<include src="testingUseCases/embed.md" />
+<include src="testingUseCases/embed.md" boilerplate  />
 
 </div>
 

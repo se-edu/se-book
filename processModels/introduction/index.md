@@ -12,10 +12,10 @@ title: "SDLC Process Models: Introduction"
 
 <div id="main">
 
-<include src="what/embed.md" />
-<include src="sequentialModels/embed.md" />
-<include src="iterativeModels/embed.md" />
-<include src="agileModels/embed.md" />
+<include src="what/embed.md" boilerplate  />
+<include src="sequentialModels/embed.md" boilerplate  />
+<include src="iterativeModels/embed.md" boilerplate  />
+<include src="agileModels/embed.md" boilerplate  />
 
 </div>
 

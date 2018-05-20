@@ -12,7 +12,7 @@ title: "Software Design Patterns: Command"
 
 <div id="main">
 
-<include src="what/embed.md" />
+<include src="what/embed.md" boilerplate  />
 
 </div>
 

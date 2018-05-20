@@ -12,8 +12,8 @@ title: "Architectural Styles: More"
 
 <div id="main">
 
-<include src="./moreStyles/embed.md" />
-<include src="./usingStyles/embed.md" />
+<include src="./moreStyles/embed.md" boilerplate  />
+<include src="./usingStyles/embed.md" boilerplate  />
 
 </div>
 </div>

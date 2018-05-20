@@ -12,8 +12,8 @@ title: "Testing: Testing Types: Acceptance Testing"
 
 <div id="main">
 
-<include src="./what/embed.md" />
-<include src="./acceptanceVsSystemTesting/embed.md" />
+<include src="./what/embed.md" boilerplate  />
+<include src="./acceptanceVsSystemTesting/embed.md" boilerplate  />
 
 </div>
 </div>

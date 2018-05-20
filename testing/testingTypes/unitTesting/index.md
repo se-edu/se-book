@@ -12,8 +12,8 @@ title: "Testing: Testing Types: Unit Testing"
 
 <div id="main">
 
-<include src="./what/embed.md" />
-<include src="./stubs/embed.md" />
+<include src="./what/embed.md" boilerplate  />
+<include src="./stubs/embed.md" boilerplate  />
 
 </div>
 </div>

@@ -12,13 +12,13 @@ title: "Object Oriented Programming: Inheritance"
 
 <div id="main">
 
-<include src="what/embed.md" />
-<include src="overriding/embed.md" />
-<include src="overloading/embed.md" />
-<include src="interfaces/embed.md" />
-<include src="abstractClasses/embed.md" />
-<include src="dynamicAndStaticBinding/embed.md" />
-<include src="substitutability/embed.md" />
+<include src="what/embed.md" boilerplate  />
+<include src="overriding/embed.md" boilerplate  />
+<include src="overloading/embed.md" boilerplate  />
+<include src="interfaces/embed.md" boilerplate  />
+<include src="abstractClasses/embed.md" boilerplate  />
+<include src="dynamicAndStaticBinding/embed.md" boilerplate  />
+<include src="substitutability/embed.md" boilerplate  />
 
 </div>
 

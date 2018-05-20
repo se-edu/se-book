@@ -12,7 +12,7 @@ title: "Code Quality: Introduction"
 
 <div id="main">
 
-<include src="basic/embed.md" />
+<include src="basic/embed.md" boilerplate  />
 
 </div>
 

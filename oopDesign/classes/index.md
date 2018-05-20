@@ -12,9 +12,9 @@ title: "Object Oriented Programming: Classes"
 
 <div id="main">
 
-<include src="basic/embed.md" />
-<include src="classLevelMembers/embed.md" />
-<include src="enumerations/embed.md" />
+<include src="basic/embed.md" boilerplate  />
+<include src="classLevelMembers/embed.md" boilerplate  />
+<include src="enumerations/embed.md" boilerplate  />
 
 </div>
 

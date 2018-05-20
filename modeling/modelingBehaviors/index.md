@@ -12,15 +12,15 @@ title: "Modeling: Modeling Behaviors"
 
 <div id="main">
 
-<include src="activityDiagrams/embed.md" />
-<include src="sequenceDiagramsBasic/embed.md" />
-<!-- <include src="sequenceDiagramsIntermediate/embed.md" /> -->
-<!-- <include src="sequenceDiagramsAdvanced/embed.md" /> -->
-<include src="useCaseDiagrams/embed.md" />
-<include src="timingDiagrams/embed.md" />
-<include src="interactionOverviewDiagrams/embed.md" />
-<include src="communicationDiagrams/embed.md" />
-<include src="stateMachineDiagrams/embed.md" />
+<include src="activityDiagrams/embed.md" boilerplate  />
+<include src="sequenceDiagramsBasic/embed.md" boilerplate  />
+<!-- <include src="sequenceDiagramsIntermediate/embed.md" boilerplate  /> -->
+<!-- <include src="sequenceDiagramsAdvanced/embed.md" boilerplate  /> -->
+<include src="useCaseDiagrams/embed.md" boilerplate  />
+<include src="timingDiagrams/embed.md" boilerplate  />
+<include src="interactionOverviewDiagrams/embed.md" boilerplate  />
+<include src="communicationDiagrams/embed.md" boilerplate  />
+<include src="stateMachineDiagrams/embed.md" boilerplate  />
 
 </div>
 

@@ -10,11 +10,11 @@ title: "Java"
 
 <div id="main">
 
-<include src="collections/embed.md" />
-<include src="enums/embed.md" />
-<include src="varargs/embed.md" />
-<include src="javaFXBasic/embed.md" />
-<include src="streamsBasic/embed.md" />
+<include src="collections/embed.md" boilerplate  />
+<include src="enums/embed.md" boilerplate  />
+<include src="varargs/embed.md" boilerplate  />
+<include src="javaFXBasic/embed.md" boilerplate  />
+<include src="streamsBasic/embed.md" boilerplate  />
 
 </div>
 

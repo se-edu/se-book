@@ -10,9 +10,9 @@ title: "Software Design Fundamentals: Coupling"
 
 <div id="main">
 
-<include src="what/embed.md" />
-<include src="how/embed.md" />
-<include src="types/embed.md" />
+<include src="what/embed.md" boilerplate  />
+<include src="how/embed.md" boilerplate  />
+<include src="types/embed.md" boilerplate  />
 
 </div>
 

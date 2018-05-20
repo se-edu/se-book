@@ -29,7 +29,7 @@ title: "Integration"
 ## Review
 <panel header="================================================================"
     type="seamless" alt="review">
-  <include src="review/embed.md" />
+  <include src="review/embed.md" boilerplate  />
 </panel>
 
 </div>

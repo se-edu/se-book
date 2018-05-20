@@ -12,9 +12,9 @@ title: "Software Design Patterns: Singleton"
 
 <div id="main">
 
-<include src="what/embed.md" />
-<include src="implementation/embed.md" />
-<include src="evaluation/embed.md" />
+<include src="what/embed.md" boilerplate  />
+<include src="implementation/embed.md" boilerplate  />
+<include src="evaluation/embed.md" boilerplate  />
 
 </div>
 

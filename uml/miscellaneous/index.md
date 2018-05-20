@@ -12,7 +12,7 @@ title: "UML: Miscellaneous"
 
 <div id="main">
 
-<include src="objectVsClassDiagrams/embed.md" />
+<include src="objectVsClassDiagrams/embed.md" boilerplate  />
 
 </div>
 

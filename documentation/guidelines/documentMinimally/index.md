@@ -12,8 +12,8 @@ title: "Documentation: Guidelines: Document Minimally, but Sufficiently"
 
 <div id="main">
 
-<include src="./what/embed.md" />
-<include src="./how/embed.md" />
+<include src="./what/embed.md" boilerplate  />
+<include src="./how/embed.md" boilerplate  />
 
 </div>
 </div>

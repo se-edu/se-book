@@ -10,7 +10,7 @@ title: "Teamwork"
 
 <div id="main">
 
-<include src="teamStructures/embed.md" />
+<include src="teamStructures/embed.md" boilerplate  />
 
 </div>
 

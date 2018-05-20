@@ -10,17 +10,17 @@ title: "Principles"
 
 <div id="main">
 
-<include src="singleResponsibilityPrinciple/embed.md" />
-<include src="interfaceSegregationPrinciple/embed.md" />
-<include src="liskovSubstitutionPrinciple/embed.md" />
-<include src="dependencyInversionPrinciple/embed.md" />
-<include src="openClosedPrinciple/embed.md" />
-<include src="solidPrinciples/embed.md" />
-<include src="separationOfConcernsPrinciple/embed.md" />
-<include src="lawOfDemeter/embed.md" />
-<include src="brooksLaw/embed.md" />
-<include src="yagniPrinciple/embed.md" />
-<include src="dryPrinciple/embed.md" />
+<include src="singleResponsibilityPrinciple/embed.md" boilerplate  />
+<include src="interfaceSegregationPrinciple/embed.md" boilerplate  />
+<include src="liskovSubstitutionPrinciple/embed.md" boilerplate  />
+<include src="dependencyInversionPrinciple/embed.md" boilerplate  />
+<include src="openClosedPrinciple/embed.md" boilerplate  />
+<include src="solidPrinciples/embed.md" boilerplate  />
+<include src="separationOfConcernsPrinciple/embed.md" boilerplate  />
+<include src="lawOfDemeter/embed.md" boilerplate  />
+<include src="brooksLaw/embed.md" boilerplate  />
+<include src="yagniPrinciple/embed.md" boilerplate  />
+<include src="dryPrinciple/embed.md" boilerplate  />
 <!-- TODO: add review -->
 
 </div>

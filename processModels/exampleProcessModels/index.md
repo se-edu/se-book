@@ -12,9 +12,9 @@ title: "SDLC Process Models: Exaxmple Process Models"
 
 <div id="main">
 
-<include src="xp/embed.md" />
-<include src="scrum/embed.md" />
-<include src="unifiedProcess/embed.md" />
+<include src="xp/embed.md" boilerplate  />
+<include src="scrum/embed.md" boilerplate  />
+<include src="unifiedProcess/embed.md" boilerplate  />
 
 </div>
 

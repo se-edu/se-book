@@ -10,13 +10,13 @@ title: "Gathering Requirements"
 
 <div id="main">
 
-<include src="brainstorming/embed.md" />
-<include src="userSurveys/embed.md" />
-<include src="observation/embed.md" />
-<include src="interviews/embed.md" />
-<include src="focusGroups/embed.md" />
-<include src="prototyping/embed.md" />
-<include src="productSurveys/embed.md" />
+<include src="brainstorming/embed.md" boilerplate  />
+<include src="userSurveys/embed.md" boilerplate  />
+<include src="observation/embed.md" boilerplate  />
+<include src="interviews/embed.md" boilerplate  />
+<include src="focusGroups/embed.md" boilerplate  />
+<include src="prototyping/embed.md" boilerplate  />
+<include src="productSurveys/embed.md" boilerplate  />
 
 </div>
 

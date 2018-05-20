@@ -12,9 +12,9 @@ title: "Object Oriented Programming: Objects"
 
 <div id="main">
 
-<include src="basic/embed.md" />
-<include src="abstraction/embed.md" />
-<include src="encapsulation/embed.md" />
+<include src="basic/embed.md" boilerplate  />
+<include src="abstraction/embed.md" boilerplate  />
+<include src="encapsulation/embed.md" boilerplate  />
 
 </div>
 

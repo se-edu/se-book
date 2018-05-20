@@ -10,16 +10,16 @@ title: "Revision Control"
 
 <div id="main">
 
-<include src="what/embed.md" />
-<include src="repositories/embed.md" />
-<include src="savingHistory/embed.md" />
-<include src="usingHistory/embed.md" />
-<include src="remoteRepositories/embed.md" />
-<include src="branching/embed.md" />
-<include src="drcsVsCrcs/embed.md" />
-<include src="forkingWorkflow/embed.md" />
-<include src="featureBranchFlow/embed.md" />
-<include src="centralizedFlow/embed.md" />
+<include src="what/embed.md" boilerplate  />
+<include src="repositories/embed.md" boilerplate  />
+<include src="savingHistory/embed.md" boilerplate  />
+<include src="usingHistory/embed.md" boilerplate  />
+<include src="remoteRepositories/embed.md" boilerplate  />
+<include src="branching/embed.md" boilerplate  />
+<include src="drcsVsCrcs/embed.md" boilerplate  />
+<include src="forkingWorkflow/embed.md" boilerplate  />
+<include src="featureBranchFlow/embed.md" boilerplate  />
+<include src="centralizedFlow/embed.md" boilerplate  />
 
 </div>
 

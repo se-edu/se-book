@@ -10,11 +10,11 @@ title: "Intellij IDEA"
 
 <div id="main">
 
-<include src="projectSetup/embed.md" />
-<include src="codeNavigation/embed.md" />
-<include src="productivityShortcuts/embed.md" />
-<include src="debuggingBasic/embed.md" />
-<include src="refactoring/embed.md" />
+<include src="projectSetup/embed.md" boilerplate  />
+<include src="codeNavigation/embed.md" boilerplate  />
+<include src="productivityShortcuts/embed.md" boilerplate  />
+<include src="debuggingBasic/embed.md" boilerplate  />
+<include src="refactoring/embed.md" boilerplate  />
 
 </div>
 

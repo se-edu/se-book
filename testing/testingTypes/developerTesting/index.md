@@ -12,8 +12,8 @@ title: "Testing: Testing Types: Developer Testing"
 
 <div id="main">
 
-<include src="./what/embed.md" />
-<include src="./why/embed.md" />
+<include src="./what/embed.md" boilerplate  />
+<include src="./why/embed.md" boilerplate  />
 
 </div>
 </div>

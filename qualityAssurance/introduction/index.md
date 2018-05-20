@@ -12,8 +12,8 @@ title: "Quality Assurance: Introduction"
 
 <div id="main">
 
-<include src="what/embed.md" />
-<include src="validationVsVerification/embed.md" />
+<include src="what/embed.md" boilerplate  />
+<include src="validationVsVerification/embed.md" boilerplate  />
 
 </div>
 

@@ -12,8 +12,8 @@ title: "Software Design Patterns: Introduction"
 
 <div id="main">
 
-<include src="what/embed.md" />
-<include src="format/embed.md" />
+<include src="what/embed.md" boilerplate  />
+<include src="format/embed.md" boilerplate  />
 
 </div>
 

@@ -12,11 +12,11 @@ title: "Testing: Test Automation"
 
 <div id="main">
 
-<include src="what/embed.md" />
-<include src="testingTextUis/embed.md" />
-<include src="usingTestDrivers/embed.md" />
-<include src="tools/embed.md" />
-<include src="testingGuis/embed.md" />
+<include src="what/embed.md" boilerplate  />
+<include src="testingTextUis/embed.md" boilerplate  />
+<include src="usingTestDrivers/embed.md" boilerplate  />
+<include src="tools/embed.md" boilerplate  />
+<include src="testingGuis/embed.md" boilerplate  />
 
 </div>
 

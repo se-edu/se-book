@@ -12,9 +12,9 @@ title: "Modeling: Modeling a Solution"
 
 <div id="main">
 
-<include src="introduction/embed.md" />
-<include src="basic/embed.md" />
-<include src="intermediate/embed.md" />
+<include src="introduction/embed.md" boilerplate  />
+<include src="basic/embed.md" boilerplate  />
+<include src="intermediate/embed.md" boilerplate  />
 
 </div>
 

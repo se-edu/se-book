@@ -12,8 +12,8 @@ title: "Reuse: APIs"
 
 <div id="main">
 
-<include src="what/embed.md" />
-<include src="designingAPIs/embed.md" />
+<include src="what/embed.md" boilerplate  />
+<include src="designingAPIs/embed.md" boilerplate  />
 
 </div>
 

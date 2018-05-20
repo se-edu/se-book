@@ -12,8 +12,8 @@ title: "Reuse: Cloud Computing"
 
 <div id="main">
 
-<include src="what/embed.md" />
-<include src="services/embed.md" />
+<include src="what/embed.md" boilerplate  />
+<include src="services/embed.md" boilerplate  />
 
 </div>
 

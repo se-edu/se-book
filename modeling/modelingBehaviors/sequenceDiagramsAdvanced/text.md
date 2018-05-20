@@ -12,7 +12,7 @@
 
 <div id="body">
 
-<dynamic-panel src="../../../uml/sequenceDiagrams/parallelPaths/embed.md" header="UML: Sequence Diagrams: Parallel Paths" is-open></dynamic-panel>
+<dynamic-panel src="../../../uml/sequenceDiagrams/parallelPaths/embed.md" boilerplate  header="UML: Sequence Diagrams: Parallel Paths" is-open></dynamic-panel>
 
 </div>
 

@@ -10,20 +10,20 @@ title: "Git and Github"
 
 <div id="main">
 
-<include src="init/embed.md" />
-<include src="commit/embed.md" />
-<include src="ignore/embed.md" />
-<include src="tag/embed.md" />
-<include src="checkout/embed.md" />
-<include src="stash/embed.md" />
-<include src="clone/embed.md" />
-<include src="pull/embed.md" />
-<include src="push/embed.md" />
-<include src="branch/embed.md" />
-<include src="mergeConflicts/embed.md" />
-<include src="createPRs/embed.md" />
-<include src="managePRs/embed.md" />
-<include src="forkingWorkflow/embed.md" />
+<include src="init/embed.md" boilerplate  />
+<include src="commit/embed.md" boilerplate  />
+<include src="ignore/embed.md" boilerplate  />
+<include src="tag/embed.md" boilerplate  />
+<include src="checkout/embed.md" boilerplate  />
+<include src="stash/embed.md" boilerplate  />
+<include src="clone/embed.md" boilerplate  />
+<include src="pull/embed.md" boilerplate  />
+<include src="push/embed.md" boilerplate  />
+<include src="branch/embed.md" boilerplate  />
+<include src="mergeConflicts/embed.md" boilerplate  />
+<include src="createPRs/embed.md" boilerplate  />
+<include src="managePRs/embed.md" boilerplate  />
+<include src="forkingWorkflow/embed.md" boilerplate  />
 
 </div>
 

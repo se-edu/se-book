@@ -12,13 +12,13 @@ title: "Object Oriented Programming: Associations"
 
 <div id="main">
 
-<include src="basic/embed.md" />
-<include src="navigability/embed.md" />
-<include src="multiplicity/embed.md" />
-<include src="dependencies/embed.md" />
-<include src="composition/embed.md" />
-<include src="aggregation/embed.md" />
-<include src="associationClasses/embed.md" />
+<include src="basic/embed.md" boilerplate  />
+<include src="navigability/embed.md" boilerplate  />
+<include src="multiplicity/embed.md" boilerplate  />
+<include src="dependencies/embed.md" boilerplate  />
+<include src="composition/embed.md" boilerplate  />
+<include src="aggregation/embed.md" boilerplate  />
+<include src="associationClasses/embed.md" boilerplate  />
 
 </div>
 

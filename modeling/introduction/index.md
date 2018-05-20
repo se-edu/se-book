@@ -12,9 +12,9 @@ title: "Modeling: Introduction"
 
 <div id="main">
 
-<include src="what/embed.md" />
-<include src="how/embed.md" />
-<include src="umlModels/embed.md" />
+<include src="what/embed.md" boilerplate  />
+<include src="how/embed.md" boilerplate  />
+<include src="umlModels/embed.md" boilerplate  />
 
 </div>
 

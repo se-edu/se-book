@@ -11,7 +11,7 @@ title: "Object Oriented Programming"
 ## Introduction
 <panel header="================================================================"
     type="seamless" alt="introduction">
-  <include src="introduction/embed.md" />
+  <include src="introduction/embed.md" boilerplate  />
 </panel>
 
 ## Objects
@@ -47,13 +47,13 @@ title: "Object Oriented Programming"
 ## Miscellaneous
 <panel header="================================================================"
     type="seamless" alt="miscellaneous">
-  <include src="miscellaneous/embed.md" />
+  <include src="miscellaneous/embed.md" boilerplate  />
 </panel>
 
 ## Review
 <panel header="================================================================"
     type="seamless" alt="review">
-  <include src="review/embed.md" />
+  <include src="review/embed.md" boilerplate  />
 </panel>
 
 </div>

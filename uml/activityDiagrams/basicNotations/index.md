@@ -12,11 +12,11 @@ title: "UML: Activity Diagrams: Basic Notation"
 
 <div id="main">
 
-<include src="./linearPaths/embed.md" />
-<include src="./alternatePaths/embed.md" />
-<include src="./parallelPaths/embed.md" />
-<include src="./rakes/embed.md" />
-<include src="./swimlanes/embed.md" />
+<include src="./linearPaths/embed.md" boilerplate  />
+<include src="./alternatePaths/embed.md" boilerplate  />
+<include src="./parallelPaths/embed.md" boilerplate  />
+<include src="./rakes/embed.md" boilerplate  />
+<include src="./swimlanes/embed.md" boilerplate  />
 
 </div>
 </div>

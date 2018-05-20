@@ -10,8 +10,8 @@ title: "JUnit"
 
 <div id="main">
 
-<include src="basic/embed.md" />
-<include src="intermediate/embed.md" />
+<include src="basic/embed.md" boilerplate  />
+<include src="intermediate/embed.md" boilerplate  />
 
 </div>
 

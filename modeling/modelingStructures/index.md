@@ -12,15 +12,15 @@ title: "Modeling: Modeling Structures"
 
 <div id="main">
 
-<include src="classDiagramsBasic/embed.md" />
-<!-- <include src="classDiagramsIntermediate/embed.md" /> -->
-<!-- <include src="classDiagramsAdvanced/embed.md" /> -->
-<include src="objectDiagrams/embed.md" />
-<include src="objectOrientedDomainModels/embed.md" />
-<include src="deploymentDiagrams/embed.md" />
-<include src="componentDiagrams/embed.md" />
-<include src="packageDiagrams/embed.md" />
-<include src="compositeStructureDiagrams/embed.md" />
+<include src="classDiagramsBasic/embed.md" boilerplate  />
+<!-- <include src="classDiagramsIntermediate/embed.md" boilerplate  /> -->
+<!-- <include src="classDiagramsAdvanced/embed.md" boilerplate  /> -->
+<include src="objectDiagrams/embed.md" boilerplate  />
+<include src="objectOrientedDomainModels/embed.md" boilerplate  />
+<include src="deploymentDiagrams/embed.md" boilerplate  />
+<include src="componentDiagrams/embed.md" boilerplate  />
+<include src="packageDiagrams/embed.md" boilerplate  />
+<include src="compositeStructureDiagrams/embed.md" boilerplate  />
 
 </div>
 

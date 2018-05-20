@@ -12,7 +12,7 @@ title: "UML: Class Diagrams: Associations as Attributes"
 
 <div id="main">
 
-<include src="./what/embed.md" />
+<include src="./what/embed.md" boilerplate  />
 
 </div>
 </div>

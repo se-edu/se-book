@@ -12,8 +12,8 @@ title: "Object Oriented Programming: Polymorphism"
 
 <div id="main">
 
-<include src="introduction/embed.md" />
-<include src="mechanism/embed.md" />
+<include src="introduction/embed.md" boilerplate  />
+<include src="mechanism/embed.md" boilerplate  />
 
 </div>
 

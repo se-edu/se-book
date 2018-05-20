@@ -12,7 +12,7 @@ title: "SDLC Process Models: Summary"
 
 <div id="main">
 
-<include src="recap/embed.md" />
+<include src="recap/embed.md" boilerplate  />
 
 </div>
 

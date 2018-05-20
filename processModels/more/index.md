@@ -12,7 +12,7 @@ title: "SDLC Process Models: More"
 
 <div id="main">
 
-<include src="cmmi/embed.md" />
+<include src="cmmi/embed.md" boilerplate  />
 
 </div>
 

@@ -12,8 +12,8 @@ title: "Integration: Build Automation"
 
 <div id="main">
 
-<include src="what/embed.md" />
-<include src="continuousIntegrationDeployment/embed.md" />
+<include src="what/embed.md" boilerplate  />
+<include src="continuousIntegrationDeployment/embed.md" boilerplate  />
 
 </div>
 

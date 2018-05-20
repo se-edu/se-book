@@ -12,7 +12,7 @@ title: "UML: Class Diagrams: Class Level Members"
 
 <div id="main">
 
-<include src="./what/embed.md" />
+<include src="./what/embed.md" boilerplate  />
 
 </div>
 </div>

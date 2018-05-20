@@ -12,11 +12,11 @@ title: "Software Design Patterns: More"
 
 <div id="main">
 
-<include src="combiningDesignPatterns/embed.md" />
-<include src="otherDesignPatterns/embed.md" />
-<include src="usingDesignPatterns/embed.md" />
-<include src="otherTypesOfPatterns/embed.md" />
-<include src="vsPrinciples/embed.md" />
+<include src="combiningDesignPatterns/embed.md" boilerplate  />
+<include src="otherDesignPatterns/embed.md" boilerplate  />
+<include src="usingDesignPatterns/embed.md" boilerplate  />
+<include src="otherTypesOfPatterns/embed.md" boilerplate  />
+<include src="vsPrinciples/embed.md" boilerplate  />
 
 </div>
 

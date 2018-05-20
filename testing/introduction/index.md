@@ -12,8 +12,8 @@ title: "Testing: Introduction"
 
 <div id="main">
 
-<include src="what/embed.md" />
-<include src="testability/embed.md" />
+<include src="what/embed.md" boilerplate  />
+<include src="testability/embed.md" boilerplate  />
 
 </div>
 

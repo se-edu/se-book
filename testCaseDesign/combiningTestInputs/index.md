@@ -12,11 +12,11 @@ title: "Test Case Design: Combining Test Inputs"
 
 <div id="main">
 
-<include src="why/embed.md" />
-<include src="combinationStrategies/embed.md" />
-<include src="heuristicValid/embed.md" />
-<include src="heuristicInvalid/embed.md" />
-<include src="mix/embed.md" />
+<include src="why/embed.md" boilerplate  />
+<include src="combinationStrategies/embed.md" boilerplate  />
+<include src="heuristicValid/embed.md" boilerplate  />
+<include src="heuristicInvalid/embed.md" boilerplate  />
+<include src="mix/embed.md" boilerplate  />
 
 </div>
 

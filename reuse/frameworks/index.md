@@ -12,8 +12,8 @@ title: "Reuse: Frameworks"
 
 <div id="main">
 
-<include src="what/embed.md" />
-<include src="frameworksVsLibraries/embed.md" />
+<include src="what/embed.md" boilerplate  />
+<include src="frameworksVsLibraries/embed.md" boilerplate  />
 
 </div>
 

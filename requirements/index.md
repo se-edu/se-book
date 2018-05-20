@@ -10,10 +10,10 @@ title: "Requirements"
 
 <div id="main">
 
-<include src="introduction/embed.md" />
-<include src="nonFunctionalRequirements/embed.md" />
-<include src="prioritizing/embed.md" />
-<include src="quality/embed.md" />
+<include src="introduction/embed.md" boilerplate  />
+<include src="nonFunctionalRequirements/embed.md" boilerplate  />
+<include src="prioritizing/embed.md" boilerplate  />
+<include src="quality/embed.md" boilerplate  />
 
 </div>
 

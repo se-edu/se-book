@@ -10,7 +10,7 @@ title: "Software Engineering"
 
 <div id="main">
 
-<include src="prosAndCons/embed.md" />
+<include src="prosAndCons/embed.md" boilerplate  />
 
 </div>
 
