@@ -1,1 +1,1 @@
-<dynamic-panel src="../../oopDesign/inheritance/overriding/full.md" header="%%:mortar_board: OOP → Inheritance → Overriding%%" />
+<dynamic-panel src="../../oopDesign/inheritance/overriding/full.md" boilerplate header="%%:mortar_board: OOP → Inheritance → Overriding%%" />

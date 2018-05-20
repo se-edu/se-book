@@ -12,7 +12,7 @@
   <include src="outcomes.md" />
 </tip-box></p>
 
-<include src="full.md" />
+<include src="full.md" boilerplate />
 
 </div>
 

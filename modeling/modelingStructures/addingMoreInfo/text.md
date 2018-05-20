@@ -12,7 +12,7 @@
 
 **UML notes can be used to add more info to any UML model.**
 
-<panel src="../../../../book/uml/notes/notes/full.md#title-and-body" header=":mortar_board: UML → Notes" expanded />
+<panel src="../../../../book/uml/notes/notes/full.md#title-and-body" boilerplate header=":mortar_board: UML → Notes" expanded />
 
 </div>
 

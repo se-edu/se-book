@@ -35,7 +35,7 @@ displayResult();
 </tip-box>
 
 <modal title="" id="modal:slap-abstraction">
-  <include src="../../../designFundamentals/abstraction/what/full.md"/>
+  <include src="../../../designFundamentals/abstraction/what/full.md" boilerplate/>
 </modal>
 
 [Bad]: {{baseUrl}}/images/Bad.png "Bad"

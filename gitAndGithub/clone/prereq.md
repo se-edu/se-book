@@ -1,1 +1,1 @@
-<dynamic-panel src="../../revisionControl/remoteRepositories/full.md" header=":mortar_board: %%Project Management → Revision Control → Remote Respositories%%" />
+<dynamic-panel src="../../revisionControl/remoteRepositories/full.md" boilerplate header=":mortar_board: %%Project Management → Revision Control → Remote Respositories%%" />

@@ -1,1 +1,1 @@
-<dynamic-panel src="../../../introduction/what/full.md" header="%%:mortar_board: Design → Architecture → Introduction → What%%" />
+<dynamic-panel src="../../../introduction/what/full.md" boilerplate header="%%:mortar_board: Design → Architecture → Introduction → What%%" />

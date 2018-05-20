@@ -17,7 +17,7 @@
 :package: Continuing with the example given in [<trigger trigger="click" for="modal:oopImpl-polymorphism">:mortar_board: OOP → Polymorphism → Introduction </trigger>], given below is the minimum code for `Staff`, `Admin`, and `Academic` classes that achieves the desired polymorphism.
 
 <modal title="" id="modal:oopImpl-polymorphism">
-  <include src="../../oopDesign/polymorphism/introduction/full.md"/>
+  <include src="../../oopDesign/polymorphism/introduction/full.md" boilerplate/>
 </modal>
 
 <img src="{{baseUrl}}/oopImplementation/polymorphism/images/polymorphicPayroll.png" height="200" />

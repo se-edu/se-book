@@ -1,1 +1,1 @@
-<dynamic-panel src="../../oopDesign/inheritance/what/full.md" header="%%:mortar_board: Design → OOP → Inheritance → What%%" />
+<dynamic-panel src="../../oopDesign/inheritance/what/full.md" boilerplate header="%%:mortar_board: Design → OOP → Inheritance → What%%" />

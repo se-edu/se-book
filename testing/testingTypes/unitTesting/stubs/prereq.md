@@ -1,1 +1,1 @@
-<dynamic-panel src="../what/full.md" header="%%:mortar_board: Quality Assurance → Testing → Unit Testing → What →%%" />
+<dynamic-panel src="../what/full.md" boilerplate header="%%:mortar_board: Quality Assurance → Testing → Unit Testing → What →%%" />

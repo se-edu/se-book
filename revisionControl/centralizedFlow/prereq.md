@@ -1,1 +1,1 @@
-<dynamic-panel src="../featureBranchFlow/full.md" header="%%:mortar_board: Revision Control → Feature Branch Workflow%%" />
+<dynamic-panel src="../featureBranchFlow/full.md" boilerplate header="%%:mortar_board: Revision Control → Feature Branch Workflow%%" />

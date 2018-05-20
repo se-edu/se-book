@@ -1,1 +1,1 @@
-<dynamic-panel src="../what/full.md" header="%%:mortar_board: Design → Design Fundamentals → Coupling → What%%" />
+<dynamic-panel src="../what/full.md" boilerplate header="%%:mortar_board: Design → Design Fundamentals → Coupling → What%%" />
