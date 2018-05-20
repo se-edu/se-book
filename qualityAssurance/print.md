@@ -12,20 +12,20 @@ title: "Quality Assurance [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/print.md" />
-<include src="introduction/validationVsVerification/print.md" />
+<include src="introduction/what/print.md" boilerplate />
+<include src="introduction/validationVsVerification/print.md" boilerplate />
 
 ## Code Reviews
 
-<include src="codeReviews/what/print.md" />
+<include src="codeReviews/what/print.md" boilerplate />
 
 ## Static Analysis
 
-<include src="staticAnalysis/what/print.md" />
+<include src="staticAnalysis/what/print.md" boilerplate />
 
 ## Formal Verification
 
-<include src="formalVerification/what/print.md" />
+<include src="formalVerification/what/print.md" boilerplate />
 
 </div>
 

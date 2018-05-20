@@ -6,9 +6,9 @@
 
 ## Design Approaches
 
-<include src="../designApproaches/multilevelDesign/what/print.md" />
-<include src="../designApproaches/topDownBottomUp/what/print.md" />
-<include src="../designApproaches/agileDesign/what/print.md" />
+<include src="../designApproaches/multilevelDesign/what/print.md" boilerplate />
+<include src="../designApproaches/topDownBottomUp/what/print.md" boilerplate />
+<include src="../designApproaches/agileDesign/what/print.md" boilerplate />
 
 </div>
 

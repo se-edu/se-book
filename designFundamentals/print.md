@@ -12,18 +12,18 @@ title: "Software Design Fundamentals [Printable]"
 
 ## Abstraction
 
-<include src="../designFundamentals/abstraction/what/print.md" />
+<include src="../designFundamentals/abstraction/what/print.md" boilerplate />
 
 ## Coupling
 
-<include src="../designFundamentals/coupling/what/print.md" />
-<include src="../designFundamentals/coupling/how/print.md" />
-<include src="../designFundamentals/coupling/types/print.md" />
+<include src="../designFundamentals/coupling/what/print.md" boilerplate />
+<include src="../designFundamentals/coupling/how/print.md" boilerplate />
+<include src="../designFundamentals/coupling/types/print.md" boilerplate />
 
 ## Cohesion
 
-<include src="../designFundamentals/cohesion/what/print.md" />
-<include src="../designFundamentals/cohesion/how/print.md" />
+<include src="../designFundamentals/cohesion/what/print.md" boilerplate />
+<include src="../designFundamentals/cohesion/how/print.md" boilerplate />
 
 </div>
 

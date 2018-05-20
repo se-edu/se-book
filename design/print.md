@@ -12,7 +12,7 @@ title: "Software Design [Printable]"
 
 ## Introduction
 
-<include src="../design/introduction/what/print.md" />
+<include src="../design/introduction/what/print.md" boilerplate />
 
 
 

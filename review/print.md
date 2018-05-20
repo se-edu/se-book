@@ -12,7 +12,7 @@ title: "Review [Printable]"
 
 ## Review
 
-<include src="review/print.md" />
+<include src="review/print.md" boilerplate />
 
 </div>
 

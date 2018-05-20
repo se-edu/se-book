@@ -12,39 +12,39 @@ title: "Modeling [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/print.md" />
-<include src="introduction/how/print.md" />
-<include src="introduction/umlModels/print.md" />
+<include src="introduction/what/print.md" boilerplate />
+<include src="introduction/how/print.md" boilerplate />
+<include src="introduction/umlModels/print.md" boilerplate />
 
 ## Modeling Structures
 
-<include src="modelingStructures/classDiagramsBasic/print.md" />
-<!-- <include src="modelingStructures/classDiagramsIntermediate/print.md" /> -->
-<!-- <include src="modelingStructures/classDiagramsAdvanced/print.md" /> -->
-<include src="modelingStructures/objectDiagrams/print.md" />
-<include src="modelingStructures/objectOrientedDomainModels/print.md" />
-<include src="modelingStructures/deploymentDiagrams/print.md" />
-<include src="modelingStructures/componentDiagrams/print.md" />
-<include src="modelingStructures/packageDiagrams/print.md" />
-<include src="modelingStructures/compositeStructureDiagrams/print.md" />
+<include src="modelingStructures/classDiagramsBasic/print.md" boilerplate />
+<!-- <include src="modelingStructures/classDiagramsIntermediate/print.md" boilerplate /> -->
+<!-- <include src="modelingStructures/classDiagramsAdvanced/print.md" boilerplate /> -->
+<include src="modelingStructures/objectDiagrams/print.md" boilerplate />
+<include src="modelingStructures/objectOrientedDomainModels/print.md" boilerplate />
+<include src="modelingStructures/deploymentDiagrams/print.md" boilerplate />
+<include src="modelingStructures/componentDiagrams/print.md" boilerplate />
+<include src="modelingStructures/packageDiagrams/print.md" boilerplate />
+<include src="modelingStructures/compositeStructureDiagrams/print.md" boilerplate />
 
 ## Modeling Behaviors
 
-<include src="modelingBehaviors/activityDiagrams/print.md" />
-<include src="modelingBehaviors/sequenceDiagramsBasic/print.md" />
-<!-- <include src="modelingBehaviors/sequenceDiagramsIntermediate/print.md" /> -->
-<!-- <include src="modelingBehaviors/sequenceDiagramsAdvanced/print.md" /> -->
-<include src="modelingBehaviors/useCaseDiagrams/print.md" />
-<include src="modelingBehaviors/timingDiagrams/print.md" />
-<include src="modelingBehaviors/interactionOverviewDiagrams/print.md" />
-<include src="modelingBehaviors/communicationDiagrams/print.md" />
-<include src="modelingBehaviors/stateMachineDiagrams/print.md" />
+<include src="modelingBehaviors/activityDiagrams/print.md" boilerplate />
+<include src="modelingBehaviors/sequenceDiagramsBasic/print.md" boilerplate />
+<!-- <include src="modelingBehaviors/sequenceDiagramsIntermediate/print.md" boilerplate /> -->
+<!-- <include src="modelingBehaviors/sequenceDiagramsAdvanced/print.md" boilerplate /> -->
+<include src="modelingBehaviors/useCaseDiagrams/print.md" boilerplate />
+<include src="modelingBehaviors/timingDiagrams/print.md" boilerplate />
+<include src="modelingBehaviors/interactionOverviewDiagrams/print.md" boilerplate />
+<include src="modelingBehaviors/communicationDiagrams/print.md" boilerplate />
+<include src="modelingBehaviors/stateMachineDiagrams/print.md" boilerplate />
 
 ## Modeling a Solution
 
-<include src="modelingASolution/introduction/print.md" />
-<include src="modelingASolution/basic/print.md" />
-<include src="modelingASolution/intermediate/print.md" />
+<include src="modelingASolution/introduction/print.md" boilerplate />
+<include src="modelingASolution/basic/print.md" boilerplate />
+<include src="modelingASolution/intermediate/print.md" boilerplate />
 
 <!-- TODO: add review -->
 

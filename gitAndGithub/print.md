@@ -10,20 +10,20 @@ title: "Git and Github [Printable]"
 
 # Git and GitHub
 
-<include src="init/print.md" />
-<include src="commit/print.md" />
-<include src="ignore/print.md" />
-<include src="tag/print.md" />
-<include src="checkout/print.md" />
-<include src="stash/print.md" />
-<include src="clone/print.md" />
-<include src="pull/print.md" />
-<include src="push/print.md" />
-<include src="branch/print.md" />
-<include src="mergeConflicts/print.md" />
-<include src="createPRs/print.md" />
-<include src="managePRs/print.md" />
-<include src="forkingWorkflow/print.md" />
+<include src="init/print.md" boilerplate />
+<include src="commit/print.md" boilerplate />
+<include src="ignore/print.md" boilerplate />
+<include src="tag/print.md" boilerplate />
+<include src="checkout/print.md" boilerplate />
+<include src="stash/print.md" boilerplate />
+<include src="clone/print.md" boilerplate />
+<include src="pull/print.md" boilerplate />
+<include src="push/print.md" boilerplate />
+<include src="branch/print.md" boilerplate />
+<include src="mergeConflicts/print.md" boilerplate />
+<include src="createPRs/print.md" boilerplate />
+<include src="managePRs/print.md" boilerplate />
+<include src="forkingWorkflow/print.md" boilerplate />
 
 </div>
 

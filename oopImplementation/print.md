@@ -10,19 +10,19 @@ title: "Object Oriented Programming [Printable]"
 
 # OOP - Implementation
 
-<include src="classes/print.md" />
-<include src="classLevelMembers/print.md" />
-<include src="associations/print.md" />
-<include src="dependencies/print.md" />
-<include src="composition/print.md" />
-<include src="aggregation/print.md" />
-<include src="associationClasses/print.md" />
-<include src="inheritance/print.md" />
-<include src="overriding/print.md" />
-<include src="overloading/print.md" />
-<include src="interfaces/print.md" />
-<include src="abstractClasses/print.md" />
-<include src="polymorphism/print.md" />
+<include src="classes/print.md" boilerplate />
+<include src="classLevelMembers/print.md" boilerplate />
+<include src="associations/print.md" boilerplate />
+<include src="dependencies/print.md" boilerplate />
+<include src="composition/print.md" boilerplate />
+<include src="aggregation/print.md" boilerplate />
+<include src="associationClasses/print.md" boilerplate />
+<include src="inheritance/print.md" boilerplate />
+<include src="overriding/print.md" boilerplate />
+<include src="overloading/print.md" boilerplate />
+<include src="interfaces/print.md" boilerplate />
+<include src="abstractClasses/print.md" boilerplate />
+<include src="polymorphism/print.md" boilerplate />
 
 </div>
 

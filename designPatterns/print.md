@@ -12,42 +12,42 @@ title: "Software Design Patterns [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/print.md" />
-<include src="introduction/format/print.md" />
+<include src="introduction/what/print.md" boilerplate />
+<include src="introduction/format/print.md" boilerplate />
 
 ## Singleton Pattern
 
-<include src="singleton/what/print.md" />
-<include src="singleton/implementation/print.md" />
-<include src="singleton/evaluation/print.md" />
+<include src="singleton/what/print.md" boilerplate />
+<include src="singleton/implementation/print.md" boilerplate />
+<include src="singleton/evaluation/print.md" boilerplate />
 
 ## Abstraction Occurrence Pattern
 
-<include src="abstractionOccurrence/what/print.md" />
+<include src="abstractionOccurrence/what/print.md" boilerplate />
 
 ## Facade Pattern
 
-<include src="facade/what/print.md" />
+<include src="facade/what/print.md" boilerplate />
 
 ## Command Pattern
 
-<include src="command/what/print.md" />
+<include src="command/what/print.md" boilerplate />
 
 ## Model View Controller (MVC) Pattern
 
-<include src="modelViewController/what/print.md" />
+<include src="modelViewController/what/print.md" boilerplate />
 
 ## Observer Pattern
 
-<include src="observer/what/print.md" />
+<include src="observer/what/print.md" boilerplate />
 
 ## More
 
-<include src="more/combiningDesignPatterns/print.md" />
-<include src="more/otherDesignPatterns/print.md" />
-<include src="more/usingDesignPatterns/print.md" />
-<include src="more/otherTypesOfPatterns/print.md" />
-<include src="more/vsPrinciples/print.md" />
+<include src="more/combiningDesignPatterns/print.md" boilerplate />
+<include src="more/otherDesignPatterns/print.md" boilerplate />
+<include src="more/usingDesignPatterns/print.md" boilerplate />
+<include src="more/otherTypesOfPatterns/print.md" boilerplate />
+<include src="more/vsPrinciples/print.md" boilerplate />
 
 </div>
 

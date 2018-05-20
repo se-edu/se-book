@@ -10,7 +10,7 @@ title: "Software Engineering [Printable]"
 
 # Software Engineering
 
-<include src="prosAndCons/print.md" />
+<include src="prosAndCons/print.md" boilerplate />
 
 </div>
 
