@@ -6,7 +6,7 @@
 
 <div id="title">
 
-#### Project Setup :one: [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/intellij/projectSetup/index.html)
+#### Project Setup :one: [{{glyphicon_new_window}}]({{baseUrl}}/intellij/projectSetup/index.html)
 
 </div>
 

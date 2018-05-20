@@ -6,7 +6,7 @@
 
 <div id="title">
 
-#### Automated Testing of CLI Apps :one: [<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>]({{baseUrl}}/testing/testAutomation/testingTextUis/index.html)
+#### Automated Testing of CLI Apps :one: [{{glyphicon_new_window}}]({{baseUrl}}/testing/testAutomation/testingTextUis/index.html)
 
 </div>
 

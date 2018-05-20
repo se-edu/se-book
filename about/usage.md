@@ -133,7 +133,7 @@ Meaning of icons:
 
 * :one: :two: :three: :four: : indication of the depth of the topic, in order of increasing depth (:one: is the least depth)
 * :zero: : tangential info, can be ignored if not interested
-* <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span> : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.
+* {{glyphicon_new_window}} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.
 * :trophy: : learning outcomes
 * :mortar_board: : prerequisite learning outcome
 * :package: : examples
