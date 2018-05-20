@@ -1,6 +1,6 @@
 <include src="prereq.md"/><p/> 
 
-%%**<include src="../../path.md" inline />**%%
+%%**<include src="../path.md" inline />**%%
 <div id="title-and-body">
 <include src="text.md#title" />
 
