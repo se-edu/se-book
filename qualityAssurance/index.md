@@ -8,27 +8,19 @@ title: "Quality Assurance"
 
 # Quality Assurance
 
-## Introduction
-<panel header="================================================================"
-    type="seamless" alt="introduction">
+<panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
 </panel>
 
-## Code Reviews
-<panel header="================================================================"
-    type="seamless" alt="code reviews">
+<panel header="## Code Reviews" type="seamless" alt="code reviews" expanded >
   <include src="codeReviews/index.md#main" />
 </panel>
 
-## Static Analysis
-<panel header="================================================================"
-    type="seamless" alt="static analysis">
+<panel header="## Static Analysis" type="seamless" alt="static analysis" expanded >
   <include src="staticAnalysis/index.md#main" />
 </panel>
 
-## Formal Verification
-<panel header="================================================================"
-    type="seamless" alt="formal verification">
+<panel header="## Formal Verification" type="seamless" alt="formal verification" expanded >
   <include src="formalVerification/index.md#main" />
 </panel>
 

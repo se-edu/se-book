@@ -8,39 +8,27 @@ title: "Reuse"
 
 # Reuse
 
-## Introduction
-<panel header="================================================================"
-    type="seamless" alt="introduction">
+<panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
 </panel>
 
-## APIs
-<panel header="================================================================"
-    type="seamless" alt="apis">
+<panel header="## APIs" type="seamless" alt="apis" expanded >
   <include src="apis/index.md#main" />
 </panel>
 
-## Libraries
-<panel header="================================================================"
-    type="seamless" alt="libraries">
+<panel header="## Libraries" type="seamless" alt="libraries" expanded >
   <include src="libraries/index.md#main" />
 </panel>
 
-## Frameworks
-<panel header="================================================================"
-    type="seamless" alt="frameworks">
+<panel header="## Frameworks" type="seamless" alt="frameworks" expanded >
   <include src="frameworks/index.md#main" />
 </panel>
 
-## Platforms
-<panel header="================================================================"
-    type="seamless" alt="platforms">
+<panel header="## Platforms" type="seamless" alt="platforms" expanded >
   <include src="platforms/index.md#main" />
 </panel>
 
-## Cloud Computing
-<panel header="================================================================"
-    type="seamless" alt="platforms">
+<panel header="## Cloud Computing" type="seamless" alt="platforms" expanded >
   <include src="cloudComputing/index.md#main" />
 </panel>
 

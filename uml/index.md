@@ -8,39 +8,27 @@ title: "UML"
 
 # UML
 
-## Class Diagrams
-<panel header="================================================================"
-    type="seamless" alt="class diagrams">
+<panel header="## Class Diagrams" type="seamless" alt="class diagrams" expanded >
   <include src="classDiagrams/index.md#main" />
 </panel>
 
-## Sequence Diagrams
-<panel header="================================================================"
-    type="seamless" alt="sequence diagrams">
+<panel header="## Sequence Diagrams" type="seamless" alt="sequence diagrams" expanded >
   <include src="sequenceDiagrams/index.md#main" />
 </panel>
 
-## Object Diagrams
-<panel header="================================================================"
-    type="seamless" alt="object diagrams">
+<panel header="## Object Diagrams" type="seamless" alt="object diagrams" expanded >
   <include src="objectDiagrams/index.md#main" />
 </panel>
 
-## Activity Diagrams
-<panel header="================================================================"
-    type="seamless" alt="activity diagrams">
+<panel header="## Activity Diagrams" type="seamless" alt="activity diagrams" expanded >
   <include src="activityDiagrams/index.md#main" />
 </panel>
 
-## Notes
-<panel header="================================================================"
-    type="seamless" alt="notes">
+<panel header="## Notes" type="seamless" alt="notes" expanded >
   <include src="notes/index.md#main" />
 </panel>
 
-## Miscellaneous
-<panel header="================================================================"
-    type="seamless" alt="miscellaneous">
+<panel header="## Miscellaneous" type="seamless" alt="miscellaneous" expanded >
   <include src="miscellaneous/index.md#main" />
 </panel>
 

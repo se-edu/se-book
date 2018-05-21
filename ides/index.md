@@ -8,15 +8,11 @@ title: "IDEs"
 
 # IDEs
 
-## Introduction
-<panel header="================================================================"
-    type="seamless" alt="introduction">
+<panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
 </panel>
 
-## Debugging
-<panel header="================================================================"
-    type="seamless" alt="debugging">
+<panel header="## Debugging" type="seamless" alt="debugging" expanded >
   <include src="debugging/index.md#main" />
 </panel>
 

@@ -8,27 +8,19 @@ title: "Integration"
 
 # Integration
 
-## Introduction
-<panel header="================================================================"
-    type="seamless" alt="introduction">
+<panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
 </panel>
 
-## Approaches
-<panel header="================================================================"
-    type="seamless" alt="approaches">
+<panel header="## Approaches" type="seamless" alt="approaches" expanded >
   <include src="approaches/index.md#main" />
 </panel>
 
-## Build Automation
-<panel header="================================================================"
-    type="seamless" alt="build automation">
+<panel header="## Build Automation" type="seamless" alt="build automation" expanded >
   <include src="buildAutomation/index.md#main" />
 </panel>
 
-## Review
-<panel header="================================================================"
-    type="seamless" alt="review">
+<panel header="## Review" type="seamless" alt="review" expanded >
   <include src="review/embed.md" boilerplate  />
 </panel>
 

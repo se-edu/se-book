@@ -8,39 +8,27 @@ title: "Testing"
 
 # Testing
 
-## Introduction
-<panel header="================================================================"
-    type="seamless" alt="introduction">
+<panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
 </panel>
 
-## Testing Types
-<panel header="================================================================"
-    type="seamless" alt="testing types">
+<panel header="## Testing Types" type="seamless" alt="testing types" expanded >
   <include src="testingTypes/index.md#main" />
 </panel>
 
-## Test Automation
-<panel header="================================================================"
-    type="seamless" alt="test automation">
+<panel header="## Test Automation" type="seamless" alt="test automation" expanded >
   <include src="testAutomation/index.md#main" />
 </panel>
 
-## Test Coverage
-<panel header="================================================================"
-    type="seamless" alt="test coverage">
+<panel header="## Test Coverage" type="seamless" alt="test coverage" expanded >
   <include src="testCoverage/index.md#main" />
 </panel>
 
-## Dependency Injection
-<panel header="================================================================"
-    type="seamless" alt="dependency injection">
+<panel header="## Dependency Injection" type="seamless" alt="dependency injection" expanded >
   <include src="dependencyInjection/index.md#main" />
 </panel>
 
-## TDD
-<panel header="================================================================"
-    type="seamless" alt="tdd">
+<panel header="## TDD" type="seamless" alt="tdd" expanded >
   <include src="tdd/index.md#main" />
 </panel>
 

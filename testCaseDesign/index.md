@@ -8,39 +8,27 @@ title: "Test Case Design"
 
 # Test Case Design
 
-## Introduction
-<panel header="================================================================"
-    type="seamless" alt="introduction">
+<panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
 </panel>
 
-## Equivalence Partitions
-<panel header="================================================================"
-    type="seamless" alt="equivalence partitions">
+<panel header="## Equivalence Partitions" type="seamless" alt="equivalence partitions" expanded >
   <include src="equivalencePartitions/index.md#main" />
 </panel>
 
-## Boundary Value Analysis
-<panel header="================================================================"
-    type="seamless" alt="boundary value analysis">
+<panel header="## Boundary Value Analysis" type="seamless" alt="boundary value analysis" expanded >
   <include src="boundaryValueAnalysis/index.md#main" />
 </panel>
 
-## Combining Test Inputs
-<panel header="================================================================"
-    type="seamless" alt="combining test inputs">
+<panel header="## Combining Test Inputs" type="seamless" alt="combining test inputs" expanded >
   <include src="combiningTestInputs/index.md#main" />
 </panel>
 
-## More
-<panel header="================================================================"
-    type="seamless" alt="more">
+<panel header="## More" type="seamless" alt="more" expanded >
   <include src="more/index.md#main" />
 </panel>
 
-## Summary
-<panel header="================================================================"
-    type="seamless" alt="summary">
+<panel header="## Summary" type="seamless" alt="summary" expanded >
   <include src="summary/index.md#main" />
 </panel>
 

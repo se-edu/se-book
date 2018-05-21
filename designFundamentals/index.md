@@ -8,21 +8,15 @@ title: "Software Design Fundamentals"
 
 # Design Fundamentals
 
-## Abstraction
-<panel header="================================================================"
-    type="seamless" alt="abstraction">
+<panel header="## Abstraction" type="seamless" alt="abstraction" expanded >
   <include src="abstraction/index.md#main" />
 </panel>
 
-## Coupling
-<panel header="================================================================"
-    type="seamless" alt="coupling">
+<panel header="## Coupling" type="seamless" alt="coupling" expanded >
   <include src="coupling/index.md#main" />
 </panel>
 
-## Cohesion
-<panel header="================================================================"
-    type="seamless" alt="cohesion">
+<panel header="## Cohesion" type="seamless" alt="cohesion" expanded >
   <include src="cohesion/index.md#main" />
 </panel>
 

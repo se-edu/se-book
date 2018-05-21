@@ -8,33 +8,23 @@ title: "Modeling"
 
 # Modeling
 
-## Introduction
-<panel header="================================================================"
-    type="seamless" alt="introduction">
+<panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
 </panel>
 
-## Modeling Structures
-<panel header="================================================================"
-    type="seamless" alt="modeling structures">
+<panel header="## Modeling Structures" type="seamless" alt="modeling structures" expanded >
   <include src="modelingStructures/index.md#main" />
 </panel>
 
-## Modeling Behaviors
-<panel header="================================================================"
-    type="seamless" alt="modeling behaviors">
+<panel header="## Modeling Behaviors" type="seamless" alt="modeling behaviors" expanded >
   <include src="modelingBehaviors/index.md#main" />
 </panel>
 
-## Modeling a Solution
-<panel header="================================================================"
-    type="seamless" alt="conceptualizing a solution">
+<panel header="## Modeling a Solution" type="seamless" alt="conceptualizing a solution" expanded >
   <include src="modelingASolution/index.md#main" />
 </panel>
 
-## Review
-<panel header="================================================================"
-    type="seamless" alt="review">
+<panel header="## Review" type="seamless" alt="review" expanded >
   <include src="review/embed.md" boilerplate  />
 </panel>
 

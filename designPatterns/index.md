@@ -8,51 +8,35 @@ title: "Software Design Patterns"
 
 # Software Design Patterns
 
-## Introduction
-<panel header="================================================================"
-    type="seamless" alt="introduction">
+<panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
 </panel>
 
-## Singleton Pattern
-<panel header="================================================================"
-    type="seamless" alt="singleton">
+<panel header="## Singleton Pattern" type="seamless" alt="singleton" expanded >
   <include src="singleton/index.md#main" />
 </panel>
 
-## Abstraction Occurrence Pattern
-<panel header="================================================================"
-    type="seamless" alt="abstraction occurrence">
+<panel header="## Abstraction Occurrence Pattern" type="seamless" alt="abstraction occurrence" expanded >
   <include src="abstractionOccurrence/index.md#main" />
 </panel>
 
-## Facade Pattern
-<panel header="================================================================"
-    type="seamless" alt="facade">
+<panel header="## Facade Pattern" type="seamless" alt="facade" expanded >
   <include src="facade/index.md#main" />
 </panel>
 
-## Command Pattern
-<panel header="================================================================"
-    type="seamless" alt="command">
+<panel header="## Command Pattern" type="seamless" alt="command" expanded >
   <include src="command/index.md#main" />
 </panel>
 
-## Model View Controller (MVC) Pattern
-<panel header="================================================================"
-    type="seamless" alt="model view controller">
+<panel header="## Model View Controller (MVC) Pattern" type="seamless" alt="model view controller" expanded >
   <include src="modelViewController/index.md#main" />
 </panel>
 
-## Observer Pattern
-<panel header="================================================================"
-    type="seamless" alt="observer">
+<panel header="## Observer Pattern" type="seamless" alt="observer" expanded >
   <include src="observer/index.md#main" />
 </panel>
 
-## More
-<panel header="================================================================"
-    type="seamless" alt="more">
+<panel header="## More" type="seamless" alt="more" expanded >
   <include src="more/index.md#main" />
 </panel>
 

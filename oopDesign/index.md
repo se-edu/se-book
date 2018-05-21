@@ -8,51 +8,36 @@ title: "Object Oriented Programming"
 
 # OOP - Concepts
 
-## Introduction
-<panel header="================================================================"
-    type="seamless" alt="introduction">
+
+<panel header="## Introduction"  type="seamless" alt="introduction" expanded>
   <include src="introduction/embed.md" boilerplate  />
 </panel>
 
-## Objects
-<panel header="================================================================"
-    type="seamless" alt="objects">
+<panel header="## Objects" type="seamless" alt="objects" expanded >
   <include src="objects/index.md#main" />
 </panel>
 
-## Classes
-<panel header="================================================================"
-    type="seamless" alt="classes">
+<panel header="## Classes" type="seamless" alt="classes" expanded >
   <include src="classes/index.md#main" />
 </panel>
 
-## Associations
-<panel header="================================================================"
-    type="seamless" alt="associations">
+<panel header="## Associations" type="seamless" alt="associations" expanded >
   <include src="associations/index.md#main" />
 </panel>
 
-## Inheritance
-<panel header="================================================================"
-    type="seamless" alt="inheritance">
+<panel header="## Inheritance" type="seamless" alt="inheritance" expanded >
   <include src="inheritance/index.md#main" />
 </panel>
 
-## Polymorphism
-<panel header="================================================================"
-    type="seamless" alt="polymorphism">
+<panel header="## Polymorphism" type="seamless" alt="polymorphism" expanded >
   <include src="polymorphism/index.md#main" />
 </panel>
 
-## Miscellaneous
-<panel header="================================================================"
-    type="seamless" alt="miscellaneous">
+<panel header="## Miscellaneous" type="seamless" alt="miscellaneous" expanded >
   <include src="miscellaneous/embed.md" boilerplate  />
 </panel>
 
-## Review
-<panel header="================================================================"
-    type="seamless" alt="review">
+<panel header="## Review" type="seamless" alt="review" expanded >
   <include src="review/embed.md" boilerplate  />
 </panel>
 

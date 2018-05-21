@@ -8,39 +8,27 @@ title: "Error Handling"
 
 # Error Handling
 
-## Introduction
-<panel header="================================================================"
-    type="seamless" alt="introduction">
+<panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
 </panel>
 
-## Exceptions
-<panel header="================================================================"
-    type="seamless" alt="exceptions">
+<panel header="## Exceptions" type="seamless" alt="exceptions" expanded >
   <include src="exceptions/index.md#main" />
 </panel>
 
-## Assertions
-<panel header="================================================================"
-    type="seamless" alt="assertions">
+<panel header="## Assertions" type="seamless" alt="assertions" expanded >
   <include src="assertions/index.md#main" />
 </panel>
 
-## Logging
-<panel header="================================================================"
-    type="seamless" alt="logging">
+<panel header="## Logging" type="seamless" alt="logging" expanded >
   <include src="logging/index.md#main" />
 </panel>
 
-## Defensive Programming
-<panel header="================================================================"
-    type="seamless" alt="defensive programming">
+<panel header="## Defensive Programming" type="seamless" alt="defensive programming" expanded >
   <include src="defensiveProgramming/index.md#main" />
 </panel>
 
-## Design-by-Contract Approach
-<panel header="================================================================"
-    type="seamless" alt="logging">
+<panel header="## Design-by-Contract Approach" type="seamless" alt="logging" expanded >
   <include src="designByContract/index.md#main" />
 </panel>
 

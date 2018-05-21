@@ -8,39 +8,27 @@ title: "Code Quality"
 
 # Code Quality
 
-## Introduction
-<panel header="================================================================"
-    type="seamless" alt="introduction">
+<panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
 </panel>
 
-## Guideline: Maximise Readability
-<panel header="================================================================"
-    type="seamless" alt="maximise readability">
+<panel header="## Guideline: Maximise Readability" type="seamless" alt="maximise readability" expanded >
   <include src="maximiseReadability/index.md#main" />
 </panel>
 
-## Guideline: Follow a Standard
-<panel header="================================================================"
-    type="seamless" alt="follow standard">
+<panel header="## Guideline: Follow a Standard" type="seamless" alt="follow standard" expanded >
   <include src="followStandard/index.md#main" />
 </panel>
 
-## Guideline: Name Well
-<panel header="================================================================"
-    type="seamless" alt="name well">
+<panel header="## Guideline: Name Well" type="seamless" alt="name well" expanded >
   <include src="nameWell/index.md#main" />
 </panel>
 
-## Guideline: Avoid Unsafe Shortcuts
-<panel header="================================================================"
-    type="seamless" alt="avoid shortcuts">
+<panel header="## Guideline: Avoid Unsafe Shortcuts" type="seamless" alt="avoid shortcuts" expanded >
   <include src="avoidShortcuts/index.md#main" />
 </panel>
 
-## Guideline: Comment Minimally, but Sufficiently
-<panel header="================================================================"
-    type="seamless" alt="comment minimally">
+<panel header="## Guideline: Comment Minimally, but Sufficiently" type="seamless" alt="comment minimally" expanded >
   <include src="commentMinimally/index.md#main" />
 </panel>
 

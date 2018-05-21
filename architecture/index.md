@@ -8,21 +8,15 @@ title: "Software Architecture"
 
 # Software Architecture
 
-## Introduction
-<panel header="================================================================"
-    type="seamless" alt="introduction">
+<panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
 </panel>
 
-## Architecture Diagrams
-<panel header="================================================================"
-    type="seamless" alt="architecture diagrams">
+<panel header="## Architecture Diagrams" type="seamless" alt="architecture diagrams" expanded >
   <include src="architectureDiagrams/index.md#main" />
 </panel>
 
-## Architectural Styles
-<panel header="================================================================"
-    type="seamless" alt="architectural styles">
+<panel header="## Architectural Styles" type="seamless" alt="architectural styles" expanded >
   <include src="architecturalStyles/index.md#main" />
 </panel>
 

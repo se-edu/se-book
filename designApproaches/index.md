@@ -8,22 +8,16 @@ title: "Design Approaches"
 
 # Design Approaches
 
-## Multi-Level Design
-<panel header="================================================================"
-    type="seamless" alt="Multilevel Design">
+<panel header="## Multi-Level Design" type="seamless" alt="Multilevel Design" expanded >
   <include src="multilevelDesign/index.md#main" />
 </panel>
 
-## Top-Down and Bottom-Up Design
-<panel header="================================================================"
-    type="seamless" alt="Top-Down and Bottom-Up Design">
+<panel header="## Top-Down and Bottom-Up Design" type="seamless" alt="Top-Down and Bottom-Up Design" expanded >
   <include src="topDownBottomUp/index.md#main" />
 </panel>
 
 
-## Agile Design
-<panel header="================================================================"
-    type="seamless" alt="Agile Design">
+<panel header="## Agile Design" type="seamless" alt="Agile Design" expanded >
   <include src="agileDesign/index.md#main" />
 </panel>
 

@@ -8,9 +8,7 @@ title: "Review"
 
 # Review
 
-## Review
-<panel header="================================================================"
-    type="seamless" alt="review">
+<panel header="## Review" type="seamless" alt="review" expanded >
   <include src="review/embed.md" boilerplate  />
 </panel>
 

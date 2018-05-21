@@ -8,27 +8,19 @@ title: "SDLC Process Models"
 
 # SDLC Process Models
 
-## Introduction
-<panel header="================================================================"
-    type="seamless" alt="introduction">
+<panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
 </panel>
 
-## Example Process Models
-<panel header="================================================================"
-    type="seamless" alt="example process models">
+<panel header="## Example Process Models" type="seamless" alt="example process models" expanded >
   <include src="exampleProcessModels/index.md#main" />
 </panel>
 
-## More
-<panel header="================================================================"
-    type="seamless" alt="more">
+<panel header="## More" type="seamless" alt="more" expanded >
   <include src="more/index.md#main" />
 </panel>
 
-## Summary
-<panel header="================================================================"
-    type="seamless" alt="summary">
+<panel header="## Summary" type="seamless" alt="summary" expanded >
   <include src="summary/index.md#main" />
 </panel>
 

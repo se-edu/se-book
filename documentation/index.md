@@ -8,21 +8,15 @@ title: "Documentation"
 
 # Documentation
 
-## Introduction
-<panel header="================================================================"
-    type="seamless" alt="introduction">
+<panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
 </panel>
 
-## Guidelines
-<panel header="================================================================"
-    type="seamless" alt="guidelines">
+<panel header="## Guidelines" type="seamless" alt="guidelines" expanded >
   <include src="guidelines/index.md#main" />
 </panel>
 
-## Tools
-<panel header="================================================================"
-    type="seamless" alt="tools">
+<panel header="## Tools" type="seamless" alt="tools" expanded >
   <include src="tools/index.md#main" />
 </panel>
 
