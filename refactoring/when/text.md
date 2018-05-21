@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Refactoring → </div>
 
 <div id="title">
@@ -19,7 +15,5 @@ We know that it is important to refactor frequently so as to avoid the accumulat
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

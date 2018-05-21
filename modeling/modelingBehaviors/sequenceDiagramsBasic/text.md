@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Sequence Diagrams - Basic :one:
@@ -47,6 +43,4 @@ Here is the sequence diagram to model the interactions for the method call `prou
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Intermediate :two:
@@ -64,6 +60,4 @@ Next, let us identify equivalence partitions for each participant. Will the `new
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Identifying :one:
@@ -96,7 +92,5 @@ While modeling user-system interactions,
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

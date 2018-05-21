@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :one:
@@ -38,6 +34,4 @@ If the returned Config object is not meant to be modified, a defensive programme
 </div>
 
 <div id="extras">
-</div>
-
 </div>

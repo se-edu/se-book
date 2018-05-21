@@ -16,5 +16,3 @@ An _open beta release_ is the release of not-yet-production-quality-but-almost-t
 
 <div id="extras">
 </div>
-
-</div>

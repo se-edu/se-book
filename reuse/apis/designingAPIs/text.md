@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Reuse → APIs →</div>
 
 <div id="title">
@@ -56,6 +52,4 @@ Preconditions are the conditions that must be true before calling this operation
 </div>
 
 <div id="extras">
-</div>
-
 </div>

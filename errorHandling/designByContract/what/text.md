@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Error Handling → Design-by-Contract Approach →</div>
 
 <div id="title">
@@ -23,7 +19,5 @@ Languages such as Eiffel have native support for DbC. For example, preconditions
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

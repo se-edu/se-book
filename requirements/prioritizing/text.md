@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Prioritizing Requirements :one:
@@ -43,6 +39,4 @@ A common approach is to group requirements into priority categories. Note that a
 </div>
 
 <div id="extras">
-</div>
-
 </div>

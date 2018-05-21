@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Activity Diagrams :two:
@@ -52,6 +48,4 @@ In some workflows, multiple paths happen in parallel.
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

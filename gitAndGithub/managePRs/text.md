@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Manage PRs :three:
@@ -66,6 +62,4 @@ Note that you could have merged the `add-summary` branch to the `master` branch 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

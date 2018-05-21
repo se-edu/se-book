@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :one:
@@ -15,6 +11,4 @@ Reuse is a major theme in software engineering practices. **By reusing tried-and
 </div>
 
 <div id="extras">
-</div>
-
 </div>

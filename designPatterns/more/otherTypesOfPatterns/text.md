@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Other Types of Patterns :three:
@@ -30,7 +26,5 @@ New patterns can be created too. If a common problem needs to be solved frequent
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

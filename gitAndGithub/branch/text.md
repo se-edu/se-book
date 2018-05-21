@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Branch :two:
@@ -123,6 +119,4 @@ That is because **Git does a ==_fast forward_ merge== if possible**. Seeing that
 </div>
 
 <div id="extras">
-</div>
-
 </div>

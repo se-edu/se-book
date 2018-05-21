@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### 'Late and One Time' vs 'Early and Frequent' :two:
@@ -39,6 +35,4 @@ Here is an animation that compares the two approaches:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

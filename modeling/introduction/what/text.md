@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :two:
@@ -52,6 +48,4 @@ A _class diagram_ is a diagram drawn using the UML modelling notation.<br>
 </div>
 
 <div id="extras">
-</div>
-
 </div>

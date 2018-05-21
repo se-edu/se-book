@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Basic :one:
@@ -47,6 +43,4 @@ Note that unlike in Object Diagrams, the **class/object name is not underlined i
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Test Case Design → Combining Test Inputs →</div>
 
 <div id="title">
@@ -41,6 +37,4 @@ VV/IV = Any Invalid or Valid Value VV=Any Valid Value
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

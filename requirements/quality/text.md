@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Quality of Requirements :one:
@@ -38,6 +34,4 @@ Besides these criteria for individual requirements, the set of requirements as a
 </div>
 
 <div id="extras">
-</div>
-
 </div>

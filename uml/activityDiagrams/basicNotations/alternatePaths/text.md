@@ -28,5 +28,3 @@ Both branch nodes and merge nodes are ==diamond shapes==. Guard conditions must 
 <div id="extras">
   <include src="exercises.md" />
 </div>
-
-</div>

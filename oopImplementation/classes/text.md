@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Implementing Classes :one:
@@ -28,6 +24,4 @@ Given below are some resources on how to implement classes:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

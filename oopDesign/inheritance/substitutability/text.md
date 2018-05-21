@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Substitutability :two:
@@ -37,6 +33,4 @@ AcademicStaff academicStaff = staff; // Not OK
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :one:
@@ -45,6 +41,4 @@ Most programs are written to solve complex problems involving large amounts of i
 </div>
 
 <div id="extras">
-</div>
-
 </div>

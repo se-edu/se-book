@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Non-Functional Requirements :one:
@@ -44,6 +40,4 @@ We should spend extra effort in digging NFRs out as early as possible because **
 
 <div id="extras">
 <include src="exercises.md" />
-</div>
-
 </div>

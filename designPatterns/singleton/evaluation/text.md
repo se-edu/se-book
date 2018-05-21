@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Evaluation :three:
@@ -25,6 +21,4 @@ Given there are some significant cons, it is recommended that you apply the Sing
 </div>
 
 <div id="extras">
-</div>
-
 </div>

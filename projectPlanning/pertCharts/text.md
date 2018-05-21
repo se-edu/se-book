@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### PERT Charts :four:
@@ -40,6 +36,4 @@ A PERT chart can help determine the following important information:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

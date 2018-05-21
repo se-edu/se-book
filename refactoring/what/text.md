@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Refactoring → </div>
 
 <div id="title">
@@ -100,7 +96,5 @@ Important: Refactoring, even if done with the aid of an IDE, may still result in
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

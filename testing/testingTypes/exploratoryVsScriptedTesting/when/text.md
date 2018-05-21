@@ -24,5 +24,3 @@ Which approach is better – **scripted or exploratory? A mix is better.**
 <div id="extras">
  <include src="exercises.md" />
 </div>
-
-</div>

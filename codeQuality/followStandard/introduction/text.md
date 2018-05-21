@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Introduction :one:
@@ -25,7 +21,5 @@ IDEs can help to enforce some parts of a coding standard e.g. indentation rules.
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

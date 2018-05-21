@@ -12,5 +12,3 @@ AsciiDoc is similar to Markdown but has more powerful (but also more complex) sy
 
 <div id="extras">
 </div>
-
-</div>

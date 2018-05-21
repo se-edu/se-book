@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Use Name to Explain
@@ -50,7 +46,5 @@ Examples:
 
 [Bad]: {{baseUrl}}/images/Bad.png "Bad"
 [Good]: {{baseUrl}}/images/Good.png "Good"
-
-</div>
 
 </div>

@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Practice KISSing
@@ -15,7 +11,5 @@ As the old adage goes, **"keep it simple, stupid” (KISS).  Do not try to write
 > Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it. <sub>--Brian W. Kernighan </sub>
 
 > Programs must be written for people to read, and only incidentally for machines to execute. <sub>--Abelson and Sussman</sub>
-
-</div>
 
 </div>

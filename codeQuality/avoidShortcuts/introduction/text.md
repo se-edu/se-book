@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Introduction :one:
@@ -15,6 +11,4 @@ It is safer to use language constructs in the way they are meant to be used, eve
 </div>
 
 <div id="extras">
-</div>
-
 </div>

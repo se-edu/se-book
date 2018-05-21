@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Agile Models :one:
@@ -36,6 +32,4 @@ Subsequently, some of the signatories of the manifesto went on to create process
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

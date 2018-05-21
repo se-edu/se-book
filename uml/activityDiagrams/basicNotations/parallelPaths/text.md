@@ -29,5 +29,3 @@ In a <tooltip content="paths within a matching fork-join pair">set of parallel p
 <div id="extras">
   <include src="exercises.md" />
 </div>
-
-</div>

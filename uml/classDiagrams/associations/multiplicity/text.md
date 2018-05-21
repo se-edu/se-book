@@ -39,5 +39,3 @@ Commonly used multiplicities:
 
 <div id="extras">
 </div>
-
-</div>

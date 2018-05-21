@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Git and Github → </div>
 
 <div id="title">
@@ -77,6 +73,4 @@ Next, add two more files `colors.txt` and `shapes.txt` to the same working direc
 
 <div id="extras">
   <include src="resources.md"/>
-</div>
-
 </div>

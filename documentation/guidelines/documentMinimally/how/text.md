@@ -14,5 +14,3 @@ Refrain from duplicating chunks or text. When describing several similar algorit
 
 <div id="extras">
 </div>
-
-</div>

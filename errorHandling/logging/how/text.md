@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### How :two:
@@ -46,6 +42,4 @@ logger.log(Level.INFO, "end of processing");
 
 <div id="extras">
   <include src="resources.md" />
-</div>
-
 </div>

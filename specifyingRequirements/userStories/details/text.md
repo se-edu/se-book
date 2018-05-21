@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Specifying Requirements → User Stories →</div>
 
 <div id="title">
@@ -92,7 +88,5 @@ User stories for a travel website (credit: Mike Cohen)
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

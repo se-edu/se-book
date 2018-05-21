@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :two:
@@ -45,7 +41,5 @@ For 100% condition coverage, three test cases are required
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

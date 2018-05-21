@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :one:
@@ -27,7 +23,5 @@ When developing large systems, if you define the API of each components early, t
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

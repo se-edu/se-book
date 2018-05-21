@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Intermediate :two:
@@ -17,7 +13,5 @@ Go through the [provided Java coding standard]({{java_coding_standard}}) and lea
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

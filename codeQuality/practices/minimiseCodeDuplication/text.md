@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Minimise Code Duplication
@@ -17,7 +13,5 @@ This guideline is closely related to the <trigger for="modal:duplication-dry" tr
 <modal title="**:mag: DRY Principle**" id="modal:duplication-dry">
   <include src="../../../principles/dryPrinciple/full.md" boilerplate />
 </modal>
-
-</div>
 
 </div>

@@ -91,5 +91,3 @@ class Admin:
 
 <div id="extras">
 </div>
-
-</div>

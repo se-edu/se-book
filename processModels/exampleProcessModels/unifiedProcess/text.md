@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Unified Process :three:
@@ -98,6 +94,4 @@ Given above is a visualization of a project done using the Unified process (sour
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

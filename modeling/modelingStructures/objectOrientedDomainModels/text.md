@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Object Oriented Domain Models :three:
@@ -38,7 +34,5 @@ The above OO domain model omits the ladder class for simplicity. It can be inclu
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

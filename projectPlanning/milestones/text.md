@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Milestones :one:
@@ -35,6 +31,4 @@ In some projects, it is not practical to have a very detailed plan for the whole
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### State Machine Diagrams :four:
@@ -44,6 +40,4 @@ An SMD views the life-cycle of an object as consisting of a finite number of sta
 </div>
 
 <div id="extras">
-</div>
-
 </div>

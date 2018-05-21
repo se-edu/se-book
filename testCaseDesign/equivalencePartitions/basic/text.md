@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Basic :two:
@@ -120,6 +116,4 @@ Returns the square root of `s` if the square root is an integer; returns `0` oth
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

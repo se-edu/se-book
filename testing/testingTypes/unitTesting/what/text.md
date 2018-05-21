@@ -33,5 +33,3 @@ In OOP code, it is common to write one or more unit tests for each public method
 <div id="extras">
   <include src="resources.md" />
 </div>
-
-</div>

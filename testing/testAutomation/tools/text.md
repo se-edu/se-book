@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Testing → Test Automation →</div>
 
 <div id="title">
@@ -47,6 +43,4 @@ Most modern IDEs has integrated support for testing tools. The figure below show
 </div>
 
 <div id="extras">
-</div>
-
 </div>

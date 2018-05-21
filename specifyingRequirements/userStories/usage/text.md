@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Usage :three:
@@ -74,6 +70,4 @@ While use cases can be recorded on <tooltip content="e.g. index cards or sticky 
 
 <div id="extras">
   <include src="resources.md" />
-</div>
-
 </div>

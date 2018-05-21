@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :one:
@@ -86,6 +82,4 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 </div>
 
 <div id="extras">
-</div>
-
 </div>

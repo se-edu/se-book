@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### How :two:
@@ -49,7 +45,5 @@ Advantages of exception handling in this way:
 
 <include src="resources.md" />
 <include src="exercises.md" />
-
-</div>
 
 </div>

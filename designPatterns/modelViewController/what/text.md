@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :two:
@@ -49,6 +45,4 @@ There are many variations of the MVC model used in different domains. For exampl
 </div>
 
 <div id="extras">
-</div>
-
 </div>

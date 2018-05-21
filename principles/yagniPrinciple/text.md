@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### YAGNI Principle :four:
@@ -23,7 +19,5 @@ The principle says that some capability we presume our software needs in the fut
 <div id="extras">
 
 <include src="resources.md" />
-
-</div>
 
 </div>

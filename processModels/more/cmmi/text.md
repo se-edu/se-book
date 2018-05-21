@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### CMMI :four:
@@ -24,6 +20,4 @@ CMMI (Capability Maturity Model Integration) is a process improvement approach d
 </div>
 
 <div id="extras">
-</div>
-
 </div>

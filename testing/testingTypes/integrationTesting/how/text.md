@@ -37,5 +37,3 @@ c) After that, do an integration test for `Car` using it together with the `Engi
 
 <div id="extras">
 </div>
-
-</div>

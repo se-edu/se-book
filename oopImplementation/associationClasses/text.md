@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Implementing Association Classes :three:
@@ -33,7 +29,5 @@ At implementation level, an association class is most likely implemented as foll
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

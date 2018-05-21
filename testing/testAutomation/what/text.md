@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Testing → Test Automation →</div>
 
 <div id="title">
@@ -29,6 +25,4 @@
 
 <div id="extras">
 <include src="resources.md" />
-</div>
-
 </div>

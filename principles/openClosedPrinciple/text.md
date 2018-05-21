@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Open-Closed Principle :one:
@@ -42,7 +38,5 @@ ArrayList admins = new ArrayList< Admin >();
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

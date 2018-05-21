@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Automated Testing of GUIs :two:
@@ -46,7 +42,5 @@ If a software product has a GUI component, all product-level testing (i.e. the t
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

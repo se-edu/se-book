@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Issue Trackers :two:
@@ -30,7 +26,5 @@ Keeping track of project tasks %%(who is doing what, which tasks are ongoing, wh
 </div>
 
 <div id="extras">
-
-</div>
 
 </div>

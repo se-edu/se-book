@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Implementation :two:
@@ -50,6 +46,4 @@ Logic m = Logic.getInstance();
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Implementing Class-Level Members :one:
@@ -29,6 +25,4 @@ Some resources to learn how to implement class-level members:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

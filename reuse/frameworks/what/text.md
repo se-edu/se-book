@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :two:
@@ -70,6 +66,4 @@ Some frameworks cover only a specific components or an aspect.
 </div>
 
 <div id="extras">
-</div>
-
 </div>

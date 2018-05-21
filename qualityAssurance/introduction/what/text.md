@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :one:
@@ -17,6 +13,4 @@ While testing is the most common activity used in QA, there are other complement
 </div>
 
 <div id="extras">
-</div>
-
 </div>

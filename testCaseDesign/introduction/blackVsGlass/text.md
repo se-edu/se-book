@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Black Box vs Glass Box :two:
@@ -46,6 +42,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

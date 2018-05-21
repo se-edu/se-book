@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :two:
@@ -117,7 +113,5 @@ In a GUI application, how is the Controller notified when the “save” button 
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

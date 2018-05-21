@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Forking Flow :three:
@@ -29,6 +25,4 @@ To illustrate how the workflow goes, let’s assume Jean wants to fix a bug in t
 
 <div id="extras">
   <include src="resources.md" />
-</div>
-
 </div>

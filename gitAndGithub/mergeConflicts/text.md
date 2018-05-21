@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Merge Conflicts :three:
@@ -71,6 +67,4 @@ white
 </div>
 
 <div id="extras">
-</div>
-
 </div>

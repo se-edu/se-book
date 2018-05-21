@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Iaas, PaaS, and SaaS :three:
@@ -27,7 +23,5 @@ Cloud computing can deliver computing services at three levels:
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

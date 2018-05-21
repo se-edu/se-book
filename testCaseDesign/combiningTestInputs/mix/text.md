@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Mix :three:
@@ -109,6 +105,4 @@ Next, let us assume that there is a dependency between the inputs `examScore` an
 
 <div id="extras">
  <include src="exercises.md" />
-</div>
-
 </div>

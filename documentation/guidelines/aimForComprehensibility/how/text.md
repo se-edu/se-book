@@ -21,5 +21,3 @@ Here are some tips on writing effective documentation.
 <include src="exercises.md" />
 
 </div>
-
-</div>

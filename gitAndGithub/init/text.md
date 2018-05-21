@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Git and Github → </div>
 
 <div id="title">
@@ -36,6 +32,4 @@ Suppose you want to create a repository in an empty directory `things`
 </div>
 
 <div id="extras">
-</div>
-
 </div>

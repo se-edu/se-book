@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">IDEs → Debugging →</div>
 
 <div id="title">
@@ -28,6 +24,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

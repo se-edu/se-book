@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :two:
@@ -36,6 +32,4 @@ In general, **most SUTs do not treat each input in a unique way. Instead, they p
 </div>
 
 <div id="extras">
-</div>
-
 </div>

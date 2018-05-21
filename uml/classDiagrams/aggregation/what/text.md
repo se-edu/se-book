@@ -25,5 +25,3 @@ Notation:
 
 <div id="extras">
 </div>
-
-</div>

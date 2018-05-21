@@ -26,5 +26,3 @@ The _rake_ symbol (in the `Move piece` action above) is used to show that the ac
 
 <div id="extras">
 </div>
-
-</div>

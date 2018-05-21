@@ -107,5 +107,3 @@ In addition to Stubs, there are other type of replacements you can use during te
   <include src="resources.md" />
   <include src="exercises.md" />
 </div>
-
-</div>

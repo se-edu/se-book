@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Single Responsibility Principle :two:
@@ -29,7 +25,5 @@ If a class has only one responsibility, it needs to change only when there is a 
 <div id="extras">
 
 <include src="resources.md" />
-
-</div>
 
 </div>

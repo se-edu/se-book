@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Reference Frames :two:
@@ -33,6 +29,4 @@ Those details are shown in a separate sequence diagram given below.<br>
 </div>
 
 <div id="extras">
-</div>
-
 </div>

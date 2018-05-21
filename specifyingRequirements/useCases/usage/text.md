@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Usage :three:
@@ -53,7 +49,5 @@ Use cases should be easy to read. Note that there is no strict rule about writin
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

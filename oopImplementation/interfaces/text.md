@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Implementing Interfaces :one:
@@ -80,6 +76,4 @@ class TA implements Student, Staff{
 
 <div id="extras">
 <include src="resources.md" />
-</div>
-
 </div>

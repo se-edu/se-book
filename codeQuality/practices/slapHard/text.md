@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### SLAP Hard
@@ -40,7 +36,5 @@ displayResult();
 
 [Bad]: {{baseUrl}}/images/Bad.png "Bad"
 [Good]: {{baseUrl}}/images/Good.png "Good"
-
-</div>
 
 </div>

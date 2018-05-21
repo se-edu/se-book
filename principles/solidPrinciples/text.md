@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### SOLID Principles :four:
@@ -31,6 +27,4 @@ The five OOP principles given below are known as _SOLID Principles_ (an acronym 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

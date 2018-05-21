@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Design Patterns vs Design Principles :one:
@@ -15,6 +11,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

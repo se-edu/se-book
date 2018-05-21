@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Multi-Level Design :three:
@@ -61,6 +57,4 @@ Here are examples of lower level designs of some components of the same software
 </div>
 
 <div id="extras">
-</div>
-
 </div>

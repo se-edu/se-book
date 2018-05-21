@@ -25,5 +25,3 @@ In a UML class diagram, a **dependency is a weaker form of an association where 
 
 <div id="extras">
 </div>
-
-</div>

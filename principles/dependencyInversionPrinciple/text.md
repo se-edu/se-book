@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Software Design Principles → Dependency Inversion Principle →</div>
 
 <div id="title">
@@ -35,7 +31,5 @@ Design (b) is more flexible (and less coupled) because now the `Payroll` class n
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

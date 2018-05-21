@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Navigability :one:
@@ -21,7 +17,5 @@ When two classes are linked by an association, it does not necessarily mean both
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

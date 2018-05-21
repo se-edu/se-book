@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Introduction :two:
@@ -86,6 +82,4 @@ For example, `ArrayList` staff contains both `Admin` and `Academic` objects alth
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Basic :one:
@@ -17,6 +13,4 @@ Some coding standards you can adopt:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

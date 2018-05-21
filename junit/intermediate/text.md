@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### JUnit: Intermediate :three:
@@ -19,6 +15,4 @@ Some intermediate JUnit techniques that may be useful:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Liskov Substitution Principle :three:
@@ -81,6 +77,4 @@ This code will fail if it is called as `maekSameSize(new Rectangle(12,8), new Sq
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

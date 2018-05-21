@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### When :two:
@@ -24,7 +20,5 @@ The suitable degree of defensiveness depends on many factors such as:
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

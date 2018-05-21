@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Enforcing 1-to-1 Associations :three:
@@ -50,6 +46,4 @@ Option 2 is more defensive because the `Mine` is immediately linked to a `MinedC
 </div>
 
 <div id="extras">
-</div>
-
 </div>

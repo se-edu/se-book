@@ -12,5 +12,3 @@ The main advantage of the top-down approach is that the document is structured l
 
 <div id="extras">
 </div>
-
-</div>

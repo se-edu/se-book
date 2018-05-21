@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :one:
@@ -36,6 +32,4 @@ A library is a collection of modular code that is general and can be used by oth
 </div>
 
 <div id="extras">
-</div>
-
 </div>

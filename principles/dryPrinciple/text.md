@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### DRY Principle :three:
@@ -29,6 +25,4 @@ This principle guards against duplication of information.
 </div>
 
 <div id="extras">
-</div>
-
 </div>

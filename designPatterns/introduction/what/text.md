@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :one:
@@ -36,7 +32,5 @@ After repeated attempts at solving such problems, better solutions are discovere
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

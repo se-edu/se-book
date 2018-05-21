@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Brooks' Law :four:
@@ -21,7 +17,5 @@ Explanation: The additional communication overhead will outweigh the benefit of 
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

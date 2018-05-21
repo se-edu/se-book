@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Implementing Overloading :one:
@@ -31,6 +27,4 @@ An operation can be overloaded inside the same class or in sub/super classes.
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Test Automation Using Test Drivers :two:
@@ -47,6 +43,4 @@ public class PayrollTestDriver {
 </div>
 
 <div id="extras">
-</div>
-
 </div>

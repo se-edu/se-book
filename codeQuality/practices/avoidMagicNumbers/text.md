@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Avoid Magic Numbers
@@ -44,7 +40,5 @@ Similarly, we can have ‘magic’ values of other data types.
 
 [Bad]: {{baseUrl}}/images/Bad.png "Bad"
 [Good]: {{baseUrl}}/images/Good.png "Good"
-
-</div>
 
 </div>

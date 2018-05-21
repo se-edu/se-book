@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Refactoring → </div>
 
 <div id="title">
@@ -33,6 +29,4 @@ Given below are some more commonly used refactorings. A more comprehensive list 
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

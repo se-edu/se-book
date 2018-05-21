@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Object Oriented Programming →</div>
 
 <div id="title">
@@ -68,6 +64,4 @@ The code above results in this dependency.
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :one:
@@ -23,6 +19,4 @@ Design in the creative process of transforming the problem into a solution; the 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

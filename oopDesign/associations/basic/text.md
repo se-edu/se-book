@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Basic :one:
@@ -56,6 +52,4 @@ Objects in an OO solution need to be connected to each other to form a network s
 </div>
 
 <div id="extras">
-</div>
-
 </div>

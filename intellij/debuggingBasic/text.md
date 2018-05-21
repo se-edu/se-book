@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Intellij IDEA → </div>
 
 <div id="title">
@@ -25,6 +21,4 @@ This video (from LaunchCode) gives a pretty good explanation of how to use the I
 </div>
 
 <div id="extras">
-</div>
-
 </div>

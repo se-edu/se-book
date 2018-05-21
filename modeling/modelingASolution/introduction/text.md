@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Introduction :one:
@@ -28,6 +24,4 @@ To answer those questions, you can analyze the how the objects of these classes 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Intellij IDEA → </div>
 
 <div id="title">
@@ -35,6 +31,4 @@ Some useful navigation shortcuts:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

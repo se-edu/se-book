@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Scrum :three:
@@ -63,6 +59,4 @@ The daily scrum meeting is not used as a problem-solving or issue resolution mee
 </div>
 
 <div id="extras">
-</div>
-
 </div>

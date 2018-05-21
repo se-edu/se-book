@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Combining Design Patterns :three:
@@ -76,6 +72,4 @@ In addition, the Singleton pattern can be applied to the façade class.
 </div>
 
 <div id="extras">
-</div>
-
 </div>

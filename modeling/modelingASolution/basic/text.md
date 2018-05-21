@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Basic :two:
@@ -87,6 +83,4 @@ Given below are the interactions between the player and the Text UI for the whol
 </div>
 
 <div id="extras">
-</div>
-
 </div>

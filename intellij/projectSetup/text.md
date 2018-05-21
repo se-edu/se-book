@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Intellij IDEA → </div>
 
 <div id="title">
@@ -38,6 +34,4 @@ A little bit more detailed explanation %%(from CodeLaunch)%% with some additiona
 </div>
 
 <div id="extras">
-</div>
-
 </div>

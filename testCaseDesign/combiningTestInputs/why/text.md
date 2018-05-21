@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Why :one:
@@ -34,6 +30,4 @@ examScore     | 0, 1, 69, 70,        | 71, 72
 </div>
 
 <div id="extras">
-</div>
-
 </div>

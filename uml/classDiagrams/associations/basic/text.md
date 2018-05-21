@@ -23,5 +23,3 @@ We use a solid line to show an association between two classes.
 
 <div id="extras">
 </div>
-
-</div>

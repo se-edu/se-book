@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :two:
@@ -34,6 +30,4 @@ _Linters_ are a subset of static analyzers that specifically aim to locate areas
 </div>
 
 <div id="extras">
-</div>
-
 </div>

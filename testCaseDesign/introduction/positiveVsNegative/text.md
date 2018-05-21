@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Positive vs Negative Test Cases :one:
@@ -24,6 +20,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

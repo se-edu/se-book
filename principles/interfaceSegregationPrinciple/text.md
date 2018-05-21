@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Interface Segregation Principle :four:
@@ -47,6 +43,4 @@ public class Payroll {
 </div>
 
 <div id="extras">
-</div>
-
 </div>

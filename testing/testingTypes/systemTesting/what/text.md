@@ -39,5 +39,3 @@ This test case would fail if the browser attempted to load the large file anyway
 
 <div id="extras">
 </div>
-
-</div>

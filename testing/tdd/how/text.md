@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Testing → TDD →</div>
 
 <div id="title">
@@ -26,6 +22,4 @@ Note that TDD does not imply writing all the test cases first before writing fun
 </div>
 
 <div id="extras">
-</div>
-
 </div>

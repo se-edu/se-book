@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">IDEs → Introduction →</div>
 
 <div id="title">
@@ -36,7 +32,5 @@ Some experienced developers, in particular those with a UNIX background, prefer 
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

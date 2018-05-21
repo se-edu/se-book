@@ -21,5 +21,3 @@ In UML class diagrams, **underlines denote class-level attributes and variables.
 
 <div id="extras">
 </div>
-
-</div>

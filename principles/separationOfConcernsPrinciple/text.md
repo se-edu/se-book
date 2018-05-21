@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Separation of Concerns Principle :three:
@@ -62,7 +58,5 @@ A _concern_ in this context is a set of information that affects the code of a c
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

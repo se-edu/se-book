@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :two:
@@ -47,6 +43,4 @@ Exhaustive testing of this operation can take many more test cases.
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

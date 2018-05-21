@@ -112,5 +112,3 @@ visibility | Java | Python
 <include src="exercises.md" />
 
 </div>
-
-</div>

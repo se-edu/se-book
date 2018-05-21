@@ -28,5 +28,3 @@ Note the slight difference between the _start node_ and the _end node_ which rep
 <div id="extras">
   <include src="exercises.md" />
 </div>
-
-</div>

@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Class Level Members :two:
@@ -50,6 +46,4 @@ However, there can be methods related to a specific class but not suitable for s
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

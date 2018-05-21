@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Object Oriented Programming → </div>
 
 <div id="title">
@@ -27,6 +23,4 @@ Overriding is when a sub-class redefines an operation using the same method name
 </div>
 
 <div id="extras">
-</div>
-
 </div>

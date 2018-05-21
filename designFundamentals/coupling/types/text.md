@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Types of Coupling :three:
@@ -23,6 +19,4 @@ Some examples of different coupling types:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

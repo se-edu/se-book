@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Do Not Repeat the Obvious
@@ -22,7 +18,5 @@ trimInput();
 ```
 
 [Bad]: {{baseUrl}}/images/Bad.png "Bad"
-
-</div>
 
 </div>

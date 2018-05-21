@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Heuristic: Each Valid Input at Least Once in a Positive Test Case :two:
@@ -74,6 +70,4 @@ VV/IV = Any Invalid or Valid Value VV=Any Valid Value
 </div>
 
 <div id="extras">
-</div>
-
 </div>

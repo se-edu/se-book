@@ -47,5 +47,3 @@ However, **in many cases one document serves as both a requirement specification
 <include src="exercises.md" />
 
 </div>
-
-</div>

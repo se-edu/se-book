@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :one:
@@ -45,7 +41,5 @@ However, most big projects use specialized build tools to automate complex build
 
 <include src="resources.md" />
 <include src="exercises.md" />
-
-</div>
 
 </div>

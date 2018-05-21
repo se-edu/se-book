@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Object Oriented Programming → Inheritance →</div>
 
 <div id="title">
@@ -77,6 +73,4 @@ void calculateGrade (String matric) { ... }
 </div>
 
 <div id="extras">
-</div>
-
 </div>

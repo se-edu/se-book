@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Test Input Combination Strategies :two:
@@ -130,6 +126,4 @@ A variation of this strategy is to test all pairs of inputs but only for inputs 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

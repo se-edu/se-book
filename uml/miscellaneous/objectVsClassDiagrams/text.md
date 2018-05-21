@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Object vs Class Diagrams :two:
@@ -37,7 +33,5 @@ Furthermore, **multiple object diagrams can correspond to a single class diagram
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

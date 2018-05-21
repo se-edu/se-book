@@ -14,5 +14,3 @@ Acceptance tests give an assurance to the customer that the system does what it 
 
 <div id="extras">
 </div>
-
-</div>

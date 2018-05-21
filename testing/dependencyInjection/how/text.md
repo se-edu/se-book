@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### How :three:
@@ -92,7 +88,5 @@ class SalaryManagerStub extends SalaryManager {
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

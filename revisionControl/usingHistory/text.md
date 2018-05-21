@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Revision Control → </div>
 
 <div id="title">
@@ -23,6 +19,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

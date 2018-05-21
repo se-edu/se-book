@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### How :two:
@@ -20,6 +16,4 @@ These are the typical steps required to use a library.
 </div>
 
 <div id="extras">
-</div>
-
 </div>

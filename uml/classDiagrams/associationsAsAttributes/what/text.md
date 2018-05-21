@@ -32,5 +32,3 @@ The association that a `Board` has 100 `Sqaure`s can be shown in either of these
 
 <div id="extras">
 </div>
-
-</div>

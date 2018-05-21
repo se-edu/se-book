@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Testing → Test Automation →</div>
 
 <div id="title">
@@ -87,6 +83,4 @@ Note that the above technique is only suitable when testing CLI apps, and only i
 </div>
 
 <div id="extras">
-</div>
-
 </div>

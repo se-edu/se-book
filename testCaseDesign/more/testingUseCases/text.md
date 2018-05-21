@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Testing Based on Use Cases :four:
@@ -25,6 +21,4 @@ To increase <trigger trigger="click" for="modal:usebaseBased-EandE">E&E of testi
 </div>
 
 <div id="extras">
-</div>
-
 </div>

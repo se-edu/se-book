@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Recap :three:
@@ -16,6 +12,4 @@ This section has some exercise that cover multiple topics related to SDLC proces
 
 <div id="extras">
  <include src="exercises.md" />
-</div>
-
 </div>

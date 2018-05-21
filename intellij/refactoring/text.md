@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Intellij IDEA → </div>
 
 <div id="title">
@@ -29,6 +25,4 @@ Here's another video explaining how to change a method signature as part of refa
 </div>
 
 <div id="extras">
-</div>
-
 </div>

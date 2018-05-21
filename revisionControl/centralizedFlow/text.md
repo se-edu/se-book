@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Centralized Flow :two:
@@ -16,6 +12,4 @@
 
 <div id="extras">
   <include src="resources.md" />
-</div>
-
 </div>

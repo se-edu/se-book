@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Implementing Inheritance :one:
@@ -37,6 +33,4 @@ To learn how to implement inheritance in Java, you can follow [[Oracle’s Java 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

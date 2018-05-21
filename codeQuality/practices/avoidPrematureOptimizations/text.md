@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Practice KISSing
@@ -20,7 +16,5 @@ A popular saying in the industry is **_make it work, make it right, make it fast
 > Premature optimization is the root of all evil in programming. <sub>--[Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth)</sub>
 
 Note that **there are cases where optimizing takes priority over other things** %%e.g. when writing code for resource-constrained environments%%. This guideline simply a caution that you should optimize only when it is really needed.
-
-</div>
 
 </div>

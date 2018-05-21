@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### What :two:
@@ -45,7 +41,5 @@ Include a <tooltip content="a French word that means 'front of a building'">Faç
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

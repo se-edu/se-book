@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Use Nouns for Things and Verbs for Actions
@@ -55,7 +51,5 @@ students = [Person('Jim'), Person('Alice')]
 
 [Bad]: {{baseUrl}}/images/Bad.png "Bad"
 [Good]: {{baseUrl}}/images/Good.png "Good"
-
-</div>
 
 </div>

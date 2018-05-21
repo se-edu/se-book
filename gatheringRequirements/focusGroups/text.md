@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Focus Groups :one:
@@ -27,6 +23,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

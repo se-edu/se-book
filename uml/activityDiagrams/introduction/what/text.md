@@ -20,5 +20,3 @@ An example activity diagram:<br>
 
 <div id="extras">
 </div>
-
-</div>

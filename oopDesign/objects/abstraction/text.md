@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Objects as Abstractions :two:
@@ -21,6 +17,4 @@ The concept of **_Objects_ in OOP is an abstraction mechanism because it allows 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

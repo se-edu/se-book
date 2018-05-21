@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Implementing Polymorphism :two:
@@ -73,6 +69,4 @@ class Payroll {
 
 <div id="extras">
   <include src="resources.md" />
-</div>
-
 </div>

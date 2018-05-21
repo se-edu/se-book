@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Implementing Abstract Classes :two:
@@ -51,7 +47,5 @@ In Java, if a class contains an abstract method, the class itself should be an a
 
 <include src="resources.md" />
 <include src="exercises.md" />
-
-</div>
 
 </div>

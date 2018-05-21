@@ -23,5 +23,3 @@ Association classes are denoted as a connection to an association link using a d
 
 <div id="extras">
 </div>
-
-</div>

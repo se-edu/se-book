@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### How :two:
@@ -55,6 +51,4 @@ assert x == 0 : "x should be 0";
 
 <div id="extras">
   <include src="resources.md" />
-</div>
-
 </div>

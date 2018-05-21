@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Feature Branch Flow :three:
@@ -19,6 +15,4 @@
 
 <div id="extras">
   <include src="resources.md" />
-</div>
-
 </div>

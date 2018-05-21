@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Git and Github → </div>
 
 <div id="title">
@@ -43,6 +39,4 @@ Now, your local repo state is exactly how it would be if you had cloned the repo
 </div>
 
 <div id="extras">
-</div>
-
 </div>

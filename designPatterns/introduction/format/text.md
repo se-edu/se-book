@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Format :two:
@@ -24,7 +20,5 @@ The common format to describe a pattern consists of the following components:
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

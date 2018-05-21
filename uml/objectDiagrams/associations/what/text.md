@@ -21,5 +21,3 @@ A solid line indicates an association between two objects.
 
 <div id="extras">
 </div>
-
-</div>

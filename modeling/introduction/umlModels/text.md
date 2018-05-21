@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### UML Models :four:
@@ -21,6 +17,4 @@ The following diagram uses the class diagram notation to show the different type
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### XP :four:
@@ -34,6 +30,4 @@ The following description was adapted from the [XP home page](http://www.extreme
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Implementing Aggregation :two:
@@ -57,6 +53,4 @@ class Car:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

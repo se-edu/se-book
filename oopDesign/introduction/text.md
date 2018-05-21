@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Introduction :one:
@@ -45,7 +41,5 @@ Paradigm | Programming Languages
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

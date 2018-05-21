@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Make the Code Obvious
@@ -22,7 +18,5 @@ Make the code as explicit as possible, even if the language syntax allows them t
 * [More about Python enumerations](https://docs.python.org/3/library/enum.html)
 
 </modal>
-
-</div>
 
 </div>

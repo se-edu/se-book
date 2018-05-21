@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Agile Design :four:
@@ -19,7 +15,5 @@
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

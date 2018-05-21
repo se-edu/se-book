@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Dependencies :two:
@@ -19,6 +15,4 @@ Dependencies are objects that are not directly linked in the object network can 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

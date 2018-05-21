@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### GANTT Charts :three:
@@ -26,6 +22,4 @@ In a Gantt chart, a solid bar represents the main task, which is generally compo
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -14,5 +14,3 @@ Technical documents exist to help others understand technical details. Therefore
 
 <div id="extras">
 </div>
-
-</div>

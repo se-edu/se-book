@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Introduction :one:
@@ -17,6 +13,4 @@ Proper naming improves the readability. It also reduces bugs caused by ambiguiti
 </div>
 
 <div id="extras">
-</div>
-
 </div>

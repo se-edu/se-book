@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="path">Revision Control → </div>
 
 <div id="title">
@@ -52,7 +48,5 @@ Revision control is also known as _Version Control Software (VCS)_, and a few ot
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

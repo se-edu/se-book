@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Basic Indentation :one:
@@ -18,7 +14,5 @@ for (i = 0; i < nElements; i++) {
     a[i] = 0;
 }
 ```
-
-</div>
 
 </div>

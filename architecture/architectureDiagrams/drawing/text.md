@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Drawing :two:
@@ -28,6 +24,4 @@ While architecture diagrams have no standard notation, try to follow these basic
 </div>
 
 <div id="extras">
-</div>
-
 </div>

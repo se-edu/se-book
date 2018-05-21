@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Class Diagrams (Basics) :one:
@@ -46,6 +42,4 @@ In addition, **associations can show additional decorations such as _association
 
 <div id="extras">
   <include src="exercises.md"/>
-</div>
-
 </div>

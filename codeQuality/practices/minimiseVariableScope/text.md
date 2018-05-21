@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
 #### Minimise Scope of Variables
@@ -19,7 +15,5 @@
 :paperclip: Resources:
 
 * [Refactoring: Reduce Scope of Variable](https://refactoring.com/catalog/reduceScopeOfVariable.html) 
-
-</div>
 
 </div>
