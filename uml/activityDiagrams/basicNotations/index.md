@@ -4,7 +4,7 @@ title: "UML: Activity Diagrams: Basic Notation"
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
-<div class="website-content">
+<div class="website-content" id="all">
 
 %%**UML → Activity Diagrams →**%%
 

@@ -4,7 +4,7 @@ title: "Coding Best Practices: [Practice] Do Not Recycle Variables or Parameters
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
-<div class="website-content">
+<div class="website-content" id="all">
 
 
 %%**<include src="../path.md" inline />**%%

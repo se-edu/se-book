@@ -4,10 +4,11 @@ title: "Object Oriented Programming"
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
-<div class="website-content">
+<div class="website-content" id="all">
 
 # OOP - Concepts
 
+<div id="main">
 
 <panel header="## Introduction"  type="seamless" alt="introduction" expanded>
   <include src="introduction/embed.md" boilerplate  />
@@ -40,5 +41,7 @@ title: "Object Oriented Programming"
 <panel header="## Review" type="seamless" alt="review" expanded >
   <include src="review/embed.md" boilerplate  />
 </panel>
+
+</div>
 
 </div>

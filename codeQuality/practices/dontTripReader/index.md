@@ -4,7 +4,7 @@ title: "Coding Best Practices: [Practice] Do Not 'Trip Up' the Reader"
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
-<div class="website-content">
+<div class="website-content" id="all">
 
 
 %%**<include src="../path.md" inline />**%%

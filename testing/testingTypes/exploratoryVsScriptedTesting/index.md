@@ -4,7 +4,7 @@ title: "Testing: Testing Types: Exploratory vs Scripted Testing"
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
-<div class="website-content">
+<div class="website-content" id="all">
 
 %%**Testing → Testing Types →**%%
 

@@ -4,7 +4,7 @@ title: "Java: Code Style : [Rule] Basic Indentation"
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
-<div class="website-content">
+<div class="website-content" id="all">
 
 
 %%**<include src="../path.md" inline />**%%

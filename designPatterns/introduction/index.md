@@ -4,7 +4,7 @@ title: "Software Design Patterns: Introduction"
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
-<div class="website-content">
+<div class="website-content" id="all">
 
 %%**Software Design Patterns →**%%
 

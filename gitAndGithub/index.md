@@ -4,7 +4,7 @@ title: "Git and Github"
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
-<div class="website-content">
+<div class="website-content" id="all">
 
 # Git and Github
 

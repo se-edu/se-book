@@ -4,7 +4,7 @@ title: "Architectural Styles: Event-Driven Architectural Style"
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
-<div class="website-content">
+<div class="website-content" id="all">
 
 %%**Software Architecture → Architectural Styles →**%%
 
