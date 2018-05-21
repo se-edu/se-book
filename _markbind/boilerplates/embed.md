@@ -1,7 +1,7 @@
 <include src="text.md#title" />
-<tip-box>
-  <include src="outcomes.md" />
-</tip-box>
-<panel type="seamless" header=" %%- - - - - - - - - -%%">
+<panel type="seamless" header=" %%- - - - - - - - - -%%" expanded>
+  <tip-box>
+    <include src="outcomes.md" />
+  </tip-box>
   <include src="full.md#main" boilerplate />
 </panel>
