@@ -15,6 +15,4 @@
 <include src="full.md" boilerplate />
 
 </div>
-
-</div>
 </span>
