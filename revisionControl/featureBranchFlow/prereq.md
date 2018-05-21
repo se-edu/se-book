@@ -1,1 +1,1 @@
-<dynamic-panel src="../forkingWorkflow/full.md" boilerplate header="%%:mortar_board: Revision Control → Forking Workflow%%" />
+<dynamic-panel src="../forkingWorkflow/full.md" boilerplate header="%%{{glyphicon_education}} Revision Control → Forking Workflow%%" />

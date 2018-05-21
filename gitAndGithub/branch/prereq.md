@@ -1,1 +1,1 @@
-<dynamic-panel src="../../revisionControl/branching/full.md" boilerplate header=":mortar_board: %%Project Management → Revision Control → Branching%%" />
+<dynamic-panel src="../../revisionControl/branching/full.md" boilerplate header="{{glyphicon_education}} %%Project Management → Revision Control → Branching%%" />

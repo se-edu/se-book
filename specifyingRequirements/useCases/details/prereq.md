@@ -1,2 +1,2 @@
-<dynamic-panel src="../introduction/full.md" boilerplate header="%%:mortar_board: Requirements → Specifying Requirements → Use Cases → Introduction%%" />
-<dynamic-panel src="../identifying/full.md" boilerplate header="%%:mortar_board: Requirements → Specifying Requirements → Use Cases → Identifying%%" />
+<dynamic-panel src="../introduction/full.md" boilerplate header="%%{{glyphicon_education}} Requirements → Specifying Requirements → Use Cases → Introduction%%" />
+<dynamic-panel src="../identifying/full.md" boilerplate header="%%{{glyphicon_education}} Requirements → Specifying Requirements → Use Cases → Identifying%%" />

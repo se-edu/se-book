@@ -1,2 +1,2 @@
-<dynamic-panel src="../what/full.md" boilerplate header="%%:mortar_board: Error Handling → Assertions → What%%" />
-<dynamic-panel src="../../exceptions/what/full.md" boilerplate header="%%:mortar_board: Error Handling → Exceptions → What%%" />
+<dynamic-panel src="../what/full.md" boilerplate header="%%{{glyphicon_education}} Error Handling → Assertions → What%%" />
+<dynamic-panel src="../../exceptions/what/full.md" boilerplate header="%%{{glyphicon_education}} Error Handling → Exceptions → What%%" />

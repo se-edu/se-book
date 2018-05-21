@@ -1,1 +1,1 @@
-<dynamic-panel src="../branch/full.md" boilerplate header=":mortar_board: %%Tools → Git & GitHub → Branching%%" />
+<dynamic-panel src="../branch/full.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Branching%%" />

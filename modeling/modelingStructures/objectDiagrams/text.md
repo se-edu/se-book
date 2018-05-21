@@ -16,8 +16,8 @@
 
 <include src="../../../uml/objectDiagrams/introduction/text.md#body" />
 
-<panel src="../../../../book/uml/objectDiagrams/objects/full.md#title-and-body" boilerplate header=":mortar_board: UML → Object Diagrams → Objects" alt=":mortar_board: Objects" minimized/>
-<panel src="../../../../book/uml/objectDiagrams/associations/what/full.md#title-and-body" boilerplate header=":mortar_board: UML → Object Diagrams → Associations → What" alt=":mortar_board: Associations" minimized/>
+<panel src="../../../../book/uml/objectDiagrams/objects/full.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Object Diagrams → Objects" alt="{{glyphicon_education}} Objects" minimized/>
+<panel src="../../../../book/uml/objectDiagrams/associations/what/full.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Object Diagrams → Associations → What" alt="{{glyphicon_education}} Associations" minimized/>
 
 </div>
 

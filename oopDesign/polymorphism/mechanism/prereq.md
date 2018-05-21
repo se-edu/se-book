@@ -1,3 +1,3 @@
-<dynamic-panel src="../../../oopImplementation/polymorphism/full.md" boilerplate header="%%:mortar_board: Implementation → Object Oriented Programming → Polymorphism%%" />
-<dynamic-panel src="../../../oopDesign/inheritance/substitutability/full.md" boilerplate header="%%:mortar_board: Design → Object Oriented Programming → Inheritance → Substitutability%%" />
-<dynamic-panel src="../../../oopDesign/inheritance/dynamicAndStaticBinding/full.md" boilerplate header="%%:mortar_board: Design → Object Oriented Programming → Inheritance → Dynamic and Static Binding%%" />
+<dynamic-panel src="../../../oopImplementation/polymorphism/full.md" boilerplate header="%%{{glyphicon_education}} Implementation → Object Oriented Programming → Polymorphism%%" />
+<dynamic-panel src="../../../oopDesign/inheritance/substitutability/full.md" boilerplate header="%%{{glyphicon_education}} Design → Object Oriented Programming → Inheritance → Substitutability%%" />
+<dynamic-panel src="../../../oopDesign/inheritance/dynamicAndStaticBinding/full.md" boilerplate header="%%{{glyphicon_education}} Design → Object Oriented Programming → Inheritance → Dynamic and Static Binding%%" />

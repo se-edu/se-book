@@ -20,7 +20,7 @@
 
 </tip-box>
 
-<panel src="../../../uml/classDiagrams/associationClasses/what/full.md" boilerplate header=":mortar_board: UML → Class Diagrams → Association Classes" expanded /><p/>
+<panel src="../../../uml/classDiagrams/associationClasses/what/full.md" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Association Classes" expanded /><p/>
 
 
 </div>

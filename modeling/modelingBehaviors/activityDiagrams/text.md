@@ -38,15 +38,15 @@ Understanding such workflows is important for the success of the software projec
 
 The most basic activity diagram is simply a linear sequence of actions.
 
-<panel src="../../../uml/activityDiagrams/basicNotations/linearPaths/full.md" boilerplate header=":mortar_board: UML → Activity Diagrams → Basic Notations → Linear Paths" expanded />
+<panel src="../../../uml/activityDiagrams/basicNotations/linearPaths/full.md" boilerplate header="{{glyphicon_education}} UML → Activity Diagrams → Basic Notations → Linear Paths" expanded />
 
 Some workflows have alternate paths where only one of the alternate paths is taken based on some condition.
 
-<panel src="../../../uml/activityDiagrams/basicNotations/alternatePaths/full.md" boilerplate header=":mortar_board: UML → Activity Diagrams → Basic Notations → Alternative Paths" expanded />
+<panel src="../../../uml/activityDiagrams/basicNotations/alternatePaths/full.md" boilerplate header="{{glyphicon_education}} UML → Activity Diagrams → Basic Notations → Alternative Paths" expanded />
 
 In some workflows, multiple paths happen in parallel. 
 
-<panel src="../../../uml/activityDiagrams/basicNotations/parallelPaths/full.md" boilerplate header=":mortar_board: UML → Activity Diagrams → Basic Notations → Parallel Paths" expanded />
+<panel src="../../../uml/activityDiagrams/basicNotations/parallelPaths/full.md" boilerplate header="{{glyphicon_education}} UML → Activity Diagrams → Basic Notations → Parallel Paths" expanded />
 
 </div>
 

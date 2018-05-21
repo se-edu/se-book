@@ -1,1 +1,1 @@
-<dynamic-panel src="../what/full.md" boilerplate header="%%:mortar_board: OOP → Inheritance → What%%" />
+<dynamic-panel src="../what/full.md" boilerplate header="%%{{glyphicon_education}} OOP → Inheritance → What%%" />

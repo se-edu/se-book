@@ -1,1 +1,1 @@
-<dynamic-panel src="../../oopDesign/inheritance/abstractClasses/full.md" boilerplate header="%%:mortar_board: Design → OOP → Inheritance → Abstract Classes%%" />
+<dynamic-panel src="../../oopDesign/inheritance/abstractClasses/full.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Inheritance → Abstract Classes%%" />

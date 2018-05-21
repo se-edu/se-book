@@ -18,7 +18,7 @@
 
 **An abstract method is simply the method interface without the implementation.** 
 
-<dynamic-panel src="../../../uml/classDiagrams/abstractClasses/what/full.md" boilerplate header=":mortar_board:UML → Class Diagrams → Abstract Classes" />
+<dynamic-panel src="../../../uml/classDiagrams/abstractClasses/what/full.md" boilerplate header="{{glyphicon_education}}UML → Class Diagrams → Abstract Classes" />
 
 <p/>
 

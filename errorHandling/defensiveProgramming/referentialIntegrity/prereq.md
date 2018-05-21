@@ -1,1 +1,1 @@
-<dynamic-panel src="../what/full.md" boilerplate header="%%:mortar_board: Implementation → Error Handling → Defensive Programming → What%%" />
+<dynamic-panel src="../what/full.md" boilerplate header="%%{{glyphicon_education}} Implementation → Error Handling → Defensive Programming → What%%" />

@@ -1,1 +1,1 @@
-<dynamic-panel src="../../revisionControl/savingHistory/full.md" boilerplate header=":mortar_board: Revision Control: Saving History" />
+<dynamic-panel src="../../revisionControl/savingHistory/full.md" boilerplate header="{{glyphicon_education}} Revision Control: Saving History" />

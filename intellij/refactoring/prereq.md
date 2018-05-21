@@ -1,1 +1,1 @@
-<dynamic-panel src="../../refactoring/what/full.md" boilerplate header=":mortar_board: %%Implementation → Refactoring → What%%" />
+<dynamic-panel src="../../refactoring/what/full.md" boilerplate header="{{glyphicon_education}} %%Implementation → Refactoring → What%%" />

@@ -12,7 +12,7 @@
 
 **_Aggregation_ represents a _container-contained_ relationship.** It is a weaker relationship than composition.
 
-<panel src="../../../uml/classDiagrams/aggregation/what/full.md#title-and-body" boilerplate header=":mortar_board: Tools → UML → Class Diagrams → Aggregation" expanded/>
+<panel src="../../../uml/classDiagrams/aggregation/what/full.md#title-and-body" boilerplate header="{{glyphicon_education}} Tools → UML → Class Diagrams → Aggregation" expanded/>
 
 <p/>
 

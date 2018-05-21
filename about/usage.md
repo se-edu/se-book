@@ -135,7 +135,7 @@ Meaning of icons:
 * :zero: : tangential info, can be ignored if not interested
 * {{glyphicon_new_window}} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.
 * :trophy: : learning outcomes
-* :mortar_board: : prerequisite learning outcome
+* {{glyphicon_education}} : prerequisite learning outcome
 * :package: : examples
 * :paperclip: : resources
 * :muscle: : exercises
