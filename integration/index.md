@@ -6,7 +6,11 @@ title: "Integration"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Integration
+</div>
+<div id="main">
 
 <panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
@@ -23,5 +27,7 @@ title: "Integration"
 <panel header="## Review" type="seamless" alt="review" expanded >
   <include src="review/embed.md" boilerplate  />
 </panel>
+
+</div>
 
 </div>

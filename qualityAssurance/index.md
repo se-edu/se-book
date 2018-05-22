@@ -6,7 +6,11 @@ title: "Quality Assurance"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Quality Assurance
+</div>
+<div id="main">
 
 <panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
@@ -23,5 +27,7 @@ title: "Quality Assurance"
 <panel header="## Formal Verification" type="seamless" alt="formal verification" expanded >
   <include src="formalVerification/index.md#main" />
 </panel>
+
+</div>
 
 </div>

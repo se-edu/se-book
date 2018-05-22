@@ -6,7 +6,10 @@ title: "Gathering Requirements"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Gathering Requirements
+</div>
 
 <div id="main">
 

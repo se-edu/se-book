@@ -6,7 +6,10 @@ title: "Principles"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Principles
+</div>
 
 <div id="main">
 

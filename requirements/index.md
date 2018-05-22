@@ -6,8 +6,10 @@ title: "Requirements"
 
 <div class="website-content" id="all">
 
-# Requirements
+<div id="title">
 
+# Requirements
+</div>
 <div id="main">
 
 <include src="introduction/embed.md" boilerplate  />

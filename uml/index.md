@@ -6,7 +6,11 @@ title: "UML"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # UML
+</div>
+<div id="main">
 
 <panel header="## Class Diagrams" type="seamless" alt="class diagrams" expanded >
   <include src="classDiagrams/index.md#main" />
@@ -31,5 +35,7 @@ title: "UML"
 <panel header="## Miscellaneous" type="seamless" alt="miscellaneous" expanded >
   <include src="miscellaneous/index.md#main" />
 </panel>
+
+</div>
 
 </div>

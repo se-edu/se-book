@@ -6,94 +6,103 @@ title: "Book - Software Engineering for Self-Directed Learners"
 
 <div class="website-content">
 
-## Software Engineering for Self-Directed Learners
+# BOOK: SOFTWARE ENGINEERING FOR SELF-DIRECTED LEARNERS
 
 ### About this Book
 
 * [Acknowledgements](about/acknowledgements.html)
 * [How to use this book](about/usage.html)
 
-### Software Engineering
 
-<include src="../softwareEngineering/index.md#all" />
+# SECTION: INTRODUCTION
 
-### Object-Oriented Programming (with UML)
+<include src="../softwareEngineering/chapter.md" boilerplate />
 
-<include src="../oopDesign/index.md#main" />
 
-<include src="../oopImplementation/index.md#all" />
+# SECTION: OOP (with UML)
 
-### Requirements
+<include src="../oopDesign/chapter.md" boilerplate />
 
-<include src="../requirements/index.md#all" />
+<include src="../oopImplementation/chapter.md" boilerplate />
 
-<include src="../gatheringRequirements/index.md#all" />
 
-<include src="../specifyingRequirements/index.md#all" />
+# SECTION: REQUIREMENTS
 
-### Design
+<include src="../requirements/chapter.md" boilerplate />
 
-<include src="../design/index.md#all" />
+<include src="../gatheringRequirements/chapter.md" boilerplate />
 
-<include src="../designFundamentals/index.md#all" />
+<include src="../specifyingRequirements/chapter.md" boilerplate />
 
-<include src="../modeling/index.md#all" />
 
-<include src="../architecture/index.md#all" />
+# SECTION: DESIGN
 
-<include src="../designPatterns/index.md#all" />
+<include src="../design/chapter.md" boilerplate />
 
-<include src="../designApproaches/index.md#all" />
+<include src="../designFundamentals/chapter.md" boilerplate />
 
-### Implementation
+<include src="../modeling/chapter.md" boilerplate />
 
-<include src="../ides/index.md#all" />
+<include src="../architecture/chapter.md" boilerplate />
 
-<include src="../codeQuality/index.md#all" />
+<include src="../designPatterns/chapter.md" boilerplate />
 
-<include src="../refactoring/index.md#all" />
+<include src="../designApproaches/chapter.md" boilerplate />
 
-<include src="../documentation/index.md#all" />
 
-<include src="../errorHandling/index.md#all" />
+# SECTION: IMPLEMENTATION
 
-<include src="../integration/index.md#all" />
+<include src="../ides/chapter.md" boilerplate />
 
-<include src="../reuse/index.md#all" />
+<include src="../codeQuality/chapter.md" boilerplate />
 
-### Quality Assurance
+<include src="../refactoring/chapter.md" boilerplate />
 
-<include src="../qualityAssurance/index.md#all" />
+<include src="../documentation/chapter.md" boilerplate />
 
-<include src="../testing/index.md#all" />
+<include src="../errorHandling/chapter.md" boilerplate />
 
-<include src="../testCaseDesign/index.md#all" />
+<include src="../integration/chapter.md" boilerplate />
 
-### Project Management
+<include src="../reuse/chapter.md" boilerplate />
 
-<include src="../revisionControl/index.md#all" />
 
-<include src="../projectPlanning/index.md#all" />
+# SECTION: QUALITY ASSURANCE
 
-<include src="../teamwork/index.md#all" />
+<include src="../qualityAssurance/chapter.md" boilerplate />
 
-<include src="../processModels/index.md#all" />
+<include src="../testing/chapter.md" boilerplate />
 
-### Tools
+<include src="../testCaseDesign/chapter.md" boilerplate />
 
-<include src="../uml/index.md#all" />
 
-<include src="../intellij/index.md#all" />
+# SECTION: PROJECT MANAGEMENT
 
-<include src="../gitAndGithub/index.md#all" />
+<include src="../revisionControl/chapter.md" boilerplate />
 
-<include src="../javaTools/index.md#all" />
+<include src="../projectPlanning/chapter.md" boilerplate />
 
-<include src="../junit/index.md#all" />
+<include src="../teamwork/chapter.md" boilerplate />
 
-### Supplementary
+<include src="../processModels/chapter.md" boilerplate />
 
-<include src="../principles/index.md#all" />
+
+# SECTION: TOOLS
+
+<include src="../uml/chapter.md" boilerplate />
+
+<include src="../intellij/chapter.md" boilerplate />
+
+<include src="../gitAndGithub/chapter.md" boilerplate />
+
+<include src="../javaTools/chapter.md" boilerplate />
+
+<include src="../junit/chapter.md" boilerplate />
+
+
+# SECTION: SUPPLEMENTARY
+
+<include src="../principles/chapter.md" boilerplate />
 
 <!-- TODO: add review -->
 

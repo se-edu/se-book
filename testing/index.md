@@ -6,7 +6,11 @@ title: "Testing"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Testing
+</div>
+<div id="main">
 
 <panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
@@ -31,5 +35,7 @@ title: "Testing"
 <panel header="## TDD" type="seamless" alt="tdd" expanded >
   <include src="tdd/index.md#main" />
 </panel>
+
+</div>
 
 </div>

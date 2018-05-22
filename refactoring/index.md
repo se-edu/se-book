@@ -6,7 +6,10 @@ title: "Refactoring"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Refactoring
+</div>
 
 <div id="main">
 

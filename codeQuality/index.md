@@ -6,7 +6,11 @@ title: "Code Quality"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Code Quality
+</div>
+<div id="main">
 
 <panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
@@ -31,5 +35,7 @@ title: "Code Quality"
 <panel header="## Guideline: Comment Minimally, but Sufficiently" type="seamless" alt="comment minimally" expanded >
   <include src="commentMinimally/index.md#main" />
 </panel>
+
+</div>
 
 </div>

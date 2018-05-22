@@ -6,7 +6,12 @@ title: "Specifying Requirements"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Specifying Requirements
+</div>
+
+<div id="main">
 
 <panel header="## Prose" type="seamless" alt="prose" expanded >
   <include src="prose/index.md#main" />
@@ -31,5 +36,7 @@ title: "Specifying Requirements"
 <panel header="## Supplementary Requirements" type="seamless" alt="supplementary requirements" expanded >
   <include src="supplementaryRequirements/index.md#main" />
 </panel>
+
+</div>
 
 </div>

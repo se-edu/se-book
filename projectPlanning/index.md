@@ -6,7 +6,10 @@ title: "Project Planning"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Project Planning
+</div>
 
 <div id="main">
 

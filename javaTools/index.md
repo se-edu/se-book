@@ -6,7 +6,10 @@ title: "Java"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Java
+</div>
 
 <div id="main">
 

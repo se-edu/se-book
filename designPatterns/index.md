@@ -6,7 +6,11 @@ title: "Software Design Patterns"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Software Design Patterns
+</div>
+<div id="main">
 
 <panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
@@ -39,5 +43,7 @@ title: "Software Design Patterns"
 <panel header="## More" type="seamless" alt="more" expanded >
   <include src="more/index.md#main" />
 </panel>
+
+</div>
 
 </div>

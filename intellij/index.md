@@ -6,7 +6,10 @@ title: "Intellij IDEA"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Intellij IDEA
+</div>
 
 <div id="main">
 

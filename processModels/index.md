@@ -6,7 +6,11 @@ title: "SDLC Process Models"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # SDLC Process Models
+</div>
+<div id="main">
 
 <panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
@@ -23,5 +27,7 @@ title: "SDLC Process Models"
 <panel header="## Summary" type="seamless" alt="summary" expanded >
   <include src="summary/index.md#main" />
 </panel>
+
+</div>
 
 </div>

@@ -6,7 +6,11 @@ title: "Software Architecture"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Software Architecture
+</div>
+<div id="main">
 
 <panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
@@ -19,5 +23,7 @@ title: "Software Architecture"
 <panel header="## Architectural Styles" type="seamless" alt="architectural styles" expanded >
   <include src="architecturalStyles/index.md#main" />
 </panel>
+
+</div>
 
 </div>

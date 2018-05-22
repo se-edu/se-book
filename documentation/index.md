@@ -6,7 +6,12 @@ title: "Documentation"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Documentation
+</div>
+
+<div id="main">
 
 <panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
@@ -19,5 +24,7 @@ title: "Documentation"
 <panel header="## Tools" type="seamless" alt="tools" expanded >
   <include src="tools/index.md#main" />
 </panel>
+
+</div>
 
 </div>

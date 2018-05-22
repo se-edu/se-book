@@ -6,7 +6,11 @@ title: "Error Handling"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Error Handling
+</div>
+<div id="main">
 
 <panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
@@ -31,5 +35,7 @@ title: "Error Handling"
 <panel header="## Design-by-Contract Approach" type="seamless" alt="logging" expanded >
   <include src="designByContract/index.md#main" />
 </panel>
+
+</div>
 
 </div>

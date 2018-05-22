@@ -6,7 +6,11 @@ title: "Test Case Design"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Test Case Design
+</div>
+<div id="main">
 
 <panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
@@ -31,5 +35,7 @@ title: "Test Case Design"
 <panel header="## Summary" type="seamless" alt="summary" expanded >
   <include src="summary/index.md#main" />
 </panel>
+
+</div>
 
 </div>

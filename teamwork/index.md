@@ -6,7 +6,10 @@ title: "Teamwork"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Teamwork
+</div>
 
 <div id="main">
 

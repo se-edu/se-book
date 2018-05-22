@@ -6,7 +6,10 @@ title: "Software Engineering"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Software Engineering
+</div>
 
 <div id="main">
 

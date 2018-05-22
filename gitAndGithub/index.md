@@ -6,7 +6,10 @@ title: "Git and Github"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Git and Github
+</div>
 
 <div id="main">
 

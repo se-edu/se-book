@@ -6,7 +6,11 @@ title: "Design Approaches"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Design Approaches
+</div>
+<div id="main">
 
 <panel header="## Multi-Level Design" type="seamless" alt="Multilevel Design" expanded >
   <include src="multilevelDesign/index.md#main" />
@@ -20,5 +24,7 @@ title: "Design Approaches"
 <panel header="## Agile Design" type="seamless" alt="Agile Design" expanded >
   <include src="agileDesign/index.md#main" />
 </panel>
+
+</div>
 
 </div>

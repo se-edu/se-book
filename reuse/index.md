@@ -6,7 +6,11 @@ title: "Reuse"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Reuse
+</div>
+<div id="main">
 
 <panel header="## Introduction" type="seamless" alt="introduction" expanded >
   <include src="introduction/index.md#main" />
@@ -31,5 +35,7 @@ title: "Reuse"
 <panel header="## Cloud Computing" type="seamless" alt="platforms" expanded >
   <include src="cloudComputing/index.md#main" />
 </panel>
+
+</div>
 
 </div>

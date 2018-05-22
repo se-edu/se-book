@@ -6,7 +6,10 @@ title: "Revision Control"
 
 <div class="website-content" id="all">
 
+<div id="title">
+
 # Revision Control
+</div>
 
 <div id="main">
 
