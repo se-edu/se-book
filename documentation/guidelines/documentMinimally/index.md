@@ -6,9 +6,11 @@ title: "Documentation: Guidelines: Document Minimally, but Sufficiently"
 
 <div class="website-content" id="all">
 
-%%**Documentation → Guidelines →**%%
+
+<div id="title">
 
 ### Guideline: Document Minimally, but Sufficiently
+</div>
 
 <div id="main">
 

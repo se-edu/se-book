@@ -6,9 +6,11 @@ title: "UML: Class Diagrams: Aggregation"
 
 <div class="website-content" id="all">
 
-%%**UML → Class Diagrams →**%%
+
+<div id="title">
 
 ### Aggregation
+</div>
 
 <div id="main">
 

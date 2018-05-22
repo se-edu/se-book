@@ -6,9 +6,11 @@ title: "Documentation: Tools: AsciiDoc"
 
 <div class="website-content" id="all">
 
-%%**Documentation → Tools →**%%
+
+<div id="title">
 
 ### AsciiDoc
+</div>
 
 <div id="main">
 

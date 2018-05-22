@@ -6,9 +6,11 @@ title: "Documentation: Guidelines: Aim for Comprehensibility"
 
 <div class="website-content" id="all">
 
-%%**Documentation → Guidelines →**%%
+
+<div id="title">
 
 ### Guideline: Aim for Comprehensibility
+</div>
 
 <div id="main">
 

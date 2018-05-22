@@ -12,13 +12,13 @@ title: "Software Architecture: Architectural Styles"
 
 <div id="main">
 
-<include src="./introduction/topicPanel.md" />
-<include src="./nTier/topicPanel.md" />
-<include src="./clientServer/topicPanel.md" />
-<include src="./transactionProcessing/topicPanel.md" />
-<include src="./serviceOriented/topicPanel.md" />
-<include src="./eventDriven/topicPanel.md" />
-<include src="./more/topicPanel.md" />
+<include src="./introduction/chapter.md" boilerplate />
+<include src="./nTier/chapter.md" boilerplate />
+<include src="./clientServer/chapter.md" boilerplate />
+<include src="./transactionProcessing/chapter.md" boilerplate />
+<include src="./serviceOriented/chapter.md" boilerplate />
+<include src="./eventDriven/chapter.md" boilerplate />
+<include src="./more/chapter.md" boilerplate />
 
 </div>
 

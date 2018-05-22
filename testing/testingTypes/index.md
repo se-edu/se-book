@@ -14,15 +14,15 @@ title: "Testing: Testing Types"
 
 Testing can be categorized based on the level of testing, the objective of testing, who is doing the testing, etc.
 
-<include src="./unitTesting/topicPanel.md" />
-<include src="./integrationTesting/topicPanel.md" />
-<include src="./systemTesting/topicPanel.md" />
-<include src="./alphaBetaTesting/topicPanel.md" />
-<include src="./dogfooding/topicPanel.md" />
-<include src="./developerTesting/topicPanel.md" />
-<include src="./exploratoryVsScriptedTesting/topicPanel.md" />
-<include src="./acceptanceTesting/topicPanel.md" />
-<include src="./regressionTesting/topicPanel.md" />
+<include src="./unitTesting/chapter.md" boilerplate />
+<include src="./integrationTesting/chapter.md" boilerplate />
+<include src="./systemTesting/chapter.md" boilerplate />
+<include src="./alphaBetaTesting/chapter.md" boilerplate />
+<include src="./dogfooding/chapter.md" boilerplate />
+<include src="./developerTesting/chapter.md" boilerplate />
+<include src="./exploratoryVsScriptedTesting/chapter.md" boilerplate />
+<include src="./acceptanceTesting/chapter.md" boilerplate />
+<include src="./regressionTesting/chapter.md" boilerplate />
 
 </div>
 

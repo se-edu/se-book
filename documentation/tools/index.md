@@ -12,9 +12,9 @@ title: "Documentation: Tools"
 
 <div id="main">
 
-<include src="./javaDoc/topicPanel.md" />
-<include src="./markdown/topicPanel.md" />
-<include src="./asciiDoc/topicPanel.md" />
+<include src="./javaDoc/chapter.md" boilerplate />
+<include src="./markdown/chapter.md" boilerplate />
+<include src="./asciiDoc/chapter.md" boilerplate />
 
 </div>
 

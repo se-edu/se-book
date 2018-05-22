@@ -6,9 +6,11 @@ title: "Architectural Styles: Event-Driven Architectural Style"
 
 <div class="website-content" id="all">
 
-%%**Software Architecture → Architectural Styles →**%%
+
+<div id="title">
 
 ### Event-driven Architectural Style
+</div>
 
 <div id="main">
 

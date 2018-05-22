@@ -6,9 +6,11 @@ title: "UML: Class Diagrams: Class Inheritance"
 
 <div class="website-content" id="all">
 
-%%**UML → Class Diagrams →**%%
+
+<div id="title">
 
 ### Class Inheritance
+</div>
 
 <div id="main">
 

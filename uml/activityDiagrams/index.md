@@ -12,8 +12,8 @@ title: "UML: Activity Diagrams"
 
 <div id="main">
 
-<include src="./introduction/topicPanel.md" />
-<include src="./basicNotations/topicPanel.md" />
+<include src="./introduction/chapter.md" boilerplate />
+<include src="./basicNotations/chapter.md" boilerplate />
 
 </div>
 

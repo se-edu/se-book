@@ -14,9 +14,9 @@ title: "Documentation: Guidelines"
 
 <include src="./intro.md" />
 
-<include src="./goTopDown/topicPanel.md" />
-<include src="./aimForComprehensibility/topicPanel.md" />
-<include src="./documentMinimally/topicPanel.md" />
+<include src="./goTopDown/chapter.md" boilerplate />
+<include src="./aimForComprehensibility/chapter.md" boilerplate />
+<include src="./documentMinimally/chapter.md" boilerplate />
 
 </div>
 

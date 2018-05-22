@@ -6,9 +6,11 @@ title: "Architectural Styles: Transaction Processing Architectural Style"
 
 <div class="website-content" id="all">
 
-%%**Software Architecture → Architectural Styles →**%%
+
+<div id="title">
 
 ### Transaction Processing Architectural Style
+</div>
 
 <div id="main">
 

@@ -6,9 +6,11 @@ title: "Testing: Testing Types: Developer Testing"
 
 <div class="website-content" id="all">
 
-%%**Testing → Testing Types →**%%
+
+<div id="title">
 
 ### Developer Testing
+</div>
 
 <div id="main">
 

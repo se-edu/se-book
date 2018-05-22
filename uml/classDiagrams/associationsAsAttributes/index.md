@@ -6,9 +6,11 @@ title: "UML: Class Diagrams: Associations as Attributes"
 
 <div class="website-content" id="all">
 
-%%**UML → Class Diagrams →**%%
+
+<div id="title">
 
 ### Associations as Attributes
+</div>
 
 <div id="main">
 

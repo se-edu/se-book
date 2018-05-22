@@ -6,9 +6,11 @@ title: "UML: Activity Diagrams: Basic Notation"
 
 <div class="website-content" id="all">
 
-%%**UML → Activity Diagrams →**%%
+
+<div id="title">
 
 ### Basic Notations
+</div>
 
 <div id="main">
 

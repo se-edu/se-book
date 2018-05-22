@@ -12,19 +12,19 @@ title: "UML: Class Diagrams"
 
 <div id="main">
 
-<include src="./introduction/topicPanel.md" />
-<include src="./classes/topicPanel.md" />
-<include src="./associations/topicPanel.md" />
-<include src="./dependencies/topicPanel.md" />
-<include src="./associationsAsAttributes/topicPanel.md" />
-<include src="./enumerations/topicPanel.md" />
-<include src="./classLevelMembers/topicPanel.md" />
-<include src="./associationClasses/topicPanel.md" />
-<include src="./composition/topicPanel.md" />
-<include src="./aggregation/topicPanel.md" />
-<include src="./classInheritance/topicPanel.md" />
-<include src="./interfaces/topicPanel.md" />
-<include src="./abstractClasses/topicPanel.md" />
+<include src="./introduction/chapter.md" boilerplate />
+<include src="./classes/chapter.md" boilerplate />
+<include src="./associations/chapter.md" boilerplate />
+<include src="./dependencies/chapter.md" boilerplate />
+<include src="./associationsAsAttributes/chapter.md" boilerplate />
+<include src="./enumerations/chapter.md" boilerplate />
+<include src="./classLevelMembers/chapter.md" boilerplate />
+<include src="./associationClasses/chapter.md" boilerplate />
+<include src="./composition/chapter.md" boilerplate />
+<include src="./aggregation/chapter.md" boilerplate />
+<include src="./classInheritance/chapter.md" boilerplate />
+<include src="./interfaces/chapter.md" boilerplate />
+<include src="./abstractClasses/chapter.md" boilerplate />
 
 </div>
 

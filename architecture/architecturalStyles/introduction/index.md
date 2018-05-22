@@ -6,10 +6,10 @@ title: "Architectural Styles: Introduction"
 
 <div class="website-content" id="all">
 
-%%**Software Architecture → Architectural Styles →**%%
+<div id="title">
 
 ### Introduction
-
+</div>
 <div id="main">
 
 <include src="./what/embed.md" boilerplate  />

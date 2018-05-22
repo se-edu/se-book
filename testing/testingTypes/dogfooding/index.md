@@ -6,9 +6,11 @@ title: "Testing: Testing Types: Dogfooding"
 
 <div class="website-content" id="all">
 
-%%**Testing → Testing Types →**%%
+
+<div id="title">
 
 ### Dogfooding
+</div>
 
 <div id="main">
 

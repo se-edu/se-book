@@ -6,9 +6,11 @@ title: "Documentation: Tools: Markdown"
 
 <div class="website-content" id="all">
 
-%%**Documentation → Tools →**%%
+
+<div id="title">
 
 ### Markdown
+</div>
 
 <div id="main">
 

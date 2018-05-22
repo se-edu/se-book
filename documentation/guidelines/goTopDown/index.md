@@ -6,9 +6,11 @@ title: "Documentation: Guidelines: Go Top-down, Not Bottom-up"
 
 <div class="website-content" id="all">
 
-%%**Documentation → Guidelines →**%%
+
+<div id="title">
 
 ### Guideline: Go Top-down, Not Bottom-up
+</div>
 
 <div id="main">
 

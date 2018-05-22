@@ -6,9 +6,11 @@ title: "Testing: Testing Types: Exploratory vs Scripted Testing"
 
 <div class="website-content" id="all">
 
-%%**Testing → Testing Types →**%%
+
+<div id="title">
 
 ### Exploratory vs Scripted Testing
+</div>
 
 <div id="main">
 

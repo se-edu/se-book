@@ -6,9 +6,11 @@ title: "Testing: Testing Types: Integration Testing"
 
 <div class="website-content" id="all">
 
-%%**Testing → Testing Types →**%%
+
+<div id="title">
 
 ### Integration Testing
+</div>
 
 <div id="main">
 

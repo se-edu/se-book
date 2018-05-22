@@ -6,9 +6,11 @@ title: "Testing: Testing Types: Regression Testing"
 
 <div class="website-content" id="all">
 
-%%**Testing → Testing Types →**%%
+
+<div id="title">
 
 ### Regression Testing
+</div>
 
 <div id="main">
 

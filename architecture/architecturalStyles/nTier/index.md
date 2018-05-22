@@ -6,9 +6,11 @@ title: "Architectural Styles: n-tier Architectural Style"
 
 <div class="website-content" id="all">
 
-%%**Software Architecture → Architectural Styles →**%%
+
+<div id="title">
 
 ### N-tier Architectural Style
+</div>
 
 <div id="main">
 

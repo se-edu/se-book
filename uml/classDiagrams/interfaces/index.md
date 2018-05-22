@@ -6,9 +6,11 @@ title: "UML: Class Diagrams: Interfaces"
 
 <div class="website-content" id="all">
 
-%%**UML → Class Diagrams →**%%
+
+<div id="title">
 
 ### Interfaces
+</div>
 
 <div id="main">
 

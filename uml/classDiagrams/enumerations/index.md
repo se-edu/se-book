@@ -6,9 +6,11 @@ title: "UML: Class Diagrams: Enumerations"
 
 <div class="website-content" id="all">
 
-%%**UML → Class Diagrams →**%%
+
+<div id="title">
 
 ### Enumerations
+</div>
 
 <div id="main">
 

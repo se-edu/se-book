@@ -6,9 +6,11 @@ title: "Architectural Styles: Client-Server Architectural Style"
 
 <div class="website-content" id="all">
 
-%%**Software Architecture → Architectural Styles →**%%
+
+<div id="title">
 
 ### Client-server Architectural Style
+</div>
 
 <div id="main">
 

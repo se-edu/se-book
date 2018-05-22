@@ -6,9 +6,11 @@ title: "Documentation: Tools: JavaDoc"
 
 <div class="website-content" id="all">
 
-%%**Documentation → Tools →**%%
+
+<div id="title">
 
 ### JavaDoc
+</div>
 
 <div id="main">
 

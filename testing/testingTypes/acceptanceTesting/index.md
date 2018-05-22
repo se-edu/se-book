@@ -6,9 +6,11 @@ title: "Testing: Testing Types: Acceptance Testing"
 
 <div class="website-content" id="all">
 
-%%**Testing → Testing Types →**%%
+
+<div id="title">
 
 ### Acceptance Testing
+</div>
 
 <div id="main">
 

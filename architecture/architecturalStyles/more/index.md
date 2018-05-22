@@ -6,9 +6,11 @@ title: "Architectural Styles: More"
 
 <div class="website-content" id="all">
 
-%%**Software Architecture → Architectural Styles →**%%
+
+<div id="title">
 
 ### More
+</div>
 
 <div id="main">
 

@@ -6,9 +6,11 @@ title: "Testing: Testing Types: Alpha and Beta Testing"
 
 <div class="website-content" id="all">
 
-%%**Testing → Testing Types →**%%
+
+<div id="title">
 
 ### Alpha and Beta Testing
+</div>
 
 <div id="main">
 
