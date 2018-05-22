@@ -14,6 +14,9 @@ title: "Book - Software Engineering for Self-Directed Learners"
 * [How to use this book](about/usage.html)
 
 
+<include src="toc.md" />
+
+
 # SECTION: INTRODUCTION
 
 <include src="../softwareEngineering/chapter.md" boilerplate />
