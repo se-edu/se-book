@@ -2,4 +2,4 @@
 title: "Project Planning: GANTT Charts"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

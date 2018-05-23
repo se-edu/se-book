@@ -2,4 +2,4 @@
 title: "Code Quality: [Guideline] Maximise Readability: Advanced"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

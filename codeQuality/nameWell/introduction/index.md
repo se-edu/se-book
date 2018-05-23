@@ -2,4 +2,4 @@
 title: "Code Quality: [Guideline] Name Well: Introduction"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

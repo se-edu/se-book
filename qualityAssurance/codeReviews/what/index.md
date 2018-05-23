@@ -2,4 +2,4 @@
 title: "Quality Assurance: Code Reviews: What"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

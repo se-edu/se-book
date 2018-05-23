@@ -2,4 +2,4 @@
 title: "Documentation: Aim for Comprehensibility: What"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

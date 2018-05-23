@@ -2,4 +2,4 @@
 title: "Intellij IDEA: Refactoring"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

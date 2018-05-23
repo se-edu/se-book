@@ -2,4 +2,4 @@
 title: "Java: Use Collections"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

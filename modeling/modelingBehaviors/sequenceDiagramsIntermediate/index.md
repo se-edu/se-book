@@ -2,4 +2,4 @@
 title: "Modeling: Modeling Behaviors: Sequence Diagrams - Intermediate"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

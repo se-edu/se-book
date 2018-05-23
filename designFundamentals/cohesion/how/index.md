@@ -2,4 +2,4 @@
 title: "Software Design Fundamentals: Cohesion: How"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

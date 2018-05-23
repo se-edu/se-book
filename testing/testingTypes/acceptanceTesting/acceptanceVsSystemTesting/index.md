@@ -2,4 +2,4 @@
 title: "Testing Types: Acceptance Testing: Acceptance vs System Testing"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

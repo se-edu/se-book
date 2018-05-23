@@ -2,4 +2,4 @@
 title: "Code Quality: [Guideline] Follow a Standard: Introduction"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

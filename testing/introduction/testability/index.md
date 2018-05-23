@@ -2,4 +2,4 @@
 title: "Testing: Introduction: Testability"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

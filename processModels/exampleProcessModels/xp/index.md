@@ -2,4 +2,4 @@
 title: "SDLC Process Models: Exaxmple Process Models: XP"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

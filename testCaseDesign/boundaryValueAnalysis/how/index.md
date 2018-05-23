@@ -2,4 +2,4 @@
 title: "Test Case Design: Boundary Value Analysis: How"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

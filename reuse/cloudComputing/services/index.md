@@ -2,4 +2,4 @@
 title: "Reuse: Cloud Computing: IaaS, PaaS and SaaS"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

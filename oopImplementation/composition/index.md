@@ -2,4 +2,4 @@
 title: "Object Oriented Programming: Composition"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

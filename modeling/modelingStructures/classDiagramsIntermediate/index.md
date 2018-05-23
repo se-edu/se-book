@@ -2,4 +2,4 @@
 title: "Modeling: Modeling Structures: Class Diagrams - Intermediate"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

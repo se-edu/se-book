@@ -2,4 +2,4 @@
 title: "Error Handling: Logging: How"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

@@ -2,4 +2,4 @@
 title: "Test Case Design: Introduction: Black Box vs Glass Box"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

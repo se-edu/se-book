@@ -2,4 +2,4 @@
 title: "Revision Control: Centralized Flow"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

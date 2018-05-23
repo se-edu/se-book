@@ -2,4 +2,4 @@
 title: "Software Architecture: Introduction: What"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

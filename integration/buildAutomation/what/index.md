@@ -2,4 +2,4 @@
 title: "Integration: Build Automation: What"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

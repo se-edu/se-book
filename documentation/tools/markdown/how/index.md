@@ -2,4 +2,4 @@
 title: "Documentation: Markdown: How"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

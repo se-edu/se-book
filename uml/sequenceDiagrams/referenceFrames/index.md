@@ -2,4 +2,4 @@
 title: "UML: Sequence Diagrams: Reference Frames"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

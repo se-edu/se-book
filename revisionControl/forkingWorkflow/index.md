@@ -2,4 +2,4 @@
 title: "Revision Control: Forking Workflow"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

@@ -2,4 +2,4 @@
 title: "Principles: Interface Segregation Principle"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

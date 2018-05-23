@@ -2,4 +2,4 @@
 title: "Software Engineering: Pros and Cons"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

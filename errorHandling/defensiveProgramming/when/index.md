@@ -2,4 +2,4 @@
 title: "Error Handling: Defensive Programming: When"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

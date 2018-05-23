@@ -2,4 +2,4 @@
 title: "Modeling: Modeling Behaviors: Interaction Overview Diagrams"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

@@ -2,4 +2,4 @@
 title: "Test Case Design: Introduction: What"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

@@ -2,4 +2,4 @@
 title: "UML: Activity Diagrams: Basic Notation: Swimlanes"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

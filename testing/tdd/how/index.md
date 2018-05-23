@@ -2,4 +2,4 @@
 title: "Testing: TDD: How"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

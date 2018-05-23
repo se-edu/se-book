@@ -2,5 +2,5 @@
 title: "Software Design Principles: Open-Closed Principle"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />
 div>

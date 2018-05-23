@@ -2,4 +2,4 @@
 title: "Software Design Patterns: Facade: What"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

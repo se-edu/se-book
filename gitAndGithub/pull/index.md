@@ -2,4 +2,4 @@
 title: "Git and Github: Pull"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

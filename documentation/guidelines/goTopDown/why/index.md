@@ -2,4 +2,4 @@
 title: "Documentation: Go Top-down, Not Bottom-up: Why"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

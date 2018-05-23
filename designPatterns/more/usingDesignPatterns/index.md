@@ -2,4 +2,4 @@
 title: "Software Design Patterns: More: Using Design Patterns"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

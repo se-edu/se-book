@@ -2,4 +2,4 @@
 title: "Specifying Requirements: Use Cases: Writing Detailed Use Cases"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

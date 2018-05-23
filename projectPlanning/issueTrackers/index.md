@@ -2,4 +2,4 @@
 title: "Project Planning: Issue Trackers"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

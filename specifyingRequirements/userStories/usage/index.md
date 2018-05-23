@@ -2,4 +2,4 @@
 title: "Specifying Requirements: User Stories: Putting User Stories to Good Use"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

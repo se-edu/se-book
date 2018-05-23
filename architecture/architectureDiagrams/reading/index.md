@@ -2,4 +2,4 @@
 title: "Software Architecture: Architecture Diagrams: Reading"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

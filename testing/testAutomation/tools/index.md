@@ -2,4 +2,4 @@
 title: "Testing: Test Automation: Test Automation Tools"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

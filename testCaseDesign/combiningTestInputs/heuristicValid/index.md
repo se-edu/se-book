@@ -2,4 +2,4 @@
 title: "Test Case Design: Combining Test Inputs: Heuristic: Each valid input at least once in a positive test case"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

@@ -2,4 +2,4 @@
 title: "Software Design Fundamentals: Coupling: Types of Coupling"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

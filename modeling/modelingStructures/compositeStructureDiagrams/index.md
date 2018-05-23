@@ -2,4 +2,4 @@
 title: "Modeling: Modeling Structures: Composite Structure Diagrams"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

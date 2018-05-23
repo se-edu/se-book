@@ -2,4 +2,4 @@
 title: "SDLC Process Models: Introduction: Iterative Models"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

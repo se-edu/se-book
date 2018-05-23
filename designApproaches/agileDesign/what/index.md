@@ -2,4 +2,4 @@
 title: "Design Approaches: Agile Design"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

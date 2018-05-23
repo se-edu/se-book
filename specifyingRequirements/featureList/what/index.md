@@ -2,4 +2,4 @@
 title: "Specifying Requirements: Feature List: What"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

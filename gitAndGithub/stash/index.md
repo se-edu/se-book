@@ -2,4 +2,4 @@
 title: "Git and Github: Stash"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

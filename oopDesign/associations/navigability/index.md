@@ -2,4 +2,4 @@
 title: "Object Oriented Programming: Associations: Navigability"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

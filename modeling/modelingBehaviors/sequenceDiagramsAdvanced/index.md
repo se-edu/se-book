@@ -2,4 +2,4 @@
 title: "Modeling: Modeling Behaviors: Sequence Diagrams - Advanced"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

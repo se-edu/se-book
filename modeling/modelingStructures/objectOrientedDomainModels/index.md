@@ -2,4 +2,4 @@
 title: "Modeling: Modeling Structures: Object Oriented Domain Models"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

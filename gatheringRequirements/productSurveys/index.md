@@ -2,4 +2,4 @@
 title: "Gathering Requirements: Product Surveys"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

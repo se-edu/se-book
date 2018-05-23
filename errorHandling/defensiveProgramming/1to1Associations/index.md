@@ -2,4 +2,4 @@
 title: "Error Handling: Defensive Programming: Enforcing 1-to-1 Associations"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

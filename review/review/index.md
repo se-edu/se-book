@@ -2,4 +2,4 @@
 title: "Review: Review"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

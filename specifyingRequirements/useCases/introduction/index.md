@@ -2,4 +2,4 @@
 title: "Specifying Requirements: Use Cases: Introduction"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

@@ -2,4 +2,4 @@
 title: "Code Quality: Introduction: Basic"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

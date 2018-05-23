@@ -2,4 +2,4 @@
 title: "Architectural Styles: Event-Driven Architectural Style: What"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

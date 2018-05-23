@@ -2,4 +2,4 @@
 title: "Principles: Single Responsibility Principle"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

@@ -2,4 +2,4 @@
 title: "Principles: Brooks' Law"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

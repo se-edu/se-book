@@ -2,4 +2,4 @@
 title: "Reuse: APIs: Designing APIs"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

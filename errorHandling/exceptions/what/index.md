@@ -2,4 +2,4 @@
 title: "Error Handling: Exceptions: What"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

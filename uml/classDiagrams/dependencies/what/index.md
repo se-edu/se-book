@@ -2,4 +2,4 @@
 title: "UML: Class Diagrams: Dependencies: What"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

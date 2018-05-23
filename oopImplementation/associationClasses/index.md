@@ -2,4 +2,4 @@
 title: "Object Oriented Programming: Association Classes"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

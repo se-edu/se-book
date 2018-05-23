@@ -2,4 +2,4 @@
 title: "SDLC Process Models: More: CMMI"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

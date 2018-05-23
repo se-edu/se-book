@@ -2,4 +2,4 @@
 title: "Java: Use Varargs"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

@@ -2,4 +2,4 @@
 title: "UML: Class Diagrams: Associations: Labels"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

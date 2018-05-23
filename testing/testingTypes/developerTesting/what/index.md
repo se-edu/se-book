@@ -2,4 +2,4 @@
 title: "Testing Types: Developer Testing: What"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

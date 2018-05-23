@@ -2,4 +2,4 @@
 title: "Documentation: Document Minimally, but Sufficiently: How"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

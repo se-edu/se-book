@@ -2,4 +2,4 @@
 title: "Code Quality: [Guideline] Avoid Unsafe Shortcuts: Intermediate"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />

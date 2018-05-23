@@ -2,4 +2,4 @@
 title: "Specifying Requirements: Glossary: What"
 </frontmatter>
 
-{{index_body}}
+<include src="index-body.md" boilerplate />
