@@ -46,7 +46,7 @@ title: "Book - Software Engineering for Self-Directed Learners"
 
 <include src="../modeling/chapter.md" boilerplate />
 
-<include src="../architecture/chapter.md" boilerplate />
+<include src="../architecture/container-index.md" boilerplate />
 
 <include src="../designPatterns/chapter.md" boilerplate />
 
