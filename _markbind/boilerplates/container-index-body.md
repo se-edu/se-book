@@ -1,7 +1,3 @@
-<frontmatter>
-title: "Software Architecture: Introduction"
-</frontmatter>
-
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content" id="all">
@@ -10,12 +6,12 @@ title: "Software Architecture: Introduction"
 
 <div id="title">
 
-## Introduction
+<include src="text.md#title" />
+
 </div>
 <div id="main">
 
-<include src="what/embed.md" boilerplate  />
+<include src="text.md#body" />
 
 </div>
-
 </div>

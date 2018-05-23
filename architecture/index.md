@@ -6,23 +6,17 @@ title: "Software Architecture"
 
 <div class="website-content" id="all">
 
+%%**<include src="../path.md" inline />**%%
+
 <div id="title">
 
 # Software Architecture
 </div>
 <div id="main">
 
-<panel header="## Introduction" type="seamless" alt="introduction" expanded >
-  <include src="introduction/index.md#main" />
-</panel>
-
-<panel header="## Architecture Diagrams" type="seamless" alt="architecture diagrams" expanded >
-  <include src="architectureDiagrams/index.md#main" />
-</panel>
-
-<panel header="## Architectural Styles" type="seamless" alt="architectural styles" expanded >
-  <include src="architecturalStyles/index.md#main" />
-</panel>
+<include src="introduction/chapter.md" boilerplate />
+<include src="architectureDiagrams/chapter.md" boilerplate />
+<include src="architecturalStyles/chapter.md" boilerplate />
 
 </div>
 

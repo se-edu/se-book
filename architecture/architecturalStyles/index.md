@@ -6,19 +6,21 @@ title: "Software Architecture: Architectural Styles"
 
 <div class="website-content" id="all">
 
-%%**Software Architecture →**%%
+%%**<include src="../path.md" inline />**%%
+
+<div id="title">
 
 ## Architectural Styles
-
+</div>
 <div id="main">
 
-<include src="./introduction/chapter.md" boilerplate />
-<include src="./nTier/chapter.md" boilerplate />
-<include src="./clientServer/chapter.md" boilerplate />
-<include src="./transactionProcessing/chapter.md" boilerplate />
-<include src="./serviceOriented/chapter.md" boilerplate />
-<include src="./eventDriven/chapter.md" boilerplate />
-<include src="./more/chapter.md" boilerplate />
+<include src="./introduction/container-index.md" boilerplate />
+<include src="./nTier/container-index.md" boilerplate />
+<include src="./clientServer/container-index.md" boilerplate />
+<include src="./transactionProcessing/container-index.md" boilerplate />
+<include src="./serviceOriented/container-index.md" boilerplate />
+<include src="./eventDriven/container-index.md" boilerplate />
+<include src="./more/container-index.md" boilerplate />
 
 </div>
 
