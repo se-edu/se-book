@@ -1,6 +1,6 @@
 <div id="title">
 
-#### Use the Default Branch
+##### Use the Default Branch
 
 </div>
 
@@ -29,4 +29,7 @@ else error("incorrect input");
 [Bad]: {{baseUrl}}/images/Bad.png "Bad"
 [Good]: {{baseUrl}}/images/Good.png "Good"
 
+</div>
+
+<div id="extras">
 </div>

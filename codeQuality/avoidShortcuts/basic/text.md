@@ -6,9 +6,7 @@
 
 <div id="body">
 
-<panel header="**Use the Default Branch**" type="seamless" expanded>
-  <include src="../../practices/useDefaultBranch/index.md#main" />
-</panel>
+<include src="useDefaultBranch/container-index.md" boilerplate />
 
 <panel header="**Don't Recycle Variables or Parameters**" type="seamless" expanded>
   <include src="../../practices/dontRecycleVarsOrParams/index.md#main" />
