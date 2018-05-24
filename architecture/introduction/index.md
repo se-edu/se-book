@@ -2,4 +2,4 @@
 title: "Software Architecture: Introduction"
 </frontmatter>
 
-<include src="container-index-body.md" boilerplate />
+{{container_index_body | safe}}
