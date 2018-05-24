@@ -6,15 +6,8 @@
 
 <div id="body">
 
-<panel header="**Do Not Repeat the Obvious**"
-    type="seamless" alt="indentation" expanded>
-  <include src="../../practices/dontRepeatObvious/index.md#main" />
-</panel>
-
-<panel header="**Write to the Reader**"
-    type="seamless" alt="indentation" expanded>
-  <include src="../../practices/writeToReader/index.md#main" />
-</panel>
+<include src="dontRepeatObvious/container-index.md" boilerplate />
+<include src="writeToReader/container-index.md" boilerplate />
 
 </div>
 

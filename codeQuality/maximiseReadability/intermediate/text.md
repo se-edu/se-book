@@ -6,25 +6,11 @@
 
 <div id="body">
 
-<panel header="**Structure Code Logically**" type="seamless" expanded>
-  <include src="../../practices/structureCodeLogically/index.md#main" />
-</panel>
-
-<panel header="**Do not 'Trip Up' the Reader**" type="seamless" expanded>
-  <include src="../../practices/dontTripReader/index.md#main" />
-</panel>
-
-<panel header="**Practice KISSing**" type="seamless" expanded>
-  <include src="../../practices/practiceKISSing/index.md#main" />
-</panel>
-
-<panel header="**Avoid Premature Optimizations**" type="seamless" expanded>
-  <include src="../../practices/avoidPrematureOptimizations/index.md#main" />
-</panel>
-
-<panel header="**SLAP Hard**" type="seamless" expanded>
-  <include src="../../practices/slapHard/index.md#main" />
-</panel>
+<include src="structureCodeLogically/container-index.md" boilerplate />
+<include src="dontTripReader/container-index.md" boilerplate />
+<include src="practiceKISSing/container-index.md" boilerplate />
+<include src="avoidPrematureOptimizations/container-index.md" boilerplate />
+<include src="slapHard/container-index.md" boilerplate />
 
 </div>
 

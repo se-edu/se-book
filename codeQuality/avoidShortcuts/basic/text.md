@@ -7,18 +7,9 @@
 <div id="body">
 
 <include src="useDefaultBranch/container-index.md" boilerplate />
-
-<panel header="**Don't Recycle Variables or Parameters**" type="seamless" expanded>
-  <include src="../../practices/dontRecycleVarsOrParams/index.md#main" />
-</panel>
-
-<panel header="**Avoid Empty Catch Blocks**" type="seamless" expanded>
-  <include src="../../practices/avoidEmptyCatchBlocks/index.md#main" />
-</panel>
-
-<panel header="**Delete Dead Code**" type="seamless" expanded>
-  <include src="../../practices/deleteDeadCode/index.md#main" />
-</panel>
+<include src="dontRecycleVarsOrParams/container-index.md" boilerplate />
+<include src="avoidEmptyCatchBlocks/container-index.md" boilerplate />
+<include src="deleteDeadCode/container-index.md" boilerplate />
 
 </div>
 

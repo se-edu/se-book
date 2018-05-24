@@ -6,13 +6,8 @@
 
 <div id="body">
 
-<panel header="**Minimise Scope of Variables**" type="seamless" type="seamless" expanded>
-  <include src="../../practices/minimiseVariableScope/index.md#main" />
-</panel>
-
-<panel header="**Minimise Code Duplication**" type="seamless" type="seamless" expanded>
-  <include src="../../practices/minimiseCodeDuplication/index.md#main" />
-</panel>
+<include src="minimiseVariableScope/container-index.md" boilerplate />
+<include src="minimiseCodeDuplication/container-index.md" boilerplate />
 
 </div>
 

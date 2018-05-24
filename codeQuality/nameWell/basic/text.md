@@ -6,15 +6,8 @@
 
 <div id="body">
 
-<panel header="**Use Nouns for Things and Verbs for Actions**"
-    type="seamless" alt="indentation" expanded>
-  <include src="../../practices/nounsAndVerbsAsNames/index.md#main" />
-</panel>
-
-<panel header="**Use Standard Words**"
-    type="seamless" alt="indentation" expanded>
-  <include src="../../practices/useStandardWords/index.md#main" />
-</panel>
+<include src="nounsAndVerbsAsNames/container-index.md" boilerplate />
+<include src="useStandardWords/container-index.md" boilerplate />
 
 </div>
 

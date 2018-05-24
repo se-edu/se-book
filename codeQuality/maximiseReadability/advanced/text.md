@@ -6,8 +6,8 @@
 
 <div id="body">
 
-<panel header="**Make the Happy Path Prominent**" type="seamless" expanded>
-  <include src="../../practices/makeHappyPathProminent/index.md#main" />
+<include src="makeHappyPathProminent/container-index.md" boilerplate/>
+
 </panel>
 
 </div>

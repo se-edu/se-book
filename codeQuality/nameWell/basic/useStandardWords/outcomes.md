@@ -1,0 +1,1 @@
+:trophy: Can improve code quality using technique: use standard words  :one:

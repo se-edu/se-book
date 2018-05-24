@@ -1,0 +1,1 @@
+:trophy: Can improve code quality using technique: make the code obvious  :one:

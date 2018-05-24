@@ -6,10 +6,7 @@
 
 <div id="body">
 
-<panel header="**Explain WHAT and WHY, not HOW**"
-    type="seamless" alt="indentation" expanded>
-  <include src="../../practices/explainWhatWhyNotHow/index.md#main" />
-</panel>
+<include src="explainWhatWhyNotHow/container-index.md" boilerplate />
 
 </div>
 
