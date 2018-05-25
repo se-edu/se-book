@@ -2,12 +2,12 @@
 
 :package: Example: 
 
-![][Bad]
+{{bad}}
 ```java
 return ((length < MAX_LENGTH) || (previousSize != length)) && (typeCode == URGENT);
 ```
 
-![][Good]
+{{good}}
 ```java
 
 boolean isWithinSizeLimit = length < MAX_LENGTH;

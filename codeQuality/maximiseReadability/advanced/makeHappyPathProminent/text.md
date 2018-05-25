@@ -12,7 +12,7 @@ The happy path (i.e. the execution path taken when everything goes well) should 
 
 Example:
 
-![][Bad]
+{{bad}}
 ```java
 if (!isUnusualCase) {  //detecting an unusual condition
     if (!isErrorCase) {
@@ -31,7 +31,7 @@ In the code above,
 * Unusual condition detection is separated from their handling.
 * Main path is nested deeply.
 
-![][Good]
+{{good}}
 ```java
 if (isUnusualCase) { //Guard Clause
     handleUnusualCase();
@@ -54,8 +54,6 @@ In contrast, the above code
 
 </tip-box>
 
-[Bad]: {{baseUrl}}/images/Bad.png "Bad"
-[Good]: {{baseUrl}}/images/Good.png "Good"
 
 </div>
 

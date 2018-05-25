@@ -4,7 +4,7 @@ Note: Python does not have a way to make a variable a constant. However, you can
 <tr>
   <td valign="top">
 
-![][Bad]
+{{bad}}
 ```python
 return 3.14236
 ...
@@ -14,7 +14,7 @@ return 9
   <td>&nbsp;&nbsp;<br><br></td>
   <td valign="top">
 
-![][Good]
+{{good}}
 ```python
 PI = 3.14236
 MAX_SIZE = 10

@@ -41,13 +41,13 @@ compact(input);
 
 :package: Example:  
 
-![][Bad] %%Reason: Comment explains how the code works.%%
+{{bad}} %%Reason: Comment explains how the code works.%%
 ```java
 // return true if both left end and right end are correct or the size has not incremented
 return (left && right) || (input.size() == size);
 ```
 
-![][Good] %%Reason: Code refactored to be self-explanatory. Comment no longer needed.%%
+{{good}} %%Reason: Code refactored to be self-explanatory. Comment no longer needed.%%
 ```java
 
 boolean isSameSize = (input.size() == size) ;
@@ -56,8 +56,6 @@ return (isLeftEndCorrect && isRightEndCorrect) || isSameSize;
 
 </tip-box>
 
-[Bad]: {{baseUrl}}/images/Bad.png "Bad"
-[Good]: {{baseUrl}}/images/Good.png "Good"
 
 
 </div>

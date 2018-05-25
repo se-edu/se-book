@@ -21,3 +21,7 @@
 </div>
 </div>
 </span>
+
+<span id="good"><font color="green">**<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Good**</font></span>
+
+<span id="bad"><font color="red">**<span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Bad**</font></span>

@@ -27,8 +27,6 @@ Do not write comments as if they are private notes to self. Instead, write them 
 
 </tip-box>
 
-[Bad]: {{baseUrl}}/images/Bad.png "Bad"
-[Good]: {{baseUrl}}/images/Good.png "Good"
 
 </div>
 

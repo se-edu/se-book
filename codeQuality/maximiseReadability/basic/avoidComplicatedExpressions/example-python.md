@@ -2,12 +2,12 @@
 
 :package: Example: 
 
-![][Bad]
+{{bad}}
 ```python
 return ((length < MAX_LENGTH) or (previous_size != length)) and (type_code == URGENT)
 ```
 
-![][Good]
+{{good}}
 ```python
 is_within_size_limit = length < MAX_LENGTH
 is_same_size = previous_size != length

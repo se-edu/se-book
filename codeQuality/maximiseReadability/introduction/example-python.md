@@ -2,7 +2,7 @@
 <tr>
   <td>
 
-![][Bad]
+{{bad}}
 ```python
 def calculate_subs():
     if not age:
@@ -21,7 +21,7 @@ def calculate_subs():
   <td>&nbsp;&nbsp;<br><br></td>
   <td valign="top">
 
-![][Good]
+{{good}}
 ```python
 def calculate_subsidy():
     if is_senior:

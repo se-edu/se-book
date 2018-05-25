@@ -2,7 +2,7 @@
 <tr>
   <td>
 
-![][Bad]
+{{bad}}
 ```java
 int subsidy() {
     int subsidy;
@@ -26,7 +26,7 @@ int subsidy() {
   <td>&nbsp;&nbsp;<br><br></td>
   <td valign="top">
 
-![][Good]
+{{good}}
 ```java
 int calculateSubsidy() {
     int subsidy;

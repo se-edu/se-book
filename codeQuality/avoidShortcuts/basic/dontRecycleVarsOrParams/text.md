@@ -11,7 +11,7 @@
 
 <tip-box>
 
-![][Bad]
+{{bad}}
 ```java
 double computeRectangleArea(double length, double width) {
     length = length * width;
@@ -19,7 +19,7 @@ double computeRectangleArea(double length, double width) {
 }
 
 ```
-![][Good]
+{{good}}
 ```java
 double computeRectangleArea(double length, double width) {
     double area;
@@ -29,9 +29,6 @@ double computeRectangleArea(double length, double width) {
 ```
 
 </tip-box>
-
-[Bad]: {{baseUrl}}/images/Bad.png "Bad"
-[Good]: {{baseUrl}}/images/Good.png "Good"
 
 </div>
 

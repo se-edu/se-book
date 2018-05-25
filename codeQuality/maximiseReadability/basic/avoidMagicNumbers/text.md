@@ -31,15 +31,13 @@ Similarly, we can have ‘magic’ values of other data types.
 
 <tip-box>
 
-![][Bad]
+{{bad}}
 ```java
 "Error 1432"  // A magic string!
 ```
 
 </tip-box>
 
-[Bad]: {{baseUrl}}/images/Bad.png "Bad"
-[Good]: {{baseUrl}}/images/Good.png "Good"
 
 </div>
 

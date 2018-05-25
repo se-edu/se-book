@@ -12,7 +12,7 @@
 
 Examples:
 
-| ![][Bad]          |  ![][Good]                     |
+| {{bad}}          |  {{good}}                     |
 | ----------------- |  ----------------------------- |
 |`processInput()`  (what 'process'?) |  `removeWhiteSpaceFromInput()` |
 |`flag`   |  `isValidInput` |
@@ -26,7 +26,7 @@ Examples:
 
 Examples:
 
-| ![][Bad]        |  ![][Good]       |
+| {{bad}}        |  {{good}}       |
 | --------------- |  --------------- |
 |`bySizeOrder()`  |  `orderBySize()` |
 
@@ -38,14 +38,12 @@ Imagine going to the doctor's and saying "My eye1 is swollen"! Don’t use numbe
 
 Examples:
 
-| ![][Bad]          | ![][Bad]          | ![][Good]                     |
+| {{bad}}          | {{bad}}          | {{good}}                     |
 | ----------------- | ----------------- | ----------------------------- |
 |`value1`, `value2` | `value`, `Value`  | `originalValue`, `finalValue` |
 
 </tip-box>
 
-[Bad]: {{baseUrl}}/images/Bad.png "Bad"
-[Good]: {{baseUrl}}/images/Good.png "Good"
 
 </div>
 

@@ -13,7 +13,7 @@ Note: The _Productive Programmer_ (by Neal Ford) calls this the _SLAP principle_
 
 Example:
 
-![][Bad]
+{{bad}}
 ```java
 readData();
 salary = basic*rise+1000;
@@ -21,7 +21,7 @@ tax = (taxable?salary*0.07:0);
 displayResult();
 ```
 
-![][Good]
+{{good}}
 ```java
 readData();
 processData();
@@ -34,8 +34,6 @@ displayResult();
   <include src="../../../../designFundamentals/abstraction/what/full.md" boilerplate/>
 </modal>
 
-[Bad]: {{baseUrl}}/images/Bad.png "Bad"
-[Good]: {{baseUrl}}/images/Good.png "Good"
 
 </div>
 

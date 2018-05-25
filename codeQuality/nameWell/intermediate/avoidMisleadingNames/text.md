@@ -28,7 +28,7 @@ Avoid misleading or ambiguous names (e.g. those with multiple meanings), similar
 
 Examples:
 
-| ![][Bad]        | ![][Good]        |  Reason      |
+| {{bad}}        | {{good}}        |  Reason      |
 | --------------- | --------------- |  --------------- |
 |`phase0`  |`phaseZero`  |  Is that zero or letter O? |
 |`rwrLgtDirn`  |`rowerLegitDirection`  |  Hard to pronounce |
@@ -38,8 +38,6 @@ Examples:
 
 </tip-box>
 
-[Bad]: {{baseUrl}}/images/Bad.png "Bad"
-[Good]: {{baseUrl}}/images/Good.png "Good"
 
 </div>
 

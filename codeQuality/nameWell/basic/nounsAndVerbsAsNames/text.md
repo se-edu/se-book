@@ -12,7 +12,7 @@
 
 Examples:
 
-Name for a | ![][Bad]        | ![][Good]
+Name for a | {{bad}}        | {{good}}
 -----------|-----------------|----------------
 Class      |`CheckLimit`     | `LimitChecker`           
 method     |`result()`       | `calculate()`  
@@ -29,7 +29,7 @@ method     |`result()`       | `calculate()`
 <tabs> 
   <tab header="Java">
 
-![][Good]
+{{good}}
 ```java
 Person student;
 ArrayList<Person> students;
@@ -37,7 +37,7 @@ ArrayList<Person> students;
   </tab>
   <tab header="Python">
 
-![][Good]
+{{good}}
 ```python
 student = Person('Jim')
 students = [Person('Jim'), Person('Alice')]
@@ -49,8 +49,6 @@ students = [Person('Jim'), Person('Alice')]
 
 </tip-box>
 
-[Bad]: {{baseUrl}}/images/Bad.png "Bad"
-[Good]: {{baseUrl}}/images/Good.png "Good"
 
 </div>
 

@@ -12,12 +12,12 @@ Furthermore, use it for the intended default action and not just to execute the 
 
 <tip-box>
 
-![][Bad]
+{{bad}}
 ```java
 if (red) print "red";
 else print "blue";
 ```
-![][Good]
+{{good}}
 ```java
 if (red) print "red";
 else if (blue) print "blue";
@@ -26,8 +26,6 @@ else error("incorrect input");
 
 </tip-box>
 
-[Bad]: {{baseUrl}}/images/Bad.png "Bad"
-[Good]: {{baseUrl}}/images/Good.png "Good"
 
 </div>
 

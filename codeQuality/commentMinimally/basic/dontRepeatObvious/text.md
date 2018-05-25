@@ -8,7 +8,7 @@
 
 If the code is self-explanatory, refrain from repeating the description in a comment just for the sake of 'good documentation'.
 
-![][Bad]
+{{bad}}
 ```java
 // increment x
 x++;
@@ -17,7 +17,6 @@ x++;
 trimInput();
 ```
 
-[Bad]: {{baseUrl}}/images/Bad.png "Bad"
 
 </div>
 
