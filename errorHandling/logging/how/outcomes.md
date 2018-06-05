@@ -1,1 +1,1 @@
-:trophy: Can use logging :two:
+{{glyphicon_flag}} Can use logging :two:

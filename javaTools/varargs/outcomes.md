@@ -1,1 +1,1 @@
-:trophy: Can use Java varargs feature :three:
+{{glyphicon_flag}} Can use Java varargs feature :three:

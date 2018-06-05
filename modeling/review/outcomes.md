@@ -1,1 +1,1 @@
-:trophy: Can combine some modeling concepts :one:
+{{glyphicon_flag}} Can combine some modeling concepts :one:

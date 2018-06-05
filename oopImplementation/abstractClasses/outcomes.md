@@ -1,1 +1,1 @@
-:trophy: Can implement abstract classes :one:
+{{glyphicon_flag}} Can implement abstract classes :one:

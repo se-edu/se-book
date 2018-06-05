@@ -1,1 +1,1 @@
-:trophy: Can explain equivalence partitions :two:
+{{glyphicon_flag}} Can explain equivalence partitions :two:

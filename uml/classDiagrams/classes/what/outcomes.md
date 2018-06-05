@@ -1,1 +1,1 @@
-:trophy: Can draw UML classes :one:
+{{glyphicon_flag}} Can draw UML classes :one:

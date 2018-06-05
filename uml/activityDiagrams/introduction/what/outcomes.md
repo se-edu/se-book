@@ -1,1 +1,1 @@
-:trophy: Can explain activity diagrams :one:
+{{glyphicon_flag}} Can explain activity diagrams :one:

@@ -1,1 +1,1 @@
-:trophy: Can explain automated GUI testing :two:
+{{glyphicon_flag}} Can explain automated GUI testing :two:

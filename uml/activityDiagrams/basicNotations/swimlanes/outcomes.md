@@ -1,1 +1,1 @@
-:trophy: Can explain swimlanes in activity diagrams :four:
+{{glyphicon_flag}} Can explain swimlanes in activity diagrams :four:

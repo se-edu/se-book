@@ -1,1 +1,1 @@
-:trophy: Can distinguish between IaaS, PaaS, and SaaS :three:
+{{glyphicon_flag}} Can distinguish between IaaS, PaaS, and SaaS :three:

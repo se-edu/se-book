@@ -1,1 +1,1 @@
-:trophy: Can combine test case design techniques :three:
+{{glyphicon_flag}} Can combine test case design techniques :three:

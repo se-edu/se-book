@@ -1,1 +1,1 @@
-:trophy: Can explain method overriding :one:
+{{glyphicon_flag}} Can explain method overriding :one:

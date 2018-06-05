@@ -1,1 +1,1 @@
-:trophy: Can write reasonably comprehensible developer documents :two:
+{{glyphicon_flag}} Can write reasonably comprehensible developer documents :two:

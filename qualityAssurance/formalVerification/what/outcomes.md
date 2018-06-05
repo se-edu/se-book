@@ -1,1 +1,1 @@
-:trophy: Can explain formal verification :two:
+{{glyphicon_flag}} Can explain formal verification :two:

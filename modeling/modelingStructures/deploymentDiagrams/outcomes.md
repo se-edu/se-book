@@ -1,1 +1,1 @@
-:trophy: Can explain deployment diagrams :four:
+{{glyphicon_flag}} Can explain deployment diagrams :four:

@@ -1,1 +1,1 @@
-:trophy: Can explain quality of requirements :one:
+{{glyphicon_flag}} Can explain quality of requirements :one:

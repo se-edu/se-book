@@ -1,1 +1,1 @@
-:trophy: Can explain glossary :one:
+{{glyphicon_flag}} Can explain glossary :one:

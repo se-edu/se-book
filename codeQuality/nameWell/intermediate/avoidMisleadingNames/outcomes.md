@@ -1,1 +1,1 @@
-:trophy: Can improve code quality using technique: avoid misleading names  :one:
+{{glyphicon_flag}} Can improve code quality using technique: avoid misleading names  :one:

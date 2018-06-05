@@ -1,1 +1,1 @@
-:trophy: Can explain platforms :two:
+{{glyphicon_flag}} Can explain platforms :two:

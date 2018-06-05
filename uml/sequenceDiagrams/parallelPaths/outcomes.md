@@ -1,1 +1,1 @@
-:trophy: Can interpret sequence diagrams with parallel paths :three:
+{{glyphicon_flag}} Can interpret sequence diagrams with parallel paths :three:

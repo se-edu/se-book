@@ -1,1 +1,1 @@
-:trophy: Can explain debugging :one:
+{{glyphicon_flag}} Can explain debugging :one:

@@ -1,1 +1,1 @@
-:trophy: Can implement composition :two:
+{{glyphicon_flag}} Can implement composition :two:

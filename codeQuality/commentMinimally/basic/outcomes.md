@@ -1,1 +1,1 @@
-:trophy: Can follow basic guidelines for writing code comments :one:
+{{glyphicon_flag}} Can follow basic guidelines for writing code comments :one:

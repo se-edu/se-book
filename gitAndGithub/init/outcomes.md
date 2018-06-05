@@ -1,1 +1,1 @@
-:trophy: Can create a local Git repo :one:
+{{glyphicon_flag}} Can create a local Git repo :one:

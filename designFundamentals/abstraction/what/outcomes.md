@@ -1,1 +1,1 @@
-:trophy: Can explain abstraction :one:
+{{glyphicon_flag}} Can explain abstraction :one:

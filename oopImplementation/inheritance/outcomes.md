@@ -1,1 +1,1 @@
-:trophy: Can implement basic inheritance :one:
+{{glyphicon_flag}} Can implement basic inheritance :one:

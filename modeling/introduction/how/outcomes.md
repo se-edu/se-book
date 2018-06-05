@@ -1,1 +1,1 @@
-:trophy: Can explain how models are used :three:
+{{glyphicon_flag}} Can explain how models are used :three:

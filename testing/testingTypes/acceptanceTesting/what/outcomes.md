@@ -1,1 +1,1 @@
-:trophy: Can explain acceptance testing :one:
+{{glyphicon_flag}} Can explain acceptance testing :one:

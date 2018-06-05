@@ -1,1 +1,1 @@
-:trophy: Can improve code quality using technique: delete dead code  :one:
+{{glyphicon_flag}} Can improve code quality using technique: delete dead code  :one:

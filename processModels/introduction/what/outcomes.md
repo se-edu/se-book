@@ -1,1 +1,1 @@
-:trophy: Can explain SDLC process models :one:
+{{glyphicon_flag}} Can explain SDLC process models :one:

@@ -1,1 +1,1 @@
-:trophy: Can explain test automation :one:
+{{glyphicon_flag}} Can explain test automation :one:

@@ -1,1 +1,1 @@
-:trophy: Can implement associations :one:
+{{glyphicon_flag}} Can implement associations :one:

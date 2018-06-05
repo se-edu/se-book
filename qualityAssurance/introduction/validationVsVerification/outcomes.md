@@ -1,1 +1,1 @@
-:trophy: Can explain validation and verification :two:
+{{glyphicon_flag}} Can explain validation and verification :two:

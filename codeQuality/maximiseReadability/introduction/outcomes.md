@@ -1,1 +1,1 @@
-:trophy: Can explain the importance of readability :one:
+{{glyphicon_flag}} Can explain the importance of readability :one:

@@ -1,1 +1,1 @@
-:trophy: Can explain CMMI :four:
+{{glyphicon_flag}} Can explain CMMI :four:

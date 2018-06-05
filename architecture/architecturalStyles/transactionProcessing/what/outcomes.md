@@ -1,1 +1,1 @@
-:trophy: Can identify transaction processing architectural style :one:
+{{glyphicon_flag}} Can identify transaction processing architectural style :one:

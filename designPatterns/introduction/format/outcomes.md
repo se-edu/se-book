@@ -1,1 +1,1 @@
-:trophy: Can explain design patterns format :two:
+{{glyphicon_flag}} Can explain design patterns format :two:

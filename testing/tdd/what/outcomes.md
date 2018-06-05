@@ -1,1 +1,1 @@
-:trophy: Can explain TDD :two:
+{{glyphicon_flag}} Can explain TDD :two:

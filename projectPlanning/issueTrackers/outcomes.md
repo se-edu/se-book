@@ -1,1 +1,1 @@
-:trophy: Can explain issue trackers :two:
+{{glyphicon_flag}} Can explain issue trackers :two:

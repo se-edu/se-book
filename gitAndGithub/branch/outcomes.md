@@ -1,1 +1,1 @@
-:trophy: Can use Git branching :two:
+{{glyphicon_flag}} Can use Git branching :two:

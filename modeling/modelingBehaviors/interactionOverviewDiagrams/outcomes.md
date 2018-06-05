@@ -1,1 +1,1 @@
-:trophy: Can explain interaction overview diagrams :four:
+{{glyphicon_flag}} Can explain interaction overview diagrams :four:

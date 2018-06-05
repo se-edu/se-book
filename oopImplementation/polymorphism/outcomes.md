@@ -1,1 +1,1 @@
-:trophy: Can implement polymorphism :two:
+{{glyphicon_flag}} Can implement polymorphism :two:

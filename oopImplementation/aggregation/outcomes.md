@@ -1,1 +1,1 @@
-:trophy: Can implement aggregation :two:
+{{glyphicon_flag}} Can implement aggregation :two:

@@ -1,1 +1,1 @@
-:trophy: Can explain SOLID Principles :four:
+{{glyphicon_flag}} Can explain SOLID Principles :four:

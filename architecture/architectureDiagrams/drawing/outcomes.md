@@ -1,1 +1,1 @@
-:trophy: Can draw an architecture diagram :two:
+{{glyphicon_flag}} Can draw an architecture diagram :two:

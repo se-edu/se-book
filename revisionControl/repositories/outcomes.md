@@ -1,1 +1,1 @@
-:trophy: Can explain repositories :one:
+{{glyphicon_flag}} Can explain repositories :one:

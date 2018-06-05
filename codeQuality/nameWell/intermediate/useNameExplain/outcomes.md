@@ -1,1 +1,1 @@
-:trophy: Can improve code quality using technique: use name to explain  :one:
+{{glyphicon_flag}} Can improve code quality using technique: use name to explain  :one:

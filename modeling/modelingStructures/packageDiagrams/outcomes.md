@@ -1,1 +1,1 @@
-:trophy: Can explain package diagrams :four:
+{{glyphicon_flag}} Can explain package diagrams :four:

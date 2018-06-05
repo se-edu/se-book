@@ -1,1 +1,1 @@
-:trophy: Can apply some basic refactoring :two:
+{{glyphicon_flag}} Can apply some basic refactoring :two:

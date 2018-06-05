@@ -1,1 +1,1 @@
-:trophy: Can interpret sequence diagrams with basic notation :one:
+{{glyphicon_flag}} Can interpret sequence diagrams with basic notation :one:

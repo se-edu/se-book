@@ -1,1 +1,1 @@
-:trophy: Can reduce coupling :two:
+{{glyphicon_flag}} Can reduce coupling :two:

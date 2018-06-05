@@ -1,1 +1,1 @@
-:trophy: Can interpret advanced sequence diagrams :three:
+{{glyphicon_flag}} Can interpret advanced sequence diagrams :three:

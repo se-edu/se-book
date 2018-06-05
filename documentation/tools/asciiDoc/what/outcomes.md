@@ -1,1 +1,1 @@
-:trophy: Can explain AsciiDoc :two:
+{{glyphicon_flag}} Can explain AsciiDoc :two:

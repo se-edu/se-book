@@ -1,1 +1,1 @@
-:trophy: Can explain architectural styles :one:
+{{glyphicon_flag}} Can explain architectural styles :one:

@@ -1,1 +1,1 @@
-:trophy: Can explain Brooks' law :four:
+{{glyphicon_flag}} Can explain Brooks' law :four:

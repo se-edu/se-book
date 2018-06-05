@@ -1,1 +1,1 @@
-:trophy: Can explain software reuse :one:
+{{glyphicon_flag}} Can explain software reuse :one:

@@ -1,1 +1,1 @@
-:trophy: Can apply EP for pure functions :two:
+{{glyphicon_flag}} Can apply EP for pure functions :two:

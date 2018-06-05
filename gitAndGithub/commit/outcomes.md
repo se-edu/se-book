@@ -1,1 +1,1 @@
-:trophy: Can commit using Git :one:
+{{glyphicon_flag}} Can commit using Git :one:

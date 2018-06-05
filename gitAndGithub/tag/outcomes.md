@@ -1,1 +1,1 @@
-:trophy: Can tag commits using Git :three:
+{{glyphicon_flag}} Can tag commits using Git :three:

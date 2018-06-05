@@ -1,1 +1,1 @@
-:trophy: Can explain branching :two:
+{{glyphicon_flag}} Can explain branching :two:

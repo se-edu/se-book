@@ -1,1 +1,1 @@
-:trophy: Can explain communication diagrams :four:
+{{glyphicon_flag}} Can explain communication diagrams :four:

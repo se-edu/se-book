@@ -1,1 +1,1 @@
-:trophy: Can explain observation :one:
+{{glyphicon_flag}} Can explain observation :one:

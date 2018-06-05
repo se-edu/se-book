@@ -1,1 +1,1 @@
-:trophy: Can interpret sequence diagrams with object deletion :two:
+{{glyphicon_flag}} Can interpret sequence diagrams with object deletion :two:

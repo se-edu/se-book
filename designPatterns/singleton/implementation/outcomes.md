@@ -1,1 +1,1 @@
-:trophy: Can apply the Singleton design pattern :two:
+{{glyphicon_flag}} Can apply the Singleton design pattern :two:

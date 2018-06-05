@@ -1,1 +1,1 @@
-:trophy: Can write more detailed user stories :two:
+{{glyphicon_flag}} Can write more detailed user stories :two:

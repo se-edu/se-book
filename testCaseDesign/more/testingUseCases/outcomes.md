@@ -1,1 +1,1 @@
-:trophy: Can explain test case design for use case based testing :four:
+{{glyphicon_flag}} Can explain test case design for use case based testing :four:

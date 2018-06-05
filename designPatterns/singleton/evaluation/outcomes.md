@@ -1,1 +1,1 @@
-:trophy: Can decide when to apply Singleton design pattern :three:
+{{glyphicon_flag}} Can decide when to apply Singleton design pattern :three:

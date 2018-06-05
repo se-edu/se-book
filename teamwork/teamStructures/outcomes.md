@@ -1,1 +1,1 @@
-:trophy: Can explain common team structures :three:
+{{glyphicon_flag}} Can explain common team structures :three:

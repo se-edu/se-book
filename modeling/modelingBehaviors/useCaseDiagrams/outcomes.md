@@ -1,1 +1,1 @@
-:trophy: Can explain use case diagrams :two:
+{{glyphicon_flag}} Can explain use case diagrams :two:

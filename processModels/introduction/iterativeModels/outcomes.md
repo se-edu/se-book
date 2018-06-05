@@ -1,1 +1,1 @@
-:trophy: Can explain iterative process models :one:
+{{glyphicon_flag}} Can explain iterative process models :one:

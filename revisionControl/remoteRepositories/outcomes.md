@@ -1,1 +1,1 @@
-:trophy: Can explain remote repositories :two:
+{{glyphicon_flag}} Can explain remote repositories :two:

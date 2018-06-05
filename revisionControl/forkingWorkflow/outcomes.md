@@ -1,1 +1,1 @@
-:trophy: Can explain forking workflow :three:
+{{glyphicon_flag}} Can explain forking workflow :three:

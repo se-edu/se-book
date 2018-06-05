@@ -1,1 +1,1 @@
-:trophy: Can explain dependencies among classes :two:
+{{glyphicon_flag}} Can explain dependencies among classes :two:

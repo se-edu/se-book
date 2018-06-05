@@ -1,1 +1,1 @@
-:trophy: Can explain supplementary requirements :one:
+{{glyphicon_flag}} Can explain supplementary requirements :one:

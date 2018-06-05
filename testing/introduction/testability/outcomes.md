@@ -1,1 +1,1 @@
-:trophy: Can explain testability :three:
+{{glyphicon_flag}} Can explain testability :three:

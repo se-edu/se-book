@@ -1,1 +1,1 @@
-:trophy: Can explain the Unified Process :three:
+{{glyphicon_flag}} Can explain the Unified Process :three:

@@ -1,1 +1,1 @@
-:trophy: Can follow TDD :three:
+{{glyphicon_flag}} Can follow TDD :three:

@@ -1,1 +1,1 @@
-:trophy: Can specify constraints in UML diagrams :three:
+{{glyphicon_flag}} Can specify constraints in UML diagrams :three:

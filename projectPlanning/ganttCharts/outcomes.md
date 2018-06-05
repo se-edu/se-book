@@ -1,1 +1,1 @@
-:trophy: Can explain GANTT charts :three:
+{{glyphicon_flag}} Can explain GANTT charts :three:

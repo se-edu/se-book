@@ -1,1 +1,1 @@
-:trophy: Can explain models :two:
+{{glyphicon_flag}} Can explain models :two:

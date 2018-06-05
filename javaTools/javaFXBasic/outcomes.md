@@ -1,1 +1,1 @@
-:trophy: Can use JavaFX to build a simple GUI :three:
+{{glyphicon_flag}} Can use JavaFX to build a simple GUI :three:

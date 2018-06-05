@@ -1,1 +1,1 @@
-:trophy: Can explain IDEs :one:
+{{glyphicon_flag}} Can explain IDEs :one:

@@ -1,1 +1,1 @@
-:trophy: Can explain prototyping :one:
+{{glyphicon_flag}} Can explain prototyping :one:

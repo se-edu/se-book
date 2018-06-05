@@ -1,1 +1,1 @@
-:trophy: Can explain buffers :two:
+{{glyphicon_flag}} Can explain buffers :two:

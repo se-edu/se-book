@@ -1,1 +1,1 @@
-:trophy: Can implement class-level members :one:
+{{glyphicon_flag}} Can implement class-level members :one:

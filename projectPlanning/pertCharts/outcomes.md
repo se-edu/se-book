@@ -1,1 +1,1 @@
-:trophy: Can explain PERT charts :four:
+{{glyphicon_flag}} Can explain PERT charts :four:

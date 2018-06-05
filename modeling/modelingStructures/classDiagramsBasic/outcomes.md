@@ -1,1 +1,1 @@
-:trophy: Can use basic-level class diagrams :one:
+{{glyphicon_flag}} Can use basic-level class diagrams :one:

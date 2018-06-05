@@ -1,1 +1,1 @@
-:trophy: Can explain the meaning of composition :two:
+{{glyphicon_flag}} Can explain the meaning of composition :two:

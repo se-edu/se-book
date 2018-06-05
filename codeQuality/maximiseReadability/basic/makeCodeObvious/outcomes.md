@@ -1,1 +1,1 @@
-:trophy: Can improve code quality using technique: make the code obvious  :one:
+{{glyphicon_flag}} Can improve code quality using technique: make the code obvious  :one:

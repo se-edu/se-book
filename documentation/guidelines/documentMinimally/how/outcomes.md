@@ -1,1 +1,1 @@
-:trophy: Can write minimal yet sufficient documentation :two:
+{{glyphicon_flag}} Can write minimal yet sufficient documentation :two:

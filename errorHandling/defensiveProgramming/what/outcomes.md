@@ -1,1 +1,1 @@
-:trophy: Can explain defensive programming :one:
+{{glyphicon_flag}} Can explain defensive programming :one:

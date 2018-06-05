@@ -1,1 +1,1 @@
-:trophy: Can explain XP :four:
+{{glyphicon_flag}} Can explain XP :four:

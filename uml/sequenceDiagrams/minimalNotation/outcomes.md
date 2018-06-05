@@ -1,1 +1,1 @@
-:trophy: Can interpret sequence diagrams with minimal notation :three:
+{{glyphicon_flag}} Can interpret sequence diagrams with minimal notation :three:

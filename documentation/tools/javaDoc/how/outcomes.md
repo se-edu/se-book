@@ -1,1 +1,1 @@
-:trophy: Can write Javadoc comments :two:
+{{glyphicon_flag}} Can write Javadoc comments :two:

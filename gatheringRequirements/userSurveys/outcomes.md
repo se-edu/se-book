@@ -1,1 +1,1 @@
-:trophy: Can explain user surveys :one:
+{{glyphicon_flag}} Can explain user surveys :one:

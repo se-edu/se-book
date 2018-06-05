@@ -1,1 +1,1 @@
-:trophy: Can implement operation overriding :one:
+{{glyphicon_flag}} Can implement operation overriding :one:

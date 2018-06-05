@@ -1,1 +1,1 @@
-:trophy: Can explain composite structure diagrams :four:
+{{glyphicon_flag}} Can explain composite structure diagrams :four:

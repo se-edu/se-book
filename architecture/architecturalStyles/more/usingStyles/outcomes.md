@@ -1,1 +1,1 @@
-:trophy: Can explain how architectural styles are combined :two:
+{{glyphicon_flag}} Can explain how architectural styles are combined :two:

@@ -1,1 +1,1 @@
-:trophy: Can explain associations :one:
+{{glyphicon_flag}} Can explain associations :one:

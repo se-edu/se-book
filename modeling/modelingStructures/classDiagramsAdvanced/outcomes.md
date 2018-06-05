@@ -1,1 +1,1 @@
-:trophy: Can use advanced class diagrams :three:
+{{glyphicon_flag}} Can use advanced class diagrams :three:

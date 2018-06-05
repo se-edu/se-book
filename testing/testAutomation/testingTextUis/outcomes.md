@@ -1,1 +1,1 @@
-:trophy: Can semi-automate testing of CLIs :one:
+{{glyphicon_flag}} Can semi-automate testing of CLIs :one:

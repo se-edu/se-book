@@ -1,1 +1,1 @@
-:trophy: Can explain prose :one:
+{{glyphicon_flag}} Can explain prose :one:

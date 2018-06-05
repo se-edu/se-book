@@ -1,1 +1,1 @@
-:trophy: Can explain error handling :one:
+{{glyphicon_flag}} Can explain error handling :one:

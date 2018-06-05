@@ -1,1 +1,1 @@
-:trophy: Can explain Software Architecture :one:
+{{glyphicon_flag}} Can explain Software Architecture :one:

@@ -1,1 +1,1 @@
-:trophy: Can explain software quality assurance :one:
+{{glyphicon_flag}} Can explain software quality assurance :one:

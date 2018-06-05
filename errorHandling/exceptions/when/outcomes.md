@@ -1,1 +1,1 @@
-:trophy: Can avoid using exceptions to control normal workflow :three:
+{{glyphicon_flag}} Can avoid using exceptions to control normal workflow :three:

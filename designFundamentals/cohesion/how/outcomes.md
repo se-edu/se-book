@@ -1,1 +1,1 @@
-:trophy: Can increase cohesion :two:
+{{glyphicon_flag}} Can increase cohesion :two:

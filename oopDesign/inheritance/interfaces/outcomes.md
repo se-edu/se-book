@@ -1,1 +1,1 @@
-:trophy: Can explain interfaces :two:
+{{glyphicon_flag}} Can explain interfaces :two:

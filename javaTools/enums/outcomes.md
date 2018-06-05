@@ -1,1 +1,1 @@
-:trophy: Can use Java enumerations :two:
+{{glyphicon_flag}} Can use Java enumerations :two:

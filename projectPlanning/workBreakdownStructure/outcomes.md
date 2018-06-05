@@ -1,1 +1,1 @@
-:trophy: Can explain work breakdown structures :one:
+{{glyphicon_flag}} Can explain work breakdown structures :one:

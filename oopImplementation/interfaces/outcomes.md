@@ -1,1 +1,1 @@
-:trophy: Can implement interfaces :one:
+{{glyphicon_flag}} Can implement interfaces :one:

@@ -1,1 +1,1 @@
-:trophy: Can explain DRY principle :three:
+{{glyphicon_flag}} Can explain DRY principle :three:

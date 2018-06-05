@@ -1,1 +1,1 @@
-:trophy: Can explain prioritizing requirements :one:
+{{glyphicon_flag}} Can explain prioritizing requirements :one:

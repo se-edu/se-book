@@ -1,1 +1,1 @@
-:trophy: Can implement classes :one:
+{{glyphicon_flag}} Can implement classes :one:

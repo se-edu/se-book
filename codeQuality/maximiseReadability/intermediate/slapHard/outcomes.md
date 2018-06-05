@@ -1,1 +1,1 @@
-:trophy: Can improve code quality using technique: slap hard  :one:
+{{glyphicon_flag}} Can improve code quality using technique: slap hard  :one:

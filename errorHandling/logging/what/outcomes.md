@@ -1,1 +1,1 @@
-:trophy: Can explain logging :one:
+{{glyphicon_flag}} Can explain logging :one:

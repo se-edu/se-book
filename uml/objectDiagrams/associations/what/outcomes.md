@@ -1,1 +1,1 @@
-:trophy: Can interpret simple associations among objects :one:
+{{glyphicon_flag}} Can interpret simple associations among objects :one:

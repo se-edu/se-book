@@ -1,1 +1,1 @@
-:trophy: Can explain the Singleton design pattern :two:
+{{glyphicon_flag}} Can explain the Singleton design pattern :two:

@@ -1,1 +1,1 @@
-:trophy: Can explain assertions :two:
+{{glyphicon_flag}} Can explain assertions :two:

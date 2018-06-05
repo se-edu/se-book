@@ -1,1 +1,1 @@
-:trophy: Can interpret an architecture diagram :one:
+{{glyphicon_flag}} Can interpret an architecture diagram :one:

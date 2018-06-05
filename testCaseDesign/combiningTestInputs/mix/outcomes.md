@@ -1,1 +1,1 @@
-:trophy: Can apply multiple test input combination techniques together :three:
+{{glyphicon_flag}} Can apply multiple test input combination techniques together :three:

@@ -1,1 +1,1 @@
-:trophy: Can interpret composition in class diagrams :two:
+{{glyphicon_flag}} Can interpret composition in class diagrams :two:

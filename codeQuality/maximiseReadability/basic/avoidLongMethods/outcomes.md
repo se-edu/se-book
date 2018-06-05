@@ -1,1 +1,1 @@
-:trophy: Can improve code quality using technique: avoid long methods  :one:
+{{glyphicon_flag}} Can improve code quality using technique: avoid long methods  :one:

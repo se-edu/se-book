@@ -1,1 +1,1 @@
-:trophy: Can explain libraries :one:
+{{glyphicon_flag}} Can explain libraries :one:

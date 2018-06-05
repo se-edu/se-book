@@ -1,1 +1,1 @@
-:trophy: Can draw intermediate-level sequence diagrams :two:
+{{glyphicon_flag}} Can draw intermediate-level sequence diagrams :two:

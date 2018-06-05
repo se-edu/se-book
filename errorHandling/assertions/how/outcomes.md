@@ -1,1 +1,1 @@
-:trophy: Can use assertions :two:
+{{glyphicon_flag}} Can use assertions :two:

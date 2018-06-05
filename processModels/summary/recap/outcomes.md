@@ -1,1 +1,1 @@
-:trophy: Can explain process models at a higher level :three:
+{{glyphicon_flag}} Can explain process models at a higher level :three:

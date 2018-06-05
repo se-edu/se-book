@@ -1,1 +1,1 @@
-:trophy: Can combine some OOP concepts :one:
+{{glyphicon_flag}} Can combine some OOP concepts :one:

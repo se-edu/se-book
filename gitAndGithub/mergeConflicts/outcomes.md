@@ -1,1 +1,1 @@
-:trophy: Can use Git to resolve merge conflicts :three:
+{{glyphicon_flag}} Can use Git to resolve merge conflicts :three:

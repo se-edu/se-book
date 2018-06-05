@@ -1,1 +1,1 @@
-:trophy: Can explain integration :one:
+{{glyphicon_flag}} Can explain integration :one:

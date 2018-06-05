@@ -1,1 +1,1 @@
-:trophy: Can explain interviews :one:
+{{glyphicon_flag}} Can explain interviews :one:

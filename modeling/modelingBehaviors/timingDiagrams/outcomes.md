@@ -1,1 +1,1 @@
-:trophy: Can explain timing diagrams :four:
+{{glyphicon_flag}} Can explain timing diagrams :four:

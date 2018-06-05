@@ -1,1 +1,1 @@
-:trophy: Can explain continuous integration and continuous deployment :two:
+{{glyphicon_flag}} Can explain continuous integration and continuous deployment :two:

@@ -1,1 +1,1 @@
-:trophy: Can explain test coverage :two:
+{{glyphicon_flag}} Can explain test coverage :two:

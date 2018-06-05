@@ -1,1 +1,1 @@
-:trophy: Can combine some principles concepts :one:
+{{glyphicon_flag}} Can combine some principles concepts :one:

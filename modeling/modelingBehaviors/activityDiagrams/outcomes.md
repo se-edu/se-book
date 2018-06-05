@@ -1,1 +1,1 @@
-:trophy: Can use activity diagrams :two:
+{{glyphicon_flag}} Can use activity diagrams :two:

@@ -1,1 +1,1 @@
-:trophy: Can design reasonable quality APIs :three:
+{{glyphicon_flag}} Can design reasonable quality APIs :three:

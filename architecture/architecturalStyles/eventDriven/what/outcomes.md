@@ -1,1 +1,1 @@
-:trophy: Can identify event-driven architectural style :one:
+{{glyphicon_flag}} Can identify event-driven architectural style :one:

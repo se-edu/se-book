@@ -1,1 +1,1 @@
-:trophy: Can explain DRCS vs CRCS :three:
+{{glyphicon_flag}} Can explain DRCS vs CRCS :three:

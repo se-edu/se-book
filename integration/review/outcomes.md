@@ -1,1 +1,1 @@
-:trophy: Can combine some integration concepts :one:
+{{glyphicon_flag}} Can combine some integration concepts :one:

@@ -1,1 +1,1 @@
-:trophy: Can explain focus groups :one:
+{{glyphicon_flag}} Can explain focus groups :one:

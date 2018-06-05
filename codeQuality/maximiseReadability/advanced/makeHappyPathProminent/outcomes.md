@@ -1,1 +1,1 @@
-:trophy: Can improve code quality using technique: make the happy path prominent  :one:
+{{glyphicon_flag}} Can improve code quality using technique: make the happy path prominent  :one:

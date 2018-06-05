@@ -1,1 +1,1 @@
-:trophy: Can explain integration testing :one:
+{{glyphicon_flag}} Can explain integration testing :one:

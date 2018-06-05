@@ -1,1 +1,1 @@
-:trophy: Can explain cohesion :one:
+{{glyphicon_flag}} Can explain cohesion :one:

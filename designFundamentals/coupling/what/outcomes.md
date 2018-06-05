@@ -1,1 +1,1 @@
-:trophy: Can explain coupling :one:
+{{glyphicon_flag}} Can explain coupling :one:

@@ -1,1 +1,1 @@
-:trophy: Can explain the abstraction aspect of OOP :two:
+{{glyphicon_flag}} Can explain the abstraction aspect of OOP :two:

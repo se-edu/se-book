@@ -1,1 +1,1 @@
-:trophy: Can use Java Collections :two:
+{{glyphicon_flag}} Can use Java Collections :two:

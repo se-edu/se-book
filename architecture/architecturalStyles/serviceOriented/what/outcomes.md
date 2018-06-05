@@ -1,1 +1,1 @@
-:trophy: Can identify service-oriented architectural style :one:
+{{glyphicon_flag}} Can identify service-oriented architectural style :one:

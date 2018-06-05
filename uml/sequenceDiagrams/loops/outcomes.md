@@ -1,1 +1,1 @@
-:trophy: Can interpret sequence diagrams with loops :two:
+{{glyphicon_flag}} Can interpret sequence diagrams with loops :two:

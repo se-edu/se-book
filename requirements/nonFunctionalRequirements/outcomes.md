@@ -1,1 +1,1 @@
-:trophy: Can explain non-functional requirements :one:
+{{glyphicon_flag}} Can explain non-functional requirements :one:

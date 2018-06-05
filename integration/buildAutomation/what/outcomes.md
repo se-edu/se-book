@@ -1,1 +1,1 @@
-:trophy: Can explain build automation tools :one:
+{{glyphicon_flag}} Can explain build automation tools :one:

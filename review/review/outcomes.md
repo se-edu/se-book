@@ -1,1 +1,1 @@
-:trophy: Can combine software engineering concepts :one:
+{{glyphicon_flag}} Can combine software engineering concepts :one:

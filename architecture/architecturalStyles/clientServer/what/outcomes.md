@@ -1,1 +1,1 @@
-:trophy: Can identify client-server architectural style :one:
+{{glyphicon_flag}} Can identify client-server architectural style :one:

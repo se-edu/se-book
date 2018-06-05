@@ -1,1 +1,1 @@
-:trophy: Can use UML notes :two:
+{{glyphicon_flag}} Can use UML notes :two:

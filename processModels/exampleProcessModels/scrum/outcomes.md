@@ -1,1 +1,1 @@
-:trophy: Can explain scrum :three:
+{{glyphicon_flag}} Can explain scrum :three:

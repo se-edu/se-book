@@ -1,1 +1,1 @@
-:trophy: Can improve code quality using technique: do not 'trip up' reader  :one:
+{{glyphicon_flag}} Can improve code quality using technique: do not 'trip up' reader  :one:

@@ -1,1 +1,1 @@
-:trophy: Can explain product surveys :one:
+{{glyphicon_flag}} Can explain product surveys :one:

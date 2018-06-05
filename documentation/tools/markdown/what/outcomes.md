@@ -1,1 +1,1 @@
-:trophy: Can explain Markdown :one:
+{{glyphicon_flag}} Can explain Markdown :one:

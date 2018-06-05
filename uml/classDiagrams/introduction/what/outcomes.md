@@ -1,1 +1,1 @@
-:trophy: Can explain/identify class diagrams :one:
+{{glyphicon_flag}} Can explain/identify class diagrams :one:

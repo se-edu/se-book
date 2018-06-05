@@ -1,1 +1,1 @@
-:trophy: Can step through a program using a debugger :two:
+{{glyphicon_flag}} Can step through a program using a debugger :two:

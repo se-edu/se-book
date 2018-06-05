@@ -1,1 +1,1 @@
-:trophy: Can explain substitutability :two:
+{{glyphicon_flag}} Can explain substitutability :two:

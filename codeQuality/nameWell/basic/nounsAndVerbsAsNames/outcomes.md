@@ -1,1 +1,1 @@
-:trophy: Can improve code quality using technique: use nouns for things and verbs for actions  :one:
+{{glyphicon_flag}} Can improve code quality using technique: use nouns for things and verbs for actions  :one:

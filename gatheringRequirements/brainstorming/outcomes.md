@@ -1,1 +1,1 @@
-:trophy: Can explain brainstorming :one:
+{{glyphicon_flag}} Can explain brainstorming :one:

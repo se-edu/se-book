@@ -1,1 +1,1 @@
-:trophy: Can use intermediate-level class diagrams :two:
+{{glyphicon_flag}} Can use intermediate-level class diagrams :two:

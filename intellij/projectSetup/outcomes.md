@@ -1,1 +1,1 @@
-:trophy: Can setup a project in an IDE :one:
+{{glyphicon_flag}} Can setup a project in an IDE :one:

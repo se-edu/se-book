@@ -1,1 +1,1 @@
-:trophy: Can explain pros and cons of design patterns :three:
+{{glyphicon_flag}} Can explain pros and cons of design patterns :three:

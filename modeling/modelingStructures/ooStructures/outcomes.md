@@ -1,1 +1,1 @@
-:trophy: Can explain structure modelling of OO solutions :one:
+{{glyphicon_flag}} Can explain structure modelling of OO solutions :one:

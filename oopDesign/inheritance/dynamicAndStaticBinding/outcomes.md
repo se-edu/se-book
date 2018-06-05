@@ -1,1 +1,1 @@
-:trophy: Can explain dynamic and static binding :three:
+{{glyphicon_flag}} Can explain dynamic and static binding :three:

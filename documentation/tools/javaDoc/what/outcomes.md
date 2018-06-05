@@ -1,1 +1,1 @@
-:trophy: Can explain JavaDoc :one:
+{{glyphicon_flag}} Can explain JavaDoc :one:

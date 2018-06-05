@@ -1,1 +1,1 @@
-:trophy: Can explain system testing :one:
+{{glyphicon_flag}} Can explain system testing :one:

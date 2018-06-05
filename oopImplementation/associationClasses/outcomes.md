@@ -1,1 +1,1 @@
-:trophy: Can implement association classes :three:
+{{glyphicon_flag}} Can implement association classes :three:

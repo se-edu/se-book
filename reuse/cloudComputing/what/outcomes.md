@@ -1,1 +1,1 @@
-:trophy: Can explain cloud computing :one:
+{{glyphicon_flag}} Can explain cloud computing :one:

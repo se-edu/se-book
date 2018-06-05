@@ -1,1 +1,1 @@
-:trophy: Can identify types of coupling :three:
+{{glyphicon_flag}} Can identify types of coupling :three:

@@ -1,1 +1,1 @@
-:trophy: Can follow basic guidelines for improving readability :one:
+{{glyphicon_flag}} Can follow basic guidelines for improving readability :one:

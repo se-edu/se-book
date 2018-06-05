@@ -1,1 +1,1 @@
-:trophy: Can use assertions optimally :three:
+{{glyphicon_flag}} Can use assertions optimally :three:

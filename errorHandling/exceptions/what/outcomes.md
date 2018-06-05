@@ -1,1 +1,1 @@
-:trophy: Can explain exceptions :one:
+{{glyphicon_flag}} Can explain exceptions :one:

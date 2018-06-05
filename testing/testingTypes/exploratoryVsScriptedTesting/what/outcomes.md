@@ -1,1 +1,1 @@
-:trophy: Can explain exploratory testing and scripted testing :two:
+{{glyphicon_flag}} Can explain exploratory testing and scripted testing :two:
