@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Learning Outcomes"
+title: "SE Book: Full List of Learning Outcomes"
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
