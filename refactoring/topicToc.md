@@ -1,4 +1,4 @@
-* [Refactoring](./refactoring/)
+* [Refactoring]({{baseUrl}}/refactoring/)
   <trigger for="pop:refactoring-preview">:mag:</trigger>[:scroll:](refactoring/print.html)
 
 <popover id="pop:refactoring-preview" title="Refactoring :mag:" placement="right">

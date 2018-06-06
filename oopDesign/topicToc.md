@@ -1,4 +1,4 @@
-* [OOP - Concepts](./oopDesign/)
+* [OOP - Concepts]({{baseUrl}}/oopDesign/)
   <trigger for="pop:oopDesign-preview">:mag:</trigger>[:scroll:](oopDesign/print.html)
 
 <popover id="pop:oopDesign-preview" title="Object Oriented Programming :mag:" placement="right">

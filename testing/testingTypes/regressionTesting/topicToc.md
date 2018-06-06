@@ -1,4 +1,4 @@
-* __ [Regression Testing](./testing/testingTypes/regressionTesting) :one: <trigger for="pop:testing-regressionTesting-preview">:mag:</trigger>
+* __ [Regression Testing]({{baseUrl}}/testing/testingTypes/regressionTesting) :one: <trigger for="pop:testing-regressionTesting-preview">:mag:</trigger>
 
 <popover id="pop:testing-regressionTesting-preview" title=":mag: Regression Testing" placement="right">
   <div slot="content">

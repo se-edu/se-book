@@ -1,4 +1,4 @@
-* __ [AsciiDoc](./documentation/tools/asciiDoc) :one: <trigger for="pop:documentation-asciiDoc-preview">:mag:</trigger>
+* __ [AsciiDoc]({{baseUrl}}/documentation/tools/asciiDoc) :one: <trigger for="pop:documentation-asciiDoc-preview">:mag:</trigger>
 
 <popover id="pop:documentation-asciiDoc-preview" title=":mag: AsciiDoc" placement="right">
   <div slot="content">

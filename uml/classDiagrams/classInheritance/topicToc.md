@@ -1,4 +1,4 @@
-* __ [Class Inheritance](./uml/classDiagrams/classInheritance) :one: <trigger for="pop:classDiagrams-classInheritance-preview">:mag:</trigger>
+* __ [Class Inheritance]({{baseUrl}}/uml/classDiagrams/classInheritance) :one: <trigger for="pop:classDiagrams-classInheritance-preview">:mag:</trigger>
 
 <popover id="pop:classDiagrams-classInheritance-preview" title=":mag: Class Inheritance" placement="right">
   <div slot="content">

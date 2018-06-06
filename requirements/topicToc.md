@@ -1,4 +1,4 @@
-* [Requirements](./requirements/)
+* [Requirements]({{baseUrl}}/requirements/)
   <trigger for="pop:requirements-preview">:mag:</trigger>[:scroll:](requirements/print.html)
 
 <popover id="pop:requirements-preview" title="Requirements :mag:" placement="right">

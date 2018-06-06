@@ -1,4 +1,4 @@
-* __ [Service-oriented Architectural Style](./architecture/architecturalStyles/serviceOriented) :one: <trigger for="pop:architecturalStyles-serviceOriented-preview">:mag:</trigger>
+* __ [Service-oriented Architectural Style]({{baseUrl}}/architecture/architecturalStyles/serviceOriented) :one: <trigger for="pop:architecturalStyles-serviceOriented-preview">:mag:</trigger>
 
 <popover id="pop:architecturalStyles-serviceOriented-preview" title=":mag: Service-oriented Architectural Style" placement="right">
   <div slot="content">

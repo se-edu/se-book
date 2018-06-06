@@ -1,4 +1,4 @@
-* [Design Approaches](./designApproaches/)
+* [Design Approaches]({{baseUrl}}/designApproaches/)
   <trigger for="pop:designApproaches-preview">:mag:</trigger>[:scroll:](designApproaches/print.html)
 
 <popover id="pop:designApproaches-preview" title="Design Approaches :mag:" placement="right">

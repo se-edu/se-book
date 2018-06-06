@@ -1,4 +1,4 @@
-* [Design Patterns](./designPatterns/)
+* [Design Patterns]({{baseUrl}}/designPatterns/)
   <trigger for="pop:design-patterns-preview">:mag:</trigger>[:scroll:](designPatterns/print.html)
 
 <popover id="pop:design-patterns-preview" title="Software Design Patterns :mag:" placement="right">

@@ -1,4 +1,4 @@
-* __ [Introduction](./architecture/architecturalStyles/introduction) :one: <trigger for="pop:architecturalStyles-introduction-preview">:mag:</trigger>
+* __ [Introduction]({{baseUrl}}/architecture/architecturalStyles/introduction) :one: <trigger for="pop:architecturalStyles-introduction-preview">:mag:</trigger>
 
 <popover id="pop:architecturalStyles-introduction-preview" title=":mag: Introduction" placement="right">
   <div slot="content">

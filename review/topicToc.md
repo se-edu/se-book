@@ -1,4 +1,4 @@
-* [Review](./review/)
+* [Review]({{baseUrl}}/review/)
   <trigger for="pop:review-preview">:mag:</trigger>[:scroll:](review/print.html)
 
 <popover id="pop:review-preview" title="Review :mag:" placement="right">

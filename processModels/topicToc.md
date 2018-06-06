@@ -1,4 +1,4 @@
-* [SDLC Process Models](./processModels/)
+* [SDLC Process Models]({{baseUrl}}/processModels/)
   <trigger for="pop:processModels-preview">:mag:</trigger>[:scroll:](processModels/print.html)
 
 <popover id="pop:processModels-preview" title="SDLC Process Models :mag:" placement="right">

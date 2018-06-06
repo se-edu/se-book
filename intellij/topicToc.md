@@ -1,4 +1,4 @@
-* [Intellij IDEA](./intellij/)
+* [Intellij IDEA]({{baseUrl}}/intellij/)
   <trigger for="pop:intellij-preview">:mag:</trigger>[:scroll:](intellij/print.html)
 
 <popover id="pop:intellij-preview" title="Intellij IDEA :mag:" placement="right">

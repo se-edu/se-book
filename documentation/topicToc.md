@@ -1,4 +1,4 @@
-* [Documentation](./documentation/)
+* [Documentation]({{baseUrl}}/documentation/)
   <trigger for="pop:documentation-preview">:mag:</trigger>[:scroll:](documentation/print.html)
 
 <popover id="pop:documentation-preview" title="Documentation :mag:" placement="right">

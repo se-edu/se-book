@@ -1,4 +1,4 @@
-* [JUnit](./junit/)
+* [JUnit]({{baseUrl}}/junit/)
   <trigger for="pop:junit-preview">:mag:</trigger>[:scroll:](junit/print.html)
 
 <popover id="pop:junit-preview" title="JUnit :mag:" placement="right">
