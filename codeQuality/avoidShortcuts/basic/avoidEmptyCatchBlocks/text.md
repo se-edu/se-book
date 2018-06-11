@@ -1,6 +1,6 @@
 <div id="title">
 
-##### Avoid Empty Catch Blocks
+#### Avoid Empty Catch Blocks
 
 </div>
 

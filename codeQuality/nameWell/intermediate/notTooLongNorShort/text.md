@@ -1,6 +1,6 @@
 <div id="title">
 
-##### Not Too Long, Not Too Short
+#### Not Too Long, Not Too Short
 
 </div>
 

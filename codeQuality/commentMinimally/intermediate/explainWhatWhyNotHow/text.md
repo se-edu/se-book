@@ -1,6 +1,6 @@
 <div id="title">
 
-##### Explain WHAT and WHY, not HOW
+#### Explain WHAT and WHY, not HOW
 
 </div>
 

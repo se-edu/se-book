@@ -1,6 +1,6 @@
 <div id="title">
 
-##### Use the Default Branch
+#### Use the Default Branch
 
 </div>
 

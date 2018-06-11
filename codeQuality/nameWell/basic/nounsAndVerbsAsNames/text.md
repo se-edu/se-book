@@ -1,6 +1,6 @@
 <div id="title">
 
-##### Use Nouns for Things and Verbs for Actions
+#### Use Nouns for Things and Verbs for Actions
 
 </div>
 

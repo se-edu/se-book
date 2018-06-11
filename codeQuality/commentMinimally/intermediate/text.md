@@ -1,6 +1,6 @@
 <div id="title">
 
-#### Intermediate :two:
+### Intermediate :two:
 
 </div>
 

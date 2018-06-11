@@ -1,6 +1,6 @@
 <div id="title">
 
-##### Make the Happy Path Prominent
+#### Make the Happy Path Prominent
 
 </div>
 
