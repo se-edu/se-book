@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<include src="basic/container-index.md" boilerplate  />
+<include src="basic/embed-inParent.md" boilerplate  />
 
 </div>
 

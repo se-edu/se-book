@@ -6,8 +6,8 @@
 
 <div id="body">
 
-<include src="minimiseVariableScope/container-index.md" boilerplate />
-<include src="minimiseCodeDuplication/container-index.md" boilerplate />
+<include src="minimiseVariableScope/embed-inParent.md" boilerplate />
+<include src="minimiseCodeDuplication/embed-inParent.md" boilerplate />
 
 </div>
 

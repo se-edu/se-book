@@ -6,8 +6,8 @@
 
 <div id="body">
 
-<include src="dontRepeatObvious/container-index.md" boilerplate />
-<include src="writeToReader/container-index.md" boilerplate />
+<include src="dontRepeatObvious/embed-inParent.md" boilerplate />
+<include src="writeToReader/embed-inParent.md" boilerplate />
 
 </div>
 

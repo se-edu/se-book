@@ -6,11 +6,11 @@
 
 <div id="body">
 
-<include src="avoidLongMethods/container-index.md" boilerplate />
-<include src="avoidDeepNesting/container-index.md" boilerplate />
-<include src="avoidComplicatedExpressions/container-index.md" boilerplate />
-<include src="avoidMagicNumbers/container-index.md" boilerplate />
-<include src="makeCodeObvious/container-index.md" boilerplate />
+<include src="avoidLongMethods/embed-inParent.md" boilerplate />
+<include src="avoidDeepNesting/embed-inParent.md" boilerplate />
+<include src="avoidComplicatedExpressions/embed-inParent.md" boilerplate />
+<include src="avoidMagicNumbers/embed-inParent.md" boilerplate />
+<include src="makeCodeObvious/embed-inParent.md" boilerplate />
 
 </div>
 

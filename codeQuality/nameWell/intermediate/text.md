@@ -6,9 +6,9 @@
 
 <div id="body">
 
-<include src="useNameExplain/container-index.md" boilerplate />
-<include src="notTooLongNorShort/container-index.md" boilerplate />
-<include src="avoidMisleadingNames/container-index.md" boilerplate />
+<include src="useNameExplain/embed-inParent.md" boilerplate />
+<include src="notTooLongNorShort/embed-inParent.md" boilerplate />
+<include src="avoidMisleadingNames/embed-inParent.md" boilerplate />
 
 </div>
 

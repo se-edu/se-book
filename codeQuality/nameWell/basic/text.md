@@ -6,8 +6,8 @@
 
 <div id="body">
 
-<include src="nounsAndVerbsAsNames/container-index.md" boilerplate />
-<include src="useStandardWords/container-index.md" boilerplate />
+<include src="nounsAndVerbsAsNames/embed-inParent.md" boilerplate />
+<include src="useStandardWords/embed-inParent.md" boilerplate />
 
 </div>
 

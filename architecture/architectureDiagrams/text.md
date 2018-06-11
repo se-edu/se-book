@@ -5,7 +5,7 @@
 </div>
 <div id="body">
 
-<include src="reading/container-index.md" boilerplate  />
-<include src="drawing/container-index.md" boilerplate  />
+<include src="reading/embed-inParent.md" boilerplate  />
+<include src="drawing/embed-inParent.md" boilerplate  />
 
 </div>

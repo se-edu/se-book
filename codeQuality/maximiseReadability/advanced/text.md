@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<include src="makeHappyPathProminent/container-index.md" boilerplate/>
+<include src="makeHappyPathProminent/embed-inParent.md" boilerplate/>
 
 </panel>
 
