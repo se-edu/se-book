@@ -2,4 +2,4 @@
 title: "Architectural Styles: Client-Server Architectural Style"
 </frontmatter>
 
-{{container_index_body | safe}}
+<include src="container-index-body.md" boilerplate />

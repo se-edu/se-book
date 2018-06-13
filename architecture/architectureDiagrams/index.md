@@ -2,4 +2,4 @@
 title: "Software Architecture: Architecture Diagrams"
 </frontmatter>
 
-{{container_index_body | safe}}
+<include src="container-index-body.md" boilerplate />
