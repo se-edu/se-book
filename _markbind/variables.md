@@ -2,6 +2,7 @@
 
 <span id="java_coding_standard">https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html</span>
 
+<!-- ------------------------------------------------------- -->
 <span id="container_index_body">
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
@@ -20,7 +21,8 @@
 
 </div>
 </div>
-</span>
+</span> 
+<!-- ------------------------------------------------------- -->
 
 <span id="good"><font color="green">**<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Good**</font></span>
 
