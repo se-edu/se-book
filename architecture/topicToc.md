@@ -1,7 +1,7 @@
 * [Architecture]({{baseUrl}}/architecture/)
-  <trigger for="pop:architecture-preview">:mag:</trigger>[:scroll:]({{baseUrl}}/architecture/print.html)
+  <trigger for="pop:architecture-preview">{{glyphicon_eye_open}}</trigger> [{{glyphicon_print}}]({{baseUrl}}/architecture/print.html)
 
-<popover id="pop:architecture-preview" title="Architecture :mag:" placement="right">
+<popover id="pop:architecture-preview" title="Architecture {{glyphicon_eye_open}}" placement="right">
   <div slot="content">
     <include src="preview.md" />
   </div>

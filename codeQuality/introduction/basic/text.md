@@ -10,7 +10,7 @@
 
 **<trigger for="pop:production-code">Production code</trigger> needs to be of high quality**. Given how the world is becoming increasingly dependent of software, poor quality code is something we cannot afford to tolerate.
 
-<popover id="pop:production-code" title=":mag: Production Code" placement="top">
+<popover id="pop:production-code" title="{{glyphicon_eye_open}} Production Code" placement="top">
   <div slot="content">
     Code being used in an actual product with actual users
   </div>

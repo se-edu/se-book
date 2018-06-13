@@ -1,7 +1,7 @@
 * [Documentation]({{baseUrl}}/documentation/)
-  <trigger for="pop:documentation-preview">:mag:</trigger>[:scroll:](documentation/print.html)
+  <trigger for="pop:documentation-preview">{{glyphicon_eye_open}}</trigger> [{{glyphicon_print}}](documentation/print.html)
 
-<popover id="pop:documentation-preview" title="Documentation :mag:" placement="right">
+<popover id="pop:documentation-preview" title="Documentation {{glyphicon_eye_open}}" placement="right">
   <div slot="content">
     <include src="preview.md" />
   </div>

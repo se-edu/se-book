@@ -1,6 +1,6 @@
-* __ [System Testing]({{baseUrl}}/testing/testingTypes/systemTesting) :one: <trigger for="pop:testing-systemTesting-preview">:mag:</trigger>
+* __ [System Testing]({{baseUrl}}/testing/testingTypes/systemTesting) :one: <trigger for="pop:testing-systemTesting-preview">{{glyphicon_eye_open}}</trigger>
 
-<popover id="pop:testing-systemTesting-preview" title=":mag: System Testing" placement="right">
+<popover id="pop:testing-systemTesting-preview" title="{{glyphicon_eye_open}} System Testing" placement="right">
   <div slot="content">
     <include src=".\preview.md" />
   </div>

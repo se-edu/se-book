@@ -37,7 +37,7 @@ Revision control is also known as _Version Control Software (VCS)_, and a few ot
   <hr></tab>
 </tabs>
 
-<popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide :mag:" placement="right">
+<popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide {{glyphicon_eye_open}}" placement="right">
   <div slot="content">
     <include src="../../common/references.md#bryan-mercurial-guide" />
   </div>

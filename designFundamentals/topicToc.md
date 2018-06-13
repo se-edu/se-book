@@ -1,7 +1,7 @@
 * [Design Fundamentals]({{baseUrl}}/designFundamentals/)
-  <trigger for="pop:design-fundamentals-preview">:mag:</trigger>[:scroll:](designFundamentals/print.html)
+  <trigger for="pop:design-fundamentals-preview">{{glyphicon_eye_open}}</trigger> [{{glyphicon_print}}](designFundamentals/print.html)
 
-<popover id="pop:design-fundamentals-preview" title="Software Design Fundamentals :mag:" placement="right">
+<popover id="pop:design-fundamentals-preview" title="Software Design Fundamentals {{glyphicon_eye_open}}" placement="right">
   <div slot="content">
     <include src="preview.md" />
   </div>

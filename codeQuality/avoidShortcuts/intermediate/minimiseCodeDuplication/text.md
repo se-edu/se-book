@@ -10,7 +10,7 @@
 
 This guideline is closely related to the <trigger for="modal:duplication-dry" trigger="click">DRY Principle<trigger>. 
 
-<modal title="**:mag: DRY Principle**" id="modal:duplication-dry">
+<modal title="**{{glyphicon_eye_open}} DRY Principle**" id="modal:duplication-dry">
   <include src="../../../../principles/dryPrinciple/full.md" boilerplate />
 </modal>
 

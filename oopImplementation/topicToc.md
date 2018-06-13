@@ -1,7 +1,7 @@
 * [OOP - Implementation]({{baseUrl}}/oopImplementation/)
-  <trigger for="pop:oopImplementation-preview">:mag:</trigger>[:scroll:](oopImplementation/print.html)
+  <trigger for="pop:oopImplementation-preview">{{glyphicon_eye_open}}</trigger> [{{glyphicon_print}}](oopImplementation/print.html)
 
-<popover id="pop:oopImplementation-preview" title="OOP :mag:" placement="right">
+<popover id="pop:oopImplementation-preview" title="OOP {{glyphicon_eye_open}}" placement="right">
   <div slot="content">
     <include src="preview.md" />
   </div>

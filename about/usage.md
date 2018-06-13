@@ -139,8 +139,8 @@ Meaning of icons:
 * :package: : examples
 * :paperclip: : resources
 * :muscle: : exercises
-* :scroll: : printable version
-* :mag: : preview/more info
+* {{glyphicon_print}} : printable version
+* {{glyphicon_eye_open}} : preview/more info
 * :tv: : video
 * :abc: : textual description
 * :bar_chart: : slides
@@ -172,7 +172,7 @@ The book currently does not have a _search_ feature. The workaround is to load [
   
 ### Printing
 
-The :scroll: icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here]({{baseUrl}}/common/print.html)
+The {{glyphicon_print}} icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here]({{baseUrl}}/common/print.html)
 
 </div>
 

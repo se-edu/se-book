@@ -1,6 +1,6 @@
-* __ [Associations]({{baseUrl}}/uml/classDiagrams/associations) :one: <trigger for="pop:classDiagrams-associations-preview">:mag:</trigger>
+* __ [Associations]({{baseUrl}}/uml/classDiagrams/associations) :one: <trigger for="pop:classDiagrams-associations-preview">{{glyphicon_eye_open}}</trigger>
 
-<popover id="pop:classDiagrams-associations-preview" title=":mag: Associations" placement="right">
+<popover id="pop:classDiagrams-associations-preview" title="{{glyphicon_eye_open}} Associations" placement="right">
   <div slot="content">
     <include src=".\preview.md" />
   </div>
