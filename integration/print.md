@@ -12,18 +12,18 @@ title: "Integration [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/print.md" boilerplate />
+<include src="introduction/what/embed-inParent-printable.md" boilerplate />
 
 ## Approaches
 
-<include src="approaches/lateVsEarly/print.md" boilerplate />
-<include src="approaches/bigBangVsIncremental/print.md" boilerplate />
-<include src="approaches/topDownVsBottomUp/print.md" boilerplate />
+<include src="approaches/lateVsEarly/embed-inParent-printable.md" boilerplate />
+<include src="approaches/bigBangVsIncremental/embed-inParent-printable.md" boilerplate />
+<include src="approaches/topDownVsBottomUp/embed-inParent-printable.md" boilerplate />
 
 ## Build Automation
 
-<include src="buildAutomation/what/print.md" boilerplate />
-<include src="buildAutomation/continuousIntegrationDeployment/print.md" boilerplate />
+<include src="buildAutomation/what/embed-inParent-printable.md" boilerplate />
+<include src="buildAutomation/continuousIntegrationDeployment/embed-inParent-printable.md" boilerplate />
 
 <!-- TODO: add review -->
 

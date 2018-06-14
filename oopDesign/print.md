@@ -12,48 +12,48 @@ title: "Object Oriented Programming [Printable]"
 
 ## Introduction
 
-<include src="introduction/print.md" boilerplate />
+<include src="introduction/embed-inParent-printable.md" boilerplate />
 
 ## Objects
 
-<include src="objects/basic/print.md" boilerplate />
-<include src="objects/abstraction/print.md" boilerplate />
-<include src="objects/encapsulation/print.md" boilerplate />
+<include src="objects/basic/embed-inParent-printable.md" boilerplate />
+<include src="objects/abstraction/embed-inParent-printable.md" boilerplate />
+<include src="objects/encapsulation/embed-inParent-printable.md" boilerplate />
 
 ## Classes
 
-<include src="classes/basic/print.md" boilerplate />
-<include src="classes/classLevelMembers/print.md" boilerplate />
-<include src="classes/enumerations/print.md" boilerplate />
+<include src="classes/basic/embed-inParent-printable.md" boilerplate />
+<include src="classes/classLevelMembers/embed-inParent-printable.md" boilerplate />
+<include src="classes/enumerations/embed-inParent-printable.md" boilerplate />
 
 ## Associations
 
-<include src="associations/basic/print.md" boilerplate />
-<include src="associations/navigability/print.md" boilerplate />
-<include src="associations/multiplicity/print.md" boilerplate />
-<include src="associations/dependencies/print.md" boilerplate />
-<include src="associations/composition/print.md" boilerplate />
-<include src="associations/aggregation/print.md" boilerplate />
-<include src="associations/associationClasses/print.md" boilerplate />
+<include src="associations/basic/embed-inParent-printable.md" boilerplate />
+<include src="associations/navigability/embed-inParent-printable.md" boilerplate />
+<include src="associations/multiplicity/embed-inParent-printable.md" boilerplate />
+<include src="associations/dependencies/embed-inParent-printable.md" boilerplate />
+<include src="associations/composition/embed-inParent-printable.md" boilerplate />
+<include src="associations/aggregation/embed-inParent-printable.md" boilerplate />
+<include src="associations/associationClasses/embed-inParent-printable.md" boilerplate />
 
 ## Inheritance
 
-<include src="inheritance/what/print.md" boilerplate />
-<include src="inheritance/overriding/print.md" boilerplate />
-<include src="inheritance/overloading/print.md" boilerplate />
-<include src="inheritance/interfaces/print.md" boilerplate />
-<include src="inheritance/abstractClasses/print.md" boilerplate />
-<include src="inheritance/dynamicAndStaticBinding/print.md" boilerplate />
-<include src="inheritance/substitutability/print.md" boilerplate />
+<include src="inheritance/what/embed-inParent-printable.md" boilerplate />
+<include src="inheritance/overriding/embed-inParent-printable.md" boilerplate />
+<include src="inheritance/overloading/embed-inParent-printable.md" boilerplate />
+<include src="inheritance/interfaces/embed-inParent-printable.md" boilerplate />
+<include src="inheritance/abstractClasses/embed-inParent-printable.md" boilerplate />
+<include src="inheritance/dynamicAndStaticBinding/embed-inParent-printable.md" boilerplate />
+<include src="inheritance/substitutability/embed-inParent-printable.md" boilerplate />
 
 ## Polymorphism
 
-<include src="polymorphism/introduction/print.md" boilerplate />
-<include src="polymorphism/mechanism/print.md" boilerplate />
+<include src="polymorphism/introduction/embed-inParent-printable.md" boilerplate />
+<include src="polymorphism/mechanism/embed-inParent-printable.md" boilerplate />
 
 ## Miscellaneous
 
-<include src="miscellaneous/print.md" boilerplate />
+<include src="miscellaneous/embed-inParent-printable.md" boilerplate />
 
 <!-- TODO: add review -->
 

@@ -10,17 +10,17 @@ title: "Principles [Printable]"
 
 # Principles
 
-<include src="singleResponsibilityPrinciple/print.md" boilerplate />
-<include src="interfaceSegregationPrinciple/print.md" boilerplate />
-<include src="liskovSubstitutionPrinciple/print.md" boilerplate />
-<include src="dependencyInversionPrinciple/print.md" boilerplate />
-<include src="openClosedPrinciple/print.md" boilerplate />
-<include src="solidPrinciples/print.md" boilerplate />
-<include src="separationOfConcernsPrinciple/print.md" boilerplate />
-<include src="lawOfDemeter/print.md" boilerplate />
-<include src="brooksLaw/print.md" boilerplate />
-<include src="yagniPrinciple/print.md" boilerplate />
-<include src="dryPrinciple/print.md" boilerplate />
+<include src="singleResponsibilityPrinciple/embed-inParent-printable.md" boilerplate />
+<include src="interfaceSegregationPrinciple/embed-inParent-printable.md" boilerplate />
+<include src="liskovSubstitutionPrinciple/embed-inParent-printable.md" boilerplate />
+<include src="dependencyInversionPrinciple/embed-inParent-printable.md" boilerplate />
+<include src="openClosedPrinciple/embed-inParent-printable.md" boilerplate />
+<include src="solidPrinciples/embed-inParent-printable.md" boilerplate />
+<include src="separationOfConcernsPrinciple/embed-inParent-printable.md" boilerplate />
+<include src="lawOfDemeter/embed-inParent-printable.md" boilerplate />
+<include src="brooksLaw/embed-inParent-printable.md" boilerplate />
+<include src="yagniPrinciple/embed-inParent-printable.md" boilerplate />
+<include src="dryPrinciple/embed-inParent-printable.md" boilerplate />
 <!-- TODO: add review -->
 
 </div>

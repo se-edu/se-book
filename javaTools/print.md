@@ -10,11 +10,11 @@ title: "Java [Printable]"
 
 # Java
 
-<include src="collections/print.md" boilerplate />
-<include src="enums/print.md" boilerplate />
-<include src="varargs/print.md" boilerplate />
-<include src="javaFXBasic/print.md" boilerplate />
-<include src="streamsBasic/print.md" boilerplate />
+<include src="collections/embed-inParent-printable.md" boilerplate />
+<include src="enums/embed-inParent-printable.md" boilerplate />
+<include src="varargs/embed-inParent-printable.md" boilerplate />
+<include src="javaFXBasic/embed-inParent-printable.md" boilerplate />
+<include src="streamsBasic/embed-inParent-printable.md" boilerplate />
 
 </div>
 

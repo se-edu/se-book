@@ -12,11 +12,11 @@ title: "IDEs [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/print.md" boilerplate />
+<include src="introduction/what/embed-inParent-printable.md" boilerplate />
 
 ## Debugging
 
-<include src="debugging/what/print.md" boilerplate />
+<include src="debugging/what/embed-inParent-printable.md" boilerplate />
 
 </div>
 

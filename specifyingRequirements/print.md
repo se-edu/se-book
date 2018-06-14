@@ -12,32 +12,32 @@ title: "Specifying Requirements [Printable]"
 
 ## Prose
 
-<include src="prose/what/print.md" boilerplate />
+<include src="prose/what/embed-inParent-printable.md" boilerplate />
 
 ## Feature List
 
-<include src="featureList/what/print.md" boilerplate />
+<include src="featureList/what/embed-inParent-printable.md" boilerplate />
 
 ## User Stories
 
-<include src="userStories/introduction/print.md" boilerplate />
-<include src="userStories/details/print.md" boilerplate />
-<include src="userStories/usage/print.md" boilerplate />
+<include src="userStories/introduction/embed-inParent-printable.md" boilerplate />
+<include src="userStories/details/embed-inParent-printable.md" boilerplate />
+<include src="userStories/usage/embed-inParent-printable.md" boilerplate />
 
 ## Use Cases
 
-<include src="useCases/introduction/print.md" boilerplate />
-<include src="useCases/identifying/print.md" boilerplate />
-<include src="useCases/details/print.md" boilerplate />
-<include src="useCases/usage/print.md" boilerplate />
+<include src="useCases/introduction/embed-inParent-printable.md" boilerplate />
+<include src="useCases/identifying/embed-inParent-printable.md" boilerplate />
+<include src="useCases/details/embed-inParent-printable.md" boilerplate />
+<include src="useCases/usage/embed-inParent-printable.md" boilerplate />
 
 ## Glossary
 
-<include src="glossary/what/print.md" boilerplate />
+<include src="glossary/what/embed-inParent-printable.md" boilerplate />
 
 ## Supplementary Requirements
 
-<include src="supplementaryRequirements/what/print.md" boilerplate />
+<include src="supplementaryRequirements/what/embed-inParent-printable.md" boilerplate />
 
 </div>
 

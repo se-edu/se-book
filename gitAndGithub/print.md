@@ -10,20 +10,20 @@ title: "Git and Github [Printable]"
 
 # Git and GitHub
 
-<include src="init/print.md" boilerplate />
-<include src="commit/print.md" boilerplate />
-<include src="ignore/print.md" boilerplate />
-<include src="tag/print.md" boilerplate />
-<include src="checkout/print.md" boilerplate />
-<include src="stash/print.md" boilerplate />
-<include src="clone/print.md" boilerplate />
-<include src="pull/print.md" boilerplate />
-<include src="push/print.md" boilerplate />
-<include src="branch/print.md" boilerplate />
-<include src="mergeConflicts/print.md" boilerplate />
-<include src="createPRs/print.md" boilerplate />
-<include src="managePRs/print.md" boilerplate />
-<include src="forkingWorkflow/print.md" boilerplate />
+<include src="init/embed-inParent-printable.md" boilerplate />
+<include src="commit/embed-inParent-printable.md" boilerplate />
+<include src="ignore/embed-inParent-printable.md" boilerplate />
+<include src="tag/embed-inParent-printable.md" boilerplate />
+<include src="checkout/embed-inParent-printable.md" boilerplate />
+<include src="stash/embed-inParent-printable.md" boilerplate />
+<include src="clone/embed-inParent-printable.md" boilerplate />
+<include src="pull/embed-inParent-printable.md" boilerplate />
+<include src="push/embed-inParent-printable.md" boilerplate />
+<include src="branch/embed-inParent-printable.md" boilerplate />
+<include src="mergeConflicts/embed-inParent-printable.md" boilerplate />
+<include src="createPRs/embed-inParent-printable.md" boilerplate />
+<include src="managePRs/embed-inParent-printable.md" boilerplate />
+<include src="forkingWorkflow/embed-inParent-printable.md" boilerplate />
 
 </div>
 

@@ -12,42 +12,42 @@ title: "Software Design Patterns [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/print.md" boilerplate />
-<include src="introduction/format/print.md" boilerplate />
+<include src="introduction/what/embed-inParent-printable.md" boilerplate />
+<include src="introduction/format/embed-inParent-printable.md" boilerplate />
 
 ## Singleton Pattern
 
-<include src="singleton/what/print.md" boilerplate />
-<include src="singleton/implementation/print.md" boilerplate />
-<include src="singleton/evaluation/print.md" boilerplate />
+<include src="singleton/what/embed-inParent-printable.md" boilerplate />
+<include src="singleton/implementation/embed-inParent-printable.md" boilerplate />
+<include src="singleton/evaluation/embed-inParent-printable.md" boilerplate />
 
 ## Abstraction Occurrence Pattern
 
-<include src="abstractionOccurrence/what/print.md" boilerplate />
+<include src="abstractionOccurrence/what/embed-inParent-printable.md" boilerplate />
 
 ## Facade Pattern
 
-<include src="facade/what/print.md" boilerplate />
+<include src="facade/what/embed-inParent-printable.md" boilerplate />
 
 ## Command Pattern
 
-<include src="command/what/print.md" boilerplate />
+<include src="command/what/embed-inParent-printable.md" boilerplate />
 
 ## Model View Controller (MVC) Pattern
 
-<include src="modelViewController/what/print.md" boilerplate />
+<include src="modelViewController/what/embed-inParent-printable.md" boilerplate />
 
 ## Observer Pattern
 
-<include src="observer/what/print.md" boilerplate />
+<include src="observer/what/embed-inParent-printable.md" boilerplate />
 
 ## More
 
-<include src="more/combiningDesignPatterns/print.md" boilerplate />
-<include src="more/otherDesignPatterns/print.md" boilerplate />
-<include src="more/usingDesignPatterns/print.md" boilerplate />
-<include src="more/otherTypesOfPatterns/print.md" boilerplate />
-<include src="more/vsPrinciples/print.md" boilerplate />
+<include src="more/combiningDesignPatterns/embed-inParent-printable.md" boilerplate />
+<include src="more/otherDesignPatterns/embed-inParent-printable.md" boilerplate />
+<include src="more/usingDesignPatterns/embed-inParent-printable.md" boilerplate />
+<include src="more/otherTypesOfPatterns/embed-inParent-printable.md" boilerplate />
+<include src="more/vsPrinciples/embed-inParent-printable.md" boilerplate />
 
 </div>
 

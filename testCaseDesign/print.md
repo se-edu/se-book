@@ -12,36 +12,36 @@ title: "Test Case Design [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/print.md" boilerplate />
-<include src="introduction/positiveVsNegative/print.md" boilerplate />
-<include src="introduction/blackVsGlass/print.md" boilerplate />
+<include src="introduction/what/embed-inParent-printable.md" boilerplate />
+<include src="introduction/positiveVsNegative/embed-inParent-printable.md" boilerplate />
+<include src="introduction/blackVsGlass/embed-inParent-printable.md" boilerplate />
 
 ## Equivalence Partitions
 
-<include src="equivalencePartitions/what/print.md" boilerplate />
-<include src="equivalencePartitions/basic/print.md" boilerplate />
-<include src="equivalencePartitions/intermediate/print.md" boilerplate />
+<include src="equivalencePartitions/what/embed-inParent-printable.md" boilerplate />
+<include src="equivalencePartitions/basic/embed-inParent-printable.md" boilerplate />
+<include src="equivalencePartitions/intermediate/embed-inParent-printable.md" boilerplate />
 
 ## Boundary Value Analysis
 
-<include src="boundaryValueAnalysis/what/print.md" boilerplate />
-<include src="boundaryValueAnalysis/how/print.md" boilerplate />
+<include src="boundaryValueAnalysis/what/embed-inParent-printable.md" boilerplate />
+<include src="boundaryValueAnalysis/how/embed-inParent-printable.md" boilerplate />
 
 ## Combining Test Inputs
 
-<include src="combiningTestInputs/why/print.md" boilerplate />
-<include src="combiningTestInputs/combinationStrategies/print.md" boilerplate />
-<include src="combiningTestInputs/heuristicValid/print.md" boilerplate />
-<include src="combiningTestInputs/heuristicInvalid/print.md" boilerplate />
-<include src="combiningTestInputs/mix/print.md" boilerplate />
+<include src="combiningTestInputs/why/embed-inParent-printable.md" boilerplate />
+<include src="combiningTestInputs/combinationStrategies/embed-inParent-printable.md" boilerplate />
+<include src="combiningTestInputs/heuristicValid/embed-inParent-printable.md" boilerplate />
+<include src="combiningTestInputs/heuristicInvalid/embed-inParent-printable.md" boilerplate />
+<include src="combiningTestInputs/mix/embed-inParent-printable.md" boilerplate />
 
 ## More
 
-<include src="more/testingUseCases/print.md" boilerplate />
+<include src="more/testingUseCases/embed-inParent-printable.md" boilerplate />
 
 ## Summary
 
-<include src="summary/recap/print.md" boilerplate />
+<include src="summary/recap/embed-inParent-printable.md" boilerplate />
 
 </div>
 

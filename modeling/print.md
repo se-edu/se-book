@@ -12,39 +12,39 @@ title: "Modeling [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/print.md" boilerplate />
-<include src="introduction/how/print.md" boilerplate />
-<include src="introduction/umlModels/print.md" boilerplate />
+<include src="introduction/what/embed-inParent-printable.md" boilerplate />
+<include src="introduction/how/embed-inParent-printable.md" boilerplate />
+<include src="introduction/umlModels/embed-inParent-printable.md" boilerplate />
 
 ## Modeling Structures
 
-<include src="modelingStructures/classDiagramsBasic/print.md" boilerplate />
-<!-- <include src="modelingStructures/classDiagramsIntermediate/print.md" boilerplate /> -->
-<!-- <include src="modelingStructures/classDiagramsAdvanced/print.md" boilerplate /> -->
-<include src="modelingStructures/objectDiagrams/print.md" boilerplate />
-<include src="modelingStructures/objectOrientedDomainModels/print.md" boilerplate />
-<include src="modelingStructures/deploymentDiagrams/print.md" boilerplate />
-<include src="modelingStructures/componentDiagrams/print.md" boilerplate />
-<include src="modelingStructures/packageDiagrams/print.md" boilerplate />
-<include src="modelingStructures/compositeStructureDiagrams/print.md" boilerplate />
+<include src="modelingStructures/classDiagramsBasic/embed-inParent-printable.md" boilerplate />
+<!-- <include src="modelingStructures/classDiagramsIntermediate/embed-inParent-printable.md" boilerplate /> -->
+<!-- <include src="modelingStructures/classDiagramsAdvanced/embed-inParent-printable.md" boilerplate /> -->
+<include src="modelingStructures/objectDiagrams/embed-inParent-printable.md" boilerplate />
+<include src="modelingStructures/objectOrientedDomainModels/embed-inParent-printable.md" boilerplate />
+<include src="modelingStructures/deploymentDiagrams/embed-inParent-printable.md" boilerplate />
+<include src="modelingStructures/componentDiagrams/embed-inParent-printable.md" boilerplate />
+<include src="modelingStructures/packageDiagrams/embed-inParent-printable.md" boilerplate />
+<include src="modelingStructures/compositeStructureDiagrams/embed-inParent-printable.md" boilerplate />
 
 ## Modeling Behaviors
 
-<include src="modelingBehaviors/activityDiagrams/print.md" boilerplate />
-<include src="modelingBehaviors/sequenceDiagramsBasic/print.md" boilerplate />
-<!-- <include src="modelingBehaviors/sequenceDiagramsIntermediate/print.md" boilerplate /> -->
-<!-- <include src="modelingBehaviors/sequenceDiagramsAdvanced/print.md" boilerplate /> -->
-<include src="modelingBehaviors/useCaseDiagrams/print.md" boilerplate />
-<include src="modelingBehaviors/timingDiagrams/print.md" boilerplate />
-<include src="modelingBehaviors/interactionOverviewDiagrams/print.md" boilerplate />
-<include src="modelingBehaviors/communicationDiagrams/print.md" boilerplate />
-<include src="modelingBehaviors/stateMachineDiagrams/print.md" boilerplate />
+<include src="modelingBehaviors/activityDiagrams/embed-inParent-printable.md" boilerplate />
+<include src="modelingBehaviors/sequenceDiagramsBasic/embed-inParent-printable.md" boilerplate />
+<!-- <include src="modelingBehaviors/sequenceDiagramsIntermediate/embed-inParent-printable.md" boilerplate /> -->
+<!-- <include src="modelingBehaviors/sequenceDiagramsAdvanced/embed-inParent-printable.md" boilerplate /> -->
+<include src="modelingBehaviors/useCaseDiagrams/embed-inParent-printable.md" boilerplate />
+<include src="modelingBehaviors/timingDiagrams/embed-inParent-printable.md" boilerplate />
+<include src="modelingBehaviors/interactionOverviewDiagrams/embed-inParent-printable.md" boilerplate />
+<include src="modelingBehaviors/communicationDiagrams/embed-inParent-printable.md" boilerplate />
+<include src="modelingBehaviors/stateMachineDiagrams/embed-inParent-printable.md" boilerplate />
 
 ## Modeling a Solution
 
-<include src="modelingASolution/introduction/print.md" boilerplate />
-<include src="modelingASolution/basic/print.md" boilerplate />
-<include src="modelingASolution/intermediate/print.md" boilerplate />
+<include src="modelingASolution/introduction/embed-inParent-printable.md" boilerplate />
+<include src="modelingASolution/basic/embed-inParent-printable.md" boilerplate />
+<include src="modelingASolution/intermediate/embed-inParent-printable.md" boilerplate />
 
 <!-- TODO: add review -->
 

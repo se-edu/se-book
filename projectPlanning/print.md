@@ -10,12 +10,12 @@ title: "Project Planning [Printable]"
 
 # Project Planning
 
-<include src="workBreakdownStructure/print.md" boilerplate />
-<include src="milestones/print.md" boilerplate />
-<include src="buffers/print.md" boilerplate />
-<include src="issueTrackers/print.md" boilerplate />
-<include src="ganttCharts/print.md" boilerplate />
-<include src="pertCharts/print.md" boilerplate />
+<include src="workBreakdownStructure/embed-inParent-printable.md" boilerplate />
+<include src="milestones/embed-inParent-printable.md" boilerplate />
+<include src="buffers/embed-inParent-printable.md" boilerplate />
+<include src="issueTrackers/embed-inParent-printable.md" boilerplate />
+<include src="ganttCharts/embed-inParent-printable.md" boilerplate />
+<include src="pertCharts/embed-inParent-printable.md" boilerplate />
 
 </div>
 

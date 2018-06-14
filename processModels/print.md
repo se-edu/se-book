@@ -12,20 +12,20 @@ title: "SDLC Process Models [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/print.md" boilerplate />
-<include src="introduction/sequentialModels/print.md" boilerplate />
-<include src="introduction/iterativeModels/print.md" boilerplate />
-<include src="introduction/agileModels/print.md" boilerplate />
+<include src="introduction/what/embed-inParent-printable.md" boilerplate />
+<include src="introduction/sequentialModels/embed-inParent-printable.md" boilerplate />
+<include src="introduction/iterativeModels/embed-inParent-printable.md" boilerplate />
+<include src="introduction/agileModels/embed-inParent-printable.md" boilerplate />
 
 ## Example Process Models
 
-<include src="exampleProcessModels/xp/print.md" boilerplate />
-<include src="exampleProcessModels/scrum/print.md" boilerplate />
-<include src="exampleProcessModels/unifiedProcess/print.md" boilerplate />
+<include src="exampleProcessModels/xp/embed-inParent-printable.md" boilerplate />
+<include src="exampleProcessModels/scrum/embed-inParent-printable.md" boilerplate />
+<include src="exampleProcessModels/unifiedProcess/embed-inParent-printable.md" boilerplate />
 
 ## More
 
-<include src="more/cmmi/print.md" boilerplate />
+<include src="more/cmmi/embed-inParent-printable.md" boilerplate />
 
 </div>
 

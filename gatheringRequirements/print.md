@@ -10,13 +10,13 @@ title: "Gathering Requirements [Printable]"
 
 # Gathering Requirements
 
-<include src="brainstorming/print.md" boilerplate />
-<include src="userSurveys/print.md" boilerplate />
-<include src="observation/print.md" boilerplate />
-<include src="interviews/print.md" boilerplate />
-<include src="focusGroups/print.md" boilerplate />
-<include src="prototyping/print.md" boilerplate />
-<include src="productSurveys/print.md" boilerplate />
+<include src="brainstorming/embed-inParent-printable.md" boilerplate />
+<include src="userSurveys/embed-inParent-printable.md" boilerplate />
+<include src="observation/embed-inParent-printable.md" boilerplate />
+<include src="interviews/embed-inParent-printable.md" boilerplate />
+<include src="focusGroups/embed-inParent-printable.md" boilerplate />
+<include src="prototyping/embed-inParent-printable.md" boilerplate />
+<include src="productSurveys/embed-inParent-printable.md" boilerplate />
 
 </div>
 
