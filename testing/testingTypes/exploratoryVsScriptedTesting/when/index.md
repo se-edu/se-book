@@ -2,4 +2,4 @@
 title: "Testing Types: Exploratory vs Scripted Testing: WWhen"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

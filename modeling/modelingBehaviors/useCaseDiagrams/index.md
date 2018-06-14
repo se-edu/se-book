@@ -2,4 +2,4 @@
 title: "Modeling: Modeling Behaviors: Use Case Diagrams"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

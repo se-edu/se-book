@@ -1,1 +1,1 @@
-<dynamic-panel src="../notes/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} UML → Notes%%" />
+<dynamic-panel src="../notes/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} UML → Notes%%" />

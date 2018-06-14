@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<include src="basic/embed-inParent.md" boilerplate  />
+<include src="basic/unit-inParent-asPanel.md" boilerplate  />
 
 </div>
 

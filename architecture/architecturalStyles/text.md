@@ -5,12 +5,12 @@
 </div>
 <div id="body">
 
-<include src="./introduction/embedContainer-inParent.md" boilerplate />
-<include src="./nTier/embedContainer-inParent.md" boilerplate />
-<include src="./clientServer/embedContainer-inParent.md" boilerplate />
-<include src="./transactionProcessing/embedContainer-inParent.md" boilerplate />
-<include src="./serviceOriented/embedContainer-inParent.md" boilerplate />
-<include src="./eventDriven/embedContainer-inParent.md" boilerplate />
-<include src="./more/embedContainer-inParent.md" boilerplate />
+<include src="./introduction/container-inParent-asPanel.md" boilerplate />
+<include src="./nTier/container-inParent-asPanel.md" boilerplate />
+<include src="./clientServer/container-inParent-asPanel.md" boilerplate />
+<include src="./transactionProcessing/container-inParent-asPanel.md" boilerplate />
+<include src="./serviceOriented/container-inParent-asPanel.md" boilerplate />
+<include src="./eventDriven/container-inParent-asPanel.md" boilerplate />
+<include src="./more/container-inParent-asPanel.md" boilerplate />
 
 </div>

@@ -12,20 +12,20 @@ title: "SDLC Process Models [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/embed-inParent-printable.md" boilerplate />
-<include src="introduction/sequentialModels/embed-inParent-printable.md" boilerplate />
-<include src="introduction/iterativeModels/embed-inParent-printable.md" boilerplate />
-<include src="introduction/agileModels/embed-inParent-printable.md" boilerplate />
+<include src="introduction/what/unit-inParent-asPanel-print.md" boilerplate />
+<include src="introduction/sequentialModels/unit-inParent-asPanel-print.md" boilerplate />
+<include src="introduction/iterativeModels/unit-inParent-asPanel-print.md" boilerplate />
+<include src="introduction/agileModels/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Example Process Models
 
-<include src="exampleProcessModels/xp/embed-inParent-printable.md" boilerplate />
-<include src="exampleProcessModels/scrum/embed-inParent-printable.md" boilerplate />
-<include src="exampleProcessModels/unifiedProcess/embed-inParent-printable.md" boilerplate />
+<include src="exampleProcessModels/xp/unit-inParent-asPanel-print.md" boilerplate />
+<include src="exampleProcessModels/scrum/unit-inParent-asPanel-print.md" boilerplate />
+<include src="exampleProcessModels/unifiedProcess/unit-inParent-asPanel-print.md" boilerplate />
 
 ## More
 
-<include src="more/cmmi/embed-inParent-printable.md" boilerplate />
+<include src="more/cmmi/unit-inParent-asPanel-print.md" boilerplate />
 
 </div>
 

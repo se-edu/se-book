@@ -12,7 +12,7 @@ title: "Software Design [Printable]"
 
 ## Introduction
 
-<include src="../design/introduction/what/embed-inParent-printable.md" boilerplate />
+<include src="../design/introduction/what/unit-inParent-asPanel-print.md" boilerplate />
 
 
 

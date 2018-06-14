@@ -2,4 +2,4 @@
 title: "Principles: Liskov Substitution Principle"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

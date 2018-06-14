@@ -1,3 +1,3 @@
-<dynamic-panel src="../branch/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Branching%%" />
-<dynamic-panel src="../createPRs/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Create PRs%%" />
-<dynamic-panel src="../mergeConflicts/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Merge Conflicts%%" />
+<dynamic-panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Branching%%" />
+<dynamic-panel src="../createPRs/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Create PRs%%" />
+<dynamic-panel src="../mergeConflicts/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Merge Conflicts%%" />

@@ -2,4 +2,4 @@
 title: "UML: Object Diagrams: Object Structures"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

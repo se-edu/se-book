@@ -12,18 +12,18 @@ title: "Integration [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/embed-inParent-printable.md" boilerplate />
+<include src="introduction/what/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Approaches
 
-<include src="approaches/lateVsEarly/embed-inParent-printable.md" boilerplate />
-<include src="approaches/bigBangVsIncremental/embed-inParent-printable.md" boilerplate />
-<include src="approaches/topDownVsBottomUp/embed-inParent-printable.md" boilerplate />
+<include src="approaches/lateVsEarly/unit-inParent-asPanel-print.md" boilerplate />
+<include src="approaches/bigBangVsIncremental/unit-inParent-asPanel-print.md" boilerplate />
+<include src="approaches/topDownVsBottomUp/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Build Automation
 
-<include src="buildAutomation/what/embed-inParent-printable.md" boilerplate />
-<include src="buildAutomation/continuousIntegrationDeployment/embed-inParent-printable.md" boilerplate />
+<include src="buildAutomation/what/unit-inParent-asPanel-print.md" boilerplate />
+<include src="buildAutomation/continuousIntegrationDeployment/unit-inParent-asPanel-print.md" boilerplate />
 
 <!-- TODO: add review -->
 

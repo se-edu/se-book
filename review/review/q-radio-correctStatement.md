@@ -1,9 +1,9 @@
 <panel header=":lock::key: Choose the correct statement.">
 
 <panel header="%%Prerequisites%%" expandable expanded>
-  <dynamic-panel src="../../requirements/introduction/embed-inOtherContext.md" boilerplate header="Requirements: Introduction" />
-  <dynamic-panel src="../../requirements/nonFunctionalRequirements/embed-inOtherContext.md" boilerplate header="Requirements: Non-Functional Requirements" />
-  <dynamic-panel src="../../gatheringRequirements/prototyping/embed-inOtherContext.md" boilerplate header="Gathering Requirements: Prototyping" />
+  <dynamic-panel src="../../requirements/introduction/unit-inElsewhere-asFlat.md" boilerplate header="Requirements: Introduction" />
+  <dynamic-panel src="../../requirements/nonFunctionalRequirements/unit-inElsewhere-asFlat.md" boilerplate header="Requirements: Non-Functional Requirements" />
+  <dynamic-panel src="../../gatheringRequirements/prototyping/unit-inElsewhere-asFlat.md" boilerplate header="Gathering Requirements: Prototyping" />
 </panel>
 
 <p/>

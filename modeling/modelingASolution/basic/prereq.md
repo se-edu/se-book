@@ -1,2 +1,2 @@
-<dynamic-panel src="../../../modeling/modelingBehaviors/sequenceDiagramsBasic/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Design → Modeling → Modeling Behaviors → Sequence Diagrams → Basic%%" />
-<dynamic-panel src="../../../modeling/modelingStructures/classDiagramsBasic/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Design → Modeling → Modeling Structures → Class Diagrams → Basic%%" />
+<dynamic-panel src="../../../modeling/modelingBehaviors/sequenceDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Modeling → Modeling Behaviors → Sequence Diagrams → Basic%%" />
+<dynamic-panel src="../../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Modeling → Modeling Structures → Class Diagrams → Basic%%" />

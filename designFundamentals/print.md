@@ -12,18 +12,18 @@ title: "Software Design Fundamentals [Printable]"
 
 ## Abstraction
 
-<include src="../designFundamentals/abstraction/what/embed-inParent-printable.md" boilerplate />
+<include src="../designFundamentals/abstraction/what/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Coupling
 
-<include src="../designFundamentals/coupling/what/embed-inParent-printable.md" boilerplate />
-<include src="../designFundamentals/coupling/how/embed-inParent-printable.md" boilerplate />
-<include src="../designFundamentals/coupling/types/embed-inParent-printable.md" boilerplate />
+<include src="../designFundamentals/coupling/what/unit-inParent-asPanel-print.md" boilerplate />
+<include src="../designFundamentals/coupling/how/unit-inParent-asPanel-print.md" boilerplate />
+<include src="../designFundamentals/coupling/types/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Cohesion
 
-<include src="../designFundamentals/cohesion/what/embed-inParent-printable.md" boilerplate />
-<include src="../designFundamentals/cohesion/how/embed-inParent-printable.md" boilerplate />
+<include src="../designFundamentals/cohesion/what/unit-inParent-asPanel-print.md" boilerplate />
+<include src="../designFundamentals/cohesion/how/unit-inParent-asPanel-print.md" boilerplate />
 
 </div>
 

@@ -2,4 +2,4 @@
 title: "Coding Best Practices: [Practice] Avoid Misleading Names"
 </frontmatter>
 
-<include src="index-body.md" boilerplate /> 
+<include src="unit-inPage-asFlat.md" boilerplate /> 

@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<include src="explainWhatWhyNotHow/embed-inParent.md" boilerplate />
+<include src="explainWhatWhyNotHow/unit-inParent-asPanel.md" boilerplate />
 
 </div>
 

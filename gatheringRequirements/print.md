@@ -10,13 +10,13 @@ title: "Gathering Requirements [Printable]"
 
 # Gathering Requirements
 
-<include src="brainstorming/embed-inParent-printable.md" boilerplate />
-<include src="userSurveys/embed-inParent-printable.md" boilerplate />
-<include src="observation/embed-inParent-printable.md" boilerplate />
-<include src="interviews/embed-inParent-printable.md" boilerplate />
-<include src="focusGroups/embed-inParent-printable.md" boilerplate />
-<include src="prototyping/embed-inParent-printable.md" boilerplate />
-<include src="productSurveys/embed-inParent-printable.md" boilerplate />
+<include src="brainstorming/unit-inParent-asPanel-print.md" boilerplate />
+<include src="userSurveys/unit-inParent-asPanel-print.md" boilerplate />
+<include src="observation/unit-inParent-asPanel-print.md" boilerplate />
+<include src="interviews/unit-inParent-asPanel-print.md" boilerplate />
+<include src="focusGroups/unit-inParent-asPanel-print.md" boilerplate />
+<include src="prototyping/unit-inParent-asPanel-print.md" boilerplate />
+<include src="productSurveys/unit-inParent-asPanel-print.md" boilerplate />
 
 </div>
 

@@ -10,10 +10,10 @@
 
 **Compositions and Aggregations are stronger forms of associations while Dependencies are a weaker form of associations. Inheritance is another strong type of association between classes.**
 
-<panel src="../../../../book/uml/classDiagrams/composition/what/embed-inOtherContext.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Composition → What" alt="{{glyphicon_education}} Composition" minimized/>
-<panel src="../../../../book/uml/classDiagrams/aggregation/what/embed-inOtherContext.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Aggregation → What" alt="{{glyphicon_education}} Aggregation" minimized/>
-<panel src="../../../../book/uml/classDiagrams/dependencies/what/embed-inOtherContext.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Dependencies → What" alt="{{glyphicon_education}} Dependencies" minimized/>
-<panel src="../../../../book/uml/classDiagrams/classInheritance/what/embed-inOtherContext.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Inheritance → What" alt="{{glyphicon_education}} Inheritance" minimized/>
+<panel src="../../../../book/uml/classDiagrams/composition/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Composition → What" alt="{{glyphicon_education}} Composition" minimized/>
+<panel src="../../../../book/uml/classDiagrams/aggregation/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Aggregation → What" alt="{{glyphicon_education}} Aggregation" minimized/>
+<panel src="../../../../book/uml/classDiagrams/dependencies/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Dependencies → What" alt="{{glyphicon_education}} Dependencies" minimized/>
+<panel src="../../../../book/uml/classDiagrams/classInheritance/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Inheritance → What" alt="{{glyphicon_education}} Inheritance" minimized/>
 
 </div>
 

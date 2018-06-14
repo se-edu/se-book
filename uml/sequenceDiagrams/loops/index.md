@@ -2,4 +2,4 @@
 title: "UML: Sequence Diagrams: Loops"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

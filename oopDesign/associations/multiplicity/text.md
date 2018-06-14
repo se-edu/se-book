@@ -16,7 +16,7 @@
 
 </tip-box>
 
-<panel src="../../../uml/classDiagrams/associations/multiplicity/embed-inOtherContext.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Associations → Multiplicity" expanded />
+<panel src="../../../uml/classDiagrams/associations/multiplicity/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Associations → Multiplicity" expanded />
 
 <p/>
 

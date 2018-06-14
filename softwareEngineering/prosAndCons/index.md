@@ -3,4 +3,4 @@ title: "Software Engineering: Pros and Cons"
 keywords: Frederick P. Brooks, Mythical Man-Month
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

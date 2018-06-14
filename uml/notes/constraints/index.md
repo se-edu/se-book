@@ -2,4 +2,4 @@
 title: "UML: Notes: Constraints"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

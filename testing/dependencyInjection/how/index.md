@@ -2,4 +2,4 @@
 title: "Testing: Dependency Injection: How"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

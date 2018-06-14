@@ -10,19 +10,19 @@ title: "Object Oriented Programming [Printable]"
 
 # OOP - Implementation
 
-<include src="classes/embed-inParent-printable.md" boilerplate />
-<include src="classLevelMembers/embed-inParent-printable.md" boilerplate />
-<include src="associations/embed-inParent-printable.md" boilerplate />
-<include src="dependencies/embed-inParent-printable.md" boilerplate />
-<include src="composition/embed-inParent-printable.md" boilerplate />
-<include src="aggregation/embed-inParent-printable.md" boilerplate />
-<include src="associationClasses/embed-inParent-printable.md" boilerplate />
-<include src="inheritance/embed-inParent-printable.md" boilerplate />
-<include src="overriding/embed-inParent-printable.md" boilerplate />
-<include src="overloading/embed-inParent-printable.md" boilerplate />
-<include src="interfaces/embed-inParent-printable.md" boilerplate />
-<include src="abstractClasses/embed-inParent-printable.md" boilerplate />
-<include src="polymorphism/embed-inParent-printable.md" boilerplate />
+<include src="classes/unit-inParent-asPanel-print.md" boilerplate />
+<include src="classLevelMembers/unit-inParent-asPanel-print.md" boilerplate />
+<include src="associations/unit-inParent-asPanel-print.md" boilerplate />
+<include src="dependencies/unit-inParent-asPanel-print.md" boilerplate />
+<include src="composition/unit-inParent-asPanel-print.md" boilerplate />
+<include src="aggregation/unit-inParent-asPanel-print.md" boilerplate />
+<include src="associationClasses/unit-inParent-asPanel-print.md" boilerplate />
+<include src="inheritance/unit-inParent-asPanel-print.md" boilerplate />
+<include src="overriding/unit-inParent-asPanel-print.md" boilerplate />
+<include src="overloading/unit-inParent-asPanel-print.md" boilerplate />
+<include src="interfaces/unit-inParent-asPanel-print.md" boilerplate />
+<include src="abstractClasses/unit-inParent-asPanel-print.md" boilerplate />
+<include src="polymorphism/unit-inParent-asPanel-print.md" boilerplate />
 
 </div>
 

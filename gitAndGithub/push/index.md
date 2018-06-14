@@ -2,4 +2,4 @@
 title: "Git and Github: Push"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

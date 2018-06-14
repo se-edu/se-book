@@ -46,7 +46,7 @@ title: "SE Book [All-In-One-Page Big File!]"
 
 <include src="../modeling/chapter.md" boilerplate />
 
-<include src="../architecture/embedContainer-inParent.md" boilerplate />
+<include src="../architecture/container-inParent-asPanel.md" boilerplate />
 
 <include src="../designPatterns/chapter.md" boilerplate />
 

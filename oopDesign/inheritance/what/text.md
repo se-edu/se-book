@@ -8,7 +8,7 @@
 
 **The OOP concept _Inheritance_ allows you to define a new class based on an existing class.** For example, you can use inheritance to define an `EvaluationReport` class based on an existing `Report` class so that the `EvaluationReport` class does not have to duplicate code that is already implemented in the `Report` class. 
 
-<dynamic-panel src="../../../uml/classDiagrams/classInheritance/what/embed-inOtherContext.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Inheritance" expanded/>
+<dynamic-panel src="../../../uml/classDiagrams/classInheritance/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Inheritance" expanded/>
 
 <p/>
 

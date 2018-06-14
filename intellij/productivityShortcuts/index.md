@@ -2,4 +2,4 @@
 title: "Intellij IDEA: Productivity Shortcuts"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

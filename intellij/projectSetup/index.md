@@ -2,4 +2,4 @@
 title: "Intellij IDEA: Project Setup"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

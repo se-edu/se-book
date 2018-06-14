@@ -1,4 +1,4 @@
-<dynamic-panel src="../../../uml/sequenceDiagrams/basic/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%UML → Sequence Diagrams → Basic%%" />
-<dynamic-panel src="../../../uml/sequenceDiagrams/loops/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%UML → Sequence Diagrams → Loops%%" />
-<dynamic-panel src="../../../uml/sequenceDiagrams/objectCreation/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%UML → Sequence Diagrams → Object Creation%%" />
-<dynamic-panel src="../../../uml/sequenceDiagrams/minimalNotation/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%UML → Sequence Diagrams → Minimal Notation%%" />
+<dynamic-panel src="../../../uml/sequenceDiagrams/basic/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%UML → Sequence Diagrams → Basic%%" />
+<dynamic-panel src="../../../uml/sequenceDiagrams/loops/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%UML → Sequence Diagrams → Loops%%" />
+<dynamic-panel src="../../../uml/sequenceDiagrams/objectCreation/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%UML → Sequence Diagrams → Object Creation%%" />
+<dynamic-panel src="../../../uml/sequenceDiagrams/minimalNotation/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%UML → Sequence Diagrams → Minimal Notation%%" />

@@ -1,1 +1,1 @@
-<dynamic-panel src="../../../introduction/what/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Design → Architecture → Introduction → What%%" />
+<dynamic-panel src="../../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Architecture → Introduction → What%%" />

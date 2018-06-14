@@ -6,8 +6,8 @@
 
 <div id="body">
 
-<include src="minimiseVariableScope/embed-inParent.md" boilerplate />
-<include src="minimiseCodeDuplication/embed-inParent.md" boilerplate />
+<include src="minimiseVariableScope/unit-inParent-asPanel.md" boilerplate />
+<include src="minimiseCodeDuplication/unit-inParent-asPanel.md" boilerplate />
 
 </div>
 

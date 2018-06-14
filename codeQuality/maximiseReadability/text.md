@@ -6,10 +6,10 @@
 
 <div id="body">
 
-<include src="introduction/embedContainer-inParent.md" boilerplate  />
-<include src="basic/embedContainer-inParent.md" boilerplate  />
-<include src="intermediate/embedContainer-inParent.md" boilerplate  />
-<include src="advanced/embedContainer-inParent.md" boilerplate  />
+<include src="introduction/container-inParent-asPanel.md" boilerplate  />
+<include src="basic/container-inParent-asPanel.md" boilerplate  />
+<include src="intermediate/container-inParent-asPanel.md" boilerplate  />
+<include src="advanced/container-inParent-asPanel.md" boilerplate  />
 
 </div>
 

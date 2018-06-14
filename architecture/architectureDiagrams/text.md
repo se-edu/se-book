@@ -5,7 +5,7 @@
 </div>
 <div id="body">
 
-<include src="reading/embed-inParent.md" boilerplate  />
-<include src="drawing/embed-inParent.md" boilerplate  />
+<include src="reading/unit-inParent-asPanel.md" boilerplate  />
+<include src="drawing/unit-inParent-asPanel.md" boilerplate  />
 
 </div>

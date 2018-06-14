@@ -12,32 +12,32 @@ title: "Reuse [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/embed-inParent-printable.md" boilerplate />
-<include src="introduction/when/embed-inParent-printable.md" boilerplate />
+<include src="introduction/what/unit-inParent-asPanel-print.md" boilerplate />
+<include src="introduction/when/unit-inParent-asPanel-print.md" boilerplate />
 
 ## APIs
 
-<include src="apis/what/embed-inParent-printable.md" boilerplate />
-<include src="apis/designingAPIs/embed-inParent-printable.md" boilerplate />
+<include src="apis/what/unit-inParent-asPanel-print.md" boilerplate />
+<include src="apis/designingAPIs/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Libraries
 
-<include src="libraries/what/embed-inParent-printable.md" boilerplate />
-<include src="libraries/how/embed-inParent-printable.md" boilerplate />
+<include src="libraries/what/unit-inParent-asPanel-print.md" boilerplate />
+<include src="libraries/how/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Frameworks
 
-<include src="frameworks/what/embed-inParent-printable.md" boilerplate />
-<include src="frameworks/frameworksVsLibraries/embed-inParent-printable.md" boilerplate />
+<include src="frameworks/what/unit-inParent-asPanel-print.md" boilerplate />
+<include src="frameworks/frameworksVsLibraries/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Platforms
 
-<include src="platforms/what/embed-inParent-printable.md" boilerplate />
+<include src="platforms/what/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Cloud Computing
 
-<include src="cloudComputing/what/embed-inParent-printable.md" boilerplate />
-<include src="cloudComputing/services/embed-inParent-printable.md" boilerplate />
+<include src="cloudComputing/what/unit-inParent-asPanel-print.md" boilerplate />
+<include src="cloudComputing/services/unit-inParent-asPanel-print.md" boilerplate />
 
 </div>
 

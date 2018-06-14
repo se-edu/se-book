@@ -2,4 +2,4 @@
 title: "Testing: Introduction: Testability"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

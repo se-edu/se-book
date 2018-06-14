@@ -2,4 +2,4 @@
 title: "SDLC Process Models: Introduction: Sequential Models"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

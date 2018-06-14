@@ -2,4 +2,4 @@
 title: "Object Oriented Programming: Inheritance: Interfaces"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

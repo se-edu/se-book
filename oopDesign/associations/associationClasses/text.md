@@ -16,7 +16,7 @@
 
 </tip-box>
 
-<panel src="../../../uml/classDiagrams/associationClasses/what/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Association Classes" expanded /><p/>
+<panel src="../../../uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Association Classes" expanded /><p/>
 
 
 </div>

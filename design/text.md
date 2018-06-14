@@ -4,6 +4,6 @@
 </div>
 <div id="body">
 
-<include src="introduction/embedContainer-inParent.md" boilerplate />
+<include src="introduction/container-inParent-asPanel.md" boilerplate />
 
 </div>

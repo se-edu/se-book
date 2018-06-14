@@ -1,1 +1,1 @@
-<dynamic-panel src="../branch/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Branching%%" />
+<dynamic-panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Branching%%" />

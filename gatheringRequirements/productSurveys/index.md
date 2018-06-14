@@ -2,4 +2,4 @@
 title: "Gathering Requirements: Product Surveys"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

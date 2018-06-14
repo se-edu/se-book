@@ -2,4 +2,4 @@
 title: "UML: Sequence Diagrams: Introduction"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

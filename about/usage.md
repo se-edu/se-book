@@ -90,19 +90,19 @@ Meaning of some shortened headings:
 
 * **What** : the **meaning** of the concept in concern 
 
-  <include name="%%Example%%" src="../refactoring/what/embed-inOtherContext.md" boilerplate dynamic />
+  <include name="%%Example%%" src="../refactoring/what/unit-inElsewhere-asFlat.md" boilerplate dynamic />
 
 * **Why** : the **motivation** behind the concept in concern
 
-  <include name="%%Example%%" src="../documentation/guidelines/goTopDown/why/embed-inOtherContext.md" boilerplate dynamic />
+  <include name="%%Example%%" src="../documentation/guidelines/goTopDown/why/unit-inElsewhere-asFlat.md" boilerplate dynamic />
   
 * **How** : the **usage** of the concept in concern 
 
-  <include name="%%Example%%" src="../refactoring/how/embed-inOtherContext.md" boilerplate dynamic />
+  <include name="%%Example%%" src="../refactoring/how/unit-inElsewhere-asFlat.md" boilerplate dynamic />
   
 * **When** : the **pros and cons** of the concept in concern, **when to use** the concept 
 
-  <include name="%%Example%%" src="../refactoring/when/embed-inOtherContext.md" boilerplate dynamic />
+  <include name="%%Example%%" src="../refactoring/when/unit-inElsewhere-asFlat.md" boilerplate dynamic />
   
 
 Boxed-text styles:

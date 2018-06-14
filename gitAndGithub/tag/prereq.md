@@ -1,1 +1,1 @@
-<dynamic-panel src="../../revisionControl/savingHistory/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%Project Management → Revision Control → Saving History%%" />
+<dynamic-panel src="../../revisionControl/savingHistory/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Project Management → Revision Control → Saving History%%" />

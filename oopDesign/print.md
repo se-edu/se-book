@@ -12,48 +12,48 @@ title: "Object Oriented Programming [Printable]"
 
 ## Introduction
 
-<include src="introduction/embed-inParent-printable.md" boilerplate />
+<include src="introduction/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Objects
 
-<include src="objects/basic/embed-inParent-printable.md" boilerplate />
-<include src="objects/abstraction/embed-inParent-printable.md" boilerplate />
-<include src="objects/encapsulation/embed-inParent-printable.md" boilerplate />
+<include src="objects/basic/unit-inParent-asPanel-print.md" boilerplate />
+<include src="objects/abstraction/unit-inParent-asPanel-print.md" boilerplate />
+<include src="objects/encapsulation/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Classes
 
-<include src="classes/basic/embed-inParent-printable.md" boilerplate />
-<include src="classes/classLevelMembers/embed-inParent-printable.md" boilerplate />
-<include src="classes/enumerations/embed-inParent-printable.md" boilerplate />
+<include src="classes/basic/unit-inParent-asPanel-print.md" boilerplate />
+<include src="classes/classLevelMembers/unit-inParent-asPanel-print.md" boilerplate />
+<include src="classes/enumerations/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Associations
 
-<include src="associations/basic/embed-inParent-printable.md" boilerplate />
-<include src="associations/navigability/embed-inParent-printable.md" boilerplate />
-<include src="associations/multiplicity/embed-inParent-printable.md" boilerplate />
-<include src="associations/dependencies/embed-inParent-printable.md" boilerplate />
-<include src="associations/composition/embed-inParent-printable.md" boilerplate />
-<include src="associations/aggregation/embed-inParent-printable.md" boilerplate />
-<include src="associations/associationClasses/embed-inParent-printable.md" boilerplate />
+<include src="associations/basic/unit-inParent-asPanel-print.md" boilerplate />
+<include src="associations/navigability/unit-inParent-asPanel-print.md" boilerplate />
+<include src="associations/multiplicity/unit-inParent-asPanel-print.md" boilerplate />
+<include src="associations/dependencies/unit-inParent-asPanel-print.md" boilerplate />
+<include src="associations/composition/unit-inParent-asPanel-print.md" boilerplate />
+<include src="associations/aggregation/unit-inParent-asPanel-print.md" boilerplate />
+<include src="associations/associationClasses/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Inheritance
 
-<include src="inheritance/what/embed-inParent-printable.md" boilerplate />
-<include src="inheritance/overriding/embed-inParent-printable.md" boilerplate />
-<include src="inheritance/overloading/embed-inParent-printable.md" boilerplate />
-<include src="inheritance/interfaces/embed-inParent-printable.md" boilerplate />
-<include src="inheritance/abstractClasses/embed-inParent-printable.md" boilerplate />
-<include src="inheritance/dynamicAndStaticBinding/embed-inParent-printable.md" boilerplate />
-<include src="inheritance/substitutability/embed-inParent-printable.md" boilerplate />
+<include src="inheritance/what/unit-inParent-asPanel-print.md" boilerplate />
+<include src="inheritance/overriding/unit-inParent-asPanel-print.md" boilerplate />
+<include src="inheritance/overloading/unit-inParent-asPanel-print.md" boilerplate />
+<include src="inheritance/interfaces/unit-inParent-asPanel-print.md" boilerplate />
+<include src="inheritance/abstractClasses/unit-inParent-asPanel-print.md" boilerplate />
+<include src="inheritance/dynamicAndStaticBinding/unit-inParent-asPanel-print.md" boilerplate />
+<include src="inheritance/substitutability/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Polymorphism
 
-<include src="polymorphism/introduction/embed-inParent-printable.md" boilerplate />
-<include src="polymorphism/mechanism/embed-inParent-printable.md" boilerplate />
+<include src="polymorphism/introduction/unit-inParent-asPanel-print.md" boilerplate />
+<include src="polymorphism/mechanism/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Miscellaneous
 
-<include src="miscellaneous/embed-inParent-printable.md" boilerplate />
+<include src="miscellaneous/unit-inParent-asPanel-print.md" boilerplate />
 
 <!-- TODO: add review -->
 

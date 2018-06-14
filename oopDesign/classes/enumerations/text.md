@@ -10,7 +10,7 @@
 
 An enumeration is often useful when using a regular data type such as `int` or `String` would allow invalid values to be assigned to a variable. %%e.g. if a variable can only take values `0` and `1`, declaring it as an `int` would allow invalid values such as `2` to be assigned to it. But if you define an enumeration called `Binary` that has values `0` and `1` only, a variable of type `Binary` will never be assigned an invalid value such as `2` because the compiler is able to catch the error.%%
 
-<panel src="../../../uml/classDiagrams/enumerations/what/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Enumerations" expanded />
+<panel src="../../../uml/classDiagrams/enumerations/what/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Enumerations" expanded />
 
 <p/>
 

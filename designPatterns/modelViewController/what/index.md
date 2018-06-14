@@ -2,4 +2,4 @@
 title: "Software Design Patterns: Model View Controller: What"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

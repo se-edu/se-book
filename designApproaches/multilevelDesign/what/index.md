@@ -2,4 +2,4 @@
 title: "Design Approaches: Multi-Level Design"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

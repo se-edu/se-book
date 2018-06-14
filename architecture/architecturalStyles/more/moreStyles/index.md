@@ -2,4 +2,4 @@
 title: "Architectural Styles: More: More Architectural Styles"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

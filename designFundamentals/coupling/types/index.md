@@ -2,4 +2,4 @@
 title: "Software Design Fundamentals: Coupling: Types of Coupling"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

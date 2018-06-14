@@ -6,10 +6,10 @@
 
 <div id="body">
 
-<include src="useDefaultBranch/embed-inParent.md" boilerplate />
-<include src="dontRecycleVarsOrParams/embed-inParent.md" boilerplate />
-<include src="avoidEmptyCatchBlocks/embed-inParent.md" boilerplate />
-<include src="deleteDeadCode/embed-inParent.md" boilerplate />
+<include src="useDefaultBranch/unit-inParent-asPanel.md" boilerplate />
+<include src="dontRecycleVarsOrParams/unit-inParent-asPanel.md" boilerplate />
+<include src="avoidEmptyCatchBlocks/unit-inParent-asPanel.md" boilerplate />
+<include src="deleteDeadCode/unit-inParent-asPanel.md" boilerplate />
 
 </div>
 

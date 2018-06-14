@@ -2,4 +2,4 @@
 title: "Testing Types: Developer Testing: What"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

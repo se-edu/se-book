@@ -2,4 +2,4 @@
 title: "Revision Control: Feature Branch Flow"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

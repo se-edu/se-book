@@ -15,7 +15,7 @@
 **<trigger trigger="click" for="modal:dynamicAndStatic-overriding">Overridden methods</trigger> are resolved using dynamic binding, and therefore resolves to the implementation in the actual type of the object.**
 
 <modal large title="Textbook »" id="modal:dynamicAndStatic-overriding">
-  <include src="../../../oopImplementation/overriding/embed-inOtherContext.md" boilerplate/>
+  <include src="../../../oopImplementation/overriding/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
 <tip-box>
@@ -43,7 +43,7 @@ However, at runtime the `adjustSalary(int)` operation of the actual object will 
 **In contrast, <trigger trigger="click" for="modal:dynamicAndStatic-overloading">overloaded</trigger> methods are resolved using static binding.**
 
 <modal large title="Textbook »" id="modal:dynamicAndStatic-overloading">
-  <include src="../../../oopImplementation/overloading/embed-inOtherContext.md" boilerplate/>
+  <include src="../../../oopImplementation/overloading/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
 <tip-box>

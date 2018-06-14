@@ -12,8 +12,8 @@
 
 <include src="../../../uml/objectDiagrams/introduction/text.md#body" />
 
-<panel src="../../../../book/uml/objectDiagrams/objects/embed-inOtherContext.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Object Diagrams → Objects" alt="{{glyphicon_education}} Objects" minimized/>
-<panel src="../../../../book/uml/objectDiagrams/associations/what/embed-inOtherContext.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Object Diagrams → Associations → What" alt="{{glyphicon_education}} Associations" minimized/>
+<panel src="../../../../book/uml/objectDiagrams/objects/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Object Diagrams → Objects" alt="{{glyphicon_education}} Objects" minimized/>
+<panel src="../../../../book/uml/objectDiagrams/associations/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Object Diagrams → Associations → What" alt="{{glyphicon_education}} Associations" minimized/>
 
 </div>
 

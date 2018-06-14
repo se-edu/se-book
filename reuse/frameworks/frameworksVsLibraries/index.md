@@ -2,4 +2,4 @@
 title: "Reuse: Frameworks: Frameworks vs Libraries"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

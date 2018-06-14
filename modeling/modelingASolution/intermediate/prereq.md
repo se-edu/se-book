@@ -1,2 +1,2 @@
-<dynamic-panel src="../../../modeling/modelingBehaviors/sequenceDiagramsIntermediate/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Design → Modeling → Modeling Behaviors → Sequence Diagrams → Intermediate%%" />
-<dynamic-panel src="../../../modeling/modelingStructures/classDiagramsIntermediate/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Design → Modeling → Modeling Structures → Class Diagrams → Intermediate%%" />
+<dynamic-panel src="../../../modeling/modelingBehaviors/sequenceDiagramsIntermediate/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Modeling → Modeling Behaviors → Sequence Diagrams → Intermediate%%" />
+<dynamic-panel src="../../../modeling/modelingStructures/classDiagramsIntermediate/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Modeling → Modeling Structures → Class Diagrams → Intermediate%%" />

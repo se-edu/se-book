@@ -2,4 +2,4 @@
 title: "Modeling: Modeling Structures: Composite Structure Diagrams"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

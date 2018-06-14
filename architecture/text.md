@@ -5,8 +5,8 @@
 </div>
 <div id="body">
 
-<include src="introduction/embedContainer-inParent.md" boilerplate />
-<include src="architectureDiagrams/embedContainer-inParent.md" boilerplate />
-<include src="architecturalStyles/embedContainer-inParent.md" boilerplate />
+<include src="introduction/container-inParent-asPanel.md" boilerplate />
+<include src="architectureDiagrams/container-inParent-asPanel.md" boilerplate />
+<include src="architecturalStyles/container-inParent-asPanel.md" boilerplate />
 
 </div>

@@ -1,1 +1,1 @@
-<dynamic-panel src="../../oopDesign/inheritance/abstractClasses/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Inheritance → Abstract Classes%%" />
+<dynamic-panel src="../../oopDesign/inheritance/abstractClasses/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Inheritance → Abstract Classes%%" />

@@ -1,1 +1,1 @@
-<dynamic-panel src="../what/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Quality Assurance → Testing → Dependency Injection → What%%" />
+<dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Quality Assurance → Testing → Dependency Injection → What%%" />

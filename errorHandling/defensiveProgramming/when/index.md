@@ -2,4 +2,4 @@
 title: "Error Handling: Defensive Programming: When"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

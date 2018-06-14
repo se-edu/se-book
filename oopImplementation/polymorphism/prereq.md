@@ -1,3 +1,3 @@
-<dynamic-panel src="../../oopDesign/polymorphism/introduction/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} OOP → Polymorphism → Introduction%%" />
-<dynamic-panel src="../../oopDesign/inheritance/what/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} OOP → Inheritance → What%%" />
-<dynamic-panel src="../overriding/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Implementation → OOP → Overriding%%" />
+<dynamic-panel src="../../oopDesign/polymorphism/introduction/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} OOP → Polymorphism → Introduction%%" />
+<dynamic-panel src="../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} OOP → Inheritance → What%%" />
+<dynamic-panel src="../overriding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Implementation → OOP → Overriding%%" />

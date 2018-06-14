@@ -10,9 +10,9 @@ title: "Refactoring [Printable]"
 
 # Refactoring
 
-<include src="what/embed-inParent-printable.md" boilerplate />
-<include src="how/embed-inParent-printable.md" boilerplate />
-<include src="when/embed-inParent-printable.md" boilerplate />
+<include src="what/unit-inParent-asPanel-print.md" boilerplate />
+<include src="how/unit-inParent-asPanel-print.md" boilerplate />
+<include src="when/unit-inParent-asPanel-print.md" boilerplate />
 
 </div>
 

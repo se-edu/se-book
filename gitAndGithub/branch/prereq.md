@@ -1,1 +1,1 @@
-<dynamic-panel src="../../revisionControl/branching/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%Project Management → Revision Control → Branching%%" />
+<dynamic-panel src="../../revisionControl/branching/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Project Management → Revision Control → Branching%%" />

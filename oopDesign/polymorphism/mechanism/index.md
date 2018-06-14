@@ -2,4 +2,4 @@
 title: "Object Oriented Programming: Polymorphism: Mechanism"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

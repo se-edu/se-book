@@ -6,9 +6,9 @@
 
 <div id="body">
 
-<include src="useNameExplain/embed-inParent.md" boilerplate />
-<include src="notTooLongNorShort/embed-inParent.md" boilerplate />
-<include src="avoidMisleadingNames/embed-inParent.md" boilerplate />
+<include src="useNameExplain/unit-inParent-asPanel.md" boilerplate />
+<include src="notTooLongNorShort/unit-inParent-asPanel.md" boilerplate />
+<include src="avoidMisleadingNames/unit-inParent-asPanel.md" boilerplate />
 
 </div>
 

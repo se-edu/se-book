@@ -12,32 +12,32 @@ title: "Specifying Requirements [Printable]"
 
 ## Prose
 
-<include src="prose/what/embed-inParent-printable.md" boilerplate />
+<include src="prose/what/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Feature List
 
-<include src="featureList/what/embed-inParent-printable.md" boilerplate />
+<include src="featureList/what/unit-inParent-asPanel-print.md" boilerplate />
 
 ## User Stories
 
-<include src="userStories/introduction/embed-inParent-printable.md" boilerplate />
-<include src="userStories/details/embed-inParent-printable.md" boilerplate />
-<include src="userStories/usage/embed-inParent-printable.md" boilerplate />
+<include src="userStories/introduction/unit-inParent-asPanel-print.md" boilerplate />
+<include src="userStories/details/unit-inParent-asPanel-print.md" boilerplate />
+<include src="userStories/usage/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Use Cases
 
-<include src="useCases/introduction/embed-inParent-printable.md" boilerplate />
-<include src="useCases/identifying/embed-inParent-printable.md" boilerplate />
-<include src="useCases/details/embed-inParent-printable.md" boilerplate />
-<include src="useCases/usage/embed-inParent-printable.md" boilerplate />
+<include src="useCases/introduction/unit-inParent-asPanel-print.md" boilerplate />
+<include src="useCases/identifying/unit-inParent-asPanel-print.md" boilerplate />
+<include src="useCases/details/unit-inParent-asPanel-print.md" boilerplate />
+<include src="useCases/usage/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Glossary
 
-<include src="glossary/what/embed-inParent-printable.md" boilerplate />
+<include src="glossary/what/unit-inParent-asPanel-print.md" boilerplate />
 
 ## Supplementary Requirements
 
-<include src="supplementaryRequirements/what/embed-inParent-printable.md" boilerplate />
+<include src="supplementaryRequirements/what/unit-inParent-asPanel-print.md" boilerplate />
 
 </div>
 

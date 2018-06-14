@@ -2,4 +2,4 @@
 title: "UML: Class Diagrams: Interfaces: What"
 </frontmatter>
 
-<include src="index-body.md" boilerplate />
+<include src="unit-inPage-asFlat.md" boilerplate />

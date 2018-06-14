@@ -10,11 +10,11 @@ title: "Intellij IDEA [Printable]"
 
 # Intellij IDEA
 
-<include src="projectSetup/embed-inParent-printable.md" boilerplate />
-<include src="codeNavigation/embed-inParent-printable.md" boilerplate />
-<include src="productivityShortcuts/embed-inParent-printable.md" boilerplate />
-<include src="debuggingBasic/embed-inParent-printable.md" boilerplate />
-<include src="refactoring/embed-inParent-printable.md" boilerplate />
+<include src="projectSetup/unit-inParent-asPanel-print.md" boilerplate />
+<include src="codeNavigation/unit-inParent-asPanel-print.md" boilerplate />
+<include src="productivityShortcuts/unit-inParent-asPanel-print.md" boilerplate />
+<include src="debuggingBasic/unit-inParent-asPanel-print.md" boilerplate />
+<include src="refactoring/unit-inParent-asPanel-print.md" boilerplate />
 
 </div>
 
