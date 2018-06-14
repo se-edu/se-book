@@ -6,12 +6,12 @@
 
 <div id="body">
 
-<include src="introduction/container-index.md" boilerplate/>
-<include src="maximiseReadability/container-index.md" boilerplate />
-<include src="followStandard/container-index.md" boilerplate/>
-<include src="nameWell/container-index.md" boilerplate/>
-<include src="avoidShortcuts/container-index.md" boilerplate/>
-<include src="commentMinimally/container-index.md" boilerplate/>
+<include src="introduction/embedContainer-inParent.md" boilerplate/>
+<include src="maximiseReadability/embedContainer-inParent.md" boilerplate />
+<include src="followStandard/embedContainer-inParent.md" boilerplate/>
+<include src="nameWell/embedContainer-inParent.md" boilerplate/>
+<include src="avoidShortcuts/embedContainer-inParent.md" boilerplate/>
+<include src="commentMinimally/embedContainer-inParent.md" boilerplate/>
 
 </panel>
 

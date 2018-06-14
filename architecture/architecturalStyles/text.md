@@ -5,12 +5,12 @@
 </div>
 <div id="body">
 
-<include src="./introduction/container-index.md" boilerplate />
-<include src="./nTier/container-index.md" boilerplate />
-<include src="./clientServer/container-index.md" boilerplate />
-<include src="./transactionProcessing/container-index.md" boilerplate />
-<include src="./serviceOriented/container-index.md" boilerplate />
-<include src="./eventDriven/container-index.md" boilerplate />
-<include src="./more/container-index.md" boilerplate />
+<include src="./introduction/embedContainer-inParent.md" boilerplate />
+<include src="./nTier/embedContainer-inParent.md" boilerplate />
+<include src="./clientServer/embedContainer-inParent.md" boilerplate />
+<include src="./transactionProcessing/embedContainer-inParent.md" boilerplate />
+<include src="./serviceOriented/embedContainer-inParent.md" boilerplate />
+<include src="./eventDriven/embedContainer-inParent.md" boilerplate />
+<include src="./more/embedContainer-inParent.md" boilerplate />
 
 </div>

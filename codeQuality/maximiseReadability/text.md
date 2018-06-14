@@ -6,10 +6,10 @@
 
 <div id="body">
 
-<include src="introduction/container-index.md" boilerplate  />
-<include src="basic/container-index.md" boilerplate  />
-<include src="intermediate/container-index.md" boilerplate  />
-<include src="advanced/container-index.md" boilerplate  />
+<include src="introduction/embedContainer-inParent.md" boilerplate  />
+<include src="basic/embedContainer-inParent.md" boilerplate  />
+<include src="intermediate/embedContainer-inParent.md" boilerplate  />
+<include src="advanced/embedContainer-inParent.md" boilerplate  />
 
 </div>
 
