@@ -10,7 +10,7 @@
 
 **A composition is an association that represents a strong _whole-part_ relationship.** When the _whole_ is destroyed, _parts_ are destroyed too.
 
-<panel src="../../../uml/classDiagrams/composition/what/full.md#title-and-body" boilerplate header="{{glyphicon_education}} Tools → UML → Class Diagrams → Composition" expanded/>
+<panel src="../../../uml/classDiagrams/composition/what/embed-inOtherContext.md#title-and-body" boilerplate header="{{glyphicon_education}} Tools → UML → Class Diagrams → Composition" expanded/>
 
 <p/>
 

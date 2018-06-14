@@ -3,5 +3,5 @@
   <tip-box>
     <include src="outcomes.md" />
   </tip-box>
-  <include src="full.md#main" boilerplate />
+  <include src="embed-inOtherContext.md#main" boilerplate />
 </panel>

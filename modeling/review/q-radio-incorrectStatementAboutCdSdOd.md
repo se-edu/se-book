@@ -1,9 +1,9 @@
 <panel header=":lock::key: Class Diagrams vs Object Diagrams vs Sequence Diagrams">
 
 <panel header="%%Prerequisites%%" expandable expanded>
-  <dynamic-panel src="../modelingStructures/objectDiagrams/full.md" boilerplate header="Modeling: Modeling Structures: Object Diagrams" />
-  <dynamic-panel src="../modelingStructures/classDiagramsBasic/full.md" boilerplate header="Modeling: Modeling Structures: Class Diagrams" />
-  <dynamic-panel src="../modelingBehaviors/sequenceDiagramsBasic/full.md" boilerplate header="Modeling: Modeling Behaviors: Sequence Diagrams" />
+  <dynamic-panel src="../modelingStructures/objectDiagrams/embed-inOtherContext.md" boilerplate header="Modeling: Modeling Structures: Object Diagrams" />
+  <dynamic-panel src="../modelingStructures/classDiagramsBasic/embed-inOtherContext.md" boilerplate header="Modeling: Modeling Structures: Class Diagrams" />
+  <dynamic-panel src="../modelingBehaviors/sequenceDiagramsBasic/embed-inOtherContext.md" boilerplate header="Modeling: Modeling Behaviors: Sequence Diagrams" />
 </panel>
 
 <p/>

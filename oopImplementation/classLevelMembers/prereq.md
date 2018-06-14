@@ -1,1 +1,1 @@
-<dynamic-panel src="../../oopDesign/classes/classLevelMembers/full.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Classes → Class-Level Members%%" />
+<dynamic-panel src="../../oopDesign/classes/classLevelMembers/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Classes → Class-Level Members%%" />

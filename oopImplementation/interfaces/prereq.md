@@ -1,1 +1,1 @@
-<dynamic-panel src="../../oopDesign/inheritance/interfaces/full.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Inheritance → Interfaces%%" />
+<dynamic-panel src="../../oopDesign/inheritance/interfaces/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Inheritance → Interfaces%%" />

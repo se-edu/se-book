@@ -1,1 +1,1 @@
-<dynamic-panel src="../what/full.md" boilerplate header="%%{{glyphicon_education}} Quality Assurance → Testing → Unit Testing → What →%%" />
+<dynamic-panel src="../what/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Quality Assurance → Testing → Unit Testing → What →%%" />

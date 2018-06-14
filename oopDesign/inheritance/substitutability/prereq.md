@@ -1,1 +1,1 @@
-<dynamic-panel src="../../../oopDesign/inheritance/what/full.md" boilerplate header="%%{{glyphicon_education}} Design → Object Oriented Programming → Inheritance → What%%" />
+<dynamic-panel src="../../../oopDesign/inheritance/what/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Design → Object Oriented Programming → Inheritance → What%%" />

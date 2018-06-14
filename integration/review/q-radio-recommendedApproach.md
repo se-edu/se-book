@@ -1,9 +1,9 @@
 <panel header=":lock::key: Which is the recommended integration approach in general?">
 
 <panel header="%%Prerequisites%%" expandable expanded>
-  <dynamic-panel src="../approaches/bigBangVsIncremental/full.md" boilerplate header="Integration: Approaches: Big-bang vs Incremental Approach" />
-  <dynamic-panel src="../approaches/lateVsEarly/full.md" boilerplate header="Integration: Approaches: Late vs Early Approach" />
-  <dynamic-panel src="../approaches/topDownVsBottomUp/full.md" boilerplate header="Integration: Approaches: Top-down vs Bottom-up Approach" />
+  <dynamic-panel src="../approaches/bigBangVsIncremental/embed-inOtherContext.md" boilerplate header="Integration: Approaches: Big-bang vs Incremental Approach" />
+  <dynamic-panel src="../approaches/lateVsEarly/embed-inOtherContext.md" boilerplate header="Integration: Approaches: Late vs Early Approach" />
+  <dynamic-panel src="../approaches/topDownVsBottomUp/embed-inOtherContext.md" boilerplate header="Integration: Approaches: Top-down vs Bottom-up Approach" />
 </panel>
 
 <p/>

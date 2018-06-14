@@ -1,1 +1,1 @@
-<dynamic-panel src="../clone/full.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Clone%%" />
+<dynamic-panel src="../clone/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Clone%%" />

@@ -1,1 +1,1 @@
-<dynamic-panel src="../what/full.md" boilerplate header="%%{{glyphicon_education}} Error Handling → Assertions → What%%" />
+<dynamic-panel src="../what/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Error Handling → Assertions → What%%" />

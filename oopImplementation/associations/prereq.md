@@ -1,1 +1,1 @@
-<dynamic-panel src="../../modeling/modelingStructures/classDiagramsBasic/full.md" boilerplate header="%%{{glyphicon_education}} Design → Modelling Structure → Class Diagrams%%" />
+<dynamic-panel src="../../modeling/modelingStructures/classDiagramsBasic/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Design → Modelling Structure → Class Diagrams%%" />

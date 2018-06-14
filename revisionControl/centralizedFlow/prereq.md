@@ -1,1 +1,1 @@
-<dynamic-panel src="../featureBranchFlow/full.md" boilerplate header="%%{{glyphicon_education}} Revision Control → Feature Branch Workflow%%" />
+<dynamic-panel src="../featureBranchFlow/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Revision Control → Feature Branch Workflow%%" />

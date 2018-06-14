@@ -1,1 +1,1 @@
-<dynamic-panel src="../bigBangVsIncremental/full.md" boilerplate header="%%{{glyphicon_education}} Implementation → Integration → Approaches → Big-Bang Vs Incremental%%" />
+<dynamic-panel src="../bigBangVsIncremental/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Implementation → Integration → Approaches → Big-Bang Vs Incremental%%" />

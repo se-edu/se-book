@@ -1,3 +1,3 @@
-<dynamic-panel src="../../../oopDesign/inheritance/interfaces/full.md" boilerplate header="%%{{glyphicon_education}} OOP: Inheritance → Interfaces%%" />
-<dynamic-panel src="../../../oopDesign/inheritance/abstractClasses/full.md" boilerplate header="%%{{glyphicon_education}} OOP → Inheritance → Abstract Classes%%" />
-<dynamic-panel src="../../../oopDesign/associations/associationClasses/full.md" boilerplate header="%%{{glyphicon_education}} OOP → Associations → Association Classes%%" />
+<dynamic-panel src="../../../oopDesign/inheritance/interfaces/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} OOP: Inheritance → Interfaces%%" />
+<dynamic-panel src="../../../oopDesign/inheritance/abstractClasses/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} OOP → Inheritance → Abstract Classes%%" />
+<dynamic-panel src="../../../oopDesign/associations/associationClasses/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} OOP → Associations → Association Classes%%" />

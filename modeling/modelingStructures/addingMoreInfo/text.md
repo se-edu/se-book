@@ -8,7 +8,7 @@
 
 **UML notes can be used to add more info to any UML model.**
 
-<panel src="../../../../book/uml/notes/notes/full.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Notes" expanded />
+<panel src="../../../../book/uml/notes/notes/embed-inOtherContext.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Notes" expanded />
 
 </div>
 

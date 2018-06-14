@@ -1,1 +1,1 @@
-<dynamic-panel src="../../../oopDesign/classes/basic/full.md" boilerplate header="{{glyphicon_education}} %%Design → OOP → Classes → Basic%%" />
+<dynamic-panel src="../../../oopDesign/classes/basic/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%Design → OOP → Classes → Basic%%" />

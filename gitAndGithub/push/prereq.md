@@ -1,1 +1,1 @@
-<dynamic-panel src="../pull/full.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Pull%%" />
+<dynamic-panel src="../pull/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Pull%%" />

@@ -1,1 +1,1 @@
-<dynamic-panel src="../../oopDesign/inheritance/overloading/full.md" boilerplate header="{{glyphicon_education}} %%OOP → Inheritance → Overloading%%" />
+<dynamic-panel src="../../oopDesign/inheritance/overloading/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%OOP → Inheritance → Overloading%%" />

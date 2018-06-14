@@ -14,7 +14,7 @@
 
 **An abstract method is simply the method interface without the implementation.** 
 
-<dynamic-panel src="../../../uml/classDiagrams/abstractClasses/what/full.md" boilerplate header="{{glyphicon_education}}UML → Class Diagrams → Abstract Classes" />
+<dynamic-panel src="../../../uml/classDiagrams/abstractClasses/what/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}}UML → Class Diagrams → Abstract Classes" />
 
 <p/>
 

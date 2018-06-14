@@ -6,6 +6,6 @@
   <include src="outcomes.md" />
 </tip-box></p>
 
-<include src="full.md" boilerplate />
+<include src="embed-inOtherContext.md" boilerplate />
 
 </div>

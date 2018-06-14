@@ -31,7 +31,7 @@ displayResult();
 </tip-box>
 
 <modal title="" id="modal:slap-abstraction">
-  <include src="../../../../designFundamentals/abstraction/what/full.md" boilerplate/>
+  <include src="../../../../designFundamentals/abstraction/what/embed-inOtherContext.md" boilerplate/>
 </modal>
 
 

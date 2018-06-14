@@ -1,1 +1,1 @@
-<dynamic-panel src="../forkingWorkflow/full.md" boilerplate header="%%{{glyphicon_education}} Revision Control → Forking Workflow%%" />
+<dynamic-panel src="../forkingWorkflow/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Revision Control → Forking Workflow%%" />

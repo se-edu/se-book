@@ -1,1 +1,1 @@
-<dynamic-panel src="../../introduction/what/full.md" boilerplate header="%%{{glyphicon_education}} Implementation → Integration → Introduction → What%%" />
+<dynamic-panel src="../../introduction/what/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Implementation → Integration → Introduction → What%%" />

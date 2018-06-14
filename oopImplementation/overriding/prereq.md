@@ -1,1 +1,1 @@
-<dynamic-panel src="../../oopDesign/inheritance/overriding/full.md" boilerplate header="%%{{glyphicon_education}} OOP → Inheritance → Overriding%%" />
+<dynamic-panel src="../../oopDesign/inheritance/overriding/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} OOP → Inheritance → Overriding%%" />

@@ -1,1 +1,1 @@
-<dynamic-panel src="../../oopDesign/associations/associationClasses/full.md" boilerplate header="%%{{glyphicon_education}} OOP → Associations → Association Classes%%" />
+<dynamic-panel src="../../oopDesign/associations/associationClasses/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} OOP → Associations → Association Classes%%" />

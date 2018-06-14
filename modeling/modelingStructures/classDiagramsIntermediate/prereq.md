@@ -1,6 +1,6 @@
-<dynamic-panel src="../../../oopDesign/inheritance/what/full.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Inheritance → What%%" />
-<dynamic-panel src="../../../oopDesign/classes/classLevelMembers/full.md" boilerplate header="{{glyphicon_education}} %%OOP → Classes → Class Level Members%%" />
-<dynamic-panel src="../../../oopDesign/classes/enumerations/full.md" boilerplate header="{{glyphicon_education}} %%OOP → Classes → Enumerations%%" />
-<dynamic-panel src="../../../uml/classDiagrams/dependencies/what/full.md" boilerplate header="{{glyphicon_education}} %%UML → Class Diagrams → Dependencies%%" />
-<dynamic-panel src="../../../oopDesign/associations/composition/full.md" boilerplate header="{{glyphicon_education}} %%OOP → Associations → Composition%%" />
-<dynamic-panel src="../../../oopDesign/associations/aggregation/full.md" boilerplate header="{{glyphicon_education}} %%OOP → Associations → Aggregation%%" />
+<dynamic-panel src="../../../oopDesign/inheritance/what/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Inheritance → What%%" />
+<dynamic-panel src="../../../oopDesign/classes/classLevelMembers/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%OOP → Classes → Class Level Members%%" />
+<dynamic-panel src="../../../oopDesign/classes/enumerations/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%OOP → Classes → Enumerations%%" />
+<dynamic-panel src="../../../uml/classDiagrams/dependencies/what/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%UML → Class Diagrams → Dependencies%%" />
+<dynamic-panel src="../../../oopDesign/associations/composition/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%OOP → Associations → Composition%%" />
+<dynamic-panel src="../../../oopDesign/associations/aggregation/embed-inOtherContext.md" boilerplate header="{{glyphicon_education}} %%OOP → Associations → Aggregation%%" />

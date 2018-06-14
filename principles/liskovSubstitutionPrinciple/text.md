@@ -13,7 +13,7 @@
 LSP sounds same as <trigger large trigger="click" for="modal:lsp-substitutability">substitutability</trigger> but it goes beyond substitutability; **LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.** As we know, Java has language support for substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.
 
 <modal large title="Textbook »" id="modal:lsp-substitutability">
-  <include src="../../oopDesign/inheritance/substitutability/full.md" boilerplate/>
+  <include src="../../oopDesign/inheritance/substitutability/embed-inOtherContext.md" boilerplate/>
 </modal> 
 
 <tip-box>

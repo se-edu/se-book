@@ -1,1 +1,1 @@
-<dynamic-panel src="../../oopDesign/associations/aggregation/full.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Associations → Aggregation%%" />
+<dynamic-panel src="../../oopDesign/associations/aggregation/embed-inOtherContext.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Associations → Aggregation%%" />
