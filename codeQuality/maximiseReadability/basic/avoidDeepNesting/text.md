@@ -3,6 +3,7 @@
 #### Avoid Deep Nesting
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: avoid deep nesting  :one:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### How :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can apply boundary value analysis :two:</span>
 
 <div id="body">
 

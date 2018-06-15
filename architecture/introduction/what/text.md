@@ -3,6 +3,7 @@
 #### What :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain Software Architecture :one:</span>
 
 <div id="body">
 

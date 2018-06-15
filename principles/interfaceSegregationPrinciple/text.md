@@ -3,6 +3,7 @@
 #### Interface Segregation Principle :four:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain interface segregation principle :four:</span>
 
 <div id="body">
 

@@ -1,4 +1,5 @@
 <div id="path">Java → </div>
+<span id="outcomes">{{glyphicon_flag}} Can use Java Collections :two:</span>
 
 <div id="title">
 

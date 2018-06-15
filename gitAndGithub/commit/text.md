@@ -1,4 +1,5 @@
 <div id="path">Git and Github → </div>
+<span id="outcomes">{{glyphicon_flag}} Can commit using Git :one:</span>
 
 <div id="title">
 

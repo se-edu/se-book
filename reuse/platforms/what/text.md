@@ -3,6 +3,7 @@
 #### What :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain platforms :two:</span>
 
 <div id="body">
 

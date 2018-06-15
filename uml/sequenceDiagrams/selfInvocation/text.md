@@ -3,6 +3,7 @@
 #### Self Invocation :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with self invocation :two:</span>
 
 <div id="body">
 

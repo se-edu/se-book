@@ -3,6 +3,7 @@
 #### What :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain exceptions :one:</span>
 
 <div id="body">
 

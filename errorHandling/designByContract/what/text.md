@@ -1,4 +1,5 @@
 <div id="path">Error Handling → Design-by-Contract Approach →</div>
+<span id="outcomes">{{glyphicon_flag}} Can explain the Design-by-Contract approach :three:</span>
 
 <div id="title">
 

@@ -3,6 +3,7 @@
 #### Implementing Associations :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can implement associations :one:</span>
 
 <div id="body">
 

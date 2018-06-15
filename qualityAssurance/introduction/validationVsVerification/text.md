@@ -3,6 +3,7 @@
 #### Validation vs Verification :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain validation and verification :two:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### What :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain JavaDoc :one:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### Agile Models :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain agile process models :two:</span>
 
 <div id="body">
 

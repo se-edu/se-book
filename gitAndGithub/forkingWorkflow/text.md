@@ -1,4 +1,5 @@
 <div id="path">Git and Github → </div>
+<span id="outcomes">{{glyphicon_flag}} Can follow Forking Workflow :four:</span>
 
 <div id="title">
 

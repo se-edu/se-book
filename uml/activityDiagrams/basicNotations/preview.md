@@ -1,5 +1,5 @@
-<include src="./linearPaths/outcomes.md" />
-<include src="./alternatePaths/outcomes.md" />
-<include src="./parallelPaths/outcomes.md" />
-<include src="./rakes/outcomes.md" />
-<include src="./swimlanes/outcomes.md" />
+<include src="./linearPaths/text.md#outcomes" />
+<include src="./alternatePaths/text.md#outcomes" />
+<include src="./parallelPaths/text.md#outcomes" />
+<include src="./rakes/text.md#outcomes" />
+<include src="./swimlanes/text.md#outcomes" />

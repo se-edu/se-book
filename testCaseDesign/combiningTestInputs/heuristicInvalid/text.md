@@ -1,4 +1,5 @@
 <div id="path">Test Case Design → Combining Test Inputs →</div>
+<span id="outcomes">{{glyphicon_flag}} Can apply heuristic ‘no more than one invalid input in a test case’ :two:</span>
 
 <div id="title">
 

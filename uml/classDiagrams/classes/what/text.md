@@ -3,6 +3,7 @@
 #### What :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can draw UML classes :one:</span>
 
 <div id="body">
 

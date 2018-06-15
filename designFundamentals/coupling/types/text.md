@@ -3,6 +3,7 @@
 #### Types of Coupling :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can identify types of coupling :three:</span>
 
 <div id="body">
 

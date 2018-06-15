@@ -3,6 +3,7 @@
 #### XP :four:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain XP :four:</span>
 
 <div id="body">
 

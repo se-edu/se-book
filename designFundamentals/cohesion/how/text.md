@@ -3,6 +3,7 @@
 #### How :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can increase cohesion :two:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### Single Responsibility Principle :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain single responsibility principle :two:</span>
 
 <div id="body">
 

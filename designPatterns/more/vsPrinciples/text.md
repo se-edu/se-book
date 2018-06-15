@@ -3,6 +3,7 @@
 #### Design Patterns vs Design Principles :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can differentiate between design patterns and principles :three:</span>
 
 <div id="body">
 

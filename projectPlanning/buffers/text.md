@@ -3,6 +3,7 @@
 #### Buffers :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain buffers :two:</span>
 
 <div id="body">
 

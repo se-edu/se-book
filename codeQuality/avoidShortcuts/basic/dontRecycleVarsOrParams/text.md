@@ -3,6 +3,7 @@
 #### Don't Recycle Variables or Parameters
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: don't recycle variables or parameters  :one:</span>
 
 <div id="body">
 

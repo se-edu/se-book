@@ -1,2 +1,2 @@
-<include src="./what/outcomes.md" />
-<include src="./stubs/outcomes.md" />
+<include src="./what/text.md#outcomes" />
+<include src="./stubs/text.md#outcomes" />

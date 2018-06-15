@@ -1,4 +1,5 @@
 <div id="path">Software Engineering → </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain pros and cons of software engineering :two:</span>
 
 <div id="title">
 
@@ -116,4 +117,3 @@ _The Mythical Man-Month: Essays on Software Engineering_ is a book on software e
 <include src="exercises.md" />
 
 </div>
-

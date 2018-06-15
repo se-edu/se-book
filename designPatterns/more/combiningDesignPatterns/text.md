@@ -3,6 +3,7 @@
 #### Combining Design Patterns :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can combine multiple patterns to fit a context :three:</span>
 
 <div id="body">
 

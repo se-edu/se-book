@@ -3,6 +3,7 @@
 #### Adding more info to UML Models :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can add more info to UML models :two:</span>
 
 <div id="body">
 

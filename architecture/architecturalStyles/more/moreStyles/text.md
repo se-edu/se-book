@@ -3,6 +3,7 @@
 #### More Styles :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can name several other architecture styles :two:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### Basic :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can use simple class diagrams and sequence diagrams to model an OO solution :two:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### Interaction Overview Diagrams :four:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain interaction overview diagrams :four:</span>
 
 <div id="body">
 

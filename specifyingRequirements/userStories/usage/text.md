@@ -3,6 +3,7 @@
 #### Usage :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can use user stories to manage requirements of project :three:</span>
 
 <div id="body">
 

@@ -1,4 +1,5 @@
 <div id="path">Object Oriented Programming → </div>
+<span id="outcomes">{{glyphicon_flag}} Can answer frequently asked OOP questions :three:</span>
 
 <div id="title">
 

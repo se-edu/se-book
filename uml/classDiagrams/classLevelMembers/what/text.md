@@ -3,6 +3,7 @@
 #### Class-Level Members :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can interpret class-level members in class diagrams :two:</span>
 
 <div id="body">
 

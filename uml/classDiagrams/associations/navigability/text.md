@@ -3,6 +3,7 @@
 #### Navigability :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can interpret association navigabilities in class diagrams :two:</span>
 
 <div id="body">
 

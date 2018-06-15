@@ -3,6 +3,7 @@
 #### Testing Based on Use Cases :four:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain test case design for use case based testing :four:</span>
 
 <div id="body">
 

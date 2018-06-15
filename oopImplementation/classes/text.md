@@ -3,6 +3,7 @@
 #### Implementing Classes :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can implement classes :one:</span>
 
 <div id="body">
 

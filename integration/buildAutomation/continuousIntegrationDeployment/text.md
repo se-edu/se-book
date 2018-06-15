@@ -3,6 +3,7 @@
 #### Continuous Integration and Continuous Deployment :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain continuous integration and continuous deployment :two:</span>
 
 <div id="body">
 

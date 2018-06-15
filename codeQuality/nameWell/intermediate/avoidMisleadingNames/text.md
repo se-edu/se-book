@@ -3,6 +3,7 @@
 #### Avoid Misleading Names
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: avoid misleading names  :one:</span>
 
 <div id="body">
 

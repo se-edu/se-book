@@ -3,6 +3,7 @@
 #### When :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can use assertions optimally :three:</span>
 
 <div id="body">
 

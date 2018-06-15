@@ -3,6 +3,7 @@
 #### Aggregation :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can interpret aggregation in class diagrams :three:</span>
 
 <div id="body">
 

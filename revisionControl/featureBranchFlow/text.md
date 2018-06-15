@@ -3,6 +3,7 @@
 #### Feature Branch Flow :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain feature branch flow :three:</span>
 
 <div id="body">
 

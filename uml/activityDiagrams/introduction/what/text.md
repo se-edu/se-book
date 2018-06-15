@@ -3,6 +3,7 @@
 #### Introduction :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain activity diagrams :one:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### Introduction :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for following a standard :one:</span>
 
 <div id="body">
 

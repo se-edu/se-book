@@ -3,6 +3,7 @@
 #### Law of Demeter :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain the Law of Demeter :three:</span>
 
 <div id="body">
 

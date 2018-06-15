@@ -3,6 +3,7 @@
 #### Basic :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can interpret simple associations in a class diagram :one:</span>
 
 <div id="body">
 

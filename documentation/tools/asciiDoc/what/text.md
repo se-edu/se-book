@@ -3,6 +3,7 @@
 #### What :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain AsciiDoc :two:</span>
 
 <div id="body">
 

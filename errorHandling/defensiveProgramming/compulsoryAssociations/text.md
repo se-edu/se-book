@@ -3,6 +3,7 @@
 #### Enforcing Compulsory Associations :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can use defensive coding to enforce compulsory associations :two:</span>
 
 <div id="body">
 

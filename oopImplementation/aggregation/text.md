@@ -3,6 +3,7 @@
 #### Implementing Aggregation :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can implement aggregation :two:</span>
 
 <div id="body">
 

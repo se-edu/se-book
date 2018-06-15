@@ -3,6 +3,7 @@
 #### What :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain/identify class diagrams :one:</span>
 
 <div id="body">
 

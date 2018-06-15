@@ -3,6 +3,7 @@
 #### Implementing Inheritance :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can implement basic inheritance :one:</span>
 
 <div id="body">
 

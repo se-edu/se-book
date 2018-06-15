@@ -1,4 +1,5 @@
 <div id="path">Object Oriented Programming → Associations →</div>
+<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of composition :two:</span>
 
 <div id="title">
 

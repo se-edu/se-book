@@ -3,6 +3,7 @@
 #### How :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can write minimal yet sufficient documentation :two:</span>
 
 <div id="body">
 

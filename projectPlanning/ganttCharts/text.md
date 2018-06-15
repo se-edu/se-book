@@ -3,6 +3,7 @@
 #### GANTT Charts :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain GANTT charts :three:</span>
 
 <div id="body">
 

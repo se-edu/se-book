@@ -3,6 +3,7 @@
 #### Focus Groups :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain focus groups :one:</span>
 
 <div id="body">
 

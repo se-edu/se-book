@@ -3,6 +3,7 @@
 #### SOLID Principles :four:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain SOLID Principles :four:</span>
 
 <div id="body">
 

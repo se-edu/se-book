@@ -3,6 +3,7 @@
 #### Merge Conflicts :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can use Git to resolve merge conflicts :three:</span>
 
 <div id="body">
 

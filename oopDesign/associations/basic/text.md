@@ -3,6 +3,7 @@
 #### Basic :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain associations :one:</span>
 
 <div id="body">
 

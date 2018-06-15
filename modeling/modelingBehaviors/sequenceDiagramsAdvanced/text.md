@@ -1,4 +1,5 @@
 <div id="path">Modeling → Modeling Behaviors →</div>
+<span id="outcomes">{{glyphicon_flag}} Can interpret advanced sequence diagrams :three:</span>
 
 <div id="title">
 

@@ -3,6 +3,7 @@
 #### Avoid Magic Numbers
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: avoid magic numbers  :one:</span>
 
 <div id="body">
 

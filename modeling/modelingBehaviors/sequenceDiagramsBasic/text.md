@@ -3,6 +3,7 @@
 #### Sequence Diagrams - Basic :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can draw basic sequence diagrams :one:</span>
 
 <div id="body">
 

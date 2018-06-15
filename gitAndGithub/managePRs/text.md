@@ -3,6 +3,7 @@
 #### Manage PRs :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can review and merge PRs on GitHub :three:</span>
 
 <div id="body">
 

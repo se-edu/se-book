@@ -3,6 +3,7 @@
 #### Reading :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can interpret an architecture diagram :one:</span>
 
 <div id="body">
 

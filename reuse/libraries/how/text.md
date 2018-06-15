@@ -3,6 +3,7 @@
 #### How :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can make use of a library :two:</span>
 
 <div id="body">
 

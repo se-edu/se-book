@@ -1,2 +1,2 @@
-<include src="./what/outcomes.md" />
-<include src="./acceptanceVsSystemTesting/outcomes.md" />
+<include src="./what/text.md#outcomes" />
+<include src="./acceptanceVsSystemTesting/text.md#outcomes" />

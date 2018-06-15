@@ -1,4 +1,5 @@
 <div id="path">Intellij IDEA → </div>
+<span id="outcomes">{{glyphicon_flag}} Can use automated refactoring features of the IDE :two:</span>
 
 <div id="title">
 

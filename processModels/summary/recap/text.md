@@ -3,6 +3,7 @@
 #### Recap :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain process models at a higher level :three:</span>
 
 <div id="body">
 

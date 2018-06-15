@@ -3,6 +3,7 @@
 #### How :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain how test coverage works :three:</span>
 
 <div id="body">
 

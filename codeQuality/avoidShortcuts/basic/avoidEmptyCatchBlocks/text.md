@@ -3,6 +3,7 @@
 #### Avoid Empty Catch Blocks
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: avoid empty catch blocks  :one:</span>
 
 <div id="body">
 

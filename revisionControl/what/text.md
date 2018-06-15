@@ -1,4 +1,5 @@
 <div id="path">Revision Control → </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain revision control :one:</span>
 
 <div id="title">
 

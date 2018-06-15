@@ -3,6 +3,7 @@
 #### Implementing Composition :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can implement composition :two:</span>
 
 <div id="body">
 

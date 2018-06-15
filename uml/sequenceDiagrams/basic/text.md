@@ -3,6 +3,7 @@
 #### Basic :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with basic notation :one:</span>
 
 <div id="body">
 

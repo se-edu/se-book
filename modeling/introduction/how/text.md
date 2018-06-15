@@ -3,6 +3,7 @@
 #### How :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain how models are used :three:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### Structure Code Logically
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: structure code logically  :one:</span>
 
 <div id="body">
 

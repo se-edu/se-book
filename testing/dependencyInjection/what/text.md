@@ -3,6 +3,7 @@
 #### What :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain dependency injection :three:</span>
 
 <div id="body">
 

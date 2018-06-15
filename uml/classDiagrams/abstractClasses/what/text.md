@@ -1,4 +1,5 @@
 <div id="path">UML → Class Diagrams →</div>
+<span id="outcomes">{{glyphicon_flag}} Can interpret abstract classes in class diagrams :two:</span>
 
 <div id="title">
 

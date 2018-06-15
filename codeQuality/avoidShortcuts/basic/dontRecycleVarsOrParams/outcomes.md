@@ -1,1 +1,0 @@
-{{glyphicon_flag}} Can improve code quality using technique: don't recycle variables or parameters  :one:

@@ -1,4 +1,5 @@
 <div id="path">Modeling → </div>
+<span id="outcomes">{{glyphicon_flag}} Can combine some principles concepts :one:</span>
 
 <div id="title">
 

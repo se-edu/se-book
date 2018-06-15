@@ -3,6 +3,7 @@
 #### How :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can reduce coupling :two:</span>
 
 <div id="body">
 

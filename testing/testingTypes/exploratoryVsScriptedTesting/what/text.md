@@ -3,6 +3,7 @@
 #### What :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain exploratory testing and scripted testing :two:</span>
 
 <div id="body">
 

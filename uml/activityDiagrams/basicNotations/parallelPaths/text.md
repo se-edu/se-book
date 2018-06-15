@@ -3,6 +3,7 @@
 #### Parallel Paths :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can interpret parallel paths in activity diagrams :two:</span>
 
 <div id="body">
 

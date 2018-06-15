@@ -3,6 +3,7 @@
 #### YAGNI Principle :four:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain YAGNI principle :four:</span>
 
 <div id="body">
 

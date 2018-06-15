@@ -3,6 +3,7 @@
 #### Optional Paths :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with optional paths :two:</span>
 
 <div id="body">
 

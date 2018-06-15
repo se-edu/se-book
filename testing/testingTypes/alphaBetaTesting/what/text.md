@@ -3,6 +3,7 @@
 #### What :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain alpha and beta testing :three:</span>
 
 <div id="body">
 

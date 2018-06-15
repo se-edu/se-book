@@ -1,4 +1,5 @@
 <div id="path">IDEs → Debugging →</div>
+<span id="outcomes">{{glyphicon_flag}} Can explain debugging :one:</span>
 
 <div id="title">
 

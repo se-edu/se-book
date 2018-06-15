@@ -1,1 +1,0 @@
-{{glyphicon_flag}} Can improve code quality using technique: do not repeat the obvious  :one:

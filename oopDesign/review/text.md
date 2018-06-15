@@ -1,4 +1,5 @@
 <div id="path">Object Oriented Programming → </div>
+<span id="outcomes">{{glyphicon_flag}} Can combine some OOP concepts :one:</span>
 
 <div id="title">
 

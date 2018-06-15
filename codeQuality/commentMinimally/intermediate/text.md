@@ -3,6 +3,7 @@
 ### Intermediate :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can follow intermediate guidelines for writing code comments :two:</span>
 
 <div id="body">
 

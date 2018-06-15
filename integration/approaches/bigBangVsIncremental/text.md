@@ -3,6 +3,7 @@
 #### Big-Bang vs Incremental Integration :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain how integration approaches vary based on amount merged at a time :two:</span>
 
 <div id="body">
 

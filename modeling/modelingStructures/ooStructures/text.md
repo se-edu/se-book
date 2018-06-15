@@ -3,6 +3,7 @@
 #### OO Structures :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain structure modelling of OO solutions :one:</span>
 
 <div id="body">
 

@@ -1,5 +1,5 @@
-<include src="./basic/outcomes.md" />
-<include src="./navigability/outcomes.md" />
-<include src="./roles/outcomes.md" />
-<include src="./labels/outcomes.md" />
-<include src="./multiplicity/outcomes.md" />
+<include src="./basic/text.md#outcomes" />
+<include src="./navigability/text.md#outcomes" />
+<include src="./roles/text.md#outcomes" />
+<include src="./labels/text.md#outcomes" />
+<include src="./multiplicity/text.md#outcomes" />

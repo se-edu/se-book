@@ -3,6 +3,7 @@
 #### Implementing Interfaces :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can implement interfaces :one:</span>
 
 <div id="body">
 

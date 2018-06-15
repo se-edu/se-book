@@ -3,6 +3,7 @@
 #### Introduction :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for avoiding error-prone shortcuts :one:</span>
 
 <div id="body">
 

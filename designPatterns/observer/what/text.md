@@ -3,6 +3,7 @@
 #### What :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain the Observer design pattern :two:</span>
 
 <div id="body">
 

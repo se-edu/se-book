@@ -3,6 +3,7 @@
 #### Interfaces :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain interfaces :two:</span>
 
 <div id="body">
 

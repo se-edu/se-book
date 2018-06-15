@@ -1,1 +1,0 @@
-{{glyphicon_flag}} Can explain the Design-by-Contract approach :three:

@@ -3,6 +3,7 @@
 #### Swimlanes :four:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain swimlanes in activity diagrams :four:</span>
 
 <div id="body">
 

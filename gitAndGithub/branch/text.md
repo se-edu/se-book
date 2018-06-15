@@ -3,6 +3,7 @@
 #### Branch :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can use Git branching :two:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### Avoid Long Methods
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: avoid long methods  :one:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### Scrum :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain scrum :three:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### What :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can identify n-tier architectural style :one:</span>
 
 <div id="body">
 

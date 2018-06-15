@@ -3,6 +3,7 @@
 #### Dependencies :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain dependencies among classes :two:</span>
 
 <div id="body">
 

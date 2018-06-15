@@ -3,6 +3,7 @@
 #### Navigability :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of navigability :one:</span>
 
 <div id="body">
 

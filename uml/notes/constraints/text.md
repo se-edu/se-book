@@ -3,6 +3,7 @@
 #### Constraints :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can specify constraints in UML diagrams :three:</span>
 
 <div id="body">
 

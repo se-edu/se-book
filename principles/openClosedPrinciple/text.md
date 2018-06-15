@@ -3,6 +3,7 @@
 #### Open-Closed Principle :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain open-closed principle (OCP) :one:</span>
 
 <div id="body">
 

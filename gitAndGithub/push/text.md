@@ -1,4 +1,5 @@
 <div id="path">Git and Github → </div>
+<span id="outcomes">{{glyphicon_flag}} Can push to a remote repo :two:</span>
 
 <div id="title">
 

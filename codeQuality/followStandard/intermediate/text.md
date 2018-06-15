@@ -3,6 +3,7 @@
 #### Intermediate :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can follow intermediate style rules :two:</span>
 
 <div id="body">
 

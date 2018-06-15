@@ -3,6 +3,7 @@
 #### Make the Code Obvious
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: make the code obvious  :one:</span>
 
 <div id="body">
 

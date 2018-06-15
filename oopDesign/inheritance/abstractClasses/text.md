@@ -3,6 +3,7 @@
 #### Abstract Classes :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can implement abstract classes :two:</span>
 
 <div id="body">
 

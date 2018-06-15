@@ -1,4 +1,5 @@
 <div id="path">Test Case Design → Summary →</div>
+<span id="outcomes">{{glyphicon_flag}} Can combine test case design techniques :three:</span>
 
 <div id="title">
 

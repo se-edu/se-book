@@ -1,4 +1,5 @@
 <div id="path">Specifying Requirements → User Stories →</div>
+<span id="outcomes">{{glyphicon_flag}} Can write simple user stories :one:</span>
 
 <div id="title">
 

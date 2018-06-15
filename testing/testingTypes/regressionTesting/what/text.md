@@ -1,4 +1,5 @@
 <div id="path">Testing → Testing Types →</div>
+<span id="outcomes">{{glyphicon_flag}} Can explain regression testing :one:</span>
 
 <div id="title">
 

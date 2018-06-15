@@ -3,6 +3,7 @@
 #### Introduction :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain/identify sequence diagrams :one:</span>
 
 <div id="body">
 

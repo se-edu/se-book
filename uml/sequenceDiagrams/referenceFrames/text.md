@@ -3,6 +3,7 @@
 #### Reference Frames :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with reference frames :two:</span>
 
 <div id="body">
 

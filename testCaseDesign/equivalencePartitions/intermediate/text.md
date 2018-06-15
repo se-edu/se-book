@@ -3,6 +3,7 @@
 #### Intermediate :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can apply EP for OOP methods :two:</span>
 
 <div id="body">
 

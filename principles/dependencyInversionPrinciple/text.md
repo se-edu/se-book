@@ -1,4 +1,5 @@
 <div id="path">Software Design Principles → Dependency Inversion Principle →</div>
+<span id="outcomes">{{glyphicon_flag}} Can explain dependency inversion principle (DIP) :one:</span>
 
 <div id="title">
 

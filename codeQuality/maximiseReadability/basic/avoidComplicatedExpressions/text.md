@@ -3,6 +3,7 @@
 #### Avoid Complicated Expressions
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: avoid complicated expressions  :one:</span>
 
 <div id="body">
 

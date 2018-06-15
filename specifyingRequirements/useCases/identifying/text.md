@@ -3,6 +3,7 @@
 #### Identifying :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can use use cases to list functional requirements of a simple system :one:</span>
 
 <div id="body">
 

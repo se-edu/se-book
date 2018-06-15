@@ -3,6 +3,7 @@
 #### Product Surveys :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain product surveys :one:</span>
 
 <div id="body">
 

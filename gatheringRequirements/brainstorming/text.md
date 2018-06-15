@@ -3,6 +3,7 @@
 #### Brainstorming :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain brainstorming :one:</span>
 
 <div id="body">
 

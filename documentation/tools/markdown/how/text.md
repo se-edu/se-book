@@ -1,4 +1,5 @@
 <div id="path">Documentation → Tools →</div>
+<span id="outcomes">{{glyphicon_flag}} Can write documents in Markdown format :two:</span>
 
 <div id="title">
 

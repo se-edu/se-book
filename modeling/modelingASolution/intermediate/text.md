@@ -3,6 +3,7 @@
 #### Intermediate :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can use intermediate class diagram and sequence diagram concepts to model an OO design :three:</span>
 
 <div id="body">
 

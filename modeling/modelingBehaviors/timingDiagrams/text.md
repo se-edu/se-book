@@ -3,6 +3,7 @@
 #### Timing Diagrams :four:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain timing diagrams :four:</span>
 
 <div id="body">
 

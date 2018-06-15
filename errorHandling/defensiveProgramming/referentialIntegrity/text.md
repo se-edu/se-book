@@ -3,6 +3,7 @@
 #### Enforcing Referential Integrity :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can use defensive coding to enforce referential integrity of bi-directional associations :three:</span>
 
 <div id="body">
 

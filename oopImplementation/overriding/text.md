@@ -3,6 +3,7 @@
 #### Implementing Overriding :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can implement operation overriding :one:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### How :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can write documentation in a top-down manner :two:</span>
 
 <div id="body">
 

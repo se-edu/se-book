@@ -3,6 +3,7 @@
 #### Positive vs Negative Test Cases :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain positive and negative test cases :one:</span>
 
 <div id="body">
 

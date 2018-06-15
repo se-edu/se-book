@@ -3,6 +3,7 @@
 #### DRY Principle :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain DRY principle :three:</span>
 
 <div id="body">
 

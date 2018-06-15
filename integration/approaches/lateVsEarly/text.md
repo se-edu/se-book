@@ -3,6 +3,7 @@
 #### 'Late and One Time' vs 'Early and Frequent' :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain how integration approaches vary based on timing and frequency :two:</span>
 
 <div id="body">
 

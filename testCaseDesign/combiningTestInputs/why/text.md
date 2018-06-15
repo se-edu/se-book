@@ -3,6 +3,7 @@
 #### Why :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for strategies to combine test inputs :one:</span>
 
 <div id="body">
 

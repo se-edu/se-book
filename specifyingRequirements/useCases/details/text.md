@@ -3,6 +3,7 @@
 #### Details :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can specify details of a use case in a structured format :two:</span>
 
 <div id="body">
 

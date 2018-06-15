@@ -3,6 +3,7 @@
 #### Basic :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can follow simple mechanical style rules :one:</span>
 
 <div id="body">
 

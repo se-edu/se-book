@@ -1,4 +1,5 @@
 <div id="path">Integration → </div>
+<span id="outcomes">{{glyphicon_flag}} Can combine some integration concepts :one:</span>
 
 <div id="title">
 

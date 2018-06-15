@@ -3,6 +3,7 @@
 #### Enums :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can use Java enumerations :two:</span>
 
 <div id="body">
 

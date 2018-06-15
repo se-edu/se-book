@@ -3,6 +3,7 @@
 #### Substitutability :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain substitutability :two:</span>
 
 <div id="body">
 

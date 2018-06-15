@@ -1,4 +1,5 @@
 <div id="path">Refactoring → </div>
+<span id="outcomes">{{glyphicon_flag}} Can decide when to apply a given refactoring :three:</span>
 
 <div id="title">
 

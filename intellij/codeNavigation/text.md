@@ -1,4 +1,5 @@
 <div id="path">Intellij IDEA → </div>
+<span id="outcomes">{{glyphicon_flag}} Can navigate code effectively using IDE features :two:</span>
 
 <div id="title">
 

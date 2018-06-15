@@ -3,6 +3,7 @@
 #### Team Structures :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain common team structures :three:</span>
 
 <div id="body">
 

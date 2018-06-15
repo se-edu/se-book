@@ -3,6 +3,7 @@
 #### Why :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for early developer testing :two:</span>
 
 <div id="body">
 

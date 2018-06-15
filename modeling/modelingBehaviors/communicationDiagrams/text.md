@@ -3,6 +3,7 @@
 #### Communication Diagrams :four:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain communication diagrams :four:</span>
 
 <div id="body">
 

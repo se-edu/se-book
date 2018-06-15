@@ -1,2 +1,2 @@
-<include src="./moreStyles/outcomes.md" />
-<include src="./usingStyles/outcomes.md" />
+<include src="./moreStyles/text.md#outcomes" />
+<include src="./usingStyles/text.md#outcomes" />

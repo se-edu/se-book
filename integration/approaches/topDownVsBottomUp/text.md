@@ -3,6 +3,7 @@
 #### Top-Down vs Bottom-Up Integration :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain how integration approaches vary based on the order of integration :three:</span>
 
 <div id="body">
 

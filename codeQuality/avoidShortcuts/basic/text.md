@@ -3,6 +3,7 @@
 ### Basic :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can follow basic guidelines for avoiding unsafe shortcuts :one:</span>
 
 <div id="body">
 

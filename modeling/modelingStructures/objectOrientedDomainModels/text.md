@@ -3,6 +3,7 @@
 #### Object Oriented Domain Models :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain object oriented domain models :three:</span>
 
 <div id="body">
 

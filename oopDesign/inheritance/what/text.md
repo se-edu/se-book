@@ -3,6 +3,7 @@
 #### What :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of inheritance :two:</span>
 
 <div id="body">
 

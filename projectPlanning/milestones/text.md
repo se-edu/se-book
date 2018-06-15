@@ -3,6 +3,7 @@
 #### Milestones :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain milestones :one:</span>
 
 <div id="body">
 

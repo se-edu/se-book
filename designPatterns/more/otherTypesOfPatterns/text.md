@@ -3,6 +3,7 @@
 #### Other Types of Patterns :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain how patterns exist beyond software design domain :three:</span>
 
 <div id="body">
 

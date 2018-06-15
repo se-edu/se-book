@@ -3,6 +3,7 @@
 #### Test Automation Using Test Drivers :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain test drivers :two:</span>
 
 <div id="body">
 

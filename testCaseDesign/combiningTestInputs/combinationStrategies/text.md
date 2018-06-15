@@ -3,6 +3,7 @@
 #### Test Input Combination Strategies :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain some basic test input combination strategies :two:</span>
 
 <div id="body">
 

@@ -1,4 +1,5 @@
 <div id="path">Git and Github → </div>
+<span id="outcomes">{{glyphicon_flag}} Can pull changes from a repo :two:</span>
 
 <div id="title">
 

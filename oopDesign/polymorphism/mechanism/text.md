@@ -3,6 +3,7 @@
 #### Mechanism :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain how substitutability operation overriding, and dynamic binding relates to polymorphism :three:</span>
 
 <div id="body">
 

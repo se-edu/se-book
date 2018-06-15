@@ -3,6 +3,7 @@
 #### CMMI :four:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain CMMI :four:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### Implementing Class-Level Members :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can implement class-level members :one:</span>
 
 <div id="body">
 

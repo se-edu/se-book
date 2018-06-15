@@ -3,6 +3,7 @@
 #### When :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain when to use defensive programming :two:</span>
 
 <div id="body">
 

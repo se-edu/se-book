@@ -3,6 +3,7 @@
 #### DRCS vs CRCS :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain DRCS vs CRCS :three:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### UML Models :four:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can identify UML models :four:</span>
 
 <div id="body">
 

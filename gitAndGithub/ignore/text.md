@@ -1,4 +1,5 @@
 <div id="path">Git and Github → </div>
+<span id="outcomes">{{glyphicon_flag}} Can set Git to ignore files :two:</span>
 
 <div id="title">
 

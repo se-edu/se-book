@@ -3,6 +3,7 @@
 #### Aggregation :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of aggregations :three:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### Liskov Substitution Principle :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain Liskov Substitution Principle :three:</span>
 
 <div id="body">
 

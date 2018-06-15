@@ -3,6 +3,7 @@
 #### Centralized Flow :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain centralized flow :two:</span>
 
 <div id="body">
 

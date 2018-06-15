@@ -3,6 +3,7 @@
 #### Class Diagrams (Basics) :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can use basic-level class diagrams :one:</span>
 
 <div id="body">
 

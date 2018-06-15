@@ -3,6 +3,7 @@
 #### Practice KISSing
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: practice kissing  :one:</span>
 
 <div id="body">
 

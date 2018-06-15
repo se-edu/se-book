@@ -3,6 +3,7 @@
 #### What :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for deliberate test case design :two:</span>
 
 <div id="body">
 

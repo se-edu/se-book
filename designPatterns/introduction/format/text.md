@@ -3,6 +3,7 @@
 #### Format :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain design patterns format :two:</span>
 
 <div id="body">
 

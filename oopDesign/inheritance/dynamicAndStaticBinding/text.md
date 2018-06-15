@@ -1,4 +1,5 @@
 <div id="path">Object Oriented Programming → Inheritance →</div>
+<span id="outcomes">{{glyphicon_flag}} Can explain dynamic and static binding :three:</span>
 
 <div id="title">
 

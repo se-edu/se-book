@@ -3,6 +3,7 @@
 #### Prioritizing Requirements :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain prioritizing requirements :one:</span>
 
 <div id="body">
 

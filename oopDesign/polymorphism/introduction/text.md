@@ -3,6 +3,7 @@
 #### Introduction :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain OOP polymorphism :two:</span>
 
 <div id="body">
 

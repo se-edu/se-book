@@ -3,6 +3,7 @@
 #### Deployment Diagrams :four:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain deployment diagrams :four:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### Interviews :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain interviews :one:</span>
 
 <div id="body">
 

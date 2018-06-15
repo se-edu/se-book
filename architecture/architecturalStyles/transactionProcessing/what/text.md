@@ -3,6 +3,7 @@
 #### What :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can identify transaction processing architectural style :one:</span>
 
 <div id="body">
 

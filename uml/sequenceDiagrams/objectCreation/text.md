@@ -3,6 +3,7 @@
 #### Object Creation :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with object creation :two:</span>
 
 <div id="body">
 

@@ -1,4 +1,5 @@
 <div id="path">Git and Github → </div>
+<span id="outcomes">{{glyphicon_flag}} Can clone a remote repo :one:</span>
 
 <div id="title">
 

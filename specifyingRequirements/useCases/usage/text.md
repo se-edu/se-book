@@ -3,6 +3,7 @@
 #### Usage :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can optimize the use of use cases :three:</span>
 
 <div id="body">
 

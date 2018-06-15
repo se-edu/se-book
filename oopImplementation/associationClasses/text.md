@@ -3,6 +3,7 @@
 #### Implementing Association Classes :three:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can implement association classes :three:</span>
 
 <div id="body">
 

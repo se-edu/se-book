@@ -3,6 +3,7 @@
 #### Use Nouns for Things and Verbs for Actions
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: use nouns for things and verbs for actions  :one:</span>
 
 <div id="body">
 

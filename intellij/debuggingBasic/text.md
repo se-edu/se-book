@@ -1,4 +1,5 @@
 <div id="path">Intellij IDEA → </div>
+<span id="outcomes">{{glyphicon_flag}} Can step through a program using a debugger :two:</span>
 
 <div id="title">
 

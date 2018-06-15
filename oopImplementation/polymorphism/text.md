@@ -3,6 +3,7 @@
 #### Implementing Polymorphism :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can implement polymorphism :two:</span>
 
 <div id="body">
 

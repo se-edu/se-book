@@ -3,6 +3,7 @@
 #### What :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can interpret enumerations in class diagrams :two:</span>
 
 <div id="body">
 

@@ -3,6 +3,7 @@
 #### What :one:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can identify event-driven architectural style :one:</span>
 
 <div id="body">
 

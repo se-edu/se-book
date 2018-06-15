@@ -3,6 +3,7 @@
 #### Objects as Abstractions :two:
 
 </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain the abstraction aspect of OOP :two:</span>
 
 <div id="body">
 
