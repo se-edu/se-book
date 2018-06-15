@@ -4,6 +4,8 @@
 
 </div>
 
+<span id="outcomes">{{glyphicon_flag}} Can identify the client-server architectural style :one:</span>
+
 <div id="body">
 
 **The _client-server_ style has at least one component playing the role of a server and at least one client component accessing the services of the server.** This is an architectural style used often in distributed applications.
@@ -13,7 +15,7 @@
 
 <tip-box> 
 
-:package: The online game and teh Web application below uses the client-server style.
+:package: The online game and the Web application below uses the client-server style.
 
 <img src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServerExamples.png" height="200" />
 

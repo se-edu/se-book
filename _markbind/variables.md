@@ -5,3 +5,10 @@
 <span id="good"><font color="green">**<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Good**</font></span>
 
 <span id="bad"><font color="red">**<span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Bad**</font></span>
+
+<span id="outcomes">
+<tip-box>
+
+  <include src="text.md#outcomes" />
+</tip-box>
+</span>

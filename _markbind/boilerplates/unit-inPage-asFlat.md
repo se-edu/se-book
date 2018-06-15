@@ -2,9 +2,7 @@
 
 <div class="website-content">
 
-<tip-box>
-  <include src="outcomes.md" />
-</tip-box></p>
+{{ outcomes | safe}}</p>
 
 <include src="unit-inElsewhere-asFlat.md" boilerplate />
 
