@@ -1,4 +1,3 @@
-<div id="path">Documentation → Tools →</div>
 <span id="outcomes">{{glyphicon_flag}} Can write Javadoc comments :two:</span>
 
 <div id="title">

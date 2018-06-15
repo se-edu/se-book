@@ -1,4 +1,3 @@
-<div id="path">Modeling → Modeling Structures →</div>
 <span id="outcomes">{{glyphicon_flag}} Can use intermediate-level class diagrams :two:</span>
 
 <div id="title">

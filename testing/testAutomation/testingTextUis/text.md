@@ -1,4 +1,3 @@
-<div id="path">Testing → Test Automation →</div>
 <span id="outcomes">{{glyphicon_flag}} Can semi-automate testing of CLIs :one:</span>
 
 <div id="title">

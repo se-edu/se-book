@@ -1,4 +1,3 @@
-<div id="path">Intellij IDEA → </div>
 <span id="outcomes">{{glyphicon_flag}} Can setup a project in an IDE :one:</span>
 
 <div id="title">

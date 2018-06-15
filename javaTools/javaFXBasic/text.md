@@ -1,4 +1,3 @@
-<div id="path">Java → </div>
 <span id="outcomes">{{glyphicon_flag}} Can use JavaFX to build a simple GUI :three:</span>
 
 <div id="title">

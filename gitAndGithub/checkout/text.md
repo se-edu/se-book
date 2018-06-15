@@ -1,4 +1,3 @@
-<div id="path">Git and Github → </div>
 <span id="outcomes">{{glyphicon_flag}} Can load a specific version of a Git repo :two:</span>
 
 <div id="title">

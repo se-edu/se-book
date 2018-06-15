@@ -1,4 +1,3 @@
-<div id="path">Object Oriented Programming →</div>
 <span id="outcomes">{{glyphicon_flag}} Can implement dependencies :two:</span>
 
 <div id="title">

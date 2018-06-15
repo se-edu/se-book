@@ -1,4 +1,3 @@
-<div id="path">Testing → Introduction →</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain testing :one:</span>
 
 <div id="title">

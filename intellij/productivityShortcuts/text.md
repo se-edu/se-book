@@ -1,4 +1,3 @@
-<div id="path">Intellij IDEA → </div>
 <span id="outcomes">{{glyphicon_flag}} Can use some useful IDE productivity shortcuts :three:</span>
 
 <div id="title">

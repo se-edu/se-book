@@ -1,4 +1,3 @@
-<div id="path">Software Engineering → </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain pros and cons of software engineering :two:</span>
 
 <div id="title">

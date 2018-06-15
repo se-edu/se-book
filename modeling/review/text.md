@@ -1,4 +1,3 @@
-<div id="path">Modeling → </div>
 <span id="outcomes">{{glyphicon_flag}} Can combine some modeling concepts :one:</span>
 
 <div id="title">

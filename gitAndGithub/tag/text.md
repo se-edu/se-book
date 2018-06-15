@@ -1,4 +1,3 @@
-<div id="path">Git and Github → </div>
 <span id="outcomes">{{glyphicon_flag}} Can tag commits using Git :three:</span>
 
 <div id="title">

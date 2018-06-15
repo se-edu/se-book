@@ -1,4 +1,3 @@
-<div id="path">Modeling → Modeling Behaviors →</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain use case diagrams :two:</span>
 
 <div id="title">

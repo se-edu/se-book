@@ -1,4 +1,3 @@
-<div id="path">UML → Class Diagrams →</div>
 <span id="outcomes">{{glyphicon_flag}} Can interpret class inheritance in class diagrams :one:</span>
 
 <div id="title">

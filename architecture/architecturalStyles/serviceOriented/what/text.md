@@ -1,4 +1,3 @@
-<div id="path">Architecture → Architectural Styles →</div>
 <span id="outcomes">{{glyphicon_flag}} Can identify service-oriented architectural style :one:</span>
 
 <div id="title">

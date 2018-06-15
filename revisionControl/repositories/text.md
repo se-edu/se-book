@@ -1,4 +1,3 @@
-<div id="path">Revision Control → </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain repositories :one:</span>
 
 <div id="title">

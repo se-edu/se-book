@@ -1,4 +1,3 @@
-<div id="path">Testing → TDD →</div>
 <span id="outcomes">{{glyphicon_flag}} Can follow TDD :three:</span>
 
 <div id="title">

@@ -1,4 +1,3 @@
-<div id="path">Refactoring → </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain refactoring :one:</span>
 
 <div id="title">

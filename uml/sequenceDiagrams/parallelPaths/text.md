@@ -1,4 +1,3 @@
-<div id="path">UML → Sequence Diagrams →</div>
 <span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with parallel paths :three:</span>
 
 <div id="title">

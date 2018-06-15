@@ -1,4 +1,3 @@
-<div id="path">IDEs → Introduction →</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain IDEs :one:</span>
 
 <div id="title">
