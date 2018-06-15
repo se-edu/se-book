@@ -2,6 +2,8 @@
 
 #### UML Models :four:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can identify UML models :four:</span>
 

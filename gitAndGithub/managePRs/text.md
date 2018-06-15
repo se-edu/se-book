@@ -2,6 +2,10 @@
 
 #### Manage PRs :three:
 
+<span id="prereqs"><dynamic-panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Branching%%" />
+<dynamic-panel src="../createPRs/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Create PRs%%" />
+<dynamic-panel src="../mergeConflicts/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Merge Conflicts%%" /></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can review and merge PRs on GitHub :three:</span>
 

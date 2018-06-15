@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can interpret abstract classes in class diagrams :two:</span>
 
 <div id="title">

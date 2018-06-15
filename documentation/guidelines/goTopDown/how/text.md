@@ -2,6 +2,8 @@
 
 #### How :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can write documentation in a top-down manner :two:</span>
 

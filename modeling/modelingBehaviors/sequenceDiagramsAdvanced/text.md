@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can interpret advanced sequence diagrams :three:</span>
 
 <div id="title">

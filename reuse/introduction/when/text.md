@@ -2,6 +2,8 @@
 
 #### When :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain the costs and benefits of reuse :two:</span>
 

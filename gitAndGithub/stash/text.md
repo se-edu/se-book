@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can use Git to stash files :four:</span>
 
 <div id="title">

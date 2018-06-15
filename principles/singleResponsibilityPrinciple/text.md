@@ -2,6 +2,8 @@
 
 #### Single Responsibility Principle :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain single responsibility principle :two:</span>
 

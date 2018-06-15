@@ -2,6 +2,8 @@
 
 #### Implementing Associations :one:
 
+<span id="prereqs"><dynamic-panel src="../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Modelling Structure → Class Diagrams%%" /></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can implement associations :one:</span>
 

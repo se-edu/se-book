@@ -2,6 +2,8 @@
 
 #### How :two:
 
+<span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Design Fundamentals → Coupling → What%%" /></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can reduce coupling :two:</span>
 

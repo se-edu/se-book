@@ -2,6 +2,8 @@
 
 #### Use the Default Branch
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: use the default branch  :one:</span>
 

@@ -2,6 +2,8 @@
 
 ### Intermediate :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can follow intermediate guidelines for avoiding unsafe shortcuts :two:</span>
 

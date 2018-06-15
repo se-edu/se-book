@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can explain IDEs :one:</span>
 
 <div id="title">

@@ -2,6 +2,8 @@
 
 #### Navigability :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can interpret association navigabilities in class diagrams :two:</span>
 

@@ -2,6 +2,8 @@
 
 #### Adding more info to UML Models :one:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can add more info to UML models :two:</span>
 

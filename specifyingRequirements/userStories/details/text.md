@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can write more detailed user stories :two:</span>
 
 <div id="title">

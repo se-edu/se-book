@@ -2,6 +2,8 @@
 
 #### Implementing Inheritance :one:
 
+<span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Inheritance → What%%" /></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can implement basic inheritance :one:</span>
 

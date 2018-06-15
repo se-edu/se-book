@@ -1,2 +1,0 @@
-<dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Error Handling → Assertions → What%%" />
-<dynamic-panel src="../../exceptions/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Error Handling → Exceptions → What%%" />

@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can use Java varargs feature :three:</span>
 
 <div id="title">

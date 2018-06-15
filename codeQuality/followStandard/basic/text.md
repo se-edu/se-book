@@ -2,6 +2,8 @@
 
 #### Basic :one:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can follow simple mechanical style rules :one:</span>
 

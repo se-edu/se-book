@@ -1,4 +1,4 @@
-<include src="prereq.md"/><p/>
+<include src="text.md#prereqs"/><p/>
 
 %%**<include src="../path.md" inline />**%%
 <div id="title-and-body">

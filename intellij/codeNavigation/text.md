@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can navigate code effectively using IDE features :two:</span>
 
 <div id="title">

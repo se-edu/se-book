@@ -1,3 +1,5 @@
+<span id="prereqs"><dynamic-panel src="../../revisionControl/remoteRepositories/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Project Management → Revision Control → Remote Respositories%%" /></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can clone a remote repo :one:</span>
 
 <div id="title">

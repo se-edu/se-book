@@ -2,6 +2,8 @@
 
 #### Validation vs Verification :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain validation and verification :two:</span>
 

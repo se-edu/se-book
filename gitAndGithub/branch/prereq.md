@@ -1,1 +1,0 @@
-<dynamic-panel src="../../revisionControl/branching/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Project Management → Revision Control → Branching%%" />

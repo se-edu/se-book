@@ -1,3 +1,5 @@
+<span id="prereqs"><dynamic-panel src="../../refactoring/what/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Implementation → Refactoring → What%%" /></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can use automated refactoring features of the IDE :two:</span>
 
 <div id="title">

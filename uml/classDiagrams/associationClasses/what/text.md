@@ -2,6 +2,8 @@
 
 #### Association Classes :three:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can interpret association classes in class diagrams :three:</span>
 

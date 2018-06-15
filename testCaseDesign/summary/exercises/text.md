@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can combine test case design techniques :three:</span>
 
 <div id="title">

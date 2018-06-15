@@ -2,6 +2,9 @@
 
 #### Intermediate :three:
 
+<span id="prereqs"><dynamic-panel src="../../../modeling/modelingBehaviors/sequenceDiagramsIntermediate/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Modeling → Modeling Behaviors → Sequence Diagrams → Intermediate%%" />
+<dynamic-panel src="../../../modeling/modelingStructures/classDiagramsIntermediate/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Modeling → Modeling Structures → Class Diagrams → Intermediate%%" /></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can use intermediate class diagram and sequence diagram concepts to model an OO design :three:</span>
 

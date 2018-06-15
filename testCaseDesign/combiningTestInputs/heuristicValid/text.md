@@ -2,6 +2,8 @@
 
 #### Heuristic: Each Valid Input at Least Once in a Positive Test Case :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can apply heuristic ‘each valid input at least once in a positive test case’ :two:</span>
 

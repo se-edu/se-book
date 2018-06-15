@@ -2,6 +2,8 @@
 
 #### Encapsulation Of Objects :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain the encapsulation aspect of OOP :two:</span>
 

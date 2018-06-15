@@ -2,6 +2,8 @@
 
 #### Scrum :three:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain scrum :three:</span>
 

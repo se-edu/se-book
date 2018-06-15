@@ -2,6 +2,8 @@
 
 #### Merge Conflicts :three:
 
+<span id="prereqs"><dynamic-panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Branching%%" /></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can use Git to resolve merge conflicts :three:</span>
 

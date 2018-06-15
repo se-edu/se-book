@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can use JavaFX to build a simple GUI :three:</span>
 
 <div id="title">

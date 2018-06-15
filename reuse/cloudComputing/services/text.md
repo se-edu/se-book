@@ -2,6 +2,8 @@
 
 #### Iaas, PaaS, and SaaS :three:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can distinguish between IaaS, PaaS, and SaaS :three:</span>
 

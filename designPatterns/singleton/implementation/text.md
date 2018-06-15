@@ -2,6 +2,8 @@
 
 #### Implementation :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can apply the Singleton design pattern :two:</span>
 

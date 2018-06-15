@@ -1,1 +1,0 @@
-<dynamic-panel src="../../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Object Oriented Programming → Inheritance → What%%" />

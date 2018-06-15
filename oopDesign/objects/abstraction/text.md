@@ -2,6 +2,8 @@
 
 #### Objects as Abstractions :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain the abstraction aspect of OOP :two:</span>
 

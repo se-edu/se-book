@@ -2,6 +2,8 @@
 
 #### Aggregation :three:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can interpret aggregation in class diagrams :three:</span>
 

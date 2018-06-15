@@ -2,6 +2,8 @@
 
 #### More Styles :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can name several other architecture styles :two:</span>
 

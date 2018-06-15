@@ -2,6 +2,8 @@
 
 #### Minimise Scope of Variables
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: minimise scope of variables  :one:</span>
 

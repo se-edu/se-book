@@ -2,6 +2,8 @@
 
 #### Reading :one:
 
+<span id="prereqs"><dynamic-panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Architecture → Introduction → What%%" /></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can interpret an architecture diagram :one:</span>
 

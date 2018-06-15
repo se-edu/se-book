@@ -2,6 +2,8 @@
 
 #### Acceptance vs System Testing :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain the differences between system testing and acceptance testing :two:</span>
 

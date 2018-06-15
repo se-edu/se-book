@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can combine some principles concepts :one:</span>
 
 <div id="title">

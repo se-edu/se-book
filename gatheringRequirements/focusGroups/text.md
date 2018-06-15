@@ -2,6 +2,8 @@
 
 #### Focus Groups :one:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain focus groups :one:</span>
 

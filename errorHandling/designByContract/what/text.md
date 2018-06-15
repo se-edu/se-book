@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can explain the Design-by-Contract approach :three:</span>
 
 <div id="title">

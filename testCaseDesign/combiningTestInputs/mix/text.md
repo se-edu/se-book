@@ -2,6 +2,8 @@
 
 #### Mix :three:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can apply multiple test input combination techniques together :three:</span>
 

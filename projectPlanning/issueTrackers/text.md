@@ -2,6 +2,8 @@
 
 #### Issue Trackers :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain issue trackers :two:</span>
 

@@ -1,1 +1,0 @@
-<dynamic-panel src="../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Modelling Structure → Class Diagrams%%" />

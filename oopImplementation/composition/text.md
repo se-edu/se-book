@@ -2,6 +2,8 @@
 
 #### Implementing Composition :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can implement composition :two:</span>
 

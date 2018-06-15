@@ -2,6 +2,8 @@
 
 #### Class-Level Members :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can interpret class-level members in class diagrams :two:</span>
 

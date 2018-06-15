@@ -2,6 +2,8 @@
 
 ### Basic :one:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can follow basic guidelines for improving readability :one:</span>
 

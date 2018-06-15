@@ -2,6 +2,8 @@
 
 #### Constraints :three:
 
+<span id="prereqs"><dynamic-panel src="../notes/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} UML → Notes%%" /></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can specify constraints in UML diagrams :three:</span>
 

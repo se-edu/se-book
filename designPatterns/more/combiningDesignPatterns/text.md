@@ -2,6 +2,8 @@
 
 #### Combining Design Patterns :three:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can combine multiple patterns to fit a context :three:</span>
 

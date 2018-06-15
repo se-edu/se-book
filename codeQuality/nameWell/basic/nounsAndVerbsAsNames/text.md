@@ -2,6 +2,8 @@
 
 #### Use Nouns for Things and Verbs for Actions
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: use nouns for things and verbs for actions  :one:</span>
 

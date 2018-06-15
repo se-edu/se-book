@@ -1,1 +1,0 @@
-<dynamic-panel src="../../oopDesign/classes/classLevelMembers/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Classes → Class-Level Members%%" />

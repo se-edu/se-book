@@ -2,6 +2,8 @@
 
 #### Branch :two:
 
+<span id="prereqs"><dynamic-panel src="../../revisionControl/branching/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Project Management → Revision Control → Branching%%" /></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can use Git branching :two:</span>
 

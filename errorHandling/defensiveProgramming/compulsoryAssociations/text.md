@@ -2,6 +2,8 @@
 
 #### Enforcing Compulsory Associations :two:
 
+<span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Implementation → Error Handling → Defensive Programming → What%%" /></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can use defensive coding to enforce compulsory associations :two:</span>
 

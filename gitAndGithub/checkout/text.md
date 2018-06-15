@@ -1,3 +1,5 @@
+<span id="prereqs"><dynamic-panel src="../../revisionControl/usingHistory/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Project Management → Revision Control → Using History%%" /></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can load a specific version of a Git repo :two:</span>
 
 <div id="title">

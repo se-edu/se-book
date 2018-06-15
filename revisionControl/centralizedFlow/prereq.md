@@ -1,1 +1,0 @@
-<dynamic-panel src="../featureBranchFlow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Revision Control → Feature Branch Workflow%%" />

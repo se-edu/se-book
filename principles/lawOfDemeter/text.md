@@ -2,6 +2,8 @@
 
 #### Law of Demeter :three:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain the Law of Demeter :three:</span>
 

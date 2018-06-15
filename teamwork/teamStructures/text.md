@@ -2,6 +2,8 @@
 
 #### Team Structures :three:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain common team structures :three:</span>
 

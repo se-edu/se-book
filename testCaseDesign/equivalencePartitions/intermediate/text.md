@@ -2,6 +2,8 @@
 
 #### Intermediate :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can apply EP for OOP methods :two:</span>
 

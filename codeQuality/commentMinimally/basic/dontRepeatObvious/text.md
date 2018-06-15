@@ -2,6 +2,8 @@
 
 #### Do Not Repeat the Obvious
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: do not repeat the obvious  :one:</span>
 

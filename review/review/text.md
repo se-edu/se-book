@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can combine software engineering concepts :one:</span>
 
 <div id="title">

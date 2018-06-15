@@ -2,6 +2,8 @@
 
 #### Enforcing Referential Integrity :three:
 
+<span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Implementation → Error Handling → Defensive Programming → What%%" /></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can use defensive coding to enforce referential integrity of bi-directional associations :three:</span>
 

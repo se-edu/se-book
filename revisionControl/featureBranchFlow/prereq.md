@@ -1,1 +1,0 @@
-<dynamic-panel src="../forkingWorkflow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Revision Control → Forking Workflow%%" />

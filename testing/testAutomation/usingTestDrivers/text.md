@@ -2,6 +2,8 @@
 
 #### Test Automation Using Test Drivers :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain test drivers :two:</span>
 

@@ -2,6 +2,8 @@
 
 #### Design Patterns vs Design Principles :one:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can differentiate between design patterns and principles :three:</span>
 

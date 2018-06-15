@@ -2,6 +2,8 @@
 
 #### Introduction :one:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain the need for good names in code :one:</span>
 

@@ -1,1 +1,0 @@
-<dynamic-panel src="../../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Architecture → Introduction → What%%" />

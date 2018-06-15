@@ -1,3 +1,0 @@
-<dynamic-panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Branching%%" />
-<dynamic-panel src="../createPRs/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Create PRs%%" />
-<dynamic-panel src="../mergeConflicts/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Merge Conflicts%%" />

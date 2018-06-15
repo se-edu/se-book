@@ -1,1 +1,0 @@
-<dynamic-panel src="../../../oopDesign/classes/basic/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Design → OOP → Classes → Basic%%" />

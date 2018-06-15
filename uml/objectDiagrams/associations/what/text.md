@@ -2,6 +2,8 @@
 
 #### What :one:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can interpret simple associations among objects :one:</span>
 

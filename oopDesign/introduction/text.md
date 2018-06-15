@@ -2,6 +2,8 @@
 
 #### Introduction :one:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can describe OOP at a higher level :one:</span>
 

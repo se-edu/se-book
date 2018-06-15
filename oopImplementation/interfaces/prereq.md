@@ -1,1 +1,0 @@
-<dynamic-panel src="../../oopDesign/inheritance/interfaces/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Inheritance → Interfaces%%" />

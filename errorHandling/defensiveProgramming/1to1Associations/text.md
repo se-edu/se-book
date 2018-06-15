@@ -2,6 +2,8 @@
 
 #### Enforcing 1-to-1 Associations :three:
 
+<span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Implementation → Error Handling → Defensive Programming → What%%" /></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can use defensive coding to enforce 1-to-1 associations :three:</span>
 

@@ -2,6 +2,8 @@
 
 #### Rakes :three:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can use rakes in activity diagrams :three:</span>
 

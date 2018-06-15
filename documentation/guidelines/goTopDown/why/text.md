@@ -2,6 +2,8 @@
 
 #### Why :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain the advantages of top-down documentation :two:</span>
 

@@ -2,6 +2,8 @@
 
 #### Implementing Abstract Classes :two:
 
+<span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/abstractClasses/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Inheritance → Abstract Classes%%" /></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can implement abstract classes :one:</span>
 

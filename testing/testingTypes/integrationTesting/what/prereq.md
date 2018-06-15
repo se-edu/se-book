@@ -1,1 +1,0 @@
-<dynamic-panel src="../../unitTesting/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Quality Assurance → Testing → Unit Testing → What →%%" />

@@ -1,3 +1,5 @@
+<span id="prereqs"><dynamic-panel src="../pull/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Pull%%" /></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can push to a remote repo :two:</span>
 
 <div id="title">

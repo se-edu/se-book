@@ -1,1 +1,0 @@
-<dynamic-panel src="../../refactoring/what/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Implementation → Refactoring → What%%" />

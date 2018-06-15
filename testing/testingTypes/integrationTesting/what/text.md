@@ -2,6 +2,8 @@
 
 #### What :one:
 
+<span id="prereqs"><dynamic-panel src="../../unitTesting/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Quality Assurance → Testing → Unit Testing → What →%%" /></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain integration testing :one:</span>
 

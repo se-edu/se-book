@@ -2,6 +2,8 @@
 
 #### Prioritizing Requirements :one:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain prioritizing requirements :one:</span>
 

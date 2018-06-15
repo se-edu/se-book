@@ -2,6 +2,8 @@
 
 #### Self Invocation :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with self invocation :two:</span>
 

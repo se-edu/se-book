@@ -2,6 +2,8 @@
 
 #### Basic :one:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can interpret simple associations in a class diagram :one:</span>
 

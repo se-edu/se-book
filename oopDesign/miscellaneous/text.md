@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can answer frequently asked OOP questions :three:</span>
 
 <div id="title">

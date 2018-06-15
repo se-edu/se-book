@@ -2,6 +2,8 @@
 
 #### DRCS vs CRCS :three:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain DRCS vs CRCS :three:</span>
 

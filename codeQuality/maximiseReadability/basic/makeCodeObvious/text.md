@@ -2,6 +2,8 @@
 
 #### Make the Code Obvious
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: make the code obvious  :one:</span>
 

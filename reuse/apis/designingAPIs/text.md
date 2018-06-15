@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can design reasonable quality APIs :three:</span>
 
 <div id="title">

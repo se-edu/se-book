@@ -2,6 +2,8 @@
 
 #### Do Not 'Trip Up' Reader
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: do not 'trip up' reader  :one:</span>
 

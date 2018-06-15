@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can explain pros and cons of software engineering :two:</span>
 
 <div id="title">

@@ -2,6 +2,8 @@
 
 #### Streams: Basic :three:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can use Java8 streams :three:</span>
 

@@ -2,6 +2,8 @@
 
 #### JUnit: Intermediate :three:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can use intermediate features of JUnit :three:</span>
 

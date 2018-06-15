@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can setup a project in an IDE :one:</span>
 
 <div id="title">

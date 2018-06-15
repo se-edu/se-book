@@ -2,6 +2,8 @@
 
 #### Communication Diagrams :four:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain communication diagrams :four:</span>
 

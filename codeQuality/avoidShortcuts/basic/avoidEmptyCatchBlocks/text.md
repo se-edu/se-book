@@ -2,6 +2,8 @@
 
 #### Avoid Empty Catch Blocks
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: avoid empty catch blocks  :one:</span>
 

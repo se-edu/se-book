@@ -2,6 +2,8 @@
 
 #### Avoid Long Methods
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: avoid long methods  :one:</span>
 

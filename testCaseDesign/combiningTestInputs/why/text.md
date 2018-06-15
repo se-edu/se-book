@@ -2,6 +2,8 @@
 
 #### Why :one:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain the need for strategies to combine test inputs :one:</span>
 

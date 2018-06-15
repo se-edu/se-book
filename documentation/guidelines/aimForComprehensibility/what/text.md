@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can explain the need for comprehensibility in documents :two:</span>
 
 <div id="title">

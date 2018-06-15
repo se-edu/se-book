@@ -2,6 +2,8 @@
 
 #### Minimal Notation :three:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with minimal notation :three:</span>
 

@@ -2,6 +2,8 @@
 
 #### Enumerations :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain the meaning of enumerations :two:</span>
 

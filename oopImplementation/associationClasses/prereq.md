@@ -1,1 +1,0 @@
-<dynamic-panel src="../../oopDesign/associations/associationClasses/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} OOP → Associations → Association Classes%%" />

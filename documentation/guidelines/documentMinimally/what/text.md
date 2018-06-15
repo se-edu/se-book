@@ -2,6 +2,8 @@
 
 #### What :one:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain documentation should be minimal yet sufficient :one:</span>
 

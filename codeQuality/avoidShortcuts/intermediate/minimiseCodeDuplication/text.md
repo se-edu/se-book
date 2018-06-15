@@ -2,6 +2,8 @@
 
 #### Minimise Code Duplication
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: minimise code duplication  :one:</span>
 

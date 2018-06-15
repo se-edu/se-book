@@ -1,3 +1,10 @@
+<span id="prereqs"><dynamic-panel src="../../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Inheritance → What%%" />
+<dynamic-panel src="../../../oopDesign/classes/classLevelMembers/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%OOP → Classes → Class Level Members%%" />
+<dynamic-panel src="../../../oopDesign/classes/enumerations/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%OOP → Classes → Enumerations%%" />
+<dynamic-panel src="../../../uml/classDiagrams/dependencies/what/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%UML → Class Diagrams → Dependencies%%" />
+<dynamic-panel src="../../../oopDesign/associations/composition/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%OOP → Associations → Composition%%" />
+<dynamic-panel src="../../../oopDesign/associations/aggregation/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%OOP → Associations → Aggregation%%" /></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can use intermediate-level class diagrams :two:</span>
 
 <div id="title">

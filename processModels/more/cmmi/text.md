@@ -2,6 +2,8 @@
 
 #### CMMI :four:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain CMMI :four:</span>
 

@@ -2,6 +2,8 @@
 
 #### Composite Structure Diagrams :four:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain composite structure diagrams :four:</span>
 

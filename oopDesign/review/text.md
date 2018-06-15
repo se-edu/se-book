@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can combine some OOP concepts :one:</span>
 
 <div id="title">

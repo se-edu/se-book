@@ -2,6 +2,8 @@
 
 #### Work Breakdown Structure :one:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain work breakdown structures :one:</span>
 

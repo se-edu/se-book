@@ -1,3 +1,5 @@
+<span id="prereqs"></span>
+
 <span id="outcomes">{{glyphicon_flag}} Can semi-automate testing of CLIs :one:</span>
 
 <div id="title">

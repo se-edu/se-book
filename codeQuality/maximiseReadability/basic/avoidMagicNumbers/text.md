@@ -2,6 +2,8 @@
 
 #### Avoid Magic Numbers
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: avoid magic numbers  :one:</span>
 

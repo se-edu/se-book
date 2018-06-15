@@ -2,6 +2,8 @@
 
 #### Drawing :two:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can draw an architecture diagram :two:</span>
 

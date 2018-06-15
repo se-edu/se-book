@@ -2,6 +2,8 @@
 
 #### Use Standard Words
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: use standard words  :one:</span>
 

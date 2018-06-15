@@ -2,6 +2,8 @@
 
 #### Introduction :one:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain/identify sequence diagrams :one:</span>
 

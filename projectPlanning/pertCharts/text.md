@@ -2,6 +2,8 @@
 
 #### PERT Charts :four:
 
+<span id="prereqs"></span>
+
 </div>
 <span id="outcomes">{{glyphicon_flag}} Can explain PERT charts :four:</span>
 
