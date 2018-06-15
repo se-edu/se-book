@@ -2,9 +2,10 @@
 
 #### Format :two:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain design patterns format :two:</span>
 
 <div id="body">

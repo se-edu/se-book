@@ -2,9 +2,10 @@
 
 #### How :three:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain how models are used :three:</span>
 
 <div id="body">

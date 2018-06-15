@@ -2,9 +2,10 @@
 
 #### Non-Functional Requirements :one:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain non-functional requirements :one:</span>
 
 <div id="body">

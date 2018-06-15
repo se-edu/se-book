@@ -2,9 +2,10 @@
 
 #### Linear Paths :two:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can interpret linear paths in activity diagrams :two:</span>
 
 <div id="body">

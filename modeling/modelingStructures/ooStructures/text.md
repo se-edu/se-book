@@ -2,9 +2,10 @@
 
 #### OO Structures :one:
 
+</div>
+
 <span id="prereqs"><dynamic-panel src="../../../oopDesign/classes/basic/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Design → OOP → Classes → Basic%%" /></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain structure modelling of OO solutions :one:</span>
 
 <div id="body">

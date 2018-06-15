@@ -2,9 +2,10 @@
 
 #### Component Diagrams :four:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain component diagrams :four:</span>
 
 <div id="body">

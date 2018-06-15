@@ -2,9 +2,10 @@
 
 #### Create PRs :two:
 
+</div>
+
 <span id="prereqs"><dynamic-panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Branching%%" /></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can create PRs on GitHub :two:</span>
 
 <div id="body">

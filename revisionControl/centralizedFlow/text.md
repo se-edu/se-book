@@ -2,9 +2,10 @@
 
 #### Centralized Flow :two:
 
+</div>
+
 <span id="prereqs"><dynamic-panel src="../featureBranchFlow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Revision Control → Feature Branch Workflow%%" /></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain centralized flow :two:</span>
 
 <div id="body">

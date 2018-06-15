@@ -2,9 +2,10 @@
 
 #### Iterative Models :one:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain iterative process models :one:</span>
 
 <div id="body">

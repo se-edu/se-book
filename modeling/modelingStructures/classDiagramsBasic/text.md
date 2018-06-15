@@ -2,9 +2,10 @@
 
 #### Class Diagrams (Basics) :one:
 
+</div>
+
 <span id="prereqs"><dynamic-panel src="../../../oopDesign/classes/basic/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Design → OOP → Classes → Basic%%" /></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can use basic-level class diagrams :one:</span>
 
 <div id="body">

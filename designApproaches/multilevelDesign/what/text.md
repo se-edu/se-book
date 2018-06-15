@@ -2,9 +2,10 @@
 
 #### Multi-Level Design :three:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain multi-level design :one:</span>
 
 <div id="body">

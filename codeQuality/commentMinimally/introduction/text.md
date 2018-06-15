@@ -2,9 +2,10 @@
 
 #### Introduction :one:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain the need for commenting minimally but sufficiently :one:</span>
 
 <div id="body">

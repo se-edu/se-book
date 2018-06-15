@@ -2,9 +2,10 @@
 
 #### Separation of Concerns Principle :three:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain separation of concerns principle :three:</span>
 
 <div id="body">

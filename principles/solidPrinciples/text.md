@@ -2,9 +2,10 @@
 
 #### SOLID Principles :four:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain SOLID Principles :four:</span>
 
 <div id="body">

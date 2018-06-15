@@ -2,9 +2,10 @@
 
 #### What :one:
 
+</div>
+
 <span id="prereqs"><dynamic-panel src="../../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Architecture → Introduction → What%%" /></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain architectural styles :one:</span>
 
 <div id="body">

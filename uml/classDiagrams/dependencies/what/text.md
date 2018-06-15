@@ -2,9 +2,10 @@
 
 #### Dependencies :three:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can use dependencies in a class diagram :three:</span>
 
 <div id="body">

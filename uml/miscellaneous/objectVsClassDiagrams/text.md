@@ -2,9 +2,10 @@
 
 #### Object vs Class Diagrams :two:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can distinguish between class diagrams and object diagrams :two:</span>
 
 <div id="body">

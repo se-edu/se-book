@@ -2,9 +2,10 @@
 
 #### Alternate Paths :two:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can interpret alternate paths in activity diagrams :two:</span>
 
 <div id="body">

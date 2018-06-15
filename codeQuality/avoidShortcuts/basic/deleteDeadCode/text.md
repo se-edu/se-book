@@ -2,9 +2,10 @@
 
 #### Delete Dead Code
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: delete dead code  :one:</span>
 
 <div id="body">

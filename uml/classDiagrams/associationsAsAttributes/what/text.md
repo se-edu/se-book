@@ -2,9 +2,10 @@
 
 #### Associations as Attributes :three:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can show an association as an attribute :three:</span>
 
 <div id="body">

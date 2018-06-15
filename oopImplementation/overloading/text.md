@@ -2,9 +2,10 @@
 
 #### Implementing Overloading :one:
 
+</div>
+
 <span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/overloading/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%OOP → Inheritance → Overloading%%" /></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can implement overloading :one:</span>
 
 <div id="body">

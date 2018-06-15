@@ -2,9 +2,10 @@
 
 #### Make the Happy Path Prominent
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: make the happy path prominent  :one:</span>
 
 <div id="body">

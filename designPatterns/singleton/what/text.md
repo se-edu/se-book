@@ -2,9 +2,10 @@
 
 #### What :two:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain the Singleton design pattern :two:</span>
 
 <div id="body">

@@ -2,9 +2,10 @@
 
 #### Activity Diagrams :two:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can use activity diagrams :two:</span>
 
 <div id="body">

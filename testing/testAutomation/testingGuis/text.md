@@ -2,9 +2,10 @@
 
 #### Automated Testing of GUIs :two:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain automated GUI testing :two:</span>
 
 <div id="body">

@@ -2,9 +2,10 @@
 
 #### Substitutability :two:
 
+</div>
+
 <span id="prereqs"><dynamic-panel src="../../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Object Oriented Programming → Inheritance → What%%" /></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain substitutability :two:</span>
 
 <div id="body">

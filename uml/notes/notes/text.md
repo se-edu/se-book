@@ -2,9 +2,10 @@
 
 #### Notes :two:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can use UML notes :two:</span>
 
 <div id="body">

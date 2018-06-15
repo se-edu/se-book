@@ -2,9 +2,10 @@
 
 #### Use Name to Explain
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: use name to explain  :one:</span>
 
 <div id="body">

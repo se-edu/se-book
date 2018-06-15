@@ -2,9 +2,10 @@
 
 #### Deployment Diagrams :four:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain deployment diagrams :four:</span>
 
 <div id="body">

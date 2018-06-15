@@ -2,9 +2,10 @@
 
 #### Association Classes :three:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain the meaning of association classes :three:</span>
 
 <div id="body">

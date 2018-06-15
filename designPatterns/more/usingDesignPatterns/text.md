@@ -2,9 +2,10 @@
 
 #### Using Design Patterns :three:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain pros and cons of design patterns :three:</span>
 
 <div id="body">

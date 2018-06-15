@@ -2,9 +2,10 @@
 
 #### Objects :one:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can draw UML objects :one:</span>
 
 <div id="body">

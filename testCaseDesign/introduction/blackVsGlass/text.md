@@ -2,9 +2,10 @@
 
 #### Black Box vs Glass Box :two:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain black box and glass box test case design :two:</span>
 
 <div id="body">

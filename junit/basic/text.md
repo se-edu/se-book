@@ -2,9 +2,10 @@
 
 #### JUnit: Basic :two:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can use simple JUnit tests :two:</span>
 
 <div id="body">

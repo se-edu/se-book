@@ -2,9 +2,10 @@
 
 #### Roles :two:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain/use association roles in class diagrams :two:</span>
 
 <div id="body">

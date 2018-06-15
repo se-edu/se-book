@@ -2,9 +2,10 @@
 
 #### How :three:
 
+</div>
+
 <span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Quality Assurance → Testing → Dependency Injection → What%%" /></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can use dependency injection :three:</span>
 
 <div id="body">

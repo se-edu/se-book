@@ -2,9 +2,10 @@
 
 #### What :one:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain what is software design :one:</span>
 
 <div id="body">

@@ -2,9 +2,10 @@
 
 ### Basic :one:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can follow basic guidelines for writing code comments :one:</span>
 
 <div id="body">

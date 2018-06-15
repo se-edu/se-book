@@ -2,9 +2,10 @@
 
 #### Explain WHAT and WHY, not HOW
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: explain what and why, not how  :one:</span>
 
 <div id="body">

@@ -2,9 +2,10 @@
 
 #### Rakes :three:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can use rakes in activity diagrams :three:</span>
 
 <div id="body">

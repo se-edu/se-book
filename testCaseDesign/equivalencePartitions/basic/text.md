@@ -2,9 +2,10 @@
 
 #### Basic :two:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can apply EP for pure functions :two:</span>
 
 <div id="body">

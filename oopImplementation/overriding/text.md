@@ -2,9 +2,10 @@
 
 #### Implementing Overriding :one:
 
+</div>
+
 <span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/overriding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} OOP → Inheritance → Overriding%%" /></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can implement operation overriding :one:</span>
 
 <div id="body">

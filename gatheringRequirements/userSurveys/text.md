@@ -2,9 +2,10 @@
 
 #### User Surveys :one:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain user surveys :one:</span>
 
 <div id="body">

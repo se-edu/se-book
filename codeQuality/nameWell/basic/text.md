@@ -2,9 +2,10 @@
 
 ### Basic :one:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can follow basic guidelines for naming :one:</span>
 
 <div id="body">

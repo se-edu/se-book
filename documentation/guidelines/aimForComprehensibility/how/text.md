@@ -2,9 +2,10 @@
 
 #### How :two:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can write reasonably comprehensible developer documents :two:</span>
 
 <div id="body">

@@ -2,9 +2,10 @@
 
 #### Quality of Requirements :one:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain quality of requirements :one:</span>
 
 <div id="body">

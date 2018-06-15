@@ -2,9 +2,10 @@
 
 #### When :three:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain the choice between exploratory testing and scripted testing :three:</span>
 
 <div id="body">

@@ -2,9 +2,10 @@
 
 #### Package Diagrams :four:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain package diagrams :four:</span>
 
 <div id="body">

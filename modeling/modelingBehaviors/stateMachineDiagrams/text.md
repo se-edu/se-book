@@ -2,9 +2,10 @@
 
 #### State Machine Diagrams :four:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain state machine diagrams :four:</span>
 
 <div id="body">

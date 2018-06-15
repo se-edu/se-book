@@ -2,9 +2,10 @@
 
 #### Interaction Overview Diagrams :four:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain interaction overview diagrams :four:</span>
 
 <div id="body">

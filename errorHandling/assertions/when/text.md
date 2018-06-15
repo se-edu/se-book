@@ -2,10 +2,11 @@
 
 #### When :three:
 
+</div>
+
 <span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Error Handling → Assertions → What%%" />
 <dynamic-panel src="../../exceptions/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Error Handling → Exceptions → What%%" /></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can use assertions optimally :three:</span>
 
 <div id="body">

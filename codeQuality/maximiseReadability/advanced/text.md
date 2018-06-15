@@ -2,9 +2,10 @@
 
 ### Advanced :three:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can follow advanced guidelines for improving readability :three:</span>
 
 <div id="body">

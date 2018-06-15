@@ -2,9 +2,10 @@
 
 #### Feature Branch Flow :three:
 
+</div>
+
 <span id="prereqs"><dynamic-panel src="../forkingWorkflow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Revision Control → Forking Workflow%%" /></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain feature branch flow :three:</span>
 
 <div id="body">

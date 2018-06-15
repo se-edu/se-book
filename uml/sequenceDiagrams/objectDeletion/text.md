@@ -2,9 +2,10 @@
 
 #### Object Deletion :two:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with object deletion :two:</span>
 
 <div id="body">

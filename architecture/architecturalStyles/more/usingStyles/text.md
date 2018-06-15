@@ -2,9 +2,10 @@
 
 #### Using Styles :two:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain how architectural styles are combined :two:</span>
 
 <div id="body">

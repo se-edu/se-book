@@ -2,9 +2,10 @@
 
 #### How :two:
 
+</div>
+
 <span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Error Handling → Assertions → What%%" /></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can use assertions :two:</span>
 
 <div id="body">

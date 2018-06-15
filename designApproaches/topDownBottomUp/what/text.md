@@ -2,9 +2,10 @@
 
 #### Top-Down and Bottom-Up Design :four:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain top-down and bottom-up design :four:</span>
 
 <div id="body">

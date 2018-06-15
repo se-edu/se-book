@@ -2,9 +2,10 @@
 
 #### Basic :one:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain the relationship between classes and objects  :one:</span>
 
 <div id="body">

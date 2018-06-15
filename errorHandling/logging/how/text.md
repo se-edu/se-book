@@ -2,9 +2,10 @@
 
 #### How :two:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can use logging :two:</span>
 
 <div id="body">

@@ -2,9 +2,10 @@
 
 #### Brooks' Law :four:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can explain Brooks' law :four:</span>
 
 <div id="body">

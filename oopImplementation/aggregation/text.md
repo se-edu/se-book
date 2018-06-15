@@ -2,9 +2,10 @@
 
 #### Implementing Aggregation :two:
 
+</div>
+
 <span id="prereqs"><dynamic-panel src="../../oopDesign/associations/aggregation/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Associations → Aggregation%%" /></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can implement aggregation :two:</span>
 
 <div id="body">

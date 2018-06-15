@@ -2,9 +2,10 @@
 
 #### What :one:
 
+</div>
+
 <span id="prereqs"></span>
 
-</div>
 <span id="outcomes">{{glyphicon_flag}} Can distinguish between top-down and bottom up documentation :one:</span>
 
 <div id="body">
