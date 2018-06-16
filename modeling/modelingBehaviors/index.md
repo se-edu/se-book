@@ -8,8 +8,10 @@ title: "Modeling: Modeling Behaviors"
 
 %%**Modeling →**%%
 
-## Modeling Behaviors
+<div id="title">
 
+## Modeling Behaviors
+</div>
 <div id="main">
 
 <include src="activityDiagrams/embed.md" boilerplate  />

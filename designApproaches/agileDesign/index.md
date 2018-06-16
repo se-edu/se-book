@@ -2,8 +2,10 @@
 
 <div class="website-content" id="all">
 
-## Agile Design
+<div id="title">
 
+## Agile Design
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

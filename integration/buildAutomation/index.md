@@ -8,8 +8,10 @@ title: "Integration: Build Automation"
 
 %%**Integration →**%%
 
-## Build Automation
+<div id="title">
 
+## Build Automation
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

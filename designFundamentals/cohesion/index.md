@@ -6,8 +6,10 @@ title: "Software Design Fundamentals: Cohesion"
 
 <div class="website-content" id="all">
 
-## Cohesion
+<div id="title">
 
+## Cohesion
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

@@ -8,8 +8,10 @@ title: "Error Handling: Logging"
 
 %%**Error Handling →**%%
 
-## Logging
+<div id="title">
 
+## Logging
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

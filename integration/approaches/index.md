@@ -8,8 +8,10 @@ title: "Integration: Approaches"
 
 %%**Integration →**%%
 
-## Approaches
+<div id="title">
 
+## Approaches
+</div>
 <div id="main">
 
 <include src="lateVsEarly/embed.md" boilerplate  />

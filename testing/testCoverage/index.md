@@ -8,8 +8,10 @@ title: "Testing: Test Coverage"
 
 %%**Testing →**%%
 
-## Test Coverage
+<div id="title">
 
+## Test Coverage
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

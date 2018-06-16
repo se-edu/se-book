@@ -6,8 +6,10 @@ title: "Software Design Fundamentals: Abstraction"
 
 <div class="website-content" id="all">
 
-## Abstraction
+<div id="title">
 
+## Abstraction
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

@@ -8,8 +8,10 @@ title: "Testing: Testing Types"
 
 %%**Testing →**%%
 
-## Testing Types
+<div id="title">
 
+## Testing Types
+</div>
 <div id="main">
 
 Testing can be categorized based on the level of testing, the objective of testing, who is doing the testing, etc.

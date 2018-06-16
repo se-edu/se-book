@@ -8,8 +8,10 @@ title: "Error Handling: Introduction"
 
 %%**Error Handling →**%%
 
-## Introduction
+<div id="title">
 
+## Introduction
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

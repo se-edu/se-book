@@ -8,8 +8,10 @@ title: "Software Design Patterns: Singleton"
 
 %%**Software Design Patterns →**%%
 
-## Singleton Pattern
+<div id="title">
 
+## Singleton Pattern
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

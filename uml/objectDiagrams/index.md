@@ -8,8 +8,10 @@ title: "UML: Object Diagrams"
 
 %%**UML →**%%
 
-## Object Diagrams
+<div id="title">
 
+## Object Diagrams
+</div>
 <div id="main">
 
 <include src="introduction/embed.md" boilerplate  />

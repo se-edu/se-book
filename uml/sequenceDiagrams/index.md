@@ -8,8 +8,10 @@ title: "UML: Sequence Diagrams"
 
 %%**UML →**%%
 
-## Sequence Diagrams
+<div id="title">
 
+## Sequence Diagrams
+</div>
 <div id="main">
 
 <include src="introduction/embed.md" boilerplate  />

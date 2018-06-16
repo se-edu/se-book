@@ -8,8 +8,10 @@ title: "Object Oriented Programming: Associations"
 
 %%**Object Oriented Programming →**%%
 
-## Associations
+<div id="title">
 
+## Associations
+</div>
 <div id="main">
 
 <include src="basic/embed.md" boilerplate  />

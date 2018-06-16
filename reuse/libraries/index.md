@@ -8,8 +8,10 @@ title: "Reuse: Libraries"
 
 %%**Reuse →**%%
 
-## Libraries
+<div id="title">
 
+## Libraries
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

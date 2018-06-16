@@ -8,8 +8,10 @@ title: "UML: Miscellaneous"
 
 %%**UML →**%%
 
-## Miscellaneous
+<div id="title">
 
+## Miscellaneous
+</div>
 <div id="main">
 
 <include src="objectVsClassDiagrams/embed.md" boilerplate  />

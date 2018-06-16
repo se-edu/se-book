@@ -8,8 +8,10 @@ title: "Reuse: APIs"
 
 %%**Reuse →**%%
 
-## APIs
+<div id="title">
 
+## APIs
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

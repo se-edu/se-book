@@ -8,8 +8,10 @@ title: "Modeling: Modeling Structures"
 
 %%**Modeling →**%%
 
-## Modeling Structures
+<div id="title">
 
+## Modeling Structures
+</div>
 <div id="main">
 
 <include src="classDiagramsBasic/embed.md" boilerplate  />

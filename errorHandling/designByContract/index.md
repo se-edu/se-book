@@ -8,8 +8,10 @@ title: "Error Handling: Design-by-Contract Approach"
 
 %%**Error Handling →**%%
 
-## Design-by-Contract Approach
+<div id="title">
 
+## Design-by-Contract Approach
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

@@ -8,8 +8,10 @@ title: "Software Design Patterns: Model View Controller"
 
 %%**Software Design Patterns →**%%
 
-## Model View Controller (MVC) Pattern
+<div id="title">
 
+## Model View Controller (MVC) Pattern
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

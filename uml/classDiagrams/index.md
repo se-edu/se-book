@@ -8,8 +8,10 @@ title: "UML: Class Diagrams"
 
 %%**UML →**%%
 
-## Class Diagrams
+<div id="title">
 
+## Class Diagrams
+</div>
 <div id="main">
 
 <include src="./introduction/chapter.md" boilerplate />

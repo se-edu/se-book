@@ -8,8 +8,10 @@ title: "Object Oriented Programming: Polymorphism"
 
 %%**Object Oriented Programming →**%%
 
-## Polymorphism
+<div id="title">
 
+## Polymorphism
+</div>
 <div id="main">
 
 <include src="introduction/embed.md" boilerplate  />

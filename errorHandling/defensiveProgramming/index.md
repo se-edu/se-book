@@ -8,8 +8,10 @@ title: "Error Handling: Defensive Programming"
 
 %%**Error Handling →**%%
 
-## Defensive Programming
+<div id="title">
 
+## Defensive Programming
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

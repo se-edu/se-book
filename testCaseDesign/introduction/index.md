@@ -8,8 +8,10 @@ title: "Test Case Design: Introduction"
 
 %%**Test Case Design →**%%
 
-## Introduction
+<div id="title">
 
+## Introduction
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

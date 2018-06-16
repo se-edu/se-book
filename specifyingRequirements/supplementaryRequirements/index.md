@@ -8,8 +8,10 @@ title: "Specifying Requirements: Supplementary Requirements"
 
 %%**Specifying Requirements →**%%
 
-## Supplementary Requirements
+<div id="title">
 
+## Supplementary Requirements
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

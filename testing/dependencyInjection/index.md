@@ -8,8 +8,10 @@ title: "Testing: Dependency Injection"
 
 %%**Testing →**%%
 
-## Dependency Injection
+<div id="title">
 
+## Dependency Injection
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

@@ -8,8 +8,10 @@ title: "Specifying Requirements: User Stories"
 
 %%**Specifying Requirements →**%%
 
-## User Stories
+<div id="title">
 
+## User Stories
+</div>
 <div id="main">
 
 <include src="introduction/embed.md" boilerplate  />

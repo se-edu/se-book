@@ -6,8 +6,10 @@ title: "Java: Code Style"
 
 <div class="website-content" id="all">
 
-# Java Code Style
+<div id="title">
 
+# Java Code Style
+</div>
 
 ## Layout
 

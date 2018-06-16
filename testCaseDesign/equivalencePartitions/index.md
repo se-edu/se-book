@@ -8,8 +8,10 @@ title: "Test Case Design: Equivalence Partitions"
 
 %%**Test Case Design →**%%
 
-## Equivalence Partitions
+<div id="title">
 
+## Equivalence Partitions
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

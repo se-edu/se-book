@@ -8,8 +8,10 @@ title: "Reuse: Cloud Computing"
 
 %%**Reuse →**%%
 
-## Cloud Computing
+<div id="title">
 
+## Cloud Computing
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

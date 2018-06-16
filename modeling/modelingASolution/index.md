@@ -8,8 +8,10 @@ title: "Modeling: Modeling a Solution"
 
 %%**Object Oriented Programming →**%%
 
-## Modeling a Solution
+<div id="title">
 
+## Modeling a Solution
+</div>
 <div id="main">
 
 <include src="introduction/embed.md" boilerplate  />

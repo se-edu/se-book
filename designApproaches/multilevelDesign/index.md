@@ -2,8 +2,10 @@
 
 <div class="website-content" id="all">
 
-## Multi-Level Design
+<div id="title">
 
+## Multi-Level Design
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

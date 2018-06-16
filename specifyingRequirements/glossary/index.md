@@ -8,8 +8,10 @@ title: "Specifying Requirements: Glossary"
 
 %%**Specifying Requirements →**%%
 
-## Glossary
+<div id="title">
 
+## Glossary
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

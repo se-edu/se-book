@@ -8,8 +8,10 @@ title: "Specifying Requirements: Feature List"
 
 %%**Specifying Requirements →**%%
 
-## Prose
+<div id="title">
 
+## Prose
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

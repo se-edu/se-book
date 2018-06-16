@@ -8,8 +8,10 @@ title: "Error Handling: Assertions"
 
 %%**Error Handling →**%%
 
-## Assertions
+<div id="title">
 
+## Assertions
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

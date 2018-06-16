@@ -8,8 +8,10 @@ title: "Test Case Design: Combining Test Inputs"
 
 %%**Test Case Design →**%%
 
-## Combining Test Inputs
+<div id="title">
 
+## Combining Test Inputs
+</div>
 <div id="main">
 
 <include src="why/embed.md" boilerplate  />

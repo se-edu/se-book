@@ -8,8 +8,10 @@ title: "Software Design Patterns: Facade"
 
 %%**Software Design Patterns →**%%
 
-## Facade Pattern
+<div id="title">
 
+## Facade Pattern
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

@@ -8,8 +8,10 @@ title: "IDEs: Introduction"
 
 %%**IDEs →**%%
 
-## Introduction
+<div id="title">
 
+## Introduction
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

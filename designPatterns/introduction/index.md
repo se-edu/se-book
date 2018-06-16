@@ -8,8 +8,10 @@ title: "Software Design Patterns: Introduction"
 
 %%**Software Design Patterns →**%%
 
-## Introduction
+<div id="title">
 
+## Introduction
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

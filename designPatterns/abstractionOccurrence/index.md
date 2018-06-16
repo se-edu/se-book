@@ -8,8 +8,10 @@ title: "Software Design Patterns: Abstraction Occurrence"
 
 %%**Software Design Patterns →**%%
 
-## Abstraction Occurrence Pattern
+<div id="title">
 
+## Abstraction Occurrence Pattern
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

@@ -8,8 +8,10 @@ title: "Quality Assurance: Static Analysis"
 
 %%**Quality Assurance →**%%
 
-## Static Analysis
+<div id="title">
 
+## Static Analysis
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

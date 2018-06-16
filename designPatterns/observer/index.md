@@ -8,8 +8,10 @@ title: "Software Design Patterns: Observer"
 
 %%**Software Design Patterns →**%%
 
-## Observer Pattern
+<div id="title">
 
+## Observer Pattern
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

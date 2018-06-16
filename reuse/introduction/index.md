@@ -8,8 +8,10 @@ title: "Reuse: Introduction"
 
 %%**Reuse →**%%
 
-## Introduction
+<div id="title">
 
+## Introduction
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

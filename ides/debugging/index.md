@@ -8,8 +8,10 @@ title: "IDEs: Debugging"
 
 %%**IDEs →**%%
 
-## Debugging
+<div id="title">
 
+## Debugging
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

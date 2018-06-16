@@ -4,8 +4,10 @@
 
 %%**UML →**%%
 
-## Notes
+<div id="title">
 
+## Notes
+</div>
 <div id="main">
 
 <include src="notes/embed.md" boilerplate  />

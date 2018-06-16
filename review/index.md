@@ -6,8 +6,10 @@ title: "Review"
 
 <div class="website-content" id="all">
 
-# Review
+<div id="title">
 
+# Review
+</div>
 <panel header="## Review" type="seamless" alt="review" expanded >
   <include src="review/embed.md" boilerplate  />
 </panel>

@@ -8,8 +8,10 @@ title: "Software Design Patterns: Command"
 
 %%**Software Design Patterns →**%%
 
-## Command Pattern
+<div id="title">
 
+## Command Pattern
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

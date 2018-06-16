@@ -8,8 +8,10 @@ title: "Test Case Design: Boundary Value Analysis"
 
 %%**Test Case Design →**%%
 
-## Boundary Value Analysis
+<div id="title">
 
+## Boundary Value Analysis
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

@@ -6,8 +6,10 @@ title: "Software Design Fundamentals: Coupling"
 
 <div class="website-content" id="all">
 
-## Coupling
+<div id="title">
 
+## Coupling
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

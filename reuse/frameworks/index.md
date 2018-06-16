@@ -8,8 +8,10 @@ title: "Reuse: Frameworks"
 
 %%**Reuse →**%%
 
-## Frameworks
+<div id="title">
 
+## Frameworks
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

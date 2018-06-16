@@ -8,8 +8,10 @@ title: "Documentation: Guidelines"
 
 %%**Documentation →**%%
 
-## Guidelines
+<div id="title">
 
+## Guidelines
+</div>
 <div id="main">
 
 <include src="./intro.md" />

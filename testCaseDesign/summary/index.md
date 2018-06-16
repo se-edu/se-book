@@ -8,8 +8,10 @@ title: "Test Case Design: Summary"
 
 %%**Test Case Design →**%%
 
-## Recap
+<div id="title">
 
+## Recap
+</div>
 <div id="main">
 
 <include src="recap/embed.md" boilerplate  />

@@ -8,8 +8,10 @@ title: "Quality Assurance: Formal Veerification"
 
 %%**Quality Assurance →**%%
 
-## Formal Verification
+<div id="title">
 
+## Formal Verification
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

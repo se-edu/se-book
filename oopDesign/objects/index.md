@@ -8,8 +8,10 @@ title: "Object Oriented Programming: Objects"
 
 %%**Object Oriented Programming →**%%
 
-## Objects
+<div id="title">
 
+## Objects
+</div>
 <div id="main">
 
 <include src="basic/embed.md" boilerplate  />

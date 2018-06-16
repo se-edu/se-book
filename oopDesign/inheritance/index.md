@@ -8,8 +8,10 @@ title: "Object Oriented Programming: Inheritance"
 
 %%**Object Oriented Programming →**%%
 
-## Inheritance
+<div id="title">
 
+## Inheritance
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

@@ -8,8 +8,10 @@ title: "Reuse: Platforms"
 
 %%**Reuse →**%%
 
-## Platforms
+<div id="title">
 
+## Platforms
+</div>
 <div id="main">
 
 <include src="what/embed.md" boilerplate  />

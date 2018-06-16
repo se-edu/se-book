@@ -8,8 +8,10 @@ title: "Documentation: Tools"
 
 %%**Documentation →**%%
 
-## Tools
+<div id="title">
 
+## Tools
+</div>
 <div id="main">
 
 <include src="./javaDoc/chapter.md" boilerplate />
