@@ -10,11 +10,11 @@ title: "Java [Printable]"
 
 # Java
 
-<include src="collections/unit-inParent-asPanel-print.md" boilerplate />
-<include src="enums/unit-inParent-asPanel-print.md" boilerplate />
-<include src="varargs/unit-inParent-asPanel-print.md" boilerplate />
-<include src="javaFXBasic/unit-inParent-asPanel-print.md" boilerplate />
-<include src="streamsBasic/unit-inParent-asPanel-print.md" boilerplate />
+<include src="collections/unit-inParent-asFlat-print.md" boilerplate />
+<include src="enums/unit-inParent-asFlat-print.md" boilerplate />
+<include src="varargs/unit-inParent-asFlat-print.md" boilerplate />
+<include src="javaFXBasic/unit-inParent-asFlat-print.md" boilerplate />
+<include src="streamsBasic/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

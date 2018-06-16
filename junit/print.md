@@ -10,8 +10,8 @@ title: "JUnit [Printable]"
 
 # JUnit
 
-<include src="basic/unit-inParent-asPanel-print.md" boilerplate />
-<include src="intermediate/unit-inParent-asPanel-print.md" boilerplate />
+<include src="basic/unit-inParent-asFlat-print.md" boilerplate />
+<include src="intermediate/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

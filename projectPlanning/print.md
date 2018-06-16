@@ -10,12 +10,12 @@ title: "Project Planning [Printable]"
 
 # Project Planning
 
-<include src="workBreakdownStructure/unit-inParent-asPanel-print.md" boilerplate />
-<include src="milestones/unit-inParent-asPanel-print.md" boilerplate />
-<include src="buffers/unit-inParent-asPanel-print.md" boilerplate />
-<include src="issueTrackers/unit-inParent-asPanel-print.md" boilerplate />
-<include src="ganttCharts/unit-inParent-asPanel-print.md" boilerplate />
-<include src="pertCharts/unit-inParent-asPanel-print.md" boilerplate />
+<include src="workBreakdownStructure/unit-inParent-asFlat-print.md" boilerplate />
+<include src="milestones/unit-inParent-asFlat-print.md" boilerplate />
+<include src="buffers/unit-inParent-asFlat-print.md" boilerplate />
+<include src="issueTrackers/unit-inParent-asFlat-print.md" boilerplate />
+<include src="ganttCharts/unit-inParent-asFlat-print.md" boilerplate />
+<include src="pertCharts/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

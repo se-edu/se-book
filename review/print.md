@@ -12,7 +12,7 @@ title: "Review [Printable]"
 
 ## Review
 
-<include src="review/unit-inParent-asPanel-print.md" boilerplate />
+<include src="review/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

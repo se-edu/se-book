@@ -10,20 +10,20 @@ title: "Git and Github [Printable]"
 
 # Git and GitHub
 
-<include src="init/unit-inParent-asPanel-print.md" boilerplate />
-<include src="commit/unit-inParent-asPanel-print.md" boilerplate />
-<include src="ignore/unit-inParent-asPanel-print.md" boilerplate />
-<include src="tag/unit-inParent-asPanel-print.md" boilerplate />
-<include src="checkout/unit-inParent-asPanel-print.md" boilerplate />
-<include src="stash/unit-inParent-asPanel-print.md" boilerplate />
-<include src="clone/unit-inParent-asPanel-print.md" boilerplate />
-<include src="pull/unit-inParent-asPanel-print.md" boilerplate />
-<include src="push/unit-inParent-asPanel-print.md" boilerplate />
-<include src="branch/unit-inParent-asPanel-print.md" boilerplate />
-<include src="mergeConflicts/unit-inParent-asPanel-print.md" boilerplate />
-<include src="createPRs/unit-inParent-asPanel-print.md" boilerplate />
-<include src="managePRs/unit-inParent-asPanel-print.md" boilerplate />
-<include src="forkingWorkflow/unit-inParent-asPanel-print.md" boilerplate />
+<include src="init/unit-inParent-asFlat-print.md" boilerplate />
+<include src="commit/unit-inParent-asFlat-print.md" boilerplate />
+<include src="ignore/unit-inParent-asFlat-print.md" boilerplate />
+<include src="tag/unit-inParent-asFlat-print.md" boilerplate />
+<include src="checkout/unit-inParent-asFlat-print.md" boilerplate />
+<include src="stash/unit-inParent-asFlat-print.md" boilerplate />
+<include src="clone/unit-inParent-asFlat-print.md" boilerplate />
+<include src="pull/unit-inParent-asFlat-print.md" boilerplate />
+<include src="push/unit-inParent-asFlat-print.md" boilerplate />
+<include src="branch/unit-inParent-asFlat-print.md" boilerplate />
+<include src="mergeConflicts/unit-inParent-asFlat-print.md" boilerplate />
+<include src="createPRs/unit-inParent-asFlat-print.md" boilerplate />
+<include src="managePRs/unit-inParent-asFlat-print.md" boilerplate />
+<include src="forkingWorkflow/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

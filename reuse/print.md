@@ -12,32 +12,32 @@ title: "Reuse [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/unit-inParent-asPanel-print.md" boilerplate />
-<include src="introduction/when/unit-inParent-asPanel-print.md" boilerplate />
+<include src="introduction/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="introduction/when/unit-inParent-asFlat-print.md" boilerplate />
 
 ## APIs
 
-<include src="apis/what/unit-inParent-asPanel-print.md" boilerplate />
-<include src="apis/designingAPIs/unit-inParent-asPanel-print.md" boilerplate />
+<include src="apis/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="apis/designingAPIs/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Libraries
 
-<include src="libraries/what/unit-inParent-asPanel-print.md" boilerplate />
-<include src="libraries/how/unit-inParent-asPanel-print.md" boilerplate />
+<include src="libraries/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="libraries/how/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Frameworks
 
-<include src="frameworks/what/unit-inParent-asPanel-print.md" boilerplate />
-<include src="frameworks/frameworksVsLibraries/unit-inParent-asPanel-print.md" boilerplate />
+<include src="frameworks/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="frameworks/frameworksVsLibraries/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Platforms
 
-<include src="platforms/what/unit-inParent-asPanel-print.md" boilerplate />
+<include src="platforms/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Cloud Computing
 
-<include src="cloudComputing/what/unit-inParent-asPanel-print.md" boilerplate />
-<include src="cloudComputing/services/unit-inParent-asPanel-print.md" boilerplate />
+<include src="cloudComputing/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="cloudComputing/services/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

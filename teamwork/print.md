@@ -10,7 +10,7 @@ title: "Teamwork [Printable]"
 
 # Teamwork
 
-<include src="teamStructures/unit-inParent-asPanel-print.md" boilerplate />
+<include src="teamStructures/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

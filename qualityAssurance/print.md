@@ -12,20 +12,20 @@ title: "Quality Assurance [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/unit-inParent-asPanel-print.md" boilerplate />
-<include src="introduction/validationVsVerification/unit-inParent-asPanel-print.md" boilerplate />
+<include src="introduction/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="introduction/validationVsVerification/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Code Reviews
 
-<include src="codeReviews/what/unit-inParent-asPanel-print.md" boilerplate />
+<include src="codeReviews/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Static Analysis
 
-<include src="staticAnalysis/what/unit-inParent-asPanel-print.md" boilerplate />
+<include src="staticAnalysis/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Formal Verification
 
-<include src="formalVerification/what/unit-inParent-asPanel-print.md" boilerplate />
+<include src="formalVerification/what/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 
