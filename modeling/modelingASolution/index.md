@@ -2,22 +2,4 @@
 title: "Modeling: Modeling a Solution"
 </frontmatter>
 
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content" id="all">
-
-%%**Object Oriented Programming →**%%
-
-<div id="title">
-
-## Modeling a Solution
-</div>
-<div id="main">
-
-<include src="introduction/embed.md" boilerplate  />
-<include src="basic/embed.md" boilerplate  />
-<include src="intermediate/embed.md" boilerplate  />
-
-</div>
-
-</div>
+<include src="container-inPage-asFlat.md" boilerplate />

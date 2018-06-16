@@ -2,28 +2,4 @@
 title: "Modeling: Modeling Behaviors"
 </frontmatter>
 
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content" id="all">
-
-%%**Modeling →**%%
-
-<div id="title">
-
-## Modeling Behaviors
-</div>
-<div id="main">
-
-<include src="activityDiagrams/embed.md" boilerplate  />
-<include src="sequenceDiagramsBasic/embed.md" boilerplate  />
-<!-- <include src="sequenceDiagramsIntermediate/embed.md" boilerplate  /> -->
-<!-- <include src="sequenceDiagramsAdvanced/embed.md" boilerplate  /> -->
-<include src="useCaseDiagrams/embed.md" boilerplate  />
-<include src="timingDiagrams/embed.md" boilerplate  />
-<include src="interactionOverviewDiagrams/embed.md" boilerplate  />
-<include src="communicationDiagrams/embed.md" boilerplate  />
-<include src="stateMachineDiagrams/embed.md" boilerplate  />
-
-</div>
-
-</div>
+<include src="container-inPage-asFlat.md" boilerplate />
