@@ -4,14 +4,14 @@
 
 <div id="title">
 
-#### Pros and Cons :two: [{{glyphicon_new_window}}]({{baseUrl}}/softwareEngineering/prosAndCons/index.html)
+#### Pros and Cons :two: [{{glyphicon_new_window}}]({{baseUrl}}/softwareEngineering/introduction/prosAndCons/index.html)
 
 </div>
 
 <div id="body">
 
 <tip-box type="definition"> 
-  <include src="../../common/definitions.md#def-se" />
+  <include src="../../../common/definitions.md#def-se" />
 </tip-box>
 
 The following description of the _Joys of the Programming Craft_ was taken from Chapter 1 of the famous book <trigger for="modal:mmm" trigger="click">_The Mythical Man-Month_, by Frederick P. Brooks</trigger>.

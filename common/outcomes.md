@@ -10,7 +10,7 @@ title: "SE Book: Full List of Learning Outcomes"
 
 ## Software Engineering
 
-<include src="../softwareEngineering/prosAndCons/unit-inParent-asOutcome.md" boilerplate/>
+<include src="../softwareEngineering/introduction/prosAndCons/unit-inParent-asOutcome.md" boilerplate/>
 
 ## Requirements
 
