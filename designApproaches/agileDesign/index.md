@@ -1,15 +1,5 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<frontmatter>
+title: "Design Approaches: Agile Design"
+</frontmatter>
 
-<div class="website-content" id="all">
-
-<div id="title">
-
-## Agile Design
-</div>
-<div id="main">
-
-<include src="what/embed.md" boilerplate  />
-
-</div>
-
-</div>
+<include src="container-inPage-asFlat.md" boilerplate />

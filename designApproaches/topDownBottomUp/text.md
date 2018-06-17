@@ -1,6 +1,6 @@
 <div id="title">
 
-## Agile Design
+## Top-Down and Bottom-Up Design
 </div>
 
 <div id="body">
