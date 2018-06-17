@@ -1,8 +1,8 @@
 <div id="title">
 
 # Software Architecture
-
 </div>
+
 <div id="body">
 
 <include src="introduction/container-inParent-asPanel.md" boilerplate />
