@@ -85,8 +85,8 @@ title: "SE Book: Full List of Learning Outcomes"
 <include src="../oopDesign/inheritance/substitutability/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oopDesign/polymorphism/introduction/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oopDesign/polymorphism/mechanism/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/miscellaneous/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/review/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oopDesign/more/miscellaneous/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oopDesign/more/review/unit-inParent-asOutcome.md" boilerplate />
 
 ### Modeling
 
