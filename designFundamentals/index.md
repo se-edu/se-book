@@ -2,28 +2,4 @@
 title: "Software Design Fundamentals"
 </frontmatter>
 
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content" id="all">
-
-<div id="title">
-
-# Design Fundamentals
-</div>
-<div id="main">
-
-<panel header="## Abstraction" type="seamless" alt="abstraction" expanded >
-  <include src="abstraction/index.md#main" />
-</panel>
-
-<panel header="## Coupling" type="seamless" alt="coupling" expanded >
-  <include src="coupling/index.md#main" />
-</panel>
-
-<panel header="## Cohesion" type="seamless" alt="cohesion" expanded >
-  <include src="cohesion/index.md#main" />
-</panel>
-
-</div>
-
-</div>
+<include src="container-inPage-asFlat.md" boilerplate />
