@@ -12,7 +12,7 @@ title: "Object Oriented Programming [Printable]"
 
 ## Introduction
 
-<include src="introduction/unit-inParent-asFlat-print.md" boilerplate />
+<include src="introduction/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Objects
 
@@ -51,9 +51,10 @@ title: "Object Oriented Programming [Printable]"
 <include src="polymorphism/introduction/unit-inParent-asFlat-print.md" boilerplate />
 <include src="polymorphism/mechanism/unit-inParent-asFlat-print.md" boilerplate />
 
-## Miscellaneous
+## More
 
-<include src="miscellaneous/unit-inParent-asFlat-print.md" boilerplate />
+<include src="more/miscellaneous/unit-inParent-asFlat-print.md" boilerplate />
+<include src="more/review/unit-inParent-asFlat-print.md" boilerplate />
 
 <!-- TODO: add review -->
 

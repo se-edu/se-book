@@ -62,7 +62,7 @@ title: "SE Book: Full List of Learning Outcomes"
 
 ### Object Oriented Programming
 
-<include src="../oopDesign/introduction/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oopDesign/introduction/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oopDesign/objects/basic/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oopDesign/objects/abstraction/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oopDesign/objects/encapsulation/unit-inParent-asOutcome.md" boilerplate />
