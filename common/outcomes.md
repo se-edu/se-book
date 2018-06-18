@@ -382,7 +382,7 @@ title: "SE Book: Full List of Learning Outcomes"
 <include src="../uml/classDiagrams/interfaces/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../uml/objectDiagrams/introduction/unit-inParent-asOutcome.md" boilerplate />
 <include src="../uml/objectDiagrams/objects/unit-inParent-asOutcome.md" boilerplate />
-<include src="../uml/objectDiagrams/associations/what/unit-inParent-asOutcome.md" boilerplate />
+<include src="../uml/objectDiagrams/associations/unit-inParent-asOutcome.md" boilerplate />
 <include src="../uml/sequenceDiagrams/introduction/unit-inParent-asOutcome.md" boilerplate />
 <include src="../uml/sequenceDiagrams/basic/unit-inParent-asOutcome.md" boilerplate />
 <include src="../uml/sequenceDiagrams/objectCreation/unit-inParent-asOutcome.md" boilerplate />

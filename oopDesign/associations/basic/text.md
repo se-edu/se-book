@@ -12,7 +12,7 @@
 
 Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such **connections between objects are called _associations_.**
 
-<panel src="../../../uml/objectDiagrams/associations/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{glyphicon_education}} Tools → UML → Object Diagrams → Associations → What" expanded />
+<panel src="../../../uml/objectDiagrams/associations/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{glyphicon_education}} Tools → UML → Object Diagrams → Associations → What" expanded />
 
 <p/>
 

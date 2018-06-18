@@ -68,7 +68,7 @@ title: "UML [Printable]"
 
 <include src="objectDiagrams/introduction/unit-inParent-asFlat-print.md" boilerplate />
 <include src="objectDiagrams/objects/unit-inParent-asFlat-print.md" boilerplate />
-<include src="objectDiagrams/associations/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="objectDiagrams/associations/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Sequence Diagrams
 

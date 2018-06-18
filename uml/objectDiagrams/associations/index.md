@@ -1,5 +1,5 @@
 <frontmatter>
-title: "UML: Object Diagrams: Object Structures"
+title: "UML: Object Diagrams: Associations"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

@@ -16,7 +16,7 @@ title: "UML: Object Diagrams"
 
 <include src="introduction/embed.md" boilerplate  />
 <include src="objects/embed.md" boilerplate  />
-<include src="associations/what/embed.md" boilerplate  />
+<include src="associations/embed.md" boilerplate  />
 
 </div>
 
