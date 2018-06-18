@@ -25,7 +25,9 @@ title: "Integration [Printable]"
 <include src="buildAutomation/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="buildAutomation/continuousIntegrationDeployment/unit-inParent-asFlat-print.md" boilerplate />
 
-<!-- TODO: add review -->
+## Build Automation
+
+<include src="more/review/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

@@ -229,7 +229,7 @@ title: "SE Book: Full List of Learning Outcomes"
 <include src="../integration/approaches/topDownVsBottomUp/unit-inParent-asOutcome.md" boilerplate />
 <include src="../integration/buildAutomation/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../integration/buildAutomation/continuousIntegrationDeployment/unit-inParent-asOutcome.md" boilerplate />
-<include src="../integration/review/unit-inParent-asOutcome.md" boilerplate />
+<include src="../integration/more/review/unit-inParent-asOutcome.md" boilerplate />
 
 ### OOP Implementation
 
