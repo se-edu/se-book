@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Review :one:
+#### Exercises :one:
 
 </div>
 

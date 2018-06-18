@@ -97,8 +97,7 @@ title: "Book - Software Engineering for Self-Directed Learners"
 
 ### Supplementary
 
-<!-- TODO: add review -->
-
+* [Combined Exercises](combined/)
 * [List of Definitions](common/definitions.html)
 * [List of References](common/references.html)
 * [List of Learning Outcomes](common/outcomes.html)

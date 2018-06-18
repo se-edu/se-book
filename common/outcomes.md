@@ -442,7 +442,7 @@ title: "SE Book: Full List of Learning Outcomes"
 <include src="../junit/basic/unit-inParent-asOutcome.md" boilerplate />
 <include src="../junit/intermediate/unit-inParent-asOutcome.md" boilerplate />
 
-## Supplementary
+## Principles
 
 ### SE Principles
 
@@ -459,6 +459,6 @@ title: "SE Book: Full List of Learning Outcomes"
 <include src="../principles/dryPrinciple/unit-inParent-asOutcome.md" boilerplate />
 <include src="../principles/review/unit-inParent-asOutcome.md" boilerplate />
 
-### Review
+### Combined
 
-<include src="../review/review/unit-inParent-asOutcome.md" boilerplate />
+<include src="../combined/exercises/unit-inParent-asOutcome.md" boilerplate />

@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Review [Printable]"
+title: "Combined Exercises [Printable]"
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
@@ -8,11 +8,11 @@ title: "Review [Printable]"
 
 <div id="main">
 
-# Review
+# Combined 
 
-## Review
+## Exercises
 
-<include src="review/unit-inParent-asFlat-print.md" boilerplate />
+<include src="exercises/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 
