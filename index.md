@@ -91,9 +91,11 @@ title: "Book - Software Engineering for Self-Directed Learners"
 
 <include src="junit/topicToc.md" />
 
-### Supplementary
+### Principles
 
 <include src="principles/topicToc.md" />
+
+### Supplementary
 
 <!-- TODO: add review -->
 
