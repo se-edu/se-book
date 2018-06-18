@@ -2,20 +2,4 @@
 title: "Testing: Testing Types: Exploratory vs Scripted Testing"
 </frontmatter>
 
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content" id="all">
-
-
-<div id="title">
-
-### Exploratory vs Scripted Testing
-</div>
-
-<div id="main">
-
-<include src="./what/embed.md" boilerplate  />
-<include src="./when/embed.md" boilerplate  />
-
-</div>
-</div>
+<include src="container-inPage-asFlat.md" boilerplate />
