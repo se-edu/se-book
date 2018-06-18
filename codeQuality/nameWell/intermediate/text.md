@@ -1,20 +1,12 @@
 <div id="title">
 
-### Intermediate :two:
-
+### Intermediate
 </div>
-
-<span id="prereqs"></span>
-
-<span id="outcomes">{{glyphicon_flag}} Can follow intermediate guidelines for naming :two:</span>
 
 <div id="body">
 
-<include src="useNameExplain/unit-inParent-asPanel.md" boilerplate />
-<include src="notTooLongNorShort/unit-inParent-asPanel.md" boilerplate />
-<include src="avoidMisleadingNames/unit-inParent-asPanel.md" boilerplate />
+<include src="useNameExplain/container-inParent-asPanel.md" boilerplate />
+<include src="notTooLongNorShort/container-inParent-asPanel.md" boilerplate />
+<include src="avoidMisleadingNames/container-inParent-asPanel.md" boilerplate />
 
-</div>
-
-<div id="extras">
 </div>

@@ -1,15 +1,10 @@
 <div id="title">
 
 ### Introduction
-
 </div>
 
 <div id="body">
 
-<include src="basic/unit-inParent-asPanel.md" boilerplate  />
-
-</div>
-
-<div id="extras">
+<include src="basic/container-inParent-asPanel.md" boilerplate />
 
 </div>

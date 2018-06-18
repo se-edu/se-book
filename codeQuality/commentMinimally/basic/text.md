@@ -1,19 +1,11 @@
 <div id="title">
 
-### Basic :one:
-
+### Basic
 </div>
-
-<span id="prereqs"></span>
-
-<span id="outcomes">{{glyphicon_flag}} Can follow basic guidelines for writing code comments :one:</span>
 
 <div id="body">
 
-<include src="dontRepeatObvious/unit-inParent-asPanel.md" boilerplate />
-<include src="writeToReader/unit-inParent-asPanel.md" boilerplate />
+<include src="dontRepeatObvious/container-inParent-asPanel.md" boilerplate />
+<include src="writeToReader/container-inParent-asPanel.md" boilerplate />
 
-</div>
-
-<div id="extras">
 </div>
