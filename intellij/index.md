@@ -2,23 +2,4 @@
 title: "Intellij IDEA"
 </frontmatter>
 
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content" id="all">
-
-<div id="title">
-
-# Intellij IDEA
-</div>
-
-<div id="main">
-
-<include src="projectSetup/embed.md" boilerplate  />
-<include src="codeNavigation/embed.md" boilerplate  />
-<include src="productivityShortcuts/embed.md" boilerplate  />
-<include src="debuggingBasic/embed.md" boilerplate  />
-<include src="refactoring/embed.md" boilerplate  />
-
-</div>
-
-</div>
+<include src="container-inPage-asFlat.md" boilerplate />
