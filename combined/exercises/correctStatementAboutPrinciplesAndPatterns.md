@@ -1,7 +1,7 @@
-<panel header=":lock::key: Choose the least  correct statement.">
+<panel header=":lock::key: Choose the least  correct statement about principles and patterns." expanded>
 
-<panel header="%%Prerequisites%%" expandable expanded>
-  <dynamic-panel src="../../designPatterns/introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="Design Patterns: Introduction: What" />
+<panel header="%%{{glyphicon_education}}%% Prerequisites" minimized>
+  <dynamic-panel src="../../designPatterns/introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} Design Patterns: Introduction: What" />
 </panel>
 
 <p/>

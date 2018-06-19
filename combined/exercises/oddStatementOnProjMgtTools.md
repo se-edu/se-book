@@ -1,11 +1,11 @@
-<panel header=":lock::key: Pick the odd one out.">
+<panel header=":lock::key: Pick the odd one out of these project management tools/techniques." expanded>
 
-<panel header="%%Prerequisites%%" expandable expanded>
-  <dynamic-panel src="../../revisionControl/what/unit-inElsewhere-asFlat.md" boilerplate header="Revision Control: What" />
+<panel header="%%{{glyphicon_education}}%% Prerequisites" minimized>
+  <dynamic-panel src="../../revisionControl/what/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} Revision Control: What" />
   <dynamic-panel src="../../projectPlanning/ganttCharts/unit-inElsewhere-asFlat.md" boilerplate header="Project Planning: Gantt Charts" />
-  <dynamic-panel src="../../projectPlanning/issueTrackers/unit-inElsewhere-asFlat.md" boilerplate header="Project Planning: Issue Trackers" />
+  <dynamic-panel src="../../projectPlanning/issueTrackers/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} Project Planning: Issue Trackers" />
   <dynamic-panel src="../../projectPlanning/pertCharts/unit-inElsewhere-asFlat.md" boilerplate header="Project Planning: PERT Charts" />
-  <dynamic-panel src="../../projectPlanning/workBreakdownStructure/unit-inElsewhere-asFlat.md" boilerplate header="Project Planning: Work Breakdown Structure" />
+  <dynamic-panel src="../../projectPlanning/workBreakdownStructure/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} Project Planning: Work Breakdown Structure" />
 </panel>
 
 <p/>

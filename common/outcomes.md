@@ -458,7 +458,3 @@ title: "SE Book: Full List of Learning Outcomes"
 <include src="../principles/yagniPrinciple/unit-inParent-asOutcome.md" boilerplate />
 <include src="../principles/dryPrinciple/unit-inParent-asOutcome.md" boilerplate />
 <include src="../principles/review/unit-inParent-asOutcome.md" boilerplate />
-
-### Combined
-
-<include src="../combined/exercises/unit-inParent-asOutcome.md" boilerplate />
