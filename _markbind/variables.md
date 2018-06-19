@@ -7,8 +7,5 @@
 <span id="bad"><font color="red">**<span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Bad**</font></span>
 
 <span id="outcomes">
-<tip-box>
-
-  <include src="text.md#outcomes" />
-</tip-box>
+<button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><md>%%<include src="text.md#outcomes" inline />%%</md></button><p/>
 </span>
