@@ -40,14 +40,6 @@ Less important info
 
 </panel><p/>
 
-**Dash lines indicate collapsed content.** Click on them to expand:
-
-<panel type="seamless" header="%%--------------------------------------%%">
-
-Some content
-
-</panel><p/>
-
 **Tabs indicate alternative formats of the same content** (e.g. video vs text). You can choose the one you like and ignore the other tabs. 
 
 <tip-box>
