@@ -1,12 +1,12 @@
 <div id="title">
 
-#### When :two:
+#### When
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the costs and benefits of reuse :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the costs and benefits of reuse</span>
 
 <div id="body">
 

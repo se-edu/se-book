@@ -1,12 +1,12 @@
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can identify transaction processing architectural style :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can identify transaction processing architectural style</span>
 
 <div id="body">
 

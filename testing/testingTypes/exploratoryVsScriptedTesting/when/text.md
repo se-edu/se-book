@@ -1,12 +1,12 @@
 <div id="title">
 
-#### When :three:
+#### When
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the choice between exploratory testing and scripted testing :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the choice between exploratory testing and scripted testing</span>
 
 <div id="body">
 

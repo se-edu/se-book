@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Buffers :two:
+#### Buffers
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain buffers :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain buffers</span>
 
 <div id="body">
 

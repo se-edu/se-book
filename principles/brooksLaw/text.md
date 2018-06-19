@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Brooks' Law :four:
+#### Brooks' Law
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain Brooks' law :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain Brooks' law</span>
 
 <div id="body">
 

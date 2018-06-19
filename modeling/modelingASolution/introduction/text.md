@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Introduction :one:
+#### Introduction
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain how modelling can be used before implementation :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain how modelling can be used before implementation</span>
 
 <div id="body">
 

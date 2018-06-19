@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain debugging :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain debugging</span>
 
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Introduction :one:
+#### Introduction
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the need for avoiding error-prone shortcuts :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for avoiding error-prone shortcuts</span>
 
 <div id="body">
 

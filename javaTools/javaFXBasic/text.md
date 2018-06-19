@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use JavaFX to build a simple GUI :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use JavaFX to build a simple GUI</span>
 
 <div id="title">
 
-#### JavaFX: Basic :three:
+#### JavaFX: Basic
 
 </div>
 

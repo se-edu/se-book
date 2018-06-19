@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain testing :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain testing</span>
 
 <div id="title">
 
-#### What :one: [{{glyphicon_new_window}}]({{baseUrl}}/testing/introduction/what/index.html)
+#### What [{{glyphicon_new_window}}]({{baseUrl}}/testing/introduction/what/index.html)
 
 </div>
 
@@ -30,7 +30,7 @@
 
 **Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.**
 
-<panel header="%%Other details a test case can contain :two:%%" type="seamless">
+<panel header="%%Other details a test case can contain%%" type="seamless">
 
 A more elaborate test case can have other details such as those given below.  
 
@@ -56,7 +56,7 @@ For each test case we do the following:
 
 </tip-box>
 
-<panel header="%%A deeper look at the definition of testing :three:%%" type="seamless">
+<panel header="%%A deeper look at the definition of testing%%" type="seamless">
 
 Here is another definition of testing:
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain integration :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain integration</span>
 
 <div id="body">
 

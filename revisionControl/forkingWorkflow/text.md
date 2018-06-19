@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Forking Flow :three:
+#### Forking Flow
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain forking workflow :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain forking workflow</span>
 
 <div id="body">
 

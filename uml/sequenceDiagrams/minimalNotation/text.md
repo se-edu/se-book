@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Minimal Notation :three:
+#### Minimal Notation
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with minimal notation :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with minimal notation</span>
 
 <div id="body">
 

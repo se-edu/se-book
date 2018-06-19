@@ -5,11 +5,11 @@
 <dynamic-panel src="../../../oopDesign/associations/composition/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%OOP → Associations → Composition%%" />
 <dynamic-panel src="../../../oopDesign/associations/aggregation/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%OOP → Associations → Aggregation%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use intermediate-level class diagrams :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use intermediate-level class diagrams</span>
 
 <div id="title">
 
-#### Class Diagrams - Intermediate :two:
+#### Class Diagrams - Intermediate
 
 </div>
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### PERT Charts :four:
+#### PERT Charts
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain PERT charts :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain PERT charts</span>
 
 <div id="body">
 

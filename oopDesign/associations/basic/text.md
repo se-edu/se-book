@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Basic :one:
+#### Basic
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain associations :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain associations</span>
 
 <div id="body">
 

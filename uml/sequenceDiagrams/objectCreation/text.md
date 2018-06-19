@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Object Creation :two:
+#### Object Creation
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with object creation :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with object creation</span>
 
 <div id="body">
 

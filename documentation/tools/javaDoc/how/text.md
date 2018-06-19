@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can write Javadoc comments :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can write Javadoc comments</span>
 
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
 

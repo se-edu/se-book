@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Implementing Overloading :one:
+#### Implementing Overloading
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/overloading/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%OOP → Inheritance → Overloading%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can implement overloading :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can implement overloading</span>
 
 <div id="body">
 

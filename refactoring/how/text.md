@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can apply some basic refactoring :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can apply some basic refactoring</span>
 
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
 

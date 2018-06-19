@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Frameworks vs Libraries :three:
+#### Frameworks vs Libraries
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can differentiate between frameworks and libraries :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can differentiate between frameworks and libraries</span>
 
 <div id="body">
 

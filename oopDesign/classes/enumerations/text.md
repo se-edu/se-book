@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Enumerations :two:
+#### Enumerations
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of enumerations :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of enumerations</span>
 
 <div id="body">
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Association Classes :three:
+#### Association Classes
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of association classes :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of association classes</span>
 
 <div id="body">
 

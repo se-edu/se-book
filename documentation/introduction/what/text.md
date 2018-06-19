@@ -1,12 +1,12 @@
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the two types of developer docs :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the two types of developer docs</span>
 
 <div id="body">
 

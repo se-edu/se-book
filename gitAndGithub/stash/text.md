@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use Git to stash files :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use Git to stash files</span>
 
 <div id="title">
 
-#### Stash :four:
+#### Stash
 
 </div>
 

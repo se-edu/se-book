@@ -1,6 +1,6 @@
 <div id="title">
 
-#### Class Diagrams - Advanced :three:
+#### Class Diagrams - Advanced
 
 </div>
 
@@ -8,7 +8,7 @@
 <dynamic-panel src="../../../oopDesign/inheritance/abstractClasses/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} OOP → Inheritance → Abstract Classes%%" />
 <dynamic-panel src="../../../oopDesign/associations/associationClasses/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} OOP → Associations → Association Classes%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use advanced class diagrams :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use advanced class diagrams</span>
 
 <div id="body">
 

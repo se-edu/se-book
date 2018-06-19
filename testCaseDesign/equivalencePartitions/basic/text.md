@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Basic :two:
+#### Basic
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can apply EP for pure functions :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can apply EP for pure functions</span>
 
 <div id="body">
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### How :three:
+#### How
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain how test coverage works :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain how test coverage works</span>
 
 <div id="body">
 

@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can combine test case design techniques :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can combine test case design techniques</span>
 
 <div id="title">
 
-#### Exercises :three:
+#### Exercises
 
 </div>
 

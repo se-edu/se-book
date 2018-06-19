@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Swimlanes :four:
+#### Swimlanes
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain swimlanes in activity diagrams :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain swimlanes in activity diagrams</span>
 
 <div id="body">
 

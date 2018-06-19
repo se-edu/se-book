@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Liskov Substitution Principle :three:
+#### Liskov Substitution Principle
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain Liskov Substitution Principle :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain Liskov Substitution Principle</span>
 
 <div id="body">
 

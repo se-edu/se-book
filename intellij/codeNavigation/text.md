@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can navigate code effectively using IDE features :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can navigate code effectively using IDE features</span>
 
 <div id="title">
 
-#### Code Navigation :two: [{{glyphicon_new_window}}]({{baseUrl}}/intellij/codeNavigation/index.html)
+#### Code Navigation [{{glyphicon_new_window}}]({{baseUrl}}/intellij/codeNavigation/index.html)
 
 </div>
 

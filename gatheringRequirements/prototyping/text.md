@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Prototyping :one:
+#### Prototyping
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain prototyping :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain prototyping</span>
 
 <div id="body">
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Communication Diagrams :four:
+#### Communication Diagrams
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain communication diagrams :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain communication diagrams</span>
 
 <div id="body">
 

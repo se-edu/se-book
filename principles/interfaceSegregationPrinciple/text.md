@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Interface Segregation Principle :four:
+#### Interface Segregation Principle
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain interface segregation principle :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain interface segregation principle</span>
 
 <div id="body">
 

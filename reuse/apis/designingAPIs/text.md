@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can design reasonable quality APIs :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can design reasonable quality APIs</span>
 
 <div id="title">
 
-#### Designing APIs :three:
+#### Designing APIs
 
 </div>
 

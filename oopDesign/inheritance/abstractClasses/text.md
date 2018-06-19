@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Abstract Classes :two:
+#### Abstract Classes
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can implement abstract classes :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can implement abstract classes</span>
 
 <div id="body">
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Why :one:
+#### Why
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the need for strategies to combine test inputs :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for strategies to combine test inputs</span>
 
 <div id="body">
 

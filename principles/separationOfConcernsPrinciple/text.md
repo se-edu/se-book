@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Separation of Concerns Principle :three:
+#### Separation of Concerns Principle
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain separation of concerns principle :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain separation of concerns principle</span>
 
 <div id="body">
 

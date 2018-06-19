@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can identify service-oriented architectural style :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can identify service-oriented architectural style</span>
 
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
 

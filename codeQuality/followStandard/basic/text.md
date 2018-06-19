@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Basic :one:
+#### Basic
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can follow simple mechanical style rules :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can follow simple mechanical style rules</span>
 
 <div id="body">
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Multiplicity :two:
+#### Multiplicity
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain what is the multiplicity of an association :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain what is the multiplicity of an association</span>
 
 <div id="body">
 

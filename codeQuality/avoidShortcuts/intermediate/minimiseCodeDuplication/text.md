@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: minimise code duplication  :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: minimise code duplication </span>
 
 <div id="body">
 

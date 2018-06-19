@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Navigability :one:
+#### Navigability
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of navigability :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of navigability</span>
 
 <div id="body">
 

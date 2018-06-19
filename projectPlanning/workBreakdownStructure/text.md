@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Work Breakdown Structure :one:
+#### Work Breakdown Structure
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain work breakdown structures :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain work breakdown structures</span>
 
 <div id="body">
 

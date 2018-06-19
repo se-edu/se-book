@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain refactoring :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain refactoring</span>
 
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
 

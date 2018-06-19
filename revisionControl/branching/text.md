@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain branching :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain branching</span>
 
 <div id="title">
 
-#### Branching :two:
+#### Branching
 
 </div>
 

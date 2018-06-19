@@ -1,12 +1,12 @@
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain design patterns :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain design patterns</span>
 
 <div id="body">
 

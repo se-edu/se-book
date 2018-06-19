@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Objects :one:
+#### Objects
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can draw UML objects :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can draw UML objects</span>
 
 <div id="body">
 

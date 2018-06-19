@@ -1,12 +1,12 @@
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret enumerations in class diagrams :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret enumerations in class diagrams</span>
 
 <div id="body">
 

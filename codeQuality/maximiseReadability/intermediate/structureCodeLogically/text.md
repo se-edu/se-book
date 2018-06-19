@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: structure code logically  :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: structure code logically </span>
 
 <div id="body">
 

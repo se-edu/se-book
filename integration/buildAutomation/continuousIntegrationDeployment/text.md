@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Continuous Integration and Continuous Deployment :two:
+#### Continuous Integration and Continuous Deployment
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain continuous integration and continuous deployment :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain continuous integration and continuous deployment</span>
 
 <div id="body">
 

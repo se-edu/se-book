@@ -1,12 +1,12 @@
 <div id="title">
 
-#### How :three:
+#### How
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain how models are used :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain how models are used</span>
 
 <div id="body">
 
@@ -57,7 +57,7 @@ c) **As a blueprint for creating software.** Models can be used as instructions 
 
 <!-- TODO: make this an independent LO 4* -->
 
-<panel header="Model Driven Development :four:" type="seamless">
+<panel header="Model Driven Development" type="seamless">
 
 **_Model-driven development (MDD)_, also called _Model-driven engineering_, is an approach to software development that strives to exploits models as blueprints.** MDD uses models as primary engineering artifacts when developing software. That is, the system is first created in the form of models. After that, the models are converted to code using code-generation techniques (usually, automated or semi-automated, but can even involve manual translation from model to code). MDD requires the use of a very expressive modeling notation (graphical or otherwise), often specific to a given problem domain. It also requires sophisticated tools to generate code from models and maintain the link between models and the code. One advantage of MDD is that the same model can be used to create software for different platforms and different languages. MDD has a lot of promise, but it is still an emerging technology
 

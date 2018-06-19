@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: do not repeat the obvious  :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: do not repeat the obvious </span>
 
 <div id="body">
 

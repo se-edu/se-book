@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Testability :three:
+#### Testability
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain testability :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain testability</span>
 
 <div id="body">
 

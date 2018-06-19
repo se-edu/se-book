@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Basic :one:
+#### Basic
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with basic notation :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with basic notation</span>
 
 <div id="body">
 

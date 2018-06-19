@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can combine some integration concepts :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can combine some integration concepts</span>
 
 <div id="title">
 
-#### Review :one:
+#### Review
 
 </div>
 

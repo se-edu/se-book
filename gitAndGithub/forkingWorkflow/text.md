@@ -1,10 +1,10 @@
 <span id="prereqs"><dynamic-panel src="../../revisionControl/forkingWorkflow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Revision Control → Forking Workflow%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can follow Forking Workflow :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can follow Forking Workflow</span>
 
 <div id="title">
 
-#### Forking Workflow :four:
+#### Forking Workflow
 
 </div>
 

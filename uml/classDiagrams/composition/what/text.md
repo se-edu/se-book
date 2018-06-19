@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Composition :two:
+#### Composition
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret composition in class diagrams :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret composition in class diagrams</span>
 
 <div id="body">
 

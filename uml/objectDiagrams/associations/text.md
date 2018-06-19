@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Associations :one:
+#### Associations
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret simple associations among objects :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret simple associations among objects</span>
 
 <div id="body">
 

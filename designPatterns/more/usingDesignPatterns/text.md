@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Using Design Patterns :three:
+#### Using Design Patterns
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain pros and cons of design patterns :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain pros and cons of design patterns</span>
 
 <div id="body">
 

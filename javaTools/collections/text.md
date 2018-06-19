@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use Java Collections :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use Java Collections</span>
 
 <div id="title">
 
-#### Collections :two: [{{glyphicon_new_window}}]({{baseUrl}}/javaTools/collections/index.html)
+#### Collections [{{glyphicon_new_window}}]({{baseUrl}}/javaTools/collections/index.html)
 
 </div>
 

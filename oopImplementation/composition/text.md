@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Implementing Composition :two:
+#### Implementing Composition
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can implement composition :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can implement composition</span>
 
 <div id="body">
 

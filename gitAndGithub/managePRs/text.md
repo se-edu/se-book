@@ -1,6 +1,6 @@
 <div id="title">
 
-#### Manage PRs :three:
+#### Manage PRs
 
 </div>
 
@@ -8,7 +8,7 @@
 <dynamic-panel src="../createPRs/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Create PRs%%" />
 <dynamic-panel src="../mergeConflicts/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Merge Conflicts%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can review and merge PRs on GitHub :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can review and merge PRs on GitHub</span>
 
 <div id="body">
 

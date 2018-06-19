@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Create PRs :two:
+#### Create PRs
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Branching%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can create PRs on GitHub :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can create PRs on GitHub</span>
 
 <div id="body">
 

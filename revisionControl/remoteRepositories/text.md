@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain remote repositories :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain remote repositories</span>
 
 <div id="title">
 
-#### Remote Repositories :two:
+#### Remote Repositories
 
 </div>
 

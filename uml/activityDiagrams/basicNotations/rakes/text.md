@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Rakes :three:
+#### Rakes
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use rakes in activity diagrams :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use rakes in activity diagrams</span>
 
 <div id="body">
 

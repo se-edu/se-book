@@ -1,12 +1,12 @@
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Error Handling → Assertions → What%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use assertions :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use assertions</span>
 
 <div id="body">
 

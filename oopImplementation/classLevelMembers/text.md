@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Implementing Class-Level Members :one:
+#### Implementing Class-Level Members
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../../oopDesign/classes/classLevelMembers/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Classes → Class-Level Members%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can implement class-level members :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can implement class-level members</span>
 
 <div id="body">
 

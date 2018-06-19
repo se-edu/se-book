@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Interaction Overview Diagrams :four:
+#### Interaction Overview Diagrams
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain interaction overview diagrams :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain interaction overview diagrams</span>
 
 <div id="body">
 

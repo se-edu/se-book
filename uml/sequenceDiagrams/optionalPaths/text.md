@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Optional Paths :two:
+#### Optional Paths
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with optional paths :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with optional paths</span>
 
 <div id="body">
 

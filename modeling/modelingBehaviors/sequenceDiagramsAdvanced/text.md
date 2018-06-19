@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret advanced sequence diagrams :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret advanced sequence diagrams</span>
 
 <div id="title">
 
-#### Sequence Diagrams - Advanced :three:
+#### Sequence Diagrams - Advanced
 
 </div>
 

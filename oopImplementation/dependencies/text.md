@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can implement dependencies :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can implement dependencies</span>
 
 <div id="title">
 
-#### Implementing Dependencies :two:
+#### Implementing Dependencies
 
 </div>
 

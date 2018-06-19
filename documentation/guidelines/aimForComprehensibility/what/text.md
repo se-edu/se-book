@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the need for comprehensibility in documents :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for comprehensibility in documents</span>
 
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
 

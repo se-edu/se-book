@@ -1,12 +1,12 @@
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Design Fundamentals → Coupling → What%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can reduce coupling :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can reduce coupling</span>
 
 <div id="body">
 

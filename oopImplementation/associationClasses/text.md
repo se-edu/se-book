@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Implementing Association Classes :three:
+#### Implementing Association Classes
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../../oopDesign/associations/associationClasses/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} OOP → Associations → Association Classes%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can implement association classes :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can implement association classes</span>
 
 <div id="body">
 

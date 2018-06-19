@@ -1,10 +1,10 @@
 <span id="prereqs"><dynamic-panel src="../init/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Git & GitHub → Init%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can commit using Git :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can commit using Git</span>
 
 <div id="title">
 
-#### Commit :one: [{{glyphicon_new_window}}]({{baseUrl}}/gitAndGithub/commit/index.html)
+#### Commit [{{glyphicon_new_window}}]({{baseUrl}}/gitAndGithub/commit/index.html)
 
 </div>
 

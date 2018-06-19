@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Top-Down and Bottom-Up Design :four:
+#### Top-Down and Bottom-Up Design
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain top-down and bottom-up design :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain top-down and bottom-up design</span>
 
 <div id="body">
 

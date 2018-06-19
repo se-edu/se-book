@@ -1,12 +1,12 @@
 <div id="title">
 
-#### UML Models :four:
+#### UML Models
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can identify UML models :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can identify UML models</span>
 
 <div id="body">
 

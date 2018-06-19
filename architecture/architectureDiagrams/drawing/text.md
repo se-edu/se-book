@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Drawing :two:
+#### Drawing
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can draw an architecture diagram :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can draw an architecture diagram</span>
 
 <div id="body">
 

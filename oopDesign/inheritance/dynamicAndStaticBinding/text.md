@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain dynamic and static binding :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain dynamic and static binding</span>
 
 <div id="title">
 
-#### Dynamic and Static Binding :three:
+#### Dynamic and Static Binding
 
 </div>
 

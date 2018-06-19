@@ -1,6 +1,6 @@
 <div id="title">
 
-#### Sequence Diagrams - Basic :one:
+#### Sequence Diagrams - Basic
 
 </div>
 
@@ -9,7 +9,7 @@
 <dynamic-panel src="../../../uml/sequenceDiagrams/objectCreation/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%UML → Sequence Diagrams → Object Creation%%" />
 <dynamic-panel src="../../../uml/sequenceDiagrams/minimalNotation/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%UML → Sequence Diagrams → Minimal Notation%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can draw basic sequence diagrams :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can draw basic sequence diagrams</span>
 
 <div id="body">
 

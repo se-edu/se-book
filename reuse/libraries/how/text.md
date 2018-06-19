@@ -1,12 +1,12 @@
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can make use of a library :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can make use of a library</span>
 
 <div id="body">
 

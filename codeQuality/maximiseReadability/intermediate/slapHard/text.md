@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: slap hard  :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: slap hard </span>
 
 <div id="body">
 

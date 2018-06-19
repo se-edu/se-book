@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Other Design Patterns :three:
+#### Other Design Patterns
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can recognize some of the GoF design patterns :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can recognize some of the GoF design patterns</span>
 
 <div id="body">
 

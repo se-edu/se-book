@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Parallel Paths :two:
+#### Parallel Paths
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret parallel paths in activity diagrams :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret parallel paths in activity diagrams</span>
 
 <div id="body">
 

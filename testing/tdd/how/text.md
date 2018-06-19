@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can follow TDD :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can follow TDD</span>
 
 <div id="title">
 
-#### How :three:
+#### How
 
 </div>
 

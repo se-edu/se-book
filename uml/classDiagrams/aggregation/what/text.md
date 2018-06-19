@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Aggregation :three:
+#### Aggregation
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret aggregation in class diagrams :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret aggregation in class diagrams</span>
 
 <div id="body">
 

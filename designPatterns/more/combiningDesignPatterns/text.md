@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Combining Design Patterns :three:
+#### Combining Design Patterns
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can combine multiple patterns to fit a context :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can combine multiple patterns to fit a context</span>
 
 <div id="body">
 

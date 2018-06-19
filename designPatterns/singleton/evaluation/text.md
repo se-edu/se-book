@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Evaluation :three:
+#### Evaluation
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can decide when to apply Singleton design pattern :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can decide when to apply Singleton design pattern</span>
 
 <div id="body">
 

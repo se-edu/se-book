@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Types of Coupling :three:
+#### Types of Coupling
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Design Fundamentals → Coupling → What%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can identify types of coupling :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can identify types of coupling</span>
 
 <div id="body">
 

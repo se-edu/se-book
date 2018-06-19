@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: avoid long methods  :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: avoid long methods </span>
 
 <div id="body">
 

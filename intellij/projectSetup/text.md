@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can setup a project in an IDE :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can setup a project in an IDE</span>
 
 <div id="title">
 
-#### Project Setup :one: [{{glyphicon_new_window}}]({{baseUrl}}/intellij/projectSetup/index.html)
+#### Project Setup [{{glyphicon_new_window}}]({{baseUrl}}/intellij/projectSetup/index.html)
 
 </div>
 

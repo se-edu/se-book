@@ -1,12 +1,12 @@
 <div id="title">
 
-#### 'Late and One Time' vs 'Early and Frequent' :two:
+#### 'Late and One Time' vs 'Early and Frequent'
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Implementation → Integration → Introduction → What%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain how integration approaches vary based on timing and frequency :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain how integration approaches vary based on timing and frequency</span>
 
 <div id="body">
 

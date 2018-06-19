@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Merge Conflicts :three:
+#### Merge Conflicts
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Branching%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use Git to resolve merge conflicts :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use Git to resolve merge conflicts</span>
 
 <div id="body">
 

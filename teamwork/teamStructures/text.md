@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Team Structures :three:
+#### Team Structures
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain common team structures :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain common team structures</span>
 
 <div id="body">
 

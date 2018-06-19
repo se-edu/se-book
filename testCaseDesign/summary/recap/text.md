@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain test case design techniques at a higher level :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain test case design techniques at a higher level</span>
 
 <div id="title">
 
-#### Recap :four:
+#### Recap
 
 </div>
 

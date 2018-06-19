@@ -1,12 +1,12 @@
 <div id="title">
 
-#### XP :four:
+#### XP
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain XP :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain XP</span>
 
 <div id="body">
 

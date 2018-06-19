@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Dependencies :two:
+#### Dependencies
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain dependencies among classes :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain dependencies among classes</span>
 
 <div id="body">
 

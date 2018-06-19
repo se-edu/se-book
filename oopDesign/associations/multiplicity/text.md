@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Multiplicity :two:
+#### Multiplicity
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of multiplicity :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of multiplicity</span>
 
 <div id="body">
 

@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain regression testing :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain regression testing</span>
 
 <div id="title">
 
-#### What :one: [{{glyphicon_new_window}}]({{baseUrl}}/testing/testingTypes/regressionTesting/what/index.html)
+#### What [{{glyphicon_new_window}}]({{baseUrl}}/testing/testingTypes/regressionTesting/what/index.html)
 
 </div>
 

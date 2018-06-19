@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the Design-by-Contract approach :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the Design-by-Contract approach</span>
 
 <div id="title">
 
-#### Design by Contract :three:
+#### Design by Contract
 
 </div>
 

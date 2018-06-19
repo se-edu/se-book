@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Introduction :one:
+#### Introduction
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain/identify object diagrams :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain/identify object diagrams</span>
 
 <div id="body">
 

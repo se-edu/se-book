@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Iterative Models :one:
+#### Iterative Models
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain iterative process models :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain iterative process models</span>
 
 <div id="body">
 

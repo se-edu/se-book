@@ -1,12 +1,12 @@
 <div id="title">
 
-#### YAGNI Principle :four:
+#### YAGNI Principle
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain YAGNI principle :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain YAGNI principle</span>
 
 <div id="body">
 

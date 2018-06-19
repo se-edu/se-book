@@ -1,12 +1,12 @@
 <div id="title">
 
-#### What :three:
+#### What
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain dogfooding :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain dogfooding</span>
 
 <div id="body">
 

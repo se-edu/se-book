@@ -1,12 +1,12 @@
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use logging :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use logging</span>
 
 <div id="body">
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### More Styles :two:
+#### More Styles
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can name several other architecture styles :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can name several other architecture styles</span>
 
 <div id="body">
 

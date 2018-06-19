@@ -1,13 +1,13 @@
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Design Fundamentals → Cohesion →
 What%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can increase cohesion :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can increase cohesion</span>
 
 <div id="body">
 

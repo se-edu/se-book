@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Positive vs Negative Test Cases :one:
+#### Positive vs Negative Test Cases
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain positive and negative test cases :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain positive and negative test cases</span>
 
 <div id="body">
 

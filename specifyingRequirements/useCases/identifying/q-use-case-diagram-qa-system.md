@@ -1,4 +1,4 @@
-<panel header="Q: Use case diagram for QA system :two:">
+<panel header="Q: Use case diagram for QA system">
 <question has-input="false">
 
 A software house wishes to automate its Quality Assurance division.

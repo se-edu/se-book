@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with parallel paths :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with parallel paths</span>
 
 <div id="title">
 
-#### Parallel Paths :three:
+#### Parallel Paths
 
 </div>
 

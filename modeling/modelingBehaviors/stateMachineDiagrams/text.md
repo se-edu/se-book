@@ -1,12 +1,12 @@
 <div id="title">
 
-#### State Machine Diagrams :four:
+#### State Machine Diagrams
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain state machine diagrams :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain state machine diagrams</span>
 
 <div id="body">
 

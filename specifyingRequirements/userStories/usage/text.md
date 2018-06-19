@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Usage :three:
+#### Usage
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use user stories to manage requirements of project :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use user stories to manage requirements of project</span>
 
 <div id="body">
 

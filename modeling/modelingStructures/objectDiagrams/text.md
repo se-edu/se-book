@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain object diagrams :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain object diagrams</span>
 
 <div id="title">
 
-#### Object Diagrams :three:
+#### Object Diagrams
 
 </div>
 

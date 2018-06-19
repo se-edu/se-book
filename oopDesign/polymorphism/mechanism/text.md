@@ -1,6 +1,6 @@
 <div id="title">
 
-#### Mechanism :three:
+#### Mechanism
 
 </div>
 
@@ -8,7 +8,7 @@
 <dynamic-panel src="../../../oopDesign/inheritance/substitutability/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Object Oriented Programming → Inheritance → Substitutability%%" />
 <dynamic-panel src="../../../oopDesign/inheritance/dynamicAndStaticBinding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Object Oriented Programming → Inheritance → Dynamic and Static Binding%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain how substitutability operation overriding, and dynamic binding relates to polymorphism :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain how substitutability operation overriding, and dynamic binding relates to polymorphism</span>
 
 <div id="body">
 

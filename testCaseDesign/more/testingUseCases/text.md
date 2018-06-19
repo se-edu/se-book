@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Testing Based on Use Cases :four:
+#### Testing Based on Use Cases
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain test case design for use case based testing :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain test case design for use case based testing</span>
 
 <div id="body">
 

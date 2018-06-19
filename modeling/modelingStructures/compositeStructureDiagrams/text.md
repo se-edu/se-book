@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Composite Structure Diagrams :four:
+#### Composite Structure Diagrams
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain composite structure diagrams :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain composite structure diagrams</span>
 
 <div id="body">
 

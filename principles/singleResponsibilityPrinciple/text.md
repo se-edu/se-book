@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Single Responsibility Principle :two:
+#### Single Responsibility Principle
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain single responsibility principle :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain single responsibility principle</span>
 
 <div id="body">
 

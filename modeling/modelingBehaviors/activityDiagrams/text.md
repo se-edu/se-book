@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Activity Diagrams :two:
+#### Activity Diagrams
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use activity diagrams :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use activity diagrams</span>
 
 <div id="body">
 

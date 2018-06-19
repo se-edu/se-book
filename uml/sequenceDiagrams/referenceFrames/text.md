@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Reference Frames :two:
+#### Reference Frames
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with reference frames :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with reference frames</span>
 
 <div id="body">
 

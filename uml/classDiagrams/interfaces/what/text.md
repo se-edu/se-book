@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Interfaces :two:
+#### Interfaces
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret interfaces in class diagrams :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret interfaces in class diagrams</span>
 
 <div id="body">
 

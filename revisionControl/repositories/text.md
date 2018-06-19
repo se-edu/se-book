@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain repositories :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain repositories</span>
 
 <div id="title">
 
-#### Repositories :one: [{{glyphicon_new_window}}]({{baseUrl}}/revisionControl/repositories/index.html)
+#### Repositories [{{glyphicon_new_window}}]({{baseUrl}}/revisionControl/repositories/index.html)
 
 </div>
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Open-Closed Principle :one:
+#### Open-Closed Principle
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain open-closed principle (OCP) :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain open-closed principle (OCP)</span>
 
 <div id="body">
 

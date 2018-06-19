@@ -1,12 +1,12 @@
 <div id="title">
 
-#### CMMI :four:
+#### CMMI
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain CMMI :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain CMMI</span>
 
 <div id="body">
 

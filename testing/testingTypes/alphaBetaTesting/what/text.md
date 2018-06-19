@@ -1,12 +1,12 @@
 <div id="title">
 
-#### What :three:
+#### What
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain alpha and beta testing :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain alpha and beta testing</span>
 
 <div id="body">
 

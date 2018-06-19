@@ -1,12 +1,12 @@
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can write minimal yet sufficient documentation :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can write minimal yet sufficient documentation</span>
 
 <div id="body">
 

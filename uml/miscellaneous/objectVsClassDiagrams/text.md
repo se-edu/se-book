@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Object vs Class Diagrams :two:
+#### Object vs Class Diagrams
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can distinguish between class diagrams and object diagrams :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can distinguish between class diagrams and object diagrams</span>
 
 <div id="body">
 

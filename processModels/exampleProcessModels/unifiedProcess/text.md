@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Unified Process :three:
+#### Unified Process
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the Unified Process :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the Unified Process</span>
 
 <div id="body">
 

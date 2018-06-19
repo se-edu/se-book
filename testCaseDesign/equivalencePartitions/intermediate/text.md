@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Intermediate :two:
+#### Intermediate
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can apply EP for OOP methods :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can apply EP for OOP methods</span>
 
 <div id="body">
 

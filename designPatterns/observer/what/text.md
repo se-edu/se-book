@@ -1,12 +1,12 @@
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the Observer design pattern :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the Observer design pattern</span>
 
 <div id="body">
 

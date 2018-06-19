@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Interviews :one:
+#### Interviews
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain interviews :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain interviews</span>
 
 <div id="body">
 

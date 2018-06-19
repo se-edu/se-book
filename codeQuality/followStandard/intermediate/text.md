@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Intermediate :two:
+#### Intermediate
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can follow intermediate style rules :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can follow intermediate style rules</span>
 
 <div id="body">
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### DRY Principle :three:
+#### DRY Principle
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain DRY principle :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain DRY principle</span>
 
 <div id="body">
 

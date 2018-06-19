@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Navigability :two:
+#### Navigability
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret association navigabilities in class diagrams :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret association navigabilities in class diagrams</span>
 
 <div id="body">
 

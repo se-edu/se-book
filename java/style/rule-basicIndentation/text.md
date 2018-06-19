@@ -1,6 +1,6 @@
 <div id="title">
 
-#### Basic Indentation :one:
+#### Basic Indentation
 
 </div>
 

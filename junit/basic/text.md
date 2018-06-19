@@ -1,12 +1,12 @@
 <div id="title">
 
-#### JUnit: Basic :two:
+#### JUnit: Basic
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use simple JUnit tests :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use simple JUnit tests</span>
 
 <div id="body">
 

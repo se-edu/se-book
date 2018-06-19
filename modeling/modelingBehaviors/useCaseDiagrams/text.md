@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain use case diagrams :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain use case diagrams</span>
 
 <div id="title">
 
-#### Use Case Diagrams :two:
+#### Use Case Diagrams
 
 </div>
 

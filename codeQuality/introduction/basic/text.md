@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Basic :one:
+#### Basic
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the importance of code quality :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the importance of code quality</span>
 
 <div id="body">
 

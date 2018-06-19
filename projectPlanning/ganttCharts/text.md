@@ -1,12 +1,12 @@
 <div id="title">
 
-#### GANTT Charts :three:
+#### GANTT Charts
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain GANTT charts :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain GANTT charts</span>
 
 <div id="body">
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Observation :one:
+#### Observation
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain observation :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain observation</span>
 
 <div id="body">
 

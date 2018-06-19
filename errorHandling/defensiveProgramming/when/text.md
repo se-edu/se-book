@@ -1,12 +1,12 @@
 <div id="title">
 
-#### When :two:
+#### When
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Implementation → Error Handling → Defensive Programming → What%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain when to use defensive programming :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain when to use defensive programming</span>
 
 <div id="body">
 

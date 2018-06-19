@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Notes :two:
+#### Notes
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use UML notes :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use UML notes</span>
 
 <div id="body">
 

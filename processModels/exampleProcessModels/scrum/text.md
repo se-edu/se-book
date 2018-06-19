@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Scrum :three:
+#### Scrum
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain scrum :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain scrum</span>
 
 <div id="body">
 

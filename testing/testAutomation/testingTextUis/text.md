@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can semi-automate testing of CLIs :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can semi-automate testing of CLIs</span>
 
 <div id="title">
 
-#### Automated Testing of CLI Apps :one: [{{glyphicon_new_window}}]({{baseUrl}}/testing/testAutomation/testingTextUis/index.html)
+#### Automated Testing of CLI Apps [{{glyphicon_new_window}}]({{baseUrl}}/testing/testAutomation/testingTextUis/index.html)
 
 </div>
 
@@ -53,7 +53,7 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
    
    * :bulb: If you are using Windows, use a normal command window to run the app, not a Power Shell window.
    
-   <panel header="%%More on the `>` operator and the `<` operator. :zero:%%" alt="I/O redirection info" type="seamless" >
+   <panel header="%%More on the `>` operator and the `<` operator. <span class='badge'>tangential</span>%%" alt="I/O redirection info" type="seamless" >
    
    A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using ` < ` and ` > ` operators. For example, if you run `AddressBook` in a command window, the output will be shown in the console, but if you run it like this,
    

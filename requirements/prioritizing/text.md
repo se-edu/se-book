@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Prioritizing Requirements :one:
+#### Prioritizing Requirements
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain prioritizing requirements :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain prioritizing requirements</span>
 
 <div id="body">
 

@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain using history :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain using history</span>
 
 <div id="title">
 
-#### Using History :two:
+#### Using History
 
 </div>
 

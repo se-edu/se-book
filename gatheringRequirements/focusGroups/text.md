@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Focus Groups :one:
+#### Focus Groups
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain focus groups :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain focus groups</span>
 
 <div id="body">
 
@@ -18,7 +18,7 @@
 
 **Focus groups are a kind of informal interview within an interactive group setting.** A group of people (e.g. potential users, beta testers) are asked about their understanding of a specific issue, process, product, advertisement, etc.  
 
-<panel type="seamless" header="%%:tv:: How do focus groups work? - Hector Lanz :zero:%%">
+<panel type="seamless" header="%%:tv:: How do focus groups work? - Hector Lanz <span class='badge'>tangential</span>%%">
 
 @[youtube](3TwgVQIZPsw)
 

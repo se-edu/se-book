@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Acceptance vs System Testing :two:
+#### Acceptance vs System Testing
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the differences between system testing and acceptance testing :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the differences between system testing and acceptance testing</span>
 
 <div id="body">
 

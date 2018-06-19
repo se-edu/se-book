@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Automated Testing of GUIs :two:
+#### Automated Testing of GUIs
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain automated GUI testing :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain automated GUI testing</span>
 
 <div id="body">
 

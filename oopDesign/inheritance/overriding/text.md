@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Overriding :one:
+#### Overriding
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} OOP → Inheritance → What%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain method overriding :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain method overriding</span>
 
 <div id="body">
 

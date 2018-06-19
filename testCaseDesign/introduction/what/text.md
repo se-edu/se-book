@@ -1,12 +1,12 @@
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the need for deliberate test case design :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for deliberate test case design</span>
 
 <div id="body">
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### DRCS vs CRCS :three:
+#### DRCS vs CRCS
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain DRCS vs CRCS :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain DRCS vs CRCS</span>
 
 <div id="body">
 

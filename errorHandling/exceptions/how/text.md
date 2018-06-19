@@ -1,12 +1,12 @@
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can do exception handling in code :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can do exception handling in code</span>
 
 <div id="body">
 

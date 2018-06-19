@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Identifying :one:
+#### Identifying
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use use cases to list functional requirements of a simple system :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use use cases to list functional requirements of a simple system</span>
 
 <div id="body">
 

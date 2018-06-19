@@ -1,12 +1,12 @@
 <div id="title">
 
-#### When :three:
+#### When
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can avoid using exceptions to control normal workflow :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can avoid using exceptions to control normal workflow</span>
 
 <div id="body">
 

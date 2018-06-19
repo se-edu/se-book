@@ -1,12 +1,12 @@
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Quality Assurance → Testing → Integration Testing → What →%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain integration testing :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain integration testing</span>
 
 <div id="body">
 

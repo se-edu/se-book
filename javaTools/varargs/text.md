@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use Java varargs feature :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use Java varargs feature</span>
 
 <div id="title">
 
-#### Varargs :three:  [{{glyphicon_new_window}}]({{baseUrl}}/javaTools/varargs/index.html)
+#### Varargs  [{{glyphicon_new_window}}]({{baseUrl}}/javaTools/varargs/index.html)
 
 </div>
 

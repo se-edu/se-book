@@ -1,13 +1,13 @@
 <div id="title">
 
-#### Details :two:
+#### Details
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../introduction/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Requirements → Specifying Requirements → Use Cases → Introduction%%" />
 <dynamic-panel src="../identifying/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Requirements → Specifying Requirements → Use Cases → Identifying%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can specify details of a use case in a structured format :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can specify details of a use case in a structured format</span>
 
 <div id="body">
 

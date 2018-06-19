@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Enums :two:
+#### Enums
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use Java enumerations :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use Java enumerations</span>
 
 <div id="body">
 

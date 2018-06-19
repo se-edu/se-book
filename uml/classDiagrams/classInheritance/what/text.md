@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret class inheritance in class diagrams :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret class inheritance in class diagrams</span>
 
 <div id="title">
 
-#### Inheritance :one:
+#### Inheritance
 
 </div>
 

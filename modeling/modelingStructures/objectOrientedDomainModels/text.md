@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Object Oriented Domain Models :three:
+#### Object Oriented Domain Models
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain object oriented domain models :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain object oriented domain models</span>
 
 <div id="body">
 

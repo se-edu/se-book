@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Agile Models :one:
+#### Agile Models
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain agile process models :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain agile process models</span>
 
 <div id="body">
 

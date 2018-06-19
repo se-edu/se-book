@@ -1,12 +1,12 @@
 <div id="title">
 
-#### What :three:
+#### What
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the Abstraction Occurrence design pattern :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the Abstraction Occurrence design pattern</span>
 
 <div id="body">
 

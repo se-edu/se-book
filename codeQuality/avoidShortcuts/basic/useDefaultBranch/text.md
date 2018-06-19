@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: use the default branch  :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: use the default branch </span>
 
 <div id="body">
 

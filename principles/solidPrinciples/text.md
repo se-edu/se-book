@@ -1,12 +1,12 @@
 <div id="title">
 
-#### SOLID Principles :four:
+#### SOLID Principles
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain SOLID Principles :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain SOLID Principles</span>
 
 <div id="body">
 

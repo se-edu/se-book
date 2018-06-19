@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Test Input Combination Strategies :two:
+#### Test Input Combination Strategies
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain some basic test input combination strategies :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain some basic test input combination strategies</span>
 
 <div id="body">
 

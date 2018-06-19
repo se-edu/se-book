@@ -1,12 +1,12 @@
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain formal verification :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain formal verification</span>
 
 <div id="body">
 

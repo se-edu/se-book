@@ -71,7 +71,7 @@ Video describing X
   Additional information
 </modal>
 
-**Sections tagged as :zero: can be ignored because they are tangential info** that are strictly not within the scope of the topic.
+**Sections tagged as <span class='badge'>tangential</span> can be ignored because they are tangential info** that are strictly not within the scope of the topic.
 
 </div>
 <div id="conventions">
@@ -123,8 +123,7 @@ Boxed-text styles:
 
 Meaning of icons:
 
-* :one: :two: :three: :four: : indication of the depth of the topic, in order of increasing depth (:one: is the least depth)
-* :zero: : tangential info, can be ignored if not interested
+* <span class="badge">tangential</span> : tangential info, can be ignored if not interested
 * {{glyphicon_new_window}} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.
 * {{glyphicon_flag}} : learning outcomes
 * {{glyphicon_education}} : prerequisite learning outcome

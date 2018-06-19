@@ -1,6 +1,6 @@
 <div id="title">
 
-#### Sequence Diagrams - Intermediate :two:
+#### Sequence Diagrams - Intermediate
 
 </div>
 
@@ -10,7 +10,7 @@
 <dynamic-panel src="../../../uml/sequenceDiagrams/alternativePaths/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%UML → Sequence Diagrams → Alternative Paths%%" />
 <dynamic-panel src="../../../uml/sequenceDiagrams/optionalPaths/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%UML → Sequence Diagrams → Optional Paths%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can draw intermediate-level sequence diagrams :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can draw intermediate-level sequence diagrams</span>
 
 <div id="body">
 

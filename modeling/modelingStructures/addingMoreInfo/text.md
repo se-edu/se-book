@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Adding more info to UML Models :one:
+#### Adding more info to UML Models
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can add more info to UML models :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can add more info to UML models</span>
 
 <div id="body">
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Timing Diagrams :four:
+#### Timing Diagrams
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain timing diagrams :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain timing diagrams</span>
 
 <div id="body">
 

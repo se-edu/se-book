@@ -1,12 +1,12 @@
 <div id="title">
 
-#### JUnit: Intermediate :three:
+#### JUnit: Intermediate
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use intermediate features of JUnit :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use intermediate features of JUnit</span>
 
 <div id="body">
 

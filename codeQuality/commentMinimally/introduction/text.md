@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Introduction :one:
+#### Introduction
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the need for commenting minimally but sufficiently :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for commenting minimally but sufficiently</span>
 
 <div id="body">
 

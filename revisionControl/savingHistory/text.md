@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain saving history :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain saving history</span>
 
 <div id="title">
 
-#### Saving History :one: [{{glyphicon_new_window}}]({{baseUrl}}/revisionControl/savingHistory/index.html)
+#### Saving History [{{glyphicon_new_window}}]({{baseUrl}}/revisionControl/savingHistory/index.html)
 
 </div>
 

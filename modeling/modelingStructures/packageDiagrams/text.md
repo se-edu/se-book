@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Package Diagrams :four:
+#### Package Diagrams
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain package diagrams :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain package diagrams</span>
 
 <div id="body">
 

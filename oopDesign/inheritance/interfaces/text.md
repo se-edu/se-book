@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Interfaces :two:
+#### Interfaces
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain interfaces :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain interfaces</span>
 
 <div id="body">
 

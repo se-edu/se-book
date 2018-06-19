@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Product Surveys :one:
+#### Product Surveys
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain product surveys :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain product surveys</span>
 
 <div id="body">
 

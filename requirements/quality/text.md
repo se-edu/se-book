@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Quality of Requirements :one:
+#### Quality of Requirements
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain quality of requirements :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain quality of requirements</span>
 
 <div id="body">
 

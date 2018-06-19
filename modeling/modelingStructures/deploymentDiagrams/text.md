@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Deployment Diagrams :four:
+#### Deployment Diagrams
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain deployment diagrams :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain deployment diagrams</span>
 
 <div id="body">
 

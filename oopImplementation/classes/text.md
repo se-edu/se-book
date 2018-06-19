@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Implementing Classes :one:
+#### Implementing Classes
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../../oopDesign/classes/basic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Classes → Basic%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can implement classes :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can implement classes</span>
 
 <div id="body">
 

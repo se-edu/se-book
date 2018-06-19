@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Multi-Level Design :three:
+#### Multi-Level Design
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain multi-level design :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain multi-level design</span>
 
 <div id="body">
 

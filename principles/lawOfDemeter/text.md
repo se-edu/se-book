@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Law of Demeter :three:
+#### Law of Demeter
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the Law of Demeter :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the Law of Demeter</span>
 
 <div id="body">
 

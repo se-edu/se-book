@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Recap :three:
+#### Recap
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain process models at a higher level :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain process models at a higher level</span>
 
 <div id="body">
 

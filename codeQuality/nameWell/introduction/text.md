@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Introduction :one:
+#### Introduction
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the need for good names in code :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for good names in code</span>
 
 <div id="body">
 

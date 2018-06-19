@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Brainstorming :one:
+#### Brainstorming
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain brainstorming :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain brainstorming</span>
 
 <div id="body">
 

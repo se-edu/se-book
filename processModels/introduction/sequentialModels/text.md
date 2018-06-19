@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Sequential Models :one:
+#### Sequential Models
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain sequential process models :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain sequential process models</span>
 
 <div id="body">
 

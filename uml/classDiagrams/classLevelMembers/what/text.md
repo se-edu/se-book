@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Class-Level Members :two:
+#### Class-Level Members
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret class-level members in class diagrams :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret class-level members in class diagrams</span>
 
 <div id="body">
 

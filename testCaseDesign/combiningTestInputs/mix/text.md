@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Mix :three:
+#### Mix
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can apply multiple test input combination techniques together :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can apply multiple test input combination techniques together</span>
 
 <div id="body">
 

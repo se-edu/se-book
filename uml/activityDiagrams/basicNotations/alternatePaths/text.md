@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Alternate Paths :two:
+#### Alternate Paths
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret alternate paths in activity diagrams :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret alternate paths in activity diagrams</span>
 
 <div id="body">
 

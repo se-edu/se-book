@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Alternative Paths :two:
+#### Alternative Paths
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with alternative paths :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with alternative paths</span>
 
 <div id="body">
 

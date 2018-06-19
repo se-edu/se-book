@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Black Box vs Glass Box :two:
+#### Black Box vs Glass Box
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain black box and glass box test case design :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain black box and glass box test case design</span>
 
 <div id="body">
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Linear Paths :two:
+#### Linear Paths
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret linear paths in activity diagrams :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret linear paths in activity diagrams</span>
 
 <div id="body">
 

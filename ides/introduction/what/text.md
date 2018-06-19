@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain IDEs :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain IDEs</span>
 
 <div id="title">
 
-#### What :one: [{{glyphicon_new_window}}]({{baseUrl}}/ides/introduction/what/index.html)
+#### What [{{glyphicon_new_window}}]({{baseUrl}}/ides/introduction/what/index.html)
 
 </div>
 

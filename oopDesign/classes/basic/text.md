@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Basic :one:
+#### Basic
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the relationship between classes and objects  :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the relationship between classes and objects </span>
 
 <div id="body">
 

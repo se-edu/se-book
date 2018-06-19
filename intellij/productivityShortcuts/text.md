@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use some useful IDE productivity shortcuts :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use some useful IDE productivity shortcuts</span>
 
 <div id="title">
 
-#### Productivity Shortcuts :three:
+#### Productivity Shortcuts
 
 </div>
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Why :two:
+#### Why
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the need for early developer testing :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for early developer testing</span>
 
 <div id="body">
 

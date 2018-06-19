@@ -1,12 +1,12 @@
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain test coverage :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain test coverage</span>
 
 <div id="body">
 

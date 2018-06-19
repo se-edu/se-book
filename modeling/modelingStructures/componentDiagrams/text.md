@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Component Diagrams :four:
+#### Component Diagrams
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain component diagrams :four:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain component diagrams</span>
 
 <div id="body">
 

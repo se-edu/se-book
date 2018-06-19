@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of composition :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of composition</span>
 
 <div id="title">
 
-#### Composition :two:
+#### Composition
 
 </div>
 

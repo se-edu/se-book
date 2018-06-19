@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Labels :two:
+#### Labels
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain/use association labels in class diagrams :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain/use association labels in class diagrams</span>
 
 <div id="body">
 

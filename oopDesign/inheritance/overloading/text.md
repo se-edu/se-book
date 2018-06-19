@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Overloading :two:
+#### Overloading
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain method overloading :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain method overloading</span>
 
 <div id="body">
 

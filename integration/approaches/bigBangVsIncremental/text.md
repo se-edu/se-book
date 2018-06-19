@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Big-Bang vs Incremental Integration :two:
+#### Big-Bang vs Incremental Integration
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain how integration approaches vary based on amount merged at a time :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain how integration approaches vary based on amount merged at a time</span>
 
 <div id="body">
 

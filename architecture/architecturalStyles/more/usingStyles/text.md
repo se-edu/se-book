@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Using Styles :two:
+#### Using Styles
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain how architectural styles are combined :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain how architectural styles are combined</span>
 
 <div id="body">
 

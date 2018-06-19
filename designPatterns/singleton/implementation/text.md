@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Implementation :two:
+#### Implementation
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can apply the Singleton design pattern :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can apply the Singleton design pattern</span>
 
 <div id="body">
 

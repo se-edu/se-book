@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Branch :two:
+#### Branch
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../../revisionControl/branching/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Project Management → Revision Control → Branching%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use Git branching :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use Git branching</span>
 
 <div id="body">
 

@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Objects as Abstractions :two:
+#### Objects as Abstractions
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the abstraction aspect of OOP :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain the abstraction aspect of OOP</span>
 
 <div id="body">
 

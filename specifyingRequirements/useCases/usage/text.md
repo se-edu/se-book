@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Usage :three:
+#### Usage
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can optimize the use of use cases :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can optimize the use of use cases</span>
 
 <div id="body">
 

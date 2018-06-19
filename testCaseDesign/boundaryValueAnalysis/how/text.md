@@ -1,12 +1,12 @@
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can apply boundary value analysis :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can apply boundary value analysis</span>
 
 <div id="body">
 

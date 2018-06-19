@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Validation vs Verification :two:
+#### Validation vs Verification
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain validation and verification :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain validation and verification</span>
 
 <div id="body">
 

@@ -1,6 +1,6 @@
 <div id="title">
 
-#### Implementing Polymorphism :two:
+#### Implementing Polymorphism
 
 </div>
 
@@ -8,7 +8,7 @@
 <dynamic-panel src="../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} OOP → Inheritance → What%%" />
 <dynamic-panel src="../overriding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Implementation → OOP → Overriding%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can implement polymorphism :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can implement polymorphism</span>
 
 <div id="body">
 

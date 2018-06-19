@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Implementing Interfaces :one:
+#### Implementing Interfaces
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/interfaces/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Inheritance → Interfaces%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can implement interfaces :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can implement interfaces</span>
 
 <div id="body">
 

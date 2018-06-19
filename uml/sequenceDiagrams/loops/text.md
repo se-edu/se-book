@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Loops :two:
+#### Loops
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with loops :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with loops</span>
 
 <div id="body">
 

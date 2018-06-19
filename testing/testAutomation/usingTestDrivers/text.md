@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Test Automation Using Test Drivers :two:
+#### Test Automation Using Test Drivers
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain test drivers :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain test drivers</span>
 
 <div id="body">
 

@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain dependency inversion principle (DIP) :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain dependency inversion principle (DIP)</span>
 
 <div id="title">
 
-#### Dependency Inversion Principle :one:
+#### Dependency Inversion Principle
 
 </div>
 

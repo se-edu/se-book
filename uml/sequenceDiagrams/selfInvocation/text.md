@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Self Invocation :two:
+#### Self Invocation
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with self invocation :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with self invocation</span>
 
 <div id="body">
 

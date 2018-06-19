@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain test automation :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain test automation</span>
 
 <div id="title">
 
-#### What :one: [{{glyphicon_new_window}}]({{baseUrl}}/testing/testAutomation/what/index.html)
+#### What [{{glyphicon_new_window}}]({{baseUrl}}/testing/testAutomation/what/index.html)
 
 </div>
 

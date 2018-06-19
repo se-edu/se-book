@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Constraints :three:
+#### Constraints
 
 </div>
 
 <span id="prereqs"><dynamic-panel src="../notes/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} UML → Notes%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can specify constraints in UML diagrams :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can specify constraints in UML diagrams</span>
 
 <div id="body">
 

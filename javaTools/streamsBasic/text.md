@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Streams: Basic :three:
+#### Streams: Basic
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use Java8 streams :three:</span>
+<span id="outcomes">{{glyphicon_flag}} Can use Java8 streams</span>
 
 <div id="body">
 

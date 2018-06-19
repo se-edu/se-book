@@ -1,12 +1,12 @@
 <div id="title">
 
-#### Issue Trackers :two:
+#### Issue Trackers
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain issue trackers :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can explain issue trackers</span>
 
 <div id="body">
 

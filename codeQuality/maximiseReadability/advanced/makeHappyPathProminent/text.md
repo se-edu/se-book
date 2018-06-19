@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: make the happy path prominent  :one:</span>
+<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: make the happy path prominent </span>
 
 <div id="body">
 

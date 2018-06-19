@@ -1,10 +1,10 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can write more detailed user stories :two:</span>
+<span id="outcomes">{{glyphicon_flag}} Can write more detailed user stories</span>
 
 <div id="title">
 
-#### Details :two:
+#### Details
 
 </div>
 
@@ -63,7 +63,7 @@ Conditions:
 * Size: the estimated effort to implement the user story
 * Urgency: how soon the feature is needed
 
-<panel header="%%More examples :zero:%%" type="seamless">
+<panel header="%%More examples <span class='badge'>tangential</span>%%" type="seamless">
 
 User stories for a travel website (credit: Mike Cohen)
 
