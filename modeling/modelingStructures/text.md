@@ -7,6 +7,7 @@
 
 <include src="ooStructures/container-inParent-asPanel.md" boilerplate />
 <include src="classDiagramsBasic/container-inParent-asPanel.md" boilerplate />
+<include src="addingMoreInfo/container-inParent-asPanel.md" boilerplate />
 <include src="classDiagramsIntermediate/container-inParent-asPanel.md" boilerplate />
 <include src="classDiagramsAdvanced/container-inParent-asPanel.md" boilerplate />
 <include src="objectDiagrams/container-inParent-asPanel.md" boilerplate />
