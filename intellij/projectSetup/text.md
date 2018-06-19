@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Project Setup [{{glyphicon_new_window}}]({{baseUrl}}/intellij/projectSetup/index.html)
+#### Project Setup
 
 </div>
 

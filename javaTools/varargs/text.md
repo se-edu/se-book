@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Varargs  [{{glyphicon_new_window}}]({{baseUrl}}/javaTools/varargs/index.html)
+#### Varargs
 
 </div>
 

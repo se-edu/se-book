@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Code Navigation [{{glyphicon_new_window}}]({{baseUrl}}/intellij/codeNavigation/index.html)
+#### Code Navigation
 
 </div>
 

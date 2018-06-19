@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Pros and Cons [{{glyphicon_new_window}}]({{baseUrl}}/softwareEngineering/introduction/prosAndCons/index.html)
+#### Pros and Cons
 
 </div>
 

@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Collections [{{glyphicon_new_window}}]({{baseUrl}}/javaTools/collections/index.html)
+#### Collections
 
 </div>
 

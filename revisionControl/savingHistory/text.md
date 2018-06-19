@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Saving History [{{glyphicon_new_window}}]({{baseUrl}}/revisionControl/savingHistory/index.html)
+#### Saving History
 
 </div>
 

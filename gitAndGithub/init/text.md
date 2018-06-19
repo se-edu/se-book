@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Init [{{glyphicon_new_window}}]({{baseUrl}}/gitAndGithub/init/index.html)
+#### Init
 
 </div>
 
