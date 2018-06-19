@@ -114,7 +114,6 @@ title: "SE Book: Full List of Learning Outcomes"
 <include src="../modeling/modelingASolution/introduction/unit-inParent-asOutcome.md" boilerplate />
 <include src="../modeling/modelingASolution/basic/unit-inParent-asOutcome.md" boilerplate />
 <include src="../modeling/modelingASolution/intermediate/unit-inParent-asOutcome.md" boilerplate />
-<include src="../modeling/review/unit-inParent-asOutcome.md" boilerplate />
 
 ### Architecture
 
