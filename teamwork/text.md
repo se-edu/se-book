@@ -5,6 +5,6 @@
 
 <div id="body">
 
-<include src="teamStructures/container-inParent-asPanel.md" boilerplate />
+<include src="teamStructures/unit-inParent-asPanel.md" boilerplate />
 
 </div>

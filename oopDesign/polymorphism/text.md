@@ -5,7 +5,7 @@
 
 <div id="body">
 
-<include src="introduction/container-inParent-asPanel.md" boilerplate />
-<include src="mechanism/container-inParent-asPanel.md" boilerplate />
+<include src="introduction/unit-inParent-asPanel.md" boilerplate />
+<include src="mechanism/unit-inParent-asPanel.md" boilerplate />
 
 </div>

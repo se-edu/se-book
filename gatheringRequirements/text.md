@@ -5,12 +5,12 @@
 
 <div id="body">
 
-<include src="brainstorming/container-inParent-asPanel.md" boilerplate />
-<include src="userSurveys/container-inParent-asPanel.md" boilerplate />
-<include src="observation/container-inParent-asPanel.md" boilerplate />
-<include src="interviews/container-inParent-asPanel.md" boilerplate />
-<include src="focusGroups/container-inParent-asPanel.md" boilerplate />
-<include src="prototyping/container-inParent-asPanel.md" boilerplate />
-<include src="productSurveys/container-inParent-asPanel.md" boilerplate />
+<include src="brainstorming/unit-inParent-asPanel.md" boilerplate />
+<include src="userSurveys/unit-inParent-asPanel.md" boilerplate />
+<include src="observation/unit-inParent-asPanel.md" boilerplate />
+<include src="interviews/unit-inParent-asPanel.md" boilerplate />
+<include src="focusGroups/unit-inParent-asPanel.md" boilerplate />
+<include src="prototyping/unit-inParent-asPanel.md" boilerplate />
+<include src="productSurveys/unit-inParent-asPanel.md" boilerplate />
 
 </div>

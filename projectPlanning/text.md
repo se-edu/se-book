@@ -5,11 +5,11 @@
 
 <div id="body">
 
-<include src="workBreakdownStructure/container-inParent-asPanel.md" boilerplate />
-<include src="milestones/container-inParent-asPanel.md" boilerplate />
-<include src="buffers/container-inParent-asPanel.md" boilerplate />
-<include src="issueTrackers/container-inParent-asPanel.md" boilerplate />
-<include src="ganttCharts/container-inParent-asPanel.md" boilerplate />
-<include src="pertCharts/container-inParent-asPanel.md" boilerplate />
+<include src="workBreakdownStructure/unit-inParent-asPanel.md" boilerplate />
+<include src="milestones/unit-inParent-asPanel.md" boilerplate />
+<include src="buffers/unit-inParent-asPanel.md" boilerplate />
+<include src="issueTrackers/unit-inParent-asPanel.md" boilerplate />
+<include src="ganttCharts/unit-inParent-asPanel.md" boilerplate />
+<include src="pertCharts/unit-inParent-asPanel.md" boilerplate />
 
 </div>

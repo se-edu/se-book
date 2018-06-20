@@ -5,10 +5,10 @@
 
 <div id="body">
 
-<include src="avoidLongMethods/container-inParent-asPanel.md" boilerplate />
-<include src="avoidDeepNesting/container-inParent-asPanel.md" boilerplate />
-<include src="avoidComplicatedExpressions/container-inParent-asPanel.md" boilerplate />
-<include src="avoidMagicNumbers/container-inParent-asPanel.md" boilerplate />
-<include src="makeCodeObvious/container-inParent-asPanel.md" boilerplate />
+<include src="avoidLongMethods/unit-inParent-asPanel.md" boilerplate />
+<include src="avoidDeepNesting/unit-inParent-asPanel.md" boilerplate />
+<include src="avoidComplicatedExpressions/unit-inParent-asPanel.md" boilerplate />
+<include src="avoidMagicNumbers/unit-inParent-asPanel.md" boilerplate />
+<include src="makeCodeObvious/unit-inParent-asPanel.md" boilerplate />
 
 </div>

@@ -5,10 +5,10 @@
 
 <div id="body">
 
-<include src="why/container-inParent-asPanel.md" boilerplate />
-<include src="combinationStrategies/container-inParent-asPanel.md" boilerplate />
-<include src="heuristicValid/container-inParent-asPanel.md" boilerplate />
-<include src="heuristicInvalid/container-inParent-asPanel.md" boilerplate />
-<include src="mix/container-inParent-asPanel.md" boilerplate />
+<include src="why/unit-inParent-asPanel.md" boilerplate />
+<include src="combinationStrategies/unit-inParent-asPanel.md" boilerplate />
+<include src="heuristicValid/unit-inParent-asPanel.md" boilerplate />
+<include src="heuristicInvalid/unit-inParent-asPanel.md" boilerplate />
+<include src="mix/unit-inParent-asPanel.md" boilerplate />
 
 </div>

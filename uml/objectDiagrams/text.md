@@ -5,8 +5,8 @@
 
 <div id="body">
 
-<include src="introduction/container-inParent-asPanel.md" boilerplate />
-<include src="objects/container-inParent-asPanel.md" boilerplate />
-<include src="associations/container-inParent-asPanel.md" boilerplate />
+<include src="introduction/unit-inParent-asPanel.md" boilerplate />
+<include src="objects/unit-inParent-asPanel.md" boilerplate />
+<include src="associations/unit-inParent-asPanel.md" boilerplate />
 
 </div>

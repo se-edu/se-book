@@ -5,6 +5,6 @@
 
 <div id="body">
 
-<include src="recap/container-inParent-asPanel.md" boilerplate />
+<include src="recap/unit-inParent-asPanel.md" boilerplate />
 
 </div>

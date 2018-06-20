@@ -5,14 +5,14 @@
 
 <div id="body">
 
-<include src="activityDiagrams/container-inParent-asPanel.md" boilerplate />
-<include src="sequenceDiagramsBasic/container-inParent-asPanel.md" boilerplate />
-<include src="sequenceDiagramsIntermediate/container-inParent-asPanel.md" boilerplate />
-<include src="sequenceDiagramsAdvanced/container-inParent-asPanel.md" boilerplate />
-<include src="useCaseDiagrams/container-inParent-asPanel.md" boilerplate />
-<include src="timingDiagrams/container-inParent-asPanel.md" boilerplate />
-<include src="interactionOverviewDiagrams/container-inParent-asPanel.md" boilerplate />
-<include src="communicationDiagrams/container-inParent-asPanel.md" boilerplate />
-<include src="stateMachineDiagrams/container-inParent-asPanel.md" boilerplate />
+<include src="activityDiagrams/unit-inParent-asPanel.md" boilerplate />
+<include src="sequenceDiagramsBasic/unit-inParent-asPanel.md" boilerplate />
+<include src="sequenceDiagramsIntermediate/unit-inParent-asPanel.md" boilerplate />
+<include src="sequenceDiagramsAdvanced/unit-inParent-asPanel.md" boilerplate />
+<include src="useCaseDiagrams/unit-inParent-asPanel.md" boilerplate />
+<include src="timingDiagrams/unit-inParent-asPanel.md" boilerplate />
+<include src="interactionOverviewDiagrams/unit-inParent-asPanel.md" boilerplate />
+<include src="communicationDiagrams/unit-inParent-asPanel.md" boilerplate />
+<include src="stateMachineDiagrams/unit-inParent-asPanel.md" boilerplate />
 
 </div>

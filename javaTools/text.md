@@ -5,10 +5,10 @@
 
 <div id="body">
 
-<include src="collections/container-inParent-asPanel.md" boilerplate />
-<include src="enums/container-inParent-asPanel.md" boilerplate />
-<include src="varargs/container-inParent-asPanel.md" boilerplate />
-<include src="javaFXBasic/container-inParent-asPanel.md" boilerplate />
-<include src="streamsBasic/container-inParent-asPanel.md" boilerplate />
+<include src="collections/unit-inParent-asPanel.md" boilerplate />
+<include src="enums/unit-inParent-asPanel.md" boilerplate />
+<include src="varargs/unit-inParent-asPanel.md" boilerplate />
+<include src="javaFXBasic/unit-inParent-asPanel.md" boilerplate />
+<include src="streamsBasic/unit-inParent-asPanel.md" boilerplate />
 
 </div>

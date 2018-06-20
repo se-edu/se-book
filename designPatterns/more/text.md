@@ -5,10 +5,10 @@
 
 <div id="body">
 
-<include src="combiningDesignPatterns/container-inParent-asPanel.md" boilerplate />
-<include src="otherDesignPatterns/container-inParent-asPanel.md" boilerplate />
-<include src="usingDesignPatterns/container-inParent-asPanel.md" boilerplate />
-<include src="otherTypesOfPatterns/container-inParent-asPanel.md" boilerplate />
-<include src="vsPrinciples/container-inParent-asPanel.md" boilerplate />
+<include src="combiningDesignPatterns/unit-inParent-asPanel.md" boilerplate />
+<include src="otherDesignPatterns/unit-inParent-asPanel.md" boilerplate />
+<include src="usingDesignPatterns/unit-inParent-asPanel.md" boilerplate />
+<include src="otherTypesOfPatterns/unit-inParent-asPanel.md" boilerplate />
+<include src="vsPrinciples/unit-inParent-asPanel.md" boilerplate />
 
 </div>

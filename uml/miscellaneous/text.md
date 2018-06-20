@@ -5,6 +5,6 @@
 
 <div id="body">
 
-<include src="objectVsClassDiagrams/container-inParent-asPanel.md" boilerplate />
+<include src="objectVsClassDiagrams/unit-inParent-asPanel.md" boilerplate />
 
 </div>

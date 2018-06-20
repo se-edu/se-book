@@ -5,6 +5,6 @@
 
 <div id="body">
 
-<include src="prosAndCons/container-inParent-asPanel.md" boilerplate />
+<include src="prosAndCons/unit-inParent-asPanel.md" boilerplate />
 
 </div>
