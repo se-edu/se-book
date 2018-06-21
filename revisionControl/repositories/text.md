@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Repositories [{{glyphicon_new_window}}]({{baseUrl}}/revisionControl/repositories/index.html)
+#### Repositories
 
 </div>
 

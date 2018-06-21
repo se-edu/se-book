@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Automated Testing of CLI Apps [{{glyphicon_new_window}}]({{baseUrl}}/testing/testAutomation/testingTextUis/index.html)
+#### Automated Testing of CLI Apps
 
 </div>
 

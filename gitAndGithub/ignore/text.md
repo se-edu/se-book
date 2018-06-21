@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Ignore [{{glyphicon_new_window}}]({{baseUrl}}/gitAndGithub/ignore/index.html)
+#### Ignore
 
 </div>
 

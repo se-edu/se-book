@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### What [{{glyphicon_new_window}}]({{baseUrl}}/ides/introduction/what/index.html)
+#### What
 
 </div>
 

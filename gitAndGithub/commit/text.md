@@ -4,7 +4,7 @@
 
 <div id="title">
 
-#### Commit [{{glyphicon_new_window}}]({{baseUrl}}/gitAndGithub/commit/index.html)
+#### Commit
 
 </div>
 
