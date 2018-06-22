@@ -18,7 +18,7 @@ In a UML class diagram, a **dependency is a weaker form of an association where 
 
 <tip-box> 
 
-:package: Two examples of dependencies:
+{{ icon_example }} Two examples of dependencies:
 
 <img src="{{baseUrl}}/uml/classDiagrams/dependencies/what/images/examples.png" width="450" />
 <p/>

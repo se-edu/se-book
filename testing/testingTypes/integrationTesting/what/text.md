@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Suppose a class `Car` users classes `Engine` and `Wheel`. If the `Car` class assumed a `Wheel` can support 200 mph speed but the actual `Wheel` can only support 150 mph, it is the integration test that is supposed to uncover this discrepancy.
+{{ icon_example }} Suppose a class `Car` users classes `Engine` and `Wheel`. If the `Car` class assumed a `Wheel` can support 200 mph speed but the actual `Wheel` can only support 150 mph, it is the integration test that is supposed to uncover this discrepancy.
 
 </tip-box>
 

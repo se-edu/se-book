@@ -17,7 +17,7 @@ Notation:
 
 <tip-box>
 
-:package: The `Player` calls the `mark x,y` command or `clear x y` command repeatedly until the game is won or lost.
+{{ icon_example }} The `Player` calls the `mark x,y` command or `clear x y` command repeatedly until the game is won or lost.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/loops/images/playerText.png" height="300" />
 <p/>

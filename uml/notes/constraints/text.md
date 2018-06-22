@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Example:
+{{ icon_example }} Example:
 
 <img src="{{baseUrl}}/uml/notes/constraints/images/playerTurn.png" height="120" />
 <p/>

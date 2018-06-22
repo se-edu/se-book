@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: Consider the test cases for adding a string object to a <tooltip content="Java: `ArrayList`,<br>Python: `list`">collection</tooltip>:
+{{ icon_example }} Consider the test cases for adding a string object to a <tooltip content="Java: `ArrayList`,<br>Python: `list`">collection</tooltip>:
 
 * Add an item to an empty collection.
 * Add an item when there is one item in the collection.

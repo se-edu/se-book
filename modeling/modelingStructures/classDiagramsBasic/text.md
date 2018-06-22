@@ -20,7 +20,7 @@ The most basic class diagram is a bunch of classes with some solid lines among t
 
 <tip-box> 
 
-:package: An example class diagram showing associations between classes.
+{{ icon_example }} An example class diagram showing associations between classes.
 <p/><img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculatorPerson.png" height="100" />
 <p/>
 
@@ -35,7 +35,7 @@ In addition, **associations can show additional decorations such as _association
 
 <tip-box> 
 
-:package: Here is the same class diagram shown earlier but with some additional information included: 
+{{ icon_example }} Here is the same class diagram shown earlier but with some additional information included: 
 <p/><img src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/ageListCalculatorPerson.png" width="450" />
 <p/>
 

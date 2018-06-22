@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Here is the AD for a game of  ‘Snakes and Ladders’.
+{{ icon_example }} Here is the AD for a game of  ‘Snakes and Ladders’.
 
 <img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/rakes/images/snakesAndLadders.png" height="230" />
 <p/>

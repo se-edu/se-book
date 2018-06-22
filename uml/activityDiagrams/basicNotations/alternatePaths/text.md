@@ -20,7 +20,7 @@ Both branch nodes and merge nodes are ==diamond shapes==. Guard conditions must 
 
 <tip-box>
 
-:package: The AD below shows alternate paths involved in the workflow of the activity _shop for product_:
+{{ icon_example }} The AD below shows alternate paths involved in the workflow of the activity _shop for product_:
 
 <img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/example.png" height="240" />
 <p/>

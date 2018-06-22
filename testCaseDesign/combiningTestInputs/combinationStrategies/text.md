@@ -14,7 +14,7 @@ Given below are some basic strategies for generating a set of test cases by comb
 
 <tip-box>
 
-:package: Let's assume the SUT has the following three inputs and you have selected the given values for testing:
+{{ icon_example }} Let's assume the SUT has the following three inputs and you have selected the given values for testing:
 
 SUT: `foo(p1 char, p2 int, p3 boolean)`
 
@@ -32,7 +32,7 @@ Selected values for each input:
 
 <tip-box>
 
-:package: the strategy generates 3x3x2=18 test cases
+{{ icon_example }} the strategy generates 3x3x2=18 test cases
 
 | Test Case   | p1      | p2      | p3      |
 | :---------: | :-----: | :-----: | :-----: |
@@ -48,7 +48,7 @@ Selected values for each input:
 
 <tip-box>
 
-:package: this strategy generates 3 test cases.
+{{ icon_example }} this strategy generates 3 test cases.
 
 | Test Case   | p1      | p2      | p3      |
 | :---------: | :-----: | :-----: | :-----: |
@@ -64,7 +64,7 @@ VV/IV = Any Valid Value / Any Invalid Value
 
 <tip-box>
 
-:package: this strategy generates 9 test cases:
+{{ icon_example }} this strategy generates 9 test cases:
 
 <panel type="seamless" header="see steps">
 
@@ -110,7 +110,7 @@ A variation of this strategy is to test all pairs of inputs but only for inputs 
 
 <tip-box>
 
-:package: Testing all pairs between p1 and p3 only while ensuring all p3 values are tested at least once
+{{ icon_example }} Testing all pairs between p1 and p3 only while ensuring all p3 values are tested at least once
 
 | Test Case   | p1      | p2      | p3      |
 | :---------: | :-----: | :-----: | :-----: |

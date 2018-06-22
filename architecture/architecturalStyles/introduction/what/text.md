@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: n-tier style, client-server style, event-driven style, transaction processing style, service-oriented style, pipes-and-filters style, message-driven style, broker style, ...
+{{ icon_example }} n-tier style, client-server style, event-driven style, transaction processing style, service-oriented style, pipes-and-filters style, message-driven style, broker style, ...
 
 </tip-box>
 

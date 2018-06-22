@@ -24,7 +24,7 @@
 
 <tip-box>
 
-:package: The `Account` class has an abstract method (`addInterest()`).
+{{ icon_example }} The `Account` class has an abstract method (`addInterest()`).
 
 <img src="{{baseUrl}}/oopDesign/inheritance/abstractClasses/images/account.png" height="220" />
 <p/>

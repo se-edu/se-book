@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Here is an example package diagram:
+{{ icon_example }} Here is an example package diagram:
 
 <img src="{{baseUrl}}/modeling/modelingStructures/packageDiagrams/images/diagram.png" height="450" /><br>
 <sub>source:[https://commons.wikimedia.org](https://en.wikipedia.org/wiki/Package_diagram)</sub>

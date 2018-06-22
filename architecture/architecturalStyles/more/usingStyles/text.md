@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: An application can use a client-server architecture where the server component comprises several layers, i.e. it uses the n-Tier architecture.
+{{ icon_example }} An application can use a client-server architecture where the server component comprises several layers, i.e. it uses the n-Tier architecture.
 
 <!-- TODO: add diagram -->
 

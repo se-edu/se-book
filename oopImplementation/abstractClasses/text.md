@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Partial code below gives an example of how to declare abstract classes/methods.
+{{ icon_example }} Partial code below gives an example of how to declare abstract classes/methods.
 
 <img src="{{baseUrl}}/oopDesign/inheritance/abstractClasses/images/account.png" height="220" />
 <p/>

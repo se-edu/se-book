@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: an SUT that takes multiple inputs and some values chosen as values for each input:
+{{ icon_example }} an SUT that takes multiple inputs and some values chosen as values for each input:
 
 * Scenario: calculateGrade
 * Method to test: calculateGrade(participation, projectGrade, isAbsent, examScore)

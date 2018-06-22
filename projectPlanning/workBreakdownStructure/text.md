@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: The high level tasks for a single iteration of a small project could look like the following:
+{{ icon_example }} The high level tasks for a single iteration of a small project could look like the following:
 
 | Task ID | Task                         | Estimated Effort       | Prerequisite Task |
 | ------- | ---------------------------- | ---------------------- | ----------------- |
@@ -31,7 +31,7 @@
 
 <tip-box> 
 
-:package: An example WBS for a project for developing a game.
+{{ icon_example }} An example WBS for a project for developing a game.
  
  <table class="table">
    <tr>
@@ -113,7 +113,7 @@
 
 <tip-box> 
 
-:package: Some examples of ill-defined tasks and their better-defined counterparts:
+{{ icon_example }} Some examples of ill-defined tasks and their better-defined counterparts:
 
 | :-1: Not good | :+1: Better
 | ------- | ----------------------------

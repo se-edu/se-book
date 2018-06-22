@@ -19,7 +19,7 @@ In software development, there are certain problems that recur in a certain cont
 
 <tip-box>
 
-:package: Some examples of recurring design problems:
+{{ icon_example }} Some examples of recurring design problems:
 
 | Design Context  | Recurring Problem
 | --------------- | -----------------

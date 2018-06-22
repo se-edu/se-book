@@ -14,9 +14,9 @@
 
 <tip-box>
 
-:package: A class has an API (e.g., [API of the Java `String` class](http://docs.oracle.com/javase/8/docs/api/java/lang/String.html), [API of the Python `str` class](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str)) which is a collection of public methods that you can invoke to make use of the class.
+{{ icon_example }} A class has an API (e.g., [API of the Java `String` class](http://docs.oracle.com/javase/8/docs/api/java/lang/String.html), [API of the Python `str` class](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str)) which is a collection of public methods that you can invoke to make use of the class.
 
-:package: The [GitHub API](https://developer.github.com/v3/) is a collection of Web request formats GitHub server accepts and the corresponding responses. We can write a program that interacts with GitHub through that API.
+{{ icon_example }} The [GitHub API](https://developer.github.com/v3/) is a collection of Web request formats GitHub server accepts and the corresponding responses. We can write a program that interacts with GitHub through that API.
 
 </tip-box>
 

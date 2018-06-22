@@ -28,7 +28,7 @@ method     |`result()`       | `calculate()`
 
 <tip-box>
 
-:package: Examples:
+{{ icon_example }} Examples:
 
 <tabs> 
   <tab header="Java">

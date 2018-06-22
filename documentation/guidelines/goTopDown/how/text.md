@@ -12,7 +12,7 @@
 
 <tip-box> 
 
-:package: To explain a system called `SystemFoo` with two sub-systems, `FrontEnd` and `BackEnd`, start by describing the system at the highest level of abstraction, and progressively drill down to lower level details. An outline for such a description is given below.
+{{ icon_example }} To explain a system called `SystemFoo` with two sub-systems, `FrontEnd` and `BackEnd`, start by describing the system at the highest level of abstraction, and progressively drill down to lower level details. An outline for such a description is given below.
 
 [First, explain what the system is, in a black-box fashion (no internal details, only the external view).]
 

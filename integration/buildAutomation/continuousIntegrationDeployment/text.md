@@ -16,7 +16,7 @@
 
 <tip-box> 
 
-:package: Some examples of CI/CD tools:
+{{ icon_example }} Some examples of CI/CD tools:
 
 * [Travis](https://travis-ci.org/)
 * [Jenkins](http://jenkins-ci.org)

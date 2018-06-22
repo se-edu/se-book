@@ -20,7 +20,7 @@ A _concern_ in this context is a set of information that affects the code of a c
 
 <tip-box> 
 
-:package: Examples for _concerns_:
+{{ icon_example }} Examples for _concerns_:
 
 *	A specific feature, such as the code related to `add employee` feature
 *	A specific aspect, such as the code related to `persistence` or `security`
@@ -32,7 +32,7 @@ A _concern_ in this context is a set of information that affects the code of a c
 
 <tip-box> 
 
-:package: If the code related to _persistence_ is separated from the code related to _security_, a change to how the data are persisted will not need changes to how the security is implemented.
+{{ icon_example }} If the code related to _persistence_ is separated from the code related to _security_, a change to how the data are persisted will not need changes to how the security is implemented.
 
 </tip-box>
 
@@ -40,7 +40,7 @@ A _concern_ in this context is a set of information that affects the code of a c
 
 <tip-box> 
 
-:package: The <trigger trigger="click" for="modal:soc-nTier">n-tier architecture</trigger> utilizes this principle. Each layer in the architecture has a well-defined functionality that has no functional overlap with each other. 
+{{ icon_example }} The <trigger trigger="click" for="modal:soc-nTier">n-tier architecture</trigger> utilizes this principle. Each layer in the architecture has a well-defined functionality that has no functional overlap with each other. 
 
 </tip-box>
 

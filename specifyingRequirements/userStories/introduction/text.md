@@ -22,7 +22,7 @@
 
 <tip-box>
 
-:package: Examples (from a _Learning Management System_):
+{{ icon_example }} Examples (from a _Learning Management System_):
 
 1. As a student, I can download files uploaded by lecturers, so that I can get my own copy of the files
 2. As a lecturer, I can create discussion forums, so that students can discuss things online

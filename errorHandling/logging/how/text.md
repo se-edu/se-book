@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: This sample Java code uses Java’s default logging mechanism. 
+{{ icon_example }} This sample Java code uses Java’s default logging mechanism. 
 
 First, import the relevant Java package:
 ```java

@@ -17,7 +17,7 @@
 
 <tip-box> 
 
-:package: The code below will not invoke the `writeFile()` method when assertions are disabled. %%&nbsp;If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.%%
+{{ icon_example }} The code below will not invoke the `writeFile()` method when assertions are disabled. %%&nbsp;If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.%%
 
 ```java
 ...

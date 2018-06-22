@@ -20,7 +20,7 @@
 
 <tip-box>
 
-:package: Examples:
+{{ icon_example }} Examples:
 
 * A network connection encounters a timeout due to a slow server.
 * The code tries to read a file from the hard disk but the file is corrupted and cannot be read.

@@ -24,7 +24,7 @@ Notes:
 
 <tip-box>
 
-:package: Some example objects:
+{{ icon_example }} Some example objects:
 
 <img src="{{baseUrl}}/uml/objectDiagrams/objects/images/professorStudent.png" height="65" />
 <p/>

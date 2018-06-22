@@ -16,7 +16,7 @@
 
 <tip-box>
 
-:package: In this example, the same association is described using two different labels.
+{{ icon_example }} In this example, the same association is described using two different labels.
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/labels/images/adminStudent.png" width="600" />
 <p/>

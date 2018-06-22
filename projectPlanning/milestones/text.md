@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Each intermediate product release is a milestone. 
+{{ icon_example }} Each intermediate product release is a milestone. 
 
 </tip-box>
 
@@ -22,7 +22,7 @@ In some projects, it is not practical to have a very detailed plan for the whole
 
 <tip-box>
 
-:package: Milestones for the Minesweeper project, iteration 1
+{{ icon_example }} Milestones for the Minesweeper project, iteration 1
 
 | Day      | Milestones                        |
 | -------- | --------------------------------- |

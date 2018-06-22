@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: Consider testing of the method `print(Integer i)` which prints the value of `i`.
+{{ icon_example }} Consider testing of the method `print(Integer i)` which prints the value of `i`.
 
 * A positive test case: `i == new Integer(50)`
 * A negative test case: `i == null;`

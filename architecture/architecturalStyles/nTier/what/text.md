@@ -16,7 +16,7 @@
 
 <tip-box> 
 
-:package: Operating systems and network communication software often use n-tier style.
+{{ icon_example }} Operating systems and network communication software often use n-tier style.
 <img src="{{baseUrl}}/architecture/architecturalStyles/nTier/what/images/nTierExamples.png" height="150" />
 
 </tip-box>

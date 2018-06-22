@@ -20,7 +20,7 @@ Notation:
 
 <tip-box>
 
-:package: The `Logic` object creates a `Minefield` object.
+{{ icon_example }} The `Logic` object creates a `Minefield` object.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/objectCreation/images/logicMinefield.png" height="150" />
 <p/>

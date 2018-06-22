@@ -18,7 +18,7 @@ When deciding EPs of OOP methods, we need to identify EPs of all data participan
 
 <tip-box>
 
-:package: Consider this method in the `DataStack` class:
+{{ icon_example }} Consider this method in the `DataStack` class:
 `push(Object o): boolean`
 * Adds o to the top of the stack if the stack is not full.
 * returns `true` if the push operation was a success.
@@ -35,7 +35,7 @@ EPs:
 
 <tip-box>
 
-:package: Consider a simple Minesweeper app. What are the EPs for the `newGame()` method of the `Logic` component?
+{{ icon_example }} Consider a simple Minesweeper app. What are the EPs for the `newGame()` method of the `Logic` component?
 
 As `newGame()` does not have any parameters, the only obvious participant is the `Logic` object itself.
 
@@ -52,7 +52,7 @@ Next, let us identify equivalence partitions for each participant. Will the `new
 
 <tip-box>
 
-:package: Consider the `Logic` component of the Minesweeper application. What are the EPs for the `markCellAt(int x, int y)` method?. The partitions in **bold** represent valid inputs.
+{{ icon_example }} Consider the `Logic` component of the Minesweeper application. What are the EPs for the `markCellAt(int x, int y)` method?. The partitions in **bold** represent valid inputs.
 
 * `Logic`: PRE_GAME, **READY**, **IN_PLAY**, WON, LOST
 * `x`: [MIN_INT..-1] **[0..(W-1)]** [W..MAX_INT] %%(we assume a minefield size of WxH)%%

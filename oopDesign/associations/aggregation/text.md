@@ -18,7 +18,7 @@
 
 <tip-box> 
 
-:package: `Club` acts as a _container_ for `Person` objects. `Person` objects can survive without a `Club` object.
+{{ icon_example }} `Club` acts as a _container_ for `Person` objects. `Person` objects can survive without a `Club` object.
 
 <img src="{{baseUrl}}/oopDesign/associations/aggregation/images/clubPerson.png" height="80" />
 <p/>

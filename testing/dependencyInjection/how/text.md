@@ -18,7 +18,7 @@
 
 <tip-box> 
 
-:package: Here is another example of using polymorphism to implement dependency injection:
+{{ icon_example }} Here is another example of using polymorphism to implement dependency injection:
 
 Suppose we want to unit test the `Payroll#totalSalary()` given below. The method depends on the `SalaryManager` object to calculate the return value. Note how the `setSalaryManager(SalaryManager)` can be used to inject a `SalaryManager` object to replace the current `SalaryManager` object.
 

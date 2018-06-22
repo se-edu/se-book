@@ -19,7 +19,7 @@
 <tabs> 
   <tab header="Java">
 
-:package: In the code given below, `processArray` can potentially throw an `InvalidInputException`. Because of that, `processInput` method invokes `processArray` method inside a `try{  }` block and has a `catch{  }` block to specify what to do if the exception is actually thrown.
+{{ icon_example }} In the code given below, `processArray` can potentially throw an `InvalidInputException`. Because of that, `processInput` method invokes `processArray` method inside a `try{  }` block and has a `catch{  }` block to specify what to do if the exception is actually thrown.
 
 <img src="{{baseUrl}}/errorHandling/exceptions/how/images/processInput.png" width="400" />
 <p/>
@@ -27,7 +27,7 @@
   </tab>
   <tab header="Python">
 
-:package: In the code given below, `process_array` function can potentially raise a `ValueError` exception. Because of that, `process_input` function invokes `process_array` function inside a `try` clause and has a `except` clause to specify what to do if the exception is actually raised.
+{{ icon_example }} In the code given below, `process_array` function can potentially raise a `ValueError` exception. Because of that, `process_input` function invokes `process_array` function inside a `try` clause and has a `except` clause to specify what to do if the exception is actually raised.
 
 <img src="{{baseUrl}}/errorHandling/exceptions/how/images/example-python.png" width="400"/>
 

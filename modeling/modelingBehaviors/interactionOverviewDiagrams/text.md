@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: An example:
+{{ icon_example }} An example:
 
 <img src="{{baseUrl}}/modeling/modelingBehaviors/interactionOverviewDiagrams/images/diagram.png" height="420" />
 <p/>

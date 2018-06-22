@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: An assertion can be used to express something like _when the execution comes to this point, the variable `v` cannot be null_. 
+{{ icon_example }} An assertion can be used to express something like _when the execution comes to this point, the variable `v` cannot be null_. 
 
 </tip-box>
  
@@ -22,7 +22,7 @@
 
 <tip-box>
 
-:package: In the Java code below, suppose we set an assertion that `timeout` returned by `Config.getTimeout()` is greater than `0`. Now, if the `Config.getTimeout()` returned `-1` in a specific execution of this line, the runtime can detect it as a _assertion failure_ -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result of a bug -- and take some drastic action such as terminating the execution.
+{{ icon_example }} In the Java code below, suppose we set an assertion that `timeout` returned by `Config.getTimeout()` is greater than `0`. Now, if the `Config.getTimeout()` returned `-1` in a specific execution of this line, the runtime can detect it as a _assertion failure_ -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result of a bug -- and take some drastic action such as terminating the execution.
 
 ```java
 int timeout = Config.getTimeout(); 

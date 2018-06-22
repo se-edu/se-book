@@ -26,7 +26,7 @@
 
 <tip-box>
 
-:package: A real world scenario viewed as a network of interacting objects:
+{{ icon_example }} A real world scenario viewed as a network of interacting objects:
 
 You are asked to find out the average age of a group of people Adam, Beth, Charlie, and Daisy. You take a piece of paper and pen, go to each person, ask for their age, and note it down. After collecting the age of all four, you enter it into a calculator to find the total. And then, use the same calculator to divide the total by four, to get the average age. This can be viewed as the objects `You`, `Pen`, `Paper`, `Calculator`, `Adam`, `Beth`, `Charlie`, and `Daisy` interacting to accomplish to achieve the end result of calculating the average age of the four persons. These objects can be considered as connected in a certain network of certain structure.
 
@@ -42,7 +42,7 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 
 <tip-box>
 
-:package: Our previous example can be tweaked a bit as follows:
+{{ icon_example }} Our previous example can be tweaked a bit as follows:
 
 * Use an object called `Main` to represent your role in the scenario.
 * As there is no physical writing involved, we can replace the `Pen` and `Paper` with an object called `AgeList` that is able to keep a list of ages.
@@ -71,7 +71,7 @@ Every real world object has an interface that other objects can interact with an
 
 <tip-box>
 
-:package: The interface and implementation of some real-world objects in our example:
+{{ icon_example }} The interface and implementation of some real-world objects in our example:
 
 * Calculator: the buttons and the display are part of the interface; circuits are part of the implementation.
 * Adam: In the context of our 'calculate average age' example, the interface of Adam consists of requests that adam will respond to, e.g.  "Give age to the nearest year, as at Jan 1st of this year" "State your name"; the implementation includes the mental calculation Adam uses to calculate the age which is not visible to other objects.
@@ -82,7 +82,7 @@ Similarly, every object in the virtual world has an interface and an implementat
 
 <tip-box>
 
-:package: The interface and implementation of some virtual-world objects in our example:
+{{ icon_example }} The interface and implementation of some virtual-world objects in our example:
 
 * `Adam`: the interface might have a method `getAge(Date asAt)`; the implementation of that method is not visible to other objects.
 

@@ -19,7 +19,7 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
 
 1. Store the test input in the text file `input.txt`. 
  
-   <panel header="%%:package: Example `input.txt`%%" type="seamless">
+   <panel header="%%{{ icon_example }} Example `input.txt`%%" type="seamless">
    
    ```
    add Valid Name p/12345 valid@email.butNoPrefix
@@ -30,7 +30,7 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
 
 1. Store the output we expect from the SUT in another text file `expected.txt`. 
    
-   <panel header="%%:package: Example `expected.txt`%%" type="seamless">
+   <panel header="%%{{ icon_example }} Example `expected.txt`%%" type="seamless">
    
    ```
    Command: || [add Valid Name p/12345 valid@email.butNoPrefix]

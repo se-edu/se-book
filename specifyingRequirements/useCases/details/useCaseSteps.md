@@ -4,7 +4,7 @@
 
 <tip-box>
   
-:package: An example of the main body of a use case.
+{{ icon_example }} An example of the main body of a use case.
 
   1. Student requests to upload file
   2. LMS requests for the file location
@@ -17,7 +17,7 @@
 
 <tip-box>
   
-:package: This example use case step refers to behaviors not externally visible .
+{{ icon_example }} This example use case step refers to behaviors not externally visible .
 
 1. LMS ==saves the file into the cache== and indicates success.
 

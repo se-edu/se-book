@@ -127,7 +127,7 @@ Meaning of icons:
 * {{glyphicon_new_window}} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.
 * {{glyphicon_flag}} : learning outcomes
 * {{glyphicon_education}} : prerequisite learning outcome
-* :package: : examples
+* {{ icon_example }} : examples
 * :paperclip: : resources
 * :muscle: : exercises
 * {{glyphicon_print}} : printable version

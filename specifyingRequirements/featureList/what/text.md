@@ -16,7 +16,7 @@
 
 <tip-box>
 
-:package: A sample feature list from a simple Minesweeper game %%&nbsp;(only a brief description has been provided to save space)%%:
+{{ icon_example }} A sample feature list from a simple Minesweeper game %%&nbsp;(only a brief description has been provided to save space)%%:
 
 1. Basic play – Single player play.
 2. Difficulty levels

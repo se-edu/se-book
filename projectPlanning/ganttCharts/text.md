@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: A sample Gantt chart:
+{{ icon_example }} A sample Gantt chart:
 
 <img src="{{baseUrl}}/projectPlanning/ganttCharts/images/gantt.png" height="360" />
 <p/>

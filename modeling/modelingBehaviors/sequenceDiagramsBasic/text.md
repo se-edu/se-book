@@ -17,7 +17,7 @@
 
 <tip-box> 
 
-:package: Consider the code below.
+{{ icon_example }} Consider the code below.
 
 ```java
 class Machine {

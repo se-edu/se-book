@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: `PayrollTest` ‘drives’ the `PayRoll` class by sending it test inputs and verifies if the output is as expected.
+{{ icon_example }} `PayrollTest` ‘drives’ the `PayRoll` class by sending it test inputs and verifies if the output is as expected.
 
 ```java
 public class PayrollTestDriver {

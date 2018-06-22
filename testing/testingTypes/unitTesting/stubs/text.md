@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: If a `Logic` class depends on a `Storage` class, unit testing the `Logic` class requires isolating the `Logic` class from the `Storage` class.
+{{ icon_example }} If a `Logic` class depends on a `Storage` class, unit testing the `Logic` class requires isolating the `Logic` class from the `Storage` class.
 
 </tip-box>
 
@@ -29,7 +29,7 @@
 
 <tip-box> 
 
-:package: Consider the code below:
+{{ icon_example }} Consider the code below:
 ```java
 class Logic {
     Storage s;

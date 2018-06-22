@@ -20,7 +20,7 @@ Note the slight difference between the _start node_ and the _end node_ which rep
 
 <tip-box> 
 
-:package: This activity diagram shows the action sequence of the activity _a passenger rides the bus_:
+{{ icon_example }} This activity diagram shows the action sequence of the activity _a passenger rides the bus_:
 
 <img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/linearPaths/images/example.png" width="450" />
 

@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: An example deployment diagram:
+{{ icon_example }} An example deployment diagram:
 
 <img src="{{baseUrl}}/modeling/modelingStructures/deploymentDiagrams/images/diagram.png" height="500" />
 <p/>

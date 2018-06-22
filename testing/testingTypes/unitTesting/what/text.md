@@ -16,7 +16,7 @@ In OOP code, it is common to write one or more unit tests for each public method
 
 <tip-box> 
 
-:package: Here are the code skeletons for a `Foo` class containing two methods and a `FooTest` class that contains unit tests for those two methods.
+{{ icon_example }} Here are the code skeletons for a `Foo` class containing two methods and a `FooTest` class that contains unit tests for those two methods.
 
 <tabs> 
   <tab header="Java">

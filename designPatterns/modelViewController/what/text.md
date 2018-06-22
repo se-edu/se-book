@@ -33,7 +33,7 @@ The relationship between the components can be observed in the diagram below. Ty
 
 <tip-box>
 
-:package: Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving data of one student.
+{{ icon_example }} Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving data of one student.
 
 <img src="{{baseUrl}}/designPatterns/modelViewController/what/images/sequenceDiagram.png" width="500" />
 <p/>

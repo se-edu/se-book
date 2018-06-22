@@ -16,7 +16,7 @@
 
 <tip-box>
 
-:package: Some example architecture diagrams:
+{{ icon_example }} Some example architecture diagrams:
 
 <tabs> 
   <tab header="TEAMMATES">

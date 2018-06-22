@@ -19,7 +19,7 @@ Notation:
 
 <tip-box>
 
-:package: Examples: The `Car` class _inherits_ from the `Vehicle` class. The `Cat` and `Dog` classes _inherit_ from the `Pet` class. 
+{{ icon_example }} Examples: The `Car` class _inherits_ from the `Vehicle` class. The `Cat` and `Dog` classes _inherit_ from the `Pet` class. 
 
 <img src="{{baseUrl}}/uml/classDiagrams/classInheritance/what/images/examples.png" height="120" />
 <p/>

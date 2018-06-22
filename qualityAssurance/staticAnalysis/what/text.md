@@ -22,7 +22,7 @@ Higher-end static analyzer tools can perform for more complex analysis such as l
 
 <tip-box> 
 
-:package: Some example static analyzer for Java:
+{{ icon_example }} Some example static analyzer for Java:
 * [CheckStyle](http://checkstyle.sourceforge.net/)
 * [PMD](http://findbugs.sourceforge.net/)
 * [FindBugs](https://pmd.github.io/)

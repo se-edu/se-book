@@ -34,9 +34,9 @@ Paradigm | Programming Languages
 
 <tip-box> 
 
-:package: Java is primarily an OOP language but it supports limited forms of functional programming and it can be used to (although not recommended) write procedural code. %%&nbsp;e.g. [se-edu/addressbook-level1](https://github.com/se-edu/addressbook-level1)%%
+{{ icon_example }} Java is primarily an OOP language but it supports limited forms of functional programming and it can be used to (although not recommended) write procedural code. %%&nbsp;e.g. [se-edu/addressbook-level1](https://github.com/se-edu/addressbook-level1)%%
 
-:package: JavaScript and Python support functional, procedural, and OOP programming.
+{{ icon_example }} JavaScript and Python support functional, procedural, and OOP programming.
 
 </tip-box>
 

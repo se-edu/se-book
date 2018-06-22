@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: This class diagram does not tell us multiplicities. For exaple, how many `Calculator` objects can be associated with one `Main` object? How many `Main` objects can be associated with one `Calculator` object? and so on. 
+{{ icon_example }} This class diagram does not tell us multiplicities. For exaple, how many `Calculator` objects can be associated with one `Main` object? How many `Main` objects can be associated with one `Calculator` object? and so on. 
 
 <img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculatorPerson.png" height="100" />
 

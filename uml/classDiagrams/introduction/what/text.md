@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: An example class diagram:
+{{ icon_example }} An example class diagram:
 
 <img src="{{baseUrl}}/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600" />
 

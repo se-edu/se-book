@@ -17,7 +17,7 @@ Notation:
 
 <tip-box>
 
-:package: This sequence diagram shows some interactions between a human user and the Text UI of a <tooltip content="Command Line Interface">CLI</tooltip> Minesweeper game.
+{{ icon_example }} This sequence diagram shows some interactions between a human user and the Text UI of a <tooltip content="Command Line Interface">CLI</tooltip> Minesweeper game.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/basic/images/playerText.png" height="300" />
 <p/>

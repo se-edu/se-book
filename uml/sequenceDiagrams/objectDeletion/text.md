@@ -25,7 +25,7 @@ Notation:
 
 <tip-box>
 
-:package: Note how the diagrams shows the deletion of the `Minefield` object
+{{ icon_example }} Note how the diagrams shows the deletion of the `Minefield` object
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/objectDeletion/images/logicMinefield.png" height="120" />
 <p/>

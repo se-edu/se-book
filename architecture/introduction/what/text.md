@@ -17,7 +17,7 @@
 
 <tip-box>
 
-:package: A possible architecture for a _Minesweeper_ game
+{{ icon_example }} A possible architecture for a _Minesweeper_ game
 
 <table>
 <tr>

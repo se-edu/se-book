@@ -17,7 +17,7 @@
 <img src="{{baseUrl}}/oopDesign/inheritance/substitutability/images/staff.png" height="80" />
 <p/>
 
-:package: an `Academic` is an instance of a `Staff`, but a `Staff` is not necessarily an instance of an `Academic`.  i.e. wherever an object of the superclass is expected, it can be substituted by an object of any of its subclasses. 
+{{ icon_example }} an `Academic` is an instance of a `Staff`, but a `Staff` is not necessarily an instance of an `Academic`.  i.e. wherever an object of the superclass is expected, it can be substituted by an object of any of its subclasses. 
 
 The following code is valid because an `AcademicStaff` object is substitutable as a `Staff` object.
 

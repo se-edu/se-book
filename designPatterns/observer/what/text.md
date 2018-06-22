@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: Here is a scenario from the a student management system where the user is adding a new student to the system.
+{{ icon_example }} Here is a scenario from the a student management system where the user is adding a new student to the system.
 
 <img src="{{baseUrl}}/designPatterns/observer/what/images/sequenceDiagram.png" height="330" />
 <p/>
@@ -50,7 +50,7 @@ Force the communication through an interface known to both parties.
 
 <tip-box>
 
-:package:Here is the Observer pattern applied to the student management system.
+{{ icon_example }}Here is the Observer pattern applied to the student management system.
 
 During initialization of the system,
 

@@ -18,7 +18,7 @@ Keeping track of project tasks %%(who is doing what, which tasks are ongoing, wh
 
 <tip-box> 
 
-:package: A screenshot from the Jira Issue tracker software %%(Jira is part of the BitBucket project management tool suite)%%:
+{{ icon_example }} A screenshot from the Jira Issue tracker software %%(Jira is part of the BitBucket project management tool suite)%%:
           
 <img src="{{baseUrl}}/projectPlanning/issueTrackers/images/xjira.png" height="350" />
 <p/>

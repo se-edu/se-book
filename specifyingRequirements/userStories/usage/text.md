@@ -20,7 +20,7 @@
 
 <tip-box>
 
-:package: An example of a NFR captured as a user story:
+{{ icon_example }} An example of a NFR captured as a user story:
 
 As a | I want to | so that
 -----|-----------|--------

@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Consider a `MainApp#getConfig()` a method that returns a `Config` object containing configuration data. A typical implementation is given below:
+{{ icon_example }} Consider a `MainApp#getConfig()` a method that returns a `Config` object containing configuration data. A typical implementation is given below:
 ```java
 class MainApp{
     Config config;

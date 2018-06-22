@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: Some exmaple sequence diagrams:
+{{ icon_example }} Some exmaple sequence diagrams:
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/introduction/images/textLogic.png" height="300" />
 <p/>

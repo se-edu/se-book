@@ -14,7 +14,7 @@ To reduce clutter, **activation bars and return arrows may be omitted** if they 
 
 <tip-box>
 
-:package: A minimal sequence diagram
+{{ icon_example }} A minimal sequence diagram
 
 <!-- TODO: add a more detailed version of the SD for comparison -->
 

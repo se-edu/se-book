@@ -19,7 +19,7 @@ Notation:
 
 <tip-box>
 
-:package: `Logic` is calling methods `CloudServer#poll()` and `LocalServer#poll()` in parallel.
+{{ icon_example }} `Logic` is calling methods `CloudServer#poll()` and `LocalServer#poll()` in parallel.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/parallelPaths/images/logicServerData.png" height="150" />
 <p/>

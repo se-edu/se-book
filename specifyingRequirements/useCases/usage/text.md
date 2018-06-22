@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: In this example, actor `Blogger` can do all the use cases the actor `Guest` can do, as a result of the actor generalization relationship given in the diagram.
+{{ icon_example }} In this example, actor `Blogger` can do all the use cases the actor `Guest` can do, as a result of the actor generalization relationship given in the diagram.
 
 <img src="{{baseUrl}}/specifyingRequirements/useCases/usage/images/actorGeneralisation.png" height="250" />
 </tip-box>
@@ -25,7 +25,7 @@
 
 <tip-box> 
 
-:package: The diagram below can be used to indicate that the system generates daily reports at midnight.
+{{ icon_example }} The diagram below can be used to indicate that the system generates daily reports at midnight.
 
 <img src="{{baseUrl}}/specifyingRequirements/useCases/usage/images/systemAsActor.jpg" height="200" />
 

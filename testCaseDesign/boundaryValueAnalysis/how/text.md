@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Some examples:
+{{ icon_example }} Some examples:
 
 <table class="table">
   <tr>

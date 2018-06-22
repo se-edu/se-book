@@ -19,7 +19,7 @@ Notation:
 
 <tip-box>
 
-:package: The details of the `get minefield appearance` interactions have been omitted from the diagram.
+{{ icon_example }} The details of the `get minefield appearance` interactions have been omitted from the diagram.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/referenceFrames/images/playerTextLogic.png" height="250" />
 <p/>

@@ -21,7 +21,7 @@ Here are some examples of different coverage criteria:
  
 <tip-box> 
 
-:package: `if(x > 2 && x < 44)` is considered one decision point but two conditions. 
+{{ icon_example }} `if(x > 2 && x < 44)` is considered one decision point but two conditions. 
 
 For 100% branch or decision coverage, two test cases are required:
 

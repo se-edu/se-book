@@ -14,7 +14,7 @@ Do not write comments as if they are private notes to self. Instead, write them 
 
 <tip-box> 
 
-:package: Examples:
+{{ icon_example }} Examples:
 
 <tabs> 
   <tab header="Java">

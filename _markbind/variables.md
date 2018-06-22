@@ -9,3 +9,5 @@
 <span id="outcomes">
 <button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><md>%%<include src="text.md#outcomes" inline />%%</md></button><p/>
 </span>
+
+<span id="icon_example">{{ glyphicon_gift | safe}}</span>

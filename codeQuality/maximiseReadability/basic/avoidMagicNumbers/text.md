@@ -14,7 +14,7 @@ When the code has a number that does not explain the meaning of the number, we c
 
 <tip-box>
 
-:package: Example:
+{{ icon_example }} Example:
 
 <tabs> 
   <tab header="Java">

@@ -22,7 +22,7 @@
 
 <tip-box>
 
-:package: Consider the code below. The declared type of `s` is `Staff` and it appears as if the `adjustSalary(int)` operation of the `Staff` class is invoked. 
+{{ icon_example }} Consider the code below. The declared type of `s` is `Staff` and it appears as if the `adjustSalary(int)` operation of the `Staff` class is invoked. 
 
 <img src="{{baseUrl}}/oopDesign/inheritance/dynamicAndStaticBinding/images/staff.png" height="150" />
 <p/>
@@ -50,7 +50,7 @@ However, at runtime the `adjustSalary(int)` operation of the actual object will 
 
 <tip-box>
 
-:package: Note how the constructor is overloaded in the class below. The method call `new Account()` is bound to the first constructor at compile time.
+{{ icon_example }} Note how the constructor is overloaded in the class below. The method call `new Account()` is bound to the first constructor at compile time.
 
 ```java
 class Account {
@@ -65,7 +65,7 @@ class Account {
 }
 ```
 
-:package: Similarly, the `calcuateGrade` method is overloaded in the code below and a method call `calculateGrade("A1213232")` is bound to the second implementation, at compile time. 
+{{ icon_example }} Similarly, the `calcuateGrade` method is overloaded in the code below and a method call `calculateGrade("A1213232")` is bound to the second implementation, at compile time. 
 ```
 void calculateGrade (int[] averages) { ... }
 void calculateGrade (String matric) { ... }

@@ -20,7 +20,7 @@ An enumeration is often useful when using a regular data type such as `int` or `
 
 <tip-box>
 
-:package: `Priority` can be considered an enumeration because it has only three values.
+{{ icon_example }} `Priority` can be considered an enumeration because it has only three values.
 
 `Priority`: `HIGH`, `MEDIUM`, `LOW`
 

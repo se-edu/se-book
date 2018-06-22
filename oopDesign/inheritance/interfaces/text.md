@@ -19,7 +19,7 @@
 
 <tip-box>
 
-:package: `SalariedStaff` is an interface that contains two methods `setSalary(int)` and `getSalary()`. `AcademicStaff` implements the `SalariedStaff` interface. %%&nbsp;That means an `AcademicStaff` object is able to support the behaviors `setSalary(int)` and `getSalary()`. That's why the same two methods also appear under the methods implemented by the `AcademicStaff` class (in blue)%%
+{{ icon_example }} `SalariedStaff` is an interface that contains two methods `setSalary(int)` and `getSalary()`. `AcademicStaff` implements the `SalariedStaff` interface. %%&nbsp;That means an `AcademicStaff` object is able to support the behaviors `setSalary(int)` and `getSalary()`. That's why the same two methods also appear under the methods implemented by the `AcademicStaff` class (in blue)%%
 
 <img src="{{baseUrl}}/oopDesign/inheritance/interfaces/images/staff.png" height="250" />
 <p/>
@@ -30,7 +30,7 @@
 
 <tip-box>
 
-:package: In the example above, `AcademicStaff` _is a_ `SalariedStaff`.  An `AcademicStaff` object can be used anywhere a `SalariedStaff` object is expected e.g. `SalariedStaff ss = new AcademicStaff()`. 
+{{ icon_example }} In the example above, `AcademicStaff` _is a_ `SalariedStaff`.  An `AcademicStaff` object can be used anywhere a `SalariedStaff` object is expected e.g. `SalariedStaff ss = new AcademicStaff()`. 
 
 %%&nbsp;Similarly, `AdminStaff` _is a_ `SalariedStaff` too.%%
 

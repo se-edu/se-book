@@ -25,7 +25,7 @@ If a software product has a GUI component, all product-level testing (i.e. the t
 
 <tip-box> 
 
-:package: Some tools used for automated GUI testing:
+{{ icon_example }} Some tools used for automated GUI testing:
 * **TestFx** can do automated testing of JavaFX GUIs<br>
 * **VisualStudio** supports ‘record replay’ type of GUI test automation.
 * [**Selenium**](http://seleniumhq.org/) can be used to automate testing of Web application UIs<br>

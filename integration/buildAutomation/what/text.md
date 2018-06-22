@@ -20,14 +20,14 @@ However, most big projects use specialized build tools to automate complex build
 
 <tip-box> 
 
-:package: Some popular build tools relevant to Java developers:
+{{ icon_example }} Some popular build tools relevant to Java developers:
 
 * [Gradle](https://gradle.org/)
 * [Maven](http://maven.apache.org/)
 * [Apache Ant](http://ant.apache.org/)
 * [GNU Make](http://www.gnu.org/software/make/)
 
-:package: %%Some other build tools : Grunt (JavaScript), Rake (Ruby)%%
+{{ icon_example }} %%Some other build tools : Grunt (JavaScript), Rake (Ruby)%%
 
 </tip-box>
 
@@ -35,7 +35,7 @@ However, most big projects use specialized build tools to automate complex build
 
 <tip-box> 
 
-:package: Maven and Gradle, in addition to managing the build process, can play the role of dependency management tools too.
+{{ icon_example }} Maven and Gradle, in addition to managing the build process, can play the role of dependency management tools too.
 
 </tip-box>
 

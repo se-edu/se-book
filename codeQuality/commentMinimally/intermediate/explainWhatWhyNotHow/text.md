@@ -16,7 +16,7 @@ Comments should explain _what_ and _why_ aspect of the code, rather than the _ho
 
 <tip-box>
 
-:package: Example: This method is possibly buggy because the implementation does not seem to match the comment. In this case the comment could help the reader to detect the bug.
+{{ icon_example }} Example: This method is possibly buggy because the implementation does not seem to match the comment. In this case the comment could help the reader to detect the bug.
 
 ```java
 /** Removes all spaces from the {@code input} */
@@ -30,7 +30,7 @@ void compact(String input){
 
 <tip-box>
 
-:package: Example: Without this comment, the reader will not know the reason for calling this method. 
+{{ icon_example }} Example: Without this comment, the reader will not know the reason for calling this method. 
 
 ```java
 // Remove spaces to comply with IE23.5 formatting rules
@@ -43,7 +43,7 @@ compact(input);
 
 <tip-box>
 
-:package: Example:  
+{{ icon_example }} Example:  
 
 {{bad}} %%Reason: Comment explains how the code works.%%
 ```java

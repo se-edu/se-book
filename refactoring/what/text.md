@@ -37,7 +37,7 @@ Situation:  The same fragment of code is in all branches of a conditional expres
 
 Method: Move it outside of the expression.
 
-:package: Example:
+{{ icon_example }} Example:
 
 <tabs> 
   <tab header="Java">
@@ -62,7 +62,7 @@ Situation:  You have a code fragment that can be grouped together.
 
 Method: Turn the fragment into a method whose name explains the purpose of the method.
 
-:package: Example:
+{{ icon_example }} Example:
 
 <tabs> 
   <tab header="Java">

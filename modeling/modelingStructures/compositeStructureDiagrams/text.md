@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Here is an example composite structure diagram:
+{{ icon_example }} Here is an example composite structure diagram:
 
 <img src="{{baseUrl}}/modeling/modelingStructures/compositeStructureDiagrams/images/diagram.png" height="150" />
 <br>

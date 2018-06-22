@@ -14,7 +14,7 @@ While all objects of a class has the same attributes, each object has its own co
 
 <tip-box>
 
-:package: All `Person` objects have the `Name` attribute but the value of that attribute varies between `Person` objects.
+{{ icon_example }} All `Person` objects have the `Name` attribute but the value of that attribute varies between `Person` objects.
 
 </tip-box>
 
@@ -22,7 +22,7 @@ However, some attributes are not suitable to be maintained by individual objects
 
 <tip-box>
 
-:package: The attribute `totalPersons` should be maintained centrally and shared by all `Person` objects rather than copied at each `Person` object.  
+{{ icon_example }} The attribute `totalPersons` should be maintained centrally and shared by all `Person` objects rather than copied at each `Person` object.  
 
 </tip-box>
 
@@ -30,7 +30,7 @@ Similarly, when a normal method is being called, a message is being sent to the 
 
 <tip-box>
 
-:package: Sending the `getName()` message to `Adam` object results in the response `"Adam"` while sending the same message to the `Beth` object gets the response `"Beth"`.
+{{ icon_example }} Sending the `getName()` message to `Adam` object results in the response `"Adam"` while sending the same message to the `Beth` object gets the response `"Beth"`.
 
 </tip-box>
 
@@ -38,7 +38,7 @@ However, there can be methods related to a specific class but not suitable for s
 
 <tip-box>
 
-:package: The method `getTotalPersons()` is not suitable to send to a specific `Person` object %%because a specific object of the `Person` class should not know about the total number of `Person` objects%%.
+{{ icon_example }} The method `getTotalPersons()` is not suitable to send to a specific `Person` object %%because a specific object of the `Person` class should not know about the total number of `Person` objects%%.
 
 </tip-box>
 

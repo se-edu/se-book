@@ -18,7 +18,7 @@
 
 <tip-box> 
 
-<panel header=":package: Example 1: ‘check account balance’ use case for an ATM" type="seamless" expanded>
+<panel header="{{ icon_example }} Example 1: ‘check account balance’ use case for an ATM" type="seamless" expanded>
 
 * System: <popover effect="fade" placement="right" content="Automated Teller Machine">
 ATM </popover>
@@ -34,7 +34,7 @@ ATM </popover>
 
 </panel>
 
-<panel header="%%:package: Example 2: 'upload file' use case of an LMS%%" type="seamless">
+<panel header="%%{{ icon_example }} Example 2: 'upload file' use case of an LMS%%" type="seamless">
 
 * System: A Learning Management System (LMS)
 * Actor: Student

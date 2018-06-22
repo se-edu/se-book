@@ -21,7 +21,7 @@
 
 <tip-box>
 
-:package: Example: A minimal test case for testing a browser:
+{{ icon_example }} Example: A minimal test case for testing a browser:
 
 * **Input** – Start the browser using a blank page (vertical scrollbar disabled). Then, load `longfile.html` located in the `test data` folder.
 * **Expected behavior** – The scrollbar should be automatically enabled upon loading `longfile.html`.
@@ -52,7 +52,7 @@ For each test case we do the following:
 
 <tip-box>
 
-:package: Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading `longfile.html`. The defect/bug causing that failure could be an uninitialized variable.
+{{ icon_example }} Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading `longfile.html`. The defect/bug causing that failure could be an uninitialized variable.
 
 </tip-box>
 

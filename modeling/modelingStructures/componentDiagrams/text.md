@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: An example component diagram:
+{{ icon_example }} An example component diagram:
 
 <img src="{{baseUrl}}/modeling/modelingStructures/componentDiagrams/images/diagram.png" height="500" /><br>
 

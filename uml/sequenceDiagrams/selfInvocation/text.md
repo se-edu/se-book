@@ -19,12 +19,12 @@ Notation:
 
 <tip-box>
 
-:package: The `markCellAt(...)` method of a `Logic` object is calling its own `updateState(...)` method.
+{{ icon_example }} The `markCellAt(...)` method of a `Logic` object is calling its own `updateState(...)` method.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/selfInvocation/images/logic.png" height="100" />
 <p/>
 
-:package: In this variation, the `Book#write()` method is calling the `Chapter#getText()` method which in turn does a _call back_ by calling the `getAuthor()` method of the calling object.
+{{ icon_example }} In this variation, the `Book#write()` method is calling the `Chapter#getText()` method which in turn does a _call back_ by calling the `getAuthor()` method of the calling object.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/selfInvocation/images/callBack.png" height="150" />
 <p/>

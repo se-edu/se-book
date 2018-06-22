@@ -16,9 +16,9 @@
 
 Some examples in which a certain workflow is relevant to software project:
 
-:package: A software that automates the work of an insurance company needs to take into account the workflow of processing an insurance claim.
+{{ icon_example }} A software that automates the work of an insurance company needs to take into account the workflow of processing an insurance claim.
 
-:package: The algorithm of a price of code represents the workflow (i.e. the execution flow) of the code.
+{{ icon_example }} The algorithm of a price of code represents the workflow (i.e. the execution flow) of the code.
 
 </tip-box>
 
@@ -30,7 +30,7 @@ Understanding such workflows is important for the success of the software projec
 
 <tip-box> 
 
-:package: An example activity diagram <sub>[[source:wikipeida](https://en.wikipedia.org/wiki/Activity_diagram)]</sub>:
+{{ icon_example }} An example activity diagram <sub>[[source:wikipeida](https://en.wikipedia.org/wiki/Activity_diagram)]</sub>:
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Activity_conducting.svg" width="430">
 

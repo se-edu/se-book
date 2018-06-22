@@ -16,7 +16,7 @@
 
 <tip-box>
 
-:package: Continuing with the example given in [<trigger trigger="click" for="modal:oopImpl-polymorphism">{{glyphicon_education}} OOP → Polymorphism → Introduction </trigger>], given below is the minimum code for `Staff`, `Admin`, and `Academic` classes that achieves the desired polymorphism.
+{{ icon_example }} Continuing with the example given in [<trigger trigger="click" for="modal:oopImpl-polymorphism">{{glyphicon_education}} OOP → Polymorphism → Introduction </trigger>], given below is the minimum code for `Staff`, `Admin`, and `Academic` classes that achieves the desired polymorphism.
 
 <modal title="" id="modal:oopImpl-polymorphism">
   <include src="../../oopDesign/polymorphism/introduction/unit-inElsewhere-asFlat.md" boilerplate/>

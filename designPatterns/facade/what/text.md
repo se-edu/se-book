@@ -16,7 +16,7 @@ Components need to access functionality deep inside other components.
 
 <tip-box>
 
-:package: The `UI` component of a `Library` system might want to access functionality of the `Book` class contained inside the `Logic` component.
+{{ icon_example }} The `UI` component of a `Library` system might want to access functionality of the `Book` class contained inside the `Logic` component.
 
 <img src="{{baseUrl}}/designPatterns/facade/what/images/textBook.png" height="120" />
 <p/>
@@ -33,7 +33,7 @@ Include a <tooltip content="a French word that means 'front of a building'">Faç
 
 <tip-box>
 
-:package: The following class diagram applies the Façade pattern to the `Library System` example. The `LibraryLogic` class is the Facade class.
+{{ icon_example }} The following class diagram applies the Façade pattern to the `Library System` example. The `LibraryLogic` class is the Facade class.
 
 <img src="{{baseUrl}}/designPatterns/facade/what/images/textLibraryBook.png" height="120" />
 <p/>

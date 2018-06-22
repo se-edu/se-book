@@ -18,7 +18,7 @@ Notation:
 
 <tip-box>
 
-:package: Example:
+{{ icon_example }} Example:
 
 <img src="{{baseUrl}}/uml/classDiagrams/aggregation/what/images/clubPerson.png" height="85" />
 <p/>

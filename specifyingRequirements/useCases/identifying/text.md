@@ -20,7 +20,7 @@ A use case is an interaction between a system and its _actors_.
 
 <tip-box>
 
-:package: Some example actors for a Learning Management System
+{{ icon_example }} Some example actors for a Learning Management System
 
 * Actors: Guest, Student, Staff, Admin, <tooltip content="an exam management system">ExamSys</tooltip>, <tooltip content="a library management system">LibSys</tooltip>.
 
@@ -72,7 +72,7 @@ A use case is an interaction between a system and its _actors_.
 
 <tip-box>
 
-:package: Consider the three use cases given below. Clearly, (a) is at a higher level than (b) and (b) is at a higher level than (c).
+{{ icon_example }} Consider the three use cases given below. Clearly, (a) is at a higher level than (b) and (b) is at a higher level than (c).
 
 * System: LearnSys
 * Use cases:<br>

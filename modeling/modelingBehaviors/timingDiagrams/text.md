@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Here is an example timing diagram:
+{{ icon_example }} Here is an example timing diagram:
 
 <img src="{{baseUrl}}/modeling/modelingBehaviors/timingDiagrams/images/diagram.png" height="280" />
 <br>

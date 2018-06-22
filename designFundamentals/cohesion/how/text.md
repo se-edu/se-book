@@ -18,7 +18,7 @@ What%%" /></span>
 
 <tip-box>
 
-:package:  Suppose a Payroll application contains a class that deals with writing data to the database. If the class include some code to show an error dialog to the user if the database is unreachable, that class is not cohesive because it seems to be interacting with the user as well as the database.
+{{ icon_example }}  Suppose a Payroll application contains a class that deals with writing data to the database. If the class include some code to show an error dialog to the user if the database is unreachable, that class is not cohesive because it seems to be interacting with the user as well as the database.
 
 </tip-box>
 

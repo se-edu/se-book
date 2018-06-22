@@ -20,7 +20,7 @@ Take the example of writing a payroll application for a university to facilitate
 
 <tip-box>
 
-:package: Calling `adjustSalary()` method for each Staff type:
+{{ icon_example }} Calling `adjustSalary()` method for each Staff type:
 
 <img src="{{baseUrl}}/oopDesign/polymorphism/introduction/images/payroll.png" height="150" />
 <p/>

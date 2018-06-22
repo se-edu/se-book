@@ -16,7 +16,7 @@
 
 <tip-box>
 
-:package: The two code samples given below achieve the same functionality, but one is easier to read.
+{{ icon_example }} The two code samples given below achieve the same functionality, but one is easier to read.
 
 <tabs> 
   <tab header="Java">

@@ -1,6 +1,6 @@
 <tip-box>
 
-:package: Example: 
+{{ icon_example }} Example: 
 
 {{bad}}
 ```python

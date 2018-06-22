@@ -18,7 +18,7 @@
 
 <tip-box>
 
-:package: A `Board` (used for playing board games) consists of `Square` objects.
+{{ icon_example }} A `Board` (used for playing board games) consists of `Square` objects.
 
 <img src="{{baseUrl}}/oopDesign/associations/composition/images/boardSquare.png" height="50" />
 <p/>
@@ -29,7 +29,7 @@
 
 <tip-box>
 
-:package: In this ‘sub-folder’ association, a `Folder` cannot be a sub-folder of itself. If the diamond is removed, it is no longer a composition relationship and technically, allows a folder to be sub-folder of itself.
+{{ icon_example }} In this ‘sub-folder’ association, a `Folder` cannot be a sub-folder of itself. If the diamond is removed, it is no longer a composition relationship and technically, allows a folder to be sub-folder of itself.
 
 <img src="{{baseUrl}}/oopDesign/associations/composition/images/folder.png" height="80" />
 <p/>

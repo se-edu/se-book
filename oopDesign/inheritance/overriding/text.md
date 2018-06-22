@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: In the diagram below, 
+{{ icon_example }} In the diagram below, 
 * `Report#print()` method is overridden by `EvaluationReport#print()` method.
 * `Report#write(String)` method is overridden by `EvaluationReport#write(String)` method.
 * `Report#read():String` method is **NOT** overridden by `EvaluationReport#read(int):String` method. %%&nbsp;Reason: the two methods have different signatures; `EvaluationReport#read(int):String` <trigger trigger="click" for="modal:overriding-overloading"> _overloads_ </trigger> (rather than overrides) the `Report#read():String` method.%%

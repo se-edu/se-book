@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Someone can say 'apply Observer pattern here' instead of having to describe the mechanics of the solution in detail.
+{{ icon_example }} Someone can say 'apply Observer pattern here' instead of having to describe the mechanics of the solution in detail.
 
 </tip-box>
 

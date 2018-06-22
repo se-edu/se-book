@@ -16,7 +16,7 @@ In a smaller system, design of the entire system can be shown in one place.
 
 <tip-box> 
 
-:package: This class diagram of [se-edu/addressbook-level3](https://se-edu.github.io/addressbook-level3) depicts the design of the entire software.
+{{ icon_example }} This class diagram of [se-edu/addressbook-level3](https://se-edu.github.io/addressbook-level3) depicts the design of the entire software.
 
 <img src="https://se-edu.github.io/addressbook-level3/doc/images/mainClassDiagram.png" width="600" />
 
@@ -30,7 +30,7 @@ In a smaller system, design of the entire system can be shown in one place.
 
 <tip-box> 
 
-:package: This architecture diagram of [se-edu/addressbook-level4](https://se-edu.github.io/addressbook-level4) depicts the high-level design of the software.
+{{ icon_example }} This architecture diagram of [se-edu/addressbook-level4](https://se-edu.github.io/addressbook-level4) depicts the high-level design of the software.
 
 <img src="https://se-edu.github.io/addressbook-level4/images/Architecture.png" width="600" />
 

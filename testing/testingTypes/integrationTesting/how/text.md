@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Suppose a class `Car` uses classes `Engine` and `Wheel`. Here is how you would go about doing pure integration tests:
+{{ icon_example }} Suppose a class `Car` uses classes `Engine` and `Wheel`. Here is how you would go about doing pure integration tests:
 
 a) First, unit test `Engine` and `Wheel`.<br>
 b) Next, unit test `Car` in isolation of `Engine` and `Wheel`, ==using stubs for `Engine` and `Wheel`==.<br>
@@ -26,7 +26,7 @@ c) After that, do an integration test for `Car` using it together with the `Engi
 
 <tip-box> 
 
-:package: Here's how a hybrid unit+integration approach could be applied to the same example used above:
+{{ icon_example }} Here's how a hybrid unit+integration approach could be applied to the same example used above:
 
 (a) First, unit test `Engine` and `Wheel`.<br>
 ~~(b) Next, unit test `Car` in isolation of `Engine` and `Wheel`, using stubs for `Engine` and `Wheel`.~~<br>

@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Consider how a CD player responds when the “eject CD” button is pushed:
+{{ icon_example }} Consider how a CD player responds when the “eject CD” button is pushed:
 
 * If the CD tray is already open, it does nothing.
 * If the CD tray is already in the process of opening (opened half-way), it continues to open the CD tray.
@@ -34,7 +34,7 @@ An SMD views the life-cycle of an object as consisting of a finite number of sta
 
 <tip-box>
 
-:package: An SMD for the Minesweeper game. 
+{{ icon_example }} An SMD for the Minesweeper game. 
 
 <img src="{{baseUrl}}/modeling/modelingBehaviors/stateMachineDiagrams/images/minesweeper.png" height="200" />
 <p/>

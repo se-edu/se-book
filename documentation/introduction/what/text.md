@@ -21,14 +21,14 @@
 <tabs> 
   <tab header="Java">
 
-* :package: Example of API Documentation: [String API](http://download.oracle.com/javase/8/docs/api/).
-* :package: Example of tutorial-style documentation: [Java Intenatioanalization Tutorial](https://docs.oracle.com/javase/tutorial/i18n/index.html)
+* {{ icon_example }} Example of API Documentation: [String API](http://download.oracle.com/javase/8/docs/api/).
+* {{ icon_example }} Example of tutorial-style documentation: [Java Intenatioanalization Tutorial](https://docs.oracle.com/javase/tutorial/i18n/index.html)
 
   </tab>
   <tab header="Python">
 
-* :package: Example of API Documentation: [string API](https://docs.python.org/3/library/string.html).
-* :package: Example of tutorial-style documentation: [How to use Regular Expressions in Python](https://docs.python.org/3/howto/regex.html)
+* {{ icon_example }} Example of API Documentation: [string API](https://docs.python.org/3/library/string.html).
+* {{ icon_example }} Example of tutorial-style documentation: [How to use Regular Expressions in Python](https://docs.python.org/3/howto/regex.html)
 
   </tab>
 </tabs>
@@ -39,7 +39,7 @@
 
 <tip-box>
 
-* :package: An example: [se-edu/addressbook-level4 Developer Guide](https://se-edu.github.io/addressbook-level4/DeveloperGuide.html#design).
+* {{ icon_example }} An example: [se-edu/addressbook-level4 Developer Guide](https://se-edu.github.io/addressbook-level4/DeveloperGuide.html#design).
 
 </tip-box>
 

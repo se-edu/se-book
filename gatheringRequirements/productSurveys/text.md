@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: When developing a game for a mobile device, a look at a similar PC game can give insight into the kind of features and interactions the mobile game can offer.
+{{ icon_example }} When developing a game for a mobile device, a look at a similar PC game can give insight into the kind of features and interactions the mobile game can offer.
 
 </tip-box>
  

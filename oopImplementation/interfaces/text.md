@@ -15,7 +15,7 @@
 
 <tip-box>
 
-:package: The design below is allowed by Java.
+{{ icon_example }} The design below is allowed by Java.
 
 <img src="{{baseUrl}}/oopDesign/inheritance/interfaces/images/studentStaff.png" height="250" />
 <p/>
@@ -31,7 +31,7 @@
 
 <tip-box> 
 
-:package: The code for the example design given in the previous example:
+{{ icon_example }} The code for the example design given in the previous example:
 
 ```java
 interface TaxPayer {

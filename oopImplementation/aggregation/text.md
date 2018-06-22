@@ -14,7 +14,7 @@ Implementation is similar to that of composition except the _containee_ object c
 
 <tip-box>
 
-:package: Example:
+{{ icon_example }} Example:
 
 <img src="{{baseUrl}}/oopImplementation/aggregation/images/carPerson.png" height="40" />
 

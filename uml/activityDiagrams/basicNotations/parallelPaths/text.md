@@ -22,7 +22,7 @@ In a <tooltip content="paths within a matching fork-join pair">set of parallel p
 
 <tip-box> 
 
-:package: In this activity diagram (from an online shop website) the actions _User browsers products_ and _System records browsing data_ happen in parallel. Both of them need to finish before the _log out_ action can take place.
+{{ icon_example }} In this activity diagram (from an online shop website) the actions _User browsers products_ and _System records browsing data_ happen in parallel. Both of them need to finish before the _log out_ action can take place.
 
 <img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/parallelPaths/images/example.png" width="260" />
 
