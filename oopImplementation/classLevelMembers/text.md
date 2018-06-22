@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../../oopDesign/classes/classLevelMembers/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Classes → Class-Level Members%%" /></span>
+<span id="prereqs"><dynamic-panel src="../../oopDesign/classes/classLevelMembers/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Classes → Class-Level Members%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can implement class-level members</span>
 

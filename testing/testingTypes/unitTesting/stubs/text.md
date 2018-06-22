@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Quality Assurance → Testing → Unit Testing → What →%%" /></span>
+<span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Testing → Unit Testing → What →%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can use stubs to isolate an SUT from its dependencies</span>
 

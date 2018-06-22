@@ -1,4 +1,4 @@
-<span id="prereqs"><dynamic-panel src="../../revisionControl/savingHistory/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Project Management → Revision Control → Saving History%%" /></span>
+<span id="prereqs"><dynamic-panel src="../../revisionControl/savingHistory/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Saving History%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can tag commits using Git</span>
 

@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../../oopDesign/associations/associationClasses/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} OOP → Associations → Association Classes%%" /></span>
+<span id="prereqs"><dynamic-panel src="../../oopDesign/associations/associationClasses/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Associations → Association Classes%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can implement association classes</span>
 

@@ -20,7 +20,7 @@
 
 </tip-box>
 
-<panel src="../../../uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Association Classes" expanded /><p/>
+<panel src="../../../uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Association Classes" expanded /><p/>
 
 
 </div>

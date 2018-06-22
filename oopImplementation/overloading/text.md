@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/overloading/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%OOP → Inheritance → Overloading%%" /></span>
+<span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/overloading/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Inheritance → Overloading%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can implement overloading</span>
 

@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Implementation → Integration → Introduction → What%%" /></span>
+<span id="prereqs"><dynamic-panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Integration → Introduction → What%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can explain how integration approaches vary based on timing and frequency</span>
 

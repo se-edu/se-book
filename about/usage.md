@@ -126,7 +126,7 @@ Meaning of icons:
 * <span class="badge">tangential</span> : tangential info, can be ignored if not interested
 * {{glyphicon_new_window}} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.
 * {{glyphicon_flag}} : learning outcomes
-* {{glyphicon_education}} : prerequisite learning outcome
+* {{ icon_prereq }} : prerequisite learning outcome
 * {{ icon_example }} : examples
 * :paperclip: : resources
 * :muscle: : exercises

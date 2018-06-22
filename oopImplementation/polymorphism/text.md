@@ -4,9 +4,9 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../../oopDesign/polymorphism/introduction/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} OOP → Polymorphism → Introduction%%" />
-<dynamic-panel src="../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} OOP → Inheritance → What%%" />
-<dynamic-panel src="../overriding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Implementation → OOP → Overriding%%" /></span>
+<span id="prereqs"><dynamic-panel src="../../oopDesign/polymorphism/introduction/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Polymorphism → Introduction%%" />
+<dynamic-panel src="../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Inheritance → What%%" />
+<dynamic-panel src="../overriding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → OOP → Overriding%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can implement polymorphism</span>
 
@@ -16,7 +16,7 @@
 
 <tip-box>
 
-{{ icon_example }} Continuing with the example given in [<trigger trigger="click" for="modal:oopImpl-polymorphism">{{glyphicon_education}} OOP → Polymorphism → Introduction </trigger>], given below is the minimum code for `Staff`, `Admin`, and `Academic` classes that achieves the desired polymorphism.
+{{ icon_example }} Continuing with the example given in [<trigger trigger="click" for="modal:oopImpl-polymorphism">{{ icon_prereq }} OOP → Polymorphism → Introduction </trigger>], given below is the minimum code for `Staff`, `Admin`, and `Academic` classes that achieves the desired polymorphism.
 
 <modal title="" id="modal:oopImpl-polymorphism">
   <include src="../../oopDesign/polymorphism/introduction/unit-inElsewhere-asFlat.md" boilerplate/>

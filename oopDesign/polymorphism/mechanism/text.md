@@ -4,9 +4,9 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../../../oopImplementation/polymorphism/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Implementation → Object Oriented Programming → Polymorphism%%" />
-<dynamic-panel src="../../../oopDesign/inheritance/substitutability/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Object Oriented Programming → Inheritance → Substitutability%%" />
-<dynamic-panel src="../../../oopDesign/inheritance/dynamicAndStaticBinding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Object Oriented Programming → Inheritance → Dynamic and Static Binding%%" /></span>
+<span id="prereqs"><dynamic-panel src="../../../oopImplementation/polymorphism/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Object Oriented Programming → Polymorphism%%" />
+<dynamic-panel src="../../../oopDesign/inheritance/substitutability/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Object Oriented Programming → Inheritance → Substitutability%%" />
+<dynamic-panel src="../../../oopDesign/inheritance/dynamicAndStaticBinding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Object Oriented Programming → Inheritance → Dynamic and Static Binding%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can explain how substitutability operation overriding, and dynamic binding relates to polymorphism</span>
 

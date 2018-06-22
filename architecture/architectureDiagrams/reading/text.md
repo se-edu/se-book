@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → Architecture → Introduction → What%%" /></span>
+<span id="prereqs"><dynamic-panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Architecture → Introduction → What%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can interpret an architecture diagram</span>
 

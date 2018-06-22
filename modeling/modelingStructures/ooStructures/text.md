@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../../../oopDesign/classes/basic/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Design → OOP → Classes → Basic%%" /></span>
+<span id="prereqs"><dynamic-panel src="../../../oopDesign/classes/basic/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Design → OOP → Classes → Basic%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can explain structure modelling of OO solutions</span>
 
@@ -42,8 +42,8 @@ However, object structures do not change at random; they change based on a set o
 
 UML Object Diagrams are used to model object structures and UML class diagrams are used to model class structures of an OO solution.
 
-<panel src="../../../../book/uml/objectDiagrams/introduction/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} UML → Object Diagrams → Introduction" expanded/> 
-<panel src="../../../../book/uml/classDiagrams/introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} UML → Class Diagrams → Introduction → What" expanded/>
+<panel src="../../../../book/uml/objectDiagrams/introduction/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} UML → Object Diagrams → Introduction" expanded/> 
+<panel src="../../../../book/uml/classDiagrams/introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Introduction → What" expanded/>
 
 <tip-box> 
 

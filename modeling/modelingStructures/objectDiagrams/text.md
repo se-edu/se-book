@@ -14,8 +14,8 @@
 
 <include src="../../../uml/objectDiagrams/introduction/text.md#body" />
 
-<panel src="../../../../book/uml/objectDiagrams/objects/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Object Diagrams → Objects" alt="{{glyphicon_education}} Objects" minimized/>
-<panel src="../../../../book/uml/objectDiagrams/associations/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{glyphicon_education}} UML → Object Diagrams → Associations → What" alt="{{glyphicon_education}} Associations" minimized/>
+<panel src="../../../../book/uml/objectDiagrams/objects/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML → Object Diagrams → Objects" alt="{{ icon_prereq }} Objects" minimized/>
+<panel src="../../../../book/uml/objectDiagrams/associations/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML → Object Diagrams → Associations → What" alt="{{ icon_prereq }} Associations" minimized/>
 
 </div>
 

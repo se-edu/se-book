@@ -1,4 +1,4 @@
-<span id="prereqs"><dynamic-panel src="../clone/unit-inElsewhere-asFlat.md" boilerplate header="{{glyphicon_education}} %%Tools → Git & GitHub → Clone%%" /></span>
+<span id="prereqs"><dynamic-panel src="../clone/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Clone%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can pull changes from a repo</span>
 

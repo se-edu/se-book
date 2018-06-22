@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{glyphicon_education}} Design → OOP → Inheritance → What%%" /></span>
+<span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Inheritance → What%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can implement basic inheritance</span>
 

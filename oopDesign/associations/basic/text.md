@@ -12,7 +12,7 @@
 
 Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such **connections between objects are called _associations_.**
 
-<panel src="../../../uml/objectDiagrams/associations/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{glyphicon_education}} Tools → UML → Object Diagrams → Associations → What" expanded />
+<panel src="../../../uml/objectDiagrams/associations/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} Tools → UML → Object Diagrams → Associations → What" expanded />
 
 <p/>
 
@@ -37,7 +37,7 @@ Objects in an OO solution need to be connected to each other to form a network s
 
 **Associations among objects are reflected correspondingly in the class diagram too**, as it is the class diagram that dictates the nature of the associations allowed in the object structures.
 
-<panel src="../../../uml/classDiagrams/associations/basic/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{glyphicon_education}} Tools → UML → Class Diagrams → Associations → Basic" expanded/>
+<panel src="../../../uml/classDiagrams/associations/basic/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} Tools → UML → Class Diagrams → Associations → Basic" expanded/>
 
 <tip-box> 
 
@@ -48,8 +48,8 @@ Objects in an OO solution need to be connected to each other to form a network s
 
 </tip-box>
 
-<panel src="../../../uml/classDiagrams/associations/roles/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{glyphicon_education}} Tools → UML → Class Diagrams → Associations → Roles" expanded />
-<panel src="../../../uml/classDiagrams/associations/labels/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{glyphicon_education}} Tools → UML → Class Diagrams → Associations → Labels" expanded />
+<panel src="../../../uml/classDiagrams/associations/roles/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} Tools → UML → Class Diagrams → Associations → Roles" expanded />
+<panel src="../../../uml/classDiagrams/associations/labels/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} Tools → UML → Class Diagrams → Associations → Labels" expanded />
 
 
 
