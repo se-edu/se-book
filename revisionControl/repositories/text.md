@@ -22,7 +22,7 @@ Suppose you want to apply revision control on files in a directory called `Proje
 You can have multiple repos in your computer, each repo revision-controlling files of a different working directly, for examples, files of different projects.
 
   <hr></tab>
-  <tab header=":tv:">
+  <tab header="{{ icon_video }}">
 
 @[youtube](mLnxwlCEIb8)
 

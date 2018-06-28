@@ -30,7 +30,7 @@ If a software product has a GUI component, all product-level testing (i.e. the t
 * **VisualStudio** supports ‘record replay’ type of GUI test automation.
 * [**Selenium**](http://seleniumhq.org/) can be used to automate testing of Web application UIs<br>
 
-  <panel type="seamless" header=":tv: demo video of autoamted testing of a Web application">
+  <panel type="seamless" header="{{ icon_video }} demo video of autoamted testing of a Web application">
   
   This video shows automated testing of the [TEAMMATES](http://github.com/teammates/teammates) Web app using Selenium
   

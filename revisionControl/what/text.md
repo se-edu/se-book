@@ -32,7 +32,7 @@ Revision control is also known as _Version Control Software (VCS)_, and a few ot
 > -- [adapted from <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]
 
   <hr></tab>
-  <tab header=":tv:">
+  <tab header="{{ icon_video }}">
 
 @[youtube](M-O8ZNW9icQ)
 

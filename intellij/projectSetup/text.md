@@ -18,7 +18,7 @@
 * [[Intellij Official Tutorial] **Creating, Running and Packaging Your First Java Application**](https://www.jetbrains.com/help/idea/creating-running-and-packaging-your-first-java-application.html)
 
   <hr></tab>
-  <tab header=":tv:">
+  <tab header="{{ icon_video }}">
 
 @[youtube](c0efB_CKOYo)
 

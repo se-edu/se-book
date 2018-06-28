@@ -18,7 +18,7 @@
 
 <div v-closeable alt="Test Coverage in Intellij"> 
 
-:tv: Measuring code coverage in Intellij IDEA
+{{ icon_video }} Measuring code coverage in Intellij IDEA
 
 @[youtube](yNYzZvyA2ik)
 

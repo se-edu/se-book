@@ -19,22 +19,22 @@
 * **_Gray-box_ approach**: test case design uses _some_ important information about the implementation. For example, if the implementation of a sort operation uses different algorithms to sort lists shorter than 1000 items and lists longer than 1000 items, more meaningful test cases can then be added to verify the correctness of both algorithms.
 
 
-<panel type="seamless" header=":tv: %%Black-box and white-box testing%%"> 
+<panel type="seamless" header="{{ icon_video }} %%Black-box and white-box testing%%"> 
 
 <sub>Note: these videos are from the [Udacity course _Software Development Process_ by Georgia Tech](https://www.udacity.com/course/software-development-process--ud805)</sub>
 
 <tabs> 
-  <tab header=":tv: Black-box vs White-box testing">
+  <tab header="{{ icon_video }} Black-box vs White-box testing">
  
 @[youtube](jRwwb7iaRsU)
 
   <hr></tab>
-  <tab header=":tv: Black-box testing example">
+  <tab header="{{ icon_video }} Black-box testing example">
  
 @[youtube](6pbB37nFUZw)
 
   <hr></tab>
-  <tab header=":tv: White-box testing example">
+  <tab header="{{ icon_video }} White-box testing example">
  
 @[youtube](KIAkoae6_jE)
 

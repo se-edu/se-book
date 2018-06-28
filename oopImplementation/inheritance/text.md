@@ -15,7 +15,7 @@
 
 To learn how to implement inheritance in Java, you can follow [[Oracle’s Java Tutorials: Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)]
 
-<panel type="seamless" header=":tv: A very beginner-friendly video about implementing Java inheritance.">
+<panel type="seamless" header="{{ icon_video }} A very beginner-friendly video about implementing Java inheritance.">
 
 @[youtube](9JpNY-XAseg)
 

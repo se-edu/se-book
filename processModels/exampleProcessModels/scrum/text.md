@@ -51,7 +51,7 @@ This description of Scrum was adapted from Wikipedia [retrieved on 18/10/2011], 
 
 The daily scrum meeting is not used as a problem-solving or issue resolution meeting. **Issues that are raised are taken offline and usually dealt with by the relevant subgroup immediately after the meeting.**
 
-<panel type="seamless" header=":tv: Intro to Scrum in Under 10 Minutes">
+<panel type="seamless" header="{{ icon_video }} Intro to Scrum in Under 10 Minutes">
 
 <sub>(This is not an endorsement of the product mentioned in the video)</sub>
 

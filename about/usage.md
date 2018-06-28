@@ -50,7 +50,7 @@ Less important info
 Some textual description of X
 
   <hr></tab>
-  <tab header=":tv:">
+  <tab header="{{ icon_video }}">
 
 Video describing X
 
@@ -132,7 +132,7 @@ Meaning of icons:
 * :muscle: : exercises
 * {{glyphicon_print}} : printable version
 * {{glyphicon_eye_open}} : preview/more info
-* :tv: : video
+* {{ icon_video }} : video
 * :abc: : textual description
 * :bar_chart: : slides
 * :arrow_heading_down: : output produced by running code

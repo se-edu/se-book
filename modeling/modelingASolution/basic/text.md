@@ -77,7 +77,7 @@ Given below are the interactions between the player and the Text UI for the whol
 
 <div v-closeable alt="Tic-Tac-Toe Video"> 
 
-:tv: Defining the architecture-level APIs for a small Tic-Tac-Toe game:
+{{ icon_video }} Defining the architecture-level APIs for a small Tic-Tac-Toe game:
 
 @[youtube](Un80XoRT1ME)
 

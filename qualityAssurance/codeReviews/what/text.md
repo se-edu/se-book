@@ -29,7 +29,7 @@ Reviews can be done in various forms. Some examples below:
 <sub>[[image credit: Wikipedia](https://en.wikipedia.org/wiki/Pair_programming)]</sub>
 
 
-:tv: A good introduction to pair programming:
+{{ icon_video }} A good introduction to pair programming:
 
 @[youtube](ET3Q6zNK3Io)
 

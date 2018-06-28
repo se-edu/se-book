@@ -12,7 +12,7 @@
 
 **Formal verification uses mathematical techniques to prove the correctness of a program.**
 
-<panel type="seamless" header=":tv: An introduction to Formal Methods">
+<panel type="seamless" header="{{ icon_video }} An introduction to Formal Methods">
 
 @[youtube](89fKiaMxHrA)
 
