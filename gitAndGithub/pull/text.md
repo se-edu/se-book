@@ -10,7 +10,7 @@
 
 <div id="body">
 
-Clone the sample repo as explained in <trigger for="modal:clone-repository" trigger="click">[Textbook » Tools → Git & GitHub → Clone]</trigger>.
+Clone the sample repo as explained in <trigger for="modal:clone-repository" trigger="click">[Textbook {{ icon_embedding }} Tools → Git & GitHub → Clone]</trigger>.
 
 Delete the last two commits to simulate cloning the repo 2 commits ago.
 

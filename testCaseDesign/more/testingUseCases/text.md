@@ -18,7 +18,7 @@ To increase <trigger trigger="click" for="modal:usebaseBased-EandE">E&E of testi
   <include src="../../introduction/what/text.md#e-and-e"/>
 </modal>
 
-<modal large title="Textbook »" id="modal:usecaseBased-scripted">
+<modal large title="Textbook {{ icon_embedding }}" id="modal:usecaseBased-scripted">
   <include src="../../../testing/testingTypes/exploratoryVsScriptedTesting/what/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
