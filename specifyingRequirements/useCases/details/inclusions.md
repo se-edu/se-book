@@ -4,7 +4,7 @@
 
 <tip-box>
 
-:package: This use case includes two other use cases, one in step 1 and one in step 2.
+{{ icon_example }} This use case includes two other use cases, one in step 1 and one in step 2.
 
 <ul>
   <li>Software System: LearnSys</li>

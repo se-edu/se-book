@@ -1,8 +1,12 @@
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain AsciiDoc</span>
 
 <div id="body">
 
@@ -11,6 +15,4 @@ AsciiDoc is similar to Markdown but has more powerful (but also more complex) sy
 </div>
 
 <div id="extras">
-</div>
-
 </div>

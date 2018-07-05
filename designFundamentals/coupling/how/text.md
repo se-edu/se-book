@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Design Fundamentals → Coupling → What%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can reduce coupling</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: If `Foo` class calls the method `Bar#read()`, `Foo` is coupled to `Bar` because a change to `Bar` can potentially (but not always) require a change in the `Foo` class %%&nbsp;e.g. if the signature of the `Bar#read()` is changed, `Foo` needs to change as well, but a change to the `Bar#write()` method may not require a change in the `Foo` class because `Foo` does not call `Bar#write()`%%. 
+{{ icon_example }} If `Foo` class calls the method `Bar#read()`, `Foo` is coupled to `Bar` because a change to `Bar` can potentially (but not always) require a change in the `Foo` class %%&nbsp;e.g. if the signature of the `Bar#read()` is changed, `Foo` needs to change as well, but a change to the `Bar#write()` method may not require a change in the `Foo` class because `Foo` does not call `Bar#write()`%%. 
 
 <panel type="seamless" header="%%code for the above example%%">
 
@@ -42,7 +42,7 @@ class Bar{
 
 <tip-box> 
 
-:package: Some examples of coupling: `A` is coupled to `B` if,
+{{ icon_example }} Some examples of coupling: `A` is coupled to `B` if,
 
 * `A` has access to the internal structure of `B` (this results in a very high level of coupling)
 * `A` and `B` depend on the same global variable
@@ -59,7 +59,5 @@ class Bar{
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

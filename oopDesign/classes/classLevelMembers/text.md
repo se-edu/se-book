@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Class Level Members :two:
+#### Class Level Members
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain class-level members</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@ While all objects of a class has the same attributes, each object has its own co
 
 <tip-box>
 
-:package: All `Person` objects have the `Name` attribute but the value of that attribute varies between `Person` objects.
+{{ icon_example }} All `Person` objects have the `Name` attribute but the value of that attribute varies between `Person` objects.
 
 </tip-box>
 
@@ -22,7 +22,7 @@ However, some attributes are not suitable to be maintained by individual objects
 
 <tip-box>
 
-:package: The attribute `totalPersons` should be maintained centrally and shared by all `Person` objects rather than copied at each `Person` object.  
+{{ icon_example }} The attribute `totalPersons` should be maintained centrally and shared by all `Person` objects rather than copied at each `Person` object.  
 
 </tip-box>
 
@@ -30,7 +30,7 @@ Similarly, when a normal method is being called, a message is being sent to the 
 
 <tip-box>
 
-:package: Sending the `getName()` message to `Adam` object results in the response `"Adam"` while sending the same message to the `Beth` object gets the response `"Beth"`.
+{{ icon_example }} Sending the `getName()` message to `Adam` object results in the response `"Adam"` while sending the same message to the `Beth` object gets the response `"Beth"`.
 
 </tip-box>
 
@@ -38,18 +38,16 @@ However, there can be methods related to a specific class but not suitable for s
 
 <tip-box>
 
-:package: The method `getTotalPersons()` is not suitable to send to a specific `Person` object %%because a specific object of the `Person` class should not know about the total number of `Person` objects%%.
+{{ icon_example }} The method `getTotalPersons()` is not suitable to send to a specific `Person` object %%because a specific object of the `Person` class should not know about the total number of `Person` objects%%.
 
 </tip-box>
 
 **Class-level attributes and methods are collectively called ==_class-level members_==** (also called _static members_ sometimes because some programming languages use the keyword `static` to identify class-level members). **They are to be accessed using the class name rather than an instance of the class**.
 
-<panel src="../../../uml/classDiagrams/classLevelMembers/what/full.md#title-and-body" header=":mortar_board: Tools → UML → Class Diagrams → Class Level Members" expanded /><p/>
+<panel src="../../../uml/classDiagrams/classLevelMembers/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} Tools → UML → Class Diagrams → Class Level Members" expanded /><p/>
 
 </div>
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

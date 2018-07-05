@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use logging</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: This sample Java code uses Java’s default logging mechanism. 
+{{ icon_example }} This sample Java code uses Java’s default logging mechanism. 
 
 First, import the relevant Java package:
 ```java
@@ -46,6 +46,4 @@ logger.log(Level.INFO, "end of processing");
 
 <div id="extras">
   <include src="resources.md" />
-</div>
-
 </div>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\markbind\css\site-nav.css">
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
@@ -19,7 +20,7 @@
     <h2 id="introduction">Introduction</h2>
     <div>
       <div>
-        <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+        <h4 id="what">What</h4>
       </div>
       <div>
         <blockquote>
@@ -31,7 +32,7 @@
     <h2 id="exceptions">Exceptions</h2>
     <div>
       <div>
-        <h4 id="what-one-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+        <h4 id="what-2">What</h4>
       </div>
       <div>
         <p><strong>Exceptions are used to deal with <em>'unusual' but not entirely unexpected</em> situations</strong> that the program might encounter at run time.</p>
@@ -44,7 +45,7 @@
           </div>
         </tip-box>
         <tip-box>
-          <p>📦 Examples:</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Examples:</p>
           <ul>
             <li>A network connection encounters a timeout due to a slow server.</li>
             <li>The code tries to read a file from the hard disk but the file is corrupted and cannot be read.</li>
@@ -54,7 +55,7 @@
     </div>
     <div>
       <div>
-        <h4 id="how-two">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        <h4 id="how">How</h4>
       </div>
       <div>
         <p><strong>Most languages allow a method/function to encapsulate the unusual situation in an Exception object and 'throw'/'raise' that object so that another piece of code can 'catch' it and deal with it.</strong> This is especially useful when code
@@ -66,15 +67,15 @@
           <tabs>
           
             <tab header="Java">
-              <p>📦 In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code> method inside a <code>try{ }</code> block
-                and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p>
+              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code>                method inside a <code>try{ }</code> block and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p>
               <img src="/se-book/errorHandling/exceptions/how/images/processInput.png" width="400">
               <p></p>
               <p></p>
             </tab>
           
             <tab header="Python">
-              <p>📦 In the code given below, <code>process_array</code> function can potentially raise a <code>ValueError</code> exception. Because of that, <code>process_input</code> function invokes <code>process_array</code> function inside a <code>try</code>                clause and has a <code>except</code> clause to specify what to do if the exception is actually raised.</p>
+              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> In the code given below, <code>process_array</code> function can potentially raise a <code>ValueError</code> exception. Because of that, <code>process_input</code> function
+                invokes <code>process_array</code> function inside a <code>try</code> clause and has a <code>except</code> clause to specify what to do if the exception is actually raised.</p>
               <img src="/se-book/errorHandling/exceptions/how/images/example-python.png" width="400">
               <p></p>
             </tab>
@@ -90,7 +91,7 @@
     </div>
     <div>
       <div>
-        <h4 id="when-three">When <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+        <h4 id="when">When</h4>
       </div>
       <div>
         <p>In general, use exceptions only for 'unusual' conditions. Use normal <code>return</code> statements to pass control to the caller for conditions that are 'normal'.</p>
@@ -99,19 +100,18 @@
     <h2 id="assertions">Assertions</h2>
     <div>
       <div>
-        <h4 id="what-two">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        <h4 id="what-3">What</h4>
       </div>
       <div>
         <p><strong><em>Assertions</em> are used to define assumptions about the program state so that the runtime can verify them.</strong> An assertion failure indicates a possible bug in the code <span class="dimmed">because the code has resulted in a program state that violates an assumption about how the code <em>should</em> behave</span>.</p>
         <tip-box>
-          <p>📦 An assertion can be used to express something like <em>when the execution comes to this point, the variable <code>v</code> cannot be null</em>.</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> An assertion can be used to express something like <em>when the execution comes to this point, the variable <code>v</code> cannot be null</em>.</p>
         </tip-box>
         <p><strong>If the runtime detects an <em>assertion failure</em>, it typically take some drastic action</strong> such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner
           the execution stops, the safer it is.</p>
         <tip-box>
-          <p>📦 In the Java code below, suppose we set an assertion that <code>timeout</code> returned by <code>Config.getTimeout()</code> is greater than <code>0</code>. Now, if the <code>Config.getTimeout()</code> returned <code>-1</code> in a specific
-            execution of this line, the runtime can detect it as a <em>assertion failure</em> -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result of a bug -- and take some drastic
-            action such as terminating the execution.</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> In the Java code below, suppose we set an assertion that <code>timeout</code> returned by <code>Config.getTimeout()</code> is greater than <code>0</code>. Now, if the <code>Config.getTimeout()</code>            returned <code>-1</code> in a specific execution of this line, the runtime can detect it as a <em>assertion failure</em> -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result
+            of a bug -- and take some drastic action such as terminating the execution.</p>
           <pre><code class="hljs java"><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); 
 </code></pre>
         </tip-box>
@@ -119,12 +119,12 @@
     </div>
     <div>
       <div>
-        <h4 id="how-two-2">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        <h4 id="how-2">How</h4>
       </div>
       <div>
         <p>Use the <code>assert</code> keyword to define assertions.</p>
         <tip-box>
-          <p>📦 This assertion will fail with the message <code>x should be 0</code> if <code>x</code> is not 0 at this point.</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> This assertion will fail with the message <code>x should be 0</code> if <code>x</code> is not 0 at this point.</p>
           <pre><code class="hljs java">x = getX();
 <span class="hljs-keyword">assert</span> x == <span class="hljs-number">0</span> : <span class="hljs-string">"x should be 0"</span>;
 ...
@@ -132,7 +132,7 @@
         </tip-box>
         <p><strong>Assertions can be disabled without modifying the code.</strong></p>
         <tip-box>
-          <p>📦 <code>java -enableassertions HelloWorld</code> (or <code>java -ea HelloWorld</code>) will run <code>HelloWorld</code> with assertions enabled while <code>java -disableassertions HelloWorld</code> will run it without verifying assertions.</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> <code>java -enableassertions HelloWorld</code> (or <code>java -ea HelloWorld</code>) will run <code>HelloWorld</code> with assertions enabled while <code>java -disableassertions HelloWorld</code>            will run it without verifying assertions.</p>
         </tip-box>
         <tip-box type="important">
           <p><strong>Java disables assertions by default.</strong> This could create a situation where you think all assertions are being verified as <code>true</code> while in fact they are not being verified at all. Therefore, remember to enable assertions
@@ -150,13 +150,13 @@
     </div>
     <div>
       <div>
-        <h4 id="when-three-2">When <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+        <h4 id="when-2">When</h4>
       </div>
       <div>
         <p><strong>It is recommended that assertions be used liberally in the code.</strong> Their impact on performance is considered low and worth the additional safety they provide.</p>
         <p><strong>Do not use assertions to do <em>work</em></strong> because assertions can be disabled. If not, your program will stop working when assertions are not enabled.</p>
         <tip-box>
-          <p>📦 The code below will not invoke the <code>writeFile()</code> method when assertions are disabled. <span class="dimmed"> If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.</span></p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> The code below will not invoke the <code>writeFile()</code> method when assertions are disabled. <span class="dimmed"> If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.</span></p>
           <pre><code class="hljs java">...
 <span class="hljs-function"><span class="hljs-keyword">assert</span> <span class="hljs-title">writeFile</span><span class="hljs-params">()</span> : "File writing is supposed to return <span class="hljs-keyword">true</span>"</span>;
 </code></pre>
@@ -173,7 +173,7 @@
     <h2 id="logging">Logging</h2>
     <div>
       <div>
-        <h4 id="what-one-3">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+        <h4 id="what-4">What</h4>
       </div>
       <div>
         <p><strong><em>Logging</em> is the deliberate recording of certain information during a program execution for future reference.</strong> Logs are typically written to a log file but it is also possible to log information in other ways <span class="dimmed"> e.g. into a database or a remote server</span>.</p>
@@ -190,13 +190,13 @@
     </div>
     <div>
       <div>
-        <h4 id="how-two-3">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        <h4 id="how-3">How</h4>
       </div>
       <div>
         <p><strong>Most programming environments come with logging systems that allow sophisticated forms of logging.</strong> They have features such as the ability to enable and disable logging easily or to change the logging
           <tooltip content="how much information to record">intensity</tooltip>.</p>
         <tip-box>
-          <p>📦 This sample Java code uses Java’s default logging mechanism.</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> This sample Java code uses Java’s default logging mechanism.</p>
           <p>First, import the relevant Java package:</p>
           <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.logging.*;
 </code></pre>
@@ -223,12 +223,12 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
     <h2 id="defensive-programming">Defensive Programming</h2>
     <div>
       <div>
-        <h4 id="what-one-4">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+        <h4 id="what-5">What</h4>
       </div>
       <div>
         <p><strong>A defensive programmer codes under the assumption &quot;if we leave room for things to go wrong, they <em>will</em> go wrong&quot;.</strong> Therefore, a defensive programmer proactively tries to eliminate any room for things to go wrong.</p>
         <tip-box>
-          <p>📦 Consider a <code>MainApp#getConfig()</code> a method that returns a <code>Config</code> object containing configuration data. A typical implementation is given below:</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Consider a <code>MainApp#getConfig()</code> a method that returns a <code>Config</code> object containing configuration data. A typical implementation is given below:</p>
           <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainApp</span></span>{
     Config config;
     
@@ -249,7 +249,7 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
     </div>
     <div>
       <div>
-        <h4 id="enforcing-compulsory-associations-two">Enforcing Compulsory Associations <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        <h4 id="enforcing-compulsory-associations">Enforcing Compulsory Associations</h4>
       </div>
       <div>
         <p>Consider two classes, <code>Account</code> and <code>Guarantor</code>, with an association as shown in the following diagram:</p>
@@ -295,7 +295,7 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     </div>
     <div>
       <div>
-        <h4 id="enforcing-1-to-1-associations-three">Enforcing 1-to-1 Associations <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+        <h4 id="enforcing-1-to-1-associations">Enforcing 1-to-1 Associations</h4>
       </div>
       <div>
         <p>Consider the association given below. A defensive implementation requires to ensure a <code>MinedCell</code> cannot exist without a <code>Mine</code> and vice versa which requires simultaneous object creation. However, Java can only create one
@@ -331,7 +331,7 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     </div>
     <div>
       <div>
-        <h4 id="enforcing-referential-integrity-three">Enforcing Referential Integrity <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+        <h4 id="enforcing-referential-integrity">Enforcing Referential Integrity</h4>
       </div>
       <div>
         <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p>
@@ -416,7 +416,7 @@ jean.setBoyfriend(yong);
     </div>
     <div>
       <div>
-        <h4 id="when-two">When <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        <h4 id="when-3">When</h4>
       </div>
       <div>
         <p><strong>It is not necessary to be 100% defensive all the time.</strong> While defensive code may be less prone to be misused or abused, such code can also be more complicated and slower to run.</p>
@@ -432,7 +432,7 @@ jean.setBoyfriend(yong);
     <h2 id="design-by-contract-approach">Design-by-Contract Approach</h2>
     <div>
       <div>
-        <h4 id="design-by-contract-three">Design by Contract <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+        <h4 id="design-by-contract">Design by Contract</h4>
       </div>
       <div>
         <p><strong><tooltip content="term was coined by Bertrand Meyer">Design by contract (DbC)</tooltip> is an approach for designing software that requires defining formal, precise and verifiable interface specifications for software components.</strong></p>
@@ -453,4 +453,5 @@ jean.setBoyfriend(yong);
     const baseUrl = '/se-book'
 </script>
 <script src="..\markbind\js\setup.js"></script>
+<script src="..\markbind\js\site-nav.js"></script>
 </html>

@@ -1,11 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
 <div id="title">
 
-#### Law of Demeter :three:
+#### Law of Demeter
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the Law of Demeter</span>
 
 <div id="body">
 
@@ -24,7 +25,7 @@ More concretely, a method `m` of an object `O` should invoke only the methods of
 
 <tip-box>
 
-:package: The following code fragment violates LoD due to the reason: while `b` is a ‘friend’ of `foo` (because it receives it as a parameter), `g` is a ‘friend of a friend’ (which should be considered a ‘stranger’), and `g.doSomething()` is analogous to ‘talking to a stranger’.
+{{ icon_example }} The following code fragment violates LoD due to the reason: while `b` is a ‘friend’ of `foo` (because it receives it as a parameter), `g` is a ‘friend of a friend’ (which should be considered a ‘stranger’), and `g.doSomething()` is analogous to ‘talking to a stranger’.
 
 ```java
 void foo(Bar b) {
@@ -39,9 +40,9 @@ void foo(Bar b) {
  
 <tip-box> 
 
-:package: In the example above, `foo` is already coupled to `Bar`. Upholding LoD avoids `foo` being coupled to `Goo` as well.
+{{ icon_example }} In the example above, `foo` is already coupled to `Bar`. Upholding LoD avoids `foo` being coupled to `Goo` as well.
 
-:package: An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.
+{{ icon_example }} An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.
 
 </tip-box>
 
@@ -49,6 +50,4 @@ void foo(Bar b) {
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

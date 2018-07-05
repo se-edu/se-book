@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### When :two:
+#### When
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the costs and benefits of reuse</span>
 
 <div id="body">
 
@@ -24,7 +24,5 @@ While you may be tempted to use many libraries/frameworks/platform that seem to 
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

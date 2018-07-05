@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Object Oriented Programming → Inheritance →</div>
+<span id="outcomes">{{glyphicon_flag}} Can explain dynamic and static binding</span>
 
 <div id="title">
 
-#### Dynamic and Static Binding :three:
+#### Dynamic and Static Binding
 
 </div>
 
@@ -18,13 +16,13 @@
 
 **<trigger trigger="click" for="modal:dynamicAndStatic-overriding">Overridden methods</trigger> are resolved using dynamic binding, and therefore resolves to the implementation in the actual type of the object.**
 
-<modal large title="Textbook »" id="modal:dynamicAndStatic-overriding">
-  <include src="../../../oopImplementation/overriding/full.md"/>
+<modal large title="Textbook {{ icon_embedding }}" id="modal:dynamicAndStatic-overriding">
+  <include src="../../../oopImplementation/overriding/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
 <tip-box>
 
-:package: Consider the code below. The declared type of `s` is `Staff` and it appears as if the `adjustSalary(int)` operation of the `Staff` class is invoked. 
+{{ icon_example }} Consider the code below. The declared type of `s` is `Staff` and it appears as if the `adjustSalary(int)` operation of the `Staff` class is invoked. 
 
 <img src="{{baseUrl}}/oopDesign/inheritance/dynamicAndStaticBinding/images/staff.png" height="150" />
 <p/>
@@ -46,13 +44,13 @@ However, at runtime the `adjustSalary(int)` operation of the actual object will 
 
 **In contrast, <trigger trigger="click" for="modal:dynamicAndStatic-overloading">overloaded</trigger> methods are resolved using static binding.**
 
-<modal large title="Textbook »" id="modal:dynamicAndStatic-overloading">
-  <include src="../../../oopImplementation/overloading/full.md"/>
+<modal large title="Textbook {{ icon_embedding }}" id="modal:dynamicAndStatic-overloading">
+  <include src="../../../oopImplementation/overloading/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
 <tip-box>
 
-:package: Note how the constructor is overloaded in the class below. The method call `new Account()` is bound to the first constructor at compile time.
+{{ icon_example }} Note how the constructor is overloaded in the class below. The method call `new Account()` is bound to the first constructor at compile time.
 
 ```java
 class Account {
@@ -67,7 +65,7 @@ class Account {
 }
 ```
 
-:package: Similarly, the `calcuateGrade` method is overloaded in the code below and a method call `calculateGrade("A1213232")` is bound to the second implementation, at compile time. 
+{{ icon_example }} Similarly, the `calcuateGrade` method is overloaded in the code below and a method call `calculateGrade("A1213232")` is bound to the second implementation, at compile time. 
 ```
 void calculateGrade (int[] averages) { ... }
 void calculateGrade (String matric) { ... }
@@ -77,6 +75,4 @@ void calculateGrade (String matric) { ... }
 </div>
 
 <div id="extras">
-</div>
-
 </div>

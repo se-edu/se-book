@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Introduction :two:
+#### Introduction
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain activity diagrams</span>
 
 <div id="body">
 
@@ -19,6 +23,4 @@ An example activity diagram:<br>
 </div>
 
 <div id="extras">
-</div>
-
 </div>

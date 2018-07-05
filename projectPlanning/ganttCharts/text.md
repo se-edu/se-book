@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### GANTT Charts :three:
+#### GANTT Charts
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain GANTT charts</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: A sample Gantt chart:
+{{ icon_example }} A sample Gantt chart:
 
 <img src="{{baseUrl}}/projectPlanning/ganttCharts/images/gantt.png" height="360" />
 <p/>
@@ -26,6 +26,4 @@ In a Gantt chart, a solid bar represents the main task, which is generally compo
 </div>
 
 <div id="extras">
-</div>
-
 </div>

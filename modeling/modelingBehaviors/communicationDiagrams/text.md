@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Communication Diagrams :four:
+#### Communication Diagrams
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain communication diagrams</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: An example:
+{{ icon_example }} An example:
 
 <img src="{{baseUrl}}/modeling/modelingBehaviors/communicationDiagrams/images/diagram.png" height="300" />
 <br>
@@ -26,6 +26,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,13 +1,5 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<frontmatter>
+title: "Modeling: Modeling Structures: Object Oriented Structures"
+</frontmatter>
 
-<div class="website-content">
-
-<tip-box>
-  <include src="outcomes.md" />
-</tip-box></p>
-
-<include src="full.md" />
-
-</div>
-
-</div>
+<include src="unit-inPage-asFlat.md" boilerplate />

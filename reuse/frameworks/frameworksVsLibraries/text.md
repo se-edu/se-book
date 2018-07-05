@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Frameworks vs Libraries :three:
+#### Frameworks vs Libraries
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can differentiate between frameworks and libraries</span>
 
 <div id="body">
 
@@ -23,7 +23,5 @@ Although both frameworks and libraries are reuse mechanisms, there are notable d
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

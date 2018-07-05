@@ -1,3 +1,3 @@
-<include src="./what/outcomes.md" />
-<include src="./why/outcomes.md" />
-<include src="./how/outcomes.md" />
+<include src="./what/text.md#outcomes" />
+<include src="./why/text.md#outcomes" />
+<include src="./how/text.md#outcomes" />

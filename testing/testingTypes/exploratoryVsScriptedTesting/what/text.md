@@ -1,8 +1,12 @@
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain exploratory testing and scripted testing</span>
 
 <div id="body">
 
@@ -16,7 +20,7 @@ Exploratory testing is ‘the simultaneous learning, test design, and test execu
 
 <tip-box> 
 
-:package: Here is an example thought process behind a segment of an exploratory testing session:
+{{ icon_example }} Here is an example thought process behind a segment of an exploratory testing session:
 
 > “Hmm... looks like feature x is broken. This usually means feature n and k could be broken too; we need to look at them soon.
 > But before that, let us give a good test run to feature y because users can still use the product if feature y works, even if x doesn’t work. Now, if feature y doesn’t work 100%, we have a major problem and this has to be made known to the development team sooner rather than later...”
@@ -29,7 +33,7 @@ Exploratory testing is ‘the simultaneous learning, test design, and test execu
 
 </tip-box>
 
-<modal id="modal:exploratoryWhat-bach-et-explained" title="bach-et-explained :mag:">
+<modal id="modal:exploratoryWhat-bach-et-explained" title="bach-et-explained {{glyphicon_eye_open}}">
   <include src="../../../../common/references.md#bach-et-explained" />
 </modal>
 
@@ -37,6 +41,4 @@ Exploratory testing is ‘the simultaneous learning, test design, and test execu
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

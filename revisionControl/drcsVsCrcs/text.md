@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### DRCS vs CRCS :three:
+#### DRCS vs CRCS
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain DRCS vs CRCS</span>
 
 <div id="body">
 
@@ -27,6 +27,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

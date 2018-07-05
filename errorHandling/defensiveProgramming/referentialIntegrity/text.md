@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Enforcing Referential Integrity :three:
+#### Enforcing Referential Integrity
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Error Handling → Defensive Programming → What%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use defensive coding to enforce referential integrity of bi-directional associations</span>
 
 <div id="body">
 
@@ -112,7 +112,5 @@ When the code `james.setGirlfriend(jean)` is executed, the code ensures that `ja
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

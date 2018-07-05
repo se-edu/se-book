@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Reuse → APIs →</div>
+<span id="outcomes">{{glyphicon_flag}} Can design reasonable quality APIs</span>
 
 <div id="title">
 
-#### Designing APIs :three:
+#### Designing APIs
 
 </div>
 
@@ -56,6 +54,4 @@ Preconditions are the conditions that must be true before calling this operation
 </div>
 
 <div id="extras">
-</div>
-
 </div>

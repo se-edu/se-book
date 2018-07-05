@@ -1,8 +1,12 @@
 <div id="title">
 
-#### What :three:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain alpha and beta testing</span>
 
 <div id="body">
 
@@ -15,6 +19,4 @@ An _open beta release_ is the release of not-yet-production-quality-but-almost-t
 </div>
 
 <div id="extras">
-</div>
-
 </div>

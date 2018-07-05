@@ -8,65 +8,82 @@
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\site-nav.css">
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-<div class="website-content">
-  <tip-box>
     <div>
-      <p>🏆 Can follow basic guidelines for avoiding unsafe shortcuts <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
-    </div>
-  </tip-box>
-  <div>
-    <div></div>
-    <p></p>
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+  <div class="website-content" id="all">
     <p><span class="dimmed"><strong><span>Implementation → Code Quality → Error-Prone Practices →
 </span></strong>
       </span>
     </p>
-    <div>
-      <h4 id="basic-one">Basic <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+    <div id="title">
+      <div>
+        <h3 id="basic">Basic</h3>
+      </div>
     </div>
     <div id="main">
       <div>
-        <panel header="**Use the Default Branch**" type="seamless" expanded="">
-          <div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="use-the-default-branch">Use the Default Branch</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can improve code quality using technique: use the default branch </span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
             <div>
               <p>Always include a default branch in <code>case</code> statements.</p>
               <p>Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the 'default' branch to detect errors (i.e. if execution reached the <code>default</code> branch, throw
                 an exception). This also applies to the final <code>else</code> of an <code>if-else</code> construct. That is, the final <code>else</code> should mean 'everything else', and not the final option. Do not use <code>else</code> when an <code>if</code>                condition can be explicitly specified, unless there is absolutely no other possibility.</p>
               <tip-box>
-                <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                <p>
+                  <font color="red"><strong><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Bad</strong></font>
+                </p>
                 <pre><code class="hljs java"><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;
 <span class="hljs-keyword">else</span> print <span class="hljs-string">"blue"</span>;
 </code></pre>
-                <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                <p>
+                  <font color="green"><strong><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Good</strong></font>
+                </p>
                 <pre><code class="hljs java"><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;
 <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (blue) print <span class="hljs-string">"blue"</span>;
 <span class="hljs-keyword">else</span> error(<span class="hljs-string">"incorrect input"</span>);
 </code></pre>
               </tip-box>
             </div>
-          </div>
-        </panel>
-        <panel header="**Don't Recycle Variables or Parameters**" type="seamless" expanded="">
-          <div>
+            <div></div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="dont-recycle-variables-or-parameters">Don't Recycle Variables or Parameters</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can improve code quality using technique: don't recycle variables or parameters </span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
             <div>
               <ul>
                 <li>Use one variable for one purpose. Do not reuse a variable for a different purpose other than its intended one, just because the data type is the same.</li>
                 <li>Do not reuse formal parameters as local variables inside the method.</li>
               </ul>
               <tip-box>
-                <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                <p>
+                  <font color="red"><strong><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Bad</strong></font>
+                </p>
                 <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{
     length = length * width;
     <span class="hljs-keyword">return</span> length;
 }
 
 </code></pre>
-                <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                <p>
+                  <font color="green"><strong><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Good</strong></font>
+                </p>
                 <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{
     <span class="hljs-keyword">double</span> area;
     area = length * width;
@@ -75,65 +92,36 @@
 </code></pre>
               </tip-box>
             </div>
-          </div>
-        </panel>
-        <panel header="**Avoid Empty Catch Blocks**" type="seamless" expanded="">
-          <div>
+            <div></div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="avoid-empty-catch-blocks">Avoid Empty Catch Blocks</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can improve code quality using technique: avoid empty catch blocks </span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
             <div>
               <p>Never write an empty <code>catch</code> statement. At least give a comment to explain why the <code>catch</code> block is left empty.</p>
             </div>
-          </div>
-        </panel>
-        <panel header="**Delete Dead Code**" type="seamless" expanded="">
-          <div>
+            <div></div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="delete-dead-code">Delete Dead Code</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can improve code quality using technique: delete dead code </span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
             <div>
               <p>We all feel reluctant to delete code we have painstakingly written, even if we have no use for that code any more (&quot;I spent a lot of time writing that code; what if we need it again?&quot;). Consider all code as baggage you have to
                 carry; get rid of unused code the moment it becomes redundant. If you need that code again, simply recover it from the revision control tool you are using. Deleting code you wrote previously is a sign that you are improving.</p>
             </div>
-          </div>
-        </panel>
-      </div>
-      <div>
-        <div>
-          <panel header=":muscle: Exercises" expandable="">
-            <div>
-              <panel header=":lock::key: Which oare unsafe practices?">
-                <question>
-                  <p>Which of these are unsafe coding practices?</p>
-                  <ul class="task-list">
-                    <li class="task-list-item">
-                      <p><input class="task-list-item-checkbox" type="checkbox"> a. <code>case</code> statements without a <code>default</code> clause</p>
-                    </li>
-                    <li class="task-list-item">
-                      <p><input class="task-list-item-checkbox" type="checkbox"> b. Omitting braces when a code block has only one statement</p>
-                      <p>e.g writing this</p>
-                      <pre class="hljs"><code>if(isProper)
-    return PROPER_AMOUNT;
-</code></pre>
-                      <p>instead of</p>
-                      <pre class="hljs"><code>if(isProper){
-    return PROPER_AMOUNT;
-}
-</code></pre>
-                    </li>
-                    <li class="task-list-item">
-                      <p><input class="task-list-item-checkbox" type="checkbox"> c. Using a variable just to explain what’s going on</p>
-                      <p>e.g.writing this</p>
-                      <pre class="hljs"><code>boolean isProper = notNull &amp;&amp; notEmpty;
-return isProper;
-</code></pre>
-                      <p>instead of</p>
-                      <pre class="hljs"><code>return notNull &amp;&amp; notEmpty;
-</code></pre>
-                    </li>
-                  </ul>
-                  <div slot="answer">
-                    <p>a, b.</p>
-                    <p>Reason why [c] is not a bad practice: The extra variable helps to make the code more understandable because it makes the intent of the formula clearer.</p>
-                  </div>
-                </question>
-              </panel>
-            </div>
+            <div></div>
           </panel>
         </div>
       </div>
@@ -148,4 +136,5 @@ return isProper;
     const baseUrl = '/se-book'
 </script>
 <script src="..\..\..\markbind\js\setup.js"></script>
+<script src="..\..\..\markbind\js\site-nav.js"></script>
 </html>

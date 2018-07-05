@@ -12,42 +12,42 @@ title: "Software Design Patterns [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/print.md" />
-<include src="introduction/format/print.md" />
+<include src="introduction/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="introduction/format/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Singleton Pattern
 
-<include src="singleton/what/print.md" />
-<include src="singleton/implementation/print.md" />
-<include src="singleton/evaluation/print.md" />
+<include src="singleton/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="singleton/implementation/unit-inParent-asFlat-print.md" boilerplate />
+<include src="singleton/evaluation/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Abstraction Occurrence Pattern
 
-<include src="abstractionOccurrence/what/print.md" />
+<include src="abstractionOccurrence/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Facade Pattern
 
-<include src="facade/what/print.md" />
+<include src="facade/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Command Pattern
 
-<include src="command/what/print.md" />
+<include src="command/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Model View Controller (MVC) Pattern
 
-<include src="modelViewController/what/print.md" />
+<include src="modelViewController/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Observer Pattern
 
-<include src="observer/what/print.md" />
+<include src="observer/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ## More
 
-<include src="more/combiningDesignPatterns/print.md" />
-<include src="more/otherDesignPatterns/print.md" />
-<include src="more/usingDesignPatterns/print.md" />
-<include src="more/otherTypesOfPatterns/print.md" />
-<include src="more/vsPrinciples/print.md" />
+<include src="more/combiningDesignPatterns/unit-inParent-asFlat-print.md" boilerplate />
+<include src="more/otherDesignPatterns/unit-inParent-asFlat-print.md" boilerplate />
+<include src="more/usingDesignPatterns/unit-inParent-asFlat-print.md" boilerplate />
+<include src="more/otherTypesOfPatterns/unit-inParent-asFlat-print.md" boilerplate />
+<include src="more/vsPrinciples/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

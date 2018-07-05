@@ -1,22 +1,20 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Adding more info to UML Models :one:
+#### Adding more info to UML Models
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can add more info to UML models</span>
 
 <div id="body">
 
 **UML notes can be used to add more info to any UML model.**
 
-<panel src="../../../../book/uml/notes/notes/full.md#title-and-body" header=":mortar_board: UML → Notes" expanded />
+<panel src="../../../../book/uml/notes/notes/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML → Notes" expanded />
 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

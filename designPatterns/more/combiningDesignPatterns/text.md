@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Combining Design Patterns :three:
+#### Combining Design Patterns
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can combine multiple patterns to fit a context</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: Let us look at a case study that shows how design patterns are used in the design of a class structure for a Stock Inventory System (SIS) for a shop. The shop sells appliances, and accessories for the appliances. SIS simply stores information about each item in the store.
+{{ icon_example }} Let us look at a case study that shows how design patterns are used in the design of a class structure for a Stock Inventory System (SIS) for a shop. The shop sells appliances, and accessories for the appliances. SIS simply stores information about each item in the store.
 
 **Use Cases**:
 
@@ -76,6 +76,4 @@ In addition, the Singleton pattern can be applied to the façade class.
 </div>
 
 <div id="extras">
-</div>
-
 </div>

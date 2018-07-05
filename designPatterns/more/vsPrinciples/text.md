@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Design Patterns vs Design Principles :one:
+#### Design Patterns vs Design Principles
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can differentiate between design patterns and principles</span>
 
 <div id="body">
 
@@ -15,6 +15,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

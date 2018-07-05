@@ -1,8 +1,10 @@
-<div id="path">UML → Class Diagrams →</div>
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret abstract classes in class diagrams</span>
 
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
 
@@ -25,6 +27,4 @@ Example:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

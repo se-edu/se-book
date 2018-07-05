@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Big-Bang vs Incremental Integration :two:
+#### Big-Bang vs Incremental Integration
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain how integration approaches vary based on amount merged at a time</span>
 
 <div id="body">
 
@@ -33,7 +33,5 @@ Here is an animation that compares the two approaches:
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

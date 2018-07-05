@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Abstract Classes :two:
+#### Abstract Classes
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can implement abstract classes</span>
 
 <div id="body">
 
@@ -18,13 +18,13 @@
 
 **An abstract method is simply the method interface without the implementation.** 
 
-<dynamic-panel src="../../../uml/classDiagrams/abstractClasses/what/full.md" header=":mortar_board:UML → Class Diagrams → Abstract Classes" />
+<dynamic-panel src="../../../uml/classDiagrams/abstractClasses/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }}UML → Class Diagrams → Abstract Classes" />
 
 <p/>
 
 <tip-box>
 
-:package: The `Account` class has an abstract method (`addInterest()`).
+{{ icon_example }} The `Account` class has an abstract method (`addInterest()`).
 
 <img src="{{baseUrl}}/oopDesign/inheritance/abstractClasses/images/account.png" height="220" />
 <p/>
@@ -34,6 +34,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

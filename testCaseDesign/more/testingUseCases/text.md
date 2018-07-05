@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Testing Based on Use Cases :four:
+#### Testing Based on Use Cases
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain test case design for use case based testing</span>
 
 <div id="body">
 
@@ -18,13 +18,11 @@ To increase <trigger trigger="click" for="modal:usebaseBased-EandE">E&E of testi
   <include src="../../introduction/what/text.md#e-and-e"/>
 </modal>
 
-<modal large title="Textbook »" id="modal:usecaseBased-scripted">
-  <include src="../../../testing/testingTypes/exploratoryVsScriptedTesting/what/full.md"/>
+<modal large title="Textbook {{ icon_embedding }}" id="modal:usecaseBased-scripted">
+  <include src="../../../testing/testingTypes/exploratoryVsScriptedTesting/what/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

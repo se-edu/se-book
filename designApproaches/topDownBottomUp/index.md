@@ -1,13 +1,5 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<frontmatter>
+title: "Design Approaches: Top-Down and Bottom-Up Design"
+</frontmatter>
 
-<div class="website-content">
-
-## Top-Down and Bottom-Up Design
-
-<div id="main">
-
-<include src="what/embed.md" />
-
-</div>
-
-</div>
+<include src="container-inPage-asFlat.md" boilerplate />

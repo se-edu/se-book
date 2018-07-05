@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain what is software design</span>
 
 <div id="body">
 
@@ -23,6 +23,4 @@ Design in the creative process of transforming the problem into a solution; the 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Object Oriented Programming →</div>
+<span id="outcomes">{{glyphicon_flag}} Can implement dependencies</span>
 
 <div id="title">
 
-#### Implementing Dependencies :two:
+#### Implementing Dependencies
 
 </div>
 
@@ -16,7 +14,7 @@ Dependencies result from interactions between objects that do not result in a lo
 
 <tip-box>
 
-:package: In the code below, `Foo` has a dependency on `Bar` but it is not an association because it is only a <tooltip content="temporary">transient</tooltip> interaction and there is no long term relationship between a `Foo` object and a `Bar` object. %%i.e. the `Foo` object does not keep the `Bar` object it receives as a parameter%%.
+{{ icon_example }} In the code below, `Foo` has a dependency on `Bar` but it is not an association because it is only a <tooltip content="temporary">transient</tooltip> interaction and there is no long term relationship between a `Foo` object and a `Bar` object. %%i.e. the `Foo` object does not keep the `Bar` object it receives as a parameter%%.
 
 <table> 
 <tr>
@@ -68,6 +66,4 @@ The code above results in this dependency.
 </div>
 
 <div id="extras">
-</div>
-
 </div>

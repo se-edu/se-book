@@ -12,36 +12,36 @@ title: "Error Handling [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/print.md" />
+<include src="introduction/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Exceptions
 
-<include src="exceptions/what/print.md" />
-<include src="exceptions/how/print.md" />
-<include src="exceptions/when/print.md" />
+<include src="exceptions/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="exceptions/how/unit-inParent-asFlat-print.md" boilerplate />
+<include src="exceptions/when/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Assertions
 
-<include src="assertions/what/print.md" />
-<include src="assertions/how/print.md" />
-<include src="assertions/when/print.md" />
+<include src="assertions/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="assertions/how/unit-inParent-asFlat-print.md" boilerplate />
+<include src="assertions/when/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Logging
 
-<include src="logging/what/print.md" />
-<include src="logging/how/print.md" />
+<include src="logging/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="logging/how/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Defensive Programming
 
-<include src="defensiveProgramming/what/print.md" />
-<include src="defensiveProgramming/compulsoryAssociations/print.md" />
-<include src="defensiveProgramming/1to1Associations/print.md" />
-<include src="defensiveProgramming/referentialIntegrity/print.md" />
-<include src="defensiveProgramming/when/print.md" />
+<include src="defensiveProgramming/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="defensiveProgramming/compulsoryAssociations/unit-inParent-asFlat-print.md" boilerplate />
+<include src="defensiveProgramming/1to1Associations/unit-inParent-asFlat-print.md" boilerplate />
+<include src="defensiveProgramming/referentialIntegrity/unit-inParent-asFlat-print.md" boilerplate />
+<include src="defensiveProgramming/when/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Design-by-Contract Approach
 
-<include src="designByContract/what/print.md" />
+<include src="designByContract/what/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

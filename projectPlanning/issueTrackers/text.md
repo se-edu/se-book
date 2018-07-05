@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Issue Trackers :two:
+#### Issue Trackers
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain issue trackers</span>
 
 <div id="body">
 
@@ -18,7 +18,7 @@ Keeping track of project tasks %%(who is doing what, which tasks are ongoing, wh
 
 <tip-box> 
 
-:package: A screenshot from the Jira Issue tracker software %%(Jira is part of the BitBucket project management tool suite)%%:
+{{ icon_example }} A screenshot from the Jira Issue tracker software %%(Jira is part of the BitBucket project management tool suite)%%:
           
 <img src="{{baseUrl}}/projectPlanning/issueTrackers/images/xjira.png" height="350" />
 <p/>
@@ -30,7 +30,5 @@ Keeping track of project tasks %%(who is doing what, which tasks are ongoing, wh
 </div>
 
 <div id="extras">
-
-</div>
 
 </div>

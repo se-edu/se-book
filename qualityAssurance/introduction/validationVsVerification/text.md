@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Validation vs Verification :two:
+#### Validation vs Verification
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain validation and verification</span>
 
 <div id="body">
 
@@ -24,7 +24,5 @@ Whether something belongs under validation or verification is not that important
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

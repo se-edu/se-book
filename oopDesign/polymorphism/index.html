@@ -8,43 +8,51 @@
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\markbind\css\site-nav.css">
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-<div class="website-content">
-  <p><span class="dimmed"><strong>Object Oriented Programming →</strong></span></p>
-  <h2 id="polymorphism">Polymorphism</h2>
-  <div id="main">
     <div>
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+  <div class="website-content" id="all">
+    <p><span class="dimmed"><strong><span>Design → Object Oriented Programming →
+</span></strong>
+      </span>
+    </p>
+    <div id="title">
       <div>
-        <h4 id="introduction-two">Introduction <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        <h2 id="polymorphism">Polymorphism</h2>
       </div>
-      <tip-box>
+    </div>
+    <div id="main">
+      <div>
         <div>
-          <p>🏆 Can explain OOP polymorphism <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
-        </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
-        <div>
-          <div>
-            <tip-box type="primary">
-              <div>
-                <p><strong>Polymorphism</strong>:</p>
-                <blockquote>
-                  <p>The ability of different objects to respond, each in its own way, to identical messages is called polymorphism. <sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
-                </blockquote>
-              </div>
-            </tip-box>
-            <p>Take the example of writing a payroll application for a university to facilitate payroll processing of university staff. Suppose an <code>adjustSalary(int)</code> operation adjusts the salaries of all staff members. This operation will be
-              executed whenever the university initiates a salary adjustment for its staff. However, the adjustment formula is different for different staff categories, say admin and academic. Here is one possible way of designing the classes in the <code>Payroll</code>              system.</p>
-            <tip-box>
-              <p>📦 Calling <code>adjustSalary()</code> method for each Staff type:</p>
-              <img src="/se-book/oopDesign/polymorphism/introduction/images/payroll.png" height="150">
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="introduction">Introduction</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can explain OOP polymorphism</span></span></span></button>
               <p></p>
-              <p>Here is the implementation of the <code>adjustSalary(int)</code> operation from the above design.</p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll1</span> </span>{
+            </p>
+            <p></p>
+            <div>
+              <tip-box type="primary">
+                <div>
+                  <p><strong>Polymorphism</strong>:</p>
+                  <blockquote>
+                    <p>The ability of different objects to respond, each in its own way, to identical messages is called polymorphism. <sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
+                  </blockquote>
+                </div>
+              </tip-box>
+              <p>Take the example of writing a payroll application for a university to facilitate payroll processing of university staff. Suppose an <code>adjustSalary(int)</code> operation adjusts the salaries of all staff members. This operation will be
+                executed whenever the university initiates a salary adjustment for its staff. However, the adjustment formula is different for different staff categories, say admin and academic. Here is one possible way of designing the classes in the
+                <code>Payroll</code> system.</p>
+              <tip-box>
+                <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Calling <code>adjustSalary()</code> method for each Staff type:</p>
+                <img src="/se-book/oopDesign/polymorphism/introduction/images/payroll.png" height="150">
+                <p></p>
+                <p>Here is the implementation of the <code>adjustSalary(int)</code> operation from the above design.</p>
+                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll1</span> </span>{
     ArrayList&lt; Admin &gt; admins;
     ArrayList&lt; Academic &gt; academics;
     <span class="hljs-comment">// ...</span>
@@ -59,11 +67,11 @@
     }
 }
 </code></pre>
-            </tip-box>
-            <p>Note how processing is similar for the two staff types. It is as if the type of staff members is irrelevant to how they are processed inside this operation! If that is the case, can the staff type be &quot;abstracted away&quot; from this method?
-              Here is such an implementation of <code>adjustSalary(int)</code>:</p>
-            <tip-box>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll2</span> </span>{
+              </tip-box>
+              <p>Note how processing is similar for the two staff types. It is as if the type of staff members is irrelevant to how they are processed inside this operation! If that is the case, can the staff type be &quot;abstracted away&quot; from this
+                method? Here is such an implementation of <code>adjustSalary(int)</code>:</p>
+              <tip-box>
+                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll2</span> </span>{
     ArrayList&lt; Staff &gt; staff;
     <span class="hljs-comment">// ...</span>
 
@@ -74,75 +82,72 @@
     }
 }
 </code></pre>
-              <p>Notice the following:</p>
+                <p>Notice the following:</p>
+                <ul>
+                  <li>Only one data structure <code>ArrayList&lt; Staff &gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
+                  <li>Only one loop</li>
+                  <li>Outcome of the <code>s.adjustSalary(byPercent)</code> method call depends on whether <code>s</code> is an <code>Academic</code> or <code>Admin</code> object</li>
+                </ul>
+              </tip-box>
+              <p>The above code is better in several ways:</p>
               <ul>
-                <li>Only one data structure <code>ArrayList&lt; Staff &gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
-                <li>Only one loop</li>
-                <li>Outcome of the <code>s.adjustSalary(byPercent)</code> method call depends on whether <code>s</code> is an <code>Academic</code> or <code>Admin</code> object</li>
+                <li>It is shorter.</li>
+                <li>It is simpler.</li>
+                <li>It is more flexible (this code will remain the same even if more staff types are added).</li>
               </ul>
-            </tip-box>
-            <p>The above code is better in several ways:</p>
-            <ul>
-              <li>It is shorter.</li>
-              <li>It is simpler.</li>
-              <li>It is more flexible (this code will remain the same even if more staff types are added).</li>
-            </ul>
-            <p>This does not mean we are getting rid of the <code>Academic</code> and <code>Admin</code> classes completely and replacing them with a more general class called <code>Staff</code>. Rather, this part of the code “treats” both <code>Admin</code>              and <code>Academic</code> objects as one type called <code>Staff</code>.</p>
-            <p>For example, <code>ArrayList</code> staff contains both <code>Admin</code> and <code>Academic</code> objects although it treats all of them as <code>Staff</code> objects. However, when the <code>adjustSalary(int)</code> operation of these
-              objects is called, the resulting salary adjustment will be different for <code>Admin</code> objects and <code>Academic</code> objects. Therefore, different types of objects are treated as a single general type, but yet each type of object
-              exhibits a different kind of behavior. This is called <em>polymorphism</em> (literally, it means “ability to take many forms”). In this example, an object that is perceived as type <code>Staff</code> can be an <code>Admin</code> object or
-              an <code>Academic</code> object.</p>
-          </div>
-          <div></div>
-        </div>
-      </panel>
-    </div>
-    <div>
-      <div>
-        <h4 id="mechanism-three">Mechanism <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
-      </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can explain how substitutability operation overriding, and dynamic binding relates to polymorphism <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
-        </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
-        <div>
-          <div>
-            <p><strong>Three concepts combine to achieve polymorphism: <em>substitutability, operation overriding, and dynamic binding</em>.</strong></p>
-            <ul>
-              <li><strong>Substitutability:</strong> Because of substitutability, you can write code that expects object of a parent class and yet use that code with objects of child classes. That is how polymorphism is able to <em>treat objects of different types as one type</em>.</li>
-              <li><strong>Overriding:</strong> To get polymorphic behavior from an operation, the operation in the superclass needs to be overridden in each of the subclasses. That is how overriding allows objects of different sub classes to <em>display different behaviors in response to the same method call</em>.</li>
-              <li><strong>Dynamic binding</strong>: Calls to overridden methods are bound to the implementation of the actual object's class dynamically during the runtime. That is how the polymorphic code can call the method of the parent class and yet execute
-                the implementation of the child class.</li>
-            </ul>
-          </div>
-          <div>
-            <div>
-              <panel header=":muscle: Exercises" expandable="">
-                <div>
-                  <panel header=":lock::key: Concepts related to polymorphism">
-                    <question>
-                      <p>Which one of these is least related to how OO programs achieve polymorphism?</p>
-                      <ul radio-group="8bdf8" class="radio-list">
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> a. substitutability</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> b. dynamic binding</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> c. operation overloading</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> d. interfaces</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> e. abstract classes</label></li>
-                      </ul>
-                      <div slot="answer">
-                        <p>(c)</p>
-                        <p>Explanation: Operation overriding is the one that is related, not operation overloading. Interfaces and abstract classes, although not <em>required</em>, can be used in achieving polymorphism.</p>
-                      </div>
-                    </question>
-                  </panel>
-                </div>
-              </panel>
+              <p>This does not mean we are getting rid of the <code>Academic</code> and <code>Admin</code> classes completely and replacing them with a more general class called <code>Staff</code>. Rather, this part of the code “treats” both <code>Admin</code>                and <code>Academic</code> objects as one type called <code>Staff</code>.</p>
+              <p>For example, <code>ArrayList</code> staff contains both <code>Admin</code> and <code>Academic</code> objects although it treats all of them as <code>Staff</code> objects. However, when the <code>adjustSalary(int)</code> operation of these
+                objects is called, the resulting salary adjustment will be different for <code>Admin</code> objects and <code>Academic</code> objects. Therefore, different types of objects are treated as a single general type, but yet each type of object
+                exhibits a different kind of behavior. This is called <em>polymorphism</em> (literally, it means “ability to take many forms”). In this example, an object that is perceived as type <code>Staff</code> can be an <code>Admin</code> object
+                or an <code>Academic</code> object.</p>
             </div>
-          </div>
+            <div></div>
+          </panel>
         </div>
-      </panel>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="mechanism">Mechanism</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can explain how substitutability operation overriding, and dynamic binding relates to polymorphism</span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
+            <div>
+              <p><strong>Three concepts combine to achieve polymorphism: <em>substitutability, operation overriding, and dynamic binding</em>.</strong></p>
+              <ul>
+                <li><strong>Substitutability:</strong> Because of substitutability, you can write code that expects object of a parent class and yet use that code with objects of child classes. That is how polymorphism is able to <em>treat objects of different types as one type</em>.</li>
+                <li><strong>Overriding:</strong> To get polymorphic behavior from an operation, the operation in the superclass needs to be overridden in each of the subclasses. That is how overriding allows objects of different sub classes to <em>display different behaviors in response to the same method call</em>.</li>
+                <li><strong>Dynamic binding</strong>: Calls to overridden methods are bound to the implementation of the actual object's class dynamically during the runtime. That is how the polymorphic code can call the method of the parent class and yet
+                  execute the implementation of the child class.</li>
+              </ul>
+            </div>
+            <div>
+              <div>
+                <panel header=":muscle: Exercises" expandable="">
+                  <div>
+                    <panel header=":lock::key: Concepts related to polymorphism">
+                      <question>
+                        <p>Which one of these is least related to how OO programs achieve polymorphism?</p>
+                        <ul radio-group="8bdf8" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> a. substitutability</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> b. dynamic binding</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> c. operation overloading</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> d. interfaces</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> e. abstract classes</label></li>
+                        </ul>
+                        <div slot="answer">
+                          <p>(c)</p>
+                          <p>Explanation: Operation overriding is the one that is related, not operation overloading. Interfaces and abstract classes, although not <em>required</em>, can be used in achieving polymorphism.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </panel>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -154,4 +159,5 @@
     const baseUrl = '/se-book'
 </script>
 <script src="..\..\markbind\js\setup.js"></script>
+<script src="..\..\markbind\js\site-nav.js"></script>
 </html>

@@ -1,12 +1,13 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### When :three:
+#### When
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Error Handling → Assertions → What%%" />
+<dynamic-panel src="../../exceptions/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Error Handling → Exceptions → What%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use assertions optimally</span>
 
 <div id="body">
 
@@ -16,7 +17,7 @@
 
 <tip-box> 
 
-:package: The code below will not invoke the `writeFile()` method when assertions are disabled. %%&nbsp;If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.%%
+{{ icon_example }} The code below will not invoke the `writeFile()` method when assertions are disabled. %%&nbsp;If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.%%
 
 ```java
 ...
@@ -37,6 +38,4 @@ _Preconditions_, _Postconditions_, and _Class Invariants_.** Refer to [[Programm
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

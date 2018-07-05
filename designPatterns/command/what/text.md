@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the Command design pattern</span>
 
 <div id="body">
 
@@ -26,7 +26,7 @@ Let us examine an example application of the pattern first:
 
 <tip-box>
 
-:package: In the example solution below, the `CommandCreator` creates `List`, `Sort`, and `Reset Command` objects and adds them to the `CommandQueue` object. The `CommandQueue` object treats them all as `Command` objects and performs the execute/undo operation on each of them without knowledge of the specific `Command` type. When executed, each `Command` object will access the `DataStore` object to carry out its task. The `Command` class can also be an abstract class or an interface.
+{{ icon_example }} In the example solution below, the `CommandCreator` creates `List`, `Sort`, and `Reset Command` objects and adds them to the `CommandQueue` object. The `CommandQueue` object treats them all as `Command` objects and performs the execute/undo operation on each of them without knowledge of the specific `Command` type. When executed, each `Command` object will access the `DataStore` object to carry out its task. The `Command` class can also be an abstract class or an interface.
 
 <img src="{{baseUrl}}/designPatterns/command/what/images/commandCreator.png" height="150" />
 <p/>
@@ -43,6 +43,4 @@ The `<< Client >>` creates a `<< ConcreteCommand >>` object, and passes it to th
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Overloading :two:
+#### Overloading
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain method overloading</span>
 
 <div id="body">
 
@@ -20,7 +20,7 @@
 
 <tip-box>
 
-:package: In the class below, the `calculate` method is overloaded because the two methods have the same name but different type signatures `(String)` and `(int)`
+{{ icon_example }} In the class below, the `calculate` method is overloaded because the two methods have the same name but different type signatures `(String)` and `(int)`
 
 * `calculate(String): void`
 * `calculate(int): void`
@@ -32,6 +32,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

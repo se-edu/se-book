@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Multiplicity :two:
+#### Multiplicity
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of multiplicity</span>
 
 <div id="body">
 
@@ -14,13 +14,13 @@
 
 <tip-box> 
 
-:package: This class diagram does not tell us multiplicities. For exaple, how many `Calculator` objects can be associated with one `Main` object? How many `Main` objects can be associated with one `Calculator` object? and so on. 
+{{ icon_example }} This class diagram does not tell us multiplicities. For exaple, how many `Calculator` objects can be associated with one `Main` object? How many `Main` objects can be associated with one `Calculator` object? and so on. 
 
 <img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculatorPerson.png" height="100" />
 
 </tip-box>
 
-<panel src="../../../uml/classDiagrams/associations/multiplicity/full.md#title-and-body" header=":mortar_board: UML → Class Diagrams → Associations → Multiplicity" expanded />
+<panel src="../../../uml/classDiagrams/associations/multiplicity/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Associations → Multiplicity" expanded />
 
 <p/>
 
@@ -29,7 +29,5 @@
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

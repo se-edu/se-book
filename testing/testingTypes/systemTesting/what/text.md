@@ -1,8 +1,12 @@
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain system testing</span>
 
 <div id="body">
 
@@ -14,7 +18,7 @@ System testing is typically done by a testing team (also called a QA team).
 
 <tip-box>
 
-:package: Suppose the SUT is a browser supposedly capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully if pushed beyond its limits. 
+{{ icon_example }} Suppose the SUT is a browser supposedly capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully if pushed beyond its limits. 
 
 ```
 Test case: load a web page that is too big
@@ -38,6 +42,4 @@ This test case would fail if the browser attempted to load the large file anyway
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Optional Paths :two:
+#### Optional Paths
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with optional paths</span>
 
 <div id="body">
 
@@ -19,7 +19,7 @@ Notation:
 
 <tip-box>
 
-:package: `Logic#markCellAt(...)` calls `Timer#start()` only if it is the first move of the player. 
+{{ icon_example }} `Logic#markCellAt(...)` calls `Timer#start()` only if it is the first move of the player. 
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/optionalPaths/images/logicTimer.png" height="150" />
 <p/>
@@ -29,6 +29,4 @@ Notation:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

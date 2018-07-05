@@ -1,24 +1,24 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of inheritance</span>
 
 <div id="body">
 
 **The OOP concept _Inheritance_ allows you to define a new class based on an existing class.** For example, you can use inheritance to define an `EvaluationReport` class based on an existing `Report` class so that the `EvaluationReport` class does not have to duplicate code that is already implemented in the `Report` class. 
 
-<dynamic-panel src="../../../uml/classDiagrams/classInheritance/what/full.md#title-and-body" header=":mortar_board: UML → Class Diagrams → Inheritance" expanded/>
+<dynamic-panel src="../../../uml/classDiagrams/classInheritance/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Inheritance" expanded/>
 
 <p/>
 
 <tip-box>
 
-:package: Example: The `EvaluationReport` inherits the `wordCount` attribute and the `print()` method from the _base class_ `Report`.
+{{ icon_example }} Example: The `EvaluationReport` inherits the `wordCount` attribute and the `print()` method from the _base class_ `Report`.
 
 <img src="{{baseUrl}}/oopDesign/inheritance/what/images/report.png" height="120" />
 <p/>
@@ -34,7 +34,7 @@
 
 <tip-box>
 
-:package: `Man` and `Woman` behaves the same way for the 'owes money' association. However, the two classes cannot be simply replaced with a more general class `Person` because of the need to distinguish between `Man` and `Woman` for the ‘marriage’ association. A solution is to add the `Person` class as a super class and let `Man` and `Woman` inherit from `Person`.
+{{ icon_example }} `Man` and `Woman` behaves the same way for the 'owes money' association. However, the two classes cannot be simply replaced with a more general class `Person` because of the need to distinguish between `Man` and `Woman` for the ‘marriage’ association. A solution is to add the `Person` class as a super class and let `Man` and `Woman` inherit from `Person`.
 
 <img src="{{baseUrl}}/oopDesign/inheritance/what/images/manWoman.png" height="250" />
 <p/>
@@ -51,7 +51,7 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 
 <tip-box>
 
-:package: In this class diagrams of a _Snakes and Ladders_ board game,
+{{ icon_example }} In this class diagrams of a _Snakes and Ladders_ board game,
 * `SnakeHeadSquare` _is a_ `Square` %%&nbsp;(a `SnakeHeadSquare` is a square in which the head of a snake appears)%%
 * `SnakeTailSquare` _is a_ `Square`
 
@@ -65,7 +65,7 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 
 <tip-box>
 
-:package: Two inheritance hierarchies/trees are given below. Note that `Parrot` _is a_ `Bird` as well as it _is an_ `Animal`. 
+{{ icon_example }} Two inheritance hierarchies/trees are given below. Note that `Parrot` _is a_ `Bird` as well as it _is an_ `Animal`. 
 
 <img src="{{baseUrl}}/oopDesign/inheritance/what/images/inheritanceTreesExamples.png" width="500" />
 <p/>
@@ -76,7 +76,7 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 
 <tip-box>
 
-:package: The `TA` class inherits from the `Staff` class _and_ the `Student`.
+{{ icon_example }} The `TA` class inherits from the `Staff` class _and_ the `Student`.
 
 <img src="{{baseUrl}}/oopDesign/inheritance/what/images/studentStaff.png" height="200" />
 <p/>
@@ -86,6 +86,4 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 </div>
 
 <div id="extras">
-</div>
-
 </div>

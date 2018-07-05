@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Modeling → Modeling Structures →</div>
+<span id="outcomes">{{glyphicon_flag}} Can explain object diagrams</span>
 
 <div id="title">
 
-#### Object Diagrams :three:
+#### Object Diagrams
 
 </div>
 
@@ -16,12 +14,10 @@
 
 <include src="../../../uml/objectDiagrams/introduction/text.md#body" />
 
-<panel src="../../../../book/uml/objectDiagrams/objects/full.md#title-and-body" header=":mortar_board: UML → Object Diagrams → Objects" alt=":mortar_board: Objects" minimized/>
-<panel src="../../../../book/uml/objectDiagrams/associations/what/full.md#title-and-body" header=":mortar_board: UML → Object Diagrams → Associations → What" alt=":mortar_board: Associations" minimized/>
+<panel src="../../../../book/uml/objectDiagrams/objects/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML → Object Diagrams → Objects" alt="{{ icon_prereq }} Objects" minimized/>
+<panel src="../../../../book/uml/objectDiagrams/associations/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML → Object Diagrams → Associations → What" alt="{{ icon_prereq }} Associations" minimized/>
 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

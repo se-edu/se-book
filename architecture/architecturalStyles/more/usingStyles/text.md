@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Using Styles :two:
+#### Using Styles
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain how architectural styles are combined</span>
 
 <div id="body">
 
@@ -10,7 +14,7 @@
 
 <tip-box> 
 
-:package: An application can use a client-server architecture where the server component comprises several layers, i.e. it uses the n-Tier architecture.
+{{ icon_example }} An application can use a client-server architecture where the server component comprises several layers, i.e. it uses the n-Tier architecture.
 
 <!-- TODO: add diagram -->
 

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Positive vs Negative Test Cases :one:
+#### Positive vs Negative Test Cases
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain positive and negative test cases</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: Consider testing of the method `print(Integer i)` which prints the value of `i`.
+{{ icon_example }} Consider testing of the method `print(Integer i)` which prints the value of `i`.
 
 * A positive test case: `i == new Integer(50)`
 * A negative test case: `i == null;`
@@ -24,6 +24,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Liskov Substitution Principle :three:
+#### Liskov Substitution Principle
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain Liskov Substitution Principle</span>
 
 <div id="body">
 
@@ -16,13 +16,13 @@
 
 LSP sounds same as <trigger large trigger="click" for="modal:lsp-substitutability">substitutability</trigger> but it goes beyond substitutability; **LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.** As we know, Java has language support for substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.
 
-<modal large title="Textbook »" id="modal:lsp-substitutability">
-  <include src="../../oopDesign/inheritance/substitutability/full.md"/>
+<modal large title="Textbook {{ icon_embedding }}" id="modal:lsp-substitutability">
+  <include src="../../oopDesign/inheritance/substitutability/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal> 
 
 <tip-box>
 
-:package: Suppose the `Payroll` class depends on the `adjustMySalary(int percent)` method of the `Staff` class. Furthermore, the `Staff` class states that the `adjustMySalary` method will work for all positive percent values. Both `Admin` and `Academic` classes override the `adjustMySalary` method.
+{{ icon_example }} Suppose the `Payroll` class depends on the `adjustMySalary(int percent)` method of the `Staff` class. Furthermore, the `Staff` class states that the `adjustMySalary` method will work for all positive percent values. Both `Admin` and `Academic` classes override the `adjustMySalary` method.
 
 <img src="{{baseUrl}}/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200" />
 <p/>
@@ -39,7 +39,7 @@ In the above scenario,
 
 <panel type="seamless" header="%%Another example%%">
 
-:package: The `Rectangle#resize()` can take any integers for `height` and `width`. This contract is violated by the subclass `Square#resize()` because it does not accept a `height` that is different from the `width`. 
+{{ icon_example }} The `Rectangle#resize()` can take any integers for `height` and `width`. This contract is violated by the subclass `Square#resize()` because it does not accept a `height` that is different from the `width`. 
 
 <img src="{{baseUrl}}/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120" />
 <p/>
@@ -81,6 +81,4 @@ This code will fail if it is called as `maekSameSize(new Rectangle(12,8), new Sq
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

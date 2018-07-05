@@ -1,8 +1,10 @@
-<div id="path">Documentation → Guidelines →</div>
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for comprehensibility in documents</span>
 
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
 
@@ -13,6 +15,4 @@ Technical documents exist to help others understand technical details. Therefore
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Introduction :one:
+#### Introduction
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain requirements</span>
 
 <div id="body">
 
@@ -31,6 +31,4 @@ Identifying requirements is often not easy. For example, stakeholders may not be
 </div>
 
 <div id="extras">
-</div>
-
 </div>

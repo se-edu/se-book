@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Notes :two:
+#### Notes
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use UML notes</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Example:
+{{ icon_example }} Example:
 
 <img src="{{baseUrl}}/uml/notes/notes/images/adminProfessor.png" height="120" />
 <p/>
@@ -24,6 +24,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

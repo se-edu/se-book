@@ -40,14 +40,6 @@ Less important info
 
 </panel><p/>
 
-**Dash lines indicate collapsed content.** Click on them to expand:
-
-<panel type="seamless" header="%%--------------------------------------%%">
-
-Some content
-
-</panel><p/>
-
 **Tabs indicate alternative formats of the same content** (e.g. video vs text). You can choose the one you like and ignore the other tabs. 
 
 <tip-box>
@@ -58,7 +50,7 @@ Some content
 Some textual description of X
 
   <hr></tab>
-  <tab header=":tv:">
+  <tab header="{{ icon_video }}">
 
 Video describing X
 
@@ -79,7 +71,7 @@ Video describing X
   Additional information
 </modal>
 
-**Sections tagged as :zero: can be ignored because they are tangential info** that are strictly not within the scope of the topic.
+**Sections tagged as <span class='badge'>tangential</span> can be ignored because they are tangential info** that are strictly not within the scope of the topic.
 
 </div>
 <div id="conventions">
@@ -90,19 +82,19 @@ Meaning of some shortened headings:
 
 * **What** : the **meaning** of the concept in concern 
 
-  <include name="%%Example%%" src="../refactoring/what/full.md" dynamic />
+  <include name="%%Example%%" src="../refactoring/what/unit-inElsewhere-asFlat.md" boilerplate dynamic />
 
 * **Why** : the **motivation** behind the concept in concern
 
-  <include name="%%Example%%" src="../documentation/guidelines/goTopDown/why/full.md" dynamic />
+  <include name="%%Example%%" src="../documentation/guidelines/goTopDown/why/unit-inElsewhere-asFlat.md" boilerplate dynamic />
   
 * **How** : the **usage** of the concept in concern 
 
-  <include name="%%Example%%" src="../refactoring/how/full.md" dynamic />
+  <include name="%%Example%%" src="../refactoring/how/unit-inElsewhere-asFlat.md" boilerplate dynamic />
   
 * **When** : the **pros and cons** of the concept in concern, **when to use** the concept 
 
-  <include name="%%Example%%" src="../refactoring/when/full.md" dynamic />
+  <include name="%%Example%%" src="../refactoring/when/unit-inElsewhere-asFlat.md" boilerplate dynamic />
   
 
 Boxed-text styles:
@@ -131,17 +123,16 @@ Boxed-text styles:
 
 Meaning of icons:
 
-* :one: :two: :three: :four: : indication of the depth of the topic, in order of increasing depth (:one: is the least depth)
-* :zero: : tangential info, can be ignored if not interested
+* <span class="badge">tangential</span> : tangential info, can be ignored if not interested
 * {{glyphicon_new_window}} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.
-* :trophy: : learning outcomes
-* :mortar_board: : prerequisite learning outcome
-* :package: : examples
+* {{glyphicon_flag}} : learning outcomes
+* {{ icon_prereq }} : prerequisite learning outcome
+* {{ icon_example }} : examples
 * :paperclip: : resources
 * :muscle: : exercises
-* :scroll: : printable version
-* :mag: : preview/more info
-* :tv: : video
+* {{glyphicon_print}} : printable version
+* {{glyphicon_eye_open}} : preview/more info
+* {{ icon_video }} : video
 * :abc: : textual description
 * :bar_chart: : slides
 * :arrow_heading_down: : output produced by running code
@@ -172,7 +163,7 @@ The book currently does not have a _search_ feature. The workaround is to load [
   
 ### Printing
 
-The :scroll: icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here]({{baseUrl}}/common/print.html)
+The {{glyphicon_print}} icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here]({{baseUrl}}/common/print.html)
 
 </div>
 

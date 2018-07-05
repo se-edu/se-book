@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### User Surveys :one:
+#### User Surveys
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain user surveys</span>
 
 <div id="body">
 
@@ -15,6 +15,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### UML Models :four:
+#### UML Models
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can identify UML models</span>
 
 <div id="body">
 
@@ -21,6 +21,4 @@ The following diagram uses the class diagram notation to show the different type
 </div>
 
 <div id="extras">
-</div>
-
 </div>

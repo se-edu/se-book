@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Component Diagrams :four:
+#### Component Diagrams
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain component diagrams</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: An example component diagram:
+{{ icon_example }} An example component diagram:
 
 <img src="{{baseUrl}}/modeling/modelingStructures/componentDiagrams/images/diagram.png" height="500" /><br>
 
@@ -24,6 +24,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

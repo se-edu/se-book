@@ -1,24 +1,22 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain supplementary requirements</span>
 
 <div id="body">
 
 **A _supplementary requirements_ section can be used to capture _requirements that do not fit elsewhere_**. Typically, this is where most <trigger trigger="click" for="modal:supplementary-nfr">Non Functional Requirements</trigger> will be listed.
 
 <modal large title="" id="modal:supplementary-nfr">
-  <include src="../../../requirements/nonFunctionalRequirements/full.md"/>
+  <include src="../../../requirements/nonFunctionalRequirements/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,6 +1,6 @@
 <tip-box> 
 
-:package: A simple example where the `Report#print()` method is overridden by `EvaluationReport#print()` method: 
+{{ icon_example }} A simple example where the `Report#print()` method is overridden by `EvaluationReport#print()` method: 
 
 ```java
 

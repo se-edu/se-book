@@ -1,22 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Advanced :three:
-
+### Advanced
 </div>
 
 <div id="body">
 
-<panel header="**Make the Happy Path Prominent**" type="seamless" expanded>
-  <include src="../../practices/makeHappyPathProminent/index.md#main" />
-</panel>
-
-</div>
-
-<div id="extras">
-</div>
+<include src="makeHappyPathProminent/unit-inParent-asPanel.md" boilerplate />
 
 </div>

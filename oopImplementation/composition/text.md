@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Implementing Composition :two:
+#### Implementing Composition
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can implement composition</span>
 
 <div id="body">
 
@@ -51,6 +51,4 @@ class Car:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

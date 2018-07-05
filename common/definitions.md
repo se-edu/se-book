@@ -328,7 +328,7 @@ Also known as
 
 **Use Case**: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an <trigger for="pop:actor">actor</trigger>.[ :book: : <popover effect="fade" placement="top" >uml-user-guide<span slot="content"><include src="./references.md#uml-user-guide" inline/></span></popover>]
   
-<popover id="pop:actor" title=":mag:" placement="top">
+<popover id="pop:actor" title="{{glyphicon_eye_open}}" placement="top">
   <div slot="content">
     <include src="definitions.md#def-actor" />
   </div>

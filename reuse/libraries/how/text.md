@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can make use of a library</span>
 
 <div id="body">
 
@@ -20,6 +20,4 @@ These are the typical steps required to use a library.
 </div>
 
 <div id="extras">
-</div>
-
 </div>

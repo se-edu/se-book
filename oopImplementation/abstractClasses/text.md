@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Implementing Abstract Classes :two:
+#### Implementing Abstract Classes
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/abstractClasses/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Inheritance → Abstract Classes%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can implement abstract classes</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Partial code below gives an example of how to declare abstract classes/methods.
+{{ icon_example }} Partial code below gives an example of how to declare abstract classes/methods.
 
 <img src="{{baseUrl}}/oopDesign/inheritance/abstractClasses/images/account.png" height="220" />
 <p/>
@@ -51,7 +51,5 @@ In Java, if a class contains an abstract method, the class itself should be an a
 
 <include src="resources.md" />
 <include src="exercises.md" />
-
-</div>
 
 </div>

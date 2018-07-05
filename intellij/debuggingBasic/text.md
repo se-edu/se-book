@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Intellij IDEA → </div>
+<span id="outcomes">{{glyphicon_flag}} Can step through a program using a debugger</span>
 
 <div id="title">
 
-#### Debugging: Basic :two:
+#### Debugging: Basic
 
 </div>
 
@@ -25,6 +23,4 @@ This video (from LaunchCode) gives a pretty good explanation of how to use the I
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,12 +1,14 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Class Diagrams - Advanced :three:
+#### Class Diagrams - Advanced
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../../oopDesign/inheritance/interfaces/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP: Inheritance → Interfaces%%" />
+<dynamic-panel src="../../../oopDesign/inheritance/abstractClasses/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Inheritance → Abstract Classes%%" />
+<dynamic-panel src="../../../oopDesign/associations/associationClasses/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Associations → Association Classes%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use advanced class diagrams</span>
 
 <div id="body">
 
@@ -17,7 +19,5 @@
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

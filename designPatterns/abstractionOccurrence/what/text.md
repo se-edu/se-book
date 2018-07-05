@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :three:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the Abstraction Occurrence design pattern</span>
 
 <div id="body">
 
@@ -16,7 +16,7 @@ There is a group of similar entities that appears to be ‘occurrences’ (or �
 
 <tip-box>
 
-:package: In a library, there can be multiple copies of same book title. Each copy shares common information such as book title, author, ISBN etc. However, there are also significant differences like purchase date and barcode number (assumed to be unique for each copy of the book).
+{{ icon_example }} In a library, there can be multiple copies of same book title. Each copy shares common information such as book title, author, ISBN etc. However, there are also significant differences like purchase date and barcode number (assumed to be unique for each copy of the book).
 
 Other examples:
 
@@ -31,7 +31,7 @@ Representing the objects mentioned previously as a single class would be problem
 
 <tip-box>
 
-:package: Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial numbers.
+{{ icon_example }} Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial numbers.
 
 <img src="{{baseUrl}}/designPatterns/abstractionOccurrence/what/images/book.png" height="200" />
 <p/>
@@ -46,7 +46,7 @@ The above solution requires common information to be duplicated by all instances
 
 <tip-box>
 
-:package: Refer to the same Library example given above.
+{{ icon_example }} Refer to the same Library example given above.
 
 <img src="{{baseUrl}}/designPatterns/abstractionOccurrence/what/images/bookFriends.png" height="240" />
 <p/>
@@ -61,12 +61,12 @@ Let a copy of an entity (e.g. a copy of a book)be represented by two objects ins
 
 <tip-box>
 
-:package: Given below is how the pattern is applied to the Library example:
+{{ icon_example }} Given below is how the pattern is applied to the Library example:
 
 <img src="{{baseUrl}}/designPatterns/abstractionOccurrence/what/images/bookTitleBookCopy.png" height="260" />
 <p/>
 
-:package: Here's a more generic example:
+{{ icon_example }} Here's a more generic example:
 
 <img src="{{baseUrl}}/designPatterns/abstractionOccurrence/what/images/beforeAfter.png" height="370" />
 <p/>
@@ -85,7 +85,5 @@ The `<< Abstraction >>` class should hold all common information, and the unique
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

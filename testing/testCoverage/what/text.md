@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain test coverage</span>
 
 <div id="body">
 
@@ -21,7 +21,7 @@ Here are some examples of different coverage criteria:
  
 <tip-box> 
 
-:package: `if(x > 2 && x < 44)` is considered one decision point but two conditions. 
+{{ icon_example }} `if(x > 2 && x < 44)` is considered one decision point but two conditions. 
 
 For 100% branch or decision coverage, two test cases are required:
 
@@ -45,7 +45,5 @@ For 100% condition coverage, three test cases are required
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

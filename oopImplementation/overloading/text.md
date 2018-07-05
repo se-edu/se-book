@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Implementing Overloading :one:
+#### Implementing Overloading
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/overloading/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Inheritance → Overloading%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can implement overloading</span>
 
 <div id="body">
 
@@ -31,6 +31,4 @@ An operation can be overloaded inside the same class or in sub/super classes.
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### JUnit: Basic :two:
+#### JUnit: Basic
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use simple JUnit tests</span>
 
 <div id="body">
 
@@ -23,6 +23,4 @@ JUnit 4 with IntelliJ: A quick introduction <sub>-- by DrBFraser</sub>
 
 <div id="extras">
   <include src="resources.md" />
-</div>
-
 </div>

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Iaas, PaaS, and SaaS :three:
+#### Iaas, PaaS, and SaaS
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can distinguish between IaaS, PaaS, and SaaS</span>
 
 <div id="body">
 
@@ -27,7 +27,5 @@ Cloud computing can deliver computing services at three levels:
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

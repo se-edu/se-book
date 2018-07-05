@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\markbind\css\site-nav.css">
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
@@ -19,7 +20,7 @@
     <h2 id="introduction">Introduction</h2>
     <div>
       <div>
-        <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+        <h4 id="what">What</h4>
       </div>
       <div>
         <tip-box type="definition">
@@ -29,7 +30,7 @@
         </tip-box>
         <p>In software development, there are certain problems that recur in a certain context.</p>
         <tip-box>
-          <p>📦 Some examples of recurring design problems:</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Some examples of recurring design problems:</p>
           <table class="markbind-table table table-bordered table-striped">
             <thead>
               <tr>
@@ -54,7 +55,7 @@
     </div>
     <div>
       <div>
-        <h4 id="format-two">Format <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        <h4 id="format">Format</h4>
       </div>
       <div>
         <p>The common format to describe a pattern consists of the following components:</p>
@@ -71,7 +72,7 @@
     <h2 id="singleton-pattern">Singleton Pattern</h2>
     <div>
       <div>
-        <h4 id="what-two">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        <h4 id="what-2">What</h4>
       </div>
       <div>
         <p><strong>Context</strong></p>
@@ -90,7 +91,7 @@
     </div>
     <div>
       <div>
-        <h4 id="implementation-two">Implementation <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        <h4 id="implementation">Implementation</h4>
       </div>
       <div>
         <p>Here is the typical implementation of how the Singleton pattern is applied to a class:</p>
@@ -126,7 +127,7 @@
     </div>
     <div>
       <div>
-        <h4 id="evaluation-three">Evaluation <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+        <h4 id="evaluation">Evaluation</h4>
       </div>
       <div>
         <p><strong>Pros:</strong></p>
@@ -148,14 +149,14 @@
     <h2 id="abstraction-occurrence-pattern">Abstraction Occurrence Pattern</h2>
     <div>
       <div>
-        <h4 id="what-three">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+        <h4 id="what-3">What</h4>
       </div>
       <div>
         <p><strong>Context</strong></p>
         <p>There is a group of similar entities that appears to be ‘occurrences’ (or ‘copies’) of the same thing, sharing lots of common information, but also differing in significant ways.</p>
         <tip-box>
-          <p>📦 In a library, there can be multiple copies of same book title. Each copy shares common information such as book title, author, ISBN etc. However, there are also significant differences like purchase date and barcode number (assumed to be
-            unique for each copy of the book).</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> In a library, there can be multiple copies of same book title. Each copy shares common information such as book title, author, ISBN etc. However, there are also significant differences
+            like purchase date and barcode number (assumed to be unique for each copy of the book).</p>
           <p>Other examples:</p>
           <ul>
             <li>Episodes of the same TV series</li>
@@ -165,7 +166,8 @@
         <p><strong>Problem</strong></p>
         <p>Representing the objects mentioned previously as a single class would be problematic because it results in duplication of data which can lead to inconsistencies in data (if some of the duplicates are not updated consistently).</p>
         <tip-box>
-          <p>📦 Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial numbers.</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial
+            numbers.</p>
           <img src="/se-book/designPatterns/abstractionOccurrence/what/images/book.png" height="200">
           <p></p>
           <p>The above solution requires common information to be duplicated by all instances. This will not only waste storage space, but also creates a consistency problem. Suppose that after creating several copies of the same title, the librarian realized
@@ -174,7 +176,7 @@
         </tip-box>
         <p><strong>Anti-pattern</strong></p>
         <tip-box>
-          <p>📦 Refer to the same Library example given above.</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Refer to the same Library example given above.</p>
           <img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookFriends.png" height="240">
           <p></p>
           <p>The design above segregates the common and unique information into a class hierarchy. Each book title is represented by a separate class with common data (i.e. Name, Author, ISBN) hard-coded in the class itself. This solution is problematic
@@ -183,10 +185,10 @@
         <p><strong>Solution</strong></p>
         <p>Let a copy of an entity (e.g. a copy of a book)be represented by two objects instead of one, separating the common and unique information into two classes to avoid duplication.</p>
         <tip-box>
-          <p>📦 Given below is how the pattern is applied to the Library example:</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Given below is how the pattern is applied to the Library example:</p>
           <img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookTitleBookCopy.png" height="260">
           <p></p>
-          <p>📦 Here's a more generic example:</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Here's a more generic example:</p>
           <img src="/se-book/designPatterns/abstractionOccurrence/what/images/beforeAfter.png" height="370">
           <p></p>
         </tip-box>
@@ -200,13 +202,13 @@
     <h2 id="facade-pattern">Facade Pattern</h2>
     <div>
       <div>
-        <h4 id="what-two-2">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        <h4 id="what-4">What</h4>
       </div>
       <div>
         <p><strong>Context</strong></p>
         <p>Components need to access functionality deep inside other components.</p>
         <tip-box>
-          <p>📦 The <code>UI</code> component of a <code>Library</code> system might want to access functionality of the <code>Book</code> class contained inside the <code>Logic</code> component.</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> The <code>UI</code> component of a <code>Library</code> system might want to access functionality of the <code>Book</code> class contained inside the <code>Logic</code> component.</p>
           <img src="/se-book/designPatterns/facade/what/images/textBook.png" height="120">
           <p></p>
         </tip-box>
@@ -216,7 +218,7 @@
         <p>Include a
           <tooltip content="a French word that means 'front of a building'">Façade</tooltip> class that sits between the component internals and users of the component such that all access to the component happens through the Facade class.</p>
         <tip-box>
-          <p>📦 The following class diagram applies the Façade pattern to the <code>Library System</code> example. The <code>LibraryLogic</code> class is the Facade class.</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> The following class diagram applies the Façade pattern to the <code>Library System</code> example. The <code>LibraryLogic</code> class is the Facade class.</p>
           <img src="/se-book/designPatterns/facade/what/images/textLibraryBook.png" height="120">
           <p></p>
         </tip-box>
@@ -225,7 +227,7 @@
     <h2 id="command-pattern">Command Pattern</h2>
     <div>
       <div>
-        <h4 id="what-two-3">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        <h4 id="what-5">What</h4>
       </div>
       <div>
         <p><strong>Context</strong></p>
@@ -236,8 +238,7 @@
         <p>The essential element of this pattern is to have a general <code>&lt;&lt; Command &gt;&gt;</code> object that can be passed around, stored, executed, etc without knowing the type of command (i.e. via polymorphism).</p>
         <p>Let us examine an example application of the pattern first:</p>
         <tip-box>
-          <p>📦 In the example solution below, the <code>CommandCreator</code> creates <code>List</code>, <code>Sort</code>, and <code>Reset Command</code> objects and adds them to the <code>CommandQueue</code> object. The <code>CommandQueue</code> object
-            treats them all as <code>Command</code> objects and performs the execute/undo operation on each of them without knowledge of the specific <code>Command</code> type. When executed, each <code>Command</code> object will access the <code>DataStore</code>            object to carry out its task. The <code>Command</code> class can also be an abstract class or an interface.</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> In the example solution below, the <code>CommandCreator</code> creates <code>List</code>, <code>Sort</code>, and <code>Reset Command</code> objects and adds them to the <code>CommandQueue</code>            object. The <code>CommandQueue</code> object treats them all as <code>Command</code> objects and performs the execute/undo operation on each of them without knowledge of the specific <code>Command</code> type. When executed, each <code>Command</code>            object will access the <code>DataStore</code> object to carry out its task. The <code>Command</code> class can also be an abstract class or an interface.</p>
           <img src="/se-book/designPatterns/command/what/images/commandCreator.png" height="150">
           <p></p>
         </tip-box>
@@ -254,7 +255,7 @@
     <h2 id="model-view-controller-mvc-pattern">Model View Controller (MVC) Pattern</h2>
     <div>
       <div>
-        <h4 id="what-two-4">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        <h4 id="what-6">What</h4>
       </div>
       <div>
         <p><strong>Context</strong></p>
@@ -272,7 +273,7 @@
         <img src="/se-book/designPatterns/modelViewController/what/images/classDiagram.png" width="400">
         <p></p>
         <tip-box>
-          <p>📦 Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving data of one student.</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving data of one student.</p>
           <img src="/se-book/designPatterns/modelViewController/what/images/sequenceDiagram.png" width="500">
           <p></p>
           <p>In the diagram above, when the user clicks on a button using the UI, the ‘click’ event is caught and handled by the <code>UiController</code>.</p>
@@ -284,11 +285,11 @@
     <h2 id="observer-pattern">Observer Pattern</h2>
     <div>
       <div>
-        <h4 id="what-two-5">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        <h4 id="what-7">What</h4>
       </div>
       <div>
         <tip-box>
-          <p>📦 Here is a scenario from the a student management system where the user is adding a new student to the system.</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Here is a scenario from the a student management system where the user is adding a new student to the system.</p>
           <img src="/se-book/designPatterns/observer/what/images/sequenceDiagram.png" height="330">
           <p></p>
           <p>Now, assume the system has two additional views used in parallel by different users:</p>
@@ -311,7 +312,7 @@
         <img src="/se-book/designPatterns/observer/what/images/studentListObserver.png" height="160">
         <p></p>
         <tip-box>
-          <p>📦Here is the Observer pattern applied to the student management system.</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span>Here is the Observer pattern applied to the student management system.</p>
           <p>During initialization of the system,</p>
           <ol>
             <li>First, create the relevant objects.</li>
@@ -362,13 +363,13 @@ studentList.addUi(statusUi);
     <h2 id="more">More</h2>
     <div>
       <div>
-        <h4 id="combining-design-patterns-three">Combining Design Patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+        <h4 id="combining-design-patterns">Combining Design Patterns</h4>
       </div>
       <div>
         <p><strong>Design patterns are usually embedded in a larger design and sometimes applied in combination with other design patterns.</strong></p>
         <tip-box>
-          <p>📦 Let us look at a case study that shows how design patterns are used in the design of a class structure for a Stock Inventory System (SIS) for a shop. The shop sells appliances, and accessories for the appliances. SIS simply stores information
-            about each item in the store.</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Let us look at a case study that shows how design patterns are used in the design of a class structure for a Stock Inventory System (SIS) for a shop. The shop sells appliances,
+            and accessories for the appliances. SIS simply stores information about each item in the store.</p>
           <p><strong>Use Cases</strong>:</p>
           <ul>
             <li>Create a new item</li>
@@ -410,7 +411,7 @@ studentList.addUi(statusUi);
     </div>
     <div>
       <div>
-        <h4 id="other-design-patterns-three">Other Design Patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+        <h4 id="other-design-patterns">Other Design Patterns</h4>
       </div>
       <div>
         <p><strong>The most famous source of design patterns is the <a href="https://en.wikipedia.org/wiki/Design_Patterns">&quot;Gang of Four&quot; (GoF) book</a> which contains 23 design patterns divided into three categories</strong>:</p>
@@ -435,12 +436,12 @@ studentList.addUi(statusUi);
     </div>
     <div>
       <div>
-        <h4 id="using-design-patterns-three">Using Design Patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+        <h4 id="using-design-patterns">Using Design Patterns</h4>
       </div>
       <div>
         <p><strong>Design pattern provides a high-level vocabulary to talk about design.</strong></p>
         <tip-box>
-          <p>📦 Someone can say 'apply Observer pattern here' instead of having to describe the mechanics of the solution in detail.</p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Someone can say 'apply Observer pattern here' instead of having to describe the mechanics of the solution in detail.</p>
         </tip-box>
         <p><strong>Knowing more patterns is a way to become more ‘experienced’.</strong> Aim to learn at least the context and the problem of patterns <span class="dimmed"> so that when you encounter those problems you know where to look for a solution</span>.</p>
         <p><strong>Some patterns are domain-specific</strong> <span class="dimmed"> e.g. patterns for distributed applications</span>, <strong>some are created in-house</strong> <span class="dimmed"> e.g. patterns in the company/project</span> and <strong>some can be self-created</strong>          <span class="dimmed"> e.g. from past experience</span>.</p>
@@ -454,7 +455,7 @@ studentList.addUi(statusUi);
     </div>
     <div>
       <div>
-        <h4 id="other-types-of-patterns-three">Other Types of Patterns <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+        <h4 id="other-types-of-patterns">Other Types of Patterns</h4>
       </div>
       <div>
         <p>The notion of capturing design ideas as &quot;patterns&quot; is usually attributed to <a href="https://en.wikipedia.org/wiki/Christopher_Alexander">Christopher Alexander</a>. He is a building architect noted for his theories about design. His
@@ -474,7 +475,7 @@ studentList.addUi(statusUi);
     </div>
     <div>
       <div>
-        <h4 id="design-patterns-vs-design-principles-one">Design Patterns vs Design Principles <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+        <h4 id="design-patterns-vs-design-principles">Design Patterns vs Design Principles</h4>
       </div>
       <div>
         <p><strong>Design <em>principles</em>  have varying degrees of formality – rules, opinions, rules of thumb, observations, and axioms.</strong> Compared to design patterns, principles are <strong>more general</strong>, have <strong>wider applicability</strong>,
@@ -491,4 +492,5 @@ studentList.addUi(statusUi);
     const baseUrl = '/se-book'
 </script>
 <script src="..\markbind\js\setup.js"></script>
+<script src="..\markbind\js\site-nav.js"></script>
 </html>

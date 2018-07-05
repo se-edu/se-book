@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Recap :three:
+#### Recap
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain process models at a higher level</span>
 
 <div id="body">
 
@@ -16,6 +16,4 @@ This section has some exercise that cover multiple topics related to SDLC proces
 
 <div id="extras">
  <include src="exercises.md" />
-</div>
-
 </div>

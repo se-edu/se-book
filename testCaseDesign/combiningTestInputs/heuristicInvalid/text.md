@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"><dynamic-panel src="../heuristicValid/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: Each Valid Input at Least Once in a Positive Test Case%%" /></span>
 
-<div class="website-content">
-
-<div id="path">Test Case Design → Combining Test Inputs →</div>
+<span id="outcomes">{{glyphicon_flag}} Can apply heuristic ‘no more than one invalid input in a test case’</span>
 
 <div id="title">
 
-#### Heuristic: No More Than One Invalid Input In A Test Case :two:
+#### Heuristic: No More Than One Invalid Input In A Test Case
 
 </div>
 
@@ -41,6 +39,4 @@ VV/IV = Any Invalid or Valid Value VV=Any Valid Value
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

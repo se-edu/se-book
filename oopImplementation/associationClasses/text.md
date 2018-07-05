@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Implementing Association Classes :three:
+#### Implementing Association Classes
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../oopDesign/associations/associationClasses/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Associations → Association Classes%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can implement association classes</span>
 
 <div id="body">
 
@@ -33,7 +33,5 @@ At implementation level, an association class is most likely implemented as foll
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

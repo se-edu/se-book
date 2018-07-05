@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Revision Control → </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain remote repositories</span>
 
 <div id="title">
 
-#### Remote Repositories :two:
+#### Remote Repositories
 
 </div>
 
@@ -38,6 +36,4 @@ Here is a scenario that includes all the concepts introduced above (click on the
 </div>
 
 <div id="extras">
-</div>
-
 </div>

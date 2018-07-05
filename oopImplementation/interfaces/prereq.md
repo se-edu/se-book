@@ -1,1 +1,0 @@
-<dynamic-panel src="../../oopDesign/inheritance/interfaces/full.md" header="%%:mortar_board: Design → OOP → Inheritance → Interfaces%%" />

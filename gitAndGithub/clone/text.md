@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"><dynamic-panel src="../../revisionControl/remoteRepositories/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Remote Respositories%%" /></span>
 
-<div class="website-content">
-
-<div id="path">Git and Github → </div>
+<span id="outcomes">{{glyphicon_flag}} Can clone a remote repo</span>
 
 <div id="title">
 
-#### Clone :one:
+#### Clone
 
 </div>
 
@@ -36,6 +34,4 @@ Git repo URL: `{{common_org}}/samplerepo-things.git` (note the `.git` at the end
 </div>
 
 <div id="extras">
-</div>
-
 </div>

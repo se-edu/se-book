@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Basic :one:
+#### Basic
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with basic notation</span>
 
 <div id="body">
 
@@ -17,7 +17,7 @@ Notation:
 
 <tip-box>
 
-:package: This sequence diagram shows some interactions between a human user and the Text UI of a <tooltip content="Command Line Interface">CLI</tooltip> Minesweeper game.
+{{ icon_example }} This sequence diagram shows some interactions between a human user and the Text UI of a <tooltip content="Command Line Interface">CLI</tooltip> Minesweeper game.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/basic/images/playerText.png" height="300" />
 <p/>
@@ -47,6 +47,4 @@ Note that unlike in Object Diagrams, the **class/object name is not underlined i
 </div>
 
 <div id="extras">
-</div>
-
 </div>

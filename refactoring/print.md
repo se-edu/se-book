@@ -10,9 +10,9 @@ title: "Refactoring [Printable]"
 
 # Refactoring
 
-<include src="what/print.md" />
-<include src="how/print.md" />
-<include src="when/print.md" />
+<include src="what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="how/unit-inParent-asFlat-print.md" boilerplate />
+<include src="when/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain coupling</span>
 
 <div id="body">
 
@@ -18,7 +18,7 @@
 
 <tip-box>
 
-:package: In the example below, design `A` appears to have a more coupling between the components than design `B`.
+{{ icon_example }} In the example below, design `A` appears to have a more coupling between the components than design `B`.
 
 <img src="{{baseUrl}}/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220" />
 <p/>
@@ -28,7 +28,5 @@
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

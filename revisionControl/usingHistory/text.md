@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Revision Control → </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain using history</span>
 
 <div id="title">
 
-#### Using History :two:
+#### Using History
 
 </div>
 
@@ -23,6 +21,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

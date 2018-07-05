@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Basic :one:
+#### Basic
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the relationship between classes and objects </span>
 
 <div id="body">
 
@@ -18,7 +18,7 @@
 
 <tip-box>
 
-:package: Classes and objects in an example scenario
+{{ icon_example }} Classes and objects in an example scenario
 
 When writing an OOP program to calculate the average age of Adam, Beth, Charlie, and Daisy, instructions for creating objects `Adam`, `Beth`, `Charlie`, and `Daisy` will be very similar because they are all of the same kind : they all represent ‘persons’ with the same interface, the same kind of data (i.e. `name`, `DoB`, etc.), and the same kind of behavior (i.e. `getAge(Date)`, `getName()`, etc.). Therefore, we can have a class called `Person` containing instructions on how to create `Person` objects and use that class to instantiate objects `Adam`, `Beth`, `Charlie`, and `Daisy`. Similarly, we need classes `AgeList`, `Calculator`, and `Main` classes to instantiate one each of `AgeList`, `Calculator`, and `Main` objects.
 
@@ -28,8 +28,8 @@ When writing an OOP program to calculate the average age of Adam, Beth, Charlie,
 
 Let us use the UML notation to illustrate classes and objects under discussion.
 
-<panel src="../../../uml/classDiagrams/classes/what/full.md#title-and-body" header=":mortar_board: Tools → UML → Class Diagrams → Classes" expanded />
-<panel src="../../../uml/objectDiagrams/objects/full.md#title-and-body" header=":mortar_board: Tools → UML → Object Diagrams → Objects" expanded/>
+<panel src="../../../uml/classDiagrams/classes/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} Tools → UML → Class Diagrams → Classes" expanded />
+<panel src="../../../uml/objectDiagrams/objects/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} Tools → UML → Object Diagrams → Objects" expanded/>
 
 <p/>
 
@@ -47,7 +47,5 @@ Let us use the UML notation to illustrate classes and objects under discussion.
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

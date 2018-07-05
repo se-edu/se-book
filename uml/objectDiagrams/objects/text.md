@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Objects :one:
+#### Objects
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can draw UML objects</span>
 
 <div id="body">
 
@@ -24,7 +24,7 @@ Notes:
 
 <tip-box>
 
-:package: Some example objects:
+{{ icon_example }} Some example objects:
 
 <img src="{{baseUrl}}/uml/objectDiagrams/objects/images/professorStudent.png" height="65" />
 <p/>
@@ -36,7 +36,5 @@ Notes:
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

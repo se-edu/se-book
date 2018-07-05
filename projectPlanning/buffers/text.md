@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Buffers :two:
+#### Buffers
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain buffers</span>
 
 <div id="body">
 
@@ -17,6 +17,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

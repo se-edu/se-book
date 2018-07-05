@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Dependencies :three:
+#### Dependencies
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use dependencies in a class diagram</span>
 
 <div id="body">
 
@@ -14,7 +18,7 @@ In a UML class diagram, a **dependency is a weaker form of an association where 
 
 <tip-box> 
 
-:package: Two examples of dependencies:
+{{ icon_example }} Two examples of dependencies:
 
 <img src="{{baseUrl}}/uml/classDiagrams/dependencies/what/images/examples.png" width="450" />
 <p/>
@@ -24,6 +28,4 @@ In a UML class diagram, a **dependency is a weaker form of an association where 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

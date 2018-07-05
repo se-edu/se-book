@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Object vs Class Diagrams :two:
+#### Object vs Class Diagrams
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can distinguish between class diagrams and object diagrams</span>
 
 <div id="body">
 
@@ -22,7 +22,7 @@ Furthermore, **multiple object diagrams can correspond to a single class diagram
 
 <tip-box>
 
-:package: Both object diagrams are derived from the same class diagram shown earlier. In other words, each of these object diagrams shows ‘an instance of’ the same class diagram.
+{{ icon_example }} Both object diagrams are derived from the same class diagram shown earlier. In other words, each of these object diagrams shows ‘an instance of’ the same class diagram.
 
 <img src="{{baseUrl}}/uml/miscellaneous/objectVsClassDiagrams/images/professorStudentAdmin.png" height="85" />
 <p/>
@@ -37,7 +37,5 @@ Furthermore, **multiple object diagrams can correspond to a single class diagram
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Usage :three:
+#### Usage
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use user stories to manage requirements of project</span>
 
 <div id="body">
 
@@ -20,7 +20,7 @@
 
 <tip-box>
 
-:package: An example of a NFR captured as a user story:
+{{ icon_example }} An example of a NFR captured as a user story:
 
 As a | I want to | so that
 -----|-----------|--------
@@ -74,6 +74,4 @@ While use cases can be recorded on <tooltip content="e.g. index cards or sticky 
 
 <div id="extras">
   <include src="resources.md" />
-</div>
-
 </div>

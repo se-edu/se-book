@@ -14,98 +14,98 @@ title: "UML [Printable]"
 
 ### Introduction
 
-<include src="classDiagrams/introduction/what/print.md" />
+<include src="classDiagrams/introduction/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Classes
 
-<include src="classDiagrams/classes/what/print.md" />
+<include src="classDiagrams/classes/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Associations
 
-<include src="classDiagrams/associations/basic/print.md" />
-<include src="classDiagrams/associations/navigability/print.md" />
-<include src="classDiagrams/associations/roles/print.md" />
-<include src="classDiagrams/associations/labels/print.md" />
-<include src="classDiagrams/associations/multiplicity/print.md" />
+<include src="classDiagrams/associations/basic/unit-inParent-asFlat-print.md" boilerplate />
+<include src="classDiagrams/associations/navigability/unit-inParent-asFlat-print.md" boilerplate />
+<include src="classDiagrams/associations/roles/unit-inParent-asFlat-print.md" boilerplate />
+<include src="classDiagrams/associations/labels/unit-inParent-asFlat-print.md" boilerplate />
+<include src="classDiagrams/associations/multiplicity/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Associations as Attributes
 
-<include src="classDiagrams/associationsAsAttributes/what/print.md" />
+<include src="classDiagrams/associationsAsAttributes/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Enumerations
 
-<include src="classDiagrams/enumerations/what/print.md" />
+<include src="classDiagrams/enumerations/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Class Level Members
 
-<include src="classDiagrams/classLevelMembers/what/print.md" />
+<include src="classDiagrams/classLevelMembers/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Association Classes
 
-<include src="classDiagrams/associationClasses/what/print.md" />
+<include src="classDiagrams/associationClasses/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Composition
 
-<include src="classDiagrams/composition/what/print.md" />
+<include src="classDiagrams/composition/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Aggregation
 
-<include src="classDiagrams/aggregation/what/print.md" />
+<include src="classDiagrams/aggregation/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Class Inheritance
 
-<include src="classDiagrams/classInheritance/what/print.md" />
+<include src="classDiagrams/classInheritance/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Interfaces
 
-<include src="classDiagrams/interfaces/what/print.md" />
+<include src="classDiagrams/interfaces/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Abstract Classes
 
-<include src="classDiagrams/abstractClasses/what/print.md" />
+<include src="classDiagrams/abstractClasses/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Object Diagrams
 
-<include src="objectDiagrams/introduction/print.md" />
-<include src="objectDiagrams/objects/print.md" />
-<include src="objectDiagrams/associations/what/print.md" />
+<include src="objectDiagrams/introduction/unit-inParent-asFlat-print.md" boilerplate />
+<include src="objectDiagrams/objects/unit-inParent-asFlat-print.md" boilerplate />
+<include src="objectDiagrams/associations/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Sequence Diagrams
 
-<include src="sequenceDiagrams/introduction/print.md" />
-<include src="sequenceDiagrams/basic/print.md" />
-<include src="sequenceDiagrams/objectCreation/print.md" />
-<include src="sequenceDiagrams/objectDeletion/print.md" />
-<include src="sequenceDiagrams/loops/print.md" />
-<include src="sequenceDiagrams/selfInvocation/print.md" />
-<include src="sequenceDiagrams/alternativePaths/print.md" />
-<include src="sequenceDiagrams/optionalPaths/print.md" />
-<include src="sequenceDiagrams/parallelPaths/print.md" />
-<include src="sequenceDiagrams/referenceFrames/print.md" />
-<include src="sequenceDiagrams/minimalNotation/print.md" />
+<include src="sequenceDiagrams/introduction/unit-inParent-asFlat-print.md" boilerplate />
+<include src="sequenceDiagrams/basic/unit-inParent-asFlat-print.md" boilerplate />
+<include src="sequenceDiagrams/objectCreation/unit-inParent-asFlat-print.md" boilerplate />
+<include src="sequenceDiagrams/objectDeletion/unit-inParent-asFlat-print.md" boilerplate />
+<include src="sequenceDiagrams/loops/unit-inParent-asFlat-print.md" boilerplate />
+<include src="sequenceDiagrams/selfInvocation/unit-inParent-asFlat-print.md" boilerplate />
+<include src="sequenceDiagrams/alternativePaths/unit-inParent-asFlat-print.md" boilerplate />
+<include src="sequenceDiagrams/optionalPaths/unit-inParent-asFlat-print.md" boilerplate />
+<include src="sequenceDiagrams/parallelPaths/unit-inParent-asFlat-print.md" boilerplate />
+<include src="sequenceDiagrams/referenceFrames/unit-inParent-asFlat-print.md" boilerplate />
+<include src="sequenceDiagrams/minimalNotation/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Activity Diagrams
 
 ### Introduction
 
-<include src="activityDiagrams/introduction/what/print.md" />
+<include src="activityDiagrams/introduction/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Basic Notations
 
-<include src="activityDiagrams/basicNotations/linearPaths/print.md" />
-<include src="activityDiagrams/basicNotations/alternatePaths/print.md" />
-<include src="activityDiagrams/basicNotations/parallelPaths/print.md" />
-<include src="activityDiagrams/basicNotations/rakes/print.md" />
-<include src="activityDiagrams/basicNotations/swimlanes/print.md" />
+<include src="activityDiagrams/basicNotations/linearPaths/unit-inParent-asFlat-print.md" boilerplate />
+<include src="activityDiagrams/basicNotations/alternatePaths/unit-inParent-asFlat-print.md" boilerplate />
+<include src="activityDiagrams/basicNotations/parallelPaths/unit-inParent-asFlat-print.md" boilerplate />
+<include src="activityDiagrams/basicNotations/rakes/unit-inParent-asFlat-print.md" boilerplate />
+<include src="activityDiagrams/basicNotations/swimlanes/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Notes
 
-<include src="notes/notes/print.md" />
-<include src="notes/constraints/print.md" />
+<include src="notes/notes/unit-inParent-asFlat-print.md" boilerplate />
+<include src="notes/constraints/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Miscellaneous
 
-<include src="miscellaneous/objectVsClassDiagrams/print.md" />
+<include src="miscellaneous/objectVsClassDiagrams/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

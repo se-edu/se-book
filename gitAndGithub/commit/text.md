@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"><dynamic-panel src="../init/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Git & GitHub → Init%%" /></span>
 
-<div class="website-content">
-
-<div id="path">Git and Github → </div>
+<span id="outcomes">{{glyphicon_flag}} Can commit using Git</span>
 
 <div id="title">
 
-#### Commit :one: [{{glyphicon_new_window}}]({{baseUrl}}/gitAndGithub/commit/index.html)
+#### Commit
 
 </div>
 
@@ -77,6 +75,4 @@ Next, add two more files `colors.txt` and `shapes.txt` to the same working direc
 
 <div id="extras">
   <include src="resources.md"/>
-</div>
-
 </div>

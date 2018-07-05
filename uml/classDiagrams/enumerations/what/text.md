@@ -1,8 +1,12 @@
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret enumerations in class diagrams</span>
 
 <div id="body">
 
@@ -12,7 +16,7 @@ Notation:
 
 <tip-box>
 
-:package: In the class diagram below, there are two enumerations in use:
+{{ icon_example }} In the class diagram below, there are two enumerations in use:
 
 <img src="{{baseUrl}}/uml/classDiagrams/enumerations/what/images/playerTurn.png" width="600" />
 <p/>
@@ -22,6 +26,4 @@ Notation:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

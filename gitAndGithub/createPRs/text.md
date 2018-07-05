@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Create PRs :two:
+#### Create PRs
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Branching%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can create PRs on GitHub</span>
 
 <div id="body">
 
@@ -48,7 +48,7 @@ git push origin add-intro
 
 4b. Select `base fork` and `head fork` as follows:
 
-* `base fork`: your own fork (i.e. `{your user name}/samplerepo-pr-practice`, ==NOT `nus-cs2103-AY1718S2/samplerepo-pr-practice`==)
+* `base fork`: your own fork (i.e. `{your user name}/samplerepo-pr-practice`, ==NOT `nus-{{ module | lower }}-{{ semester }}/samplerepo-pr-practice`==)
 * `head fork`: your own fork.
 
 <img src="{{baseUrl}}/gitAndGithub/createPRs/images/selectBase.png" width="800" />
@@ -101,6 +101,4 @@ When creating the new branch, it is very important that you switch back to the `
 </div>
 
 <div id="extras">
-</div>
-
 </div>

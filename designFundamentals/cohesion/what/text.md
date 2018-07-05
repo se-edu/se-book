@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain cohesion</span>
 
 <div id="body">
 
@@ -20,6 +20,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

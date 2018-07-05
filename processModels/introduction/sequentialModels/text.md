@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Sequential Models :one:
+#### Sequential Models
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain sequential process models</span>
 
 <div id="body">
 
@@ -24,6 +24,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Association Classes :three:
+#### Association Classes
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret association classes in class diagrams</span>
 
 <div id="body">
 
@@ -12,7 +16,7 @@ Association classes are denoted as a connection to an association link using a d
 
 <tip-box>
 
-:package: In this example `Loan` is an association class because it stores information about the `borrows` association between the `User` and the `Book`.
+{{ icon_example }} In this example `Loan` is an association class because it stores information about the `borrows` association between the `User` and the `Book`.
 
 <img src="{{baseUrl}}/uml/classDiagrams/associationClasses/what/images/bookLoan.png" height="150" />
 <p/>
@@ -22,6 +26,4 @@ Association classes are denoted as a connection to an association link using a d
 </div>
 
 <div id="extras">
-</div>
-
 </div>

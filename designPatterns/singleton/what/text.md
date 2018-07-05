@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the Singleton design pattern</span>
 
 <div id="body">
 
@@ -36,7 +36,5 @@ Example:
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Swimlanes :four:
+#### Swimlanes
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain swimlanes in activity diagrams</span>
 
 <div id="body">
 
@@ -10,7 +14,7 @@
 
 <tip-box> 
 
-:package: A simple example of a swimlane diagram:
+{{ icon_example }} A simple example of a swimlane diagram:
 
 <img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/swimlanes/images/diagram.png" height="220" />
 <p/>
@@ -22,6 +26,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

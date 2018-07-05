@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Revision Control → </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain saving history</span>
 
 <div id="title">
 
-#### Saving History :one: [{{glyphicon_new_window}}]({{baseUrl}}/revisionControl/savingHistory/index.html)
+#### Saving History
 
 </div>
 
@@ -26,7 +24,7 @@
 **When ready to commit, we first ==_stage_== the specific changes we want to commit.** This intermediate step allows us to commit only some changes while saving other changes for a later commit.
 
   <hr></tab>
-  <tab header=":tv:">
+  <tab header="{{ icon_video }}">
 
 @[youtube](7exFDGHgQcw)
 
@@ -42,6 +40,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

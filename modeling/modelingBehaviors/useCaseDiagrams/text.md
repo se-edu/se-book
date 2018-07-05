@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Modeling → Modeling Behaviors →</div>
+<span id="outcomes">{{glyphicon_flag}} Can explain use case diagrams</span>
 
 <div id="title">
 
-#### Use Case Diagrams :two:
+#### Use Case Diagrams
 
 </div>
 
@@ -16,7 +14,7 @@
 
 <tip-box> 
 
-:package: A simple use case diagram:
+{{ icon_example }} A simple use case diagram:
 
 <img src="{{baseUrl}}/specifyingRequirements/useCases/introduction/images/ticketMachine.png" height="250" />
 
@@ -25,6 +23,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

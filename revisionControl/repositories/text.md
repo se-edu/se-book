@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Revision Control → </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain repositories</span>
 
 <div id="title">
 
-#### Repositories :one: [{{glyphicon_new_window}}]({{baseUrl}}/revisionControl/repositories/index.html)
+#### Repositories
 
 </div>
 
@@ -24,7 +22,7 @@ Suppose you want to apply revision control on files in a directory called `Proje
 You can have multiple repos in your computer, each repo revision-controlling files of a different working directly, for examples, files of different projects.
 
   <hr></tab>
-  <tab header=":tv:">
+  <tab header="{{ icon_video }}">
 
 @[youtube](mLnxwlCEIb8)
 
@@ -35,6 +33,4 @@ You can have multiple repos in your computer, each repo revision-controlling fil
 
 <div id="extras">
 <include src="exercises.md" />
-</div>
-
 </div>

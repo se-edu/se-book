@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Milestones :one:
+#### Milestones
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain milestones</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Each intermediate product release is a milestone. 
+{{ icon_example }} Each intermediate product release is a milestone. 
 
 </tip-box>
 
@@ -22,7 +22,7 @@ In some projects, it is not practical to have a very detailed plan for the whole
 
 <tip-box>
 
-:package: Milestones for the Minesweeper project, iteration 1
+{{ icon_example }} Milestones for the Minesweeper project, iteration 1
 
 | Day      | Milestones                        |
 | -------- | --------------------------------- |
@@ -35,6 +35,4 @@ In some projects, it is not practical to have a very detailed plan for the whole
 </div>
 
 <div id="extras">
-</div>
-
 </div>

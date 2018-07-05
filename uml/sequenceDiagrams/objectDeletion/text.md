@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Object Deletion :two:
+#### Object Deletion
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with object deletion</span>
 
 <div id="body">
 
@@ -25,7 +25,7 @@ Notation:
 
 <tip-box>
 
-:package: Note how the diagrams shows the deletion of the `Minefield` object
+{{ icon_example }} Note how the diagrams shows the deletion of the `Minefield` object
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/objectDeletion/images/logicMinefield.png" height="120" />
 <p/>
@@ -35,6 +35,4 @@ Notation:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

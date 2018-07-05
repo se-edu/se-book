@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Refactoring → </div>
+<span id="outcomes">{{glyphicon_flag}} Can apply some basic refactoring</span>
 
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
 
@@ -33,6 +31,4 @@ Given below are some more commonly used refactorings. A more comprehensive list 
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

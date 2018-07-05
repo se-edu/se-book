@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### XP :four:
+#### XP
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain XP</span>
 
 <div id="body">
 
@@ -34,6 +34,4 @@ The following description was adapted from the [XP home page](http://www.extreme
 </div>
 
 <div id="extras">
-</div>
-
 </div>

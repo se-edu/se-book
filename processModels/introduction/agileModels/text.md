@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Agile Models :one:
+#### Agile Models
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain agile process models</span>
 
 <div id="body">
 
@@ -36,6 +36,4 @@ Subsequently, some of the signatories of the manifesto went on to create process
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

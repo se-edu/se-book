@@ -1,0 +1,48 @@
+<div></div>
+<p></p>
+<p><span class="dimmed"><strong><span>Implementation → Reuse → APIs →
+</span></strong>
+  </span>
+</p>
+<div id="title-and-body">
+  <div>
+    <h4 id="designing-apis">Designing APIs</h4>
+  </div>
+  <div id="main">
+    <div>
+      <p>An API should be well-designed (i.e. should cater for the needs of its users) and well-documented.</p>
+      <p>When we write software consisting of multiple components, we need to define the API of each component.</p>
+      <p>One approach is to let the API emerge and evolve over time as we write code.</p>
+      <p>Another approach is to define the API up-front. Doing so allows us to develop the components in parallel.</p>
+      <p>We can use UML <em>sequence diagrams</em> to analyze the required interactions between components in order to discover the required API. Given below is an example.</p>
+      <tip-box>
+        <p>Example:</p>
+        <img src="/se-book/reuse/apis/designingAPIs/images/textLogic.png" height="500">
+        <p></p>
+        <p>As we analyze the interactions between components using sequence diagrams, we discover the API of those components. For example, the diagram above tells us that the MSLogic component API should have the methods:</p>
+        <ul>
+          <li><code>new()</code></li>
+          <li><code>getWidth:int</code></li>
+          <li><code>getHeight():int</code></li>
+          <li><code>getRemainingMineCount():int</code></li>
+        </ul>
+        <p>More details can be included to increase the precision of the method definitions before coding. Such precision is important to avoid misunderstandings between the developer of the class and developers of other classes that interact with this class.</p>
+        <ul>
+          <li><strong>Operation</strong>: <em>newGame(): void</em></li>
+          <li><strong>Description</strong>: Generates a new <em>WxH</em> minefield with <em>M</em> mines. Any existing minefield will be overwritten.</li>
+          <li><strong>Preconditions</strong>: None</li>
+          <li><strong>Postconditions</strong>: A new minefield is created. Game state is READY.</li>
+        </ul>
+        <p>Preconditions are the conditions that must be true before calling this operation. Postconditions describe the system after the operation is complete. Note that post conditions do not say what happens during the operation. Here is another example:</p>
+        <ul>
+          <li><strong>Operation</strong>: <em>clearCellAt(int x, int y): void</em></li>
+          <li><strong>Description</strong>: Records the cell at x,y as cleared.</li>
+          <li><strong>Parameters</strong>: x, y coordinates of the cell</li>
+          <li><strong>Preconditions</strong>: game state is READY or IN_PLAY. x and y are in 0..(H-1) and 0..(W-1), respectively.</li>
+          <li><strong>Postconditions</strong>: Cell at x,y changes state to ZERO, ONE, TWO, THREE, …, EIGHT, or INCORRECTLY_CLEARED. Game state changes to IN_PLAY, WON or LOST as appropriate.</li>
+        </ul>
+      </tip-box>
+    </div>
+    <div></div>
+  </div>
+</div>

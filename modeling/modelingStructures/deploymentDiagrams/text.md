@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Deployment Diagrams :four:
+#### Deployment Diagrams
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain deployment diagrams</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: An example deployment diagram:
+{{ icon_example }} An example deployment diagram:
 
 <img src="{{baseUrl}}/modeling/modelingStructures/deploymentDiagrams/images/diagram.png" height="500" />
 <p/>
@@ -26,6 +26,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

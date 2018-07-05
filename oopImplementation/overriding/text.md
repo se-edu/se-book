@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Implementing Overriding :one:
+#### Implementing Overriding
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/overriding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Inheritance → Overriding%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can implement operation overriding</span>
 
 <div id="body">
 
@@ -30,7 +30,5 @@
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

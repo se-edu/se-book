@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"><dynamic-panel src="../../revisionControl/usingHistory/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Using History%%" /></span>
 
-<div class="website-content">
-
-<div id="path">Git and Github → </div>
+<span id="outcomes">{{glyphicon_flag}} Can load a specific version of a Git repo</span>
 
 <div id="title">
 
-#### Checkout :two:
+#### Checkout
 
 </div>
 
@@ -49,6 +47,4 @@ Git can load a specific version of the history to the working directory. Note th
 </div>
 
 <div id="extras">
-</div>
-
 </div>

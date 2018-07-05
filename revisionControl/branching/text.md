@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Revision Control → </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain branching</span>
 
 <div id="title">
 
-#### Branching :two:
+#### Branching
 
 </div>
 
@@ -27,7 +25,5 @@
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

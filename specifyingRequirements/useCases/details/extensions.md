@@ -2,7 +2,7 @@
 
 <tip-box>
 
-:package: This example adds some extensions to the use case in the previous example.
+{{ icon_example }} This example adds some extensions to the use case in the previous example.
 
 <ul>
   <li>System: Online Banking System (OBS)</li>

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Automated Testing of GUIs :two:
+#### Automated Testing of GUIs
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain automated GUI testing</span>
 
 <div id="body">
 
@@ -25,12 +25,12 @@ If a software product has a GUI component, all product-level testing (i.e. the t
 
 <tip-box> 
 
-:package: Some tools used for automated GUI testing:
+{{ icon_example }} Some tools used for automated GUI testing:
 * **TestFx** can do automated testing of JavaFX GUIs<br>
 * **VisualStudio** supports ‘record replay’ type of GUI test automation.
 * [**Selenium**](http://seleniumhq.org/) can be used to automate testing of Web application UIs<br>
 
-  <panel type="seamless" header=":tv: demo video of autoamted testing of a Web application">
+  <panel type="seamless" header="{{ icon_video }} demo video of autoamted testing of a Web application">
   
   This video shows automated testing of the [TEAMMATES](http://github.com/teammates/teammates) Web app using Selenium
   
@@ -46,7 +46,5 @@ If a software product has a GUI component, all product-level testing (i.e. the t
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

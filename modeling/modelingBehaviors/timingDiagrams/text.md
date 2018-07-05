@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Timing Diagrams :four:
+#### Timing Diagrams
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain timing diagrams</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Here is an example timing diagram:
+{{ icon_example }} Here is an example timing diagram:
 
 <img src="{{baseUrl}}/modeling/modelingBehaviors/timingDiagrams/images/diagram.png" height="280" />
 <br>
@@ -26,6 +26,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

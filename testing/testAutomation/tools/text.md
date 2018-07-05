@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Testing → Test Automation →</div>
+<span id="outcomes">{{glyphicon_flag}} Can explain test automation tools</span>
 
 <div id="title">
 
-#### Test Automation Tools :two:
+#### Test Automation Tools
 
 </div>
 
@@ -16,7 +14,7 @@
 
 <tip-box> 
 
-:package: This an automated test for a `Payroll` class, written using JUnit libraries.
+{{ icon_example }} This an automated test for a `Payroll` class, written using JUnit libraries.
 
 ```java
 public class PayrollTestJUnit {
@@ -47,6 +45,4 @@ Most modern IDEs has integrated support for testing tools. The figure below show
 </div>
 
 <div id="extras">
-</div>
-
 </div>

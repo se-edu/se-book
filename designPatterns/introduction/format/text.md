@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Format :two:
+#### Format
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain design patterns format</span>
 
 <div id="body">
 
@@ -24,7 +24,5 @@ The common format to describe a pattern consists of the following components:
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

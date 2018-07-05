@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Introduction :two:
+#### Introduction
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain OOP polymorphism</span>
 
 <div id="body">
 
@@ -20,7 +20,7 @@ Take the example of writing a payroll application for a university to facilitate
 
 <tip-box>
 
-:package: Calling `adjustSalary()` method for each Staff type:
+{{ icon_example }} Calling `adjustSalary()` method for each Staff type:
 
 <img src="{{baseUrl}}/oopDesign/polymorphism/introduction/images/payroll.png" height="150" />
 <p/>
@@ -86,6 +86,4 @@ For example, `ArrayList` staff contains both `Admin` and `Academic` objects alth
 </div>
 
 <div id="extras">
-</div>
-
 </div>

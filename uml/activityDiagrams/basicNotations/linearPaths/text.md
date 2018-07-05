@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Linear Paths :two:
+#### Linear Paths
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret linear paths in activity diagrams</span>
 
 <div id="body">
 
@@ -16,7 +20,7 @@ Note the slight difference between the _start node_ and the _end node_ which rep
 
 <tip-box> 
 
-:package: This activity diagram shows the action sequence of the activity _a passenger rides the bus_:
+{{ icon_example }} This activity diagram shows the action sequence of the activity _a passenger rides the bus_:
 
 <img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/linearPaths/images/example.png" width="450" />
 
@@ -27,6 +31,4 @@ Note the slight difference between the _start node_ and the _end node_ which rep
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

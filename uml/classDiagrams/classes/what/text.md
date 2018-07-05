@@ -1,8 +1,12 @@
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can draw UML classes</span>
 
 <div id="body">
 
@@ -13,7 +17,7 @@ The basic UML notations used to represent a _class_:<br>
 
 <tip-box>
 
-:package: A `Table` class shown in UML notation:
+{{ icon_example }} A `Table` class shown in UML notation:
 
 <img src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operations.png" height="150" />
 <p/>
@@ -98,7 +102,7 @@ visibility | Java | Python
 
 <tip-box>
 
-:package: `Table` class with visibilities shown:
+{{ icon_example }} `Table` class with visibilities shown:
 
 <img src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operationsVisibility.png" height="150" />
 <p/>
@@ -110,7 +114,5 @@ visibility | Java | Python
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Basic :one:
+#### Basic
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret simple associations in a class diagram</span>
 
 <div id="body">
 
@@ -13,7 +17,7 @@ We use a solid line to show an association between two classes.
 
 <tip-box> 
 
-:package: This example shows an association between the `Admin` class and the `Student` class:<br>
+{{ icon_example }} This example shows an association between the `Admin` class and the `Student` class:<br>
 <img src="{{baseUrl}}/uml/classDiagrams/associations/basic/images/example.png" width="300" />
 
 
@@ -22,6 +26,4 @@ We use a solid line to show an association between two classes.
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Multiplicity :two:
+#### Multiplicity
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain what is the multiplicity of an association</span>
 
 <div id="body">
 
@@ -17,14 +21,14 @@ Commonly used multiplicities:
 
 <tip-box>
 
-:package: In the diagram below, an `Admin` object administers (in charge of) any number of students but a `Student` object must always be under the charge of exactly one `Admin` object
+{{ icon_example }} In the diagram below, an `Admin` object administers (in charge of) any number of students but a `Student` object must always be under the charge of exactly one `Admin` object
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/adminStudent.png" width="300" />
 
 </tip-box>
 <tip-box>
 
-:package: In the diagram below,
+{{ icon_example }} In the diagram below,
 * Each student must be supervised by exactly one professor. i.e. There cannot be a student who doesn't have a supervisor or has multiple supervisors.
 * A professor cannot supervise more than 5 students but can have no students to supervise.
 * An admin can handle any number of professors and any number of students, including none. 
@@ -38,6 +42,4 @@ Commonly used multiplicities:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

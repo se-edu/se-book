@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### OO Structures :one:
+#### OO Structures
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../../oopDesign/classes/basic/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Design → OOP → Classes → Basic%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain structure modelling of OO solutions</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@ An OO solution is basically a network of objects interacting with each other. Th
 
 <tip-box> 
 
-:package: Given below is an illustration of some objects and how they are connected together. %%&nbsp;Note: the diagram uses an ad-hoc notation.%%
+{{ icon_example }} Given below is an illustration of some objects and how they are connected together. %%&nbsp;Note: the diagram uses an ad-hoc notation.%%
 <p><img src="{{baseUrl}}/modeling/modelingStructures/ooStructures/images/objectsAdHoc.png" width="500" />
 <p/>
 
@@ -24,7 +24,7 @@ Note that these **object structures within the same software can change over tim
 
 <tip-box> 
 
-:package: Given below is how the object structure in the previous example could have looked like at a different time.
+{{ icon_example }} Given below is how the object structure in the previous example could have looked like at a different time.
 <p><img src="{{baseUrl}}/modeling/modelingStructures/ooStructures/images/objectsAdHoc2.png" width="500" />
 <p/>
 
@@ -34,7 +34,7 @@ However, object structures do not change at random; they change based on a set o
 
 <tip-box> 
 
-:package: Here is a class structure (drawn using an ad-hoc notation) that matches the object structures given in the previous two examples. For example, note how this class structure does not allow any connection between `Genre` objects and `Author` objects, a rule followed by the two object structures above.
+{{ icon_example }} Here is a class structure (drawn using an ad-hoc notation) that matches the object structures given in the previous two examples. For example, note how this class structure does not allow any connection between `Genre` objects and `Author` objects, a rule followed by the two object structures above.
 <p><img src="{{baseUrl}}/modeling/modelingStructures/ooStructures/images/classesAdHoc.png" width="500" />
 <p/>
 
@@ -42,15 +42,15 @@ However, object structures do not change at random; they change based on a set o
 
 UML Object Diagrams are used to model object structures and UML class diagrams are used to model class structures of an OO solution.
 
-<panel src="../../../../book/uml/objectDiagrams/introduction/full.md" header=":mortar_board: UML → Object Diagrams → Introduction" expanded/> 
-<panel src="../../../../book/uml/classDiagrams/introduction/what/full.md" header=":mortar_board: UML → Class Diagrams → Introduction → What" expanded/>
+<panel src="../../../../book/uml/objectDiagrams/introduction/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} UML → Object Diagrams → Introduction" expanded/> 
+<panel src="../../../../book/uml/classDiagrams/introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Introduction → What" expanded/>
 
 <tip-box> 
 
-:package: Here is an object diagram for the above example:
+{{ icon_example }} Here is an object diagram for the above example:
 <p><img src="{{baseUrl}}/modeling/modelingStructures/ooStructures/images/objectDiagram.png" width="500" />
 
-:package: And here is the class diagram for it:
+{{ icon_example }} And here is the class diagram for it:
 <p><img src="{{baseUrl}}/modeling/modelingStructures/ooStructures/images/classDiagram.png" width="500" />
 <p/>
 
@@ -60,6 +60,4 @@ UML Object Diagrams are used to model object structures and UML class diagrams a
 
 <div id="extras">
   <include src="exercises.md"/>
-</div>
-
 </div>

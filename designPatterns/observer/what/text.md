@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the Observer design pattern</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: Here is a scenario from the a student management system where the user is adding a new student to the system.
+{{ icon_example }} Here is a scenario from the a student management system where the user is adding a new student to the system.
 
 <img src="{{baseUrl}}/designPatterns/observer/what/images/sequenceDiagram.png" height="330" />
 <p/>
@@ -50,7 +50,7 @@ Force the communication through an interface known to both parties.
 
 <tip-box>
 
-:package:Here is the Observer pattern applied to the student management system.
+{{ icon_example }}Here is the Observer pattern applied to the student management system.
 
 During initialization of the system,
 
@@ -117,7 +117,5 @@ In a GUI application, how is the Controller notified when the “save” button 
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

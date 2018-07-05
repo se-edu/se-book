@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Revision Control → </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain revision control</span>
 
 <div id="title">
 
-#### What :one: [{{glyphicon_new_window}}]({{baseUrl}}/revisionControl/what/index.html)
+#### What
 
 </div>
 
@@ -34,14 +32,14 @@ Revision control is also known as _Version Control Software (VCS)_, and a few ot
 > -- [adapted from <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]
 
   <hr></tab>
-  <tab header=":tv:">
+  <tab header="{{ icon_video }}">
 
 @[youtube](M-O8ZNW9icQ)
 
   <hr></tab>
 </tabs>
 
-<popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide :mag:" placement="right">
+<popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide {{glyphicon_eye_open}}" placement="right">
   <div slot="content">
     <include src="../../common/references.md#bryan-mercurial-guide" />
   </div>
@@ -52,7 +50,5 @@ Revision control is also known as _Version Control Software (VCS)_, and a few ot
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

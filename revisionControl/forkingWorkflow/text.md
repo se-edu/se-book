@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Forking Flow :three:
+#### Forking Flow
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain forking workflow</span>
 
 <div id="body">
 
@@ -29,6 +29,4 @@ To illustrate how the workflow goes, let’s assume Jean wants to fix a bug in t
 
 <div id="extras">
   <include src="resources.md" />
-</div>
-
 </div>

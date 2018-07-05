@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Why :one:
+#### Why
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for strategies to combine test inputs</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: an SUT that takes multiple inputs and some values chosen as values for each input:
+{{ icon_example }} an SUT that takes multiple inputs and some values chosen as values for each input:
 
 * Scenario: calculateGrade
 * Method to test: calculateGrade(participation, projectGrade, isAbsent, examScore)
@@ -34,6 +34,4 @@ examScore     | 0, 1, 69, 70,        | 71, 72
 </div>
 
 <div id="extras">
-</div>
-
 </div>

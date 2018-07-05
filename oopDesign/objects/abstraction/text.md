@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Objects as Abstractions :two:
+#### Objects as Abstractions
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the abstraction aspect of OOP</span>
 
 <div id="body">
 
@@ -14,13 +14,11 @@ The concept of **_Objects_ in OOP is an abstraction mechanism because it allows 
 
 <tip-box>
 
-:package: We can deal with a `Person` object that represents the person Adam and query the object for Adam's age instead of dealing with details such as Adam’s date of birth (DoB), in what format the DoB is stored, the algorithm used to calculate the age from the DoB, etc.
+{{ icon_example }} We can deal with a `Person` object that represents the person Adam and query the object for Adam's age instead of dealing with details such as Adam’s date of birth (DoB), in what format the DoB is stored, the algorithm used to calculate the age from the DoB, etc.
 
 </tip-box>
 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

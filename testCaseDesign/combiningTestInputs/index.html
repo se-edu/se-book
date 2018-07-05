@@ -8,201 +8,94 @@
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\markbind\css\site-nav.css">
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-<div class="website-content">
-  <p><span class="dimmed"><strong>Test Case Design →</strong></span></p>
-  <h2 id="combining-test-inputs">Combining Test Inputs</h2>
-  <div id="main">
     <div>
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+  <div class="website-content" id="all">
+    <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design →
+</span></strong>
+      </span>
+    </p>
+    <div id="title">
       <div>
-        <h4 id="why-one">Why <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+        <h2 id="combining-test-inputs">Combining Test Inputs</h2>
       </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can explain the need for strategies to combine test inputs <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
-        </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
-        <div>
-          <div>
-            <p><strong>An SUT can take multiple inputs.</strong> You can select values for each input (using equivalence partitioning, boundary value analysis, or some other technique).</p>
-            <tip-box>
-              <p>📦 an SUT that takes multiple inputs and some values chosen as values for each input:</p>
-              <ul>
-                <li>Scenario: calculateGrade</li>
-                <li>Method to test: calculateGrade(participation, projectGrade, isAbsent, examScore)</li>
-                <li>Values to test (invalid values are <strong>bold</strong>)</li>
-              </ul>
-              <table class="markbind-table table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th>Input</th>
-                    <th>valid values to test</th>
-                    <th>invalid values to test</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>participation</td>
-                    <td>0, 1, 19, 20</td>
-                    <td>21, 22</td>
-                  </tr>
-                  <tr>
-                    <td>projectGrade</td>
-                    <td>A, B, C, D, F</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>isAbsent</td>
-                    <td>true, false</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>examScore</td>
-                    <td>0, 1, 69, 70,</td>
-                    <td>71, 72</td>
-                  </tr>
-                </tbody>
-              </table>
-            </tip-box>
-            <p><strong>Testing all possible combinations is effective but not efficient.</strong> If you test all possible combinations for the above example, you need to test 6x5x2x6=360 cases. Doing so has a higher chance of discovering bugs (i.e. effective)
-              but the number of test cases can be too high (i.e. not efficient). Therefore, <strong>we need smarter ways to combine test inputs that are both effective and efficient.</strong></p>
-          </div>
-          <div></div>
-        </div>
-      </panel>
     </div>
-    <div>
+    <div id="main">
       <div>
-        <h4 id="test-input-combination-strategies-two">Test Input Combination Strategies <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-      </div>
-      <tip-box>
         <div>
-          <p>🏆 Can explain some basic test input combination strategies <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="why">Why</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can explain the need for strategies to combine test inputs</span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
+            <div>
+              <p><strong>An SUT can take multiple inputs.</strong> You can select values for each input (using equivalence partitioning, boundary value analysis, or some other technique).</p>
+              <tip-box>
+                <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> an SUT that takes multiple inputs and some values chosen as values for each input:</p>
+                <ul>
+                  <li>Scenario: calculateGrade</li>
+                  <li>Method to test: calculateGrade(participation, projectGrade, isAbsent, examScore)</li>
+                  <li>Values to test (invalid values are <strong>bold</strong>)</li>
+                </ul>
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Input</th>
+                      <th>valid values to test</th>
+                      <th>invalid values to test</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>participation</td>
+                      <td>0, 1, 19, 20</td>
+                      <td>21, 22</td>
+                    </tr>
+                    <tr>
+                      <td>projectGrade</td>
+                      <td>A, B, C, D, F</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>isAbsent</td>
+                      <td>true, false</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>examScore</td>
+                      <td>0, 1, 69, 70,</td>
+                      <td>71, 72</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </tip-box>
+              <p><strong>Testing all possible combinations is effective but not efficient.</strong> If you test all possible combinations for the above example, you need to test 6x5x2x6=360 cases. Doing so has a higher chance of discovering bugs (i.e. effective)
+                but the number of test cases can be too high (i.e. not efficient). Therefore, <strong>we need smarter ways to combine test inputs that are both effective and efficient.</strong></p>
+            </div>
+            <div></div>
+          </panel>
         </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
-          <div>
-            <p>Given below are some basic strategies for generating a set of test cases by combining multiple test input combination strategies.</p>
-            <tip-box>
-              <p>📦 Let's assume the SUT has the following three inputs and you have selected the given values for testing:</p>
-              <p>SUT: <code>foo(p1 char, p2 int, p3 boolean)</code></p>
-              <p>Selected values for each input:</p>
-              <table class="markbind-table table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th style="text-align:center">Input</th>
-                    <th style="text-align:center">Values</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="text-align:center">p1</td>
-                    <td style="text-align:center">a, b, c</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">p2</td>
-                    <td style="text-align:center">1, 2, 3</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">p3</td>
-                    <td style="text-align:center">T, F</td>
-                  </tr>
-                </tbody>
-              </table>
-            </tip-box>
-            <p><strong>all combinations</strong>: generate test cases for each unique combination of test inputs</p>
-            <tip-box>
-              <p>📦 the strategy generates 3x3x2=18 test cases</p>
-              <table class="markbind-table table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th style="text-align:center">Test Case</th>
-                    <th style="text-align:center">p1</th>
-                    <th style="text-align:center">p2</th>
-                    <th style="text-align:center">p3</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">a</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">T</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">a</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">F</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">a</td>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">T</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">...</td>
-                    <td style="text-align:center">...</td>
-                    <td style="text-align:center">...</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">18</td>
-                    <td style="text-align:center">c</td>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">F</td>
-                  </tr>
-                </tbody>
-              </table>
-            </tip-box>
-            <p><strong>at least once</strong>: include each test input at least once.</p>
-            <tip-box>
-              <p>📦 this strategy generates 3 test cases.</p>
-              <table class="markbind-table table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th style="text-align:center">Test Case</th>
-                    <th style="text-align:center">p1</th>
-                    <th style="text-align:center">p2</th>
-                    <th style="text-align:center">p3</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">a</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">T</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">b</td>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">F</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">c</td>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">VV/IV</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p>VV/IV = Any Valid Value / Any Invalid Value</p>
-            </tip-box>
-            <p><strong>all pairs</strong>: This strategy creates test cases so that for any given pair of inputs, all combinations between them are tested. It is based on the observations that a bug is rarely the result of more than two interacting factors.
-              The resulting number of test cases is lower than the &quot;all combinations&quot; strategy, but higher than the &quot;at least once&quot; approach.</p>
-            <tip-box>
-              <p>📦 this strategy generates 9 test cases:</p>
-              <panel type="seamless" header="see steps">
-                <p>Let's first consider inputs p1 and p2:</p>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="test-input-combination-strategies">Test Input Combination Strategies</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can explain some basic test input combination strategies</span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
+            <div>
+              <p>Given below are some basic strategies for generating a set of test cases by combining multiple test input combination strategies.</p>
+              <tip-box>
+                <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Let's assume the SUT has the following three inputs and you have selected the given values for testing:</p>
+                <p>SUT: <code>foo(p1 char, p2 int, p3 boolean)</code></p>
+                <p>Selected values for each input:</p>
                 <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
@@ -219,275 +112,492 @@
                       <td style="text-align:center">p2</td>
                       <td style="text-align:center">1, 2, 3</td>
                     </tr>
-                  </tbody>
-                </table>
-                <p>These values can generate
-                  <tooltip content="(a,1)(a,2)(a,3)(b,1)(b,2),...">3x3=9 combinations</tooltip>, and the test cases should cover all of them.</p>
-                <p>Next, let's consider p1 and p3.</p>
-                <table class="markbind-table table table-bordered table-striped">
-                  <thead>
-                    <tr>
-                      <th style="text-align:center">Input</th>
-                      <th style="text-align:center">Values</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td style="text-align:center">p1</td>
-                      <td style="text-align:center">a, b, c</td>
-                    </tr>
                     <tr>
                       <td style="text-align:center">p3</td>
                       <td style="text-align:center">T, F</td>
                     </tr>
                   </tbody>
                 </table>
-                <p>These values can generate
-                  <tooltip content="(a,T)(a,F)(b,T)(b,F),...">3x2=6 combinations</tooltip>, and the test cases should cover all of them.</p>
-                <p>Similarly, inputs p2 and p3 generates another 6 combinations.</p>
-                <p>The 9 test cases given below covers all those 9+6+6 combinations.</p>
-              </panel>
-              <table class="markbind-table table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th style="text-align:center">Test Case</th>
-                    <th style="text-align:center">p1</th>
-                    <th style="text-align:center">p2</th>
-                    <th style="text-align:center">p3</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">a</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">T</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">a</td>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">T</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">a</td>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">F</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">4</td>
-                    <td style="text-align:center">b</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">F</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">5</td>
-                    <td style="text-align:center">b</td>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">T</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">6</td>
-                    <td style="text-align:center">b</td>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">F</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">7</td>
-                    <td style="text-align:center">c</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">T</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">8</td>
-                    <td style="text-align:center">c</td>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">F</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">9</td>
-                    <td style="text-align:center">c</td>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">T</td>
-                  </tr>
-                </tbody>
-              </table>
-            </tip-box>
-            <p>A variation of this strategy is to test all pairs of inputs but only for inputs that could influence each other.</p>
-            <tip-box>
-              <p>📦 Testing all pairs between p1 and p3 only while ensuring all p3 values are tested at least once</p>
-              <table class="markbind-table table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th style="text-align:center">Test Case</th>
-                    <th style="text-align:center">p1</th>
-                    <th style="text-align:center">p2</th>
-                    <th style="text-align:center">p3</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">a</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">T</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">a</td>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">F</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">b</td>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">T</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">4</td>
-                    <td style="text-align:center">b</td>
-                    <td style="text-align:center">VV/IV</td>
-                    <td style="text-align:center">F</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">5</td>
-                    <td style="text-align:center">c</td>
-                    <td style="text-align:center">VV/IV</td>
-                    <td style="text-align:center">T</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">6</td>
-                    <td style="text-align:center">c</td>
-                    <td style="text-align:center">VV/IV</td>
-                    <td style="text-align:center">F</td>
-                  </tr>
-                </tbody>
-              </table>
-            </tip-box>
-            <p><strong>d) random:</strong> This strategy generates test cases using one of the other strategies and then pick a subset randomly (presumably because the original set of test cases is too big).</p>
-            <p><strong>e) other</strong>: There are other strategies that can be used.</p>
-          </div>
-          <div></div>
+              </tip-box>
+              <p><strong>all combinations</strong>: generate test cases for each unique combination of test inputs</p>
+              <tip-box>
+                <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> the strategy generates 3x3x2=18 test cases</p>
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th style="text-align:center">Test Case</th>
+                      <th style="text-align:center">p1</th>
+                      <th style="text-align:center">p2</th>
+                      <th style="text-align:center">p3</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">a</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">T</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">2</td>
+                      <td style="text-align:center">a</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">F</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">3</td>
+                      <td style="text-align:center">a</td>
+                      <td style="text-align:center">2</td>
+                      <td style="text-align:center">T</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">...</td>
+                      <td style="text-align:center">...</td>
+                      <td style="text-align:center">...</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">18</td>
+                      <td style="text-align:center">c</td>
+                      <td style="text-align:center">3</td>
+                      <td style="text-align:center">F</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </tip-box>
+              <p><strong>at least once</strong>: include each test input at least once.</p>
+              <tip-box>
+                <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> this strategy generates 3 test cases.</p>
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th style="text-align:center">Test Case</th>
+                      <th style="text-align:center">p1</th>
+                      <th style="text-align:center">p2</th>
+                      <th style="text-align:center">p3</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">a</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">T</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">2</td>
+                      <td style="text-align:center">b</td>
+                      <td style="text-align:center">2</td>
+                      <td style="text-align:center">F</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">3</td>
+                      <td style="text-align:center">c</td>
+                      <td style="text-align:center">3</td>
+                      <td style="text-align:center">VV/IV</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>VV/IV = Any Valid Value / Any Invalid Value</p>
+              </tip-box>
+              <p><strong>all pairs</strong>: This strategy creates test cases so that for any given pair of inputs, all combinations between them are tested. It is based on the observations that a bug is rarely the result of more than two interacting factors.
+                The resulting number of test cases is lower than the &quot;all combinations&quot; strategy, but higher than the &quot;at least once&quot; approach.</p>
+              <tip-box>
+                <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> this strategy generates 9 test cases:</p>
+                <panel type="seamless" header="see steps">
+                  <p>Let's first consider inputs p1 and p2:</p>
+                  <table class="markbind-table table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th style="text-align:center">Input</th>
+                        <th style="text-align:center">Values</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="text-align:center">p1</td>
+                        <td style="text-align:center">a, b, c</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">p2</td>
+                        <td style="text-align:center">1, 2, 3</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>These values can generate
+                    <tooltip content="(a,1)(a,2)(a,3)(b,1)(b,2),...">3x3=9 combinations</tooltip>, and the test cases should cover all of them.</p>
+                  <p>Next, let's consider p1 and p3.</p>
+                  <table class="markbind-table table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th style="text-align:center">Input</th>
+                        <th style="text-align:center">Values</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="text-align:center">p1</td>
+                        <td style="text-align:center">a, b, c</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">p3</td>
+                        <td style="text-align:center">T, F</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>These values can generate
+                    <tooltip content="(a,T)(a,F)(b,T)(b,F),...">3x2=6 combinations</tooltip>, and the test cases should cover all of them.</p>
+                  <p>Similarly, inputs p2 and p3 generates another 6 combinations.</p>
+                  <p>The 9 test cases given below covers all those 9+6+6 combinations.</p>
+                </panel>
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th style="text-align:center">Test Case</th>
+                      <th style="text-align:center">p1</th>
+                      <th style="text-align:center">p2</th>
+                      <th style="text-align:center">p3</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">a</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">T</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">2</td>
+                      <td style="text-align:center">a</td>
+                      <td style="text-align:center">2</td>
+                      <td style="text-align:center">T</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">3</td>
+                      <td style="text-align:center">a</td>
+                      <td style="text-align:center">3</td>
+                      <td style="text-align:center">F</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">4</td>
+                      <td style="text-align:center">b</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">F</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">5</td>
+                      <td style="text-align:center">b</td>
+                      <td style="text-align:center">2</td>
+                      <td style="text-align:center">T</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">6</td>
+                      <td style="text-align:center">b</td>
+                      <td style="text-align:center">3</td>
+                      <td style="text-align:center">F</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">7</td>
+                      <td style="text-align:center">c</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">T</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">8</td>
+                      <td style="text-align:center">c</td>
+                      <td style="text-align:center">2</td>
+                      <td style="text-align:center">F</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">9</td>
+                      <td style="text-align:center">c</td>
+                      <td style="text-align:center">3</td>
+                      <td style="text-align:center">T</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </tip-box>
+              <p>A variation of this strategy is to test all pairs of inputs but only for inputs that could influence each other.</p>
+              <tip-box>
+                <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Testing all pairs between p1 and p3 only while ensuring all p3 values are tested at least once</p>
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th style="text-align:center">Test Case</th>
+                      <th style="text-align:center">p1</th>
+                      <th style="text-align:center">p2</th>
+                      <th style="text-align:center">p3</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">a</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">T</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">2</td>
+                      <td style="text-align:center">a</td>
+                      <td style="text-align:center">2</td>
+                      <td style="text-align:center">F</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">3</td>
+                      <td style="text-align:center">b</td>
+                      <td style="text-align:center">3</td>
+                      <td style="text-align:center">T</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">4</td>
+                      <td style="text-align:center">b</td>
+                      <td style="text-align:center">VV/IV</td>
+                      <td style="text-align:center">F</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">5</td>
+                      <td style="text-align:center">c</td>
+                      <td style="text-align:center">VV/IV</td>
+                      <td style="text-align:center">T</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">6</td>
+                      <td style="text-align:center">c</td>
+                      <td style="text-align:center">VV/IV</td>
+                      <td style="text-align:center">F</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </tip-box>
+              <p><strong>d) random:</strong> This strategy generates test cases using one of the other strategies and then pick a subset randomly (presumably because the original set of test cases is too big).</p>
+              <p><strong>e) other</strong>: There are other strategies that can be used.</p>
+            </div>
+            <div></div>
+          </panel>
         </div>
-      </panel>
-    </div>
-    <div>
-      <div>
-        <h4 id="heuristic-each-valid-input-at-least-once-in-a-positive-test-case-two">Heuristic: Each Valid Input at Least Once in a Positive Test Case <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-      </div>
-      <tip-box>
         <div>
-          <p>🏆 Can apply heuristic ‘each valid input at least once in a positive test case’ <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="heuristic-each-valid-input-at-least-once-in-a-positive-test-case">Heuristic: Each Valid Input at Least Once in a Positive Test Case</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can apply heuristic ‘each valid input at least once in a positive test case’</span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
+            <div>
+              <p>Consider the following scenario.</p>
+              <tip-box>
+                <p>SUT: <code>printLabel(fruitName String, unitPrice int)</code></p>
+                <p><strong>Selected values for</strong> <code>fruitName</code> (invalid values are marked with an ❗️ ):</p>
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Values</th>
+                      <th>Explanation</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Apple</td>
+                      <td>Label format is round</td>
+                    </tr>
+                    <tr>
+                      <td>Banana</td>
+                      <td>Label format is oval</td>
+                    </tr>
+                    <tr>
+                      <td>Cherry</td>
+                      <td>Label format is square</td>
+                    </tr>
+                    <tr>
+                      <td>❗️ Dog</td>
+                      <td>Not a valid fruit</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p><strong>Selected values for</strong> <code>unitPrice</code>:</p>
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Values</th>
+                      <th>Explanation</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Only one digit</td>
+                    </tr>
+                    <tr>
+                      <td>20</td>
+                      <td>Two digits</td>
+                    </tr>
+                    <tr>
+                      <td>❗️ 0</td>
+                      <td>Invalid because 0 is not a valid price</td>
+                    </tr>
+                    <tr>
+                      <td>❗️ -1</td>
+                      <td>Invalid because negative prices are not allowed</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </tip-box>
+              <p>Suppose these are the test cases being considered.</p>
+              <tip-box>
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th style="text-align:center">Case</th>
+                      <th style="text-align:center">fruitName</th>
+                      <th style="text-align:center">unitPrice</th>
+                      <th style="text-align:center">Expected</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">Apple</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">Print label</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">2</td>
+                      <td style="text-align:center">Banana</td>
+                      <td style="text-align:center">20</td>
+                      <td style="text-align:center">Print label</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">3</td>
+                      <td style="text-align:center">Cherry</td>
+                      <td style="text-align:center">❗️ 0</td>
+                      <td style="text-align:center">Error message “invalid price”</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">4</td>
+                      <td style="text-align:center">❗️ Dog</td>
+                      <td style="text-align:center">❗️ -1</td>
+                      <td style="text-align:center">Error message “invalid fruit&quot;</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </tip-box>
+              <p>It looks like the test cases were created using the ‘at least once’ strategy. After running these tests can we confirm that square-format label printing is done correctly? Answer: No. Reason: <code>Cherry</code> -- the only input that can
+                produce a square-format label -- is in a negative test case which produces an error message instead of a label. If there is a bug in the code that prints labels in square-format, these tests cases will not trigger that bug.</p>
+              <p>In this case a useful heuristic to apply is <strong>each valid input must appear at least once in a positive test case</strong>. <code>Cherry</code> is a valid test input and we must ensure that it appears at least once in a positive test
+                case. Here are the updated test cases after applying that heuristic.</p>
+              <tip-box>
+                <div id="heuristic-valid-test-case">
+                  <table class="markbind-table table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th style="text-align:center">Case</th>
+                        <th style="text-align:center">fruitName</th>
+                        <th style="text-align:center">unitPrice</th>
+                        <th style="text-align:center">Expected</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="text-align:center">1</td>
+                        <td style="text-align:center">Apple</td>
+                        <td style="text-align:center">1</td>
+                        <td style="text-align:center">Print round label</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">2</td>
+                        <td style="text-align:center">Banana</td>
+                        <td style="text-align:center">20</td>
+                        <td style="text-align:center">Print oval label</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">2.1</td>
+                        <td style="text-align:center">Cherry</td>
+                        <td style="text-align:center">VV</td>
+                        <td style="text-align:center">Print square label</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">3</td>
+                        <td style="text-align:center">VV</td>
+                        <td style="text-align:center">❗️ 0</td>
+                        <td style="text-align:center">Error message “invalid price”</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">4</td>
+                        <td style="text-align:center">❗️ Dog</td>
+                        <td style="text-align:center">❗️ -1</td>
+                        <td style="text-align:center">Error message “invalid fruit&quot;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
+                </div>
+              </tip-box>
+            </div>
+            <div></div>
+          </panel>
         </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
-          <div>
-            <p>Consider the following scenario.</p>
-            <tip-box>
-              <p>SUT: <code>printLabel(fruitName String, unitPrice int)</code></p>
-              <p><strong>Selected values for</strong> <code>fruitName</code> (invalid values are marked with an ❗️ ):</p>
-              <table class="markbind-table table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th>Values</th>
-                    <th>Explanation</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Apple</td>
-                    <td>Label format is round</td>
-                  </tr>
-                  <tr>
-                    <td>Banana</td>
-                    <td>Label format is oval</td>
-                  </tr>
-                  <tr>
-                    <td>Cherry</td>
-                    <td>Label format is square</td>
-                  </tr>
-                  <tr>
-                    <td>❗️ Dog</td>
-                    <td>Not a valid fruit</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p><strong>Selected values for</strong> <code>unitPrice</code>:</p>
-              <table class="markbind-table table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th>Values</th>
-                    <th>Explanation</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Only one digit</td>
-                  </tr>
-                  <tr>
-                    <td>20</td>
-                    <td>Two digits</td>
-                  </tr>
-                  <tr>
-                    <td>❗️ 0</td>
-                    <td>Invalid because 0 is not a valid price</td>
-                  </tr>
-                  <tr>
-                    <td>❗️ -1</td>
-                    <td>Invalid because negative prices are not allowed</td>
-                  </tr>
-                </tbody>
-              </table>
-            </tip-box>
-            <p>Suppose these are the test cases being considered.</p>
-            <tip-box>
-              <table class="markbind-table table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th style="text-align:center">Case</th>
-                    <th style="text-align:center">fruitName</th>
-                    <th style="text-align:center">unitPrice</th>
-                    <th style="text-align:center">Expected</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">Apple</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">Print label</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">Banana</td>
-                    <td style="text-align:center">20</td>
-                    <td style="text-align:center">Print label</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">Cherry</td>
-                    <td style="text-align:center">❗️ 0</td>
-                    <td style="text-align:center">Error message “invalid price”</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">4</td>
-                    <td style="text-align:center">❗️ Dog</td>
-                    <td style="text-align:center">❗️ -1</td>
-                    <td style="text-align:center">Error message “invalid fruit&quot;</td>
-                  </tr>
-                </tbody>
-              </table>
-            </tip-box>
-            <p>It looks like the test cases were created using the ‘at least once’ strategy. After running these tests can we confirm that square-format label printing is done correctly? Answer: No. Reason: <code>Cherry</code> -- the only input that can
-              produce a square-format label -- is in a negative test case which produces an error message instead of a label. If there is a bug in the code that prints labels in square-format, these tests cases will not trigger that bug.</p>
-            <p>In this case a useful heuristic to apply is <strong>each valid input must appear at least once in a positive test case</strong>. <code>Cherry</code> is a valid test input and we must ensure that it appears at least once in a positive test
-              case. Here are the updated test cases after applying that heuristic.</p>
-            <tip-box>
-              <div id="heuristic-valid-test-case">
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="heuristic-no-more-than-one-invalid-input-in-a-test-case">Heuristic: No More Than One Invalid Input In A Test Case</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can apply heuristic ‘no more than one invalid input in a test case’</span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
+            <div>
+              <p>Consider the
+                <trigger for="modal:heuristic-valid-test-case" trigger="click">test cases designed in [Heuristic: each valid input at least once in a positive test case]</trigger>.</p>
+              <modal large="" title="**Extract from Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: each valid input at least once in a positive test case**" id="modal:heuristic-valid-test-case">
+                <div>
+                  <table class="markbind-table table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th style="text-align:center">Case</th>
+                        <th style="text-align:center">fruitName</th>
+                        <th style="text-align:center">unitPrice</th>
+                        <th style="text-align:center">Expected</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="text-align:center">1</td>
+                        <td style="text-align:center">Apple</td>
+                        <td style="text-align:center">1</td>
+                        <td style="text-align:center">Print round label</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">2</td>
+                        <td style="text-align:center">Banana</td>
+                        <td style="text-align:center">20</td>
+                        <td style="text-align:center">Print oval label</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">2.1</td>
+                        <td style="text-align:center">Cherry</td>
+                        <td style="text-align:center">VV</td>
+                        <td style="text-align:center">Print square label</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">3</td>
+                        <td style="text-align:center">VV</td>
+                        <td style="text-align:center">❗️ 0</td>
+                        <td style="text-align:center">Error message “invalid price”</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">4</td>
+                        <td style="text-align:center">❗️ Dog</td>
+                        <td style="text-align:center">❗️ -1</td>
+                        <td style="text-align:center">Error message “invalid fruit&quot;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
+                </div>
+              </modal>
+              <p>After running these test cases can you be sure that the error message “invalid price” is shown for negative prices? Answer: No. Reason: <code>-1</code> -- the only input that is a negative price – is in a test case that produces the error
+                message “invalid fruit”.</p>
+              <p>In this case a useful heuristic to apply is <strong>no more than one invalid input in a test case</strong>. After applying that, we get the following test cases.</p>
+              <tip-box>
                 <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
@@ -519,557 +629,439 @@
                     <tr>
                       <td style="text-align:center">3</td>
                       <td style="text-align:center">VV</td>
-                      <td style="text-align:center">❗️ 0</td>
+                      <td style="text-align:center">❗️0</td>
                       <td style="text-align:center">Error message “invalid price”</td>
                     </tr>
                     <tr>
                       <td style="text-align:center">4</td>
-                      <td style="text-align:center">❗️ Dog</td>
-                      <td style="text-align:center">❗️ -1</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">❗️-1</td>
+                      <td style="text-align:center">Error message “invalid price&quot;</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">4.1</td>
+                      <td style="text-align:center">❗️Dog</td>
+                      <td style="text-align:center">VV</td>
                       <td style="text-align:center">Error message “invalid fruit&quot;</td>
                     </tr>
                   </tbody>
                 </table>
                 <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
-              </div>
-            </tip-box>
-          </div>
-          <div></div>
-        </div>
-      </panel>
-    </div>
-    <div>
-      <div>
-        <h4 id="heuristic-no-more-than-one-invalid-input-in-a-test-case-two">Heuristic: No More Than One Invalid Input In A Test Case <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-      </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can apply heuristic ‘no more than one invalid input in a test case’ <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
-        </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
-        <div>
-          <div>
-            <p>Consider the
-              <trigger for="modal:heuristic-valid-test-case" trigger="click">test cases designed in [Heuristic: each valid input at least once in a positive test case]</trigger>.</p>
-            <modal large="" title="**Extract from Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: each valid input at least once in a positive test case**" id="modal:heuristic-valid-test-case">
+              </tip-box>
+            </div>
+            <div>
               <div>
+                <panel header=":muscle: Exercises" expandable="">
+                  <div>
+                    <panel header=":lock::key: Can define test cases precisely">
+                      <question>
+                        <p>Applying the heuristics covered so far, we can determine the precise number of test cases required to test any given SUT effectively.</p>
+                        <ul radio-group="a7d7f" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="a7d7f" type="radio"> True</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="a7d7f" type="radio"> False</label></li>
+                        </ul>
+                        <div slot="answer">
+                          <p>False</p>
+                          <p>Explanation: These heuristics are, well, heuristics only. They will help you to make better decisions about test case design. However, they are speculative in nature (especially, when testing in black-box fashion) and cannot
+                            give you precise number of test cases.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="mix">Mix</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can apply multiple test input combination techniques together</span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
+            <div>
+              <p>Consider the calculateGrade scenario given below:</p>
+              <tip-box>
+                <ul>
+                  <li>
+                    <p>Scenario: calculateGrade</p>
+                  </li>
+                  <li>
+                    <p>SUT : <code>calculateGrade(participation, projectGrade, isAbsent, examScore)</code></p>
+                  </li>
+                  <li>
+                    <p>Values to test (invalid values are marked with an ❗️)</p>
+                    <ul>
+                      <li>participation: 0, 1, 19, 20, ❗️ 21, ❗️ 22</li>
+                      <li>projectGrade: A, B, C, D, F</li>
+                      <li>isAbsent: true, false</li>
+                      <li>examScore: 0, 1, 69, 70, ❗️ 71, ❗️ 72</li>
+                    </ul>
+                  </li>
+                </ul>
+              </tip-box>
+              <p>To get the first cut of test cases, let’s apply the ‘at least once’ strategy.</p>
+              <tip-box>
+                <p><strong>Test cases for calculateGrade V1</strong></p>
                 <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
-                      <th style="text-align:center">Case</th>
-                      <th style="text-align:center">fruitName</th>
-                      <th style="text-align:center">unitPrice</th>
+                      <th style="text-align:center">Case No.</th>
+                      <th style="text-align:center">participation</th>
+                      <th style="text-align:center">projectGrade</th>
+                      <th style="text-align:center">isAbsent</th>
+                      <th style="text-align:center">examScore</th>
                       <th style="text-align:center">Expected</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td style="text-align:center">1</td>
-                      <td style="text-align:center">Apple</td>
-                      <td style="text-align:center">1</td>
-                      <td style="text-align:center">Print round label</td>
+                      <td style="text-align:center">0</td>
+                      <td style="text-align:center">A</td>
+                      <td style="text-align:center">true</td>
+                      <td style="text-align:center">0</td>
+                      <td style="text-align:center">...</td>
                     </tr>
                     <tr>
                       <td style="text-align:center">2</td>
-                      <td style="text-align:center">Banana</td>
-                      <td style="text-align:center">20</td>
-                      <td style="text-align:center">Print oval label</td>
-                    </tr>
-                    <tr>
-                      <td style="text-align:center">2.1</td>
-                      <td style="text-align:center">Cherry</td>
-                      <td style="text-align:center">VV</td>
-                      <td style="text-align:center">Print square label</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">B</td>
+                      <td style="text-align:center">false</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">...</td>
                     </tr>
                     <tr>
                       <td style="text-align:center">3</td>
-                      <td style="text-align:center">VV</td>
-                      <td style="text-align:center">❗️ 0</td>
-                      <td style="text-align:center">Error message “invalid price”</td>
+                      <td style="text-align:center">19</td>
+                      <td style="text-align:center">C</td>
+                      <td style="text-align:center">VV/IV</td>
+                      <td style="text-align:center">69</td>
+                      <td style="text-align:center">...</td>
                     </tr>
                     <tr>
                       <td style="text-align:center">4</td>
-                      <td style="text-align:center">❗️ Dog</td>
-                      <td style="text-align:center">❗️ -1</td>
-                      <td style="text-align:center">Error message “invalid fruit&quot;</td>
+                      <td style="text-align:center">20</td>
+                      <td style="text-align:center">D</td>
+                      <td style="text-align:center">VV/IV</td>
+                      <td style="text-align:center">70</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">5</td>
+                      <td style="text-align:center">❗️ 21</td>
+                      <td style="text-align:center">F</td>
+                      <td style="text-align:center">VV/IV</td>
+                      <td style="text-align:center">❗️ 71</td>
+                      <td style="text-align:center">Err Msg</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">6</td>
+                      <td style="text-align:center">❗️ 22</td>
+                      <td style="text-align:center">VV/IV</td>
+                      <td style="text-align:center">VV/IV</td>
+                      <td style="text-align:center">❗️ 72</td>
+                      <td style="text-align:center">Err Msg</td>
                     </tr>
                   </tbody>
                 </table>
-                <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
+                <p>VV/IV = Any Valid or Invalid Value, Err Msg = Error Message</p>
+              </tip-box>
+              <p>Next, let’s apply the ‘each valid input at least once in a positive test case’ heuristic. Test case 5 has a valid value for <code>projectGrade=F</code> that doesn't appear in any other positive test case. Let's replace test case 5 with 5.1
+                and 5.2 to rectify that.</p>
+              <tip-box>
+                <p><strong>Test cases for calculateGrade V2</strong></p>
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th style="text-align:center">Case No.</th>
+                      <th style="text-align:center">participation</th>
+                      <th style="text-align:center">projectGrade</th>
+                      <th style="text-align:center">isAbsent</th>
+                      <th style="text-align:center">examScore</th>
+                      <th style="text-align:center">Expected</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">0</td>
+                      <td style="text-align:center">A</td>
+                      <td style="text-align:center">true</td>
+                      <td style="text-align:center">0</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">2</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">B</td>
+                      <td style="text-align:center">false</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">3</td>
+                      <td style="text-align:center">19</td>
+                      <td style="text-align:center">C</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">69</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">4</td>
+                      <td style="text-align:center">20</td>
+                      <td style="text-align:center">D</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">70</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center"><mark>5.1</mark></td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">F</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center"><mark>5.2</mark></td>
+                      <td style="text-align:center">❗️ 21</td>
+                      <td style="text-align:center">VV/IV</td>
+                      <td style="text-align:center">VV/IV</td>
+                      <td style="text-align:center">❗️ 71</td>
+                      <td style="text-align:center">Err Msg</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">6</td>
+                      <td style="text-align:center">❗️ 22</td>
+                      <td style="text-align:center">VV/IV</td>
+                      <td style="text-align:center">VV/IV</td>
+                      <td style="text-align:center">❗️ 72</td>
+                      <td style="text-align:center">Err Msg</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>VV = Any Valid Value VV/IV = Any Valid or Invalid Value</p>
+              </tip-box>
+              <p>Next, we apply the ‘no more than one invalid input in a test case’ heuristic. Test cases 5.2 and 6 don't follow that heuristic. Let's rectify the situation as follows:</p>
+              <tip-box>
+                <p><strong>Test cases for calculateGrade V3</strong></p>
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th style="text-align:center">Case No.</th>
+                      <th style="text-align:center">participation</th>
+                      <th style="text-align:center">projectGrade</th>
+                      <th style="text-align:center">isAbsent</th>
+                      <th style="text-align:center">examScore</th>
+                      <th style="text-align:center">Expected</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">0</td>
+                      <td style="text-align:center">A</td>
+                      <td style="text-align:center">true</td>
+                      <td style="text-align:center">0</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">2</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">B</td>
+                      <td style="text-align:center">false</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">3</td>
+                      <td style="text-align:center">19</td>
+                      <td style="text-align:center">C</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">69</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">4</td>
+                      <td style="text-align:center">20</td>
+                      <td style="text-align:center">D</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">70</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">5.1</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">F</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">5.2</td>
+                      <td style="text-align:center">❗️ 21</td>
+                      <td style="text-align:center"><mark>VV</mark></td>
+                      <td style="text-align:center"><mark>VV</mark></td>
+                      <td style="text-align:center"><mark>VV</mark></td>
+                      <td style="text-align:center">Err Msg</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center"><mark>5.3</mark></td>
+                      <td style="text-align:center">❗️ 22</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">Err Msg</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center"><mark>6.1</mark></td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">❗️ 71</td>
+                      <td style="text-align:center">Err Msg</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center"><mark>6.2</mark></td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">❗️ 72</td>
+                      <td style="text-align:center">Err Msg</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </tip-box>
+              <p>Next, let us assume that there is a dependency between the inputs <code>examScore</code> and <code>isAbsent</code> such that an absent student can only have <code>examScore=0</code>. To cater for the hidden invalid case arising from this,
+                we can add a new test case where <code>isAbsent=true</code> and <code>examScore!=0</code>. In addition, test cases 3-6.2 should have <code>isAbsent=false</code> so that the input remains valid.</p>
+              <tip-box>
+                <p><strong>Test cases for calculateGrade V4</strong></p>
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th style="text-align:center">Case No.</th>
+                      <th style="text-align:center">participation</th>
+                      <th style="text-align:center">projectGrade</th>
+                      <th style="text-align:center">isAbsent</th>
+                      <th style="text-align:center">examScore</th>
+                      <th style="text-align:center">Expected</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">0</td>
+                      <td style="text-align:center">A</td>
+                      <td style="text-align:center">true</td>
+                      <td style="text-align:center">0</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">2</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">B</td>
+                      <td style="text-align:center">false</td>
+                      <td style="text-align:center">1</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">3</td>
+                      <td style="text-align:center">19</td>
+                      <td style="text-align:center">C</td>
+                      <td style="text-align:center"><mark>false</mark></td>
+                      <td style="text-align:center">69</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">4</td>
+                      <td style="text-align:center">20</td>
+                      <td style="text-align:center">D</td>
+                      <td style="text-align:center"><mark>false</mark></td>
+                      <td style="text-align:center">70</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">5.1</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">F</td>
+                      <td style="text-align:center"><mark>false</mark></td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">...</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">5.2</td>
+                      <td style="text-align:center">❗️ 21</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center"><mark>false</mark></td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">Err Msg</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">5.3</td>
+                      <td style="text-align:center">❗️ 22</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center"><mark>false</mark></td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">Err Msg</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">6.1</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center"><mark>false</mark></td>
+                      <td style="text-align:center">❗️ 71</td>
+                      <td style="text-align:center">Err Msg</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center">6.2</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center">VV</td>
+                      <td style="text-align:center"><mark>false</mark></td>
+                      <td style="text-align:center">❗️ 72</td>
+                      <td style="text-align:center">Err Msg</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center"><mark>7</mark></td>
+                      <td style="text-align:center"><mark>VV</mark></td>
+                      <td style="text-align:center"><mark>VV</mark></td>
+                      <td style="text-align:center"><mark>true</mark></td>
+                      <td style="text-align:center"><mark>!=0</mark></td>
+                      <td style="text-align:center"><mark>Err Msg</mark></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </tip-box>
+            </div>
+            <div>
+              <div>
+                <panel header=":muscle: Exercises" expandable="">
+                  <div>
+                    <panel header=":lock::key: statements about test input combinations">
+                      <question>
+                        <p>Which of these contradict the heuristics recommended when creating test cases with multiple inputs?</p>
+                        <ul radio-group="1da4e" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> a. All invalid test inputs must be tested together.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> b. It is ok to combine valid values for different inputs.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> c. No more than one invalid test input should be in a given test case.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> d. Each valid test input should appear at least once in a test case that doesn’t have any invalid inputs.</label></li>
+                        </ul>
+                        <div slot="answer">
+                          <p>(a) inputs.</p>
+                          <p>Explanation: If you test all invalid test inputs together, you will not know if each one of the invalid inputs are handled correctly by the SUT. This is because most SUTs return an error message upon encountering the first invalid
+                            input.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
               </div>
-            </modal>
-            <p>After running these test cases can you be sure that the error message “invalid price” is shown for negative prices? Answer: No. Reason: <code>-1</code> -- the only input that is a negative price – is in a test case that produces the error
-              message “invalid fruit”.</p>
-            <p>In this case a useful heuristic to apply is <strong>no more than one invalid input in a test case</strong>. After applying that, we get the following test cases.</p>
-            <tip-box>
-              <table class="markbind-table table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th style="text-align:center">Case</th>
-                    <th style="text-align:center">fruitName</th>
-                    <th style="text-align:center">unitPrice</th>
-                    <th style="text-align:center">Expected</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">Apple</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">Print round label</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">Banana</td>
-                    <td style="text-align:center">20</td>
-                    <td style="text-align:center">Print oval label</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">2.1</td>
-                    <td style="text-align:center">Cherry</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">Print square label</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">❗️0</td>
-                    <td style="text-align:center">Error message “invalid price”</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">4</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">❗️-1</td>
-                    <td style="text-align:center">Error message “invalid price&quot;</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">4.1</td>
-                    <td style="text-align:center">❗️Dog</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">Error message “invalid fruit&quot;</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
-            </tip-box>
-          </div>
-          <div>
-            <div>
-              <panel header=":muscle: Exercises" expandable="">
-                <div>
-                  <panel header=":lock::key: Can define test cases precisely">
-                    <question>
-                      <p>Applying the heuristics covered so far, we can determine the precise number of test cases required to test any given SUT effectively.</p>
-                      <ul radio-group="a7d7f" class="radio-list">
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="a7d7f" type="radio"> True</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="a7d7f" type="radio"> False</label></li>
-                      </ul>
-                      <div slot="answer">
-                        <p>False</p>
-                        <p>Explanation: These heuristics are, well, heuristics only. They will help you to make better decisions about test case design. However, they are speculative in nature (especially, when testing in black-box fashion) and cannot give
-                          you precise number of test cases.</p>
-                      </div>
-                    </question>
-                  </panel>
-                </div>
-              </panel>
             </div>
-          </div>
+          </panel>
         </div>
-      </panel>
-    </div>
-    <div>
-      <div>
-        <h4 id="mix-three">Mix <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
       </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can apply multiple test input combination techniques together <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
-        </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
-        <div>
-          <div>
-            <p>Consider the calculateGrade scenario given below:</p>
-            <tip-box>
-              <ul>
-                <li>
-                  <p>Scenario: calculateGrade</p>
-                </li>
-                <li>
-                  <p>SUT : <code>calculateGrade(participation, projectGrade, isAbsent, examScore)</code></p>
-                </li>
-                <li>
-                  <p>Values to test (invalid values are marked with an ❗️)</p>
-                  <ul>
-                    <li>participation: 0, 1, 19, 20, ❗️ 21, ❗️ 22</li>
-                    <li>projectGrade: A, B, C, D, F</li>
-                    <li>isAbsent: true, false</li>
-                    <li>examScore: 0, 1, 69, 70, ❗️ 71, ❗️ 72</li>
-                  </ul>
-                </li>
-              </ul>
-            </tip-box>
-            <p>To get the first cut of test cases, let’s apply the ‘at least once’ strategy.</p>
-            <tip-box>
-              <p><strong>Test cases for calculateGrade V1</strong></p>
-              <table class="markbind-table table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th style="text-align:center">Case No.</th>
-                    <th style="text-align:center">participation</th>
-                    <th style="text-align:center">projectGrade</th>
-                    <th style="text-align:center">isAbsent</th>
-                    <th style="text-align:center">examScore</th>
-                    <th style="text-align:center">Expected</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">0</td>
-                    <td style="text-align:center">A</td>
-                    <td style="text-align:center">true</td>
-                    <td style="text-align:center">0</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">B</td>
-                    <td style="text-align:center">false</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">19</td>
-                    <td style="text-align:center">C</td>
-                    <td style="text-align:center">VV/IV</td>
-                    <td style="text-align:center">69</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">4</td>
-                    <td style="text-align:center">20</td>
-                    <td style="text-align:center">D</td>
-                    <td style="text-align:center">VV/IV</td>
-                    <td style="text-align:center">70</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">5</td>
-                    <td style="text-align:center">❗️ 21</td>
-                    <td style="text-align:center">F</td>
-                    <td style="text-align:center">VV/IV</td>
-                    <td style="text-align:center">❗️ 71</td>
-                    <td style="text-align:center">Err Msg</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">6</td>
-                    <td style="text-align:center">❗️ 22</td>
-                    <td style="text-align:center">VV/IV</td>
-                    <td style="text-align:center">VV/IV</td>
-                    <td style="text-align:center">❗️ 72</td>
-                    <td style="text-align:center">Err Msg</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p>VV/IV = Any Valid or Invalid Value, Err Msg = Error Message</p>
-            </tip-box>
-            <p>Next, let’s apply the ‘each valid input at least once in a positive test case’ heuristic. Test case 5 has a valid value for <code>projectGrade=F</code> that doesn't appear in any other positive test case. Let's replace test case 5 with 5.1
-              and 5.2 to rectify that.</p>
-            <tip-box>
-              <p><strong>Test cases for calculateGrade V2</strong></p>
-              <table class="markbind-table table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th style="text-align:center">Case No.</th>
-                    <th style="text-align:center">participation</th>
-                    <th style="text-align:center">projectGrade</th>
-                    <th style="text-align:center">isAbsent</th>
-                    <th style="text-align:center">examScore</th>
-                    <th style="text-align:center">Expected</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">0</td>
-                    <td style="text-align:center">A</td>
-                    <td style="text-align:center">true</td>
-                    <td style="text-align:center">0</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">B</td>
-                    <td style="text-align:center">false</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">19</td>
-                    <td style="text-align:center">C</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">69</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">4</td>
-                    <td style="text-align:center">20</td>
-                    <td style="text-align:center">D</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">70</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center"><mark>5.1</mark></td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">F</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center"><mark>5.2</mark></td>
-                    <td style="text-align:center">❗️ 21</td>
-                    <td style="text-align:center">VV/IV</td>
-                    <td style="text-align:center">VV/IV</td>
-                    <td style="text-align:center">❗️ 71</td>
-                    <td style="text-align:center">Err Msg</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">6</td>
-                    <td style="text-align:center">❗️ 22</td>
-                    <td style="text-align:center">VV/IV</td>
-                    <td style="text-align:center">VV/IV</td>
-                    <td style="text-align:center">❗️ 72</td>
-                    <td style="text-align:center">Err Msg</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p>VV = Any Valid Value VV/IV = Any Valid or Invalid Value</p>
-            </tip-box>
-            <p>Next, we apply the ‘no more than one invalid input in a test case’ heuristic. Test cases 5.2 and 6 don't follow that heuristic. Let's rectify the situation as follows:</p>
-            <tip-box>
-              <p><strong>Test cases for calculateGrade V3</strong></p>
-              <table class="markbind-table table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th style="text-align:center">Case No.</th>
-                    <th style="text-align:center">participation</th>
-                    <th style="text-align:center">projectGrade</th>
-                    <th style="text-align:center">isAbsent</th>
-                    <th style="text-align:center">examScore</th>
-                    <th style="text-align:center">Expected</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">0</td>
-                    <td style="text-align:center">A</td>
-                    <td style="text-align:center">true</td>
-                    <td style="text-align:center">0</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">B</td>
-                    <td style="text-align:center">false</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">19</td>
-                    <td style="text-align:center">C</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">69</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">4</td>
-                    <td style="text-align:center">20</td>
-                    <td style="text-align:center">D</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">70</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">5.1</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">F</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">5.2</td>
-                    <td style="text-align:center">❗️ 21</td>
-                    <td style="text-align:center"><mark>VV</mark></td>
-                    <td style="text-align:center"><mark>VV</mark></td>
-                    <td style="text-align:center"><mark>VV</mark></td>
-                    <td style="text-align:center">Err Msg</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center"><mark>5.3</mark></td>
-                    <td style="text-align:center">❗️ 22</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">Err Msg</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center"><mark>6.1</mark></td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">❗️ 71</td>
-                    <td style="text-align:center">Err Msg</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center"><mark>6.2</mark></td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">❗️ 72</td>
-                    <td style="text-align:center">Err Msg</td>
-                  </tr>
-                </tbody>
-              </table>
-            </tip-box>
-            <p>Next, let us assume that there is a dependency between the inputs <code>examScore</code> and <code>isAbsent</code> such that an absent student can only have <code>examScore=0</code>. To cater for the hidden invalid case arising from this,
-              we can add a new test case where <code>isAbsent=true</code> and <code>examScore!=0</code>. In addition, test cases 3-6.2 should have <code>isAbsent=false</code> so that the input remains valid.</p>
-            <tip-box>
-              <p><strong>Test cases for calculateGrade V4</strong></p>
-              <table class="markbind-table table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th style="text-align:center">Case No.</th>
-                    <th style="text-align:center">participation</th>
-                    <th style="text-align:center">projectGrade</th>
-                    <th style="text-align:center">isAbsent</th>
-                    <th style="text-align:center">examScore</th>
-                    <th style="text-align:center">Expected</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">0</td>
-                    <td style="text-align:center">A</td>
-                    <td style="text-align:center">true</td>
-                    <td style="text-align:center">0</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">2</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">B</td>
-                    <td style="text-align:center">false</td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">3</td>
-                    <td style="text-align:center">19</td>
-                    <td style="text-align:center">C</td>
-                    <td style="text-align:center"><mark>false</mark></td>
-                    <td style="text-align:center">69</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">4</td>
-                    <td style="text-align:center">20</td>
-                    <td style="text-align:center">D</td>
-                    <td style="text-align:center"><mark>false</mark></td>
-                    <td style="text-align:center">70</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">5.1</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">F</td>
-                    <td style="text-align:center"><mark>false</mark></td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">...</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">5.2</td>
-                    <td style="text-align:center">❗️ 21</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center"><mark>false</mark></td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">Err Msg</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">5.3</td>
-                    <td style="text-align:center">❗️ 22</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center"><mark>false</mark></td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">Err Msg</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">6.1</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center"><mark>false</mark></td>
-                    <td style="text-align:center">❗️ 71</td>
-                    <td style="text-align:center">Err Msg</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center">6.2</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center">VV</td>
-                    <td style="text-align:center"><mark>false</mark></td>
-                    <td style="text-align:center">❗️ 72</td>
-                    <td style="text-align:center">Err Msg</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center"><mark>7</mark></td>
-                    <td style="text-align:center"><mark>VV</mark></td>
-                    <td style="text-align:center"><mark>VV</mark></td>
-                    <td style="text-align:center"><mark>true</mark></td>
-                    <td style="text-align:center"><mark>!=0</mark></td>
-                    <td style="text-align:center"><mark>Err Msg</mark></td>
-                  </tr>
-                </tbody>
-              </table>
-            </tip-box>
-          </div>
-          <div>
-            <div>
-              <panel header=":muscle: Exercises" expandable="">
-                <div>
-                  <panel header=":lock::key: statements about test input combinations">
-                    <question>
-                      <p>Which of these contradict the heuristics recommended when creating test cases with multiple inputs?</p>
-                      <ul radio-group="1da4e" class="radio-list">
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> a. All invalid test inputs must be tested together.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> b. It is ok to combine valid values for different inputs.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> c. No more than one invalid test input should be in a given test case.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> d. Each valid test input should appear at least once in a test case that doesn’t have any invalid inputs.</label></li>
-                      </ul>
-                      <div slot="answer">
-                        <p>(a) inputs.</p>
-                        <p>Explanation: If you test all invalid test inputs together, you will not know if each one of the invalid inputs are handled correctly by the SUT. This is because most SUTs return an error message upon encountering the first invalid
-                          input.</p>
-                      </div>
-                    </question>
-                  </panel>
-                </div>
-              </panel>
-            </div>
-          </div>
-        </div>
-      </panel>
     </div>
   </div>
 </div>
@@ -1081,4 +1073,5 @@
     const baseUrl = '/se-book'
 </script>
 <script src="..\..\markbind\js\setup.js"></script>
+<script src="..\..\markbind\js\site-nav.js"></script>
 </html>

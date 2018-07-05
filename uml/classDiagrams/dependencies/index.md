@@ -2,17 +2,4 @@
 title: "UML: Class Diagrams: Dependencies"
 </frontmatter>
 
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
-%%**UML → Class Diagrams →**%%
-
-### Dependencies
-
-<div id="main">
-
-<include src="./what/embed.md" />
-
-</div>
-</div>
+<include src="container-inPage-asFlat.md" boilerplate />

@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"><dynamic-panel src="../pull/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Pull%%" /></span>
 
-<div class="website-content">
-
-<div id="path">Git and Github → </div>
+<span id="outcomes">{{glyphicon_flag}} Can push to a remote repo</span>
 
 <div id="title">
 
-#### Push :two:
+#### Push
 
 </div>
 
@@ -36,6 +34,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

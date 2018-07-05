@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain boundary value analysis</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: `markCellAt(int x, int y)` operation could contain code such as if `(x > 0 && x <= (W-1))` which involves boundaries of x’s equivalence partitions.
+{{ icon_example }} `markCellAt(int x, int y)` operation could contain code such as if `(x > 0 && x <= (W-1))` which involves boundaries of x’s equivalence partitions.
 
 </tip-box>
  
@@ -27,6 +27,4 @@ Boundary values are sometimes called _corner cases_.
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

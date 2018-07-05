@@ -2,19 +2,4 @@
 title: "Documentation: Guidelines: Go Top-down, Not Bottom-up"
 </frontmatter>
 
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
-%%**Documentation → Guidelines →**%%
-
-### Guideline: Go Top-down, Not Bottom-up
-
-<div id="main">
-
-<include src="./what/embed.md" />
-<include src="./why/embed.md" />
-<include src="./how/embed.md" />
-
-</div>
-</div>
+<include src="container-inPage-asFlat.md" boilerplate />

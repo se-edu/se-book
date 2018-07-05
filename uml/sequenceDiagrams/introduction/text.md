@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Introduction :one:
+#### Introduction
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain/identify sequence diagrams</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: Some exmaple sequence diagrams:
+{{ icon_example }} Some exmaple sequence diagrams:
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/introduction/images/textLogic.png" height="300" />
 <p/>
@@ -27,6 +27,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Implementing Associations :one:
+#### Implementing Associations
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modelling Structure → Class Diagrams%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can implement associations</span>
 
 <div id="body">
 
@@ -143,6 +143,4 @@ class Minefield:
 
 <div id="extras">
  <include src="exercises.md"/>
-</div>
-
 </div>

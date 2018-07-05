@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Testing → Introduction →</div>
+<span id="outcomes">{{glyphicon_flag}} Can explain testing</span>
 
 <div id="title">
 
-#### What :one: [{{glyphicon_new_window}}]({{baseUrl}}/testing/introduction/what/index.html)
+#### What
 
 </div>
 
@@ -23,7 +21,7 @@
 
 <tip-box>
 
-:package: Example: A minimal test case for testing a browser:
+{{ icon_example }} Example: A minimal test case for testing a browser:
 
 * **Input** – Start the browser using a blank page (vertical scrollbar disabled). Then, load `longfile.html` located in the `test data` folder.
 * **Expected behavior** – The scrollbar should be automatically enabled upon loading `longfile.html`.
@@ -32,7 +30,7 @@
 
 **Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.**
 
-<panel header="%%Other details a test case can contain :two:%%" type="seamless">
+<panel header="%%Other details a test case can contain%%" type="seamless">
 
 A more elaborate test case can have other details such as those given below.  
 
@@ -54,11 +52,11 @@ For each test case we do the following:
 
 <tip-box>
 
-:package: Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading `longfile.html`. The defect/bug causing that failure could be an uninitialized variable.
+{{ icon_example }} Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading `longfile.html`. The defect/bug causing that failure could be an uninitialized variable.
 
 </tip-box>
 
-<panel header="%%A deeper look at the definition of testing :three:%%" type="seamless">
+<panel header="%%A deeper look at the definition of testing%%" type="seamless">
 
 Here is another definition of testing:
 
@@ -77,6 +75,4 @@ Some things to note (indicated by keywords in the above definition):
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

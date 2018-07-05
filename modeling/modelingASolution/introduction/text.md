@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Introduction :one:
+#### Introduction
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain how modelling can be used before implementation</span>
 
 <div id="body">
 
@@ -28,6 +28,4 @@ To answer those questions, you can analyze the how the objects of these classes 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

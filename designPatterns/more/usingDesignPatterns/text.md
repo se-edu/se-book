@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Using Design Patterns :three:
+#### Using Design Patterns
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain pros and cons of design patterns</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Someone can say 'apply Observer pattern here' instead of having to describe the mechanics of the solution in detail.
+{{ icon_example }} Someone can say 'apply Observer pattern here' instead of having to describe the mechanics of the solution in detail.
 
 </tip-box>
 
@@ -29,6 +29,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

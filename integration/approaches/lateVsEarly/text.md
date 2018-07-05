@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### 'Late and One Time' vs 'Early and Frequent' :two:
+#### 'Late and One Time' vs 'Early and Frequent'
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Integration → Introduction → What%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain how integration approaches vary based on timing and frequency</span>
 
 <div id="body">
 
@@ -24,7 +24,7 @@
 
 <tip-box> 
 
-:package: A _<tooltip content="it compiles and runs but does not produce any useful output">walking skeleton</tooltip>_ can be written first. This can be done by one developer, possibly the one in charge of integration. After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate the new code to the main system.
+{{ icon_example }} A _<tooltip content="it compiles and runs but does not produce any useful output">walking skeleton</tooltip>_ can be written first. This can be done by one developer, possibly the one in charge of integration. After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate the new code to the main system.
 
 </tip-box>
 
@@ -39,6 +39,4 @@ Here is an animation that compares the two approaches:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

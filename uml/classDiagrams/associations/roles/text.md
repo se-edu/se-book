@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Roles :two:
+#### Roles
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain/use association roles in class diagrams</span>
 
 <div id="body">
 
@@ -12,7 +16,7 @@
 
 <tip-box>
 
-:package: This association represents a marriage between a `Man` object and a `Woman` object. The respective roles played by objects of these two classes are `husband` and `wife`. 
+{{ icon_example }} This association represents a marriage between a `Man` object and a `Woman` object. The respective roles played by objects of these two classes are `husband` and `wife`. 
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/husbandWife.png" width="300" />
 <p/>
@@ -55,7 +59,7 @@ class Woman:
 
 <tip-box>
 
-:package: The role of `Student` objects in this association is `charges` %%(i.e. Admin is in charge of students)%%
+{{ icon_example }} The role of `Student` objects in this association is `charges` %%(i.e. Admin is in charge of students)%%
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/adminStudent.png" height="70" />
 <p/>
@@ -90,6 +94,4 @@ class Admin:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

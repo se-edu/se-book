@@ -1,23 +1,21 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"><dynamic-panel src="../clone/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Clone%%" /></span>
 
-<div class="website-content">
-
-<div id="path">Git and Github → </div>
+<span id="outcomes">{{glyphicon_flag}} Can pull changes from a repo</span>
 
 <div id="title">
 
-#### Pull :two:
+#### Pull
 
 </div>
 
 <div id="body">
 
-Clone the sample repo as explained in <trigger for="modal:clone-repository" trigger="click">[Textbook » Tools → Git & GitHub → Clone]</trigger>.
+Clone the sample repo as explained in <trigger for="modal:clone-repository" trigger="click">[Textbook {{ icon_embedding }} Tools → Git & GitHub → Clone]</trigger>.
 
 Delete the last two commits to simulate cloning the repo 2 commits ago.
 
 <modal title="**Clone Repository**" id="modal:clone-repository">
-  <include src="../clone/embed.md" />
+  <include src="../clone/embed.md" boilerplate  />
 </modal>
 
 <tabs>
@@ -43,6 +41,4 @@ Now, your local repo state is exactly how it would be if you had cloned the repo
 </div>
 
 <div id="extras">
-</div>
-
 </div>

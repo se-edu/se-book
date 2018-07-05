@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Implementing Inheritance :one:
+#### Implementing Inheritance
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Inheritance → What%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can implement basic inheritance</span>
 
 <div id="body">
 
@@ -15,7 +15,7 @@
 
 To learn how to implement inheritance in Java, you can follow [[Oracle’s Java Tutorials: Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)]
 
-<panel type="seamless" header=":tv: A very beginner-friendly video about implementing Java inheritance.">
+<panel type="seamless" header="{{ icon_video }} A very beginner-friendly video about implementing Java inheritance.">
 
 @[youtube](9JpNY-XAseg)
 
@@ -37,6 +37,4 @@ To learn how to implement inheritance in Java, you can follow [[Oracle’s Java 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

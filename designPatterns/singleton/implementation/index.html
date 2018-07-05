@@ -8,31 +8,32 @@
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\site-nav.css">
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-<div class="website-content">
-  <tip-box>
     <div>
-      <p>🏆 Can apply the Singleton design pattern <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
-    </div>
-  </tip-box>
-  <div>
-    <div></div>
-    <p></p>
-    <p><span class="dimmed"><strong><span>Design → Design Patterns → Singleton →
-</span></strong>
-      </span>
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+  <div class="website-content">
+    <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can apply the Singleton design pattern</span></span></span></button>
+      <p></p>
     </p>
     <div>
-      <h4 id="implementation-two">Implementation <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-    </div>
-    <div id="main">
-      <div>
-        <p>Here is the typical implementation of how the Singleton pattern is applied to a class:</p>
-        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
+      <div></div>
+      <p></p>
+      <p><span class="dimmed"><strong><span>Design → Design Patterns → Singleton →
+</span></strong>
+        </span>
+      </p>
+      <div id="title-and-body">
+        <div>
+          <h4 id="implementation">Implementation</h4>
+        </div>
+        <div id="main">
+          <div>
+            <p>Here is the typical implementation of how the Singleton pattern is applied to a class:</p>
+            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logic theOne = <span class="hljs-keyword">null</span>;
 
     <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Logic</span><span class="hljs-params">()</span> </span>{
@@ -47,21 +48,23 @@
     }
 }
 </code></pre>
-        <p>Notes:</p>
-        <ul>
-          <li>The constructor is <code>private</code>, which prevents instantiation from outside the class.</li>
-          <li>The single instance of the singleton class is maintained by a <code>private</code> class-level variable.</li>
-          <li>Access to this object is provided by a <code>public</code> class-level operation <code>getInstance()</code> which instantiates a single copy of the singleton class when it is executed for the first time. Subsequent calls to this operation return
-            the single instance of the class.</li>
-        </ul>
-        <p>If <code>Logic</code> was not a Singleton class, an object is created like this:</p>
-        <pre><code class="hljs java">Logic m = <span class="hljs-keyword">new</span> Logic();
+            <p>Notes:</p>
+            <ul>
+              <li>The constructor is <code>private</code>, which prevents instantiation from outside the class.</li>
+              <li>The single instance of the singleton class is maintained by a <code>private</code> class-level variable.</li>
+              <li>Access to this object is provided by a <code>public</code> class-level operation <code>getInstance()</code> which instantiates a single copy of the singleton class when it is executed for the first time. Subsequent calls to this operation
+                return the single instance of the class.</li>
+            </ul>
+            <p>If <code>Logic</code> was not a Singleton class, an object is created like this:</p>
+            <pre><code class="hljs java">Logic m = <span class="hljs-keyword">new</span> Logic();
 </code></pre>
-        <p>But now, the <code>Logic</code> object needs to be accessed like this:</p>
-        <pre><code class="hljs java">Logic m = Logic.getInstance();
+            <p>But now, the <code>Logic</code> object needs to be accessed like this:</p>
+            <pre><code class="hljs java">Logic m = Logic.getInstance();
 </code></pre>
+          </div>
+          <div></div>
+        </div>
       </div>
-      <div></div>
     </div>
   </div>
 </div>
@@ -73,4 +76,5 @@
     const baseUrl = '/se-book'
 </script>
 <script src="..\..\..\markbind\js\setup.js"></script>
+<script src="..\..\..\markbind\js\site-nav.js"></script>
 </html>

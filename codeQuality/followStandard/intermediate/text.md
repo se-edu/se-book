@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Intermediate :two:
+#### Intermediate
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can follow intermediate style rules</span>
 
 <div id="body">
 
@@ -17,7 +17,5 @@ Go through the [provided Java coding standard]({{java_coding_standard}}) and lea
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

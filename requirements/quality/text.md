@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Quality of Requirements :one:
+#### Quality of Requirements
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain quality of requirements</span>
 
 <div id="body">
 
@@ -38,6 +38,4 @@ Besides these criteria for individual requirements, the set of requirements as a
 </div>
 
 <div id="extras">
-</div>
-
 </div>

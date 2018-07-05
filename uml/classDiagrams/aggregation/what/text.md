@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Aggregation :three:
+#### Aggregation
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret aggregation in class diagrams</span>
 
 <div id="body">
 
@@ -14,7 +18,7 @@ Notation:
 
 <tip-box>
 
-:package: Example:
+{{ icon_example }} Example:
 
 <img src="{{baseUrl}}/uml/classDiagrams/aggregation/what/images/clubPerson.png" height="85" />
 <p/>
@@ -24,6 +28,4 @@ Notation:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

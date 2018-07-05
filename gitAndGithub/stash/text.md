@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Git and Github → </div>
+<span id="outcomes">{{glyphicon_flag}} Can use Git to stash files</span>
 
 <div id="title">
 
-#### Stash :four:
+#### Stash
 
 </div>
 
@@ -30,6 +28,4 @@ Follow [this article from Atlassian](https://www.atlassian.com/git/tutorials/git
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -12,73 +12,73 @@ title: "Testing [Printable]"
 
 ## Introduction
 
-<include src="introduction/what/print.md" />
-<include src="introduction/testability/print.md" />
+<include src="introduction/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="introduction/testability/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Testing Types
 
 ### Unit Testing
 
-<include src="testingTypes/unitTesting/what/print.md" />
-<include src="testingTypes/unitTesting/stubs/print.md" />
+<include src="testingTypes/unitTesting/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="testingTypes/unitTesting/stubs/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Integration Testing
 
-<include src="testingTypes/integrationTesting/what/print.md" />
+<include src="testingTypes/integrationTesting/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ### System Testing
 
-<include src="testingTypes/systemTesting/what/print.md" />
+<include src="testingTypes/systemTesting/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Alpha-Beta Testing
 
-<include src="testingTypes/alphaBetaTesting/what/print.md" />
+<include src="testingTypes/alphaBetaTesting/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Dogfooding
 
-<include src="testingTypes/dogfooding/what/print.md" />
+<include src="testingTypes/dogfooding/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Developer Testing
 
-<include src="testingTypes/developerTesting/what/print.md" />
-<include src="testingTypes/developerTesting/why/print.md" />
+<include src="testingTypes/developerTesting/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="testingTypes/developerTesting/why/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Exploratory vs Scripted Testing
 
-<include src="testingTypes/exploratoryVsScriptedTesting/what/print.md" />
-<include src="testingTypes/exploratoryVsScriptedTesting/when/print.md" />
+<include src="testingTypes/exploratoryVsScriptedTesting/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="testingTypes/exploratoryVsScriptedTesting/when/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Acceptance Testing
 
-<include src="testingTypes/acceptanceTesting/what/print.md" />
-<include src="testingTypes/acceptanceTesting/acceptanceVsSystemTesting/print.md" />
+<include src="testingTypes/acceptanceTesting/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="testingTypes/acceptanceTesting/acceptanceVsSystemTesting/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Regression Testing
 
-<include src="testingTypes/regressionTesting/what/print.md" />
+<include src="testingTypes/regressionTesting/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Test Automation
 
-<include src="testAutomation/what/print.md" />
-<include src="testAutomation/testingTextUis/print.md" />
-<include src="testAutomation/usingTestDrivers/print.md" />
-<include src="testAutomation/tools/print.md" />
-<include src="testAutomation/testingGuis/print.md" />
+<include src="testAutomation/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="testAutomation/testingTextUis/unit-inParent-asFlat-print.md" boilerplate />
+<include src="testAutomation/usingTestDrivers/unit-inParent-asFlat-print.md" boilerplate />
+<include src="testAutomation/tools/unit-inParent-asFlat-print.md" boilerplate />
+<include src="testAutomation/testingGuis/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Test Coverage
 
-<include src="testCoverage/what/print.md" />
-<include src="testCoverage/how/print.md" />
+<include src="testCoverage/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="testCoverage/how/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Dependency Injection
 
-<include src="dependencyInjection/what/print.md" />
-<include src="dependencyInjection/how/print.md" />
+<include src="dependencyInjection/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="dependencyInjection/how/unit-inParent-asFlat-print.md" boilerplate />
 
 ## TDD
 
-<include src="tdd/what/print.md" />
-<include src="tdd/how/print.md" />
+<include src="tdd/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="tdd/how/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

@@ -1,1 +1,0 @@
-<dynamic-panel src="../../oopDesign/inheritance/overriding/full.md" header="%%:mortar_board: OOP → Inheritance → Overriding%%" />

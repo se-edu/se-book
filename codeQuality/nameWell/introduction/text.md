@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Introduction :one:
+#### Introduction
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for good names in code</span>
 
 <div id="body">
 
@@ -17,6 +17,4 @@ Proper naming improves the readability. It also reduces bugs caused by ambiguiti
 </div>
 
 <div id="extras">
-</div>
-
 </div>

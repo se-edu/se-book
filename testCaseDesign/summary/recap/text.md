@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Test Case Design → Summary →</div>
+<span id="outcomes">{{glyphicon_flag}} Can explain test case design techniques at a higher level</span>
 
 <div id="title">
 
-#### Recap :four:
+#### Recap
 
 </div>
 
@@ -17,6 +15,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

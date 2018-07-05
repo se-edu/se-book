@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain design patterns</span>
 
 <div id="body">
 
@@ -19,7 +19,7 @@ In software development, there are certain problems that recur in a certain cont
 
 <tip-box>
 
-:package: Some examples of recurring design problems:
+{{ icon_example }} Some examples of recurring design problems:
 
 | Design Context  | Recurring Problem
 | --------------- | -----------------
@@ -36,7 +36,5 @@ After repeated attempts at solving such problems, better solutions are discovere
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

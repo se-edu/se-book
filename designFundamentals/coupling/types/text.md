@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Types of Coupling :three:
+#### Types of Coupling
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Design Fundamentals → Coupling → What%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can identify types of coupling</span>
 
 <div id="body">
 
@@ -23,6 +23,4 @@ Some examples of different coupling types:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

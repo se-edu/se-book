@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Object Creation :two:
+#### Object Creation
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with object creation</span>
 
 <div id="body">
 
@@ -20,7 +20,7 @@ Notation:
 
 <tip-box>
 
-:package: The `Logic` object creates a `Minefield` object.
+{{ icon_example }} The `Logic` object creates a `Minefield` object.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/objectCreation/images/logicMinefield.png" height="150" />
 <p/>
@@ -30,6 +30,4 @@ Notation:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

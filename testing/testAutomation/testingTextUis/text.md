@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Testing → Test Automation →</div>
+<span id="outcomes">{{glyphicon_flag}} Can semi-automate testing of CLIs</span>
 
 <div id="title">
 
-#### Automated Testing of CLI Apps :one: [{{glyphicon_new_window}}]({{baseUrl}}/testing/testAutomation/testingTextUis/index.html)
+#### Automated Testing of CLI Apps
 
 </div>
 
@@ -21,7 +19,7 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
 
 1. Store the test input in the text file `input.txt`. 
  
-   <panel header="%%:package: Example `input.txt`%%" type="seamless">
+   <panel header="%%{{ icon_example }} Example `input.txt`%%" type="seamless">
    
    ```
    add Valid Name p/12345 valid@email.butNoPrefix
@@ -32,7 +30,7 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
 
 1. Store the output we expect from the SUT in another text file `expected.txt`. 
    
-   <panel header="%%:package: Example `expected.txt`%%" type="seamless">
+   <panel header="%%{{ icon_example }} Example `expected.txt`%%" type="seamless">
    
    ```
    Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
@@ -55,7 +53,7 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
    
    * :bulb: If you are using Windows, use a normal command window to run the app, not a Power Shell window.
    
-   <panel header="%%More on the `>` operator and the `<` operator. :zero:%%" alt="I/O redirection info" type="seamless" >
+   <panel header="%%More on the `>` operator and the `<` operator. <span class='badge'>tangential</span>%%" alt="I/O redirection info" type="seamless" >
    
    A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using ` < ` and ` > ` operators. For example, if you run `AddressBook` in a command window, the output will be shown in the console, but if you run it like this,
    
@@ -87,6 +85,4 @@ Note that the above technique is only suitable when testing CLI apps, and only i
 </div>
 
 <div id="extras">
-</div>
-
 </div>

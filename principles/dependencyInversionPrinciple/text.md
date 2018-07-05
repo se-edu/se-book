@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Software Design Principles → Dependency Inversion Principle →</div>
+<span id="outcomes">{{glyphicon_flag}} Can explain dependency inversion principle (DIP)</span>
 
 <div id="title">
 
-#### Dependency Inversion Principle :one:
+#### Dependency Inversion Principle
 
 </div>
 
@@ -35,7 +33,5 @@ Design (b) is more flexible (and less coupled) because now the `Payroll` class n
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

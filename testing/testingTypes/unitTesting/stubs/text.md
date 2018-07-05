@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Stubs :two:
+#### Stubs
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Testing → Unit Testing → What →%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use stubs to isolate an SUT from its dependencies</span>
 
 <div id="body">
 
@@ -10,7 +14,7 @@
 
 <tip-box> 
 
-:package: If a `Logic` class depends on a `Storage` class, unit testing the `Logic` class requires isolating the `Logic` class from the `Storage` class.
+{{ icon_example }} If a `Logic` class depends on a `Storage` class, unit testing the `Logic` class requires isolating the `Logic` class from the `Storage` class.
 
 </tip-box>
 
@@ -25,7 +29,7 @@
 
 <tip-box> 
 
-:package: Consider the code below:
+{{ icon_example }} Consider the code below:
 ```java
 class Logic {
     Storage s;
@@ -106,6 +110,4 @@ In addition to Stubs, there are other type of replacements you can use during te
 <div id="extras">
   <include src="resources.md" />
   <include src="exercises.md" />
-</div>
-
 </div>

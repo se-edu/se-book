@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">IDEs → Introduction →</div>
+<span id="outcomes">{{glyphicon_flag}} Can explain IDEs</span>
 
 <div id="title">
 
-#### What :one: [{{glyphicon_new_window}}]({{baseUrl}}/ides/introduction/what/index.html)
+#### What
 
 </div>
 
@@ -36,7 +34,5 @@ Some experienced developers, in particular those with a UNIX background, prefer 
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

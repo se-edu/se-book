@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"><dynamic-panel src="../../revisionControl/savingHistory/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Saving History%%" /></span>
 
-<div class="website-content">
-
-<div id="path">Git and Github → </div>
+<span id="outcomes">{{glyphicon_flag}} Can tag commits using Git</span>
 
 <div id="title">
 
-#### Tag :three:
+#### Tag
 
 </div>
 
@@ -26,6 +24,4 @@ Let's tag a commit in a local repo you have (e.g. the `sampelrepo-things` repo)
 </div>
 
 <div id="extras">
-</div>
-
 </div>

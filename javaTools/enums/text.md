@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Enums :two:
+#### Enums
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use Java enumerations</span>
 
 <div id="body">
 
@@ -15,6 +15,4 @@ Note that while enumerations are usually a simple set of fixed values, Java enum
 </div>
 
 <div id="extras">
-</div>
-
 </div>

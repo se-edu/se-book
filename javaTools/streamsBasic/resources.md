@@ -9,7 +9,7 @@
 * **Tutorials from Oracle**: [[Lambdas](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)][[Streams](http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)]
 
   <hr></tab>
-  <tab header=":tv:">
+  <tab header="{{ icon_video }}">
 
 A video tutorial by well-known Java coach Venkat Subramaniam
 

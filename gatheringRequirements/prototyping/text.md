@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Prototyping :one:
+#### Prototyping
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain prototyping</span>
 
 <div id="body">
 
@@ -20,19 +20,19 @@
 
 <tip-box> 
 
-<panel header=":package: Simple text UI prototype for a primitive CLI (Command Line Interface) Minesweeper:" type="seamless" expanded>
+<panel header="{{ icon_example }} Simple text UI prototype for a primitive CLI (Command Line Interface) Minesweeper:" type="seamless" expanded>
 
 <img src="{{baseUrl}}/gatheringRequirements/prototyping/images/textPrototypeCLI.png" height="320" /><p/>
 
 </panel>
 
-<panel header=":package: A simple GUI prototype for the same Minesweeper, created using Powerpoint:" type="seamless">
+<panel header="{{ icon_example }} A simple GUI prototype for the same Minesweeper, created using Powerpoint:" type="seamless">
 
 <img src="{{baseUrl}}/gatheringRequirements/prototyping/images/guiPrototypeMinesweeper.jpg" height="220" /><p/>
 
 </panel>
 
-<panel header=":package: A prototype for a mobile app, created using the UI prototyping tool Balsmiq:" type="seamless">
+<panel header="{{ icon_example }} A prototype for a mobile app, created using the UI prototyping tool Balsmiq:" type="seamless">
 
 <img src="{{baseUrl}}/gatheringRequirements/prototyping/images/balsamiqPrototypeGUI.jpg" height="450" />
 
@@ -48,6 +48,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

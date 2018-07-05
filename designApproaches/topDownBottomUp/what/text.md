@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Top-Down and Bottom-Up Design :four:
+#### Top-Down and Bottom-Up Design
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain top-down and bottom-up design</span>
 
 <div id="body">
 
@@ -20,7 +20,5 @@
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Modeling → </div>
+<span id="outcomes">{{glyphicon_flag}} Can combine some principles concepts</span>
 
 <div id="title">
 
-#### Review :one:
+#### Review
 
 </div>
 
@@ -19,7 +17,5 @@
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

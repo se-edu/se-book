@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Introduction :one:
+#### Introduction
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the importance of readability</span>
 
 <div id="body">
 
@@ -16,7 +16,7 @@
 
 <tip-box>
 
-:package: The two code samples given below achieve the same functionality, but one is easier to read.
+{{ icon_example }} The two code samples given below achieve the same functionality, but one is easier to read.
 
 <tabs> 
   <tab header="Java">
@@ -34,12 +34,8 @@
 </tip-box>
 
 
-[Bad]: {{baseUrl}}/images/Bad.png "Bad"
-[Good]: {{baseUrl}}/images/Good.png "Good"
 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

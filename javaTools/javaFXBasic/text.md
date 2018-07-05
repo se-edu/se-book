@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Java → </div>
+<span id="outcomes">{{glyphicon_flag}} Can use JavaFX to build a simple GUI</span>
 
 <div id="title">
 
-#### JavaFX: Basic :three:
+#### JavaFX: Basic
 
 </div>
 
@@ -31,6 +29,4 @@ After going through the two parts above, you should be familiar with building ba
 </div>
 
 <div id="extras">
-</div>
-
 </div>

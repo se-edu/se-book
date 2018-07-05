@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Testing → TDD →</div>
+<span id="outcomes">{{glyphicon_flag}} Can follow TDD</span>
 
 <div id="title">
 
-#### How :three:
+#### How
 
 </div>
 
@@ -26,6 +24,4 @@ Note that TDD does not imply writing all the test cases first before writing fun
 </div>
 
 <div id="extras">
-</div>
-
 </div>

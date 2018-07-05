@@ -1,18 +1,18 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain formal verification</span>
 
 <div id="body">
 
 **Formal verification uses mathematical techniques to prove the correctness of a program.**
 
-<panel type="seamless" header=":tv: An introduction to Formal Methods">
+<panel type="seamless" header="{{ icon_video }} An introduction to Formal Methods">
 
 @[youtube](89fKiaMxHrA)
 
@@ -34,7 +34,5 @@ Disadvantages:
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

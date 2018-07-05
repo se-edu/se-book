@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Interfaces :two:
+#### Interfaces
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret interfaces in class diagrams</span>
 
 <div id="body">
 
@@ -10,7 +14,7 @@
 
 <tip-box>
 
-:package: The `AcademicStaff` and the `AdminStaff` classes _implement_ the `SalariedStaff` interface.
+{{ icon_example }} The `AcademicStaff` and the `AdminStaff` classes _implement_ the `SalariedStaff` interface.
 
 <img src="{{baseUrl}}/uml/classDiagrams/interfaces/what/images/staff.png" height="250" />
 <p/>
@@ -20,6 +24,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Basic :one:
+#### Basic
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can follow simple mechanical style rules</span>
 
 <div id="body">
 
@@ -17,6 +17,4 @@ Some coding standards you can adopt:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

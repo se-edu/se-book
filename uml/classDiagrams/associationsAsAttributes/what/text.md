@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Associations as Attributes :three:
+#### Associations as Attributes
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can show an association as an attribute</span>
 
 <div id="body">
 
@@ -14,7 +18,7 @@ Association multiplicities and the default value too can be shown as part of the
 
 <tip-box>
 
-:package: The diagram below depicts a multi-player _Square Game_ being played on a board comprising of 100 squares. Each of the squares may be occupied with any number of pieces, each belonging to a certain player. 
+{{ icon_example }} The diagram below depicts a multi-player _Square Game_ being played on a board comprising of 100 squares. Each of the squares may be occupied with any number of pieces, each belonging to a certain player. 
 
 A `Piece` may or may not be on a `Square`.  Note how that association can be replaced by an `isOn` attribute of the `Piece` class. The `isOn` attribute can either be `null` or hold a reference to a `Square` object, matching the `0..1` multiplicity of the association it replaces. The default value is `null`.
 
@@ -31,6 +35,4 @@ The association that a `Board` has 100 `Sqaure`s can be shown in either of these
 </div>
 
 <div id="extras">
-</div>
-
 </div>

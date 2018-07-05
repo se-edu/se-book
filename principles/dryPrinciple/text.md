@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### DRY Principle :three:
+#### DRY Principle
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain DRY principle</span>
 
 <div id="body">
 
@@ -20,15 +20,13 @@ This principle guards against duplication of information.
 
 <tip-box> 
 
-:package: The functionality implemented twice is a violation of the DRY principle even if the two implementations are different.
+{{ icon_example }} The functionality implemented twice is a violation of the DRY principle even if the two implementations are different.
 
-:package: The value a system-wide timeout being defined in multiple places is a violation of DRY.
+{{ icon_example }} The value a system-wide timeout being defined in multiple places is a violation of DRY.
 
 </tip-box> 
 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

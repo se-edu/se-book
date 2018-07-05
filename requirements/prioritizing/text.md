@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Prioritizing Requirements :one:
+#### Prioritizing Requirements
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain prioritizing requirements</span>
 
 <div id="body">
 
@@ -16,13 +16,13 @@ A common approach is to group requirements into priority categories. Note that a
 
 <tip-box> 
 
-:package: An example scheme for categorizing requirements:
+{{ icon_example }} An example scheme for categorizing requirements:
 
 * `Essential`:  The product must have this requirement fulfilled or else it does not get user acceptance
 * `Typical`:  Most similar systems have this feature although the product can survive without it.
 * `Novel`: New features that could differentiate this product from the rest.
 
-:package: Other schemes:
+{{ icon_example }} Other schemes:
 
 * `High`, `Medium`, `Low`
 * `Must-have`, `Nice-to-have`, `Unlikely-to-have`
@@ -34,7 +34,7 @@ A common approach is to group requirements into priority categories. Note that a
 
 <tip-box> 
 
-:package: The requirement given below is for a Calendar application. Stakeholder of the software (e.g. product designers) might decide the following requirement is not in the scope of the software.
+{{ icon_example }} The requirement given below is for a Calendar application. Stakeholder of the software (e.g. product designers) might decide the following requirement is not in the scope of the software.
 
 >The software records the actual time taken by each task and show the difference between the _actual_ and _scheduled_ time for the task.
 
@@ -43,6 +43,4 @@ A common approach is to group requirements into priority categories. Note that a
 </div>
 
 <div id="extras">
-</div>
-
 </div>

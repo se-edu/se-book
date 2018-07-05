@@ -1,8 +1,10 @@
-<div id="path">Testing → Testing Types →</div>
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain regression testing</span>
 
 <div id="title">
 
-#### What :one: [{{glyphicon_new_window}}]({{baseUrl}}/testing/testingTypes/regressionTesting/what/index.html)
+#### What
 
 </div>
 
@@ -18,6 +20,4 @@ Regression testing is more effective when it is done frequently, after each smal
 
 <div id="extras">
  <include src="exercises.md" />
-</div>
-
 </div>

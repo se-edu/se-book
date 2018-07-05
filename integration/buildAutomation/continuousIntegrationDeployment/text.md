@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Continuous Integration and Continuous Deployment :two:
+#### Continuous Integration and Continuous Deployment
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain continuous integration and continuous deployment</span>
 
 <div id="body">
 
@@ -16,7 +16,7 @@
 
 <tip-box> 
 
-:package: Some examples of CI/CD tools:
+{{ icon_example }} Some examples of CI/CD tools:
 
 * [Travis](https://travis-ci.org/)
 * [Jenkins](http://jenkins-ci.org)
@@ -29,6 +29,4 @@
 
 <div id="extras">
   <include src="resources.md" />
-</div>
-
 </div>

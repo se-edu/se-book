@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Centralized Flow :two:
+#### Centralized Flow
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../featureBranchFlow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Revision Control → Feature Branch Workflow%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain centralized flow</span>
 
 <div id="body">
 
@@ -16,6 +16,4 @@
 
 <div id="extras">
   <include src="resources.md" />
-</div>
-
 </div>

@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Class-Level Members :two:
+#### Class-Level Members
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret class-level members in class diagrams</span>
 
 <div id="body">
 
@@ -10,7 +14,7 @@ In UML class diagrams, **underlines denote class-level attributes and variables.
 
 <tip-box>
 
-:package: In the class below, `totalStudents` attribute and the `getTotalStudents` method are class-level.
+{{ icon_example }} In the class below, `totalStudents` attribute and the `getTotalStudents` method are class-level.
 
 <img src="{{baseUrl}}/uml/classDiagrams/classLevelMembers/what/images/student.png" height="120" />
 <p/>
@@ -20,6 +24,4 @@ In UML class diagrams, **underlines denote class-level attributes and variables.
 </div>
 
 <div id="extras">
-</div>
-
 </div>

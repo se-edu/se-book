@@ -1,19 +1,20 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Intermediate :three:
+#### Intermediate
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../../modeling/modelingBehaviors/sequenceDiagramsIntermediate/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Behaviors → Sequence Diagrams → Intermediate%%" />
+<dynamic-panel src="../../../modeling/modelingStructures/classDiagramsIntermediate/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Structures → Class Diagrams → Intermediate%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use intermediate class diagram and sequence diagram concepts to model an OO design</span>
 
 <div id="body">
 
 Continuing with the example in [<trigger trigger="click" for="modal:conceptualingIntermediate-basic">Design → Modeling → Modeling a Solution → Basic</trigger>], next let us model how the TextUi interacts with the Logic to support the mark or clear operations until the game is won or lost.
 
 <modal large title="" id="modal:conceptualingIntermediate-basic">
-  <include src="../basic/full.md"/>
+  <include src="../basic/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
 <tip-box>
@@ -144,6 +145,4 @@ Updated class diagram:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

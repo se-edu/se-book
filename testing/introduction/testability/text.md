@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Testability :three:
+#### Testability
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain testability</span>
 
 <div id="body">
 
@@ -15,6 +15,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

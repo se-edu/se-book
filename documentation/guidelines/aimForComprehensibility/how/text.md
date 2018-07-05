@@ -1,8 +1,12 @@
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can write reasonably comprehensible developer documents</span>
 
 <div id="body">
 
@@ -19,7 +23,5 @@ Here are some tips on writing effective documentation.
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

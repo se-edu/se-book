@@ -1,24 +1,24 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Aggregation :three:
+#### Aggregation
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of aggregations</span>
 
 <div id="body">
 
 **_Aggregation_ represents a _container-contained_ relationship.** It is a weaker relationship than composition.
 
-<panel src="../../../uml/classDiagrams/aggregation/what/full.md#title-and-body" header=":mortar_board: Tools → UML → Class Diagrams → Aggregation" expanded/>
+<panel src="../../../uml/classDiagrams/aggregation/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} Tools → UML → Class Diagrams → Aggregation" expanded/>
 
 <p/>
 
 <tip-box> 
 
-:package: `Club` acts as a _container_ for `Person` objects. `Person` objects can survive without a `Club` object.
+{{ icon_example }} `Club` acts as a _container_ for `Person` objects. `Person` objects can survive without a `Club` object.
 
 <img src="{{baseUrl}}/oopDesign/associations/aggregation/images/clubPerson.png" height="80" />
 <p/>
@@ -40,7 +40,5 @@ The distinction between composition (&#9670;) and aggregation (&#9671;) is rathe
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

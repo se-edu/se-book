@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain Software Architecture</span>
 
 <div id="body">
 
@@ -17,7 +17,7 @@
 
 <tip-box>
 
-:package: A possible architecture for a _Minesweeper_ game
+{{ icon_example }} A possible architecture for a _Minesweeper_ game
 
 <table>
 <tr>
@@ -48,7 +48,5 @@ The logical view (satisfying the functional requirements) vs. the process view (
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

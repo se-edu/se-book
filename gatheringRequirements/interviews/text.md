@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Interviews :one:
+#### Interviews
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain interviews</span>
 
 <div id="body">
 
@@ -21,6 +21,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">IDEs → Debugging →</div>
+<span id="outcomes">{{glyphicon_flag}} Can explain debugging</span>
 
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
 
@@ -28,6 +26,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -8,31 +8,33 @@
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\site-nav.css">
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-<div class="website-content">
-  <tip-box>
     <div>
-      <p>🏆 Can follow intermediate guidelines for avoiding unsafe shortcuts <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
-    </div>
-  </tip-box>
-  <div>
-    <div></div>
-    <p></p>
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+  <div class="website-content" id="all">
     <p><span class="dimmed"><strong><span>Implementation → Code Quality → Error-Prone Practices →
 </span></strong>
       </span>
     </p>
-    <div>
-      <h4 id="intermediate-two">Intermediate <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+    <div id="title">
+      <div>
+        <h3 id="intermediate">Intermediate</h3>
+      </div>
     </div>
     <div id="main">
       <div>
-        <panel header="**Minimise Scope of Variables**" type="seamless" expanded="">
-          <div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="minimise-scope-of-variables">Minimise Scope of Variables</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can improve code quality using technique: minimise scope of variables </span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
             <div>
               <p><strong>Minimize global variables</strong>. Global variables may be the most convenient way to pass information around, but they do create implicit links between code segments that use the global variable. Avoid them as much as possible.</p>
               <p><strong>Define variables in the least possible scope</strong>. For example, if the variable is used only within the <code>if</code> block of the conditional statement, it should be declared inside that <code>if</code> block.</p>
@@ -44,10 +46,17 @@
                 <li><a href="https://refactoring.com/catalog/reduceScopeOfVariable.html">Refactoring: Reduce Scope of Variable</a></li>
               </ul>
             </div>
-          </div>
-        </panel>
-        <panel header="**Minimise Code Duplication**" type="seamless" expanded="">
-          <div>
+            <div></div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="minimise-code-duplication">Minimise Code Duplication</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can improve code quality using technique: minimise code duplication </span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
             <div>
               <p><strong>Code duplication, especially when you copy-paste-modify code, often indicates a poor quality implementation.</strong> While it may not be possible to have zero duplication, always think twice before duplicating code; most often there
                 is a better alternative.</p>
@@ -56,7 +65,7 @@
                   <trigger>.</trigger>
                 </trigger>
               </p>
-              <modal title="**:mag: DRY Principle**" id="modal:duplication-dry">
+              <modal title="**<span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span> DRY Principle**" id="modal:duplication-dry">
                 <div>
                   <div></div>
                   <p></p>
@@ -64,32 +73,34 @@
 </span></strong>
                     </span>
                   </p>
-                  <div>
-                    <h4 id="dry-principle-three">DRY Principle <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
-                  </div>
-                  <div id="main">
+                  <div id="title-and-body">
                     <div>
-                      <tip-box type="definition">
-                        <div>
-                          <p><strong>DRY (Don't Repeat Yourself) Principle</strong>: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub><em>The Pragmatic Programmer</em>, by Andy Hunt and Dave Thomas</sub></p>
-                        </div>
-                      </tip-box>
-                      <p>This principle guards against duplication of information.</p>
-                      <tip-box>
-                        <p>📦 The functionality implemented twice is a violation of the DRY principle even if the two implementations are different.</p>
-                        <p>📦 The value a system-wide timeout being defined in multiple places is a violation of DRY.</p>
-                      </tip-box>
+                      <h4 id="dry-principle">DRY Principle</h4>
                     </div>
-                    <div></div>
+                    <div id="main">
+                      <div>
+                        <tip-box type="definition">
+                          <div>
+                            <p><strong>DRY (Don't Repeat Yourself) Principle</strong>: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub><em>The Pragmatic Programmer</em>, by Andy Hunt and Dave Thomas</sub></p>
+                          </div>
+                        </tip-box>
+                        <p>This principle guards against duplication of information.</p>
+                        <tip-box>
+                          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> The functionality implemented twice is a violation of the DRY principle even if the two implementations are different.</p>
+                          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> The value a system-wide timeout being defined in multiple places is a violation of DRY.</p>
+                        </tip-box>
+                      </div>
+                      <div></div>
+                    </div>
                   </div>
                 </div>
               </modal>
               <p></p>
             </div>
-          </div>
-        </panel>
+            <div></div>
+          </panel>
+        </div>
       </div>
-      <div></div>
     </div>
   </div>
 </div>
@@ -101,4 +112,5 @@
     const baseUrl = '/se-book'
 </script>
 <script src="..\..\..\markbind\js\setup.js"></script>
+<script src="..\..\..\markbind\js\site-nav.js"></script>
 </html>

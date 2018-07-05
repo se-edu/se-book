@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Alternate Paths :two:
+#### Alternate Paths
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret alternate paths in activity diagrams</span>
 
 <div id="body">
 
@@ -16,7 +20,7 @@ Both branch nodes and merge nodes are ==diamond shapes==. Guard conditions must 
 
 <tip-box>
 
-:package: The AD below shows alternate paths involved in the workflow of the activity _shop for product_:
+{{ icon_example }} The AD below shows alternate paths involved in the workflow of the activity _shop for product_:
 
 <img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/example.png" height="240" />
 <p/>
@@ -27,6 +31,4 @@ Both branch nodes and merge nodes are ==diamond shapes==. Guard conditions must 
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

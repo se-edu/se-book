@@ -8,40 +8,42 @@
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\site-nav.css">
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-<div class="website-content">
-  <tip-box>
     <div>
-      <p>🏆 Can use defensive coding to enforce compulsory associations <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
-    </div>
-  </tip-box>
-  <div>
-    <div>
-      <p>
-        <panel src="/se-book\errorHandling\defensiveProgramming\what\full._include_.html" header="%%:mortar_board: Implementation → Error Handling → Defensive Programming → What%%" isOpen="false" no-close="true" no-switch="true"></panel>
-      </p>
-    </div>
-    <p></p>
-    <p><span class="dimmed"><strong><span>Implementation → Error Handling → Defensive Programming →
-</span></strong>
-      </span>
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+  <div class="website-content">
+    <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can use defensive coding to enforce compulsory associations</span></span></span></button>
+      <p></p>
     </p>
     <div>
-      <h4 id="enforcing-compulsory-associations-two">Enforcing Compulsory Associations <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-    </div>
-    <div id="main">
       <div>
-        <p>Consider two classes, <code>Account</code> and <code>Guarantor</code>, with an association as shown in the following diagram:</p>
-        <tip-box>
-          <p>Example:</p>
-          <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50">
-          <p></p>
-          <p>Here, the association is compulsory i.e. an <code>Account</code> object should always be linked to a <code>Guarantor</code>. One way to implement this is to simply use a reference variable, like this:</p>
-          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+        <p>
+          <panel src="/se-book\errorHandling\defensiveProgramming\what\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Implementation → Error Handling → Defensive Programming → What%%"
+            isOpen="false" no-close="true" no-switch="true"></panel>
+        </p>
+      </div>
+      <p></p>
+      <p><span class="dimmed"><strong><span>Implementation → Error Handling → Defensive Programming →
+</span></strong>
+        </span>
+      </p>
+      <div id="title-and-body">
+        <div>
+          <h4 id="enforcing-compulsory-associations">Enforcing Compulsory Associations</h4>
+        </div>
+        <div id="main">
+          <div>
+            <p>Consider two classes, <code>Account</code> and <code>Guarantor</code>, with an association as shown in the following diagram:</p>
+            <tip-box>
+              <p>Example:</p>
+              <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50">
+              <p></p>
+              <p>Here, the association is compulsory i.e. an <code>Account</code> object should always be linked to a <code>Guarantor</code>. One way to implement this is to simply use a reference variable, like this:</p>
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
     Guarantor guarantor;
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span><span class="hljs-params">(Guarantor g)</span> </span>{
@@ -49,13 +51,13 @@
     }
 }
 </code></pre>
-          <p>However, what if someone else used the <code>Account</code> class like this?</p>
-          <pre><code class="hljs java">Account a = <span class="hljs-keyword">new</span> Account();
+              <p>However, what if someone else used the <code>Account</code> class like this?</p>
+              <pre><code class="hljs java">Account a = <span class="hljs-keyword">new</span> Account();
 a.setGuarantor(<span class="hljs-keyword">null</span>);
 </code></pre>
-          <p>This results in an <code>Account</code> without a <code>Guarantor</code>! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. We can make the code more defensive by
-            proactively enforcing the multiplicity constraint, like this:</p>
-          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+              <p>This results in an <code>Account</code> without a <code>Guarantor</code>! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. We can make the code more defensive
+                by proactively enforcing the multiplicity constraint, like this:</p>
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
     <span class="hljs-keyword">private</span> Guarantor guarantor;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span></span>{
@@ -73,23 +75,23 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     …
 }
 </code></pre>
-        </tip-box>
-      </div>
-      <div>
-        <div>
-          <panel header=":muscle: Exercises" expandable="">
+            </tip-box>
+          </div>
+          <div>
             <div>
-              <panel header=":lock::key: Write a `Manager#addAccount()`">
-                <question has-input="true">
-                  <p>For the <code>Manager</code> class shown below, write an <code>addAccount()</code> method that</p>
-                  <ul>
-                    <li>restricts the maximum number of Accounts to 8</li>
-                    <li>avoids adding duplicate Accounts</li>
-                  </ul>
-                  <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/managerAccount.jpg" height="55">
-                  <p></p>
-                  <div slot="answer">
-                    <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.*;
+              <panel header=":muscle: Exercises" expandable="">
+                <div>
+                  <panel header=":lock::key: Write a `Manager#addAccount()`">
+                    <question has-input="true">
+                      <p>For the <code>Manager</code> class shown below, write an <code>addAccount()</code> method that</p>
+                      <ul>
+                        <li>restricts the maximum number of Accounts to 8</li>
+                        <li>avoids adding duplicate Accounts</li>
+                      </ul>
+                      <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/managerAccount.jpg" height="55">
+                      <p></p>
+                      <div slot="answer">
+                        <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.*;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Manager</span> </span>{
     <span class="hljs-keyword">private</span> ArrayList&lt; Account &gt; theAccounts ;
@@ -109,18 +111,18 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     }
 }
 </code></pre>
-                  </div>
-                </question>
-              </panel>
-            </div>
-            <div>
-              <panel header=":lock::key: Implement `Marriage`">
-                <question has-input="true">
-                  <p>Implement the classes defensively with appropriate references and operations to establish the association among the classes. Follow the defensive coding approach. Let the <code>Marriage</code> class handle setting/removal of reference.</p>
-                  <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/manMarriageWoman.jpg" height="55">
-                  <p></p>
-                  <div slot="answer">
-                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Marriage</span> </span>{
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+                <div>
+                  <panel header=":lock::key: Implement `Marriage`">
+                    <question has-input="true">
+                      <p>Implement the classes defensively with appropriate references and operations to establish the association among the classes. Follow the defensive coding approach. Let the <code>Marriage</code> class handle setting/removal of reference.</p>
+                      <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/manMarriageWoman.jpg" height="55">
+                      <p></p>
+                      <div slot="answer">
+                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Marriage</span> </span>{
     <span class="hljs-keyword">private</span> Man husband = <span class="hljs-keyword">null</span>;
     <span class="hljs-keyword">private</span> Woman wife = <span class="hljs-keyword">null</span>;
 
@@ -167,18 +169,18 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     }
 } 
 </code></pre>
-                  </div>
-                </question>
-              </panel>
-            </div>
-            <div>
-              <panel header=":lock::key: Immutable `Account` class">
-                <question has-input="true">
-                  <p>Give a suitable defensive implementation to the <code>Account</code> class in the following class diagram. Note that “{immutable}” means once the association is formed, it cannot be changed.</p>
-                  <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png" height="80">
-                  <p></p>
-                  <div slot="answer">
-                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+                <div>
+                  <panel header=":lock::key: Immutable `Account` class">
+                    <question has-input="true">
+                      <p>Give a suitable defensive implementation to the <code>Account</code> class in the following class diagram. Note that “{immutable}” means once the association is formed, it cannot be changed.</p>
+                      <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png" height="80">
+                      <p></p>
+                      <div slot="answer">
+                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
     <span class="hljs-keyword">private</span> Guarantor myGuarantor; <span class="hljs-comment">// should not be public</span>
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span></span>{
@@ -190,16 +192,16 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     <span class="hljs-comment">// there should not be a setGuarantor method</span>
 }
 </code></pre>
-                  </div>
-                </question>
-              </panel>
-            </div>
-            <div>
-              <panel header=":lock::key: Is this defensive?">
-                <question>
-                  <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45">
-                  <p></p>
-                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">City</span></span>{
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+                <div>
+                  <panel header=":lock::key: Is this defensive?">
+                    <question>
+                      <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45">
+                      <p></p>
+                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">City</span></span>{
     Country country;
     
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setCountry</span><span class="hljs-params">(Country country)</span></span>{
@@ -207,19 +209,21 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     }
 }
 </code></pre>
-                  <p>This is a defensive implementation of the association.</p>
-                  <ul radio-group="ac03f" class="radio-list">
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="ac03f" type="radio"> True</label></li>
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="ac03f" type="radio"> False</label></li>
-                  </ul>
-                  <div slot="answer">
-                    <p>False</p>
-                    <p>Explanation: While the design requires a City to be connected to exactly one Country, the code allows it to be connected to zero Country objects (by passing null to the setCountry() method).</p>
-                  </div>
-                </question>
+                      <p>This is a defensive implementation of the association.</p>
+                      <ul radio-group="ac03f" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="ac03f" type="radio"> True</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="ac03f" type="radio"> False</label></li>
+                      </ul>
+                      <div slot="answer">
+                        <p>False</p>
+                        <p>Explanation: While the design requires a City to be connected to exactly one Country, the code allows it to be connected to zero Country objects (by passing null to the setCountry() method).</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
               </panel>
             </div>
-          </panel>
+          </div>
         </div>
       </div>
     </div>
@@ -233,4 +237,5 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     const baseUrl = '/se-book'
 </script>
 <script src="..\..\..\markbind\js\setup.js"></script>
+<script src="..\..\..\markbind\js\site-nav.js"></script>
 </html>

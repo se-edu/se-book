@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Intellij IDEA → </div>
+<span id="outcomes">{{glyphicon_flag}} Can use some useful IDE productivity shortcuts</span>
 
 <div id="title">
 
-#### Productivity Shortcuts :three:
+#### Productivity Shortcuts
 
 </div>
 
@@ -24,6 +22,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

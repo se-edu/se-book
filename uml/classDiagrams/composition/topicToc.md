@@ -1,6 +1,6 @@
-* __ [Composition](./uml/classDiagrams/composition) :one: <trigger for="pop:classDiagrams-composition-preview">:mag:</trigger>
+* __ [Composition]({{baseUrl}}/uml/classDiagrams/composition) <trigger for="pop:classDiagrams-composition-preview">{{glyphicon_eye_open}}</trigger>
 
-<popover id="pop:classDiagrams-composition-preview" title=":mag: Composition" placement="right">
+<popover id="pop:classDiagrams-composition-preview" title="{{glyphicon_eye_open}} Composition" placement="right">
   <div slot="content">
     <include src=".\preview.md" />
   </div>

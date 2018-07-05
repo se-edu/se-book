@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Other Design Patterns :three:
+#### Other Design Patterns
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can recognize some of the GoF design patterns</span>
 
 <div id="body">
 
@@ -22,6 +22,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

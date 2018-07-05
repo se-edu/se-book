@@ -1,6 +1,6 @@
 <tip-box>
 
-:package: In the example below, `Student` class overrides the `print_info` method of its parent class `Person`:
+{{ icon_example }} In the example below, `Student` class overrides the `print_info` method of its parent class `Person`:
 
 <table> 
 <tr>

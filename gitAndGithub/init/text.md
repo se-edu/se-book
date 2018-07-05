@@ -1,18 +1,16 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"><dynamic-panel src="../../revisionControl/repositories/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Repositories%%" /></span>
 
-<div class="website-content">
-
-<div id="path">Git and Github → </div>
+<span id="outcomes">{{glyphicon_flag}} Can create a local Git repo</span>
 
 <div id="title">
 
-#### Init :one: [{{glyphicon_new_window}}]({{baseUrl}}/gitAndGithub/init/index.html)
+#### Init
 
 </div>
 
 <div id="body">
 
-<panel header="%%:paperclip: Git Overview :three:%%"> 
+<panel header="%%:paperclip: Git Overview%%"> 
 
 Soon you are going to take your first step in using Git. If you would like to see a quick overview of the full Git landscape before jumping in, watch the video below.
  
@@ -36,6 +34,4 @@ Suppose you want to create a repository in an empty directory `things`
 </div>
 
 <div id="extras">
-</div>
-
 </div>

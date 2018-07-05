@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Merge Conflicts :three:
+#### Merge Conflicts
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Branching%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use Git to resolve merge conflicts</span>
 
 <div id="body">
 
@@ -71,6 +71,4 @@ white
 </div>
 
 <div id="extras">
-</div>
-
 </div>

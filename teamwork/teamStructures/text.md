@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Team Structures :three:
+#### Team Structures
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain common team structures</span>
 
 <div id="body">
 
@@ -38,7 +38,5 @@ In a large, resource-intensive, complex project, this could be a good team struc
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Implementation :two:
+#### Implementation
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can apply the Singleton design pattern</span>
 
 <div id="body">
 
@@ -50,6 +50,4 @@ Logic m = Logic.getInstance();
 </div>
 
 <div id="extras">
-</div>
-
 </div>

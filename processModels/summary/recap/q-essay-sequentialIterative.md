@@ -1,4 +1,4 @@
-<panel header=":lock::key: Sequential vs iterative approach :two:">
+<panel header=":lock::key: Sequential vs iterative approach">
 <question has-input="true">
 
 Discuss how sequential approach and the iterative approach can affect the following aspects of a project.

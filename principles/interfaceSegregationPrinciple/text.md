@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Interface Segregation Principle :four:
+#### Interface Segregation Principle
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain interface segregation principle</span>
 
 <div id="body">
 
@@ -18,7 +18,7 @@
 
 <tip-box>
 
-:package: The `Payroll` class should not depend on the `AdminStaff` class because it does not use the `arrangeMeeting()` method. Instead, it should depend on the `SalariedStaff` interface.
+{{ icon_example }} The `Payroll` class should not depend on the `AdminStaff` class because it does not use the `arrangeMeeting()` method. Instead, it should depend on the `SalariedStaff` interface.
 
 ```java
 public class Payroll {
@@ -47,6 +47,4 @@ public class Payroll {
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,1 +1,0 @@
-<dynamic-panel src="../../modeling/modelingStructures/classDiagramsBasic/full.md" header="%%:mortar_board: Design → Modelling Structure → Class Diagrams%%" />

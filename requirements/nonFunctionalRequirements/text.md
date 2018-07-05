@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Non-Functional Requirements :one:
+#### Non-Functional Requirements
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain non-functional requirements</span>
 
 <div id="body">
 
@@ -17,13 +17,13 @@ There are two kinds of requirements:
 
 <tip-box> 
 
-:package: Some examples of non-functional requirement categories:
+{{ icon_example }} Some examples of non-functional requirement categories:
 
 * Data requirements e.g. size, <tooltip content="how often do data change">volatility</tooltip>, <tooltip content="saving data permanenetly">persistency</tooltip> etc.,
 * Environment requirements e.g. technical environment in which system would operate or need to be compatible with.
 * Accessibility, Capacity, Compliance with regulations, Documentation, Disaster recovery, Efficiency, Extensibility, Fault tolerance, Interoperability, Maintainability, Privacy, Portability, Quality, Reliability, Response time, Robustness, Scalability, Security, Stability, Testability, and more ...
 
-<panel type="seamless" header=":package: Some concrete examples of NFRs" expanded>
+<panel type="seamless" header="{{ icon_example }} Some concrete examples of NFRs" expanded>
 
 * Business/domain rules:   e.g. the size of the minefield cannot be smaller than five.
 * Constraints: e.g.  the system should be backward compatible with data produced by earlier versions of the system; system testers are available only during the last month of the project; the total project cost should not exceed $1.5 million.
@@ -44,6 +44,4 @@ We should spend extra effort in digging NFRs out as early as possible because **
 
 <div id="extras">
 <include src="exercises.md" />
-</div>
-
 </div>

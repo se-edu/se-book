@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Specifying Requirements → User Stories →</div>
+<span id="outcomes">{{glyphicon_flag}} Can write simple user stories</span>
 
 <div id="title">
 
-#### Introduction :one:
+#### Introduction
 
 </div>
 
@@ -24,7 +22,7 @@
 
 <tip-box>
 
-:package: Examples (from a _Learning Management System_):
+{{ icon_example }} Examples (from a _Learning Management System_):
 
 1. As a student, I can download files uploaded by lecturers, so that I can get my own copy of the files
 2. As a lecturer, I can create discussion forums, so that students can discuss things online
@@ -66,7 +64,5 @@
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

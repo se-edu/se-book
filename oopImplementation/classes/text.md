@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Implementing Classes :one:
+#### Implementing Classes
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../oopDesign/classes/basic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Classes → Basic%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can implement classes</span>
 
 <div id="body">
 
@@ -28,6 +28,4 @@ Given below are some resources on how to implement classes:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

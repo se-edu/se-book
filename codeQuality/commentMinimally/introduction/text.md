@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Introduction :one:
+#### Introduction
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for commenting minimally but sufficiently</span>
 
 <div id="body">
 
@@ -17,6 +17,4 @@ Some think commenting heavily increases the 'code quality'. This is not so. Avoi
 </div>
 
 <div id="extras">
-</div>
-
 </div>

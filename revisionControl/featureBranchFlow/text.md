@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Feature Branch Flow :three:
+#### Feature Branch Flow
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../forkingWorkflow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Revision Control → Forking Workflow%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain feature branch flow</span>
 
 <div id="body">
 
@@ -19,6 +19,4 @@
 
 <div id="extras">
   <include src="resources.md" />
-</div>
-
 </div>

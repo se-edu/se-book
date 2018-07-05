@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Intellij IDEA → </div>
+<span id="outcomes">{{glyphicon_flag}} Can setup a project in an IDE</span>
 
 <div id="title">
 
-#### Project Setup :one: [{{glyphicon_new_window}}]({{baseUrl}}/intellij/projectSetup/index.html)
+#### Project Setup
 
 </div>
 
@@ -20,7 +18,7 @@
 * [[Intellij Official Tutorial] **Creating, Running and Packaging Your First Java Application**](https://www.jetbrains.com/help/idea/creating-running-and-packaging-your-first-java-application.html)
 
   <hr></tab>
-  <tab header=":tv:">
+  <tab header="{{ icon_video }}">
 
 @[youtube](c0efB_CKOYo)
 
@@ -38,6 +36,4 @@ A little bit more detailed explanation %%(from CodeLaunch)%% with some additiona
 </div>
 
 <div id="extras">
-</div>
-
 </div>

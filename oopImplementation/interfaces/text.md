@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Implementing Interfaces :one:
+#### Implementing Interfaces
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/interfaces/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Inheritance → Interfaces%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can implement interfaces</span>
 
 <div id="body">
 
@@ -15,7 +15,7 @@
 
 <tip-box>
 
-:package: The design below is allowed by Java.
+{{ icon_example }} The design below is allowed by Java.
 
 <img src="{{baseUrl}}/oopDesign/inheritance/interfaces/images/studentStaff.png" height="250" />
 <p/>
@@ -31,7 +31,7 @@
 
 <tip-box> 
 
-:package: The code for the example design given in the previous example:
+{{ icon_example }} The code for the example design given in the previous example:
 
 ```java
 interface TaxPayer {
@@ -80,6 +80,4 @@ class TA implements Student, Staff{
 
 <div id="extras">
 <include src="resources.md" />
-</div>
-
 </div>

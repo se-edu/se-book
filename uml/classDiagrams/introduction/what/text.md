@@ -1,8 +1,12 @@
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain/identify class diagrams</span>
 
 <div id="body">
 
@@ -10,7 +14,7 @@
 
 <tip-box> 
 
-:package: An example class diagram:
+{{ icon_example }} An example class diagram:
 
 <img src="{{baseUrl}}/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600" />
 
@@ -19,6 +23,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

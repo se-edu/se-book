@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Other Types of Patterns :three:
+#### Other Types of Patterns
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain how patterns exist beyond software design domain</span>
 
 <div id="body">
 
@@ -30,7 +30,5 @@ New patterns can be created too. If a common problem needs to be solved frequent
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

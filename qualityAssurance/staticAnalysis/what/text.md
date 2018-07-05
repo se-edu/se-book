@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain static analysis</span>
 
 <div id="body">
 
@@ -22,7 +22,7 @@ Higher-end static analyzer tools can perform for more complex analysis such as l
 
 <tip-box> 
 
-:package: Some example static analyzer for Java:
+{{ icon_example }} Some example static analyzer for Java:
 * [CheckStyle](http://checkstyle.sourceforge.net/)
 * [PMD](http://findbugs.sourceforge.net/)
 * [FindBugs](https://pmd.github.io/)
@@ -34,6 +34,4 @@ _Linters_ are a subset of static analyzers that specifically aim to locate areas
 </div>
 
 <div id="extras">
-</div>
-
 </div>

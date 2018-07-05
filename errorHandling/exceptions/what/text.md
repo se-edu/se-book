@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain exceptions</span>
 
 <div id="body">
 
@@ -20,7 +20,7 @@
 
 <tip-box>
 
-:package: Examples:
+{{ icon_example }} Examples:
 
 * A network connection encounters a timeout due to a slow server.
 * The code tries to read a file from the hard disk but the file is corrupted and cannot be read.
@@ -31,6 +31,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -10,10 +10,10 @@ title: "Requirements [Printable]"
 
 # Requirements
 
-<include src="introduction/print.md" />
-<include src="nonFunctionalRequirements/print.md" />
-<include src="prioritizing/print.md" />
-<include src="quality/print.md" />
+<include src="introduction/unit-inParent-asFlat-print.md" boilerplate />
+<include src="nonFunctionalRequirements/unit-inParent-asFlat-print.md" boilerplate />
+<include src="prioritizing/unit-inParent-asFlat-print.md" boilerplate />
+<include src="quality/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

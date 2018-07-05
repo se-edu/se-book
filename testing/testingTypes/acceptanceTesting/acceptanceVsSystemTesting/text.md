@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Acceptance vs System Testing :two:
+#### Acceptance vs System Testing
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the differences between system testing and acceptance testing</span>
 
 <div id="body">
 
@@ -45,7 +49,5 @@ However, **in many cases one document serves as both a requirement specification
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

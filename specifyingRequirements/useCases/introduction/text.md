@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Introduction :one:
+#### Introduction
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain use cases</span>
 
 <div id="body">
 
@@ -18,7 +18,7 @@
 
 <tip-box> 
 
-<panel header=":package: Example 1: ‘check account balance’ use case for an ATM" type="seamless" expanded>
+<panel header="{{ icon_example }} Example 1: ‘check account balance’ use case for an ATM" type="seamless" expanded>
 
 * System: <popover effect="fade" placement="right" content="Automated Teller Machine">
 ATM </popover>
@@ -34,7 +34,7 @@ ATM </popover>
 
 </panel>
 
-<panel header="%%:package: Example 2: 'upload file' use case of an LMS%%" type="seamless">
+<panel header="%%{{ icon_example }} Example 2: 'upload file' use case of an LMS%%" type="seamless">
 
 * System: A Learning Management System (LMS)
 * Actor: Student
@@ -68,6 +68,4 @@ ATM </popover>
 </div>
 
 <div id="extras">
-</div>
-
 </div>

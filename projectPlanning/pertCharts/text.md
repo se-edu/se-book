@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### PERT Charts :four:
+#### PERT Charts
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain PERT charts</span>
 
 <div id="body">
 
@@ -17,7 +17,7 @@
 
 <tip-box>
 
-:package: an example PERT chart for a simple software project
+{{ icon_example }} an example PERT chart for a simple software project
 
 <img src="{{baseUrl}}/projectPlanning/pertCharts/images/pert.jpg" height="320" /><br>
 `md` = man days
@@ -40,6 +40,4 @@ A PERT chart can help determine the following important information:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

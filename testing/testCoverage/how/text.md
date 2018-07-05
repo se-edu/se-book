@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### How :three:
+#### How
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain how test coverage works</span>
 
 <div id="body">
 
@@ -18,7 +18,7 @@
 
 <div v-closeable alt="Test Coverage in Intellij"> 
 
-:tv: Measuring code coverage in Intellij IDEA
+{{ icon_video }} Measuring code coverage in Intellij IDEA
 
 @[youtube](yNYzZvyA2ik)
 
@@ -27,6 +27,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

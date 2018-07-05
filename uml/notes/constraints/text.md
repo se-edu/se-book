@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Constraints :three:
+#### Constraints
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../notes/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} UML → Notes%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can specify constraints in UML diagrams</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Example:
+{{ icon_example }} Example:
 
 <img src="{{baseUrl}}/uml/notes/constraints/images/playerTurn.png" height="120" />
 <p/>
@@ -25,6 +25,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

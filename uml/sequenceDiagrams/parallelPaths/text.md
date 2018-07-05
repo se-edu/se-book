@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">UML → Sequence Diagrams →</div>
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with parallel paths</span>
 
 <div id="title">
 
-#### Parallel Paths :three:
+#### Parallel Paths
 
 </div>
 
@@ -21,7 +19,7 @@ Notation:
 
 <tip-box>
 
-:package: `Logic` is calling methods `CloudServer#poll()` and `LocalServer#poll()` in parallel.
+{{ icon_example }} `Logic` is calling methods `CloudServer#poll()` and `LocalServer#poll()` in parallel.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/parallelPaths/images/logicServerData.png" height="150" />
 <p/>
@@ -37,6 +35,4 @@ Notation:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

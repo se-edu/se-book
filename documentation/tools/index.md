@@ -2,20 +2,4 @@
 title: "Documentation: Tools"
 </frontmatter>
 
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
-%%**Documentation →**%%
-
-## Tools
-
-<div id="main">
-
-<include src="./javaDoc/topicPanel.md" />
-<include src="./markdown/topicPanel.md" />
-<include src="./asciiDoc/topicPanel.md" />
-
-</div>
-
-</div>
+<include src="container-inPage-asFlat.md" boilerplate />

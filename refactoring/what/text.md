@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Refactoring → </div>
+<span id="outcomes">{{glyphicon_flag}} Can explain refactoring</span>
 
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
 
@@ -39,7 +37,7 @@ Situation:  The same fragment of code is in all branches of a conditional expres
 
 Method: Move it outside of the expression.
 
-:package: Example:
+{{ icon_example }} Example:
 
 <tabs> 
   <tab header="Java">
@@ -64,7 +62,7 @@ Situation:  You have a code fragment that can be grouped together.
 
 Method: Turn the fragment into a method whose name explains the purpose of the method.
 
-:package: Example:
+{{ icon_example }} Example:
 
 <tabs> 
   <tab header="Java">
@@ -100,7 +98,5 @@ Important: Refactoring, even if done with the aid of an IDE, may still result in
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Object Oriented Domain Models :three:
+#### Object Oriented Domain Models
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain object oriented domain models</span>
 
 <div id="body">
 
@@ -16,7 +16,7 @@ Class diagrams can also be used to model objects in the <tooltip content="the re
 
 <tip-box>
 
-:package: OO domain model of a snakes and ladders game is given below.
+{{ icon_example }} OO domain model of a snakes and ladders game is given below.
 
 Description: Snakes and ladders game is played by two or more players using a board and a die. The board has 100 squares marked 1 to 100. Each player owns one piece. Players take turns to throw the die and advance their piece by the number of squares they earned from the die throw. The board has a number of snakes. If a player’s piece lands on a square with a snake head, the piece is automatically moved to the square containing the snake’s tail. Similarly, a piece can automatically move from a ladder foot to the ladder top. The player whose piece is the first to reach the 100th square wins.
 
@@ -38,7 +38,5 @@ The above OO domain model omits the ladder class for simplicity. It can be inclu
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

@@ -1,12 +1,14 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Manage PRs :three:
+#### Manage PRs
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Branching%%" />
+<dynamic-panel src="../createPRs/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Create PRs%%" />
+<dynamic-panel src="../mergeConflicts/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Merge Conflicts%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can review and merge PRs on GitHub</span>
 
 <div id="body">
 
@@ -66,6 +68,4 @@ Note that you could have merged the `add-summary` branch to the `master` branch 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

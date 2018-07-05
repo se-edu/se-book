@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Identifying :one:
+#### Identifying
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use use cases to list functional requirements of a simple system</span>
 
 <div id="body">
 
@@ -20,7 +20,7 @@ A use case is an interaction between a system and its _actors_.
 
 <tip-box>
 
-:package: Some example actors for a Learning Management System
+{{ icon_example }} Some example actors for a Learning Management System
 
 * Actors: Guest, Student, Staff, Admin, <tooltip content="an exam management system">ExamSys</tooltip>, <tooltip content="a library management system">LibSys</tooltip>.
 
@@ -72,7 +72,7 @@ A use case is an interaction between a system and its _actors_.
 
 <tip-box>
 
-:package: Consider the three use cases given below. Clearly, (a) is at a higher level than (b) and (b) is at a higher level than (c).
+{{ icon_example }} Consider the three use cases given below. Clearly, (a) is at a higher level than (b) and (b) is at a higher level than (c).
 
 * System: LearnSys
 * Use cases:<br>
@@ -96,7 +96,5 @@ While modeling user-system interactions,
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

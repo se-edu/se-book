@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Enforcing 1-to-1 Associations :three:
+#### Enforcing 1-to-1 Associations
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Error Handling → Defensive Programming → What%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use defensive coding to enforce 1-to-1 associations</span>
 
 <div id="body">
 
@@ -50,6 +50,4 @@ Option 2 is more defensive because the `Mine` is immediately linked to a `MinedC
 </div>
 
 <div id="extras">
-</div>
-
 </div>

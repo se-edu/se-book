@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Refactoring → </div>
+<span id="outcomes">{{glyphicon_flag}} Can decide when to apply a given refactoring</span>
 
 <div id="title">
 
-#### When :three:
+#### When
 
 </div>
 
@@ -19,7 +17,5 @@ We know that it is important to refactor frequently so as to avoid the accumulat
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

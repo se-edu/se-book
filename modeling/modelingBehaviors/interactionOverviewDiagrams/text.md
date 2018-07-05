@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Interaction Overview Diagrams :four:
+#### Interaction Overview Diagrams
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain interaction overview diagrams</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: An example:
+{{ icon_example }} An example:
 
 <img src="{{baseUrl}}/modeling/modelingBehaviors/interactionOverviewDiagrams/images/diagram.png" height="420" />
 <p/>
@@ -26,6 +26,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

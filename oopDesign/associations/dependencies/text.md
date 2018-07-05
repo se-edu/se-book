@@ -1,24 +1,22 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Dependencies :two:
+#### Dependencies
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain dependencies among classes</span>
 
 <div id="body">
 
 Dependencies are objects that are not directly linked in the object network can still interact with each other. These are a weaker form of associations we call _dependencies_.
 
-<panel src="../../../uml/classDiagrams/dependencies/what/full.md#title-and-body" header=":mortar_board: Tools → UML → Class Diagrams → Dependencies" expanded />
+<panel src="../../../uml/classDiagrams/dependencies/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} Tools → UML → Class Diagrams → Dependencies" expanded />
 
 <p/>
 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

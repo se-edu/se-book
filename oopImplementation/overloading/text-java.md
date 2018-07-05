@@ -1,6 +1,6 @@
 <tip-box>
 
-:package: The constructor of the `Account` class below is _overloaded_ because there are two constructors with different signatures: `()` and `(String, String, double)`. Furthermore, the `save` method in the `Account` class is overloaded in the child class `SavingAccount`.
+{{ icon_example }} The constructor of the `Account` class below is _overloaded_ because there are two constructors with different signatures: `()` and `(String, String, double)`. Furthermore, the `save` method in the `Account` class is overloaded in the child class `SavingAccount`.
 
 ```java
 class Account {

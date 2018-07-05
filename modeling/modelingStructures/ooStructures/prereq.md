@@ -1,1 +1,0 @@
-<dynamic-panel src="../../../oopDesign/classes/basic/full.md" header=":mortar_board: %%Design → OOP → Classes → Basic%%" />

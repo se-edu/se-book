@@ -8,46 +8,49 @@
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\site-nav.css">
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-<div class="website-content">
-  <tip-box>
     <div>
-      <p>🏆 Can explain the importance of readability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
-    </div>
-  </tip-box>
-  <div>
-    <div></div>
-    <p></p>
-    <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability →
-</span></strong>
-      </span>
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+  <div class="website-content">
+    <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can explain the importance of readability</span></span></span></button>
+      <p></p>
     </p>
     <div>
-      <h4 id="introduction-one">Introduction <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
-    </div>
-    <div id="main">
-      <div>
-        <blockquote>
-          <p>Programs should be written and polished until they acquire publication quality. <sub>--<a href="https://en.wikipedia.org/wiki/Niklaus_Wirth">Niklaus Wirth</a></sub></p>
-        </blockquote>
-        <p><strong>Among various dimensions of code quality, such as run-time efficiency, security, and robustness, one of the most important is understandability.</strong> This is because in any non-trivial software project, code needs to be read, understood,
-          and modified by other developers later on. Even if we do not intend to pass the code to someone else, code quality is still important because we all become 'strangers' to our own code someday.</p>
-        <tip-box>
-          <p>📦 The two code samples given below achieve the same functionality, but one is easier to read.</p>
-          <tabs>
-          
-            <tab header="Java">
-              <div>
-                <table>
-                  <tr>
-                  
-                    <td>
-                      <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
-                      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{
+      <div></div>
+      <p></p>
+      <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability →
+</span></strong>
+        </span>
+      </p>
+      <div id="title-and-body">
+        <div>
+          <h4 id="introduction">Introduction</h4>
+        </div>
+        <div id="main">
+          <div>
+            <blockquote>
+              <p>Programs should be written and polished until they acquire publication quality. <sub>--<a href="https://en.wikipedia.org/wiki/Niklaus_Wirth">Niklaus Wirth</a></sub></p>
+            </blockquote>
+            <p><strong>Among various dimensions of code quality, such as run-time efficiency, security, and robustness, one of the most important is understandability.</strong> This is because in any non-trivial software project, code needs to be read, understood,
+              and modified by other developers later on. Even if we do not intend to pass the code to someone else, code quality is still important because we all become 'strangers' to our own code someday.</p>
+            <tip-box>
+              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> The two code samples given below achieve the same functionality, but one is easier to read.</p>
+              <tabs>
+              
+                <tab header="Java">
+                  <div>
+                    <table>
+                      <tr>
+                      
+                        <td>
+                          <p>
+                            <font color="red"><strong><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Bad</strong></font>
+                          </p>
+                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{
     <span class="hljs-keyword">int</span> subsidy;
     <span class="hljs-keyword">if</span> (!age) {
         <span class="hljs-keyword">if</span> (!sub) {
@@ -65,14 +68,16 @@
     <span class="hljs-keyword">return</span> subsidy;
 }
 </code></pre>
-                      <p></p>
-                    </td>
-                  
-                    <td>  <br><br></td>
-                  
-                    <td valign="top">
-                      <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
-                      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{
+                          <p></p>
+                        </td>
+                      
+                        <td>  <br><br></td>
+                      
+                        <td valign="top">
+                          <p>
+                            <font color="green"><strong><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Good</strong></font>
+                          </p>
+                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{
     <span class="hljs-keyword">int</span> subsidy;
     <span class="hljs-keyword">if</span> (isSenior) {
         subsidy = REJECT_SENIOR;
@@ -86,21 +91,23 @@
     <span class="hljs-keyword">return</span> subsidy;
 }
 </code></pre>
-                      <p></p>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </tab>
-          
-            <tab header="Python">
-              <div>
-                <table>
-                  <tr>
-                  
-                    <td>
-                      <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
-                      <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span>
+                          <p></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </tab>
+              
+                <tab header="Python">
+                  <div>
+                    <table>
+                      <tr>
+                      
+                        <td>
+                          <p>
+                            <font color="red"><strong><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Bad</strong></font>
+                          </p>
+                          <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span>
     <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:
         <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:
             <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:
@@ -113,14 +120,16 @@
         subsidy = <span class="hljs-number">-1</span>
     <span class="hljs-keyword">return</span> subsidy
 </code></pre>
-                      <p></p>
-                    </td>
-                  
-                    <td>  <br><br></td>
-                  
-                    <td valign="top">
-                      <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
-                      <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span>
+                          <p></p>
+                        </td>
+                      
+                        <td>  <br><br></td>
+                      
+                        <td valign="top">
+                          <p>
+                            <font color="green"><strong><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Good</strong></font>
+                          </p>
+                          <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span>
     <span class="hljs-keyword">if</span> is_senior:
         <span class="hljs-keyword">return</span> REJECT_SENIOR
     <span class="hljs-keyword">elif</span> is_already_subsidised:
@@ -130,17 +139,19 @@
     <span class="hljs-keyword">else</span>:
         <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY
 </code></pre>
-                      <p></p>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </tab>
-          </tabs>
-          <hr>
-        </tip-box>
+                          <p></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </tab>
+              </tabs>
+              <hr>
+            </tip-box>
+          </div>
+          <div></div>
+        </div>
       </div>
-      <div></div>
     </div>
   </div>
 </div>
@@ -152,4 +163,5 @@
     const baseUrl = '/se-book'
 </script>
 <script src="..\..\..\markbind\js\setup.js"></script>
+<script src="..\..\..\markbind\js\site-nav.js"></script>
 </html>

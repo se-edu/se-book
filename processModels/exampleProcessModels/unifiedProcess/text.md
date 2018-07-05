@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Unified Process :three:
+#### Unified Process
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the Unified Process</span>
 
 <div id="body">
 
@@ -98,6 +98,4 @@ Given above is a visualization of a project done using the Unified process (sour
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

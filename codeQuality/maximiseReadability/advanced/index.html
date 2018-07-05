@@ -8,37 +8,41 @@
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\site-nav.css">
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-<div class="website-content">
-  <tip-box>
     <div>
-      <p>🏆 Can follow advanced guidelines for improving readability <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
-    </div>
-  </tip-box>
-  <div>
-    <div></div>
-    <p></p>
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+  <div class="website-content" id="all">
     <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability →
 </span></strong>
       </span>
     </p>
-    <div>
-      <h4 id="advanced-three">Advanced <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
+    <div id="title">
+      <div>
+        <h3 id="advanced">Advanced</h3>
+      </div>
     </div>
     <div id="main">
       <div>
-        <panel header="**Make the Happy Path Prominent**" type="seamless" expanded="">
-          <div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="make-the-happy-path-prominent">Make the Happy Path Prominent</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can improve code quality using technique: make the happy path prominent </span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
             <div>
               <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unindented as much as possible. It is the ‘unusual’ cases that should be indented.
                 Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
               <tip-box>
                 <p>Example:</p>
-                <p><img src="/se-book/images/Bad.png" alt="" title="Bad"></p>
+                <p>
+                  <font color="red"><strong><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Bad</strong></font>
+                </p>
                 <pre><code class="hljs java"><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span>
     <span class="hljs-keyword">if</span> (!isErrorCase) {
         start();    <span class="hljs-comment">//main path</span>
@@ -57,7 +61,9 @@
                   <li>Unusual condition detection is separated from their handling.</li>
                   <li>Main path is nested deeply.</li>
                 </ul>
-                <p><img src="/se-book/images/Good.png" alt="" title="Good"></p>
+                <p>
+                  <font color="green"><strong><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Good</strong></font>
+                </p>
                 <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isUnusualCase) { <span class="hljs-comment">//Guard Clause</span>
     handleUnusualCase();
     <span class="hljs-keyword">return</span>;
@@ -80,10 +86,10 @@ exit();
                 </ul>
               </tip-box>
             </div>
-          </div>
-        </panel>
+            <div></div>
+          </panel>
+        </div>
       </div>
-      <div></div>
     </div>
   </div>
 </div>
@@ -95,4 +101,5 @@ exit();
     const baseUrl = '/se-book'
 </script>
 <script src="..\..\..\markbind\js\setup.js"></script>
+<script src="..\..\..\markbind\js\site-nav.js"></script>
 </html>

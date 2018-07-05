@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Alternative Paths :two:
+#### Alternative Paths
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with alternative paths</span>
 
 <div id="body">
 
@@ -19,7 +19,7 @@ Notation:
 
 <tip-box>
 
-:package: `Minefield` calls the `Cell#setMine` if the cell is supposed to be a mined cell, and calls the `Cell:setMineCount(...)` method otherwise.
+{{ icon_example }} `Minefield` calls the `Cell#setMine` if the cell is supposed to be a mined cell, and calls the `Cell:setMineCount(...)` method otherwise.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/alternativePaths/images/minefieldCell.png" height="180" />
 <p/>
@@ -29,6 +29,4 @@ Notation:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

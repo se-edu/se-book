@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Composite Structure Diagrams :four:
+#### Composite Structure Diagrams
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain composite structure diagrams</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Here is an example composite structure diagram:
+{{ icon_example }} Here is an example composite structure diagram:
 
 <img src="{{baseUrl}}/modeling/modelingStructures/compositeStructureDiagrams/images/diagram.png" height="150" />
 <br>
@@ -25,6 +25,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

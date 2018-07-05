@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"><dynamic-panel src="../../refactoring/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Implementation → Refactoring → What%%" /></span>
 
-<div class="website-content">
-
-<div id="path">Intellij IDEA → </div>
+<span id="outcomes">{{glyphicon_flag}} Can use automated refactoring features of the IDE</span>
 
 <div id="title">
 
-#### Refactoring :two:
+#### Refactoring
 
 </div>
 
@@ -29,6 +27,4 @@ Here's another video explaining how to change a method signature as part of refa
 </div>
 
 <div id="extras">
-</div>
-
 </div>

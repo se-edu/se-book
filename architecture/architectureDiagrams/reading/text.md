@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Reading :one:
+#### Reading
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Architecture → Introduction → What%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret an architecture diagram</span>
 
 <div id="body">
 
@@ -16,7 +16,7 @@
 
 <tip-box>
 
-:package: Some example architecture diagrams:
+{{ icon_example }} Some example architecture diagrams:
 
 <tabs> 
   <tab header="TEAMMATES">
@@ -56,6 +56,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

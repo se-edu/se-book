@@ -1,7 +1,7 @@
-* [Principles](./principles/)
-  <trigger for="pop:principles-preview">:mag:</trigger>[:scroll:](principles/print.html)
+* [Principles]({{baseUrl}}/principles/)
+  <trigger for="pop:principles-preview">{{glyphicon_eye_open}}</trigger> [{{glyphicon_print}}](principles/print.html)
 
-<popover id="pop:principles-preview" title="Principles :mag:" placement="right">
+<popover id="pop:principles-preview" title="Principles {{glyphicon_eye_open}}" placement="right">
   <div slot="content">
     <include src="preview.md" />
   </div>

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### JUnit: Intermediate :three:
+#### JUnit: Intermediate
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use intermediate features of JUnit</span>
 
 <div id="body">
 
@@ -19,6 +19,4 @@ Some intermediate JUnit techniques that may be useful:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

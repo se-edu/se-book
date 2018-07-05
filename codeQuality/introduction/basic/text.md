@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Basic :one:
+#### Basic
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the importance of code quality</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 **<trigger for="pop:production-code">Production code</trigger> needs to be of high quality**. Given how the world is becoming increasingly dependent of software, poor quality code is something we cannot afford to tolerate.
 
-<popover id="pop:production-code" title=":mag: Production Code" placement="top">
+<popover id="pop:production-code" title="{{glyphicon_eye_open}} Production Code" placement="top">
   <div slot="content">
     Code being used in an actual product with actual users
   </div>
@@ -23,6 +23,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

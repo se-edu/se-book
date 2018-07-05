@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Heuristic: Each Valid Input at Least Once in a Positive Test Case :two:
+#### Heuristic: Each Valid Input at Least Once in a Positive Test Case
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can apply heuristic ‘each valid input at least once in a positive test case’</span>
 
 <div id="body">
 
@@ -74,6 +74,4 @@ VV/IV = Any Invalid or Valid Value VV=Any Valid Value
 </div>
 
 <div id="extras">
-</div>
-
 </div>

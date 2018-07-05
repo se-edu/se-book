@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain code reviews</span>
 
 <div id="body">
 
@@ -29,7 +29,7 @@ Reviews can be done in various forms. Some examples below:
 <sub>[[image credit: Wikipedia](https://en.wikipedia.org/wiki/Pair_programming)]</sub>
 
 
-:tv: A good introduction to pair programming:
+{{ icon_video }} A good introduction to pair programming:
 
 @[youtube](ET3Q6zNK3Io)
 
@@ -62,6 +62,4 @@ Disadvantages:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

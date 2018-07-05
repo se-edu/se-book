@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Agile Design :four:
+#### Agile Design
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain agile design</span>
 
 <div id="body">
 
@@ -19,7 +19,5 @@
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

@@ -1,12 +1,14 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Mechanism :three:
+#### Mechanism
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../../oopImplementation/polymorphism/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Object Oriented Programming → Polymorphism%%" />
+<dynamic-panel src="../../../oopDesign/inheritance/substitutability/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Object Oriented Programming → Inheritance → Substitutability%%" />
+<dynamic-panel src="../../../oopDesign/inheritance/dynamicAndStaticBinding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Object Oriented Programming → Inheritance → Dynamic and Static Binding%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain how substitutability operation overriding, and dynamic binding relates to polymorphism</span>
 
 <div id="body">
 
@@ -21,7 +23,5 @@
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

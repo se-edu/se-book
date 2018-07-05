@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Composition :two:
+#### Composition
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret composition in class diagrams</span>
 
 <div id="body">
 
@@ -15,7 +19,7 @@ Notation:
 
 <tip-box>
 
-:package: A `Book` consists of `Chapter` objects. When the `Book` object is destroyed, its `Chapter` objects are destroyed too.
+{{ icon_example }} A `Book` consists of `Chapter` objects. When the `Book` object is destroyed, its `Chapter` objects are destroyed too.
 
 <img src="{{baseUrl}}/uml/classDiagrams/composition/what/images/bookChapter.png" width="220" />
 <p/>
@@ -25,6 +29,4 @@ Notation:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

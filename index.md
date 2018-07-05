@@ -4,7 +4,7 @@ title: "Book - Software Engineering for Self-Directed Learners"
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
-<div class="website-content">
+<div class="website-content" id="all">
 
 ## Software Engineering for Self-Directed Learners
 
@@ -91,15 +91,16 @@ title: "Book - Software Engineering for Self-Directed Learners"
 
 <include src="junit/topicToc.md" />
 
-### Supplementary
+### Principles
 
 <include src="principles/topicToc.md" />
 
-<!-- TODO: add review -->
+### Supplementary
 
+* [Combined Exercises](combined/exercises.html)
 * [List of Definitions](common/definitions.html)
 * [List of References](common/references.html)
 * [List of Learning Outcomes](common/outcomes.html)
-* [Printable Version :scroll:](common/print.html)
+* [Printable Version {{glyphicon_print}}](common/print.html)
 
 </div>

@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Java → </div>
+<span id="outcomes">{{glyphicon_flag}} Can use Java varargs feature</span>
 
 <div id="title">
 
-#### Varargs :three:  [{{glyphicon_new_window}}]({{baseUrl}}/javaTools/varargs/index.html)
+#### Varargs
 
 </div>
 
@@ -19,6 +17,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Test Automation Using Test Drivers :two:
+#### Test Automation Using Test Drivers
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain test drivers</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: `PayrollTest` ‘drives’ the `PayRoll` class by sending it test inputs and verifies if the output is as expected.
+{{ icon_example }} `PayrollTest` ‘drives’ the `PayRoll` class by sending it test inputs and verifies if the output is as expected.
 
 ```java
 public class PayrollTestDriver {
@@ -47,6 +47,4 @@ public class PayrollTestDriver {
 </div>
 
 <div id="extras">
-</div>
-
 </div>

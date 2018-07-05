@@ -8,94 +8,94 @@
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\site-nav.css">
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-<div class="website-content">
-  <p><span class="dimmed"><strong>Documentation → Guidelines →</strong></span></p>
-  <h3 id="guideline-go-top-down-not-bottom-up">Guideline: Go Top-down, Not Bottom-up</h3>
-  <div id="main">
     <div>
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+  <div class="website-content" id="all">
+    <p><span class="dimmed"><strong><span>Implementation → Documentation → Guidelines →
+</span></strong>
+      </span>
+    </p>
+    <div id="title">
       <div>
-        <h4 id="what-one">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></h4>
+        <h3 id="guideline-go-top-down-not-bottom-up">Guideline: Go Top-down, Not Bottom-up</h3>
       </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can distinguish between top-down and bottom up documentation <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png"></p>
-        </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
-        <div>
-          <div>
-            <p><strong>When writing project documents, a top-down breadth-first explanation is easier to understand than a bottom-up one.</strong></p>
-          </div>
-          <div></div>
-        </div>
-      </panel>
     </div>
-    <div>
+    <div id="main">
       <div>
-        <h4 id="why-two">Why <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="what">What</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can distinguish between top-down and bottom up documentation</span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
+            <div>
+              <p><strong>When writing project documents, a top-down breadth-first explanation is easier to understand than a bottom-up one.</strong></p>
+            </div>
+            <div></div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="why">Why</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can explain the advantages of top-down documentation</span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
+            <div>
+              <p>The main advantage of the top-down approach is that the document is structured like an upside down tree (root at the top) and <strong>the reader can travel down a path she is interested in until she reaches the component she is interested to learn in-depth</strong>,
+                without having to read the entire document or understand the whole system.</p>
+            </div>
+            <div></div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="how">How</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can write documentation in a top-down manner</span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
+            <div>
+              <tip-box>
+                <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> To explain a system called <code>SystemFoo</code> with two sub-systems, <code>FrontEnd</code> and <code>BackEnd</code>, start by describing the system at the highest level
+                  of abstraction, and progressively drill down to lower level details. An outline for such a description is given below.</p>
+                <p>[First, explain what the system is, in a black-box fashion (no internal details, only the external view).]</p>
+                <blockquote>
+                  <p><code>SystemFoo</code> is a ....</p>
+                </blockquote>
+                <p>[Next, explain the high-level architecture of <code>SystemFoo</code>, referring to its major components only.]</p>
+                <blockquote>
+                  <p><code>SystemFoo</code> consists of two major components: <code>FrontEnd</code> and <code>BackEnd</code>.<br><br> The job of <code>FrontEnd</code> is to ... while the job of <code>BackEnd</code> is to ...<br><br> And this is how <code>FrontEnd</code>                    and <code>BackEnd</code> work together ...</p>
+                </blockquote>
+                <p>[Now we can drill down to <code>FrontEnd</code>'s details.]</p>
+                <blockquote>
+                  <p><code>FrontEnd</code> consists of three major components: <code>A</code>, <code>B</code>, <code>C</code><br><br>
+                    <code>A</code>'s job is to ...<br><code>B</code>'s job is to...<br><code>C</code>'s job is to...<br><br> And this is how the three components work together ...</p>
+                </blockquote>
+                <p>[At this point, further drill down the internal workings of each component. A reader who is not interested in knowing nitty-gritty details can skip ahead to the section on <code>BackEnd</code>.]</p>
+                <blockquote>
+                  <p>In-depth description of <code>A</code><br><br> In-depth description of <code>B</code><br><br> ...
+                  </p>
+                </blockquote>
+                <p>[At this point drill down details of the <code>BackEnd</code>.]</p>
+                <blockquote>
+                  <p>...</p>
+                </blockquote>
+              </tip-box>
+            </div>
+            <div></div>
+          </panel>
+        </div>
       </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can explain the advantages of top-down documentation <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
-        </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
-        <div>
-          <div>
-            <p>The main advantage of the top-down approach is that the document is structured like an upside down tree (root at the top) and <strong>the reader can travel down a path she is interested in until she reaches the component she is interested to learn in-depth</strong>,
-              without having to read the entire document or understand the whole system.</p>
-          </div>
-          <div></div>
-        </div>
-      </panel>
-    </div>
-    <div>
-      <div>
-        <h4 id="how-two">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-      </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can write documentation in a top-down manner <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
-        </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
-        <div>
-          <div>
-            <tip-box>
-              <p>📦 To explain a system called <code>SystemFoo</code> with two sub-systems, <code>FrontEnd</code> and <code>BackEnd</code>, start by describing the system at the highest level of abstraction, and progressively drill down to lower level details.
-                An outline for such a description is given below.</p>
-              <p>[First, explain what the system is, in a black-box fashion (no internal details, only the external view).]</p>
-              <blockquote>
-                <p><code>SystemFoo</code> is a ....</p>
-              </blockquote>
-              <p>[Next, explain the high-level architecture of <code>SystemFoo</code>, referring to its major components only.]</p>
-              <blockquote>
-                <p><code>SystemFoo</code> consists of two major components: <code>FrontEnd</code> and <code>BackEnd</code>.<br><br> The job of <code>FrontEnd</code> is to ... while the job of <code>BackEnd</code> is to ...<br><br> And this is how <code>FrontEnd</code>                  and <code>BackEnd</code> work together ...</p>
-              </blockquote>
-              <p>[Now we can drill down to <code>FrontEnd</code>'s details.]</p>
-              <blockquote>
-                <p><code>FrontEnd</code> consists of three major components: <code>A</code>, <code>B</code>, <code>C</code><br><br>
-                  <code>A</code>'s job is to ...<br><code>B</code>'s job is to...<br><code>C</code>'s job is to...<br><br> And this is how the three components work together ...</p>
-              </blockquote>
-              <p>[At this point, further drill down the internal workings of each component. A reader who is not interested in knowing nitty-gritty details can skip ahead to the section on <code>BackEnd</code>.]</p>
-              <blockquote>
-                <p>In-depth description of <code>A</code><br><br> In-depth description of <code>B</code><br><br> ...
-                </p>
-              </blockquote>
-              <p>[At this point drill down details of the <code>BackEnd</code>.]</p>
-              <blockquote>
-                <p>...</p>
-              </blockquote>
-            </tip-box>
-          </div>
-          <div></div>
-        </div>
-      </panel>
     </div>
   </div>
 </div>
@@ -107,4 +107,5 @@
     const baseUrl = '/se-book'
 </script>
 <script src="..\..\..\markbind\js\setup.js"></script>
+<script src="..\..\..\markbind\js\site-nav.js"></script>
 </html>

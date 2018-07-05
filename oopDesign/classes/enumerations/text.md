@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Enumerations :two:
+#### Enumerations
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of enumerations</span>
 
 <div id="body">
 
@@ -14,13 +14,13 @@
 
 An enumeration is often useful when using a regular data type such as `int` or `String` would allow invalid values to be assigned to a variable. %%e.g. if a variable can only take values `0` and `1`, declaring it as an `int` would allow invalid values such as `2` to be assigned to it. But if you define an enumeration called `Binary` that has values `0` and `1` only, a variable of type `Binary` will never be assigned an invalid value such as `2` because the compiler is able to catch the error.%%
 
-<panel src="../../../uml/classDiagrams/enumerations/what/full.md" header=":mortar_board: UML → Class Diagrams → Enumerations" expanded />
+<panel src="../../../uml/classDiagrams/enumerations/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Enumerations" expanded />
 
 <p/>
 
 <tip-box>
 
-:package: `Priority` can be considered an enumeration because it has only three values.
+{{ icon_example }} `Priority` can be considered an enumeration because it has only three values.
 
 `Priority`: `HIGH`, `MEDIUM`, `LOW`
 
@@ -33,6 +33,4 @@ An enumeration is often useful when using a regular data type such as `int` or `
 
 <div id="extras">
   <include src="exercises.md"/>
-</div>
-
 </div>

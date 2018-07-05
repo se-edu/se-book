@@ -1,19 +1,20 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Basic :two:
+#### Basic
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../../modeling/modelingBehaviors/sequenceDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Behaviors → Sequence Diagrams → Basic%%" />
+<dynamic-panel src="../../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Structures → Class Diagrams → Basic%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use simple class diagrams and sequence diagrams to model an OO solution</span>
 
 <div id="body">
 
 As mentioned in [<trigger trigger="click" for="modal:basicModelling-modelingIntro">Design → Modeling → Modeling a Solutions → Introduction</trigger>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.
 
-<modal title="Textbook »" id="modal:basicModelling-modelingIntro">
-  <include src="../introduction/full.md"/>
+<modal title="Textbook {{ icon_embedding }}" id="modal:basicModelling-modelingIntro">
+  <include src="../introduction/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
 <img src="{{baseUrl}}/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50" />
@@ -76,7 +77,7 @@ Given below are the interactions between the player and the Text UI for the whol
 
 <div v-closeable alt="Tic-Tac-Toe Video"> 
 
-:tv: Defining the architecture-level APIs for a small Tic-Tac-Toe game:
+{{ icon_video }} Defining the architecture-level APIs for a small Tic-Tac-Toe game:
 
 @[youtube](Un80XoRT1ME)
 
@@ -87,6 +88,4 @@ Given below are the interactions between the player and the Text UI for the whol
 </div>
 
 <div id="extras">
-</div>
-
 </div>

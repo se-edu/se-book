@@ -1,6 +1,6 @@
-* __ [Introduction](./uml/activityDiagrams/introduction) :one: <trigger for="pop:activityDiagrams-introduction-preview">:mag:</trigger>
+* __ [Introduction]({{baseUrl}}/uml/activityDiagrams/introduction) <trigger for="pop:activityDiagrams-introduction-preview">{{glyphicon_eye_open}}</trigger>
 
-<popover id="pop:activityDiagrams-introduction-preview" title=":mag: Introduction" placement="right">
+<popover id="pop:activityDiagrams-introduction-preview" title="{{glyphicon_eye_open}} Introduction" placement="right">
   <div slot="content">
     <include src=".\preview.md" />
   </div>

@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Intellij IDEA → </div>
+<span id="outcomes">{{glyphicon_flag}} Can navigate code effectively using IDE features</span>
 
 <div id="title">
 
-#### Code Navigation :two: [{{glyphicon_new_window}}]({{baseUrl}}/intellij/codeNavigation/index.html)
+#### Code Navigation
 
 </div>
 
@@ -35,6 +33,4 @@ Some useful navigation shortcuts:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

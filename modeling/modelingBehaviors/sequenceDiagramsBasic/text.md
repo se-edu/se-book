@@ -1,12 +1,15 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Sequence Diagrams - Basic :one:
+#### Sequence Diagrams - Basic
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../../uml/sequenceDiagrams/basic/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%UML → Sequence Diagrams → Basic%%" />
+<dynamic-panel src="../../../uml/sequenceDiagrams/loops/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%UML → Sequence Diagrams → Loops%%" />
+<dynamic-panel src="../../../uml/sequenceDiagrams/objectCreation/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%UML → Sequence Diagrams → Object Creation%%" />
+<dynamic-panel src="../../../uml/sequenceDiagrams/minimalNotation/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%UML → Sequence Diagrams → Minimal Notation%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can draw basic sequence diagrams</span>
 
 <div id="body">
 
@@ -14,7 +17,7 @@
 
 <tip-box> 
 
-:package: Consider the code below.
+{{ icon_example }} Consider the code below.
 
 ```java
 class Machine {
@@ -47,6 +50,4 @@ Here is the sequence diagram to model the interactions for the method call `prou
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

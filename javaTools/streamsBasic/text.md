@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Streams: Basic :three:
+#### Streams: Basic
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use Java8 streams</span>
 
 <div id="body">
 
@@ -18,6 +18,4 @@
 
 <div id="extras">
   <include src="resources.md" />
-</div>
-
 </div>

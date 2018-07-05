@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Specifying Requirements → User Stories →</div>
+<span id="outcomes">{{glyphicon_flag}} Can write more detailed user stories</span>
 
 <div id="title">
 
-#### Details :two:
+#### Details
 
 </div>
 
@@ -65,7 +63,7 @@ Conditions:
 * Size: the estimated effort to implement the user story
 * Urgency: how soon the feature is needed
 
-<panel header="%%More examples :zero:%%" type="seamless">
+<panel header="%%More examples <span class='badge'>tangential</span>%%" type="seamless">
 
 User stories for a travel website (credit: Mike Cohen)
 
@@ -92,7 +90,5 @@ User stories for a travel website (credit: Mike Cohen)
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"></span>
 
-<div class="website-content">
-
-<div id="path">Java → </div>
+<span id="outcomes">{{glyphicon_flag}} Can use Java Collections</span>
 
 <div id="title">
 
-#### Collections :two: [{{glyphicon_new_window}}]({{baseUrl}}/javaTools/collections/index.html)
+#### Collections
 
 </div>
 
@@ -19,6 +17,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,3 +1,0 @@
-<dynamic-panel src="../../../oopDesign/inheritance/interfaces/full.md" header="%%:mortar_board: OOP: Inheritance → Interfaces%%" />
-<dynamic-panel src="../../../oopDesign/inheritance/abstractClasses/full.md" header="%%:mortar_board: OOP → Inheritance → Abstract Classes%%" />
-<dynamic-panel src="../../../oopDesign/associations/associationClasses/full.md" header="%%:mortar_board: OOP → Associations → Association Classes%%" />

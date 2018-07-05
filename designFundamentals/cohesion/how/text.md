@@ -1,12 +1,13 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Design Fundamentals → Cohesion →
+What%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can increase cohesion</span>
 
 <div id="body">
 
@@ -17,7 +18,7 @@
 
 <tip-box>
 
-:package:  Suppose a Payroll application contains a class that deals with writing data to the database. If the class include some code to show an error dialog to the user if the database is unreachable, that class is not cohesive because it seems to be interacting with the user as well as the database.
+{{ icon_example }}  Suppose a Payroll application contains a class that deals with writing data to the database. If the class include some code to show an error dialog to the user if the database is unreachable, that class is not cohesive because it seems to be interacting with the user as well as the database.
 
 </tip-box>
 
@@ -25,6 +26,4 @@
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

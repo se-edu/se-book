@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Iterative Models :one:
+#### Iterative Models
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain iterative process models</span>
 
 <div id="body">
 
@@ -26,6 +26,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

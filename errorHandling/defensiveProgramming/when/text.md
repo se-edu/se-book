@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### When :two:
+#### When
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Error Handling → Defensive Programming → What%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain when to use defensive programming</span>
 
 <div id="body">
 
@@ -24,7 +24,5 @@ The suitable degree of defensiveness depends on many factors such as:
 <div id="extras">
 
 <include src="exercises.md" />
-
-</div>
 
 </div>

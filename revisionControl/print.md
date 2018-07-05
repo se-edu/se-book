@@ -10,16 +10,16 @@ title: "Revision Control [Printable]"
 
 # Revision Control
 
-<include src="what/print.md" />
-<include src="repositories/print.md" />
-<include src="savingHistory/print.md" />
-<include src="usingHistory/print.md" />
-<include src="remoteRepositories/print.md" />
-<include src="branching/print.md" />
-<include src="drcsVsCrcs/print.md" />
-<include src="forkingWorkflow/print.md" />
-<include src="featureBranchFlow/print.md" />
-<include src="centralizedFlow/print.md" />
+<include src="what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="repositories/unit-inParent-asFlat-print.md" boilerplate />
+<include src="savingHistory/unit-inParent-asFlat-print.md" boilerplate />
+<include src="usingHistory/unit-inParent-asFlat-print.md" boilerplate />
+<include src="remoteRepositories/unit-inParent-asFlat-print.md" boilerplate />
+<include src="branching/unit-inParent-asFlat-print.md" boilerplate />
+<include src="drcsVsCrcs/unit-inParent-asFlat-print.md" boilerplate />
+<include src="forkingWorkflow/unit-inParent-asFlat-print.md" boilerplate />
+<include src="featureBranchFlow/unit-inParent-asFlat-print.md" boilerplate />
+<include src="centralizedFlow/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

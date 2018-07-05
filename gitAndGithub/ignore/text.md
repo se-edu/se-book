@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"><dynamic-panel src="../../revisionControl/savingHistory/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} Revision Control: Saving History" /></span>
 
-<div class="website-content">
-
-<div id="path">Git and Github → </div>
+<span id="outcomes">{{glyphicon_flag}} Can set Git to ignore files</span>
 
 <div id="title">
 
-#### Ignore :two: [{{glyphicon_new_window}}]({{baseUrl}}/gitAndGithub/ignore/index.html)
+#### Ignore
 
 </div>
 
@@ -31,6 +29,4 @@ The `.gitignore` file tells Git which files to ignore when tracking revision his
 </div>
 
 <div id="extras">
-</div>
-
 </div>

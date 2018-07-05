@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :two:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain the need for deliberate test case design</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box>
 
-:package: Consider the test cases for adding a string object to a <tooltip content="Java: `ArrayList`,<br>Python: `list`">collection</tooltip>:
+{{ icon_example }} Consider the test cases for adding a string object to a <tooltip content="Java: `ArrayList`,<br>Python: `list`">collection</tooltip>:
 
 * Add an item to an empty collection.
 * Add an item when there is one item in the collection.
@@ -47,6 +47,4 @@ Exhaustive testing of this operation can take many more test cases.
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

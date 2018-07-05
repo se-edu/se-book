@@ -1,8 +1,12 @@
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Architecture → Introduction → What%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain architectural styles</span>
 
 <div id="body">
 
@@ -10,7 +14,7 @@
 
 <tip-box> 
 
-:package: n-tier style, client-server style, event-driven style, transaction processing style, service-oriented style, pipes-and-filters style, message-driven style, broker style, ...
+{{ icon_example }} n-tier style, client-server style, event-driven style, transaction processing style, service-oriented style, pipes-and-filters style, message-driven style, broker style, ...
 
 </tip-box>
 
@@ -24,6 +28,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

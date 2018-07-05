@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Minimal Notation :three:
+#### Minimal Notation
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with minimal notation</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@ To reduce clutter, **activation bars and return arrows may be omitted** if they 
 
 <tip-box>
 
-:package: A minimal sequence diagram
+{{ icon_example }} A minimal sequence diagram
 
 <!-- TODO: add a more detailed version of the SD for comparison -->
 
@@ -26,6 +26,4 @@ To reduce clutter, **activation bars and return arrows may be omitted** if they 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

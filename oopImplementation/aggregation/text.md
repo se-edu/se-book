@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Implementing Aggregation :two:
+#### Implementing Aggregation
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../oopDesign/associations/aggregation/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Associations → Aggregation%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can implement aggregation</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@ Implementation is similar to that of composition except the _containee_ object c
 
 <tip-box>
 
-:package: Example:
+{{ icon_example }} Example:
 
 <img src="{{baseUrl}}/oopImplementation/aggregation/images/carPerson.png" height="40" />
 
@@ -57,6 +57,4 @@ class Car:
 </div>
 
 <div id="extras">
-</div>
-
 </div>

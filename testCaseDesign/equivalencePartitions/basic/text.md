@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Basic :two:
+#### Basic
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can apply EP for pure functions</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: These could be EPs for the <trigger for="pop:epBasic-isValidMonth">isValidMonth</trigger> example:
+{{ icon_example }} These could be EPs for the <trigger for="pop:epBasic-isValidMonth">isValidMonth</trigger> example:
 
 * [MIN_INT ... 0] : **below** the range that produces `true`
 * [1 … 12] : the range that produces `true`
@@ -32,7 +32,7 @@ When the SUT has multiple inputs, you should identify EPs for each input.
 
 <tip-box> 
 
-:package: Consider the method `duplicate(String s, int n): String` which returns a `String` that contains `s` repeated `n` times.
+{{ icon_example }} Consider the method `duplicate(String s, int n): String` which returns a `String` that contains `s` repeated `n` times.
 
 Example EPs for `s`:
 * zero-length strings
@@ -50,7 +50,7 @@ An EP may not have adjacent values.
 
 <tip-box> 
 
-:package: Consider the method `isPrime(int i): boolean` that returns true if `i` is a prime number.
+{{ icon_example }} Consider the method `isPrime(int i): boolean` that returns true if `i` is a prime number.
 
 EPs for `i`:
 * prime numbers
@@ -62,7 +62,7 @@ Some inputs have only a small number of possible values and a potentially unique
 
 <tip-box> 
 
-:package: Consider the method `showStatusMessage(GameStatus s): String` that returns a unique `String` for each of the possible value of s (`GameStatus` is an `enum`). In this case, each possible value for `s` will have to be considered as a partition. 
+{{ icon_example }} Consider the method `showStatusMessage(GameStatus s): String` that returns a unique `String` for each of the possible value of s (`GameStatus` is an `enum`). In this case, each possible value for `s` will have to be considered as a partition. 
 
 </tip-box>
 
@@ -70,7 +70,7 @@ Note that the EP technique is merely a heuristic and not an exact science, espec
 
 <tip-box> 
 
-:package: Consider the method EPs given above for the `isValidMonth`. A different tester might use these EPs instead:
+{{ icon_example }} Consider the method EPs given above for the `isValidMonth`. A different tester might use these EPs instead:
 * [1 … 12] : the range that produces `true`
 * [all other integers] : the range that produces `false`
 
@@ -78,7 +78,7 @@ Note that the EP technique is merely a heuristic and not an exact science, espec
 
 <tip-box> 
 
-:package: Some more examples:
+{{ icon_example }} Some more examples:
 
 <table class="table">
   <tr>
@@ -120,6 +120,4 @@ Returns the square root of `s` if the square root is an integer; returns `0` oth
 
 <div id="extras">
   <include src="exercises.md" />
-</div>
-
 </div>

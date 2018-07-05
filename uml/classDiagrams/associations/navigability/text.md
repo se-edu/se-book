@@ -1,8 +1,12 @@
 <div id="title">
 
-#### Navigability :two:
+#### Navigability
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret association navigabilities in class diagrams</span>
 
 <div id="body">
 
@@ -10,13 +14,13 @@
 
 <tip-box>
 
-:package: `Logic` is aware of `Minefield`, but `Minefield` is not aware of `Logic`
+{{ icon_example }} `Logic` is aware of `Minefield`, but `Minefield` is not aware of `Logic`
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/navigability/images/logicMinefield.png" height="40" />
 
 <include src="logic-minefield.md" />
 
-:package: Here is an example of a bidirectional navigability; each class is aware of the other.<p/>
+{{ icon_example }} Here is an example of a bidirectional navigability; each class is aware of the other.<p/>
 <img src="{{baseUrl}}/uml/classDiagrams/associations/navigability/images/manDog.png" height="40" />
 
 </tip-box>
@@ -25,7 +29,7 @@
 
 <tip-box> 
 
-:package: According to this object diagram the given `Logic` object is associated with and aware of two `MineField` objects.
+{{ icon_example }} According to this object diagram the given `Logic` object is associated with and aware of two `MineField` objects.
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/navigability/images/logicMinefieldObjects.png" height="80" />
 
@@ -35,6 +39,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

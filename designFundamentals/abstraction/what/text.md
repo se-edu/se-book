@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain abstraction</span>
 
 <div id="body">
 
@@ -20,7 +20,7 @@ Most programs are written to solve complex problems involving large amounts of i
 
 <tip-box> 
 
-:package: Within a certain software component, we might deal with a _user_ data type, while ignoring the details contained in the user data item such as _name_, and _date of birth_. These details have been ‘abstracted away’ as they do not affect the task of that software component.
+{{ icon_example }} Within a certain software component, we might deal with a _user_ data type, while ignoring the details contained in the user data item such as _name_, and _date of birth_. These details have been ‘abstracted away’ as they do not affect the task of that software component.
 
 </tip-box>
 
@@ -28,7 +28,7 @@ Most programs are written to solve complex problems involving large amounts of i
  
 <tip-box> 
 
-:package: `print(“Hello”)` is an abstraction of the actual output mechanism within the computer.
+{{ icon_example }} `print(“Hello”)` is an abstraction of the actual output mechanism within the computer.
 
 </tip-box> 
 
@@ -36,15 +36,13 @@ Most programs are written to solve complex problems involving large amounts of i
 
 <tip-box> 
 
-:package: An example of different levels of data abstraction: a `File` is a data item that is at a higher level than an array and an array is at a higher level than a bit. 
+{{ icon_example }} An example of different levels of data abstraction: a `File` is a data item that is at a higher level than an array and an array is at a higher level than a bit. 
 
-:package: An example of different levels of control abstraction: `execute(Game)` is at a higher level than `print(Char)` which is at a higher than an Assembly language instruction `MOV`.
+{{ icon_example }} An example of different levels of control abstraction: `execute(Game)` is at a higher level than `print(Char)` which is at a higher than an Assembly language instruction `MOV`.
 
 </tip-box>
 
 </div>
 
 <div id="extras">
-</div>
-
 </div>

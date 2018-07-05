@@ -8,168 +8,167 @@
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\markbind\css\site-nav.css">
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-<div class="website-content">
-  <p><span class="dimmed"><strong>Error Handling →</strong></span></p>
-  <h2 id="assertions">Assertions</h2>
-  <div id="main">
     <div>
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+  <div class="website-content" id="all">
+    <p><span class="dimmed"><strong><span>Implementation → Error Handling →
+</span></strong>
+      </span>
+    </p>
+    <div id="title">
       <div>
-        <h4 id="what-two">What <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
+        <h2 id="assertions">Assertions</h2>
       </div>
-      <tip-box>
-        <div>
-          <p>🏆 Can explain assertions <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
-        </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
-        <div>
-          <div>
-            <p><strong><em>Assertions</em> are used to define assumptions about the program state so that the runtime can verify them.</strong> An assertion failure indicates a possible bug in the code <span class="dimmed">because the code has resulted in a program state that violates an assumption about how the code <em>should</em> behave</span>.</p>
-            <tip-box>
-              <p>📦 An assertion can be used to express something like <em>when the execution comes to this point, the variable <code>v</code> cannot be null</em>.</p>
-            </tip-box>
-            <p><strong>If the runtime detects an <em>assertion failure</em>, it typically take some drastic action</strong> such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner
-              the execution stops, the safer it is.</p>
-            <tip-box>
-              <p>📦 In the Java code below, suppose we set an assertion that <code>timeout</code> returned by <code>Config.getTimeout()</code> is greater than <code>0</code>. Now, if the <code>Config.getTimeout()</code> returned <code>-1</code> in a specific
-                execution of this line, the runtime can detect it as a <em>assertion failure</em> -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result of a bug -- and take some drastic
-                action such as terminating the execution.</p>
-              <pre><code class="hljs java"><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); 
-</code></pre>
-            </tip-box>
-          </div>
-          <div></div>
-        </div>
-      </panel>
     </div>
-    <div>
+    <div id="main">
       <div>
-        <h4 id="how-two">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-      </div>
-      <tip-box>
         <div>
-          <p>🏆 Can use assertions <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="what">What</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can explain assertions</span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
+            <div>
+              <p><strong><em>Assertions</em> are used to define assumptions about the program state so that the runtime can verify them.</strong> An assertion failure indicates a possible bug in the code <span class="dimmed">because the code has resulted in a program state that violates an assumption about how the code <em>should</em> behave</span>.</p>
+              <tip-box>
+                <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> An assertion can be used to express something like <em>when the execution comes to this point, the variable <code>v</code> cannot be null</em>.</p>
+              </tip-box>
+              <p><strong>If the runtime detects an <em>assertion failure</em>, it typically take some drastic action</strong> such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner
+                the execution stops, the safer it is.</p>
+              <tip-box>
+                <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> In the Java code below, suppose we set an assertion that <code>timeout</code> returned by <code>Config.getTimeout()</code> is greater than <code>0</code>. Now, if the <code>Config.getTimeout()</code>                  returned <code>-1</code> in a specific execution of this line, the runtime can detect it as a <em>assertion failure</em> -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be
+                  the result of a bug -- and take some drastic action such as terminating the execution.</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); 
+</code></pre>
+              </tip-box>
+            </div>
+            <div></div>
+          </panel>
         </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
         <div>
-          <div>
-            <p>Use the <code>assert</code> keyword to define assertions.</p>
-            <tip-box>
-              <p>📦 This assertion will fail with the message <code>x should be 0</code> if <code>x</code> is not 0 at this point.</p>
-              <pre><code class="hljs java">x = getX();
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="how">How</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can use assertions</span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
+            <div>
+              <p>Use the <code>assert</code> keyword to define assertions.</p>
+              <tip-box>
+                <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> This assertion will fail with the message <code>x should be 0</code> if <code>x</code> is not 0 at this point.</p>
+                <pre><code class="hljs java">x = getX();
 <span class="hljs-keyword">assert</span> x == <span class="hljs-number">0</span> : <span class="hljs-string">"x should be 0"</span>;
 ...
 </code></pre>
-            </tip-box>
-            <p><strong>Assertions can be disabled without modifying the code.</strong></p>
-            <tip-box>
-              <p>📦 <code>java -enableassertions HelloWorld</code> (or <code>java -ea HelloWorld</code>) will run <code>HelloWorld</code> with assertions enabled while <code>java -disableassertions HelloWorld</code> will run it without verifying assertions.</p>
-            </tip-box>
-            <tip-box type="important">
-              <p><strong>Java disables assertions by default.</strong> This could create a situation where you think all assertions are being verified as <code>true</code> while in fact they are not being verified at all. Therefore, remember to enable assertions
-                when you run the program if you want them to be in effect.</p>
-            </tip-box>
-            <tip-box>
-              <p>💡 Enable assertions in Intellij (<a href="https://stackoverflow.com/questions/18168257/where-to-add-compiler-options-like-ea-in-intellij-idea">how?</a>) and get an assertion to fail temporarily (e.g. insert an <code>assert false</code>                into the code temporarily) to confirm assertions are being verified.</p>
-            </tip-box>
-            <tip-box type="info">
-              <p><strong>Java <code>assert</code> vs JUnit assertions</strong>: They are similar in purpose but JUnit assertions are more powerful and customized for testing. In addition, JUnit assertions are not disabled by default. We recommend you use
-                JUnit assertions in test code and Java <code>assert</code> in functional code.</p>
-            </tip-box>
-          </div>
-          <div>
-            <div>
-              <panel header=":paperclip: Resources" expanded="">
-                <p><strong>Tutorials</strong>:</p>
-                <ul>
-                  <li><a href="https://www.javatpoint.com/assertion-in-java"><strong>Java Assertions</strong></a> -- a simple tutorial from <em><a href="http://javatpoint.com">javatpoint.com</a></em></li>
-                  <li><a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html"><strong>Programming with Assertions</strong> (first half)</a> -- a more detailed tutorial from <em>Oracle</em></li>
-                </ul>
-                <p><strong>Best practices</strong>:</p>
-                <ul>
-                  <li><a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#usage"><strong>Programming with Assertions</strong> (second half)</a> -- <em>from Oracle</em> (also listed above as a tutorial) contains some best practices
-                    towards the end of the article.</li>
-                </ul>
-              </panel>
+              </tip-box>
+              <p><strong>Assertions can be disabled without modifying the code.</strong></p>
+              <tip-box>
+                <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> <code>java -enableassertions HelloWorld</code> (or <code>java -ea HelloWorld</code>) will run <code>HelloWorld</code> with assertions enabled while <code>java -disableassertions HelloWorld</code>                  will run it without verifying assertions.</p>
+              </tip-box>
+              <tip-box type="important">
+                <p><strong>Java disables assertions by default.</strong> This could create a situation where you think all assertions are being verified as <code>true</code> while in fact they are not being verified at all. Therefore, remember to enable
+                  assertions when you run the program if you want them to be in effect.</p>
+              </tip-box>
+              <tip-box>
+                <p>💡 Enable assertions in Intellij (<a href="https://stackoverflow.com/questions/18168257/where-to-add-compiler-options-like-ea-in-intellij-idea">how?</a>) and get an assertion to fail temporarily (e.g. insert an <code>assert false</code>                  into the code temporarily) to confirm assertions are being verified.</p>
+              </tip-box>
+              <tip-box type="info">
+                <p><strong>Java <code>assert</code> vs JUnit assertions</strong>: They are similar in purpose but JUnit assertions are more powerful and customized for testing. In addition, JUnit assertions are not disabled by default. We recommend you use
+                  JUnit assertions in test code and Java <code>assert</code> in functional code.</p>
+              </tip-box>
             </div>
-          </div>
+            <div>
+              <div>
+                <panel header=":paperclip: Resources" expanded="">
+                  <p><strong>Tutorials</strong>:</p>
+                  <ul>
+                    <li><a href="https://www.javatpoint.com/assertion-in-java"><strong>Java Assertions</strong></a> -- a simple tutorial from <em><a href="http://javatpoint.com">javatpoint.com</a></em></li>
+                    <li><a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html"><strong>Programming with Assertions</strong> (first half)</a> -- a more detailed tutorial from <em>Oracle</em></li>
+                  </ul>
+                  <p><strong>Best practices</strong>:</p>
+                  <ul>
+                    <li><a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#usage"><strong>Programming with Assertions</strong> (second half)</a> -- <em>from Oracle</em> (also listed above as a tutorial) contains some best
+                      practices towards the end of the article.</li>
+                  </ul>
+                </panel>
+              </div>
+            </div>
+          </panel>
         </div>
-      </panel>
-    </div>
-    <div>
-      <div>
-        <h4 id="when-three">When <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></h4>
-      </div>
-      <tip-box>
         <div>
-          <p>🏆 Can use assertions optimally <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0033-20e3.png"></p>
-        </div>
-      </tip-box>
-      <panel type="seamless" header=" %%- - - - - - - - - -%%">
-        <div>
-          <div>
-            <p><strong>It is recommended that assertions be used liberally in the code.</strong> Their impact on performance is considered low and worth the additional safety they provide.</p>
-            <p><strong>Do not use assertions to do <em>work</em></strong> because assertions can be disabled. If not, your program will stop working when assertions are not enabled.</p>
-            <tip-box>
-              <p>📦 The code below will not invoke the <code>writeFile()</code> method when assertions are disabled. <span class="dimmed"> If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.</span></p>
-              <pre><code class="hljs java">...
+          <panel type="seamless" expanded="">
+            <span slot="header" class="panel-title"><div>
+<h4 id="when">When</h4></div></span>
+            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can use assertions optimally</span></span></span></button>
+              <p></p>
+            </p>
+            <p></p>
+            <div>
+              <p><strong>It is recommended that assertions be used liberally in the code.</strong> Their impact on performance is considered low and worth the additional safety they provide.</p>
+              <p><strong>Do not use assertions to do <em>work</em></strong> because assertions can be disabled. If not, your program will stop working when assertions are not enabled.</p>
+              <tip-box>
+                <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> The code below will not invoke the <code>writeFile()</code> method when assertions are disabled. <span class="dimmed"> If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.</span></p>
+                <pre><code class="hljs java">...
 <span class="hljs-function"><span class="hljs-keyword">assert</span> <span class="hljs-title">writeFile</span><span class="hljs-params">()</span> : "File writing is supposed to return <span class="hljs-keyword">true</span>"</span>;
 </code></pre>
-            </tip-box>
-            <p><strong>Assertions are suitable for verifying assumptions about <em>Internal Invariants</em>, <em>Control-Flow Invariants</em>,
+              </tip-box>
+              <p><strong>Assertions are suitable for verifying assumptions about <em>Internal Invariants</em>, <em>Control-Flow Invariants</em>,
 <em>Preconditions</em>, <em>Postconditions</em>, and <em>Class Invariants</em>.</strong> Refer to [<a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#usage">Programming with Assertions (second half)</a>] to learn more.</p>
-            <p><strong>Exceptions and assertions are two complementary ways of handling errors in software but they serve different purposes.</strong> Therefore, both assertions and exceptions should be used in code.</p>
-            <ul>
-              <li>The raising of an exception indicates an unusual condition created by the user <span class="dimmed"> (e.g.  user inputs an unacceptable input)</span> or the environment <span class="dimmed"> (e.g., a file needed for the program is missing)</span>.</li>
-              <li>An assertion failure indicates the programmer made a mistake in the code <span class="dimmed"> (e.g., a null value is returned from a method that is not supposed to return null under any circumstances)</span>.</li>
-            </ul>
-          </div>
-          <div>
-            <div>
-              <panel header=":muscle: Exercises" expandable="">
-                <div>
-                  <panel header=":lock::key: Assertions failure in Calculator">
-                    <question>
-                      <p>A Calculator program crashes with an ‘assertion failure’ message when you try to find the square root of a negative number.</p>
-                      <ul radio-group="f7dad" class="radio-list">
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="f7dad" type="radio"> a. This is a correct use of assertions.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="f7dad" type="radio"> b. The application should have terminated with an exception instead.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="f7dad" type="radio"> c. The program has a bug.</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="f7dad" type="radio"> d. All statements above are incorrect.</label></li>
-                      </ul>
-                      <div slot="answer">
-                        <p>(c)</p>
-                        <p>Explanation: An assertion failure indicates a bug in the code. (b) is not acceptable because of the word &quot;terminated&quot;. The application should not fail at all for this input. But it could have used an exception to handle
-                          the situation internally.</p>
-                      </div>
-                    </question>
-                  </panel>
-                </div>
-                <div>
-                  <panel header=":lock::key: Statement about exceptions and assertions">
-                    <question>
-                      <p>Which statements are correct?</p>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Use assertions to indicate the programmer messed up; Use exceptions to indicate the user or the environment messed up.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Use exceptions to indicate the programmer messed up; Use assertions to indicate the user or the environment messed up.</li>
-                      </ul>
-                      <div slot="answer">
-                        <p>(a)</p>
-                      </div>
-                    </question>
-                  </panel>
-                </div>
-              </panel>
+              <p><strong>Exceptions and assertions are two complementary ways of handling errors in software but they serve different purposes.</strong> Therefore, both assertions and exceptions should be used in code.</p>
+              <ul>
+                <li>The raising of an exception indicates an unusual condition created by the user <span class="dimmed"> (e.g.  user inputs an unacceptable input)</span> or the environment <span class="dimmed"> (e.g., a file needed for the program is missing)</span>.</li>
+                <li>An assertion failure indicates the programmer made a mistake in the code <span class="dimmed"> (e.g., a null value is returned from a method that is not supposed to return null under any circumstances)</span>.</li>
+              </ul>
             </div>
-          </div>
+            <div>
+              <div>
+                <panel header=":muscle: Exercises" expandable="">
+                  <div>
+                    <panel header=":lock::key: Assertions failure in Calculator">
+                      <question>
+                        <p>A Calculator program crashes with an ‘assertion failure’ message when you try to find the square root of a negative number.</p>
+                        <ul radio-group="f7dad" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="f7dad" type="radio"> a. This is a correct use of assertions.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="f7dad" type="radio"> b. The application should have terminated with an exception instead.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="f7dad" type="radio"> c. The program has a bug.</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="f7dad" type="radio"> d. All statements above are incorrect.</label></li>
+                        </ul>
+                        <div slot="answer">
+                          <p>(c)</p>
+                          <p>Explanation: An assertion failure indicates a bug in the code. (b) is not acceptable because of the word &quot;terminated&quot;. The application should not fail at all for this input. But it could have used an exception to handle
+                            the situation internally.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                  <div>
+                    <panel header=":lock::key: Statement about exceptions and assertions">
+                      <question>
+                        <p>Which statements are correct?</p>
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Use assertions to indicate the programmer messed up; Use exceptions to indicate the user or the environment messed up.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Use exceptions to indicate the programmer messed up; Use assertions to indicate the user or the environment messed up.</li>
+                        </ul>
+                        <div slot="answer">
+                          <p>(a)</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </panel>
         </div>
-      </panel>
+      </div>
     </div>
   </div>
 </div>
@@ -181,4 +180,5 @@
     const baseUrl = '/se-book'
 </script>
 <script src="..\..\markbind\js\setup.js"></script>
+<script src="..\..\markbind\js\site-nav.js"></script>
 </html>

@@ -1,6 +1,6 @@
-* __ [Regression Testing](./testing/testingTypes/regressionTesting) :one: <trigger for="pop:testing-regressionTesting-preview">:mag:</trigger>
+* __ [Regression Testing]({{baseUrl}}/testing/testingTypes/regressionTesting) <trigger for="pop:testing-regressionTesting-preview">{{glyphicon_eye_open}}</trigger>
 
-<popover id="pop:testing-regressionTesting-preview" title=":mag: Regression Testing" placement="right">
+<popover id="pop:testing-regressionTesting-preview" title="{{glyphicon_eye_open}} Regression Testing" placement="right">
   <div slot="content">
     <include src=".\preview.md" />
   </div>

@@ -8,53 +8,54 @@
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\site-nav.css">
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-<div class="website-content">
-  <tip-box>
     <div>
-      <p>🏆 Can increase cohesion <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></p>
-    </div>
-  </tip-box>
-  <div>
-    <div>
-      <p>
-        <panel src="/se-book\designFundamentals\cohesion\what\full._include_.html" header="%%:mortar_board: Design → Design Fundamentals → Cohesion →
-What%%" isOpen="false" no-close="true" no-switch="true"></panel>
-      </p>
-    </div>
-    <p></p>
-    <p><span class="dimmed"><strong><span>Design → Design Fundamentals → Cohesion →
-</span></strong>
-      </span>
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+  <div class="website-content">
+    <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can increase cohesion</span></span></span></button>
+      <p></p>
     </p>
     <div>
-      <h4 id="how-two">How <img style="height: 1em;width: 1em;margin: 0 .05em 0 .1em;vertical-align: -0.1em;" src="https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png"></h4>
-    </div>
-    <div id="main">
       <div>
-        <p><strong>Cohesion can be present in many forms</strong>. Some examples:</p>
-        <ul>
-          <li>Code related to a single concept is kept together, e.g. the Student component handles everything related to students.</li>
-          <li>Code that is invoked close together in time is kept together, e.g. all code related to initializing the system is kept together.</li>
-          <li>Code that manipulates the same data structure is kept together, e.g. the <code>GameArchive</code> component handles everything related to the storage and retrieval of game sessions.</li>
-        </ul>
-        <tip-box>
-          <p>📦 Suppose a Payroll application contains a class that deals with writing data to the database. If the class include some code to show an error dialog to the user if the database is unreachable, that class is not cohesive because it seems to
-            be interacting with the user as well as the database.</p>
-        </tip-box>
+        <p>
+          <panel src="/se-book\designFundamentals\cohesion\what\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Design → Design Fundamentals → Cohesion →
+What%%" isOpen="false" no-close="true" no-switch="true"></panel>
+        </p>
       </div>
-      <div>
+      <p></p>
+      <p><span class="dimmed"><strong><span>Design → Design Fundamentals → Cohesion →
+</span></strong>
+        </span>
+      </p>
+      <div id="title-and-body">
         <div>
-          <panel header=":muscle: Exercises" expandable="">
+          <h4 id="how">How</h4>
+        </div>
+        <div id="main">
+          <div>
+            <p><strong>Cohesion can be present in many forms</strong>. Some examples:</p>
+            <ul>
+              <li>Code related to a single concept is kept together, e.g. the Student component handles everything related to students.</li>
+              <li>Code that is invoked close together in time is kept together, e.g. all code related to initializing the system is kept together.</li>
+              <li>Code that manipulates the same data structure is kept together, e.g. the <code>GameArchive</code> component handles everything related to the storage and retrieval of game sessions.</li>
+            </ul>
+            <tip-box>
+              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Suppose a Payroll application contains a class that deals with writing data to the database. If the class include some code to show an error dialog to the user if the database
+                is unreachable, that class is not cohesive because it seems to be interacting with the user as well as the database.</p>
+            </tip-box>
+          </div>
+          <div>
             <div>
-              <panel header=":lock::key: Which class is more cohesive?">
-                <question has-input="true">
-                  <p>Compare the cohesion of the following two versions of the <code>EmailMessage</code> class. Which one is more cohesive and why?</p>
-                  <pre><code class="hljs java"><span class="hljs-comment">// version-1</span>
+              <panel header=":muscle: Exercises" expandable="">
+                <div>
+                  <panel header=":lock::key: Which class is more cohesive?">
+                    <question has-input="true">
+                      <p>Compare the cohesion of the following two versions of the <code>EmailMessage</code> class. Which one is more cohesive and why?</p>
+                      <pre><code class="hljs java"><span class="hljs-comment">// version-1</span>
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{
     <span class="hljs-keyword">private</span> String sendTo;
  	  <span class="hljs-keyword">private</span> String subject;
@@ -94,15 +95,17 @@ What%%" isOpen="false" no-close="true" no-switch="true"></panel>
     }
 }
 </code></pre>
-                  <div slot="answer">
-                    <p>Version 2 is less cohesive.</p>
-                    <p>Explanation: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, we can improve the cohesion of both versions
-                      by removing the sendMessage functionality. Although sending message is related to emails, this class is supposed to represent an email message, not an email server.</p>
-                  </div>
-                </question>
+                      <div slot="answer">
+                        <p>Version 2 is less cohesive.</p>
+                        <p>Explanation: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, we can improve the cohesion of both
+                          versions by removing the sendMessage functionality. Although sending message is related to emails, this class is supposed to represent an email message, not an email server.</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
               </panel>
             </div>
-          </panel>
+          </div>
         </div>
       </div>
     </div>
@@ -116,4 +119,5 @@ What%%" isOpen="false" no-close="true" no-switch="true"></panel>
     const baseUrl = '/se-book'
 </script>
 <script src="..\..\..\markbind\js\setup.js"></script>
+<script src="..\..\..\markbind\js\site-nav.js"></script>
 </html>

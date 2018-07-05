@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Branch :two:
+#### Branch
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../revisionControl/branching/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Branching%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can use Git branching</span>
 
 <div id="body">
 
@@ -123,6 +123,4 @@ That is because **Git does a ==_fast forward_ merge== if possible**. Seeing that
 </div>
 
 <div id="extras">
-</div>
-
 </div>

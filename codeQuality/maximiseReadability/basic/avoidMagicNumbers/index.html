@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - Coding Best Practices: [Practice] Avoid Magic Numbers</title>
+    <link rel="stylesheet" href="..\..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\..\..\markbind\css\site-nav.css">
+    <link rel="icon" href="/se-book/favicon.ico">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <div>
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+  <div class="website-content">
+    <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can improve code quality using technique: avoid magic numbers </span></span></span></button>
+      <p></p>
+    </p>
+    <div>
+      <div></div>
+      <p></p>
+      <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Basic →
+</span></strong>
+        </span>
+      </p>
+      <div id="title-and-body">
+        <div>
+          <h4 id="avoid-magic-numbers">Avoid Magic Numbers</h4>
+        </div>
+        <div id="main">
+          <div>
+            <p>When the code has a number that does not explain the meaning of the number, we call that a magic number (as in “the number appears as if by magic”). Using a
+              <tooltip content="e.g., `PI`"><em>named constant</em></tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
+            <tip-box>
+              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Example:</p>
+              <tabs>
+              
+                <tab header="Java">
+                  <div>
+                    <table>
+                      <tr>
+                      
+                        <td valign="top">
+                          <p>
+                            <font color="red"><strong><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Bad</strong></font>
+                          </p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>;
+...
+<span class="hljs-keyword">return</span> <span class="hljs-number">9</span>;
+</code></pre>
+                          <p></p>
+                        </td>
+                      
+                        <td>  <br><br></td>
+                      
+                        <td valign="top">
+                          <p>
+                            <font color="green"><strong><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Good</strong></font>
+                          </p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14236</span>;
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_SIZE = <span class="hljs-number">10</span>;
+...
+<span class="hljs-keyword">return</span> PI;
+...
+<span class="hljs-keyword">return</span> MAX_SIZE-<span class="hljs-number">1</span>;
+</code></pre>
+                          <p></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </tab>
+              
+                <tab header="Python">
+                  <div>
+                    <p>Note: Python does not have a way to make a variable a constant. However, you can use a normal variable with an <code>ALL_CAPS</code> name to simulate a constant.</p>
+                    <table>
+                      <tr>
+                      
+                        <td valign="top">
+                          <p>
+                            <font color="red"><strong><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Bad</strong></font>
+                          </p>
+                          <pre><code class="hljs python"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>
+...
+<span class="hljs-keyword">return</span> <span class="hljs-number">9</span>
+</code></pre>
+                          <p></p>
+                        </td>
+                      
+                        <td>  <br><br></td>
+                      
+                        <td valign="top">
+                          <p>
+                            <font color="green"><strong><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Good</strong></font>
+                          </p>
+                          <pre><code class="hljs python">PI = <span class="hljs-number">3.14236</span>
+MAX_SIZE = <span class="hljs-number">10</span>
+...
+<span class="hljs-keyword">return</span> PI
+...
+<span class="hljs-keyword">return</span> MAX_SIZE<span class="hljs-number">-1</span>
+</code></pre>
+                          <p></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </tab>
+              </tabs>
+              <hr>
+            </tip-box>
+            <p>Similarly, we can have ‘magic’ values of other data types.</p>
+            <tip-box>
+              <p>
+                <font color="red"><strong><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Bad</strong></font>
+              </p>
+              <pre><code class="hljs java"><span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment">// A magic string!</span>
+</code></pre>
+            </tip-box>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
+<script src="..\..\..\..\markbind\js\setup.js"></script>
+<script src="..\..\..\..\markbind\js\site-nav.js"></script>
+</html>

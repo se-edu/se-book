@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### How :two:
+#### How
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can apply boundary value analysis</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Some examples:
+{{ icon_example }} Some examples:
 
 <table class="table">
   <tr>
@@ -95,6 +95,4 @@ Stack with: one element, two elements, no empty spaces, only one empty space
 </div>
 
 <div id="extras">
-</div>
-
 </div>

@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### What :one:
+#### What
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can explain defensive programming</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-:package: Consider a `MainApp#getConfig()` a method that returns a `Config` object containing configuration data. A typical implementation is given below:
+{{ icon_example }} Consider a `MainApp#getConfig()` a method that returns a `Config` object containing configuration data. A typical implementation is given below:
 ```java
 class MainApp{
     Config config;
@@ -38,6 +38,4 @@ If the returned Config object is not meant to be modified, a defensive programme
 </div>
 
 <div id="extras">
-</div>
-
 </div>

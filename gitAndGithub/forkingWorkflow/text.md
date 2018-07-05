@@ -1,12 +1,10 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<span id="prereqs"><dynamic-panel src="../../revisionControl/forkingWorkflow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Revision Control → Forking Workflow%%" /></span>
 
-<div class="website-content">
-
-<div id="path">Git and Github → </div>
+<span id="outcomes">{{glyphicon_flag}} Can follow Forking Workflow</span>
 
 <div id="title">
 
-#### Forking Workflow :four:
+#### Forking Workflow
 
 </div>
 
@@ -44,6 +42,4 @@
 </div>
 
 <div id="extras">
-</div>
-
 </div>

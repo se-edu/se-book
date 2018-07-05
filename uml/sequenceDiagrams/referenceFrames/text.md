@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Reference Frames :two:
+#### Reference Frames
 
 </div>
+
+<span id="prereqs"></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with reference frames</span>
 
 <div id="body">
 
@@ -19,7 +19,7 @@ Notation:
 
 <tip-box>
 
-:package: The details of the `get minefield appearance` interactions have been omitted from the diagram.
+{{ icon_example }} The details of the `get minefield appearance` interactions have been omitted from the diagram.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/referenceFrames/images/playerTextLogic.png" height="250" />
 <p/>
@@ -33,6 +33,4 @@ Those details are shown in a separate sequence diagram given below.<br>
 </div>
 
 <div id="extras">
-</div>
-
 </div>

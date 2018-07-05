@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
-
-<div class="website-content">
-
 <div id="title">
 
-#### Implementing Class-Level Members :one:
+#### Implementing Class-Level Members
 
 </div>
+
+<span id="prereqs"><dynamic-panel src="../../oopDesign/classes/classLevelMembers/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Classes → Class-Level Members%%" /></span>
+
+<span id="outcomes">{{glyphicon_flag}} Can implement class-level members</span>
 
 <div id="body">
 
@@ -29,6 +29,4 @@ Some resources to learn how to implement class-level members:
 </div>
 
 <div id="extras">
-</div>
-
 </div>
