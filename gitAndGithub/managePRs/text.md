@@ -4,9 +4,9 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Branching%%" />
-<dynamic-panel src="../createPRs/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Create PRs%%" />
-<dynamic-panel src="../mergeConflicts/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Merge Conflicts%%" /></span>
+<span id="prereqs"><panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Branching%%" />
+<panel src="../createPRs/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Create PRs%%" />
+<panel src="../mergeConflicts/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Merge Conflicts%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can review and merge PRs on GitHub</span>
 

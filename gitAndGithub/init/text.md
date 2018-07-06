@@ -1,4 +1,4 @@
-<span id="prereqs"><dynamic-panel src="../../revisionControl/repositories/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Repositories%%" /></span>
+<span id="prereqs"><panel src="../../revisionControl/repositories/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Repositories%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can create a local Git repo</span>
 

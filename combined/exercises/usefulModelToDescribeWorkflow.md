@@ -1,11 +1,11 @@
 <panel header=":lock::key: Which one of these is the most useful to describe a workflow?" expanded>
 
 <panel header="%%{{ icon_prereq }} Prerequisites%%" expandable minimized>
-  <dynamic-panel src="../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Structures: Class Diagrams" />
-  <dynamic-panel src="../../modeling/modelingStructures/objectDiagrams/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Structures: Object Diagrams" />
-  <dynamic-panel src="../../modeling/modelingBehaviors/activityDiagrams/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Behaviors: Activity Diagrams" />
-	<dynamic-panel src="../../modeling/modelingBehaviors/stateMachineDiagrams/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Behaviors: State Machine Diagrams" />
-  <dynamic-panel src="../../modeling/modelingBehaviors/useCaseDiagrams/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Behaviors: Use Case Diagrams" />
+  <panel src="../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Structures: Class Diagrams" />
+  <panel src="../../modeling/modelingStructures/objectDiagrams/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Structures: Object Diagrams" />
+  <panel src="../../modeling/modelingBehaviors/activityDiagrams/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Behaviors: Activity Diagrams" />
+	<panel src="../../modeling/modelingBehaviors/stateMachineDiagrams/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Behaviors: State Machine Diagrams" />
+  <panel src="../../modeling/modelingBehaviors/useCaseDiagrams/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Behaviors: Use Case Diagrams" />
 </panel>
 
 <p/>

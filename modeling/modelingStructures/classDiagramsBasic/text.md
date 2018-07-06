@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../../../oopDesign/classes/basic/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Design → OOP → Classes → Basic%%" /></span>
+<span id="prereqs"><panel src="../../../oopDesign/classes/basic/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Design → OOP → Classes → Basic%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can use basic-level class diagrams</span>
 

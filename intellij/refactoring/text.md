@@ -1,4 +1,4 @@
-<span id="prereqs"><dynamic-panel src="../../refactoring/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Implementation → Refactoring → What%%" /></span>
+<span id="prereqs"><panel src="../../refactoring/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Implementation → Refactoring → What%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can use automated refactoring features of the IDE</span>
 

@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../../oopDesign/associations/associationClasses/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Associations → Association Classes%%" /></span>
+<span id="prereqs"><panel src="../../oopDesign/associations/associationClasses/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Associations → Association Classes%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can implement association classes</span>
 
@@ -24,7 +24,7 @@ At implementation level, an association class is most likely implemented as foll
 <img src="{{baseUrl}}/oopImplementation/associationClasses/images/manWomanImplementation.png" height="140" />
 <p/>
 
-<dynamic-panel type="seamless" src="code-marriage.md" header="%%See code%%" />
+<panel type="seamless" src="code-marriage.md" header="%%See code%%" />
 
 </tip-box>
 

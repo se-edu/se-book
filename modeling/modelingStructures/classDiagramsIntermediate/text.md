@@ -1,9 +1,9 @@
-<span id="prereqs"><dynamic-panel src="../../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Inheritance → What%%" />
-<dynamic-panel src="../../../oopDesign/classes/classLevelMembers/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Classes → Class Level Members%%" />
-<dynamic-panel src="../../../oopDesign/classes/enumerations/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Classes → Enumerations%%" />
-<dynamic-panel src="../../../uml/classDiagrams/dependencies/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%UML → Class Diagrams → Dependencies%%" />
-<dynamic-panel src="../../../oopDesign/associations/composition/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Associations → Composition%%" />
-<dynamic-panel src="../../../oopDesign/associations/aggregation/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Associations → Aggregation%%" /></span>
+<span id="prereqs"><panel src="../../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Inheritance → What%%" />
+<panel src="../../../oopDesign/classes/classLevelMembers/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Classes → Class Level Members%%" />
+<panel src="../../../oopDesign/classes/enumerations/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Classes → Enumerations%%" />
+<panel src="../../../uml/classDiagrams/dependencies/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%UML → Class Diagrams → Dependencies%%" />
+<panel src="../../../oopDesign/associations/composition/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Associations → Composition%%" />
+<panel src="../../../oopDesign/associations/aggregation/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Associations → Aggregation%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can use intermediate-level class diagrams</span>
 

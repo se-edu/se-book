@@ -1,8 +1,8 @@
 <panel header=":lock::key: Pick the odd one out.">
 
 <panel header="%%Prerequisites%%" expandable expanded>
-  <dynamic-panel src="../separationOfConcernsPrinciple/unit-inElsewhere-asFlat.md" boilerplate header="Principles: Separation of Concerns Principle" />
-  <dynamic-panel src="../solidPrinciples/unit-inElsewhere-asFlat.md" boilerplate header="Principles: SOLID Principles" />
+  <panel src="../separationOfConcernsPrinciple/unit-inElsewhere-asFlat.md" boilerplate header="Principles: Separation of Concerns Principle" />
+  <panel src="../solidPrinciples/unit-inElsewhere-asFlat.md" boilerplate header="Principles: SOLID Principles" />
 </panel>
 
 <p/>

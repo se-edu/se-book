@@ -1,7 +1,7 @@
 <panel header=":lock::key: Choose the least  correct statement about principles and patterns." expanded>
 
 <panel header="%%{{ icon_prereq }}%% Prerequisites" minimized>
-  <dynamic-panel src="../../designPatterns/introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} Design Patterns: Introduction: What" />
+  <panel src="../../designPatterns/introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} Design Patterns: Introduction: What" />
 </panel>
 
 <p/>

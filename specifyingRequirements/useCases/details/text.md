@@ -4,8 +4,8 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../introduction/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Requirements → Specifying Requirements → Use Cases → Introduction%%" />
-<dynamic-panel src="../identifying/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Requirements → Specifying Requirements → Use Cases → Identifying%%" /></span>
+<span id="prereqs"><panel src="../introduction/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Requirements → Specifying Requirements → Use Cases → Introduction%%" />
+<panel src="../identifying/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Requirements → Specifying Requirements → Use Cases → Identifying%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can specify details of a use case in a structured format</span>
 

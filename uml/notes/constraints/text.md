@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../notes/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} UML → Notes%%" /></span>
+<span id="prereqs"><panel src="../notes/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} UML → Notes%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can specify constraints in UML diagrams</span>
 

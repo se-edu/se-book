@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/overriding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Inheritance → Overriding%%" /></span>
+<span id="prereqs"><panel src="../../oopDesign/inheritance/overriding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Inheritance → Overriding%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can implement operation overriding</span>
 
