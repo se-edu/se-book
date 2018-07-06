@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../../oopDesign/inheritance/interfaces/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Inheritance → Interfaces%%" /></span>
+<span id="prereqs"><panel src="../../oopDesign/inheritance/interfaces/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Inheritance → Interfaces%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can implement interfaces</span>
 

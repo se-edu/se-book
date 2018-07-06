@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../../oopDesign/associations/aggregation/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Associations → Aggregation%%" /></span>
+<span id="prereqs"><panel src="../../oopDesign/associations/aggregation/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Associations → Aggregation%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can implement aggregation</span>
 

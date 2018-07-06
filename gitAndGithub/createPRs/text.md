@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Branching%%" /></span>
+<span id="prereqs"><panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Branching%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can create PRs on GitHub</span>
 
@@ -48,7 +48,7 @@ git push origin add-intro
 
 4b. Select `base fork` and `head fork` as follows:
 
-* `base fork`: your own fork (i.e. `{your user name}/samplerepo-pr-practice`, ==NOT `nus-{{ module | lower }}-{{ semester }}/samplerepo-pr-practice`==)
+* `base fork`: your own fork (i.e. `{your user name}/samplerepo-pr-practice`, ==NOT `nus-cs2103-AY1718S2/samplerepo-pr-practice`==)
 * `head fork`: your own fork.
 
 <img src="{{baseUrl}}/gitAndGithub/createPRs/images/selectBase.png" width="800" />

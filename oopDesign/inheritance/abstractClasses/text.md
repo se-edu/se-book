@@ -18,7 +18,7 @@
 
 **An abstract method is simply the method interface without the implementation.** 
 
-<dynamic-panel src="../../../uml/classDiagrams/abstractClasses/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }}UML → Class Diagrams → Abstract Classes" />
+<panel src="../../../uml/classDiagrams/abstractClasses/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }}UML → Class Diagrams → Abstract Classes" />
 
 <p/>
 

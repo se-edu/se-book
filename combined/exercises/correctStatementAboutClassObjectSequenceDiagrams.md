@@ -1,9 +1,9 @@
 <panel header=":lock::key: Class Diagrams vs Object Diagrams vs Sequence Diagrams" expanded>
 
 <panel header="%%{{ icon_prereq }} Prerequisites%%" expandable minimized>
-  <dynamic-panel src="../../modeling/modelingStructures/objectDiagrams/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Structures: Object Diagrams" />
-  <dynamic-panel src="../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Structures: Class Diagrams" />
-  <dynamic-panel src="../../modeling/modelingBehaviors/sequenceDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Behaviors: Sequence Diagrams" />
+  <panel src="../../modeling/modelingStructures/objectDiagrams/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Structures: Object Diagrams" />
+  <panel src="../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Structures: Class Diagrams" />
+  <panel src="../../modeling/modelingBehaviors/sequenceDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Behaviors: Sequence Diagrams" />
 </panel>
 
 <p/>

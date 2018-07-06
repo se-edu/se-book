@@ -4,9 +4,9 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../../oopDesign/polymorphism/introduction/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Polymorphism → Introduction%%" />
-<dynamic-panel src="../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Inheritance → What%%" />
-<dynamic-panel src="../overriding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → OOP → Overriding%%" /></span>
+<span id="prereqs"><panel src="../../oopDesign/polymorphism/introduction/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Polymorphism → Introduction%%" />
+<panel src="../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Inheritance → What%%" />
+<panel src="../overriding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → OOP → Overriding%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can implement polymorphism</span>
 

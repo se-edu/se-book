@@ -1,9 +1,9 @@
 <panel header=":lock::key: Choose the correct statement about requirements." expanded>
 
 <panel header="%%{{ icon_prereq }}%% Prerequisites" minimized>
-  <dynamic-panel src="../../requirements/introduction/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Requirements: Introduction%%" />
-  <dynamic-panel src="../../requirements/nonFunctionalRequirements/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Requirements: Non-Functional Requirements%%" />
-  <dynamic-panel src="../../gatheringRequirements/prototyping/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Gathering Requirements: Prototyping%%" />
+  <panel src="../../requirements/introduction/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Requirements: Introduction%%" />
+  <panel src="../../requirements/nonFunctionalRequirements/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Requirements: Non-Functional Requirements%%" />
+  <panel src="../../gatheringRequirements/prototyping/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Gathering Requirements: Prototyping%%" />
 </panel>
 <p/>
 

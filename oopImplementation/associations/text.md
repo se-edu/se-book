@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><dynamic-panel src="../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modelling Structure → Class Diagrams%%" /></span>
+<span id="prereqs"><panel src="../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modelling Structure → Class Diagrams%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can implement associations</span>
 

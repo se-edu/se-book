@@ -1,4 +1,4 @@
-<span id="prereqs"><dynamic-panel src="../clone/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Clone%%" /></span>
+<span id="prereqs"><panel src="../clone/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Clone%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can pull changes from a repo</span>
 
@@ -15,7 +15,7 @@ Clone the sample repo as explained in <trigger for="modal:clone-repository" trig
 Delete the last two commits to simulate cloning the repo 2 commits ago.
 
 <modal title="**Clone Repository**" id="modal:clone-repository">
-  <include src="../clone/embed.md" boilerplate  />
+  <include src="../clone/embed.md" boilerplate />
 </modal>
 
 <tabs>
