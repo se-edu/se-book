@@ -82,19 +82,19 @@ Meaning of some shortened headings:
 
 * **What** : the **meaning** of the concept in concern 
 
-  <include name="%%Example%%" src="../refactoring/what/unit-inElsewhere-asFlat.md" boilerplate />
+  <panel header="%%Example%%" src="../refactoring/what/unit-inElsewhere-asFlat.md" boilerplate />
 
 * **Why** : the **motivation** behind the concept in concern
 
-  <include name="%%Example%%" src="../documentation/guidelines/goTopDown/why/unit-inElsewhere-asFlat.md" boilerplate />
+  <panel header="%%Example%%" src="../documentation/guidelines/goTopDown/why/unit-inElsewhere-asFlat.md" boilerplate />
   
 * **How** : the **usage** of the concept in concern 
 
-  <include name="%%Example%%" src="../refactoring/how/unit-inElsewhere-asFlat.md" boilerplate />
+  <panel header="%%Example%%" src="../refactoring/how/unit-inElsewhere-asFlat.md" boilerplate />
   
 * **When** : the **pros and cons** of the concept in concern, **when to use** the concept 
 
-  <include name="%%Example%%" src="../refactoring/when/unit-inElsewhere-asFlat.md" boilerplate />
+  <panel header="%%Example%%" src="../refactoring/when/unit-inElsewhere-asFlat.md" boilerplate />
   
 
 Boxed-text styles:
