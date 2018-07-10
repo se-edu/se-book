@@ -1,7 +1,7 @@
 <panel header=":lock::key: What does the navigability given by this diagram mean?">
 <question>
 
-<img src="{{baseUrl}}/oopDesign/associations/navigability/images/unitItem.png" height="100" />
+<img src="{{baseUrl}}/uml/classDiagrams/associations/navigability/images/unitItem.png" height="100" />
 <p/>
 
 - ( ) a. A `Unit` object knows about the `Item` object it is linked to

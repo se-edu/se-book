@@ -24,23 +24,9 @@ When writing an OOP program to calculate the average age of Adam, Beth, Charlie,
 
 </tip-box>
 
-<!-- TODO: add a more elaborate UML intro here -->
 
-Let us use the UML notation to illustrate classes and objects under discussion.
-
-<panel src="../../../uml/classDiagrams/classes/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} Tools → UML → Class Diagrams → Classes" expanded />
-<panel src="../../../uml/objectDiagrams/objects/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} Tools → UML → Object Diagrams → Objects" expanded/>
-
-<p/>
 
 <tip-box>
-
-<img src="{{baseUrl}}/oopDesign/classes/basic/images/person.png" height="100" />
-<p/>
-
-`Person` class and some example instances of the `Person` class.
-
-</tip-box>
 
 </div>
 

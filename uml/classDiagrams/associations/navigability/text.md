@@ -39,4 +39,5 @@
 </div>
 
 <div id="extras">
+  <include src="exercises.md" />
 </div>

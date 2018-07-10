@@ -14,20 +14,11 @@
 
 <tip-box> 
 
-{{ icon_example }} This class diagram does not tell us multiplicities. For exaple, how many `Calculator` objects can be associated with one `Main` object? How many `Main` objects can be associated with one `Calculator` object? and so on. 
-
-<img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculatorPerson.png" height="100" />
+{{ icon_example }} The navigability of the association between `Course` objects and `Student` objects tells you how many `Course` objects can be associated with one `Student` object and vice versa. 
 
 </tip-box>
-
-<panel src="../../../uml/classDiagrams/associations/multiplicity/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Associations → Multiplicity" expanded />
-
-<p/>
 
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
 </div>

@@ -1,7 +1,7 @@
 <panel header=":lock::key: Which statement agrees with the  multiplicity shown in this diagram?">
 <question>
 
-<img src="{{baseUrl}}/oopDesign/associations/multiplicity/images/unitItem.png" height="100" />
+<img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/unitItem.png" height="100" />
 <p/>
 
 - [ ] a. A `Unit` object can be linked to any number of `Item` objects

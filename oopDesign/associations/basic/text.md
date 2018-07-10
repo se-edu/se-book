@@ -12,15 +12,9 @@
 
 Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such **connections between objects are called _associations_.**
 
-<panel src="../../../uml/objectDiagrams/associations/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} Tools → UML → Object Diagrams → Associations → What" expanded />
-
-<p/>
-
 <tip-box>
 
-{{ icon_example }} An object diagram example showing associations among objects. %%For example, there is an association between the `AgeList` object and the `Main` object.%%
-
-<img src="{{baseUrl}}/oopDesign/associations/basic/images/completeStructure.png" height="120" />
+{{ icon_example }} Suppose an OOP program for managing a learning management system creates an object structure to represent the related objects. In that object structure we can expect to have associations between a`Course` object that represents a specific course and `Student` objects that represents students taking that course.%%
 
 </tip-box>
 
@@ -28,30 +22,17 @@ Objects in an OO solution need to be connected to each other to form a network s
 
 <tip-box>
 
-{{ icon_example }} In this example, the associations in the object structure have changed %%(from left to right) due to a new `Person` object being connected to the `Main` object.%%
-
-<img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculator.png" height="100" /> &nbsp; → &nbsp; 
-<img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculatorAdam.png" height="100" />
+{{ icon_example }} To continue the previous example, the associations between a `Course` object and `Student` objects can change as students enroll in the module or drop the module over time.
 
 </tip-box>
 
-**Associations among objects are reflected correspondingly in the class diagram too**, as it is the class diagram that dictates the nature of the associations allowed in the object structures.
-
-<panel src="../../../uml/classDiagrams/associations/basic/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} Tools → UML → Class Diagrams → Associations → Basic" expanded/>
+**Associations among objects can be generalized as associations between the corresponding classles too.**
 
 <tip-box> 
 
-{{ icon_example }} An example class diagram showing associations between classes.
-
-<img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculatorPerson.png" height="100" />
-<p/>
+{{ icon_example }} In our example, as some `Course` objects can have associations with some `Student` objects, we can view it as an association between the `Course` class and the `Student` class.
 
 </tip-box>
-
-<panel src="../../../uml/classDiagrams/associations/roles/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} Tools → UML → Class Diagrams → Associations → Roles" expanded />
-<panel src="../../../uml/classDiagrams/associations/labels/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} Tools → UML → Class Diagrams → Associations → Labels" expanded />
-
-
 
 </div>
 

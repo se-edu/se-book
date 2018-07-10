@@ -42,4 +42,5 @@ Commonly used multiplicities:
 </div>
 
 <div id="extras">
+  <include src="exercises.md" />
 </div>
