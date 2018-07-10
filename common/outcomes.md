@@ -66,7 +66,7 @@ title: "SE Book: Full List of Learning Outcomes"
 <include src="../oopDesign/objects/basic/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oopDesign/objects/abstraction/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oopDesign/objects/encapsulation/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/classes/basic/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oopDesign/classes/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oopDesign/classes/classLevelMembers/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oopDesign/classes/enumerations/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oopDesign/associations/basic/unit-inParent-asOutcome.md" boilerplate />
