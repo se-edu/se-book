@@ -24,9 +24,6 @@
 
 {{ icon_example }} Consider the code below. The declared type of `s` is `Staff` and it appears as if the `adjustSalary(int)` operation of the `Staff` class is invoked. 
 
-<img src="{{baseUrl}}/oopDesign/inheritance/dynamicAndStaticBinding/images/staff.png" height="150" />
-<p/>
-
 ```java
 void adjustSalary(int byPercent) {
     for (Staff s: staff) {
@@ -34,7 +31,7 @@ void adjustSalary(int byPercent) {
     }
 }
 ```
-However, at runtime the `adjustSalary(int)` operation of the actual object will be called (i.e. `adjustSalary(int)` operation of `Admin` or `Academic`). If the actual object does not override that operation, the operation defined in the immediate superclass (in this case, `Staff` class) will be called.
+However, at runtime s can receive an object of any sub class of `Staff`. That means the `adjustSalary(int)` operation of the actual subclass object will be called. If the subclass does not override that operation, the operation defined in the superclass (in this case, `Staff` class) will be called.
 
 </tip-box>
 

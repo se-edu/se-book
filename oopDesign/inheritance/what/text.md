@@ -10,18 +10,11 @@
 
 <div id="body">
 
-**The OOP concept _Inheritance_ allows you to define a new class based on an existing class.** For example, you can use inheritance to define an `EvaluationReport` class based on an existing `Report` class so that the `EvaluationReport` class does not have to duplicate code that is already implemented in the `Report` class. 
-
-<panel src="../../../uml/classDiagrams/classInheritance/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Inheritance" expanded/>
-
-<p/>
+**The OOP concept _Inheritance_ allows you to define a new class based on an existing class.** 
 
 <tip-box>
 
-{{ icon_example }} Example: The `EvaluationReport` inherits the `wordCount` attribute and the `print()` method from the _base class_ `Report`.
-
-<img src="{{baseUrl}}/oopDesign/inheritance/what/images/report.png" height="120" />
-<p/>
+{{ icon_example }} For example, you can use inheritance to define an `EvaluationReport` class based on an existing `Report` class so that the `EvaluationReport` class does not have to duplicate code that is already implemented in the `Report` class. The `EvaluationReport` can inherit the `wordCount` attribute and the `print()` method from the _base class_ `Report`.
 
 </tip-box>
 
@@ -34,10 +27,7 @@
 
 <tip-box>
 
-{{ icon_example }} `Man` and `Woman` behaves the same way for the 'owes money' association. However, the two classes cannot be simply replaced with a more general class `Person` because of the need to distinguish between `Man` and `Woman` for the ‘marriage’ association. A solution is to add the `Person` class as a super class and let `Man` and `Woman` inherit from `Person`.
-
-<img src="{{baseUrl}}/oopDesign/inheritance/what/images/manWoman.png" height="250" />
-<p/>
+{{ icon_example }} `Man` and `Woman` behaves the same way for certain things. However, the two classes cannot be simply replaced with a more general class `Person` because of the need to distinguish between `Man` and `Woman` for certain other things. A solution is to add the `Person` class as a super class (to contain the code common to men and woment) and let `Man` and `Woman` inherit from `Person` class.
 
 </tip-box>
 
@@ -51,12 +41,9 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 
 <tip-box>
 
-{{ icon_example }} In this class diagrams of a _Snakes and Ladders_ board game,
-* `SnakeHeadSquare` _is a_ `Square` %%&nbsp;(a `SnakeHeadSquare` is a square in which the head of a snake appears)%%
-* `SnakeTailSquare` _is a_ `Square`
-
-<img src="{{baseUrl}}/oopDesign/inheritance/what/images/boardSquare.png" height="250" />
-<p/>
+{{ icon_example }} To continue the previous example,
+* `Woman` _is a_ `Person` 
+* `Man` _is a_ `Person`
 
 </tip-box>
 
@@ -65,7 +52,7 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 
 <tip-box>
 
-{{ icon_example }} Two inheritance hierarchies/trees are given below. Note that `Parrot` _is a_ `Bird` as well as it _is an_ `Animal`. 
+{{ icon_example }} Two inheritance hierarchies/trees are given below. Note that `Parrot` _is a_ `Bird` as well as it _is an_ `Animal`. Note that the triangle points to the parent class. 
 
 <img src="{{baseUrl}}/oopDesign/inheritance/what/images/inheritanceTreesExamples.png" width="500" />
 <p/>
@@ -76,14 +63,13 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 
 <tip-box>
 
-{{ icon_example }} The `TA` class inherits from the `Staff` class _and_ the `Student`.
+{{ icon_example }} The `Honey` class inherits from the `Food` class _and_ the `Medicine` class %%because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)%%.
 
-<img src="{{baseUrl}}/oopDesign/inheritance/what/images/studentStaff.png" height="200" />
-<p/>
 
 </tip-box>
 
 </div>
 
 <div id="extras">
+ <include src="exercises.md" />
 </div>

@@ -18,18 +18,13 @@
 
 **An abstract method is simply the method interface without the implementation.** 
 
-<panel src="../../../uml/classDiagrams/abstractClasses/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }}UML → Class Diagrams → Abstract Classes" />
-
-<p/>
-
 <tip-box>
 
 {{ icon_example }} The `Account` class has an abstract method (`addInterest()`).
 
-<img src="{{baseUrl}}/oopDesign/inheritance/abstractClasses/images/account.png" height="220" />
-<p/>
-
 </tip-box>
+
+**A class that has an abstract method becomes an abstract class**. Evan a class that does not have any abstract method can be declared as an abstract class. Abstract classes cannot be instantiated.
 
 </div>
 
