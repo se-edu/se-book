@@ -28,7 +28,7 @@ title: "Object Oriented Programming [Printable]"
 
 ## Associations
 
-<include src="associations/basic/unit-inParent-asFlat-print.md" boilerplate />
+<include src="associations/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="associations/navigability/unit-inParent-asFlat-print.md" boilerplate />
 <include src="associations/multiplicity/unit-inParent-asFlat-print.md" boilerplate />
 <include src="associations/dependencies/unit-inParent-asFlat-print.md" boilerplate />

@@ -21,7 +21,7 @@ The most basic class diagram is a bunch of classes with some solid lines among t
 <tip-box> 
 
 {{ icon_example }} An example class diagram showing associations between classes.
-<p/><img src="{{baseUrl}}/oopDesign/associations/basic/images/ageListCalculatorPerson.png" height="100" />
+<p/><img src="{{baseUrl}}/oopDesign/associations/what/images/ageListCalculatorPerson.png" height="100" />
 <p/>
 
 </tip-box> 

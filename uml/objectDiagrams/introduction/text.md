@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-<img src="{{baseUrl}}/oopDesign/associations/basic/images/completeStructure.png" height="120" />
+<img src="{{baseUrl}}/oopDesign/associations/what/images/completeStructure.png" height="120" />
 
 </tip-box>
 

@@ -22,7 +22,7 @@ title: "UML [Printable]"
 
 ### Associations
 
-<include src="classDiagrams/associations/basic/unit-inParent-asFlat-print.md" boilerplate />
+<include src="classDiagrams/associations/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="classDiagrams/associations/navigability/unit-inParent-asFlat-print.md" boilerplate />
 <include src="classDiagrams/associations/roles/unit-inParent-asFlat-print.md" boilerplate />
 <include src="classDiagrams/associations/labels/unit-inParent-asFlat-print.md" boilerplate />

@@ -69,7 +69,7 @@ title: "SE Book: Full List of Learning Outcomes"
 <include src="../oopDesign/classes/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oopDesign/classes/classLevelMembers/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oopDesign/classes/enumerations/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/associations/basic/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oopDesign/associations/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oopDesign/associations/navigability/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oopDesign/associations/multiplicity/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oopDesign/associations/dependencies/unit-inParent-asOutcome.md" boilerplate />
@@ -364,7 +364,7 @@ title: "SE Book: Full List of Learning Outcomes"
 
 <include src="../uml/classDiagrams/introduction/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../uml/classDiagrams/classes/what/unit-inParent-asOutcome.md" boilerplate />
-<include src="../uml/classDiagrams/associations/basic/unit-inParent-asOutcome.md" boilerplate />
+<include src="../uml/classDiagrams/associations/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../uml/classDiagrams/associations/navigability/unit-inParent-asOutcome.md" boilerplate />
 <include src="../uml/classDiagrams/associations/roles/unit-inParent-asOutcome.md" boilerplate />
 <include src="../uml/classDiagrams/associations/labels/unit-inParent-asOutcome.md" boilerplate />
