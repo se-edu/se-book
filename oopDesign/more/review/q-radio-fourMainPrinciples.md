@@ -5,7 +5,7 @@
   <panel src="../../objects/encapsulation/unit-inElsewhere-asFlat.md" boilerplate header="OOP: Objects: Encapsulation" />
   <panel src="../../inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="OOP: Inheritance: Basic" />
   <panel src="../../inheritance/substitutability/unit-inElsewhere-asFlat.md" boilerplate header="OOP: Inheritance: Substitutability" />
-  <panel src="../../polymorphism/introduction/unit-inElsewhere-asFlat.md" boilerplate header="OOP: Polymorphism: Introduction" />
+  <panel src="../../polymorphism/what/unit-inElsewhere-asFlat.md" boilerplate header="OOP: Polymorphism: Introduction" />
 </panel>
 
 <p/>

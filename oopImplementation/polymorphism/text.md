@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><panel src="../../oopDesign/polymorphism/introduction/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Polymorphism → Introduction%%" />
+<span id="prereqs"><panel src="../../oopDesign/polymorphism/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Polymorphism → Introduction%%" />
 <panel src="../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Inheritance → What%%" />
 <panel src="../overriding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → OOP → Overriding%%" /></span>
 
@@ -19,7 +19,7 @@
 {{ icon_example }} Continuing with the example given in [<trigger trigger="click" for="modal:oopImpl-polymorphism">{{ icon_prereq }} OOP → Polymorphism → Introduction </trigger>], given below is the minimum code for `Staff`, `Admin`, and `Academic` classes that achieves the desired polymorphism.
 
 <modal title="" id="modal:oopImpl-polymorphism">
-  <include src="../../oopDesign/polymorphism/introduction/unit-inElsewhere-asFlat.md" boilerplate/>
+  <include src="../../oopDesign/polymorphism/what/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
 <img src="{{baseUrl}}/oopImplementation/polymorphism/images/polymorphicPayroll.png" height="200" />

@@ -48,8 +48,8 @@ title: "Object Oriented Programming [Printable]"
 
 ## Polymorphism
 
-<include src="polymorphism/introduction/unit-inParent-asFlat-print.md" boilerplate />
-<include src="polymorphism/mechanism/unit-inParent-asFlat-print.md" boilerplate />
+<include src="polymorphism/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="polymorphism/how/unit-inParent-asFlat-print.md" boilerplate />
 
 ## More
 
