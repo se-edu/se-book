@@ -22,7 +22,7 @@ title: "SE Book [All-In-One-Page Big File!]"
 <include src="../softwareEngineering/chapter.md" boilerplate />
 
 
-# SECTION: OOP (with UML)
+# SECTION: OOP
 
 <include src="../oopDesign/chapter.md" boilerplate />
 

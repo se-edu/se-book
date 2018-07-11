@@ -1,6 +1,6 @@
 * [**SECTION: INTRODUCTION**](#section-introduction)
   * [Software Engineering](#software-engineering)
-* [**SECTION: OOP (with UML)**](#section-oop-with-uml) 
+* [**SECTION: OOP**](#section-oop) 
   * [OOP - Concepts](#oop-concepts)
   * [OOP - Implementation](#oop-implementation)
 * [**SECTION: REQUIREMENTS**](#section-requirements) 

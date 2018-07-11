@@ -17,7 +17,7 @@ title: "Book - Software Engineering for Self-Directed Learners"
 
 <include src="softwareEngineering/topicToc.md" />
 
-### Object-Oriented Programming (with UML)
+### Object-Oriented Programming
 
 <include src="oopDesign/topicToc.md" />
 
