@@ -28,7 +28,7 @@
 
 </tip-box>
 
-##### **Implementing overloading**
+##### <big>Implementing overloading</big>
 
 An operation can be overloaded inside the same class or in sub/super classes.
 

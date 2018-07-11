@@ -17,7 +17,7 @@
 * **Overriding:** To get polymorphic behavior from an operation, the operation in the superclass needs to be overridden in each of the subclasses. That is how overriding allows objects of different sub classes to _display different behaviors in response to the same method call_.
 * **Dynamic binding**: Calls to overridden methods are bound to the implementation of the actual object's class dynamically during the runtime. That is how the polymorphic code can call the method of the parent class and yet execute the implementation of the child class.
 
-##### **Implementing polymorphism**
+##### <big>Implementing polymorphism</big>
 
 **We can use inheritance to achieve polymorphism**.
 

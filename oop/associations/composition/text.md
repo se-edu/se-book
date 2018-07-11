@@ -26,7 +26,7 @@
 
 </tip-box>
 
-##### **Implementing composition**
+##### <big>Implementing composition</big>
 
 **Composition too is implemented using a normal variable.** If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’ object.
 

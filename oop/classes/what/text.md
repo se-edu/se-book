@@ -24,7 +24,7 @@ When writing an OOP program to calculate the average age of Adam, Beth, Charlie,
 
 </tip-box>
 
-##### **Implementing Classes**
+##### <big>Implementing Classes</big>
 
 Given below are some resources on how to implement classes:
 

@@ -28,7 +28,7 @@
 
 </tip-box>
 
-##### **Implementing interfaces**
+##### <big>Implementing interfaces</big>
 
 **Java allows multiple inheritance among interfaces. A Java class can _implement_ multiple interfaces** (and inherit from one class). 
 

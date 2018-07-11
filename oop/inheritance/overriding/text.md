@@ -25,7 +25,7 @@
 
 </tip-box>
 
-##### **Implementing overriding**
+##### <big>Implementing overriding</big>
 
 **To override a method inherited from an ancestor class, simply re-implement the method in the target class.** 
 

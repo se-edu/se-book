@@ -68,7 +68,7 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 
 </tip-box>
 
-##### **Implementing inheritance**
+##### <big>Implementing inheritance</big>
 
 <tabs> 
   <tab header="Java">

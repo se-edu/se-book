@@ -26,7 +26,7 @@
 
 **A class that has an abstract method becomes an abstract class**. Evan a class that does not have any abstract method can be declared as an abstract class. Abstract classes cannot be instantiated.
 
-##### **Implementing abstract classes**
+##### <big>Implementing abstract classes</big>
 
 **Use the `abstract` keyword to identify abstract classes/methods.**
 
