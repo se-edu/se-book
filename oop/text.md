@@ -1,6 +1,6 @@
 <div id="title">
 
-# OOP - Concepts
+# Object-Oriented Programming
 </div>
 
 <div id="body">

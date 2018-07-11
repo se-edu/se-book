@@ -19,7 +19,7 @@ title: "Book - Software Engineering for Self-Directed Learners"
 
 ### Object-Oriented Programming
 
-<include src="oopDesign/topicToc.md" />
+<include src="oop/topicToc.md" />
 
 
 ### Requirements

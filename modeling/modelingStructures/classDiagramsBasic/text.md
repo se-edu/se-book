@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><panel src="../../../oopDesign/classes/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Design → OOP → Classes → Basic%%" /></span>
+<span id="prereqs"><panel src="../../../oop/classes/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Design → OOP → Classes → Basic%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can use basic-level class diagrams</span>
 
@@ -21,7 +21,7 @@ The most basic class diagram is a bunch of classes with some solid lines among t
 <tip-box> 
 
 {{ icon_example }} An example class diagram showing associations between classes.
-<p/><img src="{{baseUrl}}/oopDesign/associations/what/images/ageListCalculatorPerson.png" height="100" />
+<p/><img src="{{baseUrl}}/oop/associations/what/images/ageListCalculatorPerson.png" height="100" />
 <p/>
 
 </tip-box> 

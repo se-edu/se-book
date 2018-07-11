@@ -8,7 +8,7 @@ title: "Object Oriented Programming [Printable]"
 
 <div id="main">
 
-# OOP - Concepts
+# Object-Oriented Programming
 
 ## Introduction
 

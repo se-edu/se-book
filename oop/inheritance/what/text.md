@@ -54,7 +54,7 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 
 {{ icon_example }} Two inheritance hierarchies/trees are given below. Note that `Parrot` _is a_ `Bird` as well as it _is an_ `Animal`. Note that the triangle points to the parent class. 
 
-<img src="{{baseUrl}}/oopDesign/inheritance/what/images/inheritanceTreesExamples.png" width="500" />
+<img src="{{baseUrl}}/oop/inheritance/what/images/inheritanceTreesExamples.png" width="500" />
 <p/>
 
 </tip-box>

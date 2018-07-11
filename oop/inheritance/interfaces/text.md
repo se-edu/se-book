@@ -36,7 +36,7 @@
 
 {{ icon_example }} The design below is allowed by Java. %%In case you are not familiar with UML notation used: solid lines indicate normal inheritance; dashed lines indicate interface inheritance; the triangle points to pare parent.%%
 
-<img src="{{baseUrl}}/oopDesign/inheritance/interfaces/images/studentStaff.png" height="250" />
+<img src="{{baseUrl}}/oop/inheritance/interfaces/images/studentStaff.png" height="250" />
 <p/>
 
 1. `Staff` interface inherits (note the solid lines) the interfaces `TaxPayer` and `Citizen`.

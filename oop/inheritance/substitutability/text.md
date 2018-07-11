@@ -4,7 +4,7 @@
 
 </div>
 
-<span id="prereqs"><panel src="../../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Object Oriented Programming → Inheritance → What%%" /></span>
+<span id="prereqs"><panel src="../../../oop/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Object Oriented Programming → Inheritance → What%%" /></span>
 
 <span id="outcomes">{{glyphicon_flag}} Can explain substitutability</span>
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-<img src="{{baseUrl}}/oopDesign/inheritance/substitutability/images/staff.png" height="80" />
+<img src="{{baseUrl}}/oop/inheritance/substitutability/images/staff.png" height="80" />
 <p/>
 
 {{ icon_example }} an `Academic` is an instance of a `Staff`, but a `Staff` is not necessarily an instance of an `Academic`.  i.e. wherever an object of the superclass is expected, it can be substituted by an object of any of its subclasses. 

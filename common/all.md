@@ -22,9 +22,9 @@ title: "SE Book [All-In-One-Page Big File!]"
 <include src="../softwareEngineering/chapter.md" boilerplate />
 
 
-# SECTION: OOP
+# SECTION: PROGRAMMING PARADIGMS
 
-<include src="../oopDesign/chapter.md" boilerplate />
+<include src="../oop/chapter.md" boilerplate />
 
 
 # SECTION: REQUIREMENTS

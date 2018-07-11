@@ -23,9 +23,9 @@ title: "SE Book [Printable, Big File!]"
 
 <hr>
 
-# SECTION: OOP
+# SECTION: PROGRAMMING PARADIGMS
 
-<include src="../oopDesign/print.md#main" />
+<include src="../oop/print.md#main" />
 
 <hr>
 
