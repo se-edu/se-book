@@ -25,6 +25,22 @@
 
 </tip-box>
 
+##### **Implementing overriding**
+
+**To override a method inherited from an ancestor class, simply re-implement the method in the target class.** 
+
+<tabs> 
+  <tab header="Java">
+
+<include src="text-java.fr" />
+
+  </tab>
+  <tab header="Python">
+
+<include src="text-python.fr" />
+
+</tab>
+</tabs><hr>
 </div>
 
 <div id="extras">

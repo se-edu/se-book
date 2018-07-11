@@ -18,6 +18,31 @@
 
 </tip-box>
 
+##### **Implementing association classes**
+
+There is no special way to implement an association class. It can be implemented as a normal class that has variables to represent the endpoint of the association it represents. 
+
+<tip-box>
+
+{{ icon_example }} In the code below, the `Transaction` class is an association class that represent a transaction between a `Person` who is the seller and another `Person` who is the buyer. 
+
+```java
+class Transaction{
+    
+    //all fields are compulsory
+    Person seller;
+    Person buyer;
+    Date date;
+    String receiptNumber;
+    
+    Marriage (Person seller, Person buyer, Date date, String receiptNumber){
+        //set fields
+    }
+}
+```
+
+</tip-box>
+
 </div>
 
 <div id="extras">

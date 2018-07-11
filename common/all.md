@@ -26,8 +26,6 @@ title: "SE Book [All-In-One-Page Big File!]"
 
 <include src="../oopDesign/chapter.md" boilerplate />
 
-<include src="../oopImplementation/chapter.md" boilerplate />
-
 
 # SECTION: REQUIREMENTS
 

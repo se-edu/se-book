@@ -26,7 +26,6 @@ title: "SE Book [Printable, Big File!]"
 # SECTION: OOP (with UML)
 
 <include src="../oopDesign/print.md#main" />
-<include src="../oopImplementation/print.md#main" />
 
 <hr>
 

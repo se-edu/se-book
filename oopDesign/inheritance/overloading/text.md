@@ -28,6 +28,25 @@
 
 </tip-box>
 
+##### **Implementing overloading**
+
+An operation can be overloaded inside the same class or in sub/super classes.
+
+<tabs> 
+  <tab header="Java">
+
+<include src="text-java.fr" />
+
+  </tab>
+  <tab header="Python">
+
+<include src="text-python.fr" />
+
+</tab>
+</tabs><hr>
+
+<p/>
+
 
 </div>
 

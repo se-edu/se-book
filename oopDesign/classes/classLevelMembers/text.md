@@ -44,6 +44,24 @@ However, there can be methods related to a specific class but not suitable for s
 
 **Class-level attributes and methods are collectively called ==_class-level members_==** (also called _static members_ sometimes because some programming languages use the keyword `static` to identify class-level members). **They are to be accessed using the class name rather than an instance of the class**.
 
+#### **Implementing class-level members**
+
+Some resources to learn how to implement class-level members:
+
+<tabs> 
+  <tab header="Java">
+
+* [Oracle’s official Java tutorial on class-level members](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html)
+  
+  </tab>
+  <tab header="Python">
+
+* [Python Programming Basics: OOP: Class-Level Members](https://nus-te3201.github.io/website/programming/toc/oop.html#class-level-members)
+
+  </tab>
+</tabs><hr>
+
+
 </div>
 
 <div id="extras">

@@ -34,6 +34,10 @@ Objects in an OO solution need to be connected to each other to form a network s
 
 </tip-box>
 
+##### **Implementing associations**
+
+**We use instance level variables to implement associations.**
+
 </div>
 
 <div id="extras">

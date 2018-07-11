@@ -21,7 +21,6 @@ title: "Book - Software Engineering for Self-Directed Learners"
 
 <include src="oopDesign/topicToc.md" />
 
-<include src="oopImplementation/topicToc.md" />
 
 ### Requirements
 
