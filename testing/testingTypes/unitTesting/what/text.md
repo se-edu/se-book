@@ -27,7 +27,7 @@ In OOP code, it is common to write one or more unit tests for each public method
 
 <include src="exampleTestCode-python.md" />
 </tab>
-</tabs><hr>
+</tabs>
 </tip-box>
 
 

@@ -47,7 +47,7 @@ student = Person('Jim')
 students = [Person('Jim'), Person('Alice')]
 ```
 </tab>
-</tabs><hr>
+</tabs>
 
 
 

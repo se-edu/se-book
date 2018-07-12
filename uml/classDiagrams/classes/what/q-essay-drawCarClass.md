@@ -42,7 +42,7 @@ class Car:
       pass
 ```
 </tab>
-</tabs><hr>
+</tabs>
 
 </question>
 </panel>

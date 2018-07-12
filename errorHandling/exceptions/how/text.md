@@ -32,7 +32,7 @@
 <img src="{{baseUrl}}/errorHandling/exceptions/how/images/example-python.png" width="400"/>
 
   </tab>
-</tabs><hr>
+</tabs>
 
 
 

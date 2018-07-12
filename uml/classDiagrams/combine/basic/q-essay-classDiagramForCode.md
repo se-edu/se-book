@@ -92,7 +92,7 @@ item2.add_previous_box(box1);
 item2.add_previous_box(box2);
 ```
 </tab>
-</tabs><hr>
+</tabs>
 
 <div slot="answer">
 

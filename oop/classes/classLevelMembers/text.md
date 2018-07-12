@@ -59,7 +59,7 @@ Some resources to learn how to implement class-level members:
 * [Python Programming Basics: OOP: Class-Level Members](https://nus-te3201.github.io/website/programming/toc/oop.html#class-level-members)
 
   </tab>
-</tabs><hr>
+</tabs>
 
 
 </div>

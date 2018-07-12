@@ -39,14 +39,10 @@ Given below are some resources on how to implement classes:
 * [Python Programming Basics: OOP: Classes](https://nus-te3201.github.io/website/programming/toc/oop.html#classes) - Basics of writing classes using Python
 
   </tab>
-</tabs><hr>
-
-<tip-box>
+</tabs>
 
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+  <include src="exercises.md" />
 </div>

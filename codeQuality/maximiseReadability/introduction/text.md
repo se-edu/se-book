@@ -29,7 +29,7 @@
 <include src="example-python.md" />
 
 </tab>
-</tabs><hr>
+</tabs>
 
 </tip-box>
 

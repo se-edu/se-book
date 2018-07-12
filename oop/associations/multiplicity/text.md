@@ -57,7 +57,7 @@ class Logic:
     self.config_gen = ConfigGenerator()
 ```
   </tab>
-</tabs><hr>
+</tabs>
 
 
 </tip-box>

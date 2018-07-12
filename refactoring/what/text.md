@@ -50,7 +50,7 @@ Method: Move it outside of the expression.
 <include src="example-consolidate-python.md" />
 
 </tab>
-</tabs><hr>
+</tabs>
 
 </tip-box>
 
@@ -75,7 +75,7 @@ Method: Turn the fragment into a method whose name explains the purpose of the m
 <include src="example-extract-python.md" />
 
 </tab>
-</tabs><hr>
+</tabs>
 
 
 

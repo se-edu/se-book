@@ -36,7 +36,7 @@ class Car:
 my_car = Car(13.5, 200);  
 ```
 </tab>
-</tabs><hr>
+</tabs>
 
 </question>
 </panel>

@@ -28,7 +28,7 @@ A library is a collection of modular code that is general and can be used by oth
 {{ icon_example }} [Colorama](https://pypi.python.org/pypi/colorama) is a Python library that can be used for colorizing text in a CLI.
 
 </tab>
-</tabs><hr>
+</tabs>
 
 
 </tip-box>

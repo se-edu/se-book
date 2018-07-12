@@ -27,7 +27,7 @@ When the code has a number that does not explain the meaning of the number, we c
 <include src="example-python.md" />
 
 </tab>
-</tabs><hr>
+</tabs>
 
 </tip-box>
 

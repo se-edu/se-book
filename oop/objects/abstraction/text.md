@@ -10,7 +10,7 @@
 
 <div id="body">
 
-The concept of **_Objects_ in OOP is an abstraction mechanism because it allows us to abstract away the lower level details and work with bigger granularity entities** i.e. ignore details data formats and the method implementation details and work at the level of objects.
+The concept of **_Objects_ in OOP is an abstraction mechanism because it allows us to abstract away the lower level details and work with bigger granularity entities** i.e. ignore details of data formats and the method implementation details and work at the level of objects.
 
 <tip-box>
 

@@ -40,7 +40,7 @@
 <include src="text-python.fr" />
 
 </tab>
-</tabs><hr>
+</tabs>
 </div>
 
 <div id="extras">
