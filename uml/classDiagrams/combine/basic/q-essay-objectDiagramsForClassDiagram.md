@@ -24,7 +24,7 @@ i.e. apply step 1 → [diagram 1] → apply step 2 on diagarm 1 → [diagarm 2] 
 
 After step 2, the diagram should be like this:
 
-<img src="{{baseUrl}}/oopImplementation/associations/images/objectDiagramsForClassDiagramHint.png" width="600" />
+<img src="{{baseUrl}}/uml/classDiagrams/combine/basic/images/objectDiagramsForClassDiagramHint.png" width="600" />
 
 </div>
 

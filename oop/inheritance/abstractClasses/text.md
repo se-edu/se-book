@@ -64,4 +64,5 @@ In Java, if a class contains an abstract method, the class itself should be an a
 
 <div id="extras">
   <include src="resources.md" />
+  <include src="exercises.fr" />
 </div>

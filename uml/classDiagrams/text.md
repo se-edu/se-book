@@ -18,5 +18,6 @@
 <include src="classInheritance/container-inParent-asPanel.md" boilerplate />
 <include src="interfaces/container-inParent-asPanel.md" boilerplate />
 <include src="abstractClasses/container-inParent-asPanel.md" boilerplate />
+<include src="combine/container-inParent-asPanel.md" boilerplate />
 
 </div>

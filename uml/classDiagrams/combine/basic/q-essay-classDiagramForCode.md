@@ -96,7 +96,7 @@ item2.add_previous_box(box2);
 
 <div slot="answer">
 
-<img src="{{baseUrl}}/oopImplementation/associations/images/classDiagramForCodeAnswer.png" width="600" />
+<img src="{{baseUrl}}/uml/classDiagrams/combine/basic/images/classDiagramForCodeAnswer.png" width="600" />
 
 </div>
 

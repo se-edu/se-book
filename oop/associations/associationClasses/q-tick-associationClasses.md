@@ -3,7 +3,7 @@
 
 Which one of these is the suitable as an Association Class?
 
-<img src="{{baseUrl}}/oopImplementation/associationClasses/images/exerciseDiagram.png" height="330" />
+<img src="{{baseUrl}}/oop/associations/associationClasses/images/exerciseDiagram.png" width="500" />
 <p/>
 
 - [ ] a

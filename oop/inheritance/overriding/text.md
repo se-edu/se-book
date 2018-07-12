@@ -44,4 +44,5 @@
 </div>
 
 <div id="extras">
+  <include src="exercises.fr" />
 </div>
