@@ -1,4 +1,4 @@
-<panel header=":muscle: Exercises" expandable>
+<panel header="{{ icon_exercise }} Exercises" expandable>
   <include src="q-essay-minesweeper.md" />
   <include src="q-essay-bank.md" />
   <include src="q-essay-defensive.md" />

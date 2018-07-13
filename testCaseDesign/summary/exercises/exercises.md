@@ -1,4 +1,4 @@
-<panel header=":muscle: Exercises" expandable>
+<panel header="{{ icon_exercise }} Exercises" expandable>
   <include src="q-essay-matricNumbers.md" />
   <include src="q-essay-isValidDate.md" />
   <include src="q-essay-dispatchResources.md" />

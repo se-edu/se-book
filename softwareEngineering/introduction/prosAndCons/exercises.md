@@ -1,4 +1,4 @@
-<panel header=":muscle: Exercises" expandable>
+<panel header="{{ icon_exercise }} Exercises" expandable>
   <include src="q-essay-seVsCivilEngineering.md" />
   <include src="q-essay-softwareVsBridges.md" />
   <include src="q-essay-codingAsManufacturing.md" />

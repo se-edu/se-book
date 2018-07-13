@@ -129,7 +129,7 @@ Meaning of icons:
 * {{ icon_prereq }} : prerequisite learning outcome
 * {{ icon_example }} : examples
 * :paperclip: : resources
-* :muscle: : exercises
+* {{ icon_exercise }} : exercises
 * {{glyphicon_print}} : printable version
 * {{glyphicon_eye_open}} : preview/more info
 * {{ icon_video }} : video
