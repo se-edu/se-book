@@ -18,18 +18,23 @@ title: "About: Usage"
 
 ### Browser Compatibility
 
-This book is best viewed using the ==Chrome browser==.
+Most of this will work on most mainstream Browsers, but ==embedded slides are best viewed using Chrome==.
 
 </div>
 <div id="layers">
 
 ### Information Layers
 
-The book tries to _layer_ information so that readers can decide to omit less important layers if they wish to. 
+This book tries to _layer_ information so that readers can decide to omit less important layers if they wish to. 
 
 **More important information are in bold** or ==highlighted== while %%less important information are dimmed%% or in collapsed panels such as the below.
 
 <panel header="%%Some less important info in a panel%%">
+
+Less important info
+
+</panel><p/>
+<panel header="%%Some less important info in a minimized panel%%" minimized>
 
 Less important info
 
@@ -71,7 +76,7 @@ Video describing X
   Additional information
 </modal>
 
-**Sections tagged as <span class='badge'>tangential</span> can be ignored because they are tangential info** that are strictly not within the scope of the topic.
+**Sections tagged as {{ icon_tangential }} can be ignored because they are tangential info** that are strictly not within the scope of the topic.
 
 </div>
 <div id="conventions">
@@ -123,7 +128,7 @@ Boxed-text styles:
 
 Meaning of icons:
 
-* <span class="badge">tangential</span> : tangential info, can be ignored if not interested
+* {{ icon_tangential }} : tangential info, can be ignored if not interested
 * {{glyphicon_new_window}} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.
 * {{glyphicon_flag}} : learning outcomes
 * {{ icon_prereq }} : prerequisite learning outcome

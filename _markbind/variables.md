@@ -15,3 +15,6 @@
 <span id="icon_embedding">{{glyphicon_log_in | safe}}</span>
 <span id="icon_video">{{glyphicon_facetime_video | safe}}</span>
 <span id="icon_exercise">{{fas_dumbbell | safe}}</span>
+<span id="tangential"><span class='badge badge-pill badge-secondary'>tangential</span></span>
+<span id="icon_tangential">{{ tangential | safe }}</span>
+
