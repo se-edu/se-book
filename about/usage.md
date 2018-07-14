@@ -29,21 +29,28 @@ This book tries to _layer_ information so that readers can decide to omit less i
 
 **More important information are in bold** or ==highlighted== while %%less important information are dimmed%% or in collapsed panels such as the below.
 
-<panel header="%%Some less important info in a panel%%">
+<tip-box> 
+
+<panel header="Some less important info in a minimized panel" minimized>
 
 Less important info
 
 </panel><p/>
-<panel header="%%Some less important info in a minimized panel%%" minimized>
 
-Less important info
-
-</panel><p/>
 <panel header="%%Some less important info in a boarder-less panel%%" type="seamless">
 
 Less important info
 
 </panel><p/>
+
+<panel header="%%Some less important info in a panel%%">
+
+Less important info
+
+</panel><p/>
+
+</tip-box>
+
 
 **Tabs indicate alternative formats of the same content** (e.g. video vs text). You can choose the one you like and ignore the other tabs. 
 
@@ -76,12 +83,12 @@ Video describing X
   Additional information
 </modal>
 
-**Sections tagged as {{ icon_tangential }} can be ignored because they are tangential info** that are strictly not within the scope of the topic.
-
 </div>
 <div id="conventions">
 
 ### Conventions Used
+
+#### Shorthand Headings
 
 Meaning of some shortened headings:
 
@@ -102,7 +109,7 @@ Meaning of some shortened headings:
   <panel header="%%Example%%" src="../refactoring/when/unit-inElsewhere-asFlat.md" boilerplate />
   
 
-Boxed-text styles:
+#### Boxed-Text Styles
 
 <tip-box type="info">
     additional info
@@ -126,7 +133,7 @@ Boxed-text styles:
     definition
 </tip-box>
 
-Meaning of icons:
+#### Meaning of Icons
 
 * {{ icon_tangential }} : tangential info, can be ignored if not interested
 * {{glyphicon_new_window}} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.
