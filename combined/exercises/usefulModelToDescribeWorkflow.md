@@ -1,6 +1,6 @@
 <panel header=":lock::key: Which one of these is the most useful to describe a workflow?" expanded>
 
-<panel header="%%{{ icon_prereq }} Prerequisites%%" expandable minimized>
+<panel header="{{ icon_prereq }} Prerequisites" expandable minimized>
   <panel src="../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Structures: Class Diagrams" />
   <panel src="../../modeling/modelingStructures/objectDiagrams/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Structures: Object Diagrams" />
   <panel src="../../modeling/modelingBehaviors/activityDiagrams/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Behaviors: Activity Diagrams" />
