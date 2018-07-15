@@ -92,19 +92,19 @@ Video describing X
 
 Meaning of some shortened headings:
 
-* **What** : the **meaning** of the concept in concern 
+* <big>**What**</big> : the **meaning** of the concept in concern 
 
   <panel header="%%Example%%" src="../refactoring/what/unit-inElsewhere-asFlat.md" boilerplate />
 
-* **Why** : the **motivation** behind the concept in concern
+* <big>**Why**</big> : the **motivation** behind the concept in concern
 
   <panel header="%%Example%%" src="../documentation/guidelines/goTopDown/why/unit-inElsewhere-asFlat.md" boilerplate />
   
-* **How** : the **usage** of the concept in concern 
+* <big>**How**</big> : the **usage** of the concept in concern 
 
   <panel header="%%Example%%" src="../refactoring/how/unit-inElsewhere-asFlat.md" boilerplate />
   
-* **When** : the **pros and cons** of the concept in concern, **when to use** the concept 
+* <big>**When**</big> : the **pros and cons** of the concept in concern, **when to use** the concept 
 
   <panel header="%%Example%%" src="../refactoring/when/unit-inElsewhere-asFlat.md" boilerplate />
   
@@ -135,21 +135,25 @@ Meaning of some shortened headings:
 
 #### Meaning of Icons
 
-* {{ icon_tangential }} : tangential info, can be ignored if not interested
-* {{ glyphicon_new_window }} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.
-* {{ icon_outcome }} : learning outcomes
-* {{ icon_prereq }} : prerequisite learning outcome
-* {{ icon_example }} : examples
-* {{ icon_resource }} : resources
-* {{ icon_exercise }} : exercises
-* {{ glyphicon_print }} : printable version
-* {{ glyphicon_eye_open }} : preview/more info
-* {{ icon_video }} : video
-* {{ icon_text }} : textual description
-* {{ icon_slides }} : slides
-* {{ icon_output }} : output produced by running code
-* {{ icon_Q }} question without answer
-* {{ icon_Q_A }} question with answer
+<div class="indented">
+
+{{ icon_tangential }} : tangential info, can be ignored if not interested<br>
+{{ glyphicon_new_window }} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.<br>
+{{ icon_outcome }} : learning outcomes<br>
+{{ icon_prereq }} : prerequisite learning outcome<br>
+{{ icon_example }} : examples<br>
+{{ icon_resource }} : resources<br>
+{{ icon_exercise }} : exercises<br>
+{{ glyphicon_print }} : printable version<br>
+{{ glyphicon_eye_open }} : preview/more info<br>
+{{ icon_video }} : video<br>
+{{ icon_text }} : textual description<br>
+{{ icon_slides }} : slides<br>
+{{ icon_output }} : output produced by running code<br>
+{{ icon_Q }} question without answer<br>
+{{ icon_Q_A }} question with answer<br>
+
+</div>
 
 </div>
 <div id="searching">
