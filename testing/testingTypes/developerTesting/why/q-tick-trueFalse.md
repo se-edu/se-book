@@ -1,4 +1,4 @@
-<panel header=":lock::key: Cost of bug fixing over time">
+<panel header="{{ icon_Q_A }} Cost of bug fixing over time">
 <question>
 
 The cost of fixing a bug goes down as we reach the product release.

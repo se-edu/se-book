@@ -1,4 +1,4 @@
-<panel header=":lock::key: Statements about the unified process">
+<panel header="{{ icon_Q_A }} Statements about the unified process">
 <question>
 
 Choose the correct statements about the unified process.

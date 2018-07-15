@@ -1,4 +1,4 @@
-<panel header=":lock::key: EPs for `isValidName` method">
+<panel header="{{ icon_Q_A }} EPs for `isValidName` method">
 <question>
 
 Consider this SUT:

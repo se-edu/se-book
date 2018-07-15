@@ -1,4 +1,4 @@
-<panel header=":lock::key: Class Diagram for code">
+<panel header="{{ icon_Q_A }} Class Diagram for code">
 <question>
 
 <tabs> 

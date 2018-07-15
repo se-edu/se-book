@@ -1,4 +1,4 @@
-<panel header=":lock::key: statements about OOP">
+<panel header="{{ icon_Q_A }} statements about OOP">
 <question>
 
 A) Choose the correct statements

@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain/identify class diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can explain/identify class diagrams</span>
 
 <div id="body">
 

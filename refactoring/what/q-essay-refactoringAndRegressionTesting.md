@@ -1,4 +1,4 @@
-<panel header=":lock::key: Do you agree with the following statement? Refactoring and regression testing">
+<panel header="{{ icon_Q_A }} Do you agree with the following statement? Refactoring and regression testing">
 <question has-input="true">
 
 Do you agree with the following statement? Justify your answer.

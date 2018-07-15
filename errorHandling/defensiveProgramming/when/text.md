@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Error Handling → Defensive Programming → What%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain when to use defensive programming</span>
+<span id="outcomes">{{ icon_outcome }} Can explain when to use defensive programming</span>
 
 <div id="body">
 

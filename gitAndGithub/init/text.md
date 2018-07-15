@@ -1,6 +1,6 @@
 <span id="prereqs"><panel src="../../revisionControl/repositories/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Repositories%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can create a local Git repo</span>
+<span id="outcomes">{{ icon_outcome }} Can create a local Git repo</span>
 
 <div id="title">
 
@@ -10,7 +10,7 @@
 
 <div id="body">
 
-<panel header="%%:paperclip: Git Overview%%"> 
+<panel header="%%{{ icon_resource }} Git Overview%%"> 
 
 Soon you are going to take your first step in using Git. If you would like to see a quick overview of the full Git landscape before jumping in, watch the video below.
  

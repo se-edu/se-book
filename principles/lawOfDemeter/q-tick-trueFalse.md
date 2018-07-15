@@ -1,4 +1,4 @@
-<panel header=":lock::key: LoD violation?">
+<panel header="{{ icon_Q_A }} LoD violation?">
 <question>
 
 This violates Law of Demeter.

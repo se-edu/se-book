@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the Unified Process</span>
+<span id="outcomes">{{ icon_outcome }} Can explain the Unified Process</span>
 
 <div id="body">
 

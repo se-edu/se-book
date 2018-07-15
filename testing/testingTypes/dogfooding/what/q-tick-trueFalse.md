@@ -1,4 +1,4 @@
-<panel header=":lock::key: Dogfooding improves product design?">
+<panel header="{{ icon_Q_A }} Dogfooding improves product design?">
 <question>
 
 ‘dogfooding’ can help us improve product designs. 

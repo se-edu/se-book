@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Error Handling → Defensive Programming → What%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use defensive coding to enforce 1-to-1 associations</span>
+<span id="outcomes">{{ icon_outcome }} Can use defensive coding to enforce 1-to-1 associations</span>
 
 <div id="body">
 

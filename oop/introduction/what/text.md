@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can describe OOP at a higher level</span>
+<span id="outcomes">{{ icon_outcome }} Can describe OOP at a higher level</span>
 
 <div id="body">
 

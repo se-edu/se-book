@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain coupling</span>
+<span id="outcomes">{{ icon_outcome }} Can explain coupling</span>
 
 <div id="body">
 

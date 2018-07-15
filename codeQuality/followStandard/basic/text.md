@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can follow simple mechanical style rules</span>
+<span id="outcomes">{{ icon_outcome }} Can follow simple mechanical style rules</span>
 
 <div id="body">
 

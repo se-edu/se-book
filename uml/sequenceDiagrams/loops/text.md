@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with loops</span>
+<span id="outcomes">{{ icon_outcome }} Can interpret sequence diagrams with loops</span>
 
 <div id="body">
 

@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can write minimal yet sufficient documentation</span>
+<span id="outcomes">{{ icon_outcome }} Can write minimal yet sufficient documentation</span>
 
 <div id="body">
 

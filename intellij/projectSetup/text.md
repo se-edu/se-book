@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can setup a project in an IDE</span>
+<span id="outcomes">{{ icon_outcome }} Can setup a project in an IDE</span>
 
 <div id="title">
 
@@ -13,7 +13,7 @@
 ##### Running Intellij IDEA for the First Time
 
 <tabs> 
-  <tab header=":abc:">
+  <tab header="{{ icon_text }}">
 
 * [[Intellij Official Tutorial] **Creating, Running and Packaging Your First Java Application**](https://www.jetbrains.com/help/idea/creating-running-and-packaging-your-first-java-application.html)
 

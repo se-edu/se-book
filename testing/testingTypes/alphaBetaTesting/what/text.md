@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain alpha and beta testing</span>
+<span id="outcomes">{{ icon_outcome }} Can explain alpha and beta testing</span>
 
 <div id="body">
 

@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain OOP polymorphism</span>
+<span id="outcomes">{{ icon_outcome }} Can explain OOP polymorphism</span>
 
 <div id="body">
 

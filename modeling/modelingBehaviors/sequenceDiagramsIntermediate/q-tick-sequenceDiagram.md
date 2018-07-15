@@ -1,4 +1,4 @@
-<panel header=":lock::key: What’s going on here?">
+<panel header="{{ icon_Q_A }} What’s going on here?">
 <question>
 
 What’s going on here?

@@ -1,4 +1,4 @@
-<panel header=":lock::key: Statements about API documentation">
+<panel header="{{ icon_Q_A }} Statements about API documentation">
 <question>
 
 Choose correct statements about API documentation.

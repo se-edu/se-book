@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can do exception handling in code</span>
+<span id="outcomes">{{ icon_outcome }} Can do exception handling in code</span>
 
 <div id="body">
 

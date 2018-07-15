@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use intermediate features of JUnit</span>
+<span id="outcomes">{{ icon_outcome }} Can use intermediate features of JUnit</span>
 
 <div id="body">
 

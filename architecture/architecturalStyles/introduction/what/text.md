@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Architecture → Introduction → What%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain architectural styles</span>
+<span id="outcomes">{{ icon_outcome }} Can explain architectural styles</span>
 
 <div id="body">
 

@@ -1,4 +1,4 @@
-<panel header=":lock::key: Common saying: Make it fast,...">
+<panel header="{{ icon_Q_A }} Common saying: Make it fast,...">
 <question>
 
 This is a common saying among programmers

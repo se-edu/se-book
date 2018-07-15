@@ -1,4 +1,4 @@
-<panel header=":lock::key: statements about validation and verification.">
+<panel header="{{ icon_Q_A }} statements about validation and verification.">
 <question>
 
 Choose the correct statements about validation and verification.

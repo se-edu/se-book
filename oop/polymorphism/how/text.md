@@ -7,7 +7,7 @@
 <span id="prereqs"><panel src="../../../oop/inheritance/substitutability/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Object Oriented Programming → Inheritance → Substitutability%%" />
 <panel src="../../../oop/inheritance/dynamicAndStaticBinding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Object Oriented Programming → Inheritance → Dynamic and Static Binding%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain how substitutability operation overriding, and dynamic binding relates to polymorphism</span>
+<span id="outcomes">{{ icon_outcome }} Can explain how substitutability operation overriding, and dynamic binding relates to polymorphism</span>
 
 <div id="body">
 

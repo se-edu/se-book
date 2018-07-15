@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which statements are correct">
+<panel header="{{ icon_Q_A }} Which statements are correct">
 <question>
 
 Which of these are correct?

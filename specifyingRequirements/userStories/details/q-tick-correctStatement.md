@@ -1,4 +1,4 @@
-<panel header=":lock::key: Correct statements about user stories">
+<panel header="{{ icon_Q_A }} Correct statements about user stories">
 <question>
 
 Choose the correct statements

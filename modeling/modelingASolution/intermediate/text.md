@@ -7,7 +7,7 @@
 <span id="prereqs"><panel src="../../../modeling/modelingBehaviors/sequenceDiagramsIntermediate/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Behaviors → Sequence Diagrams → Intermediate%%" />
 <panel src="../../../modeling/modelingStructures/classDiagramsIntermediate/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Structures → Class Diagrams → Intermediate%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use intermediate class diagram and sequence diagram concepts to model an OO design</span>
+<span id="outcomes">{{ icon_outcome }} Can use intermediate class diagram and sequence diagram concepts to model an OO design</span>
 
 <div id="body">
 

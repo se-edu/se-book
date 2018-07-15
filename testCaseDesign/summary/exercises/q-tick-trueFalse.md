@@ -1,4 +1,4 @@
-<panel header=":lock::key: True or False?">
+<panel header="{{ icon_Q_A }} True or False?">
 <question>
 
 We can apply equivalence partitioning technique in white-box fashion.

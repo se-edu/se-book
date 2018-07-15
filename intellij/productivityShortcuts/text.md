@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use some useful IDE productivity shortcuts</span>
+<span id="outcomes">{{ icon_outcome }} Can use some useful IDE productivity shortcuts</span>
 
 <div id="title">
 

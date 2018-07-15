@@ -1,4 +1,4 @@
-<panel header=":lock::key: This diagram is,...">
+<panel header="{{ icon_Q_A }} This diagram is,...">
 <question>
 
 This diagram is,

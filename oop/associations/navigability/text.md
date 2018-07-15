@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of navigability</span>
+<span id="outcomes">{{ icon_outcome }} Can explain the meaning of navigability</span>
 
 <div id="body">
 

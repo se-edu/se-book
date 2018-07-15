@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain focus groups</span>
+<span id="outcomes">{{ icon_outcome }} Can explain focus groups</span>
 
 <div id="body">
 

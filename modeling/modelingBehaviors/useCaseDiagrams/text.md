@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain use case diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can explain use case diagrams</span>
 
 <div id="title">
 

@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Design Fundamentals → Coupling → What%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can identify types of coupling</span>
+<span id="outcomes">{{ icon_outcome }} Can identify types of coupling</span>
 
 <div id="body">
 

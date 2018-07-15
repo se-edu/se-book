@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can navigate code effectively using IDE features</span>
+<span id="outcomes">{{ icon_outcome }} Can navigate code effectively using IDE features</span>
 
 <div id="title">
 

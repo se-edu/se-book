@@ -1,4 +1,4 @@
-<panel header=":lock::key: Purpose of stubs">
+<panel header="{{ icon_Q_A }} Purpose of stubs">
 <question>
 
 Stubs help us to test a component in isolation from its dependencies.

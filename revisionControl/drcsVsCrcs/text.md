@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain DRCS vs CRCS</span>
+<span id="outcomes">{{ icon_outcome }} Can explain DRCS vs CRCS</span>
 
 <div id="body">
 

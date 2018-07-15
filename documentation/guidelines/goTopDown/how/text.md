@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can write documentation in a top-down manner</span>
+<span id="outcomes">{{ icon_outcome }} Can write documentation in a top-down manner</span>
 
 <div id="body">
 

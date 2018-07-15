@@ -1,4 +1,4 @@
-<panel header=":lock: Draw Car class">
+<panel header="{{ icon_Q }} Draw Car class">
 <question>
 
 Draw a UML diagram to represent the `Car` class as given below. Include visibilities.

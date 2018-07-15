@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can design reasonable quality APIs</span>
+<span id="outcomes">{{ icon_outcome }} Can design reasonable quality APIs</span>
 
 <div id="title">
 

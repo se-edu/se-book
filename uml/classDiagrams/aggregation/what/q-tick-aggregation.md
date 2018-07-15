@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which one is not recommended to use?">
+<panel header="{{ icon_Q_A }} Which one is not recommended to use?">
 <question>
 
 Which one of these is recommended not to use in UML diagrams because it adds more confusion than clarity?

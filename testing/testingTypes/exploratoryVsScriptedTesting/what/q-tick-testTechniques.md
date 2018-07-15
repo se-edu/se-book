@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which testing technique is better?">
+<panel header="{{ icon_Q_A }} Which testing technique is better?">
 <question>
 
 Which testing technique is better?

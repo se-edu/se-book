@@ -1,4 +1,4 @@
-<panel header=":lock::key: TEAMMATES NFRs">
+<panel header="{{ icon_Q_A }} TEAMMATES NFRs">
 <question>
 
 Given below are some requirements of TEAMMATES (an online peer evaluation system for education). Which one of these are non-functional requirements?

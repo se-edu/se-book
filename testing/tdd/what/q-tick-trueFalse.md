@@ -1,4 +1,4 @@
-<panel header=":lock::key: When do we write tests in TDD?">
+<panel header="{{ icon_Q_A }} When do we write tests in TDD?">
 <question>
 
 A) In TDD, we write all the test cases before we start writing functional code.

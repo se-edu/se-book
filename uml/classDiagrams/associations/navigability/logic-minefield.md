@@ -2,7 +2,7 @@
 <tr>
   <td>
 
-Java :arrow_heading_down:
+Java {{ icon_output }}
 ```java
 class Logic{
     Minefield minefield;
@@ -19,7 +19,7 @@ class Minefield{
   <td valign="bottom">&nbsp;&nbsp;<br><br></td>
   <td valign="bottom">
 
-Python :arrow_heading_down:
+Python {{ icon_output }}
 ```python
 class Logic:
   

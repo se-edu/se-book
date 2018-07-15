@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use dependencies in a class diagram</span>
+<span id="outcomes">{{ icon_outcome }} Can use dependencies in a class diagram</span>
 
 <div id="body">
 

@@ -57,7 +57,7 @@ Less important info
 <tip-box>
 
 <tabs> 
-  <tab header=":abc:">
+  <tab header="{{ icon_text }}">
   
 Some textual description of X
 
@@ -136,20 +136,20 @@ Meaning of some shortened headings:
 #### Meaning of Icons
 
 * {{ icon_tangential }} : tangential info, can be ignored if not interested
-* {{glyphicon_new_window}} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.
-* {{glyphicon_flag}} : learning outcomes
+* {{ glyphicon_new_window }} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.
+* {{ icon_outcome }} : learning outcomes
 * {{ icon_prereq }} : prerequisite learning outcome
 * {{ icon_example }} : examples
-* :paperclip: : resources
+* {{ icon_resource }} : resources
 * {{ icon_exercise }} : exercises
-* {{glyphicon_print}} : printable version
-* {{glyphicon_eye_open}} : preview/more info
+* {{ glyphicon_print }} : printable version
+* {{ glyphicon_eye_open }} : preview/more info
 * {{ icon_video }} : video
-* :abc: : textual description
-* :bar_chart: : slides
-* :arrow_heading_down: : output produced by running code
-* :lock: question without answer
-* :lock::key: question with answer
+* {{ icon_text }} : textual description
+* {{ icon_slides }} : slides
+* {{ icon_output }} : output produced by running code
+* {{ icon_Q }} question without answer
+* {{ icon_Q_A }} question with answer
 
 </div>
 <div id="searching">

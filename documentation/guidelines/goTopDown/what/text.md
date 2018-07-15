@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can distinguish between top-down and bottom up documentation</span>
+<span id="outcomes">{{ icon_outcome }} Can distinguish between top-down and bottom up documentation</span>
 
 <div id="body">
 

@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Integration → Introduction → What%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain how integration approaches vary based on timing and frequency</span>
+<span id="outcomes">{{ icon_outcome }} Can explain how integration approaches vary based on timing and frequency</span>
 
 <div id="body">
 

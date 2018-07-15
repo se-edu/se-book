@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain how architectural styles are combined</span>
+<span id="outcomes">{{ icon_outcome }} Can explain how architectural styles are combined</span>
 
 <div id="body">
 

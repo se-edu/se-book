@@ -1,4 +1,4 @@
-<panel header=":lock: Object Diagrams for Class Diagram">
+<panel header="{{ icon_Q }} Object Diagrams for Class Diagram">
 <question>
 
 Suppose we wrote a program to follow the class structure given in this class diagram:

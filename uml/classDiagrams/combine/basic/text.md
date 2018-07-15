@@ -5,7 +5,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can combine different basic aspects of class diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can combine different basic aspects of class diagrams</span>
 
 <div id="body">
 

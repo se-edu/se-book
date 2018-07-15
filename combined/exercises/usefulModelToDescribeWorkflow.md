@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which one of these is the most useful to describe a workflow?" expanded>
+<panel header="{{ icon_Q_A }} Which one of these is the most useful to describe a workflow?" expanded>
 
 <panel header="{{ icon_prereq }} Prerequisites" expandable minimized>
   <panel src="../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Structures: Class Diagrams" />

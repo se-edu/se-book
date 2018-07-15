@@ -1,4 +1,4 @@
-<panel header=":lock::key: procedural vs OOP">
+<panel header="{{ icon_Q_A }} procedural vs OOP">
 <question>
 
 OO is a higher level mechanism than the procedural paradigm.

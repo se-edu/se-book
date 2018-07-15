@@ -1,4 +1,4 @@
-<panel header=":lock::key: Statements about models">
+<panel header="{{ icon_Q_A }} Statements about models">
 <question>
 
 Choose the correct statements about models.

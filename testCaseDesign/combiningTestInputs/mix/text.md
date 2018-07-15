@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can apply multiple test input combination techniques together</span>
+<span id="outcomes">{{ icon_outcome }} Can apply multiple test input combination techniques together</span>
 
 <div id="body">
 

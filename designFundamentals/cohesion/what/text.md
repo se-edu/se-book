@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain cohesion</span>
+<span id="outcomes">{{ icon_outcome }} Can explain cohesion</span>
 
 <div id="body">
 

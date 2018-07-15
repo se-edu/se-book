@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain GANTT charts</span>
+<span id="outcomes">{{ icon_outcome }} Can explain GANTT charts</span>
 
 <div id="body">
 

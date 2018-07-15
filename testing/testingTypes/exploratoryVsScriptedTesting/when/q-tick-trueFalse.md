@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which is better?">
+<panel header="{{ icon_Q_A }} Which is better?">
 <question>
 
 Scripted testing is better than exploratory testing.

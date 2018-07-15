@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can semi-automate testing of CLIs</span>
+<span id="outcomes">{{ icon_outcome }} Can semi-automate testing of CLIs</span>
 
 <div id="title">
 
@@ -66,7 +66,7 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
    
    <tip-box>
    
-   :paperclip: Resources:
+   {{ icon_resource }} Resources:
    * [Using command redirection operators in Windows](http://technet.microsoft.com/en-us/library/bb490982.aspx)
    
    </tip-box>

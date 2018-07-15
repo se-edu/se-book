@@ -1,4 +1,4 @@
-<panel header=":lock::key: In the context of OOP, what is the relationship between abstraction and encapsulation?">
+<panel header="{{ icon_Q_A }} In the context of OOP, what is the relationship between abstraction and encapsulation?">
 
 <panel header="%%Prerequisites%%" expandable expanded>
   <panel src="../../objects/encapsulation/unit-inElsewhere-asFlat.md" boilerplate header="OOP: Objects: Encapsulation" />

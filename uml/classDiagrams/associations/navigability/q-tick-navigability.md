@@ -1,4 +1,4 @@
-<panel header=":lock::key: What does the navigability given by this diagram mean?">
+<panel header="{{ icon_Q_A }} What does the navigability given by this diagram mean?">
 <question>
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/navigability/images/unitItem.png" height="100" />

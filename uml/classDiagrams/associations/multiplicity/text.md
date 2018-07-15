@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain what is the multiplicity of an association</span>
+<span id="outcomes">{{ icon_outcome }} Can explain what is the multiplicity of an association</span>
 
 <div id="body">
 

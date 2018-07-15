@@ -1,6 +1,6 @@
 <span id="prereqs"><panel src="../clone/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Clone%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can pull changes from a repo</span>
+<span id="outcomes">{{ icon_outcome }} Can pull changes from a repo</span>
 
 <div id="title">
 

@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use UML notes</span>
+<span id="outcomes">{{ icon_outcome }} Can use UML notes</span>
 
 <div id="body">
 

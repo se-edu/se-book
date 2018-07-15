@@ -1,4 +1,4 @@
-<panel header=":lock: Identify Classes and Objects">
+<panel header="{{ icon_Q }} Identify Classes and Objects">
 <question>
 
 Consider the following scenario. If you were to simulate this in an OOP program, what are the classes and the objects you would use? Use UML notation to give your answer.

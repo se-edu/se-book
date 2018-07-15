@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain developer testing</span>
+<span id="outcomes">{{ icon_outcome }} Can explain developer testing</span>
 
 <div id="body">
 

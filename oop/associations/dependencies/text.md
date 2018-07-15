@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain dependencies among classes</span>
+<span id="outcomes">{{ icon_outcome }} Can explain dependencies among classes</span>
 
 <div id="body">
 
@@ -30,7 +30,7 @@ Dependencies result from interactions between objects that do not result in a lo
 <tr>
   <td>
 
-Java :arrow_heading_down:
+Java {{ icon_output }}
 ```java
 class Foo{
     
@@ -51,7 +51,7 @@ class Bar{
   <td>&nbsp;&nbsp;<br><br></td>
   <td valign="top">
 
-Python :arrow_heading_down:
+Python {{ icon_output }}
 ```python
 class Foo:
     

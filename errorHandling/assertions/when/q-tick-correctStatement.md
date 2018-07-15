@@ -1,4 +1,4 @@
-<panel header=":lock::key: Statement about exceptions and assertions">
+<panel header="{{ icon_Q_A }} Statement about exceptions and assertions">
 <question>
 
 Which statements are correct?

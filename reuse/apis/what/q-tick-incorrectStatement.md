@@ -1,4 +1,4 @@
-<panel header=":lock::key: Statements about APIs">
+<panel header="{{ icon_Q_A }} Statements about APIs">
 <question>
 
 Choose the correct statements

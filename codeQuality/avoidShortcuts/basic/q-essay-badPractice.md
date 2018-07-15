@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which oare unsafe practices?">
+<panel header="{{ icon_Q_A }} Which oare unsafe practices?">
 <question>
 
 Which of these are unsafe coding practices?

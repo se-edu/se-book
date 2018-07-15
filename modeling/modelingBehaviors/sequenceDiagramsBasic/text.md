@@ -9,7 +9,7 @@
 <panel src="../../../uml/sequenceDiagrams/objectCreation/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%UML → Sequence Diagrams → Object Creation%%" />
 <panel src="../../../uml/sequenceDiagrams/minimalNotation/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%UML → Sequence Diagrams → Minimal Notation%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can draw basic sequence diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can draw basic sequence diagrams</span>
 
 <div id="body">
 

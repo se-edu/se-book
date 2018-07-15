@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain associations</span>
+<span id="outcomes">{{ icon_outcome }} Can explain associations</span>
 
 <div id="body">
 

@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which are frameworks?">
+<panel header="{{ icon_Q_A }} Which are frameworks?">
 <question>
 
 Which one of these are frameworks ?

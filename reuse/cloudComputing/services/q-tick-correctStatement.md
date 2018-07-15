@@ -1,4 +1,4 @@
-<panel header=":lock::key: Google Calendar in which category?">
+<panel header="{{ icon_Q_A }} Google Calendar in which category?">
 <question>
 
 Google Calendar belongs to which category of cloud computing services?

@@ -1,4 +1,4 @@
-<panel header=":lock::key: Results of Refactoring">
+<panel header="{{ icon_Q_A }} Results of Refactoring">
 <question>
 
 Choose the correct statements

@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can combine some OOP concepts</span>
+<span id="outcomes">{{ icon_outcome }} Can combine some OOP concepts</span>
 
 <div id="title">
 

@@ -7,7 +7,7 @@
 <span id="prereqs"><panel src="../introduction/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Requirements → Specifying Requirements → Use Cases → Introduction%%" />
 <panel src="../identifying/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Requirements → Specifying Requirements → Use Cases → Identifying%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can specify details of a use case in a structured format</span>
+<span id="outcomes">{{ icon_outcome }} Can specify details of a use case in a structured format</span>
 
 <div id="body">
 

@@ -1,4 +1,4 @@
-<panel header=":lock::key: Statements about use cases">
+<panel header="{{ icon_Q_A }} Statements about use cases">
 <question>
 
 Which of these are correct?

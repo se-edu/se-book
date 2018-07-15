@@ -1,4 +1,4 @@
-<panel header=":lock::key: Suitable as a class-level variables">
+<panel header="{{ icon_Q_A }} Suitable as a class-level variables">
 <question>
 
 Which of these are suitable as class-level variables?

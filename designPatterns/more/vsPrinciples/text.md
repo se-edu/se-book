@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can differentiate between design patterns and principles</span>
+<span id="outcomes">{{ icon_outcome }} Can differentiate between design patterns and principles</span>
 
 <div id="body">
 

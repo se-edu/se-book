@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain boundary value analysis</span>
+<span id="outcomes">{{ icon_outcome }} Can explain boundary value analysis</span>
 
 <div id="body">
 

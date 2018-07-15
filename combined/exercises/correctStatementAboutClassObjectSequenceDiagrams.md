@@ -1,4 +1,4 @@
-<panel header=":lock::key: Class Diagrams vs Object Diagrams vs Sequence Diagrams" expanded>
+<panel header="{{ icon_Q_A }} Class Diagrams vs Object Diagrams vs Sequence Diagrams" expanded>
 
 <panel header="{{ icon_prereq }} Prerequisites" expandable minimized>
   <panel src="../../modeling/modelingStructures/objectDiagrams/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }}%% Modeling: Modeling Structures: Object Diagrams" />

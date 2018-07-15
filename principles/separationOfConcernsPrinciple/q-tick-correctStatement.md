@@ -1,4 +1,4 @@
-<panel header=":lock::key: correct statement about SoC">
+<panel header="{{ icon_Q_A }} correct statement about SoC">
 <question>
 
 “Only the GUI class should interact with the user. The GUI class should only concern itself with user interactions”. This statement follows from,

@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../bigBangVsIncremental/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Integration → Approaches → Big-Bang Vs Incremental%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain how integration approaches vary based on the order of integration</span>
+<span id="outcomes">{{ icon_outcome }} Can explain how integration approaches vary based on the order of integration</span>
 
 <div id="body">
 

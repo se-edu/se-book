@@ -1,4 +1,4 @@
-<panel header=":lock::key: Choose the correct statement about requirements." expanded>
+<panel header="{{ icon_Q_A }} Choose the correct statement about requirements." expanded>
 
 <panel header="%%{{ icon_prereq }}%% Prerequisites" minimized>
   <panel src="../../requirements/introduction/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Requirements: Introduction%%" />

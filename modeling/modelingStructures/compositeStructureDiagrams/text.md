@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain composite structure diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can explain composite structure diagrams</span>
 
 <div id="body">
 

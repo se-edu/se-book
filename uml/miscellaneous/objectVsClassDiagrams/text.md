@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can distinguish between class diagrams and object diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can distinguish between class diagrams and object diagrams</span>
 
 <div id="body">
 

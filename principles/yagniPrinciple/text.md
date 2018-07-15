@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain YAGNI principle</span>
+<span id="outcomes">{{ icon_outcome }} Can explain YAGNI principle</span>
 
 <div id="body">
 

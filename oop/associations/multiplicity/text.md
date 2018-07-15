@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of multiplicity</span>
+<span id="outcomes">{{ icon_outcome }} Can explain the meaning of multiplicity</span>
 
 <div id="body">
 
@@ -72,7 +72,7 @@ class Logic:
 <tr>
   <td>
 
-Java :arrow_heading_down:
+Java {{ icon_output }}
 ```java
 class Foo {
     Bar bar;
@@ -90,7 +90,7 @@ class Bar {
   <td valign="bottom">&nbsp;&nbsp;<br><br></td>
   <td valign="bottom">
 
-Python :arrow_heading_down:
+Python {{ icon_output }}
 ```python
 class Foo:
   
@@ -118,7 +118,7 @@ class Bar:
 <tr>
   <td>
 
-Java :arrow_heading_down:
+Java {{ icon_output }}
 ```java
 class Minefield {
     Cell[][] cell;
@@ -129,7 +129,7 @@ class Minefield {
   <td valign="bottom">&nbsp;&nbsp;<br><br></td>
   <td valign="bottom">
 
-Python :arrow_heading_down:
+Python {{ icon_output }}
 ```python
 class Minefield:
   

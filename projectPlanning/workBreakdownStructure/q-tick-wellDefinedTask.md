@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which one is not a well-defined task?">
+<panel header="{{ icon_Q_A }} Which one is not a well-defined task?">
 <question>
 
 Which one these project tasks is not well-defined?

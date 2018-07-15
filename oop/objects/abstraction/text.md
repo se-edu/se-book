@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the abstraction aspect of OOP</span>
+<span id="outcomes">{{ icon_outcome }} Can explain the abstraction aspect of OOP</span>
 
 <div id="body">
 

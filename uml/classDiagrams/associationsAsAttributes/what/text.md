@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can show an association as an attribute</span>
+<span id="outcomes">{{ icon_outcome }} Can show an association as an attribute</span>
 
 <div id="body">
 

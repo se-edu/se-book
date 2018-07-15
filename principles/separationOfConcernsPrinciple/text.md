@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain separation of concerns principle</span>
+<span id="outcomes">{{ icon_outcome }} Can explain separation of concerns principle</span>
 
 <div id="body">
 

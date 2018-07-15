@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can distinguish between IaaS, PaaS, and SaaS</span>
+<span id="outcomes">{{ icon_outcome }} Can distinguish between IaaS, PaaS, and SaaS</span>
 
 <div id="body">
 

@@ -1,4 +1,4 @@
-<panel header=":lock::key: statements about dependency injection">
+<panel header="{{ icon_Q_A }} statements about dependency injection">
 <question>
 
 Choose correct statement about dependency injection

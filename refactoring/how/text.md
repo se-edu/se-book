@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can apply some basic refactoring</span>
+<span id="outcomes">{{ icon_outcome }} Can apply some basic refactoring</span>
 
 <div id="title">
 

@@ -1,4 +1,4 @@
-<panel header=":lock::key: Characteristic of brainstorming">
+<panel header="{{ icon_Q_A }} Characteristic of brainstorming">
 <question>
 
 What is the key characteristic about brainstorming?

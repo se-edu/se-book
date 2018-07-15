@@ -5,7 +5,7 @@
 <panel src="../../../oop/associations/composition/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Associations → Composition%%" />
 <panel src="../../../oop/associations/aggregation/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Associations → Aggregation%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use intermediate-level class diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can use intermediate-level class diagrams</span>
 
 <div id="title">
 

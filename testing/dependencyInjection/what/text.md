@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain dependency injection</span>
+<span id="outcomes">{{ icon_outcome }} Can explain dependency injection</span>
 
 <div id="body">
 

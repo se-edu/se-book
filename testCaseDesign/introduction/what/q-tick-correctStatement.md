@@ -1,4 +1,4 @@
-<panel header=":lock::key: Statements about E&E of testing">
+<panel header="{{ icon_Q_A }} Statements about E&E of testing">
 <question>
 
 Improving efficiency and effectiveness of test case design can,

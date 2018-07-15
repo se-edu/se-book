@@ -1,4 +1,4 @@
-<panel header=":lock::key: Coupling levels of alternative designs">
+<panel header="{{ icon_Q_A }} Coupling levels of alternative designs">
 <question has-input="true">
 
 Discuss the coupling levels of alternative designs _x_ and _y_.

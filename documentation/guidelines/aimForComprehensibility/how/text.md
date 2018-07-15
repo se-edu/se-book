@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can write reasonably comprehensible developer documents</span>
+<span id="outcomes">{{ icon_outcome }} Can write reasonably comprehensible developer documents</span>
 
 <div id="body">
 

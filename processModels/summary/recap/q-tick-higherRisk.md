@@ -1,4 +1,4 @@
-<panel header=":lock::key: Risk of overshooting a deadline">
+<panel header="{{ icon_Q_A }} Risk of overshooting a deadline">
 <question>
 
 In general, which has a higher risk of overshooting a deadline?

@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the importance of code quality</span>
+<span id="outcomes">{{ icon_outcome }} Can explain the importance of code quality</span>
 
 <div id="body">
 

@@ -1,4 +1,4 @@
-<panel header=":lock::key: Logging vs blackbox">
+<panel header="{{ icon_Q_A }} Logging vs blackbox">
 <question>
 
 Why is logging like having the 'black box' in an airplane?

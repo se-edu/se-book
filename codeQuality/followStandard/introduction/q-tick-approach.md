@@ -1,4 +1,4 @@
-<panel header=":lock::key: What is the recommended approach regarding coding standards?">
+<panel header="{{ icon_Q_A }} What is the recommended approach regarding coding standards?">
 <question>
 
 What is the recommended approach regarding coding standards?

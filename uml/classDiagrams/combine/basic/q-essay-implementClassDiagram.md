@@ -1,4 +1,4 @@
-<panel header=":lock: Implement Class Diagram">
+<panel header="{{ icon_Q }} Implement Class Diagram">
 <question>
 
 Implement the class structure given below:

@@ -1,4 +1,4 @@
-<panel header=":lock::key: What BVA recommends">
+<panel header="{{ icon_Q_A }} What BVA recommends">
 <question>
 
 Boundary value analysis recommends testing _only_ values that reside on the equivalence class boundary.

@@ -1,4 +1,4 @@
-<panel header=":lock::key: regressions and coupling.">
+<panel header="{{ icon_Q_A }} regressions and coupling.">
 <question has-input="true">
 
 Explain the link (if any) between regressions and coupling.

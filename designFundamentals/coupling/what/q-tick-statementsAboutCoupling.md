@@ -1,4 +1,4 @@
-<panel header=":lock::key: Statements about coupling">
+<panel header="{{ icon_Q_A }} Statements about coupling">
 <question>
 
 Choose the correct statements.

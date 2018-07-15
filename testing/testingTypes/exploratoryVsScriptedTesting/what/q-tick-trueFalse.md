@@ -1,4 +1,4 @@
-<panel header=":lock::key: statements about exploratory and scripted testing">
+<panel header="{{ icon_Q_A }} statements about exploratory and scripted testing">
 <question>
 
 Scripted testing requires tests to be written in a scripting language; Manual testing is called exploratory testing.

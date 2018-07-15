@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret enumerations in class diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can interpret enumerations in class diagrams</span>
 
 <div id="body">
 

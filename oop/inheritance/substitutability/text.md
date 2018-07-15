@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../../../oop/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Object Oriented Programming → Inheritance → What%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain substitutability</span>
+<span id="outcomes">{{ icon_outcome }} Can explain substitutability</span>
 
 <div id="body">
 

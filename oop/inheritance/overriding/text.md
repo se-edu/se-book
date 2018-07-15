@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Inheritance → What%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain method overriding</span>
+<span id="outcomes">{{ icon_outcome }} Can explain method overriding</span>
 
 <div id="body">
 

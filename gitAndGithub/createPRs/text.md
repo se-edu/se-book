@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Branching%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can create PRs on GitHub</span>
+<span id="outcomes">{{ icon_outcome }} Can create PRs on GitHub</span>
 
 <div id="body">
 
@@ -92,7 +92,7 @@ When creating the new branch, it is very important that you switch back to the `
 
 **7. Push the `add-summary` to your fork and create a new PR** similar to before.
 
-<panel header=":paperclip: Resources" expanded>
+<panel header="{{ icon_resource }} Resources" expanded>
 
 * [GitHub's own documentation on creating a PR](https://help.github.com/articles/creating-a-pull-request/)
 

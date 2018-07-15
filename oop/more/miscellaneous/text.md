@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can answer frequently asked OOP questions</span>
+<span id="outcomes">{{ icon_outcome }} Can answer frequently asked OOP questions</span>
 
 <div id="title">
 

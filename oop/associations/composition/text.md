@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of composition</span>
+<span id="outcomes">{{ icon_outcome }} Can explain the meaning of composition</span>
 
 <div id="title">
 
@@ -38,7 +38,7 @@
 <tr>
   <td valign="top">
 
-Java :arrow_heading_down:
+Java {{ icon_output }}
 ```java
 class Email {
     private Subject subject;
@@ -49,7 +49,7 @@ class Email {
   <td>&nbsp;&nbsp;<br><br></td>
   <td valign="top">
 
-Python :arrow_heading_down:
+Python {{ icon_output }}
 ```python
 class Email:
   

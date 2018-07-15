@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can differentiate between frameworks and libraries</span>
+<span id="outcomes">{{ icon_outcome }} Can differentiate between frameworks and libraries</span>
 
 <div id="body">
 

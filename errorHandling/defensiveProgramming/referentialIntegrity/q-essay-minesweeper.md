@@ -1,4 +1,4 @@
-<panel header=":lock::key: Implement `Player` and `Region`">
+<panel header="{{ icon_Q_A }} Implement `Player` and `Region`">
 <question has-input="true">
 
 Imagine that we now support the following feature in our Minesweeper game.

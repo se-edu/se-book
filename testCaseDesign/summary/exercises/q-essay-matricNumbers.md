@@ -1,4 +1,4 @@
-<panel header=":lock::key: Matric numbers">
+<panel header="{{ icon_Q_A }} Matric numbers">
 <question has-input="true">
 
 Assume students are given matriculation number according to the following format:

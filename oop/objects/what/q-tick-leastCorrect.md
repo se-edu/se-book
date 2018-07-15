@@ -1,4 +1,4 @@
-<panel header=":lock::key: Choose the least correct statement.">
+<panel header="{{ icon_Q_A }} Choose the least correct statement.">
 <question>
 
 Which statements are correct?

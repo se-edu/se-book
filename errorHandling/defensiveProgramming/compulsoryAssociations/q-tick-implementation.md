@@ -1,4 +1,4 @@
-<panel header=":lock::key: Is this defensive?">
+<panel header="{{ icon_Q_A }} Is this defensive?">
 <question>
 
 <img src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45" />

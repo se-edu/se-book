@@ -1,4 +1,4 @@
-<panel header=":lock::key: Software vs Bridges">
+<panel header="{{ icon_Q_A }} Software vs Bridges">
 <question has-input="true">
 
 Comment on this statement: Building software is cheaper and easier than building bridges (all we need is a PC!).

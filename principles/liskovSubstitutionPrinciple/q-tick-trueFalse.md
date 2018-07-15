@@ -1,4 +1,4 @@
-<panel header=":lock::key: Is this LSP?">
+<panel header="{{ icon_Q_A }} Is this LSP?">
 <question>
 
 If a subclass imposes more restrictive conditions than its parent class, it violates Liskov Substitution Principle.

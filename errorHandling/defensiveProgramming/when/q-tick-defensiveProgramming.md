@@ -1,4 +1,4 @@
-<panel header=":lock::key: Defensive programming">
+<panel header="{{ icon_Q_A }} Defensive programming">
 <question>
 
 Defensive programming,

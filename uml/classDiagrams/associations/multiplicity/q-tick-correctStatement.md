@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which statement agrees with the  multiplicity shown in this diagram?">
+<panel header="{{ icon_Q_A }} Which statement agrees with the  multiplicity shown in this diagram?">
 <question>
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/unitItem.png" height="100" />

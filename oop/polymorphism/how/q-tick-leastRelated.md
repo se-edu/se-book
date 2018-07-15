@@ -1,4 +1,4 @@
-<panel header=":lock::key: Concepts related to polymorphism">
+<panel header="{{ icon_Q_A }} Concepts related to polymorphism">
 <question>
 
 Which one of these is least related to how OO programs achieve polymorphism?

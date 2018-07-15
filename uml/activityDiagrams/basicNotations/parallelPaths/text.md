@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret parallel paths in activity diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can interpret parallel paths in activity diagrams</span>
 
 <div id="body">
 

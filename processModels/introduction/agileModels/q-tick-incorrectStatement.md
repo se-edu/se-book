@@ -1,4 +1,4 @@
-<panel header=":lock::key: statements about agile processes">
+<panel header="{{ icon_Q_A }} statements about agile processes">
 <question>
 
 Choose the correct statements about agile processes.

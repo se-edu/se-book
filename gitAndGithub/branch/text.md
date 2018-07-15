@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../../revisionControl/branching/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Branching%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use Git branching</span>
+<span id="outcomes">{{ icon_outcome }} Can use Git branching</span>
 
 <div id="body">
 

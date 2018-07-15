@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain agile process models</span>
+<span id="outcomes">{{ icon_outcome }} Can explain agile process models</span>
 
 <div id="body">
 

@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the meaning of aggregations</span>
+<span id="outcomes">{{ icon_outcome }} Can explain the meaning of aggregations</span>
 
 <div id="body">
 
@@ -30,7 +30,7 @@ Implementation is similar to that of composition except the _containee_ object c
 <tr>
   <td valign="top">
 
-Java :arrow_heading_down:
+Java {{ icon_output }}
 ```java
 class Team {
     Person leader;
@@ -44,7 +44,7 @@ class Team {
   <td>&nbsp;&nbsp;<br><br></td>
   <td valign="top">
 
-Python :arrow_heading_down:
+Python {{ icon_output }}
 ```python
 class Team:
   

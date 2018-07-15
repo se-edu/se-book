@@ -1,4 +1,4 @@
-<panel header=":lock::key: Integration order">
+<panel header="{{ icon_Q_A }} Integration order">
 <question has-input="false">
 
 Consider the architecture given below. Describe the order in which components will be integrated with one another if the following integration strategies were adopted.

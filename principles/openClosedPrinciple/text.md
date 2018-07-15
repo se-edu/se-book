@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain open-closed principle (OCP)</span>
+<span id="outcomes">{{ icon_outcome }} Can explain open-closed principle (OCP)</span>
 
 <div id="body">
 

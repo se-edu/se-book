@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain/use association roles in class diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can explain/use association roles in class diagrams</span>
 
 <div id="body">
 
@@ -27,7 +27,7 @@ Note how the variable names match closely with the association roles.
 <tr>
   <td valign="top">
 
-Java :arrow_heading_down:
+Java {{ icon_output }}
 ```java
 class Man{
     Woman wife;
@@ -41,7 +41,7 @@ class Woman{
   <td>&nbsp;&nbsp;<br><br></td>
   <td valign="top">
 
-Python :arrow_heading_down:
+Python {{ icon_output }}
 ```python
 class Man:
   def __init__(self):
@@ -68,7 +68,7 @@ class Woman:
 <tr>
   <td valign="top">
 
-Java :arrow_heading_down:
+Java {{ icon_output }}
 ```java
 class Admin{
     List<Student> charges;
@@ -78,7 +78,7 @@ class Admin{
   <td>&nbsp;&nbsp;<br><br></td>
   <td valign="top">
 
-Python :arrow_heading_down:
+Python {{ icon_output }}
 ```python
 class Admin:
   def __init__(self):

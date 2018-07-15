@@ -1,4 +1,4 @@
-<panel header=":lock::key: Apply pattern?">
+<panel header="{{ icon_Q_A }} Apply pattern?">
 <question>
 
 Which one of these is most suited for an application of the Abstraction Occurrence pattern?

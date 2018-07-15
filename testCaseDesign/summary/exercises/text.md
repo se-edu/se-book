@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can combine test case design techniques</span>
+<span id="outcomes">{{ icon_outcome }} Can combine test case design techniques</span>
 
 <div id="title">
 

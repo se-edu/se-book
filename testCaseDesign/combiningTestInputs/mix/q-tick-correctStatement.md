@@ -1,4 +1,4 @@
-<panel header=":lock::key: statements about test input combinations">
+<panel header="{{ icon_Q_A }} statements about test input combinations">
 <question>
 
 Which of these contradict the heuristics recommended when creating test cases with multiple inputs?

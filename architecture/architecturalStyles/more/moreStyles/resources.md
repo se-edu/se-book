@@ -1,4 +1,4 @@
-<panel header=":paperclip: Resources" expanded> 
+<panel header="{{ icon_resource }} Resources" expanded> 
 
 * [**Pipes and Filters pattern**](https://docs.microsoft.com/en-us/azure/architecture/patterns/pipes-and-filters) -- an article from Microsoft about the pipes and filters architectural style
 

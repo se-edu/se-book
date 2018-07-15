@@ -1,4 +1,4 @@
-<panel header=":lock::key: highest intensity coverage">
+<panel header="{{ icon_Q_A }} highest intensity coverage">
 <question>
 
 Which of these gives us the highest intensity of testing?

@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain positive and negative test cases</span>
+<span id="outcomes">{{ icon_outcome }} Can explain positive and negative test cases</span>
 
 <div id="body">
 

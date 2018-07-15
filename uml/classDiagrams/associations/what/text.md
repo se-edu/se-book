@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret simple associations in a class diagram</span>
+<span id="outcomes">{{ icon_outcome }} Can interpret simple associations in a class diagram</span>
 
 <div id="body">
 

@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can avoid using exceptions to control normal workflow</span>
+<span id="outcomes">{{ icon_outcome }} Can avoid using exceptions to control normal workflow</span>
 
 <div id="body">
 

@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain common team structures</span>
+<span id="outcomes">{{ icon_outcome }} Can explain common team structures</span>
 
 <div id="body">
 

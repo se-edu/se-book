@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain equivalence partitions</span>
+<span id="outcomes">{{ icon_outcome }} Can explain equivalence partitions</span>
 
 <div id="body">
 

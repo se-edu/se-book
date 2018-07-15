@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which are suitable as an Association Class?">
+<panel header="{{ icon_Q_A }} Which are suitable as an Association Class?">
 <question>
 
 Which one of these is the suitable as an Association Class?

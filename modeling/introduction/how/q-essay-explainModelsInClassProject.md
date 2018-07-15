@@ -1,4 +1,4 @@
-<panel header=":lock: Explain usage of models in a class project">
+<panel header="{{ icon_Q }} Explain usage of models in a class project">
 <question>
 
 Explain how models (e.g. UML diagrams) can be used in a class project.

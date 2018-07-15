@@ -10,7 +10,7 @@
 <panel src="../../../uml/sequenceDiagrams/alternativePaths/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%UML → Sequence Diagrams → Alternative Paths%%" />
 <panel src="../../../uml/sequenceDiagrams/optionalPaths/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%UML → Sequence Diagrams → Optional Paths%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can draw intermediate-level sequence diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can draw intermediate-level sequence diagrams</span>
 
 <div id="body">
 

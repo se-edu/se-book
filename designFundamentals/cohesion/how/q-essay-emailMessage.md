@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which class is more cohesive?">
+<panel header="{{ icon_Q_A }} Which class is more cohesive?">
 <question has-input="true">
 
 Compare the cohesion of the following two versions of the `EmailMessage` class. Which one is more cohesive and why?

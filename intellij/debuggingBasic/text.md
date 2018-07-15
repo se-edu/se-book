@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can step through a program using a debugger</span>
+<span id="outcomes">{{ icon_outcome }} Can step through a program using a debugger</span>
 
 <div id="title">
 

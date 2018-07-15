@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain abstraction</span>
+<span id="outcomes">{{ icon_outcome }} Can explain abstraction</span>
 
 <div id="body">
 

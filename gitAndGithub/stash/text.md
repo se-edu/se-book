@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use Git to stash files</span>
+<span id="outcomes">{{ icon_outcome }} Can use Git to stash files</span>
 
 <div id="title">
 

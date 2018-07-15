@@ -7,7 +7,7 @@
 <span id="prereqs"></span>
 
 
-<span id="outcomes">{{glyphicon_flag}} Can identify the client-server architectural style</span>
+<span id="outcomes">{{ icon_outcome }} Can identify the client-server architectural style</span>
 
 <div id="body">
 

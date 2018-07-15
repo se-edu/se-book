@@ -1,4 +1,4 @@
-<panel header=":lock::key: Choose the correct statement.">
+<panel header="{{ icon_Q_A }} Choose the correct statement.">
 <question>
 
 Choose the correct statement

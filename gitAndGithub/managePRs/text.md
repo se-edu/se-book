@@ -8,7 +8,7 @@
 <panel src="../createPRs/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Create PRs%%" />
 <panel src="../mergeConflicts/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Merge Conflicts%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can review and merge PRs on GitHub</span>
+<span id="outcomes">{{ icon_outcome }} Can review and merge PRs on GitHub</span>
 
 <div id="body">
 

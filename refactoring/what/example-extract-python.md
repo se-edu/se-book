@@ -6,7 +6,7 @@ def print_owing():
     print("name:	" + name)
     print("amount	" + get_outstanding())
 ```
-:arrow_heading_down:
+{{ icon_output }}
 ```python
 def print_owing():
     print_banner()

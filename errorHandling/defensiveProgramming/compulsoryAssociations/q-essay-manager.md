@@ -1,4 +1,4 @@
-<panel header=":lock::key: Write a `Manager#addAccount()`">
+<panel header="{{ icon_Q_A }} Write a `Manager#addAccount()`">
 <question has-input="true">
 
 For the `Manager` class shown below, write an `addAccount()` method that

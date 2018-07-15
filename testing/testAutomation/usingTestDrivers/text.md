@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain test drivers</span>
+<span id="outcomes">{{ icon_outcome }} Can explain test drivers</span>
 
 <div id="body">
 

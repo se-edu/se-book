@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: use the default branch </span>
+<span id="outcomes">{{ icon_outcome }} Can improve code quality using technique: use the default branch </span>
 
 <div id="body">
 

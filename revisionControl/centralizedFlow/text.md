@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../featureBranchFlow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Revision Control → Feature Branch Workflow%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain centralized flow</span>
+<span id="outcomes">{{ icon_outcome }} Can explain centralized flow</span>
 
 <div id="body">
 

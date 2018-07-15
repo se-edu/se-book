@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain dependency inversion principle (DIP)</span>
+<span id="outcomes">{{ icon_outcome }} Can explain dependency inversion principle (DIP)</span>
 
 <div id="title">
 
