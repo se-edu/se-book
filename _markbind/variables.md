@@ -2,7 +2,7 @@
 
 
 <span id="outcomes">
-<button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><md>%%<include src="text.md#outcomes" inline />%%</md></button><p/>
+<span class="badge badge-light"><md>%%<include src="text.md#outcomes" inline />%%</md></span><p/>
 </span>
 
 <span id="icon_deadline">:alarm_clock:</span>
