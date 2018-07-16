@@ -1,6 +1,6 @@
-* __ [Unit Testing]({{baseUrl}}/testing/testingTypes/unitTesting) <trigger for="pop:testing-unitTesting-preview">{{glyphicon_eye_open}}</trigger>
+* __ [Unit Testing]({{baseUrl}}/testing/testingTypes/unitTesting) <trigger for="pop:testing-unitTesting-preview">{{icon_preview}}</trigger>
 
-<popover id="pop:testing-unitTesting-preview" title="{{glyphicon_eye_open}} Unit Testing" placement="right">
+<popover id="pop:testing-unitTesting-preview" title="{{icon_preview}} Unit Testing" placement="right">
   <div slot="content">
     <include src=".\preview.md" />
   </div>

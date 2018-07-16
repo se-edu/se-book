@@ -1,7 +1,7 @@
 * [Git and Github]({{baseUrl}}/gitAndGithub/)
-  <trigger for="pop:gitAndGithub-preview">{{glyphicon_eye_open}}</trigger> [{{glyphicon_print}}](gitAndGithub/print.html)
+  <trigger for="pop:gitAndGithub-preview">{{icon_preview}}</trigger> [{{icon_print}}](gitAndGithub/print.html)
 
-<popover id="pop:gitAndGithub-preview" title="Git and Github {{glyphicon_eye_open}}" placement="right">
+<popover id="pop:gitAndGithub-preview" title="Git and Github {{icon_preview}}" placement="right">
   <div slot="content">
     <include src="preview.md" />
   </div>

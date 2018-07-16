@@ -1,6 +1,6 @@
-* __ [Interfaces]({{baseUrl}}/uml/classDiagrams/interfaces) <trigger for="pop:classDiagrams-interfaces-preview">{{glyphicon_eye_open}}</trigger>
+* __ [Interfaces]({{baseUrl}}/uml/classDiagrams/interfaces) <trigger for="pop:classDiagrams-interfaces-preview">{{icon_preview}}</trigger>
 
-<popover id="pop:classDiagrams-interfaces-preview" title="{{glyphicon_eye_open}} Interfaces" placement="right">
+<popover id="pop:classDiagrams-interfaces-preview" title="{{icon_preview}} Interfaces" placement="right">
   <div slot="content">
     <include src=".\preview.md" />
   </div>

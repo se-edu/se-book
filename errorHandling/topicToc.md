@@ -1,7 +1,7 @@
 * [Error Handling]({{baseUrl}}/errorHandling/)
-  <trigger for="pop:errorHandling-preview">{{glyphicon_eye_open}}</trigger> [{{glyphicon_print}}](errorHandling/print.html)
+  <trigger for="pop:errorHandling-preview">{{icon_preview}}</trigger> [{{icon_print}}](errorHandling/print.html)
 
-<popover id="pop:errorHandling-preview" title="Error Handling {{glyphicon_eye_open}}" placement="right">
+<popover id="pop:errorHandling-preview" title="Error Handling {{icon_preview}}" placement="right">
   <div slot="content">
     <include src="preview.md" />
   </div>

@@ -33,7 +33,7 @@ Exploratory testing is ‘the simultaneous learning, test design, and test execu
 
 </tip-box>
 
-<modal id="modal:exploratoryWhat-bach-et-explained" title="bach-et-explained {{glyphicon_eye_open}}">
+<modal id="modal:exploratoryWhat-bach-et-explained" title="bach-et-explained {{icon_preview}}">
   <include src="../../../../common/references.md#bach-et-explained" />
 </modal>
 

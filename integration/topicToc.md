@@ -1,7 +1,7 @@
 * [Integration]({{baseUrl}}/integration/)
-  <trigger for="pop:integration-preview">{{glyphicon_eye_open}}</trigger> [{{glyphicon_print}}](integration/print.html)
+  <trigger for="pop:integration-preview">{{icon_preview}}</trigger> [{{icon_print}}](integration/print.html)
 
-<popover id="pop:integration-preview" title="Integration {{glyphicon_eye_open}}" placement="right">
+<popover id="pop:integration-preview" title="Integration {{icon_preview}}" placement="right">
   <div slot="content">
     <include src="preview.md" />
   </div>

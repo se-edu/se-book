@@ -19,7 +19,7 @@ Which approach is better – **scripted or exploratory? A mix is better.**
 > In some contexts, you will achieve your testing mission better through a more scripted approach; in other contexts, your mission will benefit more from the ability to create and improve tests as you execute them. I find that most situations benefit from a mix of scripted and exploratory approaches.
 > --<trigger trigger="click" for="modal:ExploratoryWhen-bach-et-explained">[source: bach-et-explained]</trigger>
 
-<modal id="modal:ExploratoryWhen-bach-et-explained" title="bach-et-explained {{glyphicon_eye_open}}">
+<modal id="modal:ExploratoryWhen-bach-et-explained" title="bach-et-explained {{icon_preview}}">
   <include src="../../../../common/references.md#bach-et-explained" />
 </modal>
 

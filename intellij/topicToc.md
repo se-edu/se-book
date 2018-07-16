@@ -1,7 +1,7 @@
 * [Intellij IDEA]({{baseUrl}}/intellij/)
-  <trigger for="pop:intellij-preview">{{glyphicon_eye_open}}</trigger> [{{glyphicon_print}}](intellij/print.html)
+  <trigger for="pop:intellij-preview">{{icon_preview}}</trigger> [{{icon_print}}](intellij/print.html)
 
-<popover id="pop:intellij-preview" title="Intellij IDEA {{glyphicon_eye_open}}" placement="right">
+<popover id="pop:intellij-preview" title="Intellij IDEA {{icon_preview}}" placement="right">
   <div slot="content">
     <include src="preview.md" />
   </div>

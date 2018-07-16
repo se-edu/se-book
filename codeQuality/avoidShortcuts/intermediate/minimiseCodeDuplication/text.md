@@ -14,7 +14,7 @@
 
 This guideline is closely related to the <trigger for="modal:duplication-dry" trigger="click">DRY Principle<trigger>. 
 
-<modal title="**{{glyphicon_eye_open}} DRY Principle**" id="modal:duplication-dry">
+<modal title="**{{icon_preview}} DRY Principle**" id="modal:duplication-dry">
   <include src="../../../../principles/dryPrinciple/unit-inElsewhere-asFlat.md" boilerplate />
 </modal>
 

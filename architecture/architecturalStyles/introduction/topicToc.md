@@ -1,6 +1,6 @@
-* __ [Introduction]({{baseUrl}}/architecture/architecturalStyles/introduction) <trigger for="pop:architecturalStyles-introduction-preview">{{glyphicon_eye_open}}</trigger>
+* __ [Introduction]({{baseUrl}}/architecture/architecturalStyles/introduction) <trigger for="pop:architecturalStyles-introduction-preview">{{icon_preview}}</trigger>
 
-<popover id="pop:architecturalStyles-introduction-preview" title="{{glyphicon_eye_open}} Introduction" placement="right">
+<popover id="pop:architecturalStyles-introduction-preview" title="{{icon_preview}} Introduction" placement="right">
   <div slot="content">
     <include src=".\preview.md" />
   </div>

@@ -1,7 +1,7 @@
 * [Teamwork]({{baseUrl}}/teamwork/)
-  <trigger for="pop:teamwork-preview">{{glyphicon_eye_open}}</trigger> [{{glyphicon_print}}](teamwork/print.html)
+  <trigger for="pop:teamwork-preview">{{icon_preview}}</trigger> [{{icon_print}}](teamwork/print.html)
 
-<popover id="pop:teamwork-preview" title="Teamwork {{glyphicon_eye_open}}" placement="right">
+<popover id="pop:teamwork-preview" title="Teamwork {{icon_preview}}" placement="right">
   <div slot="content">
     <include src="preview.md" />
   </div>

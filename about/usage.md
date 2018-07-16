@@ -138,14 +138,14 @@ Meaning of some shortened headings:
 <div class="indented">
 
 {{ icon_tangential }} : tangential info, can be ignored if not interested<br>
-{{ glyphicon_new_window }} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.<br>
+{{ icon_new_window }} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.<br>
 {{ icon_outcome }} : learning outcomes<br>
 {{ icon_prereq }} : prerequisite learning outcome<br>
 {{ icon_example }} : examples<br>
 {{ icon_resource }} : resources<br>
 {{ icon_exercise }} : exercises<br>
-{{ glyphicon_print }} : printable version<br>
-{{ glyphicon_eye_open }} : preview/more info<br>
+{{ icon_print }} : printable version<br>
+{{ icon_preview }} : preview/more info<br>
 {{ icon_video }} : video<br>
 {{ icon_text }} : textual description<br>
 {{ icon_slides }} : slides<br>
@@ -179,7 +179,7 @@ The book currently does not have a _search_ feature. The workaround is to load [
   
 ### Printing
 
-The {{glyphicon_print}} icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here]({{baseUrl}}/common/print.html)
+The {{icon_print}} icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here]({{baseUrl}}/common/print.html)
 
 </div>
 
