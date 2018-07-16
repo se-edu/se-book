@@ -10,7 +10,7 @@
 
 <div id="body">
 
-1. Fork the [samplerepo-things]({{common_org}}/samplerepo-things) to your GitHub account: 
+1. Fork the [samplerepo-things](https://github.com/se-edu/samplerepo-things) to your GitHub account: 
 
    <panel type="seamless" header="%%How to fork a repo?%%">
     

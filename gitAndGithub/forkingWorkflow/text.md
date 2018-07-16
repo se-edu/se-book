@@ -10,8 +10,7 @@
 
 <div id="body">
 
-
-<p/>
+{{ icon_info }} This activity is best done as a team. If you are learning this alone, you can simulate a team by using two different browsers to log into GitHub using two different accounts.   
 
 1. **One member: set up the team org and the team repo.**
    * **[Create a GitHub organization](https://help.github.com/articles/creating-a-new-organization-from-scratch/)** for your team. The org name is up to you. We'll refer to this organization as _team org_ from now on. 

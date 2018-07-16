@@ -14,7 +14,7 @@
 
 **1. Go to GitHub page of your fork and review the `add-intro` PR** you created previously in [Tools → Git & GitHub → Create PRs]({{baseUrl}}/gitAndGithub/createPRs/index.html) to simulate the PR being reviewed by another developer, as explained below. %%Note that some features available to PR reviewers will be unavailable to you because you are also the author of the PR.%%
 
-1a. Go to the respective PR page and click on the `Files changed` tab. Hover over the line you want to comment on and click on the `+` icon that appears on the left margin. That should create a text box for you to enter your comment.
+1a. Go to the respective PR page and click on the `Files changed` tab. Hover over the line you want to comment on and click on the <span style="color:#0066ff">{{ fas_plus_square }}</span> icon that appears on the left margin. That should create a text box for you to enter your comment.
 
 <img src="{{baseUrl}}/gitAndGithub/managePRs/images/startReview.png" width="800" />
 <p/>
