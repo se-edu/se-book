@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain object oriented domain models</span>
+<span id="outcomes">{{ icon_outcome }} Can explain object oriented domain models</span>
 
 <div id="body">
 

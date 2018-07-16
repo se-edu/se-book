@@ -1,4 +1,4 @@
-<panel header=":lock::key: Small methods or lengthy methods?">
+<panel header="{{ icon_Q_A }} Small methods or lengthy methods?">
 <question>
 
 Putting all details in one place can create lengthy methods, but it is preferred over creating many small methods because it makes the code easier to understand.

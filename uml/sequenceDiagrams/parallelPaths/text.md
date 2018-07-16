@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret sequence diagrams with parallel paths</span>
+<span id="outcomes">{{ icon_outcome }} Can interpret sequence diagrams with parallel paths</span>
 
 <div id="title">
 

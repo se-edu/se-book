@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain saving history</span>
+<span id="outcomes">{{ icon_outcome }} Can explain saving history</span>
 
 <div id="title">
 
@@ -12,12 +12,12 @@
 
 ##### Tracking and Ignoring
 
-**In a repo, we can specify which files to track and which files to ==ignore==.** Some files such a temporary log files created during the build/test process should not be revision-controlled.
+**In a repo, we can specify which files to track and which files to ==ignore==.** Some files such as temporary log files created during the build/test process should not be revision-controlled.
 
 ##### Staging and Committing 
 
 <tabs> 
-  <tab header=":abc:">
+  <tab header="{{ icon_text }}">
 
 **==_Committing_== saves a snapshot of the current state of the tracked files in the revision control history. Such a snapshot is also called a _commit_ (i.e. the noun).**
 

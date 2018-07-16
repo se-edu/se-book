@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can optimize the use of use cases</span>
+<span id="outcomes">{{ icon_outcome }} Can optimize the use of use cases</span>
 
 <div id="body">
 

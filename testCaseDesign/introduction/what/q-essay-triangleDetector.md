@@ -1,4 +1,4 @@
-<panel header=":lock::key: Test cases for `TriangleDetector`">
+<panel header="{{ icon_Q_A }} Test cases for `TriangleDetector`">
 <question has-input="true">
 
 Given below is the sample output from a text-based program `TriangleDetector` ithat determines whether the three input numbers make up the three sides of a valid triangle. List test cases you would use to test this software. Two sample test cases are given below.

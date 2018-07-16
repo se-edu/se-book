@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain validation and verification</span>
+<span id="outcomes">{{ icon_outcome }} Can explain validation and verification</span>
 
 <div id="body">
 

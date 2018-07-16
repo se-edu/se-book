@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the need for deliberate test case design</span>
+<span id="outcomes">{{ icon_outcome }} Can explain the need for deliberate test case design</span>
 
 <div id="body">
 

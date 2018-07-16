@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the Design-by-Contract approach</span>
+<span id="outcomes">{{ icon_outcome }} Can explain the Design-by-Contract approach</span>
 
 <div id="title">
 

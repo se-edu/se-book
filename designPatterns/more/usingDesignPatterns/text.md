@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain pros and cons of design patterns</span>
+<span id="outcomes">{{ icon_outcome }} Can explain pros and cons of design patterns</span>
 
 <div id="body">
 

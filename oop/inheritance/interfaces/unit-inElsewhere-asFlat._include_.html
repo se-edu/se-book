@@ -1,0 +1,98 @@
+<div></div>
+<p></p>
+<p><span class="dimmed"><strong><span>Design → Object Oriented Programming → Inheritance →
+</span></strong>
+  </span>
+</p>
+<div id="title-and-body">
+  <div>
+    <h4 id="interfaces">Interfaces</h4>
+  </div>
+  <div id="main">
+    <div>
+      <p><strong>An <em>interface</em> is a behavior specification</strong> i.e. a collection of
+        <tooltip content="Just the method signature without any implementation">method specifications</tooltip>. If a class
+        <tooltip content="implements all methods specified in an interface">implements the interface</tooltip>, it means the class is able to support the behaviors specified by the said interface.</p>
+      <blockquote>
+        <p>There are a number of situations in software engineering when it is important for disparate groups of programmers to agree to a &quot;contract&quot; that spells out how their software interacts. Each group should be able to write their code without
+          any knowledge of how the other group's code is written. Generally speaking, interfaces are such contracts. <sub>--<a href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html">Oracle Docs on Java</a><sub></sub></sub>
+        </p>
+      </blockquote>
+      <tip-box>
+        <p><span class="fas fa-cube"></span> Suppose <code>SalariedStaff</code> is an interface that contains two methods <code>setSalary(int)</code> and <code>getSalary()</code>. <code>AcademicStaff</code> can declare itself as <em>implementing</em> the
+          <code>SalariedStaff</code> interface, which means the <code>AcademicStaff</code> class must implement all the methods specified by the <code>SalariedStaff</code> interface i.e., <code>setSalary(int)</code> and <code>getSalary()</code>.</p>
+      </tip-box>
+      <p><strong>A class implementing an interface results in an <em>is-a</em> relationship</strong>, just like in class inheritance.</p>
+      <tip-box>
+        <p><span class="fas fa-cube"></span> In the example above, <code>AcademicStaff</code> <em>is a</em> <code>SalariedStaff</code>. An <code>AcademicStaff</code> object can be used anywhere a <code>SalariedStaff</code> object is expected e.g. <code>SalariedStaff ss = new AcademicStaff()</code>.</p>
+      </tip-box>
+      <h5 id="implementing-interfaces"><big>Implementing interfaces</big></h5>
+      <p><strong>Java allows multiple inheritance among interfaces. A Java class can <em>implement</em> multiple interfaces</strong> (and inherit from one class).</p>
+      <tip-box>
+        <p><span class="fas fa-cube"></span> The design below is allowed by Java. <span class="dimmed">In case you are not familiar with UML notation used: solid lines indicate normal inheritance; dashed lines indicate interface inheritance; the triangle points to pare parent.</span></p>
+        <img src="/se-book/oop/inheritance/interfaces/images/studentStaff.png" height="250">
+        <p></p>
+        <ol>
+          <li><code>Staff</code> interface inherits (note the solid lines) the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
+          <li><code>TA</code> class implements both <code>Student</code> interface and the <code>Staff</code> interface.</li>
+          <li>Because of point 1 above, <code>TA</code> class has to implement all methods in the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
+          <li>Because of points 1,2,3, a <code>TA</code> <em>is a</em> <code>Staff</code>, <em>is a</em> <code>TaxPayer</code> and <em>is a</em> <code>Citizen</code>.</li>
+        </ol>
+      </tip-box>
+      <p><strong>Java uses the <code>interface</code> keyword to declare interfaces and <code>implements</code> keyword to indicate that a class implements a given interface.</strong> Inheritance among interfaces uses the <code>extends</code> keyword, just
+        like inheritance among classes.</p>
+      <tip-box>
+        <p><span class="fas fa-cube"></span> The code for the example design given in the previous example:</p>
+        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">TaxPayer</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">payTax</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Citizen</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">vote</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Staff</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Citizen</span>, <span class="hljs-title">TaxPayer</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">work</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Student</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">learn</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TA</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Student</span>, <span class="hljs-title">Staff</span></span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">payTax</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">vote</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">work</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">learn</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+      </tip-box>
+      <p></p>
+    </div>
+    <div>
+      <div>
+        <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+          <ul>
+            <li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html">Oracle’s Java Tutorials: Interfaces</a></li>
+          </ul>
+        </panel>
+      </div>
+    </div>
+  </div>
+</div>

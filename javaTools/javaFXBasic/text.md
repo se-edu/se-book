@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use JavaFX to build a simple GUI</span>
+<span id="outcomes">{{ icon_outcome }} Can use JavaFX to build a simple GUI</span>
 
 <div id="title">
 

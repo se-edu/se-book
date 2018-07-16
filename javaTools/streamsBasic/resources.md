@@ -1,9 +1,9 @@
-<panel header=":paperclip: Resources" expanded> 
+<panel header="{{ icon_resource }} Resources" expanded> 
 
 **Tutorials**:
 
 <tabs> 
-  <tab header=":abc:">
+  <tab header="{{ icon_text }}">
 
 * [**Java 8 Tutorial**](https://www.tutorialspoint.com/java8/) -- from tutorialspoint.com. :bulb: Also provides a way to try out code online 
 * **Tutorials from Oracle**: [[Lambdas](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)][[Streams](http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)]

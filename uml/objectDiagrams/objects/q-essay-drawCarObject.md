@@ -1,4 +1,4 @@
-<panel header=":lock: Draw Car object">
+<panel header="{{ icon_Q }} Draw Car object">
 <question>
 
 Draw a UML diagram to represent the `Car` object created by the following code.
@@ -36,7 +36,7 @@ class Car:
 my_car = Car(13.5, 200);  
 ```
 </tab>
-</tabs><hr>
+</tabs>
 
 </question>
 </panel>

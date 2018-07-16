@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can semi-automate testing of CLIs</span>
+<span id="outcomes">{{ icon_outcome }} Can semi-automate testing of CLIs</span>
 
 <div id="title">
 
@@ -53,7 +53,8 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
    
    * :bulb: If you are using Windows, use a normal command window to run the app, not a Power Shell window.
    
-   <panel header="%%More on the `>` operator and the `<` operator. <span class='badge'>tangential</span>%%" alt="I/O redirection info" type="seamless" >
+   <panel header="" minimized >
+   <span slot="header" class="card-title"><md>More on the `>` operator and the `<` operator. {{ icon_tangential }}</md></span>
    
    A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using ` < ` and ` > ` operators. For example, if you run `AddressBook` in a command window, the output will be shown in the console, but if you run it like this,
    
@@ -65,7 +66,7 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
    
    <tip-box>
    
-   :paperclip: Resources:
+   {{ icon_resource }} Resources:
    * [Using command redirection operators in Windows](http://technet.microsoft.com/en-us/library/bb490982.aspx)
    
    </tip-box>

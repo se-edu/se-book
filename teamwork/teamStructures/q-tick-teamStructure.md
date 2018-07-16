@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which team structure is the most suitable for a school project?">
+<panel header="{{ icon_Q_A }} Which team structure is the most suitable for a school project?">
 <question>
 
 Which team structure is the most suitable for a school project?

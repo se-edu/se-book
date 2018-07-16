@@ -1,4 +1,4 @@
-<panel header=":paperclip: Resources">
+<panel header="{{ icon_resource }} Resources">
 
 * [Uncle Bob’s three rules of TDD](http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd) - 
   (Uncle Bob = Robert C. Martin, the author of Clean Code)

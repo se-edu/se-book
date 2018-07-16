@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain debugging</span>
+<span id="outcomes">{{ icon_outcome }} Can explain debugging</span>
 
 <div id="title">
 

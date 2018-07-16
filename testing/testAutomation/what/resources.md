@@ -1,4 +1,4 @@
-<panel header=":paperclip: Resources">
+<panel header="{{ icon_resource }} Resources">
 
 **Side readings:**
 

@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: avoid magic numbers </span>
+<span id="outcomes">{{ icon_outcome }} Can improve code quality using technique: avoid magic numbers </span>
 
 <div id="body">
 
@@ -27,7 +27,7 @@ When the code has a number that does not explain the meaning of the number, we c
 <include src="example-python.md" />
 
 </tab>
-</tabs><hr>
+</tabs>
 
 </tip-box>
 

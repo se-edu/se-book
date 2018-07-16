@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the Facade design pattern</span>
+<span id="outcomes">{{ icon_outcome }} Can explain the Facade design pattern</span>
 
 <div id="body">
 

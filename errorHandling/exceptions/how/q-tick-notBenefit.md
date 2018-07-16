@@ -1,4 +1,4 @@
-<panel header=":lock::key: Benefit of exceptions">
+<panel header="{{ icon_Q_A }} Benefit of exceptions">
 <question>
 
 Which are benefits of exceptions?

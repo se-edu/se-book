@@ -1,6 +1,6 @@
 <span id="prereqs"><panel src="../pull/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Pull%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can push to a remote repo</span>
+<span id="outcomes">{{ icon_outcome }} Can push to a remote repo</span>
 
 <div id="title">
 
@@ -10,7 +10,7 @@
 
 <div id="body">
 
-1. Fork the [samplerepo-things]({{common_org}}/samplerepo-things) to your GitHub account: 
+1. Fork the [samplerepo-things](https://github.com/se-edu/samplerepo-things) to your GitHub account: 
 
    <panel type="seamless" header="%%How to fork a repo?%%">
     

@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can write documents in Markdown format</span>
+<span id="outcomes">{{ icon_outcome }} Can write documents in Markdown format</span>
 
 <div id="title">
 

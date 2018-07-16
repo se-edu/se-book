@@ -1,4 +1,4 @@
-<panel header=":lock::key: Comments should cover: What? Why? How?">
+<panel header="{{ icon_Q_A }} Comments should cover: What? Why? How?">
 <question>
 
 In general, comments should describe, 

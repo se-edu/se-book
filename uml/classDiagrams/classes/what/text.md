@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can draw UML classes</span>
+<span id="outcomes">{{ icon_outcome }} Can draw UML classes</span>
 
 <div id="body">
 
@@ -28,7 +28,7 @@ The basic UML notations used to represent a _class_:<br>
 <tr>
   <td>
 
-Java :arrow_heading_down:
+Java {{ icon_output }}
 
 ```java
 class Table{
@@ -49,7 +49,7 @@ class Table{
   <td valign="bottom">&nbsp;&nbsp;<br><br></td>
   <td valign="bottom">
 
-Python :arrow_heading_down:
+Python {{ icon_output }}
 
 ```python
 class Table:

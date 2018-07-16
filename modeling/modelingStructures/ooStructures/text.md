@@ -4,9 +4,9 @@
 
 </div>
 
-<span id="prereqs"><panel src="../../../oopDesign/classes/basic/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Design → OOP → Classes → Basic%%" /></span>
+<span id="prereqs"><panel src="../../../oop/classes/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Design → OOP → Classes → Basic%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain structure modelling of OO solutions</span>
+<span id="outcomes">{{ icon_outcome }} Can explain structure modelling of OO solutions</span>
 
 <div id="body">
 

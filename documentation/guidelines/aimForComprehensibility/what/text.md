@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the need for comprehensibility in documents</span>
+<span id="outcomes">{{ icon_outcome }} Can explain the need for comprehensibility in documents</span>
 
 <div id="title">
 

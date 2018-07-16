@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can identify transaction processing architectural style</span>
+<span id="outcomes">{{ icon_outcome }} Can identify transaction processing architectural style</span>
 
 <div id="body">
 

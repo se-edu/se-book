@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - Object Oriented Programming: Inheritance</title>
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\markbind\css\site-nav.css">
+    <link rel="icon" href="/se-book/favicon.ico">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <div>
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+  <div class="website-content" id="all">
+    <p><span class="dimmed"><strong><span>Design → Object Oriented Programming →
+</span></strong>
+      </span>
+    </p>
+    <div id="title">
+      <div>
+        <h2 id="inheritance">Inheritance</h2>
+      </div>
+    </div>
+    <div id="main">
+      <div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="card-title"><div>
+<h4 id="what">What</h4></div></span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of inheritance</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
+              <p></p>
+              <div>
+                <p><strong>The OOP concept <em>Inheritance</em> allows you to define a new class based on an existing class.</strong></p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> For example, you can use inheritance to define an <code>EvaluationReport</code> class based on an existing <code>Report</code> class so that the <code>EvaluationReport</code> class does not have to duplicate
+                    code that is already implemented in the <code>Report</code> class. The <code>EvaluationReport</code> can inherit the <code>wordCount</code> attribute and the <code>print()</code> method from the <em>base class</em> <code>Report</code>.</p>
+                </tip-box>
+                <ul>
+                  <li>Other names for Base class: <em>Parent</em> class, <em>Super</em> class</li>
+                  <li>Other names for Derived class: <em>Child</em> class, <em>Sub</em> class, <em>Extended</em> class</li>
+                </ul>
+                <p><strong>A super class is said to be <em>more general</em> than the sub class.</strong> Conversely, a sub class is said to be more <em>specialized</em> than the super class.</p>
+                <p><strong>Applying inheritance on a group of similar classes can result in the common parts among classes being extracted into more general classes.</strong></p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> <code>Man</code> and <code>Woman</code> behaves the same way for certain things. However, the two classes cannot be simply replaced with a more general class <code>Person</code> because of the need to
+                    distinguish between <code>Man</code> and <code>Woman</code> for certain other things. A solution is to add the <code>Person</code> class as a super class (to contain the code common to men and woment) and let <code>Man</code> and <code>Woman</code>                    inherit from <code>Person</code> class.</p>
+                </tip-box>
+                <p><strong>Inheritance implies the derived class can be considered as a <em>sub-type</em> of the base class (and the base class is a <em>super-type</em> of the derived class), resulting in an <em>is a</em> relationship.</strong></p>
+                <tip-box type="info">
+                  <p>Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type relationship.</p>
+                </tip-box>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> To continue the previous example,</p>
+                  <ul>
+                    <li><code>Woman</code> <em>is a</em> <code>Person</code></li>
+                    <li><code>Man</code> <em>is a</em> <code>Person</code></li>
+                  </ul>
+                </tip-box>
+                <p><strong>Inheritance relationships through a chain of classes can result in inheritance <em>hierarchies</em> (aka inheritance <em>trees</em>).</strong></p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> Two inheritance hierarchies/trees are given below. Note that <code>Parrot</code> <em>is a</em> <code>Bird</code> as well as it <em>is an</em> <code>Animal</code>. Note that the triangle points to the
+                    parent class.</p>
+                  <img src="/se-book/oop/inheritance/what/images/inheritanceTreesExamples.png" width="500">
+                  <p></p>
+                </tip-box>
+                <p><strong><em>Multiple Inheritance</em> is when a class inherits <em>directly</em> from multiple classes.</strong> Multiple inheritance among classes is allowed in some languages (e.g., Python, C++) but not in other languages (e.g., Java,
+                  C#).</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> The <code>Honey</code> class inherits from the <code>Food</code> class <em>and</em> the <code>Medicine</code> class <span class="dimmed">because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)</span>.</p>
+                </tip-box>
+                <h5 id="implementing-inheritance"><big>Implementing inheritance</big></h5>
+                <tabs>
+                
+                  <tab header="Java">
+                    <p>To learn how to implement inheritance in Java, you can follow [<a href="https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html">Oracle’s Java Tutorials: Inheritance</a>]</p>
+                    <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> A very beginner-friendly video about implementing Java inheritance.">
+                      <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/9JpNY-XAseg" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                      <p></p>
+                    </panel>
+                    <p></p>
+                    <p>💡 Java requires all classes to have a parent class. If you do not specify a parent class, Java automatically assigns the <code>Object</code> class as the parent class.</p>
+                    <p>
+                      <hr>
+                    </p>
+                  </tab>
+                
+                  <tab header="Python">
+                    <ul>
+                      <li><a href="https://nus-te3201.github.io/website/programming/toc/oop.html#inheritance">Python Programming Basics: OOP: Inheritance</a></li>
+                    </ul>
+                    <p>💡 Python automatically assigns the <code>object</code> class as the parent class.</p>
+                    <p>
+                      <hr>
+                    </p>
+                  </tab>
+                </tabs>
+              </div>
+              <div>
+                <div>
+                  <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which statements are correct">
+                        <question>
+                          <p>Which of these are correct?</p>
+                          <ul class="task-list">
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Super class is more general than the sub class.</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Child class is more specialized than the parent class.</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A class can inherit behavior from its ancestor classes (ancestor classes = classes above it in the inheritance hierarchy).</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Code reuse can be one benefit of inheritance.</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. A change to the super class will not affect its sub classes.</li>
+                          </ul>
+                          <div slot="answer">
+                            <p>(a) (b) (c) (d)</p>
+                            <p>Explanation: (e) is incorrect. Because sub classes inherit behavior from the super class, any changes to the super class could affect sub classes.</p>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </panel>
+                </div>
+              </div>
+            </div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="card-title"><div>
+<h4 id="overriding">Overriding</h4></div></span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain method overriding</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
+              <p></p>
+              <div>
+                <p><strong>Method <em>overriding</em> is when a sub-class changes the behavior inherited from the parent class</strong> by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> In a case where <code>EvaluationReport</code> class inherits the <code>Report</code> class,</p>
+                  <ul>
+                    <li><code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method.</li>
+                    <li><code>Report#write(String)</code> method is overridden by <code>EvaluationReport#write(String)</code> method.</li>
+                    <li><code>Report#read():String</code> method is <strong>NOT</strong> overridden by <code>EvaluationReport#read(int):String</code> method. <span class="dimmed"> Reason: the two methods have different signatures; <code>EvaluationReport#read(int):String</code> <trigger trigger="click" for="modal:overriding-overloading"> <em>overloads</em></trigger> (rather than overrides) the <code>Report#read():String</code> method.</span></li>
+                  </ul>
+                  <modal title="**Overloading**" id="modal:overriding-overloading">
+                    <div>
+                      <div></div>
+                      <p></p>
+                      <p><span class="dimmed"><strong><span>Design → Object Oriented Programming → Inheritance →
+</span></strong>
+                        </span>
+                      </p>
+                      <div id="title-and-body">
+                        <div>
+                          <h4 id="overloading">Overloading</h4>
+                        </div>
+                        <div id="main">
+                          <div>
+                            <p><strong>Method overloading is when there are multiple methods with the same name but different type signatures.</strong> Overloading is used to indicate that multiple operations do similar things but take different parameters.</p>
+                            <tip-box type="primary">
+                              <div>
+                                <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is
+                                  significant.</p>
+                                <panel type="seamless" header="%%Examples%%">
+                                  <table class="markbind-table table table-bordered table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th style="text-align:center">Method</th>
+                                        <th style="text-align:center">Type Signature</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td style="text-align:center"><code>int add(int X, int Y)</code></td>
+                                        <td style="text-align:center"><code>(int, int)</code></td>
+                                      </tr>
+                                      <tr>
+                                        <td style="text-align:center"><code>void add(int A, int B)</code></td>
+                                        <td style="text-align:center"><code>(int, int)</code></td>
+                                      </tr>
+                                      <tr>
+                                        <td style="text-align:center"><code>void m(int X, double Y)</code></td>
+                                        <td style="text-align:center"><code>(int, double)</code></td>
+                                      </tr>
+                                      <tr>
+                                        <td style="text-align:center"><code>void m(double X, int Y)</code></td>
+                                        <td style="text-align:center"><code>(double, int)</code></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </panel>
+                              </div>
+                            </tip-box>
+                            <tip-box>
+                              <p><span class="fas fa-cube"></span> In the case below, the <code>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code>(String)</code> and <code>(int)</code></p>
+                              <ul>
+                                <li><code>calculate(String): void</code></li>
+                                <li><code>calculate(int): void</code></li>
+                              </ul>
+                            </tip-box>
+                            <h5 id="implementing-overloading"><big>Implementing overloading</big></h5>
+                            <p>An operation can be overloaded inside the same class or in sub/super classes.</p>
+                            <tabs>
+                            
+                              <tab header="Java">
+                                <div>
+                                  <tip-box>
+                                    <p><span class="fas fa-cube"></span> The constructor of the <code>Account</code> class below is <em>overloaded</em> because there are two constructors with different signatures: <code>()</code> and <code>(String, String, double)</code>.
+                                      Furthermore, the <code>save</code> method in the <code>Account</code> class is overloaded in the child class <code>SavingAccount</code>.</p>
+                                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+    Account () {
+        ...
+    }
+    
+    Account (String name, String number, <span class="hljs-keyword">double</span> balance) {
+        ...
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(<span class="hljs-keyword">int</span> amount)</span></span>{
+        ...
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SavingAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(Double amount)</span></span>{
+        ...
+    }
+}
+</code></pre>
+                                  </tip-box>
+                                  <p><span class="fas fa-paperclip"></span> Resources:</p>
+                                  <ul>
+                                    <li>
+                                      <p><a href="https://www.javatpoint.com/method-overloading-in-java"><strong>Method Overloading in Java</strong></a> a tutorial from <a href="http://javatpoint.com">javatpoint.com</a>. Also mentions the topic of a related
+                                        topic <mark><em>type promotion</em></mark>.</p>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </tab>
+
+
+                              <p>
+                                <tab header="Python"></tab>
+                              </p>
+                              <div><span>❗️ Python does not have direct support for method overloading.</span></div>
+                            </tabs>
+                            <p></p>
+                          </div>
+                          <div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </modal>
+                </tip-box>
+                <h5 id="implementing-overriding"><big>Implementing overriding</big></h5>
+                <p><strong>To override a method inherited from an ancestor class, simply re-implement the method in the target class.</strong></p>
+                <tabs>
+                
+                  <tab header="Java">
+                    <div>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> A simple example where the <code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method:</p>
+                        <pre><code class="hljs java">
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Report</span></span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
+        System.out.println(<span class="hljs-string">"Printing report"</span>);
+    }
+
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EvaluationReport</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Report</span></span>{
+
+    <span class="hljs-meta">@Override</span>  <span class="hljs-comment">// this annotation is optional</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
+        System.out.println(<span class="hljs-string">"Printing evaluation report"</span>);
+    }
+
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReportMain</span></span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        Report report = <span class="hljs-keyword">new</span> Report();
+        report.print(); <span class="hljs-comment">// prints "Printing report"</span>
+
+        EvaluationReport evaluationReport = <span class="hljs-keyword">new</span> EvaluationReport();
+        evaluationReport.print(); <span class="hljs-comment">// prints "Printing evaluation report"</span>
+    }
+}
+</code></pre>
+                      </tip-box>
+                      <p><span class="fas fa-paperclip"></span> Resources:</p>
+                      <ul>
+                        <li><a href="https://www.tutorialspoint.com/java/java_overriding.htm">Java - Overriding</a> -- a tutorial by <a href="http://tutorialspoint.com">tutorialspoint.com</a></li>
+                      </ul>
+                    </div>
+                  </tab>
+                
+                  <tab header="Python">
+                    <div>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> In the example below, <code>Student</code> class overrides the <code>print_info</code> method of its parent class <code>Person</code>:</p>
+                        <table>
+                          <tr>
+                          
+                            <td>
+                              <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name)</span>:</span>
+    self.name = name
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span><span class="hljs-params">(self)</span>:</span>
+    print(<span class="hljs-string">'My name is'</span>, self.name)
+    
+</code></pre>
+                              <p></p>
+                            </td>
+                          
+                            <td valign="bottom">  <br><br></td>
+                          
+                            <td valign="bottom">
+                              <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span><span class="hljs-params">(Person)</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, matric)</span>:</span>
+    self.name = name
+    self.matric = matric
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span><span class="hljs-params">(self)</span>:</span>
+    print(self.name, <span class="hljs-string">'is a student'</span>)
+</code></pre>
+                              <p></p>
+                            </td>
+                          </tr>
+                        </table>
+                        <table>
+                          <tr>
+                          
+                            <td>
+                              <pre><code class="hljs python">amy = Person(<span class="hljs-string">'Amy'</span>)
+amy.print_info()
+
+ben = Student(<span class="hljs-string">'Ben'</span>, <span class="hljs-string">'A12345'</span>)
+ben.print_info()
+</code></pre>
+                              <p></p>
+                            </td>
+                          
+                            <td valign="bottom"> → <br><br></td>
+                          
+                            <td valign="bottom">
+                              <pre class="hljs"><code>My name is Amy
+Ben is a student
+</code></pre>
+                              <p></p>
+                            </td>
+                          </tr>
+                        </table>
+                        <p></p>
+                      </tip-box>
+                    </div>
+                  </tab>
+                </tabs>
+              </div>
+              <div>
+                <div>
+                  <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which methods override?">
+                        <question>
+                          <p>Which of these methods override another method? <span class="dimmed"><code>A</code> is the parent class. <code>B</code> inherits <code>A</code>.</span></p>
+                          <img src="/se-book/oop/inheritance/overriding/images/overriding.png" height="220">
+                          <p></p>
+                          <ul class="task-list">
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e</li>
+                          </ul>
+                          <div slot="answer">
+                            <p>d</p>
+                            <p>Explanation: Method overriding requires a method in a <em>child class</em> to use the same method name and same parameter sequence used by one of its ancestors</p>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </panel>
+                </div>
+              </div>
+            </div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="card-title"><div>
+<h4 id="overloading-2">Overloading</h4></div></span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain method overloading</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
+              <p></p>
+              <div>
+                <p><strong>Method overloading is when there are multiple methods with the same name but different type signatures.</strong> Overloading is used to indicate that multiple operations do similar things but take different parameters.</p>
+                <tip-box type="primary">
+                  <div>
+                    <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.</p>
+                    <panel type="seamless" header="%%Examples%%">
+                      <table class="markbind-table table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th style="text-align:center">Method</th>
+                            <th style="text-align:center">Type Signature</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td style="text-align:center"><code>int add(int X, int Y)</code></td>
+                            <td style="text-align:center"><code>(int, int)</code></td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center"><code>void add(int A, int B)</code></td>
+                            <td style="text-align:center"><code>(int, int)</code></td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center"><code>void m(int X, double Y)</code></td>
+                            <td style="text-align:center"><code>(int, double)</code></td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center"><code>void m(double X, int Y)</code></td>
+                            <td style="text-align:center"><code>(double, int)</code></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </panel>
+                  </div>
+                </tip-box>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> In the case below, the <code>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code>(String)</code> and <code>(int)</code></p>
+                  <ul>
+                    <li><code>calculate(String): void</code></li>
+                    <li><code>calculate(int): void</code></li>
+                  </ul>
+                </tip-box>
+                <h5 id="implementing-overloading-2"><big>Implementing overloading</big></h5>
+                <p>An operation can be overloaded inside the same class or in sub/super classes.</p>
+                <tabs>
+                
+                  <tab header="Java">
+                    <div>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> The constructor of the <code>Account</code> class below is <em>overloaded</em> because there are two constructors with different signatures: <code>()</code> and <code>(String, String, double)</code>.
+                          Furthermore, the <code>save</code> method in the <code>Account</code> class is overloaded in the child class <code>SavingAccount</code>.</p>
+                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+    Account () {
+        ...
+    }
+    
+    Account (String name, String number, <span class="hljs-keyword">double</span> balance) {
+        ...
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(<span class="hljs-keyword">int</span> amount)</span></span>{
+        ...
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SavingAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(Double amount)</span></span>{
+        ...
+    }
+}
+</code></pre>
+                      </tip-box>
+                      <p><span class="fas fa-paperclip"></span> Resources:</p>
+                      <ul>
+                        <li>
+                          <p><a href="https://www.javatpoint.com/method-overloading-in-java"><strong>Method Overloading in Java</strong></a> a tutorial from <a href="http://javatpoint.com">javatpoint.com</a>. Also mentions the topic of a related topic <mark><em>type promotion</em></mark>.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </tab>
+
+
+                  <p>
+                    <tab header="Python"></tab>
+                  </p>
+                  <div><span>❗️ Python does not have direct support for method overloading.</span></div>
+                </tabs>
+                <p></p>
+              </div>
+              <div></div>
+            </div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="card-title"><div>
+<h4 id="interfaces">Interfaces</h4></div></span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain interfaces</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
+              <p></p>
+              <div>
+                <p><strong>An <em>interface</em> is a behavior specification</strong> i.e. a collection of
+                  <tooltip content="Just the method signature without any implementation">method specifications</tooltip>. If a class
+                  <tooltip content="implements all methods specified in an interface">implements the interface</tooltip>, it means the class is able to support the behaviors specified by the said interface.</p>
+                <blockquote>
+                  <p>There are a number of situations in software engineering when it is important for disparate groups of programmers to agree to a &quot;contract&quot; that spells out how their software interacts. Each group should be able to write their
+                    code without any knowledge of how the other group's code is written. Generally speaking, interfaces are such contracts. <sub>--<a href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html">Oracle Docs on Java</a><sub></sub></sub>
+                  </p>
+                </blockquote>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> Suppose <code>SalariedStaff</code> is an interface that contains two methods <code>setSalary(int)</code> and <code>getSalary()</code>. <code>AcademicStaff</code> can declare itself as <em>implementing</em>                    the <code>SalariedStaff</code> interface, which means the <code>AcademicStaff</code> class must implement all the methods specified by the <code>SalariedStaff</code> interface i.e., <code>setSalary(int)</code> and <code>getSalary()</code>.</p>
+                </tip-box>
+                <p><strong>A class implementing an interface results in an <em>is-a</em> relationship</strong>, just like in class inheritance.</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> In the example above, <code>AcademicStaff</code> <em>is a</em> <code>SalariedStaff</code>. An <code>AcademicStaff</code> object can be used anywhere a <code>SalariedStaff</code> object is expected e.g.
+                    <code>SalariedStaff ss = new AcademicStaff()</code>.</p>
+                </tip-box>
+                <h5 id="implementing-interfaces"><big>Implementing interfaces</big></h5>
+                <p><strong>Java allows multiple inheritance among interfaces. A Java class can <em>implement</em> multiple interfaces</strong> (and inherit from one class).</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> The design below is allowed by Java. <span class="dimmed">In case you are not familiar with UML notation used: solid lines indicate normal inheritance; dashed lines indicate interface inheritance; the triangle points to pare parent.</span></p>
+                  <img src="/se-book/oop/inheritance/interfaces/images/studentStaff.png" height="250">
+                  <p></p>
+                  <ol>
+                    <li><code>Staff</code> interface inherits (note the solid lines) the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
+                    <li><code>TA</code> class implements both <code>Student</code> interface and the <code>Staff</code> interface.</li>
+                    <li>Because of point 1 above, <code>TA</code> class has to implement all methods in the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
+                    <li>Because of points 1,2,3, a <code>TA</code> <em>is a</em> <code>Staff</code>, <em>is a</em> <code>TaxPayer</code> and <em>is a</em> <code>Citizen</code>.</li>
+                  </ol>
+                </tip-box>
+                <p><strong>Java uses the <code>interface</code> keyword to declare interfaces and <code>implements</code> keyword to indicate that a class implements a given interface.</strong> Inheritance among interfaces uses the <code>extends</code> keyword,
+                  just like inheritance among classes.</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> The code for the example design given in the previous example:</p>
+                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">TaxPayer</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">payTax</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Citizen</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">vote</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Staff</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Citizen</span>, <span class="hljs-title">TaxPayer</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">work</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Student</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">learn</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TA</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Student</span>, <span class="hljs-title">Staff</span></span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">payTax</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">vote</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">work</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">learn</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+                </tip-box>
+                <p></p>
+              </div>
+              <div>
+                <div>
+                  <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                    <ul>
+                      <li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html">Oracle’s Java Tutorials: Interfaces</a></li>
+                    </ul>
+                  </panel>
+                </div>
+              </div>
+            </div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="card-title"><div>
+<h4 id="abstract-classes">Abstract Classes</h4></div></span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can implement abstract classes</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
+              <p></p>
+              <div>
+                <tip-box type="definition">
+                  <div>
+                    <p><strong>Abstract Class</strong>:</p>
+                    <p>An <em>abstract class</em> is a class that is declared <code>abstract</code>—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed. <sub>-- <a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">Oracle's Java Documentation</a></sub></p>
+                  </div>
+                </tip-box>
+                <p><strong>An abstract method is simply the method interface without the implementation.</strong></p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> The <code>Account</code> class has an abstract method (<code>addInterest()</code>).</p>
+                </tip-box>
+                <p><strong>A class that has an abstract method becomes an abstract class</strong>. Evan a class that does not have any abstract method can be declared as an abstract class. Abstract classes cannot be instantiated.</p>
+                <h5 id="implementing-abstract-classes"><big>Implementing abstract classes</big></h5>
+                <p><strong>Use the <code>abstract</code> keyword to identify abstract classes/methods.</strong></p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> Partial code below gives an example of how to declare abstract classes/methods. The <code>addInterest()</code> method in the <code>Account</code> class is abstract and therefore the <code>Account</code>                    class itself is abstract. The <code>CurrentAccount</code> class need not be abstract because it overrides the abstract method inherited from the parent class.</p>
+                  <pre><code class="hljs java"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+    
+    <span class="hljs-keyword">int</span> number;
+    
+    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span></span>;
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">close</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CurrentAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+                </tip-box>
+                <p>In Java, if a class contains an abstract method, the class itself should be an abstract class <span class="dimmed"> i.e. if any methods of the class is 'incomplete', the class itself is 'incomplete'</span>.</p>
+              </div>
+              <div>
+                <div>
+                  <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                    <ul>
+                      <li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">Oracle’s Java Tutorials: Abstract Methods and Classes</a></li>
+                    </ul>
+                  </panel>
+                </div>
+                <div>
+                  <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about abstract classes">
+                        <question>
+                          <p>Choose the correct statements about Java abstract classes and
+                            <tooltip content="classes that are not abstract">concrete classes</tooltip>.</p>
+                          <ul class="task-list">
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A concrete class can contain an abstract method.</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An abstract class can contain concrete methods.</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. An abstract class need not contain any concrete methods.</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. An abstract class cannot be instantiated.</li>
+                          </ul>
+                          <div slot="answer">
+                            <p>(b)(c)(d)</p>
+                            <p>Explanation: A concrete class cannot contain even a single abstract method.</p>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </panel>
+                </div>
+              </div>
+            </div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="card-title"><div>
+<h4 id="substitutability">Substitutability</h4></div></span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain substitutability</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
+              <p></p>
+              <div>
+                <p><strong>Every instance of a subclass is an instance of the superclass, but not vice-versa.</strong> As a result, inheritance allows <em>substitutability</em> : the ability to substitute a child class object where a parent class object
+                  is expected.</p>
+                <tip-box>
+                  <img src="/se-book/oop/inheritance/substitutability/images/staff.png" height="80">
+                  <p></p>
+                  <p><span class="fas fa-cube"></span> an <code>Academic</code> is an instance of a <code>Staff</code>, but a <code>Staff</code> is not necessarily an instance of an <code>Academic</code>. i.e. wherever an object of the superclass is expected,
+                    it can be substituted by an object of any of its subclasses.</p>
+                  <p>The following code is valid because an <code>AcademicStaff</code> object is substitutable as a <code>Staff</code> object.</p>
+                  <pre><code class="hljs java">Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span>
+</code></pre>
+                  <p>But the following code is not valid <span class="dimmed"> because <code>staff</code> is declared as a <code>Staff</code> type and therefore its value may or may not be of  type <code>AcademicStaff</code>, which is the type expected by variable <code>academicStaff</code>.</span></p>
+                  <pre class="hljs"><code>Staff staff;
+...
+AcademicStaff academicStaff = staff; // Not OK
+</code></pre>
+                </tip-box>
+              </div>
+              <div></div>
+            </div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="card-title"><div>
+<h4 id="dynamic-and-static-binding">Dynamic and Static Binding</h4></div></span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain dynamic and static binding</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
+              <p></p>
+              <div>
+                <tip-box type="definition">
+                
+                  <div>
+                    <p><strong>Dynamic Binding</strong> (
+                      <tooltip content="There are subtle differences between late binding and dynamic binding, but they are beyond the scope of this document">aka late binding</tooltip>) : a mechanism where method calls in code are
+                      <tooltip content="deciding which method implementation to execure">resolved</tooltip> at
+                      <tooltip content="at the moment the method call is executed">runtime</tooltip>, rather than at compile time.</p>
+                  </div>
+                </tip-box>
+                <p><strong><trigger trigger="click" for="modal:dynamicAndStatic-overriding">Overridden methods</trigger> are resolved using dynamic binding, and therefore resolves to the implementation in the actual type of the object.</strong></p>
+                <modal large="" title="Textbook <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span>" id="modal:dynamicAndStatic-overriding">
+                
+                  <div>
+                    <div>
+                      <p>
+                        <panel src="/se-book\oop\inheritance\what\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Inheritance → What%%"></panel>
+                      </p>
+                    </div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Design → Object Oriented Programming → Inheritance →
+</span></strong>
+                      </span>
+                    </p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="overriding-2">Overriding</h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p><strong>Method <em>overriding</em> is when a sub-class changes the behavior inherited from the parent class</strong> by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.</p>
+                          <tip-box>
+                            <p><span class="fas fa-cube"></span> In a case where <code>EvaluationReport</code> class inherits the <code>Report</code> class,</p>
+                            <ul>
+                              <li><code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method.</li>
+                              <li><code>Report#write(String)</code> method is overridden by <code>EvaluationReport#write(String)</code> method.</li>
+                              <li><code>Report#read():String</code> method is <strong>NOT</strong> overridden by <code>EvaluationReport#read(int):String</code> method. <span class="dimmed"> Reason: the two methods have different signatures; <code>EvaluationReport#read(int):String</code> <trigger trigger="click" for="modal:overriding-overloading"> <em>overloads</em></trigger> (rather than overrides) the <code>Report#read():String</code> method.</span></li>
+                            </ul>
+                            <modal title="**Overloading**" id="modal:overriding-overloading">
+                              <div>
+                                <div></div>
+                                <p></p>
+                                <p><span class="dimmed"><strong><span>Design → Object Oriented Programming → Inheritance →
+</span></strong>
+                                  </span>
+                                </p>
+                                <div id="title-and-body">
+                                  <div>
+                                    <h4 id="overloading-3">Overloading</h4>
+                                  </div>
+                                  <div id="main">
+                                    <div>
+                                      <p><strong>Method overloading is when there are multiple methods with the same name but different type signatures.</strong> Overloading is used to indicate that multiple operations do similar things but take different
+                                        parameters.</p>
+                                      <tip-box type="primary">
+                                        <div>
+                                          <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter
+                                            order is significant.</p>
+                                          <panel type="seamless" header="%%Examples%%">
+                                            <table class="markbind-table table table-bordered table-striped">
+                                              <thead>
+                                                <tr>
+                                                  <th style="text-align:center">Method</th>
+                                                  <th style="text-align:center">Type Signature</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td style="text-align:center"><code>int add(int X, int Y)</code></td>
+                                                  <td style="text-align:center"><code>(int, int)</code></td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="text-align:center"><code>void add(int A, int B)</code></td>
+                                                  <td style="text-align:center"><code>(int, int)</code></td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="text-align:center"><code>void m(int X, double Y)</code></td>
+                                                  <td style="text-align:center"><code>(int, double)</code></td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="text-align:center"><code>void m(double X, int Y)</code></td>
+                                                  <td style="text-align:center"><code>(double, int)</code></td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </panel>
+                                        </div>
+                                      </tip-box>
+                                      <tip-box>
+                                        <p><span class="fas fa-cube"></span> In the case below, the <code>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code>(String)</code> and <code>(int)</code></p>
+                                        <ul>
+                                          <li><code>calculate(String): void</code></li>
+                                          <li><code>calculate(int): void</code></li>
+                                        </ul>
+                                      </tip-box>
+                                      <h5 id="implementing-overloading-3"><big>Implementing overloading</big></h5>
+                                      <p>An operation can be overloaded inside the same class or in sub/super classes.</p>
+                                      <tabs>
+                                      
+                                        <tab header="Java">
+                                          <div>
+                                            <tip-box>
+                                              <p><span class="fas fa-cube"></span> The constructor of the <code>Account</code> class below is <em>overloaded</em> because there are two constructors with different signatures: <code>()</code> and <code>(String, String, double)</code>.
+                                                Furthermore, the <code>save</code> method in the <code>Account</code> class is overloaded in the child class <code>SavingAccount</code>.</p>
+                                              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+    Account () {
+        ...
+    }
+    
+    Account (String name, String number, <span class="hljs-keyword">double</span> balance) {
+        ...
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(<span class="hljs-keyword">int</span> amount)</span></span>{
+        ...
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SavingAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(Double amount)</span></span>{
+        ...
+    }
+}
+</code></pre>
+                                            </tip-box>
+                                            <p><span class="fas fa-paperclip"></span> Resources:</p>
+                                            <ul>
+                                              <li>
+                                                <p><a href="https://www.javatpoint.com/method-overloading-in-java"><strong>Method Overloading in Java</strong></a> a tutorial from <a href="http://javatpoint.com">javatpoint.com</a>. Also mentions the topic
+                                                  of a related topic <mark><em>type promotion</em></mark>.</p>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </tab>
+
+
+                                        <p>
+                                          <tab header="Python"></tab>
+                                        </p>
+                                        <div><span>❗️ Python does not have direct support for method overloading.</span></div>
+                                      </tabs>
+                                      <p></p>
+                                    </div>
+                                    <div></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </modal>
+                          </tip-box>
+                          <h5 id="implementing-overriding-2"><big>Implementing overriding</big></h5>
+                          <p><strong>To override a method inherited from an ancestor class, simply re-implement the method in the target class.</strong></p>
+                          <tabs>
+                          
+                            <tab header="Java">
+                              <div>
+                                <tip-box>
+                                  <p><span class="fas fa-cube"></span> A simple example where the <code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method:</p>
+                                  <pre><code class="hljs java">
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Report</span></span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
+        System.out.println(<span class="hljs-string">"Printing report"</span>);
+    }
+
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EvaluationReport</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Report</span></span>{
+
+    <span class="hljs-meta">@Override</span>  <span class="hljs-comment">// this annotation is optional</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
+        System.out.println(<span class="hljs-string">"Printing evaluation report"</span>);
+    }
+
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReportMain</span></span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        Report report = <span class="hljs-keyword">new</span> Report();
+        report.print(); <span class="hljs-comment">// prints "Printing report"</span>
+
+        EvaluationReport evaluationReport = <span class="hljs-keyword">new</span> EvaluationReport();
+        evaluationReport.print(); <span class="hljs-comment">// prints "Printing evaluation report"</span>
+    }
+}
+</code></pre>
+                                </tip-box>
+                                <p><span class="fas fa-paperclip"></span> Resources:</p>
+                                <ul>
+                                  <li><a href="https://www.tutorialspoint.com/java/java_overriding.htm">Java - Overriding</a> -- a tutorial by <a href="http://tutorialspoint.com">tutorialspoint.com</a></li>
+                                </ul>
+                              </div>
+                            </tab>
+                          
+                            <tab header="Python">
+                              <div>
+                                <tip-box>
+                                  <p><span class="fas fa-cube"></span> In the example below, <code>Student</code> class overrides the <code>print_info</code> method of its parent class <code>Person</code>:</p>
+                                  <table>
+                                    <tr>
+                                    
+                                      <td>
+                                        <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name)</span>:</span>
+    self.name = name
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span><span class="hljs-params">(self)</span>:</span>
+    print(<span class="hljs-string">'My name is'</span>, self.name)
+    
+</code></pre>
+                                        <p></p>
+                                      </td>
+                                    
+                                      <td valign="bottom">  <br><br></td>
+                                    
+                                      <td valign="bottom">
+                                        <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span><span class="hljs-params">(Person)</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, matric)</span>:</span>
+    self.name = name
+    self.matric = matric
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span><span class="hljs-params">(self)</span>:</span>
+    print(self.name, <span class="hljs-string">'is a student'</span>)
+</code></pre>
+                                        <p></p>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <table>
+                                    <tr>
+                                    
+                                      <td>
+                                        <pre><code class="hljs python">amy = Person(<span class="hljs-string">'Amy'</span>)
+amy.print_info()
+
+ben = Student(<span class="hljs-string">'Ben'</span>, <span class="hljs-string">'A12345'</span>)
+ben.print_info()
+</code></pre>
+                                        <p></p>
+                                      </td>
+                                    
+                                      <td valign="bottom"> → <br><br></td>
+                                    
+                                      <td valign="bottom">
+                                        <pre class="hljs"><code>My name is Amy
+Ben is a student
+</code></pre>
+                                        <p></p>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <p></p>
+                                </tip-box>
+                              </div>
+                            </tab>
+                          </tabs>
+                        </div>
+                        <div>
+                          <div>
+                            <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which methods override?">
+                                  <question>
+                                    <p>Which of these methods override another method? <span class="dimmed"><code>A</code> is the parent class. <code>B</code> inherits <code>A</code>.</span></p>
+                                    <img src="/se-book/oop/inheritance/overriding/images/overriding.png" height="220">
+                                    <p></p>
+                                    <ul class="task-list">
+                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
+                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b</li>
+                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c</li>
+                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d</li>
+                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e</li>
+                                    </ul>
+                                    <div slot="answer">
+                                      <p>d</p>
+                                      <p>Explanation: Method overriding requires a method in a <em>child class</em> to use the same method name and same parameter sequence used by one of its ancestors</p>
+                                    </div>
+                                  </question>
+                                </panel>
+                              </div>
+                            </panel>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </modal>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> Consider the code below. The declared type of <code>s</code> is <code>Staff</code> and it appears as if the <code>adjustSalary(int)</code> operation of the <code>Staff</code> class is invoked.</p>
+                  <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
+    <span class="hljs-keyword">for</span> (Staff s: staff) {
+        s.adjustSalary(byPercent);
+    }
+}
+</code></pre>
+                  <p>However, at runtime s can receive an object of any sub class of <code>Staff</code>. That means the <code>adjustSalary(int)</code> operation of the actual subclass object will be called. If the subclass does not override that operation,
+                    the operation defined in the superclass (in this case, <code>Staff</code> class) will be called.</p>
+                </tip-box>
+                <tip-box type="definition">
+                
+                  <div>
+                    <p><strong>Static binding</strong> (aka early binding): When a method call is resolved at compile time.</p>
+                  </div>
+                </tip-box>
+                <p><strong>In contrast, <trigger trigger="click" for="modal:dynamicAndStatic-overloading">overloaded</trigger> methods are resolved using static binding.</strong></p>
+                <modal large="" title="Textbook <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span>" id="modal:dynamicAndStatic-overloading">
+                
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Design → Object Oriented Programming → Inheritance →
+</span></strong>
+                      </span>
+                    </p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="overloading-4">Overloading</h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p><strong>Method overloading is when there are multiple methods with the same name but different type signatures.</strong> Overloading is used to indicate that multiple operations do similar things but take different parameters.</p>
+                          <tip-box type="primary">
+                            <div>
+                              <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is
+                                significant.</p>
+                              <panel type="seamless" header="%%Examples%%">
+                                <table class="markbind-table table table-bordered table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th style="text-align:center">Method</th>
+                                      <th style="text-align:center">Type Signature</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td style="text-align:center"><code>int add(int X, int Y)</code></td>
+                                      <td style="text-align:center"><code>(int, int)</code></td>
+                                    </tr>
+                                    <tr>
+                                      <td style="text-align:center"><code>void add(int A, int B)</code></td>
+                                      <td style="text-align:center"><code>(int, int)</code></td>
+                                    </tr>
+                                    <tr>
+                                      <td style="text-align:center"><code>void m(int X, double Y)</code></td>
+                                      <td style="text-align:center"><code>(int, double)</code></td>
+                                    </tr>
+                                    <tr>
+                                      <td style="text-align:center"><code>void m(double X, int Y)</code></td>
+                                      <td style="text-align:center"><code>(double, int)</code></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </panel>
+                            </div>
+                          </tip-box>
+                          <tip-box>
+                            <p><span class="fas fa-cube"></span> In the case below, the <code>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code>(String)</code> and <code>(int)</code></p>
+                            <ul>
+                              <li><code>calculate(String): void</code></li>
+                              <li><code>calculate(int): void</code></li>
+                            </ul>
+                          </tip-box>
+                          <h5 id="implementing-overloading-4"><big>Implementing overloading</big></h5>
+                          <p>An operation can be overloaded inside the same class or in sub/super classes.</p>
+                          <tabs>
+                          
+                            <tab header="Java">
+                              <div>
+                                <tip-box>
+                                  <p><span class="fas fa-cube"></span> The constructor of the <code>Account</code> class below is <em>overloaded</em> because there are two constructors with different signatures: <code>()</code> and <code>(String, String, double)</code>.
+                                    Furthermore, the <code>save</code> method in the <code>Account</code> class is overloaded in the child class <code>SavingAccount</code>.</p>
+                                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+    Account () {
+        ...
+    }
+    
+    Account (String name, String number, <span class="hljs-keyword">double</span> balance) {
+        ...
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(<span class="hljs-keyword">int</span> amount)</span></span>{
+        ...
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SavingAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(Double amount)</span></span>{
+        ...
+    }
+}
+</code></pre>
+                                </tip-box>
+                                <p><span class="fas fa-paperclip"></span> Resources:</p>
+                                <ul>
+                                  <li>
+                                    <p><a href="https://www.javatpoint.com/method-overloading-in-java"><strong>Method Overloading in Java</strong></a> a tutorial from <a href="http://javatpoint.com">javatpoint.com</a>. Also mentions the topic of a related
+                                      topic <mark><em>type promotion</em></mark>.</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </tab>
+
+
+                            <p>
+                              <tab header="Python"></tab>
+                            </p>
+                            <div><span>❗️ Python does not have direct support for method overloading.</span></div>
+                          </tabs>
+                          <p></p>
+                        </div>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </modal>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> Note how the constructor is overloaded in the class below. The method call <code>new Account()</code> is bound to the first constructor at compile time.</p>
+                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+    Account () {
+        <span class="hljs-comment">// Signature: ()</span>
+        ...
+    }
+    Account (String name, String number, <span class="hljs-keyword">double</span> balance) {
+        <span class="hljs-comment">// Signature: (String, String, double)</span>
+        ...
+    }
+}
+</code></pre>
+                  <p><span class="fas fa-cube"></span> Similarly, the <code>calcuateGrade</code> method is overloaded in the code below and a method call <code>calculateGrade(&quot;A1213232&quot;)</code> is bound to the second implementation, at compile
+                    time.</p>
+                  <pre class="hljs"><code>void calculateGrade (int[] averages) { ... }
+void calculateGrade (String matric) { ... }
+</code></pre>
+                </tip-box>
+              </div>
+              <div></div>
+            </div>
+          </panel>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\markbind\js\polyfill.min.js"></script>
+<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
+<script src="..\..\markbind\js\setup.js"></script>
+</html>

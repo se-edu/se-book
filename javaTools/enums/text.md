@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use Java enumerations</span>
+<span id="outcomes">{{ icon_outcome }} Can use Java enumerations</span>
 
 <div id="body">
 

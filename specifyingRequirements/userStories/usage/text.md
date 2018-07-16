@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use user stories to manage requirements of project</span>
+<span id="outcomes">{{ icon_outcome }} Can use user stories to manage requirements of project</span>
 
 <div id="body">
 

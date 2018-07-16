@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain continuous integration and continuous deployment</span>
+<span id="outcomes">{{ icon_outcome }} Can explain continuous integration and continuous deployment</span>
 
 <div id="body">
 

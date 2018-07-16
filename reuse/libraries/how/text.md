@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can make use of a library</span>
+<span id="outcomes">{{ icon_outcome }} Can make use of a library</span>
 
 <div id="body">
 

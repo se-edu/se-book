@@ -1,4 +1,4 @@
-<panel header=":lock::key: Statements about documentation">
+<panel header="{{ icon_Q_A }} Statements about documentation">
 <question>
 
 It is recommended for developer documents,

@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can draw UML objects</span>
+<span id="outcomes">{{ icon_outcome }} Can draw UML objects</span>
 
 <div id="body">
 

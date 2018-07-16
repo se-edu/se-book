@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain/identify object diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can explain/identify object diagrams</span>
 
 <div id="body">
 
@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-<img src="{{baseUrl}}/oopDesign/associations/basic/images/completeStructure.png" height="120" />
+<img src="{{baseUrl}}/oop/associations/what/images/completeStructure.png" height="120" />
 
 </tip-box>
 

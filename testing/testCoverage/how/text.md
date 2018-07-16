@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain how test coverage works</span>
+<span id="outcomes">{{ icon_outcome }} Can explain how test coverage works</span>
 
 <div id="body">
 

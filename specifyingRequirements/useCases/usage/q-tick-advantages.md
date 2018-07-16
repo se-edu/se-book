@@ -1,4 +1,4 @@
-<panel header=":lock::key: Advantages of use cases">
+<panel header="{{ icon_Q_A }} Advantages of use cases">
 <question>
 
 What are the advantages of using use cases (the textual form) for requirements modelling?

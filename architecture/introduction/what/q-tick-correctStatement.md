@@ -1,4 +1,4 @@
-<panel header=":lock::key: Statements about architecture">
+<panel header="{{ icon_Q_A }} Statements about architecture">
 <question>
 
 Choose the correct statement

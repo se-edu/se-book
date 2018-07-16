@@ -1,4 +1,4 @@
-<panel header=":lock::key: Can define test cases precisely">
+<panel header="{{ icon_Q_A }} Can define test cases precisely">
 <question>
 
 Applying the heuristics covered so far, we can determine the precise number of test cases required to test any given SUT effectively.

@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain prototyping</span>
+<span id="outcomes">{{ icon_outcome }} Can explain prototyping</span>
 
 <div id="body">
 

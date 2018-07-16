@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can name several other architecture styles</span>
+<span id="outcomes">{{ icon_outcome }} Can name several other architecture styles</span>
 
 <div id="body">
 

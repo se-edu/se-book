@@ -7,7 +7,7 @@ void printOwing() {
     System.out.println("amount	" + getOutstanding());
 }
 ```
-:arrow_heading_down:
+{{ icon_output }}
 ```java
 void printOwing() {
     printBanner();

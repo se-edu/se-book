@@ -1,6 +1,6 @@
 <span id="prereqs"><panel src="../../revisionControl/usingHistory/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Using History%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can load a specific version of a Git repo</span>
+<span id="outcomes">{{ icon_outcome }} Can load a specific version of a Git repo</span>
 
 <div id="title">
 
@@ -32,7 +32,11 @@ Git can also show you the difference between two points in the history of the re
   <hr></tab>
 </tabs>
 
-Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to [stash]({{baseUrl}}/gitAndGithub/stash/index.html) them first to prevent them from being overwritten.
+Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to <trigger trigger="click" for="modal:checkout-stash">stash</trigger> them first to prevent them from being overwritten.
+
+<modal large title="%%Extract%%" id="modal:checkout-stash">
+  <include src="../stash/unit-inElsewhere-asFlat.md" boilerplate />
+</modal>
 
 <tabs>
   <tab header="SourceTree">

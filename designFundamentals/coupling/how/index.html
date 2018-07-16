@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Software Design Fundamentals: Coupling: How</title>
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\site-nav.css">
@@ -16,7 +19,10 @@
     <div>
   <link rel="stylesheet" href="/se-book/css/textbook.css">
   <div class="website-content">
-    <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can reduce coupling</span></span></span></button>
+    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can reduce coupling</span>
+      </span>
+      </span>
+      </span>
       <p></p>
     </p>
     <div>
@@ -38,8 +44,8 @@
           <div>
             <p><strong>X is <em>coupled</em> to Y if a change to Y can <mark>potentially</mark> require a change in X</strong>.</p>
             <tip-box>
-              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> If <code>Foo</code> class calls the method <code>Bar#read()</code>, <code>Foo</code> is coupled to <code>Bar</code> because a change to <code>Bar</code> can potentially (but
-                not always) require a change in the <code>Foo</code> class <span class="dimmed"> e.g. if the signature of the <code>Bar#read()</code> is changed, <code>Foo</code> needs to change as well, but a change to the <code>Bar#write()</code> method may not require a change in the <code>Foo</code> class because <code>Foo</code> does not call <code>Bar#write()</code></span>.</p>
+              <p><span class="fas fa-cube"></span> If <code>Foo</code> class calls the method <code>Bar#read()</code>, <code>Foo</code> is coupled to <code>Bar</code> because a change to <code>Bar</code> can potentially (but not always) require a change
+                in the <code>Foo</code> class <span class="dimmed"> e.g. if the signature of the <code>Bar#read()</code> is changed, <code>Foo</code> needs to change as well, but a change to the <code>Bar#write()</code> method may not require a change in the <code>Foo</code> class because <code>Foo</code> does not call <code>Bar#write()</code></span>.</p>
               <panel type="seamless" header="%%code for the above example%%">
                 <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
     ...
@@ -60,7 +66,7 @@
               </panel>
             </tip-box>
             <tip-box>
-              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Some examples of coupling: <code>A</code> is coupled to <code>B</code> if,</p>
+              <p><span class="fas fa-cube"></span> Some examples of coupling: <code>A</code> is coupled to <code>B</code> if,</p>
               <ul>
                 <li><code>A</code> has access to the internal structure of <code>B</code> (this results in a very high level of coupling)</li>
                 <li><code>A</code> and <code>B</code> depend on the same global variable</li>
@@ -73,9 +79,9 @@
           </div>
           <div>
             <div>
-              <panel header=":muscle: Exercises" expandable="">
+              <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: Which indicate coupling?">
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which indicate coupling?">
                     <question>
                       <p>Which of these indicate a coupling between components A and B?</p>
                       <ul class="task-list">
@@ -105,6 +111,8 @@
 </body>
 <script src="..\..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\polyfill.min.js"></script>
+<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
 </script>

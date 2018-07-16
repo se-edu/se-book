@@ -1,4 +1,4 @@
-<panel header=":lock::key: Statements about sequential and iterative process models">
+<panel header="{{ icon_Q_A }} Statements about sequential and iterative process models">
 <question>
 
 Choose the correct statements about the sequential and iterative process models.

@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which of these statements is true about the Dependency Inversion Principle.">
+<panel header="{{ icon_Q_A }} Which of these statements is true about the Dependency Inversion Principle.">
 <question>
 
 Which of these statements is true about the Dependency Inversion Principle.

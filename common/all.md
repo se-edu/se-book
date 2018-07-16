@@ -22,11 +22,9 @@ title: "SE Book [All-In-One-Page Big File!]"
 <include src="../softwareEngineering/chapter.md" boilerplate />
 
 
-# SECTION: OOP (with UML)
+# SECTION: PROGRAMMING PARADIGMS
 
-<include src="../oopDesign/chapter.md" boilerplate />
-
-<include src="../oopImplementation/chapter.md" boilerplate />
+<include src="../oop/chapter.md" boilerplate />
 
 
 # SECTION: REQUIREMENTS
@@ -112,6 +110,6 @@ title: "SE Book [All-In-One-Page Big File!]"
 * [List of Definitions](common/definitions.html)
 * [List of References](common/references.html)
 * [List of Learning Outcomes](common/outcomes.html)
-* [Printable Version {{glyphicon_print}}](common/print.html)
+* [Printable Version {{icon_print}}](common/print.html)
 
 </div>

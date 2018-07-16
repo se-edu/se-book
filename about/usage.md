@@ -18,34 +18,46 @@ title: "About: Usage"
 
 ### Browser Compatibility
 
-This book is best viewed using the ==Chrome browser==.
+Most of this will work on most mainstream Browsers, but ==embedded slides are best viewed using Chrome==.
 
 </div>
 <div id="layers">
 
 ### Information Layers
 
-The book tries to _layer_ information so that readers can decide to omit less important layers if they wish to. 
+This book tries to _layer_ information so that readers can decide to omit less important layers if they wish to. 
 
 **More important information are in bold** or ==highlighted== while %%less important information are dimmed%% or in collapsed panels such as the below.
 
-<panel header="%%Some less important info in a panel%%">
+<tip-box> 
+
+<panel header="Some less important info in a minimized panel" minimized>
 
 Less important info
 
 </panel><p/>
+
 <panel header="%%Some less important info in a boarder-less panel%%" type="seamless">
 
 Less important info
 
 </panel><p/>
 
+<panel header="%%Some less important info in a panel%%">
+
+Less important info
+
+</panel><p/>
+
+</tip-box>
+
+
 **Tabs indicate alternative formats of the same content** (e.g. video vs text). You can choose the one you like and ignore the other tabs. 
 
 <tip-box>
 
 <tabs> 
-  <tab header=":abc:">
+  <tab header="{{ icon_text }}">
   
 Some textual description of X
 
@@ -71,33 +83,33 @@ Video describing X
   Additional information
 </modal>
 
-**Sections tagged as <span class='badge'>tangential</span> can be ignored because they are tangential info** that are strictly not within the scope of the topic.
-
 </div>
 <div id="conventions">
 
 ### Conventions Used
 
+#### Shorthand Headings
+
 Meaning of some shortened headings:
 
-* **What** : the **meaning** of the concept in concern 
+* <big>**What**</big> : the **meaning** of the concept in concern 
 
   <panel header="%%Example%%" src="../refactoring/what/unit-inElsewhere-asFlat.md" boilerplate />
 
-* **Why** : the **motivation** behind the concept in concern
+* <big>**Why**</big> : the **motivation** behind the concept in concern
 
   <panel header="%%Example%%" src="../documentation/guidelines/goTopDown/why/unit-inElsewhere-asFlat.md" boilerplate />
   
-* **How** : the **usage** of the concept in concern 
+* <big>**How**</big> : the **usage** of the concept in concern 
 
   <panel header="%%Example%%" src="../refactoring/how/unit-inElsewhere-asFlat.md" boilerplate />
   
-* **When** : the **pros and cons** of the concept in concern, **when to use** the concept 
+* <big>**When**</big> : the **pros and cons** of the concept in concern, **when to use** the concept 
 
   <panel header="%%Example%%" src="../refactoring/when/unit-inElsewhere-asFlat.md" boilerplate />
   
 
-Boxed-text styles:
+#### Boxed-Text Styles
 
 <tip-box type="info">
     additional info
@@ -121,23 +133,27 @@ Boxed-text styles:
     definition
 </tip-box>
 
-Meaning of icons:
+#### Meaning of Icons
 
-* <span class="badge">tangential</span> : tangential info, can be ignored if not interested
-* {{glyphicon_new_window}} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.
-* {{glyphicon_flag}} : learning outcomes
-* {{ icon_prereq }} : prerequisite learning outcome
-* {{ icon_example }} : examples
-* :paperclip: : resources
-* :muscle: : exercises
-* {{glyphicon_print}} : printable version
-* {{glyphicon_eye_open}} : preview/more info
-* {{ icon_video }} : video
-* :abc: : textual description
-* :bar_chart: : slides
-* :arrow_heading_down: : output produced by running code
-* :lock: question without answer
-* :lock::key: question with answer
+<div class="indented">
+
+{{ icon_tangential }} : tangential info, can be ignored if not interested<br>
+{{ icon_new_window }} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.<br>
+{{ icon_outcome }} : learning outcomes<br>
+{{ icon_prereq }} : prerequisite learning outcome<br>
+{{ icon_example }} : examples<br>
+{{ icon_resource }} : resources<br>
+{{ icon_exercise }} : exercises<br>
+{{ icon_print }} : printable version<br>
+{{ icon_preview }} : preview/more info<br>
+{{ icon_video }} : video<br>
+{{ icon_text }} : textual description<br>
+{{ icon_slides }} : slides<br>
+{{ icon_output }} : output produced by running code<br>
+{{ icon_Q }} question without answer<br>
+{{ icon_Q_A }} question with answer<br>
+
+</div>
 
 </div>
 <div id="searching">
@@ -163,7 +179,7 @@ The book currently does not have a _search_ feature. The workaround is to load [
   
 ### Printing
 
-The {{glyphicon_print}} icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here]({{baseUrl}}/common/print.html)
+The {{icon_print}} icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here]({{baseUrl}}/common/print.html)
 
 </div>
 

@@ -1,4 +1,4 @@
-<panel header=":lock::key: Odd one out">
+<panel header="{{ icon_Q_A }} Odd one out">
 <question>
 
 Pick the odd one out.

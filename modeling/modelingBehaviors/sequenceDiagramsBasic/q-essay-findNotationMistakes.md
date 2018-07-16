@@ -1,4 +1,4 @@
-<panel header=":lock: Find notation errors in sequence diagram">
+<panel header="{{ icon_Q }} Find notation errors in sequence diagram">
 <question>
 
 Find notation mistakes in the sequence diagram below:

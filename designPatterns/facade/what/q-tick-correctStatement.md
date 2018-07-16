@@ -1,4 +1,4 @@
-<panel header=":lock::key: Is this Facade?">
+<panel header="{{ icon_Q_A }} Is this Facade?">
 <question>
 
 Does the design below likely to use the Facade pattern?

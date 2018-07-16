@@ -1,4 +1,4 @@
-<panel header=":lock::key: Brook’s Law vs school project">
+<panel header="{{ icon_Q_A }} Brook’s Law vs school project">
 <question has-input="true">
 
 Do the Brook’s Law apply to a school project? Justify.

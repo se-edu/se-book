@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Test Case Design: Equivalence Partitions: Basic</title>
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\site-nav.css">
@@ -16,7 +19,10 @@
     <div>
   <link rel="stylesheet" href="/se-book/css/textbook.css">
   <div class="website-content">
-    <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can apply EP for pure functions</span></span></span></button>
+    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can apply EP for pure functions</span>
+      </span>
+      </span>
+      </span>
       <p></p>
     </p>
     <div>
@@ -34,7 +40,7 @@
           <div>
             <p><strong>Equivalence partitions (EPs) are usually derived from the specifications of the SUT.</strong></p>
             <tip-box>
-              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> These could be EPs for the
+              <p><span class="fas fa-cube"></span> These could be EPs for the
                 <trigger for="pop:epBasic-isValidMonth">isValidMonth</trigger> example:</p>
               <ul>
                 <li>[MIN_INT ... 0] : <strong>below</strong> the range that produces <code>true</code></li>
@@ -52,7 +58,7 @@
             </popover>
             <p>When the SUT has multiple inputs, you should identify EPs for each input.</p>
             <tip-box>
-              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Consider the method <code>duplicate(String s, int n): String</code> which returns a <code>String</code> that contains <code>s</code> repeated <code>n</code> times.</p>
+              <p><span class="fas fa-cube"></span> Consider the method <code>duplicate(String s, int n): String</code> which returns a <code>String</code> that contains <code>s</code> repeated <code>n</code> times.</p>
               <p>Example EPs for <code>s</code>:</p>
               <ul>
                 <li>zero-length strings</li>
@@ -68,7 +74,7 @@
             </tip-box>
             <p>An EP may not have adjacent values.</p>
             <tip-box>
-              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Consider the method <code>isPrime(int i): boolean</code> that returns true if <code>i</code> is a prime number.</p>
+              <p><span class="fas fa-cube"></span> Consider the method <code>isPrime(int i): boolean</code> that returns true if <code>i</code> is a prime number.</p>
               <p>EPs for <code>i</code>:</p>
               <ul>
                 <li>prime numbers</li>
@@ -77,19 +83,20 @@
             </tip-box>
             <p>Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases we have to consider each value as a partition by itself.</p>
             <tip-box>
-              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Consider the method <code>showStatusMessage(GameStatus s): String</code> that returns a unique <code>String</code> for each of the possible value of s (<code>GameStatus</code>                is an <code>enum</code>). In this case, each possible value for <code>s</code> will have to be considered as a partition.</p>
+              <p><span class="fas fa-cube"></span> Consider the method <code>showStatusMessage(GameStatus s): String</code> that returns a unique <code>String</code> for each of the possible value of s (<code>GameStatus</code> is an <code>enum</code>). In
+                this case, each possible value for <code>s</code> will have to be considered as a partition.</p>
             </tip-box>
             <p>Note that the EP technique is merely a heuristic and not an exact science, especially when applied manually (as opposed to using an automated program analysis tool to derive EPs). The partitions derived depend on how one ‘speculates’ the SUT
               to behave internally. Applying EP under a glass-box or gray-box approach can yield more precise partitions.</p>
             <tip-box>
-              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Consider the method EPs given above for the <code>isValidMonth</code>. A different tester might use these EPs instead:</p>
+              <p><span class="fas fa-cube"></span> Consider the method EPs given above for the <code>isValidMonth</code>. A different tester might use these EPs instead:</p>
               <ul>
                 <li>[1 … 12] : the range that produces <code>true</code></li>
                 <li>[all other integers] : the range that produces <code>false</code></li>
               </ul>
             </tip-box>
             <tip-box>
-              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Some more examples:</p>
+              <p><span class="fas fa-cube"></span> Some more examples:</p>
               <table class="table">
                 <tr>
                   <th>Specification</th>
@@ -116,9 +123,9 @@
           </div>
           <div>
             <div>
-              <panel header=":muscle: Exercises" expandable="">
+              <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: EPs for `isValidName` method">
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> EPs for `isValidName` method">
                     <question>
                       <p>Consider this SUT:</p>
                       <tip-box>
@@ -160,6 +167,8 @@
 </body>
 <script src="..\..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\polyfill.min.js"></script>
+<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
 </script>

@@ -1,4 +1,4 @@
-<panel header=":lock::key: Meaning of OCP">
+<panel header="{{ icon_Q_A }} Meaning of OCP">
 <question>
 
 Which of these is closest to the meaning of the open-closed principle?

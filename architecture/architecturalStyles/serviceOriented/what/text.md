@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can identify service-oriented architectural style</span>
+<span id="outcomes">{{ icon_outcome }} Can identify service-oriented architectural style</span>
 
 <div id="title">
 

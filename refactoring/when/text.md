@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can decide when to apply a given refactoring</span>
+<span id="outcomes">{{ icon_outcome }} Can decide when to apply a given refactoring</span>
 
 <div id="title">
 

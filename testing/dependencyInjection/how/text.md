@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Testing → Dependency Injection → What%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use dependency injection</span>
+<span id="outcomes">{{ icon_outcome }} Can use dependency injection</span>
 
 <div id="body">
 

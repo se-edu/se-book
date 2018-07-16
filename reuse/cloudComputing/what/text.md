@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain cloud computing</span>
+<span id="outcomes">{{ icon_outcome }} Can explain cloud computing</span>
 
 <div id="body">
 

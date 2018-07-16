@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain multi-level design</span>
+<span id="outcomes">{{ icon_outcome }} Can explain multi-level design</span>
 
 <div id="body">
 

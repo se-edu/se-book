@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which of these is not considered a benefit of a typical RCS?">
+<panel header="{{ icon_Q_A }} Which of these is not considered a benefit of a typical RCS?">
 <question>
 
 - [ ] a. Help a single user manage revisions of a single file

@@ -1,4 +1,4 @@
-<panel header=":lock: Explain Sequence Diagram (ParserFactory)">
+<panel header="{{ icon_Q }} Explain Sequence Diagram (ParserFactory)">
 <question>
 
 Explain the interactions depicted in this sequence diagram.

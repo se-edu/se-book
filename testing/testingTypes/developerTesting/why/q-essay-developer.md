@@ -1,4 +1,4 @@
-<panel header=":lock::key: implications of developers testing their own code">
+<panel header="{{ icon_Q_A }} implications of developers testing their own code">
 <question has-input="true">
 
 Discuss pros and cons of developers testing their own code.

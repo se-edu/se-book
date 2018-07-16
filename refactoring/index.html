@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Refactoring</title>
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\markbind\css\bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\markbind\css\markbind.css">
     <link rel="stylesheet" href="..\markbind\css\site-nav.css">
@@ -28,50 +31,55 @@
       <div>
         <div>
           <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
+            <span slot="header" class="card-title"><div>
 <h4 id="what">What</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can explain refactoring</span></span></span></button>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain refactoring</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
               <p></p>
-            </p>
-            <p></p>
-            <div>
-              <p>The first version of the code you write may not be of production quality. It is OK to first concentrate on making the code work, rather than worry over the quality of the code, as long as you improve the quality later. This process of <strong>improving a program's internal structure in small steps without modifying its external behavior is called <em>refactoring</em>.</strong></p>
-              <ul>
-                <li><strong>Refactoring is not rewriting</strong>: Discarding poorly-written code entirely and re-writing it from scratch is not refactoring because refactoring needs to be done in small steps.</li>
-                <li><strong>Refactoring is not bug fixing</strong>: By definition, refactoring is different from bug fixing or any other modifications that alter the external behavior (e.g. adding a feature) of the component in concern.</li>
-              </ul>
-              <tip-box>
-                <p>💡 Improving code structure can have many secondary benefits: e.g.</p>
+              <div>
+                <p>The first version of the code you write may not be of production quality. It is OK to first concentrate on making the code work, rather than worry over the quality of the code, as long as you improve the quality later. This process of
+                  <strong>improving a program's internal structure in small steps without modifying its external behavior is called <em>refactoring</em>.</strong></p>
                 <ul>
-                  <li>hidden bugs become easier to spot</li>
-                  <li>improve performance (sometimes, simpler code runs faster than complex code because simpler code is easier for the compiler to optimize).</li>
+                  <li><strong>Refactoring is not rewriting</strong>: Discarding poorly-written code entirely and re-writing it from scratch is not refactoring because refactoring needs to be done in small steps.</li>
+                  <li><strong>Refactoring is not bug fixing</strong>: By definition, refactoring is different from bug fixing or any other modifications that alter the external behavior (e.g. adding a feature) of the component in concern.</li>
                 </ul>
-              </tip-box>
-              <p>Given below are two common refactorings (
-                <trigger trigger="click" for="modal:refactoring-catalog-what">more</trigger>).</p>
-              <modal title="**Refactoring Catalogs**" id="modal:refactoring-catalog-what">
-                <div>
+                <tip-box>
+                  <p>💡 Improving code structure can have many secondary benefits: e.g.</p>
                   <ul>
-                    <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’
-                      on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
-                    <li>Python: <a href="https://refactoring.guru/refactoring/catalog">https://refactoring.guru/refactoring/catalog</a> -- A catalog of refactorings applicable to Python code.</li>
+                    <li>hidden bugs become easier to spot</li>
+                    <li>improve performance (sometimes, simpler code runs faster than complex code because simpler code is easier for the compiler to optimize).</li>
                   </ul>
-                </div>
-              </modal>
-              <tip-box>
-                <p>Refactoring Name: <strong>Consolidate Duplicate Conditional Fragments</strong></p>
-                <p>Situation: The same fragment of code is in all branches of a conditional expression.</p>
-                <p>Method: Move it outside of the expression.</p>
-                <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Example:</p>
-                <tabs>
-                
-                  <tab header="Java">
-                    <div>
-                      <table>
-                        <tr>
-                        
-                          <td valign="top">
-                            <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isSpecialDeal()) {
+                </tip-box>
+                <p>Given below are two common refactorings (
+                  <trigger trigger="click" for="modal:refactoring-catalog-what">more</trigger>).</p>
+                <modal title="**Refactoring Catalogs**" id="modal:refactoring-catalog-what">
+                  <div>
+                    <ul>
+                      <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’
+                        on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
+                      <li>Python: <a href="https://refactoring.guru/refactoring/catalog">https://refactoring.guru/refactoring/catalog</a> -- A catalog of refactorings applicable to Python code.</li>
+                    </ul>
+                  </div>
+                </modal>
+                <tip-box>
+                  <p>Refactoring Name: <strong>Consolidate Duplicate Conditional Fragments</strong></p>
+                  <p>Situation: The same fragment of code is in all branches of a conditional expression.</p>
+                  <p>Method: Move it outside of the expression.</p>
+                  <p><span class="fas fa-cube"></span> Example:</p>
+                  <tabs>
+                  
+                    <tab header="Java">
+                      <div>
+                        <table>
+                          <tr>
+                          
+                            <td valign="top">
+                              <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isSpecialDeal()) {
     total = price * <span class="hljs-number">0.95</span>;
     send();
 } <span class="hljs-keyword">else</span> {
@@ -79,13 +87,13 @@
     send();
 }
 </code></pre>
-                            <p></p>
-                          </td>
-                        
-                          <td valign="center"> → </td>
-                        
-                          <td valign="top">
-                            <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isSpecialDeal()){
+                              <p></p>
+                            </td>
+                          
+                            <td valign="center"> → </td>
+                          
+                            <td valign="top">
+                              <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isSpecialDeal()){
     total = price * <span class="hljs-number">0.95</span>;
 } <span class="hljs-keyword">else</span> {
     total = price * <span class="hljs-number">0.98</span>;
@@ -93,58 +101,57 @@
 send();
 
 </code></pre>
-                            <p></p>
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-                  </tab>
-                
-                  <tab header="Python">
-                    <div>
-                      <table>
-                        <tr>
-                        
-                          <td valign="top">
-                            <pre><code class="hljs python"><span class="hljs-keyword">if</span> is_special_deal:
+                              <p></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </tab>
+                  
+                    <tab header="Python">
+                      <div>
+                        <table>
+                          <tr>
+                          
+                            <td valign="top">
+                              <pre><code class="hljs python"><span class="hljs-keyword">if</span> is_special_deal:
     total = price * <span class="hljs-number">0.95</span>
     send()
 <span class="hljs-keyword">else</span>:
     total = price * <span class="hljs-number">0.98</span>
     send()
 </code></pre>
-                            <p></p>
-                          </td>
-                        
-                          <td valign="center"> → </td>
-                        
-                          <td valign="top">
-                            <pre><code class="hljs python"><span class="hljs-keyword">if</span> is_special_deal:
+                              <p></p>
+                            </td>
+                          
+                            <td valign="center"> → </td>
+                          
+                            <td valign="top">
+                              <pre><code class="hljs python"><span class="hljs-keyword">if</span> is_special_deal:
     total = price * <span class="hljs-number">0.95</span>
 <span class="hljs-keyword">else</span>:
     total = price * <span class="hljs-number">0.98</span>
     
 send()
 </code></pre>
-                            <p></p>
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-                  </tab>
-                </tabs>
-                <hr>
-              </tip-box>
-              <tip-box>
-                <p>Refactoring Name: <strong>Extract Method</strong></p>
-                <p>Situation: You have a code fragment that can be grouped together.</p>
-                <p>Method: Turn the fragment into a method whose name explains the purpose of the method.</p>
-                <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Example:</p>
-                <tabs>
-                
-                  <tab header="Java">
-                    <div>
-                      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
+                              <p></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </tab>
+                  </tabs>
+                </tip-box>
+                <tip-box>
+                  <p>Refactoring Name: <strong>Extract Method</strong></p>
+                  <p>Situation: You have a code fragment that can be grouped together.</p>
+                  <p>Method: Turn the fragment into a method whose name explains the purpose of the method.</p>
+                  <p><span class="fas fa-cube"></span> Example:</p>
+                  <tabs>
+                  
+                    <tab header="Java">
+                      <div>
+                        <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
     printBanner();
 
     <span class="hljs-comment">//print details</span>
@@ -152,8 +159,8 @@ send()
     System.out.println(<span class="hljs-string">"amount	"</span> + getOutstanding());
 }
 </code></pre>
-                      <p>⤵️</p>
-                      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
+                        <p><span class="fas fa-arrow-down"></span></p>
+                        <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
     printBanner();
     printDetails(getOutstanding());
 }
@@ -163,20 +170,20 @@ send()
     System.out.println(<span class="hljs-string">"amount	"</span> + outstanding);
 }
 </code></pre>
-                    </div>
-                  </tab>
-                
-                  <tab header="Python">
-                    <div>
-                      <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span>
+                      </div>
+                    </tab>
+                  
+                    <tab header="Python">
+                      <div>
+                        <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span>
     print_banner()
 
     //<span class="hljs-keyword">print</span> details
     print(<span class="hljs-string">"name:	"</span> + name)
     print(<span class="hljs-string">"amount	"</span> + get_outstanding())
 </code></pre>
-                      <p>⤵️</p>
-                      <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span>
+                        <p><span class="fas fa-arrow-down"></span></p>
+                        <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span>
     print_banner()
     print_details(get_outstanding())
 
@@ -184,139 +191,149 @@ send()
     print(<span class="hljs-string">"name:	"</span> + name)
     print(<span class="hljs-string">"amount	"</span> + amount)
 </code></pre>
-                    </div>
-                  </tab>
-                </tabs>
-                <hr>
-              </tip-box>
-              <tip-box>
-                <p>💡 Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
-              </tip-box>
-              <tip-box type="important">
-                <p>Important: Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.</p>
-              </tip-box>
-            </div>
-            <div>
+                      </div>
+                    </tab>
+                  </tabs>
+                </tip-box>
+                <tip-box>
+                  <p>💡 Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
+                </tip-box>
+                <tip-box type="important">
+                  <p>Important: Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.</p>
+                </tip-box>
+              </div>
               <div>
-                <panel header=":muscle: Exercises" expandable="">
-                  <div>
-                    <panel header=":lock::key: Results of Refactoring">
-                      <question>
-                        <p>Choose the correct statements</p>
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Refactoring can improve understandability</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Refactoring can uncover bugs</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Refactoring can result in better performance</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Refactoring can change the number of methods/classes</li>
-                        </ul>
-                        <div slot="answer">
-                          <p>a, b, c, d</p>
-                          <p>Explanation:</p>
-                          <ul>
-                            <li>(a, b, c) Although the primary aim of refactoring is to improve internal code structure, there are other secondary benefits.</li>
-                            <li>(d) Some refactorings result in adding/removing methods/classes.</li>
+                <div>
+                  <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Results of Refactoring">
+                        <question>
+                          <p>Choose the correct statements</p>
+                          <ul class="task-list">
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Refactoring can improve understandability</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Refactoring can uncover bugs</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Refactoring can result in better performance</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Refactoring can change the number of methods/classes</li>
                           </ul>
-                        </div>
-                      </question>
-                    </panel>
-                  </div>
-                  <div>
-                    <panel header=":lock::key: Do you agree with the following statement? Refactoring and regression testing">
-                      <question has-input="true">
-                        <p>Do you agree with the following statement? Justify your answer.</p>
-                        <p>Statement: <code>Whenever we refactor code to fix bugs, we need not do regression testing if the bug fix was minor.</code></p>
-                        <div slot="hint">
-                          <p>There are two flaws in the given statement.</p>
-                        </div>
-                        <div slot="answer">
-                          <p>DISAGREE.</p>
-                          <ol>
-                            <li>Even a minor change can have major repercussions on the system. We MUST do regression testing after each change, no matter how minor it is.</li>
-                            <li>Fixing bugs is technically not refactoring.</li>
-                          </ol>
-                        </div>
-                      </question>
-                    </panel>
-                  </div>
-                  <div>
-                    <panel header=":lock: Explain Refactoring">
-                      <question has-input="">
-                        <p>Explain what is refactoring and why it is not the same as rewriting, bug fixing, or adding features.</p>
-                      </question>
-                    </panel>
-                  </div>
-                </panel>
+                          <div slot="answer">
+                            <p>a, b, c, d</p>
+                            <p>Explanation:</p>
+                            <ul>
+                              <li>(a, b, c) Although the primary aim of refactoring is to improve internal code structure, there are other secondary benefits.</li>
+                              <li>(d) Some refactorings result in adding/removing methods/classes.</li>
+                            </ul>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Do you agree with the following statement? Refactoring and regression testing">
+                        <question has-input="true">
+                          <p>Do you agree with the following statement? Justify your answer.</p>
+                          <p>Statement: <code>Whenever we refactor code to fix bugs, we need not do regression testing if the bug fix was minor.</code></p>
+                          <div slot="hint">
+                            <p>There are two flaws in the given statement.</p>
+                          </div>
+                          <div slot="answer">
+                            <p>DISAGREE.</p>
+                            <ol>
+                              <li>Even a minor change can have major repercussions on the system. We MUST do regression testing after each change, no matter how minor it is.</li>
+                              <li>Fixing bugs is technically not refactoring.</li>
+                            </ol>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Refactoring">
+                        <question has-input="">
+                          <p>Explain what is refactoring and why it is not the same as rewriting, bug fixing, or adding features.</p>
+                        </question>
+                      </panel>
+                    </div>
+                  </panel>
+                </div>
               </div>
             </div>
           </panel>
         </div>
         <div>
           <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
+            <span slot="header" class="card-title"><div>
 <h4 id="how">How</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can apply some basic refactoring</span></span></span></button>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can apply some basic refactoring</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
               <p></p>
-            </p>
-            <p></p>
-            <div>
-              <p>Given below are some more commonly used refactorings. A more comprehensive list is available at
-                <trigger trigger="click" for="modal:refactoring-catalog-how"> refactoring-catalog </trigger>.</p>
-              <modal title="**Refactoring Catalog**" id="modal:refactoring-catalog-how">
-                <div>
-                  <ul>
-                    <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’
-                      on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
-                    <li>Python: <a href="https://refactoring.guru/refactoring/catalog">https://refactoring.guru/refactoring/catalog</a> -- A catalog of refactorings applicable to Python code.</li>
-                  </ul>
-                </div>
-              </modal>
-              <ol>
-                <li><a href="https://refactoring.com/catalog/consolidateConditionalExpression.html">Consolidate Conditional Expression</a></li>
-                <li><a href="https://refactoring.com/catalog/decomposeConditional.html">Decompose Conditional</a></li>
-                <li><a href="https://refactoring.com/catalog/inlineMethod.html">Inline Method</a></li>
-                <li><a href="https://refactoring.com/catalog/removeDoubleNegative.html">Remove Double Negative</a></li>
-                <li><a href="https://refactoring.com/catalog/replaceMagicNumberWithSymbolicConstant.html">Replace Magic Number with Symbolic Constant</a></li>
-                <li><a href="https://refactoring.com/catalog/replaceNestedConditionalWithGuardClauses.html">Replace Nested Conditional with Guard Clauses</a></li>
-                <li><a href="https://refactoring.com/catalog/replaceParameterWithExplicitMethods.html">Replace Parameter with Explicit Methods</a></li>
-                <li><a href="https://refactoring.com/catalog/reverseConditional.html">Reverse Conditional</a></li>
-                <li><a href="https://refactoring.com/catalog/splitLoop.html">Split Loop</a></li>
-                <li><a href="https://refactoring.com/catalog/splitTemporaryVariable.html">Split Temporary Variable</a></li>
-              </ol>
-            </div>
-            <div>
-              <div></div>
+              <div>
+                <p>Given below are some more commonly used refactorings. A more comprehensive list is available at
+                  <trigger trigger="click" for="modal:refactoring-catalog-how"> refactoring-catalog </trigger>.</p>
+                <modal title="**Refactoring Catalog**" id="modal:refactoring-catalog-how">
+                  <div>
+                    <ul>
+                      <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’
+                        on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
+                      <li>Python: <a href="https://refactoring.guru/refactoring/catalog">https://refactoring.guru/refactoring/catalog</a> -- A catalog of refactorings applicable to Python code.</li>
+                    </ul>
+                  </div>
+                </modal>
+                <ol>
+                  <li><a href="https://refactoring.com/catalog/consolidateConditionalExpression.html">Consolidate Conditional Expression</a></li>
+                  <li><a href="https://refactoring.com/catalog/decomposeConditional.html">Decompose Conditional</a></li>
+                  <li><a href="https://refactoring.com/catalog/inlineMethod.html">Inline Method</a></li>
+                  <li><a href="https://refactoring.com/catalog/removeDoubleNegative.html">Remove Double Negative</a></li>
+                  <li><a href="https://refactoring.com/catalog/replaceMagicNumberWithSymbolicConstant.html">Replace Magic Number with Symbolic Constant</a></li>
+                  <li><a href="https://refactoring.com/catalog/replaceNestedConditionalWithGuardClauses.html">Replace Nested Conditional with Guard Clauses</a></li>
+                  <li><a href="https://refactoring.com/catalog/replaceParameterWithExplicitMethods.html">Replace Parameter with Explicit Methods</a></li>
+                  <li><a href="https://refactoring.com/catalog/reverseConditional.html">Reverse Conditional</a></li>
+                  <li><a href="https://refactoring.com/catalog/splitLoop.html">Split Loop</a></li>
+                  <li><a href="https://refactoring.com/catalog/splitTemporaryVariable.html">Split Temporary Variable</a></li>
+                </ol>
+              </div>
+              <div>
+                <div></div>
+              </div>
             </div>
           </panel>
         </div>
         <div>
           <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
+            <span slot="header" class="card-title"><div>
 <h4 id="when">When</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can decide when to apply a given refactoring</span></span></span></button>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can decide when to apply a given refactoring</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
               <p></p>
-            </p>
-            <p></p>
-            <div>
-              <p>We know that it is important to refactor frequently so as to avoid the accumulation of ‘messy’ code which might get out of control. But how much refactoring is too much refactoring? <strong>It is too much refactoring when the benefits no longer justify the cost.</strong>                The costs and the benefits depend on the context. That is why some refactorings are ‘opposites’ of each other (e.g. <a href="https://refactoring.com/catalog/extractMethod.html"><em>extract method</em></a> vs <a href="https://refactoring.com/catalog/inlineMethod.html"><em>inline method</em></a>).</p>
-            </div>
-            <div>
               <div>
-                <panel header=":muscle: Exercises" expandable="">
-                  <div>
-                    <panel header=":lock::key: ‘Extract method’ and ‘Inline method’ refactorings">
-                      <question>
-                        <p>‘Extract method’ and ‘Inline method’ refactorings</p>
-                        <ul radio-group="93b6b" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="93b6b" type="radio"> a. are opposites of each other.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="93b6b" type="radio"> b. sounds like opposites but they are not.</label></li>
-                        </ul>
-                        <div slot="answer">
-                          <p>a</p>
-                        </div>
-                      </question>
-                    </panel>
-                  </div>
-                </panel>
+                <p>We know that it is important to refactor frequently so as to avoid the accumulation of ‘messy’ code which might get out of control. But how much refactoring is too much refactoring? <strong>It is too much refactoring when the benefits no longer justify the cost.</strong>                  The costs and the benefits depend on the context. That is why some refactorings are ‘opposites’ of each other (e.g. <a href="https://refactoring.com/catalog/extractMethod.html"><em>extract method</em></a> vs <a href="https://refactoring.com/catalog/inlineMethod.html"><em>inline method</em></a>).</p>
+              </div>
+              <div>
+                <div>
+                  <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> ‘Extract method’ and ‘Inline method’ refactorings">
+                        <question>
+                          <p>‘Extract method’ and ‘Inline method’ refactorings</p>
+                          <ul radio-group="93b6b" class="radio-list">
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="93b6b" type="radio"> a. are opposites of each other.</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="93b6b" type="radio"> b. sounds like opposites but they are not.</label></li>
+                          </ul>
+                          <div slot="answer">
+                            <p>a</p>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </panel>
+                </div>
               </div>
             </div>
           </panel>
@@ -329,6 +346,8 @@ send()
 </body>
 <script src="..\markbind\js\vue.min.js"></script>
 <script src="..\markbind\js\vue-strap.min.js"></script>
+<script src="..\markbind\js\polyfill.min.js"></script>
+<script src="..\markbind\js\bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
 </script>

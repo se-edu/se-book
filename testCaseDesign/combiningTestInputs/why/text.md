@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the need for strategies to combine test inputs</span>
+<span id="outcomes">{{ icon_outcome }} Can explain the need for strategies to combine test inputs</span>
 
 <div id="body">
 

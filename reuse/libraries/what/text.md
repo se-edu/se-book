@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain libraries</span>
+<span id="outcomes">{{ icon_outcome }} Can explain libraries</span>
 
 <div id="body">
 
@@ -28,7 +28,7 @@ A library is a collection of modular code that is general and can be used by oth
 {{ icon_example }} [Colorama](https://pypi.python.org/pypi/colorama) is a Python library that can be used for colorizing text in a CLI.
 
 </tab>
-</tabs><hr>
+</tabs>
 
 
 </tip-box>

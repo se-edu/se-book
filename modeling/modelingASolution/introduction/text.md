@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain how modelling can be used before implementation</span>
+<span id="outcomes">{{ icon_outcome }} Can explain how modelling can be used before implementation</span>
 
 <div id="body">
 

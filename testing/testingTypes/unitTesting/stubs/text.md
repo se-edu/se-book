@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Testing → Unit Testing → What →%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use stubs to isolate an SUT from its dependencies</span>
+<span id="outcomes">{{ icon_outcome }} Can use stubs to isolate an SUT from its dependencies</span>
 
 <div id="body">
 

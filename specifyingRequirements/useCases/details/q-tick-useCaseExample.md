@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
-<panel header=":lock::key: What’s wrong with this use case?">
+<panel header="{{ icon_Q_A }} What’s wrong with this use case?">
 <question>
 
 Identify problems with this use case description.

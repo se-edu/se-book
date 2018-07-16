@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain remote repositories</span>
+<span id="outcomes">{{ icon_outcome }} Can explain remote repositories</span>
 
 <div id="title">
 

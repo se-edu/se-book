@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: use nouns for things and verbs for actions </span>
+<span id="outcomes">{{ icon_outcome }} Can improve code quality using technique: use nouns for things and verbs for actions </span>
 
 <div id="body">
 
@@ -47,7 +47,7 @@ student = Person('Jim')
 students = [Person('Jim'), Person('Alice')]
 ```
 </tab>
-</tabs><hr>
+</tabs>
 
 
 

@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can combine multiple patterns to fit a context</span>
+<span id="outcomes">{{ icon_outcome }} Can combine multiple patterns to fit a context</span>
 
 <div id="body">
 

@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which one is related to Brook's law">
+<panel header="{{ icon_Q_A }} Which one is related to Brook's law">
 <question>
 
 Which one of these (all attributed to Fred Brooks, the author of the famous SE book _The Mythical Man-Month_), is called the Brook’s law?

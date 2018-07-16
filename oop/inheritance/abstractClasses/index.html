@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - Object Oriented Programming: Inheritance: Abstract Classes</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\site-nav.css">
+    <link rel="icon" href="/se-book/favicon.ico">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <div>
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+  <div class="website-content">
+    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can implement abstract classes</span>
+      </span>
+      </span>
+      </span>
+      <p></p>
+    </p>
+    <div>
+      <div></div>
+      <p></p>
+      <p><span class="dimmed"><strong><span>Design → Object Oriented Programming → Inheritance →
+</span></strong>
+        </span>
+      </p>
+      <div id="title-and-body">
+        <div>
+          <h4 id="abstract-classes">Abstract Classes</h4>
+        </div>
+        <div id="main">
+          <div>
+            <tip-box type="definition">
+              <div>
+                <p><strong>Abstract Class</strong>:</p>
+                <p>An <em>abstract class</em> is a class that is declared <code>abstract</code>—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed. <sub>-- <a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">Oracle's Java Documentation</a></sub></p>
+              </div>
+            </tip-box>
+            <p><strong>An abstract method is simply the method interface without the implementation.</strong></p>
+            <tip-box>
+              <p><span class="fas fa-cube"></span> The <code>Account</code> class has an abstract method (<code>addInterest()</code>).</p>
+            </tip-box>
+            <p><strong>A class that has an abstract method becomes an abstract class</strong>. Evan a class that does not have any abstract method can be declared as an abstract class. Abstract classes cannot be instantiated.</p>
+            <h5 id="implementing-abstract-classes"><big>Implementing abstract classes</big></h5>
+            <p><strong>Use the <code>abstract</code> keyword to identify abstract classes/methods.</strong></p>
+            <tip-box>
+              <p><span class="fas fa-cube"></span> Partial code below gives an example of how to declare abstract classes/methods. The <code>addInterest()</code> method in the <code>Account</code> class is abstract and therefore the <code>Account</code>                class itself is abstract. The <code>CurrentAccount</code> class need not be abstract because it overrides the abstract method inherited from the parent class.</p>
+              <pre><code class="hljs java"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+    
+    <span class="hljs-keyword">int</span> number;
+    
+    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span></span>;
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">close</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CurrentAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+            </tip-box>
+            <p>In Java, if a class contains an abstract method, the class itself should be an abstract class <span class="dimmed"> i.e. if any methods of the class is 'incomplete', the class itself is 'incomplete'</span>.</p>
+          </div>
+          <div>
+            <div>
+              <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                <ul>
+                  <li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">Oracle’s Java Tutorials: Abstract Methods and Classes</a></li>
+                </ul>
+              </panel>
+            </div>
+            <div>
+              <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                <div>
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about abstract classes">
+                    <question>
+                      <p>Choose the correct statements about Java abstract classes and
+                        <tooltip content="classes that are not abstract">concrete classes</tooltip>.</p>
+                      <ul class="task-list">
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A concrete class can contain an abstract method.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An abstract class can contain concrete methods.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. An abstract class need not contain any concrete methods.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. An abstract class cannot be instantiated.</li>
+                      </ul>
+                      <div slot="answer">
+                        <p>(b)(c)(d)</p>
+                        <p>Explanation: A concrete class cannot contain even a single abstract method.</p>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+              </panel>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\polyfill.min.js"></script>
+<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

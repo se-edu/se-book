@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can draw an architecture diagram</span>
+<span id="outcomes">{{ icon_outcome }} Can draw an architecture diagram</span>
 
 <div id="body">
 

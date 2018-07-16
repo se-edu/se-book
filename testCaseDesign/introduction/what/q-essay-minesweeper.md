@@ -1,4 +1,4 @@
-<panel header=":lock::key: Exhaustive testing in Minesweeper">
+<panel header="{{ icon_Q_A }} Exhaustive testing in Minesweeper">
 <question has-input="true">
 
 Explain the why exhaustive testing is not practical using the example of testing `newGame()` operation in the `Logic` class of a Minesweeper game.

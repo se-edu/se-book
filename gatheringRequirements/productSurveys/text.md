@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain product surveys</span>
+<span id="outcomes">{{ icon_outcome }} Can explain product surveys</span>
 
 <div id="body">
 

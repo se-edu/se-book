@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - Object Oriented Programming: Associations: Dependencies</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\site-nav.css">
+    <link rel="icon" href="/se-book/favicon.ico">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <div>
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+  <div class="website-content">
+    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain dependencies among classes</span>
+      </span>
+      </span>
+      </span>
+      <p></p>
+    </p>
+    <div>
+      <div></div>
+      <p></p>
+      <p><span class="dimmed"><strong><span>Design → Object Oriented Programming → Associations →
+</span></strong>
+        </span>
+      </p>
+      <div id="title-and-body">
+        <div>
+          <h4 id="dependencies">Dependencies</h4>
+        </div>
+        <div id="main">
+          <div>
+            <p>Dependencies are objects that are not directly linked in the object network can still interact with each other. These are a weaker form of associations we call <em>dependencies</em>.</p>
+            <tip-box>
+              <p><span class="fas fa-cube"></span> A <code>Course</code> object can have a dependency on a <code>Registrar</code> object to obtain the maximum number of students it can support.</p>
+            </tip-box>
+            <h5 id="implementing-dependencies"><big>Implementing dependencies</big></h5>
+            <p>Dependencies result from interactions between objects that do not result in a long-term link between the said objects.</p>
+            <tip-box>
+              <p><span class="fas fa-cube"></span> In the code below, <code>Foo</code> has a dependency on <code>Bar</code> but it is not an association because it is only a
+                <tooltip content="temporary">transient</tooltip> interaction and there is no long term relationship between a <code>Foo</code> object and a <code>Bar</code> object. <span class="dimmed">i.e. the <code>Foo</code> object does not keep the <code>Bar</code> object it receives as a parameter</span>.</p>
+              <table>
+                <tr>
+                
+                  <td>
+                    <p>Java <span class="fas fa-arrow-down"></span></p>
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+    
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculate</span><span class="hljs-params">(Bar bar)</span></span>{
+        <span class="hljs-keyword">return</span> bar.getValue();
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span></span>{
+    <span class="hljs-keyword">int</span> value;
+    
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getValue</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> value;
+    }
+}
+</code></pre>
+                    <p></p>
+                  </td>
+                
+                  <td>  <br><br></td>
+                
+                  <td valign="top">
+                    <p>Python <span class="fas fa-arrow-down"></span></p>
+                    <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+    
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate</span><span class="hljs-params">(self, bar)</span>:</span>
+        <span class="hljs-keyword">return</span> bar.value;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span>:</span>
+    
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, value)</span>:</span>
+      self.value = value
+</code></pre>
+                    <p></p>
+                  </td>
+                </tr>
+              </table>
+              <p>The code above results in a dependency from <code>Foo</code> class to the <code>Bar</code> class.</p>
+            </tip-box>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\polyfill.min.js"></script>
+<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

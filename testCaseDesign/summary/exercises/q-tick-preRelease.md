@@ -1,4 +1,4 @@
-<panel header=":lock::key: Pre-Release Game">
+<panel header="{{ icon_Q_A }} Pre-Release Game">
 <question>
 
 If you download a pre-release version of a new game (executable file) to do a test drive and submit bug reports, you would be doing

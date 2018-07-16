@@ -1,4 +1,4 @@
-<panel header=":lock::key: Implement `Marriage`">
+<panel header="{{ icon_Q_A }} Implement `Marriage`">
 <question has-input="true">
 
 Implement the classes defensively with appropriate references and operations to establish the association among the classes. Follow the defensive coding approach. Let the `Marriage` class handle setting/removal of reference.

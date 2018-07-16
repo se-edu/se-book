@@ -1,4 +1,4 @@
-<panel header=":lock::key: Statements about class diagram.">
+<panel header="{{ icon_Q_A }} Statements about class diagram.">
 <question>
 
 Which of these statements match the class diagram?

@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain repositories</span>
+<span id="outcomes">{{ icon_outcome }} Can explain repositories</span>
 
 <div id="title">
 
@@ -15,7 +15,7 @@
 </tip-box>
 
 <tabs>
-  <tab header=":abc:">
+  <tab header="{{ icon_text }}">
   
 Suppose you want to apply revision control on files in a directory called `ProjectFoo`. In that case you need to set up a _repo_ (short for repository) in `ProjectFoo` directory, which is referred to as the _working directory_ of the repo. The repository is the database where the meta-data about the revision history are stored. For example, Git uses a hidden folder named `.git` inside the working directory.
 

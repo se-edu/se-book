@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Test Case Design: Equivalence Partitions: Intermediate</title>
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\site-nav.css">
@@ -16,7 +19,10 @@
     <div>
   <link rel="stylesheet" href="/se-book/css/textbook.css">
   <div class="website-content">
-    <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can apply EP for OOP methods</span></span></span></button>
+    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can apply EP for OOP methods</span>
+      </span>
+      </span>
+      </span>
       <p></p>
     </p>
     <div>
@@ -39,7 +45,7 @@
               <li>other data/objects accessed by the method such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented)</li>
             </ul>
             <tip-box>
-              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Consider this method in the <code>DataStack</code> class:
+              <p><span class="fas fa-cube"></span> Consider this method in the <code>DataStack</code> class:
                 <code>push(Object o): boolean</code></p>
               <ul>
                 <li>Adds o to the top of the stack if the stack is not full.</li>
@@ -59,7 +65,7 @@
               </ul>
             </tip-box>
             <tip-box>
-              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Consider a simple Minesweeper app. What are the EPs for the <code>newGame()</code> method of the <code>Logic</code> component?</p>
+              <p><span class="fas fa-cube"></span> Consider a simple Minesweeper app. What are the EPs for the <code>newGame()</code> method of the <code>Logic</code> component?</p>
               <p>As <code>newGame()</code> does not have any parameters, the only obvious participant is the <code>Logic</code> object itself.</p>
               <p>Note that if the glass-box or the grey-box approach is used, other associated objects that are involved in the method might also be included as participants. For example, <code>Minefield</code> object can be considered as another participant
                 of the <code>newGame()</code> method. Here, the black-box approach is assumed.</p>
@@ -73,7 +79,7 @@
               </ul>
             </tip-box>
             <tip-box>
-              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Consider the <code>Logic</code> component of the Minesweeper application. What are the EPs for the <code>markCellAt(int x, int y)</code> method?. The partitions in <strong>bold</strong>                represent valid inputs.</p>
+              <p><span class="fas fa-cube"></span> Consider the <code>Logic</code> component of the Minesweeper application. What are the EPs for the <code>markCellAt(int x, int y)</code> method?. The partitions in <strong>bold</strong> represent valid inputs.</p>
               <ul>
                 <li><code>Logic</code>: PRE_GAME, <strong>READY</strong>, <strong>IN_PLAY</strong>, WON, LOST</li>
                 <li><code>x</code>: [MIN_INT..-1] <strong>[0..(W-1)]</strong> [W..MAX_INT] <span class="dimmed">(we assume a minefield size of WxH)</span></li>
@@ -92,6 +98,8 @@
 </body>
 <script src="..\..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\polyfill.min.js"></script>
+<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
 </script>

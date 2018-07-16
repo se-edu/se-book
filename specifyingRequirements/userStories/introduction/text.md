@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can write simple user stories</span>
+<span id="outcomes">{{ icon_outcome }} Can write simple user stories</span>
 
 <div id="title">
 

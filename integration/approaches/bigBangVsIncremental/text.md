@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain how integration approaches vary based on amount merged at a time</span>
+<span id="outcomes">{{ icon_outcome }} Can explain how integration approaches vary based on amount merged at a time</span>
 
 <div id="body">
 

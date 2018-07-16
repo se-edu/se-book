@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: minimise scope of variables </span>
+<span id="outcomes">{{ icon_outcome }} Can improve code quality using technique: minimise scope of variables </span>
 
 <div id="body">
 
@@ -16,7 +16,7 @@
 
 >**The most powerful technique for minimizing the scope of a local variable is to declare it where it is first used.** <sub>-- _Effective Java_, by Joshua Bloch</sub>
 
-:paperclip: Resources:
+{{ icon_resource }} Resources:
 
 * [Refactoring: Reduce Scope of Variable](https://refactoring.com/catalog/reduceScopeOfVariable.html) 
 

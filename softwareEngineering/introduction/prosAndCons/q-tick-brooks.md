@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which one of these is not included in Brook’s list of ‘Woes of the Craft’?">
+<panel header="{{ icon_Q_A }} Which one of these is not included in Brook’s list of ‘Woes of the Craft’?">
 <question>
 
 - [ ] a. Need for perfection when developing software

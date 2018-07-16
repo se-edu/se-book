@@ -1,4 +1,4 @@
-<panel header=":lock::key: Definition of design patterns">
+<panel header="{{ icon_Q_A }} Definition of design patterns">
 <question>
 
 Which one of these describes the ‘software design patterns’ concept best?

@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which is the recommended integration approach in general?">
+<panel header="{{ icon_Q_A }} Which is the recommended integration approach in general?">
 
 <panel header="%%Prerequisites%%" expandable expanded>
   <panel src="../../approaches/bigBangVsIncremental/unit-inElsewhere-asFlat.md" boilerplate header="Integration: Approaches: Big-bang vs Incremental Approach" />

@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain software quality assurance</span>
+<span id="outcomes">{{ icon_outcome }} Can explain software quality assurance</span>
 
 <div id="body">
 

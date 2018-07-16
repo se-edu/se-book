@@ -1,4 +1,4 @@
-<panel header=":lock::key: Anti-patterns required?">
+<panel header="{{ icon_Q_A }} Anti-patterns required?">
 <question>
 
 When we describe a pattern, we must also specify anti-patterns.

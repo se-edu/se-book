@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret class-level members in class diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can interpret class-level members in class diagrams</span>
 
 <div id="body">
 

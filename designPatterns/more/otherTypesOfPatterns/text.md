@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain how patterns exist beyond software design domain</span>
+<span id="outcomes">{{ icon_outcome }} Can explain how patterns exist beyond software design domain</span>
 
 <div id="body">
 

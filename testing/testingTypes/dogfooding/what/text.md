@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain dogfooding</span>
+<span id="outcomes">{{ icon_outcome }} Can explain dogfooding</span>
 
 <div id="body">
 

@@ -3,7 +3,7 @@ You can use the `git status` command to check the status of the working director
 ```sh
 git status
 ```
-:arrow_heading_down:
+{{ icon_output }}
 ```sh
 # On branch master
 #

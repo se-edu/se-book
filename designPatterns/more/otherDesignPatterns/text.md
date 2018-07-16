@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can recognize some of the GoF design patterns</span>
+<span id="outcomes">{{ icon_outcome }} Can recognize some of the GoF design patterns</span>
 
 <div id="body">
 

@@ -1,4 +1,4 @@
-<panel header=":lock::key: Absence of errors">
+<panel header="{{ icon_Q_A }} Absence of errors">
 <question>
 
 Testing cannot prove the absence of errors. It can only prove the presence of errors. However, formal methods can prove the absence of errors.

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
-<panel header=":lock::key: LearnSys – reply to post use case">
+<panel header="{{ icon_Q_A }} LearnSys – reply to post use case">
 <question has-input="true">
 
 Complete the following use case (MSS, extensions, etc.).

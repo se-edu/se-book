@@ -1,4 +1,4 @@
-<panel header=":lock::key: draw class diagram: Player, Bot, etc.">
+<panel header="{{ icon_Q_A }} draw class diagram: Player, Bot, etc.">
 
 (a) Draw a class diagram to represent the following code.
 

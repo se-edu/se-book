@@ -1,4 +1,4 @@
-<panel header=":lock::key: Pick the odd one out of these project management tools/techniques." expanded>
+<panel header="{{ icon_Q_A }} Pick the odd one out of these project management tools/techniques." expanded>
 
 <panel header="%%{{ icon_prereq }}%% Prerequisites" minimized>
   <panel src="../../revisionControl/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} Revision Control: What" />

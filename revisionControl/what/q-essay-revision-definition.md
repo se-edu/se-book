@@ -1,4 +1,4 @@
-<panel header=":lock::key: What is a Revision?">
+<panel header="{{ icon_Q_A }} What is a Revision?">
 <question has-input="true">
 
 In the context of RCS, what is a _Revision_? Give an example.

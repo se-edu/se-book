@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../forkingWorkflow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Revision Control → Forking Workflow%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain feature branch flow</span>
+<span id="outcomes">{{ icon_outcome }} Can explain feature branch flow</span>
 
 <div id="body">
 

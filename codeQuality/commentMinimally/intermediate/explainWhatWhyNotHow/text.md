@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can improve code quality using technique: explain what and why, not how </span>
+<span id="outcomes">{{ icon_outcome }} Can improve code quality using technique: explain what and why, not how </span>
 
 <div id="body">
 

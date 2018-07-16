@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can identify UML models</span>
+<span id="outcomes">{{ icon_outcome }} Can identify UML models</span>
 
 <div id="body">
 

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Software Design Patterns: Abstraction Occurrence: What</title>
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\site-nav.css">
@@ -16,7 +19,10 @@
     <div>
   <link rel="stylesheet" href="/se-book/css/textbook.css">
   <div class="website-content">
-    <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can explain the Abstraction Occurrence design pattern</span></span></span></button>
+    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the Abstraction Occurrence design pattern</span>
+      </span>
+      </span>
+      </span>
       <p></p>
     </p>
     <div>
@@ -35,8 +41,8 @@
             <p><strong>Context</strong></p>
             <p>There is a group of similar entities that appears to be ‘occurrences’ (or ‘copies’) of the same thing, sharing lots of common information, but also differing in significant ways.</p>
             <tip-box>
-              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> In a library, there can be multiple copies of same book title. Each copy shares common information such as book title, author, ISBN etc. However, there are also significant
-                differences like purchase date and barcode number (assumed to be unique for each copy of the book).</p>
+              <p><span class="fas fa-cube"></span> In a library, there can be multiple copies of same book title. Each copy shares common information such as book title, author, ISBN etc. However, there are also significant differences like purchase date
+                and barcode number (assumed to be unique for each copy of the book).</p>
               <p>Other examples:</p>
               <ul>
                 <li>Episodes of the same TV series</li>
@@ -46,8 +52,7 @@
             <p><strong>Problem</strong></p>
             <p>Representing the objects mentioned previously as a single class would be problematic because it results in duplication of data which can lead to inconsistencies in data (if some of the duplicates are not updated consistently).</p>
             <tip-box>
-              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different
-                serial numbers.</p>
+              <p><span class="fas fa-cube"></span> Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial numbers.</p>
               <img src="/se-book/designPatterns/abstractionOccurrence/what/images/book.png" height="200">
               <p></p>
               <p>The above solution requires common information to be duplicated by all instances. This will not only waste storage space, but also creates a consistency problem. Suppose that after creating several copies of the same title, the librarian
@@ -56,7 +61,7 @@
             </tip-box>
             <p><strong>Anti-pattern</strong></p>
             <tip-box>
-              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Refer to the same Library example given above.</p>
+              <p><span class="fas fa-cube"></span> Refer to the same Library example given above.</p>
               <img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookFriends.png" height="240">
               <p></p>
               <p>The design above segregates the common and unique information into a class hierarchy. Each book title is represented by a separate class with common data (i.e. Name, Author, ISBN) hard-coded in the class itself. This solution is problematic
@@ -65,10 +70,10 @@
             <p><strong>Solution</strong></p>
             <p>Let a copy of an entity (e.g. a copy of a book)be represented by two objects instead of one, separating the common and unique information into two classes to avoid duplication.</p>
             <tip-box>
-              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Given below is how the pattern is applied to the Library example:</p>
+              <p><span class="fas fa-cube"></span> Given below is how the pattern is applied to the Library example:</p>
               <img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookTitleBookCopy.png" height="260">
               <p></p>
-              <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Here's a more generic example:</p>
+              <p><span class="fas fa-cube"></span> Here's a more generic example:</p>
               <img src="/se-book/designPatterns/abstractionOccurrence/what/images/beforeAfter.png" height="370">
               <p></p>
             </tip-box>
@@ -80,9 +85,9 @@
           </div>
           <div>
             <div>
-              <panel header=":muscle: Exercises" expandable="">
+              <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                 <div>
-                  <panel header=":lock::key: Which situations match the pattern?">
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which situations match the pattern?">
                     <question has-input="true">
                       <p>Which pairs of classes are likely to be the <code>&lt;&lt; Abstraction &gt;&gt;</code> and the <code>&lt;&lt; Occurrence &gt;&gt;</code> of the abstraction occurrence pattern?</p>
                       <ol>
@@ -109,7 +114,7 @@
                   </panel>
                 </div>
                 <div>
-                  <panel header=":lock::key: Apply pattern?">
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Apply pattern?">
                     <question>
                       <p>Which one of these is most suited for an application of the Abstraction Occurrence pattern?</p>
                       <ul radio-group="56836" class="radio-list">
@@ -139,6 +144,8 @@
 </body>
 <script src="..\..\..\markbind\js\vue.min.js"></script>
 <script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\polyfill.min.js"></script>
+<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
 </script>

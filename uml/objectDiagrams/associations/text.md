@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can interpret simple associations among objects</span>
+<span id="outcomes">{{ icon_outcome }} Can interpret simple associations among objects</span>
 
 <div id="body">
 

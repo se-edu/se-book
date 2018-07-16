@@ -1,4 +1,4 @@
-<panel header=":lock::key: Parts of a use case descriptions">
+<panel header="{{ icon_Q_A }} Parts of a use case descriptions">
 <question>
 
 Which of these cannot appear as part of a use case description?

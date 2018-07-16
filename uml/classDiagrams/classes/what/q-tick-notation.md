@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which classes are correct?">
+<panel header="{{ icon_Q_A }} Which classes are correct?">
 <question>
 
 Which of these follow the correct UML notation?

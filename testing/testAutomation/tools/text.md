@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain test automation tools</span>
+<span id="outcomes">{{ icon_outcome }} Can explain test automation tools</span>
 
 <div id="title">
 

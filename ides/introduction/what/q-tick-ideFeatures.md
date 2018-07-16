@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which one of these is not a feature available in IDEs?">
+<panel header="{{ icon_Q_A }} Which one of these is not a feature available in IDEs?">
 <question>
 
 - [ ] a. Compiling.

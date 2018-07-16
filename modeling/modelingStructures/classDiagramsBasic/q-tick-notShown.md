@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which association notations are shown?">
+<panel header="{{ icon_Q_A }} Which association notations are shown?">
 <question>
 
 Which association notatations are shown in this diagram?

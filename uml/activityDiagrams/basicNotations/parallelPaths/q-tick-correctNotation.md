@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which activity diagrams are correct?">
+<panel header="{{ icon_Q_A }} Which activity diagrams are correct?">
 <question>
 
 Which of these activity diagrams use the correct UML notation?

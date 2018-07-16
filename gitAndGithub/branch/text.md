@@ -6,11 +6,11 @@
 
 <span id="prereqs"><panel src="../../revisionControl/branching/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Branching%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use Git branching</span>
+<span id="outcomes">{{ icon_outcome }} Can use Git branching</span>
 
 <div id="body">
 
-**0. Observe that you are normally in the branch called `master`.** For this, you can take any repo you have on your computer (e.g. a clone of the [samplerepo-things]({{common_org}}/samplerepo-things)). 
+**0. Observe that you are normally in the branch called `master`.** For this, you can take any repo you have on your computer (e.g. a clone of the [samplerepo-things](https://github.com/se-edu/samplerepo-things)). 
 
 <tabs>
   <tab header="SourceTree">

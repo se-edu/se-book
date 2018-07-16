@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain refactoring</span>
+<span id="outcomes">{{ icon_outcome }} Can explain refactoring</span>
 
 <div id="title">
 
@@ -50,7 +50,7 @@ Method: Move it outside of the expression.
 <include src="example-consolidate-python.md" />
 
 </tab>
-</tabs><hr>
+</tabs>
 
 </tip-box>
 
@@ -75,7 +75,7 @@ Method: Turn the fragment into a method whose name explains the purpose of the m
 <include src="example-extract-python.md" />
 
 </tab>
-</tabs><hr>
+</tabs>
 
 
 

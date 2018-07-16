@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which class diagrams match object diagram?">
+<panel header="{{ icon_Q_A }} Which class diagrams match object diagram?">
 <question>
 
 Which of these class diagrams match the given object diagram?

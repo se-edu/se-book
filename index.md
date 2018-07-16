@@ -17,11 +17,10 @@ title: "Book - Software Engineering for Self-Directed Learners"
 
 <include src="softwareEngineering/topicToc.md" />
 
-### Object-Oriented Programming (with UML)
+### Object-Oriented Programming
 
-<include src="oopDesign/topicToc.md" />
+<include src="oop/topicToc.md" />
 
-<include src="oopImplementation/topicToc.md" />
 
 ### Requirements
 
@@ -101,6 +100,6 @@ title: "Book - Software Engineering for Self-Directed Learners"
 * [List of Definitions](common/definitions.html)
 * [List of References](common/references.html)
 * [List of Learning Outcomes](common/outcomes.html)
-* [Printable Version {{glyphicon_print}}](common/print.html)
+* [Printable Version {{icon_print}}](common/print.html)
 
 </div>

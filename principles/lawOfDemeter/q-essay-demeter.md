@@ -1,4 +1,4 @@
-<panel header=":lock::key: Examples for LoD">
+<panel header="{{ icon_Q_A }} Examples for LoD">
 <question has-input="true">
 
 Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.

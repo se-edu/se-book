@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can apply the Singleton design pattern</span>
+<span id="outcomes">{{ icon_outcome }} Can apply the Singleton design pattern</span>
 
 <div id="body">
 

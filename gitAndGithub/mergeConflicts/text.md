@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Branching%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use Git to resolve merge conflicts</span>
+<span id="outcomes">{{ icon_outcome }} Can use Git to resolve merge conflicts</span>
 
 <div id="body">
 

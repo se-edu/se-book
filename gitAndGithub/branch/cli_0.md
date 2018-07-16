@@ -2,7 +2,7 @@
 git status
 ```
 
-:arrow_heading_down:
+{{ icon_output }}
 
 ```
 on branch master

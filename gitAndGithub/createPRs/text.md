@@ -6,18 +6,19 @@
 
 <span id="prereqs"><panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Branching%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can create PRs on GitHub</span>
+<span id="outcomes">{{ icon_outcome }} Can create PRs on GitHub</span>
 
 <div id="body">
 
-**1. Fork the [samplerepo-pr-practice]({{common_org}}/samplerepo-pr-practice) onto your GitHub account. Clone it onto your computer.**
+**1. Fork the [samplerepo-pr-practice](https://github.com/se-edu/samplerepo-pr-practice) onto your GitHub account. Clone it onto your computer.**
 
-**2. Create a branch named `add-intro` in your clone. Add a couple of commits** which adds/modifies an _Introduction_ section to the README.md. Example:
+**2. Create a branch named `add-intro` in your clone. Add a couple of commits** which adds/modifies an _Introduction_ section to the `README.md`. Example:
 
 ```md
 
 # Introduction
-Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects. This repo can be used to practice creating PRs.
+Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects.
+This repo can be used to practice creating PRs.
 
 ```
 
@@ -48,7 +49,7 @@ git push origin add-intro
 
 4b. Select `base fork` and `head fork` as follows:
 
-* `base fork`: your own fork (i.e. `{your user name}/samplerepo-pr-practice`, ==NOT `nus-cs2103-AY1718S2/samplerepo-pr-practice`==)
+* `base fork`: your own fork (i.e. `{your user name}/samplerepo-pr-practice`, ==NOT `se-edu/samplerepo-pr-practice`==)
 * `head fork`: your own fork.
 
 <img src="{{baseUrl}}/gitAndGithub/createPRs/images/selectBase.png" width="800" />
@@ -92,7 +93,7 @@ When creating the new branch, it is very important that you switch back to the `
 
 **7. Push the `add-summary` to your fork and create a new PR** similar to before.
 
-<panel header=":paperclip: Resources" expanded>
+<panel header="{{ icon_resource }} Resources" expanded>
 
 * [GitHub's own documentation on creating a PR](https://help.github.com/articles/creating-a-pull-request/)
 

@@ -1,6 +1,6 @@
-* __ [Basic Notations]({{baseUrl}}/uml/activityDiagrams/basicNotations) <trigger for="pop:activityDiagrams-basicNotations-preview">{{glyphicon_eye_open}}</trigger>
+* __ [Basic Notations]({{baseUrl}}/uml/activityDiagrams/basicNotations) <trigger for="pop:activityDiagrams-basicNotations-preview">{{icon_preview}}</trigger>
 
-<popover id="pop:activityDiagrams-basicNotations-preview" title="{{glyphicon_eye_open}} Basic Notations" placement="right">
+<popover id="pop:activityDiagrams-basicNotations-preview" title="{{icon_preview}} Basic Notations" placement="right">
   <div slot="content">
     <include src=".\preview.md" />
   </div>

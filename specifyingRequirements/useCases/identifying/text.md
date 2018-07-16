@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use use cases to list functional requirements of a simple system</span>
+<span id="outcomes">{{ icon_outcome }} Can use use cases to list functional requirements of a simple system</span>
 
 <div id="body">
 

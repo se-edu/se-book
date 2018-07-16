@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../notes/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} UML → Notes%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can specify constraints in UML diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can specify constraints in UML diagrams</span>
 
 <div id="body">
 

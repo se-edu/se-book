@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain test case design for use case based testing</span>
+<span id="outcomes">{{ icon_outcome }} Can explain test case design for use case based testing</span>
 
 <div id="body">
 

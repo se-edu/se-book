@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain interaction overview diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can explain interaction overview diagrams</span>
 
 <div id="body">
 

@@ -5,7 +5,7 @@ Example:
 ```
 git show 251b4cf
 ```
-:arrow_heading_down:
+{{ icon_output }}
 ```diff
 commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3
 Author: … < … >

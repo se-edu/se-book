@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the differences between system testing and acceptance testing</span>
+<span id="outcomes">{{ icon_outcome }} Can explain the differences between system testing and acceptance testing</span>
 
 <div id="body">
 

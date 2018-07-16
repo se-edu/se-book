@@ -1,4 +1,4 @@
-<panel header=":lock::key: Difference between a class diagram and and an OO domain model?">
+<panel header="{{ icon_Q_A }} Difference between a class diagram and and an OO domain model?">
 <question>
 
 What is the main difference between a class diagram and and an OO domain model?

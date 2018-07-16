@@ -1,4 +1,4 @@
-<panel header=":lock::key: Unsuitable variable name">
+<panel header="{{ icon_Q_A }} Unsuitable variable name">
 <question>
 
 According to the given Java coding standard, which one of these is not a good name?

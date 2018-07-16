@@ -1,6 +1,6 @@
-* __ [JavaDoc]({{baseUrl}}/documentation/tools/javaDoc) <trigger for="pop:documentation-javaDoc-preview">{{glyphicon_eye_open}}</trigger>
+* __ [JavaDoc]({{baseUrl}}/documentation/tools/javaDoc) <trigger for="pop:documentation-javaDoc-preview">{{icon_preview}}</trigger>
 
-<popover id="pop:documentation-javaDoc-preview" title="{{glyphicon_eye_open}} JavaDoc" placement="right">
+<popover id="pop:documentation-javaDoc-preview" title="{{icon_preview}} JavaDoc" placement="right">
   <div slot="content">
     <include src=".\preview.md" />
   </div>

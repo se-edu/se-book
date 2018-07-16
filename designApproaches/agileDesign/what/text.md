@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain agile design</span>
+<span id="outcomes">{{ icon_outcome }} Can explain agile design</span>
 
 <div id="body">
 

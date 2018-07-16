@@ -1,4 +1,4 @@
-<panel header=":lock::key: What does RCS stand for?">
+<panel header="{{ icon_Q_A }} What does RCS stand for?">
 <question has-input="true">
 
 

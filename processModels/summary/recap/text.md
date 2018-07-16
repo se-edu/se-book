@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain process models at a higher level</span>
+<span id="outcomes">{{ icon_outcome }} Can explain process models at a higher level</span>
 
 <div id="body">
 

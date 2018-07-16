@@ -1,11 +1,11 @@
-<span id="prereqs"><panel src="../../../oopDesign/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Inheritance → What%%" />
-<panel src="../../../oopDesign/classes/classLevelMembers/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Classes → Class Level Members%%" />
-<panel src="../../../oopDesign/classes/enumerations/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Classes → Enumerations%%" />
+<span id="prereqs"><panel src="../../../oop/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Inheritance → What%%" />
+<panel src="../../../oop/classes/classLevelMembers/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Classes → Class Level Members%%" />
+<panel src="../../../oop/classes/enumerations/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Classes → Enumerations%%" />
 <panel src="../../../uml/classDiagrams/dependencies/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%UML → Class Diagrams → Dependencies%%" />
-<panel src="../../../oopDesign/associations/composition/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Associations → Composition%%" />
-<panel src="../../../oopDesign/associations/aggregation/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Associations → Aggregation%%" /></span>
+<panel src="../../../oop/associations/composition/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Associations → Composition%%" />
+<panel src="../../../oop/associations/aggregation/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Associations → Aggregation%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use intermediate-level class diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can use intermediate-level class diagrams</span>
 
 <div id="title">
 

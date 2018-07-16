@@ -1,7 +1,7 @@
 * [IDEs]({{baseUrl}}/ides/)
-  <trigger for="pop:ides-preview">{{glyphicon_eye_open}}</trigger> [{{glyphicon_print}}](ides/print.html)
+  <trigger for="pop:ides-preview">{{icon_preview}}</trigger> [{{icon_print}}](ides/print.html)
 
-<popover id="pop:ides-preview" title="IDEs {{glyphicon_eye_open}}" placement="right">
+<popover id="pop:ides-preview" title="IDEs {{icon_preview}}" placement="right">
   <div slot="content">
     <include src="preview.md" />
   </div>

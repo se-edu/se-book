@@ -1,3 +1,3 @@
-<panel header=":muscle: Exercises" expandable>
+<panel header="{{ icon_exercise }} Exercises" expandable>
 
 </panel>

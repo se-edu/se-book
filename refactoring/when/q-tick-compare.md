@@ -1,4 +1,4 @@
-<panel header=":lock::key: ‘Extract method’ and ‘Inline method’ refactorings">
+<panel header="{{ icon_Q_A }} ‘Extract method’ and ‘Inline method’ refactorings">
 <question>
 
 ‘Extract method’ and ‘Inline method’ refactorings

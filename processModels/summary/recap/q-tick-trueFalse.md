@@ -1,4 +1,4 @@
-<panel header=":lock::key: the two basic process models">
+<panel header="{{ icon_Q_A }} the two basic process models">
 <question>
 
 The sequential model and the waterfall model are the two most basic process models.

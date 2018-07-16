@@ -62,31 +62,31 @@ title: "SE Book: Full List of Learning Outcomes"
 
 ### Object Oriented Programming
 
-<include src="../oopDesign/introduction/what/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/objects/basic/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/objects/abstraction/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/objects/encapsulation/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/classes/basic/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/classes/classLevelMembers/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/classes/enumerations/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/associations/basic/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/associations/navigability/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/associations/multiplicity/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/associations/dependencies/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/associations/composition/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/associations/aggregation/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/associations/associationClasses/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/inheritance/what/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/inheritance/overriding/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/inheritance/overloading/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/inheritance/interfaces/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/inheritance/abstractClasses/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/inheritance/dynamicAndStaticBinding/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/inheritance/substitutability/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/polymorphism/introduction/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/polymorphism/mechanism/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/more/miscellaneous/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopDesign/more/review/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/introduction/what/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/objects/what/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/objects/abstraction/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/objects/encapsulation/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/classes/what/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/classes/classLevelMembers/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/classes/enumerations/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/associations/what/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/associations/navigability/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/associations/multiplicity/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/associations/dependencies/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/associations/composition/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/associations/aggregation/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/associations/associationClasses/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/inheritance/what/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/inheritance/overriding/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/inheritance/overloading/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/inheritance/interfaces/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/inheritance/abstractClasses/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/inheritance/dynamicAndStaticBinding/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/inheritance/substitutability/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/polymorphism/what/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/polymorphism/how/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/more/miscellaneous/unit-inParent-asOutcome.md" boilerplate />
+<include src="../oop/more/review/unit-inParent-asOutcome.md" boilerplate />
 
 ### Modeling
 
@@ -230,22 +230,6 @@ title: "SE Book: Full List of Learning Outcomes"
 <include src="../integration/buildAutomation/continuousIntegrationDeployment/unit-inParent-asOutcome.md" boilerplate />
 <include src="../integration/more/review/unit-inParent-asOutcome.md" boilerplate />
 
-### OOP Implementation
-
-<include src="../oopImplementation/classes/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopImplementation/classLevelMembers/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopImplementation/associations/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopImplementation/dependencies/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopImplementation/composition/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopImplementation/aggregation/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopImplementation/associationClasses/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopImplementation/inheritance/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopImplementation/overriding/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopImplementation/overloading/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopImplementation/interfaces/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopImplementation/abstractClasses/unit-inParent-asOutcome.md" boilerplate />
-<include src="../oopImplementation/polymorphism/unit-inParent-asOutcome.md" boilerplate />
-
 ### Reuse
 
 <include src="../reuse/introduction/what/unit-inParent-asOutcome.md" boilerplate />
@@ -364,7 +348,7 @@ title: "SE Book: Full List of Learning Outcomes"
 
 <include src="../uml/classDiagrams/introduction/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../uml/classDiagrams/classes/what/unit-inParent-asOutcome.md" boilerplate />
-<include src="../uml/classDiagrams/associations/basic/unit-inParent-asOutcome.md" boilerplate />
+<include src="../uml/classDiagrams/associations/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../uml/classDiagrams/associations/navigability/unit-inParent-asOutcome.md" boilerplate />
 <include src="../uml/classDiagrams/associations/roles/unit-inParent-asOutcome.md" boilerplate />
 <include src="../uml/classDiagrams/associations/labels/unit-inParent-asOutcome.md" boilerplate />

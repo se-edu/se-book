@@ -1,4 +1,4 @@
-<panel header=":lock::key: Statements about the Singleton pattern">
+<panel header="{{ icon_Q_A }} Statements about the Singleton pattern">
 <question>
 
 We use the Singleton pattern when

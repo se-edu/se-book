@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Git and Github [Printable]</title>
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\markbind\css\bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\markbind\css\markbind.css">
     <link rel="stylesheet" href="..\markbind\css\site-nav.css">
@@ -22,7 +25,7 @@
         <h4 id="init">Init</h4>
       </div>
       <div>
-        <panel header="%%:paperclip: Git Overview%%">
+        <panel header="%%<span class='fas fa-paperclip'></span> Git Overview%%">
           <p>Soon you are going to take your first step in using Git. If you would like to see a quick overview of the full Git landscape before jumping in, watch the video below.</p>
           <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/v40b3ExbM0c" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
           <p></p>
@@ -60,7 +63,7 @@ Initialized empty Git repository in c:/repos/things/.git/
               <p>You can also use the <code>git status</code> command to check the status of the newly-created repo. It should respond with something like the bellow</p>
               <pre class="hljs"><code>git status
 </code></pre>
-              <p>⤵️</p>
+              <p><span class="fas fa-arrow-down"></span></p>
               <pre class="hljs"><code># On branch master
 #
 # Initial commit
@@ -100,7 +103,7 @@ nothing to commit (create/copy files and use &quot;git add&quot; to track)
               <p>You can use the <code>git status</code> command to check the status of the working directory.</p>
               <pre><code class="hljs sh">git status
 </code></pre>
-              <p>⤵️</p>
+              <p><span class="fas fa-arrow-down"></span></p>
               <pre><code class="hljs sh"><span class="hljs-comment"># On branch master</span>
 <span class="hljs-comment">#</span>
 <span class="hljs-comment"># Initial commit</span>
@@ -144,7 +147,7 @@ nothing added to commit but untracked files present (use <span class="hljs-strin
               <pre><code class="hljs sh">git add fruits.txt
 git status
 </code></pre>
-              <p>⤵️</p>
+              <p><span class="fas fa-arrow-down"></span></p>
               <pre><code class="hljs sh"><span class="hljs-comment"># On branch master</span>
 <span class="hljs-comment">#</span>
 <span class="hljs-comment"># Initial commit</span>
@@ -177,7 +180,7 @@ git status
               <p>You can use the <code>log</code> command to see the commit history</p>
               <pre><code class="hljs sh">git <span class="hljs-built_in">log</span>
 </code></pre>
-              <p>⤵️</p>
+              <p><span class="fas fa-arrow-down"></span></p>
               <pre class="hljs"><code>commit 8fd30a6910efb28bb258cd01be93e481caeab846
 Author: … &lt; … @... &gt;
 Date:   Wed Jul 5 16:06:28 2017 +0800
@@ -284,7 +287,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
               <p>Example:</p>
               <pre class="hljs"><code>git show 251b4cf
 </code></pre>
-              <p>⤵️</p>
+              <p><span class="fas fa-arrow-down"></span></p>
               <pre><code class="hljs diff">commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3
 Author: … &lt; … &gt;
 Date:   Sat Jul 8 16:50:27 2017 +0800
@@ -326,7 +329,7 @@ index 15b57f7..17f4528 100644
                 <li><code>git diff 0023cdd..fcd6199</code>: shows the changes between the points indicated by by commit hashes</li>
                 <li><code>git diff v1.0..HEAD</code>: shows changes that happened from the commit tagged as <code>v1.0</code> to the most recent commit.</li>
               </ul>
-              <panel header=":paperclip: Resources" expanded="">
+              <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
                 <ul>
                   <li><a href="https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/diffs">Git-Tower Tutorial: Inspecting Changes with Diffs</a></li>
                   <li><a href="https://stackoverflow.com/questions/8640838/how-do-i-navigate-in-the-results-of-diff">How to view the next page of a <code>git</code> command result</a></li>
@@ -336,8 +339,47 @@ index 15b57f7..17f4528 100644
             <hr>
           </tab>
         </tabs>
-        <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to <a href="/se-book/gitAndGithub/stash/index.html">stash</a> them first to prevent them from
-          being overwritten.</p>
+        <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to
+          <trigger trigger="click" for="modal:checkout-stash">stash</trigger> them first to prevent them from being overwritten.</p>
+        <modal large="" title="%%Extract%%" id="modal:checkout-stash">
+        
+          <div>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+              </span>
+            </p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="stash">Stash</h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed
+                    changes later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
+                  <tabs>
+                  
+                    <tab header="Source Tree">
+                      <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
+                      <p>
+                        <hr>
+                      </p>
+                    </tab>
+                  
+                    <tab header="CLI">
+                      <p>Follow <a href="https://www.atlassian.com/git/tutorials/git-stash">this article from Atlassian</a>.</p>
+                      <p>
+                        <hr>
+                      </p>
+                    </tab>
+                  </tabs>
+                </div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </modal>
         <tabs>
           <tab header="SourceTree">
             <div>
@@ -376,7 +418,7 @@ index 15b57f7..17f4528 100644
     </div>
     <div>
       <div>
-        <h4 id="stash">Stash</h4>
+        <h4 id="stash-2">Stash</h4>
       </div>
       <div>
         <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed changes later
@@ -404,11 +446,11 @@ index 15b57f7..17f4528 100644
         <h4 id="clone">Clone</h4>
       </div>
       <div>
-        <p>Clone the sample repo <a href="https://github.com/nus-cs2103-AY1718S2/samplerepo-things">samplerepo-things</a> to your computer.</p>
+        <p>Clone the sample repo <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your computer.</p>
         <tip-box type="error">
           <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project. e.g.
           </p>
-          <p>Github project URL: <code>https://github.com/nus-cs2103-AY1718S2/samplerepo-things</code> <br> Git repo URL: <code>https://github.com/nus-cs2103-AY1718S2/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
+          <p>Github project URL: <code>https://github.com/se-edu/samplerepo-things</code> <br> Git repo URL: <code>https://github.com/se-edu/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
         </tip-box>
         <tabs>
           <tab header="SourceTree">
@@ -438,18 +480,21 @@ index 15b57f7..17f4528 100644
         <modal title="**Clone Repository**" id="modal:clone-repository">
           <div>
             <panel type="seamless" expanded="">
-              <span slot="header" class="panel-title"><div>
+              <span slot="header" class="card-title"><div>
 <h4 id="clone-2">Clone</h4></div></span>
-              <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can clone a remote repo</span></span></span></button>
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can clone a remote repo</span>
+                </span>
+                </span>
+                </span>
                 <p></p>
               </p>
               <p></p>
               <div>
-                <p>Clone the sample repo <a href="https://github.com/nus-cs2103-AY1718S2/samplerepo-things">samplerepo-things</a> to your computer.</p>
+                <p>Clone the sample repo <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your computer.</p>
                 <tip-box type="error">
                   <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project. e.g.
                   </p>
-                  <p>Github project URL: <code>https://github.com/nus-cs2103-AY1718S2/samplerepo-things</code> <br> Git repo URL: <code>https://github.com/nus-cs2103-AY1718S2/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
+                  <p>Github project URL: <code>https://github.com/se-edu/samplerepo-things</code> <br> Git repo URL: <code>https://github.com/se-edu/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
                 </tip-box>
                 <tabs>
                   <tab header="SourceTree">
@@ -527,7 +572,7 @@ index 15b57f7..17f4528 100644
       <div>
         <ol>
           <li>
-            <p>Fork the <a href="https://github.com/nus-cs2103-AY1718S2/samplerepo-things">samplerepo-things</a> to your GitHub account:</p>
+            <p>Fork the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your GitHub account:</p>
             <panel type="seamless" header="%%How to fork a repo?%%">
               <p>Navigate to the on GitHub and click on the <img src="/se-book/gitAndGithub/push/images/fork.png" height="30"> button on the top-right corner.</p>
               <p></p>
@@ -567,7 +612,7 @@ index 15b57f7..17f4528 100644
         <h4 id="branch">Branch</h4>
       </div>
       <div>
-        <p><strong>0. Observe that you are normally in the branch called <code>master</code>.</strong> For this, you can take any repo you have on your computer (e.g. a clone of the <a href="https://github.com/nus-cs2103-AY1718S2/samplerepo-things">samplerepo-things</a>).</p>
+        <p><strong>0. Observe that you are normally in the branch called <code>master</code>.</strong> For this, you can take any repo you have on your computer (e.g. a clone of the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>).</p>
         <tabs>
           <tab header="SourceTree">
             <div>
@@ -580,7 +625,7 @@ index 15b57f7..17f4528 100644
             <div>
               <pre class="hljs"><code>git status
 </code></pre>
-              <p>⤵️</p>
+              <p><span class="fas fa-arrow-down"></span></p>
               <pre class="hljs"><code>on branch master
 </code></pre>
             </div>
@@ -757,11 +802,12 @@ white
         <h4 id="create-prs">Create PRs</h4>
       </div>
       <div>
-        <p><strong>1. Fork the <a href="https://github.com/nus-cs2103-AY1718S2/samplerepo-pr-practice">samplerepo-pr-practice</a> onto your GitHub account. Clone it onto your computer.</strong></p>
-        <p><strong>2. Create a branch named <code>add-intro</code> in your clone. Add a couple of commits</strong> which adds/modifies an <em>Introduction</em> section to the <a href="http://README.md">README.md</a>. Example:</p>
+        <p><strong>1. Fork the <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a> onto your GitHub account. Clone it onto your computer.</strong></p>
+        <p><strong>2. Create a branch named <code>add-intro</code> in your clone. Add a couple of commits</strong> which adds/modifies an <em>Introduction</em> section to the <code>README.md</code>. Example:</p>
         <pre><code class="hljs md">
 <span class="hljs-section"># Introduction</span>
-Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects. This repo can be used to practice creating PRs.
+Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects.
+This repo can be used to practice creating PRs.
 
 </code></pre>
         <p><strong>3. Push the <code>add-intro</code> branch to your fork.</strong></p>
@@ -784,7 +830,7 @@ Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects.
         <p></p>
         <p>4b. Select <code>base fork</code> and <code>head fork</code> as follows:</p>
         <ul>
-          <li><code>base fork</code>: your own fork (i.e. <code>{your user name}/samplerepo-pr-practice</code>, <mark>NOT <code>nus-cs2103-AY1718S2/samplerepo-pr-practice</code></mark>)</li>
+          <li><code>base fork</code>: your own fork (i.e. <code>{your user name}/samplerepo-pr-practice</code>, <mark>NOT <code>se-edu/samplerepo-pr-practice</code></mark>)</li>
           <li><code>head fork</code>: your own fork.</li>
         </ul>
         <img src="/se-book/gitAndGithub/createPRs/images/selectBase.png" width="800">
@@ -812,7 +858,7 @@ Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects.
         <img src="/se-book/gitAndGithub/createPRs/images/addSummaryBranch.png" width="400">
         <p></p>
         <p><strong>7. Push the <code>add-summary</code> to your fork and create a new PR</strong> similar to before.</p>
-        <panel header=":paperclip: Resources" expanded="">
+        <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
           <ul>
             <li><a href="https://help.github.com/articles/creating-a-pull-request/">GitHub's own documentation on creating a PR</a></li>
           </ul>
@@ -826,8 +872,8 @@ Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects.
       <div>
         <p><strong>1. Go to GitHub page of your fork and review the <code>add-intro</code> PR</strong> you created previously in <a href="/se-book/gitAndGithub/createPRs/index.html">Tools → Git &amp; GitHub → Create PRs</a> to simulate the PR being reviewed
           by another developer, as explained below. <span class="dimmed">Note that some features available to PR reviewers will be unavailable to you because you are also the author of the PR.</span></p>
-        <p>1a. Go to the respective PR page and click on the <code>Files changed</code> tab. Hover over the line you want to comment on and click on the <code>+</code> icon that appears on the left margin. That should create a text box for you to enter your
-          comment.</p>
+        <p>1a. Go to the respective PR page and click on the <code>Files changed</code> tab. Hover over the line you want to comment on and click on the <span style="color:#0066ff"><span class="fas fa-plus-square"></span></span> icon that appears on the
+          left margin. That should create a text box for you to enter your comment.</p>
         <img src="/se-book/gitAndGithub/managePRs/images/startReview.png" width="800">
         <p></p>
         <p>1b. Enter some dummy comment and click on <code>Start a review</code> button.</p>
@@ -866,7 +912,7 @@ git pull origin master
         <h4 id="forking-workflow">Forking Workflow</h4>
       </div>
       <div>
-        <p></p>
+        <p><span class="fas fa-info-circle"></span> This activity is best done as a team. If you are learning this alone, you can simulate a team by using two different browsers to log into GitHub using two different accounts.</p>
         <ol>
           <li>
             <p><strong>One member: set up the team org and the team repo.</strong></p>
@@ -919,6 +965,8 @@ git pull origin master
 </body>
 <script src="..\markbind\js\vue.min.js"></script>
 <script src="..\markbind\js\vue-strap.min.js"></script>
+<script src="..\markbind\js\polyfill.min.js"></script>
+<script src="..\markbind\js\bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
 </script>

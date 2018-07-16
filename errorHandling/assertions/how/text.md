@@ -6,7 +6,7 @@
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Error Handling → Assertions → What%%" /></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can use assertions</span>
+<span id="outcomes">{{ icon_outcome }} Can use assertions</span>
 
 <div id="body">
 

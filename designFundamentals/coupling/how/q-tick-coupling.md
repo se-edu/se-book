@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which indicate coupling?">
+<panel header="{{ icon_Q_A }} Which indicate coupling?">
 <question>
 
 Which of these indicate a coupling between components A and B?

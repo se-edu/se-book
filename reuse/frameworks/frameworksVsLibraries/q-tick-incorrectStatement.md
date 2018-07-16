@@ -1,4 +1,4 @@
-<panel header=":lock::key: Statement about software frameworks">
+<panel header="{{ icon_Q_A }} Statement about software frameworks">
 <question>
 
 Choose correct statements about software frameworks.

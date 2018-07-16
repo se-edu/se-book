@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain revision control</span>
+<span id="outcomes">{{ icon_outcome }} Can explain revision control</span>
 
 <div id="title">
 
@@ -15,7 +15,7 @@
 Revision control is also known as _Version Control Software (VCS)_, and a few other names. Here, we use the terms _revision_ and _version_ interchangeably.
 
 <tabs>
-  <tab header=":abc:">
+  <tab header="{{ icon_text }}">
 
 > _Revision control_ is the process of managing multiple versions of a piece of information. In its simplest form, this is something that many people do by hand: every time you modify a file, save it under a new name that contains a number, each one higher than the number of the preceding version.
 >
@@ -39,7 +39,7 @@ Revision control is also known as _Version Control Software (VCS)_, and a few ot
   <hr></tab>
 </tabs>
 
-<popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide {{glyphicon_eye_open}}" placement="right">
+<popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide {{icon_preview}}" placement="right">
   <div slot="content">
     <include src="../../common/references.md#bryan-mercurial-guide" />
   </div>

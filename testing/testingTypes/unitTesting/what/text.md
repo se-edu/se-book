@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain unit testing</span>
+<span id="outcomes">{{ icon_outcome }} Can explain unit testing</span>
 
 <div id="body">
 
@@ -27,7 +27,7 @@ In OOP code, it is common to write one or more unit tests for each public method
 
 <include src="exampleTestCode-python.md" />
 </tab>
-</tabs><hr>
+</tabs>
 </tip-box>
 
 

@@ -1,4 +1,4 @@
-<panel header=":lock::key: Which sequences are not allowed?">
+<panel header="{{ icon_Q_A }} Which sequences are not allowed?">
 <question>
 
 Which of these sequence of actions is not allowed by the given activity diagram?

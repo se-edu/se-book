@@ -1,6 +1,6 @@
-* __ [N-tier Architectural Style]({{baseUrl}}/architecture/architecturalStyles/nTier) <trigger for="pop:architecturalStyles-nTier-preview">{{glyphicon_eye_open}}</trigger>
+* __ [N-tier Architectural Style]({{baseUrl}}/architecture/architecturalStyles/nTier) <trigger for="pop:architecturalStyles-nTier-preview">{{icon_preview}}</trigger>
 
-<popover id="pop:architecturalStyles-nTier-preview" title="{{glyphicon_eye_open}} N-tier Architectural Style" placement="right">
+<popover id="pop:architecturalStyles-nTier-preview" title="{{icon_preview}} N-tier Architectural Style" placement="right">
   <div slot="content">
     <include src=".\preview.md" />
   </div>

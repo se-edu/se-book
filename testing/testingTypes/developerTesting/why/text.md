@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain the need for early developer testing</span>
+<span id="outcomes">{{ icon_outcome }} Can explain the need for early developer testing</span>
 
 <div id="body">
 

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
-<panel header=":lock::key: EZ-Link top-up use case">
+<panel header="{{ icon_Q_A }} EZ-Link top-up use case">
 <question has-input="true">
 
 Complete the following use case (MSS, extensions, etc.). Note that you should not blindly follow how the existing  <tooltip content="A type of a cash card topup machine">EZ-Link machine</tooltip> operates because it will prevent you from designing a better system.  You should consider all possible extensions without complicating the use case too much.

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Git and Github</title>
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\markbind\css\bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\markbind\css\markbind.css">
     <link rel="stylesheet" href="..\markbind\css\site-nav.css">
@@ -28,99 +31,108 @@
       <div>
         <div>
           <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
+            <span slot="header" class="card-title"><div>
 <h4 id="init">Init</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can create a local Git repo</span></span></span></button>
-              <p></p>
-            </p>
-            <p></p>
-            <div>
-              <panel header="%%:paperclip: Git Overview%%">
-                <p>Soon you are going to take your first step in using Git. If you would like to see a quick overview of the full Git landscape before jumping in, watch the video below.</p>
-                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/v40b3ExbM0c" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can create a local Git repo</span>
+                </span>
+                </span>
+                </span>
                 <p></p>
-              </panel>
+              </p>
               <p></p>
-              <p>Install <a href="https://www.sourcetreeapp.com/">SourceTree</a> which is Git + a GUI for Git.</p>
-              <p>Suppose you want to create a repository in an empty directory <code>things</code></p>
-              <tabs>
-                <tab header="SourceTree">
-                  <div>
-                    <p>Windows: Click <code>File</code> → <code>Clone/New…</code>. Click on <code>Create</code> button.<br> Mac: <code>New...</code> → <code>Create New Repository</code>.</p>
-                    <p>Enter the location of the directory (Windows version shown below) and click <code>Create</code>.</p>
-                    <img src="/se-book/gitAndGithub/init/images/sourcetree_1.png" height="220">
-                    <p></p>
-                    <p>Go to the <code>things</code> folder and observe how a hidden folder <code>.git</code> has been created.</p>
-                    <p>Note: If you are on Windows, you might have to <a href="https://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">configure Windows Explorer to show hidden files</a>.</p>
-                  </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <p>Open a Git Bash Terminal.</p>
-                    <p>If you installed SourceTree, you can click the <code>Terminal</code> button to open a GitBash terminal.</p>
-                    <img src="/se-book/gitAndGithub/init/images/cli_1.png" height="100">
-                    <p></p>
-                    <p>Navigate to the <code>things</code> directory.</p>
-                    <p>Use the command <code>git init</code> which should initialize the repo.</p>
-                    <pre class="hljs"><code>$ git init
+              <div>
+                <panel header="%%<span class='fas fa-paperclip'></span> Git Overview%%">
+                  <p>Soon you are going to take your first step in using Git. If you would like to see a quick overview of the full Git landscape before jumping in, watch the video below.</p>
+                  <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/v40b3ExbM0c" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                  <p></p>
+                </panel>
+                <p></p>
+                <p>Install <a href="https://www.sourcetreeapp.com/">SourceTree</a> which is Git + a GUI for Git.</p>
+                <p>Suppose you want to create a repository in an empty directory <code>things</code></p>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <p>Windows: Click <code>File</code> → <code>Clone/New…</code>. Click on <code>Create</code> button.<br> Mac: <code>New...</code> → <code>Create New Repository</code>.</p>
+                      <p>Enter the location of the directory (Windows version shown below) and click <code>Create</code>.</p>
+                      <img src="/se-book/gitAndGithub/init/images/sourcetree_1.png" height="220">
+                      <p></p>
+                      <p>Go to the <code>things</code> folder and observe how a hidden folder <code>.git</code> has been created.</p>
+                      <p>Note: If you are on Windows, you might have to <a href="https://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">configure Windows Explorer to show hidden files</a>.</p>
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <p>Open a Git Bash Terminal.</p>
+                      <p>If you installed SourceTree, you can click the <code>Terminal</code> button to open a GitBash terminal.</p>
+                      <img src="/se-book/gitAndGithub/init/images/cli_1.png" height="100">
+                      <p></p>
+                      <p>Navigate to the <code>things</code> directory.</p>
+                      <p>Use the command <code>git init</code> which should initialize the repo.</p>
+                      <pre class="hljs"><code>$ git init
 Initialized empty Git repository in c:/repos/things/.git/
 </code></pre>
-                    <p>You can use the command <code>ls -a</code> to view all files, which should show the <code>.git</code> directory that was created by the previous command.</p>
-                    <pre class="hljs"><code>$ ls -a
+                      <p>You can use the command <code>ls -a</code> to view all files, which should show the <code>.git</code> directory that was created by the previous command.</p>
+                      <pre class="hljs"><code>$ ls -a
 .  ..  .git
 </code></pre>
-                    <p>You can also use the <code>git status</code> command to check the status of the newly-created repo. It should respond with something like the bellow</p>
-                    <pre class="hljs"><code>git status
+                      <p>You can also use the <code>git status</code> command to check the status of the newly-created repo. It should respond with something like the bellow</p>
+                      <pre class="hljs"><code>git status
 </code></pre>
-                    <p>⤵️</p>
-                    <pre class="hljs"><code># On branch master
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre class="hljs"><code># On branch master
 #
 # Initial commit
 #
 nothing to commit (create/copy files and use &quot;git add&quot; to track)
 </code></pre>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+              </div>
+              <div></div>
             </div>
-            <div></div>
           </panel>
         </div>
         <div>
           <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
+            <span slot="header" class="card-title"><div>
 <h4 id="commit">Commit</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can commit using Git</span></span></span></button>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can commit using Git</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
               <p></p>
-            </p>
-            <p></p>
-            <div>
-              <p>Create an empty repo.</p>
-              <p>Create a file named <code>fruits.txt</code> in the working directory and add some dummy text to it.</p>
-              <tip-box type="definition">
-                <div>
-                  <p><strong>Working directory</strong>: The directory the repo is based in is called the <em>working directory</em>.</p>
-                </div>
-              </tip-box>
-              <p>Observe how the file is detected by Git.</p>
-              <tabs>
-                <tab header="SourceTree">
+              <div>
+                <p>Create an empty repo.</p>
+                <p>Create a file named <code>fruits.txt</code> in the working directory and add some dummy text to it.</p>
+                <tip-box type="definition">
                   <div>
-                    <p>The file is shown as ‘unstaged’</p>
-                    <img src="/se-book/gitAndGithub/commit/images/sourcetree_1.png" height="220">
-                    <p></p>
+                    <p><strong>Working directory</strong>: The directory the repo is based in is called the <em>working directory</em>.</p>
                   </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <p>You can use the <code>git status</code> command to check the status of the working directory.</p>
-                    <pre><code class="hljs sh">git status
+                </tip-box>
+                <p>Observe how the file is detected by Git.</p>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <p>The file is shown as ‘unstaged’</p>
+                      <img src="/se-book/gitAndGithub/commit/images/sourcetree_1.png" height="220">
+                      <p></p>
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <p>You can use the <code>git status</code> command to check the status of the working directory.</p>
+                      <pre><code class="hljs sh">git status
 </code></pre>
-                    <p>⤵️</p>
-                    <pre><code class="hljs sh"><span class="hljs-comment"># On branch master</span>
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre><code class="hljs sh"><span class="hljs-comment"># On branch master</span>
 <span class="hljs-comment">#</span>
 <span class="hljs-comment"># Initial commit</span>
 <span class="hljs-comment">#</span>
@@ -130,41 +142,41 @@ nothing to commit (create/copy files and use &quot;git add&quot; to track)
 <span class="hljs-comment">#   a.txt</span>
 nothing added to commit but untracked files present (use <span class="hljs-string">"git add"</span> to track)
 </code></pre>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
-              <p>Although git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose we want to commit the current state of the file. First, we should stage the file.</p>
-              <tip-box type="definition">
-                <div>
-                  <p><strong>Commit</strong>: Saving the current state of the working folder into the Git revision history.</p>
-                </div>
-              </tip-box>
-              <tip-box type="definition">
-                <div>
-                  <p><strong>Stage</strong>: Instructing Git to prepare a file for committing.</p>
-                </div>
-              </tip-box>
-              <tabs>
-                <tab header="SourceTree">
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+                <p>Although git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose we want to commit the current state of the file. First, we should stage the file.</p>
+                <tip-box type="definition">
                   <div>
-                    <p>Select the <code>fruits.txt</code> and click on the <code>Stage Selected</code> button</p>
-                    <img src="/se-book/gitAndGithub/commit/images/sourcetree_2.png" height="100">
-                    <p></p>
-                    <p><code>fruits.txt</code> should appear in the <code>Staged files</code> panel now.’</p>
-                    <img src="/se-book/gitAndGithub/commit/images/sourcetree_3.png" height="180">
-                    <p></p>
+                    <p><strong>Commit</strong>: Saving the current state of the working folder into the Git revision history.</p>
                   </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
+                </tip-box>
+                <tip-box type="definition">
                   <div>
-                    <p>You can use the <code>stage</code> or the <code>add</code> command (they are synonyms, <code>add</code> is the more popular choice) to stage files.</p>
-                    <pre><code class="hljs sh">git add fruits.txt
+                    <p><strong>Stage</strong>: Instructing Git to prepare a file for committing.</p>
+                  </div>
+                </tip-box>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <p>Select the <code>fruits.txt</code> and click on the <code>Stage Selected</code> button</p>
+                      <img src="/se-book/gitAndGithub/commit/images/sourcetree_2.png" height="100">
+                      <p></p>
+                      <p><code>fruits.txt</code> should appear in the <code>Staged files</code> panel now.’</p>
+                      <img src="/se-book/gitAndGithub/commit/images/sourcetree_3.png" height="180">
+                      <p></p>
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <p>You can use the <code>stage</code> or the <code>add</code> command (they are synonyms, <code>add</code> is the more popular choice) to stage files.</p>
+                      <pre><code class="hljs sh">git add fruits.txt
 git status
 </code></pre>
-                    <p>⤵️</p>
-                    <pre><code class="hljs sh"><span class="hljs-comment"># On branch master</span>
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre><code class="hljs sh"><span class="hljs-comment"># On branch master</span>
 <span class="hljs-comment">#</span>
 <span class="hljs-comment"># Initial commit</span>
 <span class="hljs-comment">#</span>
@@ -174,163 +186,178 @@ git status
 <span class="hljs-comment">#       new file:   fruits.txt</span>
 <span class="hljs-comment">#</span>
 </code></pre>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
-              <p>Next, we can commit the staged version of <code>fruits.txt</code></p>
-              <tabs>
-                <tab header="SourceTree">
-                  <div>
-                    <p>Click the <code>Commit</code> button, enter a commit message e.g. <code>add fruits.txt</code> in to the text box, and click <code>Commit</code></p>
-                    <img src="/se-book/gitAndGithub/commit/images/sourcetree_4.png" height="300">
-                    <p></p>
-                  </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <p>Use the <code>commit</code> command to commit. The <code>-m</code> switch is used to specify the commit message.</p>
-                    <pre><code class="hljs sh">git commit -m <span class="hljs-string">"add fruits.txt"</span>
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+                <p>Next, we can commit the staged version of <code>fruits.txt</code></p>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <p>Click the <code>Commit</code> button, enter a commit message e.g. <code>add fruits.txt</code> in to the text box, and click <code>Commit</code></p>
+                      <img src="/se-book/gitAndGithub/commit/images/sourcetree_4.png" height="300">
+                      <p></p>
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <p>Use the <code>commit</code> command to commit. The <code>-m</code> switch is used to specify the commit message.</p>
+                      <pre><code class="hljs sh">git commit -m <span class="hljs-string">"add fruits.txt"</span>
 </code></pre>
-                    <p>You can use the <code>log</code> command to see the commit history</p>
-                    <pre><code class="hljs sh">git <span class="hljs-built_in">log</span>
+                      <p>You can use the <code>log</code> command to see the commit history</p>
+                      <pre><code class="hljs sh">git <span class="hljs-built_in">log</span>
 </code></pre>
-                    <p>⤵️</p>
-                    <pre class="hljs"><code>commit 8fd30a6910efb28bb258cd01be93e481caeab846
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre class="hljs"><code>commit 8fd30a6910efb28bb258cd01be93e481caeab846
 Author: … &lt; … @... &gt;
 Date:   Wed Jul 5 16:06:28 2017 +0800
 
   Add fruits.txt
 </code></pre>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
-              <p>Note the existence of something called the <code>master</code> branch. Git allows you to have multiple branches (i.e. it is a way to evolve the content in parallel) and Git creates a default branch named <code>master</code> on which the
-                commits go on by default.</p>
-              <p>Do some changes to <code>fruits.txt</code> (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps we followed before. You should end up with something like this.</p>
-              <img src="/se-book/gitAndGithub/commit/images/sourcetree_6.png" height="180">
-              <p></p>
-              <p>Next, add two more files <code>colors.txt</code> and <code>shapes.txt</code> to the same working directory. Add a third commit to record the current state of the working directory.</p>
-              <img src="/se-book/gitAndGithub/commit/images/sourcetree_7.png" height="150">
-              <p></p>
-            </div>
-            <div>
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+                <p>Note the existence of something called the <code>master</code> branch. Git allows you to have multiple branches (i.e. it is a way to evolve the content in parallel) and Git creates a default branch named <code>master</code> on which the
+                  commits go on by default.</p>
+                <p>Do some changes to <code>fruits.txt</code> (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps we followed before. You should end up with something like this.</p>
+                <img src="/se-book/gitAndGithub/commit/images/sourcetree_6.png" height="180">
+                <p></p>
+                <p>Next, add two more files <code>colors.txt</code> and <code>shapes.txt</code> to the same working directory. Add a third commit to record the current state of the working directory.</p>
+                <img src="/se-book/gitAndGithub/commit/images/sourcetree_7.png" height="150">
+                <p></p>
+              </div>
               <div>
-                <panel header=":paperclip: Resources" expanded="">
-                  <ul>
-                    <li><a href="https://try.github.io/levels/1/challenges/4"><strong>Try Git</strong></a> is an online simulation/tutorial of Git basics. You can try its first few steps to solidify what you learned in this LO.</li>
-                  </ul>
-                </panel>
+                <div>
+                  <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                    <ul>
+                      <li><a href="https://try.github.io/levels/1/challenges/4"><strong>Try Git</strong></a> is an online simulation/tutorial of Git basics. You can try its first few steps to solidify what you learned in this LO.</li>
+                    </ul>
+                  </panel>
+                </div>
               </div>
             </div>
           </panel>
         </div>
         <div>
           <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
+            <span slot="header" class="card-title"><div>
 <h4 id="ignore">Ignore</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can set Git to ignore files</span></span></span></button>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can set Git to ignore files</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
               <p></p>
-            </p>
-            <p></p>
-            <div>
-              <p>Add a file names <code>temp.txt</code> to the <code>things</code> repo you created. Suppose we don’t want this file to be revision controlled by Git. Let’s instruct Git to ignore <code>temp.txt</code></p>
-              <tabs>
-                <tab header="SourceTree">
-                  <div>
-                    <p>The file should be currently listed under <code>Unstaged files</code>. Right-click it and choose <code>Ignore…</code>. Choose <code>Ignore exact filename(s)</code> and click <code>OK</code>.</p>
-                    <p>Observe that a file named <code>.gitignore</code> has been created in the working directory root and has the following line in it.</p>
-                    <pre class="hljs"><code>temp.text
+              <div>
+                <p>Add a file names <code>temp.txt</code> to the <code>things</code> repo you created. Suppose we don’t want this file to be revision controlled by Git. Let’s instruct Git to ignore <code>temp.txt</code></p>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <p>The file should be currently listed under <code>Unstaged files</code>. Right-click it and choose <code>Ignore…</code>. Choose <code>Ignore exact filename(s)</code> and click <code>OK</code>.</p>
+                      <p>Observe that a file named <code>.gitignore</code> has been created in the working directory root and has the following line in it.</p>
+                      <pre class="hljs"><code>temp.text
 </code></pre>
-                  </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <p>Create a file named <code>.gitignore</code> in the working directory root and add the following line in it.</p>
-                    <pre class="hljs"><code>temp.text
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <p>Create a file named <code>.gitignore</code> in the working directory root and add the following line in it.</p>
+                      <pre class="hljs"><code>temp.text
 </code></pre>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
-              <p>The <code>.gitignore</code> file tells Git which files to ignore when tracking revision history. That file itself can be either revision controlled or ignored.</p>
-              <ul>
-                <li>To version control it (the more common choice – which allows you to track how the <code>.gitignore</code> file changed over time), simply commit it as you would commit any other file.</li>
-                <li>To ignore it, follow the same steps we followed above when we set Git to ignore the <code>temp.txt</code> file.</li>
-              </ul>
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+                <p>The <code>.gitignore</code> file tells Git which files to ignore when tracking revision history. That file itself can be either revision controlled or ignored.</p>
+                <ul>
+                  <li>To version control it (the more common choice – which allows you to track how the <code>.gitignore</code> file changed over time), simply commit it as you would commit any other file.</li>
+                  <li>To ignore it, follow the same steps we followed above when we set Git to ignore the <code>temp.txt</code> file.</li>
+                </ul>
+              </div>
+              <div></div>
             </div>
-            <div></div>
           </panel>
         </div>
         <div>
           <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
+            <span slot="header" class="card-title"><div>
 <h4 id="tag">Tag</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can tag commits using Git</span></span></span></button>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can tag commits using Git</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
               <p></p>
-            </p>
-            <p></p>
-            <div>
-              <p>Let's tag a commit in a local repo you have (e.g. the <code>sampelrepo-things</code> repo)</p>
-              <tabs>
-                <tab header="SourceTree">
-                  <div>
-                    <p>Right-click on the commit (in the graphical revision graph) you want to tag and choose <code>Tag…</code></p>
-                    <p>Specify the tag name e.g. <code>v1.0</code> and click <code>Add Tag</code>.</p>
-                    <p>The added tag will appear in the revision graph view.</p>
-                    <img src="/se-book/gitAndGithub/tag/images/sourcetree_1.png" height="70">
-                    <p></p>
-                  </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <p>To add a tag to the current commit as <code>v1.0</code>,</p>
-                    <pre class="hljs"><code>git tag –a v1.0
+              <div>
+                <p>Let's tag a commit in a local repo you have (e.g. the <code>sampelrepo-things</code> repo)</p>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <p>Right-click on the commit (in the graphical revision graph) you want to tag and choose <code>Tag…</code></p>
+                      <p>Specify the tag name e.g. <code>v1.0</code> and click <code>Add Tag</code>.</p>
+                      <p>The added tag will appear in the revision graph view.</p>
+                      <img src="/se-book/gitAndGithub/tag/images/sourcetree_1.png" height="70">
+                      <p></p>
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <p>To add a tag to the current commit as <code>v1.0</code>,</p>
+                      <pre class="hljs"><code>git tag –a v1.0
 </code></pre>
-                    <p>To view tags</p>
-                    <pre class="hljs"><code>git tag
+                      <p>To view tags</p>
+                      <pre class="hljs"><code>git tag
 </code></pre>
-                    <p>To learn how to add a tag to a past commit, go to the <a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">‘Git Basics – Tagging’ page of the git-scm book</a> and refer the ‘Tagging Later’ section.</p>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
+                      <p>To learn how to add a tag to a past commit, go to the <a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">‘Git Basics – Tagging’ page of the git-scm book</a> and refer the ‘Tagging Later’ section.</p>
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+              </div>
+              <div></div>
             </div>
-            <div></div>
           </panel>
         </div>
         <div>
           <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
+            <span slot="header" class="card-title"><div>
 <h4 id="checkout">Checkout</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can load a specific version of a Git repo</span></span></span></button>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can load a specific version of a Git repo</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
               <p></p>
-            </p>
-            <p></p>
-            <div>
-              <p>Git can show you what changed in each commit.</p>
-              <tabs>
-                <tab header="SourceTree">
-                  <div>
-                    <p>To see which files changed in a commit, click on the commit. To see what changed in a specific file in that commit, click on the file name.</p>
-                    <img src="/se-book/gitAndGithub/checkout/images/sourcetree_1.png" height="220">
-                    <p></p>
-                  </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <pre><code class="hljs sh">git show &lt; part-of-commit-hash &gt;
+              <div>
+                <p>Git can show you what changed in each commit.</p>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <p>To see which files changed in a commit, click on the commit. To see what changed in a specific file in that commit, click on the file name.</p>
+                      <img src="/se-book/gitAndGithub/checkout/images/sourcetree_1.png" height="220">
+                      <p></p>
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <pre><code class="hljs sh">git show &lt; part-of-commit-hash &gt;
 </code></pre>
-                    <p>Example:</p>
-                    <pre class="hljs"><code>git show 251b4cf
+                      <p>Example:</p>
+                      <pre class="hljs"><code>git show 251b4cf
 </code></pre>
-                    <p>⤵️</p>
-                    <pre><code class="hljs diff">commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre><code class="hljs diff">commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3
 Author: … &lt; … &gt;
 Date:   Sat Jul 8 16:50:27 2017 +0800
 
@@ -346,456 +373,528 @@ index 15b57f7..17f4528 100644
 <span class="hljs-addition">+berries</span>
  cherries
 </code></pre>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
-              <p>Git can also show you the difference between two points in the history of the repo.</p>
-              <tabs>
-                <tab header="SourceTree">
-                  <div>
-                    <p>Select the two points you want to compare using <code>Ctrl+Click</code>.</p>
-                    <img src="/se-book/gitAndGithub/checkout/images/sourcetree_2.png" height="200">
-                    <p></p>
-                    <p>The same method can be used to compare the current state of the working directory (which might have uncommitted changes) to a point in the history.</p>
-                    <img src="/se-book/gitAndGithub/checkout/images/sourcetree_3.png" height="100">
-                    <p></p>
-                  </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <p>The <code>diff</code> command can be used to view the differences between two points of the history.</p>
-                    <ul>
-                      <li><code>git diff</code> : shows the changes (uncommitted) since the last commit</li>
-                      <li><code>git diff 0023cdd..fcd6199</code>: shows the changes between the points indicated by by commit hashes</li>
-                      <li><code>git diff v1.0..HEAD</code>: shows changes that happened from the commit tagged as <code>v1.0</code> to the most recent commit.</li>
-                    </ul>
-                    <panel header=":paperclip: Resources" expanded="">
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+                <p>Git can also show you the difference between two points in the history of the repo.</p>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <p>Select the two points you want to compare using <code>Ctrl+Click</code>.</p>
+                      <img src="/se-book/gitAndGithub/checkout/images/sourcetree_2.png" height="200">
+                      <p></p>
+                      <p>The same method can be used to compare the current state of the working directory (which might have uncommitted changes) to a point in the history.</p>
+                      <img src="/se-book/gitAndGithub/checkout/images/sourcetree_3.png" height="100">
+                      <p></p>
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <p>The <code>diff</code> command can be used to view the differences between two points of the history.</p>
                       <ul>
-                        <li><a href="https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/diffs">Git-Tower Tutorial: Inspecting Changes with Diffs</a></li>
-                        <li><a href="https://stackoverflow.com/questions/8640838/how-do-i-navigate-in-the-results-of-diff">How to view the next page of a <code>git</code> command result</a></li>
+                        <li><code>git diff</code> : shows the changes (uncommitted) since the last commit</li>
+                        <li><code>git diff 0023cdd..fcd6199</code>: shows the changes between the points indicated by by commit hashes</li>
+                        <li><code>git diff v1.0..HEAD</code>: shows changes that happened from the commit tagged as <code>v1.0</code> to the most recent commit.</li>
                       </ul>
+                      <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                        <ul>
+                          <li><a href="https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/diffs">Git-Tower Tutorial: Inspecting Changes with Diffs</a></li>
+                          <li><a href="https://stackoverflow.com/questions/8640838/how-do-i-navigate-in-the-results-of-diff">How to view the next page of a <code>git</code> command result</a></li>
+                        </ul>
+                      </panel>
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+                <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to
+                  <trigger trigger="click" for="modal:checkout-stash">stash</trigger> them first to prevent them from being overwritten.</p>
+                <modal large="" title="%%Extract%%" id="modal:checkout-stash">
+                
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+                      </span>
+                    </p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="stash">Stash</h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the
+                            stashed changes later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
+                          <tabs>
+                          
+                            <tab header="Source Tree">
+                              <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
+                              <p>
+                                <hr>
+                              </p>
+                            </tab>
+                          
+                            <tab header="CLI">
+                              <p>Follow <a href="https://www.atlassian.com/git/tutorials/git-stash">this article from Atlassian</a>.</p>
+                              <p>
+                                <hr>
+                              </p>
+                            </tab>
+                          </tabs>
+                        </div>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </modal>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <p>Double-click the commit you want to load to the working directory, or right-click on that commit and choose <code>Checkout...</code>.</p>
+                      <p>Click <code>OK</code> to the warning about ‘detached HEAD’ (similar to below).</p>
+                      <img src="/se-book/gitAndGithub/checkout/images/warning.png" height="140">
+                      <p></p>
+                      <p>The specified version is now loaded to the working folder, as indicated by the <code>HEAD</code> label. <code>HEAD</code> is a reference to the currently checked out commit.</p>
+                      <img src="/se-book/gitAndGithub/checkout/images/sourcetree_4.png" height="100">
+                      <p></p>
+                      <p>If you checkout a commit that come before the commit in which you added the <code>.gitignore</code> file, Git will now show ignored fiels as ‘unstaged modifications’ because at that stage Git hasn’t been told to ignore those files.</p>
+                      <img src="/se-book/gitAndGithub/checkout/images/sourcetree_5.png" height="260">
+                      <p></p>
+                      <p>To go back to the latest commit, double-click it.</p>
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <p>Use the <code>checkout &lt;commit-identifier&gt;</code> command to change the working directory to the state it was in at a specific past commit.</p>
+                      <ul>
+                        <li><code>git checkout v1.0</code>: loads the state as at commit tagged <code>v1.0</code></li>
+                        <li><code>git checkout 0023cdd</code>: loads the state as at commit with the hash <code>0023cdd</code></li>
+                        <li><code>git checkout HEAD~2</code>: loads the state that is 2 commits behind the most recent commit</li>
+                      </ul>
+                      <p>For now, you can ignore the warning about ‘detached HEAD’.</p>
+                      <p>Use the <code>checkout &lt;branch-name&gt;</code> to go back to the most recent commit of the current branch (the default branch in git is named <code>master</code>)</p>
+                      <ul>
+                        <li><code>git checkout master</code></li>
+                      </ul>
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+              </div>
+              <div></div>
+            </div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="card-title"><div>
+<h4 id="stash-2">Stash</h4></div></span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use Git to stash files</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
+              <p></p>
+              <div>
+                <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed changes
+                  later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
+                <tabs>
+                
+                  <tab header="Source Tree">
+                    <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
+                    <p>
+                      <hr>
+                    </p>
+                  </tab>
+                
+                  <tab header="CLI">
+                    <p>Follow <a href="https://www.atlassian.com/git/tutorials/git-stash">this article from Atlassian</a>.</p>
+                    <p>
+                      <hr>
+                    </p>
+                  </tab>
+                </tabs>
+              </div>
+              <div></div>
+            </div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="card-title"><div>
+<h4 id="clone">Clone</h4></div></span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can clone a remote repo</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
+              <p></p>
+              <div>
+                <p>Clone the sample repo <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your computer.</p>
+                <tip-box type="error">
+                  <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project. e.g.
+                  </p>
+                  <p>Github project URL: <code>https://github.com/se-edu/samplerepo-things</code> <br> Git repo URL: <code>https://github.com/se-edu/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
+                </tip-box>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <p><code>File</code> → <code>Clone / New…</code> and provide the URL of the repo and the destination directory.</p>
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <p>You can use the <code>clone</code> command to clone a repo.</p>
+                      <p>Follow instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p>
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+              </div>
+              <div></div>
+            </div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="card-title"><div>
+<h4 id="pull">Pull</h4></div></span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can pull changes from a repo</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
+              <p></p>
+              <div>
+                <p>Clone the sample repo as explained in
+                  <trigger for="modal:clone-repository" trigger="click">[Textbook <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Tools → Git &amp; GitHub → Clone]</trigger>.</p>
+                <p>Delete the last two commits to simulate cloning the repo 2 commits ago.</p>
+                <modal title="**Clone Repository**" id="modal:clone-repository">
+                  <div>
+                    <panel type="seamless" expanded="">
+                      <span slot="header" class="card-title"><div>
+<h4 id="clone-2">Clone</h4></div></span>
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can clone a remote repo</span>
+                        </span>
+                        </span>
+                        </span>
+                        <p></p>
+                      </p>
+                      <p></p>
+                      <div>
+                        <p>Clone the sample repo <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your computer.</p>
+                        <tip-box type="error">
+                          <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project. e.g.
+                          </p>
+                          <p>Github project URL: <code>https://github.com/se-edu/samplerepo-things</code> <br> Git repo URL: <code>https://github.com/se-edu/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
+                        </tip-box>
+                        <tabs>
+                          <tab header="SourceTree">
+                            <div>
+                              <p><code>File</code> → <code>Clone / New…</code> and provide the URL of the repo and the destination directory.</p>
+                            </div>
+                            <hr>
+                          </tab>
+                          <tab header="CLI">
+                            <div>
+                              <p>You can use the <code>clone</code> command to clone a repo.</p>
+                              <p>Follow instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p>
+                            </div>
+                            <hr>
+                          </tab>
+                        </tabs>
+                      </div>
+                      <div></div>
                     </panel>
                   </div>
-                  <hr>
-                </tab>
-              </tabs>
-              <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to <a href="/se-book/gitAndGithub/stash/index.html">stash</a> them first to prevent
-                them from being overwritten.</p>
-              <tabs>
-                <tab header="SourceTree">
-                  <div>
-                    <p>Double-click the commit you want to load to the working directory, or right-click on that commit and choose <code>Checkout...</code>.</p>
-                    <p>Click <code>OK</code> to the warning about ‘detached HEAD’ (similar to below).</p>
-                    <img src="/se-book/gitAndGithub/checkout/images/warning.png" height="140">
-                    <p></p>
-                    <p>The specified version is now loaded to the working folder, as indicated by the <code>HEAD</code> label. <code>HEAD</code> is a reference to the currently checked out commit.</p>
-                    <img src="/se-book/gitAndGithub/checkout/images/sourcetree_4.png" height="100">
-                    <p></p>
-                    <p>If you checkout a commit that come before the commit in which you added the <code>.gitignore</code> file, Git will now show ignored fiels as ‘unstaged modifications’ because at that stage Git hasn’t been told to ignore those files.</p>
-                    <img src="/se-book/gitAndGithub/checkout/images/sourcetree_5.png" height="260">
-                    <p></p>
-                    <p>To go back to the latest commit, double-click it.</p>
-                  </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <p>Use the <code>checkout &lt;commit-identifier&gt;</code> command to change the working directory to the state it was in at a specific past commit.</p>
-                    <ul>
-                      <li><code>git checkout v1.0</code>: loads the state as at commit tagged <code>v1.0</code></li>
-                      <li><code>git checkout 0023cdd</code>: loads the state as at commit with the hash <code>0023cdd</code></li>
-                      <li><code>git checkout HEAD~2</code>: loads the state that is 2 commits behind the most recent commit</li>
-                    </ul>
-                    <p>For now, you can ignore the warning about ‘detached HEAD’.</p>
-                    <p>Use the <code>checkout &lt;branch-name&gt;</code> to go back to the most recent commit of the current branch (the default branch in git is named <code>master</code>)</p>
-                    <ul>
-                      <li><code>git checkout master</code></li>
-                    </ul>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
-            </div>
-            <div></div>
-          </panel>
-        </div>
-        <div>
-          <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
-<h4 id="stash">Stash</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can use Git to stash files</span></span></span></button>
-              <p></p>
-            </p>
-            <p></p>
-            <div>
-              <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed changes
-                later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
-              <tabs>
-              
-                <tab header="Source Tree">
-                  <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
-                  <p>
-                    <hr>
-                  </p>
-                </tab>
-              
-                <tab header="CLI">
-                  <p>Follow <a href="https://www.atlassian.com/git/tutorials/git-stash">this article from Atlassian</a>.</p>
-                  <p>
-                    <hr>
-                  </p>
-                </tab>
-              </tabs>
-            </div>
-            <div></div>
-          </panel>
-        </div>
-        <div>
-          <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
-<h4 id="clone">Clone</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can clone a remote repo</span></span></span></button>
-              <p></p>
-            </p>
-            <p></p>
-            <div>
-              <p>Clone the sample repo <a href="https://github.com/nus-cs2103-AY1718S2/samplerepo-things">samplerepo-things</a> to your computer.</p>
-              <tip-box type="error">
-                <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project. e.g.
-                </p>
-                <p>Github project URL: <code>https://github.com/nus-cs2103-AY1718S2/samplerepo-things</code> <br> Git repo URL: <code>https://github.com/nus-cs2103-AY1718S2/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
-              </tip-box>
-              <tabs>
-                <tab header="SourceTree">
-                  <div>
-                    <p><code>File</code> → <code>Clone / New…</code> and provide the URL of the repo and the destination directory.</p>
-                  </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <p>You can use the <code>clone</code> command to clone a repo.</p>
-                    <p>Follow instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
-            </div>
-            <div></div>
-          </panel>
-        </div>
-        <div>
-          <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
-<h4 id="pull">Pull</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can pull changes from a repo</span></span></span></button>
-              <p></p>
-            </p>
-            <p></p>
-            <div>
-              <p>Clone the sample repo as explained in
-                <trigger for="modal:clone-repository" trigger="click">[Textbook <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Tools → Git &amp; GitHub → Clone]</trigger>.</p>
-              <p>Delete the last two commits to simulate cloning the repo 2 commits ago.</p>
-              <modal title="**Clone Repository**" id="modal:clone-repository">
-                <div>
-                  <panel type="seamless" expanded="">
-                    <span slot="header" class="panel-title"><div>
-<h4 id="clone-2">Clone</h4></div></span>
-                    <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can clone a remote repo</span></span></span></button>
-                      <p></p>
-                    </p>
-                    <p></p>
+                </modal>
+                <tabs>
+                  <tab header="SourceTree">
                     <div>
-                      <p>Clone the sample repo <a href="https://github.com/nus-cs2103-AY1718S2/samplerepo-things">samplerepo-things</a> to your computer.</p>
-                      <tip-box type="error">
-                        <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project. e.g.
-                        </p>
-                        <p>Github project URL: <code>https://github.com/nus-cs2103-AY1718S2/samplerepo-things</code> <br> Git repo URL: <code>https://github.com/nus-cs2103-AY1718S2/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
-                      </tip-box>
-                      <tabs>
-                        <tab header="SourceTree">
-                          <div>
-                            <p><code>File</code> → <code>Clone / New…</code> and provide the URL of the repo and the destination directory.</p>
-                          </div>
-                          <hr>
-                        </tab>
-                        <tab header="CLI">
-                          <div>
-                            <p>You can use the <code>clone</code> command to clone a repo.</p>
-                            <p>Follow instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p>
-                          </div>
-                          <hr>
-                        </tab>
-                      </tabs>
+                      <p>Right-click the target commit (i.e. the commit that is 2 commits behind the tip) and choose <code>Reset current branch to this commit</code>.</p>
+                      <img src="/se-book/gitAndGithub/pull/images/rightClickOnTargetCommit.png" height="100">
+                      <p></p>
+                      <p>Choose the <code>Hard - …</code> option and click <code>OK</code>.</p>
+                      <img src="/se-book/gitAndGithub/pull/images/sourcetree_1.png" height="120">
+                      <p></p>
+                      <p>This is what you will see.</p>
+                      <img src="/se-book/gitAndGithub/pull/images/sourcetree_2.png" height="150">
+                      <p></p>
+                      <p>Note the following (cross refer the screenshot above):</p>
+                      <p>(a) The local repo is now at this commit, marked by the <code>master</code> label.<br> (b) <code>origin/master</code> shows what is the latest commit in the <code>master</code> branch in the remote repo.</p>
                     </div>
-                    <div></div>
-                  </panel>
-                </div>
-              </modal>
-              <tabs>
-                <tab header="SourceTree">
-                  <div>
-                    <p>Right-click the target commit (i.e. the commit that is 2 commits behind the tip) and choose <code>Reset current branch to this commit</code>.</p>
-                    <img src="/se-book/gitAndGithub/pull/images/rightClickOnTargetCommit.png" height="100">
-                    <p></p>
-                    <p>Choose the <code>Hard - …</code> option and click <code>OK</code>.</p>
-                    <img src="/se-book/gitAndGithub/pull/images/sourcetree_1.png" height="120">
-                    <p></p>
-                    <p>This is what you will see.</p>
-                    <img src="/se-book/gitAndGithub/pull/images/sourcetree_2.png" height="150">
-                    <p></p>
-                    <p>Note the following (cross refer the screenshot above):</p>
-                    <p>(a) The local repo is now at this commit, marked by the <code>master</code> label.<br> (b) <code>origin/master</code> shows what is the latest commit in the <code>master</code> branch in the remote repo.</p>
-                  </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <p>Use the <code>reset</code> command to delete commits at the tip of the revision history.</p>
-                    <pre class="hljs"><code>git reset --hard HEAD~2
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <p>Use the <code>reset</code> command to delete commits at the tip of the revision history.</p>
+                      <pre class="hljs"><code>git reset --hard HEAD~2
 </code></pre>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
-              <p>Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago, as if somebody has added two more commits to the remote repo since you cloned it. To get those commits to your local repo (i.e. to sync your
-                local repo with upstream repo) you can do a pull.</p>
-              <tabs>
-                <tab header="SourceTree">
-                  <div>
-                    <p>Click the <code>Pull</code> button in the main menu, choose <code>origin</code> and <code>master</code> in the next dialog, and click <code>OK</code>.</p>
-                    <img src="/se-book/gitAndGithub/pull/images/sourcetree_3.png" height="160">
-                    <p></p>
-                    <p>Now you should see something like this where <code>master</code> and <code>origin\master</code> are both pointing the same commit.</p>
-                    <img src="/se-book/gitAndGithub/pull/images/sourcetree_4.png" height="100">
-                    <p></p>
-                  </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <p><code>git pull origin</code></p>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+                <p>Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago, as if somebody has added two more commits to the remote repo since you cloned it. To get those commits to your local repo (i.e. to sync your
+                  local repo with upstream repo) you can do a pull.</p>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <p>Click the <code>Pull</code> button in the main menu, choose <code>origin</code> and <code>master</code> in the next dialog, and click <code>OK</code>.</p>
+                      <img src="/se-book/gitAndGithub/pull/images/sourcetree_3.png" height="160">
+                      <p></p>
+                      <p>Now you should see something like this where <code>master</code> and <code>origin\master</code> are both pointing the same commit.</p>
+                      <img src="/se-book/gitAndGithub/pull/images/sourcetree_4.png" height="100">
+                      <p></p>
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <p><code>git pull origin</code></p>
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+              </div>
+              <div></div>
             </div>
-            <div></div>
           </panel>
         </div>
         <div>
           <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
+            <span slot="header" class="card-title"><div>
 <h4 id="push">Push</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can push to a remote repo</span></span></span></button>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can push to a remote repo</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
               <p></p>
-            </p>
-            <p></p>
-            <div>
-              <ol>
-                <li>
-                  <p>Fork the <a href="https://github.com/nus-cs2103-AY1718S2/samplerepo-things">samplerepo-things</a> to your GitHub account:</p>
-                  <panel type="seamless" header="%%How to fork a repo?%%">
-                    <p>Navigate to the on GitHub and click on the <img src="/se-book/gitAndGithub/push/images/fork.png" height="30"> button on the top-right corner.</p>
+              <div>
+                <ol>
+                  <li>
+                    <p>Fork the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your GitHub account:</p>
+                    <panel type="seamless" header="%%How to fork a repo?%%">
+                      <p>Navigate to the on GitHub and click on the <img src="/se-book/gitAndGithub/push/images/fork.png" height="30"> button on the top-right corner.</p>
+                      <p></p>
+                    </panel>
                     <p></p>
-                  </panel>
-                  <p></p>
-                </li>
-                <li>
-                  <p>Clone the fork (not the original) to your computer.</p>
-                </li>
-                <li>
-                  <p>Create some commits in your repo.</p>
-                </li>
-                <li>
-                  <p>Push the new commits to your fork on GitHub</p>
-                </li>
-              </ol>
-              <tabs>
-                <tab header="SourceTree">
-                  <div>
-                    <p>Click the <code>Push</code> button on the main menu, ensure the settings are as follows in the next dialog, and click the <code>Push</code> button on the dialog.</p>
-                    <img src="/se-book/gitAndGithub/push/images/sourcetree_1.png" height="150">
-                    <p></p>
-                  </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <p>Use the command <code>git push origin master</code>. Enter Github username and password when prompted.</p>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
+                  </li>
+                  <li>
+                    <p>Clone the fork (not the original) to your computer.</p>
+                  </li>
+                  <li>
+                    <p>Create some commits in your repo.</p>
+                  </li>
+                  <li>
+                    <p>Push the new commits to your fork on GitHub</p>
+                  </li>
+                </ol>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <p>Click the <code>Push</code> button on the main menu, ensure the settings are as follows in the next dialog, and click the <code>Push</code> button on the dialog.</p>
+                      <img src="/se-book/gitAndGithub/push/images/sourcetree_1.png" height="150">
+                      <p></p>
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <p>Use the command <code>git push origin master</code>. Enter Github username and password when prompted.</p>
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+              </div>
+              <div></div>
             </div>
-            <div></div>
           </panel>
         </div>
         <div>
           <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
+            <span slot="header" class="card-title"><div>
 <h4 id="branch">Branch</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can use Git branching</span></span></span></button>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use Git branching</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
               <p></p>
-            </p>
-            <p></p>
-            <div>
-              <p><strong>0. Observe that you are normally in the branch called <code>master</code>.</strong> For this, you can take any repo you have on your computer (e.g. a clone of the <a href="https://github.com/nus-cs2103-AY1718S2/samplerepo-things">samplerepo-things</a>).</p>
-              <tabs>
-                <tab header="SourceTree">
-                  <div>
-                    <img src="/se-book/gitAndGithub/branch/images/onMasterBranch.png" height="120">
-                    <p></p>
-                  </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <pre class="hljs"><code>git status
+              <div>
+                <p><strong>0. Observe that you are normally in the branch called <code>master</code>.</strong> For this, you can take any repo you have on your computer (e.g. a clone of the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>).</p>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <img src="/se-book/gitAndGithub/branch/images/onMasterBranch.png" height="120">
+                      <p></p>
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <pre class="hljs"><code>git status
 </code></pre>
-                    <p>⤵️</p>
-                    <pre class="hljs"><code>on branch master
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre class="hljs"><code>on branch master
 </code></pre>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
-              <p><strong>1. Start a branch named <code>feature1</code> and switch to the new branch.</strong></p>
-              <tabs>
-                <tab header="SourceTree">
-                  <div>
-                    <p>Click on the <code>Branch</code> button on the main menu. In the next dialog, enter the branch name and click <code>Create Branch</code></p>
-                    <img src="/se-book/gitAndGithub/branch/images/sourcetree_1.png" height="150">
-                    <p></p>
-                    <p>Note how the <code>feature1</code> is indicated as the current branch.</p>
-                    <img src="/se-book/gitAndGithub/branch/images/sourcetree_2.png" height="150">
-                    <p></p>
-                  </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <p>You can use the <code>branch</code> command to create a new branch and the <code>checkout</code> command to switch to a specific branch.</p>
-                    <pre class="hljs"><code>git branch feature1
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+                <p><strong>1. Start a branch named <code>feature1</code> and switch to the new branch.</strong></p>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <p>Click on the <code>Branch</code> button on the main menu. In the next dialog, enter the branch name and click <code>Create Branch</code></p>
+                      <img src="/se-book/gitAndGithub/branch/images/sourcetree_1.png" height="150">
+                      <p></p>
+                      <p>Note how the <code>feature1</code> is indicated as the current branch.</p>
+                      <img src="/se-book/gitAndGithub/branch/images/sourcetree_2.png" height="150">
+                      <p></p>
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <p>You can use the <code>branch</code> command to create a new branch and the <code>checkout</code> command to switch to a specific branch.</p>
+                      <pre class="hljs"><code>git branch feature1
 git checkout feature1
 </code></pre>
-                    <p>One-step shortcut to create a branch and switch to it at the same time:</p>
-                    <pre class="hljs"><code>git checkout –b feature1
+                      <p>One-step shortcut to create a branch and switch to it at the same time:</p>
+                      <pre class="hljs"><code>git checkout –b feature1
 </code></pre>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
-              <p><strong>2. Create some commits in the new branch.</strong> <span class="dimmed">Just commit as per normal. Commits you add while on a certain branch will become part of that branch.</span></p>
-              <p><strong>3. Switch to <code>master</code> branch.</strong> Note how the changes you did in the <code>feature1</code> branch are no longer in the working directory.</p>
-              <tabs>
-                <tab header="SourceTree">
-                  <div>
-                    <p>Double-click the <code>master</code> branch</p>
-                    <img src="/se-book/gitAndGithub/branch/images/sourcetree_3.png" height="150">
-                    <p></p>
-                  </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <pre class="hljs"><code>git checkout master
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+                <p><strong>2. Create some commits in the new branch.</strong> <span class="dimmed">Just commit as per normal. Commits you add while on a certain branch will become part of that branch.</span></p>
+                <p><strong>3. Switch to <code>master</code> branch.</strong> Note how the changes you did in the <code>feature1</code> branch are no longer in the working directory.</p>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <p>Double-click the <code>master</code> branch</p>
+                      <img src="/se-book/gitAndGithub/branch/images/sourcetree_3.png" height="150">
+                      <p></p>
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <pre class="hljs"><code>git checkout master
 </code></pre>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
-              <p><strong>4. Add a commit to the master branch.</strong> Let’s imagine it’s a bug fix.</p>
-              <img src="/se-book/gitAndGithub/branch/images/sourcetree_4.png" height="100">
-              <p></p>
-              <p><strong>5. Switch back to the <code>feature1</code> branch</strong> <span class="dimmed">(similar to step 3)</span>.</p>
-              <p><strong>6. Merge the <code>master</code> branch to the <code>feature1</code> branch</strong>, giving an end-result like the below. Also note how Git has created a <em>merge commit</em>.</p>
-              <img src="/se-book/gitAndGithub/branch/images/sourcetree_5.png" height="120">
-              <p></p>
-              <tabs>
-                <tab header="SourceTree">
-                  <div>
-                    <p>Right-click on the <code>master</code> branch and choose <code>merge master into the current branch</code>. Click <code>OK</code> in the next dialog.</p>
-                  </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <pre class="hljs"><code>git merge master
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+                <p><strong>4. Add a commit to the master branch.</strong> Let’s imagine it’s a bug fix.</p>
+                <img src="/se-book/gitAndGithub/branch/images/sourcetree_4.png" height="100">
+                <p></p>
+                <p><strong>5. Switch back to the <code>feature1</code> branch</strong> <span class="dimmed">(similar to step 3)</span>.</p>
+                <p><strong>6. Merge the <code>master</code> branch to the <code>feature1</code> branch</strong>, giving an end-result like the below. Also note how Git has created a <em>merge commit</em>.</p>
+                <img src="/se-book/gitAndGithub/branch/images/sourcetree_5.png" height="120">
+                <p></p>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <p>Right-click on the <code>master</code> branch and choose <code>merge master into the current branch</code>. Click <code>OK</code> in the next dialog.</p>
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <pre class="hljs"><code>git merge master
 </code></pre>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
-              <p>Observe how the changes you did in the <code>master</code> branch (i.e. the imaginary bug fix) is now available even when you are in the <code>feature1</code> branch.</p>
-              <p><strong>7. Add another commit to the <code>feature1</code> branch.</strong></p>
-              <p><strong>8. Switch to the <code>master</code> branch and add one more commit.</strong></p>
-              <p><strong>9. Merge <code>feature1</code> to the master branch</strong>, giving and end-result like this:</p>
-              <img src="/se-book/gitAndGithub/branch/images/sourcetree_6.png" height="150">
-              <p></p>
-              <tabs>
-                <tab header="SourceTree">
-                  <p>Right-click on the <code>feature1</code> branch and choose <code>Merge...</code>.</p>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <pre class="hljs"><code>git merge feature1
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+                <p>Observe how the changes you did in the <code>master</code> branch (i.e. the imaginary bug fix) is now available even when you are in the <code>feature1</code> branch.</p>
+                <p><strong>7. Add another commit to the <code>feature1</code> branch.</strong></p>
+                <p><strong>8. Switch to the <code>master</code> branch and add one more commit.</strong></p>
+                <p><strong>9. Merge <code>feature1</code> to the master branch</strong>, giving and end-result like this:</p>
+                <img src="/se-book/gitAndGithub/branch/images/sourcetree_6.png" height="150">
+                <p></p>
+                <tabs>
+                  <tab header="SourceTree">
+                    <p>Right-click on the <code>feature1</code> branch and choose <code>Merge...</code>.</p>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <pre class="hljs"><code>git merge feature1
 </code></pre>
-                  <hr>
-                </tab>
-              </tabs>
-              <p><strong>10. Create a new branch called <code>add-countries</code>, switch to it, and add some commits to it</strong> <span class="dimmed">(similar to steps 1-2 above)</span>. You should have something like this now:</p>
-              <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80">
-              <p></p>
-              <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to see something
-                like the below,</p>
-              <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100">
-              <p></p>
-              <p>... you are likely to see something like this instead:</p>
-              <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80">
-              <p></p>
-              <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided it is simpler
-                to just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
-              <p><strong>It is possible to force Git to create a merge commit even if fast forwarding is possible.</strong></p>
-              <tabs>
-                <tab header="SourceTree">
-                  <div>
-                    <p>Tick the box shown below when you merge a branch:</p>
-                    <img src="/se-book/gitAndGithub/branch/images/mergeBranchDialog.png" height="150">
-                    <p></p>
-                  </div>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <div>
-                    <p>Use the <code>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
-                    <pre class="hljs"><code>git merge --no-ff add-countries
+                    <hr>
+                  </tab>
+                </tabs>
+                <p><strong>10. Create a new branch called <code>add-countries</code>, switch to it, and add some commits to it</strong> <span class="dimmed">(similar to steps 1-2 above)</span>. You should have something like this now:</p>
+                <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80">
+                <p></p>
+                <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to see
+                  something like the below,</p>
+                <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100">
+                <p></p>
+                <p>... you are likely to see something like this instead:</p>
+                <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80">
+                <p></p>
+                <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided it is
+                  simpler to just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
+                <p><strong>It is possible to force Git to create a merge commit even if fast forwarding is possible.</strong></p>
+                <tabs>
+                  <tab header="SourceTree">
+                    <div>
+                      <p>Tick the box shown below when you merge a branch:</p>
+                      <img src="/se-book/gitAndGithub/branch/images/mergeBranchDialog.png" height="150">
+                      <p></p>
+                    </div>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <div>
+                      <p>Use the <code>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
+                      <pre class="hljs"><code>git merge --no-ff add-countries
 </code></pre>
-                  </div>
-                  <hr>
-                </tab>
-              </tabs>
+                    </div>
+                    <hr>
+                  </tab>
+                </tabs>
+              </div>
+              <div></div>
             </div>
-            <div></div>
           </panel>
         </div>
         <div>
           <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
+            <span slot="header" class="card-title"><div>
 <h4 id="merge-conflicts">Merge Conflicts</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can use Git to resolve merge conflicts</span></span></span></button>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use Git to resolve merge conflicts</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
               <p></p>
-            </p>
-            <p></p>
-            <div>
-              <p><strong>1. Start a branch named <code>fix1</code> in a local repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
-              <p><strong>2. Switch back to <code>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
-              <img src="/se-book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
-              <p></p>
-              <p><strong>3. Try to merge the <code>fix1</code> branch onto the <code>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
-              <pre class="hljs"><code>COLORS
+              <div>
+                <p><strong>1. Start a branch named <code>fix1</code> in a local repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
+                <p><strong>2. Switch back to <code>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
+                <img src="/se-book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
+                <p></p>
+                <p><strong>3. Try to merge the <code>fix1</code> branch onto the <code>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
+                <pre class="hljs"><code>COLORS
 ------
 blue
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
@@ -806,24 +905,24 @@ green
 red
 white
 </code></pre>
-              <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and a line starting with <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with
-                <code>=======</code>.</p>
-              <p>This is the conflicting part that is coming from the <code>master</code> branch:</p>
-              <pre class="hljs"><code>
+                <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and a line starting with <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting
+                  with <code>=======</code>.</p>
+                <p>This is the conflicting part that is coming from the <code>master</code> branch:</p>
+                <pre class="hljs"><code>
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 black
 =======
 
 </code></pre>
-              <p>This is the conflicting part that is coming from the <code>fix1</code> branch:</p>
-              <pre class="hljs"><code>
+                <p>This is the conflicting part that is coming from the <code>fix1</code> branch:</p>
+                <pre class="hljs"><code>
 =======
 green
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; fix1
 
 </code></pre>
-              <p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
-              <pre class="hljs"><code>COLORS
+                <p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
+                <pre class="hljs"><code>COLORS
 ------
 blue
 black
@@ -831,187 +930,204 @@ green
 red
 white
 </code></pre>
-              <p><strong>6. Stage the changes, and commit.</strong></p>
+                <p><strong>6. Stage the changes, and commit.</strong></p>
+              </div>
+              <div></div>
             </div>
-            <div></div>
           </panel>
         </div>
         <div>
           <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
+            <span slot="header" class="card-title"><div>
 <h4 id="create-prs">Create PRs</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can create PRs on GitHub</span></span></span></button>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can create PRs on GitHub</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
               <p></p>
-            </p>
-            <p></p>
-            <div>
-              <p><strong>1. Fork the <a href="https://github.com/nus-cs2103-AY1718S2/samplerepo-pr-practice">samplerepo-pr-practice</a> onto your GitHub account. Clone it onto your computer.</strong></p>
-              <p><strong>2. Create a branch named <code>add-intro</code> in your clone. Add a couple of commits</strong> which adds/modifies an <em>Introduction</em> section to the <a href="http://README.md">README.md</a>. Example:</p>
-              <pre><code class="hljs md">
+              <div>
+                <p><strong>1. Fork the <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a> onto your GitHub account. Clone it onto your computer.</strong></p>
+                <p><strong>2. Create a branch named <code>add-intro</code> in your clone. Add a couple of commits</strong> which adds/modifies an <em>Introduction</em> section to the <code>README.md</code>. Example:</p>
+                <pre><code class="hljs md">
 <span class="hljs-section"># Introduction</span>
-Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects. This repo can be used to practice creating PRs.
+Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects.
+This repo can be used to practice creating PRs.
 
 </code></pre>
-              <p><strong>3. Push the <code>add-intro</code> branch to your fork.</strong></p>
-              <tabs>
-                <tab header="SourceTree">
-                  <img src="/se-book/gitAndGithub/createPRs/images/pushBranchToFork.png" height="300">
-                  <p></p>
-                  <hr>
-                </tab>
-                <tab header="CLI">
-                  <pre class="hljs"><code>git push origin add-intro
+                <p><strong>3. Push the <code>add-intro</code> branch to your fork.</strong></p>
+                <tabs>
+                  <tab header="SourceTree">
+                    <img src="/se-book/gitAndGithub/createPRs/images/pushBranchToFork.png" height="300">
+                    <p></p>
+                    <hr>
+                  </tab>
+                  <tab header="CLI">
+                    <pre class="hljs"><code>git push origin add-intro
 </code></pre>
-                  <hr>
-                </tab>
-              </tabs>
-              <p><strong>4. Create a Pull Request from the <code>add-intro</code> branch in your fork to the <code>master</code> branch of the same fork</strong> (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>),
-                as described below.</p>
-              <p>4a. Go to the GitHub page of your fork (i.e. <code>https://github.com/{your_username}/samplerepo-pr-practice</code>), click on the <code>Pull Requests</code> tab, and then click on <code>New Pull Request</code> button.</p>
-              <img src="/se-book/gitAndGithub/createPRs/images/createPrButton.png" width="800">
-              <p></p>
-              <p>4b. Select <code>base fork</code> and <code>head fork</code> as follows:</p>
-              <ul>
-                <li><code>base fork</code>: your own fork (i.e. <code>{your user name}/samplerepo-pr-practice</code>, <mark>NOT <code>nus-cs2103-AY1718S2/samplerepo-pr-practice</code></mark>)</li>
-                <li><code>head fork</code>: your own fork.</li>
-              </ul>
-              <img src="/se-book/gitAndGithub/createPRs/images/selectBase.png" width="800">
-              <p></p>
-              <tip-box type="info">
-                <p>The <em>base fork</em> is where changes should be applied. The <em>head fork</em> contains the changes you would like to be applied.</p>
-              </tip-box>
-              <p>4c. (1) Set the base branch to <code>master</code> and head branch to <code>add-intro</code>, (2) confirm the <em>diff</em> contains the changes you propose to merge in this PR <span class="dimmed">(i.e. confirm that you did not accidentally include extra commits in the branch)</span>,
-                and (3) click the <code>Create pull request</code> button.</p>
-              <img src="/se-book/gitAndGithub/createPRs/images/checkDiff.png" width="800">
-              <p></p>
-              <p>4d. (1) Set PR name, (2) set PR description, and (3) Click the <code>Create pull request</code> button.</p>
-              <img src="/se-book/gitAndGithub/createPRs/images/setPrName.png" width="600">
-              <p></p>
-              <tip-box type="important">
-                <p>A common newbie mistake when creating branch-based PRs is to mix commits of one PR with another. To learn how to avoid that mistake, you are encouraged to continue and create another PR as explained below.
-                </p>
-              </tip-box>
-              <p><strong>5. In your local repo, create a new branch <code>add-summary</code></strong> off the <code>master</code> branch.</p>
-              <tip-box type="warning">
-                <p>When creating the new branch, it is very important that you switch back to the <code>master</code> branch first. If not, the new branch will be created off the current branch <code>add-intro</code>. And that is how you end up having commits
-                  of the first PR in the second PR as well.</p>
-              </tip-box>
-              <p><strong>6. Add a commit in the <code>add-summary</code> branch</strong> that adds a <em>Summary</em> section to the <code>README.md</code>, in exactly the same place you added the <em>Introduction</em> section earlier.</p>
-              <img src="/se-book/gitAndGithub/createPRs/images/addSummaryBranch.png" width="400">
-              <p></p>
-              <p><strong>7. Push the <code>add-summary</code> to your fork and create a new PR</strong> similar to before.</p>
-              <panel header=":paperclip: Resources" expanded="">
+                    <hr>
+                  </tab>
+                </tabs>
+                <p><strong>4. Create a Pull Request from the <code>add-intro</code> branch in your fork to the <code>master</code> branch of the same fork</strong> (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>),
+                  as described below.</p>
+                <p>4a. Go to the GitHub page of your fork (i.e. <code>https://github.com/{your_username}/samplerepo-pr-practice</code>), click on the <code>Pull Requests</code> tab, and then click on <code>New Pull Request</code> button.</p>
+                <img src="/se-book/gitAndGithub/createPRs/images/createPrButton.png" width="800">
+                <p></p>
+                <p>4b. Select <code>base fork</code> and <code>head fork</code> as follows:</p>
                 <ul>
-                  <li><a href="https://help.github.com/articles/creating-a-pull-request/">GitHub's own documentation on creating a PR</a></li>
+                  <li><code>base fork</code>: your own fork (i.e. <code>{your user name}/samplerepo-pr-practice</code>, <mark>NOT <code>se-edu/samplerepo-pr-practice</code></mark>)</li>
+                  <li><code>head fork</code>: your own fork.</li>
                 </ul>
-              </panel>
+                <img src="/se-book/gitAndGithub/createPRs/images/selectBase.png" width="800">
+                <p></p>
+                <tip-box type="info">
+                  <p>The <em>base fork</em> is where changes should be applied. The <em>head fork</em> contains the changes you would like to be applied.</p>
+                </tip-box>
+                <p>4c. (1) Set the base branch to <code>master</code> and head branch to <code>add-intro</code>, (2) confirm the <em>diff</em> contains the changes you propose to merge in this PR <span class="dimmed">(i.e. confirm that you did not accidentally include extra commits in the branch)</span>,
+                  and (3) click the <code>Create pull request</code> button.</p>
+                <img src="/se-book/gitAndGithub/createPRs/images/checkDiff.png" width="800">
+                <p></p>
+                <p>4d. (1) Set PR name, (2) set PR description, and (3) Click the <code>Create pull request</code> button.</p>
+                <img src="/se-book/gitAndGithub/createPRs/images/setPrName.png" width="600">
+                <p></p>
+                <tip-box type="important">
+                  <p>A common newbie mistake when creating branch-based PRs is to mix commits of one PR with another. To learn how to avoid that mistake, you are encouraged to continue and create another PR as explained below.
+                  </p>
+                </tip-box>
+                <p><strong>5. In your local repo, create a new branch <code>add-summary</code></strong> off the <code>master</code> branch.</p>
+                <tip-box type="warning">
+                  <p>When creating the new branch, it is very important that you switch back to the <code>master</code> branch first. If not, the new branch will be created off the current branch <code>add-intro</code>. And that is how you end up having
+                    commits of the first PR in the second PR as well.</p>
+                </tip-box>
+                <p><strong>6. Add a commit in the <code>add-summary</code> branch</strong> that adds a <em>Summary</em> section to the <code>README.md</code>, in exactly the same place you added the <em>Introduction</em> section earlier.</p>
+                <img src="/se-book/gitAndGithub/createPRs/images/addSummaryBranch.png" width="400">
+                <p></p>
+                <p><strong>7. Push the <code>add-summary</code> to your fork and create a new PR</strong> similar to before.</p>
+                <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                  <ul>
+                    <li><a href="https://help.github.com/articles/creating-a-pull-request/">GitHub's own documentation on creating a PR</a></li>
+                  </ul>
+                </panel>
+              </div>
+              <div></div>
             </div>
-            <div></div>
           </panel>
         </div>
         <div>
           <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
+            <span slot="header" class="card-title"><div>
 <h4 id="manage-prs">Manage PRs</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can review and merge PRs on GitHub</span></span></span></button>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can review and merge PRs on GitHub</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
               <p></p>
-            </p>
-            <p></p>
-            <div>
-              <p><strong>1. Go to GitHub page of your fork and review the <code>add-intro</code> PR</strong> you created previously in <a href="/se-book/gitAndGithub/createPRs/index.html">Tools → Git &amp; GitHub → Create PRs</a> to simulate the PR being
-                reviewed by another developer, as explained below. <span class="dimmed">Note that some features available to PR reviewers will be unavailable to you because you are also the author of the PR.</span></p>
-              <p>1a. Go to the respective PR page and click on the <code>Files changed</code> tab. Hover over the line you want to comment on and click on the <code>+</code> icon that appears on the left margin. That should create a text box for you to enter
-                your comment.</p>
-              <img src="/se-book/gitAndGithub/managePRs/images/startReview.png" width="800">
-              <p></p>
-              <p>1b. Enter some dummy comment and click on <code>Start a review</code> button.</p>
-              <img src="/se-book/gitAndGithub/managePRs/images/addComment.png" width="800">
-              <p></p>
-              <p>1c. Add a few more comments in other places of the code.</p>
-              <p>1d. Click on the <code>Review Changes</code> button, enter an overall comment, and click on the <code>Submit review</code> button.</p>
-              <img src="/se-book/gitAndGithub/managePRs/images/submitReview.png" width="500">
-              <p></p>
-              <p><strong>2. Update the PR</strong> to simulate revising the code based on reviewer comments. Add some more commits to the <code>add-intro</code> branch and push the new commits to the fork. Observe how the PR is updated automatically to reflect
-                the new code.</p>
-              <p><strong>3. Merge the PR.</strong> Go to the GitHub page of the respective PR, scroll to the bottom of the <code>Conversation</code> tab, and click on the <code>Merge pull request</code> button, followed by the <code>Confirm merge</code>                button. You should see a <code>Pull request successfully merged and closed</code> message after the PR is merged.</p>
-              <img src="/se-book/gitAndGithub/managePRs/images/mergePr.png" width="800">
-              <p></p>
-              <p><strong>4. Sync the local repo with the remote repo.</strong> Because of the merge you did on the GitHub, the <code>master</code> branch of your fork is now ahead of your local repo by one commit. To sync the local repo with the remote repo,
-                pull the <code>master</code> branch to the local repo.</p>
-              <pre class="hljs"><code>git checkout master
+              <div>
+                <p><strong>1. Go to GitHub page of your fork and review the <code>add-intro</code> PR</strong> you created previously in <a href="/se-book/gitAndGithub/createPRs/index.html">Tools → Git &amp; GitHub → Create PRs</a> to simulate the PR
+                  being reviewed by another developer, as explained below. <span class="dimmed">Note that some features available to PR reviewers will be unavailable to you because you are also the author of the PR.</span></p>
+                <p>1a. Go to the respective PR page and click on the <code>Files changed</code> tab. Hover over the line you want to comment on and click on the <span style="color:#0066ff"><span class="fas fa-plus-square"></span></span> icon that appears
+                  on the left margin. That should create a text box for you to enter your comment.</p>
+                <img src="/se-book/gitAndGithub/managePRs/images/startReview.png" width="800">
+                <p></p>
+                <p>1b. Enter some dummy comment and click on <code>Start a review</code> button.</p>
+                <img src="/se-book/gitAndGithub/managePRs/images/addComment.png" width="800">
+                <p></p>
+                <p>1c. Add a few more comments in other places of the code.</p>
+                <p>1d. Click on the <code>Review Changes</code> button, enter an overall comment, and click on the <code>Submit review</code> button.</p>
+                <img src="/se-book/gitAndGithub/managePRs/images/submitReview.png" width="500">
+                <p></p>
+                <p><strong>2. Update the PR</strong> to simulate revising the code based on reviewer comments. Add some more commits to the <code>add-intro</code> branch and push the new commits to the fork. Observe how the PR is updated automatically to
+                  reflect the new code.</p>
+                <p><strong>3. Merge the PR.</strong> Go to the GitHub page of the respective PR, scroll to the bottom of the <code>Conversation</code> tab, and click on the <code>Merge pull request</code> button, followed by the <code>Confirm merge</code>                  button. You should see a <code>Pull request successfully merged and closed</code> message after the PR is merged.</p>
+                <img src="/se-book/gitAndGithub/managePRs/images/mergePr.png" width="800">
+                <p></p>
+                <p><strong>4. Sync the local repo with the remote repo.</strong> Because of the merge you did on the GitHub, the <code>master</code> branch of your fork is now ahead of your local repo by one commit. To sync the local repo with the remote
+                  repo, pull the <code>master</code> branch to the local repo.</p>
+                <pre class="hljs"><code>git checkout master
 git pull origin master
 </code></pre>
-              <p>Observe how the <code>add-intro</code> branch is now merged to the <code>master</code> branch in your local repo as well.</p>
-              <p><strong>5. De-conflict the <code>add-summary</code> PR.</strong> Note that GitHub page for the <code>add-summary</code> PR is now showing a conflict <span class="dimmed">(when you scroll to the bottom of that page, you should see a message <code>This branch has conflicts that must be resolved</code>)</span>.
-                You can resolve it locally and update the PR accordingly, as explained below.</p>
-              <p>5a. Switch to the <code>add-summary</code> branch. To make that branch up-to-date with the <code>master</code> branch, merge the <code>master</code> branch to it, which will surface the merge conflict. Resolve it and complete the merge.</p>
-              <p>5b. Push the updated <code>add-summary</code> branch to the fork. That will remove the 'merge conflicts' warning in the GitHub page of the PR.</p>
-              <p><strong>6. Merge the <code>add-summary</code> PR</strong> using the GitHub interface, similar to how you merged the previous PR.</p>
-              <tip-box type="info">
-                <p>Note that you could have merged the <code>add-summary</code> branch to the <code>master</code> branch locally before pushing it to GitHub. In that case, the PR will be merged on GitHub automatically to reflect that the branch has been
-                  merged already.
-                </p>
-              </tip-box>
+                <p>Observe how the <code>add-intro</code> branch is now merged to the <code>master</code> branch in your local repo as well.</p>
+                <p><strong>5. De-conflict the <code>add-summary</code> PR.</strong> Note that GitHub page for the <code>add-summary</code> PR is now showing a conflict <span class="dimmed">(when you scroll to the bottom of that page, you should see a message <code>This branch has conflicts that must be resolved</code>)</span>.
+                  You can resolve it locally and update the PR accordingly, as explained below.</p>
+                <p>5a. Switch to the <code>add-summary</code> branch. To make that branch up-to-date with the <code>master</code> branch, merge the <code>master</code> branch to it, which will surface the merge conflict. Resolve it and complete the merge.</p>
+                <p>5b. Push the updated <code>add-summary</code> branch to the fork. That will remove the 'merge conflicts' warning in the GitHub page of the PR.</p>
+                <p><strong>6. Merge the <code>add-summary</code> PR</strong> using the GitHub interface, similar to how you merged the previous PR.</p>
+                <tip-box type="info">
+                  <p>Note that you could have merged the <code>add-summary</code> branch to the <code>master</code> branch locally before pushing it to GitHub. In that case, the PR will be merged on GitHub automatically to reflect that the branch has been
+                    merged already.
+                  </p>
+                </tip-box>
+              </div>
+              <div></div>
             </div>
-            <div></div>
           </panel>
         </div>
         <div>
           <panel type="seamless" expanded="">
-            <span slot="header" class="panel-title"><div>
+            <span slot="header" class="card-title"><div>
 <h4 id="forking-workflow">Forking Workflow</h4></div></span>
-            <p><button type="button" class="btn btn-default btn-sm" aria-label="Left Align"><span><span class="dimmed"><span><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Can follow Forking Workflow</span></span></span></button>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can follow Forking Workflow</span>
+                </span>
+                </span>
+                </span>
+                <p></p>
+              </p>
               <p></p>
-            </p>
-            <p></p>
-            <div>
-              <p></p>
-              <ol>
-                <li>
-                  <p><strong>One member: set up the team org and the team repo.</strong></p>
-                  <ul>
-                    <li><strong><a href="https://help.github.com/articles/creating-a-new-organization-from-scratch/">Create a GitHub organization</a></strong> for your team. The org name is up to you. We'll refer to this organization as <em>team org</em>                      from now on.</li>
-                    <li><strong><a href="https://help.github.com/enterprise/2.10/admin/guides/user-management/creating-teams/">Add a team </a></strong> called <code>developers</code> to your team org.</li>
-                    <li><strong><a href="https://help.github.com/enterprise/2.0/admin/guides/user-management/adding-or-inviting-people-to-teams/">Add your team members</a></strong> to the <code>developers</code> team.</li>
-                    <li><strong>Fork <a href="https://github.com/se-edu/samplerepo-workflow-practice">se-edu/samplerepo-workflow-practice</a> to your team org</strong>. We'll refer to this as the <em>team repo</em>.</li>
-                    <li><strong><a href="https://help.github.com/articles/managing-team-access-to-an-organization-repository/">Add the forked repo</a> to the <code>developers</code> team.</strong> Give write access.</li>
-                  </ul>
-                </li>
-                <li>
-                  <p><strong>Each team member: create PRs via own fork</strong></p>
-                  <ul>
-                    <li><strong>Fork that repo</strong> from your team org to your own GitHub account.</li>
-                    <li><strong>Create a PR</strong> to add a file <code>yourName.md</code> <span class="dimmed"> (e.g. <code>jonhDoe.md</code>) </span> containing a brief resume of yourself <span class="dimmed"> (branch → commit → push → create PR)</span></li>
-                  </ul>
-                </li>
-                <li>
-                  <p><strong>For each PR: review, update, and merge.</strong></p>
-                  <ul>
-                    <li>A team member (not the PR author): Review the PR by adding comments (can be just dummy comments).</li>
-                    <li>PR author: Update the PR by pushing more commits to it, to simulate updating the PR based on review comments.</li>
-                    <li>Another team member: Merge the PR using the GitHub interface.</li>
-                    <li>All members: <a href="https://help.github.com/articles/syncing-a-fork/">Sync your local repo (and your fork) with upstream repo</a>. In this case, your <em>upstream repo</em> is the repo in your team org.</li>
-                  </ul>
-                </li>
-                <li>
-                  <p><strong>Create conflicting PRs.</strong></p>
-                  <ul>
-                    <li>Each team member: Create a PR to add yourself under the <code>Team Members</code> section in the <code>README.md</code>.</li>
-                    <li>One member: in the <code>master</code> branch, remove John Doe and Jane Doe from the <code>README.md</code>, commit, and push to the main repo.</li>
-                  </ul>
-                </li>
-                <li>
-                  <p><strong>Merge conflicting PRs one at a time.</strong> Before merging a PR, you’ll have to resolve conflicts. Steps:</p>
-                  <ul>
-                    <li>[Optional] A member can inform the PR author (by posting a comment) that there is a conflict in the PR.</li>
-                    <li>PR author: Pull the <code>master</code> branch from the repo in your team org. Merge the pulled <code>master</code> branch to your PR branch. Resolve the merge conflict that crops up during the merge. Push the updated PR branch to
-                      your fork.</li>
-                    <li>Another member or the PR author: When GitHub does not indicate a conflict anymore, you can go ahead and merge the PR.</li>
-                  </ul>
-                </li>
-              </ol>
+              <div>
+                <p><span class="fas fa-info-circle"></span> This activity is best done as a team. If you are learning this alone, you can simulate a team by using two different browsers to log into GitHub using two different accounts.</p>
+                <ol>
+                  <li>
+                    <p><strong>One member: set up the team org and the team repo.</strong></p>
+                    <ul>
+                      <li><strong><a href="https://help.github.com/articles/creating-a-new-organization-from-scratch/">Create a GitHub organization</a></strong> for your team. The org name is up to you. We'll refer to this organization as <em>team org</em>                        from now on.</li>
+                      <li><strong><a href="https://help.github.com/enterprise/2.10/admin/guides/user-management/creating-teams/">Add a team </a></strong> called <code>developers</code> to your team org.</li>
+                      <li><strong><a href="https://help.github.com/enterprise/2.0/admin/guides/user-management/adding-or-inviting-people-to-teams/">Add your team members</a></strong> to the <code>developers</code> team.</li>
+                      <li><strong>Fork <a href="https://github.com/se-edu/samplerepo-workflow-practice">se-edu/samplerepo-workflow-practice</a> to your team org</strong>. We'll refer to this as the <em>team repo</em>.</li>
+                      <li><strong><a href="https://help.github.com/articles/managing-team-access-to-an-organization-repository/">Add the forked repo</a> to the <code>developers</code> team.</strong> Give write access.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p><strong>Each team member: create PRs via own fork</strong></p>
+                    <ul>
+                      <li><strong>Fork that repo</strong> from your team org to your own GitHub account.</li>
+                      <li><strong>Create a PR</strong> to add a file <code>yourName.md</code> <span class="dimmed"> (e.g. <code>jonhDoe.md</code>) </span> containing a brief resume of yourself <span class="dimmed"> (branch → commit → push → create PR)</span></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p><strong>For each PR: review, update, and merge.</strong></p>
+                    <ul>
+                      <li>A team member (not the PR author): Review the PR by adding comments (can be just dummy comments).</li>
+                      <li>PR author: Update the PR by pushing more commits to it, to simulate updating the PR based on review comments.</li>
+                      <li>Another team member: Merge the PR using the GitHub interface.</li>
+                      <li>All members: <a href="https://help.github.com/articles/syncing-a-fork/">Sync your local repo (and your fork) with upstream repo</a>. In this case, your <em>upstream repo</em> is the repo in your team org.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p><strong>Create conflicting PRs.</strong></p>
+                    <ul>
+                      <li>Each team member: Create a PR to add yourself under the <code>Team Members</code> section in the <code>README.md</code>.</li>
+                      <li>One member: in the <code>master</code> branch, remove John Doe and Jane Doe from the <code>README.md</code>, commit, and push to the main repo.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p><strong>Merge conflicting PRs one at a time.</strong> Before merging a PR, you’ll have to resolve conflicts. Steps:</p>
+                    <ul>
+                      <li>[Optional] A member can inform the PR author (by posting a comment) that there is a conflict in the PR.</li>
+                      <li>PR author: Pull the <code>master</code> branch from the repo in your team org. Merge the pulled <code>master</code> branch to your PR branch. Resolve the merge conflict that crops up during the merge. Push the updated PR branch to
+                        your fork.</li>
+                      <li>Another member or the PR author: When GitHub does not indicate a conflict anymore, you can go ahead and merge the PR.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+              <div></div>
             </div>
-            <div></div>
           </panel>
         </div>
       </div>
@@ -1022,6 +1138,8 @@ git pull origin master
 </body>
 <script src="..\markbind\js\vue.min.js"></script>
 <script src="..\markbind\js\vue-strap.min.js"></script>
+<script src="..\markbind\js\polyfill.min.js"></script>
+<script src="..\markbind\js\bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
 </script>

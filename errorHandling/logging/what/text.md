@@ -6,7 +6,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{glyphicon_flag}} Can explain logging</span>
+<span id="outcomes">{{ icon_outcome }} Can explain logging</span>
 
 <div id="body">
 
