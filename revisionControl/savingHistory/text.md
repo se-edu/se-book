@@ -12,7 +12,7 @@
 
 ##### Tracking and Ignoring
 
-**In a repo, we can specify which files to track and which files to ==ignore==.** Some files such a temporary log files created during the build/test process should not be revision-controlled.
+**In a repo, we can specify which files to track and which files to ==ignore==.** Some files such as temporary log files created during the build/test process should not be revision-controlled.
 
 ##### Staging and Committing 
 
