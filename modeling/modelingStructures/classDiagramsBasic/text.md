@@ -12,9 +12,9 @@
 
 **Classes form the basis of class diagrams. _Associations_ among objects/classes play an important role in an OO solution.**
 
-<panel src="../../../uml/classDiagrams/classes/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Classes → What" alt="{{ icon_prereq }} Classes" />
-<panel src="../../../uml/classDiagrams/classLevelMembers/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Class-Level Members → What" alt="{{ icon_prereq }} Class-Level Members" />
-<panel src="../../../uml/classDiagrams/associations/what/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations → What" alt="{{ icon_prereq }} Associations"/>
+<panel type="seamless" src="../../../uml/classDiagrams/classes/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Classes → What" alt="{{ icon_prereq }} Classes" />
+<panel type="seamless" src="../../../uml/classDiagrams/classLevelMembers/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Class-Level Members → What" alt="{{ icon_prereq }} Class-Level Members" />
+<panel type="seamless" src="../../../uml/classDiagrams/associations/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations → What" alt="{{ icon_prereq }} Associations"/>
 
 The most basic class diagram is a bunch of classes with some solid lines among them to represent associations, such as this one.
 
@@ -28,10 +28,10 @@ The most basic class diagram is a bunch of classes with some solid lines among t
 
 In addition, **associations can show additional decorations such as _association labels_, _association roles_, _multiplicity_ and _navigability_** to add more information to a class diagram.
 
-<panel src="../../../../book/uml/classDiagrams/associations/labels/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations → Labels" alt="{{ icon_prereq }} Labels" />
-<panel src="../../../../book/uml/classDiagrams/associations/roles/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations → Roles" alt="{{ icon_prereq }} Roles" />
-<panel src="../../../../book/uml/classDiagrams/associations/multiplicity/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations → Multiplicity" alt="{{ icon_prereq }} Multiplicity" />
-<panel src="../../../../book/uml/classDiagrams/associations/navigability/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations → Navigability" alt="{{ icon_prereq }} Navigability" />
+<panel type="seamless" src="../../../../book/uml/classDiagrams/associations/labels/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations → Labels" alt="{{ icon_prereq }} Labels" />
+<panel type="seamless" src="../../../../book/uml/classDiagrams/associations/roles/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations → Roles" alt="{{ icon_prereq }} Roles" />
+<panel type="seamless" src="../../../../book/uml/classDiagrams/associations/multiplicity/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations → Multiplicity" alt="{{ icon_prereq }} Multiplicity" />
+<panel type="seamless" src="../../../../book/uml/classDiagrams/associations/navigability/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations → Navigability" alt="{{ icon_prereq }} Navigability" />
 
 <tip-box> 
 
