@@ -6,7 +6,7 @@
 </span>
 
 <span id="icon_deadline">:alarm_clock:</span>
-<span id="icon_dislike">{{ glyphicon_thumbs_down }}</span>
+<span id="icon_dislike">{{ fas_thumbs_down | safe }}</span>
 <span id="icon_example">{{ fas_cube | safe }}</span>
 <span id="icon_embedding">{{ glyphicon_log_in | safe }}</span>
 <span id="icon_exercise">{{ fas_dumbbell | safe }}</span>
@@ -14,7 +14,7 @@
 <span id="icon_info">{{ fas_info_circle | safe }}</span>
 <span id="icon_individual">{{ fas_user | safe }}</span>
 <span id="icon_lecture">{{ glyphicon_blackboard | safe }}</span>
-<span id="icon_like">{{ glyphicon_thumbs_up }}</span>
+<span id="icon_like">{{ fas_thumbs_up | safe }}</span>
 <span id="icon_important_big_red"><font color="red"><big>{{ glyphicon_exclamation_sign |safe }}</big></font></span>
 <span id="icon_new_window">{{ glyphicon_new_window | safe }}</span>
 <span id="icon_outcome">{{ fas_trophy | safe }}</span>
@@ -32,6 +32,6 @@
 <span id="icon_tutorial">{{ fas_chalkboard_teacher | safe }}</span>
 <span id="icon_slides">{{ far_images | safe }}</span>
 <span id="icon_video">{{ glyphicon_facetime_video | safe }}</span>
+<span id="bad"><font color="red"><md>**{{ icon_dislike | safe }} Bad**</md></font></span>
+<span id="good"><font color="green"><md>**{{ icon_like | safe }} Good**</md></font></span>
 
-<span id="good"><font color="green">**{{ icon_like}} Good**</font></span>
-<span id="bad"><font color="red">**{{ icon_dislike}} Bad**</font></span>
