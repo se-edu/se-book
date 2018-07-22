@@ -110,6 +110,7 @@ Meaning of some shortened headings:
   
 
 #### Boxed-Text Styles
+<div class="indented">
 
 <tip-box type="info">
     additional info
@@ -132,6 +133,8 @@ Meaning of some shortened headings:
 <tip-box type="definition">
     definition
 </tip-box>
+
+</div>
 
 #### Meaning of Icons
 
