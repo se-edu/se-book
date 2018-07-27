@@ -10,7 +10,7 @@
 
 <div id="body">
 
-An OO solution is basically a network of objects interacting with each other. Therefore, **it is useful to be able to model how the relevant objects are 'networked' together** inside a software %%&nbsp;i.e. how the objects are connect together%%. 
+An OO solution is basically a network of objects interacting with each other. Therefore, **it is useful to be able to model how the relevant objects are 'networked' together** inside a software %%&nbsp;i.e. how the objects are connected together%%. 
 
 <tip-box> 
 
@@ -40,10 +40,7 @@ However, object structures do not change at random; they change based on a set o
 
 </tip-box>
 
-UML Object Diagrams are used to model object structures and UML class diagrams are used to model class structures of an OO solution.
-
-<panel src="../../../../book/uml/objectDiagrams/introduction/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} UML → Object Diagrams → Introduction" expanded/> 
-<panel src="../../../../book/uml/classDiagrams/introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Introduction → What" expanded/>
+UML _Object Diagrams_ are used to model object structures and UML _Class Diagrams_ are used to model class structures of an OO solution.
 
 <tip-box> 
 

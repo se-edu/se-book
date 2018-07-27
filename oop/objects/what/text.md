@@ -1,6 +1,6 @@
 <div id="title">
 
-#### Basic
+#### What
 
 </div>
 
@@ -57,11 +57,11 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 
 | Object      | Real World? | Virtual World? | Example of State (i.e. Data)       | Examples of Behavior (i.e. Operations)                |
 | :---------: |:-----------:|:--------------:|:----------------------------------:| :----------------------------------------------------:|
-| Adam        | **🗸** | **🗸** | Name, Date of Birth                | Calculate age based on birthday                       |
-| Pen         | **🗸** | %%-%% | Ink color, Amount of ink remaining | Write                                                 |
-| AgeList     | %%-%% | **🗸** | Recorded ages                      | Give the number of entries, Accept an entry to record |
-| Calculator  | **🗸** | **🗸** | Numbers already entered            | Calculate the sum, divide                             |
-| You/Main    | **🗸** | **🗸** | Average age, Sum of ages           | Use other objects to calculate                        |
+| Adam        | {{ icon_tick }} | {{ icon_tick }} | Name, Date of Birth                | Calculate age based on birthday                       |
+| Pen         | {{ icon_tick }} | %%-%%           | Ink color, Amount of ink remaining | Write                                                 |
+| AgeList     | %%-%%           | {{ icon_tick }} | Recorded ages                      | Give the number of entries, Accept an entry to record |
+| Calculator  | {{ icon_tick }} | {{ icon_tick }} | Numbers already entered            | Calculate the sum, divide                             |
+| You/Main    | {{ icon_tick }} | {{ icon_tick }} | Average age, Sum of ages           | Use other objects to calculate                        |
 
 </tip-box>
 

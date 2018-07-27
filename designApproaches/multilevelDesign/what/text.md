@@ -18,7 +18,7 @@ In a smaller system, design of the entire system can be shown in one place.
 
 {{ icon_example }} This class diagram of [se-edu/addressbook-level3](https://se-edu.github.io/addressbook-level3) depicts the design of the entire software.
 
-<img src="https://se-edu.github.io/addressbook-level3/doc/images/mainClassDiagram.png" width="600" />
+<img src="https://se-edu.github.io/addressbook-level3/images/mainClassDiagram.png" width="600" />
 
 </tip-box>
 
