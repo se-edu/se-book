@@ -38,7 +38,8 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
 </tip-box>
 
 
-**Integrated Development Environments (IDEs)** can automate the intermediate step of compiling. They usually have a ‘Run’ button which compiles the code first and then run it.
+**Integrated Development Environments (IDEs)** can automate the intermediate step of compiling. They usually have a <span style="color:green">{{ fas_play_circle }}</span> _Run_ button which compiles the code first and then runs it.
+
 Example IDEs:
 * Intellij IDEA
 * Eclipse
