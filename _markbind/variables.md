@@ -28,7 +28,7 @@
 <span id="icon_resource">{{ fas_paperclip | safe }}</span>
 <span id="icon_tangential"><span class='badge badge-pill badge-secondary'>tangential</span></span>
 <span id="icon_team">{{fas_users | safe }}</span>
-<span id="icon_terminal"><smal><span class="badge badge-secondary">{{ fas_terminal | safe }}</span></smal></span>
+<span id="icon_terminal"><smal><span class="badge badge-secondary">&gt;_</span></smal></span>
 <span id="icon_text">{{ far_file_alt | safe }}</span>
 <span id="icon_tick">{{ fas_check | safe }}</span>
 <span id="icon_tick_green"><span style="color:green">{{ icon_tick | safe }}</span></span>
@@ -42,5 +42,6 @@
 <span id="bad"><font color="red"><md>**{{ icon_dislike | safe }} Bad**</md></font></span>
 <span id="good"><font color="green"><md>**{{ icon_like | safe }} Good**</md></font></span>
 
-<span id="similar"><span style="opacity: 0.5"> <span class="badge badge-pill badge-success">{{ fas_equals | safe }}</span></span></span>
 <span id="different"><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger">{{ fas_not_equal | safe }}</span></span></span>
+<span id="oracle"><small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></span>
+<span id="similar"><span style="opacity: 0.5"> <span class="badge badge-pill badge-success">{{ fas_equals | safe }}</span></span></span>

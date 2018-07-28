@@ -150,6 +150,7 @@ Meaning of some shortened headings:
 {{ icon_print }} : printable version<br>
 {{ icon_preview }} : preview/more info<br>
 {{ icon_video }} : video<br>
+{{ icon_termianl }} : a command to be run in a terminal<br>
 {{ icon_text }} : textual description<br>
 {{ icon_slides }} : slides<br>
 {{ icon_output }} : output produced by running code<br>
