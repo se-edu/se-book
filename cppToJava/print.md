@@ -25,6 +25,12 @@ title: "C++ to Java [Printable]"
 <include src="gettingStarted/compiling/unit-inParent-asFlat-print.md" boilerplate />
 <include src="gettingStarted/running/unit-inParent-asFlat-print.md" boilerplate />
 
+## Data Types
+
+<include src="dataTypes/primitiveTypes/unit-inParent-asFlat-print.md" boilerplate />
+<include src="dataTypes/variables/unit-inParent-asFlat-print.md" boilerplate />
+<include src="dataTypes/operators/unit-inParent-asFlat-print.md" boilerplate />
+
 
 </div>
 
