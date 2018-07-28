@@ -18,6 +18,10 @@ title: "C++ to Java [Printable]"
 
 ## Getting Started
 
+<include src="gettingStarted/installation/unit-inParent-asFlat-print.md" boilerplate />
+<include src="gettingStarted/helloWorld/unit-inParent-asFlat-print.md" boilerplate />
+<include src="gettingStarted/compiling/unit-inParent-asFlat-print.md" boilerplate />
+<include src="gettingStarted/running/unit-inParent-asFlat-print.md" boilerplate />
 
 
 </div>
