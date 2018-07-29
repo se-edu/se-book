@@ -11,5 +11,6 @@
 <include src="dataTypes/container-inParent-asPanel.md" boilerplate />
 <include src="controlFlow/container-inParent-asPanel.md" boilerplate />
 <include src="objects/container-inParent-asPanel.md" boilerplate />
+<include src="classes/container-inParent-asPanel.md" boilerplate />
 
 </div>

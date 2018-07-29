@@ -1,6 +1,6 @@
 <div id="title">
 
-## Objects
+## Java Objects
 </div>
 
 <div id="body">
