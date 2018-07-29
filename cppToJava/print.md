@@ -38,6 +38,11 @@ title: "C++ to Java [Printable]"
 <include src="controlFlow/loops/unit-inParent-asFlat-print.md" boilerplate />
 <include src="controlFlow/methods/unit-inParent-asFlat-print.md" boilerplate />
 
+## Java Objects
+
+<include src="objects/usingObjects/unit-inParent-asFlat-print.md" boilerplate />
+<include src="objects/instanceMembers/unit-inParent-asFlat-print.md" boilerplate />
+
 </div>
 
 </div>
