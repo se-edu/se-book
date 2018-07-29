@@ -42,6 +42,8 @@ title: "C++ to Java [Printable]"
 
 <include src="objects/usingObjects/unit-inParent-asFlat-print.md" boilerplate />
 <include src="objects/instanceMembers/unit-inParent-asFlat-print.md" boilerplate />
+<include src="objects/passingObjects/unit-inParent-asFlat-print.md" boilerplate />
+<include src="objects/garbageCollection/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 
