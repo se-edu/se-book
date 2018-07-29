@@ -51,6 +51,11 @@ title: "C++ to Java [Printable]"
 <include src="classes/gettersAndSetters/unit-inParent-asFlat-print.md" boilerplate />
 <include src="classes/classLevelMembers/unit-inParent-asFlat-print.md" boilerplate />
 
+## Some Useful Classes
+
+<include src="usefulClasses/api/unit-inParent-asFlat-print.md" boilerplate />
+<include src="usefulClasses/stringClass/unit-inParent-asFlat-print.md" boilerplate />
+
 
 
 </div>
