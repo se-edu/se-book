@@ -30,6 +30,7 @@ title: "C++ to Java [Printable]"
 <include src="dataTypes/primitiveTypes/unit-inParent-asFlat-print.md" boilerplate />
 <include src="dataTypes/variables/unit-inParent-asFlat-print.md" boilerplate />
 <include src="dataTypes/operators/unit-inParent-asFlat-print.md" boilerplate />
+<include src="dataTypes/arrays/unit-inParent-asFlat-print.md" boilerplate />
 
 
 </div>

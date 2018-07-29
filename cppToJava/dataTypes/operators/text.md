@@ -11,7 +11,7 @@
 <div id="body">
 
 
-Java has the following arithmetic operators:
+Java has the following **arithmetic operators**:
 Operator | Description | Examples
 ---------|-------------|---------
 `+` | Additive operator |
@@ -33,14 +33,14 @@ System.out.println(hour * 60 + minute);
 Number of minutes since midnight: 719
 ```
 
-{{ similar }} When an expression has multiple operators, normal operator precedence rules apply.
+{{ similar }} When an expression has multiple operators, normal **operator precedence** rules apply.
 
 {{ different }} Java does not allow _operator overloading_.
 
-> {{ oracle }} The unary operators require only one operand; they perform various operations such as incrementing/decrementing a value by one, negating an expression, or inverting the value of a boolean.
+> The **unary operators** require only one operand; they perform various operations such as incrementing/decrementing a value by one, negating an expression, or inverting the value of a boolean.{{ oracle }}
 
 
-Operator | Description | example
+Operator | Description {{ oracle }} | example
 ---------|-------------|--------
 `+` | Unary plus operator; indicates positive value (numbers are positive without this, however) |
 `-` | Unary minus operator; negates an expression |
@@ -49,7 +49,7 @@ Operator | Description | example
 `!` | Logical complement operator; inverts the value of a boolean |
 
 
-Relational operators are used to check conditions like whether two values are equal, or whether one is greater than the other. The following expressions show how they are used:
+**Relational operators** are used to check conditions like whether two values are equal, or whether one is greater than the other. The following expressions show how they are used:
 
 Operator | Description | example
 ---------|-------------|--------
@@ -60,9 +60,9 @@ Operator | Description | example
 `x >= y` | x is greater than or equal to y |
 `x <= y` | x is less than or equal to y |
 
-The result of a relational operator is is a boolean value.
+The result of a relational operator is a boolean value.
 
-Java has three conditional operators that are used to operate on boolean values.
+Java has three **conditional operators** that are used to operate on boolean values.
 
 Operator | Description | example
 ---------|-------------|--------

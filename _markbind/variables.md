@@ -20,6 +20,7 @@
 <span id="icon_new_window">{{ glyphicon_new_window | safe }}</span>
 <span id="icon_outcome">{{ fas_trophy | safe }}</span>
 <span id="icon_output">{{ fas_arrow_down | safe }}</span>
+<span id="icon_output_right">{{ fas_arrow_right | safe }}</span>
 <span id="icon_print">{{ glyphicon_print | safe }}</span>
 <span id="icon_prereq">{{ glyphicon_education | safe }}</span>
 <span id="icon_preview">{{ glyphicon_eye_open | safe }}</span>
