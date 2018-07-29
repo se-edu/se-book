@@ -9,5 +9,6 @@
 <include src="javaWorld/container-inParent-asPanel.md" boilerplate />
 <include src="gettingStarted/container-inParent-asPanel.md" boilerplate />
 <include src="dataTypes/container-inParent-asPanel.md" boilerplate />
+<include src="controlFlow/container-inParent-asPanel.md" boilerplate />
 
 </div>

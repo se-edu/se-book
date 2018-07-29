@@ -32,6 +32,11 @@ title: "C++ to Java [Printable]"
 <include src="dataTypes/operators/unit-inParent-asFlat-print.md" boilerplate />
 <include src="dataTypes/arrays/unit-inParent-asFlat-print.md" boilerplate />
 
+## Control Flow
+
+<include src="controlFlow/branching/unit-inParent-asFlat-print.md" boilerplate />
+<include src="controlFlow/loops/unit-inParent-asFlat-print.md" boilerplate />
+<include src="controlFlow/methods/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 
