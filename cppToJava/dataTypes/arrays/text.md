@@ -61,6 +61,7 @@ You can run this program (after compiling it first) from the command line by typ
 
 `abc`
 
+==//todo mention array initializing using literals==
 
 </div>
 

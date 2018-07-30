@@ -55,6 +55,9 @@ title: "C++ to Java [Printable]"
 
 <include src="usefulClasses/api/unit-inParent-asFlat-print.md" boilerplate />
 <include src="usefulClasses/stringClass/unit-inParent-asFlat-print.md" boilerplate />
+<include src="usefulClasses/wrapperClasses/unit-inParent-asFlat-print.md" boilerplate />
+<include src="usefulClasses/arraysClass/unit-inParent-asFlat-print.md" boilerplate />
+<include src="usefulClasses/scannerClass/unit-inParent-asFlat-print.md" boilerplate />
 
 
 
