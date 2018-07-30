@@ -77,6 +77,12 @@ title: "C++ to Java [Printable]"
 <include src="generics/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="generics/how/unit-inParent-asFlat-print.md" boilerplate />
 
+## Collections
+
+<include src="collections/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="collections/arrayListClass/unit-inParent-asFlat-print.md" boilerplate />
+<include src="collections/hashMapClass/unit-inParent-asFlat-print.md" boilerplate />
+
 
 
 </div>
