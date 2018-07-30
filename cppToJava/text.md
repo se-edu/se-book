@@ -13,5 +13,6 @@
 <include src="objects/container-inParent-asPanel.md" boilerplate />
 <include src="classes/container-inParent-asPanel.md" boilerplate />
 <include src="usefulClasses/container-inParent-asPanel.md" boilerplate />
+<include src="inheritance/container-inParent-asPanel.md" boilerplate />
 
 </div>
