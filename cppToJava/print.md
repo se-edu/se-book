@@ -72,6 +72,11 @@ title: "C++ to Java [Printable]"
 <include src="exceptions/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="exceptions/how/unit-inParent-asFlat-print.md" boilerplate />
 
+## Generics
+
+<include src="generics/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="generics/how/unit-inParent-asFlat-print.md" boilerplate />
+
 
 
 </div>
