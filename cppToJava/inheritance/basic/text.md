@@ -12,7 +12,7 @@
 
 Given below is an extract from the {{ oracle }}, with slight adaptations.
 
-<div class="indented">
+<blockquote>
 
 {{ similar }} **A class that is derived from another class is called a _subclass_** (also a _derived_ class, _extended_ class, or _child_ class). The class from which the subclass is derived is called a _superclass_ (also a _base_ class or a _parent_ class).
 
@@ -157,7 +157,7 @@ The first data column indicates whether the class itself has access to the membe
 
 Access levels affect you in two ways. First, when you use classes that come from another source, such as the classes in the Java platform, access levels determine which members of those classes your own classes can use. Second, when you write a class, you need to decide what access level every member variable and every method in your class should have.
 
-</div>
+</blockquote>
 
 </div>
 

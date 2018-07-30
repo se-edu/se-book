@@ -12,7 +12,7 @@
 
 Given below is an extract from the {{ oracle }}, with slight adaptations.
 
-<div class="indented">
+<blockquote>
 
 In the Java programming language, **an _interface_ is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types.** Method bodies exist only for default methods and static methods. Interfaces cannot be instantiated—they can only be implemented by classes or extended by other interfaces.
 Defining an interface is similar to creating a new class:
@@ -59,7 +59,7 @@ In the robotic car example above, it is the automobile manufacturers who will im
 ==//todo Mention that an interface can be used as a type, mention default methods, multiple inheritance==
 
 
-</div>
+</blockquote>
 
 </div>
 

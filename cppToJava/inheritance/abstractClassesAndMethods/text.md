@@ -12,7 +12,7 @@
 
 Given below is an extract from the {{ oracle }}, with slight adaptations.
 
-<div class="indented">
+<blockquote>
 
 * An _abstract class_ is a class that is declared `abstract`—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.
 * An _abstract method_ is a method that is declared without an implementation (without braces, and followed by a semicolon), like this:<br>
@@ -68,7 +68,7 @@ class Rectangle extends GraphicObject {
 }
 ```
 
-</div>
+</blockquote>
 
 </div>
 

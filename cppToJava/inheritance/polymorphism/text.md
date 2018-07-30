@@ -12,7 +12,7 @@
 
 Given below is an extract from the {{ oracle }}, with slight adaptations.
 
-<div class="indented">
+<blockquote>
 
 To demonstrate _polymorphic_ features in the Java language, let's extend the `Bicycle` class with a `MountainBike` and a `RoadBike` class. For `MountainBike`, let's add a field for `suspension`, which is a `String` value that indicates if the bike has a front shock absorber, `Front`. Or, the bike has a front and back shock absorber, `Dual`.
 
@@ -107,7 +107,7 @@ The RoadBike has 23 MM tires.
 The Java virtual machine (JVM) calls the appropriate method for the object that is referred to in each variable. It does not call the method that is defined by the variable's type. This behavior is referred to as _virtual method invocation_ and demonstrates an aspect of the important polymorphism features in the Java language.
 
 
-</div>
+</blockquote>
 
 </div>
 

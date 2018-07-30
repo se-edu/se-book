@@ -12,7 +12,7 @@
 
 Given below is an extract from the {{ oracle }}, with slight adaptations.
 
-<div class="indented">
+<blockquote>
 
 <tip-box type="definition">
 
@@ -48,7 +48,7 @@ Given below is an extract from the {{ oracle }}, with slight adaptations.
 
 **Errors and runtime exceptions are collectively known as _unchecked_ exceptions.**
 
-</div>
+</blockquote>
 
 </div>
 
