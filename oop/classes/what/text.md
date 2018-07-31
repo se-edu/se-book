@@ -28,13 +28,13 @@ When writing an OOP program to calculate the average age of Adam, Beth, Charlie,
 
 Given below are some resources on how to implement classes:
 
-<span class="java">
+<div class="alt-java">
 
 * [Classes, methods, variables](https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html) – Start from the linked page and follow the next few steps in the tutorial
-</span>
-<span class="alt-python">
+</div>
+<div class="alt-python">
 <markdown>* [Python Programming Basics: OOP: Classes](https://nus-te3201.github.io/website/programming/toc/oop.html#classes) - Basics of writing classes using Python</markdown>
-</span>
+</div>
 
 </div>
 

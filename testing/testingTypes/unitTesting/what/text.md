@@ -18,16 +18,12 @@ In OOP code, it is common to write one or more unit tests for each public method
 
 {{ icon_example }} Here are the code skeletons for a `Foo` class containing two methods and a `FooTest` class that contains unit tests for those two methods.
 
-<tabs> 
-  <tab header="Java">
-
-<include src="exampleTestCode-java.md" />
-  </tab>
-  <tab header="Python">
-
-<include src="exampleTestCode-python.md" />
-</tab>
-</tabs>
+<div class="alt-java">
+  <include src="exampleTestCode-java.md" />
+</div>
+<div class="alt-python">
+  <include src="exampleTestCode-python.md" />
+</div>
 </tip-box>
 
 

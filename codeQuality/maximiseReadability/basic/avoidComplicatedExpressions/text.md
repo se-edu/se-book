@@ -12,16 +12,14 @@
 
 Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate the final value).
 
-<tabs> 
-  <tab header="Java">
+<div class="alt-java">
 
 <include src="example-java.md" />
-  </tab>
-  <tab header="Python">
+</div>
+<div class="alt-python">
 
 <include src="example-python.md" />
-</tab>
-</tabs>
+</div>
 
 > The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. <sub>-- Edsger Dijkstra</sub>
 

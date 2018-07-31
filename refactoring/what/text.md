@@ -39,18 +39,16 @@ Method: Move it outside of the expression.
 
 {{ icon_example }} Example:
 
-<tabs> 
-  <tab header="Java">
+<div class="alt-java">
 
 <include src="example-consolidate-java.md" />
 
-  </tab>
-  <tab header="Python">
+  </div>
+<div class="alt-python">
 
 <include src="example-consolidate-python.md" />
 
-</tab>
-</tabs>
+</div>
 
 </tip-box>
 
@@ -64,18 +62,12 @@ Method: Turn the fragment into a method whose name explains the purpose of the m
 
 {{ icon_example }} Example:
 
-<tabs> 
-  <tab header="Java">
-
-<include src="example-extract-java.md" />
-
-  </tab>
-  <tab header="Python">
-
-<include src="example-extract-python.md" />
-
-</tab>
-</tabs>
+<div class="alt-java">
+  <include src="example-extract-java.md" />
+</div>
+<div class="alt-python">
+  <include src="example-extract-python.md" />
+</div>
 
 
 

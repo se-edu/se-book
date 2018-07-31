@@ -30,24 +30,22 @@ method     |`result()`       | `calculate()`
 
 {{ icon_example }} Examples:
 
-<tabs> 
-  <tab header="Java">
+<div class="alt-java">
 
 {{good}}
 ```java
 Person student;
 ArrayList<Person> students;
 ```
-  </tab>
-  <tab header="Python">
+</div>
+<div class="alt-python">
 
 {{good}}
 ```python
 student = Person('Jim')
 students = [Person('Jim'), Person('Alice')]
 ```
-</tab>
-</tabs>
+</div>
 
 
 

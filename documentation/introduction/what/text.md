@@ -18,20 +18,18 @@
   
 <tip-box>
 
-<tabs> 
-  <tab header="Java">
+<div class="alt-java">
 
 * {{ icon_example }} Example of API Documentation: [String API](http://download.oracle.com/javase/8/docs/api/).
 * {{ icon_example }} Example of tutorial-style documentation: [Java Intenatioanalization Tutorial](https://docs.oracle.com/javase/tutorial/i18n/index.html)
 
-  </tab>
-  <tab header="Python">
+</div>
+<div class="alt-python">
 
 * {{ icon_example }} Example of API Documentation: [string API](https://docs.python.org/3/library/string.html).
 * {{ icon_example }} Example of tutorial-style documentation: [How to use Regular Expressions in Python](https://docs.python.org/3/howto/regex.html)
 
-  </tab>
-</tabs>
+</div>
 
 </tip-box>
 
