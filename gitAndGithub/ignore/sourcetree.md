@@ -3,5 +3,5 @@ The file should be currently listed under `Unstaged files`. Right-click it and c
 Observe that a file named `.gitignore` has been created in the working directory root and has the following line in it.
 
 ```
-temp.text
+temp.txt
 ```
