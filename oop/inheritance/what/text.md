@@ -69,9 +69,7 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 </tip-box>
 
 ##### <big>Implementing inheritance</big>
-
-<tabs> 
-  <tab header="Java">
+<div class="alt-java">
 
 To learn how to implement inheritance in Java, you can follow [[Oracle’s Java Tutorials: Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)]
 
@@ -82,16 +80,14 @@ To learn how to implement inheritance in Java, you can follow [[Oracle’s Java 
 </panel><p/>
 
 :bulb: Java requires all classes to have a parent class. If you do not specify a parent class, Java automatically assigns the `Object` class as the parent class.
+</div>
+<div class="alt-python">
 
-  <hr></tab>
-  <tab header="Python">
 
 * [Python Programming Basics: OOP: Inheritance](https://nus-te3201.github.io/website/programming/toc/oop.html#inheritance)
 
 :bulb: Python automatically assigns the `object` class as the parent class.
-
-  <hr></tab>
-</tabs>
+</div>
 
 </div>
 

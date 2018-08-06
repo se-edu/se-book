@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - C++ to Java: Generics: How to use Generics</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    
+    
+    <link rel="icon" href="/se-book/favicon.ico">
+</head>
+<body>
+<div id="app">
+    <div id="content-wrapper">
+  <div>
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+    <div class="website-content">
+      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use Java Generics</span>
+        </span>
+        </span>
+        </span>
+        <p></p>
+      </p>
+      <div>
+        <div></div>
+        <p></p>
+        <p><span class="dimmed"><strong><span>C++ to Java → Generics →
+</span></strong>
+          </span>
+        </p>
+        <div id="title-and-body">
+          <div>
+            <h4 id="how-to-use-generics">How to use Generics</h4>
+          </div>
+          <div id="main">
+            <div>
+              <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
+              <blockquote>
+                <p>A generic class is defined with the following format:</p>
+                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">name</span>&lt;<span class="hljs-title">T1</span>, <span class="hljs-title">T2</span>, ..., <span class="hljs-title">Tn</span>&gt; </span>{ <span class="hljs-comment">/* ... */</span> }
+</code></pre>
+                <p>The type parameter section, delimited by angle brackets (<code>&lt;&gt;</code>), follows the class name. It specifies the type parameters (also called type variables) <code>T1</code>, <code>T2</code>, ..., and <code>Tn</code>. To update
+                  the <code>Box</code> class to use generics, you create a generic type declaration by changing the code <code>public class Box</code> to <code>public class Box&lt;T&gt;</code>. This introduces the type variable, <code>T</code>, that can
+                  be used anywhere inside the class. With this change, the Box class becomes:</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
+    <span class="hljs-comment">// T stands for "Type"</span>
+    <span class="hljs-keyword">private</span> T t;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">set</span><span class="hljs-params">(T t)</span> </span>{
+        <span class="hljs-keyword">this</span>.t = t;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> T <span class="hljs-title">get</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> t;
+    }
+}
+</code></pre>
+                <p>As you can see, all occurrences of Object are replaced by <code>T</code>. A type variable can be any non-primitive type you specify: any class type, any interface type, any array type, or even another type variable. This same technique
+                  can be applied to create generic interfaces.</p>
+                <p>By convention, type parameter names are single, uppercase letters. This stands in sharp contrast to the variable naming conventions that you already know about, and with good reason: Without this convention, it would be difficult to tell
+                  the difference between a type variable and an ordinary class or interface name. The most commonly used type parameter names are:</p>
+                <ul>
+                  <li><code>E</code> - Element (used extensively by the Java Collections Framework)</li>
+                  <li><code>K</code> - Key</li>
+                  <li><code>N</code> - Number</li>
+                  <li><code>T</code> - Type</li>
+                  <li><code>V</code> - Value S,U,V etc. - 2nd, 3rd, 4th types</li>
+                </ul>
+                <p>To reference the generic Box class from within your code, you must perform a generic type invocation, which replaces <code>T</code> with some concrete value, such as <code>Integer</code>:</p>
+                <pre><code class="hljs java">Box&lt;Integer&gt; integerBox;
+</code></pre>
+                <p>You can think of a generic type invocation as being similar to an ordinary method invocation, but instead of passing an argument to a method, you are passing a type argument — Integer in this case — to the Box class itself.</p>
+                <p>Like any other variable declaration, this code does not actually create a new Box object. It simply declares that integerBox will hold a reference to a &quot;Box of Integer&quot;, which is how <code>Box&lt;Integer&gt;</code> is read.</p>
+                <p>To instantiate this class, use the new keyword, as usual, but place <code>&lt;&gt;</code> (an empty pair of angle brackets, also called the <em>diamond operator</em>) between the class name and the parenthesis:</p>
+                <pre><code class="hljs java">integerBox = <span class="hljs-keyword">new</span> Box&lt;&gt;();
+
+Box&lt;String&gt; stringBox = <span class="hljs-keyword">new</span> Box&lt;&gt;();
+</code></pre>
+                <p>As mentioned previously, a generic class can have multiple type parameters. For example, the generic OrderedPair class, which implements the generic Pair interface:</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Pair</span>&lt;<span class="hljs-title">K</span>, <span class="hljs-title">V</span>&gt; </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> K <span class="hljs-title">getKey</span><span class="hljs-params">()</span></span>;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> V <span class="hljs-title">getValue</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OrderedPair</span>&lt;<span class="hljs-title">K</span>, <span class="hljs-title">V</span>&gt; <span class="hljs-keyword">implements</span> <span class="hljs-title">Pair</span>&lt;<span class="hljs-title">K</span>, <span class="hljs-title">V</span>&gt; </span>{
+
+    <span class="hljs-keyword">private</span> K key;
+    <span class="hljs-keyword">private</span> V value;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">OrderedPair</span><span class="hljs-params">(K key, V value)</span> </span>{
+	<span class="hljs-keyword">this</span>.key = key;
+	<span class="hljs-keyword">this</span>.value = value;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> K <span class="hljs-title">getKey</span><span class="hljs-params">()</span>	</span>{ <span class="hljs-keyword">return</span> key; }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> V <span class="hljs-title">getValue</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> value; }
+}
+</code></pre>
+                <p>The following statements create two instantiations of the OrderedPair class:</p>
+                <pre><code class="hljs java">Pair&lt;String, Integer&gt; p1 = <span class="hljs-keyword">new</span> OrderedPair&lt;&gt;(<span class="hljs-string">"Even"</span>, <span class="hljs-number">8</span>);
+Pair&lt;String, String&gt;  p2 = <span class="hljs-keyword">new</span> OrderedPair&lt;&gt;(<span class="hljs-string">"hello"</span>, <span class="hljs-string">"world"</span>);
+</code></pre>
+                <p>The code, <code>new OrderedPair&lt;String, Integer&gt;</code>, instantiates <code>K</code> as a <code>String</code> and <code>V</code> as an <code>Integer</code>. Therefore, the parameter types of OrderedPair's constructor are <code>String</code>                  and Integer, respectively.</p>
+              </blockquote>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\polyfill.min.js"></script>
+<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

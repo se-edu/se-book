@@ -48,18 +48,16 @@ However, there can be methods related to a specific class but not suitable for s
 
 Some resources to learn how to implement class-level members:
 
-<tabs> 
-  <tab header="Java">
+<div class="alt-java">
 
 * [Oracle’s official Java tutorial on class-level members](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html)
-  
-  </tab>
-  <tab header="Python">
+ 
+</div>
+<div class="alt-python">
 
 * [Python Programming Basics: OOP: Class-Level Members](https://nus-te3201.github.io/website/programming/toc/oop.html#class-level-members)
 
-  </tab>
-</tabs>
+</div>
 
 
 </div>

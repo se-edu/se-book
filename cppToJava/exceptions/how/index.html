@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - C++ to Java: Exceptions: How to use</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    
+    
+    <link rel="icon" href="/se-book/favicon.ico">
+</head>
+<body>
+<div id="app">
+    <div id="content-wrapper">
+  <div>
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+    <div class="website-content">
+      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use Java Exceptions</span>
+        </span>
+        </span>
+        </span>
+        <p></p>
+      </p>
+      <div>
+        <div></div>
+        <p></p>
+        <p><span class="dimmed"><strong><span>C++ to Java → Exceptions →
+</span></strong>
+          </span>
+        </p>
+        <div id="title-and-body">
+          <div>
+            <h4 id="how-to-use-exceptions">How to Use Exceptions</h4>
+          </div>
+          <div id="main">
+            <div>
+              <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
+              <blockquote>
+                <p><strong>A program can catch exceptions by using a combination of the <code>try</code>, <code>catch</code>, and <code>finally</code> blocks.</strong> Here is an example:</p>
+                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> </span>{
+    PrintWriter out = <span class="hljs-keyword">null</span>;
+
+    <span class="hljs-keyword">try</span> {
+        System.out.println(<span class="hljs-string">"Entering"</span> + <span class="hljs-string">" try statement"</span>);
+
+        out = <span class="hljs-keyword">new</span> PrintWriter(<span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"OutFile.txt"</span>));
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; SIZE; i++) {
+            out.println(<span class="hljs-string">"Value at: "</span> + i + <span class="hljs-string">" = "</span> + list.get(i));
+        }
+    } <span class="hljs-keyword">catch</span> (IndexOutOfBoundsException e) {
+        System.err.println(<span class="hljs-string">"Caught IndexOutOfBoundsException: "</span> + e.getMessage());
+
+    } <span class="hljs-keyword">catch</span> (IOException e) {
+        System.err.println(<span class="hljs-string">"Caught IOException: "</span> +  e.getMessage());
+
+    } <span class="hljs-keyword">finally</span> {
+        <span class="hljs-keyword">if</span> (out != <span class="hljs-keyword">null</span>) {
+            System.out.println(<span class="hljs-string">"Closing PrintWriter"</span>);
+            out.close();
+        } <span class="hljs-keyword">else</span> {
+            System.out.println(<span class="hljs-string">"PrintWriter not open"</span>);
+        }
+    }
+}
+</code></pre>
+                <ul>
+                  <li>
+                    <p>The <code>try</code> block identifies a block of code in which an exception can occur.</p>
+                  </li>
+                  <li>
+                    <p>The <code>catch</code> block identifies a block of code, known as an exception handler, that can handle a particular type of exception.</p>
+                  </li>
+                  <li>
+                    <p>The <code>finally</code> block identifies a block of code that is guaranteed to execute, and is the right place to close files, recover resources, and otherwise clean up after the code enclosed in the try block.</p>
+                  </li>
+                  <li>
+                    <p>The <code>try</code> statement should contain at least one <code>catch</code> block or a finally block and may have multiple <code>catch</code> blocks.</p>
+                  </li>
+                  <li>
+                    <p>The class of the exception object indicates the type of exception thrown. The exception object can contain further information about the error, including an error message.</p>
+                  </li>
+                </ul>
+                <p><strong>You can use the <code>throw</code> statement to throw an exception.</strong> The throw statement requires a single argument: a throwable object. Throwable objects are instances of any subclass of the <code>Throwable</code> class.
+                  Here's an example of a throw statement.</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">if</span> (size == <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> EmptyStackException();
+}
+</code></pre>
+                <p><strong>If the a method doesn't catch the checked exceptions that can occur within it, it must specify that it can throw these exceptions</strong> using a <code>throws</code> clause. Here's an example.</p>
+                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException, IndexOutOfBoundsException </span>{
+    PrintWriter out = <span class="hljs-keyword">new</span> PrintWriter(<span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"OutFile.txt"</span>));
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; SIZE; i++) {
+        out.println(<span class="hljs-string">"Value at: "</span> + i + <span class="hljs-string">" = "</span> + list.get(i));
+    }
+    out.close();
+}
+</code></pre>
+              </blockquote>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\polyfill.min.js"></script>
+<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

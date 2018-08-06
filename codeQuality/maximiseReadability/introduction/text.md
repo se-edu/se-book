@@ -18,18 +18,12 @@
 
 {{ icon_example }} The two code samples given below achieve the same functionality, but one is easier to read.
 
-<tabs> 
-  <tab header="Java">
-
-<include src="example-java.md" />
-
-  </tab>
-  <tab header="Python">
-
-<include src="example-python.md" />
-
-</tab>
-</tabs>
+<div class="alt-java">
+  <include src="example-java.md" />
+</div>
+<div class="alt-python">
+  <include src="example-python.md" />
+</div>
 
 </tip-box>
 

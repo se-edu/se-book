@@ -122,7 +122,7 @@ An _abstract class_ is a class that is declared `abstract`—it may or may not i
 <div id="def-exception">
 
 **Exception**:
-> An _exception_ is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. –- Java Tutorial (Oracle Inc.)
+> The term _exception_ is shorthand for the phrase "exceptional event." An _exception_ is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. –- Java Tutorial (Oracle Inc.)
 
 </div>
 

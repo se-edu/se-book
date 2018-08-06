@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - C++ to Java: Getting Started</title>
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    
+    
+    <link rel="icon" href="/se-book/favicon.ico">
+</head>
+<body>
+<div id="app">
+    <div id="content-wrapper">
+  <div>
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+    <div class="website-content" id="all">
+      <p><span class="dimmed"><strong><span>C++ to Java →
+</span></strong>
+        </span>
+      </p>
+      <div id="title">
+        <div>
+          <h2 id="getting-started">Getting Started</h2>
+        </div>
+      </div>
+      <div id="main">
+        <div>
+          <div>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><div>
+<h4 id="installation">Installation</h4></div></span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can install Java</span>
+                  </span>
+                  </span>
+                  </span>
+                  <p></p>
+                </p>
+                <p></p>
+                <div>
+                  <p>To <em>run</em> Java programs, you only need to have a recent version of the <em>Java Runtime Environment (JRE)</em> installed in your device.</p>
+                  <p>If you want <strong>to <em>develop</em> applications for Java, download and install a recent version of the <em>Java Development Kit (JDK)</em></strong>, which includes the JRE as well as additional resources needed to develop Java applications.</p>
+                </div>
+                <div></div>
+              </div>
+            </panel>
+          </div>
+          <div>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><div>
+<h4 id="helloworld">HelloWorld</h4></div></span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the Java HelloWorld program</span>
+                  </span>
+                  </span>
+                  </span>
+                  <p></p>
+                </p>
+                <p></p>
+                <div>
+                  <p>In Java, the HelloWorld program looks like this:</p>
+                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">// generate some simple output</span>
+        System.out.println(<span class="hljs-string">"Hello, World!"</span>);
+    }
+}
+</code></pre>
+                  <p>For reference, the equivalent C++ code is given below:</p>
+                  <pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// generate some simple output</span>
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"Hello, World!"</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+                  <p>This HelloWorld Java program defines one method named main: <code>public static void main(String[] args)</code>
+                    <code>System.out.println</code> displays results on the screen.</p>
+                  <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                    </span> Some similarities:</p>
+                  <ul>
+                    <li>Java programs are made up of class and method definitions, and
+                      <tooltip content="A _method_ is a named sequence of statements">methods</tooltip> are made up of
+                      <trigger for="pop:helloWorld-statement">statements</trigger>.</li>
+                    <li>Java is “case-sensitive”, which means <code>SYSTEM</code> is different from <code>System</code>.</li>
+                    <li><code>public</code> is an <em>access modifier</em> that indicates the method is accessible from outside this class. Similarly, <code>private</code> access modifier indicates that a method/attribute is not accessible outside the class.</li>
+                    <li><code>static</code> indicates this method is defined as a class-level member. Do not worry if you don’t know what that means. It will be explained later.</li>
+                    <li><code>void</code> indicates that the method does not return anything.</li>
+                    <li>The name and format of the <code>main</code> method is special as it is the method that Java executes when you run a Java program.</li>
+                    <li>A class is a collection of methods. This program defines a class named <code>HelloWorld</code>.</li>
+                    <li>Java uses squiggly braces (<code>{</code> and <code>}</code>) to group things together.</li>
+                    <li>The line starting with <code>//</code> is a comment. You can use <code>//</code> for single line comments and <code>/* ... */</code> for multi-line comments in Java code.</li>
+                  </ul>
+                  <popover id="pop:helloWorld-statement" title="Statements" placement="top">
+                  
+                    <div slot="content">
+                      <p>A statement is a line of code that performs a basic operation. In the HelloWorld program, this line is a print statement that displays a message on the screen:</p>
+                      <p><code>System.out.println(&quot;Hello, World!&quot;);</code></p>
+                    </div>
+                  </popover>
+                  <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
+                    </span> Some differences:</p>
+                  <ul>
+                    <li>Java use the term <em>method</em> instead of <em>function</em>. In particular, Java doesn’t have stand-alone functions. Every method should belong to a class. The <code>main</code> method work will not work unless it is inside the
+                      <code>HelloWorld</code> class.</li>
+                    <li>A Java class definition does not end with a semicolon, but most Java statements do.</li>
+                    <li>In <em>most</em> cases (i.e., there are exceptions), the name of the class has to match the name of the file it is in, so this class has to be in a file named <code>HelloWorld.java</code>.</li>
+                    <li>There is no need for the HelloWorld code to have something like <code>#include &lt;iostream&gt;</code>. The library files needed by the HelloWorld code is available by default without having to &quot;include&quot; in explicitly.</li>
+                    <li>There is no need to <code>return 0</code> at the end of the main method to indicate the execution was successful. It is considered as a successful execution unless an error is signalled specifically.</li>
+                  </ul>
+                </div>
+                <div></div>
+              </div>
+            </panel>
+          </div>
+          <div>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><div>
+<h4 id="compliling-a-program">Compliling a Program</h4></div></span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can compile a simple Java program</span>
+                  </span>
+                  </span>
+                  </span>
+                  <p></p>
+                </p>
+                <p></p>
+                <div>
+                  <p>To compile the HelloWorld program, open a command console, navigate to the folder containing the file, and run the following command.</p>
+                  <p>
+                    <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>javac HelloWorld.java</code></p>
+                  <p>If the compilation is successful, you should see a file <code>HelloWorld.class</code>. That file contains the byte code for your program. If the compilation is successful, you will be notified of the
+                    <trigger for="pop:compiling-errors">compile-time errors</trigger>.</p>
+                  <popover id="pop:compiling-errors" title="Compile-time errors" placement="top">
+                  
+                    <div slot="content">
+                      <p><em>Compile-time errors</em> <span class="dimmed">(aka <em>compile errors</em>)</span> occur when you violate the syntax rules of the Java language. For example, parentheses and braces have to come in matching pairs.</p>
+                      <p>Error messages from the compiler usually indicate where in the program the error occurred, and sometimes they can tell you exactly what the error is.</p>
+                      <p></p>
+                    </div>
+                  </popover>
+                  <p>Notes:</p>
+                  <ul>
+                    <li><code>javac</code> is the java compiler that you get when you install the JDK.</li>
+                    <li>For the above command to work, your console program should be able to find the javac executable (e.g., <span class="fab fa-windows"></span> the location of the <code>javac.exe</code> should be in the <code>PATH</code> system variable).</li>
+                  </ul>
+                </div>
+                <div></div>
+              </div>
+            </panel>
+          </div>
+          <div>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><div>
+<h4 id="running-a-program">Running a Program</h4></div></span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can run a simple Java program</span>
+                  </span>
+                  </span>
+                  </span>
+                  <p></p>
+                </p>
+                <p></p>
+                <div>
+                  <p>To run the HelloWorld program, in a command console, run the following command from the folder containing <code>HelloWorld.class</code> file.</p>
+                  <p>
+                    <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java HelloWorld</code></p>
+                  <p>Notes:</p>
+                  <ul>
+                    <li><code>java</code> in the command above refers to the Java interpreter installed in your computer.</li>
+                    <li>Similar to <code>javac</code>, your console should be able to find the java executable.</li>
+                  </ul>
+                  <p>When you run a Java program, you can encounter a
+                    <tooltip content="so-called because it does not appear until after the program has started running">run-time error</tooltip>. These errors are also called &quot;exceptions&quot; because they usually indicate that something exceptional (and bad) has happened. When a run-time error occurs, the interpreter displays an error message
+                    that explains what happened and where.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> For example, modify the HelloWorld code to include the following line, compile it again, and run it.</p>
+                    <pre><code class="hljs java">System.out.println(<span class="hljs-number">5</span>/<span class="hljs-number">0</span>);
+</code></pre>
+                    <p>You should get a message like this:</p>
+                    <pre><code class="hljs sh">Exception <span class="hljs-keyword">in</span> thread <span class="hljs-string">"main"</span> java.lang.ArithmeticException: / by zero
+    at Hello.main(Hello.java:5)
+</code></pre>
+                  </tip-box>
+                  <p><strong>Integrated Development Environments (IDEs)</strong> can automate the intermediate step of compiling. They usually have a <span style="color:green"><span class="fas fa-play-circle"></span></span> <em>Run</em> button which compiles
+                    the code first and then runs it.</p>
+                  <p>Example IDEs:</p>
+                  <ul>
+                    <li>Intellij IDEA</li>
+                    <li>Eclipse</li>
+                    <li>NetBeans</li>
+                  </ul>
+                </div>
+                <div></div>
+              </div>
+            </panel>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\markbind\js\polyfill.min.js"></script>
+<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
+<script src="..\..\markbind\js\setup.js"></script>
+</html>

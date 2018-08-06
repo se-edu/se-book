@@ -16,18 +16,16 @@ Do not write comments as if they are private notes to self. Instead, write them 
 
 {{ icon_example }} Examples:
 
-<tabs> 
-  <tab header="Java">
+<div class="alt-java">
 
 <include src="example-java.md" />
 
-  </tab>
-  <tab header="Python">
+</div>
+<div class="alt-python">
 
 <include src="example-python.md" />
 
-</tab>
-</tabs>
+</div>
 
 </tip-box>
 

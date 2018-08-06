@@ -16,18 +16,16 @@ When the code has a number that does not explain the meaning of the number, we c
 
 {{ icon_example }} Example:
 
-<tabs> 
-  <tab header="Java">
+<div class="alt-java">
 
 <include src="example-java.md" />
 
-  </tab>
-  <tab header="Python">
+</div>
+<div class="alt-python">
 
 <include src="example-python.md" />
 
-</tab>
-</tabs>
+</div>
 
 </tip-box>
 

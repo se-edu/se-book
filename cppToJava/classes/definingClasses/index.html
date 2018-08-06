@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - C++ to Java: Objects: Using Java Objects</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    
+    
+    <link rel="icon" href="/se-book/favicon.ico">
+</head>
+<body>
+<div id="app">
+    <div id="content-wrapper">
+  <div>
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+    <div class="website-content">
+      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can define Java classes</span>
+        </span>
+        </span>
+        </span>
+        <p></p>
+      </p>
+      <div>
+        <div></div>
+        <p></p>
+        <p><span class="dimmed"><strong><span>C++ to Java → Classes →
+</span></strong>
+          </span>
+        </p>
+        <div id="title-and-body">
+          <div>
+            <h4 id="defining-classes">Defining Classes</h4>
+          </div>
+          <div id="main">
+            <div>
+              <p>As you know,</p>
+              <ul>
+                <li>Defining a class creates a new object type with the same name.</li>
+                <li>Every object belongs to some object type; that is, it is an instance of some class.</li>
+                <li>A class definition is like a template for objects: it specifies what attributes the objects have and what methods can operate on them.</li>
+                <li>The <code>new</code> operator instantiates objects, that is, it creates new instances of a class.</li>
+                <li>The methods that operate on an object type are defined in the class for that object.</li>
+              </ul>
+              <p>Let’s create a class to represent a moment in time:</p>
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> hour;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> minute;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> second;
+}
+</code></pre>
+              <p>You can give a class any name you like. The Java convention is to use PascalCase format for class names e.g., <code>MyHelloWord</code> rather than <code>myHelloWorld</code> or <code>myhelloword</code> or <code>my_hello_world</code>.</p>
+              <p>The code should be in a file whose name matches the class e.g., <code>Time.java</code></p>
+              <p>The <code>Time</code> class is <code>public</code>, which means that it can be used in other classes. But the
+                <tooltip content="Attributes are also called **instance variables**, because each instance has its own variables.">instance variables</tooltip> are <code>private</code>, which means they can only be accessed from inside the <code>Time</code> class.</p>
+              <h5 id="constructos">Constructos</h5>
+              <div class="indented">
+                Next, let’s define a
+                <tooltip content="a special method that initializes the instance variables">constructor</tooltip>.
+                <p>The syntax for constructors is similar to that of other methods, except:</p>
+                <ul>
+                  <li>The name of the constructor is the same as the name of the class.</li>
+                  <li>Constructors have no return type (and no return value).</li>
+                  <li>The keyword <code>static</code> is omitted.</li>
+                  <li>Does not return anything. A constructor returns the created object by default.</li>
+                </ul>
+                <p>Here is an example constructor for the Time class:</p>
+                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">()</span> </span>{
+    hour = <span class="hljs-number">0</span>;
+    minute = <span class="hljs-number">0</span>;
+    second = <span class="hljs-number">0</span>;
+}
+</code></pre>
+                <p>This constructor does not take any arguments. Each line initializes an instance variable to zero (which in this example means midnight). Like void methods, constructors Now you can create <code>Time</code> objects.</p>
+                <p><code>Time time = new Time();</code></p>
+                <p>When you invoke <code>new</code>, Java creates the object and calls your constructor to initialize the instance variables. When the constructor is done, new returns a reference to the new object.</p>
+              </div>
+              <h5 id="this-keyword"><code>this</code> keyword</h5>
+              <div class="indented">
+                Like other methods, constructors can be overloaded, which means you can provide multiple constructors with different parameters.
+                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute, <span class="hljs-keyword">int</span> second)</span> </span>{
+    <span class="hljs-keyword">this</span>.hour = hour;
+    <span class="hljs-keyword">this</span>.minute = minute;
+    <span class="hljs-keyword">this</span>.second = second;
+}
+</code></pre>
+                <p>All this constructor does is copy values from the parameters to the instance variables. In this example, the names and types of the parameters are the same as the instance variables (parameters don’t have to use the same names, but that’s
+                  a common style). As a result, the parameters <strong><em>shadow</em></strong> (or hide) the instance variables, so the keyword <code>this</code> is necessary to tell them apart.</p>
+                <p>The name <code>this</code> is a keyword that refers to the object we are creating. You can use <code>this</code> the same way you use the name of any other object. For example, you can read and write the instance variables of <code>this</code>,
+                  and you can pass <code>this</code> as an argument to other methods. But you do not declare <code>this</code>, and you can’t make an assignment to it.</p>
+                <p>Now you can use the above constructor to create Time objects that are initialized to a specific time:</p>
+                <pre><code class="hljs java">Time time = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">11</span>, <span class="hljs-number">59</span>, <span class="hljs-number">59</span>);
+</code></pre>
+              </div>
+              <p><mark>//todo mention Java docs</mark></p>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\polyfill.min.js"></script>
+<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

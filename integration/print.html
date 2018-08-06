@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,147 +12,149 @@
     <link rel="stylesheet" href="..\markbind\css\bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\markbind\css\markbind.css">
-    <link rel="stylesheet" href="..\markbind\css\site-nav.css">
+    
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
-<div id="app" class="container-fluid">
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-<div class="website-content">
-  <div id="main">
-    <h1 id="integration">Integration</h1>
-    <h2 id="introduction">Introduction</h2>
-    <div>
+<div id="app">
+    <div id="content-wrapper">
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+  <div class="website-content">
+    <div id="main">
+      <h1 id="integration">Integration</h1>
+      <h2 id="introduction">Introduction</h2>
       <div>
-        <h4 id="what">What</h4>
-      </div>
-      <div>
-        <p><strong>Combining parts of a software product to form a whole is called <em>integration</em></strong>. It is also one of the most troublesome tasks and it rarely goes smoothly.</p>
-      </div>
-    </div>
-    <h2 id="approaches">Approaches</h2>
-    <div>
-      <div>
-        <h4 id="late-and-one-time-vs-early-and-frequent">'Late and One Time' vs 'Early and Frequent'</h4>
-      </div>
-      <div>
-        <p><strong>In terms of timing and frequency, there are two general approaches to integration: <em>late and one-time</em>, <em>early and frequent</em>.</strong></p>
-        <p><strong><em>Late and one-time</em>: wait till all components are completed and integrate all finished components near the end of the project.</strong></p>
-        <tip-box type="wrong">
-          <p>This approach is not recommended because integration often causes many component incompatibilities (due to previous miscommunications and misunderstandings) to surface which can lead to delivery delays <span class="dimmed"> i.e. Late integration → incompatibilities found → major rework required → cannot meet the delivery date</span>.</p>
-        </tip-box>
-        <p><strong><em>Early and frequent</em>: integrate early and evolve each part in parallel, in small steps, re-integrating frequently.</strong></p>
-        <tip-box>
-          <p><span class="fas fa-cube"></span> A <em><tooltip content="it compiles and runs but does not produce any useful output">walking skeleton</tooltip></em> can be written first. This can be done by one developer, possibly the one in charge of integration.
-            After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate the new code to the main system.</p>
-        </tip-box>
-        <div v-closeable="" alt="slideshow: comparison">
-          <p>Here is an animation that compares the two approaches:</p>
-          <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212312&authkey=AHtrsZMwQmNcyAE&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen=""
-              mozallowfullscreen="" allowfullscreen></iframe></div>
+        <div>
+          <h4 id="what">What</h4>
+        </div>
+        <div>
+          <p><strong>Combining parts of a software product to form a whole is called <em>integration</em></strong>. It is also one of the most troublesome tasks and it rarely goes smoothly.</p>
         </div>
       </div>
-    </div>
-    <div>
+      <h2 id="approaches">Approaches</h2>
       <div>
-        <h4 id="big-bang-vs-incremental-integration">Big-Bang vs Incremental Integration</h4>
-      </div>
-      <div>
-        <p><strong><em>Big-bang integration</em>: integrate all components at the same time.</strong></p>
-        <tip-box type="wrong">
-          <p>Big-bang is not recommended because it will uncover too many problems at the same time which could make debugging and bug-fixing more complex than when problems are uncovered incrementally.</p>
-        </tip-box>
-        <p><strong><em>Incremental integration</em>: integrate few components at a time.</strong> This approach is better than the big-bang integration because it surfaces integration problems in a more manageable way.</p>
-        <div v-closeable="" alt="slideshow: comparison">
-          <p>Here is an animation that compares the two approaches:</p>
-          <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212315&authkey=AG4cur5IrM7vr7M&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen=""
-              mozallowfullscreen="" allowfullscreen></iframe></div>
+        <div>
+          <h4 id="late-and-one-time-vs-early-and-frequent">'Late and One Time' vs 'Early and Frequent'</h4>
         </div>
-      </div>
-    </div>
-    <div>
-      <div>
-        <h4 id="top-down-vs-bottom-up-integration">Top-Down vs Bottom-Up Integration</h4>
-      </div>
-      <div>
-        <img src="/se-book/integration/approaches/topDownVsBottomUp/images/approaches.png" height="100">
-        <p></p>
-        <p><strong>Based on the order in which components are integrated, incremental integration can be done in three ways.</strong></p>
-        <p><strong><em>Top-down</em> integration: higher-level components are integrated before bringing in the lower-level components.</strong> One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that
-          this requires the use of
-          <trigger for="pop:topdown-stub">stubs</trigger> in place of lower level components until the real lower-level components are integrated to the system. Otherwise, higher-level components cannot function as they depend on lower level ones.</p>
-        <popover id="pop:topdown-stub" title="<span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span>" placement="top">
-        
-          <div slot="content">
-            <div>
-              <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined
-                inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
-            </div>
+        <div>
+          <p><strong>In terms of timing and frequency, there are two general approaches to integration: <em>late and one-time</em>, <em>early and frequent</em>.</strong></p>
+          <p><strong><em>Late and one-time</em>: wait till all components are completed and integrate all finished components near the end of the project.</strong></p>
+          <tip-box type="wrong">
+            <p>This approach is not recommended because integration often causes many component incompatibilities (due to previous miscommunications and misunderstandings) to surface which can lead to delivery delays <span class="dimmed"> i.e. Late integration → incompatibilities found → major rework required → cannot meet the delivery date</span>.</p>
+          </tip-box>
+          <p><strong><em>Early and frequent</em>: integrate early and evolve each part in parallel, in small steps, re-integrating frequently.</strong></p>
+          <tip-box>
+            <p><span class="fas fa-cube"></span> A <em><tooltip content="it compiles and runs but does not produce any useful output">walking skeleton</tooltip></em> can be written first. This can be done by one developer, possibly the one in charge of integration.
+              After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate the new code to the main system.</p>
+          </tip-box>
+          <div v-closeable="" alt="slideshow: comparison">
+            <p>Here is an animation that compares the two approaches:</p>
+            <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212312&authkey=AHtrsZMwQmNcyAE&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen=""
+                mozallowfullscreen="" allowfullscreen></iframe></div>
           </div>
-        </popover>
-        <p><strong><em>Bottom-up</em> integration: the reverse of top-down integration.</strong> Note that when integrating lower level components,
-          <tooltip content="additional code written to provide inputs to a component via an API">drivers</tooltip> may be needed to test the integrated components <span class="dimmed"> because the UI may not be integrated yet</span>, just like top-down integration needs stubs.</p>
-        <p><strong><em>Sandwich</em> integration: a mix of the top-down and the bottom-up approaches.</strong> The idea is to do both top-down and bottom-up so as to 'meet' in the middle.</p>
-        <div v-closeable="" alt="slideshow: comparison">
-          <p>Here is an animation that compares the three approaches:</p>
-          <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212318&authkey=AD27jxfKqq3nqpQ&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen=""
-              mozallowfullscreen="" allowfullscreen></iframe></div>
         </div>
       </div>
-    </div>
-    <h2 id="build-automation">Build Automation</h2>
-    <div>
       <div>
-        <h4 id="what-2">What</h4>
+        <div>
+          <h4 id="big-bang-vs-incremental-integration">Big-Bang vs Incremental Integration</h4>
+        </div>
+        <div>
+          <p><strong><em>Big-bang integration</em>: integrate all components at the same time.</strong></p>
+          <tip-box type="wrong">
+            <p>Big-bang is not recommended because it will uncover too many problems at the same time which could make debugging and bug-fixing more complex than when problems are uncovered incrementally.</p>
+          </tip-box>
+          <p><strong><em>Incremental integration</em>: integrate few components at a time.</strong> This approach is better than the big-bang integration because it surfaces integration problems in a more manageable way.</p>
+          <div v-closeable="" alt="slideshow: comparison">
+            <p>Here is an animation that compares the two approaches:</p>
+            <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212315&authkey=AG4cur5IrM7vr7M&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen=""
+                mozallowfullscreen="" allowfullscreen></iframe></div>
+          </div>
+        </div>
       </div>
       <div>
-        <p><strong>Build automation tools automate the steps of the build process, usually by means of build scripts.</strong></p>
-        <p>In a non-trivial project, building a product from source code can be a complex multi-step process. <span class="dimmed"> For example, it can include steps such as to pull code from the revision control system, compile, link, run automated tests, automatically update release documents (e.g. build number), package into a distributable, push to repo, deploy to a server, delete temporary files created during building/testing, email developers of the new build, and so on. Furthermore, this build process can be done ‘on demand’, it can be scheduled (e.g. every day at midnight) or it can be triggered by various events (e.g. triggered by a code push to the revision control system).</span></p>
-        <p>Some of these build steps such as to compile, link and package are already automated in most modern IDEs. <span class="dimmed"> For example, several steps happen automatically when the ‘build’ button of the IDE is clicked. Some IDEs even allow customization to this build process to some extent.</span></p>
-        <p>However, most big projects use specialized build tools to automate complex build processes.</p>
-        <tip-box>
-          <p><span class="fas fa-cube"></span> Some popular build tools relevant to Java developers:</p>
-          <ul>
-            <li><a href="https://gradle.org/">Gradle</a></li>
-            <li><a href="http://maven.apache.org/">Maven</a></li>
-            <li><a href="http://ant.apache.org/">Apache Ant</a></li>
-            <li><a href="http://www.gnu.org/software/make/">GNU Make</a></li>
-          </ul>
-          <p><span class="fas fa-cube"></span> <span class="dimmed">Some other build tools : Grunt (JavaScript), Rake (Ruby)</span></p>
-        </tip-box>
-        <p><strong>Some build tools also serve as <em>dependency management tools</em></strong>. Modern software projects often depend on third party libraries that evolve constantly. That means developers need to download the correct version of the required
-          libraries and update them regularly. Therefore, dependency management is an important part of build automation. Dependency Management tools can automate that aspect of a project.</p>
-        <tip-box>
-          <p><span class="fas fa-cube"></span> Maven and Gradle, in addition to managing the build process, can play the role of dependency management tools too.</p>
-        </tip-box>
+        <div>
+          <h4 id="top-down-vs-bottom-up-integration">Top-Down vs Bottom-Up Integration</h4>
+        </div>
+        <div>
+          <img src="/se-book/integration/approaches/topDownVsBottomUp/images/approaches.png" height="100">
+          <p></p>
+          <p><strong>Based on the order in which components are integrated, incremental integration can be done in three ways.</strong></p>
+          <p><strong><em>Top-down</em> integration: higher-level components are integrated before bringing in the lower-level components.</strong> One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that
+            this requires the use of
+            <trigger for="pop:topdown-stub">stubs</trigger> in place of lower level components until the real lower-level components are integrated to the system. Otherwise, higher-level components cannot function as they depend on lower level ones.</p>
+          <popover id="pop:topdown-stub" title="<span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span>" placement="top">
+          
+            <div slot="content">
+              <div>
+                <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined
+                  inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
+              </div>
+            </div>
+          </popover>
+          <p><strong><em>Bottom-up</em> integration: the reverse of top-down integration.</strong> Note that when integrating lower level components,
+            <tooltip content="additional code written to provide inputs to a component via an API">drivers</tooltip> may be needed to test the integrated components <span class="dimmed"> because the UI may not be integrated yet</span>, just like top-down integration needs stubs.</p>
+          <p><strong><em>Sandwich</em> integration: a mix of the top-down and the bottom-up approaches.</strong> The idea is to do both top-down and bottom-up so as to 'meet' in the middle.</p>
+          <div v-closeable="" alt="slideshow: comparison">
+            <p>Here is an animation that compares the three approaches:</p>
+            <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212318&authkey=AD27jxfKqq3nqpQ&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen=""
+                mozallowfullscreen="" allowfullscreen></iframe></div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div>
+      <h2 id="build-automation">Build Automation</h2>
       <div>
-        <h4 id="continuous-integration-and-continuous-deployment">Continuous Integration and Continuous Deployment</h4>
+        <div>
+          <h4 id="what-2">What</h4>
+        </div>
+        <div>
+          <p><strong>Build automation tools automate the steps of the build process, usually by means of build scripts.</strong></p>
+          <p>In a non-trivial project, building a product from source code can be a complex multi-step process. <span class="dimmed"> For example, it can include steps such as to pull code from the revision control system, compile, link, run automated tests, automatically update release documents (e.g. build number), package into a distributable, push to repo, deploy to a server, delete temporary files created during building/testing, email developers of the new build, and so on. Furthermore, this build process can be done ‘on demand’, it can be scheduled (e.g. every day at midnight) or it can be triggered by various events (e.g. triggered by a code push to the revision control system).</span></p>
+          <p>Some of these build steps such as to compile, link and package are already automated in most modern IDEs. <span class="dimmed"> For example, several steps happen automatically when the ‘build’ button of the IDE is clicked. Some IDEs even allow customization to this build process to some extent.</span></p>
+          <p>However, most big projects use specialized build tools to automate complex build processes.</p>
+          <tip-box>
+            <p><span class="fas fa-cube"></span> Some popular build tools relevant to Java developers:</p>
+            <ul>
+              <li><a href="https://gradle.org/">Gradle</a></li>
+              <li><a href="http://maven.apache.org/">Maven</a></li>
+              <li><a href="http://ant.apache.org/">Apache Ant</a></li>
+              <li><a href="http://www.gnu.org/software/make/">GNU Make</a></li>
+            </ul>
+            <p><span class="fas fa-cube"></span> <span class="dimmed">Some other build tools : Grunt (JavaScript), Rake (Ruby)</span></p>
+          </tip-box>
+          <p><strong>Some build tools also serve as <em>dependency management tools</em></strong>. Modern software projects often depend on third party libraries that evolve constantly. That means developers need to download the correct version of the required
+            libraries and update them regularly. Therefore, dependency management is an important part of build automation. Dependency Management tools can automate that aspect of a project.</p>
+          <tip-box>
+            <p><span class="fas fa-cube"></span> Maven and Gradle, in addition to managing the build process, can play the role of dependency management tools too.</p>
+          </tip-box>
+        </div>
       </div>
       <div>
-        <p><strong>An extreme application of build automation is called <em>continuous integration (CI)</em> in which integration, building, and testing happens automatically after each code change.</strong></p>
-        <p><strong>A natural extension of CI is <em>Continuous Deployment (CD)</em> where the changes are not only integrated continuously, but also deployed to end-users at the same time.</strong></p>
-        <tip-box>
-          <p><span class="fas fa-cube"></span> Some examples of CI/CD tools:</p>
-          <ul>
-            <li><a href="https://travis-ci.org/">Travis</a></li>
-            <li><a href="http://jenkins-ci.org">Jenkins</a></li>
-            <li><a href="https://www.appveyor.com">Appveyor</a></li>
-            <li><a href="https://circleci.com">CircleCI</a></li>
-          </ul>
-        </tip-box>
+        <div>
+          <h4 id="continuous-integration-and-continuous-deployment">Continuous Integration and Continuous Deployment</h4>
+        </div>
+        <div>
+          <p><strong>An extreme application of build automation is called <em>continuous integration (CI)</em> in which integration, building, and testing happens automatically after each code change.</strong></p>
+          <p><strong>A natural extension of CI is <em>Continuous Deployment (CD)</em> where the changes are not only integrated continuously, but also deployed to end-users at the same time.</strong></p>
+          <tip-box>
+            <p><span class="fas fa-cube"></span> Some examples of CI/CD tools:</p>
+            <ul>
+              <li><a href="https://travis-ci.org/">Travis</a></li>
+              <li><a href="http://jenkins-ci.org">Jenkins</a></li>
+              <li><a href="https://www.appveyor.com">Appveyor</a></li>
+              <li><a href="https://circleci.com">CircleCI</a></li>
+            </ul>
+          </tip-box>
+        </div>
       </div>
-    </div>
-    <h2 id="build-automation-2">Build Automation</h2>
-    <div>
+      <h2 id="build-automation-2">Build Automation</h2>
       <div>
-        <h4 id="review">Review</h4>
-      </div>
-      <div>
-        <p>...</p>
+        <div>
+          <h4 id="review">Review</h4>
+        </div>
+        <div>
+          <p>...</p>
+        </div>
       </div>
     </div>
   </div>

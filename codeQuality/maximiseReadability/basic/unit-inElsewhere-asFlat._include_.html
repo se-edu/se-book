@@ -73,25 +73,23 @@
             <div>
               <p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate the
                 final value).</p>
-              <tabs>
-              
-                <tab header="Java">
-                  <div>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> Example:</p>
-                      <p>
-                        <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                          </span>
-                        </font>
-                      </p>
-                      <pre><code class="hljs java"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);
+              <div class="alt-java">
+                <div>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> Example:</p>
+                    <p>
+                      <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                        </span>
+                      </font>
+                    </p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);
 </code></pre>
-                      <p>
-                        <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                          </span>
-                        </font>
-                      </p>
-                      <pre><code class="hljs java">
+                    <p>
+                      <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
+                        </span>
+                      </font>
+                    </p>
+                    <pre><code class="hljs java">
 <span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;
 <span class="hljs-keyword">boolean</span> isSameSize = previousSize != length;
 <span class="hljs-keyword">boolean</span> isValidCode = isWithinSizeLimit || isSameSize;
@@ -100,27 +98,26 @@
 
 <span class="hljs-keyword">return</span> isValidCode &amp;&amp; isUrgent;
 </code></pre>
-                    </tip-box>
-                  </div>
-                </tab>
-              
-                <tab header="Python">
-                  <div>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> Example:</p>
-                      <p>
-                        <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                          </span>
-                        </font>
-                      </p>
-                      <pre><code class="hljs python"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) <span class="hljs-keyword">or</span> (previous_size != length)) <span class="hljs-keyword">and</span> (type_code == URGENT)
+                  </tip-box>
+                </div>
+              </div>
+              <div class="alt-python">
+                <div>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> Example:</p>
+                    <p>
+                      <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                        </span>
+                      </font>
+                    </p>
+                    <pre><code class="hljs python"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) <span class="hljs-keyword">or</span> (previous_size != length)) <span class="hljs-keyword">and</span> (type_code == URGENT)
 </code></pre>
-                      <p>
-                        <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                          </span>
-                        </font>
-                      </p>
-                      <pre><code class="hljs python">is_within_size_limit = length &lt; MAX_LENGTH
+                    <p>
+                      <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
+                        </span>
+                      </font>
+                    </p>
+                    <pre><code class="hljs python">is_within_size_limit = length &lt; MAX_LENGTH
 is_same_size = previous_size != length
 is_valid_code = is_within_size_limit <span class="hljs-keyword">or</span> is_same_size
 
@@ -128,10 +125,9 @@ is_urgent = type_code == URGENT
 
 <span class="hljs-keyword">return</span> is_valid_code <span class="hljs-keyword">and</span> is_urgent
 </code></pre>
-                    </tip-box>
-                  </div>
-                </tab>
-              </tabs>
+                  </tip-box>
+                </div>
+              </div>
               <blockquote>
                 <p>The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. <sub>-- Edsger Dijkstra</sub></p>
               </blockquote>
@@ -157,89 +153,85 @@ is_urgent = type_code == URGENT
                 <tooltip content="e.g., `PI`"><em>named constant</em></tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
               <tip-box>
                 <p><span class="fas fa-cube"></span> Example:</p>
-                <tabs>
-                
-                  <tab header="Java">
-                    <div>
-                      <table>
-                        <tr>
-                        
-                          <td valign="top">
-                            <p>
-                              <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                                </span>
-                              </font>
-                            </p>
-                            <pre><code class="hljs java"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>;
+                <div class="alt-java">
+                  <div>
+                    <table>
+                      <tr>
+                      
+                        <td valign="top">
+                          <p>
+                            <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                              </span>
+                            </font>
+                          </p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>;
 ...
 <span class="hljs-keyword">return</span> <span class="hljs-number">9</span>;
 </code></pre>
-                            <p></p>
-                          </td>
-                        
-                          <td>  <br><br></td>
-                        
-                          <td valign="top">
-                            <p>
-                              <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                                </span>
-                              </font>
-                            </p>
-                            <pre><code class="hljs java"><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14236</span>;
+                          <p></p>
+                        </td>
+                      
+                        <td>  <br><br></td>
+                      
+                        <td valign="top">
+                          <p>
+                            <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
+                              </span>
+                            </font>
+                          </p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14236</span>;
 <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_SIZE = <span class="hljs-number">10</span>;
 ...
 <span class="hljs-keyword">return</span> PI;
 ...
 <span class="hljs-keyword">return</span> MAX_SIZE-<span class="hljs-number">1</span>;
 </code></pre>
-                            <p></p>
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-                  </tab>
-                
-                  <tab header="Python">
-                    <div>
-                      <p>Note: Python does not have a way to make a variable a constant. However, you can use a normal variable with an <code>ALL_CAPS</code> name to simulate a constant.</p>
-                      <table>
-                        <tr>
-                        
-                          <td valign="top">
-                            <p>
-                              <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                                </span>
-                              </font>
-                            </p>
-                            <pre><code class="hljs python"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>
+                          <p></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="alt-python">
+                  <div>
+                    <p>Note: Python does not have a way to make a variable a constant. However, you can use a normal variable with an <code>ALL_CAPS</code> name to simulate a constant.</p>
+                    <table>
+                      <tr>
+                      
+                        <td valign="top">
+                          <p>
+                            <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                              </span>
+                            </font>
+                          </p>
+                          <pre><code class="hljs python"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>
 ...
 <span class="hljs-keyword">return</span> <span class="hljs-number">9</span>
 </code></pre>
-                            <p></p>
-                          </td>
-                        
-                          <td>  <br><br></td>
-                        
-                          <td valign="top">
-                            <p>
-                              <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                                </span>
-                              </font>
-                            </p>
-                            <pre><code class="hljs python">PI = <span class="hljs-number">3.14236</span>
+                          <p></p>
+                        </td>
+                      
+                        <td>  <br><br></td>
+                      
+                        <td valign="top">
+                          <p>
+                            <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
+                              </span>
+                            </font>
+                          </p>
+                          <pre><code class="hljs python">PI = <span class="hljs-number">3.14236</span>
 MAX_SIZE = <span class="hljs-number">10</span>
 ...
 <span class="hljs-keyword">return</span> PI
 ...
 <span class="hljs-keyword">return</span> MAX_SIZE<span class="hljs-number">-1</span>
 </code></pre>
-                            <p></p>
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-                  </tab>
-                </tabs>
+                          <p></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
               </tip-box>
               <p>Similarly, we can have ‘magic’ values of other data types.</p>
               <tip-box>

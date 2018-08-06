@@ -5,7 +5,19 @@ Vue.use(VueStrap);
 function scrollToUrlAnchorHeading() {
   if (window.location.hash) {
     jQuery(window.location.hash)[0].scrollIntoView();
+    window.scrollBy(0, -document.body.style.paddingTop.replace('px', ''));
   }
+}
+
+function flattenModals() {
+  jQuery('.modal').each((index, modal) => {
+    jQuery(modal).detach().appendTo(jQuery('#app'));
+  });
+}
+
+function executeAfterMountedRoutines() {
+  flattenModals();
+  scrollToUrlAnchorHeading();
 }
 
 function setupSiteNav() {
@@ -36,7 +48,7 @@ function setup() {
   const vm = new Vue({
     el: '#app',
     mounted() {
-      scrollToUrlAnchorHeading();
+      executeAfterMountedRoutines();
     },
   });
   setupSiteNav();
@@ -63,7 +75,7 @@ function setupWithSearch(siteData) {
       },
     },
     mounted() {
-      scrollToUrlAnchorHeading();
+      executeAfterMountedRoutines();
     },
   });
   setupSiteNav();

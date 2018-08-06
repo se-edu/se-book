@@ -1,13 +1,14 @@
 <panel header="{{ icon_Q_A }} Class Diagram for code">
 <question>
 
-<tabs> 
-  <tab header="Java">
+<div class="alt-java">
 
 Draw a class diagram for the code below. Also draw an object diagram that will represent the object structure after running `Main#main()`.
 * Make the multiplicities as strict as possible without contradicting the code.
 * You may omit the `Main` class from both diagrams.
+
 ```java
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +39,7 @@ class Item{
     void setMainCard(Card card){
         this.mainCard = card;
     }
-    
+
     void setSubCard(Card card){
         this.subCard = card;
     }
@@ -49,35 +50,36 @@ class Item{
 }
 
 class Card{
-    
+
 }
 ```
-  </tab>
-  <tab header="Python">
+</div>
+<div class="alt-python">
 
 Draw a class diagram for the code below. Also draw an object diagram that will represent the object structure after running the code. Make the multiplicities as strict as possible without contradicting the code.
+
 ```python
 class Box:
-  
+
   def __init__(self, item):
     self.__item = item # type: Item
-    
+
 class Item:
-  
+
   def __init__(self):
     self.__previous_boxes = [] # type: list of Box objects
     self.__main_card = None    # type: Car
     self.__sub_card = None     # type: Card
-    
+
   def set_main_card(self, card):
     self.__main_card = card # type: Card
-    
+
   def set_sub_card(self, card):
     self.__sub_card = card # type: Card
 
   def add_previous_box(self, previous_box):
     self.__previous_boxes.append(previous_box)
-    
+
 
 class Card:
   pass
@@ -91,8 +93,7 @@ item2.set_main_card(Card());
 item2.add_previous_box(box1);
 item2.add_previous_box(box2);
 ```
-</tab>
-</tabs>
+</div>
 
 <div slot="answer">
 

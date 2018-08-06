@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,57 +12,58 @@
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
-    <link rel="stylesheet" href="..\..\markbind\css\site-nav.css">
+    
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
-<div id="app" class="container-fluid">
-    <div>
-  <link rel="stylesheet" href="/se-book/css/textbook.css">
-  <div class="website-content">
-    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can load a specific version of a Git repo</span>
-      </span>
-      </span>
-      </span>
-      <p></p>
-    </p>
-    <div>
-      <div>
-        <p>
-          <panel src="/se-book\revisionControl\usingHistory\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Project Management → Revision Control → Using History%%"></panel>
-        </p>
-      </div>
-      <p></p>
-      <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
-</span></strong>
+<div id="app">
+    <div id="content-wrapper">
+  <div>
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+    <div class="website-content">
+      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can load a specific version of a Git repo</span>
         </span>
+        </span>
+        </span>
+        <p></p>
       </p>
-      <div id="title-and-body">
+      <div>
         <div>
-          <h4 id="checkout">Checkout</h4>
+          <p>
+            <panel src="/se-book\revisionControl\usingHistory\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Project Management → Revision Control → Using History%%"></panel>
+          </p>
         </div>
-        <div id="main">
+        <p></p>
+        <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+          </span>
+        </p>
+        <div id="title-and-body">
           <div>
-            <p>Git can show you what changed in each commit.</p>
-            <tabs>
-              <tab header="SourceTree">
-                <div>
-                  <p>To see which files changed in a commit, click on the commit. To see what changed in a specific file in that commit, click on the file name.</p>
-                  <img src="/se-book/gitAndGithub/checkout/images/sourcetree_1.png" height="220">
-                  <p></p>
-                </div>
-                <hr>
-              </tab>
-              <tab header="CLI">
-                <div>
-                  <pre><code class="hljs sh">git show &lt; part-of-commit-hash &gt;
+            <h4 id="checkout">Checkout</h4>
+          </div>
+          <div id="main">
+            <div>
+              <p>Git can show you what changed in each commit.</p>
+              <tabs>
+                <tab header="SourceTree">
+                  <div>
+                    <p>To see which files changed in a commit, click on the commit. To see what changed in a specific file in that commit, click on the file name.</p>
+                    <img src="/se-book/gitAndGithub/checkout/images/sourcetree_1.png" height="220">
+                    <p></p>
+                  </div>
+                  <hr>
+                </tab>
+                <tab header="CLI">
+                  <div>
+                    <pre><code class="hljs sh">git show &lt; part-of-commit-hash &gt;
 </code></pre>
-                  <p>Example:</p>
-                  <pre class="hljs"><code>git show 251b4cf
+                    <p>Example:</p>
+                    <pre class="hljs"><code>git show 251b4cf
 </code></pre>
-                  <p><span class="fas fa-arrow-down"></span></p>
-                  <pre><code class="hljs diff">commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3
+                    <p><span class="fas fa-arrow-down"></span></p>
+                    <pre><code class="hljs diff">commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3
 Author: … &lt; … &gt;
 Date:   Sat Jul 8 16:50:27 2017 +0800
 
@@ -77,118 +79,119 @@ index 15b57f7..17f4528 100644
 <span class="hljs-addition">+berries</span>
  cherries
 </code></pre>
-                </div>
-                <hr>
-              </tab>
-            </tabs>
-            <p>Git can also show you the difference between two points in the history of the repo.</p>
-            <tabs>
-              <tab header="SourceTree">
-                <div>
-                  <p>Select the two points you want to compare using <code>Ctrl+Click</code>.</p>
-                  <img src="/se-book/gitAndGithub/checkout/images/sourcetree_2.png" height="200">
-                  <p></p>
-                  <p>The same method can be used to compare the current state of the working directory (which might have uncommitted changes) to a point in the history.</p>
-                  <img src="/se-book/gitAndGithub/checkout/images/sourcetree_3.png" height="100">
-                  <p></p>
-                </div>
-                <hr>
-              </tab>
-              <tab header="CLI">
-                <div>
-                  <p>The <code>diff</code> command can be used to view the differences between two points of the history.</p>
-                  <ul>
-                    <li><code>git diff</code> : shows the changes (uncommitted) since the last commit</li>
-                    <li><code>git diff 0023cdd..fcd6199</code>: shows the changes between the points indicated by by commit hashes</li>
-                    <li><code>git diff v1.0..HEAD</code>: shows changes that happened from the commit tagged as <code>v1.0</code> to the most recent commit.</li>
-                  </ul>
-                  <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
-                    <ul>
-                      <li><a href="https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/diffs">Git-Tower Tutorial: Inspecting Changes with Diffs</a></li>
-                      <li><a href="https://stackoverflow.com/questions/8640838/how-do-i-navigate-in-the-results-of-diff">How to view the next page of a <code>git</code> command result</a></li>
-                    </ul>
-                  </panel>
-                </div>
-                <hr>
-              </tab>
-            </tabs>
-            <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to
-              <trigger trigger="click" for="modal:checkout-stash">stash</trigger> them first to prevent them from being overwritten.</p>
-            <modal large="" title="%%Extract%%" id="modal:checkout-stash">
-            
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
+                  </div>
+                  <hr>
+                </tab>
+              </tabs>
+              <p>Git can also show you the difference between two points in the history of the repo.</p>
+              <tabs>
+                <tab header="SourceTree">
                   <div>
-                    <h4 id="stash">Stash</h4>
+                    <p>Select the two points you want to compare using <code>Ctrl+Click</code>.</p>
+                    <img src="/se-book/gitAndGithub/checkout/images/sourcetree_2.png" height="200">
+                    <p></p>
+                    <p>The same method can be used to compare the current state of the working directory (which might have uncommitted changes) to a point in the history.</p>
+                    <img src="/se-book/gitAndGithub/checkout/images/sourcetree_3.png" height="100">
+                    <p></p>
                   </div>
-                  <div id="main">
+                  <hr>
+                </tab>
+                <tab header="CLI">
+                  <div>
+                    <p>The <code>diff</code> command can be used to view the differences between two points of the history.</p>
+                    <ul>
+                      <li><code>git diff</code> : shows the changes (uncommitted) since the last commit</li>
+                      <li><code>git diff 0023cdd..fcd6199</code>: shows the changes between the points indicated by by commit hashes</li>
+                      <li><code>git diff v1.0..HEAD</code>: shows changes that happened from the commit tagged as <code>v1.0</code> to the most recent commit.</li>
+                    </ul>
+                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                      <ul>
+                        <li><a href="https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/diffs">Git-Tower Tutorial: Inspecting Changes with Diffs</a></li>
+                        <li><a href="https://stackoverflow.com/questions/8640838/how-do-i-navigate-in-the-results-of-diff">How to view the next page of a <code>git</code> command result</a></li>
+                      </ul>
+                    </panel>
+                  </div>
+                  <hr>
+                </tab>
+              </tabs>
+              <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to
+                <trigger trigger="click" for="modal:checkout-stash">stash</trigger> them first to prevent them from being overwritten.</p>
+              <modal large="" title="%%Extract%%" id="modal:checkout-stash">
+              
+                <div>
+                  <div></div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
                     <div>
-                      <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed
-                        changes later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
-                      <tabs>
-                      
-                        <tab header="Source Tree">
-                          <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
-                          <p>
-                            <hr>
-                          </p>
-                        </tab>
-                      
-                        <tab header="CLI">
-                          <p>Follow <a href="https://www.atlassian.com/git/tutorials/git-stash">this article from Atlassian</a>.</p>
-                          <p>
-                            <hr>
-                          </p>
-                        </tab>
-                      </tabs>
+                      <h4 id="stash">Stash</h4>
                     </div>
-                    <div></div>
+                    <div id="main">
+                      <div>
+                        <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed
+                          changes later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
+                        <tabs>
+                        
+                          <tab header="Source Tree">
+                            <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
+                            <p>
+                              <hr>
+                            </p>
+                          </tab>
+                        
+                          <tab header="CLI">
+                            <p>Follow <a href="https://www.atlassian.com/git/tutorials/git-stash">this article from Atlassian</a>.</p>
+                            <p>
+                              <hr>
+                            </p>
+                          </tab>
+                        </tabs>
+                      </div>
+                      <div></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </modal>
-            <tabs>
-              <tab header="SourceTree">
-                <div>
-                  <p>Double-click the commit you want to load to the working directory, or right-click on that commit and choose <code>Checkout...</code>.</p>
-                  <p>Click <code>OK</code> to the warning about ‘detached HEAD’ (similar to below).</p>
-                  <img src="/se-book/gitAndGithub/checkout/images/warning.png" height="140">
-                  <p></p>
-                  <p>The specified version is now loaded to the working folder, as indicated by the <code>HEAD</code> label. <code>HEAD</code> is a reference to the currently checked out commit.</p>
-                  <img src="/se-book/gitAndGithub/checkout/images/sourcetree_4.png" height="100">
-                  <p></p>
-                  <p>If you checkout a commit that come before the commit in which you added the <code>.gitignore</code> file, Git will now show ignored fiels as ‘unstaged modifications’ because at that stage Git hasn’t been told to ignore those files.</p>
-                  <img src="/se-book/gitAndGithub/checkout/images/sourcetree_5.png" height="260">
-                  <p></p>
-                  <p>To go back to the latest commit, double-click it.</p>
-                </div>
-                <hr>
-              </tab>
-              <tab header="CLI">
-                <div>
-                  <p>Use the <code>checkout &lt;commit-identifier&gt;</code> command to change the working directory to the state it was in at a specific past commit.</p>
-                  <ul>
-                    <li><code>git checkout v1.0</code>: loads the state as at commit tagged <code>v1.0</code></li>
-                    <li><code>git checkout 0023cdd</code>: loads the state as at commit with the hash <code>0023cdd</code></li>
-                    <li><code>git checkout HEAD~2</code>: loads the state that is 2 commits behind the most recent commit</li>
-                  </ul>
-                  <p>For now, you can ignore the warning about ‘detached HEAD’.</p>
-                  <p>Use the <code>checkout &lt;branch-name&gt;</code> to go back to the most recent commit of the current branch (the default branch in git is named <code>master</code>)</p>
-                  <ul>
-                    <li><code>git checkout master</code></li>
-                  </ul>
-                </div>
-                <hr>
-              </tab>
-            </tabs>
+              </modal>
+              <tabs>
+                <tab header="SourceTree">
+                  <div>
+                    <p>Double-click the commit you want to load to the working directory, or right-click on that commit and choose <code>Checkout...</code>.</p>
+                    <p>Click <code>OK</code> to the warning about ‘detached HEAD’ (similar to below).</p>
+                    <img src="/se-book/gitAndGithub/checkout/images/warning.png" height="140">
+                    <p></p>
+                    <p>The specified version is now loaded to the working folder, as indicated by the <code>HEAD</code> label. <code>HEAD</code> is a reference to the currently checked out commit.</p>
+                    <img src="/se-book/gitAndGithub/checkout/images/sourcetree_4.png" height="100">
+                    <p></p>
+                    <p>If you checkout a commit that come before the commit in which you added the <code>.gitignore</code> file, Git will now show ignored fiels as ‘unstaged modifications’ because at that stage Git hasn’t been told to ignore those files.</p>
+                    <img src="/se-book/gitAndGithub/checkout/images/sourcetree_5.png" height="260">
+                    <p></p>
+                    <p>To go back to the latest commit, double-click it.</p>
+                  </div>
+                  <hr>
+                </tab>
+                <tab header="CLI">
+                  <div>
+                    <p>Use the <code>checkout &lt;commit-identifier&gt;</code> command to change the working directory to the state it was in at a specific past commit.</p>
+                    <ul>
+                      <li><code>git checkout v1.0</code>: loads the state as at commit tagged <code>v1.0</code></li>
+                      <li><code>git checkout 0023cdd</code>: loads the state as at commit with the hash <code>0023cdd</code></li>
+                      <li><code>git checkout HEAD~2</code>: loads the state that is 2 commits behind the most recent commit</li>
+                    </ul>
+                    <p>For now, you can ignore the warning about ‘detached HEAD’.</p>
+                    <p>Use the <code>checkout &lt;branch-name&gt;</code> to go back to the most recent commit of the current branch (the default branch in git is named <code>master</code>)</p>
+                    <ul>
+                      <li><code>git checkout master</code></li>
+                    </ul>
+                  </div>
+                  <hr>
+                </tab>
+              </tabs>
+            </div>
+            <div></div>
           </div>
-          <div></div>
         </div>
       </div>
     </div>

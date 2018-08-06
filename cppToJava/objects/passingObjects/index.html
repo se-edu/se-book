@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - C++ to Java: Objects: Passing Objects</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    
+    
+    <link rel="icon" href="/se-book/favicon.ico">
+</head>
+<body>
+<div id="app">
+    <div id="content-wrapper">
+  <div>
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+    <div class="website-content">
+      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can pass objects between methods</span>
+        </span>
+        </span>
+        </span>
+        <p></p>
+      </p>
+      <div>
+        <div></div>
+        <p></p>
+        <p><span class="dimmed"><strong><span>C++ to Java → Objects →
+</span></strong>
+          </span>
+        </p>
+        <div id="title-and-body">
+          <div>
+            <h4 id="passing-objects">Passing Objects</h4>
+          </div>
+          <div id="main">
+            <div>
+              <p><strong>You can pass objects as parameters in the usual way</strong>. For example:</p>
+              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPoint</span><span class="hljs-params">(Point p)</span> </span>{
+    System.out.println(<span class="hljs-string">"("</span> + p.x + <span class="hljs-string">", "</span> + p.y + <span class="hljs-string">")"</span>);
+}
+</code></pre>
+              <p>This method takes a point as an argument and displays its attributes in parentheses. If you invoke <code>printPoint(spot)</code>, it displays <code>(3, 4)</code>.</p>
+              <p><strong>You can return an object as the return value too.</strong> The <code>java.awt</code> package also provides a class called <code>Rectangle</code>. <code>Rectangle</code> objects are similar to points, but they have four attributes:
+                <code>x</code>, <code>y</code>, <code>width</code>, and <code>height</code>. You can write methods that return objects. For example, <code>findCenter</code> takes a <code>Rectangle</code> as an argument and returns a <code>Point</code>                with the coordinates of the center of the rectangle:</p>
+              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Point <span class="hljs-title">findCenter</span><span class="hljs-params">(Rectangle box)</span> </span>{
+    <span class="hljs-keyword">int</span> x = box.x + box.width / <span class="hljs-number">2</span>;
+    <span class="hljs-keyword">int</span> y = box.y + box.height / <span class="hljs-number">2</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Point(x, y);
+}
+</code></pre>
+              <p>The return type of this method is <code>Point</code>. The last line creates a new Point object and returns a reference to it.</p>
+              <p><strong><code>null</code> is a special value that means &quot;no object&quot;</strong>. You can declare and initialize object variables this way:
+                <code>Point spot = null;</code></p>
+              <p>If you try to use a null value, either by accessing an attribute or invoking a method, Java throws a <code>NullPointerException</code>.</p>
+              <pre><code class="hljs java">Point spot = <span class="hljs-keyword">null</span>;
+<span class="hljs-keyword">int</span> x = spot.x;              <span class="hljs-comment">// NullPointerException</span>
+spot.translate(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>);      <span class="hljs-comment">// NullPointerException</span>
+</code></pre>
+              <p>On the other hand, it is legal to pass a <code>null</code> reference as an argument or receive one as a return value.</p>
+              <p><strong>It is possible to have multiple variables that refer to the same object.</strong></p>
+              <pre><code class="hljs java">Rectangle box1 = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">100</span>, <span class="hljs-number">200</span>);
+Rectangle box2 = box1;
+</code></pre>
+              <p>Notice how <code>box1</code> and <code>box2</code> are aliases for the same object, so any changes that affect one variable also affect the other. This example adds 50 to all four sides of the rectangle, so it moves the corner up and to
+                the left by 50, and it increases the height and width by 100:</p>
+              <pre><code class="hljs java">System.out.println(box2.width);
+box1.grow(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
+System.out.println(box2.width);
+</code></pre>
+              <p>The first line displays <code>100</code>, which is the width of the Rectangle referred to by <code>box2</code>. The second line invokes the grow method on <code>box1</code>, which stretches the Rectangle horizontally and vertically. When
+                we make a change using box1, we see the change using <code>box2</code>. Thus, the value displayed by the third line is <code>200</code>, the width of the expanded rectangle.</p>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\polyfill.min.js"></script>
+<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

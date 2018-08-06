@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,132 +12,134 @@
     <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
-    <link rel="stylesheet" href="..\..\markbind\css\site-nav.css">
+    
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
-<div id="app" class="container-fluid">
-    <div>
-  <link rel="stylesheet" href="/se-book/css/textbook.css">
-  <div class="website-content">
-    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the Law of Demeter</span>
-      </span>
-      </span>
-      </span>
-      <p></p>
-    </p>
-    <div>
-      <div></div>
-      <p></p>
-      <p><span class="dimmed"><strong><span>Supplmentary → Principles →
-</span></strong>
+<div id="app">
+    <div id="content-wrapper">
+  <div>
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+    <div class="website-content">
+      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the Law of Demeter</span>
         </span>
+        </span>
+        </span>
+        <p></p>
       </p>
-      <div id="title-and-body">
-        <div>
-          <h4 id="law-of-demeter">Law of Demeter</h4>
-        </div>
-        <div id="main">
+      <div>
+        <div></div>
+        <p></p>
+        <p><span class="dimmed"><strong><span>Supplmentary → Principles →
+</span></strong>
+          </span>
+        </p>
+        <div id="title-and-body">
           <div>
-            <tip-box type="definition">
-              <div>
-                <p><strong>Law of Demeter (LoD)</strong>:</p>
-                <ul>
-                  <li>An object should have limited knowledge of another object.</li>
-                  <li>An object should only interact with objects that are closely related to it.</li>
-                </ul>
-                <p>Also known as</p>
-                <ul>
-                  <li>Don’t talk to strangers.</li>
-                  <li>Principle of least knowledge</li>
-                </ul>
-              </div>
-            </tip-box>
-            <p>More concretely, a method <code>m</code> of an object <code>O</code> should invoke only the methods of the following kinds of objects:</p>
-            <ul>
-              <li>The object <code>O</code> itself</li>
-              <li>Objects passed as parameters of <code>m</code></li>
-              <li>Objects created/instantiated in <code>m</code></li>
-              <li>Objects from the
-                <tooltip content="objects that are held by instance variables of">direct association of</tooltip> <code>O</code></li>
-            </ul>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code> is a ‘friend of a friend’ (which
-                should be considered a ‘stranger’), and <code>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
-              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
+            <h4 id="law-of-demeter">Law of Demeter</h4>
+          </div>
+          <div id="main">
+            <div>
+              <tip-box type="definition">
+                <div>
+                  <p><strong>Law of Demeter (LoD)</strong>:</p>
+                  <ul>
+                    <li>An object should have limited knowledge of another object.</li>
+                    <li>An object should only interact with objects that are closely related to it.</li>
+                  </ul>
+                  <p>Also known as</p>
+                  <ul>
+                    <li>Don’t talk to strangers.</li>
+                    <li>Principle of least knowledge</li>
+                  </ul>
+                </div>
+              </tip-box>
+              <p>More concretely, a method <code>m</code> of an object <code>O</code> should invoke only the methods of the following kinds of objects:</p>
+              <ul>
+                <li>The object <code>O</code> itself</li>
+                <li>Objects passed as parameters of <code>m</code></li>
+                <li>Objects created/instantiated in <code>m</code></li>
+                <li>Objects from the
+                  <tooltip content="objects that are held by instance variables of">direct association of</tooltip> <code>O</code></li>
+              </ul>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code> is a ‘friend of a friend’ (which
+                  should be considered a ‘stranger’), and <code>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
+                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
     Goo g = b.getGoo();
     g.doSomething();
 }
 </code></pre>
-            </tip-box>
-            <p><strong>LoD aims to reduce coupling by limiting the interaction to a closely related group of classes.</strong></p>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> In the example above, <code>foo</code> is already coupled to <code>Bar</code>. Upholding LoD avoids <code>foo</code> being coupled to <code>Goo</code> as well.</p>
-              <p><span class="fas fa-cube"></span> An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam
-                is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.</p>
-            </tip-box>
-          </div>
-          <div>
+              </tip-box>
+              <p><strong>LoD aims to reduce coupling by limiting the interaction to a closely related group of classes.</strong></p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> In the example above, <code>foo</code> is already coupled to <code>Bar</code>. Upholding LoD avoids <code>foo</code> being coupled to <code>Goo</code> as well.</p>
+                <p><span class="fas fa-cube"></span> An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam
+                  is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.</p>
+              </tip-box>
+            </div>
             <div>
-              <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                <div>
-                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Examples for LoD">
-                    <question has-input="true">
-                      <p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
-                      <div slot="answer">
-                        <p>Let us take the <code>Logic</code> class as an example. Assume that it has the following operation.</p>
-                        <p><code>setMinefield(Minefiled mf):void</code></p>
-                        <p>Consider the following that can happen inside this operation.</p>
-                        <ul>
-                          <li><code>mf.init();</code>: this does not violate LoD since LoD allows calling operations of parameters received.</li>
-                          <li><code>mf.getCell(1,3).clear();</code>: //this violates LoD because <code>Logic</code> is handling <code>Cell</code> objects deep inside <code>Minefield</code>. Instead, it should be <code>mf.clearCellAt(1,3);</code></li>
-                          <li><code>timer.start();</code>: //this does not violate LoD because <code>timer</code> appears to be an internal component (i.e. a variable) of <code>Logic</code> itself.</li>
-                          <li><code>Cell c = new Cell();</code> <code>c.init();</code>: // this does not violate LoD because <code>c</code> was created inside the operation.</li>
-                        </ul>
-                      </div>
-                    </question>
-                  </panel>
-                </div>
-                <div>
-                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> LoD violation?">
-                    <question>
-                      <p>This violates Law of Demeter.</p>
-                      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
+              <div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Examples for LoD">
+                      <question has-input="true">
+                        <p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
+                        <div slot="answer">
+                          <p>Let us take the <code>Logic</code> class as an example. Assume that it has the following operation.</p>
+                          <p><code>setMinefield(Minefiled mf):void</code></p>
+                          <p>Consider the following that can happen inside this operation.</p>
+                          <ul>
+                            <li><code>mf.init();</code>: this does not violate LoD since LoD allows calling operations of parameters received.</li>
+                            <li><code>mf.getCell(1,3).clear();</code>: //this violates LoD because <code>Logic</code> is handling <code>Cell</code> objects deep inside <code>Minefield</code>. Instead, it should be <code>mf.clearCellAt(1,3);</code></li>
+                            <li><code>timer.start();</code>: //this does not violate LoD because <code>timer</code> appears to be an internal component (i.e. a variable) of <code>Logic</code> itself.</li>
+                            <li><code>Cell c = new Cell();</code> <code>c.init();</code>: // this does not violate LoD because <code>c</code> was created inside the operation.</li>
+                          </ul>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> LoD violation?">
+                      <question>
+                        <p>This violates Law of Demeter.</p>
+                        <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
     Goo g =  <span class="hljs-keyword">new</span> Goo();
     g.doSomething();
 }
 </code></pre>
-                      <ul radio-group="3cf8e" class="radio-list">
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> True</label></li>
-                        <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> False</label></li>
-                      </ul>
-                      <div slot="answer">
-                        <p>False</p>
-                        <p>Explanation: The line <code>g.doSomething()</code> does not violate LoD because it is OK to invoke methods of objects created within a method.</p>
-                      </div>
-                    </question>
-                  </panel>
-                </div>
-                <div>
-                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Odd one out">
-                    <question>
-                      <p>Pick the odd one out.</p>
-                      <ul class="task-list">
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Law of Demeter.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Don’t add people to a late project.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Don’t talk to strangers.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Principle of least knowledge.</li>
-                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Coupling.</li>
-                      </ul>
-                      <div slot="answer">
-                        <p>(b)</p>
-                        <p>Explanation: Law of Demeter, which aims to reduce coupling, is also known as ‘Don’t talk to strangers’ and ‘Principle of least knowledge’.</p>
-                      </div>
-                    </question>
-                  </panel>
-                </div>
-              </panel>
+                        <ul radio-group="3cf8e" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> True</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> False</label></li>
+                        </ul>
+                        <div slot="answer">
+                          <p>False</p>
+                          <p>Explanation: The line <code>g.doSomething()</code> does not violate LoD because it is OK to invoke methods of objects created within a method.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Odd one out">
+                      <question>
+                        <p>Pick the odd one out.</p>
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Law of Demeter.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Don’t add people to a late project.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Don’t talk to strangers.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Principle of least knowledge.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Coupling.</li>
+                        </ul>
+                        <div slot="answer">
+                          <p>(b)</p>
+                          <p>Explanation: Law of Demeter, which aims to reduce coupling, is also known as ‘Don’t talk to strangers’ and ‘Principle of least knowledge’.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
             </div>
           </div>
         </div>

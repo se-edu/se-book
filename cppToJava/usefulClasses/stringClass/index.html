@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - C++ to Java: Some Useful Classes: The String Class</title>
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    
+    
+    <link rel="icon" href="/se-book/favicon.ico">
+</head>
+<body>
+<div id="app">
+    <div id="content-wrapper">
+  <div>
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+    <div class="website-content">
+      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use the String class</span>
+        </span>
+        </span>
+        </span>
+        <p></p>
+      </p>
+      <div>
+        <div></div>
+        <p></p>
+        <p><span class="dimmed"><strong><span>C++ to Java → Some Useful Classes →
+</span></strong>
+          </span>
+        </p>
+        <div id="title-and-body">
+          <div>
+            <h4 id="the-string-class">The <code>String</code> Class</h4>
+          </div>
+          <div id="main">
+            <div>
+              <p>String is a built-in Java class that you can use without importing</p>
+              <box>
+                :bulb: Any class in the [`java.lang`](https://docs.oracle.com/javase/9/docs/api/java/lang/package-summary.html) package can be used without importing.
+              </box>
+              <p>Given below are some useful String methods:</p>
+              <h5 id="find-the-character-at-a-specific-location">Find the character at a specific location</h5>
+              <div class="indented">
+                <p>Strings provide a method named charAt, which extracts a character. It returns a char, a primitive type that stores an individual character (as opposed to strings of them).</p>
+                <pre><code class="hljs java">String fruit = <span class="hljs-string">"banana"</span>;
+<span class="hljs-keyword">char</span> letter = fruit.charAt(<span class="hljs-number">0</span>);
+</code></pre>
+                <p>The argument 0 means that we want the letter at position 0. Like array indexes, string indexes start at 0, so the character assigned to letter is <code>b</code>.</p>
+                <p>You can convert a string to an array of characters using the toCharArray method.</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">char</span>[] fruitChars = fruit.toCharArray()
+</code></pre>
+              </div>
+              <h5 id="change-a-string-to-upperlower-case">Change a string to upper/lower case</h5>
+              <div class="indented">
+                <p>Strings provide methods, toUpperCase and toLowerCase, that convert from uppercase to lowercase and back. These methods are often a source of confusion, because it sounds like they modify strings. But neither these methods nor any others
+                  can change a string, because strings are immutable. When you invoke toUpperCase on a string, you get a new string object as a return value. For example:</p>
+                <pre><code class="hljs java">String name = <span class="hljs-string">"Alan Turing"</span>;
+String upperName = name.toUpperCase();
+</code></pre>
+                <p>After these statements run, upperName refers to the string &quot;ALAN TURING&quot;. But name still refers to &quot;Alan Turing&quot;. Another useful method is replace, which finds and replaces instances of one string within another. This
+                  example replaces &quot;Computer Science&quot; with &quot;CS&quot;:</p>
+                <pre><code class="hljs java">String text = <span class="hljs-string">"Computer Science is fun!"</span>;
+text = text.replace(<span class="hljs-string">"Computer Science"</span>, <span class="hljs-string">"CS"</span>);
+</code></pre>
+                <p>This example demonstrates a common way to work with string methods. It invokes <code>text.replace</code>, which returns a reference to a new string, <code>&quot;CS is fun!&quot;</code>. Then it assigns the new string to text, replacing
+                  the old string. This assignment is important; if you don’t save the return value, invoking <code>text.replace</code> has no effect.</p>
+              </div>
+              <h5 id="accessing-substrings">Accessing substrings</h5>
+              <div class="indented">
+                <p>The substring method returns a new string that copies letters from an existing string, starting at the given index.</p>
+                <ul>
+                  <li><code>fruit.substring(0)</code> <span class="fas fa-arrow-right"></span> <code>&quot;banana&quot;</code></li>
+                  <li><code>fruit.substring(2)</code> <span class="fas fa-arrow-right"></span> <code>&quot;nana&quot;</code></li>
+                  <li><code>fruit.substring(6)</code> <span class="fas fa-arrow-right"></span> <code>&quot;&quot;</code></li>
+                </ul>
+                <p>The first example returns a copy of the entire string. The second example returns all but the first two characters. As the last example shows, substring returns the empty string if the argument is the length of the string.</p>
+                <p>If it’s invoked with two arguments, they are treated as a start and end index:</p>
+                <ul>
+                  <li><code>fruit.substring(0, 3)</code> <span class="fas fa-arrow-right"></span> <code>&quot;ban&quot;</code></li>
+                  <li><code>fruit.substring(2, 5)</code> <span class="fas fa-arrow-right"></span> <code>&quot;nan&quot;</code></li>
+                  <li><code>fruit.substring(6, 6)</code> <span class="fas fa-arrow-right"></span> <code>&quot;&quot;</code></li>
+                </ul>
+              </div>
+              <h5 id="searching-within-strings">Searching within strings</h5>
+              <div class="indented">
+                <p>The <code>indexOf</code> method searches for a character in a string.</p>
+                <pre><code class="hljs java">String fruit = <span class="hljs-string">"banana"</span>;
+<span class="hljs-keyword">int</span> index = fruit.indexOf(<span class="hljs-string">'a'</span>);
+</code></pre>
+                <p>This example finds the index of 'a' in the string. But the letter appears three times, so it’s not obvious what indexOf should do. According to the documentation, it returns the index of the first appearance.</p>
+                <p>To find subsequent appearances, you can use another version of indexOf, which takes a second argument that indicates where in the string to start looking.</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">int</span> index = fruit.indexOf(<span class="hljs-string">'a'</span>, <span class="hljs-number">2</span>);
+</code></pre>
+                <p>This code starts at index 2 (the first 'n') and finds the next 'a', which is at index 3. If the letter happens to appear at the starting index, the starting index is the answer. So <code>fruit.indexOf('a', 5)</code> returns <code>5</code>.</p>
+                <p>If the character does not appear in the string, <code>indexOf</code> returns <code>-1</code>. Since indexes cannot be negative, this value indicates the character was not found. You can also use indexOf to search for a substring, not just
+                  a single character. For example, the expression <code>fruit.indexOf(&quot;nan&quot;)</code> returns <code>2</code>.</p>
+              </div>
+              <h5 id="comparing-strings">Comparing Strings</h5>
+              <div class="indented">
+                <p>To compare two strings, it may be tempting to use the == and != operators.</p>
+                <pre><code class="hljs java">String name1 = <span class="hljs-string">"Alan Turing"</span>;
+String name2 = <span class="hljs-string">"Ada Lovelace"</span>;
+<span class="hljs-keyword">if</span> (name1 == name2) {                 <span class="hljs-comment">// wrong!</span>
+    System.out.println(<span class="hljs-string">"The names are the same."</span>);
+}
+</code></pre>
+                <p>This code compiles and runs, and most of the time it gets the answer right. But it is not correct, and sometimes it gets the answer wrong. The problem is that the <code>==</code> operator checks whether the two variables refer to the same
+                  object (by comparing the references). If you give it two different strings that contain the same letters, it yields false. The right way to compare strings is with the equals method, like this:</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">if</span> (name1.equals(name2)) {
+    System.out.println(<span class="hljs-string">"The names are the same."</span>);
+}
+</code></pre>
+                <p>This example invokes <code>equals</code> on <code>name1</code> and passes <code>name2</code> as an argument. The <code>equals</code> method returns <code>true</code> if the strings contain the same characters; otherwise it returns <code>false</code>.</p>
+                <p>If the strings differ, we can use <code>compareTo</code> to see which comes first in alphabetical order:</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">int</span> diff = name1.compareTo(name2);
+<span class="hljs-keyword">if</span> (diff == <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"The names are the same."</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &lt; <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"name1 comes before name2."</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &gt; <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"name2 comes before name1."</span>);
+}
+</code></pre>
+                <p>The return value from compareTo is the difference between the first characters in the strings that differ. If the strings are equal, their difference is zero. If the first string (the one on which the method is invoked) comes first in
+                  the alphabet, the difference is negative. Otherwise, the difference is positive.</p>
+                <p>In the preceding code, compareTo returns positive 8, because the second letter of &quot;Ada&quot; comes before the second letter of &quot;Alan&quot; by 8 letters. Both equals and compareTo are case-sensitive. The uppercase letters come
+                  before the lowercase letters, so &quot;Ada&quot; comes before &quot;ada&quot;.</p>
+                <p><mark>//todo: mention equalsIgnoreCase methods</mark></p>
+              </div>
+              <h5 id="string-formatting">String formatting</h5>
+              <div class="indented">
+                <p>Sometimes programs need to create strings that are formatted a certain way, but not display them immediately, or ever. For example, the following method returns a time string in 12-hour format:</p>
+                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">timeString</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute)</span> </span>{
+    String ampm;
+    <span class="hljs-keyword">if</span> (hour &lt; <span class="hljs-number">12</span>) {
+        ampm = <span class="hljs-string">"AM"</span>;
+        <span class="hljs-keyword">if</span> (hour == <span class="hljs-number">0</span>) {
+            hour = <span class="hljs-number">12</span>;  <span class="hljs-comment">// midnight</span>
+        }
+    } <span class="hljs-keyword">else</span> {
+        ampm = <span class="hljs-string">"PM"</span>;
+        hour = hour - <span class="hljs-number">12</span>;
+    }
+    <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">"%02d:%02d %s"</span>, hour, minute, ampm);
+}
+</code></pre>
+                <p><code>String.format</code> takes the same arguments as <code>System.out.printf</code>: a format specifier followed by a sequence of values. The main difference is that <code>System.out.printf</code> displays the result on the screen; <code>String.format</code>                  creates a new string, but does not display anything. In this example, the format specifier <code>\%02d</code> means “two digit integer padded with zeros”, so <code>timeString(19, 5)</code> returns the string <code>&quot;07:05 PM&quot;</code>.</p>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="..\..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\..\markbind\js\polyfill.min.js"></script>
+<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
+<script src="..\..\..\markbind\js\setup.js"></script>
+</html>

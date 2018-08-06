@@ -38,8 +38,7 @@
 {{ icon_example }} In the code below, the `Logic` class will always have a `ConfigGenerator` object, provided the variable is not set to null at some point.
 
 
-<tabs> 
-  <tab header="Java">
+<div class="alt-java">
 
 ```java
 class Logic {
@@ -47,17 +46,16 @@ class Logic {
     ...
 }
 ```
-  </tab>
-  <tab header="Python">
+</div>
+<div class="alt-python">
 
 ```python
 class Logic:
-  
+
   def __init__(self):
     self.config_gen = ConfigGenerator()
 ```
-  </tab>
-</tabs>
+</div>
 
 
 </tip-box>

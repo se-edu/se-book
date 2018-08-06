@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,58 +12,59 @@
     <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\site-nav.css">
+    
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
-<div id="app" class="container-fluid">
-    <div>
-  <link rel="stylesheet" href="/se-book/css/textbook.css">
-  <div class="website-content">
-    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can increase cohesion</span>
-      </span>
-      </span>
-      </span>
-      <p></p>
-    </p>
-    <div>
-      <div>
-        <p>
-          <panel src="/se-book\designFundamentals\cohesion\what\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Design → Design Fundamentals → Cohesion →
-What%%"></panel>
-        </p>
-      </div>
-      <p></p>
-      <p><span class="dimmed"><strong><span>Design → Design Fundamentals → Cohesion →
-</span></strong>
+<div id="app">
+    <div id="content-wrapper">
+  <div>
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+    <div class="website-content">
+      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can increase cohesion</span>
         </span>
+        </span>
+        </span>
+        <p></p>
       </p>
-      <div id="title-and-body">
+      <div>
         <div>
-          <h4 id="how">How</h4>
+          <p>
+            <panel src="/se-book\designFundamentals\cohesion\what\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Design → Design Fundamentals → Cohesion →
+What%%"></panel>
+          </p>
         </div>
-        <div id="main">
+        <p></p>
+        <p><span class="dimmed"><strong><span>Design → Design Fundamentals → Cohesion →
+</span></strong>
+          </span>
+        </p>
+        <div id="title-and-body">
           <div>
-            <p><strong>Cohesion can be present in many forms</strong>. Some examples:</p>
-            <ul>
-              <li>Code related to a single concept is kept together, e.g. the Student component handles everything related to students.</li>
-              <li>Code that is invoked close together in time is kept together, e.g. all code related to initializing the system is kept together.</li>
-              <li>Code that manipulates the same data structure is kept together, e.g. the <code>GameArchive</code> component handles everything related to the storage and retrieval of game sessions.</li>
-            </ul>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> Suppose a Payroll application contains a class that deals with writing data to the database. If the class include some code to show an error dialog to the user if the database is unreachable, that class
-                is not cohesive because it seems to be interacting with the user as well as the database.</p>
-            </tip-box>
+            <h4 id="how">How</h4>
           </div>
-          <div>
+          <div id="main">
             <div>
-              <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                <div>
-                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which class is more cohesive?">
-                    <question has-input="true">
-                      <p>Compare the cohesion of the following two versions of the <code>EmailMessage</code> class. Which one is more cohesive and why?</p>
-                      <pre><code class="hljs java"><span class="hljs-comment">// version-1</span>
+              <p><strong>Cohesion can be present in many forms</strong>. Some examples:</p>
+              <ul>
+                <li>Code related to a single concept is kept together, e.g. the Student component handles everything related to students.</li>
+                <li>Code that is invoked close together in time is kept together, e.g. all code related to initializing the system is kept together.</li>
+                <li>Code that manipulates the same data structure is kept together, e.g. the <code>GameArchive</code> component handles everything related to the storage and retrieval of game sessions.</li>
+              </ul>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> Suppose a Payroll application contains a class that deals with writing data to the database. If the class include some code to show an error dialog to the user if the database is unreachable, that class
+                  is not cohesive because it seems to be interacting with the user as well as the database.</p>
+              </tip-box>
+            </div>
+            <div>
+              <div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which class is more cohesive?">
+                      <question has-input="true">
+                        <p>Compare the cohesion of the following two versions of the <code>EmailMessage</code> class. Which one is more cohesive and why?</p>
+                        <pre><code class="hljs java"><span class="hljs-comment">// version-1</span>
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{
     <span class="hljs-keyword">private</span> String sendTo;
  	  <span class="hljs-keyword">private</span> String subject;
@@ -102,15 +104,16 @@ What%%"></panel>
     }
 }
 </code></pre>
-                      <div slot="answer">
-                        <p>Version 2 is less cohesive.</p>
-                        <p>Explanation: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, we can improve the cohesion of both
-                          versions by removing the sendMessage functionality. Although sending message is related to emails, this class is supposed to represent an email message, not an email server.</p>
-                      </div>
-                    </question>
-                  </panel>
-                </div>
-              </panel>
+                        <div slot="answer">
+                          <p>Version 2 is less cohesive.</p>
+                          <p>Explanation: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, we can improve the cohesion of both
+                            versions by removing the sendMessage functionality. Although sending message is related to emails, this class is supposed to represent an email message, not an email server.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
             </div>
           </div>
         </div>

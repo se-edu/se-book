@@ -28,19 +28,13 @@
 ##### <big>Implementing overriding</big>
 
 **To override a method inherited from an ancestor class, simply re-implement the method in the target class.** 
+<div class="alt-java">
+  <include src="text-java.fr" />
+</div>
+<div class="alt-python">
+  <include src="text-python.fr" />
+</div>
 
-<tabs> 
-  <tab header="Java">
-
-<include src="text-java.fr" />
-
-  </tab>
-  <tab header="Python">
-
-<include src="text-python.fr" />
-
-</tab>
-</tabs>
 </div>
 
 <div id="extras">

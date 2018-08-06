@@ -96,6 +96,8 @@ title: "Book - Software Engineering for Self-Directed Learners"
 
 ### Supplementary
 
+<include src="cppToJava/topicToc.md" />
+
 * [Combined Exercises](combined/exercises.html)
 * [List of Definitions](common/definitions.html)
 * [List of References](common/references.html)
