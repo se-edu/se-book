@@ -14,11 +14,11 @@
 Java has the following **arithmetic operators**:
 Operator | Description | Examples
 ---------|-------------|---------
-`+` | Additive operator |
-`-` | Subtraction operator |
-`*` | Multiplication operator |
-`/` | Division operator |
-`%` | Remainder operator |
+`+` | Additive operator | `2 + 3` %%{{ icon_output_right }}%% `5`
+`-` | Subtraction operator | `4 - 1` %%{{ icon_output_right }}%% `3`
+`*` | Multiplication operator | `2 * 3` %%{{ icon_output_right }}%% `6`
+`/` | Division operator | ==`5 / 2` %%{{ icon_output_right }}%% `2`== but ==`5.0 / 2` %%{{ icon_output_right }}%% `2.5`==
+`%` | Remainder operator | `5 % 2` %%{{ icon_output_right }}%% `1`
 
 The following program uses some operators as part of an expression `hour * 60 + minute`:
 
@@ -42,33 +42,33 @@ Number of minutes since midnight: 719
 
 Operator | Description {{ oracle }} | example
 ---------|-------------|--------
-`+` | Unary plus operator; indicates positive value (numbers are positive without this, however) |
-`-` | Unary minus operator; negates an expression |
-`++` | Increment operator; increments a value by 1 | i++
-`--` | Decrement operator; decrements a value by 1 | i--
-`!` | Logical complement operator; inverts the value of a boolean |
+`+` | Unary plus operator; indicates positive value<br>(numbers are positive without this, however) | `x = 5; y = +x` %%{{ icon_output_right }}%% `y` is `5`
+`-` | Unary minus operator; negates an expression | `x = 5; y = -x` %%{{ icon_output_right }}%% `y` is `-5`
+`++` | Increment operator; increments a value by 1 | `i = 5; i++` %%{{ icon_output_right }}%% `i` is `6`
+`--` | Decrement operator; decrements a value by 1 | `i = 5; i--` %%{{ icon_output_right }}%% `i` is `4`
+`!` | Logical complement operator; inverts the value of a boolean | `foo = true; bar = !foo` %%{{ icon_output_right }}%% `bar` is `false`
 
 
 **Relational operators** are used to check conditions like whether two values are equal, or whether one is greater than the other. The following expressions show how they are used:
 
-Operator | Description | example
----------|-------------|--------
-`x == y` | x is equal to y |
-`x != y` | x is not equal to y |
-`x > y` | x is greater than y |
-`x < y` | x is less than y |
-`x >= y` | x is greater than or equal to y |
-`x <= y` | x is less than or equal to y |
+Operator | Description | example %%{{ icon_output_right }}%% `true`| example %%{{ icon_output_right }}%% `false`
+---------|-------------|---------------------------------------|----------------------------------------
+`x == y` | `x` is equal to `y` | `5 == 5` | `5 == 6`
+`x != y` | `x` is not equal to `y` |`5 != 6` | `5 != 5`
+`x > y` | `x` is greater than `y` | `7 > 6` | `5 > 6`
+`x < y` | `x` is less than `y` | `5 < 6` | `7 < 6`
+`x >= y` | `x` is greater than or equal to `y` | `5 >= 5` | `4 >= 5`
+`x <= y` | `x` is less than or equal to `y` | `4 <= 5` | `6 <= 5`
 
 The result of a relational operator is a boolean value.
 
 Java has three **conditional operators** that are used to operate on boolean values.
 
-Operator | Description | example
----------|-------------|--------
-`&&` | |
-`||` | |
-`!` | |
+Operator | Description | example %%{{ icon_output_right }}%% `true`| example %%{{ icon_output_right }}%% `false`
+---------|-------------|-------------------------------------------|--------------------------------------------
+`&&` | and | `true && true` %%{{ icon_output_right }}%% `true` | `true && false` %%{{ icon_output_right }}%% `false`
+`||` | or | `true || false` %%{{ icon_output_right }}%% `true` | `false || false` %%{{ icon_output_right }}%% `false`
+`!` | not | `not false` | `not true`
 
 
 </div>
