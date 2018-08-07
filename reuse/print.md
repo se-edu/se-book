@@ -1,5 +1,6 @@
 <frontmatter>
 title: "Reuse [Printable]"
+footer: footer.md
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">

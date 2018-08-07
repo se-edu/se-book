@@ -1,5 +1,6 @@
 <frontmatter>
 title: "C++ to Java: Some Useful Classes: Wrapper Classes for Primitive Types"
+footer: footer.md
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />
