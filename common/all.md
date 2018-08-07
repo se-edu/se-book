@@ -2,6 +2,8 @@
 title: "SE Book [All-In-One-Page Big File!]"
 </frontmatter>
 
+<include src="navbar.md" boilerplate />
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

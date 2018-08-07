@@ -2,6 +2,8 @@
 title: "Gathering Requirements [Printable]"
 </frontmatter>
 
+<include src="navbar.md" boilerplate />
+
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">

@@ -2,4 +2,6 @@
 title: "Testing: Test Automation: Automated Testing of GUIs"
 </frontmatter>
 
+<include src="navbar.md" boilerplate />
+
 <include src="unit-inPage-asFlat.md" boilerplate />
