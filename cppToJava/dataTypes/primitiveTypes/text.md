@@ -36,4 +36,5 @@ String is not a primitive type. You’ll learn more about strings in a later sec
 </div>
 
 <div id="extras">
+  <include src="resourcesPanel.md" boilerplate />
 </div>
