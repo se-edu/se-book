@@ -1,1 +1,1 @@
-Design → Object Oriented Programming → Associations →
+Paradigms → Object Oriented Programming → Associations →

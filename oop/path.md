@@ -1,1 +1,1 @@
-Design → Object Oriented Programming →
+Paradigms → Object Oriented Programming →
