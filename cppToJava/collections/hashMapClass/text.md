@@ -74,7 +74,7 @@ x4 = [5,0]
 Number of keys: 4
 Number of keys after clearing: 0
 ```
-<small>[[Try the above code on Repl.com](https://repl.it/@seedu/Demo-HashMap)]</small>
+<small>[[Try the above code on Repl.it](https://repl.it/@seedu/Demo-HashMap)]</small>
 
 </div>
 

@@ -93,7 +93,7 @@ class Main {
 ```
 123
 ```
-<small>[[Try the above code on Repl.com](https://repl.it/@seedu/Demo-Break)]</small>
+<small>[[Try the above code on Repl.it](https://repl.it/@seedu/Demo-Break)]</small>
 
 {{ similar }} **A `continue` statement skips the remainder of the current iteration** and moves to the next iteration of the loop.
 
@@ -113,7 +113,7 @@ public static void main(String[] args) {
 ```
 12345
 ```
-<small>[[Try the above code on Repl.com](https://repl.it/@seedu/Demo-Continue)]</small>
+<small>[[Try the above code on Repl.it](https://repl.it/@seedu/Demo-Continue)]</small>
 
 </div>
 
