@@ -1,5 +1,6 @@
 <frontmatter>
 title: "Modeling: Modeling Behaviors: Sequence Diagrams - Intermediate"
+footer: footer.md
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

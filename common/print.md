@@ -1,5 +1,6 @@
 <frontmatter>
 title: "SE Book [Printable, Big File!]"
+footer: footer.md
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">

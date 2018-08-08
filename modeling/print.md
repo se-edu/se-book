@@ -1,5 +1,6 @@
 <frontmatter>
 title: "Modeling [Printable]"
+footer: footer.md
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">

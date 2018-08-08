@@ -1,5 +1,6 @@
 <frontmatter>
 title: "C++ to Java [Printable]"
+footer: footer.md
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">

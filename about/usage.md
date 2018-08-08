@@ -1,5 +1,6 @@
 <frontmatter>
 title: "About: Usage"
+footer: footer.md
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
