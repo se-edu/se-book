@@ -113,4 +113,5 @@ public class SwitchDemo {
 </div>
 
 <div id="extras">
+  <include src="resourcesPanel.md" boilerplate />
 </div>

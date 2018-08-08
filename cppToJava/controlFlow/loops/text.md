@@ -33,7 +33,7 @@ public static void countdown(int n) {
 
 {{ similar }} `for` loops have the form:
 ```
-for ( initializer; condition; update) {
+for (initializer; condition; update) {
     statement(s);
 }
 ```
@@ -77,27 +77,43 @@ class DoWhileDemo {
 
 Here is an example %%(from {{ oracle }})%%:
 ```java
-for (i = 0; i < arrayOfInts.length; i++) {
-    if (arrayOfInts[i] == searchfor) {
-        foundIt = true;
-        break;
+class Main {
+    public static void main(String[] args) {
+        int[] numbers = new int[] { 1, 2, 3, 0, 4, 5, 0 };
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == 0) {
+                break;
+            }
+            System.out.print(numbers[i]);
+        }
     }
 }
 ```
-
+{{ icon_output }}
+```
+123
+```
+<small>[[Try the above code on Repl.com](https://repl.it/@seedu/Demo-Break)]</small>
 
 {{ similar }} **A `continue` statement skips the remainder of the current iteration** and moves to the next iteration of the loop.
 
 Here is an example %%(from {{ oracle }})%%:
 ```java
-for (int i = 0; i < max; i++) {
-    // interested only in p's
-    if (searchMe.charAt(i) != 'p')
-        continue;
-    // process p's
-    numPs++;
+public static void main(String[] args) {
+    int[] numbers = new int[] { 1, 2, 3, 0, 4, 5, 0 };
+    for (int i = 0; i < numbers.length; i++) {
+        if (numbers[i] == 0) {
+            continue;
+        }
+        System.out.print(numbers[i]);
+    }
 }
 ```
+{{ icon_output }}
+```
+12345
+```
+<small>[[Try the above code on Repl.com](https://repl.it/@seedu/Demo-Continue)]</small>
 
 </div>
 
@@ -127,4 +143,5 @@ Notice how the single line `for (int value : values)` replaces the first two lin
 </div>
 
 <div id="extras">
+  <include src="resourcesPanel.md" boilerplate />
 </div>

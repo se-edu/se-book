@@ -72,7 +72,7 @@ Do we have a Box?: false
 Do we have an Apple?: true
 After clearing: []
 ```
-<small>[[Try the above code on on Repl.com](https://repl.it/@seedu/Demo-ArrayList)]</small>
+<small>[[Try the above code on Repl.com](https://repl.it/@seedu/Demo-ArrayList)]</small>
 
 </div>
 

@@ -55,6 +55,20 @@ An _abstract class_ is a class that is declared `abstract`—it may or may not i
 
 ## C
 
+<div id="def-camel-case">
+<blockquote>
+<pic src="https://upload.wikimedia.org/wikipedia/commons/e/ef/CamelCase.svg" width="200" alt="camelCase">
+</pic>
+
+_CamelCase_ is named after the "humps" of its capital letters, similar to the humps of a Bactrian camel. Camel case (stylized as `camelCase`) is the practice of writing compound words or phrases such that each word or abbreviation in the middle of the phrase begins with a capital letter, with no intervening spaces or punctuation.
+
+<small>%%-- adapted from [Wikipedia](https://en.wikipedia.org/wiki/Camel_case)%%</small>
+</blockquote>
+
+e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book defines camelCase style as requiring the first letter to be lower case. If the first letter is upper case instead e.g., `CreateEmptyList`, it is called _UpperCamelCase_ or _PascalCase_.
+
+</div>
+
 <div id="def-client-code">
 
 **Client component/method/object**: The component/method/object that is interacting with a given code.
