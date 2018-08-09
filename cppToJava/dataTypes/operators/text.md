@@ -33,7 +33,14 @@ System.out.println(hour * 60 + minute);
 Number of minutes since midnight: 719
 ```
 
-{{ similar }} When an expression has multiple operators, normal **operator precedence** rules apply.
+{{ similar }} **When an expression has multiple operators, normal _operator precedence_ rules apply**. Furthermore, you can use parentheses to specify a precise precedence.
+
+<box>
+
+Examples:
+* `4 * 5 - 1` {{ icon_output_right }} `19` (`*` has higher precedence than `-`)
+* `4 * (5 - 1)` {{ icon_output_right }} `16` (parentheses `(` `)` have higher precedence than `*`)
+</box>
 
 {{ different }} Java does not allow _operator overloading_.
 
