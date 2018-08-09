@@ -98,13 +98,11 @@ public class AreaCalculator{
 {{ similar }} **Java methods can be _overloaded_.** If two methods do the same thing, it is natural to give them the same name. Having more than one method with the same name is called overloading, and it is legal in Java as long as each version takes different parameters.
 
 ```java
-public static double calculateArea
-        (double radius) {
+public static double calculateArea(double radius) {
     //...
 }
 
-public static double calculateArea
-        (double height, double width) {
+public static double calculateArea(double height, double width) {
     //...
 }
 ```
@@ -132,4 +130,5 @@ public static void nLines(int n) {
 
 <div id="extras">
   <include src="resourcesPanel.md" boilerplate />
+  <include src="exercisesPanel.md" boilerplate />
 </div>
