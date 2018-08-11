@@ -20,6 +20,14 @@
 <div id="app">
     <div id="content-wrapper">
   <div>
+    <navbar placement="top" type="inverse">
+      <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+      <li slot="right">
+        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+      </li>
+    </navbar>
+  </div>
+  <div>
     <link rel="stylesheet" href="/se-book/css/textbook.css">
     <div class="website-content" id="all">
       <p><span class="dimmed"><strong><span>C++ to Java →
@@ -105,9 +113,80 @@
                 </p>
                 <p></p>
                 <div>
-                  <p>//TODO</p>
+                  <p>The <code>ArrayList</code> class is a resizable-array implementation of the <code>List</code> interface. Unlike a normal <code>array</code>, an <code>ArrayList</code> can grow in size as you add more items to it. The example below illustrate
+                    some of the useful methods of the <code>ArrayList</code> class using an <code>ArrayList</code> of <code>String</code> objects.</p>
+                  <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayListDemo</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{
+        ArrayList&lt;String&gt; items = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+        System.out.println(<span class="hljs-string">"Before adding any items:"</span> + items);
+
+        items.add(<span class="hljs-string">"Apple"</span>);
+        items.add(<span class="hljs-string">"Box"</span>);
+        items.add(<span class="hljs-string">"Cup"</span>);
+        items.add(<span class="hljs-string">"Dart"</span>);
+        print(<span class="hljs-string">"After adding four items: "</span> + items);
+
+        items.remove(<span class="hljs-string">"Box"</span>); <span class="hljs-comment">// remove item "Box"</span>
+        print(<span class="hljs-string">"After removing Box: "</span> + items);
+
+        items.add(<span class="hljs-number">1</span>, <span class="hljs-string">"Banana"</span>); <span class="hljs-comment">// add "Banana" at index 1</span>
+        print(<span class="hljs-string">"After adding Banana: "</span> + items);
+
+        items.add(<span class="hljs-string">"Egg"</span>); <span class="hljs-comment">// add "Egg", will be added to the end</span>
+        items.add(<span class="hljs-string">"Cup"</span>); <span class="hljs-comment">// add another "Cup"</span>
+        print(<span class="hljs-string">"After adding Egg: "</span> + items);
+
+        print(<span class="hljs-string">"Number of items: "</span> + items.size());
+
+        print(<span class="hljs-string">"Index of Cup: "</span> + items.indexOf(<span class="hljs-string">"Cup"</span>));
+        print(<span class="hljs-string">"Index of Zebra: "</span> + items.indexOf(<span class="hljs-string">"Zebra"</span>));
+
+        print(<span class="hljs-string">"Item at index 3 is: "</span> + items.get(<span class="hljs-number">2</span>));
+
+        print(<span class="hljs-string">"Do we have a Box?: "</span> + items.contains(<span class="hljs-string">"Box"</span>));
+        print(<span class="hljs-string">"Do we have an Apple?: "</span> + items.contains(<span class="hljs-string">"Apple"</span>));
+
+        items.clear();
+        print(<span class="hljs-string">"After clearing: "</span> + items);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(String text)</span> </span>{
+        System.out.println(text);
+    }
+}
+</code></pre>
+                  <p><span class="fas fa-arrow-down"></span></p>
+                  <pre class="hljs"><code>Before adding any items:[]
+After adding four items: [Apple, Box, Cup, Dart]
+After removing Box: [Apple, Cup, Dart]
+After adding Banana: [Apple, Banana, Cup, Dart]
+After adding Egg: [Apple, Banana, Cup, Dart, Egg, Cup]
+Number of items: 6
+Index of Cup: 2
+Index of Zebra: -1
+Item at index 3 is: Cup
+Do we have a Box?: false
+Do we have an Apple?: true
+After clearing: []
+</code></pre>
+                  <p><small>[<a href="https://repl.it/@seedu/Demo-ArrayList">Try the above code on Repl.it</a>]</small></p>
                 </div>
-                <div></div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                      <div>
+                        <ul>
+                          <li><a href="https://docs.oracle.com/javase/9/docs/api/java/util/ArrayList.html"><code>ArrayList</code> API</a></li>
+                          <li><a href="https://beginnersbook.com/2013/12/java-arraylist/">A tutorial on ArrayLists</a> from <a href="http://beginnersbook.com">beginnersbook.com</a></li>
+                        </ul>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
               </div>
             </panel>
           </div>
@@ -124,9 +203,81 @@
                 </p>
                 <p></p>
                 <div>
-                  <p>// TODO</p>
+                  <p><code>HashMap</code> is an implementation of the <code>Map</code> interface. It allows you to store a collection of <em>key-value pairs</em>. The example below illustrates how to use a <code>HashMap&lt;String, Point&gt;</code> to maintain
+                    a list of coordinates and their identifiers e.g., the identifier <code>x1</code> is used to identify the point <code>0,0</code> where <code>x1</code> is the <em>key</em> and <code>0,0</code> is the <em>value</em>.</p>
+                  <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
+<span class="hljs-keyword">import</span> java.util.HashMap;
+<span class="hljs-keyword">import</span> java.util.Map;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HashMapDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        HashMap&lt;String, Point&gt; points = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+        <span class="hljs-comment">// put the key-value pairs in the HashMap</span>
+        points.put(<span class="hljs-string">"x1"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>));
+        points.put(<span class="hljs-string">"x2"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>));
+        points.put(<span class="hljs-string">"x3"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">5</span>));
+        points.put(<span class="hljs-string">"x4"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">0</span>));
+
+        <span class="hljs-comment">// retrieve a value for a key using the get method</span>
+        print(<span class="hljs-string">"Coordinates of x1: "</span> + pointAsString(points.get(<span class="hljs-string">"x1"</span>)));
+
+        <span class="hljs-comment">// check if a key or a value exists</span>
+        print(<span class="hljs-string">"Key x1 exists? "</span> + points.containsKey(<span class="hljs-string">"x1"</span>));
+        print(<span class="hljs-string">"Key x1 exists? "</span> + points.containsKey(<span class="hljs-string">"y1"</span>));
+        print(<span class="hljs-string">"Value (0,0) exists? "</span> + points.containsValue(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)));
+        print(<span class="hljs-string">"Value (1,2) exists? "</span> + points.containsValue(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)));
+
+        <span class="hljs-comment">// update the value of a key to a new value</span>
+        points.put(<span class="hljs-string">"x1"</span>, <span class="hljs-keyword">new</span> Point(-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>));
+
+        <span class="hljs-comment">// iterate over the entries</span>
+        <span class="hljs-keyword">for</span> (Map.Entry&lt;String, Point&gt; entry : points.entrySet()) {
+            print(entry.getKey() + <span class="hljs-string">" = "</span> + pointAsString(entry.getValue()));
+        }
+
+        print(<span class="hljs-string">"Number of keys: "</span> + points.size());
+        points.clear();
+        print(<span class="hljs-string">"Number of keys after clearing: "</span> + points.size());
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">pointAsString</span><span class="hljs-params">(Point p)</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"["</span> + p.x + <span class="hljs-string">","</span> + p.y + <span class="hljs-string">"]"</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(String s)</span> </span>{
+        System.out.println(s);
+    }
+}
+</code></pre>
+                  <p><span class="fas fa-arrow-down"></span></p>
+                  <pre class="hljs"><code>Coordinates of x1: [0,0]
+Key x1 exists? true
+Key x1 exists? false
+Value (0,0) exists? true
+Value (1,2) exists? false
+x1 = [-1,-1]
+x2 = [0,5]
+x3 = [5,5]
+x4 = [5,0]
+Number of keys: 4
+Number of keys after clearing: 0
+</code></pre>
+                  <p><small>[<a href="https://repl.it/@seedu/Demo-HashMap">Try the above code on Repl.it</a>]</small></p>
                 </div>
-                <div></div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                      <div>
+                        <ul>
+                          <li><a href="https://docs.oracle.com/javase/9/docs/api/java/util/HashMap.html"><code>HashMap</code> API</a></li>
+                          <li><a href="https://www.journaldev.com/11560/java-hashmap">A tutorial on HashMaps</a> from <a href="http://journaldev.com">journaldev.com</a></li>
+                        </ul>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
               </div>
             </panel>
           </div>
@@ -135,6 +286,11 @@
     </div>
   </div>
 </div>
+<div id="flex-div"></div>
+<footer>
+  <div class="text-center">
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sat, 11 Aug 2018 08:12:55 GMT.</small></div>
+</footer>
 </div>
 </body>
 <script src="..\..\markbind\js\vue.min.js"></script>

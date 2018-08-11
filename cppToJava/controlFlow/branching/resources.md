@@ -1,0 +1,1 @@
+* Oracle's tutorials on [[`if`-`else`](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html)][[`switch`](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html)]

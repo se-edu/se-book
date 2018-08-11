@@ -1,0 +1,1 @@
+* Oracle's tutorials on [[methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)][[parameters](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html)]

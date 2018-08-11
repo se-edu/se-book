@@ -20,6 +20,14 @@
 <div id="app">
     <div id="content-wrapper">
   <div>
+    <navbar placement="top" type="inverse">
+      <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+      <li slot="right">
+        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+      </li>
+    </navbar>
+  </div>
+  <div>
     <link rel="stylesheet" href="/se-book/css/textbook.css">
     <div class="website-content" id="all">
       <p><span class="dimmed"><strong><span>C++ to Java →
@@ -101,31 +109,31 @@
         String monthString;
         <span class="hljs-keyword">switch</span> (month) {
         <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:  monthString = <span class="hljs-string">"January"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:  monthString = <span class="hljs-string">"February"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:  monthString = <span class="hljs-string">"March"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:  monthString = <span class="hljs-string">"April"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">5</span>:  monthString = <span class="hljs-string">"May"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">6</span>:  monthString = <span class="hljs-string">"June"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">7</span>:  monthString = <span class="hljs-string">"July"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">8</span>:  monthString = <span class="hljs-string">"August"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">9</span>:  monthString = <span class="hljs-string">"September"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">10</span>: monthString = <span class="hljs-string">"October"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">11</span>: monthString = <span class="hljs-string">"November"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">12</span>: monthString = <span class="hljs-string">"December"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">default</span>: monthString = <span class="hljs-string">"Invalid month"</span>;
-                     <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         }
         System.out.println(monthString);
     }
@@ -134,7 +142,354 @@
                     <p><span class="fas fa-arrow-right"></span> <code>August</code></p>
                   </div>
                 </div>
-                <div></div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                      <div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Greeter">
+                            <question>
+                              <p>Write a Java program that takes several command line arguments that describe a person or a family | and prints out a greeting. The parameters can be one of two formats.</p>
+                              <div class="table-responsive">
+                                <table class="markbind-table table table-bordered table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th>arguments format</th>
+                                      <th>explanation</th>
+                                      <th>expected output</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td><code>NAME GENDER</code></td>
+                                      <td>Indicates a single person. <code>GENDER</code> can be <code>M</code> or <code>F</code></td>
+                                      <td><code>Smith M</code> <span class="fas fa-arrow-right"></span> <code>Dear Mr. Smith</code><br> <code>Lee F</code> <span class="fas fa-arrow-right"></span> <code>Dear Mdm. Lee</code></td>
+                                    </tr>
+                                    <tr>
+                                      <td><code>NAME MULTIPLE_GENDERS</code></td>
+                                      <td>Indicates a family.</td>
+                                      <td><code>Tan M M F</code> <span class="fas fa-arrow-right"></span> <code>Dear Tan family</code></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <p>Follow the sample output given below.</p>
+                              <p>
+                                <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Smith M</code> <span class="fas fa-arrow-right"></span> <code>Dear Mr. Smith</code></p>
+                              <p>
+                                <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Lee F</code> <span class="fas fa-arrow-right"></span> <code>Dear Mdm. Lee</code></p>
+                              <p>
+                                <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Tan M M F</code> <span class="fas fa-arrow-right"></span> <code>Dear Tan family</code></p>
+                              <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
+                              <div slot="hint">
+                                <p>Partial solution:</p>
+                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Greeter</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String first = args[<span class="hljs-number">0</span>];
+        String second = args[<span class="hljs-number">1</span>];
+        <span class="hljs-keyword">if</span> (args.length == <span class="hljs-number">2</span>) {
+            <span class="hljs-keyword">if</span> (second.equals(<span class="hljs-string">"M"</span>)) {
+                <span class="hljs-comment">// ...</span>
+            }
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// ...</span>
+        }
+    }
+}
+</code></pre>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Grade Helper">
+                            <question>
+                              <p>Write a Java program that takes a letter grade e.g., <code>A+</code> as a command line argument and prints the CAP value for that grade.</p>
+                              <p>💡 Use a <code>switch</code> statement in your code.</p>
+                              <div id="capConversion">
+                                <div class="table-responsive">
+                                  <table class="markbind-table table table-bordered table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th>A+</th>
+                                        <th>A</th>
+                                        <th>A-</th>
+                                        <th>B+</th>
+                                        <th>B</th>
+                                        <th>B-</th>
+                                        <th>C+</th>
+                                        <th>Else</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>5.0</td>
+                                        <td>5.0</td>
+                                        <td>4.5</td>
+                                        <td>4.0</td>
+                                        <td>3.5</td>
+                                        <td>3.0</td>
+                                        <td>2.5</td>
+                                        <td>0</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <p>Follow the sample output given below.</p>
+                              <p>
+                                <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java GradeHelper B</code> <span class="fas fa-arrow-right"></span> <code>CAP for grade B is 3.5</code></p>
+                              <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
+                              <div slot="hint">
+                                <p>Partial solution:</p>
+                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GradeHelper</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String grade = args[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">double</span> cutoff = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+            <span class="hljs-comment">// ...</span>
+        }
+        System.out.println(<span class="hljs-string">"CAP for grade "</span> + grade + <span class="hljs-string">" is "</span> + cutoff);
+    }
+}
+</code></pre>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </div>
+                    </panel>
+                  </div>
+                  <div>
+                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                      <div>
+                        <ul>
+                          <li>Oracle's tutorials on [<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html"><code>if</code>-<code>else</code></a>][<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html"><code>switch</code></a>]</li>
+                        </ul>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
+              </div>
+            </panel>
+          </div>
+          <div>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><div>
+<h4 id="methods">Methods</h4></div></span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use methods</span>
+                  </span>
+                  </span>
+                  </span>
+                  <p></p>
+                </p>
+                <p></p>
+                <div>
+                  <h5 id="defining-methods">Defining methods</h5>
+                  <div class="indented">
+                    <p>Here’s an example of adding more methods to a class:</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrintTwice</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTwice</span><span class="hljs-params">(String s)</span> </span>{
+        System.out.println(s);
+        System.out.println(s);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String sentence = “Polly likes crackers”
+        printTwice(sentence);
+
+    }
+}
+
+</code></pre>
+                    <p><span class="fas fa-arrow-down"></span></p>
+                    <pre class="hljs"><code>Polly likes crackers
+Polly likes crackers
+</code></pre>
+                    <p>By convention, method names should be named in the
+                      <trigger trigger="click" for="modal:javaMethods_camelCase"><em>camelCase</em></trigger> format.</p>
+                    <modal large="" title="Defintion: camelCase" id="modal:javaMethods_camelCase">
+                    
+                      <div>
+                        <blockquote>
+                          <pic src="https://upload.wikimedia.org/wikipedia/commons/e/ef/CamelCase.svg" width="200" alt="camelCase"></pic>
+                          <p><em>CamelCase</em> is named after the &quot;humps&quot; of its capital letters, similar to the humps of a Bactrian camel. Camel case (stylized as <code>camelCase</code>) is the practice of writing compound words or phrases such
+                            that each word or abbreviation in the middle of the phrase begins with a capital letter, with no intervening spaces or punctuation.</p>
+                          <p><small><span class="dimmed">-- adapted from <a href="https://en.wikipedia.org/wiki/Camel_case">Wikipedia</a></span></small></p>
+                        </blockquote>
+                        <p>e.g., <code>createEmptyList</code>, <code>listOfIntegers</code>, <code>htmlText</code>, <code>dvdPlayer</code>. This book defines camelCase style as requiring the first letter to be lower case. If the first letter is upper case
+                          instead e.g., <code>CreateEmptyList</code>, it is called <em>UpperCamelCase</em> or <em>PascalCase</em>.</p>
+                      </div>
+                    </modal>
+                    <p>Similar to the <code>main</code> method, the <code>printTwice</code> method is <code>public</code> <span class="dimmed">(i.e., it can be invoked from other classes)</span> <code>static</code> and <code>void</code>.</p>
+                    <h5 id="parameters">Parameters</h5>
+                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                      </span> <strong>A method can specify <em>parameters</em>.</strong> The <code>printTwice</code> method above specifies a parameter of <code>String</code> type. The <code>main</code> method passes the <em>argument</em> <code>&quot;Polly likes crackers&quot;</code>                      to that parameter.</p>
+                    <p><strong>The value provided as an argument must have the same type as the parameter.</strong> Sometimes Java can convert an argument from one type to another automatically. For example, if the method requires a <code>double</code>,
+                      you can invoke it with an <code>int</code> argument <code>5</code> and Java will automatically convert the argument to the equivalent value of type double <code>5.0</code>.</p>
+                    <p><strong>Because variables only exist inside the methods where they are defined, they are often called <em>local</em> variables.</strong> Parameters and other variables declared inside a method only exist inside their own methods. Inside
+                      <code>main</code>, there is no such thing as <code>s</code>. If you try to use it there, you’ll get a compiler error. Similarly, inside <code>printTwice</code> there is no such thing as <code>sentence</code>. That variable belongs
+                      to <code>main</code>.</p>
+                  </div>
+                  <h5 id="return-statements"><code>return</code> statements</h5>
+                  <div class="indented">
+                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                      </span> <strong>The <code>return</code> statement allows you to terminate a method before you reach the end of it</strong>:</p>
+                    <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printLogarithm</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x)</span> </span>{
+    <span class="hljs-keyword">if</span> (x &lt;= <span class="hljs-number">0.0</span>) {
+        System.out.println(<span class="hljs-string">"Error: x must be positive."</span>);
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">double</span> result = Math.log(x);
+    System.out.println(<span class="hljs-string">"The log of x is "</span> + result);
+}
+</code></pre>
+                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                      </span> <strong>It can be used to return a value from a method too</strong>:</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AreaCalculator</span></span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
+        <span class="hljs-keyword">double</span> result = <span class="hljs-number">3.14</span> * radius * radius;
+        <span class="hljs-keyword">return</span> result;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">double</span> area = calculateArea(<span class="hljs-number">12.5</span>);
+        System.out.println(area);
+    }
+}
+</code></pre>
+                  </div>
+                  <h5 id="overloading">Overloading</h5>
+                  <div class="indented">
+                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                      </span> <strong>Java methods can be <em>overloaded</em>.</strong> If two methods do the same thing, it is natural to give them the same name. Having more than one method with the same name is called overloading, and it is legal in Java as
+                      long as each version takes different parameters.</p>
+                    <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
+    <span class="hljs-comment">//...</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> height, <span class="hljs-keyword">double</span> width)</span> </span>{
+    <span class="hljs-comment">//...</span>
+}
+</code></pre>
+                  </div>
+                  <h5 id="recursion">Recursion</h5>
+                  <div class="indented">
+                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                      </span> <strong>Methods can be <em>recursive</em>.</strong> Here is an example in which the <code>nLines</code> method calls itself recursively:</p>
+                    <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">nLines</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+    <span class="hljs-keyword">if</span> (n &gt; <span class="hljs-number">0</span>) {
+        System.out.println();
+        nLines(n - <span class="hljs-number">1</span>);
+    }
+}
+</code></pre>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                      <div>
+                        <ul>
+                          <li>Oracle's tutorials on [<a href="https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html">methods</a>][<a href="https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html">parameters</a>]</li>
+                        </ul>
+                      </div>
+                    </panel>
+                  </div>
+                  <div>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                      <div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> `getGradeCap` Method">
+                            <question>
+                              <p>Add the following method to the class given below.</p>
+                              <ul>
+                                <li><code>public static double getGradeCap(String grade)</code>: Returns the CAP value of the given <code>grade</code>. The mapping from grades to CAP is given below.</li>
+                              </ul>
+                              <div class="indented">
+                                <div>
+                                  <div class="table-responsive">
+                                    <table class="markbind-table table table-bordered table-striped">
+                                      <thead>
+                                        <tr>
+                                          <th>A+</th>
+                                          <th>A</th>
+                                          <th>A-</th>
+                                          <th>B+</th>
+                                          <th>B</th>
+                                          <th>B-</th>
+                                          <th>C+</th>
+                                          <th>Else</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>5.0</td>
+                                          <td>5.0</td>
+                                          <td>4.5</td>
+                                          <td>4.0</td>
+                                          <td>3.5</td>
+                                          <td>3.0</td>
+                                          <td>2.5</td>
+                                          <td>0</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// ADD YOUR CODE HERE</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(<span class="hljs-string">"A+: "</span> + getGradeCap(<span class="hljs-string">"A+"</span>));
+        System.out.println(<span class="hljs-string">"B : "</span> + getGradeCap(<span class="hljs-string">"B"</span>));
+    }
+}
+</code></pre>
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>A+: 5.0
+B : 3.5
+</code></pre>
+                              <div slot="hint">
+                                <p>Partial solution:</p>
+                                <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{
+        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:
+            cap = <span class="hljs-number">5.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:
+            cap = <span class="hljs-number">4.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:
+            cap = <span class="hljs-number">4.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:
+            cap = <span class="hljs-number">3.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:
+            cap = <span class="hljs-number">3.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+        }
+        <span class="hljs-keyword">return</span> cap;
+    }
+</code></pre>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
               </div>
             </panel>
           </div>
@@ -168,7 +523,7 @@
                   <div class="indented">
                     <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
                       </span> <code>for</code> loops have the form:</p>
-                    <pre class="hljs"><code>for ( initializer; condition; update) {
+                    <pre class="hljs"><code>for (initializer; condition; update) {
     statement(s);
 }
 </code></pre>
@@ -202,25 +557,40 @@
                       </span> <strong>A <code>break</code> statement exits the current loop</strong>.</p>
                     <p>Here is an example <span class="dimmed">(from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span>
                       </small>)</span>:</p>
-                    <pre><code class="hljs java"><span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; arrayOfInts.length; i++) {
-    <span class="hljs-keyword">if</span> (arrayOfInts[i] == searchfor) {
-        foundIt = <span class="hljs-keyword">true</span>;
-        <span class="hljs-keyword">break</span>;
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">int</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span> };
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numbers.length; i++) {
+            <span class="hljs-keyword">if</span> (numbers[i] == <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">break</span>;
+            }
+            System.out.print(numbers[i]);
+        }
     }
 }
 </code></pre>
+                    <p><span class="fas fa-arrow-down"></span></p>
+                    <pre class="hljs"><code>123
+</code></pre>
+                    <p><small>[<a href="https://repl.it/@seedu/Demo-Break">Try the above code on Repl.it</a>]</small></p>
                     <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
                       </span> <strong>A <code>continue</code> statement skips the remainder of the current iteration</strong> and moves to the next iteration of the loop.</p>
                     <p>Here is an example <span class="dimmed">(from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span>
                       </small>)</span>:</p>
-                    <pre><code class="hljs java"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; max; i++) {
-    <span class="hljs-comment">// interested only in p's</span>
-    <span class="hljs-keyword">if</span> (searchMe.charAt(i) != <span class="hljs-string">'p'</span>)
-        <span class="hljs-keyword">continue</span>;
-    <span class="hljs-comment">// process p's</span>
-    numPs++;
+                    <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+    <span class="hljs-keyword">int</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span> };
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numbers.length; i++) {
+        <span class="hljs-keyword">if</span> (numbers[i] == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">continue</span>;
+        }
+        System.out.print(numbers[i]);
+    }
 }
 </code></pre>
+                    <p><span class="fas fa-arrow-down"></span></p>
+                    <pre class="hljs"><code>12345
+</code></pre>
+                    <p><small>[<a href="https://repl.it/@seedu/Demo-Continue">Try the above code on Repl.it</a>]</small></p>
                   </div>
                   <h5 id="enhanced-for-loops">Enhanced <code>for</code> loops</h5>
                   <div class="indented">
@@ -238,125 +608,124 @@
                     <p>This statement is called an <em>enhanced <code>for</code> loop</em>. You can read it as, “for each value in values”. Notice how the single line <code>for (int value : values)</code> replaces the first two lines of the standard <code>for</code>                      loop.</p>
                   </div>
                 </div>
-                <div></div>
-              </div>
-            </panel>
-          </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="methods">Methods</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use methods</span>
-                  </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
                 <div>
-                  <h5 id="defining-methods">Defining methods</h5>
-                  <div class="indented">
-                    <p>Here’s an example of adding more methods to a class:</p>
-                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NewLine</span> </span>{
+                  <div>
+                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                      <div>
+                        <ul>
+                          <li>Oracle's tutorials on [<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html"><code>while</code></a>][<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html"><code>for</code></a>][
+                            <a
+                              href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/branch.html"><code>break</code>/<code>continue</code></a>]</li>
+                        </ul>
+                      </div>
+                    </panel>
+                  </div>
+                  <div>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                      <div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> `getMultipleGradeCaps` Method">
+                            <question>
+                              <p>Add the following method to the class given below.</p>
+                              <ul>
+                                <li><code>public static double[] getMultipleGradeCaps(String[] grades)</code>: Returns the CAP values of the given <code>grades</code>. e.g., if the input was the array <code>[&quot;A+&quot;, &quot;B&quot;]</code>, the method
+                                  returns <code>[5.0, 3.5]</code>. The mapping from grades to CAP is given below.</li>
+                              </ul>
+                              <div class="indented">
+                                <div>
+                                  <div class="table-responsive">
+                                    <table class="markbind-table table table-bordered table-striped">
+                                      <thead>
+                                        <tr>
+                                          <th>A+</th>
+                                          <th>A</th>
+                                          <th>A-</th>
+                                          <th>B+</th>
+                                          <th>B</th>
+                                          <th>B-</th>
+                                          <th>C+</th>
+                                          <th>Else</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>5.0</td>
+                                          <td>5.0</td>
+                                          <td>4.5</td>
+                                          <td>4.0</td>
+                                          <td>3.5</td>
+                                          <td>3.0</td>
+                                          <td>2.5</td>
+                                          <td>0</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">newLine</span><span class="hljs-params">()</span> </span>{
-        System.out.println();
+    <span class="hljs-comment">// ADD YOUR CODE HERE</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{
+        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:
+            cap = <span class="hljs-number">5.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:
+            cap = <span class="hljs-number">4.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:
+            cap = <span class="hljs-number">4.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:
+            cap = <span class="hljs-number">3.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:
+            cap = <span class="hljs-number">3.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"C"</span>:
+            cap = <span class="hljs-number">2.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+        }
+        <span class="hljs-keyword">return</span> cap;
     }
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        System.out.println(<span class="hljs-string">"First line."</span>);
-        newLine();
-        System.out.println(<span class="hljs-string">"Second line."</span>);
+        String[] grades = <span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"A+"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"A-"</span>};
+        <span class="hljs-keyword">double</span>[] caps = getMultipleGradeCaps(grades);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {
+            System.out.println(grades[i] + <span class="hljs-string">":"</span> + caps[i]);
+        }
     }
 }
 </code></pre>
-                    <p><span class="fas fa-arrow-down"></span></p>
-                    <pre class="hljs"><code>First line.
-
-Second line.
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>A+:5.0
+A:5.0
+A-:4.5
 </code></pre>
-                    <p>By convention, method names should be named in the <em>camelCase</em> format. Similar to the main method, the newLine method is <code>public</code>, which means they can be invoked from other classes, <code>static</code> and <code>void</code>.</p>
-                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                      </span> A method can specify parameters. The <code>printTwice</code> method below specify a parameter of String type. The main method passes the argument <code>&quot;Don't make me say this twice!&quot;</code> to that parameter.</p>
-                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrintTwice</span> </span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTwice</span><span class="hljs-params">(String s)</span> </span>{
-        System.out.println(s);
-        System.out.println(s);
+                              <div slot="hint">
+                                <p>Partial solution:</p>
+                                <pre><code class="hljs java">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span>[] getMultipleGradeCaps(String[] grades) {
+        <span class="hljs-keyword">double</span>[] caps = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[grades.length];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {
+           <span class="hljs-comment">// ...</span>
+        }
+        <span class="hljs-keyword">return</span> caps;
     }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        String sentence = “Polly likes crackers”
-        printTwice(sentence);
-
-    }
-}
-
 </code></pre>
-                    <p>The value you provide as an argument must have the same type as the parameter. Sometimes Java can convert an argument from one type to another automatically. For example, if the method requires a <code>double</code>, you can invoke
-                      it with an <code>int</code> argument and Java will automatically convert the argument to the equivalent value of type double.</p>
-                    <p>Parameters and other variables declared inside a method only exist inside their own methods. Inside <code>main</code>, there is no such thing as <code>s</code>. If you try to use it there, you’ll get a compiler error. Similarly, inside
-                      <code>printTwice</code> there is no such thing as <code>sentence</code>. That variable belongs to <code>main</code>. Because variables only exist inside the methods where they are defined, they are often called local variables.</p>
-                  </div>
-                  <h5 id="return-statements"><code>return</code> statements</h5>
-                  <div class="indented">
-                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                      </span> The <code>return</code> statement allows you to terminate a method before you reach the end of it:</p>
-                    <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printLogarithm</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x)</span> </span>{
-    <span class="hljs-keyword">if</span> (x &lt;= <span class="hljs-number">0.0</span>) {
-        System.out.println(<span class="hljs-string">"Error: x must be positive."</span>);
-        <span class="hljs-keyword">return</span>;
-    }
-    <span class="hljs-keyword">double</span> result = Math.log(x);
-    System.out.println(<span class="hljs-string">"The log of x is "</span> + result);
-}
-</code></pre>
-                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                      </span> It can be used to return a value from a method too:</p>
-                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AreaCalculator</span></span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
-        <span class="hljs-keyword">double</span> result = <span class="hljs-number">3.14</span> * radius * radius;
-        <span class="hljs-keyword">return</span> result;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        <span class="hljs-keyword">double</span> area = calculateArea(<span class="hljs-number">12.5</span>);
-        System.out.println(area);
-    }
-}
-</code></pre>
-                  </div>
-                  <h5 id="overloading">Overloading</h5>
-                  <div class="indented">
-                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                      </span> If two methods do the same thing, it is natural to give them the same name. Having more than one method with the same name is called overloading, and it is legal in Java as long as each version takes different parameters.</p>
-                    <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span>
-        <span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
-    ...
-}
-
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span>
-        <span class="hljs-params">(<span class="hljs-keyword">double</span> height, <span class="hljs-keyword">double</span> width)</span> </span>{
-    ...
-}
-</code></pre>
-                  </div>
-                  <h5 id="recursion">Recursion</h5>
-                  <div class="indented">
-                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                      </span> Method can be recursive. Here is an example:</p>
-                    <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">nLines</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
-    <span class="hljs-keyword">if</span> (n &gt; <span class="hljs-number">0</span>) {
-        System.out.println();
-        nLines(n - <span class="hljs-number">1</span>);
-    }
-}
-</code></pre>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </div>
+                    </panel>
                   </div>
                 </div>
-                <div></div>
               </div>
             </panel>
           </div>
@@ -365,6 +734,11 @@ Second line.
     </div>
   </div>
 </div>
+<div id="flex-div"></div>
+<footer>
+  <div class="text-center">
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sat, 11 Aug 2018 08:12:55 GMT.</small></div>
+</footer>
 </div>
 </body>
 <script src="..\..\markbind\js\vue.min.js"></script>

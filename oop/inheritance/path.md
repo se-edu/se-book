@@ -1,1 +1,1 @@
-Design → Object Oriented Programming → Inheritance →
+Paradigms → Object Oriented Programming → Inheritance →

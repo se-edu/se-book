@@ -20,6 +20,14 @@
 <div id="app">
     <div id="content-wrapper">
   <div>
+    <navbar placement="top" type="inverse">
+      <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+      <li slot="right">
+        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+      </li>
+    </navbar>
+  </div>
+  <div>
     <link rel="stylesheet" href="/se-book/css/textbook.css">
     <div class="website-content">
       <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use branching</span>
@@ -96,31 +104,31 @@
         String monthString;
         <span class="hljs-keyword">switch</span> (month) {
         <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:  monthString = <span class="hljs-string">"January"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:  monthString = <span class="hljs-string">"February"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:  monthString = <span class="hljs-string">"March"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:  monthString = <span class="hljs-string">"April"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">5</span>:  monthString = <span class="hljs-string">"May"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">6</span>:  monthString = <span class="hljs-string">"June"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">7</span>:  monthString = <span class="hljs-string">"July"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">8</span>:  monthString = <span class="hljs-string">"August"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">9</span>:  monthString = <span class="hljs-string">"September"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">10</span>: monthString = <span class="hljs-string">"October"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">11</span>: monthString = <span class="hljs-string">"November"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">case</span> <span class="hljs-number">12</span>: monthString = <span class="hljs-string">"December"</span>;
-                 <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         <span class="hljs-keyword">default</span>: monthString = <span class="hljs-string">"Invalid month"</span>;
-                     <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>;
         }
         System.out.println(monthString);
     }
@@ -129,13 +137,146 @@
                 <p><span class="fas fa-arrow-right"></span> <code>August</code></p>
               </div>
             </div>
-            <div></div>
+            <div>
+              <div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Greeter">
+                        <question>
+                          <p>Write a Java program that takes several command line arguments that describe a person or a family | and prints out a greeting. The parameters can be one of two formats.</p>
+                          <div class="table-responsive">
+                            <table class="markbind-table table table-bordered table-striped">
+                              <thead>
+                                <tr>
+                                  <th>arguments format</th>
+                                  <th>explanation</th>
+                                  <th>expected output</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><code>NAME GENDER</code></td>
+                                  <td>Indicates a single person. <code>GENDER</code> can be <code>M</code> or <code>F</code></td>
+                                  <td><code>Smith M</code> <span class="fas fa-arrow-right"></span> <code>Dear Mr. Smith</code><br> <code>Lee F</code> <span class="fas fa-arrow-right"></span> <code>Dear Mdm. Lee</code></td>
+                                </tr>
+                                <tr>
+                                  <td><code>NAME MULTIPLE_GENDERS</code></td>
+                                  <td>Indicates a family.</td>
+                                  <td><code>Tan M M F</code> <span class="fas fa-arrow-right"></span> <code>Dear Tan family</code></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <p>Follow the sample output given below.</p>
+                          <p>
+                            <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Smith M</code> <span class="fas fa-arrow-right"></span> <code>Dear Mr. Smith</code></p>
+                          <p>
+                            <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Lee F</code> <span class="fas fa-arrow-right"></span> <code>Dear Mdm. Lee</code></p>
+                          <p>
+                            <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Tan M M F</code> <span class="fas fa-arrow-right"></span> <code>Dear Tan family</code></p>
+                          <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
+                          <div slot="hint">
+                            <p>Partial solution:</p>
+                            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Greeter</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String first = args[<span class="hljs-number">0</span>];
+        String second = args[<span class="hljs-number">1</span>];
+        <span class="hljs-keyword">if</span> (args.length == <span class="hljs-number">2</span>) {
+            <span class="hljs-keyword">if</span> (second.equals(<span class="hljs-string">"M"</span>)) {
+                <span class="hljs-comment">// ...</span>
+            }
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// ...</span>
+        }
+    }
+}
+</code></pre>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Grade Helper">
+                        <question>
+                          <p>Write a Java program that takes a letter grade e.g., <code>A+</code> as a command line argument and prints the CAP value for that grade.</p>
+                          <p>💡 Use a <code>switch</code> statement in your code.</p>
+                          <div id="capConversion">
+                            <div class="table-responsive">
+                              <table class="markbind-table table table-bordered table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>A+</th>
+                                    <th>A</th>
+                                    <th>A-</th>
+                                    <th>B+</th>
+                                    <th>B</th>
+                                    <th>B-</th>
+                                    <th>C+</th>
+                                    <th>Else</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>5.0</td>
+                                    <td>5.0</td>
+                                    <td>4.5</td>
+                                    <td>4.0</td>
+                                    <td>3.5</td>
+                                    <td>3.0</td>
+                                    <td>2.5</td>
+                                    <td>0</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <p>Follow the sample output given below.</p>
+                          <p>
+                            <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java GradeHelper B</code> <span class="fas fa-arrow-right"></span> <code>CAP for grade B is 3.5</code></p>
+                          <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
+                          <div slot="hint">
+                            <p>Partial solution:</p>
+                            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GradeHelper</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String grade = args[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">double</span> cutoff = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+            <span class="hljs-comment">// ...</span>
+        }
+        System.out.println(<span class="hljs-string">"CAP for grade "</span> + grade + <span class="hljs-string">" is "</span> + cutoff);
+    }
+}
+</code></pre>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </panel>
+              </div>
+              <div>
+                <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                  <div>
+                    <ul>
+                      <li>Oracle's tutorials on [<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html"><code>if</code>-<code>else</code></a>][<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html"><code>switch</code></a>]</li>
+                    </ul>
+                  </div>
+                </panel>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<div id="flex-div"></div>
+<footer>
+  <div class="text-center">
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sat, 11 Aug 2018 08:12:55 GMT.</small></div>
+</footer>
 </div>
 </body>
 <script src="..\..\..\markbind\js\vue.min.js"></script>

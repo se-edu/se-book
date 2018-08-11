@@ -20,6 +20,14 @@
 <div id="app">
     <div id="content-wrapper">
   <div>
+    <navbar placement="top" type="inverse">
+      <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+      <li slot="right">
+        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+      </li>
+    </navbar>
+  </div>
+  <div>
     <link rel="stylesheet" href="/se-book/css/textbook.css">
     <div class="website-content">
       <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use methods</span>
@@ -44,27 +52,6 @@
               <h5 id="defining-methods">Defining methods</h5>
               <div class="indented">
                 <p>Here’s an example of adding more methods to a class:</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NewLine</span> </span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">newLine</span><span class="hljs-params">()</span> </span>{
-        System.out.println();
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        System.out.println(<span class="hljs-string">"First line."</span>);
-        newLine();
-        System.out.println(<span class="hljs-string">"Second line."</span>);
-    }
-}
-</code></pre>
-                <p><span class="fas fa-arrow-down"></span></p>
-                <pre class="hljs"><code>First line.
-
-Second line.
-</code></pre>
-                <p>By convention, method names should be named in the <em>camelCase</em> format. Similar to the main method, the newLine method is <code>public</code>, which means they can be invoked from other classes, <code>static</code> and <code>void</code>.</p>
-                <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                  </span> A method can specify parameters. The <code>printTwice</code> method below specify a parameter of String type. The main method passes the argument <code>&quot;Don't make me say this twice!&quot;</code> to that parameter.</p>
                 <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrintTwice</span> </span>{
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTwice</span><span class="hljs-params">(String s)</span> </span>{
@@ -80,15 +67,39 @@ Second line.
 }
 
 </code></pre>
-                <p>The value you provide as an argument must have the same type as the parameter. Sometimes Java can convert an argument from one type to another automatically. For example, if the method requires a <code>double</code>, you can invoke it
-                  with an <code>int</code> argument and Java will automatically convert the argument to the equivalent value of type double.</p>
-                <p>Parameters and other variables declared inside a method only exist inside their own methods. Inside <code>main</code>, there is no such thing as <code>s</code>. If you try to use it there, you’ll get a compiler error. Similarly, inside
-                  <code>printTwice</code> there is no such thing as <code>sentence</code>. That variable belongs to <code>main</code>. Because variables only exist inside the methods where they are defined, they are often called local variables.</p>
+                <p><span class="fas fa-arrow-down"></span></p>
+                <pre class="hljs"><code>Polly likes crackers
+Polly likes crackers
+</code></pre>
+                <p>By convention, method names should be named in the
+                  <trigger trigger="click" for="modal:javaMethods_camelCase"><em>camelCase</em></trigger> format.</p>
+                <modal large="" title="Defintion: camelCase" id="modal:javaMethods_camelCase">
+                
+                  <div>
+                    <blockquote>
+                      <pic src="https://upload.wikimedia.org/wikipedia/commons/e/ef/CamelCase.svg" width="200" alt="camelCase"></pic>
+                      <p><em>CamelCase</em> is named after the &quot;humps&quot; of its capital letters, similar to the humps of a Bactrian camel. Camel case (stylized as <code>camelCase</code>) is the practice of writing compound words or phrases such that
+                        each word or abbreviation in the middle of the phrase begins with a capital letter, with no intervening spaces or punctuation.</p>
+                      <p><small><span class="dimmed">-- adapted from <a href="https://en.wikipedia.org/wiki/Camel_case">Wikipedia</a></span></small></p>
+                    </blockquote>
+                    <p>e.g., <code>createEmptyList</code>, <code>listOfIntegers</code>, <code>htmlText</code>, <code>dvdPlayer</code>. This book defines camelCase style as requiring the first letter to be lower case. If the first letter is upper case instead
+                      e.g., <code>CreateEmptyList</code>, it is called <em>UpperCamelCase</em> or <em>PascalCase</em>.</p>
+                  </div>
+                </modal>
+                <p>Similar to the <code>main</code> method, the <code>printTwice</code> method is <code>public</code> <span class="dimmed">(i.e., it can be invoked from other classes)</span> <code>static</code> and <code>void</code>.</p>
+                <h5 id="parameters">Parameters</h5>
+                <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                  </span> <strong>A method can specify <em>parameters</em>.</strong> The <code>printTwice</code> method above specifies a parameter of <code>String</code> type. The <code>main</code> method passes the <em>argument</em> <code>&quot;Polly likes crackers&quot;</code>                  to that parameter.</p>
+                <p><strong>The value provided as an argument must have the same type as the parameter.</strong> Sometimes Java can convert an argument from one type to another automatically. For example, if the method requires a <code>double</code>, you
+                  can invoke it with an <code>int</code> argument <code>5</code> and Java will automatically convert the argument to the equivalent value of type double <code>5.0</code>.</p>
+                <p><strong>Because variables only exist inside the methods where they are defined, they are often called <em>local</em> variables.</strong> Parameters and other variables declared inside a method only exist inside their own methods. Inside
+                  <code>main</code>, there is no such thing as <code>s</code>. If you try to use it there, you’ll get a compiler error. Similarly, inside <code>printTwice</code> there is no such thing as <code>sentence</code>. That variable belongs to
+                  <code>main</code>.</p>
               </div>
               <h5 id="return-statements"><code>return</code> statements</h5>
               <div class="indented">
                 <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                  </span> The <code>return</code> statement allows you to terminate a method before you reach the end of it:</p>
+                  </span> <strong>The <code>return</code> statement allows you to terminate a method before you reach the end of it</strong>:</p>
                 <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printLogarithm</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x)</span> </span>{
     <span class="hljs-keyword">if</span> (x &lt;= <span class="hljs-number">0.0</span>) {
         System.out.println(<span class="hljs-string">"Error: x must be positive."</span>);
@@ -99,7 +110,7 @@ Second line.
 }
 </code></pre>
                 <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                  </span> It can be used to return a value from a method too:</p>
+                  </span> <strong>It can be used to return a value from a method too</strong>:</p>
                 <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AreaCalculator</span></span>{
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
@@ -117,22 +128,21 @@ Second line.
               <h5 id="overloading">Overloading</h5>
               <div class="indented">
                 <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                  </span> If two methods do the same thing, it is natural to give them the same name. Having more than one method with the same name is called overloading, and it is legal in Java as long as each version takes different parameters.</p>
-                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span>
-        <span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
-    ...
+                  </span> <strong>Java methods can be <em>overloaded</em>.</strong> If two methods do the same thing, it is natural to give them the same name. Having more than one method with the same name is called overloading, and it is legal in Java as long
+                  as each version takes different parameters.</p>
+                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
+    <span class="hljs-comment">//...</span>
 }
 
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span>
-        <span class="hljs-params">(<span class="hljs-keyword">double</span> height, <span class="hljs-keyword">double</span> width)</span> </span>{
-    ...
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> height, <span class="hljs-keyword">double</span> width)</span> </span>{
+    <span class="hljs-comment">//...</span>
 }
 </code></pre>
               </div>
               <h5 id="recursion">Recursion</h5>
               <div class="indented">
                 <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                  </span> Method can be recursive. Here is an example:</p>
+                  </span> <strong>Methods can be <em>recursive</em>.</strong> Here is an example in which the <code>nLines</code> method calls itself recursively:</p>
                 <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">nLines</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
     <span class="hljs-keyword">if</span> (n &gt; <span class="hljs-number">0</span>) {
         System.out.println();
@@ -142,13 +152,117 @@ Second line.
 </code></pre>
               </div>
             </div>
-            <div></div>
+            <div>
+              <div>
+                <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                  <div>
+                    <ul>
+                      <li>Oracle's tutorials on [<a href="https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html">methods</a>][<a href="https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html">parameters</a>]</li>
+                    </ul>
+                  </div>
+                </panel>
+              </div>
+              <div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> `getGradeCap` Method">
+                        <question>
+                          <p>Add the following method to the class given below.</p>
+                          <ul>
+                            <li><code>public static double getGradeCap(String grade)</code>: Returns the CAP value of the given <code>grade</code>. The mapping from grades to CAP is given below.</li>
+                          </ul>
+                          <div class="indented">
+                            <div>
+                              <div class="table-responsive">
+                                <table class="markbind-table table table-bordered table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th>A+</th>
+                                      <th>A</th>
+                                      <th>A-</th>
+                                      <th>B+</th>
+                                      <th>B</th>
+                                      <th>B-</th>
+                                      <th>C+</th>
+                                      <th>Else</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>5.0</td>
+                                      <td>5.0</td>
+                                      <td>4.5</td>
+                                      <td>4.0</td>
+                                      <td>3.5</td>
+                                      <td>3.0</td>
+                                      <td>2.5</td>
+                                      <td>0</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// ADD YOUR CODE HERE</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(<span class="hljs-string">"A+: "</span> + getGradeCap(<span class="hljs-string">"A+"</span>));
+        System.out.println(<span class="hljs-string">"B : "</span> + getGradeCap(<span class="hljs-string">"B"</span>));
+    }
+}
+</code></pre>
+                          <p><span class="fas fa-arrow-down"></span></p>
+                          <pre class="hljs"><code>A+: 5.0
+B : 3.5
+</code></pre>
+                          <div slot="hint">
+                            <p>Partial solution:</p>
+                            <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{
+        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">switch</span> (grade) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:
+            cap = <span class="hljs-number">5.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:
+            cap = <span class="hljs-number">4.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:
+            cap = <span class="hljs-number">4.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:
+            cap = <span class="hljs-number">3.5</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:
+            cap = <span class="hljs-number">3.0</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+        }
+        <span class="hljs-keyword">return</span> cap;
+    }
+</code></pre>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </panel>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<div id="flex-div"></div>
+<footer>
+  <div class="text-center">
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sat, 11 Aug 2018 08:12:55 GMT.</small></div>
+</footer>
 </div>
 </body>
 <script src="..\..\..\markbind\js\vue.min.js"></script>

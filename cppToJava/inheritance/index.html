@@ -20,6 +20,14 @@
 <div id="app">
     <div id="content-wrapper">
   <div>
+    <navbar placement="top" type="inverse">
+      <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+      <li slot="right">
+        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+      </li>
+    </navbar>
+  </div>
+  <div>
     <link rel="stylesheet" href="/se-book/css/textbook.css">
     <div class="website-content" id="all">
       <p><span class="dimmed"><strong><span>C++ to Java →
@@ -374,6 +382,35 @@ Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number
                 <div>
                   <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
                   <blockquote>
+                    <p>Consider the <code>Bicycle</code> class below:</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bicycle</span> </span>{
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> gear;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> speed;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Bicycle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear)</span> </span>{
+        gear = startGear;
+        speed = startSpeed;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGear</span><span class="hljs-params">(<span class="hljs-keyword">int</span> newValue)</span> </span>{
+        gear = newValue;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">applyBrake</span><span class="hljs-params">(<span class="hljs-keyword">int</span> decrement)</span> </span>{
+        speed -= decrement;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">speedUp</span><span class="hljs-params">(<span class="hljs-keyword">int</span> increment)</span> </span>{
+        speed += increment;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printDescription</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Bike is in gear "</span> + gear + <span class="hljs-string">" and travelling at a speed of "</span> + speed + <span class="hljs-string">"."</span>);
+    }
+
+}
+</code></pre>
                     <p>To demonstrate <em>polymorphic</em> features in the Java language, let's extend the <code>Bicycle</code> class with a <code>MountainBike</code> and a <code>RoadBike</code> class. For <code>MountainBike</code>, let's add a field for
                       <code>suspension</code>, which is a <code>String</code> value that indicates if the bike has a front shock absorber, <code>Front</code>. Or, the bike has a front and back shock absorber, <code>Dual</code>.</p>
                     <p>Here is the updated class:</p>
@@ -395,7 +432,7 @@ Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printDescription</span><span class="hljs-params">()</span> </span>{
         <span class="hljs-keyword">super</span>.printDescription();
-        System.out.println(<span class="hljs-string">"The "</span> + <span class="hljs-string">"MountainBike has a"</span> +getSuspension() + <span class="hljs-string">" suspension."</span>);
+        System.out.println(<span class="hljs-string">"The "</span> + <span class="hljs-string">"MountainBike has a"</span> + getSuspension() + <span class="hljs-string">" suspension."</span>);
     }
 }
 </code></pre>
@@ -420,8 +457,7 @@ Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printDescription</span><span class="hljs-params">()</span></span>{
         <span class="hljs-keyword">super</span>.printDescription();
-        System.out.println(<span class="hljs-string">"The RoadBike"</span> + <span class="hljs-string">" has "</span> + getTireWidth() +
-            <span class="hljs-string">" MM tires."</span>);
+        System.out.println(<span class="hljs-string">"The RoadBike"</span> + <span class="hljs-string">" has "</span> + getTireWidth() + <span class="hljs-string">" MM tires."</span>);
     }
 }
 </code></pre>
@@ -432,9 +468,9 @@ Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number
   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
     Bicycle bike01, bike02, bike03;
 
-    bike01 = <span class="hljs-keyword">new</span> Bicycle(<span class="hljs-number">20</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1</span>);
-    bike02 = <span class="hljs-keyword">new</span> MountainBike(<span class="hljs-number">20</span>, <span class="hljs-number">10</span>, <span class="hljs-number">5</span>, <span class="hljs-string">"Dual"</span>);
-    bike03 = <span class="hljs-keyword">new</span> RoadBike(<span class="hljs-number">40</span>, <span class="hljs-number">20</span>, <span class="hljs-number">8</span>, <span class="hljs-number">23</span>);
+    bike01 = <span class="hljs-keyword">new</span> Bicycle(<span class="hljs-number">10</span>, <span class="hljs-number">1</span>);
+    bike02 = <span class="hljs-keyword">new</span> MountainBike(<span class="hljs-number">10</span>, <span class="hljs-number">5</span>, <span class="hljs-string">"Dual"</span>);
+    bike03 = <span class="hljs-keyword">new</span> RoadBike(<span class="hljs-number">20</span>, <span class="hljs-number">8</span>, <span class="hljs-number">23</span>);
 
     bike01.printDescription();
     bike02.printDescription();
@@ -443,12 +479,10 @@ Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number
 }
 </code></pre>
                     <p><span class="fas fa-arrow-down"></span></p>
-                    <pre class="hljs"><code>Bike is in gear 1 with a cadence of 20 and travelling at a speed of 10.
-
-Bike is in gear 5 with a cadence of 20 and travelling at a speed of 10.
-The MountainBike has a Dual suspension.
-
-Bike is in gear 8 with a cadence of 40 and travelling at a speed of 20.
+                    <pre class="hljs"><code>Bike is in gear 1 and travelling at a speed of 10.
+Bike is in gear 5 and travelling at a speed of 10.
+The MountainBike has aDual suspension.
+Bike is in gear 8 and travelling at a speed of 20.
 The RoadBike has 23 MM tires.
 </code></pre>
                     <p>The Java virtual machine (JVM) calls the appropriate method for the object that is referred to in each variable. It does not call the method that is defined by the variable's type. This behavior is referred to as <em>virtual method invocation</em>                      and demonstrates an aspect of the important polymorphism features in the Java language.</p>
@@ -532,6 +566,11 @@ The RoadBike has 23 MM tires.
     </div>
   </div>
 </div>
+<div id="flex-div"></div>
+<footer>
+  <div class="text-center">
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sat, 11 Aug 2018 08:12:55 GMT.</small></div>
+</footer>
 </div>
 </body>
 <script src="..\..\markbind\js\vue.min.js"></script>

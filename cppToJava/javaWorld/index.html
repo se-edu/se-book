@@ -20,6 +20,14 @@
 <div id="app">
     <div id="content-wrapper">
   <div>
+    <navbar placement="top" type="inverse">
+      <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+      <li slot="right">
+        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+      </li>
+    </navbar>
+  </div>
+  <div>
     <link rel="stylesheet" href="/se-book/css/textbook.css">
     <div class="website-content" id="all">
       <p><span class="dimmed"><strong><span>C++ to Java →
@@ -75,9 +83,9 @@
                 </p>
                 <p></p>
                 <div>
-                  <p><strong>Java is both <em>compiled</em> and <em>interpreted</em>.</strong> Instead of translating programs directly into machine language, the Java compiler generates <em>byte code</em>. Byte code is <em>portable</em>, so it is possible
-                    to compile a Java program on one machine, transfer the byte code to another machine, and run the byte code on the other machine. That’s why Java is considered a <em>platform independent technology</em>, aka <em>WORA</em> (Write Once
-                    Run Anywhere). The interpreter that runs byte code is called a “Java Virtual Machine” (JVM).</p>
+                  <p><strong>Java is both <tooltip content="generates machine code from source code before executing the program"><em>compiled</em></tooltip> and <tooltip content="the interpreter executes the program directly, one statement at a time"><em>interpreted</em></tooltip>.</strong>                    Instead of translating programs directly into machine language, the Java compiler generates <em>byte code</em>. Byte code is <em>portable</em>, so it is possible to compile a Java program on one machine, transfer the byte code to another
+                    machine, and run the byte code on the other machine. That’s why Java is considered a <em>platform independent technology</em>, aka <em>WORA</em> (Write Once Run Anywhere). The interpreter that runs byte code is called a “Java Virtual
+                    Machine” (JVM).</p>
                   <blockquote>
                     <p><strong>Java technology is both a <em>programming language</em> and a <em>platform</em>.</strong> The Java programming language is a high-level object-oriented language that has a particular syntax and style. A Java platform is a particular
                       environment in which Java programming language applications run. <small>--<a href="https://docs.oracle.com/javaee/6/firstcup/doc/gkhoy.html">Oracle</a></small></p>
@@ -126,6 +134,11 @@
     </div>
   </div>
 </div>
+<div id="flex-div"></div>
+<footer>
+  <div class="text-center">
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sat, 11 Aug 2018 08:12:55 GMT.</small></div>
+</footer>
 </div>
 </body>
 <script src="..\..\markbind\js\vue.min.js"></script>

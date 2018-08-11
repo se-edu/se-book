@@ -20,6 +20,14 @@
 <div id="app">
     <div id="content-wrapper">
   <div>
+    <navbar placement="top" type="inverse">
+      <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+      <li slot="right">
+        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+      </li>
+    </navbar>
+  </div>
+  <div>
     <link rel="stylesheet" href="/se-book/css/textbook.css">
     <div class="website-content">
       <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use arrays</span>
@@ -43,32 +51,61 @@
             <div>
               <p>Arrays are indicated using square brackets (<code>[]</code>). To create the array itself, you have to use the <code>new</code> operator. Here are some example array declarations:</p>
               <pre><code class="hljs java"><span class="hljs-keyword">int</span>[] counts;
+counts = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">4</span>]; <span class="hljs-comment">// create an int array of size 4</span>
+
+<span class="hljs-keyword">int</span> size = <span class="hljs-number">5</span>;
 <span class="hljs-keyword">double</span>[] values;
-counts = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">4</span>];
-values = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[size];
-<span class="hljs-keyword">int</span>[] scores = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">4</span>];
-<span class="hljs-keyword">double</span>[] prices = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[size];
+values = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[size]; <span class="hljs-comment">//use a variable for the size</span>
+
+<span class="hljs-keyword">double</span>[] prices = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[size]; <span class="hljs-comment">// declare and create at the same time</span>
 </code></pre>
+              <blockquote>
+                Alternatively, you can use the shortcut syntax to create and initialize an array:
+                <pre><code class="hljs java"><span class="hljs-keyword">int</span>[] values = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>};
+
+<span class="hljs-keyword">int</span>[] anArray = {
+    <span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">300</span>,
+    <span class="hljs-number">400</span>, <span class="hljs-number">500</span>, <span class="hljs-number">600</span>,
+    <span class="hljs-number">700</span>, <span class="hljs-number">800</span>, <span class="hljs-number">900</span>, <span class="hljs-number">1000</span>
+};
+</code></pre>
+                <p><small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></p>
+              </blockquote>
               <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                </span> The <code>[]</code> operator selects elements from an array. Array elements indices start from 0 <span class="dimmed">i.e., the index of the first element is 0, not 1</span>.</p>
+                </span> The <code>[]</code> operator selects elements from an array. Array elements
+                <tooltip content="i.e., the index of the first element is 0, not 1">indices start from 0</tooltip>.</p>
               <pre><code class="hljs java"><span class="hljs-keyword">int</span>[] counts = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">4</span>];
 
 System.out.println(<span class="hljs-string">"The first element is "</span> + counts[<span class="hljs-number">0</span>]);
 
-counts[<span class="hljs-number">0</span>] = <span class="hljs-number">7</span>;
+counts[<span class="hljs-number">0</span>] = <span class="hljs-number">7</span>; <span class="hljs-comment">// set the element at index 0 to be 7</span>
 counts[<span class="hljs-number">1</span>] = counts[<span class="hljs-number">0</span>] * <span class="hljs-number">2</span>;
-counts[<span class="hljs-number">2</span>]++;
+counts[<span class="hljs-number">2</span>]++; <span class="hljs-comment">// increment value at index 2</span>
 </code></pre>
               <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
-                </span> A Java array is aware of its size.</p>
+                </span> A Java array is aware of its size. A Java array prevents a programmer from indexing the array out of bounds. If the index is negative or not present in the array, the result is an error named <code>ArrayIndexOutOfBoundsException</code>.</p>
               <pre><code class="hljs java"><span class="hljs-keyword">int</span>[] scores = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">4</span>];
-System.out.println(scores.length)
+System.out.println(scores.length) <span class="hljs-comment">// prints 4</span>
+scores[<span class="hljs-number">5</span>] = <span class="hljs-number">0</span>; <span class="hljs-comment">// causes an exception</span>
 </code></pre>
               <p><span class="fas fa-arrow-down"></span></p>
               <pre class="hljs"><code>4
+Exception in thread &quot;main&quot; java.lang.ArrayIndexOutOfBoundsException: 5
+	at Main.main(Main.java:6)
 </code></pre>
-              <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
-                </span> A Java array prevents a programmer from indexing the array out of bounds. If the index is negative or not present in the array, the result is an error named <code>ArrayIndexOutOfBoundsException</code>.</p>
+              <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                </span> It is also possible to create arrays of more than one dimension:</p>
+              <blockquote>
+                <pre><code class="hljs java">String[][] names = {
+    {<span class="hljs-string">"Mr. "</span>, <span class="hljs-string">"Mrs. "</span>, <span class="hljs-string">"Ms. "</span>},
+    {<span class="hljs-string">"Smith"</span>, <span class="hljs-string">"Jones"</span>}
+};
+
+System.out.println(names[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] + names[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>]); <span class="hljs-comment">// Mr. Smith</span>
+System.out.println(names[<span class="hljs-number">0</span>][<span class="hljs-number">2</span>] + names[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>]); <span class="hljs-comment">// Ms. Jones</span>
+</code></pre>
+                <p><small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></p>
+              </blockquote>
               <h5 id="passing-arguments-to-a-program">Passing arguments to a program</h5>
               <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
                 </span> The <code>args</code> parameter of the <code>main</code> method is an array of Strings containing command line arguments supplied (if any) when running the program.</p>
@@ -83,15 +120,83 @@ System.out.println(scores.length)
                 <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Foo abc</code></p>
               <p><span class="fas fa-arrow-down"></span></p>
               <p><code>abc</code></p>
-              <p><mark>//todo mention array initializing using literals</mark></p>
             </div>
-            <div></div>
+            <div>
+              <div>
+                <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                  <div>
+                    <ul>
+                      <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html">Oracle's tutorial on Arrays</a></li>
+                      <li><a href="https://www.tutorialspoint.com/java/java_arrays.htm">A tutorial on Arrays</a> <span class="dimmed">by <a href="http://tutorialspoint.com">tutorialspoint.com</a></span></li>
+                      <li><a href="https://www.youtube.com/watch?v=L06uGnF4IpY"><span class="fab fa-youtube"></span> A video tutorial on Arrays</a> <span class="dimmed">by thenewboston</span></li>
+                    </ul>
+                  </div>
+                </panel>
+              </div>
+              <div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Compare names">
+                        <question>
+                          <p>Write a Java program that takes two command line arguments and prints <code>true</code> or <code>false</code> to indicate if the two arguments have the same value. Follow the sample output given below.</p>
+                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WordComparator</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+      <span class="hljs-comment">// add your code here</span>
+  }
+}
+</code></pre>
+                          <p>
+                            <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java WordComparator adam eve</code> <span class="fas fa-arrow-down"></span></p>
+                          <pre class="hljs"><code>Words given: adam, eve
+They are the same: false
+</code></pre>
+                          <p>
+                            <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java WordComparator eve eve</code> <span class="fas fa-arrow-down"></span></p>
+                          <pre class="hljs"><code>Words given: eve, eve
+They are the same: true
+</code></pre>
+                          <p>💡 Use the following technique to compare two <code>Strings</code>(i.e., don't use <code>==</code>). <span class="dimmed">Reason: to be covered in a later topic</span>.</p>
+                          <pre><code class="hljs java">String x = <span class="hljs-string">"foo"</span>;
+<span class="hljs-keyword">boolean</span> isSame = x.equals(<span class="hljs-string">"bar"</span>) <span class="hljs-comment">// false</span>
+isSame = x.equals(<span class="hljs-string">"foo"</span>) <span class="hljs-comment">// true</span>
+</code></pre>
+                          <div slot="hint">
+                            <ul>
+                              <li>The two command line arguments can be accessed inside the <code>main</code> method using <code>args[0]</code> and <code>args[1]</code>.</li>
+                              <li>When using multiple operators in the same expression, you might need to use parentheses to specify operator precedence. e.g., <code>&quot;foo&quot; + x == y</code> vs <code>&quot;foo&quot; + (x == y)</code></li>
+                            </ul>
+                            <panel type="seamless" header="partial solution">
+                              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WordComparator</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+      String first = args[<span class="hljs-number">0</span>];
+      String second = args[<span class="hljs-number">1</span>];
+      System.out.println(<span class="hljs-string">"Words given: "</span> + first + <span class="hljs-string">", "</span> + second);
+      <span class="hljs-comment">// ...</span>
+  }
+}
+
+</code></pre>
+                            </panel>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </panel>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<div id="flex-div"></div>
+<footer>
+  <div class="text-center">
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sat, 11 Aug 2018 08:12:55 GMT.</small></div>
+</footer>
 </div>
 </body>
 <script src="..\..\..\markbind\js\vue.min.js"></script>

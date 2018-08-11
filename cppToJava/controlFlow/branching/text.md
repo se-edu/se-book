@@ -75,31 +75,31 @@ public class SwitchDemo {
         String monthString;
         switch (month) {
         case 1:  monthString = "January";
-                 break;
+            break;
         case 2:  monthString = "February";
-                 break;
+            break;
         case 3:  monthString = "March";
-                 break;
+            break;
         case 4:  monthString = "April";
-                 break;
+            break;
         case 5:  monthString = "May";
-                 break;
+            break;
         case 6:  monthString = "June";
-                 break;
+            break;
         case 7:  monthString = "July";
-                 break;
+            break;
         case 8:  monthString = "August";
-                 break;
+            break;
         case 9:  monthString = "September";
-                 break;
+            break;
         case 10: monthString = "October";
-                 break;
+            break;
         case 11: monthString = "November";
-                 break;
+            break;
         case 12: monthString = "December";
-                 break;
+            break;
         default: monthString = "Invalid month";
-                     break;
+            break;
         }
         System.out.println(monthString);
     }
@@ -113,4 +113,6 @@ public class SwitchDemo {
 </div>
 
 <div id="extras">
+  <include src="exercisesPanel.md" boilerplate />
+  <include src="resourcesPanel.md" boilerplate />
 </div>

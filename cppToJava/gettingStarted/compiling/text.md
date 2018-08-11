@@ -14,7 +14,7 @@ To compile the HelloWorld program, open a command console, navigate to the folde
 
 {{ icon_terminal }} `javac HelloWorld.java`
 
-If the compilation is successful, you should see a file `HelloWorld.class`. That file contains the byte code for your program. If the compilation is successful, you will be notified of the <trigger for="pop:compiling-errors">compile-time errors</trigger>.
+If the compilation is successful, you should see a file `HelloWorld.class`. That file contains the byte code for your program. If the compilation is unsuccessful, you will be notified of the <trigger for="pop:compiling-errors">compile-time errors</trigger>.
 
 <popover id="pop:compiling-errors" title="Compile-time errors" placement="top">
   <div slot="content">

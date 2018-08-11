@@ -1,6 +1,9 @@
 <frontmatter>
 title: "About: Usage"
+footer: footer.md
 </frontmatter>
+
+<include src="navbar.md" boilerplate />
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
@@ -141,7 +144,7 @@ Meaning of some shortened headings:
 <div class="indented">
 
 {{ icon_tangential }} : tangential info, can be ignored if not interested<br>
-{{ icon_new_window }} : direct link to the LO. `Ctrl+Click` to open the LO in new window/tab.<br>
+{{ icon_new_window }} : direct link to the LO. <kbd>Ctrl</kbd>+`Click` to open the LO in new window/tab.<br>
 {{ icon_outcome }} : learning outcomes<br>
 {{ icon_prereq }} : prerequisite learning outcome<br>
 {{ icon_example }} : examples<br>

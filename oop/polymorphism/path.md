@@ -1,1 +1,1 @@
-Design → Object Oriented Programming → Polymorphism → 
+Paradigms → Object Oriented Programming → Polymorphism →

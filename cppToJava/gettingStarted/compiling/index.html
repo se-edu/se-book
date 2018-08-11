@@ -20,6 +20,14 @@
 <div id="app">
     <div id="content-wrapper">
   <div>
+    <navbar placement="top" type="inverse">
+      <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+      <li slot="right">
+        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+      </li>
+    </navbar>
+  </div>
+  <div>
     <link rel="stylesheet" href="/se-book/css/textbook.css">
     <div class="website-content">
       <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can compile a simple Java program</span>
@@ -44,7 +52,7 @@
               <p>To compile the HelloWorld program, open a command console, navigate to the folder containing the file, and run the following command.</p>
               <p>
                 <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>javac HelloWorld.java</code></p>
-              <p>If the compilation is successful, you should see a file <code>HelloWorld.class</code>. That file contains the byte code for your program. If the compilation is successful, you will be notified of the
+              <p>If the compilation is successful, you should see a file <code>HelloWorld.class</code>. That file contains the byte code for your program. If the compilation is unsuccessful, you will be notified of the
                 <trigger for="pop:compiling-errors">compile-time errors</trigger>.</p>
               <popover id="pop:compiling-errors" title="Compile-time errors" placement="top">
               
@@ -67,6 +75,11 @@
     </div>
   </div>
 </div>
+<div id="flex-div"></div>
+<footer>
+  <div class="text-center">
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sat, 11 Aug 2018 08:12:55 GMT.</small></div>
+</footer>
 </div>
 </body>
 <script src="..\..\..\markbind\js\vue.min.js"></script>

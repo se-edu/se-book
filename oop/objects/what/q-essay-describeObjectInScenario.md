@@ -23,7 +23,7 @@ Explain the following statements about OOP using the above scenario as an exampl
 
 >[1] Object Oriented Programming (OOP) views the world as a network of interacting objects.
 
-Interacting objects in the scenario: `Tom`, `SE Text Book` (`Book` for short), `Text`, (possibly) `Highlighter`
+Interacting objects in the scenario: `Tom`, `SE Textbook` (`Book` for short), `Text`, (possibly) `Highlighter`
  
 :bulb: objects usually match nouns in the description
 
