@@ -14,6 +14,38 @@ Given below is an extract from the {{ oracle }}, with slight adaptations.
 
 <blockquote>
 
+Consider the `Bicycle` class below:
+
+```java
+public class Bicycle {
+
+    public int gear;
+    public int speed;
+
+    public Bicycle(int startSpeed, int startGear) {
+        gear = startGear;
+        speed = startSpeed;
+    }
+
+    public void setGear(int newValue) {
+        gear = newValue;
+    }
+
+    public void applyBrake(int decrement) {
+        speed -= decrement;
+    }
+
+    public void speedUp(int increment) {
+        speed += increment;
+    }
+
+    public void printDescription() {
+        System.out.println("Bike is in gear " + gear + " and travelling at a speed of " + speed + ".");
+    }
+
+}
+```
+
 To demonstrate _polymorphic_ features in the Java language, let's extend the `Bicycle` class with a `MountainBike` and a `RoadBike` class. For `MountainBike`, let's add a field for `suspension`, which is a `String` value that indicates if the bike has a front shock absorber, `Front`. Or, the bike has a front and back shock absorber, `Dual`.
 
 Here is the updated class:
@@ -37,7 +69,7 @@ public class MountainBike extends Bicycle {
 
     public void printDescription() {
         super.printDescription();
-        System.out.println("The " + "MountainBike has a" +getSuspension() + " suspension.");
+        System.out.println("The " + "MountainBike has a" + getSuspension() + " suspension.");
     }
 }
 ```
@@ -66,8 +98,7 @@ public class RoadBike extends Bicycle{
 
     public void printDescription(){
         super.printDescription();
-        System.out.println("The RoadBike" + " has " + getTireWidth() +
-            " MM tires.");
+        System.out.println("The RoadBike" + " has " + getTireWidth() + " MM tires.");
     }
 }
 ```
@@ -80,27 +111,25 @@ Here is a test program that creates three Bicycle variables. Each variable is as
 
 ```java
 public class TestBikes {
-  public static void main(String[] args){
-    Bicycle bike01, bike02, bike03;
+    public static void main(String[] args) {
+        Bicycle bike01, bike02, bike03;
 
-    bike01 = new Bicycle(20, 10, 1);
-    bike02 = new MountainBike(20, 10, 5, "Dual");
-    bike03 = new RoadBike(40, 20, 8, 23);
+        bike01 = new Bicycle(10, 1);
+        bike02 = new MountainBike(10, 5, "Dual");
+        bike03 = new RoadBike(20, 8, 23);
 
-    bike01.printDescription();
-    bike02.printDescription();
-    bike03.printDescription();
-  }
+        bike01.printDescription();
+        bike02.printDescription();
+        bike03.printDescription();
+    }
 }
 ```
 {{ icon_output }}
 ```
-Bike is in gear 1 with a cadence of 20 and travelling at a speed of 10.
-
-Bike is in gear 5 with a cadence of 20 and travelling at a speed of 10.
-The MountainBike has a Dual suspension.
-
-Bike is in gear 8 with a cadence of 40 and travelling at a speed of 20.
+Bike is in gear 1 and travelling at a speed of 10.
+Bike is in gear 5 and travelling at a speed of 10.
+The MountainBike has aDual suspension.
+Bike is in gear 8 and travelling at a speed of 20.
 The RoadBike has 23 MM tires.
 ```
 
