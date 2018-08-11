@@ -10,7 +10,7 @@
 
 <div id="body">
 
-<panel header="%%{{ icon_resource }} Git Overview%%"> 
+<panel header="%%{{ icon_resource }} Git Overview%%" class="non-printable">
 
 Soon you are going to take your first step in using Git. If you would like to see a quick overview of the full Git landscape before jumping in, watch the video below.
  

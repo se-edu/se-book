@@ -9,10 +9,8 @@
 </div>
 
 <div id="body">
-<div>
+</div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+  <include src="exercises.md" />
 </div>

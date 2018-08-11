@@ -10,7 +10,7 @@
 
 <div id="body">
 
-<div v-closeable alt="Junit tutorial video">
+<div v-closeable alt="Junit tutorial video" class="non-printable">
 
 JUnit 4 with IntelliJ: A quick introduction <sub>-- by DrBFraser</sub>
 

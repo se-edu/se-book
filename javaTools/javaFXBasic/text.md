@@ -12,10 +12,10 @@
 
 %%Adapted (with permissions) from [Marco Jakob's JavaFX 8 tutorial](http://code.makery.ch/library/javafx-8-tutorial/).%%
 
-<panel header="**Part 1: Scene Builder**">
+<panel header="**Part 1: Scene Builder**" minimized>
   <include src="part01/part01.md" />
 </panel>
-<panel header="**Part 2: Model and TableView**">
+<panel header="**Part 2: Model and TableView**" minimized>
   <include src="part02/part02.md" />
 </panel>
 

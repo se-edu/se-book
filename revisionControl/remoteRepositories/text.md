@@ -25,7 +25,7 @@ While it is possible to set up your own remote repo on a server, an easier optio
 **A ==_pull request_== is mechanism for contributing code to a remote repo.** It is a formal request sent to the maintainers of the repo asking them to pull your new code to their repo.
 
 
-<div v-closeable alt="slideshow: remote repo scenario">
+<div v-closeable alt="slideshow: remote repo scenario" class="non-printable">
 
 Here is a scenario that includes all the concepts introduced above (click on the slide to advance the animation): 
 

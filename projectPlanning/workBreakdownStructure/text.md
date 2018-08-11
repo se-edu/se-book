@@ -115,7 +115,7 @@
 
 {{ icon_example }} Some examples of ill-defined tasks and their better-defined counterparts:
 
-| :-1: Not good | :+1: Better
+| {{ bad }} | <span class="text-success">{{ icon_like }} Better </span>
 | ------- | ----------------------------
 | more coding | implement component X
 | do research on UI testing | find a suitable tool for testing the UI
