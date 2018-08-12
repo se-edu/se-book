@@ -22,8 +22,8 @@ Here is the implementation of the `adjustSalary(int)` operation.
 
 ```java
 class Payroll1 {
-    ArrayList< Admin > admins;
-    ArrayList< Academic > academics;
+    ArrayList<Admin> admins;
+    ArrayList<Academic> academics;
     // ...
 
     void adjustSalary(int byPercent) {
@@ -42,7 +42,7 @@ Note how processing is similar for the two staff types. It is as if the type of 
 
 ```java
 class Payroll2 {
-    ArrayList< Staff > staff;
+    ArrayList<Staff> staff;
     // ...
 
     void adjustSalary(int byPercent) {
@@ -54,7 +54,7 @@ class Payroll2 {
 ```
 
 Notice the following:
-* Only one data structure `ArrayList< Staff >`. It contains both `Admin` and `Academic` objects but treats them as `Staff` objects
+* Only one data structure `ArrayList<Staff>`. It contains both `Admin` and `Academic` objects but treats them as `Staff` objects
 * Only one loop
 * Outcome of the `s.adjustSalary(byPercent)` method call depends on whether `s` is an `Academic` or `Admin` object
 

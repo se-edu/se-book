@@ -140,6 +140,44 @@
                 <pre class="hljs"><code>Printed in Superclass.
 Printed in Subclass
 </code></pre>
+              </blockquote>
+              <panel type="seamless" header="<span class='fas fa-cube'></span> Another example of method overriding">
+                <p>A simple example where the <code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method:</p>
+                <pre><code class="hljs java">
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Report</span></span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
+        System.out.println(<span class="hljs-string">"Printing report"</span>);
+    }
+
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EvaluationReport</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Report</span></span>{
+
+    <span class="hljs-meta">@Override</span>  <span class="hljs-comment">// this annotation is optional</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
+        System.out.println(<span class="hljs-string">"Printing evaluation report"</span>);
+    }
+
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReportMain</span></span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        Report report = <span class="hljs-keyword">new</span> Report();
+        report.print(); <span class="hljs-comment">// prints "Printing report"</span>
+
+        EvaluationReport evaluationReport = <span class="hljs-keyword">new</span> EvaluationReport();
+        evaluationReport.print(); <span class="hljs-comment">// prints "Printing evaluation report"</span>
+    }
+}
+</code></pre>
+                <p><span class="fas fa-arrow-down"></span></p>
+                <pre class="hljs"><code>Printing report
+Printing evaluation report
+</code></pre>
+              </panel>
+              <blockquote>
                 <h5 id="subclass-constructors">Subclass Constructors</h5>
                 <p>The following example illustrates how to use the <code>super</code> keyword to invoke a superclass's constructor. Recall from the <code>Bicycle</code> example that <code>MountainBike</code> is a subclass of <code>Bicycle</code>. Here is
                   the <code>MountainBike</code> (subclass) constructor that calls the superclass constructor and then adds initialization code of its own:</p>
@@ -241,7 +279,7 @@ Printed in Subclass
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sat, 11 Aug 2018 08:12:55 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 09:51:30 GMT.</small></div>
 </footer>
 </div>
 </body>

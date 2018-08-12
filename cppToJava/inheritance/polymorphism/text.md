@@ -111,17 +111,17 @@ Here is a test program that creates three Bicycle variables. Each variable is as
 
 ```java
 public class TestBikes {
-  public static void main(String[] args){
-    Bicycle bike01, bike02, bike03;
+    public static void main(String[] args) {
+        Bicycle bike01, bike02, bike03;
 
-    bike01 = new Bicycle(10, 1);
-    bike02 = new MountainBike(10, 5, "Dual");
-    bike03 = new RoadBike(20, 8, 23);
+        bike01 = new Bicycle(10, 1);
+        bike02 = new MountainBike(10, 5, "Dual");
+        bike03 = new RoadBike(20, 8, 23);
 
-    bike01.printDescription();
-    bike02.printDescription();
-    bike03.printDescription();
-  }
+        bike01.printDescription();
+        bike02.printDescription();
+        bike03.printDescription();
+    }
 }
 ```
 {{ icon_output }}

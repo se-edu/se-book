@@ -435,32 +435,18 @@
                 etc.). Therefore, we can have a class called <code>Person</code> containing instructions on how to create <code>Person</code> objects and use that class to instantiate objects <code>Adam</code>, <code>Beth</code>, <code>Charlie</code>,
                 and <code>Daisy</code>. Similarly, we need classes <code>AgeList</code>, <code>Calculator</code>, and <code>Main</code> classes to instantiate one each of <code>AgeList</code>, <code>Calculator</code>, and <code>Main</code> objects.</p>
             </tip-box>
-            <h5 id="implementing-classes"><big>Implementing Classes</big></h5>
-            <p>Given below are some resources on how to implement classes:</p>
-            <div class="alt-java">
-              <ul>
-                <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html">Classes, methods, variables</a> – Start from the linked page and follow the next few steps in the tutorial</li>
-              </ul>
-            </div>
-            <div class="alt-python">
-              <div>
-                <ul>
-                  <li><a href="https://nus-te3201.github.io/website/programming/toc/oop.html#classes">Python Programming Basics: OOP: Classes</a> - Basics of writing classes using Python</li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
         <div>
           <div>
-            <h4 id="class-level-members">Class Level Members</h4>
+            <h4 id="class-level-members">Class-Level Members</h4>
           </div>
           <div>
             <p>While all objects of a class has the same attributes, each object has its own copy of the attribute value.</p>
             <tip-box>
               <p><span class="fas fa-cube"></span> All <code>Person</code> objects have the <code>Name</code> attribute but the value of that attribute varies between <code>Person</code> objects.</p>
             </tip-box>
-            <p>However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Such <strong>variables whose value is shared by all instances of a class are called <mark><em>class level attributes</em></mark></strong>.</p>
+            <p>However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Such <strong>variables whose value is shared by all instances of a class are called <mark><em>class-level attributes</em></mark></strong>.</p>
             <tip-box>
               <p><span class="fas fa-cube"></span> The attribute <code>totalPersons</code> should be maintained centrally and shared by all <code>Person</code> objects rather than copied at each <code>Person</code> object.</p>
             </tip-box>
@@ -475,18 +461,6 @@
             </tip-box>
             <p><strong>Class-level attributes and methods are collectively called <mark><em>class-level members</em></mark></strong> (also called <em>static members</em> sometimes because some programming languages use the keyword <code>static</code> to
               identify class-level members). <strong>They are to be accessed using the class name rather than an instance of the class</strong>.</p>
-            <h5 id="implementing-class-level-members"><big>Implementing class-level members</big></h5>
-            <p>Some resources to learn how to implement class-level members:</p>
-            <div class="alt-java">
-              <ul>
-                <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html">Oracle’s official Java tutorial on class-level members</a></li>
-              </ul>
-            </div>
-            <div class="alt-python">
-              <ul>
-                <li><a href="https://nus-te3201.github.io/website/programming/toc/oop.html#class-level-members">Python Programming Basics: OOP: Class-Level Members</a></li>
-              </ul>
-            </div>
           </div>
         </div>
         <div>
@@ -909,22 +883,6 @@
             <tip-box>
               <p><span class="fas fa-cube"></span> The <code>Honey</code> class inherits from the <code>Food</code> class <em>and</em> the <code>Medicine</code> class <span class="dimmed">because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)</span>.</p>
             </tip-box>
-            <h5 id="implementing-inheritance"><big>Implementing inheritance</big></h5>
-            <div class="alt-java">
-              <p>To learn how to implement inheritance in Java, you can follow [<a href="https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html">Oracle’s Java Tutorials: Inheritance</a>]</p>
-              <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> A very beginner-friendly video about implementing Java inheritance.">
-                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/9JpNY-XAseg" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                <p></p>
-              </panel>
-              <p></p>
-              <p>💡 Java requires all classes to have a parent class. If you do not specify a parent class, Java automatically assigns the <code>Object</code> class as the parent class.</p>
-            </div>
-            <div class="alt-python">
-              <ul>
-                <li><a href="https://nus-te3201.github.io/website/programming/toc/oop.html#inheritance">Python Programming Basics: OOP: Inheritance</a></li>
-              </ul>
-              <p>💡 Python automatically assigns the <code>object</code> class as the parent class.</p>
-            </div>
           </div>
         </div>
         <div>
@@ -997,45 +955,6 @@
                             <li><code>calculate(int): void</code></li>
                           </ul>
                         </tip-box>
-                        <h5 id="implementing-overloading"><big>Implementing overloading</big></h5>
-                        <p>An operation can be overloaded inside the same class or in sub/super classes.</p>
-                        <div class="alt-java">
-                          <div>
-                            <tip-box>
-                              <p><span class="fas fa-cube"></span> The constructor of the <code>Account</code> class below is <em>overloaded</em> because there are two constructors with different signatures: <code>()</code> and <code>(String, String, double)</code>.
-                                Furthermore, the <code>save</code> method in the <code>Account</code> class is overloaded in the child class <code>SavingAccount</code>.</p>
-                              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
-    Account () {
-        ...
-    }
-    
-    Account (String name, String number, <span class="hljs-keyword">double</span> balance) {
-        ...
-    }
-    
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(<span class="hljs-keyword">int</span> amount)</span></span>{
-        ...
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SavingAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
-    
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(Double amount)</span></span>{
-        ...
-    }
-}
-</code></pre>
-                            </tip-box>
-                            <p><span class="fas fa-paperclip"></span> Resources:</p>
-                            <ul>
-                              <li><a href="https://www.javatpoint.com/method-overloading-in-java"><strong>Method Overloading in Java</strong></a> a tutorial from <a href="http://javapoint.com">javapoint.com</a>. Also mentions the topic of a related topic
-                                <mark><em>type promotion</em></mark>.</li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="alt-python">
-                          <div><span>❗️ Python does not have direct support for method overloading.</span></div>
-                        </div>
                       </div>
                       <div></div>
                     </div>
@@ -1043,109 +962,6 @@
                 </div>
               </modal>
             </tip-box>
-            <h5 id="implementing-overriding"><big>Implementing overriding</big></h5>
-            <p><strong>To override a method inherited from an ancestor class, simply re-implement the method in the target class.</strong></p>
-            <div class="alt-java">
-              <div>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> A simple example where the <code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method:</p>
-                  <pre><code class="hljs java">
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Report</span></span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
-        System.out.println(<span class="hljs-string">"Printing report"</span>);
-    }
-
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EvaluationReport</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Report</span></span>{
-
-    <span class="hljs-meta">@Override</span>  <span class="hljs-comment">// this annotation is optional</span>
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
-        System.out.println(<span class="hljs-string">"Printing evaluation report"</span>);
-    }
-
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReportMain</span></span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
-        Report report = <span class="hljs-keyword">new</span> Report();
-        report.print(); <span class="hljs-comment">// prints "Printing report"</span>
-
-        EvaluationReport evaluationReport = <span class="hljs-keyword">new</span> EvaluationReport();
-        evaluationReport.print(); <span class="hljs-comment">// prints "Printing evaluation report"</span>
-    }
-}
-</code></pre>
-                </tip-box>
-                <p><span class="fas fa-paperclip"></span> Resources:</p>
-                <ul>
-                  <li><a href="https://www.tutorialspoint.com/java/java_overriding.htm">Java - Overriding</a> -- a tutorial by <a href="http://tutorialspoint.com">tutorialspoint.com</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="alt-python">
-              <div>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> In the example below, <code>Student</code> class overrides the <code>print_info</code> method of its parent class <code>Person</code>:</p>
-                  <table>
-                    <tr>
-                    
-                      <td>
-                        <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>:</span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name)</span>:</span>
-    self.name = name
-    
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span><span class="hljs-params">(self)</span>:</span>
-    print(<span class="hljs-string">'My name is'</span>, self.name)
-    
-</code></pre>
-                        <p></p>
-                      </td>
-                    
-                      <td valign="bottom">  <br><br></td>
-                    
-                      <td valign="bottom">
-                        <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span><span class="hljs-params">(Person)</span>:</span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, matric)</span>:</span>
-    self.name = name
-    self.matric = matric
-    
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span><span class="hljs-params">(self)</span>:</span>
-    print(self.name, <span class="hljs-string">'is a student'</span>)
-</code></pre>
-                        <p></p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table>
-                    <tr>
-                    
-                      <td>
-                        <pre><code class="hljs python">amy = Person(<span class="hljs-string">'Amy'</span>)
-amy.print_info()
-
-ben = Student(<span class="hljs-string">'Ben'</span>, <span class="hljs-string">'A12345'</span>)
-ben.print_info()
-</code></pre>
-                        <p></p>
-                      </td>
-                    
-                      <td valign="bottom"> → <br><br></td>
-                    
-                      <td valign="bottom">
-                        <pre class="hljs"><code>My name is Amy
-Ben is a student
-</code></pre>
-                        <p></p>
-                      </td>
-                    </tr>
-                  </table>
-                  <p></p>
-                </tip-box>
-              </div>
-            </div>
           </div>
         </div>
         <div>
@@ -1196,44 +1012,6 @@ Ben is a student
                 <li><code>calculate(int): void</code></li>
               </ul>
             </tip-box>
-            <h5 id="implementing-overloading-2"><big>Implementing overloading</big></h5>
-            <p>An operation can be overloaded inside the same class or in sub/super classes.</p>
-            <div class="alt-java">
-              <div>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> The constructor of the <code>Account</code> class below is <em>overloaded</em> because there are two constructors with different signatures: <code>()</code> and <code>(String, String, double)</code>.
-                    Furthermore, the <code>save</code> method in the <code>Account</code> class is overloaded in the child class <code>SavingAccount</code>.</p>
-                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
-    Account () {
-        ...
-    }
-    
-    Account (String name, String number, <span class="hljs-keyword">double</span> balance) {
-        ...
-    }
-    
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(<span class="hljs-keyword">int</span> amount)</span></span>{
-        ...
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SavingAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
-    
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(Double amount)</span></span>{
-        ...
-    }
-}
-</code></pre>
-                </tip-box>
-                <p><span class="fas fa-paperclip"></span> Resources:</p>
-                <ul>
-                  <li><a href="https://www.javatpoint.com/method-overloading-in-java"><strong>Method Overloading in Java</strong></a> a tutorial from <a href="http://javapoint.com">javapoint.com</a>. Also mentions the topic of a related topic <mark><em>type promotion</em></mark>.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="alt-python">
-              <div><span>❗️ Python does not have direct support for method overloading.</span></div>
-            </div>
           </div>
         </div>
         <div>
@@ -1256,63 +1034,6 @@ Ben is a student
             <tip-box>
               <p><span class="fas fa-cube"></span> In the example above, <code>AcademicStaff</code> <em>is a</em> <code>SalariedStaff</code>. An <code>AcademicStaff</code> object can be used anywhere a <code>SalariedStaff</code> object is expected e.g. <code>SalariedStaff ss = new AcademicStaff()</code>.</p>
             </tip-box>
-            <h5 id="implementing-interfaces"><big>Implementing interfaces</big></h5>
-            <p><strong>Java allows multiple inheritance among interfaces. A Java class can <em>implement</em> multiple interfaces</strong> (and inherit from one class).</p>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> The design below is allowed by Java. <span class="dimmed">In case you are not familiar with UML notation used: solid lines indicate normal inheritance; dashed lines indicate interface inheritance; the triangle points to pare parent.</span></p>
-              <img src="/se-book/oop/inheritance/interfaces/images/studentStaff.png" height="250">
-              <p></p>
-              <ol>
-                <li><code>Staff</code> interface inherits (note the solid lines) the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
-                <li><code>TA</code> class implements both <code>Student</code> interface and the <code>Staff</code> interface.</li>
-                <li>Because of point 1 above, <code>TA</code> class has to implement all methods in the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
-                <li>Because of points 1,2,3, a <code>TA</code> <em>is a</em> <code>Staff</code>, <em>is a</em> <code>TaxPayer</code> and <em>is a</em> <code>Citizen</code>.</li>
-              </ol>
-            </tip-box>
-            <p><strong>Java uses the <code>interface</code> keyword to declare interfaces and <code>implements</code> keyword to indicate that a class implements a given interface.</strong> Inheritance among interfaces uses the <code>extends</code> keyword,
-              just like inheritance among classes.</p>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> The code for the example design given in the previous example:</p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">TaxPayer</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">payTax</span><span class="hljs-params">()</span></span>;
-}
-
-<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Citizen</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">vote</span><span class="hljs-params">()</span></span>;
-}
-
-<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Staff</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Citizen</span>, <span class="hljs-title">TaxPayer</span></span>{
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">work</span><span class="hljs-params">()</span></span>;
-}
-
-<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Student</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">learn</span><span class="hljs-params">()</span></span>;
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TA</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Student</span>, <span class="hljs-title">Staff</span></span>{
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">payTax</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">//...</span>
-    }
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">vote</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">//...</span>
-    }
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">work</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">//...</span>
-    }
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">learn</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">//...</span>
-    }
-}
-</code></pre>
-            </tip-box>
             <p></p>
           </div>
         </div>
@@ -1332,31 +1053,6 @@ Ben is a student
               <p><span class="fas fa-cube"></span> The <code>Account</code> class has an abstract method (<code>addInterest()</code>).</p>
             </tip-box>
             <p><strong>A class that has an abstract method becomes an abstract class</strong>. Evan a class that does not have any abstract method can be declared as an abstract class. Abstract classes cannot be instantiated.</p>
-            <h5 id="implementing-abstract-classes"><big>Implementing abstract classes</big></h5>
-            <p><strong>Use the <code>abstract</code> keyword to identify abstract classes/methods.</strong></p>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> Partial code below gives an example of how to declare abstract classes/methods. The <code>addInterest()</code> method in the <code>Account</code> class is abstract and therefore the <code>Account</code>                class itself is abstract. The <code>CurrentAccount</code> class need not be abstract because it overrides the abstract method inherited from the parent class.</p>
-              <pre><code class="hljs java"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
-    
-    <span class="hljs-keyword">int</span> number;
-    
-    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span></span>;
-    
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">close</span><span class="hljs-params">()</span></span>{
-        <span class="hljs-comment">//...</span>
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CurrentAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">//...</span>
-    }
-}
-</code></pre>
-            </tip-box>
-            <p>In Java, if a class contains an abstract method, the class itself should be an abstract class <span class="dimmed"> i.e. if any methods of the class is 'incomplete', the class itself is 'incomplete'</span>.</p>
           </div>
         </div>
         <div>
@@ -1459,45 +1155,6 @@ Ben is a student
                                       <li><code>calculate(int): void</code></li>
                                     </ul>
                                   </tip-box>
-                                  <h5 id="implementing-overloading-3"><big>Implementing overloading</big></h5>
-                                  <p>An operation can be overloaded inside the same class or in sub/super classes.</p>
-                                  <div class="alt-java">
-                                    <div>
-                                      <tip-box>
-                                        <p><span class="fas fa-cube"></span> The constructor of the <code>Account</code> class below is <em>overloaded</em> because there are two constructors with different signatures: <code>()</code> and <code>(String, String, double)</code>.
-                                          Furthermore, the <code>save</code> method in the <code>Account</code> class is overloaded in the child class <code>SavingAccount</code>.</p>
-                                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
-    Account () {
-        ...
-    }
-    
-    Account (String name, String number, <span class="hljs-keyword">double</span> balance) {
-        ...
-    }
-    
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(<span class="hljs-keyword">int</span> amount)</span></span>{
-        ...
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SavingAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
-    
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(Double amount)</span></span>{
-        ...
-    }
-}
-</code></pre>
-                                      </tip-box>
-                                      <p><span class="fas fa-paperclip"></span> Resources:</p>
-                                      <ul>
-                                        <li><a href="https://www.javatpoint.com/method-overloading-in-java"><strong>Method Overloading in Java</strong></a> a tutorial from <a href="http://javapoint.com">javapoint.com</a>. Also mentions the topic of a related
-                                          topic <mark><em>type promotion</em></mark>.</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                  <div class="alt-python">
-                                    <div><span>❗️ Python does not have direct support for method overloading.</span></div>
-                                  </div>
                                 </div>
                                 <div></div>
                               </div>
@@ -1505,109 +1162,6 @@ Ben is a student
                           </div>
                         </modal>
                       </tip-box>
-                      <h5 id="implementing-overriding-2"><big>Implementing overriding</big></h5>
-                      <p><strong>To override a method inherited from an ancestor class, simply re-implement the method in the target class.</strong></p>
-                      <div class="alt-java">
-                        <div>
-                          <tip-box>
-                            <p><span class="fas fa-cube"></span> A simple example where the <code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method:</p>
-                            <pre><code class="hljs java">
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Report</span></span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
-        System.out.println(<span class="hljs-string">"Printing report"</span>);
-    }
-
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EvaluationReport</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Report</span></span>{
-
-    <span class="hljs-meta">@Override</span>  <span class="hljs-comment">// this annotation is optional</span>
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
-        System.out.println(<span class="hljs-string">"Printing evaluation report"</span>);
-    }
-
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReportMain</span></span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
-        Report report = <span class="hljs-keyword">new</span> Report();
-        report.print(); <span class="hljs-comment">// prints "Printing report"</span>
-
-        EvaluationReport evaluationReport = <span class="hljs-keyword">new</span> EvaluationReport();
-        evaluationReport.print(); <span class="hljs-comment">// prints "Printing evaluation report"</span>
-    }
-}
-</code></pre>
-                          </tip-box>
-                          <p><span class="fas fa-paperclip"></span> Resources:</p>
-                          <ul>
-                            <li><a href="https://www.tutorialspoint.com/java/java_overriding.htm">Java - Overriding</a> -- a tutorial by <a href="http://tutorialspoint.com">tutorialspoint.com</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="alt-python">
-                        <div>
-                          <tip-box>
-                            <p><span class="fas fa-cube"></span> In the example below, <code>Student</code> class overrides the <code>print_info</code> method of its parent class <code>Person</code>:</p>
-                            <table>
-                              <tr>
-                              
-                                <td>
-                                  <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>:</span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name)</span>:</span>
-    self.name = name
-    
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span><span class="hljs-params">(self)</span>:</span>
-    print(<span class="hljs-string">'My name is'</span>, self.name)
-    
-</code></pre>
-                                  <p></p>
-                                </td>
-                              
-                                <td valign="bottom">  <br><br></td>
-                              
-                                <td valign="bottom">
-                                  <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span><span class="hljs-params">(Person)</span>:</span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, matric)</span>:</span>
-    self.name = name
-    self.matric = matric
-    
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span><span class="hljs-params">(self)</span>:</span>
-    print(self.name, <span class="hljs-string">'is a student'</span>)
-</code></pre>
-                                  <p></p>
-                                </td>
-                              </tr>
-                            </table>
-                            <table>
-                              <tr>
-                              
-                                <td>
-                                  <pre><code class="hljs python">amy = Person(<span class="hljs-string">'Amy'</span>)
-amy.print_info()
-
-ben = Student(<span class="hljs-string">'Ben'</span>, <span class="hljs-string">'A12345'</span>)
-ben.print_info()
-</code></pre>
-                                  <p></p>
-                                </td>
-                              
-                                <td valign="bottom"> → <br><br></td>
-                              
-                                <td valign="bottom">
-                                  <pre class="hljs"><code>My name is Amy
-Ben is a student
-</code></pre>
-                                  <p></p>
-                                </td>
-                              </tr>
-                            </table>
-                            <p></p>
-                          </tip-box>
-                        </div>
-                      </div>
                     </div>
                     <div>
                       <div>
@@ -1715,44 +1269,6 @@ Ben is a student
                           <li><code>calculate(int): void</code></li>
                         </ul>
                       </tip-box>
-                      <h5 id="implementing-overloading-4"><big>Implementing overloading</big></h5>
-                      <p>An operation can be overloaded inside the same class or in sub/super classes.</p>
-                      <div class="alt-java">
-                        <div>
-                          <tip-box>
-                            <p><span class="fas fa-cube"></span> The constructor of the <code>Account</code> class below is <em>overloaded</em> because there are two constructors with different signatures: <code>()</code> and <code>(String, String, double)</code>.
-                              Furthermore, the <code>save</code> method in the <code>Account</code> class is overloaded in the child class <code>SavingAccount</code>.</p>
-                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
-    Account () {
-        ...
-    }
-    
-    Account (String name, String number, <span class="hljs-keyword">double</span> balance) {
-        ...
-    }
-    
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(<span class="hljs-keyword">int</span> amount)</span></span>{
-        ...
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SavingAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
-    
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(Double amount)</span></span>{
-        ...
-    }
-}
-</code></pre>
-                          </tip-box>
-                          <p><span class="fas fa-paperclip"></span> Resources:</p>
-                          <ul>
-                            <li><a href="https://www.javatpoint.com/method-overloading-in-java"><strong>Method Overloading in Java</strong></a> a tutorial from <a href="http://javapoint.com">javapoint.com</a>. Also mentions the topic of a related topic <mark><em>type promotion</em></mark>.</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="alt-python">
-                        <div><span>❗️ Python does not have direct support for method overloading.</span></div>
-                      </div>
                     </div>
                     <div></div>
                   </div>
@@ -1762,10 +1278,12 @@ Ben is a student
             <tip-box>
               <p><span class="fas fa-cube"></span> Note how the constructor is overloaded in the class below. The method call <code>new Account()</code> is bound to the first constructor at compile time.</p>
               <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+
     Account () {
         <span class="hljs-comment">// Signature: ()</span>
         ...
     }
+
     Account (String name, String number, <span class="hljs-keyword">double</span> balance) {
         <span class="hljs-comment">// Signature: (String, String, double)</span>
         ...
@@ -1773,8 +1291,8 @@ Ben is a student
 }
 </code></pre>
               <p><span class="fas fa-cube"></span> Similarly, the <code>calcuateGrade</code> method is overloaded in the code below and a method call <code>calculateGrade(&quot;A1213232&quot;)</code> is bound to the second implementation, at compile time.</p>
-              <pre class="hljs"><code>void calculateGrade (int[] averages) { ... }
-void calculateGrade (String matric) { ... }
+              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculateGrade</span> <span class="hljs-params">(<span class="hljs-keyword">int</span>[] averages)</span> </span>{ ... }
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculateGrade</span> <span class="hljs-params">(String matric)</span> </span>{ ... }
 </code></pre>
             </tip-box>
           </div>
@@ -1794,9 +1312,9 @@ void calculateGrade (String matric) { ... }
               <pre><code class="hljs java">Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span>
 </code></pre>
               <p>But the following code is not valid <span class="dimmed"> because <code>staff</code> is declared as a <code>Staff</code> type and therefore its value may or may not be of  type <code>AcademicStaff</code>, which is the type expected by variable <code>academicStaff</code>.</span></p>
-              <pre class="hljs"><code>Staff staff;
+              <pre><code class="hljs java">Staff staff;
 ...
-AcademicStaff academicStaff = staff; // Not OK
+AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 </code></pre>
             </tip-box>
           </div>
@@ -1819,8 +1337,8 @@ AcademicStaff academicStaff = staff; // Not OK
               executed whenever the university initiates a salary adjustment for its staff. However, the adjustment formula is different for different staff categories, say admin and academic. Here is one possible way of designing the classes in the <code>Payroll</code>              system.</p>
             <p>Here is the implementation of the <code>adjustSalary(int)</code> operation.</p>
             <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll1</span> </span>{
-    ArrayList&lt; Admin &gt; admins;
-    ArrayList&lt; Academic &gt; academics;
+    ArrayList&lt;Admin&gt; admins;
+    ArrayList&lt;Academic&gt; academics;
     <span class="hljs-comment">// ...</span>
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
@@ -1836,7 +1354,7 @@ AcademicStaff academicStaff = staff; // Not OK
             <p>Note how processing is similar for the two staff types. It is as if the type of staff members is irrelevant to how they are processed inside this operation! If that is the case, can the staff type be &quot;abstracted away&quot; from this method?
               Here is such an implementation of <code>adjustSalary(int)</code>:</p>
             <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll2</span> </span>{
-    ArrayList&lt; Staff &gt; staff;
+    ArrayList&lt;Staff&gt; staff;
     <span class="hljs-comment">// ...</span>
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
@@ -1848,7 +1366,7 @@ AcademicStaff academicStaff = staff; // Not OK
 </code></pre>
             <p>Notice the following:</p>
             <ul>
-              <li>Only one data structure <code>ArrayList&lt; Staff &gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
+              <li>Only one data structure <code>ArrayList&lt;Staff&gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
               <li>Only one loop</li>
               <li>Outcome of the <code>s.adjustSalary(byPercent)</code> method call depends on whether <code>s</code> is an <code>Academic</code> or <code>Admin</code> object</li>
             </ul>
@@ -1877,133 +1395,6 @@ AcademicStaff academicStaff = staff; // Not OK
               <li><strong>Dynamic binding</strong>: Calls to overridden methods are bound to the implementation of the actual object's class dynamically during the runtime. That is how the polymorphic code can call the method of the parent class and yet execute
                 the implementation of the child class.</li>
             </ul>
-            <h5 id="implementing-polymorphism"><big>Implementing polymorphism</big></h5>
-            <p><strong>We can use inheritance to achieve polymorphism</strong>.</p>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> Continuing with the example given in [
-                <trigger trigger="click" for="modal:oopImpl-polymorphism"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> OOP → Polymorphism → Introduction </trigger>], given below is the minimum code for <code>Staff</code>, <code>Admin</code>, and <code>Academic</code> classes that achieves
-                the desired polymorphism.</p>
-              <modal large="" title="" id="modal:oopImpl-polymorphism">
-              
-                <div>
-                  <div></div>
-                  <p></p>
-                  <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Polymorphism →
-</span></strong>
-                    </span>
-                  </p>
-                  <div id="title-and-body">
-                    <div>
-                      <h4 id="what-5">What</h4>
-                    </div>
-                    <div id="main">
-                      <div>
-                        <tip-box type="primary">
-                          <div>
-                            <p><strong>Polymorphism</strong>:</p>
-                            <blockquote>
-                              <p>The ability of different objects to respond, each in its own way, to identical messages is called polymorphism. <sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
-                            </blockquote>
-                          </div>
-                        </tip-box>
-                        <p>Take the example of writing a payroll application for a university to facilitate payroll processing of university staff. Suppose an <code>adjustSalary(int)</code> operation adjusts the salaries of all staff members. This operation
-                          will be executed whenever the university initiates a salary adjustment for its staff. However, the adjustment formula is different for different staff categories, say admin and academic. Here is one possible way of designing
-                          the classes in the <code>Payroll</code> system.</p>
-                        <p>Here is the implementation of the <code>adjustSalary(int)</code> operation.</p>
-                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll1</span> </span>{
-    ArrayList&lt; Admin &gt; admins;
-    ArrayList&lt; Academic &gt; academics;
-    <span class="hljs-comment">// ...</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Admin ad: admins) {
-            ad.adjustSalary(byPercent);
-        }
-        <span class="hljs-keyword">for</span> (Academic ac: academics) {
-            ac.adjustSalary(byPercent);
-        }
-    }
-}
-</code></pre>
-                        <p>Note how processing is similar for the two staff types. It is as if the type of staff members is irrelevant to how they are processed inside this operation! If that is the case, can the staff type be &quot;abstracted away&quot;
-                          from this method? Here is such an implementation of <code>adjustSalary(int)</code>:</p>
-                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll2</span> </span>{
-    ArrayList&lt; Staff &gt; staff;
-    <span class="hljs-comment">// ...</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Staff s: staff) {
-            s.adjustSalary(byPercent);
-        }
-    }
-}
-</code></pre>
-                        <p>Notice the following:</p>
-                        <ul>
-                          <li>Only one data structure <code>ArrayList&lt; Staff &gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
-                          <li>Only one loop</li>
-                          <li>Outcome of the <code>s.adjustSalary(byPercent)</code> method call depends on whether <code>s</code> is an <code>Academic</code> or <code>Admin</code> object</li>
-                        </ul>
-                        <p>The above code is better in several ways:</p>
-                        <ul>
-                          <li>It is shorter.</li>
-                          <li>It is simpler.</li>
-                          <li>It is more flexible (this code will remain the same even if more staff types are added).</li>
-                        </ul>
-                        <p>This does not mean we are getting rid of the <code>Academic</code> and <code>Admin</code> classes completely and replacing them with a more general class called <code>Staff</code>. Rather, this part of the code “treats” both <code>Admin</code>                          and <code>Academic</code> objects as one type called <code>Staff</code>.</p>
-                        <p>For example, <code>ArrayList</code> staff contains both <code>Admin</code> and <code>Academic</code> objects although it treats all of them as <code>Staff</code> objects. However, when the <code>adjustSalary(int)</code> operation
-                          of these objects is called, the resulting salary adjustment will be different for <code>Admin</code> objects and <code>Academic</code> objects. Therefore, different types of objects are treated as a single general type, but yet
-                          each type of object exhibits a different kind of behavior. This is called <em>polymorphism</em> (literally, it means “ability to take many forms”). In this example, an object that is perceived as type <code>Staff</code> can be
-                          an <code>Admin</code> object or an <code>Academic</code> object.</p>
-                      </div>
-                      <div></div>
-                    </div>
-                  </div>
-                </div>
-              </modal>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Staff</span> </span>{
-    String name;
-    <span class="hljs-keyword">double</span> salary;
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> percent)</span> </span>{
-        <span class="hljs-comment">// do nothing</span>
-    }
-}
-
-<span class="hljs-comment">//------------------------------------------</span>
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Admin</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Staff</span> </span>{
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> percent)</span> </span>{
-        salary = salary * percent;
-    }
-}
-
-<span class="hljs-comment">//------------------------------------------</span>
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Academic</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Staff</span> </span>{
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> percent)</span> </span>{
-        salary = salary * percent * <span class="hljs-number">2</span>;
-    }
-}
-
-<span class="hljs-comment">//------------------------------------------</span>
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll</span> </span>{
-    ArrayList&lt; Staff &gt; staff;
-    <span class="hljs-comment">// ...</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Staff s: staff) {
-            s.adjustSalary(byPercent);
-        }
-    }
-}
-</code></pre>
-            </tip-box>
           </div>
         </div>
         <h2 id="more">More</h2>
@@ -2215,14 +1606,14 @@ AcademicStaff academicStaff = staff; // Not OK
             <h4 id="focus-groups">Focus Groups</h4>
           </div>
           <div>
-            <div v-closeable="" alt="focus group photo">
+            <div v-closeable="" alt="focus group photo" class="non-printable">
               <p><img src="https://media.defense.gov/2012/Apr/11/2000162334/670/394/0/120403-F-PR861-011.JPG" width="400"><br>
                 <sub>[<a href="http://www.hanscom.af.mil/News/Article-Display/Article/380048/caring-for-people-forum-identifies-issues/">source</a>]</sub></p>
             </div>
             <p></p>
             <p><strong>Focus groups are a kind of informal interview within an interactive group setting.</strong> A group of people (e.g. potential users, beta testers) are asked about their understanding of a specific issue, process, product, advertisement,
               etc.</p>
-            <panel type="seamless">
+            <panel type="seamless" class="non-printable">
               <span slot="header"><span><span class="dimmed"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>: How do focus groups work? - Hector Lanz <span class="badge badge-pill badge-secondary">tangential</span></span>
               </span>
               </span>
@@ -2254,12 +1645,12 @@ AcademicStaff academicStaff = staff; // Not OK
                   <p></p>
                 </p>
               </panel>
-              <panel header="<span class='fas fa-cube'></span> A simple GUI prototype for the same Minesweeper, created using Powerpoint:" type="seamless">
+              <panel header="<span class='fas fa-cube'></span> A simple GUI prototype for the same Minesweeper, created using Powerpoint:" type="seamless" expanded="">
                 <p><img src="/se-book/gatheringRequirements/prototyping/images/guiPrototypeMinesweeper.jpg" height="220">
                   <p></p>
                 </p>
               </panel>
-              <panel header="<span class='fas fa-cube'></span> A prototype for a mobile app, created using the UI prototyping tool Balsmiq:" type="seamless">
+              <panel header="<span class='fas fa-cube'></span> A prototype for a mobile app, created using the UI prototyping tool Balsmiq:" type="seamless" expanded="">
                 <img src="/se-book/gatheringRequirements/prototyping/images/balsamiqPrototypeGUI.jpg" height="450">
                 <p><span class="dimmed"><sup>[source: <a href="http://balsamiq.com/products/mockups">http://balsamiq.com/products/mockups</a>]</sup></span></p>
               </panel>
@@ -2286,7 +1677,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="prose">Prose</h2>
         <div>
           <div>
-            <h4 id="what-6">What</h4>
+            <h4 id="what-5">What</h4>
           </div>
           <div>
             <p><strong>A normal textual description (i.e. <em>prose</em>) can be used to describe requirements.</strong> Prose is especially useful when describing abstract ideas such as the vision of a product.</p>
@@ -2303,7 +1694,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="feature-list">Feature List</h2>
         <div>
           <div>
-            <h4 id="what-7">What</h4>
+            <h4 id="what-6">What</h4>
           </div>
           <div>
             <tip-box type="definition">
@@ -2356,16 +1747,16 @@ AcademicStaff academicStaff = staff; // Not OK
             <p></p>
             <p><strong>We can write user stories on</strong> index cards or sticky notes, and arrange on walls or tables, to facilitate planning and discussion. Alternatively, we can use a software (e.g., <a href="https://help.github.com/articles/about-project-boards/">GitHub Project Boards</a>,
               Trello, Google Docs, ...) to manage user stories digitally.</p>
-            <panel header="%%User stories in use%%" expanded="">
+            <panel header="%%User stories in use%%" class="non-printable" expanded="">
               <panel header="With sticky notes" type="seamless" expanded="">
                 <img src="/se-book/specifyingRequirements/userStories/introduction/images/workingWithStories.jpg" height="400">
                 <p><span class="dimmed"><sup>[credit: <a href="https://www.flickr.com/photos/jakuza/2682466984/">https://www.flickr.com/photos/jakuza/2682466984/</a>]</sup></span></p>
               </panel>
-              <panel header="With paper" type="seamless">
+              <panel header="With paper" type="seamless" expanded="">
                 <img src="/se-book/specifyingRequirements/userStories/introduction/images/userStoriesOnTable.jpg" height="400">
                 <p><span class="dimmed"><sup>[credit: <a href="https://www.flickr.com/photos/jakuza/with/2726048607/">https://www.flickr.com/photos/jakuza/with/2726048607/</a>]</sup></span></p>
               </panel>
-              <panel header="With software" type="seamless">
+              <panel header="With software" type="seamless" expanded="">
                 <img src="/se-book/specifyingRequirements/userStories/introduction/images/userStoriesWithSoftware.png" height="400">
                 <p><span class="dimmed"><sup>[credit: <a href="https://commons.wikimedia.org/wiki/File:User_Story_Map_in_Action.png">https://commons.wikimedia.org/wiki/File:User_Story_Map_in_Action.png</a>]</sup></span></p>
               </panel>
@@ -2944,7 +2335,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="glossary">Glossary</h2>
         <div>
           <div>
-            <h4 id="what-8">What</h4>
+            <h4 id="what-7">What</h4>
           </div>
           <div>
             <tip-box type="definition">
@@ -2964,7 +2355,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="supplementary-requirements">Supplementary Requirements</h2>
         <div>
           <div>
-            <h4 id="what-9">What</h4>
+            <h4 id="what-8">What</h4>
           </div>
           <div>
             <p><strong>A <em>supplementary requirements</em> section can be used to capture <em>requirements that do not fit elsewhere</em></strong>. Typically, this is where most
@@ -3057,7 +2448,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="introduction-6">Introduction</h2>
         <div>
           <div>
-            <h4 id="what-10">What</h4>
+            <h4 id="what-9">What</h4>
           </div>
           <div>
             <tip-box type="definition">
@@ -3077,7 +2468,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="abstraction">Abstraction</h2>
         <div>
           <div>
-            <h4 id="what-11">What</h4>
+            <h4 id="what-10">What</h4>
           </div>
           <div>
             <tip-box type="definition">
@@ -3107,7 +2498,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="coupling">Coupling</h2>
         <div>
           <div>
-            <h4 id="what-12">What</h4>
+            <h4 id="what-11">What</h4>
           </div>
           <div>
             <p><strong><em>Coupling</em> is a measure of the degree of <em>dependence</em></strong> between components, classes, methods, etc. Low coupling indicates that a component is less dependent on other components. <strong>High coupling (aka <em>tight</em> coupling or <em>strong</em> coupling) is discouraged</strong>              due to the following disadvantages:</p>
@@ -3184,7 +2575,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="cohesion">Cohesion</h2>
         <div>
           <div>
-            <h4 id="what-13">What</h4>
+            <h4 id="what-12">What</h4>
           </div>
           <div>
             <p><strong><em>Cohesion</em> is a measure of how strongly-related and focused the various responsibilities of a component are.</strong> A highly-cohesive component keeps related functionalities together while keeping out all other unrelated things.</p>
@@ -3220,7 +2611,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="introduction-7">Introduction</h2>
         <div>
           <div>
-            <h4 id="what-14">What</h4>
+            <h4 id="what-13">What</h4>
           </div>
           <div>
             <p><strong>A <em>model</em> is a representation of something else.</strong></p>
@@ -3245,7 +2636,7 @@ AcademicStaff academicStaff = staff; // Not OK
                 </p>
                 <div id="title-and-body">
                   <div>
-                    <h4 id="what-15">What</h4>
+                    <h4 id="what-14">What</h4>
                   </div>
                   <div id="main">
                     <div>
@@ -4001,7 +3392,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="introduction-11">Introduction</h2>
         <div>
           <div>
-            <h4 id="what-16">What</h4>
+            <h4 id="what-15">What</h4>
           </div>
           <div>
             <blockquote>
@@ -4113,7 +3504,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h3 id="introduction-12">Introduction</h3>
         <div>
           <div>
-            <h4 id="what-17">What</h4>
+            <h4 id="what-16">What</h4>
           </div>
           <div>
             <p><strong>Software architectures follow various high-level styles (aka <em>architectural patterns</em>)</strong>, just like
@@ -4130,7 +3521,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h3 id="n-tier-architectural-style">N-tier Architectural Style</h3>
         <div>
           <div>
-            <h4 id="what-18">What</h4>
+            <h4 id="what-17">What</h4>
           </div>
           <div>
             <p><strong>In the <em>n-tier</em> style, higher layers make use of services provided by lower layers.</strong> Lower layers are independent of higher layers. Other names: <em>multi-layered</em>, <em>layered</em>.</p>
@@ -4145,7 +3536,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h3 id="client-server-architectural-style">Client-Server Architectural Style</h3>
         <div>
           <div>
-            <h4 id="what-19">What</h4>
+            <h4 id="what-18">What</h4>
           </div>
           <div>
             <p><strong>The <em>client-server</em> style has at least one component playing the role of a server and at least one client component accessing the services of the server.</strong> This is an architectural style used often in distributed applications.</p>
@@ -4159,7 +3550,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h3 id="transaction-processing-architectural-style">Transaction Processing Architectural Style</h3>
         <div>
           <div>
-            <h4 id="what-20">What</h4>
+            <h4 id="what-19">What</h4>
           </div>
           <div>
             <p><strong>The <em>transaction processing</em> style divides the workload of the system down to a number of <em>transactions</em> which are then given to a <em>dispatcher</em> that controls the execution of each transaction.</strong> Task queuing,
@@ -4174,7 +3565,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h3 id="service-oriented-architectural-style">Service-oriented Architectural Style</h3>
         <div>
           <div>
-            <h4 id="what-21">What</h4>
+            <h4 id="what-20">What</h4>
           </div>
           <div>
             <p><strong>The <em>service-oriented architecture</em> (SOA) style builds applications by combining functionalities packaged as <em>programmatically accessible services</em></strong>. SOA aims to achieve interoperability between distributed services,
@@ -4192,7 +3583,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h3 id="event-driven-architectural-style">Event-driven Architectural Style</h3>
         <div>
           <div>
-            <h4 id="what-22">What</h4>
+            <h4 id="what-21">What</h4>
           </div>
           <div>
             <p><strong><em>Event-driven</em> style controls the flow of the application by detecting <tooltip content="An event is a notable occurrence that happens inside or outside the software, such as the user clicking a button, a timer running out, minimizing a window, etc.">events</tooltip> from event <em>emitters</em> and communicating those events to interested event <em>consumers</em> .</strong>              This architectural style is often used in GUIs.</p>
@@ -4229,7 +3620,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="introduction-13">Introduction</h2>
         <div>
           <div>
-            <h4 id="what-23">What</h4>
+            <h4 id="what-22">What</h4>
           </div>
           <div>
             <tip-box type="definition">
@@ -4283,7 +3674,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="singleton-pattern">Singleton Pattern</h2>
         <div>
           <div>
-            <h4 id="what-24">What</h4>
+            <h4 id="what-23">What</h4>
           </div>
           <div>
             <p><strong>Context</strong></p>
@@ -4360,7 +3751,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="abstraction-occurrence-pattern">Abstraction Occurrence Pattern</h2>
         <div>
           <div>
-            <h4 id="what-25">What</h4>
+            <h4 id="what-24">What</h4>
           </div>
           <div>
             <p><strong>Context</strong></p>
@@ -4412,7 +3803,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="facade-pattern">Facade Pattern</h2>
         <div>
           <div>
-            <h4 id="what-26">What</h4>
+            <h4 id="what-25">What</h4>
           </div>
           <div>
             <p><strong>Context</strong></p>
@@ -4437,7 +3828,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="command-pattern">Command Pattern</h2>
         <div>
           <div>
-            <h4 id="what-27">What</h4>
+            <h4 id="what-26">What</h4>
           </div>
           <div>
             <p><strong>Context</strong></p>
@@ -4466,7 +3857,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="model-view-controller-mvc-pattern">Model View Controller (MVC) Pattern</h2>
         <div>
           <div>
-            <h4 id="what-28">What</h4>
+            <h4 id="what-27">What</h4>
           </div>
           <div>
             <p><strong>Context</strong></p>
@@ -4496,7 +3887,7 @@ AcademicStaff academicStaff = staff; // Not OK
         <h2 id="observer-pattern">Observer Pattern</h2>
         <div>
           <div>
-            <h4 id="what-29">What</h4>
+            <h4 id="what-28">What</h4>
           </div>
           <div>
             <tip-box>
@@ -4776,7 +4167,7 @@ studentList.addUi(statusUi);
         <h2 id="introduction-14">Introduction</h2>
         <div>
           <div>
-            <h4 id="what-30">What</h4>
+            <h4 id="what-29">What</h4>
           </div>
           <div>
             <p><strong>Professional software engineers often write code using <em>Integrated Development Environments (IDEs)</em>. IDEs support all development-related work within the same tool.</strong></p>
@@ -4801,13 +4192,16 @@ studentList.addUi(statusUi);
         <h2 id="debugging">Debugging</h2>
         <div>
           <div>
-            <h4 id="what-31">What</h4>
+            <h4 id="what-30">What</h4>
           </div>
           <div>
             <p><strong><em>Debugging</em> is the process of discovering defects in the program.</strong> Here are some approaches to debugging:</p>
             <ul>
               <li>
-                <p>👎 <strong>By inserting temporary print statements</strong>: This is an ad-hoc approach in which print statements are inserted in the program to print information relevant to debugging, such as variable values. e.g. <code>Exiting process() method, x is 5.347</code>.
+                <p>
+                  <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                    </span>
+                  </font> -- <strong>By inserting temporary print statements</strong>: This is an ad-hoc approach in which print statements are inserted in the program to print information relevant to debugging, such as variable values. e.g. <code>Exiting process() method, x is 5.347</code>.
                   This approach is not recommended due to these reasons.</p>
                 <ul>
                   <li>Incurs extra effort when inserting and removing the print statements.</li>
@@ -4816,14 +4210,20 @@ studentList.addUi(statusUi);
                 </ul>
               </li>
               <li>
-                <p>👎 <strong>By manually tracing through the code</strong>: Otherwise known as ‘eye-balling’, this approach doesn't have the cons of the previous approach, but it too is not recommended (other than as a 'quick try') due to these reasons:</p>
+                <p>
+                  <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                    </span>
+                  </font> -- <strong>By manually tracing through the code</strong>: Otherwise known as ‘eye-balling’, this approach doesn't have the cons of the previous approach, but it too is not recommended (other than as a 'quick try') due to these reasons:</p>
                 <ul>
                   <li>It is difficult, time consuming, and error-prone technique.</li>
                   <li>If you didn't spot the error while writing code, you might not spot the error when reading code too.</li>
                 </ul>
               </li>
               <li>
-                <p>👍 <strong>Using a debugger</strong>: A debugger tool allows you to pause the execution, then step through one statement at a time while examining the internal state if necessary. Most IDEs come with an inbuilt debugger. <strong>This is the recommended approach for debugging</strong>.</p>
+                <p>
+                  <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
+                    </span>
+                  </font> -- <strong>Using a debugger</strong>: A debugger tool allows you to pause the execution, then step through one statement at a time while examining the internal state if necessary. Most IDEs come with an inbuilt debugger. <strong>This is the recommended approach for debugging</strong>.</p>
               </li>
             </ul>
           </div>
@@ -5409,7 +4809,7 @@ displayResult();
                         </p>
                         <div id="title-and-body">
                           <div>
-                            <h4 id="what-32">What</h4>
+                            <h4 id="what-31">What</h4>
                           </div>
                           <div id="main">
                             <div>
@@ -6317,7 +5717,7 @@ compact(input);
         <h1 id="refactoring">Refactoring</h1>
         <div>
           <div>
-            <h4 id="what-33">What</h4>
+            <h4 id="what-32">What</h4>
           </div>
           <div>
             <p>The first version of the code you write may not be of production quality. It is OK to first concentrate on making the code work, rather than worry over the quality of the code, as long as you improve the quality later. This process of <strong>improving a program's internal structure in small steps without modifying its external behavior is called <em>refactoring</em>.</strong></p>
@@ -6516,7 +5916,7 @@ send()
         <h2 id="introduction-21">Introduction</h2>
         <div>
           <div>
-            <h4 id="what-34">What</h4>
+            <h4 id="what-33">What</h4>
           </div>
           <div>
             <p><strong>Developer-to-developer documentation can be in one of two forms:</strong></p>
@@ -6559,7 +5959,7 @@ send()
         <h3 id="guideline-go-top-down-not-bottom-up">Guideline: Go Top-down, Not Bottom-up</h3>
         <div>
           <div>
-            <h4 id="what-35">What</h4>
+            <h4 id="what-34">What</h4>
           </div>
           <div>
             <p><strong>When writing project documents, a top-down breadth-first explanation is easier to understand than a bottom-up one.</strong></p>
@@ -6610,7 +6010,7 @@ send()
         <h3 id="guideline-aim-for-comprehensibility">Guideline: Aim for Comprehensibility</h3>
         <div>
           <div>
-            <h4 id="what-36">What</h4>
+            <h4 id="what-35">What</h4>
           </div>
           <div>
             <p>Technical documents exist to help others understand technical details. Therefore, <strong>it is not enough for the documentation to be accurate and comprehensive, it should also be comprehensible too</strong>.</p>
@@ -6636,7 +6036,7 @@ send()
         <h3 id="guideline-document-minimally-but-sufficiently">Guideline: Document Minimally, but Sufficiently</h3>
         <div>
           <div>
-            <h4 id="what-37">What</h4>
+            <h4 id="what-36">What</h4>
           </div>
           <div>
             <p><strong>Aim for 'just enough' developer documentation.</strong></p>
@@ -6659,7 +6059,7 @@ send()
         <h3 id="javadoc">JavaDoc</h3>
         <div>
           <div>
-            <h4 id="what-38">What</h4>
+            <h4 id="what-37">What</h4>
           </div>
           <div>
             <p><strong>Javadoc is a tool for generating API documentation in HTML format from doc comments in source.</strong> In addition, modern IDEs use JavaDoc comments to generate explanatory tool tips.</p>
@@ -6703,7 +6103,7 @@ send()
         <h3 id="markdown">Markdown</h3>
         <div>
           <div>
-            <h4 id="what-39">What</h4>
+            <h4 id="what-38">What</h4>
           </div>
           <div>
             <p>Markdown is a lightweight markup language with plain text formatting syntax.</p>
@@ -6713,7 +6113,7 @@ send()
         <h3 id="asciidoc">AsciiDoc</h3>
         <div>
           <div>
-            <h4 id="what-40">What</h4>
+            <h4 id="what-39">What</h4>
           </div>
           <div>
             <p>AsciiDoc is similar to Markdown but has more powerful (but also more complex) syntax.</p>
@@ -6725,7 +6125,7 @@ send()
         <h2 id="introduction-22">Introduction</h2>
         <div>
           <div>
-            <h4 id="what-41">What</h4>
+            <h4 id="what-40">What</h4>
           </div>
           <div>
             <blockquote>
@@ -6737,7 +6137,7 @@ send()
         <h2 id="exceptions">Exceptions</h2>
         <div>
           <div>
-            <h4 id="what-42">What</h4>
+            <h4 id="what-41">What</h4>
           </div>
           <div>
             <p><strong>Exceptions are used to deal with <em>'unusual' but not entirely unexpected</em> situations</strong> that the program might encounter at run time.</p>
@@ -6769,17 +6169,6 @@ send()
             <p><strong>Exception objects can propagate up the function call hierarchy until it is dealt with.</strong> Usually, an exception thrown by a function is caught by the caller function. If the called function does not know how to deal with the
               exception it caught, it can throw/raise the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the
               <tooltip content="the hieararchy of function calls">function call stack</tooltip> until it is received by the main function and thrown to the runtime, thus halting the system.</p>
-            <tip-box>
-              <div class="alt-java">
-                <p><span class="fas fa-cube"></span> In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code> method
-                  inside a <code>try{ }</code> block and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p>
-                <img src="/se-book/errorHandling/exceptions/how/images/processInput.png" width="400">
-                <p></p>
-              </div>
-              <div class="alt-python">
-                <p><span class="fas fa-cube"></span> In the code given below, <code>process_array</code> function can potentially raise a <code>ValueError</code> exception. Because of that, <code>process_input</code> function invokes <code>process_array</code>                  function inside a <code>try</code> clause and has a <code>except</code> clause to specify what to do if the exception is actually raised.</p>
-                <img src="/se-book/errorHandling/exceptions/how/images/example-python.png" width="400"></div>
-            </tip-box>
             <p>Advantages of exception handling in this way:</p>
             <ul>
               <li>The ability to propagate error information through the call stack.</li>
@@ -6798,7 +6187,7 @@ send()
         <h2 id="assertions">Assertions</h2>
         <div>
           <div>
-            <h4 id="what-43">What</h4>
+            <h4 id="what-42">What</h4>
           </div>
           <div>
             <p><strong><em>Assertions</em> are used to define assumptions about the program state so that the runtime can verify them.</strong> An assertion failure indicates a possible bug in the code <span class="dimmed">because the code has resulted in a program state that violates an assumption about how the code <em>should</em> behave</span>.</p>
@@ -6872,7 +6261,7 @@ send()
         <h2 id="logging">Logging</h2>
         <div>
           <div>
-            <h4 id="what-44">What</h4>
+            <h4 id="what-43">What</h4>
           </div>
           <div>
             <p><strong><em>Logging</em> is the deliberate recording of certain information during a program execution for future reference.</strong> Logs are typically written to a log file but it is also possible to log information in other ways <span class="dimmed"> e.g. into a database or a remote server</span>.</p>
@@ -6881,8 +6270,10 @@ send()
             <div v-closeable="" alt="blackbox photo">
               <tip-box>
                 <p>💡 <strong>A log file is like the <tooltip content="flight data recorder">black box</tooltip> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.</p>
-                <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br>
-                  <sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub></p>
+                <div class="non-printable">
+                  <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br>
+                    <sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub></p>
+                </div>
               </tip-box>
             </div>
           </div>
@@ -6922,7 +6313,7 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
         <h2 id="defensive-programming">Defensive Programming</h2>
         <div>
           <div>
-            <h4 id="what-45">What</h4>
+            <h4 id="what-44">What</h4>
           </div>
           <div>
             <p><strong>A defensive programmer codes under the assumption &quot;if we leave room for things to go wrong, they <em>will</em> go wrong&quot;.</strong> Therefore, a defensive programmer proactively tries to eliminate any room for things to go
@@ -7149,7 +6540,7 @@ jean.setBoyfriend(yong);
         <h2 id="introduction-23">Introduction</h2>
         <div>
           <div>
-            <h4 id="what-46">What</h4>
+            <h4 id="what-45">What</h4>
           </div>
           <div>
             <p><strong>Combining parts of a software product to form a whole is called <em>integration</em></strong>. It is also one of the most troublesome tasks and it rarely goes smoothly.</p>
@@ -7171,7 +6562,7 @@ jean.setBoyfriend(yong);
               <p><span class="fas fa-cube"></span> A <em><tooltip content="it compiles and runs but does not produce any useful output">walking skeleton</tooltip></em> can be written first. This can be done by one developer, possibly the one in charge of
                 integration. After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate the new code to the main system.</p>
             </tip-box>
-            <div v-closeable="" alt="slideshow: comparison">
+            <div v-closeable="" alt="slideshow: comparison" class="non-printable">
               <p>Here is an animation that compares the two approaches:</p>
               <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212312&authkey=AHtrsZMwQmNcyAE&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen=""
                   mozallowfullscreen="" allowfullscreen></iframe></div>
@@ -7188,7 +6579,7 @@ jean.setBoyfriend(yong);
               <p>Big-bang is not recommended because it will uncover too many problems at the same time which could make debugging and bug-fixing more complex than when problems are uncovered incrementally.</p>
             </tip-box>
             <p><strong><em>Incremental integration</em>: integrate few components at a time.</strong> This approach is better than the big-bang integration because it surfaces integration problems in a more manageable way.</p>
-            <div v-closeable="" alt="slideshow: comparison">
+            <div v-closeable="" alt="slideshow: comparison" class="non-printable">
               <p>Here is an animation that compares the two approaches:</p>
               <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212315&authkey=AG4cur5IrM7vr7M&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen=""
                   mozallowfullscreen="" allowfullscreen></iframe></div>
@@ -7228,7 +6619,7 @@ jean.setBoyfriend(yong);
         <h2 id="build-automation">Build Automation</h2>
         <div>
           <div>
-            <h4 id="what-47">What</h4>
+            <h4 id="what-46">What</h4>
           </div>
           <div>
             <p><strong>Build automation tools automate the steps of the build process, usually by means of build scripts.</strong></p>
@@ -7285,7 +6676,7 @@ jean.setBoyfriend(yong);
         <h2 id="introduction-24">Introduction</h2>
         <div>
           <div>
-            <h4 id="what-48">What</h4>
+            <h4 id="what-47">What</h4>
           </div>
           <div>
             <p>Reuse is a major theme in software engineering practices. <strong>By reusing tried-and-tested components, the robustness of a new software system can be enhanced while reducing the manpower and time requirement.</strong> Reusable components
@@ -7312,7 +6703,7 @@ jean.setBoyfriend(yong);
         <h2 id="apis">APIs</h2>
         <div>
           <div>
-            <h4 id="what-49">What</h4>
+            <h4 id="what-48">What</h4>
           </div>
           <div>
             <p><strong>An <em>Application Programming Interface (API)</em> specifies the interface through which other programs can interact with a software component.</strong> It is a contract between the component and its clients.</p>
@@ -7369,7 +6760,7 @@ jean.setBoyfriend(yong);
         <h2 id="libraries">Libraries</h2>
         <div>
           <div>
-            <h4 id="what-50">What</h4>
+            <h4 id="what-49">What</h4>
           </div>
           <div>
             <p>A library is a collection of modular code that is general and can be used by other programs.</p>
@@ -7404,7 +6795,7 @@ jean.setBoyfriend(yong);
         <h2 id="frameworks">Frameworks</h2>
         <div>
           <div>
-            <h4 id="what-51">What</h4>
+            <h4 id="what-50">What</h4>
           </div>
           <div>
             <p><strong>The overall structure and execution flow of a specific category of software systems can be very similar. The similarity is an opportunity to reuse at a high scale.</strong></p>
@@ -7461,7 +6852,7 @@ jean.setBoyfriend(yong);
         <h2 id="platforms">Platforms</h2>
         <div>
           <div>
-            <h4 id="what-52">What</h4>
+            <h4 id="what-51">What</h4>
           </div>
           <div>
             <p><strong>A <em>platform</em> provides a runtime environment for applications.</strong> A platform is often bundled with various libraries, tools, frameworks, and technologies in addition to a runtime environment but the defining characteristic
@@ -7489,7 +6880,7 @@ jean.setBoyfriend(yong);
         <h2 id="cloud-computing">Cloud Computing</h2>
         <div>
           <div>
-            <h4 id="what-53">What</h4>
+            <h4 id="what-52">What</h4>
           </div>
           <div>
             <p><strong>Cloud computing is the delivery of computing as a service over the network</strong>, rather than a product running on a local machine. This means the actual hardware and software is located at a remote location, typically, at a large
@@ -7530,7 +6921,7 @@ jean.setBoyfriend(yong);
         <h2 id="introduction-25">Introduction</h2>
         <div>
           <div>
-            <h4 id="what-54">What</h4>
+            <h4 id="what-53">What</h4>
           </div>
           <div>
             <p><strong>Software <em>Quality Assurance</em> (QA) is the process of ensuring that the software being built has the required levels of quality.</strong></p>
@@ -7554,7 +6945,7 @@ jean.setBoyfriend(yong);
         <h2 id="code-reviews">Code Reviews</h2>
         <div>
           <div>
-            <h4 id="what-55">What</h4>
+            <h4 id="what-54">What</h4>
           </div>
           <div>
             <p><strong>Code review is the systematic examination code with the intention of finding where the code can be improved.</strong></p>
@@ -7619,7 +7010,7 @@ jean.setBoyfriend(yong);
         <h2 id="static-analysis">Static Analysis</h2>
         <div>
           <div>
-            <h4 id="what-56">What</h4>
+            <h4 id="what-55">What</h4>
           </div>
           <div>
             <tip-box type="definition">
@@ -7644,11 +7035,11 @@ jean.setBoyfriend(yong);
         <h2 id="formal-verification">Formal Verification</h2>
         <div>
           <div>
-            <h4 id="what-57">What</h4>
+            <h4 id="what-56">What</h4>
           </div>
           <div>
             <p><strong>Formal verification uses mathematical techniques to prove the correctness of a program.</strong></p>
-            <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> An introduction to Formal Methods">
+            <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> An introduction to Formal Methods" class="non-printable">
               <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/89fKiaMxHrA" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
               <p>by <a href="http://www.cs.utoronto.ca/~hehner/">Eric Hehner</a></p>
               <p></p>
@@ -7671,7 +7062,7 @@ jean.setBoyfriend(yong);
         <h2 id="introduction-26">Introduction</h2>
         <div>
           <div>
-            <h4 id="what-58">What</h4>
+            <h4 id="what-57">What</h4>
           </div>
           <div>
             <tip-box type="definition">
@@ -7743,7 +7134,7 @@ jean.setBoyfriend(yong);
         <h3 id="unit-testing">Unit Testing</h3>
         <div>
           <div>
-            <h4 id="what-59">What</h4>
+            <h4 id="what-58">What</h4>
           </div>
           <div>
             <p><strong><em>Unit testing</em> : testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly.</strong></p>
@@ -7898,7 +7289,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h3 id="integration-testing">Integration Testing</h3>
         <div>
           <div>
-            <h4 id="what-60">What</h4>
+            <h4 id="what-59">What</h4>
           </div>
           <div>
             <p><strong><em>Integration testing</em> : testing whether different parts of the software <em>work together</em> (i.e. integrates) as expected.</strong> Integration tests aim to discover bugs in the 'glue code' related to how components interact
@@ -7911,7 +7302,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h3 id="system-testing">System Testing</h3>
         <div>
           <div>
-            <h4 id="what-61">What</h4>
+            <h4 id="what-60">What</h4>
           </div>
           <div>
             <p><strong><em>System testing</em>: take the <em>whole system</em> and test it <em>against the system specification</em>.</strong></p>
@@ -7940,7 +7331,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h3 id="alpha-beta-testing">Alpha-Beta Testing</h3>
         <div>
           <div>
-            <h4 id="what-62">What</h4>
+            <h4 id="what-61">What</h4>
           </div>
           <div>
             <p><strong><em>Alpha testing</em> is performed by the users, under controlled conditions set by the software development team.</strong></p>
@@ -7951,7 +7342,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h3 id="dogfooding">Dogfooding</h3>
         <div>
           <div>
-            <h4 id="what-63">What</h4>
+            <h4 id="what-62">What</h4>
           </div>
           <div>
             <p><strong><em>Eating your own dog food</em> (aka dogfooding), is a creators of a product use their own product to test the product.</strong></p>
@@ -7960,7 +7351,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h3 id="developer-testing">Developer Testing</h3>
         <div>
           <div>
-            <h4 id="what-64">What</h4>
+            <h4 id="what-63">What</h4>
           </div>
           <div>
             <p><strong><em>Developer testing</em> is the testing done by the developers themselves</strong> as opposed to professional testers or end-users.</p>
@@ -7991,7 +7382,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h3 id="exploratory-vs-scripted-testing">Exploratory vs Scripted Testing</h3>
         <div>
           <div>
-            <h4 id="what-65">What</h4>
+            <h4 id="what-64">What</h4>
           </div>
           <div>
             <p><strong>Here are two alternative approaches to testing a software: <em>Scripted</em> testing and <em>Exploratory</em> testing</strong></p>
@@ -8051,7 +7442,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h3 id="acceptance-testing">Acceptance Testing</h3>
         <div>
           <div>
-            <h4 id="what-66">What</h4>
+            <h4 id="what-65">What</h4>
           </div>
           <div>
             <p><strong><em>Acceptance testing</em> (aka <em>User Acceptance Testing (UAT)</em>): test the delivered system to ensure it meets the user requirements.</strong></p>
@@ -8134,7 +7525,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h3 id="regression-testing">Regression Testing</h3>
         <div>
           <div>
-            <h4 id="what-67">What</h4>
+            <h4 id="what-66">What</h4>
           </div>
           <div>
             <p><strong>When we modify a system, the modification may result in some unintended and undesirable effects on the system. Such an effect is called a <em>regression</em>.</strong></p>
@@ -8145,7 +7536,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h2 id="test-automation">Test Automation</h2>
         <div>
           <div>
-            <h4 id="what-68">What</h4>
+            <h4 id="what-67">What</h4>
           </div>
           <div>
             <tabs>
@@ -8346,7 +7737,7 @@ Invalid command format: add
                 </li>
                 <li>
                   <p><a href="http://seleniumhq.org/"><strong>Selenium</strong></a> can be used to automate testing of Web application UIs<br></p>
-                  <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> demo video of autoamted testing of a Web application">
+                  <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> demo video of automated testing of a Web application" class="non-printable">
                     <p>This video shows automated testing of the <a href="http://github.com/teammates/teammates">TEAMMATES</a> Web app using Selenium</p>
                     <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/ihst69Zq1xM" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
                   </panel>
@@ -8358,7 +7749,7 @@ Invalid command format: add
         <h2 id="test-coverage">Test Coverage</h2>
         <div>
           <div>
-            <h4 id="what-69">What</h4>
+            <h4 id="what-68">What</h4>
           </div>
           <div>
             <p><strong><em>Test coverage</em> is a metric used to measure the extent to which testing exercises the code</strong> i.e., how much of the code is 'covered' by the tests.</p>
@@ -8398,7 +7789,7 @@ Invalid command format: add
             <p><strong>Measuring coverage is often done using <em>coverage analysis tools</em>.</strong> Most IDEs have inbuilt support for measuring test coverage, or at least have plugins that can measure test coverage.</p>
             <p><strong>Coverage analysis can be useful in improving the quality of testing</strong> <span class="dimmed"> e.g., if a set of test cases does not achieve 100% branch coverage, more test cases can be added to cover missed branches</span>.</p>
 
-            <div v-closeable="" alt="Test Coverage in Intellij">
+            <div v-closeable="" alt="Test Coverage in Intellij" class="non-printable">
               <p><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Measuring code coverage in Intellij IDEA</p>
               <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/yNYzZvyA2ik" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
             </div>
@@ -8407,7 +7798,7 @@ Invalid command format: add
         <h2 id="dependency-injection">Dependency Injection</h2>
         <div>
           <div>
-            <h4 id="what-70">What</h4>
+            <h4 id="what-69">What</h4>
           </div>
           <div>
             <p><strong><em>Dependency injection</em> is the process of 'injecting' objects to replace current dependencies with a different object.</strong> This is often used to inject
@@ -8752,7 +8143,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h2 id="tdd">TDD</h2>
         <div>
           <div>
-            <h4 id="what-71">What</h4>
+            <h4 id="what-70">What</h4>
           </div>
           <div>
             <p><strong>Test-Driven Development(TDD)_ advocates writing the tests before writing the SUT, while evolving functionality and tests in small increments</strong>. In TDD you first define the precise behavior of the SUT using test cases, and then
@@ -8783,7 +8174,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h2 id="introduction-27">Introduction</h2>
         <div>
           <div>
-            <h4 id="what-72">What</h4>
+            <h4 id="what-71">What</h4>
           </div>
           <div>
             <p><strong>Except for trivial <tooltip content="Software Under Test">SUTs</tooltip>, <tooltip content="testing all possible cases">exhaustive testing</tooltip> is not practical</strong> because such testing often requires a massive/infinite number
@@ -8886,7 +8277,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h2 id="equivalence-partitions">Equivalence Partitions</h2>
         <div>
           <div>
-            <h4 id="what-73">What</h4>
+            <h4 id="what-72">What</h4>
           </div>
           <div>
             <p>Consider the testing of the following operation.</p>
@@ -9059,7 +8450,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h2 id="boundary-value-analysis">Boundary Value Analysis</h2>
         <div>
           <div>
-            <h4 id="what-74">What</h4>
+            <h4 id="what-73">What</h4>
           </div>
           <div>
             <p><strong><em>Boundary Value Analysis (BVA)</em> is test case design heuristic that is based on the observation that bugs often result from incorrect handling of boundaries of equivalence partitions.</strong> This is not surprising, as the end
@@ -10168,7 +9559,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                 </p>
                 <div id="title-and-body">
                   <div>
-                    <h4 id="what-75">What</h4>
+                    <h4 id="what-74">What</h4>
                   </div>
                   <div id="main">
                     <div>
@@ -10272,7 +9663,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h1 id="revision-control">Revision Control</h1>
         <div>
           <div>
-            <h4 id="what-76">What</h4>
+            <h4 id="what-75">What</h4>
           </div>
           <div>
             <p><strong><em>Revision Control Software (RCS)</em> are the software tools that automate the process of <em>Revision Control</em> i.e. managing revisions of software artifacts.</strong></p>
@@ -10399,7 +9790,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             <p><strong>A <mark><em>fork</em></mark> is a remote copy of a remote repo</strong>. If there is a remote repo that you want to push to but you do not have write access to it, you can fork the remote repo, which gives you your own remote repo
               that you can push to.</p>
             <p><strong>A <mark><em>pull request</em></mark> is mechanism for contributing code to a remote repo.</strong> It is a formal request sent to the maintainers of the repo asking them to pull your new code to their repo.</p>
-            <div v-closeable="" alt="slideshow: remote repo scenario">
+            <div v-closeable="" alt="slideshow: remote repo scenario" class="non-printable">
               <p>Here is a scenario that includes all the concepts introduced above (click on the slide to advance the animation):</p>
               <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212290&authkey=&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen="" mozallowfullscreen=""
                   allowfullscreen></iframe></div>
@@ -10616,8 +10007,13 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                 <table class="markbind-table table table-bordered table-striped">
                   <thead>
                     <tr>
-                      <th>👎 Not good</th>
-                      <th>👍 Better</th>
+                      <th>
+                        <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                          </span>
+                        </font>
+                      </th>
+                      <th><span class="text-success"><span class="fas fa-thumbs-up"></span> Better </span>
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
@@ -10777,7 +10173,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h2 id="introduction-28">Introduction</h2>
         <div>
           <div>
-            <h4 id="what-77">What</h4>
+            <h4 id="what-76">What</h4>
           </div>
           <div>
             <p><strong>Software development goes through different stages such as <em>requirements, analysis, design, implementation</em> and <em>testing</em>.  These stages are collectively known as the <em>software development life cycle</em> (SDLC).</strong>              There are several approaches, known as <em>software development life cycle models</em> (also called <em>software process models</em>) that describe different ways to go through the SDLC. Each process model prescribes a &quot;roadmap&quot;
@@ -10917,7 +10313,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </ul>
               <p>...</p>
               <p>The daily scrum meeting is not used as a problem-solving or issue resolution meeting. <strong>Issues that are raised are taken offline and usually dealt with by the relevant subgroup immediately after the meeting.</strong></p>
-              <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> Intro to Scrum in Under 10 Minutes">
+              <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> Intro to Scrum in Under 10 Minutes" class="non-printable">
                 <p><sub>(This is not an endorsement of the product mentioned in the video)</sub></p>
                 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/XU0llRltyFM" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
               </panel>
@@ -11037,7 +10433,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h3 id="introduction-29">Introduction</h3>
         <div>
           <div>
-            <h4 id="what-78">What</h4>
+            <h4 id="what-77">What</h4>
           </div>
           <div>
             <p><strong>UML <em>class diagrams</em> describe the structure (but not the behavior) of an OOP solution.</strong> These are possibly the most often used diagrams in the industry and an indispensable tool for an OO programmer.</p>
@@ -11049,7 +10445,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h3 id="classes-2">Classes</h3>
         <div>
           <div>
-            <h4 id="what-79">What</h4>
+            <h4 id="what-78">What</h4>
           </div>
           <div>
             <p>The basic UML notations used to represent a <em>class</em>:<br></p>
@@ -11165,7 +10561,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h3 id="associations-2">Associations</h3>
         <div>
           <div>
-            <h4 id="what-80">What</h4>
+            <h4 id="what-79">What</h4>
           </div>
           <div>
             <p>We use a solid line to show an association between two classes.</p>
@@ -11382,7 +10778,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h3 id="enumerations-2">Enumerations</h3>
         <div>
           <div>
-            <h4 id="what-81">What</h4>
+            <h4 id="what-80">What</h4>
           </div>
           <div>
             <p>Notation:</p>
@@ -11394,7 +10790,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             </tip-box>
           </div>
         </div>
-        <h3 id="class-level-members-2">Class Level Members</h3>
+        <h3 id="class-level-members-2">Class-Level Members</h3>
         <div>
           <div>
             <h4 id="class-level-members-3">Class-Level Members</h4>
@@ -11494,7 +10890,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <h3 id="abstract-classes-2">Abstract Classes</h3>
         <div>
           <div>
-            <h4 id="what-82">What</h4>
+            <h4 id="what-81">What</h4>
           </div>
           <div>
             <p>We can use <em>italics</em> or <code>{abstract}</code> keyword to denote abstract classes/methods.</p>
@@ -12008,7 +11404,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             <h4 id="init">Init</h4>
           </div>
           <div>
-            <panel header="%%<span class='fas fa-paperclip'></span> Git Overview%%">
+            <panel header="%%<span class='fas fa-paperclip'></span> Git Overview%%" class="non-printable">
               <p>Soon you are going to take your first step in using Git. If you would like to see a quick overview of the full Git landscape before jumping in, watch the video below.</p>
               <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/v40b3ExbM0c" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
               <p></p>
@@ -13068,7 +12464,7 @@ git pull origin master
           </div>
           <div>
             <p><span class="dimmed">Adapted (with permissions) from <a href="http://code.makery.ch/library/javafx-8-tutorial/">Marco Jakob's JavaFX 8 tutorial</a>.</span></p>
-            <panel header="**Part 1: Scene Builder**">
+            <panel header="**Part 1: Scene Builder**" minimized="">
               <div>
                 <h1 id="javafx-8-tutorial-part-1-scene-builder">JavaFx 8 Tutorial - Part 1: Scene Builder</h1>
                 <h2 id="introduction-34">Introduction</h2>
@@ -13389,7 +12785,7 @@ git pull origin master
                 <p><code>fx:controller=&quot;seedu.address.view.PersonOverview&quot;</code></p>
               </div>
             </panel>
-            <panel header="**Part 2: Model and TableView**">
+            <panel header="**Part 2: Model and TableView**" minimized="">
               <div>
                 <h1 id="javafx-8-tutorial-part-2-model-and-tableview">JavaFx 8 tutorial - Part 2: Model and TableView</h1>
                 <h2 id="introduction-35">Introduction</h2>
@@ -13752,7 +13148,7 @@ git pull origin master
             <h4 id="junit-basic">JUnit: Basic</h4>
           </div>
           <div>
-            <div v-closeable="" alt="Junit tutorial video">
+            <div v-closeable="" alt="Junit tutorial video" class="non-printable">
               <p>JUnit 4 with IntelliJ: A quick introduction <sub>-- by DrBFraser</sub></p>
               <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Bld3644bIAo" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
             </div>
@@ -13870,9 +13266,9 @@ git pull origin master
                         <pre><code class="hljs java">Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span>
 </code></pre>
                         <p>But the following code is not valid <span class="dimmed"> because <code>staff</code> is declared as a <code>Staff</code> type and therefore its value may or may not be of  type <code>AcademicStaff</code>, which is the type expected by variable <code>academicStaff</code>.</span></p>
-                        <pre class="hljs"><code>Staff staff;
+                        <pre><code class="hljs java">Staff staff;
 ...
-AcademicStaff academicStaff = staff; // Not OK
+AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 </code></pre>
                       </tip-box>
                     </div>
@@ -14142,9 +13538,9 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                                   <pre><code class="hljs java">Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span>
 </code></pre>
                                   <p>But the following code is not valid <span class="dimmed"> because <code>staff</code> is declared as a <code>Staff</code> type and therefore its value may or may not be of  type <code>AcademicStaff</code>, which is the type expected by variable <code>academicStaff</code>.</span></p>
-                                  <pre class="hljs"><code>Staff staff;
+                                  <pre><code class="hljs java">Staff staff;
 ...
-AcademicStaff academicStaff = staff; // Not OK
+AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 </code></pre>
                                 </tip-box>
                               </div>
@@ -14375,7 +13771,7 @@ AcademicStaff academicStaff = staff; // Not OK
                 </p>
                 <div id="title-and-body">
                   <div>
-                    <h4 id="what-83">What</h4>
+                    <h4 id="what-82">What</h4>
                   </div>
                   <div id="main">
                     <div>
@@ -14404,7 +13800,7 @@ AcademicStaff academicStaff = staff; // Not OK
                 </p>
                 <div id="title-and-body">
                   <div>
-                    <h4 id="what-84">What</h4>
+                    <h4 id="what-83">What</h4>
                   </div>
                   <div id="main">
                     <div>
@@ -14497,7 +13893,7 @@ AcademicStaff academicStaff = staff; // Not OK
                 </p>
                 <div id="title-and-body">
                   <div>
-                    <h4 id="what-85">What</h4>
+                    <h4 id="what-84">What</h4>
                   </div>
                   <div id="main">
                     <div>
@@ -14616,7 +14012,7 @@ AcademicStaff academicStaff = staff; // Not OK
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sat, 11 Aug 2018 08:12:55 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 09:51:30 GMT.</small></div>
 </footer>
 </div>
 </body>

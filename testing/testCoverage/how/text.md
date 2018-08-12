@@ -16,7 +16,7 @@
 
 <!-- TODO: add screenshots -->
 
-<div v-closeable alt="Test Coverage in Intellij"> 
+<div v-closeable alt="Test Coverage in Intellij" class="non-printable">
 
 {{ icon_video }} Measuring code coverage in Intellij IDEA
 

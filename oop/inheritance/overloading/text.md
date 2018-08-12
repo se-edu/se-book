@@ -28,15 +28,6 @@
 
 </tip-box>
 
-##### <big>Implementing overloading</big>
-
-An operation can be overloaded inside the same class or in sub/super classes.
-<div class="alt-java">
-  <include src="text-java.fr" />
-</div>
-<div class="alt-python">
-  <include src="text-python.fr" />
-</div>
 
 </div>
 

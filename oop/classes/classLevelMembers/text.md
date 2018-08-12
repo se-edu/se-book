@@ -1,6 +1,6 @@
 <div id="title">
 
-#### Class Level Members
+#### Class-Level Members
 
 </div>
 
@@ -18,7 +18,7 @@ While all objects of a class has the same attributes, each object has its own co
 
 </tip-box>
 
-However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Such **variables whose value is shared by all instances of a class are called ==_class level attributes_==**.
+However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Such **variables whose value is shared by all instances of a class are called ==_class-level attributes_==**.
 
 <tip-box>
 
@@ -43,21 +43,6 @@ However, there can be methods related to a specific class but not suitable for s
 </tip-box>
 
 **Class-level attributes and methods are collectively called ==_class-level members_==** (also called _static members_ sometimes because some programming languages use the keyword `static` to identify class-level members). **They are to be accessed using the class name rather than an instance of the class**.
-
-##### <big>Implementing class-level members</big>
-
-Some resources to learn how to implement class-level members:
-
-<div class="alt-java">
-
-* [Oracle’s official Java tutorial on class-level members](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html)
- 
-</div>
-<div class="alt-python">
-
-* [Python Programming Basics: OOP: Class-Level Members](https://nus-te3201.github.io/website/programming/toc/oop.html#class-level-members)
-
-</div>
 
 
 </div>

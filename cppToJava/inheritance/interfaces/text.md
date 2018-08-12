@@ -56,10 +56,31 @@ public class OperateBMW760i implements OperateCar {
 
 In the robotic car example above, it is the automobile manufacturers who will implement the interface. Chevrolet's implementation will be substantially different from that of Toyota, of course, but both manufacturers will adhere to the same interface. The guidance manufacturers, who are the clients of the interface, will build systems that use GPS data on a car's location, digital street maps, and traffic data to drive the car. In so doing, the guidance systems will invoke the interface methods: turn, change lanes, brake, accelerate, and so forth.
 
-==//todo Mention that an interface can be used as a type, mention default methods, multiple inheritance==
-
-
 </blockquote>
+
+**Java allows multiple inheritance among interfaces. A Java class can _implement_ multiple interfaces** (and inherit from one class).
+
+<tip-box>
+
+{{ icon_example }} The design below is allowed by Java. %%In case you are not familiar with UML notation used: solid lines indicate normal inheritance; dashed lines indicate interface inheritance; the triangle points to pare parent.%%
+
+<img src="{{baseUrl}}/oop/inheritance/interfaces/images/studentStaff.png" height="250" />
+<p/>
+
+1. `Staff` interface inherits (note the solid lines) the interfaces `TaxPayer` and `Citizen`.
+2. `TA` class implements both `Student` interface and the `Staff` interface.
+3. Because of point 1 above, `TA` class has to implement all methods in the interfaces `TaxPayer` and `Citizen`.
+4. Because of points 1,2,3, a `TA` _is a_ `Staff`, _is a_ `TaxPayer` and _is a_ `Citizen`.
+
+**An interface can be used as a type.**
+
+```java
+Staff s = new TA();
+```
+
+**A Java interface can contain [_default_ method implementations](https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html).**
+
+</tip-box>
 
 </div>
 

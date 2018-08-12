@@ -112,6 +112,50 @@ Within `Subclass`, the simple name `printMethod()` refers to the one declared in
 Printed in Superclass.
 Printed in Subclass
 ```
+</blockquote>
+
+<panel type="seamless" header="{{ icon_example }} Another example of method overriding">
+
+A simple example where the `Report#print()` method is overridden by `EvaluationReport#print()` method:
+
+```java
+
+class Report{
+
+    void print(){
+        System.out.println("Printing report");
+    }
+
+}
+
+class EvaluationReport extends Report{
+
+    @Override  // this annotation is optional
+    void print(){
+        System.out.println("Printing evaluation report");
+    }
+
+}
+
+class ReportMain{
+
+    public static void main(String[] args){
+        Report report = new Report();
+        report.print(); // prints "Printing report"
+
+        EvaluationReport evaluationReport = new EvaluationReport();
+        evaluationReport.print(); // prints "Printing evaluation report"
+    }
+}
+```
+{{ icon_output }}
+```
+Printing report
+Printing evaluation report
+```
+</panel>
+
+<blockquote>
 
 ##### Subclass Constructors
 

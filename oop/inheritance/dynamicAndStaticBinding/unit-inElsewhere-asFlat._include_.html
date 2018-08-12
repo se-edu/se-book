@@ -105,45 +105,6 @@
                                 <li><code>calculate(int): void</code></li>
                               </ul>
                             </tip-box>
-                            <h5 id="implementing-overloading"><big>Implementing overloading</big></h5>
-                            <p>An operation can be overloaded inside the same class or in sub/super classes.</p>
-                            <div class="alt-java">
-                              <div>
-                                <tip-box>
-                                  <p><span class="fas fa-cube"></span> The constructor of the <code>Account</code> class below is <em>overloaded</em> because there are two constructors with different signatures: <code>()</code> and <code>(String, String, double)</code>.
-                                    Furthermore, the <code>save</code> method in the <code>Account</code> class is overloaded in the child class <code>SavingAccount</code>.</p>
-                                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
-    Account () {
-        ...
-    }
-    
-    Account (String name, String number, <span class="hljs-keyword">double</span> balance) {
-        ...
-    }
-    
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(<span class="hljs-keyword">int</span> amount)</span></span>{
-        ...
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SavingAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
-    
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(Double amount)</span></span>{
-        ...
-    }
-}
-</code></pre>
-                                </tip-box>
-                                <p><span class="fas fa-paperclip"></span> Resources:</p>
-                                <ul>
-                                  <li><a href="https://www.javatpoint.com/method-overloading-in-java"><strong>Method Overloading in Java</strong></a> a tutorial from <a href="http://javapoint.com">javapoint.com</a>. Also mentions the topic of a related topic
-                                    <mark><em>type promotion</em></mark>.</li>
-                                </ul>
-                              </div>
-                            </div>
-                            <div class="alt-python">
-                              <div><span>❗️ Python does not have direct support for method overloading.</span></div>
-                            </div>
                           </div>
                           <div></div>
                         </div>
@@ -151,109 +112,6 @@
                     </div>
                   </modal>
                 </tip-box>
-                <h5 id="implementing-overriding"><big>Implementing overriding</big></h5>
-                <p><strong>To override a method inherited from an ancestor class, simply re-implement the method in the target class.</strong></p>
-                <div class="alt-java">
-                  <div>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> A simple example where the <code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method:</p>
-                      <pre><code class="hljs java">
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Report</span></span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
-        System.out.println(<span class="hljs-string">"Printing report"</span>);
-    }
-
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EvaluationReport</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Report</span></span>{
-
-    <span class="hljs-meta">@Override</span>  <span class="hljs-comment">// this annotation is optional</span>
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
-        System.out.println(<span class="hljs-string">"Printing evaluation report"</span>);
-    }
-
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReportMain</span></span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
-        Report report = <span class="hljs-keyword">new</span> Report();
-        report.print(); <span class="hljs-comment">// prints "Printing report"</span>
-
-        EvaluationReport evaluationReport = <span class="hljs-keyword">new</span> EvaluationReport();
-        evaluationReport.print(); <span class="hljs-comment">// prints "Printing evaluation report"</span>
-    }
-}
-</code></pre>
-                    </tip-box>
-                    <p><span class="fas fa-paperclip"></span> Resources:</p>
-                    <ul>
-                      <li><a href="https://www.tutorialspoint.com/java/java_overriding.htm">Java - Overriding</a> -- a tutorial by <a href="http://tutorialspoint.com">tutorialspoint.com</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="alt-python">
-                  <div>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> In the example below, <code>Student</code> class overrides the <code>print_info</code> method of its parent class <code>Person</code>:</p>
-                      <table>
-                        <tr>
-                        
-                          <td>
-                            <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>:</span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name)</span>:</span>
-    self.name = name
-    
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span><span class="hljs-params">(self)</span>:</span>
-    print(<span class="hljs-string">'My name is'</span>, self.name)
-    
-</code></pre>
-                            <p></p>
-                          </td>
-                        
-                          <td valign="bottom">  <br><br></td>
-                        
-                          <td valign="bottom">
-                            <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span><span class="hljs-params">(Person)</span>:</span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, matric)</span>:</span>
-    self.name = name
-    self.matric = matric
-    
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span><span class="hljs-params">(self)</span>:</span>
-    print(self.name, <span class="hljs-string">'is a student'</span>)
-</code></pre>
-                            <p></p>
-                          </td>
-                        </tr>
-                      </table>
-                      <table>
-                        <tr>
-                        
-                          <td>
-                            <pre><code class="hljs python">amy = Person(<span class="hljs-string">'Amy'</span>)
-amy.print_info()
-
-ben = Student(<span class="hljs-string">'Ben'</span>, <span class="hljs-string">'A12345'</span>)
-ben.print_info()
-</code></pre>
-                            <p></p>
-                          </td>
-                        
-                          <td valign="bottom"> → <br><br></td>
-                        
-                          <td valign="bottom">
-                            <pre class="hljs"><code>My name is Amy
-Ben is a student
-</code></pre>
-                            <p></p>
-                          </td>
-                        </tr>
-                      </table>
-                      <p></p>
-                    </tip-box>
-                  </div>
-                </div>
               </div>
               <div>
                 <div>
@@ -361,44 +219,6 @@ Ben is a student
                     <li><code>calculate(int): void</code></li>
                   </ul>
                 </tip-box>
-                <h5 id="implementing-overloading-2"><big>Implementing overloading</big></h5>
-                <p>An operation can be overloaded inside the same class or in sub/super classes.</p>
-                <div class="alt-java">
-                  <div>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> The constructor of the <code>Account</code> class below is <em>overloaded</em> because there are two constructors with different signatures: <code>()</code> and <code>(String, String, double)</code>.
-                        Furthermore, the <code>save</code> method in the <code>Account</code> class is overloaded in the child class <code>SavingAccount</code>.</p>
-                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
-    Account () {
-        ...
-    }
-    
-    Account (String name, String number, <span class="hljs-keyword">double</span> balance) {
-        ...
-    }
-    
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(<span class="hljs-keyword">int</span> amount)</span></span>{
-        ...
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SavingAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
-    
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">(Double amount)</span></span>{
-        ...
-    }
-}
-</code></pre>
-                    </tip-box>
-                    <p><span class="fas fa-paperclip"></span> Resources:</p>
-                    <ul>
-                      <li><a href="https://www.javatpoint.com/method-overloading-in-java"><strong>Method Overloading in Java</strong></a> a tutorial from <a href="http://javapoint.com">javapoint.com</a>. Also mentions the topic of a related topic <mark><em>type promotion</em></mark>.</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="alt-python">
-                  <div><span>❗️ Python does not have direct support for method overloading.</span></div>
-                </div>
               </div>
               <div></div>
             </div>
@@ -408,10 +228,12 @@ Ben is a student
       <tip-box>
         <p><span class="fas fa-cube"></span> Note how the constructor is overloaded in the class below. The method call <code>new Account()</code> is bound to the first constructor at compile time.</p>
         <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+
     Account () {
         <span class="hljs-comment">// Signature: ()</span>
         ...
     }
+
     Account (String name, String number, <span class="hljs-keyword">double</span> balance) {
         <span class="hljs-comment">// Signature: (String, String, double)</span>
         ...
@@ -419,8 +241,8 @@ Ben is a student
 }
 </code></pre>
         <p><span class="fas fa-cube"></span> Similarly, the <code>calcuateGrade</code> method is overloaded in the code below and a method call <code>calculateGrade(&quot;A1213232&quot;)</code> is bound to the second implementation, at compile time.</p>
-        <pre class="hljs"><code>void calculateGrade (int[] averages) { ... }
-void calculateGrade (String matric) { ... }
+        <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculateGrade</span> <span class="hljs-params">(<span class="hljs-keyword">int</span>[] averages)</span> </span>{ ... }
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculateGrade</span> <span class="hljs-params">(String matric)</span> </span>{ ... }
 </code></pre>
       </tip-box>
     </div>

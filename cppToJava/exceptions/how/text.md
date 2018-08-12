@@ -10,6 +10,11 @@
 
 <div id="body">
 
+{{ icon_example }} In the code given below, `processArray` can potentially throw an `InvalidInputException`. Because of that, `processInput` method invokes `processArray` method inside a `try{  }` block and has a `catch{  }` block to specify what to do if the exception is actually thrown.
+
+<img src="{{baseUrl}}/errorHandling/exceptions/how/images/processInput.png" width="400" />
+<p/>
+
 Given below is an extract from the {{ oracle }}, with slight adaptations.
 
 <blockquote>

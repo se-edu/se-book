@@ -22,8 +22,8 @@
         whenever the university initiates a salary adjustment for its staff. However, the adjustment formula is different for different staff categories, say admin and academic. Here is one possible way of designing the classes in the <code>Payroll</code>        system.</p>
       <p>Here is the implementation of the <code>adjustSalary(int)</code> operation.</p>
       <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll1</span> </span>{
-    ArrayList&lt; Admin &gt; admins;
-    ArrayList&lt; Academic &gt; academics;
+    ArrayList&lt;Admin&gt; admins;
+    ArrayList&lt;Academic&gt; academics;
     <span class="hljs-comment">// ...</span>
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
@@ -39,7 +39,7 @@
       <p>Note how processing is similar for the two staff types. It is as if the type of staff members is irrelevant to how they are processed inside this operation! If that is the case, can the staff type be &quot;abstracted away&quot; from this method?
         Here is such an implementation of <code>adjustSalary(int)</code>:</p>
       <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll2</span> </span>{
-    ArrayList&lt; Staff &gt; staff;
+    ArrayList&lt;Staff&gt; staff;
     <span class="hljs-comment">// ...</span>
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
@@ -51,7 +51,7 @@
 </code></pre>
       <p>Notice the following:</p>
       <ul>
-        <li>Only one data structure <code>ArrayList&lt; Staff &gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
+        <li>Only one data structure <code>ArrayList&lt;Staff&gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
         <li>Only one loop</li>
         <li>Outcome of the <code>s.adjustSalary(byPercent)</code> method call depends on whether <code>s</code> is an <code>Academic</code> or <code>Admin</code> object</li>
       </ul>

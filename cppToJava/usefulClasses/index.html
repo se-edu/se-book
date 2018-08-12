@@ -79,7 +79,8 @@
                 <div>
                   <p>String is a built-in Java class that you can use without importing</p>
                   <box>
-                    :bulb: Any class in the [`java.lang`](https://docs.oracle.com/javase/9/docs/api/java/lang/package-summary.html) package can be used without importing.
+                    <p>💡 Any class in the <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/package-summary.html"><code>java.lang</code></a> package can be used without importing.
+                    </p>
                   </box>
                   <p>Given below are some useful String methods:</p>
                   <h5 id="find-the-character-at-a-specific-location">Find the character at a specific location</h5>
@@ -155,6 +156,18 @@ String name2 = <span class="hljs-string">"Ada Lovelace"</span>;
 </code></pre>
                     <p>This example invokes <code>equals</code> on <code>name1</code> and passes <code>name2</code> as an argument. The <code>equals</code> method returns <code>true</code> if the strings contain the same characters; otherwise it returns
                       <code>false</code>.</p>
+                    <p>To check if two strings are similar irrespective of the differences in case, you can use the <code>equalsIgnoreCase</code> method.</p>
+                    <pre><code class="hljs java">String s1 = <span class="hljs-string">"Apple"</span>;
+String s2 = <span class="hljs-string">"apple"</span>;
+System.out.println(s1.equals(s2)); <span class="hljs-comment">//false</span>
+System.out.println(s1.equalsIgnoreCase(s2)); <span class="hljs-comment">//true</span>
+</code></pre>
+                    <p>Some more comparison-related <code>String</code> methods:</p>
+                    <ul>
+                      <li><code>contains</code>: checks if one string is a sub-string of the other e.g., <code>Snapple</code> and <code>app</code></li>
+                      <li><code>startsWith</code>: checks if one string has the other as a substring at the <em>beginning</em> e.g., <code>Apple</code> and <code>App</code></li>
+                      <li><code>endsWith</code>: checks if one string has the other as a substring at the <em>end</em> e.g., <code>Crab</code> and <code>ab</code></li>
+                    </ul>
                     <p>If the strings differ, we can use <code>compareTo</code> to see which comes first in alphabetical order:</p>
                     <pre><code class="hljs java"><span class="hljs-keyword">int</span> diff = name1.compareTo(name2);
 <span class="hljs-keyword">if</span> (diff == <span class="hljs-number">0</span>) {
@@ -169,7 +182,6 @@ String name2 = <span class="hljs-string">"Ada Lovelace"</span>;
                       in the alphabet, the difference is negative. Otherwise, the difference is positive.</p>
                     <p>In the preceding code, compareTo returns positive 8, because the second letter of &quot;Ada&quot; comes before the second letter of &quot;Alan&quot; by 8 letters. Both equals and compareTo are case-sensitive. The uppercase letters
                       come before the lowercase letters, so &quot;Ada&quot; comes before &quot;ada&quot;.</p>
-                    <p><mark>//todo: mention equalsIgnoreCase methods</mark></p>
                   </div>
                   <h5 id="string-formatting">String formatting</h5>
                   <div class="indented">
@@ -318,7 +330,7 @@ System.out.printf(<span class="hljs-string">"Hello %s, age %d\n"</span>, name, a
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sat, 11 Aug 2018 08:12:55 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 09:51:30 GMT.</small></div>
 </footer>
 </div>
 </body>

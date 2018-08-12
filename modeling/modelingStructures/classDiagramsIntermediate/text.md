@@ -1,5 +1,5 @@
 <span id="prereqs"><panel src="../../../oop/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → OOP → Inheritance → What%%" />
-<panel src="../../../oop/classes/classLevelMembers/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Classes → Class Level Members%%" />
+<panel src="../../../oop/classes/classLevelMembers/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Classes → Class-Level Members%%" />
 <panel src="../../../oop/classes/enumerations/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Classes → Enumerations%%" />
 <panel src="../../../uml/classDiagrams/dependencies/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%UML → Class Diagrams → Dependencies%%" />
 <panel src="../../../oop/associations/composition/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%OOP → Associations → Composition%%" />

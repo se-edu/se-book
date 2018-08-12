@@ -25,15 +25,6 @@
 
 </tip-box>
 
-##### <big>Implementing overriding</big>
-
-**To override a method inherited from an ancestor class, simply re-implement the method in the target class.** 
-<div class="alt-java">
-  <include src="text-java.fr" />
-</div>
-<div class="alt-python">
-  <include src="text-python.fr" />
-</div>
 
 </div>
 

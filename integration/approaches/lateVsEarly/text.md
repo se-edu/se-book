@@ -28,7 +28,7 @@
 
 </tip-box>
 
-<div v-closeable alt="slideshow: comparison">
+<div v-closeable alt="slideshow: comparison" class="non-printable">
 
 Here is an animation that compares the two approaches: 
 

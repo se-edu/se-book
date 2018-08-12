@@ -26,13 +26,13 @@
 
 </panel>
 
-<panel header="{{ icon_example }} A simple GUI prototype for the same Minesweeper, created using Powerpoint:" type="seamless">
+<panel header="{{ icon_example }} A simple GUI prototype for the same Minesweeper, created using Powerpoint:" type="seamless" expanded>
 
 <img src="{{baseUrl}}/gatheringRequirements/prototyping/images/guiPrototypeMinesweeper.jpg" height="220" /><p/>
 
 </panel>
 
-<panel header="{{ icon_example }} A prototype for a mobile app, created using the UI prototyping tool Balsmiq:" type="seamless">
+<panel header="{{ icon_example }} A prototype for a mobile app, created using the UI prototyping tool Balsmiq:" type="seamless" expanded>
 
 <img src="{{baseUrl}}/gatheringRequirements/prototyping/images/balsamiqPrototypeGUI.jpg" height="450" />
 

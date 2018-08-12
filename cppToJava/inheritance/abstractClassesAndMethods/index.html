@@ -79,7 +79,7 @@
     <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">()</span></span>;
 }
 </code></pre>
-                <p>Each non-abstract subclass of <code>GraphicObject</code>, such as <code>Circle</code> and <code>Rectangle</code>, must provide implementations for the draw and resize methods:</p>
+                <p>Each subclass of <code>GraphicObject</code>, such as <code>Circle</code> and <code>Rectangle</code>, must provide implementations for the <code>draw</code> and <code>resize</code> methods or else must be declared <code>abstract</code>                  themselves:</p>
                 <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">GraphicObject</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
         ...
@@ -89,16 +89,35 @@
     }
 }
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">GraphicObject</span> </span>{
+<span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">GraphicObject</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
-        ...
-    }
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">()</span> </span>{
         ...
     }
 }
 </code></pre>
+                <p>The <code>Rectangle</code> class above is abstract because it does not provide an implementation for the <code>resize</code> method.</p>
               </blockquote>
+              <panel type="seamless" header="<span class='fas fa-cube'></span> Another example of an abstract class" minimized="">
+                <pre><code class="hljs java"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+
+    <span class="hljs-keyword">int</span> number;
+
+    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span></span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">close</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CurrentAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+              </panel>
             </div>
             <div></div>
           </div>
@@ -110,7 +129,7 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sat, 11 Aug 2018 08:12:55 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 09:51:30 GMT.</small></div>
 </footer>
 </div>
 </body>

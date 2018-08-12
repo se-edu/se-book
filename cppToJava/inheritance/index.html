@@ -146,6 +146,44 @@
                     <pre class="hljs"><code>Printed in Superclass.
 Printed in Subclass
 </code></pre>
+                  </blockquote>
+                  <panel type="seamless" header="<span class='fas fa-cube'></span> Another example of method overriding">
+                    <p>A simple example where the <code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method:</p>
+                    <pre><code class="hljs java">
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Report</span></span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
+        System.out.println(<span class="hljs-string">"Printing report"</span>);
+    }
+
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EvaluationReport</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Report</span></span>{
+
+    <span class="hljs-meta">@Override</span>  <span class="hljs-comment">// this annotation is optional</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
+        System.out.println(<span class="hljs-string">"Printing evaluation report"</span>);
+    }
+
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReportMain</span></span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        Report report = <span class="hljs-keyword">new</span> Report();
+        report.print(); <span class="hljs-comment">// prints "Printing report"</span>
+
+        EvaluationReport evaluationReport = <span class="hljs-keyword">new</span> EvaluationReport();
+        evaluationReport.print(); <span class="hljs-comment">// prints "Printing evaluation report"</span>
+    }
+}
+</code></pre>
+                    <p><span class="fas fa-arrow-down"></span></p>
+                    <pre class="hljs"><code>Printing report
+Printing evaluation report
+</code></pre>
+                  </panel>
+                  <blockquote>
                     <h5 id="subclass-constructors">Subclass Constructors</h5>
                     <p>The following example illustrates how to use the <code>super</code> keyword to invoke a superclass's constructor. Recall from the <code>Bicycle</code> example that <code>MountainBike</code> is a subclass of <code>Bicycle</code>. Here
                       is the <code>MountainBike</code> (subclass) constructor that calls the superclass constructor and then adds initialization code of its own:</p>
@@ -360,8 +398,23 @@ Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number
                     <p>In the robotic car example above, it is the automobile manufacturers who will implement the interface. Chevrolet's implementation will be substantially different from that of Toyota, of course, but both manufacturers will adhere to
                       the same interface. The guidance manufacturers, who are the clients of the interface, will build systems that use GPS data on a car's location, digital street maps, and traffic data to drive the car. In so doing, the guidance systems
                       will invoke the interface methods: turn, change lanes, brake, accelerate, and so forth.</p>
-                    <p><mark>//todo Mention that an interface can be used as a type, mention default methods, multiple inheritance</mark></p>
                   </blockquote>
+                  <p><strong>Java allows multiple inheritance among interfaces. A Java class can <em>implement</em> multiple interfaces</strong> (and inherit from one class).</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> The design below is allowed by Java. <span class="dimmed">In case you are not familiar with UML notation used: solid lines indicate normal inheritance; dashed lines indicate interface inheritance; the triangle points to pare parent.</span></p>
+                    <img src="/se-book/oop/inheritance/interfaces/images/studentStaff.png" height="250">
+                    <p></p>
+                    <ol>
+                      <li><code>Staff</code> interface inherits (note the solid lines) the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
+                      <li><code>TA</code> class implements both <code>Student</code> interface and the <code>Staff</code> interface.</li>
+                      <li>Because of point 1 above, <code>TA</code> class has to implement all methods in the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
+                      <li>Because of points 1,2,3, a <code>TA</code> <em>is a</em> <code>Staff</code>, <em>is a</em> <code>TaxPayer</code> and <em>is a</em> <code>Citizen</code>.</li>
+                    </ol>
+                    <p><strong>An interface can be used as a type.</strong></p>
+                    <pre><code class="hljs java">Staff s = <span class="hljs-keyword">new</span> TA();
+</code></pre>
+                    <p><strong>A Java interface can contain <a href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html"><em>default</em> method implementations</a>.</strong></p>
+                  </tip-box>
                 </div>
                 <div></div>
               </div>
@@ -465,17 +518,17 @@ Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number
                     <p>To summarize, there are three classes: <code>Bicycle</code>, <code>MountainBike</code>, and <code>RoadBike</code>. The two subclasses override the <code>printDescription</code> method and print unique information.</p>
                     <p>Here is a test program that creates three Bicycle variables. Each variable is assigned to one of the three bicycle classes. Each variable is then printed.</p>
                     <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestBikes</span> </span>{
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
-    Bicycle bike01, bike02, bike03;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Bicycle bike01, bike02, bike03;
 
-    bike01 = <span class="hljs-keyword">new</span> Bicycle(<span class="hljs-number">10</span>, <span class="hljs-number">1</span>);
-    bike02 = <span class="hljs-keyword">new</span> MountainBike(<span class="hljs-number">10</span>, <span class="hljs-number">5</span>, <span class="hljs-string">"Dual"</span>);
-    bike03 = <span class="hljs-keyword">new</span> RoadBike(<span class="hljs-number">20</span>, <span class="hljs-number">8</span>, <span class="hljs-number">23</span>);
+        bike01 = <span class="hljs-keyword">new</span> Bicycle(<span class="hljs-number">10</span>, <span class="hljs-number">1</span>);
+        bike02 = <span class="hljs-keyword">new</span> MountainBike(<span class="hljs-number">10</span>, <span class="hljs-number">5</span>, <span class="hljs-string">"Dual"</span>);
+        bike03 = <span class="hljs-keyword">new</span> RoadBike(<span class="hljs-number">20</span>, <span class="hljs-number">8</span>, <span class="hljs-number">23</span>);
 
-    bike01.printDescription();
-    bike02.printDescription();
-    bike03.printDescription();
-  }
+        bike01.printDescription();
+        bike02.printDescription();
+        bike03.printDescription();
+    }
 }
 </code></pre>
                     <p><span class="fas fa-arrow-down"></span></p>
@@ -536,7 +589,7 @@ The RoadBike has 23 MM tires.
     <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">()</span></span>;
 }
 </code></pre>
-                    <p>Each non-abstract subclass of <code>GraphicObject</code>, such as <code>Circle</code> and <code>Rectangle</code>, must provide implementations for the draw and resize methods:</p>
+                    <p>Each subclass of <code>GraphicObject</code>, such as <code>Circle</code> and <code>Rectangle</code>, must provide implementations for the <code>draw</code> and <code>resize</code> methods or else must be declared <code>abstract</code>                      themselves:</p>
                     <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">GraphicObject</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
         ...
@@ -546,16 +599,35 @@ The RoadBike has 23 MM tires.
     }
 }
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">GraphicObject</span> </span>{
+<span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">GraphicObject</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
-        ...
-    }
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">()</span> </span>{
         ...
     }
 }
 </code></pre>
+                    <p>The <code>Rectangle</code> class above is abstract because it does not provide an implementation for the <code>resize</code> method.</p>
                   </blockquote>
+                  <panel type="seamless" header="<span class='fas fa-cube'></span> Another example of an abstract class" minimized="">
+                    <pre><code class="hljs java"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+
+    <span class="hljs-keyword">int</span> number;
+
+    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span></span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">close</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CurrentAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+                  </panel>
                 </div>
                 <div></div>
               </div>
@@ -569,7 +641,7 @@ The RoadBike has 23 MM tires.
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sat, 11 Aug 2018 08:12:55 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 09:51:30 GMT.</small></div>
 </footer>
 </div>
 </body>
