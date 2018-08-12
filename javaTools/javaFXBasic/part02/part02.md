@@ -1,4 +1,4 @@
-# JavaFx 8 tutorial - Part 2: Model and TableView
+# JavaFx 9 tutorial - Part 2: Model and TableView
 
 ## Introduction
 

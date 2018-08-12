@@ -1,4 +1,4 @@
-# JavaFx 8 Tutorial - Part 1: Scene Builder
+# JavaFx 9 Tutorial - Part 1: Scene Builder
 
 ## Introduction
 
@@ -9,7 +9,7 @@ This tutorial will teach you how to create a new JavaFX application in IntelliJ,
 
 ## Prerequisites
 
-* Latest [Java JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (includes *JavaFX 8*)
+* Latest [Java JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (includes *JavaFX 9*)
 * IntelliJ (2017.2 or later)
 * [SceneBuilder 8](http://gluonhq.com/products/scene-builder/) (provided by Gluon as [Oracle no longer ships the tool in binary form](http://www.oracle.com/technetwork/java/javase/downloads/sb2download-2177776.html))
 
@@ -54,7 +54,7 @@ If this is the first time using IntelliJ, you need to tell IntelliJ where to fin
 The JavaDocs will come in handy when writing your own JavaFX applications:
 
 * [Java 8 API](http://docs.oracle.com/javase/8/docs/api/)
-* [JavaFX 8 API](http://docs.oracle.com/javase/8/javafx/api/)
+* [JavaFX 9 API](https://docs.oracle.com/javase/9/docs/api/overview-summary.html)
 * [ControlsFX API](http://controlsfx.bitbucket.org/)
 
 Additionally, [Oracle also has a tutorial on JavaFX](http://docs.oracle.com/javase/8/javafx/get-started-tutorial/get_start_apps.htm) if you are interested.
