@@ -135,7 +135,7 @@ public class Person {
 
 * With JavaFX, it is common to use `*Property` for all fields of a model class. A `Property` allows us, for example, to automatically be notified when the `lastName` or any other variable is changed. This helps us keep the view in sync with the data.
 * To learn more about `*Property`, refer to [Using JavaFX Properties and Binding](http://docs.oracle.com/javase/8/javafx/properties-binding-tutorial/binding.htm)
-* `LocalDate`, the type that we are using for `birthday`, is part of the [new Date and Time API for JDK 8](http://docs.oracle.com/javase/tutorial/datetime/iso/)
+* `LocalDate`, the type that we are using for `birthday`, is part of the [new Date and Time API since JDK 8](http://docs.oracle.com/javase/tutorial/datetime/iso/)
 
 ## A List of Persons
 

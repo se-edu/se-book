@@ -9,7 +9,7 @@ This tutorial will teach you how to create a new JavaFX application in IntelliJ,
 
 ## Prerequisites
 
-* Latest [Java JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (includes *JavaFX 9*)
+* Latest [Java JDK 9](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase9-3934878.html) (includes *JavaFX 9*)
 * IntelliJ (2017.2 or later)
 * [SceneBuilder 8](http://gluonhq.com/products/scene-builder/) (provided by Gluon as [Oracle no longer ships the tool in binary form](http://www.oracle.com/technetwork/java/javase/downloads/sb2download-2177776.html))
 
@@ -21,9 +21,9 @@ Do remember the installation path to SceneBuilder 8 as we will need it to config
 
 ## IntelliJ Configurations
 
-If this is the first time using IntelliJ, you need to tell IntelliJ where to find JDK 8 and SceneBuilder.
+If this is the first time using IntelliJ, you need to tell IntelliJ where to find JDK 9 and SceneBuilder.
 
-### Configuring JDK 8
+### Configuring JDK 9
 
 1. On the Welcome screen, press `Configure` → `Project Default` → `Project Structure`.
 
@@ -35,7 +35,7 @@ If this is the first time using IntelliJ, you need to tell IntelliJ where to fin
 2. Under `Project SDK:`, press `New...` → `JDK`.
 3. Select the directory that you install JDK on, and press `OK`.
 
-  <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/config-jdk-project-structure.png" alt="JDK 8 under Project Structure" height="350" />
+  <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/config-jdk-project-structure.png" alt="JDK 9 under Project Structure" height="350" />
   <p/>
 
 4. Press `OK` again.
