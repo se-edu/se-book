@@ -53,7 +53,7 @@ If this is the first time using IntelliJ, you need to tell IntelliJ where to fin
 
 The JavaDocs will come in handy when writing your own JavaFX applications:
 
-* [Java 8 API](http://docs.oracle.com/javase/8/docs/api/)
+* [Java 9 API](https://docs.oracle.com/javase/9/docs/api)
 * [JavaFX 9 API](https://docs.oracle.com/javase/9/docs/api/overview-summary.html)
 * [ControlsFX API](http://controlsfx.bitbucket.org/)
 
@@ -65,7 +65,7 @@ Additionally, [Oracle also has a tutorial on JavaFX](http://docs.oracle.com/java
 
 1. On the Welcome screen, press `Create New Project`.
   * If you already have a project, you can create a new project by going `File` → `New` → `Project...`.
-2. On the left side, select `JavaFX`. Make sure that the Project SDK is set to `1.8` and `JavaFX Application` is selected.
+2. On the left side, select `JavaFX`. Make sure that the Project SDK is set to `9` and `JavaFX Application` is selected.
 
   <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/new-project.png" alt="New Project" height="350" />
   <p/>

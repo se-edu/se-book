@@ -273,7 +273,7 @@ public class PersonOverviewController {
 * All fields and methods where the `.fxml` file needs access must be annotated with `@FXML`.
   * Actually, only if they are private, but it's better to have them private and mark them with the annotation!
 * The `initialize()` method is automatically called after the `.fxml` file has been loaded. At this time, all the FXML fields should have been initialized already.
-* The `setCellValueFactory(...)` that we set on the table colums are used to determine which field inside the `Person` objects should be used for the particular column. The arrow `->` indicates that we're using a Java 8 feature called Lambdas. (Another option would be to use a [`PropertyValueFactory`](http://docs.oracle.com/javase/8/javafx/api/), but this is not type-safe).
+* The `setCellValueFactory(...)` that we set on the table colums are used to determine which field inside the `Person` objects should be used for the particular column. The arrow `->` indicates that we're using a Java 8 feature called Lambdas. (Another option would be to use a [`PropertyValueFactory`](https://docs.oracle.com/javase/9/docs/api/javafx/scene/control/cell/PropertyValueFactory.html), but this is not type-safe).
 
 <tip-box type="tip">
 
