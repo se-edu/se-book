@@ -119,7 +119,7 @@ If IntelliJ prompts for a location of the SceneBuilder executable, make sure to 
 <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-main-anchor.png" height="350" />
 <p/>
 
-2. Add a `Split Pane (Horizontal Flow)` (under `Containers`) by dragging it from the Library into the main area. Right-click the `Split Pane` in the Hierarchy view and select `Fit to Parent`.
+2. Add a `Split Pane (horizontal)` (under `Containers`) by dragging it from the Library into the main area. Right-click the `Split Pane` in the Hierarchy view and select `Fit to Parent`.
 
 <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-fit-to-parent.png" height="250" />
 <p/>
@@ -234,7 +234,7 @@ Image Source: http://www.oracle.com
 
 *It's like a theater play:* The `Stage` is the main container which is usually a `Window` with a border and the typical minimize, maximize and close buttons. Inside the `Stage` you add a `Scene` which can, of course, be switched out by another `Scene`. Inside the `Scene` the actual JavaFX nodes like `AnchorPane`, `TextBox`, etc. are added.
 
-See [this page](http://docs.oracle.com/javase/8/javafx/scene-graph-tutorial/scenegraph.htm) fore more info on working with the JavaFX Scene Graph.
+See [this page](http://docs.oracle.com/javase/8/javafx/scene-graph-tutorial/scenegraph.htm) for more info on working with the JavaFX Scene Graph.
 
 ---
 
