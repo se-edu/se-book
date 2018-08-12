@@ -39,7 +39,7 @@ footer: footer.md
 
 <include src="classDiagrams/enumerations/what/unit-inParent-asFlat-print.md" boilerplate />
 
-### Class Level Members
+### Class-Level Members
 
 <include src="classDiagrams/classLevelMembers/what/unit-inParent-asFlat-print.md" boilerplate />
 

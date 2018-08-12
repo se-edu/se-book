@@ -1,5 +1,5 @@
 <frontmatter>
-title: "UML: Class Diagrams: Class Level Members"
+title: "UML: Class Diagrams: Class-Level Members"
 footer: footer.md
 </frontmatter>
 

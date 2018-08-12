@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Object Oriented Programming: Classes: Class Level Members"
+title: "Object Oriented Programming: Classes: Class-Level Members"
 footer: footer.md
 </frontmatter>
 

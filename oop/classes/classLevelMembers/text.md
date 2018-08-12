@@ -1,6 +1,6 @@
 <div id="title">
 
-#### Class Level Members
+#### Class-Level Members
 
 </div>
 
