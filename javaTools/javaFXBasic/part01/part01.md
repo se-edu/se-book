@@ -34,6 +34,7 @@ If this is the first time using IntelliJ, you need to tell IntelliJ where to fin
 
 2. Under `Project SDK:`, press `New...` → `JDK`.
 3. Select the directory that you install JDK on, and press `OK`.
+4. Under `Project language level:`, select `9 - Modules, private methods in interfaces etc.`.
 
   <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/config-jdk-project-structure.png" alt="JDK 9 under Project Structure" height="350" />
   <p/>
@@ -75,6 +76,11 @@ Additionally, [Oracle also has a tutorial on JavaFX](http://docs.oracle.com/java
 5. Press `Finish`. If prompted to create a new directory, just press `OK`.
 
 Remove the `sample` package and its content. We will manually create our own package and resources in our tutorial.
+
+We will also have to set up the IDE further, so that warnings and errors show up correctly when working with Java 9:
+
+1. Go to the menu `File` → `Project Structure`.
+2. Under `Project language level:`, ensure that `9 - Modules, private methods in interfaces etc.` is selected.
 
 ## Create the Packages
 
@@ -317,6 +323,32 @@ public class MainApp extends Application {
 ```
 
 The various comments should give you some hints about what's going on.
+
+## Importing JavaFx 9
+
+JavaFx 9 is a separate module from Java 9. We must ensure that the modules are imported correctly.
+
+Notice that IntellJ will complain about the imported modules "not being in the module graph":
+
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/javafx-import-error.png" height="100" />
+<p/>
+
+To fix this:
+
+1. Ensure that your Project pane is open (<kbd>Alt</kbd>+<kbd>1</kbd>). Right click on the `src` folder, and select `New` → `module-info.java`:
+2. Add the following `requires` and `exports` in order to import and export the modules correctly:
+
+```java
+module AddressApp {
+    requires javafx.graphics;
+    requires javafx.fxml;
+    requires javafx.controls;
+
+    exports seedu.address;
+}
+```
+
+## Running the Application
 
 If you run the application now (right click `MainApp.java` and select `Run MainApp.main()`), you should see something like this:
 
