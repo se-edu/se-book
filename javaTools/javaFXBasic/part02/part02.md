@@ -357,6 +357,45 @@ We're almost there! But one thing is missing: We haven't told our `PersonOvervie
 
 7. Save the `.fxml` file.
 
+## Opening up the `PersonOverviewController` to JavaFx
+
+If you try and run the application now, you will encounter the following error:
+
+```
+javafx.fxml.LoadException: ...
+
+...
+
+Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueElement (in module javafx.fxml) cannot access class seedu.address.view.PersonOverviewController (in module AddressApp) because module AddressApp does not export seedu.address.view to module javafx.fxml
+```
+
+This is because JavaFx is unable to access our `PersonOverviewController` class.
+
+To fix this, add this line of code to `src/module-info.java`:
+
+```java
+module AddressApp {
+    ... 
+
+    opens seedu.address.view;
+}
+```
+
+The file should now look something like this:
+
+**module-info.java**
+
+```java
+module AddressApp {
+    requires javafx.graphics;
+    requires javafx.fxml;
+    requires javafx.controls;
+
+    exports seedu.address;
+    opens seedu.address.view;
+}
+```
+
 ## Start the Application
 
 When you start your application now, you should see something like this:
