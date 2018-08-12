@@ -10,7 +10,7 @@ This tutorial will teach you how to create a new JavaFX application in IntelliJ,
 ## Prerequisites
 
 * Latest [Java JDK 9](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase9-3934878.html) (includes *JavaFX 9*)
-* IntelliJ (2017.2 or later)
+* IntelliJ (2018.2 or later)
 * [SceneBuilder 8](http://gluonhq.com/products/scene-builder/) (provided by Gluon as [Oracle no longer ships the tool in binary form](http://www.oracle.com/technetwork/java/javase/downloads/sb2download-2177776.html))
 
 <tip-box type="tip">
