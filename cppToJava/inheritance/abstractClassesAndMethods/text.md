@@ -46,7 +46,7 @@ abstract class GraphicObject {
 }
 ```
 
-Each non-abstract subclass of `GraphicObject`, such as `Circle` and `Rectangle`, must provide implementations for the draw and resize methods:
+Each subclass of `GraphicObject`, such as `Circle` and `Rectangle`, must provide implementations for the `draw` and `resize` methods or else must be declared `abstract` themselves:
 
 ```java
 class Circle extends GraphicObject {
@@ -58,17 +58,41 @@ class Circle extends GraphicObject {
     }
 }
 
-class Rectangle extends GraphicObject {
+abstract class Rectangle extends GraphicObject {
     void draw() {
-        ...
-    }
-    void resize() {
         ...
     }
 }
 ```
 
+The `Rectangle` class above is abstract because it does not provide an implementation for the `resize` method.
+
 </blockquote>
+
+<panel type="seamless" header="{{ icon_example }} Another example of an abstract class" minimized>
+
+```java
+abstract class Account {
+
+    int number;
+
+    abstract void addInterest();
+
+    void close(){
+        //...
+    }
+}
+
+class CurrentAccount extends Account{
+
+    @Override
+    void addInterest() {
+        //...
+    }
+}
+```
+</panel>
+
 
 </div>
 

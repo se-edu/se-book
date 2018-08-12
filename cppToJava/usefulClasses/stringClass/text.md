@@ -120,6 +120,20 @@ if (name1.equals(name2)) {
 ```
 This example invokes `equals` on `name1` and passes `name2` as an argument. The `equals` method returns `true` if the strings contain the same characters; otherwise it returns `false`.
 
+To check if two strings are similar irrespective of the differences in case, you can use the `equalsIgnoreCase` method.
+
+```java
+String s1 = "Apple";
+String s2 = "apple";
+System.out.println(s1.equals(s2)); //false
+System.out.println(s1.equalsIgnoreCase(s2)); //true
+```
+
+Some more comparison-related `String` methods:
+* `contains`: checks if one string is a sub-string of the other e.g., `Snapple` and `app`
+* `startsWith`: checks if one string has the other as a substring at the _beginning_ e.g., `Apple` and `App`
+* `endsWith`: checks if one string has the other as a substring at the _end_ e.g., `Crab` and `ab`
+
 If the strings differ, we can use `compareTo` to see which comes first in alphabetical order:
 
 ```java
@@ -137,7 +151,6 @@ The return value from compareTo is the difference between the first characters i
 In the preceding code, compareTo returns positive 8, because the second letter of "Ada" comes before the second letter of "Alan" by 8 letters.
 Both equals and compareTo are case-sensitive. The uppercase letters come before the lowercase letters, so "Ada" comes before "ada".
 
-==//todo: mention equalsIgnoreCase methods==
 
 </div>
 
