@@ -13,6 +13,7 @@
 String is a built-in Java class that you can use without importing
 
 <box>
+
 :bulb: Any class in the [`java.lang`](https://docs.oracle.com/javase/9/docs/api/java/lang/package-summary.html) package can be used without importing.
 </box>
 
