@@ -1,4 +1,4 @@
-# JavaFx 8 Tutorial - Part 1: Scene Builder
+# JavaFx 9 Tutorial - Part 1: Scene Builder
 
 ## Introduction
 
@@ -9,8 +9,8 @@ This tutorial will teach you how to create a new JavaFX application in IntelliJ,
 
 ## Prerequisites
 
-* Latest [Java JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (includes *JavaFX 8*)
-* IntelliJ (2017.2 or later)
+* Latest [Java JDK 9](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase9-3934878.html) (includes *JavaFX 9*)
+* IntelliJ (2018.2 or later)
 * [SceneBuilder 8](http://gluonhq.com/products/scene-builder/) (provided by Gluon as [Oracle no longer ships the tool in binary form](http://www.oracle.com/technetwork/java/javase/downloads/sb2download-2177776.html))
 
 <tip-box type="tip">
@@ -21,9 +21,9 @@ Do remember the installation path to SceneBuilder 8 as we will need it to config
 
 ## IntelliJ Configurations
 
-If this is the first time using IntelliJ, you need to tell IntelliJ where to find JDK 8 and SceneBuilder.
+If this is the first time using IntelliJ, you need to tell IntelliJ where to find JDK 9 and SceneBuilder.
 
-### Configuring JDK 8
+### Configuring JDK 9
 
 1. On the Welcome screen, press `Configure` → `Project Default` → `Project Structure`.
 
@@ -34,8 +34,9 @@ If this is the first time using IntelliJ, you need to tell IntelliJ where to fin
 
 2. Under `Project SDK:`, press `New...` → `JDK`.
 3. Select the directory that you install JDK on, and press `OK`.
+4. Under `Project language level:`, select `9 - Modules, private methods in interfaces etc.`.
 
-  <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/config-jdk-project-structure.png" alt="JDK 8 under Project Structure" height="350" />
+  <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/config-jdk-project-structure.png" alt="JDK 9 under Project Structure" height="350" />
   <p/>
 
 4. Press `OK` again.
@@ -53,8 +54,8 @@ If this is the first time using IntelliJ, you need to tell IntelliJ where to fin
 
 The JavaDocs will come in handy when writing your own JavaFX applications:
 
-* [Java 8 API](http://docs.oracle.com/javase/8/docs/api/)
-* [JavaFX 8 API](http://docs.oracle.com/javase/8/javafx/api/)
+* [Java 9 API](https://docs.oracle.com/javase/9/docs/api)
+* [JavaFX 9 API](https://docs.oracle.com/javase/9/docs/api/overview-summary.html)
 * [ControlsFX API](http://controlsfx.bitbucket.org/)
 
 Additionally, [Oracle also has a tutorial on JavaFX](http://docs.oracle.com/javase/8/javafx/get-started-tutorial/get_start_apps.htm) if you are interested.
@@ -65,7 +66,7 @@ Additionally, [Oracle also has a tutorial on JavaFX](http://docs.oracle.com/java
 
 1. On the Welcome screen, press `Create New Project`.
   * If you already have a project, you can create a new project by going `File` → `New` → `Project...`.
-2. On the left side, select `JavaFX`. Make sure that the Project SDK is set to `1.8` and `JavaFX Application` is selected.
+2. On the left side, select `JavaFX`. Make sure that the Project SDK is set to `9` and `JavaFX Application` is selected.
 
   <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/new-project.png" alt="New Project" height="350" />
   <p/>
@@ -75,6 +76,11 @@ Additionally, [Oracle also has a tutorial on JavaFX](http://docs.oracle.com/java
 5. Press `Finish`. If prompted to create a new directory, just press `OK`.
 
 Remove the `sample` package and its content. We will manually create our own package and resources in our tutorial.
+
+We will also have to set up the IDE further, so that warnings and errors show up correctly when working with Java 9:
+
+1. Go to the menu `File` → `Project Structure`.
+2. Under `Project language level:`, ensure that `9 - Modules, private methods in interfaces etc.` is selected.
 
 ## Create the Packages
 
@@ -119,7 +125,7 @@ If IntelliJ prompts for a location of the SceneBuilder executable, make sure to 
 <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-main-anchor.png" height="350" />
 <p/>
 
-2. Add a `Split Pane (Horizontal Flow)` (under `Containers`) by dragging it from the Library into the main area. Right-click the `Split Pane` in the Hierarchy view and select `Fit to Parent`.
+2. Add a `Split Pane (horizontal)` (under `Containers`) by dragging it from the Library into the main area. Right-click the `Split Pane` in the Hierarchy view and select `Fit to Parent`.
 
 <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-fit-to-parent.png" height="250" />
 <p/>
@@ -234,7 +240,7 @@ Image Source: http://www.oracle.com
 
 *It's like a theater play:* The `Stage` is the main container which is usually a `Window` with a border and the typical minimize, maximize and close buttons. Inside the `Stage` you add a `Scene` which can, of course, be switched out by another `Scene`. Inside the `Scene` the actual JavaFX nodes like `AnchorPane`, `TextBox`, etc. are added.
 
-See [this page](http://docs.oracle.com/javase/8/javafx/scene-graph-tutorial/scenegraph.htm) fore more info on working with the JavaFX Scene Graph.
+See [this page](http://docs.oracle.com/javase/8/javafx/scene-graph-tutorial/scenegraph.htm) for more info on working with the JavaFX Scene Graph.
 
 ---
 
@@ -317,6 +323,32 @@ public class MainApp extends Application {
 ```
 
 The various comments should give you some hints about what's going on.
+
+## Importing JavaFx 9
+
+JavaFx 9 is a separate module from Java 9. We must ensure that the modules are imported correctly.
+
+Notice that IntellJ will complain about the imported modules "not being in the module graph":
+
+<img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/javafx-import-error.png" height="100" />
+<p/>
+
+To fix this:
+
+1. Ensure that your Project pane is open (<kbd>Alt</kbd>+<kbd>1</kbd>). Right click on the `src` folder, and select `New` → `module-info.java`:
+2. Add the following `requires` and `exports` in order to import and export the modules correctly:
+
+```java
+module AddressApp {
+    requires javafx.graphics;
+    requires javafx.fxml;
+    requires javafx.controls;
+
+    exports seedu.address;
+}
+```
+
+## Running the Application
 
 If you run the application now (right click `MainApp.java` and select `Run MainApp.main()`), you should see something like this:
 

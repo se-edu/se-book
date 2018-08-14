@@ -1,4 +1,4 @@
-# JavaFx 8 tutorial
+# JavaFx 9 tutorial
 
 Adapted (with permissions) from [Marco Jakob's JavaFX 8 tutorial](http://code.makery.ch/library/javafx-8-tutorial/). Thanks to [Marco Jakob](https://github.com/marcojakob) for allowing us to adapt his tutorials for IntelliJ.
 

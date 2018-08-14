@@ -1,4 +1,4 @@
-# JavaFx 8 tutorial - Part 2: Model and TableView
+# JavaFx 9 tutorial - Part 2: Model and TableView
 
 ## Introduction
 
@@ -135,7 +135,7 @@ public class Person {
 
 * With JavaFX, it is common to use `*Property` for all fields of a model class. A `Property` allows us, for example, to automatically be notified when the `lastName` or any other variable is changed. This helps us keep the view in sync with the data.
 * To learn more about `*Property`, refer to [Using JavaFX Properties and Binding](http://docs.oracle.com/javase/8/javafx/properties-binding-tutorial/binding.htm)
-* `LocalDate`, the type that we are using for `birthday`, is part of the [new Date and Time API for JDK 8](http://docs.oracle.com/javase/tutorial/datetime/iso/)
+* `LocalDate`, the type that we are using for `birthday`, is part of the [new Date and Time API since JDK 8](http://docs.oracle.com/javase/tutorial/datetime/iso/)
 
 ## A List of Persons
 
@@ -273,7 +273,7 @@ public class PersonOverviewController {
 * All fields and methods where the `.fxml` file needs access must be annotated with `@FXML`.
   * Actually, only if they are private, but it's better to have them private and mark them with the annotation!
 * The `initialize()` method is automatically called after the `.fxml` file has been loaded. At this time, all the FXML fields should have been initialized already.
-* The `setCellValueFactory(...)` that we set on the table colums are used to determine which field inside the `Person` objects should be used for the particular column. The arrow `->` indicates that we're using a Java 8 feature called Lambdas. (Another option would be to use a [`PropertyValueFactory`](http://docs.oracle.com/javase/8/javafx/api/), but this is not type-safe).
+* The `setCellValueFactory(...)` that we set on the table colums are used to determine which field inside the `Person` objects should be used for the particular column. The arrow `->` indicates that we're using a Java 8 feature called Lambdas. (Another option would be to use a [`PropertyValueFactory`](https://docs.oracle.com/javase/9/docs/api/javafx/scene/control/cell/PropertyValueFactory.html), but this is not type-safe).
 
 <tip-box type="tip">
 
@@ -356,6 +356,45 @@ We're almost there! But one thing is missing: We haven't told our `PersonOvervie
 <p/>
 
 7. Save the `.fxml` file.
+
+## Opening up the `PersonOverviewController` to JavaFx
+
+If you try and run the application now, you will encounter the following error:
+
+```
+javafx.fxml.LoadException: ...
+
+...
+
+Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueElement (in module javafx.fxml) cannot access class seedu.address.view.PersonOverviewController (in module AddressApp) because module AddressApp does not export seedu.address.view to module javafx.fxml
+```
+
+This is because JavaFx is unable to access our `PersonOverviewController` class.
+
+To fix this, add this line of code to `src/module-info.java`:
+
+```java
+module AddressApp {
+    ... 
+
+    opens seedu.address.view;
+}
+```
+
+The file should now look something like this:
+
+**module-info.java**
+
+```java
+module AddressApp {
+    requires javafx.graphics;
+    requires javafx.fxml;
+    requires javafx.controls;
+
+    exports seedu.address;
+    opens seedu.address.view;
+}
+```
 
 ## Start the Application
 
