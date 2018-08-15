@@ -7,7 +7,7 @@ Write a Java program that takes a letter grade e.g., `A+` as a command line argu
 
 <div id="capConversion">
 
-A+  | A  | A- | B+ | B  | B- | C+ | Else
+A+  | A  | A- | B+ | B  | B- | C | Else
 ----|----|----|----|----|----|----|-----
 5.0 |5.0 |4.5 |4.0 |3.5 |3.0 |2.5 |0
 </div>
