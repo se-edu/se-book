@@ -1,22 +1,22 @@
 <panel header="{{ icon_Q }} Identify Classes and Objects">
 <question>
 
-Consider the following scenario. If you were to simulate this in an OOP program, what are the classes and the objects you would use? Use UML notation to give your answer.
+Consider the following scenario. If you were to simulate this in an OOP program, what are the classes and the objects you would use?
 
 <tip-box> 
   
-John gave a checque to the Cashier to pay for the LoTR and GoT books he bought.
+A customer (name: John) gave a cheque to the Cashier (name: Peter) to pay for the LoTR and GoT books he bought.
 
 </tip-box>
 
-<div slot="hint">
+<div slot="answer">
 
 Class      | Objects
 ---------- | -------
-`Customer` | `John`
-`Book`     | `LoTR` `GoT`
+`Customer` | `john`
+`Book`     | `LoTR`, `GoT`
 `Cheque`   | `checqueJohnGave`
-`Cashier`  | `bookshopCashier`
+`Cashier`  | `peter`
 
 </div>
 
