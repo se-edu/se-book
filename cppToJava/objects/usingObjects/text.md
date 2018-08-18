@@ -22,7 +22,18 @@ package | Some example classes in the package
 ----------|----------------
 `java.lang` | `String`, `Math`, `System`
 
-Before using a class in your code, you need to `import` the class. `import` statements appear at the top of the code.
+**Before using a class in your code, you need to `import` the class.** `import` statements appear at the top of the code.
+
+<box>
+
+{{ icon_example }} This example imports the `java.awt.Point` (i.e., the `Point` class in the `java.awt` package) class -- which can be used to represent <trigger for="pop:usingObjects-coordinates">the coordinates of a location in a Cartesian plane</trigger>  -- and use it in the `main` method.
+
+<popover id="pop:usingObjects-coordinates" title="Coordinates of a location in a Cartesian plane" placement="top">
+  <div slot="content">
+
+In mathematical notation, points are often written in parentheses with a comma separating the coordinates. For example, `(0,0)` indicates the origin, and `(x,y)` indicates the point `x` units to the right and `y` units up from the origin.
+  </div>
+</popover>
 
 ```java
 import java.awt.Point;
@@ -35,15 +46,27 @@ public class Main{
    }
 }
 ```
-Tip: You might wonder why we can use the System class without importing it. System belongs to the java.lang package, which is imported automatically.
-For example, the `java.awt` package provides a class named `Point` intended to represent the coordinates of a location in a Cartesian plane.
-Tooltip: In mathematical notation, points are often written in parentheses with a comma separating the coordinates. For example, (0,0) indicates the origin, and (x,y) indicates the point x units to the right and y units up from the origin.
-Then, to create a new point object, you have to use the `new` operator:
-```java
-import java.awt.Point;
+</box>
 
+:bulb: You might wonder why we can use the `System` class without importing it. `System` belongs to **the `java.lang` package, which is imported automatically**.
+
+</div>
+
+##### `new` operator
+
+<div class="indented">
+
+**To create a new object, you have to use the `new` operator**
+
+<box>
+
+{{ icon_example }} This line shows how to create a new `Point` object using the `new` operator:
+
+```java
 Point spot = new Point(3, 4);
 ```
+</box>
+
 </div>
 
 </div>
