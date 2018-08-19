@@ -49,35 +49,88 @@
           </div>
           <div id="main">
             <div>
-              <p>Variables that belong to an object are usually called attributes, but you might also see them called &quot;fields&quot;.</p>
+              <p><strong>Variables that belong to an object are called <em>attributes</em> (or <em>fields</em>).</strong></p>
               <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
                 </span> To access an attribute of an object, Java uses <em>dot notation</em>.</p>
-              <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+              <box>
+                <p><span class="fas fa-cube"></span> The code below uses <code>spot.x</code> which means &quot;go to the object spot refers to, and get the value of the attribute <code>x</code>.&quot;</p>
+                <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
 <span class="hljs-keyword">int</span> sum = spot.x * spot.x + spot.y * spot.y;
 System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y, <span class="hljs-string">", "</span> + sum);
 </code></pre>
-              <p><span class="fas fa-arrow-down"></span></p>
-              <pre class="hljs"><code>3, 4, 25
+                <p><span class="fas fa-arrow-down"></span></p>
+                <pre class="hljs"><code>3, 4, 25
 </code></pre>
-              <p>The expression <code>spot.x</code> means &quot;go to the object spot refers to, and get the value of the attribute <code>x</code>.&quot;</p>
-              <p>You can <em>mutate</em> an object by assigning a different values to its attributes.</p>
-              <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
-Spot.x = <span class="hljs-number">5</span>
+              </box>
+              <p><strong>You can <tooltip content="i.e., change/modify"><em>mutate</em></tooltip> an object by assigning a different values to its attributes.</strong></p>
+              <box>
+                <p><span class="fas fa-cube"></span> This example changes the x value of the <code>Point</code> object to <code>5</code>.</p>
+                <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+spot.x = <span class="hljs-number">5</span>;
 System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
 </code></pre>
+                <p><span class="fas fa-arrow-down"></span></p>
+                <pre class="hljs"><code>5, 4
+</code></pre>
+              </box>
               <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
-                </span> Java uses the dot notation to invoke methods on an object too. The example below invokes the <code>translate</code> method on a <code>Point</code> object so that it moves to a different location.</p>
-              <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+                </span> <strong>Java uses the dot notation to invoke methods on an object too.</strong></p>
+              <box>
+                <p><span class="fas fa-cube"></span> This example invokes the <code>translate</code> method on a <code>Point</code> object so that it moves to a different location.</p>
+                <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
 System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
 spot.translate(<span class="hljs-number">5</span>,<span class="hljs-number">5</span>);
 System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
 </code></pre>
-              <p><span class="fas fa-arrow-down"></span></p>
-              <pre class="hljs"><code>3, 4
+                <p><span class="fas fa-arrow-down"></span></p>
+                <pre class="hljs"><code>3, 4
 8, 9
 </code></pre>
+              </box>
             </div>
-            <div></div>
+            <div>
+              <div>
+                <div>
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> use `Rectangle` objects">
+                    <question>
+                      <p>Update the code below as described in code comments, to produce the given output.</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Rectangle;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Rectangle r = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>);
+        System.out.println(r);
+
+        <span class="hljs-keyword">int</span> area;
+        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add a line below to calculate the area using width and height properties of r</span>
+        <span class="hljs-comment">// and assign it to the variable area</span>
+
+        System.out.println(<span class="hljs-string">"Area: "</span> + area);
+
+        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add a line here to set the size of r to 8x10 (width x height)</span>
+        <span class="hljs-comment">//Recommended: use the setSize(int height, int width) method of the Rectangle object</span>
+
+        System.out.println(r);
+    }
+
+}
+</code></pre>
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre class="hljs"><code>java.awt.Rectangle[x=0,y=0,width=4,height=6]
+Area: 24
+java.awt.Rectangle[x=0,y=0,width=8,height=10]
+</code></pre>
+                      <div slot="hint">
+                        <ul>
+                          <li>Area can be calculated as <code>r.width * r.height</code></li>
+                          <li>Setting the size can be done as <code>r.setSize(8, 10)</code></li>
+                        </ul>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -87,7 +140,7 @@ System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 09:51:30 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
 </footer>
 </div>
 </body>

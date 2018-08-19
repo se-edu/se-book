@@ -248,8 +248,8 @@
           <ul>
             <li><strong><code>byte</code></strong>: an integer in the range -128 to 127 (inclusive).</li>
             <li><strong><code>short</code></strong>: an integer in the range -32,768 to 32,767 (inclusive).</li>
-            <li><strong><code>int</code></strong>: an integer in the range -231 to 231-1.</li>
-            <li><strong><code>long</code></strong>: An integer in the range -263 to 263-1.</li>
+            <li><strong><code>int</code></strong>: an integer in the range -2<sup>31</sup> to 2<sup>31</sup>-1.</li>
+            <li><strong><code>long</code></strong>: An integer in the range -2<sup>63</sup> to 2<sup>63</sup>-1.</li>
             <li><strong><code>float</code></strong>: a single-precision 32-bit IEEE 754 floating point. This data type should never be used for precise values, such as currency. For that, you will need to use the <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">java.math.BigDecimal</a>              class instead.</li>
             <li><strong><code>double</code></strong>: a double-precision 64-bit IEEE 754 floating point. For decimal values, this data type is generally the default choice. This data type should never be used for precise values, such as currency.</li>
             <li><strong><code>boolean</code></strong>: has only two possible values: <code>true</code> and <code>false</code>.</li>
@@ -915,8 +915,18 @@ Polly likes crackers
                 </tbody>
               </table>
             </div>
-            <p>Before using a class in your code, you need to <code>import</code> the class. <code>import</code> statements appear at the top of the code.</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
+            <p><strong>Before using a class in your code, you need to <code>import</code> the class.</strong> <code>import</code> statements appear at the top of the code.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> This example imports the <code>java.awt.Point</code> (i.e., the <code>Point</code> class in the <code>java.awt</code> package) class -- which can be used to represent
+                <trigger for="pop:usingObjects-coordinates">the coordinates of a location in a Cartesian plane</trigger> -- and use it in the <code>main</code> method.</p>
+              <popover id="pop:usingObjects-coordinates" title="Coordinates of a location in a Cartesian plane" placement="top">
+              
+                <div slot="content">
+                  <p>In mathematical notation, points are often written in parentheses with a comma separating the coordinates. For example, <code>(0,0)</code> indicates the origin, and <code>(x,y)</code> indicates the point <code>x</code> units to the right
+                    and <code>y</code> units up from the origin.   </p>
+                </div>
+              </popover>
+              <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span></span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
@@ -926,12 +936,17 @@ Polly likes crackers
    }
 }
 </code></pre>
-            <p>Tip: You might wonder why we can use the System class without importing it. System belongs to the java.lang package, which is imported automatically. For example, the <code>java.awt</code> package provides a class named <code>Point</code>              intended to represent the coordinates of a location in a Cartesian plane. Tooltip: In mathematical notation, points are often written in parentheses with a comma separating the coordinates. For example, (0,0) indicates the origin, and (x,y)
-              indicates the point x units to the right and y units up from the origin. Then, to create a new point object, you have to use the <code>new</code> operator:</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
-
-Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+            </box>
+            <p>💡 You might wonder why we can use the <code>System</code> class without importing it. <code>System</code> belongs to <strong>the <code>java.lang</code> package, which is imported automatically</strong>.</p>
+          </div>
+          <h5 id="new-operator"><code>new</code> operator</h5>
+          <div class="indented">
+            <p><strong>To create a new object, you have to use the <code>new</code> operator</strong></p>
+            <box>
+              <p><span class="fas fa-cube"></span> This line shows how to create a new <code>Point</code> object using the <code>new</code> operator:</p>
+              <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
 </code></pre>
+            </box>
           </div>
         </div>
       </div>
@@ -940,76 +955,154 @@ Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-numbe
           <h4 id="instance-members">Instance Members</h4>
         </div>
         <div>
-          <p>Variables that belong to an object are usually called attributes, but you might also see them called &quot;fields&quot;.</p>
+          <p><strong>Variables that belong to an object are called <em>attributes</em> (or <em>fields</em>).</strong></p>
           <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
             </span> To access an attribute of an object, Java uses <em>dot notation</em>.</p>
-          <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+          <box>
+            <p><span class="fas fa-cube"></span> The code below uses <code>spot.x</code> which means &quot;go to the object spot refers to, and get the value of the attribute <code>x</code>.&quot;</p>
+            <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
 <span class="hljs-keyword">int</span> sum = spot.x * spot.x + spot.y * spot.y;
 System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y, <span class="hljs-string">", "</span> + sum);
 </code></pre>
-          <p><span class="fas fa-arrow-down"></span></p>
-          <pre class="hljs"><code>3, 4, 25
+            <p><span class="fas fa-arrow-down"></span></p>
+            <pre class="hljs"><code>3, 4, 25
 </code></pre>
-          <p>The expression <code>spot.x</code> means &quot;go to the object spot refers to, and get the value of the attribute <code>x</code>.&quot;</p>
-          <p>You can <em>mutate</em> an object by assigning a different values to its attributes.</p>
-          <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
-Spot.x = <span class="hljs-number">5</span>
+          </box>
+          <p><strong>You can <tooltip content="i.e., change/modify"><em>mutate</em></tooltip> an object by assigning a different values to its attributes.</strong></p>
+          <box>
+            <p><span class="fas fa-cube"></span> This example changes the x value of the <code>Point</code> object to <code>5</code>.</p>
+            <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+spot.x = <span class="hljs-number">5</span>;
 System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
 </code></pre>
+            <p><span class="fas fa-arrow-down"></span></p>
+            <pre class="hljs"><code>5, 4
+</code></pre>
+          </box>
           <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
-            </span> Java uses the dot notation to invoke methods on an object too. The example below invokes the <code>translate</code> method on a <code>Point</code> object so that it moves to a different location.</p>
-          <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+            </span> <strong>Java uses the dot notation to invoke methods on an object too.</strong></p>
+          <box>
+            <p><span class="fas fa-cube"></span> This example invokes the <code>translate</code> method on a <code>Point</code> object so that it moves to a different location.</p>
+            <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
 System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
 spot.translate(<span class="hljs-number">5</span>,<span class="hljs-number">5</span>);
 System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
 </code></pre>
-          <p><span class="fas fa-arrow-down"></span></p>
-          <pre class="hljs"><code>3, 4
+            <p><span class="fas fa-arrow-down"></span></p>
+            <pre class="hljs"><code>3, 4
 8, 9
 </code></pre>
+          </box>
         </div>
       </div>
       <div>
         <div>
-          <h4 id="passing-objects">Passing Objects</h4>
+          <h4 id="passing-objects-around">Passing Objects Around</h4>
         </div>
         <div>
-          <p><strong>You can pass objects as parameters in the usual way</strong>. For example:</p>
-          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPoint</span><span class="hljs-params">(Point p)</span> </span>{
+          <p><strong>You can pass objects as parameters to a method in the usual way</strong>.</p>
+          <box>
+            <p><span class="fas fa-cube"></span> The <code>printPoint</code> method below takes a <code>Point</code> object as an argument and displays its attributes in <code>(x,y)</code> format.</p>
+            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPoint</span><span class="hljs-params">(Point p)</span> </span>{
     System.out.println(<span class="hljs-string">"("</span> + p.x + <span class="hljs-string">", "</span> + p.y + <span class="hljs-string">")"</span>);
 }
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+    Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+    printPoint(spot);
+}
 </code></pre>
-          <p>This method takes a point as an argument and displays its attributes in parentheses. If you invoke <code>printPoint(spot)</code>, it displays <code>(3, 4)</code>.</p>
-          <p><strong>You can return an object as the return value too.</strong> The <code>java.awt</code> package also provides a class called <code>Rectangle</code>. <code>Rectangle</code> objects are similar to points, but they have four attributes: <code>x</code>,
-            <code>y</code>, <code>width</code>, and <code>height</code>. You can write methods that return objects. For example, <code>findCenter</code> takes a <code>Rectangle</code> as an argument and returns a <code>Point</code> with the coordinates
-            of the center of the rectangle:</p>
-          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Point <span class="hljs-title">findCenter</span><span class="hljs-params">(Rectangle box)</span> </span>{
+            <p><span class="fas fa-arrow-down"></span></p>
+            <pre class="hljs"><code>3, 4
+</code></pre>
+          </box>
+          <p><strong>You can return an object from a method too.</strong></p>
+          <box>
+            <p><span class="fas fa-cube"></span> The <code>java.awt</code> package also provides a class called <code>Rectangle</code>. <code>Rectangle</code> objects are similar to points, but they have four attributes: <code>x</code>, <code>y</code>, <code>width</code>,
+              and <code>height</code>. The <code>findCenter</code> method below takes a <code>Rectangle</code> as an argument and returns a <code>Point</code> that corresponds to the center of the rectangle:</p>
+            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Point <span class="hljs-title">findCenter</span><span class="hljs-params">(Rectangle box)</span> </span>{
     <span class="hljs-keyword">int</span> x = box.x + box.width / <span class="hljs-number">2</span>;
     <span class="hljs-keyword">int</span> y = box.y + box.height / <span class="hljs-number">2</span>;
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Point(x, y);
 }
 </code></pre>
-          <p>The return type of this method is <code>Point</code>. The last line creates a new Point object and returns a reference to it.</p>
-          <p><strong><code>null</code> is a special value that means &quot;no object&quot;</strong>. You can declare and initialize object variables this way:
-            <code>Point spot = null;</code></p>
-          <p>If you try to use a null value, either by accessing an attribute or invoking a method, Java throws a <code>NullPointerException</code>.</p>
-          <pre><code class="hljs java">Point spot = <span class="hljs-keyword">null</span>;
-<span class="hljs-keyword">int</span> x = spot.x;              <span class="hljs-comment">// NullPointerException</span>
-spot.translate(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>);      <span class="hljs-comment">// NullPointerException</span>
+            <p>The return type of this method is <code>Point</code>. The last line creates a new <code>Point</code> object and returns a reference to it.
+            </p>
+          </box>
+          <h5 id="null-and-nullpointerexception"><code>null</code> and <code>NullPointerException</code></h5>
+          <div class="indented">
+            <p><strong><code>null</code> is a special value that means &quot;no object&quot;</strong>. You can assign null to a variable to indicate that the variable is 'empty' at the moment. However, if you try to use a null value, either by accessing
+              an attribute or invoking a method, Java throws a <code>NullPointerException</code>.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> In this example, the variable <code>spot</code> is assigned a <code>null</code> value. As a result, trying to access <code>spot.x</code> attribute or invoke <code>spot.translate</code> method results in
+                a <code>NullPointerException</code>.</p>
+              <pre><code class="hljs java">Point spot = <span class="hljs-keyword">null</span>;
+<span class="hljs-keyword">int</span> x = spot.x;          <span class="hljs-comment">// NullPointerException</span>
+spot.translate(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>);  <span class="hljs-comment">// NullPointerException</span>
 </code></pre>
-          <p>On the other hand, it is legal to pass a <code>null</code> reference as an argument or receive one as a return value.</p>
+            </box>
+            <p>On the other hand, it is legal return null from a method or to pass a <code>null</code> reference as an argument to a method.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> Returning <code>null</code> from a method.</p>
+              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Point <span class="hljs-title">createCopy</span><span class="hljs-params">(Point p)</span> </span>{
+    <span class="hljs-keyword">if</span> (p == <span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>; <span class="hljs-comment">// return null if p is null</span>
+    }
+
+    <span class="hljs-comment">// create a new object with same x,y values</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Point(p.x, p.y);
+}
+</code></pre>
+              <p><span class="fas fa-cube"></span> Passing <code>null</code> as the argument.</p>
+              <pre><code class="hljs java">Point result = createCopy(<span class="hljs-keyword">null</span>);
+System.out.println(result);
+</code></pre>
+              <p><span class="fas fa-arrow-down"></span></p>
+              <pre class="hljs"><code>null
+</code></pre>
+            </box>
+          </div>
           <p><strong>It is possible to have multiple variables that refer to the same object.</strong></p>
-          <pre><code class="hljs java">Rectangle box1 = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">100</span>, <span class="hljs-number">200</span>);
-Rectangle box2 = box1;
+          <box>
+            <p><span class="fas fa-cube"></span> Notice how <code>p1</code> and <code>p2</code> are aliases for the same object. When the object is changed using the variable <code>p1</code>, the changes are visible via <code>p2</code> as well (and vice
+              versa), because they both point to the same <code>Point</code> object.</p>
+            <pre><code class="hljs java">Point p1 = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);
+Point p2 = p1;
+System.out.println(<span class="hljs-string">"p1: "</span> + p1.x + <span class="hljs-string">", "</span> + p1.y);
+System.out.println(<span class="hljs-string">"p2: "</span> + p2.x + <span class="hljs-string">", "</span> + p2.y);
+p1.x = <span class="hljs-number">1</span>;
+p2.y = <span class="hljs-number">2</span>;
+System.out.println(<span class="hljs-string">"p1: "</span> + p1.x + <span class="hljs-string">", "</span> + p1.y);
+System.out.println(<span class="hljs-string">"p2: "</span> + p2.x + <span class="hljs-string">", "</span> + p2.y);
 </code></pre>
-          <p>Notice how <code>box1</code> and <code>box2</code> are aliases for the same object, so any changes that affect one variable also affect the other. This example adds 50 to all four sides of the rectangle, so it moves the corner up and to the
-            left by 50, and it increases the height and width by 100:</p>
-          <pre><code class="hljs java">System.out.println(box2.width);
-box1.grow(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
-System.out.println(box2.width);
+            <p><span class="fas fa-arrow-down"></span></p>
+            <pre class="hljs"><code>p1: 0, 0
+p2: 0, 0
+p1: 1, 2
+p2: 1, 2
 </code></pre>
-          <p>The first line displays <code>100</code>, which is the width of the Rectangle referred to by <code>box2</code>. The second line invokes the grow method on <code>box1</code>, which stretches the Rectangle horizontally and vertically. When we
-            make a change using box1, we see the change using <code>box2</code>. Thus, the value displayed by the third line is <code>200</code>, the width of the expanded rectangle.</p>
+          </box>
+          <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
+            </span> <strong>Java does not have explicit pointers</strong> (and other related things such as pointer de-referencing, pointer arithmetic). <strong>When an object is passed into a method as an argument, the method gains access to the original object.</strong>            If the method changes the object it received, the changes are retained in the object even after the method is completed.</p>
+          <box>
+            <p><span class="fas fa-cube"></span> Note how <code>p3</code> retains changes done to it by the method <code>swapCoordinates</code> even after the method call.</p>
+            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swapCoordinates</span><span class="hljs-params">(Point p)</span></span>{
+    <span class="hljs-keyword">int</span> temp = p.x;
+    p.x = p.y;
+    p.y = temp;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+    Point p3 = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>);
+    System.out.println(<span class="hljs-string">"p3: "</span> + p3.x + <span class="hljs-string">", "</span> + p3.y);
+    swapCoordinates(p3);
+    System.out.println(<span class="hljs-string">"p3: "</span> + p3.x + <span class="hljs-string">", "</span> + p3.y);
+}
+</code></pre>
+            <pre class="hljs"><code>p3: 2, 3
+p3: 3, 2
+</code></pre>
+          </box>
         </div>
       </div>
       <div>
@@ -1025,8 +1118,8 @@ spot = <span class="hljs-keyword">null</span>;
             no way to access its attributes or invoke a method on it. From the programmer’s view, it ceases to exist. However it’s still present in the computer’s memory, taking up space.</p>
           <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
             </span> <strong>In Java, you don’t have to delete objects you create when they are no longer needed.</strong> As your program runs, the system automatically looks for stranded objects and reclaims them; then the space can be reused for new objects.
-            This process is called garbage collection. You don’t have to do anything to make garbage collection happen, and in general don’t have to be aware of it. But in high-performance applications, you may notice a slight delay every now and then
-            when Java reclaims space from discarded objects.</p>
+            This process is called <em>garbage collection</em>. You don’t have to do anything to make garbage collection happen, and in general don’t have to be aware of it. But in high-performance applications, you may notice a slight delay every now
+            and then when Java reclaims space from discarded objects.</p>
         </div>
       </div>
       <h2 id="java-classes">Java Classes</h2>
@@ -1043,55 +1136,95 @@ spot = <span class="hljs-keyword">null</span>;
             <li>The <code>new</code> operator instantiates objects, that is, it creates new instances of a class.</li>
             <li>The methods that operate on an object type are defined in the class for that object.</li>
           </ul>
-          <p>Let’s create a class to represent a moment in time:</p>
-          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span> </span>{
+          <box>
+            <p><span class="fas fa-cube"></span> Here's a class called <code>Time</code>, intended to represent a moment in time. It has three attributes and no methods.</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span> </span>{
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> hour;
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> minute;
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> second;
 }
 </code></pre>
-          <p>You can give a class any name you like. The Java convention is to use PascalCase format for class names e.g., <code>MyHelloWord</code> rather than <code>myHelloWorld</code> or <code>myhelloword</code> or <code>my_hello_world</code>.</p>
-          <p>The code should be in a file whose name matches the class e.g., <code>Time.java</code></p>
-          <p>The <code>Time</code> class is <code>public</code>, which means that it can be used in other classes. But the
-            <tooltip content="Attributes are also called **instance variables**, because each instance has its own variables.">instance variables</tooltip> are <code>private</code>, which means they can only be accessed from inside the <code>Time</code> class.</p>
+          </box>
+          <p>You can give a class any name you like. <strong>The Java convention is to use <tooltip content="e.g., `MyHelloWord` rather than `myHelloWorld` or `myhelloword` or `my_hello_world`">PascalCase</tooltip> format for class names</strong>.</p>
+          <p>The code should be in a file whose name matches the class <span class="dimmed">e.g., the <code>Time</code> class should be in a file named <code>Time.java</code></span>.</p>
+          <p>When a class is <code>public</code> <span class="dimmed">(e.g., the <code>Time</code> class in the above example)</span> it can be used in other classes. But the
+            <tooltip content="Attributes are also called **instance variables**, because each instance has its own variables.">instance variables</tooltip> that are <code>private</code> <span class="dimmed">(e.g., the hour, <code>minute</code> and <code>second</code> attributes of the <code>Time</code> class)</span> can only be accessed from inside the <code>Time</code>            class.</p>
           <h5 id="constructos">Constructos</h5>
           <div class="indented">
-            Next, let’s define a
-            <tooltip content="a special method that initializes the instance variables">constructor</tooltip>.
-            <p>The syntax for constructors is similar to that of other methods, except:</p>
+            <p>The syntax for
+              <tooltip content="special methods that construct the object and initialize the instance variables">constructors</tooltip> is similar to that of other methods, except:</p>
             <ul>
               <li>The name of the constructor is the same as the name of the class.</li>
-              <li>Constructors have no return type (and no return value).</li>
               <li>The keyword <code>static</code> is omitted.</li>
-              <li>Does not return anything. A constructor returns the created object by default.</li>
+              <li>Do not return anything. A constructor returns the created object by default.</li>
             </ul>
-            <p>Here is an example constructor for the Time class:</p>
-            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">()</span> </span>{
+            <p>When you invoke <code>new</code>, Java creates the object and calls your constructor to initialize the instance variables. When the constructor is done, new returns a reference to the new object.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> Here is an example constructor for the <code>Time</code> class:</p>
+              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">()</span> </span>{
     hour = <span class="hljs-number">0</span>;
     minute = <span class="hljs-number">0</span>;
     second = <span class="hljs-number">0</span>;
 }
 </code></pre>
-            <p>This constructor does not take any arguments. Each line initializes an instance variable to zero (which in this example means midnight). Like void methods, constructors Now you can create <code>Time</code> objects.</p>
-            <p><code>Time time = new Time();</code></p>
-            <p>When you invoke <code>new</code>, Java creates the object and calls your constructor to initialize the instance variables. When the constructor is done, new returns a reference to the new object.</p>
+              <p>This constructor does not take any arguments. Each line initializes an instance variable to zero (which in this example means midnight). Now you can create <code>Time</code> objects.</p>
+              <p><code>Time time = new Time();</code></p>
+            </box>
+            <p>Like other methods, constructors can be overloaded, which means you can provide multiple constructors with different parameters.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> You can add another constructor to the <code>Time</code> class to allow creating <code>Time</code> objects that are initialized to a specific time:</p>
+              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">(<span class="hljs-keyword">int</span> h, <span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> s)</span> </span>{
+    hour = h;
+    minute = m;
+    second = s;
+}
+</code></pre>
+              <p>Here's how you can invoke the new constructor:</p>
+              <pre><code class="hljs java">Time justBeforeMidnight = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">11</span>, <span class="hljs-number">59</span>, <span class="hljs-number">59</span>);
+</code></pre>
+            </box>
           </div>
           <h5 id="this-keyword"><code>this</code> keyword</h5>
           <div class="indented">
-            Like other methods, constructors can be overloaded, which means you can provide multiple constructors with different parameters.
-            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute, <span class="hljs-keyword">int</span> second)</span> </span>{
+            <p><strong>The <code>this</code> keyword is a reference variable in Java that refers to the current object.</strong> You can use <code>this</code> the same way you use the name of any other object. For example, you can read and write the instance
+              variables of <code>this</code>, and you can pass <code>this</code> as an argument to other methods. But you do not declare <code>this</code>, and you can’t make an assignment to it.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> In the following version of the constructor, the names and types of the parameters are the same as the instance variables (parameters don’t have to use the same names, but that’s a common style). As a result,
+                the parameters <strong><em>shadow</em></strong> (or hide) the instance variables, so the keyword <code>this</code> is necessary to tell them apart.</p>
+              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute, <span class="hljs-keyword">int</span> second)</span> </span>{
     <span class="hljs-keyword">this</span>.hour = hour;
     <span class="hljs-keyword">this</span>.minute = minute;
     <span class="hljs-keyword">this</span>.second = second;
 }
 </code></pre>
-            <p>All this constructor does is copy values from the parameters to the instance variables. In this example, the names and types of the parameters are the same as the instance variables (parameters don’t have to use the same names, but that’s
-              a common style). As a result, the parameters <strong><em>shadow</em></strong> (or hide) the instance variables, so the keyword <code>this</code> is necessary to tell them apart.</p>
-            <p>The name <code>this</code> is a keyword that refers to the object we are creating. You can use <code>this</code> the same way you use the name of any other object. For example, you can read and write the instance variables of <code>this</code>,
-              and you can pass <code>this</code> as an argument to other methods. But you do not declare <code>this</code>, and you can’t make an assignment to it.</p>
-            <p>Now you can use the above constructor to create Time objects that are initialized to a specific time:</p>
-            <pre><code class="hljs java">Time time = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">11</span>, <span class="hljs-number">59</span>, <span class="hljs-number">59</span>);
+            </box>
+            <p><strong><code>this</code> can be used to refer to a constructor of a class within the same class too.</strong></p>
+            <box>
+              <p><span class="fas fa-cube"></span> In this example the constructor <code>Time()</code> uses the <code>this</code> keyword to call its own overloaded constructor <code>Time(int, int, int)</code></p>
+              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">this</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>); <span class="hljs-comment">// call the overloaded constructor</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute, <span class="hljs-keyword">int</span> second)</span> </span>{
+    <span class="hljs-comment">// ...</span>
+}
+
 </code></pre>
+            </box>
+            <h5 id="instance-methods">Instance methods</h5>
+            <p><strong>You can add methods to a class which can then be used from the objects of that class.</strong> These <em>instance</em> methods do not have the <code>static</code> keyword in the method signature. Instance methods can access attributes
+              of the class.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> Here's how you can add a method to the <code>Time</code> class to get the number of seconds passed till midnight.</p>
+              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">secondsSinceMidnight</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> hour*<span class="hljs-number">60</span>*<span class="hljs-number">60</span> + minute*<span class="hljs-number">60</span> + second;
+}
+</code></pre>
+              <p>Here's how you can use that method.</p>
+              <pre><code class="hljs java">Time t = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>);
+System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" seconds since midnight!"</span>);
+</code></pre>
+            </box>
           </div>
         </div>
       </div>
@@ -1136,35 +1269,37 @@ spot = <span class="hljs-keyword">null</span>;
         <div>
           <p>The content below is an extract from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
           <div class="indented">
-            When a number of objects are created from the same class blueprint, they each have their own distinct copies of instance variables. In the case of a `Bicycle` class, the instance variables are gear, and speed. Each Bicycle object has its own values for
-            these variables, stored in different memory locations.
+            <p>When a number of objects are created from the same class blueprint, they each have their own distinct copies of instance variables. In the case of a <code>Bicycle</code> class, the instance variables are gear, and speed. Each Bicycle object
+              has its own values for these variables, stored in different memory locations.</p>
             <p><strong>Sometimes, you want to have variables that are common to all objects. This is accomplished with the <code>static</code> modifier.</strong> Fields that have the <code>static</code> modifier in their declaration are called <em>static fields</em>              or <em>class variables</em>. They are associated with the class, rather than with any object. Every instance of the class shares a class variable, which is in one fixed location in memory. Any object can change the value of a class variable,
               but class variables can also be manipulated without creating an instance of the class.</p>
-            <p>For example, suppose you want to create a number of Bicycle objects and assign each a serial number, beginning with 1 for the first object. This ID number is unique to each object and is therefore an instance variable. At the same time, you
-              need a field to keep track of how many <code>Bicycle</code> objects have been created so that you know what ID to assign to the next one. Such a field is not related to any individual object, but to the class as a whole. For this you need
-              a class variable, numberOfBicycles, as follows:</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bicycle</span> </span>{
+            <box>
+              <p><span class="fas fa-cube"></span> Suppose you want to create a number of Bicycle objects and assign each a serial number, beginning with 1 for the first object. This ID number is unique to each object and is therefore an instance variable.
+                At the same time, you need a field to keep track of how many <code>Bicycle</code> objects have been created so that you know what ID to assign to the next one. Such a field is not related to any individual object, but to the class as a
+                whole. For this you need a class variable, numberOfBicycles, as follows:</p>
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bicycle</span> </span>{
 
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> gear;
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> speed;
 
-    <span class="hljs-comment">// add an instance variable for the object ID</span>
+    <span class="hljs-comment">// an instance variable for the object ID</span>
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> id;
 
-    <span class="hljs-comment">// add a class variable for the</span>
-    <span class="hljs-comment">// number of Bicycle objects instantiated</span>
+    <span class="hljs-comment">// a class variable for the number of Bicycle objects instantiated</span>
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> numberOfBicycles = <span class="hljs-number">0</span>;
         ...
 }
 </code></pre>
+            </box>
             <p><strong><em>Class variables</em> are referenced by the class name itself</strong>, as in <code>Bicycle.numberOfBicycles</code> This makes it clear that they are class variables.</p>
             <p>The Java programming language supports static methods as well as static variables. Static methods, which have the <code>static</code> modifier in their declarations, should be invoked with the class name, without the need for creating an instance
               of the class, as in <code>ClassName.methodName(args)</code></p>
             <p><strong>The <code>static</code> modifier, in combination with the <code>final</code> modifier, is also used to define constants.</strong> The final modifier indicates that the value of this field cannot change.For example, the following variable
               declaration defines a constant named PI, whose value is an approximation of pi (the ratio of the circumference of a circle to its diameter):
               <code>static final double PI = 3.141592653589793;</code></p>
-            <p>Here is an example with class-level variables and class-level methods:</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bicycle</span> </span>{
+            <box>
+              <p><span class="fas fa-cube"></span> Here is an example with class-level variables and class-level methods:</p>
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bicycle</span> </span>{
 
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> gear;
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> speed;
@@ -1174,12 +1309,12 @@ spot = <span class="hljs-keyword">null</span>;
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> numberOfBicycles = <span class="hljs-number">0</span>;
 
 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Bicycle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startSpeed,
-                   <span class="hljs-keyword">int</span> startGear)</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Bicycle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear)</span> </span>{
         gear = startGear;
         speed = startSpeed;
 
-        id = ++numberOfBicycles;
+        numberOfBicycles++;
+        id = numberOfBicycles;
     }
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getID</span><span class="hljs-params">()</span> </span>{
@@ -1206,11 +1341,12 @@ spot = <span class="hljs-keyword">null</span>;
 
 }
 </code></pre>
+            </box>
           </div>
           <tip-box>
             <p>💡 Explanation of <strong><code>System.out.println(...)</code></strong>:</p>
             <ul>
-              <li><code>out</code> is a class-level attribute of the <code>System</code> class.</li>
+              <li><code>out</code> is a class-level public attribute of the <code>System</code> class.</li>
               <li><code>println</code> is a instance level method of the <code>out</code> object.</li>
             </ul>
           </tip-box>
@@ -2404,7 +2540,7 @@ Number of keys after clearing: 0
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 09:51:30 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
 </footer>
 </div>
 </body>

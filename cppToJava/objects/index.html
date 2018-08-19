@@ -75,8 +75,18 @@
                         </tbody>
                       </table>
                     </div>
-                    <p>Before using a class in your code, you need to <code>import</code> the class. <code>import</code> statements appear at the top of the code.</p>
-                    <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
+                    <p><strong>Before using a class in your code, you need to <code>import</code> the class.</strong> <code>import</code> statements appear at the top of the code.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> This example imports the <code>java.awt.Point</code> (i.e., the <code>Point</code> class in the <code>java.awt</code> package) class -- which can be used to represent
+                        <trigger for="pop:usingObjects-coordinates">the coordinates of a location in a Cartesian plane</trigger> -- and use it in the <code>main</code> method.</p>
+                      <popover id="pop:usingObjects-coordinates" title="Coordinates of a location in a Cartesian plane" placement="top">
+                      
+                        <div slot="content">
+                          <p>In mathematical notation, points are often written in parentheses with a comma separating the coordinates. For example, <code>(0,0)</code> indicates the origin, and <code>(x,y)</code> indicates the point <code>x</code> units
+                            to the right and <code>y</code> units up from the origin.   </p>
+                        </div>
+                      </popover>
+                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span></span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
@@ -86,15 +96,54 @@
    }
 }
 </code></pre>
-                    <p>Tip: You might wonder why we can use the System class without importing it. System belongs to the java.lang package, which is imported automatically. For example, the <code>java.awt</code> package provides a class named <code>Point</code>                      intended to represent the coordinates of a location in a Cartesian plane. Tooltip: In mathematical notation, points are often written in parentheses with a comma separating the coordinates. For example, (0,0) indicates the origin,
-                      and (x,y) indicates the point x units to the right and y units up from the origin. Then, to create a new point object, you have to use the <code>new</code> operator:</p>
-                    <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
-
-Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+                    </box>
+                    <p>💡 You might wonder why we can use the <code>System</code> class without importing it. <code>System</code> belongs to <strong>the <code>java.lang</code> package, which is imported automatically</strong>.</p>
+                  </div>
+                  <h5 id="new-operator"><code>new</code> operator</h5>
+                  <div class="indented">
+                    <p><strong>To create a new object, you have to use the <code>new</code> operator</strong></p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> This line shows how to create a new <code>Point</code> object using the <code>new</code> operator:</p>
+                      <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
 </code></pre>
+                    </box>
                   </div>
                 </div>
-                <div></div>
+                <div>
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> create `Rectangle` objects">
+                        <question>
+                          <p>Update the code below to create a new <code>Rectangle</code> object as described in the code comments, to produce the given output.</p>
+                          <ul>
+                            <li>The <code>Rectangle</code> class is found in the <code>java.awt</code> package.</li>
+                            <li>The parameters you need to supply when creating new <code>Rectangle</code> objects are <code>(int x, int y, int width, int height)</code>.</li>
+                          </ul>
+                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Rectangle r;
+
+        <span class="hljs-comment">// TODO create a Rectangle object that has the properties x=0, y=0, width=5, height=10</span>
+        <span class="hljs-comment">// assign it to r</span>
+
+        System.out.println(r);
+    }
+}
+</code></pre>
+                          <p><span class="fas fa-arrow-down"></span></p>
+                          <pre class="hljs"><code>java.awt.Rectangle[x=0,y=0,width=5,height=10]
+</code></pre>
+                          <div slot="hint">
+                            <ul>
+                              <li>Import the <code>java.awt.Rectangle</code> class</li>
+                              <li>This is how you create the required object <code>new Rectangle(0, 0, 5, 10)</code></li>
+                            </ul>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
               </div>
             </panel>
           </div>
@@ -111,42 +160,95 @@ Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-numbe
                 </p>
                 <p></p>
                 <div>
-                  <p>Variables that belong to an object are usually called attributes, but you might also see them called &quot;fields&quot;.</p>
+                  <p><strong>Variables that belong to an object are called <em>attributes</em> (or <em>fields</em>).</strong></p>
                   <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
                     </span> To access an attribute of an object, Java uses <em>dot notation</em>.</p>
-                  <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+                  <box>
+                    <p><span class="fas fa-cube"></span> The code below uses <code>spot.x</code> which means &quot;go to the object spot refers to, and get the value of the attribute <code>x</code>.&quot;</p>
+                    <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
 <span class="hljs-keyword">int</span> sum = spot.x * spot.x + spot.y * spot.y;
 System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y, <span class="hljs-string">", "</span> + sum);
 </code></pre>
-                  <p><span class="fas fa-arrow-down"></span></p>
-                  <pre class="hljs"><code>3, 4, 25
+                    <p><span class="fas fa-arrow-down"></span></p>
+                    <pre class="hljs"><code>3, 4, 25
 </code></pre>
-                  <p>The expression <code>spot.x</code> means &quot;go to the object spot refers to, and get the value of the attribute <code>x</code>.&quot;</p>
-                  <p>You can <em>mutate</em> an object by assigning a different values to its attributes.</p>
-                  <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
-Spot.x = <span class="hljs-number">5</span>
+                  </box>
+                  <p><strong>You can <tooltip content="i.e., change/modify"><em>mutate</em></tooltip> an object by assigning a different values to its attributes.</strong></p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> This example changes the x value of the <code>Point</code> object to <code>5</code>.</p>
+                    <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+spot.x = <span class="hljs-number">5</span>;
 System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
 </code></pre>
+                    <p><span class="fas fa-arrow-down"></span></p>
+                    <pre class="hljs"><code>5, 4
+</code></pre>
+                  </box>
                   <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
-                    </span> Java uses the dot notation to invoke methods on an object too. The example below invokes the <code>translate</code> method on a <code>Point</code> object so that it moves to a different location.</p>
-                  <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+                    </span> <strong>Java uses the dot notation to invoke methods on an object too.</strong></p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> This example invokes the <code>translate</code> method on a <code>Point</code> object so that it moves to a different location.</p>
+                    <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
 System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
 spot.translate(<span class="hljs-number">5</span>,<span class="hljs-number">5</span>);
 System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
 </code></pre>
-                  <p><span class="fas fa-arrow-down"></span></p>
-                  <pre class="hljs"><code>3, 4
+                    <p><span class="fas fa-arrow-down"></span></p>
+                    <pre class="hljs"><code>3, 4
 8, 9
 </code></pre>
+                  </box>
                 </div>
-                <div></div>
+                <div>
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> use `Rectangle` objects">
+                        <question>
+                          <p>Update the code below as described in code comments, to produce the given output.</p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Rectangle;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Rectangle r = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>);
+        System.out.println(r);
+
+        <span class="hljs-keyword">int</span> area;
+        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add a line below to calculate the area using width and height properties of r</span>
+        <span class="hljs-comment">// and assign it to the variable area</span>
+
+        System.out.println(<span class="hljs-string">"Area: "</span> + area);
+
+        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add a line here to set the size of r to 8x10 (width x height)</span>
+        <span class="hljs-comment">//Recommended: use the setSize(int height, int width) method of the Rectangle object</span>
+
+        System.out.println(r);
+    }
+
+}
+</code></pre>
+                          <p><span class="fas fa-arrow-down"></span></p>
+                          <pre class="hljs"><code>java.awt.Rectangle[x=0,y=0,width=4,height=6]
+Area: 24
+java.awt.Rectangle[x=0,y=0,width=8,height=10]
+</code></pre>
+                          <div slot="hint">
+                            <ul>
+                              <li>Area can be calculated as <code>r.width * r.height</code></li>
+                              <li>Setting the size can be done as <code>r.setSize(8, 10)</code></li>
+                            </ul>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
               </div>
             </panel>
           </div>
           <div>
             <panel type="seamless" expanded="">
               <span slot="header" class="card-title"><div>
-<h4 id="passing-objects">Passing Objects</h4></div></span>
+<h4 id="passing-objects-around">Passing Objects Around</h4></div></span>
               <div class="indented">
                 <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can pass objects between methods</span>
                   </span>
@@ -156,43 +258,168 @@ System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
                 </p>
                 <p></p>
                 <div>
-                  <p><strong>You can pass objects as parameters in the usual way</strong>. For example:</p>
-                  <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPoint</span><span class="hljs-params">(Point p)</span> </span>{
+                  <p><strong>You can pass objects as parameters to a method in the usual way</strong>.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> The <code>printPoint</code> method below takes a <code>Point</code> object as an argument and displays its attributes in <code>(x,y)</code> format.</p>
+                    <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPoint</span><span class="hljs-params">(Point p)</span> </span>{
     System.out.println(<span class="hljs-string">"("</span> + p.x + <span class="hljs-string">", "</span> + p.y + <span class="hljs-string">")"</span>);
 }
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+    Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+    printPoint(spot);
+}
 </code></pre>
-                  <p>This method takes a point as an argument and displays its attributes in parentheses. If you invoke <code>printPoint(spot)</code>, it displays <code>(3, 4)</code>.</p>
-                  <p><strong>You can return an object as the return value too.</strong> The <code>java.awt</code> package also provides a class called <code>Rectangle</code>. <code>Rectangle</code> objects are similar to points, but they have four attributes:
-                    <code>x</code>, <code>y</code>, <code>width</code>, and <code>height</code>. You can write methods that return objects. For example, <code>findCenter</code> takes a <code>Rectangle</code> as an argument and returns a <code>Point</code>                    with the coordinates of the center of the rectangle:</p>
-                  <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Point <span class="hljs-title">findCenter</span><span class="hljs-params">(Rectangle box)</span> </span>{
+                    <p><span class="fas fa-arrow-down"></span></p>
+                    <pre class="hljs"><code>3, 4
+</code></pre>
+                  </box>
+                  <p><strong>You can return an object from a method too.</strong></p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> The <code>java.awt</code> package also provides a class called <code>Rectangle</code>. <code>Rectangle</code> objects are similar to points, but they have four attributes: <code>x</code>, <code>y</code>,
+                      <code>width</code>, and <code>height</code>. The <code>findCenter</code> method below takes a <code>Rectangle</code> as an argument and returns a <code>Point</code> that corresponds to the center of the rectangle:</p>
+                    <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Point <span class="hljs-title">findCenter</span><span class="hljs-params">(Rectangle box)</span> </span>{
     <span class="hljs-keyword">int</span> x = box.x + box.width / <span class="hljs-number">2</span>;
     <span class="hljs-keyword">int</span> y = box.y + box.height / <span class="hljs-number">2</span>;
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Point(x, y);
 }
 </code></pre>
-                  <p>The return type of this method is <code>Point</code>. The last line creates a new Point object and returns a reference to it.</p>
-                  <p><strong><code>null</code> is a special value that means &quot;no object&quot;</strong>. You can declare and initialize object variables this way:
-                    <code>Point spot = null;</code></p>
-                  <p>If you try to use a null value, either by accessing an attribute or invoking a method, Java throws a <code>NullPointerException</code>.</p>
-                  <pre><code class="hljs java">Point spot = <span class="hljs-keyword">null</span>;
-<span class="hljs-keyword">int</span> x = spot.x;              <span class="hljs-comment">// NullPointerException</span>
-spot.translate(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>);      <span class="hljs-comment">// NullPointerException</span>
+                    <p>The return type of this method is <code>Point</code>. The last line creates a new <code>Point</code> object and returns a reference to it.
+                    </p>
+                  </box>
+                  <h5 id="null-and-nullpointerexception"><code>null</code> and <code>NullPointerException</code></h5>
+                  <div class="indented">
+                    <p><strong><code>null</code> is a special value that means &quot;no object&quot;</strong>. You can assign null to a variable to indicate that the variable is 'empty' at the moment. However, if you try to use a null value, either by accessing
+                      an attribute or invoking a method, Java throws a <code>NullPointerException</code>.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> In this example, the variable <code>spot</code> is assigned a <code>null</code> value. As a result, trying to access <code>spot.x</code> attribute or invoke <code>spot.translate</code> method results
+                        in a <code>NullPointerException</code>.</p>
+                      <pre><code class="hljs java">Point spot = <span class="hljs-keyword">null</span>;
+<span class="hljs-keyword">int</span> x = spot.x;          <span class="hljs-comment">// NullPointerException</span>
+spot.translate(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>);  <span class="hljs-comment">// NullPointerException</span>
 </code></pre>
-                  <p>On the other hand, it is legal to pass a <code>null</code> reference as an argument or receive one as a return value.</p>
+                    </box>
+                    <p>On the other hand, it is legal return null from a method or to pass a <code>null</code> reference as an argument to a method.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> Returning <code>null</code> from a method.</p>
+                      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Point <span class="hljs-title">createCopy</span><span class="hljs-params">(Point p)</span> </span>{
+    <span class="hljs-keyword">if</span> (p == <span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>; <span class="hljs-comment">// return null if p is null</span>
+    }
+
+    <span class="hljs-comment">// create a new object with same x,y values</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Point(p.x, p.y);
+}
+</code></pre>
+                      <p><span class="fas fa-cube"></span> Passing <code>null</code> as the argument.</p>
+                      <pre><code class="hljs java">Point result = createCopy(<span class="hljs-keyword">null</span>);
+System.out.println(result);
+</code></pre>
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre class="hljs"><code>null
+</code></pre>
+                    </box>
+                  </div>
                   <p><strong>It is possible to have multiple variables that refer to the same object.</strong></p>
-                  <pre><code class="hljs java">Rectangle box1 = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">100</span>, <span class="hljs-number">200</span>);
-Rectangle box2 = box1;
+                  <box>
+                    <p><span class="fas fa-cube"></span> Notice how <code>p1</code> and <code>p2</code> are aliases for the same object. When the object is changed using the variable <code>p1</code>, the changes are visible via <code>p2</code> as well (and
+                      vice versa), because they both point to the same <code>Point</code> object.</p>
+                    <pre><code class="hljs java">Point p1 = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);
+Point p2 = p1;
+System.out.println(<span class="hljs-string">"p1: "</span> + p1.x + <span class="hljs-string">", "</span> + p1.y);
+System.out.println(<span class="hljs-string">"p2: "</span> + p2.x + <span class="hljs-string">", "</span> + p2.y);
+p1.x = <span class="hljs-number">1</span>;
+p2.y = <span class="hljs-number">2</span>;
+System.out.println(<span class="hljs-string">"p1: "</span> + p1.x + <span class="hljs-string">", "</span> + p1.y);
+System.out.println(<span class="hljs-string">"p2: "</span> + p2.x + <span class="hljs-string">", "</span> + p2.y);
 </code></pre>
-                  <p>Notice how <code>box1</code> and <code>box2</code> are aliases for the same object, so any changes that affect one variable also affect the other. This example adds 50 to all four sides of the rectangle, so it moves the corner up and
-                    to the left by 50, and it increases the height and width by 100:</p>
-                  <pre><code class="hljs java">System.out.println(box2.width);
-box1.grow(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
-System.out.println(box2.width);
+                    <p><span class="fas fa-arrow-down"></span></p>
+                    <pre class="hljs"><code>p1: 0, 0
+p2: 0, 0
+p1: 1, 2
+p2: 1, 2
 </code></pre>
-                  <p>The first line displays <code>100</code>, which is the width of the Rectangle referred to by <code>box2</code>. The second line invokes the grow method on <code>box1</code>, which stretches the Rectangle horizontally and vertically.
-                    When we make a change using box1, we see the change using <code>box2</code>. Thus, the value displayed by the third line is <code>200</code>, the width of the expanded rectangle.</p>
+                  </box>
+                  <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
+                    </span> <strong>Java does not have explicit pointers</strong> (and other related things such as pointer de-referencing, pointer arithmetic). <strong>When an object is passed into a method as an argument, the method gains access to the original object.</strong>                    If the method changes the object it received, the changes are retained in the object even after the method is completed.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> Note how <code>p3</code> retains changes done to it by the method <code>swapCoordinates</code> even after the method call.</p>
+                    <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swapCoordinates</span><span class="hljs-params">(Point p)</span></span>{
+    <span class="hljs-keyword">int</span> temp = p.x;
+    p.x = p.y;
+    p.y = temp;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+    Point p3 = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>);
+    System.out.println(<span class="hljs-string">"p3: "</span> + p3.x + <span class="hljs-string">", "</span> + p3.y);
+    swapCoordinates(p3);
+    System.out.println(<span class="hljs-string">"p3: "</span> + p3.x + <span class="hljs-string">", "</span> + p3.y);
+}
+</code></pre>
+                    <pre class="hljs"><code>p3: 2, 3
+p3: 3, 2
+</code></pre>
+                  </box>
                 </div>
-                <div></div>
+                <div>
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> pass objects to `move` method">
+                        <question>
+                          <p>Add a method <code>move(Point p, Rectangle r)</code> to the code below, to produce the given output. The behavior of the method is as follows:</p>
+                          <ul>
+                            <li>Returns a new <code>Point</code> object that has attributes <code>x</code> and <code>y</code> that match those of <code>r</code></li>
+                            <li>Does not modify <code>p</code></li>
+                            <li>Updates <code>r</code> so that its attributes <code>x</code> and <code>y</code> match those of <code>p</code></li>
+                            <li>Returns <code>null</code> and does nothing if either <code>p</code> or <code>r</code> is null</li>
+                          </ul>
+                          <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
+<span class="hljs-keyword">import</span> java.awt.Rectangle;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">//TODO add your method here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Point p1 = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+        Rectangle r1 = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>);
+        System.out.println(<span class="hljs-string">"arguments: "</span> + p1 + <span class="hljs-string">", "</span> + r1);
+
+        Point p2 = move(p1, r1);
+        System.out.println(<span class="hljs-string">"argument point after method call: "</span> + p1);
+        System.out.println(<span class="hljs-string">"argument rectangle after method call: "</span> + r1);
+        System.out.println(<span class="hljs-string">"returned point: "</span> + p2);
+
+        System.out.println(move(<span class="hljs-keyword">null</span>, <span class="hljs-keyword">null</span>));
+    }
+}
+</code></pre>
+                          <p><span class="fas fa-arrow-down"></span></p>
+                          <pre class="hljs"><code>arguments: java.awt.Point[x=0,y=0], java.awt.Rectangle[x=2,y=3,width=5,height=6]
+argument point after method call: java.awt.Point[x=0,y=0]
+argument rectangle after method call: java.awt.Rectangle[x=0,y=0,width=5,height=6]
+returned point: java.awt.Point[x=2,y=3]
+null
+</code></pre>
+                          <div slot="hint">
+                            <p>Partial solution:</p>
+                            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Point <span class="hljs-title">move</span><span class="hljs-params">(Point p, Rectangle r)</span></span>{
+    <span class="hljs-keyword">if</span> (p == <span class="hljs-keyword">null</span> || r == <span class="hljs-keyword">null</span>){
+        <span class="hljs-comment">// ...</span>
+    }
+    Point newPoint = <span class="hljs-keyword">new</span> Point(r.x, r.y);
+    r.x = p.x;
+    <span class="hljs-comment">// ...</span>
+    <span class="hljs-keyword">return</span> newPoint;
+}
+</code></pre>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
               </div>
             </panel>
           </div>
@@ -217,8 +444,8 @@ spot = <span class="hljs-keyword">null</span>;
                     is no way to access its attributes or invoke a method on it. From the programmer’s view, it ceases to exist. However it’s still present in the computer’s memory, taking up space.</p>
                   <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
                     </span> <strong>In Java, you don’t have to delete objects you create when they are no longer needed.</strong> As your program runs, the system automatically looks for stranded objects and reclaims them; then the space can be reused for new
-                    objects. This process is called garbage collection. You don’t have to do anything to make garbage collection happen, and in general don’t have to be aware of it. But in high-performance applications, you may notice a slight delay every
-                    now and then when Java reclaims space from discarded objects.</p>
+                    objects. This process is called <em>garbage collection</em>. You don’t have to do anything to make garbage collection happen, and in general don’t have to be aware of it. But in high-performance applications, you may notice a slight
+                    delay every now and then when Java reclaims space from discarded objects.</p>
                 </div>
                 <div></div>
               </div>
@@ -232,7 +459,7 @@ spot = <span class="hljs-keyword">null</span>;
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 09:51:30 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
 </footer>
 </div>
 </body>

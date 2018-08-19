@@ -317,7 +317,11 @@
               </div>
             </tip-box>
             <p><strong>Every object has an interface and an implementation.</strong></p>
-            <p>Every real world object has an interface that other objects can interact with and an implementation that supports the interface but may not be accessible to the other object.</p>
+            <p>Every real world object has:</p>
+            <ul>
+              <li>an interface that other objects can interact with</li>
+              <li>an implementation that supports the interface but may not be accessible to the other object</li>
+            </ul>
             <tip-box>
               <p><span class="fas fa-cube"></span> The interface and implementation of some real-world objects in our example:</p>
               <ul>
@@ -394,8 +398,14 @@
             <h4 id="objects-as-abstractions">Objects as Abstractions</h4>
           </div>
           <div>
-            <p>The concept of <strong><em>Objects</em> in OOP is an abstraction mechanism because it allows us to abstract away the lower level details and work with bigger granularity entities</strong> i.e. ignore details of data formats and the method
-              implementation details and work at the level of objects.</p>
+            <p>The concept of <strong><em>Objects</em> in OOP is an <trigger trigger="click" for="modal:objectsAsAbstractions-abstraction">abstraction</trigger> mechanism because it allows us to abstract away the lower level details and work with bigger granularity entities</strong>              i.e. ignore details of data formats and the method implementation details and work at the level of objects.</p>
+            <modal large="" title="Definition: Abstraction" id="modal:objectsAsAbstractions-abstraction">
+            
+              <div>
+                <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity (or an aspect) we are interested in, and suppressing the more complex details below that level (or irrelevant to that
+                  aspect).</p>
+              </div>
+            </modal>
             <tip-box>
               <p><span class="fas fa-cube"></span> We can deal with a <code>Person</code> object that represents the person Adam and query the object for Adam's age instead of dealing with details such as Adam’s date of birth (DoB), in what format the DoB
                 is stored, the algorithm used to calculate the age from the DoB, etc.</p>
@@ -426,14 +436,44 @@
               <li><strong>create the virtual world of object network, and</strong></li>
               <li><strong>provide it the inputs to produce the outcome we want.</strong></li>
             </ol>
-            <p><strong>A <mark><em>class</em></mark> contains instructions for creating a specific kind of objects</strong>. It turns out sometimes multiple objects have the same behavior because they are of the same kind. Instructions for creating a one
-              kind (or ‘class’) of objects can be done in one go and use that same instructions to instantiate (i.e. create) objects of that kind. We call such instructions a <em>Class</em>.</p>
+            <p><strong>A <mark><em>class</em></mark> contains instructions for creating a specific kind of objects</strong>. It turns out sometimes multiple objects have the same behavior because they are of the <em>same kind</em>. Instructions for creating
+              a one kind (or ‘class’) of objects can be done once and that same instructions can be used to
+              <tooltip content="i.e. create"><em>instantiate</em></tooltip> objects of that kind. We call such instructions a <em>Class</em>.</p>
             <tip-box>
               <p><span class="fas fa-cube"></span> Classes and objects in an example scenario</p>
-              <p>When writing an OOP program to calculate the average age of Adam, Beth, Charlie, and Daisy, instructions for creating objects <code>Adam</code>, <code>Beth</code>, <code>Charlie</code>, and <code>Daisy</code> will be very similar because
-                they are all of the same kind : they all represent ‘persons’ with the same interface, the same kind of data (i.e. <code>name</code>, <code>DoB</code>, etc.), and the same kind of behavior (i.e. <code>getAge(Date)</code>, <code>getName()</code>,
-                etc.). Therefore, we can have a class called <code>Person</code> containing instructions on how to create <code>Person</code> objects and use that class to instantiate objects <code>Adam</code>, <code>Beth</code>, <code>Charlie</code>,
-                and <code>Daisy</code>. Similarly, we need classes <code>AgeList</code>, <code>Calculator</code>, and <code>Main</code> classes to instantiate one each of <code>AgeList</code>, <code>Calculator</code>, and <code>Main</code> objects.</p>
+              <p>Consider the example of writing an OOP program to calculate the average age of Adam, Beth, Charlie, and Daisy.</p>
+              <p>Instructions for creating objects <code>Adam</code>, <code>Beth</code>, <code>Charlie</code>, and <code>Daisy</code> will be very similar because they are all of the same kind : they all represent ‘persons’ with the same interface, the same
+                kind of data (i.e. <code>name</code>, <code>DoB</code>, etc.), and the same kind of behavior (i.e. <code>getAge(Date)</code>, <code>getName()</code>, etc.). Therefore, we can have a class called <code>Person</code> containing instructions
+                on how to create <code>Person</code> objects and use that class to instantiate objects <code>Adam</code>, <code>Beth</code>, <code>Charlie</code>, and <code>Daisy</code>.</p>
+              <p>Similarly, we need classes <code>AgeList</code>, <code>Calculator</code>, and <code>Main</code> classes to instantiate one each of <code>AgeList</code>, <code>Calculator</code>, and <code>Main</code> objects.</p>
+              <div class="table-responsive">
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>Objects</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>Person</code></td>
+                      <td>objects representing Adam, Beth, Charlie, Daisy</td>
+                    </tr>
+                    <tr>
+                      <td><code>AgeList</code></td>
+                      <td>an object to represent the age list</td>
+                    </tr>
+                    <tr>
+                      <td><code>Calculator</code></td>
+                      <td>an object to do the calculations</td>
+                    </tr>
+                    <tr>
+                      <td><code>Main</code></td>
+                      <td>an object to represent you who manages the whole operation</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </tip-box>
           </div>
         </div>
@@ -12466,23 +12506,23 @@ git pull origin master
             <p><span class="dimmed">Adapted (with permissions) from <a href="http://code.makery.ch/library/javafx-8-tutorial/">Marco Jakob's JavaFX 8 tutorial</a>.</span></p>
             <panel header="**Part 1: Scene Builder**" minimized="">
               <div>
-                <h1 id="javafx-8-tutorial-part-1-scene-builder">JavaFx 8 Tutorial - Part 1: Scene Builder</h1>
+                <h1 id="javafx-9-tutorial-part-1-scene-builder">JavaFx 9 Tutorial - Part 1: Scene Builder</h1>
                 <h2 id="introduction-34">Introduction</h2>
                 <p>This tutorial will teach you how to create a new JavaFX application in IntelliJ, and to use the SceneBuilder to create a layouts for your application.</p>
                 <img src="/se-book/javaTools/javaFXBasic/part01/images/address-app-final-screenshot.png" alt="Final Screenshot" height="350">
                 <p></p>
                 <h2 id="prerequisites">Prerequisites</h2>
                 <ul>
-                  <li>Latest <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java JDK 8</a> (includes <em>JavaFX 8</em>)</li>
-                  <li>IntelliJ (2017.2 or later)</li>
+                  <li>Latest <a href="http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase9-3934878.html">Java JDK 9</a> (includes <em>JavaFX 9</em>)</li>
+                  <li>IntelliJ (2018.2 or later)</li>
                   <li><a href="http://gluonhq.com/products/scene-builder/">SceneBuilder 8</a> (provided by Gluon as <a href="http://www.oracle.com/technetwork/java/javase/downloads/sb2download-2177776.html">Oracle no longer ships the tool in binary form</a>)</li>
                 </ul>
                 <tip-box type="tip">
                   <p>Do remember the installation path to SceneBuilder 8 as we will need it to configure IntelliJ in a later step.</p>
                 </tip-box>
                 <h2 id="intellij-configurations">IntelliJ Configurations</h2>
-                <p>If this is the first time using IntelliJ, you need to tell IntelliJ where to find JDK 8 and SceneBuilder.</p>
-                <h3 id="configuring-jdk-8">Configuring JDK 8</h3>
+                <p>If this is the first time using IntelliJ, you need to tell IntelliJ where to find JDK 9 and SceneBuilder.</p>
+                <h3 id="configuring-jdk-9">Configuring JDK 9</h3>
                 <ol>
                   <li>On the Welcome screen, press <code>Configure</code> → <code>Project Default</code> → <code>Project Structure</code>.</li>
                 </ol>
@@ -12494,8 +12534,9 @@ git pull origin master
                 <ol start="2">
                   <li>Under <code>Project SDK:</code>, press <code>New...</code> → <code>JDK</code>.</li>
                   <li>Select the directory that you install JDK on, and press <code>OK</code>.</li>
+                  <li>Under <code>Project language level:</code>, select <code>9 - Modules, private methods in interfaces etc.</code>.</li>
                 </ol>
-                <img src="/se-book/javaTools/javaFXBasic/part01/images/config-jdk-project-structure.png" alt="JDK 8 under Project Structure" height="350">
+                <img src="/se-book/javaTools/javaFXBasic/part01/images/config-jdk-project-structure.png" alt="JDK 9 under Project Structure" height="350">
                 <p></p>
                 <ol start="4">
                   <li>Press <code>OK</code> again.</li>
@@ -12511,8 +12552,8 @@ git pull origin master
                 <tip-box type="info" header="Helpful Links">
                   <p>The JavaDocs will come in handy when writing your own JavaFX applications:</p>
                   <ul>
-                    <li><a href="http://docs.oracle.com/javase/8/docs/api/">Java 8 API</a></li>
-                    <li><a href="http://docs.oracle.com/javase/8/javafx/api/">JavaFX 8 API</a></li>
+                    <li><a href="https://docs.oracle.com/javase/9/docs/api">Java 9 API</a></li>
+                    <li><a href="https://docs.oracle.com/javase/9/docs/api/overview-summary.html">JavaFX 9 API</a></li>
                     <li><a href="http://controlsfx.bitbucket.org/">ControlsFX API</a></li>
                   </ul>
                   <p>Additionally, <a href="http://docs.oracle.com/javase/8/javafx/get-started-tutorial/get_start_apps.htm">Oracle also has a tutorial on JavaFX</a> if you are interested.</p>
@@ -12525,7 +12566,7 @@ git pull origin master
                   <li>If you already have a project, you can create a new project by going <code>File</code> → <code>New</code> → <code>Project...</code>.</li>
                 </ul>
                 <ol start="2">
-                  <li>On the left side, select <code>JavaFX</code>. Make sure that the Project SDK is set to <code>1.8</code> and <code>JavaFX Application</code> is selected.</li>
+                  <li>On the left side, select <code>JavaFX</code>. Make sure that the Project SDK is set to <code>9</code> and <code>JavaFX Application</code> is selected.</li>
                 </ol>
                 <img src="/se-book/javaTools/javaFXBasic/part01/images/new-project.png" alt="New Project" height="350">
                 <p></p>
@@ -12535,6 +12576,11 @@ git pull origin master
                   <li>Press <code>Finish</code>. If prompted to create a new directory, just press <code>OK</code>.</li>
                 </ol>
                 <p>Remove the <code>sample</code> package and its content. We will manually create our own package and resources in our tutorial.</p>
+                <p>We will also have to set up the IDE further, so that warnings and errors show up correctly when working with Java 9:</p>
+                <ol>
+                  <li>Go to the menu <code>File</code> → <code>Project Structure</code>.</li>
+                  <li>Under <code>Project language level:</code>, ensure that <code>9 - Modules, private methods in interfaces etc.</code> is selected.</li>
+                </ol>
                 <h2 id="create-the-packages">Create the Packages</h2>
                 <p>In We will create a package for each of the component. Ensure that your Project pane is open (<kbd>Alt</kbd>+<kbd>1</kbd>). Right click on the <code>src</code> folder, and select <code>New</code> → <code>Package</code>:</p>
                 <ul>
@@ -12566,7 +12612,7 @@ git pull origin master
                 <img src="/se-book/javaTools/javaFXBasic/part01/images/design-scene-builder-main-anchor.png" height="350">
                 <p></p>
                 <ol start="2">
-                  <li>Add a <code>Split Pane (Horizontal Flow)</code> (under <code>Containers</code>) by dragging it from the Library into the main area. Right-click the <code>Split Pane</code> in the Hierarchy view and select <code>Fit to Parent</code>.</li>
+                  <li>Add a <code>Split Pane (horizontal)</code> (under <code>Containers</code>) by dragging it from the Library into the main area. Right-click the <code>Split Pane</code> in the Hierarchy view and select <code>Fit to Parent</code>.</li>
                 </ol>
                 <img src="/se-book/javaTools/javaFXBasic/part01/images/design-scene-builder-fit-to-parent.png" height="250">
                 <p></p>
@@ -12695,7 +12741,7 @@ git pull origin master
                 <p></p>
                 <p>Image Source: <a href="http://www.oracle.com">http://www.oracle.com</a></p>
                 <p><em>It's like a theater play:</em> The <code>Stage</code> is the main container which is usually a <code>Window</code> with a border and the typical minimize, maximize and close buttons. Inside the <code>Stage</code> you add a <code>Scene</code>                  which can, of course, be switched out by another <code>Scene</code>. Inside the <code>Scene</code> the actual JavaFX nodes like <code>AnchorPane</code>, <code>TextBox</code>, etc. are added.</p>
-                <p>See <a href="http://docs.oracle.com/javase/8/javafx/scene-graph-tutorial/scenegraph.htm">this page</a> fore more info on working with the JavaFX Scene Graph.</p>
+                <p>See <a href="http://docs.oracle.com/javase/8/javafx/scene-graph-tutorial/scenegraph.htm">this page</a> for more info on working with the JavaFX Scene Graph.</p>
                 <hr>
                 <p>Open <code>MainApp.java</code> and replace the code with the following:</p>
                 <p><strong>MainApp.java</strong></p>
@@ -12773,6 +12819,25 @@ git pull origin master
 }
 </code></pre>
                 <p>The various comments should give you some hints about what's going on.</p>
+                <h2 id="importing-javafx-9">Importing JavaFx 9</h2>
+                <p>JavaFx 9 is a separate module from Java 9. We must ensure that the modules are imported correctly.</p>
+                <p>Notice that IntellJ will complain about the imported modules &quot;not being in the module graph&quot;:</p>
+                <img src="/se-book/javaTools/javaFXBasic/part01/images/javafx-import-error.png" height="100">
+                <p></p>
+                <p>To fix this:</p>
+                <ol>
+                  <li>Ensure that your Project pane is open (<kbd>Alt</kbd>+<kbd>1</kbd>). Right click on the <code>src</code> folder, and select <code>New</code> → <code>module-info.java</code>:</li>
+                  <li>Add the following <code>requires</code> and <code>exports</code> in order to import and export the modules correctly:</li>
+                </ol>
+                <pre><code class="hljs java"><span class="hljs-keyword">module</span> AddressApp {
+    <span class="hljs-keyword">requires</span> javafx.graphics;
+    <span class="hljs-keyword">requires</span> javafx.fxml;
+    <span class="hljs-keyword">requires</span> javafx.controls;
+
+    <span class="hljs-keyword">exports</span> seedu.address;
+}
+</code></pre>
+                <h2 id="running-the-application">Running the Application</h2>
                 <p>If you run the application now (right click <code>MainApp.java</code> and select <code>Run MainApp.main()</code>), you should see something like this:</p>
                 <img src="/se-book/javaTools/javaFXBasic/part01/images/address-app-final-screenshot.png" height="350">
                 <p></p>
@@ -12787,7 +12852,7 @@ git pull origin master
             </panel>
             <panel header="**Part 2: Model and TableView**" minimized="">
               <div>
-                <h1 id="javafx-8-tutorial-part-2-model-and-tableview">JavaFx 8 tutorial - Part 2: Model and TableView</h1>
+                <h1 id="javafx-9-tutorial-part-2-model-and-tableview">JavaFx 9 tutorial - Part 2: Model and TableView</h1>
                 <h2 id="introduction-35">Introduction</h2>
                 <p>In this tutorial, we will create the other parts of the application (mainly the model and the controller). We will also use <code>ObservableList</code> and <code>*Property</code> to bind our list of new model's <code>Person</code>s, and
                   their individual details, to the view, with the controller as the &quot;middleman&quot;.</p>
@@ -12919,7 +12984,7 @@ git pull origin master
                   <li>With JavaFX, it is common to use <code>*Property</code> for all fields of a model class. A <code>Property</code> allows us, for example, to automatically be notified when the <code>lastName</code> or any other variable is changed. This
                     helps us keep the view in sync with the data.</li>
                   <li>To learn more about <code>*Property</code>, refer to <a href="http://docs.oracle.com/javase/8/javafx/properties-binding-tutorial/binding.htm">Using JavaFX Properties and Binding</a></li>
-                  <li><code>LocalDate</code>, the type that we are using for <code>birthday</code>, is part of the <a href="http://docs.oracle.com/javase/tutorial/datetime/iso/">new Date and Time API for JDK 8</a></li>
+                  <li><code>LocalDate</code>, the type that we are using for <code>birthday</code>, is part of the <a href="http://docs.oracle.com/javase/tutorial/datetime/iso/">new Date and Time API since JDK 8</a></li>
                 </ul>
                 <h2 id="a-list-of-persons">A List of Persons</h2>
                 <p>The main data that our application manages is simply a bunch of persons. Let's create a list of <code>Person</code> objects inside the <code>MainApp</code> class. All other controller classes will later get access to that central list
@@ -13045,7 +13110,8 @@ git pull origin master
                   </li>
                   <li>The <code>initialize()</code> method is automatically called after the <code>.fxml</code> file has been loaded. At this time, all the FXML fields should have been initialized already.</li>
                   <li>The <code>setCellValueFactory(...)</code> that we set on the table colums are used to determine which field inside the <code>Person</code> objects should be used for the particular column. The arrow <code>-&gt;</code> indicates that
-                    we're using a Java 8 feature called Lambdas. (Another option would be to use a <a href="http://docs.oracle.com/javase/8/javafx/api/"><code>PropertyValueFactory</code></a>, but this is not type-safe).</li>
+                    we're using a Java 8 feature called Lambdas. (Another option would be to use a <a href="https://docs.oracle.com/javase/9/docs/api/javafx/scene/control/cell/PropertyValueFactory.html"><code>PropertyValueFactory</code></a>, but this
+                    is not type-safe).</li>
                 </ul>
                 <tip-box type="tip">
                   <p>Note:</p>
@@ -13114,6 +13180,33 @@ git pull origin master
                 <ol start="7">
                   <li>Save the <code>.fxml</code> file.</li>
                 </ol>
+                <h2 id="opening-up-the-personoverviewcontroller-to-javafx">Opening up the <code>PersonOverviewController</code> to JavaFx</h2>
+                <p>If you try and run the application now, you will encounter the following error:</p>
+                <pre class="hljs"><code>javafx.fxml.LoadException: ...
+
+...
+
+Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueElement (in module javafx.fxml) cannot access class seedu.address.view.PersonOverviewController (in module AddressApp) because module AddressApp does not export seedu.address.view to module javafx.fxml
+</code></pre>
+                <p>This is because JavaFx is unable to access our <code>PersonOverviewController</code> class.</p>
+                <p>To fix this, add this line of code to <code>src/module-info.java</code>:</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">module</span> AddressApp {
+    ... 
+
+    opens seedu.address.view;
+}
+</code></pre>
+                <p>The file should now look something like this:</p>
+                <p><strong>module-info.java</strong></p>
+                <pre><code class="hljs java"><span class="hljs-keyword">module</span> AddressApp {
+    <span class="hljs-keyword">requires</span> javafx.graphics;
+    <span class="hljs-keyword">requires</span> javafx.fxml;
+    <span class="hljs-keyword">requires</span> javafx.controls;
+
+    <span class="hljs-keyword">exports</span> seedu.address;
+    opens seedu.address.view;
+}
+</code></pre>
                 <h2 id="start-the-application">Start the Application</h2>
                 <p>When you start your application now, you should see something like this:</p>
                 <img src="/se-book/javaTools/javaFXBasic/part02/images/address-app-final-screenshot.png" height="350">
@@ -14012,7 +14105,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 09:51:30 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
 </footer>
 </div>
 </body>

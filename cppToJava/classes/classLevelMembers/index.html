@@ -51,35 +51,37 @@
             <div>
               <p>The content below is an extract from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
               <div class="indented">
-                When a number of objects are created from the same class blueprint, they each have their own distinct copies of instance variables. In the case of a `Bicycle` class, the instance variables are gear, and speed. Each Bicycle object has its own values for
-                these variables, stored in different memory locations.
+                <p>When a number of objects are created from the same class blueprint, they each have their own distinct copies of instance variables. In the case of a <code>Bicycle</code> class, the instance variables are gear, and speed. Each Bicycle object
+                  has its own values for these variables, stored in different memory locations.</p>
                 <p><strong>Sometimes, you want to have variables that are common to all objects. This is accomplished with the <code>static</code> modifier.</strong> Fields that have the <code>static</code> modifier in their declaration are called <em>static fields</em>                  or <em>class variables</em>. They are associated with the class, rather than with any object. Every instance of the class shares a class variable, which is in one fixed location in memory. Any object can change the value of a class variable,
                   but class variables can also be manipulated without creating an instance of the class.</p>
-                <p>For example, suppose you want to create a number of Bicycle objects and assign each a serial number, beginning with 1 for the first object. This ID number is unique to each object and is therefore an instance variable. At the same time,
-                  you need a field to keep track of how many <code>Bicycle</code> objects have been created so that you know what ID to assign to the next one. Such a field is not related to any individual object, but to the class as a whole. For this
-                  you need a class variable, numberOfBicycles, as follows:</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bicycle</span> </span>{
+                <box>
+                  <p><span class="fas fa-cube"></span> Suppose you want to create a number of Bicycle objects and assign each a serial number, beginning with 1 for the first object. This ID number is unique to each object and is therefore an instance variable.
+                    At the same time, you need a field to keep track of how many <code>Bicycle</code> objects have been created so that you know what ID to assign to the next one. Such a field is not related to any individual object, but to the class
+                    as a whole. For this you need a class variable, numberOfBicycles, as follows:</p>
+                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bicycle</span> </span>{
 
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> gear;
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> speed;
 
-    <span class="hljs-comment">// add an instance variable for the object ID</span>
+    <span class="hljs-comment">// an instance variable for the object ID</span>
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> id;
 
-    <span class="hljs-comment">// add a class variable for the</span>
-    <span class="hljs-comment">// number of Bicycle objects instantiated</span>
+    <span class="hljs-comment">// a class variable for the number of Bicycle objects instantiated</span>
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> numberOfBicycles = <span class="hljs-number">0</span>;
         ...
 }
 </code></pre>
+                </box>
                 <p><strong><em>Class variables</em> are referenced by the class name itself</strong>, as in <code>Bicycle.numberOfBicycles</code> This makes it clear that they are class variables.</p>
                 <p>The Java programming language supports static methods as well as static variables. Static methods, which have the <code>static</code> modifier in their declarations, should be invoked with the class name, without the need for creating
                   an instance of the class, as in <code>ClassName.methodName(args)</code></p>
                 <p><strong>The <code>static</code> modifier, in combination with the <code>final</code> modifier, is also used to define constants.</strong> The final modifier indicates that the value of this field cannot change.For example, the following
                   variable declaration defines a constant named PI, whose value is an approximation of pi (the ratio of the circumference of a circle to its diameter):
                   <code>static final double PI = 3.141592653589793;</code></p>
-                <p>Here is an example with class-level variables and class-level methods:</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bicycle</span> </span>{
+                <box>
+                  <p><span class="fas fa-cube"></span> Here is an example with class-level variables and class-level methods:</p>
+                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bicycle</span> </span>{
 
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> gear;
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> speed;
@@ -89,12 +91,12 @@
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> numberOfBicycles = <span class="hljs-number">0</span>;
 
 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Bicycle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startSpeed,
-                   <span class="hljs-keyword">int</span> startGear)</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Bicycle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear)</span> </span>{
         gear = startGear;
         speed = startSpeed;
 
-        id = ++numberOfBicycles;
+        numberOfBicycles++;
+        id = numberOfBicycles;
     }
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getID</span><span class="hljs-params">()</span> </span>{
@@ -121,16 +123,106 @@
 
 }
 </code></pre>
+                </box>
               </div>
               <tip-box>
                 <p>💡 Explanation of <strong><code>System.out.println(...)</code></strong>:</p>
                 <ul>
-                  <li><code>out</code> is a class-level attribute of the <code>System</code> class.</li>
+                  <li><code>out</code> is a class-level public attribute of the <code>System</code> class.</li>
                   <li><code>println</code> is a instance level method of the <code>out</code> object.</li>
                 </ul>
               </tip-box>
             </div>
-            <div></div>
+            <div>
+              <div>
+                <div>
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> add getMaxRadius to the `Circle` class">
+                    <question>
+                      <p>Consider the <code>Circle</code> class below:</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> x;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> y;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> radius;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">this</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">double</span> radius)</span></span>{
+        setX(x);
+        setY(y);
+        setRadius(radius);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getX</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> x;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setX</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>{
+        <span class="hljs-keyword">this</span>.x = x;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getY</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> y;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setY</span><span class="hljs-params">(<span class="hljs-keyword">int</span> y)</span> </span>{
+        <span class="hljs-keyword">this</span>.y = y;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getRadius</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> radius;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRadius</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
+        <span class="hljs-keyword">this</span>.radius = Math.max(radius, <span class="hljs-number">0</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getArea</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">double</span> area = Math.PI * Math.pow(radius, <span class="hljs-number">2</span>);
+        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>)area;
+    }
+}
+</code></pre>
+                      <p>Update it as follows so that code given below produces the given output.</p>
+                      <ul>
+                        <li>Add a class-level <code>getMaxRadius</code> method that returns the maximum radius that has been used in all <code>Circle</code> objects created thus far.</li>
+                      </ul>
+                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Circle c = <span class="hljs-keyword">new</span> Circle();
+        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());
+        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>);
+        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());
+        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">15</span>);
+        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());
+        c.setRadius(<span class="hljs-number">12</span>);
+        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());
+    }
+}
+</code></pre>
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre class="hljs"><code>max radius used so far : 0.0
+max radius used so far : 10.0
+max radius used so far : 10.0
+max radius used so far : 12.0
+</code></pre>
+                      <div slot="hint">
+                        <p>You can use a <code>static</code> variable <code>maxRadius</code> to track the maximum value used for the <code>radius</code> attribute so far.</p>
+                        <p>Partial solution:</p>
+                        <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRadius</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
+    <span class="hljs-keyword">this</span>.radius = Math.max(radius, <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">if</span> (maxRadius &lt; <span class="hljs-keyword">this</span>.radius){
+        <span class="hljs-comment">// ...</span>
+    }
+}
+</code></pre>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -140,7 +232,7 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 09:51:30 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
 </footer>
 </div>
 </body>

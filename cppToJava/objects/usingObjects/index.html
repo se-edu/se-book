@@ -70,8 +70,18 @@
                     </tbody>
                   </table>
                 </div>
-                <p>Before using a class in your code, you need to <code>import</code> the class. <code>import</code> statements appear at the top of the code.</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
+                <p><strong>Before using a class in your code, you need to <code>import</code> the class.</strong> <code>import</code> statements appear at the top of the code.</p>
+                <box>
+                  <p><span class="fas fa-cube"></span> This example imports the <code>java.awt.Point</code> (i.e., the <code>Point</code> class in the <code>java.awt</code> package) class -- which can be used to represent
+                    <trigger for="pop:usingObjects-coordinates">the coordinates of a location in a Cartesian plane</trigger> -- and use it in the <code>main</code> method.</p>
+                  <popover id="pop:usingObjects-coordinates" title="Coordinates of a location in a Cartesian plane" placement="top">
+                  
+                    <div slot="content">
+                      <p>In mathematical notation, points are often written in parentheses with a comma separating the coordinates. For example, <code>(0,0)</code> indicates the origin, and <code>(x,y)</code> indicates the point <code>x</code> units to the
+                        right and <code>y</code> units up from the origin.   </p>
+                    </div>
+                  </popover>
+                  <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span></span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
@@ -81,15 +91,54 @@
    }
 }
 </code></pre>
-                <p>Tip: You might wonder why we can use the System class without importing it. System belongs to the java.lang package, which is imported automatically. For example, the <code>java.awt</code> package provides a class named <code>Point</code>                  intended to represent the coordinates of a location in a Cartesian plane. Tooltip: In mathematical notation, points are often written in parentheses with a comma separating the coordinates. For example, (0,0) indicates the origin, and
-                  (x,y) indicates the point x units to the right and y units up from the origin. Then, to create a new point object, you have to use the <code>new</code> operator:</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
-
-Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+                </box>
+                <p>💡 You might wonder why we can use the <code>System</code> class without importing it. <code>System</code> belongs to <strong>the <code>java.lang</code> package, which is imported automatically</strong>.</p>
+              </div>
+              <h5 id="new-operator"><code>new</code> operator</h5>
+              <div class="indented">
+                <p><strong>To create a new object, you have to use the <code>new</code> operator</strong></p>
+                <box>
+                  <p><span class="fas fa-cube"></span> This line shows how to create a new <code>Point</code> object using the <code>new</code> operator:</p>
+                  <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
 </code></pre>
+                </box>
               </div>
             </div>
-            <div></div>
+            <div>
+              <div>
+                <div>
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> create `Rectangle` objects">
+                    <question>
+                      <p>Update the code below to create a new <code>Rectangle</code> object as described in the code comments, to produce the given output.</p>
+                      <ul>
+                        <li>The <code>Rectangle</code> class is found in the <code>java.awt</code> package.</li>
+                        <li>The parameters you need to supply when creating new <code>Rectangle</code> objects are <code>(int x, int y, int width, int height)</code>.</li>
+                      </ul>
+                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Rectangle r;
+
+        <span class="hljs-comment">// TODO create a Rectangle object that has the properties x=0, y=0, width=5, height=10</span>
+        <span class="hljs-comment">// assign it to r</span>
+
+        System.out.println(r);
+    }
+}
+</code></pre>
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre class="hljs"><code>java.awt.Rectangle[x=0,y=0,width=5,height=10]
+</code></pre>
+                      <div slot="hint">
+                        <ul>
+                          <li>Import the <code>java.awt.Rectangle</code> class</li>
+                          <li>This is how you create the required object <code>new Rectangle(0, 0, 5, 10)</code></li>
+                        </ul>
+                      </div>
+                    </question>
+                  </panel>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -99,7 +148,7 @@ Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-numbe
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 09:51:30 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
 </footer>
 </div>
 </body>

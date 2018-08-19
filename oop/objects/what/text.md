@@ -67,7 +67,9 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 
 **Every object has an interface and an implementation.** 
 
-Every real world object has an interface that other objects can interact with and an implementation that supports the interface but may not be accessible to the other object.
+Every real world object has:
+* an interface that other objects can interact with
+* an implementation that supports the interface but may not be accessible to the other object
 
 <tip-box>
 
