@@ -125,7 +125,7 @@ p2: 1, 2
 
 <box>
 
-{{ icon_example }}
+{{ icon_example }} Note how `p3` retains changes done to it by the method `swapCoordinates` even after the method call.
 
 ```java
 public static void swapCoordinates(Point p){
@@ -152,4 +152,5 @@ p3: 3, 2
 </div>
 
 <div id="extras">
+  <include src="exercises.md" />
 </div>

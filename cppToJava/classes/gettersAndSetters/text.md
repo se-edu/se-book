@@ -47,4 +47,5 @@ public void setSecond(int second) {
 </div>
 
 <div id="extras">
+  <include src="exercises.md" />
 </div>

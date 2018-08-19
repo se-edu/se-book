@@ -90,7 +90,11 @@ Time justBeforeMidnight = new Time(11, 59, 59);
 
 <div class="indented">
 
-In the following version of the constructor, the names and types of the parameters are the same as the instance variables (parameters don’t have to use the same names, but that’s a common style). As a result, the parameters **_shadow_** (or hide) the instance variables, so the keyword `this` is necessary to tell them apart.
+**The `this` keyword is a reference variable in Java that refers to the current object.** You can use `this` the same way you use the name of any other object. For example, you can read and write the instance variables of `this`, and you can pass `this` as an argument to other methods. But you do not declare `this`, and you can’t make an assignment to it.
+
+<box>
+
+{{ icon_example }} In the following version of the constructor, the names and types of the parameters are the same as the instance variables (parameters don’t have to use the same names, but that’s a common style). As a result, the parameters **_shadow_** (or hide) the instance variables, so the keyword `this` is necessary to tell them apart.
 ```java
 public Time(int hour, int minute, int second) {
     this.hour = hour;
@@ -98,7 +102,49 @@ public Time(int hour, int minute, int second) {
     this.second = second;
 }
 ```
-The name `this` is a keyword that refers to the object we are creating. You can use `this` the same way you use the name of any other object. For example, you can read and write the instance variables of `this`, and you can pass `this` as an argument to other methods. But you do not declare `this`, and you can’t make an assignment to it.
+</box>
+
+
+**`this` can be used to refer to a constructor of a class within the same class too.**
+
+<box>
+
+{{ icon_example }} In this example the constructor `Time()` uses the `this` keyword to call its own overloaded constructor `Time(int, int, int)`
+
+```java
+public Time() {
+    this(0, 0, 0); // call the overloaded constructor
+}
+
+public Time(int hour, int minute, int second) {
+    // ...
+}
+
+```
+
+</box>
+
+##### Instance methods
+
+**You can add methods to a class which can then be used from the objects of that class.** These _instance_ methods do not have the `static` keyword in the method signature. Instance methods can access attributes of the class.
+
+<box>
+
+{{ icon_example }} Here's how you can add a method to the `Time` class to get the number of seconds passed till midnight.
+
+```java
+public int secondsSinceMidnight() {
+    return hour*60*60 + minute*60 + second;
+}
+```
+
+Here's how you can use that method.
+```java
+Time t = new Time(0, 2, 5);
+System.out.println(t.secondsSinceMidnight() + " seconds since midnight!");
+```
+
+</box>
 
 </div>
 
@@ -106,4 +152,5 @@ The name `this` is a keyword that refers to the object we are creating. You can 
 </div>
 
 <div id="extras">
+  <include src="exercises.md" />
 </div>
