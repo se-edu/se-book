@@ -21,7 +21,7 @@
 ```java
 Point spot = new Point(3, 4);
 int sum = spot.x * spot.x + spot.y * spot.y;
-System.out.println(spot.x + ", " + spot.y, ", " + sum);
+System.out.println(spot.x + ", " + spot.y + ", " + sum);
 ```
 {{ icon_output }}
 ```
