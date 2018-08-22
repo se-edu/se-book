@@ -10,8 +10,7 @@
 
 <div id="body">
 
-`Scanner` is a class that provides methods for inputting words, numbers, and other data.
-`Scanner` provides a method called nextLine that reads a line of input from the keyboard and returns a String. The following example reads two lines and repeats them back to the user:
+**`Scanner` is a class that provides methods for inputting words, numbers, and other data.** `Scanner` provides a method called `nextLine` that reads a line of input from the keyboard and returns a String. The following example reads two lines and repeats them back to the user:
 
 ```java
 import java.util.Scanner;
@@ -33,7 +32,11 @@ public class Echo {
 }
 ```
 
-`Scanner` class normally reads inputs as strings but it can read in a specific type of input too. The code below uses the `nextInt` method of the `Scanner` class to read an input as an integer.
+`Scanner` class normally reads inputs as strings but it can read in a specific type of input too.
+
+<box>
+
+{{ icon_example }} The code below uses the `nextInt` method of the `Scanner` class to read an input as an integer.
 
 ```java
 
@@ -46,7 +49,9 @@ System.out.print("What is your name? ");
 String name = in.nextLine();
 System.out.printf("Hello %s, age %d\n", name, age);
 ```
+:bulb: Note the [use of `printf` method for formatting the output](https://docs.oracle.com/javase/tutorial/java/data/numberformat.html).
 
+</box>
 
 </div>
 
