@@ -12,7 +12,7 @@
 
 <p class="lead"><md>This book chapter **assumes you are familiar with basic C++ programming**. It provides a crash course to help you migrate from C++ to Java.</md></p>
 
-This chapter **borrows heavily from the excellent book [_ThinkJava_](http://greenteapress.com/wp/think-java/)** by Allen Downey and Chris Mayfield. As required by terms of reuse of that book, this chapter is released under  [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/) and not under the MIT license as rest of this book.
+This chapter **borrows heavily from the excellent book [_ThinkJava_](http://greenteapress.com/wp/think-java/)** by Allen Downey and Chris Mayfield. As required by the _terms of reuse_ of that book, this chapter is released under the [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/) and not under the MIT license as the rest of this book.
 
 Some conventions used in this chapter:
 <div class="indented">
