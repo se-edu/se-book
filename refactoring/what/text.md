@@ -69,21 +69,14 @@ Method: Turn the fragment into a method whose name explains the purpose of the m
   <include src="example-extract-python.md" />
 </div>
 
-
-
 </tip-box>
 
-<tip-box>
 
 :bulb: Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.
 
-</tip-box>
 
-<tip-box type="important">
+{{ icon_important_big_red }} Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.
 
-Important: Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.
-
-</tip-box>
 
 </div>
 
