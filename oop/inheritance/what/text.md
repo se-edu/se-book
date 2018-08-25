@@ -33,11 +33,7 @@
 
 **Inheritance implies the derived class can be considered as a _sub-type_ of the base class (and the base class is a _super-type_ of the derived class), resulting in an _is a_ relationship.**  
 
-<tip-box type="info">
-
-Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type relationship.
-
-</tip-box>
+%%{{ icon_info }} Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type relationship.%%
 
 <tip-box>
 
@@ -52,7 +48,7 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 
 <tip-box>
 
-{{ icon_example }} Two inheritance hierarchies/trees are given below. Note that `Parrot` _is a_ `Bird` as well as it _is an_ `Animal`. Note that the triangle points to the parent class. 
+{{ icon_example }} Two inheritance hierarchies/trees are given below. %%Note that the triangle points to the parent class.%% Observe how the `Parrot` _is a_ `Bird` as well as it _is an_ `Animal`.
 
 <img src="{{baseUrl}}/oop/inheritance/what/images/inheritanceTreesExamples.png" width="500" />
 <p/>
@@ -63,8 +59,9 @@ Inheritance does not necessarily mean a sub-type relationship exists. However, t
 
 <tip-box>
 
-{{ icon_example }} The `Honey` class inherits from the `Food` class _and_ the `Medicine` class %%because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)%%.
+{{ icon_example }} The `Honey` class inherits from the `Food` class _and_ the `Medicine` class %%because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)%%. Similarly, a `Car` is an `Vehicle`, an `Asset` and a `Liability`.
 
+<img src="{{baseUrl}}/oop/inheritance/what/images/multipleInheritanceExamples.png" width="440" />
 
 </tip-box>
 
