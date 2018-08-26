@@ -179,6 +179,55 @@ Some more comparison-related `String` methods:
 * `endsWith`: checks if one string has the other as a substring at the _end_ e.g., `Crab` and `ab`
 </div>
 
+##### Printing special characters (line breaks, tabs, ...)
+<div class="indented">
+
+You can embed a special character %%e.g., line break, tab, backspace, etc.%% in a string using an _escape sequence_.
+
+Escape sequence | meaning
+----------------|--------
+`\n`     | newline character
+`\t`     | tab character
+`\b`     | backspace character
+`\f`     | form feed character
+`\r`     | carriage return character
+`\"`     | " (double quote) character
+`\'`     | ' (single quote) character
+`\\`     | \ (back slash) character
+`\uDDDD` |character from the Unicode character set, by specifying the Unicode as four hex digits in the place of `DDDD`
+
+<box>
+
+{{ icon_example }} An example of using escape sequences to printing some special characters.
+
+```java
+System.out.println("First line\nSecond \"line\"");
+```
+{{ icon_output }}
+```
+First line
+Second "line"
+```
+</box>
+
+:bulb: As the behavior of the `\n` depends on the platform, the recommended way to print a line break is using the `System.lineSeparator()` as it works the same in all platforms.
+
+<box>
+
+{{ icon_example }} Using `System.lineSeparator()` to print a line break.
+
+```java
+System.out.println("First line" + System.lineSeparator() + "Second line");
+```
+{{ icon_output }}
+```
+First line
+Second line
+```
+</box>
+
+</div>
+
 ##### String formatting
 <div class="indented">
 
