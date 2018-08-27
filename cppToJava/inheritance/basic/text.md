@@ -141,11 +141,11 @@ Note: If a constructor does not explicitly invoke a superclass constructor, the 
 
 There are two levels of access control:
 
-1. **At the class level—`public`:
+1. **At the class level**:
    * **`public`**: the class is visible to all classes everywhere
    * **no modifier (the default, also known as _package-private_)**: it is visible only within its own package<br><br>
 
-2. **At the member level—`public`, `private`, `protected`, or _package-private_ (no explicit modifier)**:<br>
+2. **At the member level**:
    * **`public`** or **no modifier (_package-private_)**: same meaning as when used with top-level classes
    * **`private`**: the member can only be accessed in its own class
    * **`protected`**: the member can only be accessed within its own package (as with package-private) and, in addition, by a subclass of its class in another package
@@ -155,11 +155,11 @@ The following table shows the access to members permitted by each modifier.
 <div class="indented">
 
 Modifier |	<tooltip content="whether the class itself has access to the member defined by the access level">Class</tooltip> |	<tooltip content="whether classes in the same package as the class (regardless of their parentage) have access to the member">Package</tooltip> |	<tooltip content="whether subclasses of the class declared outside this package have access to the member">Subclass</tooltip> |	<tooltip content="whether all classes have access to the member">World</tooltip>
----------|-------|---------|----------|------
-public	     | {{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_tick_green }}
-protected	  | {{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_x_red }}
-no modifier	| {{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_x_red }}      |	{{ icon_x_red }}
-private	    | {{ icon_tick_green }} |	{{ icon_x_red }}      |	{{ icon_x_red }}      |	{{ icon_x_red }}
+--------------|-----------------------|-----------------------|-----------------------|----------------------
+`public`	     | {{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_tick_green }}
+`protected`	  | {{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_x_red }}
+no modifier	  | {{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_x_red }}      |	{{ icon_x_red }}
+`private`	    | {{ icon_tick_green }} |	{{ icon_x_red }}      |	{{ icon_x_red }}      |	{{ icon_x_red }}
 
 </div>
 
