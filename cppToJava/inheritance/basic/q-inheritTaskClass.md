@@ -3,7 +3,7 @@
 
 Background: Suppose we are creating a software to manage various tasks a person has to do. Two types of such tasks are,
 * _Todos_: i.e., things that needs to be done some day %%e.g., 'Read the book Lord of the Rings'%%
-* _Deadlines_: i.e., things to be done by a specific date/time %%e.g., Read the text book by Nov 25th%%
+* _Deadlines_: i.e., things to be done by a specific date/time %%e.g., 'Read the text book by Nov 25th'%%
 
 The `Task` class is given below:
 

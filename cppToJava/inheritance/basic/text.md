@@ -26,7 +26,7 @@ Given below is an extract from the {{ oracle }}, with slight adaptations.
 
 <box>
 
-{{ icon_example }} Here is the sample code for a possible implementation of a `Bicycle class` and a `MountainBike` class that is a subclass of the `Bicycle`:
+{{ icon_example }} Here is the sample code for a possible implementation of a `Bicycle` class and a `MountainBike` class that is a subclass of the `Bicycle`:
 
 ```java
 public class Bicycle {
@@ -112,14 +112,14 @@ Printed in Superclass.
 Printed in Subclass
 ```
 
-Within `Subclass`, the simple name `printMethod()` refers to the one declared in `Subclass`, which overrides the one in `Superclass`. So, to refer to `printMethod()` inherited from `Superclass`, `Subclass` must use a qualified name, using super as shown. Compiling and executing `Subclass` prints the following:
+Within `Subclass`, the simple name `printMethod()` refers to the one declared in `Subclass`, which overrides the one in `Superclass`. So, to refer to `printMethod()` inherited from `Superclass`, `Subclass` must use a qualified name, using `super` as shown. Compiling and executing `Subclass` prints the following:
 
 </box>
 
 ##### Subclass Constructors
 
 **A subclass constructor can invoke the superclass constructor.** Invocation of a superclass constructor must be the first line in the subclass constructor.
-The syntax for calling a superclass constructor is `super();` or `super(parameter list);` With `super()`, the superclass no-argument constructor is called. With `super(parameter list)`, the superclass constructor with a matching parameter list is called.
+The syntax for calling a superclass constructor is `super()` %%(which invokes the no-argument constructor of the superclass)%% or `super(parameter list)` %%(to invoke the superclass constructor with a matching parameter list)%%.
 
 <box>
 
@@ -141,14 +141,14 @@ Note: If a constructor does not explicitly invoke a superclass constructor, the 
 
 There are two levels of access control:
 
-1. **At the class level—`public`, or _package-private_ (no explicit modifier)**:<br>
-   * `public`: the class is visible to all classes everywhere
-   * no modifier (the default, also known as _package-private_): it is visible only within its own package (packages are named groups of related classes)<br><br>
+1. **At the class level—`public`:
+   * **`public`**: the class is visible to all classes everywhere
+   * **no modifier (the default, also known as _package-private_)**: it is visible only within its own package<br><br>
 
 2. **At the member level—`public`, `private`, `protected`, or _package-private_ (no explicit modifier)**:<br>
-   At this level, you can also use the `public` modifier or no modifier (_package-private_) just as with top-level classes, and with the same meaning. In addition, you can use `private` and `protected`.
-   * `private`: the member can only be accessed in its own class
-   * `protected`: the member can only be accessed within its own package (as with package-private) and, in addition, by a subclass of its class in another package
+   * **`public`** or **no modifier (_package-private_)**: same meaning as when used with top-level classes
+   * **`private`**: the member can only be accessed in its own class
+   * **`protected`**: the member can only be accessed within its own package (as with package-private) and, in addition, by a subclass of its class in another package
 
 The following table shows the access to members permitted by each modifier.
 

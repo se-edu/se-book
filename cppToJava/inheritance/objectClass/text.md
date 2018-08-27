@@ -41,7 +41,7 @@ class Time {
 
 </box>
 
-**You can override the `toString` method in your classes** to provide more meaningful string representation of the objects of that class.
+**You can override the `toString` method in your classes** to provide a more meaningful string representation of the objects of that class.
 
 <box>
 
@@ -72,7 +72,7 @@ class Time{
 ##### The `equals` method
 <div class="indented">
 
-**There two ways to check whether values are equal: the `==` operator and the `equals` method. With objects you can use either one, but they are not the same.**
+**There are two ways to check whether values are equal: the `==` operator and the `equals` method. With objects you can use either one, but they are not the same.**
 * The `==` operator checks whether objects are identical; that is, whether they are the same object.
 * The `equals` method checks whether they are equivalent; that is, whether they have the same value.
 
