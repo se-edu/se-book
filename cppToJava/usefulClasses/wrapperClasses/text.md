@@ -24,6 +24,24 @@ System.out.println(i.equals(5));  // compiler error
 
 But **for each primitive type, there is a corresponding class in the Java library, called a _wrapper class_**. The wrapper class for `char` is called `Character`; for `int` it’s called `Integer`. Other wrapper classes include `Boolean`, `Long`, and `Double`. They are in the `java.lang` package, so you can use them without importing them.
 
+<box>
+
+{{ icon_example }}
+
+```java
+Double d = new Double(2.5);
+int i = d.intValue();
+System.out.println(d);
+System.out.println(i);
+```
+{{ icon_output }}
+```
+2.5
+2
+```
+
+</box>
+
 Each wrapper class defines constants `MIN_VALUE` and `MAX_VALUE`. Because these constants are available in wrapper classes, you don’t have to remember them, and you don’t have to include them in your programs.
 
 <box>
