@@ -18,9 +18,9 @@ As a user, I can login to the system ~~so that I can access my data~~
 
 </tip-box>
 
-:exclamation: It is recommended to confirm there is a concrete benefit even if you omit it from the user story. If not, we could end up adding features that have no real benefit.
+:bulb: It is recommended to confirm there is a concrete benefit even if you omit it from the user story. If not, you could end up adding features that have no real benefit.
 
-We can add more characteristics to the `{user role}` to provide more context to the user story.
+You can add more characteristics to the `{user role}` to provide more context to the user story.
 
 <tip-box>
 
@@ -29,7 +29,7 @@ We can add more characteristics to the `{user role}` to provide more context to 
 
 </tip-box>
 
-**We can write user stories at various levels**. High-level user stories, called ==_epics_== (or _themes_) cover bigger functionality. We can then break down these epics to multiple user stories of normal size.
+**You can write user stories at various levels**. High-level user stories, called ==_epics_== (or _themes_) cover bigger functionality. You can then break down these epics to multiple user stories of normal size.
 
 <tip-box>
 
@@ -43,7 +43,7 @@ We can add more characteristics to the `{user role}` to provide more context to 
 
 </tip-box>
 
-**We can add _conditions of satisfaction_ to a user story** to specify things that need to be true for the user story implementation to be accepted as ‘done’.
+**You can add _conditions of satisfaction_ to a user story** to specify things that need to be true for the user story implementation to be accepted as ‘done’.
 
 <tip-box>
 

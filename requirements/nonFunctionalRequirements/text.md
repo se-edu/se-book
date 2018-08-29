@@ -38,7 +38,9 @@ There are two kinds of requirements:
 </tip-box>
 
 
-We should spend extra effort in digging NFRs out as early as possible because **NFRs are easier to miss** %%&nbsp;e.g., stakeholders tend to think of functional requirements first%% and sometimes **they are critical to the success of the software.** %%&nbsp;E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.%%
+We may have to spend an extra effort in digging NFRs out as early as possible because,
+1. **NFRs are easier to miss** %%&nbsp;e.g., stakeholders tend to think of functional requirements first%%
+1. sometimes **NFRs are critical to the success of the software.** %%&nbsp;E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.%%
 
 </div>
 

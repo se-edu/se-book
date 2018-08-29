@@ -24,9 +24,9 @@
 
 {{ icon_example }} Examples (from a _Learning Management System_):
 
-1. As a student, I can download files uploaded by lecturers, so that I can get my own copy of the files
-2. As a lecturer, I can create discussion forums, so that students can discuss things online
-3. As a tutor, I can print attendance sheets, so that I can take attendance during the class
+1. %%As a%% student, %%I can%% download files uploaded by lecturers, %%so that%% I can get my own copy of the files
+2. %%As a%% lecturer, %%I can%% create discussion forums, %%so that%% students can discuss things online
+3. %%As a%% tutor, %%I can%% print attendance sheets, %%so that%% I can take attendance during the class
 
 </tip-box>
 

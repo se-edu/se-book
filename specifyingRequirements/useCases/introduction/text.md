@@ -18,7 +18,7 @@
 
 <tip-box> 
 
-<panel header="{{ icon_example }} Example 1: ‘check account balance’ use case for an ATM" type="seamless" expanded>
+<panel header="{{ icon_example }} Example 1: 'check account balance' use case for an ATM" type="seamless" expanded>
 
 * System: <popover effect="fade" placement="right" content="Automated Teller Machine">
 ATM </popover>
@@ -59,7 +59,7 @@ ATM </popover>
 
 <p/>
 
-<img src="{{baseUrl}}/specifyingRequirements/useCases/introduction/images/ticketMachine.png" height="250" />
+<img src="{{baseUrl}}/specifyingRequirements/useCases/introduction/images/ticketMachine.png" width="300" />
 
 <p/>
 

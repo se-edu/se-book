@@ -67,4 +67,4 @@ Also note that it is not useful to mention events such as power failures or syst
 
 <p/>
 
-In use case diagrams you can use the `<< extend >>` arrows to show extensions. Note the direction of the arrow is from the extension to the use case it extends and the arrow uses a dashed line.
+In use case diagrams you can use the `<<extend>>` arrows to show extensions. Note the direction of the arrow is from the extension to the use case it extends and the arrow uses a dashed line.

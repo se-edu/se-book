@@ -82,14 +82,11 @@ A use case is an interaction between a system and its _actors_.
 
 </tip-box>
 
-<tip-box type="warning">
 
-While modeling user-system interactions,
+:bulb: While modeling user-system interactions,
+* Start with high level use cases and progressively work toward lower level use cases.
+* Be mindful at which level of details you are working on and not to mix use cases of different levels.
 
-:bulb: Start with high level use cases and progressively work toward lower level use cases. <p/>
-:bulb: Be mindful at which level of details you are working on and not to mix use cases of different levels.
-
-</tip-box>
 
 </div>
 
