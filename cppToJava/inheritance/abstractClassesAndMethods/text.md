@@ -10,89 +10,82 @@
 
 <div id="body">
 
-Given below is an extract from the {{ oracle }}, with slight adaptations.
 
-<blockquote>
+**An _abstract method_ is a method that is declared without an implementation (without braces, and followed by a semicolon)**. Use an abstract method when you want to specify a method signature but not the implementation. If a class includes abstract methods, then the class itself must be declared abstract. Use the keyword `abstract` to indicate whether a class or a method is abstract.
 
-* An _abstract class_ is a class that is declared `abstract`—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.
-* An _abstract method_ is a method that is declared without an implementation (without braces, and followed by a semicolon), like this:<br>
-  `abstract void moveTo(double deltaX, double deltaY);`
+<box>
 
-If a class includes abstract methods, then the class itself must be declared abstract, as in:
+{{ icon_example }} The `speak` method in this `Animal` class is `abstract`. Note how the method signature ends with a semicolon and there is no method body. This makes sense as the implementation of the speak method depends on the type of the animal and it is meaningless to provide a common implementation for all animal types.
 
 ```java
-public abstract class GraphicObject {
-   // declare fields
-   // declare nonabstract methods
-   abstract void draw();
+public abstract class Animal {
+
+    protected String name;
+
+    public Animal(String name){
+        this.name = name;
+    }
+    public abstract String speak();
 }
 ```
+As one method of the class is `abstract`, the class itself is `abstract`.
 
-When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class. However, if it does not, then the subclass must also be declared abstract.
+</box>
 
-In an object-oriented drawing application, you can draw circles, rectangles, lines, Bezier curves, and many other graphic objects. These objects all have certain states (for example: position, orientation, line color, fill color) and behaviors (for example: moveTo, rotate, resize, draw) in common. Some of these states and behaviors are the same for all graphic objects (for example: position, fill color, and moveTo). Others require different implementations (for example, resize or draw). All `GraphicObjects` must be able to draw or resize themselves; they just differ in how they do it. This is a perfect situation for an abstract superclass. You can take advantage of the similarities and declare all the graphic objects to inherit from the same abstract parent object (for example, `GraphicObject`). Classes `Rectangle`, `Line`, `Bezier`, and `Circle` inherit from `GraphicObject`.
+**An _abstract class_ is a class that is declared `abstract`—it may or may not include abstract methods. Abstract classes can be used a reference type but cannot be instantiated.**
 
-First, you declare an abstract class, `GraphicObject`, to provide member variables and methods that are wholly shared by all subclasses, such as the current position and the `moveTo` method. `GraphicObject` also declares abstract methods for methods, such as draw or resize, that need to be implemented by all subclasses but must be implemented in different ways. The `GraphicObject` class can look something like this:
+<box>
 
-```java
-abstract class GraphicObject {
-    int x, y;
-    ...
-    void moveTo(int newX, int newY) {
-        ...
-    }
-    abstract void draw();
-    abstract void resize();
-}
-```
-
-Each subclass of `GraphicObject`, such as `Circle` and `Rectangle`, must provide implementations for the `draw` and `resize` methods or else must be declared `abstract` themselves:
-
-```java
-class Circle extends GraphicObject {
-    void draw() {
-        ...
-    }
-    void resize() {
-        ...
-    }
-}
-
-abstract class Rectangle extends GraphicObject {
-    void draw() {
-        ...
-    }
-}
-```
-
-The `Rectangle` class above is abstract because it does not provide an implementation for the `resize` method.
-
-</blockquote>
-
-<panel type="seamless" header="{{ icon_example }} Another example of an abstract class" minimized>
+{{ icon_example }} This `Account` class has been declared as abstract although it does not have any abstract methods. Attempting to instantiate `Account` objects will result in a compile error.
 
 ```java
 abstract class Account {
 
     int number;
 
-    abstract void addInterest();
-
     void close(){
         //...
     }
 }
+```
+`Account a;` {{ icon_output_right }} {{ icon_tick_green }}<br> OK to use as a type
+`a = new Account();` {{ icon_output_right }} {{ icon_x_red }} Compile error!
 
-class CurrentAccount extends Account{
+</box>
+
+**When an abstract class is subclassed, the subclass should provides implementations for all of the abstract methods in its parent class or else the subclass must also be declared abstract.**
+
+<box>
+
+{{ icon_example }} The `Feline` class below inherits from the abstract class `Animal` but it does not provide an implementation for the abstract method `speak`. As a result, the `Feline` class needs to be abstract too.
+
+```java
+public abstract class Feline extends Animal {
+    public Feline(String name) {
+        super(name);
+    }
+
+}
+```
+The `DomesticCat` class inherits the abstract `Feline` class and provides the implementation for the abstract method `speak`. As a result, it need not be declared abstract.
+```java
+public class DomesticCat extends Feline {
+    public DomesticCat(String name) {
+        super(name);
+    }
 
     @Override
-    void addInterest() {
-        //...
+    public String speak() {
+        return "Meow";
     }
 }
 ```
-</panel>
 
+`Animal a = new Feline("Mittens");` {{ icon_output_right }} {{ icon_x_red }} Compile error! `Feline` is abstract.
+
+`Animal a = new DomesticCat("Mittens");` {{ icon_output_right }} {{ icon_tick_green }} OK. `DomesticCat` can be instantiated and assigned to a variable of `Animal` type %%(the assignment is allowed by polymorphism)%%.
+
+</box>
 
 </div>
 
