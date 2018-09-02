@@ -15,9 +15,12 @@ footer: footer.md
 
 <div id="def-abstractClass">
 
-**Abstract Class**:
+**Abstract Class**: A class declared as an _abstract class_ cannot be instantiated, but they can be subclassed.
 
-An _abstract class_ is a class that is declared `abstract`—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed. <sub>-- [Oracle's Java Documentation](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)</sub>
+</div>
+<div id="def-abstractMethod">
+
+**Abstract Method**: An _abstract method_ is a method signature without a method implementation.
 
 </div>
 
