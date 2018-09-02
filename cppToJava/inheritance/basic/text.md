@@ -135,37 +135,21 @@ public MountainBike(int startHeight, int startSpeed, int startGear) {
 
 Note: If a constructor does not explicitly invoke a superclass constructor, the Java compiler automatically inserts a call to the no-argument constructor of the superclass. If the superclass does not have a no-argument constructor, you will get a compile-time error. `Object` does have such a constructor, so if `Object` is the only superclass, there is no problem.
 
-##### Access Modifiers
+##### Access Modifiers (simplified)
 
-**Access level modifiers determine whether other classes can use a particular field or invoke a particular method.**
+**Access level modifiers determine whether other classes can use a particular field or invoke a particular method.** Given below is a simplified version of Java access modifiers, ==assuming you have not yet started placing your classes in different packages== i.e., all classes are places in the root level. A full explanation of access modifiers is given in a later topic.
 
 There are two levels of access control:
 
 1. **At the class level**:
-   * **`public`**: the class is visible to all classes everywhere
-   * **no modifier (the default, also known as _package-private_)**: it is visible only within its own package<br><br>
+   * **`public`**: the class is visible to all other classes
+   * **no modifier**: same as `public`<br><br>
 
 2. **At the member level**:
-   * **`public`** or **no modifier (_package-private_)**: same meaning as when used with top-level classes
+   * **`public`** : the class is visible to all other classes
+   * **no modifier**: same as `public`
+   * **`protected`**: same as `public`
    * **`private`**: the member can only be accessed in its own class
-   * **`protected`**: the member can only be accessed within its own package (as with package-private) and, in addition, by a subclass of its class in another package
-
-The following table shows the access to members permitted by each modifier.
-
-<div class="indented">
-
-Modifier |	<tooltip content="whether the class itself has access to the member defined by the access level">Class</tooltip> |	<tooltip content="whether classes in the same package as the class (regardless of their parentage) have access to the member">Package</tooltip> |	<tooltip content="whether subclasses of the class declared outside this package have access to the member">Subclass</tooltip> |	<tooltip content="whether all classes have access to the member">World</tooltip>
---------------|-----------------------|-----------------------|-----------------------|----------------------
-`public`	     | {{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_tick_green }}
-`protected`	  | {{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_x_red }}
-no modifier	  | {{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_x_red }}      |	{{ icon_x_red }}
-`private`	    | {{ icon_tick_green }} |	{{ icon_x_red }}      |	{{ icon_x_red }}      |	{{ icon_x_red }}
-
-</div>
-
-Access levels affect you in two ways:
-1. When you use classes that come from another source, such as the classes in the Java platform, access levels determine which members of those classes your own classes can use.
-1. When you write a class, you need to decide what access level every member variable and every method in your class should have.
 
 </div>
 

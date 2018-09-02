@@ -84,7 +84,11 @@ Furthermore, **Java allows multiple inheritance among interfaces.** A Java inter
 
 </box>
 
-**Interfaces can also contain constants and static methods**.
+**Interfaces can also contain <trigger trigger="click" for="modal:javaInterfaces-constants">constants</trigger> and static methods**.
+
+<modal large title="%%Textbook »%%" id="modal:javaInterfaces-constants">
+  <include src="../../misc/constants/unit-inElsewhere-asFlat.md" boilerplate/>
+</modal>
 
 <box>
 
