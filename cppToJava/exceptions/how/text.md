@@ -9,74 +9,117 @@
 <span id="outcomes">{{ icon_outcome }} Can use Java Exceptions</span>
 
 <div id="body">
+The content below uses extracts from the {{ oracle }}, with some adaptations.
 
-{{ icon_example }} In the code given below, `processArray` can potentially throw an `InvalidInputException`. Because of that, `processInput` method invokes `processArray` method inside a `try{  }` block and has a `catch{  }` block to specify what to do if the exception is actually thrown.
+**A program can catch exceptions by using a combination of the `try`, `catch` blocks.**
+* The `try` block identifies a block of code in which an exception can occur.
+* The `catch` block identifies a block of code, known as an exception handler, that can handle a particular type of exception.
 
-<img src="{{baseUrl}}/errorHandling/exceptions/how/images/processInput.png" width="400" />
-<p/>
+<box>
 
-Given below is an extract from the {{ oracle }}, with slight adaptations.
-
-<div class="indented">
-
-**A program can catch exceptions by using a combination of the `try`, `catch`, and `finally` blocks.** Here is an example:
+{{ icon_example }} The `writeList()` method below calls a method `process()` that can cause two type of exceptions. It uses a try-catch construct to deal with each exception.
 
 ```java
 public void writeList() {
-    PrintWriter out = null;
-
+    print("starting method");
     try {
-        System.out.println("Entering" + " try statement");
+        print("starting process");
+        process();
+        print("finishing process");
 
-        out = new PrintWriter(new FileWriter("OutFile.txt"));
-        for (int i = 0; i < SIZE; i++) {
-            out.println("Value at: " + i + " = " + list.get(i));
-        }
     } catch (IndexOutOfBoundsException e) {
-        System.err.println("Caught IndexOutOfBoundsException: " + e.getMessage());
+        print("caught IOOBE");
 
     } catch (IOException e) {
-        System.err.println("Caught IOException: " +  e.getMessage());
+        print("caught IOE");
 
-    } finally {
-        if (out != null) {
-            System.out.println("Closing PrintWriter");
-            out.close();
-        } else {
-            System.out.println("PrintWriter not open");
-        }
     }
+    print("finishing method");
 }
 ```
+Some possible outputs:
+No exceptions {{ icon_output }} | `IOException` {{ icon_output }} | `IndexOutOfBoundsException` {{ icon_output }}
+--------------------------------|---------------------------------|-----------------------------------------------
+<span class="text-monospace">starting method<br>starting process<br>finishing process<br>finishing method</span> | <span class="text-monospace">starting method<br>starting process<br>~~finishing process~~<br>==caught IOE==<br>finishing method </span>| <span class="text-monospace">starting method<br>starting process<br>~~finishing process~~<br>==caught IOOBE==<br>finishing method</span>
 
-* The `try` block identifies a block of code in which an exception can occur.
-* The `catch` block identifies a block of code, known as an exception handler, that can handle a particular type of exception.
-* The `finally` block identifies a block of code that is guaranteed to execute, and is the right place to close files, recover resources, and otherwise clean up after the code enclosed in the try block.
+
+</box>
+
+You can **use a `finally` block to specify code that is guaranteed to execute with or without the exception.** This is the right place to close files, recover resources, and otherwise clean up after the code enclosed in the `try` block.
+
+{{ icon_example }} The `writeList()` method below has a `finally` block that will run
+
+```java
+public void writeList() {
+    print("starting method");
+    try {
+        print("starting process");
+        process();
+        print("finishing process");
+
+    } catch (IndexOutOfBoundsException e) {
+        print("caught IOOBE");
+
+    } catch (IOException e) {
+        print("caught IOE");
+
+    } finally {
+        // clean up
+        print("cleaning up");
+    }
+    print("finishing method");
+}
+```
+Some possible outputs:
+No exceptions {{ icon_output }} | `IOException` {{ icon_output }} | `IndexOutOfBoundsException` {{ icon_output }}
+--------------------------------|---------------------------------|-----------------------------------------------
+<span class="text-monospace">starting method<br>starting process<br>finishing process<br>==cleaning up==<br>finishing method</span> | <span class="text-monospace">starting method<br>starting process<br>~~finishing process~~<br>caught IOE<br>==cleaning up==<br>finishing method </span>| <span class="text-monospace">starting method<br>starting process<br>~~finishing process~~<br>caught IOOBE<br>==cleaning up==<br>finishing method</span>
+
+</box>
+
+
 * The `try` statement should contain at least one `catch` block or a finally block and may have multiple `catch` blocks.
 
 * The class of the exception object indicates the type of exception thrown. The exception object can contain further information about the error, including an error message.
 
-**You can use the `throw` statement to throw an exception.** The throw statement requires a single argument: a throwable object. Throwable objects are instances of any subclass of the `Throwable` class. Here's an example of a throw statement.
+**You can use the `throw` statement to throw an exception.** The throw statement requires a <tooltip content="Throwable objects are instances of any subclass of the `Throwable` class.">throwable</tooltip> object as the argument.
+
+<box>
+
+{{ icon_example }} Here's an example of a `throw` statement.
 
 ```java
 if (size == 0) {
     throw new EmptyStackException();
 }
 ```
+</box>
 
-**If the a method doesn't catch the checked exceptions that can occur within it, it must specify that it can throw these exceptions** using a `throws` clause. Here's an example.
+In Java, **Checked exceptions are subject to the _Catch or Specify Requirement_**: code that might throw checked exceptions must be enclosed by either of the following:
+* A `try` statement that catches the exception. The `try` must provide a handler for the exception.
+* A method that specifies that it can throw the exception. The method must provide a `throws` clause that lists the exception.
+
+Unchecked exceptions are not required to follow to the _Catch or Specify Requirement_ but you can apply the requirement to them too.
+
+<box>
+
+{{ icon_example }} Here's an example of a method specifying that it throws certain checked exceptions:
 
 ```java
 public void writeList() throws IOException, IndexOutOfBoundsException {
-    PrintWriter out = new PrintWriter(new FileWriter("OutFile.txt"));
-    for (int i = 0; i < SIZE; i++) {
-        out.println("Value at: " + i + " = " + list.get(i));
-    }
-    out.close();
+    print("starting method");
+    process();
+    print("finishing method");
 }
 ```
+    Some possible outputs:
+No exceptions {{ icon_output }} | `IOException` {{ icon_output }} | `IndexOutOfBoundsException` {{ icon_output }}
+--------------------------------|---------------------------------|-----------------------------------------------
+<span class="text-monospace">starting method<br>finishing method</span> | <span class="text-monospace">starting method<br>~~finishing method~~</span>| <span class="text-monospace">starting method<br>~~finishing method~~</span>
 
-</div>
+</box>
+
+**Java comes with a collection of [built-in exception classes](https://www.geeksforgeeks.org/built-exceptions-java-examples/)** that you can use. When they are not enough, **it is possible to [create your own exception classes](https://www.javatpoint.com/custom-exception)**.
 
 </div>
 
