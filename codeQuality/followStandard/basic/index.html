@@ -49,13 +49,63 @@
           </div>
           <div id="main">
             <div>
-              <p>Some coding standards you can adopt:</p>
-              <ul>
-                <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html"><strong>Java</strong> coding standard -- by OSS-Generic</a></li>
-                <li><a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 <strong>Python</strong> Style Guide -- by Python.org</a></li>
-              </ul>
+              <div class="alt-java">
+                <p>Learn <em>basic</em> guidelines of the <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html"><strong>Java</strong> coding standard (by OSS-Generic)</a></p>
+              </div>
+              <div class="alt-python">
+                <p>Sample coding standard: <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 <strong>Python</strong> Style Guide -- by Python.org</a></p>
+              </div>
             </div>
-            <div></div>
+            <div>
+              <div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find basic coding standard violations">
+                        <question>
+                          <p>Consider the code given below:</p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.*;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;
+    <span class="hljs-keyword">private</span> String description;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;
+    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{
+      <span class="hljs-keyword">this</span>.description = d;
+      <span class="hljs-keyword">if</span> (!d.isEmpty())
+          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }
+
+    <span class="hljs-comment">/**
+     * Print the description as a string.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }
+}
+</code></pre>
+                          <p>In what ways the code violate the <em>basic</em> guidelines (i.e., those marked with one ⭐️) of the OSS-Generic Java Coding Standard given <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html">here</a>?</p>
+                          <div slot="hint">
+                            <p>Here are three:</p>
+                            <ul>
+                              <li><code>descriptionPrefix</code> is a constant and should be named <code>DESCRIPTION_PREFIX</code></li>
+                              <li>method name <code>printingDescription()</code> should be named as <code>printDescription()</code></li>
+                              <li>boolean variable <code>important</code> should be named to sound boolean e.g., <code>isImportant</code></li>
+                            </ul>
+                            <p>There are many more.</p>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </panel>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -65,7 +115,7 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
 </footer>
 </div>
 </body>

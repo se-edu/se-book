@@ -14,11 +14,14 @@
 
 <tip-box>
 
-{{ icon_example }} In a case where `EvaluationReport` class inherits the `Report` class, 
-* `Report#print()` method is overridden by `EvaluationReport#print()` method.
-* `Report#write(String)` method is overridden by `EvaluationReport#write(String)` method.
-* `Report#read():String` method is **NOT** overridden by `EvaluationReport#read(int):String` method. %%&nbsp;Reason: the two methods have different signatures; `EvaluationReport#read(int):String` <trigger trigger="click" for="modal:overriding-overloading"> _overloads_ </trigger> (rather than overrides) the `Report#read():String` method.%%
- 
+{{ icon_example }} Consider the following case of `EvaluationReport` class inheriting the `Report` class:
+
+`Report` methods | `EvaluationReport` methods | Overrides?
+-----------------|----------------------------|-----------
+`print()`        |`print()`                   | Yes
+`write(String)`  |`write(String)`             | Yes
+`read():String`  |`read(int):String`          | No. %%&nbsp;Reason: the two methods have different signatures; This is a case of <trigger trigger="click" for="modal:overriding-overloading"> _overloading_ </trigger> (rather than overriding).%%
+
 <modal title="**Overloading**" id="modal:overriding-overloading">
   <include src="../overloading/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>

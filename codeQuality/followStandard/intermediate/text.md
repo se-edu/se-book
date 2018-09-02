@@ -16,6 +16,6 @@ Go through the [provided Java coding standard]({{java_coding_standard}}) and lea
 
 <div id="extras">
 
-<include src="exercises.md" />
+<include src="exercisesPanel.md" boilerplate />
 
 </div>

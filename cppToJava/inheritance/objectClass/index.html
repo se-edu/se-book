@@ -30,7 +30,7 @@
   <div>
     <link rel="stylesheet" href="/se-book/css/textbook.css">
     <div class="website-content">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use Obect class</span>
+      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use Object class</span>
         </span>
         </span>
         </span>
@@ -49,57 +49,229 @@
           </div>
           <div id="main">
             <div>
+              <p>As you know, all Java objects inherit from the <code>Object</code> class. Let us look at some of the useful methods in the <code>Object</code> class that can be used by other classes.</p>
               <h5 id="the-tostring-method">The <code>toString</code> method</h5>
               <div class="indented">
-                <p>Suppose you defined a class called <code>Time</code>, to represent a moment in time. If you create a <code>Time</code> object and display it with println:</p>
-                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-    Time time = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">11</span>, <span class="hljs-number">59</span>, <span class="hljs-number">59.9</span>);
-    System.out.println(time);
+                <p><strong>Every class inherits a <code>toString</code> method from the <code>Object</code> class that is used by Java to get a string representation of the object</strong> <span class="dimmed">e.g., for printing</span>. By default it simply
+                  returns the type of the object and its address (in hexadecimal).</p>
+                <box>
+                  <p><span class="fas fa-cube"></span> Suppose you defined a class called <code>Time</code>, to represent a moment in time. If you create a <code>Time</code> object and display it with println:</p>
+                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span> </span>{
+    <span class="hljs-keyword">int</span> hours;
+    <span class="hljs-keyword">int</span> minutes;
+    <span class="hljs-keyword">int</span> seconds;
+
+    Time(<span class="hljs-keyword">int</span> hours, <span class="hljs-keyword">int</span> minutes, <span class="hljs-keyword">int</span> seconds) {
+        <span class="hljs-keyword">this</span>.hours = hours;
+        <span class="hljs-keyword">this</span>.minutes = minutes;
+        <span class="hljs-keyword">this</span>.seconds = seconds;
+    }
 }
 </code></pre>
-                <p>The output will look something like: <code>Time@80cc7c0</code></p>
-                <p>When Java displays the value of an object type, it displays the name of the type and the address of the object (in hexadecimal).</p>
-                <p><strong>Every object type has a method called <code>toString</code> that returns a string representation of the object.</strong> By default it simply displays the type of the object and its address, but you can override this behavior by
-                  providing your own toString <a href="http://method.To">method.To</a> display <code>Time</code> objects in a way that is more meaningful to users (e.g., to display the hour, minute, and second), you can override that method in the <code>Time</code>                  class. Reason: when you display an object using <code>print</code> or <code>println</code>, Java invokes the object’s <code>toString</code> method.</p>
-                <p>For example, here is a toString method for Time:</p>
-                <pre><code class="hljs java"><span class="hljs-meta">@Override</span>
-<span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">"%02d:%02d:%04.1f\n"</span>,
-        <span class="hljs-keyword">this</span>.hour, <span class="hljs-keyword">this</span>.minute, <span class="hljs-keyword">this</span>.second);
+                  <pre><code class="hljs java"> Time t = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);
+ System.out.println(t);
+</code></pre>
+                  <p><span class="fas fa-arrow-right"></span> <code>Time@80cc7c0</code> <span class="dimmed">(the address part can vary)</span></p>
+                </box>
+                <p><strong>You can override the <code>toString</code> method in your classes</strong> to provide a more meaningful string representation of the objects of that class.</p>
+                <box>
+                  <p><span class="fas fa-cube"></span> Here's an example of overriding the <code>toString</code> method of the <code>Time</code> class:</p>
+                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span></span>{
+
+   <span class="hljs-comment">//...</span>
+
+   <span class="hljs-meta">@Override</span>
+   <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+       <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">"%02d:%02d:%02d\n"</span>, <span class="hljs-keyword">this</span>.hours, <span class="hljs-keyword">this</span>.minutes, <span class="hljs-keyword">this</span>.seconds);
+   }
 }
 </code></pre>
+                  <pre><code class="hljs java"> Time t = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);
+ System.out.println(t);
+</code></pre>
+                  <p><span class="fas fa-arrow-right"></span> <code>05:20:13</code></p>
+                </box>
                 <p>💡 <code>@Override</code> is an optional annotation you can use to indicate that the method is overriding a method from the parent class.</p>
               </div>
               <h5 id="the-equals-method">The <code>equals</code> method</h5>
               <div class="indented">
-                <p>We have seen two ways to check whether values are equal: the <code>==</code> operator and the <code>equals</code> method. With objects you can use either one, but they are not the same.</p>
+                <p><strong>There are two ways to check whether values are equal: the <code>==</code> operator and the <code>equals</code> method. With objects you can use either one, but they are not the same.</strong></p>
                 <ul>
                   <li>The <code>==</code> operator checks whether objects are identical; that is, whether they are the same object.</li>
                   <li>The <code>equals</code> method checks whether they are equivalent; that is, whether they have the same value.</li>
                 </ul>
-                <p>The definition of identity is always the same, so the <code>==</code> operator always does the same thing. But the definition of equivalence is different for different objects, so objects can define their own <code>equals</code> methods.
-                  Consider the following variables:</p>
-                <pre><code class="hljs java">Time time1 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">9</span>, <span class="hljs-number">30</span>, <span class="hljs-number">0.0</span>);
+                <p>The definition of identity is always the same, so the <code>==</code> operator always does the same thing.</p>
+                <box>
+                  <p><span class="fas fa-cube"></span> Consider the following variables:</p>
+                  <pre><code class="hljs java">Time time1 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">9</span>, <span class="hljs-number">30</span>, <span class="hljs-number">0</span>);
 Time time2 = time1;
-Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">9</span>, <span class="hljs-number">30</span>, <span class="hljs-number">0.0</span>);
+Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">9</span>, <span class="hljs-number">30</span>, <span class="hljs-number">0</span>);
 </code></pre>
-                <ul>
-                  <li>The assignment operator copies references, so <code>time1</code> and <code>time2</code> refer to the same object. Because they are identical, <code>time1 == time2</code> is <code>true</code>.</li>
-                  <li>But <code>time1</code> and <code>time3</code> refer to different objects. Because they are not identical, <code>time1 == time3</code> is <code>false</code>.</li>
-                </ul>
-                <p>By default, the <code>equals</code> method does the same thing as <code>==</code>. For <code>Time</code> objects, that’s probably not what we want. For example, <code>time1</code> and <code>time3</code> represent the same time of day,
-                  so we should consider them equivalent. We can overrid the <code>equals</code> method of the <code>Time</code> class (inherited from the <code>Object</code> class) to provide an <code>equals</code> method that implements this notion of
-                  equivalence:</p>
-                <pre><code class="hljs java"><span class="hljs-meta">@Override</span>
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span><span class="hljs-params">(Time that)</span> </span>{
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.hour == that.hour
-        &amp;&amp; <span class="hljs-keyword">this</span>.minute == that.minute
-        &amp;&amp; <span class="hljs-keyword">this</span>.second == that.second;
+                  <ul>
+                    <li>The assignment operator copies references, so <code>time1</code> and <code>time2</code> refer to the same object. Because they are identical, <code>time1 == time2</code> is <code>true</code>.</li>
+                    <li>But <code>time1</code> and <code>time3</code> refer to different objects. Because they are not identical, <code>time1 == time3</code> is <code>false</code>.</li>
+                  </ul>
+                </box>
+                <p>By default, the <code>equals</code> method inherited from the <code>Object</code> class does the same thing as <code>==</code>. <strong>As the definition of equivalence is different for different classes, you can override the <code>equals</code> method to define your own criteria for equivalence</strong>                  of objects of your class.</p>
+                <box>
+                  <p><span class="fas fa-cube"></span> Here's how you can override the <code>equals</code> method of the <code>Time</code> class to provide an <code>equals</code> method that considers two <code>Time</code> objects equivalent as long as they
+                    represent the same time of the day:</p>
+                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span> </span>{
+    <span class="hljs-keyword">int</span> hours;
+    <span class="hljs-keyword">int</span> minutes;
+    <span class="hljs-keyword">int</span> seconds;
+
+    <span class="hljs-comment">// ...</span>
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span><span class="hljs-params">(Object o)</span> </span>{
+        Time other = (Time) o;
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.hours == other.hours
+                &amp;&amp; <span class="hljs-keyword">this</span>.minutes == other.minutes
+                &amp;&amp; <span class="hljs-keyword">this</span>.seconds == other.seconds;
+    }
 }
 </code></pre>
+                  <pre><code class="hljs java">Time t1 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);
+Time t2 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);
+System.out.println(t1 == t2);
+System.out.println(t1.equals(t2));
+</code></pre>
+                  <p><span class="fas fa-arrow-down"></span></p>
+                  <pre class="hljs"><code>false
+true
+</code></pre>
+                  <p>
+                    <font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> Note that a proper <code>equals</code> method implementation is more complex than the example above. See the article <a href="https://www.sitepoint.com/implement-javas-equals-method-correctly/"><em>How to Implement Java’s equals Method Correctly</em> by Nicolai Parlog</a>                    for a detailed explanation before you implement your own <code>equals</code> method.
+                  </p>
+                </box>
               </div>
             </div>
-            <div></div>
+            <div>
+              <div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> override the `toString` method">
+                        <question>
+                          <p>Suppose you have the following classes <code>Task</code>, <code>Todo</code>, <code>Deadline</code>:</p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-keyword">protected</span> String description;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String description)</span> </span>{
+        <span class="hljs-keyword">this</span>.description = description;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getDescription</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> description;
+    }
+}
+</code></pre>
+                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Todo</span><span class="hljs-params">(String description)</span> </span>{
+        <span class="hljs-keyword">super</span>(description);
+        isDone = <span class="hljs-keyword">false</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setDone</span><span class="hljs-params">(<span class="hljs-keyword">boolean</span> done)</span> </span>{
+        isDone = done;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isDone</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> isDone;
+    }
+}
+</code></pre>
+                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Deadline</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Todo</span> </span>{
+
+    <span class="hljs-keyword">protected</span> String by;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Deadline</span><span class="hljs-params">(String description, String by)</span> </span>{
+        <span class="hljs-keyword">super</span>(description);
+        <span class="hljs-keyword">this</span>.by = by;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setBy</span><span class="hljs-params">(String by)</span> </span>{
+        <span class="hljs-keyword">this</span>.by = by;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getBy</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> by;
+    }
+}
+</code></pre>
+                          <p>Override the <code>toString</code> method of the three classes to produce the following behavior.</p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">// create a todo task and print it</span>
+        Todo t = <span class="hljs-keyword">new</span> Todo(<span class="hljs-string">"Read a good book"</span>);
+        System.out.println(t);
+
+        <span class="hljs-comment">// change todo fields and print again</span>
+        t.setDone(<span class="hljs-keyword">true</span>);
+        System.out.println(t);
+
+        <span class="hljs-comment">// create a deadline task and print it</span>
+        Deadline d = <span class="hljs-keyword">new</span> Deadline(<span class="hljs-string">"Read textbook"</span>, <span class="hljs-string">"Nov 16"</span>);
+        System.out.println(d);
+
+        <span class="hljs-comment">// change deadline details and print again</span>
+        d.setDone(<span class="hljs-keyword">true</span>);
+        d.setBy(<span class="hljs-string">"Postponed to Nov 18th"</span>);
+        System.out.println(d);
+    }
+}
+</code></pre>
+                          <p><span class="fas fa-arrow-down"></span></p>
+                          <pre class="hljs"><code>description: Read a good book
+is done? No
+description: Read a good book
+is done? Yes
+description: Read textbook
+is done? No
+do by: Nov 16
+description: Read textbook
+is done? Yes
+do by: Postponed to Nov 18th
+</code></pre>
+                          <p>💡 You can use the <code>super.toString</code> from the subclass to invoke the behavior of the method you are overriding. This is useful here because the overriding method is simply <em>adding onto</em> the behavior of the overridden
+                            method.</p>
+                          <div slot="hint">
+                            <p><code>toString()</code> method of <code>Task</code> class and <code>Todo</code> class are given below. You can follow a similar approach for the <code>Deadline</code> class.</p>
+                            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-comment">// ...</span>
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"description: "</span> + description;
+    }
+}
+</code></pre>
+                            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-comment">// ...</span>
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+        String status = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">if</span> (isDone){
+            status = <span class="hljs-string">"Yes"</span>;
+        } <span class="hljs-keyword">else</span> {
+            status = <span class="hljs-string">"No"</span>;
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.toString() + System.lineSeparator() + <span class="hljs-string">"is done? "</span> + status;
+    }
+}
+</code></pre>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </panel>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -109,7 +281,7 @@ Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
 </footer>
 </div>
 </body>

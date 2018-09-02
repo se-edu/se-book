@@ -6,69 +6,130 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{ icon_outcome }} Can use Obect class</span>
+<span id="outcomes">{{ icon_outcome }} Can use Object class</span>
 
 <div id="body">
+
+As you know, all Java objects inherit from the `Object` class. Let us look at some of the useful methods in the `Object` class that can be used by other classes.
 
 ##### The `toString` method
 <div class="indented">
 
-Suppose you defined a class called `Time`, to represent a moment in time. If you create a `Time` object and display it with println:
+**Every class inherits a `toString` method from the `Object` class that is used by Java to get a string representation of the object** %%e.g., for printing%%. By default it simply returns the type of the object and its address (in hexadecimal).
 
+<box>
+
+{{ icon_example }} Suppose you defined a class called `Time`, to represent a moment in time. If you create a `Time` object and display it with println:
 ```java
-public static void main(String[] args) {
-    Time time = new Time(11, 59, 59.9);
-    System.out.println(time);
+class Time {
+    int hours;
+    int minutes;
+    int seconds;
+
+    Time(int hours, int minutes, int seconds) {
+        this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
+    }
 }
 ```
-The output will look something like: `Time@80cc7c0`
+```java
+ Time t = new Time(5, 20, 13);
+ System.out.println(t);
+```
+{{ icon_output_right }} `Time@80cc7c0` %%(the address part can vary)%%
 
-When Java displays the value of an object type, it displays the name of the type and the address of the object (in hexadecimal).
+</box>
 
-**Every object type has a method called `toString` that returns a string representation of the object.** By default it simply displays the type of the object and its address, but you can override this behavior by providing your own toString method.To display `Time` objects in a way that is more meaningful to users (e.g., to display the hour, minute, and second), you can override that method in the `Time` class. Reason: when you display an object using `print` or `println`, Java invokes the object’s `toString` method.
+**You can override the `toString` method in your classes** to provide a more meaningful string representation of the objects of that class.
 
-For example, here is a toString method for Time:
+<box>
+
+{{ icon_example }} Here's an example of overriding the `toString` method of the `Time` class:
 
 ```java
-@Override
-public String toString() {
-    return String.format("%02d:%02d:%04.1f\n",
-        this.hour, this.minute, this.second);
+class Time{
+
+   //...
+
+   @Override
+   public String toString() {
+       return String.format("%02d:%02d:%02d\n", this.hours, this.minutes, this.seconds);
+   }
 }
 ```
+```java
+ Time t = new Time(5, 20, 13);
+ System.out.println(t);
+```
+{{ icon_output_right }} `05:20:13`
+</box>
 
 :bulb: `@Override` is an optional annotation you can use to indicate that the method is overriding a method from the parent class.
+
 </div>
 
 ##### The `equals` method
 <div class="indented">
 
-We have seen two ways to check whether values are equal: the `==` operator and the `equals` method. With objects you can use either one, but they are not the same.
+**There are two ways to check whether values are equal: the `==` operator and the `equals` method. With objects you can use either one, but they are not the same.**
 * The `==` operator checks whether objects are identical; that is, whether they are the same object.
 * The `equals` method checks whether they are equivalent; that is, whether they have the same value.
 
-The definition of identity is always the same, so the `==` operator always does the same thing. But the definition of equivalence is different for different objects, so objects can define their own `equals` methods.
-Consider the following variables:
+The definition of identity is always the same, so the `==` operator always does the same thing.
+
+<box>
+
+{{ icon_example }} Consider the following variables:
 
 ```java
-Time time1 = new Time(9, 30, 0.0);
+Time time1 = new Time(9, 30, 0);
 Time time2 = time1;
-Time time3 = new Time(9, 30, 0.0);
+Time time3 = new Time(9, 30, 0);
 ```
 
 * The assignment operator copies references, so `time1` and `time2` refer to the same object. Because they are identical, `time1 == time2` is `true`.
 * But `time1` and `time3` refer to different objects. Because they are not identical, `time1 == time3` is `false`.
 
-By default, the `equals` method does the same thing as `==`. For `Time` objects, that’s probably not what we want. For example, `time1` and `time3` represent the same time of day, so we should consider them equivalent. We can overrid the `equals` method of the `Time` class (inherited from the `Object` class) to provide an `equals` method that implements this notion of equivalence:
+</box>
+
+By default, the `equals` method inherited from the `Object` class does the same thing as `==`. **As the definition of equivalence is different for different classes, you can override the `equals` method to define your own criteria for equivalence** of objects of your class.
+
+<box>
+
+{{ icon_example }} Here's how you can override the `equals` method of the `Time` class to provide an `equals` method that considers two `Time` objects equivalent as long as they represent the same time of the day:
 
 ```java
-@Override
-public boolean equals(Time that) {
-    return this.hour == that.hour
-        && this.minute == that.minute
-        && this.second == that.second;
+public class Time {
+    int hours;
+    int minutes;
+    int seconds;
+
+    // ...
+
+    @Override
+    public boolean equals(Object o) {
+        Time other = (Time) o;
+        return this.hours == other.hours
+                && this.minutes == other.minutes
+                && this.seconds == other.seconds;
+    }
 }
 ```
+```java
+Time t1 = new Time(5, 20, 13);
+Time t2 = new Time(5, 20, 13);
+System.out.println(t1 == t2);
+System.out.println(t1.equals(t2));
+```
+{{ icon_output }}
+```
+false
+true
+```
+
+{{ icon_important_big_red }} Note that a proper `equals` method implementation is more complex than the example above. See the article [_How to Implement Java’s equals Method Correctly_ by Nicolai Parlog](https://www.sitepoint.com/implement-javas-equals-method-correctly/) for a detailed explanation before you implement your own `equals` method.
+</box>
 
 </div>
 
@@ -76,4 +137,5 @@ public boolean equals(Time that) {
 </div>
 
 <div id="extras">
+  <include src="exercisesPanel.md" boilerplate />
 </div>

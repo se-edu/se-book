@@ -30,7 +30,7 @@ impatient user | to be able experience reasonable response time from the website
 
 <div id="usageTips">
 
-Given their lightweight nature, **user stories are quite handy for recording requirements during early requirements gathering**. 
+Given their lightweight nature, **user stories are quite handy for recording requirements during early stages of requirements gathering**.
 
 <tip-box> 
 

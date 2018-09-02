@@ -13,7 +13,7 @@
 >Java was **conceived by James Gosling and his team at Sun Microsystems in 1991**.
 >
 >Java is directly **related to both C and C++**. Java inherits its syntax from C. Its object model is adapted from C++.
-><small>--[Java: A Beinner’s Guide, by Oracle](http://www.oracle.com/events/global/en/java-outreach/resources/java-a-beginners-guide-1720064.pdf)</small>
+><small>--[Java: A Beginner’s Guide, by Oracle](http://www.oracle.com/events/global/en/java-outreach/resources/java-a-beginners-guide-1720064.pdf)</small>
 
 <box>
 

@@ -41,12 +41,35 @@
               <div>
                 <p><strong>Method <em>overriding</em> is when a sub-class changes the behavior inherited from the parent class</strong> by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.</p>
                 <tip-box>
-                  <p><span class="fas fa-cube"></span> In a case where <code>EvaluationReport</code> class inherits the <code>Report</code> class,</p>
-                  <ul>
-                    <li><code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method.</li>
-                    <li><code>Report#write(String)</code> method is overridden by <code>EvaluationReport#write(String)</code> method.</li>
-                    <li><code>Report#read():String</code> method is <strong>NOT</strong> overridden by <code>EvaluationReport#read(int):String</code> method. <span class="dimmed"> Reason: the two methods have different signatures; <code>EvaluationReport#read(int):String</code> <trigger trigger="click" for="modal:overriding-overloading"> <em>overloads</em></trigger> (rather than overrides) the <code>Report#read():String</code> method.</span></li>
-                  </ul>
+                  <p><span class="fas fa-cube"></span> Consider the following case of <code>EvaluationReport</code> class inheriting the <code>Report</code> class:</p>
+                  <div class="table-responsive">
+                    <table class="markbind-table table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th><code>Report</code> methods</th>
+                          <th><code>EvaluationReport</code> methods</th>
+                          <th>Overrides?</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code>print()</code></td>
+                          <td><code>print()</code></td>
+                          <td>Yes</td>
+                        </tr>
+                        <tr>
+                          <td><code>write(String)</code></td>
+                          <td><code>write(String)</code></td>
+                          <td>Yes</td>
+                        </tr>
+                        <tr>
+                          <td><code>read():String</code></td>
+                          <td><code>read(int):String</code></td>
+                          <td>No. <span class="dimmed"> Reason: the two methods have different signatures; This is a case of <trigger trigger="click" for="modal:overriding-overloading"> <em>overloading</em></trigger> (rather than overriding).</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                   <modal title="**Overloading**" id="modal:overriding-overloading">
                     <div>
                       <div></div>

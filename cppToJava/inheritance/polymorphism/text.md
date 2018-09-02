@@ -10,133 +10,170 @@
 
 <div id="body">
 
-Given below is an extract from the {{ oracle }}, with slight adaptations.
+**Java is a _strongly-typed_ language which means the code works with only the object types that it targets.**
 
-<blockquote>
+<box>
 
-Consider the `Bicycle` class below:
-
-```java
-public class Bicycle {
-
-    public int gear;
-    public int speed;
-
-    public Bicycle(int startSpeed, int startGear) {
-        gear = startGear;
-        speed = startSpeed;
-    }
-
-    public void setGear(int newValue) {
-        gear = newValue;
-    }
-
-    public void applyBrake(int decrement) {
-        speed -= decrement;
-    }
-
-    public void speedUp(int increment) {
-        speed += increment;
-    }
-
-    public void printDescription() {
-        System.out.println("Bike is in gear " + gear + " and travelling at a speed of " + speed + ".");
-    }
-
-}
-```
-
-To demonstrate _polymorphic_ features in the Java language, let's extend the `Bicycle` class with a `MountainBike` and a `RoadBike` class. For `MountainBike`, let's add a field for `suspension`, which is a `String` value that indicates if the bike has a front shock absorber, `Front`. Or, the bike has a front and back shock absorber, `Dual`.
-
-Here is the updated class:
+{{ icon_example }} The following code `PetShelter` keeps a list of `Cat` objects and make them `speak`. The code will not work with any other type, for example, `Dog` objects.
 
 ```java
-public class MountainBike extends Bicycle {
-    private String suspension;
+public class PetShelter {
+    private static Cat[] cats = new Cat[]{
+            new Cat("Mittens"),
+            new Cat("Snowball")};
 
-    public MountainBike(int startSpeed, int startGear, String suspensionType){
-        super(startSpeed, startGear);
-        this.setSuspension(suspensionType);
-    }
-
-    public String getSuspension(){
-      return this.suspension;
-    }
-
-    public void setSuspension(String suspensionType) {
-        this.suspension = suspensionType;
-    }
-
-    public void printDescription() {
-        super.printDescription();
-        System.out.println("The " + "MountainBike has a" + getSuspension() + " suspension.");
-    }
-}
-```
-
-Note the overridden `printDescription` method. In addition to the information provided before, additional data about the suspension is included to the output.
-
-Next, let's create the `RoadBike` class. Because road or racing bikes have skinny tires, add an attribute to track the tire width. Here is the `RoadBike` class:
-
-```java
-public class RoadBike extends Bicycle{
-    // In millimeters (mm)
-    private int tireWidth;
-
-    public RoadBike(int startSpeed, int startGear, int newTireWidth){
-        super(startSpeed, startGear);
-        this.setTireWidth(newTireWidth);
-    }
-
-    public int getTireWidth(){
-      return this.tireWidth;
-    }
-
-    public void setTireWidth(int newTireWidth){
-        this.tireWidth = newTireWidth;
-    }
-
-    public void printDescription(){
-        super.printDescription();
-        System.out.println("The RoadBike" + " has " + getTireWidth() + " MM tires.");
-    }
-}
-```
-
-Note that once again, the `printDescription` method has been overridden. This time, information about the tire width is displayed.
-
-To summarize, there are three classes: `Bicycle`, `MountainBike`, and `RoadBike`. The two subclasses override the `printDescription` method and print unique information.
-
-Here is a test program that creates three Bicycle variables. Each variable is assigned to one of the three bicycle classes. Each variable is then printed.
-
-```java
-public class TestBikes {
     public static void main(String[] args) {
-        Bicycle bike01, bike02, bike03;
-
-        bike01 = new Bicycle(10, 1);
-        bike02 = new MountainBike(10, 5, "Dual");
-        bike03 = new RoadBike(20, 8, 23);
-
-        bike01.printDescription();
-        bike02.printDescription();
-        bike03.printDescription();
+        for (Cat c: cats){
+            System.out.println(c.speak());
+        }
     }
 }
 ```
 {{ icon_output }}
 ```
-Bike is in gear 1 and travelling at a speed of 10.
-Bike is in gear 5 and travelling at a speed of 10.
-The MountainBike has aDual suspension.
-Bike is in gear 8 and travelling at a speed of 20.
-The RoadBike has 23 MM tires.
+Mittens: Meow
+Snowball: Meow
+```
+<panel type="seamless" header="%%The `Cat` class%%">
+
+```java
+public class Cat {
+    public Cat(String name) {
+        super(name);
+    }
+
+    public String speak() {
+        return name + ": Meow";
+    }
+}
+```
+</panel>
+</box>
+
+This **strong-typing can lead to unnecessary verbosity** caused by repetitive similar code that do similar things with different object types.
+
+<box>
+
+{{ icon_example }} If the `PetShelter` is to keep both cats and dogs, you'll need two arrays and two loops:
+
+```java
+public class PetShelter {
+    private static Cat[] cats = new Cat[]{
+            new Cat("Mittens"),
+            new Cat("Snowball")};
+    private static Dog[] dogs = new Dog[]{
+            new Dog("Spot")};
+
+    public static void main(String[] args) {
+        for (Cat c: cats){
+            System.out.println(c.speak());
+        }
+        for(Dog d: dogs){
+            System.out.println(d.speak());
+        }
+    }
+}
+```
+{{ icon_output }}
+```
+Mittens: Meow
+Snowball: Meow
+Spot: Woof
 ```
 
-The Java virtual machine (JVM) calls the appropriate method for the object that is referred to in each variable. It does not call the method that is defined by the variable's type. This behavior is referred to as _virtual method invocation_ and demonstrates an aspect of the important polymorphism features in the Java language.
+<panel type="seamless" header="%%The `Dog` class%%">
 
+```java
+public class Dog {
+    public Dog(String name) {
+        super(name);
+    }
 
-</blockquote>
+    public String speak() {
+        return name + ": Woof";
+    }
+}
+```
+</panel>
+</box>
+
+A better way is to **take advantage of polymorphism to write code that targets a superclass but works with any subclass objects.**
+
+<box>
+
+{{ icon_example }} The `PetShelter2` use one data structure to keep both types of animals and one loop to make them speak. The code targets the `Animal` superclass (assuming `Cat` and `Dog` inherits from the `Animal` class) instead of repeating the code for each animal type.
+
+```java
+public class PetShelter2 {
+    private static Animal[] animals = new Animal[]{
+            new Cat("Mittens"),
+            new Cat("Snowball"),
+            new Dog("Spot")};
+
+    public static void main(String[] args) {
+        for (Animal a: animals){
+            System.out.println(a.speak());
+        }
+    }
+}
+```
+{{ icon_output }}
+```
+Mittens: Meow
+Snowball: Meow
+Spot: Woof
+```
+
+<panel type="seamless" header="%%The `Animal`, `Cat`, and `Dog` classes%%">
+
+```java
+public class Animal {
+
+    protected String name;
+
+    public Animal(String name){
+        this.name = name;
+    }
+    public String speak(){
+        return name;
+    }
+}
+```
+```java
+public class Cat extends Animal {
+    public Cat(String name) {
+        super(name);
+    }
+
+    @Override
+    public String speak() {
+        return name + ": Meow";
+    }
+}
+```
+```java
+public class Dog extends Animal {
+    public Dog(String name) {
+        super(name);
+    }
+
+    @Override
+    public String speak() {
+        return name + ": Woof";
+    }
+}
+```
+</panel>
+
+%%Explanation: Because Java supports polymorphism, you can store both `Cat` and `Dog` objects in an array of `Animal` objects. Similarly, you can call the `speak` method on any `Animal` object (as done in the loop) and yet get different behavior from `Cat` objects and `Dog` objects.%%
+
+:bulb: Suggestion: try to add an `Animal` object (e.g., `new Animal("Unnamed")`) to the `animals` array and see what happens.
+</box>
+
+**Polymorphic code is better** in several ways:
+* It is **shorter**.
+* It is **simpler**.
+* It is more **flexible** (in the above example, the `main` method will work even if we add more animal types).
 
 </div>
 

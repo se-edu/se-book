@@ -49,113 +49,143 @@
           </div>
           <div id="main">
             <div>
-              <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-              <blockquote>
-                <p>Consider the <code>Bicycle</code> class below:</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bicycle</span> </span>{
+              <p><strong>Java is a <em>strongly-typed</em> language which means the code works with only the object types that it targets.</strong></p>
+              <box>
+                <p><span class="fas fa-cube"></span> The following code <code>PetShelter</code> keeps a list of <code>Cat</code> objects and make them <code>speak</code>. The code will not work with any other type, for example, <code>Dog</code> objects.</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Cat[] cats = <span class="hljs-keyword">new</span> Cat[]{
+            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),
+            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>)};
 
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> gear;
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> speed;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Bicycle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear)</span> </span>{
-        gear = startGear;
-        speed = startSpeed;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGear</span><span class="hljs-params">(<span class="hljs-keyword">int</span> newValue)</span> </span>{
-        gear = newValue;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">applyBrake</span><span class="hljs-params">(<span class="hljs-keyword">int</span> decrement)</span> </span>{
-        speed -= decrement;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">speedUp</span><span class="hljs-params">(<span class="hljs-keyword">int</span> increment)</span> </span>{
-        speed += increment;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printDescription</span><span class="hljs-params">()</span> </span>{
-        System.out.println(<span class="hljs-string">"Bike is in gear "</span> + gear + <span class="hljs-string">" and travelling at a speed of "</span> + speed + <span class="hljs-string">"."</span>);
-    }
-
-}
-</code></pre>
-                <p>To demonstrate <em>polymorphic</em> features in the Java language, let's extend the <code>Bicycle</code> class with a <code>MountainBike</code> and a <code>RoadBike</code> class. For <code>MountainBike</code>, let's add a field for <code>suspension</code>,
-                  which is a <code>String</code> value that indicates if the bike has a front shock absorber, <code>Front</code>. Or, the bike has a front and back shock absorber, <code>Dual</code>.</p>
-                <p>Here is the updated class:</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MountainBike</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Bicycle</span> </span>{
-    <span class="hljs-keyword">private</span> String suspension;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MountainBike</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear, String suspensionType)</span></span>{
-        <span class="hljs-keyword">super</span>(startSpeed, startGear);
-        <span class="hljs-keyword">this</span>.setSuspension(suspensionType);
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getSuspension</span><span class="hljs-params">()</span></span>{
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.suspension;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setSuspension</span><span class="hljs-params">(String suspensionType)</span> </span>{
-        <span class="hljs-keyword">this</span>.suspension = suspensionType;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printDescription</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">super</span>.printDescription();
-        System.out.println(<span class="hljs-string">"The "</span> + <span class="hljs-string">"MountainBike has a"</span> + getSuspension() + <span class="hljs-string">" suspension."</span>);
-    }
-}
-</code></pre>
-                <p>Note the overridden <code>printDescription</code> method. In addition to the information provided before, additional data about the suspension is included to the output.</p>
-                <p>Next, let's create the <code>RoadBike</code> class. Because road or racing bikes have skinny tires, add an attribute to track the tire width. Here is the <code>RoadBike</code> class:</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RoadBike</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Bicycle</span></span>{
-    <span class="hljs-comment">// In millimeters (mm)</span>
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> tireWidth;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">RoadBike</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear, <span class="hljs-keyword">int</span> newTireWidth)</span></span>{
-        <span class="hljs-keyword">super</span>(startSpeed, startGear);
-        <span class="hljs-keyword">this</span>.setTireWidth(newTireWidth);
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getTireWidth</span><span class="hljs-params">()</span></span>{
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.tireWidth;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setTireWidth</span><span class="hljs-params">(<span class="hljs-keyword">int</span> newTireWidth)</span></span>{
-        <span class="hljs-keyword">this</span>.tireWidth = newTireWidth;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printDescription</span><span class="hljs-params">()</span></span>{
-        <span class="hljs-keyword">super</span>.printDescription();
-        System.out.println(<span class="hljs-string">"The RoadBike"</span> + <span class="hljs-string">" has "</span> + getTireWidth() + <span class="hljs-string">" MM tires."</span>);
-    }
-}
-</code></pre>
-                <p>Note that once again, the <code>printDescription</code> method has been overridden. This time, information about the tire width is displayed.</p>
-                <p>To summarize, there are three classes: <code>Bicycle</code>, <code>MountainBike</code>, and <code>RoadBike</code>. The two subclasses override the <code>printDescription</code> method and print unique information.</p>
-                <p>Here is a test program that creates three Bicycle variables. Each variable is assigned to one of the three bicycle classes. Each variable is then printed.</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestBikes</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        Bicycle bike01, bike02, bike03;
-
-        bike01 = <span class="hljs-keyword">new</span> Bicycle(<span class="hljs-number">10</span>, <span class="hljs-number">1</span>);
-        bike02 = <span class="hljs-keyword">new</span> MountainBike(<span class="hljs-number">10</span>, <span class="hljs-number">5</span>, <span class="hljs-string">"Dual"</span>);
-        bike03 = <span class="hljs-keyword">new</span> RoadBike(<span class="hljs-number">20</span>, <span class="hljs-number">8</span>, <span class="hljs-number">23</span>);
-
-        bike01.printDescription();
-        bike02.printDescription();
-        bike03.printDescription();
+        <span class="hljs-keyword">for</span> (Cat c: cats){
+            System.out.println(c.speak());
+        }
     }
 }
 </code></pre>
                 <p><span class="fas fa-arrow-down"></span></p>
-                <pre class="hljs"><code>Bike is in gear 1 and travelling at a speed of 10.
-Bike is in gear 5 and travelling at a speed of 10.
-The MountainBike has aDual suspension.
-Bike is in gear 8 and travelling at a speed of 20.
-The RoadBike has 23 MM tires.
+                <pre class="hljs"><code>Mittens: Meow
+Snowball: Meow
 </code></pre>
-                <p>The Java virtual machine (JVM) calls the appropriate method for the object that is referred to in each variable. It does not call the method that is defined by the variable's type. This behavior is referred to as <em>virtual method invocation</em>                  and demonstrates an aspect of the important polymorphism features in the Java language.</p>
-              </blockquote>
+                <panel type="seamless" header="%%The `Cat` class%%">
+                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Cat</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">super</span>(name);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Meow"</span>;
+    }
+}
+</code></pre>
+                </panel>
+              </box>
+              <p>This <strong>strong-typing can lead to unnecessary verbosity</strong> caused by repetitive similar code that do similar things with different object types.</p>
+              <box>
+                <p><span class="fas fa-cube"></span> If the <code>PetShelter</code> is to keep both cats and dogs, you'll need two arrays and two loops:</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Cat[] cats = <span class="hljs-keyword">new</span> Cat[]{
+            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),
+            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>)};
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Dog[] dogs = <span class="hljs-keyword">new</span> Dog[]{
+            <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">"Spot"</span>)};
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">for</span> (Cat c: cats){
+            System.out.println(c.speak());
+        }
+        <span class="hljs-keyword">for</span>(Dog d: dogs){
+            System.out.println(d.speak());
+        }
+    }
+}
+</code></pre>
+                <p><span class="fas fa-arrow-down"></span></p>
+                <pre class="hljs"><code>Mittens: Meow
+Snowball: Meow
+Spot: Woof
+</code></pre>
+                <panel type="seamless" header="%%The `Dog` class%%">
+                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Dog</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">super</span>(name);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Woof"</span>;
+    }
+}
+</code></pre>
+                </panel>
+              </box>
+              <p>A better way is to <strong>take advantage of polymorphism to write code that targets a superclass but works with any subclass objects.</strong></p>
+              <box>
+                <p><span class="fas fa-cube"></span> The <code>PetShelter2</code> use one data structure to keep both types of animals and one loop to make them speak. The code targets the <code>Animal</code> superclass (assuming <code>Cat</code> and <code>Dog</code>                  inherits from the <code>Animal</code> class) instead of repeating the code for each animal type.</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter2</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Animal[] animals = <span class="hljs-keyword">new</span> Animal[]{
+            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),
+            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>),
+            <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">"Spot"</span>)};
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">for</span> (Animal a: animals){
+            System.out.println(a.speak());
+        }
+    }
+}
+</code></pre>
+                <p><span class="fas fa-arrow-down"></span></p>
+                <pre class="hljs"><code>Mittens: Meow
+Snowball: Meow
+Spot: Woof
+</code></pre>
+                <panel type="seamless" header="%%The `Animal`, `Cat`, and `Dog` classes%%">
+                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
+
+    <span class="hljs-keyword">protected</span> String name;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Animal</span><span class="hljs-params">(String name)</span></span>{
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> name;
+    }
+}
+</code></pre>
+                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Cat</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">super</span>(name);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Meow"</span>;
+    }
+}
+</code></pre>
+                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Dog</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">super</span>(name);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Woof"</span>;
+    }
+}
+</code></pre>
+                </panel>
+                <p><span class="dimmed">Explanation: Because Java supports polymorphism, you can store both <code>Cat</code> and <code>Dog</code> objects in an array of <code>Animal</code> objects. Similarly, you can call the <code>speak</code> method on any <code>Animal</code> object (as done in the loop) and yet get different behavior from <code>Cat</code> objects and <code>Dog</code> objects.</span></p>
+                <p>💡 Suggestion: try to add an <code>Animal</code> object (e.g., <code>new Animal(&quot;Unnamed&quot;)</code>) to the <code>animals</code> array and see what happens.
+                </p>
+              </box>
+              <p><strong>Polymorphic code is better</strong> in several ways:</p>
+              <ul>
+                <li>It is <strong>shorter</strong>.</li>
+                <li>It is <strong>simpler</strong>.</li>
+                <li>It is more <strong>flexible</strong> (in the above example, the <code>main</code> method will work even if we add more animal types).</li>
+              </ul>
             </div>
             <div></div>
           </div>
@@ -167,7 +197,7 @@ The RoadBike has 23 MM tires.
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
 </footer>
 </div>
 </body>

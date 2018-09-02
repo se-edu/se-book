@@ -49,18 +49,112 @@
           </div>
           <div id="main">
             <div>
-              <p>The Java library provides a utility class <code>java.util.Arrays</code> that provides methods for working with arrays. One of them, <code>toString</code>, returns a string representation of an array.</p>
-              <pre><code class="hljs java"><span class="hljs-keyword">int</span>[] a = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>};
-System.out.println(Arrays.toString(a));
+              <p><strong><a href="https://docs.oracle.com/javase/9/docs/api/java/util/Arrays.html"><code>java.util.Arrays</code></a> provides methods for working with arrays.</strong> One of them, <code>toString</code>, returns a string representation of
+                an array. It also provides a <code>copyOf</code> that copies an array.</p>
+              <box>
+                <p><span class="fas fa-cube"></span> Using <code>Arrays.copyOf</code> and <code>Arrays.toString</code>:</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">int</span>[] a = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>};
+
+<span class="hljs-keyword">int</span>[] b = Arrays.copyOf(a, <span class="hljs-number">3</span>); <span class="hljs-comment">// copy first three elements</span>
+System.out.println(Arrays.toString(b));
+
+<span class="hljs-keyword">int</span>[] c = Arrays.copyOf(a, a.length); <span class="hljs-comment">// copy all elements</span>
+System.out.println(Arrays.toString(c));
 </code></pre>
-              <p><span class="fas fa-arrow-right"></span> <code>[1, 2, 3, 4]</code></p>
-              <p>It also provides a <code>copyOf</code> that copies an array.</p>
-              <pre><code class="hljs java"><span class="hljs-keyword">double</span>[] b = Arrays.copyOf(a, <span class="hljs-number">3</span>);
-You can also use a.length with Arrays.copyOf:
-<span class="hljs-keyword">double</span>[] b = Arrays.copyOf(a, a.length);
+                <p><span class="fas fa-arrow-down"></span></p>
+                <pre class="hljs"><code>[1, 2, 3]
+[1, 2, 3, 4]
 </code></pre>
+              </box>
             </div>
-            <div></div>
+            <div>
+              <div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> `filterEmails` method">
+                        <question>
+                          <p>Implement the following two methods in the code below to produce the given output.</p>
+                          <ul>
+                            <li><strong><code>filterEmailsfilterEmails(String[] items): String[]</code></strong>
+                              <ul>
+                                <li><code>items</code> is an array of strings each of which may be an email address or some other random string</li>
+                                <li>Returns a <code>String[]</code> containing email addresses that were in <code>items</code>. Any string containing <code>@</code> is considered as an email.<br>
+                                  <code>[&quot;aaa@bbb&quot;, &quot;xyz&quot;]</code> <span class="fas fa-arrow-right"></span> <code>[&quot;aaa@bbb&quot;]</code></li>
+                              </ul>
+                            </li>
+                            <li><strong><code>printItems(String[] items)</code></strong>
+                              <ul>
+                                <li>Prints <code>items</code> in the standard array format. e.g., <code>[&quot;aaa&quot;, &quot;bbb&quot;]</code> <span class="fas fa-arrow-right"></span> <code>[aaa, bbb]</code></li>
+                              </ul>
+                            </li>
+                          </ul>
+                          <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Arrays;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String[] filterEmails(String[] items){
+        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printItems</span><span class="hljs-params">(String[] items)</span></span>{
+        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{}));
+        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"abc"</span>}));
+        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"adam@example.com"</span>, <span class="hljs-string">"aab"</span>, <span class="hljs-string">"john@example.com"</span>, <span class="hljs-string">"some@"</span>}));
+        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"xyz"</span>, <span class="hljs-string">"@bee.com"</span>, <span class="hljs-string">"aab"</span>}));
+    }
+}
+</code></pre>
+                          <p><span class="fas fa-arrow-down"></span></p>
+                          <pre class="hljs"><code>[]
+[]
+[adam@example.com, john@example.com, some@]
+[@bee.com]
+
+</code></pre>
+                          <div slot="hint">
+                            <ul>
+                              <li><strong><code>filterEmailsfilterEmails(String[] items): String[]</code></strong>
+                                <ol>
+                                  <li>create a new array (say <code>emails</code>) of the same size as <code>items</code></li>
+                                  <li>go through the elements in the <code>items</code> and add to <code>emails</code> if the element contains <code>@</code> (you can use the <code>contains</code> method of the <code>String</code> class here)</li>
+                                  <li>Use <code>Arrays.copyOf</code> method to return the filled part of <code>emails</code>.</li>
+                                </ol>
+                              </li>
+                              <li><strong><code>printItems(String[] items)</code></strong>
+                                <ul>
+                                  <li>💡 You can use the <code>Arrays.toString()</code> method for this.</li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <panel type="seamless" header="Partial solution">
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String[] filterEmails(String[] items){
+    String[] results = <span class="hljs-keyword">new</span> String[items.length];
+    <span class="hljs-keyword">int</span> matchCount = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span>(String item: items){
+        <span class="hljs-keyword">if</span> (item.contains(<span class="hljs-string">"@"</span>)){
+           <span class="hljs-comment">//...</span>
+        }
+    }
+    <span class="hljs-keyword">return</span> Arrays.copyOf(results, matchCount);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printItems</span><span class="hljs-params">(String[] items)</span></span>{
+    System.out.println(Arrays.toString(items));
+}
+</code></pre>
+                            </panel>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </panel>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -70,7 +164,7 @@ You can also use a.length with Arrays.copyOf:
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
 </footer>
 </div>
 </body>

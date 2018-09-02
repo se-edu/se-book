@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - C++ to Java: Miscellaneous Topics</title>
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    
+    
+    <link rel="icon" href="/se-book/favicon.ico">
+</head>
+<body>
+<div id="app">
+    <div id="content-wrapper">
+  <div>
+    <navbar placement="top" type="inverse">
+      <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+      <li slot="right">
+        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+      </li>
+    </navbar>
+  </div>
+  <div>
+    <link rel="stylesheet" href="/se-book/css/textbook.css">
+    <div class="website-content" id="all">
+      <p><span class="dimmed"><strong><span>C++ to Java →
+</span></strong>
+        </span>
+      </p>
+      <div id="title">
+        <div>
+          <h2 id="miscellaneous-topics">Miscellaneous Topics</h2>
+        </div>
+      </div>
+      <div id="main">
+        <div>
+          <div>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><div>
+<h4 id="access-modifiers">Access Modifiers</h4></div></span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain access modifiers</span>
+                  </span>
+                  </span>
+                  </span>
+                  <p></p>
+                </p>
+                <p></p>
+                <div>
+                  <p><strong>Access level modifiers determine whether other classes can use a particular field or invoke a particular method.</strong></p>
+                  <p>There are two levels of access control:</p>
+                  <ol>
+                    <li>
+                      <p><strong>At the class level</strong>:</p>
+                      <ul>
+                        <li><strong><code>public</code></strong>: the class is visible to all classes everywhere</li>
+                        <li><strong>no modifier (the default, also known as <em>package-private</em>)</strong>: it is visible only within its own package<br><br></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p><strong>At the member level</strong>:</p>
+                      <ul>
+                        <li><strong><code>public</code></strong> or <strong>no modifier (<em>package-private</em>)</strong>: same meaning as when used with top-level classes</li>
+                        <li><strong><code>private</code></strong>: the member can only be accessed in its own class</li>
+                        <li><strong><code>protected</code></strong>: the member can only be accessed within its own package (as with package-private) and, in addition, by a subclass of its class in another package</li>
+                      </ul>
+                    </li>
+                  </ol>
+                  <p>The following table shows the access to members permitted by each modifier.</p>
+                  <div class="indented">
+                    <div class="table-responsive">
+                      <table class="markbind-table table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Modifier</th>
+                            <th>
+                              <tooltip content="whether the class itself has access to the member defined by the access level">Class</tooltip>
+                            </th>
+                            <th>
+                              <tooltip content="whether classes in the same package as the class (regardless of their parentage) have access to the member">Package</tooltip>
+                            </th>
+                            <th>
+                              <tooltip content="whether subclasses of the class declared outside this package have access to the member">Subclass</tooltip>
+                            </th>
+                            <th>
+                              <tooltip content="whether all classes have access to the member">World</tooltip>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><code>public</code></td>
+                            <td><span style="color:green"><span class="fas fa-check"></span></span>
+                            </td>
+                            <td><span style="color:green"><span class="fas fa-check"></span></span>
+                            </td>
+                            <td><span style="color:green"><span class="fas fa-check"></span></span>
+                            </td>
+                            <td><span style="color:green"><span class="fas fa-check"></span></span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><code>protected</code></td>
+                            <td><span style="color:green"><span class="fas fa-check"></span></span>
+                            </td>
+                            <td><span style="color:green"><span class="fas fa-check"></span></span>
+                            </td>
+                            <td><span style="color:green"><span class="fas fa-check"></span></span>
+                            </td>
+                            <td><span style="color:red"><span class="fas fa-times"></span></span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>no modifier</td>
+                            <td><span style="color:green"><span class="fas fa-check"></span></span>
+                            </td>
+                            <td><span style="color:green"><span class="fas fa-check"></span></span>
+                            </td>
+                            <td><span style="color:red"><span class="fas fa-times"></span></span>
+                            </td>
+                            <td><span style="color:red"><span class="fas fa-times"></span></span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><code>private</code></td>
+                            <td><span style="color:green"><span class="fas fa-check"></span></span>
+                            </td>
+                            <td><span style="color:red"><span class="fas fa-times"></span></span>
+                            </td>
+                            <td><span style="color:red"><span class="fas fa-times"></span></span>
+                            </td>
+                            <td><span style="color:red"><span class="fas fa-times"></span></span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <p>Access levels affect you in two ways:</p>
+                  <ol>
+                    <li>When you use classes that come from another source, such as the classes in the Java platform, access levels determine which members of those classes your own classes can use.</li>
+                    <li>When you write a class, you need to decide what access level every member variable and every method in your class should have.</li>
+                  </ol>
+                </div>
+                <div></div>
+              </div>
+            </panel>
+          </div>
+          <div>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><div>
+<h4 id="constants">Constants</h4></div></span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use Java constants</span>
+                  </span>
+                  </span>
+                  </span>
+                  <p></p>
+                </p>
+                <p></p>
+                <div>
+                  <p>Java does not directly support constants. The convention is to use a <code>static</code> <code>final</code> variable where a constant is needed. The <code>static</code> modifier causes the variable to be available without instantiating
+                    an object. The <code>final</code> modifier causes the variable to be unchangeable. Java constants are normally declared in ALL CAPS separated by underscores.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> Here is an example of a constant named <code>MAX_BALANCE</code>.</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span></span>{
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> MAX_BALANCE = <span class="hljs-number">1000000.0</span>;
+
+}
+
+</code></pre>
+                  </box>
+                </div>
+                <div></div>
+              </div>
+            </panel>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="flex-div"></div>
+<footer>
+  <div class="text-center">
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+</footer>
+</div>
+</body>
+<script src="..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\markbind\js\polyfill.min.js"></script>
+<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+</script>
+<script src="..\..\markbind\js\setup.js"></script>
+</html>

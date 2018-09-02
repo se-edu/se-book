@@ -17,5 +17,6 @@
 <include src="exceptions/container-inParent-asPanel.md" boilerplate />
 <include src="generics/container-inParent-asPanel.md" boilerplate />
 <include src="collections/container-inParent-asPanel.md" boilerplate />
+<include src="misc/container-inParent-asPanel.md" boilerplate />
 
 </div>

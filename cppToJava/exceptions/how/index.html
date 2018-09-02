@@ -49,72 +49,146 @@
           </div>
           <div id="main">
             <div>
-              <p><span class="fas fa-cube"></span> In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code> method
-                inside a <code>try{ }</code> block and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p>
-              <img src="/se-book/errorHandling/exceptions/how/images/processInput.png" width="400">
-              <p></p>
-              <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-              <blockquote>
-                <p><strong>A program can catch exceptions by using a combination of the <code>try</code>, <code>catch</code>, and <code>finally</code> blocks.</strong> Here is an example:</p>
+              <p>The content below uses extracts from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with some adaptations.</p>
+              <p><strong>A program can catch exceptions by using a combination of the <code>try</code>, <code>catch</code> blocks.</strong></p>
+              <ul>
+                <li>The <code>try</code> block identifies a block of code in which an exception can occur.</li>
+                <li>The <code>catch</code> block identifies a block of code, known as an exception handler, that can handle a particular type of exception.</li>
+              </ul>
+              <box>
+                <p><span class="fas fa-cube"></span> The <code>writeList()</code> method below calls a method <code>process()</code> that can cause two type of exceptions. It uses a try-catch construct to deal with each exception.</p>
                 <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> </span>{
-    PrintWriter out = <span class="hljs-keyword">null</span>;
-
+    print(<span class="hljs-string">"starting method"</span>);
     <span class="hljs-keyword">try</span> {
-        System.out.println(<span class="hljs-string">"Entering"</span> + <span class="hljs-string">" try statement"</span>);
+        print(<span class="hljs-string">"starting process"</span>);
+        process();
+        print(<span class="hljs-string">"finishing process"</span>);
 
-        out = <span class="hljs-keyword">new</span> PrintWriter(<span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"OutFile.txt"</span>));
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; SIZE; i++) {
-            out.println(<span class="hljs-string">"Value at: "</span> + i + <span class="hljs-string">" = "</span> + list.get(i));
-        }
     } <span class="hljs-keyword">catch</span> (IndexOutOfBoundsException e) {
-        System.err.println(<span class="hljs-string">"Caught IndexOutOfBoundsException: "</span> + e.getMessage());
+        print(<span class="hljs-string">"caught IOOBE"</span>);
 
     } <span class="hljs-keyword">catch</span> (IOException e) {
-        System.err.println(<span class="hljs-string">"Caught IOException: "</span> +  e.getMessage());
+        print(<span class="hljs-string">"caught IOE"</span>);
 
-    } <span class="hljs-keyword">finally</span> {
-        <span class="hljs-keyword">if</span> (out != <span class="hljs-keyword">null</span>) {
-            System.out.println(<span class="hljs-string">"Closing PrintWriter"</span>);
-            out.close();
-        } <span class="hljs-keyword">else</span> {
-            System.out.println(<span class="hljs-string">"PrintWriter not open"</span>);
-        }
     }
+    print(<span class="hljs-string">"finishing method"</span>);
 }
 </code></pre>
-                <ul>
-                  <li>
-                    <p>The <code>try</code> block identifies a block of code in which an exception can occur.</p>
-                  </li>
-                  <li>
-                    <p>The <code>catch</code> block identifies a block of code, known as an exception handler, that can handle a particular type of exception.</p>
-                  </li>
-                  <li>
-                    <p>The <code>finally</code> block identifies a block of code that is guaranteed to execute, and is the right place to close files, recover resources, and otherwise clean up after the code enclosed in the try block.</p>
-                  </li>
-                  <li>
-                    <p>The <code>try</code> statement should contain at least one <code>catch</code> block or a finally block and may have multiple <code>catch</code> blocks.</p>
-                  </li>
-                  <li>
-                    <p>The class of the exception object indicates the type of exception thrown. The exception object can contain further information about the error, including an error message.</p>
-                  </li>
-                </ul>
-                <p><strong>You can use the <code>throw</code> statement to throw an exception.</strong> The throw statement requires a single argument: a throwable object. Throwable objects are instances of any subclass of the <code>Throwable</code> class.
-                  Here's an example of a throw statement.</p>
+                <p>Some possible outputs:</p>
+                <div class="table-responsive">
+                  <table class="markbind-table table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>No exceptions <span class="fas fa-arrow-down"></span></th>
+                        <th><code>IOException</code> <span class="fas fa-arrow-down"></span></th>
+                        <th><code>IndexOutOfBoundsException</code> <span class="fas fa-arrow-down"></span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="text-monospace">starting method<br>starting process<br>finishing process<br>finishing method</span></td>
+                        <td><span class="text-monospace">starting method<br>starting process<br><s>finishing process</s><br><mark>caught IOE</mark><br>finishing method </span></td>
+                        <td><span class="text-monospace">starting method<br>starting process<br><s>finishing process</s><br><mark>caught IOOBE</mark><br>finishing method</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </box>
+              <p>You can <strong>use a <code>finally</code> block to specify code that is guaranteed to execute with or without the exception.</strong> This is the right place to close files, recover resources, and otherwise clean up after the code enclosed
+                in the <code>try</code> block.</p>
+              <p><span class="fas fa-cube"></span> The <code>writeList()</code> method below has a <code>finally</code> block that will run</p>
+              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> </span>{
+    print(<span class="hljs-string">"starting method"</span>);
+    <span class="hljs-keyword">try</span> {
+        print(<span class="hljs-string">"starting process"</span>);
+        process();
+        print(<span class="hljs-string">"finishing process"</span>);
+
+    } <span class="hljs-keyword">catch</span> (IndexOutOfBoundsException e) {
+        print(<span class="hljs-string">"caught IOOBE"</span>);
+
+    } <span class="hljs-keyword">catch</span> (IOException e) {
+        print(<span class="hljs-string">"caught IOE"</span>);
+
+    } <span class="hljs-keyword">finally</span> {
+        <span class="hljs-comment">// clean up</span>
+        print(<span class="hljs-string">"cleaning up"</span>);
+    }
+    print(<span class="hljs-string">"finishing method"</span>);
+}
+</code></pre>
+              <p>Some possible outputs:</p>
+              <div class="table-responsive">
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>No exceptions <span class="fas fa-arrow-down"></span></th>
+                      <th><code>IOException</code> <span class="fas fa-arrow-down"></span></th>
+                      <th><code>IndexOutOfBoundsException</code> <span class="fas fa-arrow-down"></span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="text-monospace">starting method<br>starting process<br>finishing process<br><mark>cleaning up</mark><br>finishing method</span></td>
+                      <td><span class="text-monospace">starting method<br>starting process<br><s>finishing process</s><br>caught IOE<br><mark>cleaning up</mark><br>finishing method </span></td>
+                      <td><span class="text-monospace">starting method<br>starting process<br><s>finishing process</s><br>caught IOOBE<br><mark>cleaning up</mark><br>finishing method</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ul>
+                <li>
+                  <p>The <code>try</code> statement should contain at least one <code>catch</code> block or a finally block and may have multiple <code>catch</code> blocks.</p>
+                </li>
+                <li>
+                  <p>The class of the exception object indicates the type of exception thrown. The exception object can contain further information about the error, including an error message.</p>
+                </li>
+              </ul>
+              <p><strong>You can use the <code>throw</code> statement to throw an exception.</strong> The throw statement requires a
+                <tooltip content="Throwable objects are instances of any subclass of the `Throwable` class.">throwable</tooltip> object as the argument.</p>
+              <box>
+                <p><span class="fas fa-cube"></span> Here's an example of a <code>throw</code> statement.</p>
                 <pre><code class="hljs java"><span class="hljs-keyword">if</span> (size == <span class="hljs-number">0</span>) {
     <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> EmptyStackException();
 }
 </code></pre>
-                <p><strong>If the a method doesn't catch the checked exceptions that can occur within it, it must specify that it can throw these exceptions</strong> using a <code>throws</code> clause. Here's an example.</p>
+              </box>
+              <p>In Java, <strong>Checked exceptions are subject to the <em>Catch or Specify Requirement</em></strong>: code that might throw checked exceptions must be enclosed by either of the following:</p>
+              <ul>
+                <li>A <code>try</code> statement that catches the exception. The <code>try</code> must provide a handler for the exception.</li>
+                <li>A method that specifies that it can throw the exception. The method must provide a <code>throws</code> clause that lists the exception.</li>
+              </ul>
+              <p>Unchecked exceptions are not required to follow to the <em>Catch or Specify Requirement</em> but you can apply the requirement to them too.</p>
+              <box>
+                <p><span class="fas fa-cube"></span> Here's an example of a method specifying that it throws certain checked exceptions:</p>
                 <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException, IndexOutOfBoundsException </span>{
-    PrintWriter out = <span class="hljs-keyword">new</span> PrintWriter(<span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"OutFile.txt"</span>));
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; SIZE; i++) {
-        out.println(<span class="hljs-string">"Value at: "</span> + i + <span class="hljs-string">" = "</span> + list.get(i));
-    }
-    out.close();
+    print(<span class="hljs-string">"starting method"</span>);
+    process();
+    print(<span class="hljs-string">"finishing method"</span>);
 }
 </code></pre>
-              </blockquote>
+                <pre><code>Some possible outputs:
+</code></pre>
+                <div class="table-responsive">
+                  <table class="markbind-table table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>No exceptions <span class="fas fa-arrow-down"></span></th>
+                        <th><code>IOException</code> <span class="fas fa-arrow-down"></span></th>
+                        <th><code>IndexOutOfBoundsException</code> <span class="fas fa-arrow-down"></span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="text-monospace">starting method<br>finishing method</span></td>
+                        <td><span class="text-monospace">starting method<br><s>finishing method</s></span></td>
+                        <td><span class="text-monospace">starting method<br><s>finishing method</s></span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </box>
+              <p><strong>Java comes with a collection of <a href="https://www.geeksforgeeks.org/built-exceptions-java-examples/">built-in exception classes</a></strong> that you can use. When they are not enough, <strong>it is possible to <a href="https://www.javatpoint.com/custom-exception">create your own exception classes</a></strong>.</p>
             </div>
             <div></div>
           </div>
@@ -126,7 +200,7 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
 </footer>
 </div>
 </body>

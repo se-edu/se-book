@@ -10,66 +10,23 @@
 
 <div id="body">
 
-<tip-box type="primary">
+<tip-box type="definition">
 
 <include src="../../../common/definitions.md#def-polymorphism" />
 
 </tip-box>
 
-Take the example of writing a payroll application for a university to facilitate payroll processing of university staff. Suppose an `adjustSalary(int)` operation adjusts the salaries of all staff members. This operation will be executed whenever the university initiates a salary adjustment for its staff. However, the adjustment formula is different for different staff categories, say admin and academic. Here is one possible way of designing the classes in the `Payroll` system.
+**_Polymorphism_ allows you to write code targeting superclass objects, use that code on subclass objects, and achieve possibly different results based on the actual class of the object.**
 
-Here is the implementation of the `adjustSalary(int)` operation.
+<box>
 
-```java
-class Payroll1 {
-    ArrayList<Admin> admins;
-    ArrayList<Academic> academics;
-    // ...
+{{ icon_example }} Assume classes `Cat` and `Dog` are both subclasses of the `Animal` class. You can write code targeting `Animal` objects and use that code on `Cat` and `Dog` objects, achieving possibly different results based on whether it is a `Cat` object or a `Dog` object. Some examples:
+* Declare an array of type `Animal` and still be able to store `Dog` and `Cat` objects in it.
+* Define a method that takes an `Animal` object as a parameter and yet be able to pass `Dog` and `Cat` objects to it.
+* Call a method on a `Dog` or a `Cat` object as if it is an `Animal` object %%(i.e., without knowing whether it is a `Dog` object or a `Cat` object)%% and get a different response from it based on its actual class %%e.g., call the `Animal` class' method `speak()` on object `a` and get a `Meow` as the return value if `a` is a `Cat` object and `Woof` if it is a `Dog` object%%.
+</box>
 
-    void adjustSalary(int byPercent) {
-        for (Admin ad: admins) {
-            ad.adjustSalary(byPercent);
-        }
-        for (Academic ac: academics) {
-            ac.adjustSalary(byPercent);
-        }
-    }
-}
-```
-
-Note how processing is similar for the two staff types. It is as if the type of staff members is irrelevant to how they are processed inside this operation! If that is the case, can the staff type be "abstracted away" from this method? Here is such an implementation of `adjustSalary(int)`:
-
-
-```java
-class Payroll2 {
-    ArrayList<Staff> staff;
-    // ...
-
-    void adjustSalary(int byPercent) {
-        for (Staff s: staff) {
-            s.adjustSalary(byPercent);
-        }
-    }
-}
-```
-
-Notice the following:
-* Only one data structure `ArrayList<Staff>`. It contains both `Admin` and `Academic` objects but treats them as `Staff` objects
-* Only one loop
-* Outcome of the `s.adjustSalary(byPercent)` method call depends on whether `s` is an `Academic` or `Admin` object
-
-
-The above code is better in several ways:
-
-* It is shorter.
-* It is simpler.
-* It is more flexible (this code will remain the same even if more staff types are added).
-
-
-This does not mean we are getting rid of the `Academic` and `Admin` classes completely and replacing them with a more general class called `Staff`. Rather, this part of the code “treats” both `Admin` and `Academic` objects as one type called `Staff`.
-
-For example, `ArrayList` staff contains both `Admin` and `Academic` objects although it treats all of them as `Staff` objects. However, when the `adjustSalary(int)` operation of these objects is called, the resulting salary adjustment will be different for `Admin` objects and `Academic` objects. Therefore, different types of objects are treated as a single general type, but yet each type of object exhibits a different kind of behavior. This is called _polymorphism_ (literally, it means “ability to take many forms”). In this example, an object that is perceived as type `Staff` can be an `Admin` object or an `Academic` object.
-
+_Polymorphism_ literally means "ability to take many forms".
 
 </div>
 

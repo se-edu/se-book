@@ -49,11 +49,16 @@
           </div>
           <div id="main">
             <div>
-              <p><strong>Most languages allow a method/function to encapsulate the unusual situation in an Exception object and 'throw'/'raise' that object so that another piece of code can 'catch' it and deal with it.</strong> This is especially useful
-                when code segment that encountered the unusual situation does not know how to deal with it.</p>
-              <p><strong>Exception objects can propagate up the function call hierarchy until it is dealt with.</strong> Usually, an exception thrown by a function is caught by the caller function. If the called function does not know how to deal with the
-                exception it caught, it can throw/raise the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the
-                <tooltip content="the hieararchy of function calls">function call stack</tooltip> until it is received by the main function and thrown to the runtime, thus halting the system.</p>
+              <p><strong>Most languages allow code that encountered an &quot;exceptional&quot; situation to encapsulate details of the situation in an <em>Exception</em> object and <em>throw</em>/<em>raise</em> that object so that another piece of code can <em>catch</em> it and deal with it.</strong>                This is especially useful when the code that encountered the unusual situation does not know how to deal with it.</p>
+              <p>The extract below from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small> (with slight adaptations) explains how exceptions are typically handled.</p>
+              <div class="indented">
+                <p><strong>When an error occurs at some point in the execution, the code being executed creates an <em>exception object</em> and hands it off to the runtime system.</strong> The exception object contains information about the error, including
+                  its type and the state of the program when the error occurred. Creating an exception object and handing it to the runtime system is called <em>throwing</em> an exception.</p>
+                <p><strong>After a method throws an exception, the runtime system attempts to find something to handle it in the <tooltip content="the ordered list of methods that had been called to get to the method where the error occurred"><em>call stack</em></tooltip>.</strong>                  The runtime system searches the call stack for a method that contains a block of code that can handle the exception. This block of code is called an <em>exception handler</em>. The search begins with the method in which the error occurred
+                  and proceeds through the call stack in the reverse order in which the methods were called. When an appropriate handler is found, the runtime system passes the exception to the handler. An exception handler is considered appropriate if
+                  the type of the exception object thrown matches the type that can be handled by the handler.</p>
+                <p><strong>The exception handler chosen is said to <em>catch</em> the exception.</strong> If the runtime system exhaustively searches all the methods on the call stack without finding an appropriate exception handler, the program terminates.</p>
+              </div>
               <p>Advantages of exception handling in this way:</p>
               <ul>
                 <li>The ability to propagate error information through the call stack.</li>
@@ -91,7 +96,7 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
 </footer>
 </div>
 </body>

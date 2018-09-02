@@ -10,7 +10,7 @@
 
 <div id="body">
 
-**==_Branching_== is the process of evolving multiple versions of the software in parallel.** For example, one team member can create a new branch and add an experimental feature to it while the rest of the team keeps working on another branch. Branches can be given names e.g. `master` `release` `dev`. 
+**==_Branching_== is the process of evolving multiple versions of the software in parallel.** For example, one team member can create a new branch and add an experimental feature to it while the rest of the team keeps working on another branch. Branches can be given names e.g. `master`, `release`, `dev`.
 
 **A branch can be ==_merged_== into another branch.** Merging usually result in a new commit that represents the changes done in the branch being merged.
 

@@ -77,67 +77,84 @@
                 </p>
                 <p></p>
                 <div>
-                  <p>String is a built-in Java class that you can use without importing</p>
-                  <box>
-                    <p>💡 Any class in the <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/package-summary.html"><code>java.lang</code></a> package can be used without importing.
+                  <p>String is a built-in Java class that you
+                    <trigger trigger="click" for="modal:stringClass-javaLang">can use without importing</trigger>. Given below are some useful String methods:</p>
+                  <modal id="modal:stringClass-javaLang" title=":bulb: `java.lang` classes can be used without importing" placement="top">
+                    <p>Any class in the <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/package-summary.html"><code>java.lang</code></a> package can be used without importing.
                     </p>
-                  </box>
-                  <p>Given below are some useful String methods:</p>
-                  <h5 id="find-the-character-at-a-specific-location">Find the character at a specific location</h5>
+                  </modal>
+                  <h5 id="find-characters-of-a-string">Find characters of a string</h5>
                   <div class="indented">
-                    <p>Strings provide a method named charAt, which extracts a character. It returns a char, a primitive type that stores an individual character (as opposed to strings of them).</p>
+                    <p>Strings provide a method named <code>charAt</code>, which extracts a character. It returns a <code>char</code>, a primitive type that stores an individual character (as opposed to strings of them).</p>
                     <pre><code class="hljs java">String fruit = <span class="hljs-string">"banana"</span>;
 <span class="hljs-keyword">char</span> letter = fruit.charAt(<span class="hljs-number">0</span>);
 </code></pre>
-                    <p>The argument 0 means that we want the letter at position 0. Like array indexes, string indexes start at 0, so the character assigned to letter is <code>b</code>.</p>
-                    <p>You can convert a string to an array of characters using the toCharArray method.</p>
+                    <p>The argument 0 means that we want the letter at position 0. Like array indexes, string indexes start at 0, so the character assigned to <code>letter</code> is <code>'b'</code>.</p>
+                    <p>You can convert a string to an array of characters using the <code>toCharArray</code> method.</p>
                     <pre><code class="hljs java"><span class="hljs-keyword">char</span>[] fruitChars = fruit.toCharArray()
 </code></pre>
                   </div>
                   <h5 id="change-a-string-to-upperlower-case">Change a string to upper/lower case</h5>
                   <div class="indented">
-                    <p>Strings provide methods, toUpperCase and toLowerCase, that convert from uppercase to lowercase and back. These methods are often a source of confusion, because it sounds like they modify strings. But neither these methods nor any others
-                      can change a string, because strings are immutable. When you invoke toUpperCase on a string, you get a new string object as a return value. For example:</p>
-                    <pre><code class="hljs java">String name = <span class="hljs-string">"Alan Turing"</span>;
+                    <p>Strings provide methods, <code>toUpperCase</code> and <code>toLowerCase</code>, that convert from uppercase to lowercase and back.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> After these statements run, <code>upperName</code> refers to the string <code>&quot;ALAN TURING&quot;</code> but <code>name</code> still refers to <code>&quot;Alan Turing&quot;</code>.</p>
+                      <pre><code class="hljs java">String name = <span class="hljs-string">"Alan Turing"</span>;
 String upperName = name.toUpperCase();
+System.out.println(name);
+System.out.println(upperName);
 </code></pre>
-                    <p>After these statements run, upperName refers to the string &quot;ALAN TURING&quot;. But name still refers to &quot;Alan Turing&quot;. Another useful method is replace, which finds and replaces instances of one string within another.
-                      This example replaces &quot;Computer Science&quot; with &quot;CS&quot;:</p>
-                    <pre><code class="hljs java">String text = <span class="hljs-string">"Computer Science is fun!"</span>;
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre class="hljs"><code>Alan Turing
+ALAN TURING
+</code></pre>
+                    </box>
+                    <p>Note that <strong>a string method cannot change the string object on which the method is invoked, because strings are <tooltip content="once created, cannot be modified"><em>immutable</em></tooltip></strong>. For example, when you
+                      invoke <code>toUpperCase</code> on a string <code>&quot;abc&quot;</code>, you get a new string object <code>&quot;ABC&quot;</code> as the return value rather than the string <code>&quot;abc&quot;</code> being changed to <code>&quot;ABC&quot;</code>.
+                      As a result, for such string methods that <em>seemingly</em> modify the string but <em>actually</em> return a new string instead e.g., <code>toLowerCase</code>, <mark>invoking the method has no effect if you don’t assign the return value to a variable</mark>.</p>
+                    <pre><code class="hljs java">String s = <span class="hljs-string">"Ada"</span>;
+s.toUpperCase(); <span class="hljs-comment">// no effect</span>
+s = s.toUpperCase(); <span class="hljs-comment">// the correct way</span>
+</code></pre>
+                  </div>
+                  <h5 id="replacing-parts-of-a-string">Replacing parts of a string</h5>
+                  <div class="indented">
+                    <p>Another useful method is <code>replace</code>, which finds and replaces instances of one string within another.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> This example replaces <code>&quot;Computer Science&quot;</code> with <code>&quot;CS&quot;</code>.</p>
+                      <pre><code class="hljs java">String text = <span class="hljs-string">"Computer Science is fun!"</span>;
 text = text.replace(<span class="hljs-string">"Computer Science"</span>, <span class="hljs-string">"CS"</span>);
+System.out.println(text);
 </code></pre>
-                    <p>This example demonstrates a common way to work with string methods. It invokes <code>text.replace</code>, which returns a reference to a new string, <code>&quot;CS is fun!&quot;</code>. Then it assigns the new string to text, replacing
-                      the old string. This assignment is important; if you don’t save the return value, invoking <code>text.replace</code> has no effect.</p>
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre class="hljs"><code>CS is fun!
+</code></pre>
+                    </box>
                   </div>
                   <h5 id="accessing-substrings">Accessing substrings</h5>
                   <div class="indented">
-                    <p>The substring method returns a new string that copies letters from an existing string, starting at the given index.</p>
+                    <p>The <code>substring</code> method returns a new string that copies letters from an existing string, starting at the given index.</p>
                     <ul>
-                      <li><code>fruit.substring(0)</code> <span class="fas fa-arrow-right"></span> <code>&quot;banana&quot;</code></li>
-                      <li><code>fruit.substring(2)</code> <span class="fas fa-arrow-right"></span> <code>&quot;nana&quot;</code></li>
-                      <li><code>fruit.substring(6)</code> <span class="fas fa-arrow-right"></span> <code>&quot;&quot;</code></li>
+                      <li><code>&quot;banana&quot;.substring(0)</code> <span class="fas fa-arrow-right"></span> <code>&quot;banana&quot;</code></li>
+                      <li><code>&quot;banana&quot;.substring(2)</code> <span class="fas fa-arrow-right"></span> <code>&quot;nana&quot;</code></li>
+                      <li><code>&quot;banana&quot;.substring(6)</code> <span class="fas fa-arrow-right"></span> <code>&quot;&quot;</code></li>
                     </ul>
-                    <p>The first example returns a copy of the entire string. The second example returns all but the first two characters. As the last example shows, substring returns the empty string if the argument is the length of the string.</p>
                     <p>If it’s invoked with two arguments, they are treated as a start and end index:</p>
                     <ul>
-                      <li><code>fruit.substring(0, 3)</code> <span class="fas fa-arrow-right"></span> <code>&quot;ban&quot;</code></li>
-                      <li><code>fruit.substring(2, 5)</code> <span class="fas fa-arrow-right"></span> <code>&quot;nan&quot;</code></li>
-                      <li><code>fruit.substring(6, 6)</code> <span class="fas fa-arrow-right"></span> <code>&quot;&quot;</code></li>
+                      <li><code>&quot;banana&quot;.substring(0, 3)</code> <span class="fas fa-arrow-right"></span> <code>&quot;ban&quot;</code></li>
+                      <li><code>&quot;banana&quot;.substring(2, 5)</code> <span class="fas fa-arrow-right"></span> <code>&quot;nan&quot;</code></li>
+                      <li><code>&quot;banana&quot;.substring(6, 6)</code> <span class="fas fa-arrow-right"></span> <code>&quot;&quot;</code></li>
                     </ul>
                   </div>
                   <h5 id="searching-within-strings">Searching within strings</h5>
                   <div class="indented">
-                    <p>The <code>indexOf</code> method searches for a character in a string.</p>
-                    <pre><code class="hljs java">String fruit = <span class="hljs-string">"banana"</span>;
-<span class="hljs-keyword">int</span> index = fruit.indexOf(<span class="hljs-string">'a'</span>);
-</code></pre>
-                    <p>This example finds the index of 'a' in the string. But the letter appears three times, so it’s not obvious what indexOf should do. According to the documentation, it returns the index of the first appearance.</p>
-                    <p>To find subsequent appearances, you can use another version of indexOf, which takes a second argument that indicates where in the string to start looking.</p>
-                    <pre><code class="hljs java"><span class="hljs-keyword">int</span> index = fruit.indexOf(<span class="hljs-string">'a'</span>, <span class="hljs-number">2</span>);
-</code></pre>
-                    <p>This code starts at index 2 (the first 'n') and finds the next 'a', which is at index 3. If the letter happens to appear at the starting index, the starting index is the answer. So <code>fruit.indexOf('a', 5)</code> returns <code>5</code>.</p>
-                    <p>If the character does not appear in the string, <code>indexOf</code> returns <code>-1</code>. Since indexes cannot be negative, this value indicates the character was not found. You can also use indexOf to search for a substring, not
-                      just a single character. For example, the expression <code>fruit.indexOf(&quot;nan&quot;)</code> returns <code>2</code>.</p>
+                    <p>The <code>indexOf</code> method searches for a single character (or a substring) in a string and returns the index of the first occurrence. The method returns <code>-1</code> if there are no occurrences.</p>
+                    <ul>
+                      <li><code>&quot;banana&quot;.indexOf('a')</code> <span class="fas fa-arrow-right"></span> <code>1</code></li>
+                      <li><code>&quot;banana&quot;.indexOf('a', 2)</code> <span class="fas fa-arrow-right"></span> <code>3</code> <span class="dimmed">searches for <code>'a'</code>, starting from position 2</span></li>
+                      <li><code>&quot;banana&quot;.indexOf('x')</code> <span class="fas fa-arrow-right"></span> <code>-1</code></li>
+                      <li><code>&quot;banana&quot;.indexOf(&quot;nan&quot;)</code> <span class="fas fa-arrow-right"></span> <code>2</code> <span class="dimmed">searches for the substring <code>&quot;nan&quot;</code></span></li>
+                    </ul>
                   </div>
                   <h5 id="comparing-strings">Comparing Strings</h5>
                   <div class="indented">
@@ -149,14 +166,31 @@ String name2 = <span class="hljs-string">"Ada Lovelace"</span>;
 }
 </code></pre>
                     <p>This code compiles and runs, and most of the time it gets the answer right. But it is not correct, and sometimes it gets the answer wrong. The problem is that the <code>==</code> operator checks whether the two variables refer to the
-                      same object (by comparing the references). If you give it two different strings that contain the same letters, it yields false. The right way to compare strings is with the equals method, like this:</p>
-                    <pre><code class="hljs java"><span class="hljs-keyword">if</span> (name1.equals(name2)) {
+                      same object (by comparing the references). If you give it two different strings that contain the same letters, it yields false. The right way to compare strings is with the <code>equals</code> method.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> This example invokes <code>equals</code> on <code>name1</code> and passes <code>name2</code> as an argument. The <code>equals</code> method returns <code>true</code> if the strings contain the same
+                        characters; otherwise it returns <code>false</code>.</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">if</span> (name1.equals(name2)) {
     System.out.println(<span class="hljs-string">"The names are the same."</span>);
 }
 </code></pre>
-                    <p>This example invokes <code>equals</code> on <code>name1</code> and passes <code>name2</code> as an argument. The <code>equals</code> method returns <code>true</code> if the strings contain the same characters; otherwise it returns
-                      <code>false</code>.</p>
-                    <p>To check if two strings are similar irrespective of the differences in case, you can use the <code>equalsIgnoreCase</code> method.</p>
+                    </box>
+                    <p>If the strings differ, we can use <code>compareTo</code> to see which comes first in alphabetical order. The return value from <code>compareTo</code> is the difference between the first characters in the strings that differ. If the
+                      strings are equal, their difference is zero. If the first string (the one on which the method is invoked) comes first in the alphabet, the difference is negative. Otherwise, the difference is positive.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> In this example, <code>compareTo</code> returns positive 8, because the second letter of &quot;Ada&quot; comes before the second letter of &quot;Alan&quot; by 8 letters.</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">int</span> diff = name1.compareTo(name2);
+<span class="hljs-keyword">if</span> (diff == <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"The names are the same."</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &lt; <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"name1 comes before name2."</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &gt; <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"name2 comes before name1."</span>);
+}
+</code></pre>
+                    </box>
+                    <p>Both <code>equals</code> and <code>compareTo</code> are case-sensitive. The uppercase letters come before the lowercase letters, so <code>&quot;Ada&quot;</code> comes before <code>&quot;ada&quot;</code>. To check if two strings are
+                      similar irrespective of the differences in case, you can use the <code>equalsIgnoreCase</code> method.</p>
                     <pre><code class="hljs java">String s1 = <span class="hljs-string">"Apple"</span>;
 String s2 = <span class="hljs-string">"apple"</span>;
 System.out.println(s1.equals(s2)); <span class="hljs-comment">//false</span>
@@ -168,25 +202,85 @@ System.out.println(s1.equalsIgnoreCase(s2)); <span class="hljs-comment">//true</
                       <li><code>startsWith</code>: checks if one string has the other as a substring at the <em>beginning</em> e.g., <code>Apple</code> and <code>App</code></li>
                       <li><code>endsWith</code>: checks if one string has the other as a substring at the <em>end</em> e.g., <code>Crab</code> and <code>ab</code></li>
                     </ul>
-                    <p>If the strings differ, we can use <code>compareTo</code> to see which comes first in alphabetical order:</p>
-                    <pre><code class="hljs java"><span class="hljs-keyword">int</span> diff = name1.compareTo(name2);
-<span class="hljs-keyword">if</span> (diff == <span class="hljs-number">0</span>) {
-    System.out.println(<span class="hljs-string">"The names are the same."</span>);
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &lt; <span class="hljs-number">0</span>) {
-    System.out.println(<span class="hljs-string">"name1 comes before name2."</span>);
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &gt; <span class="hljs-number">0</span>) {
-    System.out.println(<span class="hljs-string">"name2 comes before name1."</span>);
-}
+                  </div>
+                  <h5 id="printing-special-characters-line-breaks-tabs">Printing special characters (line breaks, tabs, ...)</h5>
+                  <div class="indented">
+                    <p>You can embed a special character <span class="dimmed">e.g., line break, tab, backspace, etc.</span> in a string using an <em>escape sequence</em>.</p>
+                    <div class="table-responsive">
+                      <table class="markbind-table table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Escape sequence</th>
+                            <th>meaning</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><code>\n</code></td>
+                            <td>newline character</td>
+                          </tr>
+                          <tr>
+                            <td><code>\t</code></td>
+                            <td>tab character</td>
+                          </tr>
+                          <tr>
+                            <td><code>\b</code></td>
+                            <td>backspace character</td>
+                          </tr>
+                          <tr>
+                            <td><code>\f</code></td>
+                            <td>form feed character</td>
+                          </tr>
+                          <tr>
+                            <td><code>\r</code></td>
+                            <td>carriage return character</td>
+                          </tr>
+                          <tr>
+                            <td><code>\&quot;</code></td>
+                            <td>&quot; (double quote) character</td>
+                          </tr>
+                          <tr>
+                            <td><code>\'</code></td>
+                            <td>' (single quote) character</td>
+                          </tr>
+                          <tr>
+                            <td><code>\\</code></td>
+                            <td>\ (back slash) character</td>
+                          </tr>
+                          <tr>
+                            <td><code>\uDDDD</code></td>
+                            <td>character from the Unicode character set, by specifying the Unicode as four hex digits in the place of <code>DDDD</code></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <box>
+                      <p><span class="fas fa-cube"></span> An example of using escape sequences to printing some special characters.</p>
+                      <pre><code class="hljs java">System.out.println(<span class="hljs-string">"First line\nSecond \"line\""</span>);
 </code></pre>
-                    <p>The return value from compareTo is the difference between the first characters in the strings that differ. If the strings are equal, their difference is zero. If the first string (the one on which the method is invoked) comes first
-                      in the alphabet, the difference is negative. Otherwise, the difference is positive.</p>
-                    <p>In the preceding code, compareTo returns positive 8, because the second letter of &quot;Ada&quot; comes before the second letter of &quot;Alan&quot; by 8 letters. Both equals and compareTo are case-sensitive. The uppercase letters
-                      come before the lowercase letters, so &quot;Ada&quot; comes before &quot;ada&quot;.</p>
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre class="hljs"><code>First line
+Second &quot;line&quot;
+</code></pre>
+                    </box>
+                    <p>💡 As the behavior of the <code>\n</code> depends on the platform, the recommended way to print a line break is using the <code>System.lineSeparator()</code> as it works the same in all platforms.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> Using <code>System.lineSeparator()</code> to print a line break.</p>
+                      <pre><code class="hljs java">System.out.println(<span class="hljs-string">"First line"</span> + System.lineSeparator() + <span class="hljs-string">"Second line"</span>);
+</code></pre>
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre class="hljs"><code>First line
+Second line
+</code></pre>
+                    </box>
                   </div>
                   <h5 id="string-formatting">String formatting</h5>
                   <div class="indented">
-                    <p>Sometimes programs need to create strings that are formatted a certain way, but not display them immediately, or ever. For example, the following method returns a time string in 12-hour format:</p>
-                    <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">timeString</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute)</span> </span>{
+                    <p>Sometimes programs need to create strings that are formatted a certain way. <code>String.format</code> takes a format specifier followed by a sequence of values and returns a new string formatted as specified.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> The following method returns a time string in 12-hour format. The format specifier <code>\%02d</code> means “two digit integer padded with zeros”, so <code>timeString(19, 5)</code> returns the string
+                        <code>&quot;07:05 PM&quot;</code>.</p>
+                      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">timeString</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute)</span> </span>{
     String ampm;
     <span class="hljs-keyword">if</span> (hour &lt; <span class="hljs-number">12</span>) {
         ampm = <span class="hljs-string">"AM"</span>;
@@ -197,15 +291,74 @@ System.out.println(s1.equalsIgnoreCase(s2)); <span class="hljs-comment">//true</
         ampm = <span class="hljs-string">"PM"</span>;
         hour = hour - <span class="hljs-number">12</span>;
     }
-    <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">"%02d:%02d %s"</span>, hour, minute, ampm);
+    <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">"%02d:%02d %s"</span>, hour, minute, ampm); <span class="hljs-comment">// returns "07:05 PM"</span>
 }
 </code></pre>
-                    <p><code>String.format</code> takes the same arguments as <code>System.out.printf</code>: a format specifier followed by a sequence of values. The main difference is that <code>System.out.printf</code> displays the result on the screen;
-                      <code>String.format</code> creates a new string, but does not display anything. In this example, the format specifier <code>\%02d</code> means “two digit integer padded with zeros”, so <code>timeString(19, 5)</code> returns the string
-                      <code>&quot;07:05 PM&quot;</code>.</p>
+                    </box>
                   </div>
                 </div>
-                <div></div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                      <div>
+                        <ul>
+                          <li><a href="https://docs.oracle.com/javase/9/docs/api/java/lang/String.html"><code>String</code> API</a></li>
+                          <li><a href="https://docs.oracle.com/javase/tutorial/essential/io/formatting.html">Oracle's tutorial on string formatting</a></li>
+                        </ul>
+                      </div>
+                    </panel>
+                  </div>
+                  <div>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                      <div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> `printPrice` method">
+                            <question>
+                              <p>Implement the <code>printPrice</code> method in the code below to produce the given output. Its behavior:</p>
+                              <ul>
+                                <li>The parameter <code>item</code> is a string in the format <code>name--$price</code> i.e., a name and a price of an item separated using a <code>--</code> e.g., <code>banana--$3/50</code></li>
+                                <li>It prints the <code>NAME: price</code> where the name is in upper case. The price does not have a <code>$</code> sign and has <code>.</code> in place of the <code>/</code><br> e.g., <code>banana--$3/50</code> <span class="fas fa-arrow-right"></span>                                  <code>BANANA: 3.50</code></li>
+                                <li>The <code>name</code> part of the input can have trailing/leading spaces which should be omitted from the output.<br> e.g., <code>banana --$3/50</code> <span class="fas fa-arrow-right"></span> <code>BANANA: 3.50</code></li>
+                              </ul>
+                              <p>💡 Do a Web search to find how to remove leading/trailing spaces. Suggested search terms <code>java string remove leading trailing spaces</code></p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPrice</span><span class="hljs-params">(String item)</span> </span>{
+        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span>
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printPrice(<span class="hljs-string">"sandwich  --$4/50"</span>);
+        printPrice(<span class="hljs-string">"  soda --$10/00"</span>);
+        printPrice(<span class="hljs-string">"  fries --$0/50"</span>);
+    }
+}
+</code></pre>
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>SANDWICH: 4.50
+SODA: 10.00
+FRIES: 0.50
+</code></pre>
+                              <div slot="hint">
+                                <p>Partial solution:</p>
+                                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPrice</span><span class="hljs-params">(String item)</span> </span>{
+    <span class="hljs-keyword">int</span> dividerPosition = item.indexOf(<span class="hljs-string">"--"</span>);
+    String itemName = item.substring(<span class="hljs-number">0</span>, dividerPosition);
+    <span class="hljs-comment">//...</span>
+    System.out.println(itemName.trim().toUpperCase() + ...);
+
+}
+</code></pre>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
               </div>
             </panel>
           </div>
@@ -222,26 +375,88 @@ System.out.println(s1.equalsIgnoreCase(s2)); <span class="hljs-comment">//true</
                 </p>
                 <p></p>
                 <div>
-                  <p>Primitive values (like <code>int</code>s, <code>double</code>s, and <code>char</code>s) do not provide methods. For example, you can’t call <code>equals</code> on an int:</p>
-                  <pre><code class="hljs java"><span class="hljs-keyword">int</span> i = <span class="hljs-number">5</span>;
+                  <p>Primitive values (like <code>int</code>, <code>double</code>, and <code>char</code>) do not provide methods.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> For example, you can’t call <code>equals</code> on an <code>int</code>:</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">int</span> i = <span class="hljs-number">5</span>;
 System.out.println(i.equals(<span class="hljs-number">5</span>));  <span class="hljs-comment">// compiler error</span>
 </code></pre>
-                  <p>But <strong>for each primitive type, there is a corresponding class in the Java library, called a <em>wrapper class</em></strong>. The wrapper class for <code>char</code> is called <code>Character</code>; for int it’s called Integer.
-                    Other wrapper classes include Boolean, Long, and Double. They are in the java.lang package, so you can use them without importing them.</p>
-                  <p>Each wrapper class defines constants <code>MIN_VALUE</code> and <code>MAX_VALUE</code>. For example, <code>Integer.MIN_VALUE</code> is <code>-2147483648</code>, and <code>Integer.MAX_VALUE</code> is <code>2147483647</code>. Because these
-                    constants are available in wrapper classes, you don’t have to remember them, and you don’t have to include them in your programs.</p>
-                  <p><strong>Wrapper classes provide methods for converting strings to other types.</strong> For example, <code>Integer.parseInt</code> converts a string to (you guessed it) an integer:</p>
-                  <pre><code class="hljs java">String str = <span class="hljs-string">"12345"</span>;
-<span class="hljs-keyword">int</span> num = Integer.parseInt(str);
+                  </box>
+                  <p>But <strong>for each primitive type, there is a corresponding class in the Java library, called a <em>wrapper class</em></strong>. The wrapper class for <code>char</code> is called <code>Character</code>; for <code>int</code> it’s called
+                    <code>Integer</code>. Other wrapper classes include <code>Boolean</code>, <code>Long</code>, and <code>Double</code>. They are in the <code>java.lang</code> package, so you can use them without importing them.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span></p>
+                    <pre><code class="hljs java">Double d = <span class="hljs-keyword">new</span> Double(<span class="hljs-number">2.5</span>);
+<span class="hljs-keyword">int</span> i = d.intValue();
+System.out.println(d);
+System.out.println(i);
 </code></pre>
-                  <p>In this context, parse means something like “read and translate”.</p>
-                  <p>The other wrapper classes provide similar methods, like <code>Double.parseDouble</code> and <code>Boolean.parseBoolean</code>. They also provide <code>toString</code>, which returns a string representation of a value:</p>
-                  <pre><code class="hljs java"><span class="hljs-keyword">int</span> num = <span class="hljs-number">12345</span>;
-String str = Integer.toString(num);
+                    <p><span class="fas fa-arrow-down"></span></p>
+                    <pre class="hljs"><code>2.5
+2
 </code></pre>
-                  <p>The result is the string &quot;12345&quot;.</p>
+                  </box>
+                  <p>Each wrapper class defines constants <code>MIN_VALUE</code> and <code>MAX_VALUE</code>. Because these constants are available in wrapper classes, you don’t have to remember them, and you don’t have to include them in your programs.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> Accessing max and min values for integers:</p>
+                    <pre><code class="hljs java">System.out.println(Integer.MIN_VALUE + <span class="hljs-string">" : "</span> + Integer.MAX_VALUE);
+</code></pre>
+                    <p><span class="fas fa-arrow-right"></span> <code>-2147483648 : 2147483647</code></p>
+                  </box>
+                  <p><strong>Wrapper classes provide methods for converting strings to other types.</strong> In this context, parse means something like “read and translate”. <code>Integer.parseInt</code> converts a string to (you guessed it) an integer.
+                    The other wrapper classes provide similar methods, like <code>Double.parseDouble</code> and <code>Boolean.parseBoolean</code>.</p>
+                  <p><span class="fas fa-cube"></span> <code>Integer.parseInt(&quot;12345&quot;)</code> <span class="fas fa-arrow-right"></span> <code>1234</code></p>
+                  <p>Wrapper classes also provide <code>toString</code>, which returns a string representation of a value.</p>
+                  <p><span class="fas fa-cube"></span> <code>Integer.toString(12345)</code> <span class="fas fa-arrow-right"></span> <code>&quot;1234&quot;</code></p>
                 </div>
-                <div></div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                      <div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> `printTotalScore` method">
+                            <question>
+                              <p>Implement the <code>printTotalScore</code> method in the code below to produce the given output. Its behavior:</p>
+                              <ul>
+                                <li><code>values</code> is an array of strings, each string representing an integer e.g., <code>[&quot;5&quot;, &quot;-1&quot;]</code></li>
+                                <li>The method prints the total of the numbers represented by the strings in the array<br>
+                                  <code>[&quot;5&quot;, &quot;-1&quot;]</code> <span class="fas fa-arrow-right"></span> <code>4</code></li>
+                              </ul>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTotalScore</span><span class="hljs-params">(String[] values)</span></span>{
+        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printTotalScore(<span class="hljs-keyword">new</span> String[]{});
+        printTotalScore(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"0"</span>, <span class="hljs-string">"124"</span>, <span class="hljs-string">"-15"</span>});
+    }
+}
+</code></pre>
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>0
+109
+</code></pre>
+                              <div slot="hint">
+                                <p>💡 You can use the <a href="https://www.tutorialspoint.com/java/number_parseint.htm"><code>Integer.parseInt()</code></a> method to convert a <code>String</code> to the equivalent <code>int</code> value.</p>
+                                <p>Partial solution:</p>
+                                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTotalScore</span><span class="hljs-params">(String[] values)</span></span>{
+    <span class="hljs-keyword">int</span> total = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (String value: values){
+        <span class="hljs-comment">// convert the value to an int and add to the total</span>
+    }
+    System.out.println(total);
+}
+</code></pre>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
               </div>
             </panel>
           </div>
@@ -258,18 +473,112 @@ String str = Integer.toString(num);
                 </p>
                 <p></p>
                 <div>
-                  <p>The Java library provides a utility class <code>java.util.Arrays</code> that provides methods for working with arrays. One of them, <code>toString</code>, returns a string representation of an array.</p>
-                  <pre><code class="hljs java"><span class="hljs-keyword">int</span>[] a = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>};
-System.out.println(Arrays.toString(a));
+                  <p><strong><a href="https://docs.oracle.com/javase/9/docs/api/java/util/Arrays.html"><code>java.util.Arrays</code></a> provides methods for working with arrays.</strong> One of them, <code>toString</code>, returns a string representation
+                    of an array. It also provides a <code>copyOf</code> that copies an array.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> Using <code>Arrays.copyOf</code> and <code>Arrays.toString</code>:</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">int</span>[] a = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>};
+
+<span class="hljs-keyword">int</span>[] b = Arrays.copyOf(a, <span class="hljs-number">3</span>); <span class="hljs-comment">// copy first three elements</span>
+System.out.println(Arrays.toString(b));
+
+<span class="hljs-keyword">int</span>[] c = Arrays.copyOf(a, a.length); <span class="hljs-comment">// copy all elements</span>
+System.out.println(Arrays.toString(c));
 </code></pre>
-                  <p><span class="fas fa-arrow-right"></span> <code>[1, 2, 3, 4]</code></p>
-                  <p>It also provides a <code>copyOf</code> that copies an array.</p>
-                  <pre><code class="hljs java"><span class="hljs-keyword">double</span>[] b = Arrays.copyOf(a, <span class="hljs-number">3</span>);
-You can also use a.length with Arrays.copyOf:
-<span class="hljs-keyword">double</span>[] b = Arrays.copyOf(a, a.length);
+                    <p><span class="fas fa-arrow-down"></span></p>
+                    <pre class="hljs"><code>[1, 2, 3]
+[1, 2, 3, 4]
 </code></pre>
+                  </box>
                 </div>
-                <div></div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                      <div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> `filterEmails` method">
+                            <question>
+                              <p>Implement the following two methods in the code below to produce the given output.</p>
+                              <ul>
+                                <li><strong><code>filterEmailsfilterEmails(String[] items): String[]</code></strong>
+                                  <ul>
+                                    <li><code>items</code> is an array of strings each of which may be an email address or some other random string</li>
+                                    <li>Returns a <code>String[]</code> containing email addresses that were in <code>items</code>. Any string containing <code>@</code> is considered as an email.<br>
+                                      <code>[&quot;aaa@bbb&quot;, &quot;xyz&quot;]</code> <span class="fas fa-arrow-right"></span> <code>[&quot;aaa@bbb&quot;]</code></li>
+                                  </ul>
+                                </li>
+                                <li><strong><code>printItems(String[] items)</code></strong>
+                                  <ul>
+                                    <li>Prints <code>items</code> in the standard array format. e.g., <code>[&quot;aaa&quot;, &quot;bbb&quot;]</code> <span class="fas fa-arrow-right"></span> <code>[aaa, bbb]</code></li>
+                                  </ul>
+                                </li>
+                              </ul>
+                              <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Arrays;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String[] filterEmails(String[] items){
+        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printItems</span><span class="hljs-params">(String[] items)</span></span>{
+        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{}));
+        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"abc"</span>}));
+        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"adam@example.com"</span>, <span class="hljs-string">"aab"</span>, <span class="hljs-string">"john@example.com"</span>, <span class="hljs-string">"some@"</span>}));
+        printItems(filterEmails(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"xyz"</span>, <span class="hljs-string">"@bee.com"</span>, <span class="hljs-string">"aab"</span>}));
+    }
+}
+</code></pre>
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>[]
+[]
+[adam@example.com, john@example.com, some@]
+[@bee.com]
+
+</code></pre>
+                              <div slot="hint">
+                                <ul>
+                                  <li><strong><code>filterEmailsfilterEmails(String[] items): String[]</code></strong>
+                                    <ol>
+                                      <li>create a new array (say <code>emails</code>) of the same size as <code>items</code></li>
+                                      <li>go through the elements in the <code>items</code> and add to <code>emails</code> if the element contains <code>@</code> (you can use the <code>contains</code> method of the <code>String</code> class here)</li>
+                                      <li>Use <code>Arrays.copyOf</code> method to return the filled part of <code>emails</code>.</li>
+                                    </ol>
+                                  </li>
+                                  <li><strong><code>printItems(String[] items)</code></strong>
+                                    <ul>
+                                      <li>💡 You can use the <code>Arrays.toString()</code> method for this.</li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                                <panel type="seamless" header="Partial solution">
+                                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String[] filterEmails(String[] items){
+    String[] results = <span class="hljs-keyword">new</span> String[items.length];
+    <span class="hljs-keyword">int</span> matchCount = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span>(String item: items){
+        <span class="hljs-keyword">if</span> (item.contains(<span class="hljs-string">"@"</span>)){
+           <span class="hljs-comment">//...</span>
+        }
+    }
+    <span class="hljs-keyword">return</span> Arrays.copyOf(results, matchCount);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printItems</span><span class="hljs-params">(String[] items)</span></span>{
+    System.out.println(Arrays.toString(items));
+}
+</code></pre>
+                                </panel>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
               </div>
             </panel>
           </div>
@@ -286,8 +595,8 @@ You can also use a.length with Arrays.copyOf:
                 </p>
                 <p></p>
                 <div>
-                  <p><code>Scanner</code> is a class that provides methods for inputting words, numbers, and other data.
-                    <code>Scanner</code> provides a method called nextLine that reads a line of input from the keyboard and returns a String. The following example reads two lines and repeats them back to the user:</p>
+                  <p><strong><code>Scanner</code> is a class that provides methods for inputting words, numbers, and other data.</strong> <code>Scanner</code> provides a method called <code>nextLine</code> that reads a line of input from the keyboard and
+                    returns a String. The following example reads two lines and repeats them back to the user:</p>
                   <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Echo</span> </span>{
@@ -306,8 +615,10 @@ You can also use a.length with Arrays.copyOf:
     }
 }
 </code></pre>
-                  <p><code>Scanner</code> class normally reads inputs as strings but it can read in a specific type of input too. The code below uses the <code>nextInt</code> method of the <code>Scanner</code> class to read an input as an integer.</p>
-                  <pre><code class="hljs java">
+                  <p><code>Scanner</code> class normally reads inputs as strings but it can read in a specific type of input too.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> The code below uses the <code>nextInt</code> method of the <code>Scanner</code> class to read an input as an integer.</p>
+                    <pre><code class="hljs java">
 Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
 
 System.out.print(<span class="hljs-string">"What is your age? "</span>);
@@ -317,8 +628,207 @@ System.out.print(<span class="hljs-string">"What is your name? "</span>);
 String name = in.nextLine();
 System.out.printf(<span class="hljs-string">"Hello %s, age %d\n"</span>, name, age);
 </code></pre>
+                    <p>💡 Note the <a href="https://docs.oracle.com/javase/tutorial/java/data/numberformat.html">use of <code>printf</code> method for formatting the output</a>.</p>
+                  </box>
                 </div>
-                <div></div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                      <div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> find total expenditure">
+                            <question>
+                              <p>Write a program to ask the user for a description of overseas expenses (presumably, the user has just returned from an overseas trip) and calculate the total in local currency.</p>
+                              <ul>
+                                <li>The conversion rate from overseas currency to local currency : overseas <code>$1.0</code> = local <code>$1.70</code></li>
+                                <li>The user can describe expenses is in free form text, as one line. The program takes all amounts mentioned in the format <code>$amount</code> e.g., <code>$1.50</code></li>
+                              </ul>
+                              <p>Here is one example output: <span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>Your expenses while overseas?beer $4.50 books $3.00 $5.00 for food, that's all
+Expenses in overseas currency:[$4.50, $3.00, $5.00]
+Total in local currency: $21.25
+</code></pre>
+                              <p>Here is another: <span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>Your expenses while overseas?nothing. I lived off my friends all the time.
+Expenses in overseas currency:[]
+Total in local currency: $0.00
+</code></pre>
+                              <p>One more: <span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>Your expenses while overseas? Just $10
+Expenses in overseas currency:[$10]
+Total in local currency: $17.00
+</code></pre>
+                              <p>Here's the skeleton code to use as the starting point:</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// You can add more methods here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String line;
+        Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+
+        System.out.print(<span class="hljs-string">"Your expenses while overseas?"</span>);
+       <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span>
+    }
+}
+</code></pre>
+                              <p>💡 You can use the <code>split</code> method of the <code>String</code> class to convert a sentence into an array of words. e.g.,<br></p>
+                              <pre><code class="hljs java">String sentence = <span class="hljs-string">"hello my dear"</span>;
+String[] words = sentence.split(<span class="hljs-string">" "</span>); <span class="hljs-comment">// split using the space as the delimiter</span>
+System.out.println(Arrays.toString(words));
+</code></pre>
+                              <p><span class="fas fa-arrow-right"></span> <code>[hello, my, dear]</code></p>
+                              <div slot="hint">
+                                <p>💡 You can use <code>String.format(&quot;%.2f&quot;, doubleValue)</code> to format <code>doubleValue</code> to two decimal points.<br> e.g., <code>String.format(&quot;%.2f&quot;, 1.3334)</code> <span class="fas fa-arrow-right"></span>                                  <code>1.33</code></p>
+                                <panel type="seamless" header="Partial solution">
+                                  <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Arrays;
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String[] filterAmounts(String sentence) {
+        String[] words = sentence.split(<span class="hljs-string">" "</span>);
+        String[] result = <span class="hljs-keyword">new</span> String[words.length];
+        <span class="hljs-keyword">int</span> wordCount = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (String word : words) {
+            <span class="hljs-keyword">if</span> (word.startsWith(<span class="hljs-string">"$"</span>)) {
+                result[wordCount] = word;
+                wordCount++;
+            }
+        }
+        <span class="hljs-keyword">return</span> Arrays.copyOf(result, wordCount);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String line;
+        Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+
+        System.out.print(<span class="hljs-string">"Your expenses while overseas?"</span>);
+        line = in.nextLine();
+
+        String[] amounts = filterAmounts(line);
+        System.out.println(<span class="hljs-string">"Expenses in overseas currency:"</span> + Arrays.toString(amounts));
+        <span class="hljs-keyword">double</span> total = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (String amount : amounts) {
+            <span class="hljs-comment">// convert amount to double, multiply by currency conversion rate, and add to total</span>
+        }
+        System.out.println(<span class="hljs-string">"Total in local currency: $"</span> + String.format(<span class="hljs-string">"%.2f"</span>, total));
+
+    }
+}
+</code></pre>
+                                </panel>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 1">
+                            <question>
+                              <p>This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small <code>TaskManager</code> program that can store a list of tasks.</p>
+                              <ul>
+                                <li>It is a
+                                  <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program.</li>
+                                <li>In this version, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></li>
+                              </ul>
+                              <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>Welcome to TaskManager-Level1!
+Your task? add submit report
+Tasks in the list: 1
+Your task? add return library book
+Tasks in the list: 2
+Your task? add remind boss about meeting
+Tasks in the list: 3
+Your task? xyz
+Unknown command! please try again
+Your task? print
+[1] submit report
+[2] return library book
+[3] remind boss about meeting
+Your task? add set up meeting with boss
+Tasks in the list: 4
+Your task? print
+[1] submit report
+[2] return library book
+[3] remind boss about meeting
+[4] set up meeting with boss
+Your task? exit
+Bye!
+</code></pre>
+                              <p>Summary of behavior:</p>
+                              <ul>
+                                <li>Task Manager prompts for user input with the message <code>Your task?</code></li>
+                                <li><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</li>
+                                <li><strong><code>print</code></strong>: prints the tasks added so far</li>
+                                <li><strong><code>exit</code></strong> or empty input: terminates the program</li>
+                              </ul>
+                              <p>If you are new to programming, we recommend you to build the program in small steps, as follows:</p>
+                              <ol>
+                                <li>Write a program that reads any user input, prints it back to the user, and exits.</li>
+                                <li>Update the program to do the above in a loop until user types <code>exit</code>.</li>
+                                <li>Add greetings printed at the start and the end.</li>
+                                <li>If the first word is not <code>add</code> or <code>exit</code>, print an error message. Suggestion: use a <code>switch</code> statement to choose between multiple actions.</li>
+                                <li>Create a <code>Task</code> class to represent tasks and add an <code>Task[]</code> to store tasks.</li>
+                                <li>If the first word of the user input is <code>add</code>, add the whole line (no need to omit the first word) to the task list.</li>
+                                <li>Update the code in the previous step to omit the word <code>add</code> from the task description.</li>
+                                <li>Add support for the <code>print</code> command.</li>
+                                <li>Add support for terminating if the user input is empty</li>
+                                <li>and so on ...</li>
+                              </ol>
+                              <div slot="hint">
+                                <panel type="seamless" header="Partial solution">
+                                  <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+    <span class="hljs-keyword">static</span> Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;  <span class="hljs-comment">// to keep track of number of tasks in the list</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printWelcome();
+        String line;
+        <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">while</span> (!isExit) {
+            line = getInput();
+            String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>]; <span class="hljs-comment">//extract the first word of the user input</span>
+            <span class="hljs-keyword">switch</span> (command) {
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"exit"</span>:
+                <span class="hljs-keyword">case</span> <span class="hljs-string">""</span>: <span class="hljs-comment">// exit if user input is empty</span>
+                    isExit = <span class="hljs-keyword">true</span>;
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"add"</span>:
+                    <span class="hljs-comment">// todo: add code here</span>
+                <span class="hljs-keyword">default</span>:
+                    printError();
+            }
+        }
+        exit();
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printWelcome</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Welcome to TaskManager-Level1!"</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTasks</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; count; i++) {
+            System.out.println(<span class="hljs-string">"["</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">"] "</span> + tasks[i].getDescription());
+        }
+    }
+
+    <span class="hljs-comment">// todo: add missing methods</span>
+}
+
+</code></pre>
+                                </panel>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
               </div>
             </panel>
           </div>
@@ -330,7 +840,7 @@ System.out.printf(<span class="hljs-string">"Hello %s, age %d\n"</span>, name, a
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
 </footer>
 </div>
 </body>

@@ -10,7 +10,7 @@
 
 <div id="body">
 
-...
+* [A tutorial on _Mastering Markdown_](https://guides.github.com/features/mastering-markdown/) %%--from GitHub%%
 
 </div>
 

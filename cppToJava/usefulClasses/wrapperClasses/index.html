@@ -49,26 +49,88 @@
           </div>
           <div id="main">
             <div>
-              <p>Primitive values (like <code>int</code>s, <code>double</code>s, and <code>char</code>s) do not provide methods. For example, you can’t call <code>equals</code> on an int:</p>
-              <pre><code class="hljs java"><span class="hljs-keyword">int</span> i = <span class="hljs-number">5</span>;
+              <p>Primitive values (like <code>int</code>, <code>double</code>, and <code>char</code>) do not provide methods.</p>
+              <box>
+                <p><span class="fas fa-cube"></span> For example, you can’t call <code>equals</code> on an <code>int</code>:</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">int</span> i = <span class="hljs-number">5</span>;
 System.out.println(i.equals(<span class="hljs-number">5</span>));  <span class="hljs-comment">// compiler error</span>
 </code></pre>
-              <p>But <strong>for each primitive type, there is a corresponding class in the Java library, called a <em>wrapper class</em></strong>. The wrapper class for <code>char</code> is called <code>Character</code>; for int it’s called Integer. Other
-                wrapper classes include Boolean, Long, and Double. They are in the java.lang package, so you can use them without importing them.</p>
-              <p>Each wrapper class defines constants <code>MIN_VALUE</code> and <code>MAX_VALUE</code>. For example, <code>Integer.MIN_VALUE</code> is <code>-2147483648</code>, and <code>Integer.MAX_VALUE</code> is <code>2147483647</code>. Because these
-                constants are available in wrapper classes, you don’t have to remember them, and you don’t have to include them in your programs.</p>
-              <p><strong>Wrapper classes provide methods for converting strings to other types.</strong> For example, <code>Integer.parseInt</code> converts a string to (you guessed it) an integer:</p>
-              <pre><code class="hljs java">String str = <span class="hljs-string">"12345"</span>;
-<span class="hljs-keyword">int</span> num = Integer.parseInt(str);
+              </box>
+              <p>But <strong>for each primitive type, there is a corresponding class in the Java library, called a <em>wrapper class</em></strong>. The wrapper class for <code>char</code> is called <code>Character</code>; for <code>int</code> it’s called
+                <code>Integer</code>. Other wrapper classes include <code>Boolean</code>, <code>Long</code>, and <code>Double</code>. They are in the <code>java.lang</code> package, so you can use them without importing them.</p>
+              <box>
+                <p><span class="fas fa-cube"></span></p>
+                <pre><code class="hljs java">Double d = <span class="hljs-keyword">new</span> Double(<span class="hljs-number">2.5</span>);
+<span class="hljs-keyword">int</span> i = d.intValue();
+System.out.println(d);
+System.out.println(i);
 </code></pre>
-              <p>In this context, parse means something like “read and translate”.</p>
-              <p>The other wrapper classes provide similar methods, like <code>Double.parseDouble</code> and <code>Boolean.parseBoolean</code>. They also provide <code>toString</code>, which returns a string representation of a value:</p>
-              <pre><code class="hljs java"><span class="hljs-keyword">int</span> num = <span class="hljs-number">12345</span>;
-String str = Integer.toString(num);
+                <p><span class="fas fa-arrow-down"></span></p>
+                <pre class="hljs"><code>2.5
+2
 </code></pre>
-              <p>The result is the string &quot;12345&quot;.</p>
+              </box>
+              <p>Each wrapper class defines constants <code>MIN_VALUE</code> and <code>MAX_VALUE</code>. Because these constants are available in wrapper classes, you don’t have to remember them, and you don’t have to include them in your programs.</p>
+              <box>
+                <p><span class="fas fa-cube"></span> Accessing max and min values for integers:</p>
+                <pre><code class="hljs java">System.out.println(Integer.MIN_VALUE + <span class="hljs-string">" : "</span> + Integer.MAX_VALUE);
+</code></pre>
+                <p><span class="fas fa-arrow-right"></span> <code>-2147483648 : 2147483647</code></p>
+              </box>
+              <p><strong>Wrapper classes provide methods for converting strings to other types.</strong> In this context, parse means something like “read and translate”. <code>Integer.parseInt</code> converts a string to (you guessed it) an integer. The
+                other wrapper classes provide similar methods, like <code>Double.parseDouble</code> and <code>Boolean.parseBoolean</code>.</p>
+              <p><span class="fas fa-cube"></span> <code>Integer.parseInt(&quot;12345&quot;)</code> <span class="fas fa-arrow-right"></span> <code>1234</code></p>
+              <p>Wrapper classes also provide <code>toString</code>, which returns a string representation of a value.</p>
+              <p><span class="fas fa-cube"></span> <code>Integer.toString(12345)</code> <span class="fas fa-arrow-right"></span> <code>&quot;1234&quot;</code></p>
             </div>
-            <div></div>
+            <div>
+              <div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> `printTotalScore` method">
+                        <question>
+                          <p>Implement the <code>printTotalScore</code> method in the code below to produce the given output. Its behavior:</p>
+                          <ul>
+                            <li><code>values</code> is an array of strings, each string representing an integer e.g., <code>[&quot;5&quot;, &quot;-1&quot;]</code></li>
+                            <li>The method prints the total of the numbers represented by the strings in the array<br>
+                              <code>[&quot;5&quot;, &quot;-1&quot;]</code> <span class="fas fa-arrow-right"></span> <code>4</code></li>
+                          </ul>
+                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTotalScore</span><span class="hljs-params">(String[] values)</span></span>{
+        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printTotalScore(<span class="hljs-keyword">new</span> String[]{});
+        printTotalScore(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"0"</span>, <span class="hljs-string">"124"</span>, <span class="hljs-string">"-15"</span>});
+    }
+}
+</code></pre>
+                          <p><span class="fas fa-arrow-down"></span></p>
+                          <pre class="hljs"><code>0
+109
+</code></pre>
+                          <div slot="hint">
+                            <p>💡 You can use the <a href="https://www.tutorialspoint.com/java/number_parseint.htm"><code>Integer.parseInt()</code></a> method to convert a <code>String</code> to the equivalent <code>int</code> value.</p>
+                            <p>Partial solution:</p>
+                            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTotalScore</span><span class="hljs-params">(String[] values)</span></span>{
+    <span class="hljs-keyword">int</span> total = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (String value: values){
+        <span class="hljs-comment">// convert the value to an int and add to the total</span>
+    }
+    System.out.println(total);
+}
+</code></pre>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </panel>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -78,7 +140,7 @@ String str = Integer.toString(num);
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
 </footer>
 </div>
 </body>

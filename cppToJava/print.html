@@ -37,8 +37,8 @@
         </div>
         <div>
           <p class="lead"><span>This book chapter <strong>assumes you are familiar with basic C++ programming</strong>. It provides a crash course to help you migrate from C++ to Java.</span></p>
-          <p>This chapter <strong>borrows heavily from the excellent book <a href="http://greenteapress.com/wp/think-java/"><em>ThinkJava</em></a></strong> by Allen Downey and Chris Mayfield. As required by terms of reuse of that book, this chapter is released
-            under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a> and not under the MIT license as rest of this book.</p>
+          <p>This chapter <strong>borrows heavily from the excellent book <a href="http://greenteapress.com/wp/think-java/"><em>ThinkJava</em></a></strong> by Allen Downey and Chris Mayfield. As required by the <em>terms of reuse</em> of that book, this
+            chapter is released under the <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a> and not under the MIT license as the rest of this book.</p>
           <p>Some conventions used in this chapter:</p>
           <div class="indented">
             <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
@@ -62,7 +62,7 @@
           <blockquote>
             <p>Java was <strong>conceived by James Gosling and his team at Sun Microsystems in 1991</strong>.</p>
             <p>Java is directly <strong>related to both C and C++</strong>. Java inherits its syntax from C. Its object model is adapted from C++.
-              <small>--<a href="http://www.oracle.com/events/global/en/java-outreach/resources/java-a-beginners-guide-1720064.pdf">Java: A Beinner’s Guide, by Oracle</a></small></p>
+              <small>--<a href="http://www.oracle.com/events/global/en/java-outreach/resources/java-a-beginners-guide-1720064.pdf">Java: A Beginner’s Guide, by Oracle</a></small></p>
           </blockquote>
           <box>
             <p><span class="fas fa-info-circle"></span> Fun fact: The language was initially called <em>Oak</em> after an oak tree that stood outside Gosling's office. Later the project went by the name <em>Green</em> and was finally renamed Java, from Java
@@ -962,7 +962,7 @@ Polly likes crackers
             <p><span class="fas fa-cube"></span> The code below uses <code>spot.x</code> which means &quot;go to the object spot refers to, and get the value of the attribute <code>x</code>.&quot;</p>
             <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
 <span class="hljs-keyword">int</span> sum = spot.x * spot.x + spot.y * spot.y;
-System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y, <span class="hljs-string">", "</span> + sum);
+System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y + <span class="hljs-string">", "</span> + sum);
 </code></pre>
             <p><span class="fas fa-arrow-down"></span></p>
             <pre class="hljs"><code>3, 4, 25
@@ -1370,67 +1370,83 @@ System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" second
           <h4 id="the-string-class">The <code>String</code> Class</h4>
         </div>
         <div>
-          <p>String is a built-in Java class that you can use without importing</p>
-          <box>
-            <p>💡 Any class in the <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/package-summary.html"><code>java.lang</code></a> package can be used without importing.
+          <p>String is a built-in Java class that you
+            <trigger trigger="click" for="modal:stringClass-javaLang">can use without importing</trigger>. Given below are some useful String methods:</p>
+          <modal id="modal:stringClass-javaLang" title=":bulb: `java.lang` classes can be used without importing" placement="top">
+            <p>Any class in the <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/package-summary.html"><code>java.lang</code></a> package can be used without importing.
             </p>
-          </box>
-          <p>Given below are some useful String methods:</p>
-          <h5 id="find-the-character-at-a-specific-location">Find the character at a specific location</h5>
+          </modal>
+          <h5 id="find-characters-of-a-string">Find characters of a string</h5>
           <div class="indented">
-            <p>Strings provide a method named charAt, which extracts a character. It returns a char, a primitive type that stores an individual character (as opposed to strings of them).</p>
+            <p>Strings provide a method named <code>charAt</code>, which extracts a character. It returns a <code>char</code>, a primitive type that stores an individual character (as opposed to strings of them).</p>
             <pre><code class="hljs java">String fruit = <span class="hljs-string">"banana"</span>;
 <span class="hljs-keyword">char</span> letter = fruit.charAt(<span class="hljs-number">0</span>);
 </code></pre>
-            <p>The argument 0 means that we want the letter at position 0. Like array indexes, string indexes start at 0, so the character assigned to letter is <code>b</code>.</p>
-            <p>You can convert a string to an array of characters using the toCharArray method.</p>
+            <p>The argument 0 means that we want the letter at position 0. Like array indexes, string indexes start at 0, so the character assigned to <code>letter</code> is <code>'b'</code>.</p>
+            <p>You can convert a string to an array of characters using the <code>toCharArray</code> method.</p>
             <pre><code class="hljs java"><span class="hljs-keyword">char</span>[] fruitChars = fruit.toCharArray()
 </code></pre>
           </div>
           <h5 id="change-a-string-to-upperlower-case">Change a string to upper/lower case</h5>
           <div class="indented">
-            <p>Strings provide methods, toUpperCase and toLowerCase, that convert from uppercase to lowercase and back. These methods are often a source of confusion, because it sounds like they modify strings. But neither these methods nor any others can
-              change a string, because strings are immutable. When you invoke toUpperCase on a string, you get a new string object as a return value. For example:</p>
-            <pre><code class="hljs java">String name = <span class="hljs-string">"Alan Turing"</span>;
+            <p>Strings provide methods, <code>toUpperCase</code> and <code>toLowerCase</code>, that convert from uppercase to lowercase and back.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> After these statements run, <code>upperName</code> refers to the string <code>&quot;ALAN TURING&quot;</code> but <code>name</code> still refers to <code>&quot;Alan Turing&quot;</code>.</p>
+              <pre><code class="hljs java">String name = <span class="hljs-string">"Alan Turing"</span>;
 String upperName = name.toUpperCase();
+System.out.println(name);
+System.out.println(upperName);
 </code></pre>
-            <p>After these statements run, upperName refers to the string &quot;ALAN TURING&quot;. But name still refers to &quot;Alan Turing&quot;. Another useful method is replace, which finds and replaces instances of one string within another. This example
-              replaces &quot;Computer Science&quot; with &quot;CS&quot;:</p>
-            <pre><code class="hljs java">String text = <span class="hljs-string">"Computer Science is fun!"</span>;
+              <p><span class="fas fa-arrow-down"></span></p>
+              <pre class="hljs"><code>Alan Turing
+ALAN TURING
+</code></pre>
+            </box>
+            <p>Note that <strong>a string method cannot change the string object on which the method is invoked, because strings are <tooltip content="once created, cannot be modified"><em>immutable</em></tooltip></strong>. For example, when you invoke <code>toUpperCase</code>              on a string <code>&quot;abc&quot;</code>, you get a new string object <code>&quot;ABC&quot;</code> as the return value rather than the string <code>&quot;abc&quot;</code> being changed to <code>&quot;ABC&quot;</code>. As a result, for such
+              string methods that <em>seemingly</em> modify the string but <em>actually</em> return a new string instead e.g., <code>toLowerCase</code>, <mark>invoking the method has no effect if you don’t assign the return value to a variable</mark>.</p>
+            <pre><code class="hljs java">String s = <span class="hljs-string">"Ada"</span>;
+s.toUpperCase(); <span class="hljs-comment">// no effect</span>
+s = s.toUpperCase(); <span class="hljs-comment">// the correct way</span>
+</code></pre>
+          </div>
+          <h5 id="replacing-parts-of-a-string">Replacing parts of a string</h5>
+          <div class="indented">
+            <p>Another useful method is <code>replace</code>, which finds and replaces instances of one string within another.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> This example replaces <code>&quot;Computer Science&quot;</code> with <code>&quot;CS&quot;</code>.</p>
+              <pre><code class="hljs java">String text = <span class="hljs-string">"Computer Science is fun!"</span>;
 text = text.replace(<span class="hljs-string">"Computer Science"</span>, <span class="hljs-string">"CS"</span>);
+System.out.println(text);
 </code></pre>
-            <p>This example demonstrates a common way to work with string methods. It invokes <code>text.replace</code>, which returns a reference to a new string, <code>&quot;CS is fun!&quot;</code>. Then it assigns the new string to text, replacing the
-              old string. This assignment is important; if you don’t save the return value, invoking <code>text.replace</code> has no effect.</p>
+              <p><span class="fas fa-arrow-down"></span></p>
+              <pre class="hljs"><code>CS is fun!
+</code></pre>
+            </box>
           </div>
           <h5 id="accessing-substrings">Accessing substrings</h5>
           <div class="indented">
-            <p>The substring method returns a new string that copies letters from an existing string, starting at the given index.</p>
+            <p>The <code>substring</code> method returns a new string that copies letters from an existing string, starting at the given index.</p>
             <ul>
-              <li><code>fruit.substring(0)</code> <span class="fas fa-arrow-right"></span> <code>&quot;banana&quot;</code></li>
-              <li><code>fruit.substring(2)</code> <span class="fas fa-arrow-right"></span> <code>&quot;nana&quot;</code></li>
-              <li><code>fruit.substring(6)</code> <span class="fas fa-arrow-right"></span> <code>&quot;&quot;</code></li>
+              <li><code>&quot;banana&quot;.substring(0)</code> <span class="fas fa-arrow-right"></span> <code>&quot;banana&quot;</code></li>
+              <li><code>&quot;banana&quot;.substring(2)</code> <span class="fas fa-arrow-right"></span> <code>&quot;nana&quot;</code></li>
+              <li><code>&quot;banana&quot;.substring(6)</code> <span class="fas fa-arrow-right"></span> <code>&quot;&quot;</code></li>
             </ul>
-            <p>The first example returns a copy of the entire string. The second example returns all but the first two characters. As the last example shows, substring returns the empty string if the argument is the length of the string.</p>
             <p>If it’s invoked with two arguments, they are treated as a start and end index:</p>
             <ul>
-              <li><code>fruit.substring(0, 3)</code> <span class="fas fa-arrow-right"></span> <code>&quot;ban&quot;</code></li>
-              <li><code>fruit.substring(2, 5)</code> <span class="fas fa-arrow-right"></span> <code>&quot;nan&quot;</code></li>
-              <li><code>fruit.substring(6, 6)</code> <span class="fas fa-arrow-right"></span> <code>&quot;&quot;</code></li>
+              <li><code>&quot;banana&quot;.substring(0, 3)</code> <span class="fas fa-arrow-right"></span> <code>&quot;ban&quot;</code></li>
+              <li><code>&quot;banana&quot;.substring(2, 5)</code> <span class="fas fa-arrow-right"></span> <code>&quot;nan&quot;</code></li>
+              <li><code>&quot;banana&quot;.substring(6, 6)</code> <span class="fas fa-arrow-right"></span> <code>&quot;&quot;</code></li>
             </ul>
           </div>
           <h5 id="searching-within-strings">Searching within strings</h5>
           <div class="indented">
-            <p>The <code>indexOf</code> method searches for a character in a string.</p>
-            <pre><code class="hljs java">String fruit = <span class="hljs-string">"banana"</span>;
-<span class="hljs-keyword">int</span> index = fruit.indexOf(<span class="hljs-string">'a'</span>);
-</code></pre>
-            <p>This example finds the index of 'a' in the string. But the letter appears three times, so it’s not obvious what indexOf should do. According to the documentation, it returns the index of the first appearance.</p>
-            <p>To find subsequent appearances, you can use another version of indexOf, which takes a second argument that indicates where in the string to start looking.</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">int</span> index = fruit.indexOf(<span class="hljs-string">'a'</span>, <span class="hljs-number">2</span>);
-</code></pre>
-            <p>This code starts at index 2 (the first 'n') and finds the next 'a', which is at index 3. If the letter happens to appear at the starting index, the starting index is the answer. So <code>fruit.indexOf('a', 5)</code> returns <code>5</code>.</p>
-            <p>If the character does not appear in the string, <code>indexOf</code> returns <code>-1</code>. Since indexes cannot be negative, this value indicates the character was not found. You can also use indexOf to search for a substring, not just
-              a single character. For example, the expression <code>fruit.indexOf(&quot;nan&quot;)</code> returns <code>2</code>.</p>
+            <p>The <code>indexOf</code> method searches for a single character (or a substring) in a string and returns the index of the first occurrence. The method returns <code>-1</code> if there are no occurrences.</p>
+            <ul>
+              <li><code>&quot;banana&quot;.indexOf('a')</code> <span class="fas fa-arrow-right"></span> <code>1</code></li>
+              <li><code>&quot;banana&quot;.indexOf('a', 2)</code> <span class="fas fa-arrow-right"></span> <code>3</code> <span class="dimmed">searches for <code>'a'</code>, starting from position 2</span></li>
+              <li><code>&quot;banana&quot;.indexOf('x')</code> <span class="fas fa-arrow-right"></span> <code>-1</code></li>
+              <li><code>&quot;banana&quot;.indexOf(&quot;nan&quot;)</code> <span class="fas fa-arrow-right"></span> <code>2</code> <span class="dimmed">searches for the substring <code>&quot;nan&quot;</code></span></li>
+            </ul>
           </div>
           <h5 id="comparing-strings">Comparing Strings</h5>
           <div class="indented">
@@ -1442,13 +1458,31 @@ String name2 = <span class="hljs-string">"Ada Lovelace"</span>;
 }
 </code></pre>
             <p>This code compiles and runs, and most of the time it gets the answer right. But it is not correct, and sometimes it gets the answer wrong. The problem is that the <code>==</code> operator checks whether the two variables refer to the same
-              object (by comparing the references). If you give it two different strings that contain the same letters, it yields false. The right way to compare strings is with the equals method, like this:</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">if</span> (name1.equals(name2)) {
+              object (by comparing the references). If you give it two different strings that contain the same letters, it yields false. The right way to compare strings is with the <code>equals</code> method.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> This example invokes <code>equals</code> on <code>name1</code> and passes <code>name2</code> as an argument. The <code>equals</code> method returns <code>true</code> if the strings contain the same characters;
+                otherwise it returns <code>false</code>.</p>
+              <pre><code class="hljs java"><span class="hljs-keyword">if</span> (name1.equals(name2)) {
     System.out.println(<span class="hljs-string">"The names are the same."</span>);
 }
 </code></pre>
-            <p>This example invokes <code>equals</code> on <code>name1</code> and passes <code>name2</code> as an argument. The <code>equals</code> method returns <code>true</code> if the strings contain the same characters; otherwise it returns <code>false</code>.</p>
-            <p>To check if two strings are similar irrespective of the differences in case, you can use the <code>equalsIgnoreCase</code> method.</p>
+            </box>
+            <p>If the strings differ, we can use <code>compareTo</code> to see which comes first in alphabetical order. The return value from <code>compareTo</code> is the difference between the first characters in the strings that differ. If the strings
+              are equal, their difference is zero. If the first string (the one on which the method is invoked) comes first in the alphabet, the difference is negative. Otherwise, the difference is positive.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> In this example, <code>compareTo</code> returns positive 8, because the second letter of &quot;Ada&quot; comes before the second letter of &quot;Alan&quot; by 8 letters.</p>
+              <pre><code class="hljs java"><span class="hljs-keyword">int</span> diff = name1.compareTo(name2);
+<span class="hljs-keyword">if</span> (diff == <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"The names are the same."</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &lt; <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"name1 comes before name2."</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &gt; <span class="hljs-number">0</span>) {
+    System.out.println(<span class="hljs-string">"name2 comes before name1."</span>);
+}
+</code></pre>
+            </box>
+            <p>Both <code>equals</code> and <code>compareTo</code> are case-sensitive. The uppercase letters come before the lowercase letters, so <code>&quot;Ada&quot;</code> comes before <code>&quot;ada&quot;</code>. To check if two strings are similar
+              irrespective of the differences in case, you can use the <code>equalsIgnoreCase</code> method.</p>
             <pre><code class="hljs java">String s1 = <span class="hljs-string">"Apple"</span>;
 String s2 = <span class="hljs-string">"apple"</span>;
 System.out.println(s1.equals(s2)); <span class="hljs-comment">//false</span>
@@ -1460,25 +1494,84 @@ System.out.println(s1.equalsIgnoreCase(s2)); <span class="hljs-comment">//true</
               <li><code>startsWith</code>: checks if one string has the other as a substring at the <em>beginning</em> e.g., <code>Apple</code> and <code>App</code></li>
               <li><code>endsWith</code>: checks if one string has the other as a substring at the <em>end</em> e.g., <code>Crab</code> and <code>ab</code></li>
             </ul>
-            <p>If the strings differ, we can use <code>compareTo</code> to see which comes first in alphabetical order:</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">int</span> diff = name1.compareTo(name2);
-<span class="hljs-keyword">if</span> (diff == <span class="hljs-number">0</span>) {
-    System.out.println(<span class="hljs-string">"The names are the same."</span>);
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &lt; <span class="hljs-number">0</span>) {
-    System.out.println(<span class="hljs-string">"name1 comes before name2."</span>);
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &gt; <span class="hljs-number">0</span>) {
-    System.out.println(<span class="hljs-string">"name2 comes before name1."</span>);
-}
+          </div>
+          <h5 id="printing-special-characters-line-breaks-tabs">Printing special characters (line breaks, tabs, ...)</h5>
+          <div class="indented">
+            <p>You can embed a special character <span class="dimmed">e.g., line break, tab, backspace, etc.</span> in a string using an <em>escape sequence</em>.</p>
+            <div class="table-responsive">
+              <table class="markbind-table table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Escape sequence</th>
+                    <th>meaning</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>\n</code></td>
+                    <td>newline character</td>
+                  </tr>
+                  <tr>
+                    <td><code>\t</code></td>
+                    <td>tab character</td>
+                  </tr>
+                  <tr>
+                    <td><code>\b</code></td>
+                    <td>backspace character</td>
+                  </tr>
+                  <tr>
+                    <td><code>\f</code></td>
+                    <td>form feed character</td>
+                  </tr>
+                  <tr>
+                    <td><code>\r</code></td>
+                    <td>carriage return character</td>
+                  </tr>
+                  <tr>
+                    <td><code>\&quot;</code></td>
+                    <td>&quot; (double quote) character</td>
+                  </tr>
+                  <tr>
+                    <td><code>\'</code></td>
+                    <td>' (single quote) character</td>
+                  </tr>
+                  <tr>
+                    <td><code>\\</code></td>
+                    <td>\ (back slash) character</td>
+                  </tr>
+                  <tr>
+                    <td><code>\uDDDD</code></td>
+                    <td>character from the Unicode character set, by specifying the Unicode as four hex digits in the place of <code>DDDD</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <box>
+              <p><span class="fas fa-cube"></span> An example of using escape sequences to printing some special characters.</p>
+              <pre><code class="hljs java">System.out.println(<span class="hljs-string">"First line\nSecond \"line\""</span>);
 </code></pre>
-            <p>The return value from compareTo is the difference between the first characters in the strings that differ. If the strings are equal, their difference is zero. If the first string (the one on which the method is invoked) comes first in the
-              alphabet, the difference is negative. Otherwise, the difference is positive.</p>
-            <p>In the preceding code, compareTo returns positive 8, because the second letter of &quot;Ada&quot; comes before the second letter of &quot;Alan&quot; by 8 letters. Both equals and compareTo are case-sensitive. The uppercase letters come before
-              the lowercase letters, so &quot;Ada&quot; comes before &quot;ada&quot;.</p>
+              <p><span class="fas fa-arrow-down"></span></p>
+              <pre class="hljs"><code>First line
+Second &quot;line&quot;
+</code></pre>
+            </box>
+            <p>💡 As the behavior of the <code>\n</code> depends on the platform, the recommended way to print a line break is using the <code>System.lineSeparator()</code> as it works the same in all platforms.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> Using <code>System.lineSeparator()</code> to print a line break.</p>
+              <pre><code class="hljs java">System.out.println(<span class="hljs-string">"First line"</span> + System.lineSeparator() + <span class="hljs-string">"Second line"</span>);
+</code></pre>
+              <p><span class="fas fa-arrow-down"></span></p>
+              <pre class="hljs"><code>First line
+Second line
+</code></pre>
+            </box>
           </div>
           <h5 id="string-formatting">String formatting</h5>
           <div class="indented">
-            <p>Sometimes programs need to create strings that are formatted a certain way, but not display them immediately, or ever. For example, the following method returns a time string in 12-hour format:</p>
-            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">timeString</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute)</span> </span>{
+            <p>Sometimes programs need to create strings that are formatted a certain way. <code>String.format</code> takes a format specifier followed by a sequence of values and returns a new string formatted as specified.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> The following method returns a time string in 12-hour format. The format specifier <code>\%02d</code> means “two digit integer padded with zeros”, so <code>timeString(19, 5)</code> returns the string <code>&quot;07:05 PM&quot;</code>.</p>
+              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">timeString</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute)</span> </span>{
     String ampm;
     <span class="hljs-keyword">if</span> (hour &lt; <span class="hljs-number">12</span>) {
         ampm = <span class="hljs-string">"AM"</span>;
@@ -1489,10 +1582,10 @@ System.out.println(s1.equalsIgnoreCase(s2)); <span class="hljs-comment">//true</
         ampm = <span class="hljs-string">"PM"</span>;
         hour = hour - <span class="hljs-number">12</span>;
     }
-    <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">"%02d:%02d %s"</span>, hour, minute, ampm);
+    <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">"%02d:%02d %s"</span>, hour, minute, ampm); <span class="hljs-comment">// returns "07:05 PM"</span>
 }
 </code></pre>
-            <p><code>String.format</code> takes the same arguments as <code>System.out.printf</code>: a format specifier followed by a sequence of values. The main difference is that <code>System.out.printf</code> displays the result on the screen; <code>String.format</code>              creates a new string, but does not display anything. In this example, the format specifier <code>\%02d</code> means “two digit integer padded with zeros”, so <code>timeString(19, 5)</code> returns the string <code>&quot;07:05 PM&quot;</code>.</p>
+            </box>
           </div>
         </div>
       </div>
@@ -1501,24 +1594,39 @@ System.out.println(s1.equalsIgnoreCase(s2)); <span class="hljs-comment">//true</
           <h4 id="wrapper-classes-for-primitive-types">Wrapper Classes for Primitive Types</h4>
         </div>
         <div>
-          <p>Primitive values (like <code>int</code>s, <code>double</code>s, and <code>char</code>s) do not provide methods. For example, you can’t call <code>equals</code> on an int:</p>
-          <pre><code class="hljs java"><span class="hljs-keyword">int</span> i = <span class="hljs-number">5</span>;
+          <p>Primitive values (like <code>int</code>, <code>double</code>, and <code>char</code>) do not provide methods.</p>
+          <box>
+            <p><span class="fas fa-cube"></span> For example, you can’t call <code>equals</code> on an <code>int</code>:</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">int</span> i = <span class="hljs-number">5</span>;
 System.out.println(i.equals(<span class="hljs-number">5</span>));  <span class="hljs-comment">// compiler error</span>
 </code></pre>
-          <p>But <strong>for each primitive type, there is a corresponding class in the Java library, called a <em>wrapper class</em></strong>. The wrapper class for <code>char</code> is called <code>Character</code>; for int it’s called Integer. Other wrapper
-            classes include Boolean, Long, and Double. They are in the java.lang package, so you can use them without importing them.</p>
-          <p>Each wrapper class defines constants <code>MIN_VALUE</code> and <code>MAX_VALUE</code>. For example, <code>Integer.MIN_VALUE</code> is <code>-2147483648</code>, and <code>Integer.MAX_VALUE</code> is <code>2147483647</code>. Because these constants
-            are available in wrapper classes, you don’t have to remember them, and you don’t have to include them in your programs.</p>
-          <p><strong>Wrapper classes provide methods for converting strings to other types.</strong> For example, <code>Integer.parseInt</code> converts a string to (you guessed it) an integer:</p>
-          <pre><code class="hljs java">String str = <span class="hljs-string">"12345"</span>;
-<span class="hljs-keyword">int</span> num = Integer.parseInt(str);
+          </box>
+          <p>But <strong>for each primitive type, there is a corresponding class in the Java library, called a <em>wrapper class</em></strong>. The wrapper class for <code>char</code> is called <code>Character</code>; for <code>int</code> it’s called <code>Integer</code>.
+            Other wrapper classes include <code>Boolean</code>, <code>Long</code>, and <code>Double</code>. They are in the <code>java.lang</code> package, so you can use them without importing them.</p>
+          <box>
+            <p><span class="fas fa-cube"></span></p>
+            <pre><code class="hljs java">Double d = <span class="hljs-keyword">new</span> Double(<span class="hljs-number">2.5</span>);
+<span class="hljs-keyword">int</span> i = d.intValue();
+System.out.println(d);
+System.out.println(i);
 </code></pre>
-          <p>In this context, parse means something like “read and translate”.</p>
-          <p>The other wrapper classes provide similar methods, like <code>Double.parseDouble</code> and <code>Boolean.parseBoolean</code>. They also provide <code>toString</code>, which returns a string representation of a value:</p>
-          <pre><code class="hljs java"><span class="hljs-keyword">int</span> num = <span class="hljs-number">12345</span>;
-String str = Integer.toString(num);
+            <p><span class="fas fa-arrow-down"></span></p>
+            <pre class="hljs"><code>2.5
+2
 </code></pre>
-          <p>The result is the string &quot;12345&quot;.</p>
+          </box>
+          <p>Each wrapper class defines constants <code>MIN_VALUE</code> and <code>MAX_VALUE</code>. Because these constants are available in wrapper classes, you don’t have to remember them, and you don’t have to include them in your programs.</p>
+          <box>
+            <p><span class="fas fa-cube"></span> Accessing max and min values for integers:</p>
+            <pre><code class="hljs java">System.out.println(Integer.MIN_VALUE + <span class="hljs-string">" : "</span> + Integer.MAX_VALUE);
+</code></pre>
+            <p><span class="fas fa-arrow-right"></span> <code>-2147483648 : 2147483647</code></p>
+          </box>
+          <p><strong>Wrapper classes provide methods for converting strings to other types.</strong> In this context, parse means something like “read and translate”. <code>Integer.parseInt</code> converts a string to (you guessed it) an integer. The other
+            wrapper classes provide similar methods, like <code>Double.parseDouble</code> and <code>Boolean.parseBoolean</code>.</p>
+          <p><span class="fas fa-cube"></span> <code>Integer.parseInt(&quot;12345&quot;)</code> <span class="fas fa-arrow-right"></span> <code>1234</code></p>
+          <p>Wrapper classes also provide <code>toString</code>, which returns a string representation of a value.</p>
+          <p><span class="fas fa-cube"></span> <code>Integer.toString(12345)</code> <span class="fas fa-arrow-right"></span> <code>&quot;1234&quot;</code></p>
         </div>
       </div>
       <div>
@@ -1526,16 +1634,23 @@ String str = Integer.toString(num);
           <h4 id="the-arrays-class">The <code>Arrays</code> class</h4>
         </div>
         <div>
-          <p>The Java library provides a utility class <code>java.util.Arrays</code> that provides methods for working with arrays. One of them, <code>toString</code>, returns a string representation of an array.</p>
-          <pre><code class="hljs java"><span class="hljs-keyword">int</span>[] a = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>};
-System.out.println(Arrays.toString(a));
+          <p><strong><a href="https://docs.oracle.com/javase/9/docs/api/java/util/Arrays.html"><code>java.util.Arrays</code></a> provides methods for working with arrays.</strong> One of them, <code>toString</code>, returns a string representation of an
+            array. It also provides a <code>copyOf</code> that copies an array.</p>
+          <box>
+            <p><span class="fas fa-cube"></span> Using <code>Arrays.copyOf</code> and <code>Arrays.toString</code>:</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">int</span>[] a = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>};
+
+<span class="hljs-keyword">int</span>[] b = Arrays.copyOf(a, <span class="hljs-number">3</span>); <span class="hljs-comment">// copy first three elements</span>
+System.out.println(Arrays.toString(b));
+
+<span class="hljs-keyword">int</span>[] c = Arrays.copyOf(a, a.length); <span class="hljs-comment">// copy all elements</span>
+System.out.println(Arrays.toString(c));
 </code></pre>
-          <p><span class="fas fa-arrow-right"></span> <code>[1, 2, 3, 4]</code></p>
-          <p>It also provides a <code>copyOf</code> that copies an array.</p>
-          <pre><code class="hljs java"><span class="hljs-keyword">double</span>[] b = Arrays.copyOf(a, <span class="hljs-number">3</span>);
-You can also use a.length with Arrays.copyOf:
-<span class="hljs-keyword">double</span>[] b = Arrays.copyOf(a, a.length);
+            <p><span class="fas fa-arrow-down"></span></p>
+            <pre class="hljs"><code>[1, 2, 3]
+[1, 2, 3, 4]
 </code></pre>
+          </box>
         </div>
       </div>
       <div>
@@ -1543,8 +1658,8 @@ You can also use a.length with Arrays.copyOf:
           <h4 id="the-scanner-class">The <code>Scanner</code> class</h4>
         </div>
         <div>
-          <p><code>Scanner</code> is a class that provides methods for inputting words, numbers, and other data.
-            <code>Scanner</code> provides a method called nextLine that reads a line of input from the keyboard and returns a String. The following example reads two lines and repeats them back to the user:</p>
+          <p><strong><code>Scanner</code> is a class that provides methods for inputting words, numbers, and other data.</strong> <code>Scanner</code> provides a method called <code>nextLine</code> that reads a line of input from the keyboard and returns
+            a String. The following example reads two lines and repeats them back to the user:</p>
           <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Echo</span> </span>{
@@ -1563,8 +1678,10 @@ You can also use a.length with Arrays.copyOf:
     }
 }
 </code></pre>
-          <p><code>Scanner</code> class normally reads inputs as strings but it can read in a specific type of input too. The code below uses the <code>nextInt</code> method of the <code>Scanner</code> class to read an input as an integer.</p>
-          <pre><code class="hljs java">
+          <p><code>Scanner</code> class normally reads inputs as strings but it can read in a specific type of input too.</p>
+          <box>
+            <p><span class="fas fa-cube"></span> The code below uses the <code>nextInt</code> method of the <code>Scanner</code> class to read an input as an integer.</p>
+            <pre><code class="hljs java">
 Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
 
 System.out.print(<span class="hljs-string">"What is your age? "</span>);
@@ -1574,6 +1691,8 @@ System.out.print(<span class="hljs-string">"What is your name? "</span>);
 String name = in.nextLine();
 System.out.printf(<span class="hljs-string">"Hello %s, age %d\n"</span>, name, age);
 </code></pre>
+            <p>💡 Note the <a href="https://docs.oracle.com/javase/tutorial/java/data/numberformat.html">use of <code>printf</code> method for formatting the output</a>.</p>
+          </box>
         </div>
       </div>
       <h2 id="inheritance">Inheritance</h2>
@@ -1583,7 +1702,7 @@ System.out.printf(<span class="hljs-string">"Hello %s, age %d\n"</span>, name, a
         </div>
         <div>
           <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-          <blockquote>
+          <div class="indented">
             <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
               </span> <strong>A class that is derived from another class is called a <em>subclass</em></strong> (also a <em>derived</em> class, <em>extended</em> class, or <em>child</em> class). The class from which the subclass is derived is called a <em>superclass</em>              (also a <em>base</em> class or a <em>parent</em> class).</p>
             <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
@@ -1596,14 +1715,14 @@ System.out.printf(<span class="hljs-string">"Hello %s, age %d\n"</span>, name, a
             <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
               </span> <strong>The <code>java.lang.Object</code> class defines and implements behavior common to all classes</strong>—including the ones that you write. In the Java platform, many classes derive directly from <code>Object</code>, other classes
               derive from some of those classes, and so on, forming a hierarchy of classes.</p>
-            <p>Here is the sample code for a possible implementation of a Bicycle class that was presented in the Classes and Objects lesson:</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bicycle</span> </span>{
+            <p><strong>The keyword <code>extends</code> indicates one class inheriting from another.</strong></p>
+            <box>
+              <p><span class="fas fa-cube"></span> Here is the sample code for a possible implementation of a <code>Bicycle</code> class and a <code>MountainBike</code> class that is a subclass of the <code>Bicycle</code>:</p>
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bicycle</span> </span>{
 
-    <span class="hljs-comment">// the Bicycle class has two fields</span>
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> gear;
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> speed;
 
-    <span class="hljs-comment">// the Bicycle class has one constructor</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Bicycle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear)</span> </span>{
         gear = startGear;
         speed = startSpeed;
@@ -1623,9 +1742,7 @@ System.out.printf(<span class="hljs-string">"Hello %s, age %d\n"</span>, name, a
 
 }
 </code></pre>
-            <p>The keyword <code>extends</code> indicates one class inheriting from another.</p>
-            <p>A class declaration for a MountainBike class that is a subclass of Bicycle might look like this:</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MountainBike</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Bicycle</span> </span>{
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MountainBike</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Bicycle</span> </span>{
 
     <span class="hljs-comment">// the MountainBike subclass adds one field</span>
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> seatHeight;
@@ -1642,20 +1759,22 @@ System.out.printf(<span class="hljs-string">"Hello %s, age %d\n"</span>, name, a
     }
 }
 </code></pre>
-            <p><code>MountainBike</code> inherits all the fields and methods of <code>Bicycle</code> and adds the field <code>seatHeight</code> and a method to set it. Except for the constructor, it is as if you had written a new <code>MountainBike</code>              class entirely from scratch, with four fields and five methods. However, you didn't have to do all the work. This would be especially valuable if the methods in the <code>Bicycle</code> class were complex and had taken substantial time to
-              debug.</p>
+            </box>
+            <p><strong>A subclass inherits all the fields and methods of the superclass.</strong> In the example above, <code>MountainBike</code> inherits all the fields and methods of <code>Bicycle</code> and adds the field <code>seatHeight</code> and a
+              method to set it.</p>
             <h5 id="accessing-superclass-members">Accessing Superclass Members</h5>
-            <p>If your method overrides one of its superclass's methods, you can invoke the overridden method through the use of the keyword super. You can also use super to refer to a hidden field (although hiding fields is discouraged). Consider this class,
-              Superclass:</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Superclass</span> </span>{
+            <p><strong>If your method overrides one of its superclass's methods, you can invoke the overridden method through the use of the keyword <code>super</code>.</strong> You can also use <code>super</code> to refer to a
+              <tooltip content="when both the superclass and the subclass use the same variable name, the superclass variables is said to be _hidden/shadowed_ by the subclass variable">hidden field</tooltip> (although hiding fields is discouraged).</p>
+            <box>
+              <p><span class="fas fa-cube"></span> Consider this class, <code>Superclass</code> and a subclass, called <code>Subclass</code>, that overrides <code>printMethod()</code>:</p>
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Superclass</span> </span>{
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printMethod</span><span class="hljs-params">()</span> </span>{
         System.out.println(<span class="hljs-string">"Printed in Superclass."</span>);
     }
 }
 </code></pre>
-            <p>Here is a subclass, called <code>Subclass</code>, that overrides <code>printMethod()</code>:</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Subclass</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Superclass</span> </span>{
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Subclass</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Superclass</span> </span>{
 
     <span class="hljs-comment">// overrides printMethod in Superclass</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printMethod</span><span class="hljs-params">()</span> </span>{
@@ -1668,139 +1787,48 @@ System.out.printf(<span class="hljs-string">"Hello %s, age %d\n"</span>, name, a
     }
 }
 </code></pre>
-            <p>Within <code>Subclass</code>, the simple name <code>printMethod()</code> refers to the one declared in <code>Subclass</code>, which overrides the one in <code>Superclass</code>. So, to refer to <code>printMethod()</code> inherited from <code>Superclass</code>,
-              <code>Subclass</code> must use a qualified name, using super as shown. Compiling and executing <code>Subclass</code> prints the following:</p>
-            <pre class="hljs"><code>Printed in Superclass.
+              <p><span class="fas fa-arrow-down"></span></p>
+              <pre class="hljs"><code>Printed in Superclass.
 Printed in Subclass
 </code></pre>
-          </blockquote>
-          <panel type="seamless" header="<span class='fas fa-cube'></span> Another example of method overriding">
-            <p>A simple example where the <code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method:</p>
-            <pre><code class="hljs java">
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Report</span></span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
-        System.out.println(<span class="hljs-string">"Printing report"</span>);
-    }
-
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EvaluationReport</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Report</span></span>{
-
-    <span class="hljs-meta">@Override</span>  <span class="hljs-comment">// this annotation is optional</span>
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
-        System.out.println(<span class="hljs-string">"Printing evaluation report"</span>);
-    }
-
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReportMain</span></span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
-        Report report = <span class="hljs-keyword">new</span> Report();
-        report.print(); <span class="hljs-comment">// prints "Printing report"</span>
-
-        EvaluationReport evaluationReport = <span class="hljs-keyword">new</span> EvaluationReport();
-        evaluationReport.print(); <span class="hljs-comment">// prints "Printing evaluation report"</span>
-    }
-}
-</code></pre>
-            <p><span class="fas fa-arrow-down"></span></p>
-            <pre class="hljs"><code>Printing report
-Printing evaluation report
-</code></pre>
-          </panel>
-          <blockquote>
+              <p>Within <code>Subclass</code>, the simple name <code>printMethod()</code> refers to the one declared in <code>Subclass</code>, which overrides the one in <code>Superclass</code>. So, to refer to <code>printMethod()</code> inherited from <code>Superclass</code>,
+                <code>Subclass</code> must use a qualified name, using <code>super</code> as shown. Compiling and executing <code>Subclass</code> prints the following:</p>
+            </box>
             <h5 id="subclass-constructors">Subclass Constructors</h5>
-            <p>The following example illustrates how to use the <code>super</code> keyword to invoke a superclass's constructor. Recall from the <code>Bicycle</code> example that <code>MountainBike</code> is a subclass of <code>Bicycle</code>. Here is the
-              <code>MountainBike</code> (subclass) constructor that calls the superclass constructor and then adds initialization code of its own:</p>
-            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MountainBike</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startHeight, <span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear)</span> </span>{
+            <p><strong>A subclass constructor can invoke the superclass constructor.</strong> Invocation of a superclass constructor must be the first line in the subclass constructor. The syntax for calling a superclass constructor is <code>super()</code>              <span class="dimmed">(which invokes the no-argument constructor of the superclass)</span> or <code>super(parameter list)</code> <span class="dimmed">(to invoke the superclass constructor with a matching parameter list)</span>.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> The following example illustrates how to use the <code>super</code> keyword to invoke a superclass's constructor. Recall from the <code>Bicycle</code> example that <code>MountainBike</code> is a subclass
+                of <code>Bicycle</code>. Here is the <code>MountainBike</code> (subclass) constructor that calls the superclass constructor and then adds initialization code of its own:</p>
+              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MountainBike</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startHeight, <span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear)</span> </span>{
     <span class="hljs-keyword">super</span>(startSpeed, startGear);
     seatHeight = startHeight;
 }
 </code></pre>
-            <p>Invocation of a superclass constructor must be the first line in the subclass constructor. The syntax for calling a superclass constructor is <code>super();</code> or <code>super(parameter list);</code></p>
-            <p>With <code>super()</code>, the superclass no-argument constructor is called. With <code>super(parameter list)</code>, the superclass constructor with a matching parameter list is called.</p>
-            <p>Note: If a constructor does not explicitly invoke a superclass constructor, the Java compiler automatically inserts a call to the no-argument constructor of the superclass. If the super class does not have a no-argument constructor, you will
-              get a compile-time error. Object does have such a constructor, so if Object is the only superclass, there is no problem.</p>
-            <p>If a subclass constructor invokes a constructor of its superclass, either explicitly or implicitly, you might think that there will be a whole chain of constructors called, all the way back to the constructor of <code>Object</code>. In fact,
-              this is the case. It is called constructor chaining, and you need to be aware of it when there is a long line of class descent.</p>
-            <h5 id="access-modifiers">Access Modifiers</h5>
-            <p>Access level modifiers determine whether other classes can use a particular field or invoke a particular method. There are two levels of access control:</p>
-            <ul>
-              <li>At the top level—<code>public</code>, or <em>package-private</em> (no explicit modifier).</li>
-              <li>At the member level—<code>public</code>, <code>private</code>, <code>protected</code>, or <em>package-private</em> (no explicit modifier).</li>
-            </ul>
-            <p>A class may be declared with the modifier <code>public</code>, in which case that class is visible to all classes everywhere. If a class has no modifier (the default, also known as <em>package-private</em>), it is visible only within its own
-              package (packages are named groups of related classes — you will learn about them in a later lesson.)</p>
-            <p>At the member level, you can also use the <code>public</code> modifier or no modifier (<em>package-private</em>) just as with top-level classes, and with the same meaning. For members, there are two additional access modifiers: <code>private</code>              and <code>protected</code>. The <code>private</code> modifier specifies that the member can only be accessed in its own class. The <code>protected</code> modifier specifies that the member can only be accessed within its own package (as
-              with package-private) and, in addition, by a subclass of its class in another package.</p>
-            <p>The following table shows the access to members permitted by each modifier.</p>
-            <div class="table-responsive">
-              <table class="markbind-table table table-bordered table-striped">
-                <thead>
-                  <tr>
-                    <th>Modifier</th>
-                    <th>Class</th>
-                    <th>Package</th>
-                    <th>Subclass</th>
-                    <th>World</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>public</td>
-                    <td><span style="color:green"><span class="fas fa-check"></span></span>
-                    </td>
-                    <td><span style="color:green"><span class="fas fa-check"></span></span>
-                    </td>
-                    <td><span style="color:green"><span class="fas fa-check"></span></span>
-                    </td>
-                    <td><span style="color:green"><span class="fas fa-check"></span></span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>protected</td>
-                    <td><span style="color:green"><span class="fas fa-check"></span></span>
-                    </td>
-                    <td><span style="color:green"><span class="fas fa-check"></span></span>
-                    </td>
-                    <td><span style="color:green"><span class="fas fa-check"></span></span>
-                    </td>
-                    <td><span style="color:red"><span class="fas fa-times"></span></span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>no modifier</td>
-                    <td><span style="color:green"><span class="fas fa-check"></span></span>
-                    </td>
-                    <td><span style="color:green"><span class="fas fa-check"></span></span>
-                    </td>
-                    <td><span style="color:red"><span class="fas fa-times"></span></span>
-                    </td>
-                    <td><span style="color:red"><span class="fas fa-times"></span></span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>private</td>
-                    <td><span style="color:green"><span class="fas fa-check"></span></span>
-                    </td>
-                    <td><span style="color:red"><span class="fas fa-times"></span></span>
-                    </td>
-                    <td><span style="color:red"><span class="fas fa-times"></span></span>
-                    </td>
-                    <td><span style="color:red"><span class="fas fa-times"></span></span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p>The first data column indicates whether the class itself has access to the member defined by the access level. As you can see, a class always has access to its own members. The second column indicates whether classes in the same package as
-              the class (regardless of their parentage) have access to the member. The third column indicates whether subclasses of the class declared outside this package have access to the member. The fourth column indicates whether all classes have
-              access to the member.</p>
-            <p>Access levels affect you in two ways. First, when you use classes that come from another source, such as the classes in the Java platform, access levels determine which members of those classes your own classes can use. Second, when you write
-              a class, you need to decide what access level every member variable and every method in your class should have.</p>
-          </blockquote>
+            </box>
+            <p>Note: If a constructor does not explicitly invoke a superclass constructor, the Java compiler automatically inserts a call to the no-argument constructor of the superclass. If the superclass does not have a no-argument constructor, you will
+              get a compile-time error. <code>Object</code> does have such a constructor, so if <code>Object</code> is the only superclass, there is no problem.</p>
+            <h5 id="access-modifiers-simplified">Access Modifiers (simplified)</h5>
+            <p><strong>Access level modifiers determine whether other classes can use a particular field or invoke a particular method.</strong> Given below is a simplified version of Java access modifiers, <mark>assuming you have not yet started placing your classes in different packages</mark>              i.e., all classes are places in the root level. A full explanation of access modifiers is given in a later topic.</p>
+            <p>There are two levels of access control:</p>
+            <ol>
+              <li>
+                <p><strong>At the class level</strong>:</p>
+                <ul>
+                  <li><strong><code>public</code></strong>: the class is visible to all other classes</li>
+                  <li><strong>no modifier</strong>: same as <code>public</code><br><br></li>
+                </ul>
+              </li>
+              <li>
+                <p><strong>At the member level</strong>:</p>
+                <ul>
+                  <li><strong><code>public</code></strong> : the class is visible to all other classes</li>
+                  <li><strong>no modifier</strong>: same as <code>public</code></li>
+                  <li><strong><code>protected</code></strong>: same as <code>public</code></li>
+                  <li><strong><code>private</code></strong>: the member can only be accessed in its own class</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
         </div>
       </div>
       <div>
@@ -1808,53 +1836,102 @@ Printing evaluation report
           <h4 id="the-object-class">The <code>Object</code> Class</h4>
         </div>
         <div>
+          <p>As you know, all Java objects inherit from the <code>Object</code> class. Let us look at some of the useful methods in the <code>Object</code> class that can be used by other classes.</p>
           <h5 id="the-tostring-method">The <code>toString</code> method</h5>
           <div class="indented">
-            <p>Suppose you defined a class called <code>Time</code>, to represent a moment in time. If you create a <code>Time</code> object and display it with println:</p>
-            <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-    Time time = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">11</span>, <span class="hljs-number">59</span>, <span class="hljs-number">59.9</span>);
-    System.out.println(time);
+            <p><strong>Every class inherits a <code>toString</code> method from the <code>Object</code> class that is used by Java to get a string representation of the object</strong> <span class="dimmed">e.g., for printing</span>. By default it simply
+              returns the type of the object and its address (in hexadecimal).</p>
+            <box>
+              <p><span class="fas fa-cube"></span> Suppose you defined a class called <code>Time</code>, to represent a moment in time. If you create a <code>Time</code> object and display it with println:</p>
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span> </span>{
+    <span class="hljs-keyword">int</span> hours;
+    <span class="hljs-keyword">int</span> minutes;
+    <span class="hljs-keyword">int</span> seconds;
+
+    Time(<span class="hljs-keyword">int</span> hours, <span class="hljs-keyword">int</span> minutes, <span class="hljs-keyword">int</span> seconds) {
+        <span class="hljs-keyword">this</span>.hours = hours;
+        <span class="hljs-keyword">this</span>.minutes = minutes;
+        <span class="hljs-keyword">this</span>.seconds = seconds;
+    }
 }
 </code></pre>
-            <p>The output will look something like: <code>Time@80cc7c0</code></p>
-            <p>When Java displays the value of an object type, it displays the name of the type and the address of the object (in hexadecimal).</p>
-            <p><strong>Every object type has a method called <code>toString</code> that returns a string representation of the object.</strong> By default it simply displays the type of the object and its address, but you can override this behavior by providing
-              your own toString <a href="http://method.To">method.To</a> display <code>Time</code> objects in a way that is more meaningful to users (e.g., to display the hour, minute, and second), you can override that method in the <code>Time</code>              class. Reason: when you display an object using <code>print</code> or <code>println</code>, Java invokes the object’s <code>toString</code> method.</p>
-            <p>For example, here is a toString method for Time:</p>
-            <pre><code class="hljs java"><span class="hljs-meta">@Override</span>
-<span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">"%02d:%02d:%04.1f\n"</span>,
-        <span class="hljs-keyword">this</span>.hour, <span class="hljs-keyword">this</span>.minute, <span class="hljs-keyword">this</span>.second);
+              <pre><code class="hljs java"> Time t = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);
+ System.out.println(t);
+</code></pre>
+              <p><span class="fas fa-arrow-right"></span> <code>Time@80cc7c0</code> <span class="dimmed">(the address part can vary)</span></p>
+            </box>
+            <p><strong>You can override the <code>toString</code> method in your classes</strong> to provide a more meaningful string representation of the objects of that class.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> Here's an example of overriding the <code>toString</code> method of the <code>Time</code> class:</p>
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span></span>{
+
+   <span class="hljs-comment">//...</span>
+
+   <span class="hljs-meta">@Override</span>
+   <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+       <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">"%02d:%02d:%02d\n"</span>, <span class="hljs-keyword">this</span>.hours, <span class="hljs-keyword">this</span>.minutes, <span class="hljs-keyword">this</span>.seconds);
+   }
 }
 </code></pre>
+              <pre><code class="hljs java"> Time t = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);
+ System.out.println(t);
+</code></pre>
+              <p><span class="fas fa-arrow-right"></span> <code>05:20:13</code></p>
+            </box>
             <p>💡 <code>@Override</code> is an optional annotation you can use to indicate that the method is overriding a method from the parent class.</p>
           </div>
           <h5 id="the-equals-method">The <code>equals</code> method</h5>
           <div class="indented">
-            <p>We have seen two ways to check whether values are equal: the <code>==</code> operator and the <code>equals</code> method. With objects you can use either one, but they are not the same.</p>
+            <p><strong>There are two ways to check whether values are equal: the <code>==</code> operator and the <code>equals</code> method. With objects you can use either one, but they are not the same.</strong></p>
             <ul>
               <li>The <code>==</code> operator checks whether objects are identical; that is, whether they are the same object.</li>
               <li>The <code>equals</code> method checks whether they are equivalent; that is, whether they have the same value.</li>
             </ul>
-            <p>The definition of identity is always the same, so the <code>==</code> operator always does the same thing. But the definition of equivalence is different for different objects, so objects can define their own <code>equals</code> methods. Consider
-              the following variables:</p>
-            <pre><code class="hljs java">Time time1 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">9</span>, <span class="hljs-number">30</span>, <span class="hljs-number">0.0</span>);
+            <p>The definition of identity is always the same, so the <code>==</code> operator always does the same thing.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> Consider the following variables:</p>
+              <pre><code class="hljs java">Time time1 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">9</span>, <span class="hljs-number">30</span>, <span class="hljs-number">0</span>);
 Time time2 = time1;
-Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">9</span>, <span class="hljs-number">30</span>, <span class="hljs-number">0.0</span>);
+Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">9</span>, <span class="hljs-number">30</span>, <span class="hljs-number">0</span>);
 </code></pre>
-            <ul>
-              <li>The assignment operator copies references, so <code>time1</code> and <code>time2</code> refer to the same object. Because they are identical, <code>time1 == time2</code> is <code>true</code>.</li>
-              <li>But <code>time1</code> and <code>time3</code> refer to different objects. Because they are not identical, <code>time1 == time3</code> is <code>false</code>.</li>
-            </ul>
-            <p>By default, the <code>equals</code> method does the same thing as <code>==</code>. For <code>Time</code> objects, that’s probably not what we want. For example, <code>time1</code> and <code>time3</code> represent the same time of day, so we
-              should consider them equivalent. We can overrid the <code>equals</code> method of the <code>Time</code> class (inherited from the <code>Object</code> class) to provide an <code>equals</code> method that implements this notion of equivalence:</p>
-            <pre><code class="hljs java"><span class="hljs-meta">@Override</span>
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span><span class="hljs-params">(Time that)</span> </span>{
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.hour == that.hour
-        &amp;&amp; <span class="hljs-keyword">this</span>.minute == that.minute
-        &amp;&amp; <span class="hljs-keyword">this</span>.second == that.second;
+              <ul>
+                <li>The assignment operator copies references, so <code>time1</code> and <code>time2</code> refer to the same object. Because they are identical, <code>time1 == time2</code> is <code>true</code>.</li>
+                <li>But <code>time1</code> and <code>time3</code> refer to different objects. Because they are not identical, <code>time1 == time3</code> is <code>false</code>.</li>
+              </ul>
+            </box>
+            <p>By default, the <code>equals</code> method inherited from the <code>Object</code> class does the same thing as <code>==</code>. <strong>As the definition of equivalence is different for different classes, you can override the <code>equals</code> method to define your own criteria for equivalence</strong>              of objects of your class.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> Here's how you can override the <code>equals</code> method of the <code>Time</code> class to provide an <code>equals</code> method that considers two <code>Time</code> objects equivalent as long as they
+                represent the same time of the day:</p>
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span> </span>{
+    <span class="hljs-keyword">int</span> hours;
+    <span class="hljs-keyword">int</span> minutes;
+    <span class="hljs-keyword">int</span> seconds;
+
+    <span class="hljs-comment">// ...</span>
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span><span class="hljs-params">(Object o)</span> </span>{
+        Time other = (Time) o;
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.hours == other.hours
+                &amp;&amp; <span class="hljs-keyword">this</span>.minutes == other.minutes
+                &amp;&amp; <span class="hljs-keyword">this</span>.seconds == other.seconds;
+    }
 }
 </code></pre>
+              <pre><code class="hljs java">Time t1 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);
+Time t2 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);
+System.out.println(t1 == t2);
+System.out.println(t1.equals(t2));
+</code></pre>
+              <p><span class="fas fa-arrow-down"></span></p>
+              <pre class="hljs"><code>false
+true
+</code></pre>
+              <p>
+                <font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> Note that a proper <code>equals</code> method implementation is more complex than the example above. See the article <a href="https://www.sitepoint.com/implement-javas-equals-method-correctly/"><em>How to Implement Java’s equals Method Correctly</em> by Nicolai Parlog</a>                for a detailed explanation before you implement your own <code>equals</code> method.
+              </p>
+            </box>
           </div>
         </div>
       </div>
@@ -1863,48 +1940,50 @@ Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number
           <h4 id="interfaces">Interfaces</h4>
         </div>
         <div>
-          <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-          <blockquote>
-            <p>In the Java programming language, <strong>an <em>interface</em> is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types.</strong> Method bodies exist only
-              for default methods and static methods. Interfaces cannot be instantiated—they can only be implemented by classes or extended by other interfaces. Defining an interface is similar to creating a new class:</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">OperateCar</span> </span>{
-
-   <span class="hljs-comment">// constant declarations, if any</span>
-
-   <span class="hljs-comment">// method signatures</span>
-   <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">turn</span><span class="hljs-params">(Direction direction, <span class="hljs-keyword">double</span> radius, <span class="hljs-keyword">double</span> startSpeed, <span class="hljs-keyword">double</span> endSpeed)</span></span>;
-   <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">changeLanes</span><span class="hljs-params">(Direction direction, <span class="hljs-keyword">double</span> startSpeed, <span class="hljs-keyword">double</span> endSpeed)</span></span>;
-   <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">signalTurn</span><span class="hljs-params">(Direction direction, <span class="hljs-keyword">boolean</span> signalOn)</span></span>;
-   <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getRadarFront</span><span class="hljs-params">(<span class="hljs-keyword">double</span> distanceToCar, <span class="hljs-keyword">double</span> speedOfCar)</span></span>;
-   <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getRadarRear</span><span class="hljs-params">(<span class="hljs-keyword">double</span> distanceToCar, <span class="hljs-keyword">double</span> speedOfCar)</span></span>;
-         ......
-   <span class="hljs-comment">// more method signatures</span>
+          <p>The text given in this section borrows some explanations and code examples from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>.</p>
+          <p>In Java, <strong>an <em>interface</em> is a reference type, similar to a class, mainly containing method signatures.</strong> Defining an interface is similar to creating a new class except it uses the keyword <code>interface</code> in place
+            of <code>class</code>.</p>
+          <box>
+            <p><span class="fas fa-cube"></span> Here is an interface named <code>DrivableVehicle</code> that defines methods needed to drive a vehicle.</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">DrivableVehicle</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">turn</span><span class="hljs-params">(Direction direction)</span></span>;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">changeLanes</span><span class="hljs-params">(Direction direction)</span></span>;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">signalTurn</span><span class="hljs-params">(Direction direction, <span class="hljs-keyword">boolean</span> signalOn)</span></span>;
+    <span class="hljs-comment">// more method signatures</span>
 }
 </code></pre>
-            <p>Note that the method signatures have no braces and are terminated with a semicolon.</p>
-            <p>To use an interface, you write a class that implements the interface. When an instantiable class implements an interface, it provides a method body for each of the methods declared in the interface. For example,</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OperateBMW760i</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">OperateCar</span> </span>{
+            <p>Note that the method signatures have no braces and are terminated with a semicolon.
+            </p>
+          </box>
+          <p><strong>Interfaces cannot be instantiated—they can only be implemented by classes</strong>. When an instantiable class implements an interface, indicated by the keyword <code>implements</code>, it provides a method body for each of the methods
+            declared in the interface.</p>
+          <box>
+            <p><span class="fas fa-cube"></span> Here is how a class <code>CarModelX</code> can implement the <code>DrivableVehicle</code> interface.</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CarModelX</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">DrivableVehicle</span> </span>{
 
-    <span class="hljs-comment">// the OperateCar method signatures, with implementation --</span>
-    <span class="hljs-comment">// for example:</span>
-    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">signalTurn</span><span class="hljs-params">(Direction direction, <span class="hljs-keyword">boolean</span> signalOn)</span> </span>{
-       <span class="hljs-comment">// code to turn BMW's LEFT turn indicator lights on</span>
-       <span class="hljs-comment">// code to turn BMW's LEFT turn indicator lights off</span>
-       <span class="hljs-comment">// code to turn BMW's RIGHT turn indicator lights on</span>
-       <span class="hljs-comment">// code to turn BMW's RIGHT turn indicator lights off</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">turn</span><span class="hljs-params">(Direction direction)</span> </span>{
+       <span class="hljs-comment">// implementation</span>
     }
 
-    <span class="hljs-comment">// other members, as needed -- for example, helper classes not</span>
-    <span class="hljs-comment">// visible to clients of the interface</span>
+    <span class="hljs-comment">// implementation of other methods</span>
 }
 </code></pre>
-            <p>In the robotic car example above, it is the automobile manufacturers who will implement the interface. Chevrolet's implementation will be substantially different from that of Toyota, of course, but both manufacturers will adhere to the same
-              interface. The guidance manufacturers, who are the clients of the interface, will build systems that use GPS data on a car's location, digital street maps, and traffic data to drive the car. In so doing, the guidance systems will invoke
-              the interface methods: turn, change lanes, brake, accelerate, and so forth.</p>
-          </blockquote>
-          <p><strong>Java allows multiple inheritance among interfaces. A Java class can <em>implement</em> multiple interfaces</strong> (and inherit from one class).</p>
-          <tip-box>
-            <p><span class="fas fa-cube"></span> The design below is allowed by Java. <span class="dimmed">In case you are not familiar with UML notation used: solid lines indicate normal inheritance; dashed lines indicate interface inheritance; the triangle points to pare parent.</span></p>
+          </box>
+          <p><strong>An interface can be used as a type</strong> e.g., <code>DrivableVechile dv = new CarModelX();</code>.</p>
+          <p><strong>Interfaces can inherit from other interfaces</strong> using the <code>extends</code> keyword, similar to a class inheriting another.</p>
+          <box>
+            <p><span class="fas fa-cube"></span> Here is an interface named <code>SelfDrivableVehicle</code> that inherits the <code>DrivableVehicle</code> interface.</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">SelfDrivableVehicle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">DrivableVehicle</span> </span>{
+   <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">goToAutoPilotMode</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+            <p>Note that the method signatures have no braces and are terminated with a semicolon.
+            </p>
+          </box>
+          <p>Furthermore, <strong>Java allows multiple inheritance among interfaces.</strong> A Java interface can inherit multiple other interfaces. <strong>A Java class can <em>implement</em> multiple interfaces</strong> (and inherit from one class).</p>
+          <box>
+            <p><span class="fas fa-cube"></span> The design below is allowed by Java. <span class="dimmed">In case you are not familiar with UML notation used: solid lines indicate normal inheritance; dashed lines indicate interface inheritance; the triangle points to the parent.</span></p>
             <img src="/se-book/oop/inheritance/interfaces/images/studentStaff.png" height="250">
             <p></p>
             <ol>
@@ -1913,11 +1992,59 @@ Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number
               <li>Because of point 1 above, <code>TA</code> class has to implement all methods in the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
               <li>Because of points 1,2,3, a <code>TA</code> <em>is a</em> <code>Staff</code>, <em>is a</em> <code>TaxPayer</code> and <em>is a</em> <code>Citizen</code>.</li>
             </ol>
-            <p><strong>An interface can be used as a type.</strong></p>
-            <pre><code class="hljs java">Staff s = <span class="hljs-keyword">new</span> TA();
+          </box>
+          <p><strong>Interfaces can also contain <trigger trigger="click" for="modal:javaInterfaces-constants">constants</trigger> and static methods</strong>.</p>
+          <modal large="" title="%%Textbook »%%" id="modal:javaInterfaces-constants">
+          
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>C++ to Java → Miscellaneous Topics →
+</span></strong>
+                </span>
+              </p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="constants">Constants</h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p>Java does not directly support constants. The convention is to use a <code>static</code> <code>final</code> variable where a constant is needed. The <code>static</code> modifier causes the variable to be available without instantiating
+                      an object. The <code>final</code> modifier causes the variable to be unchangeable. Java constants are normally declared in ALL CAPS separated by underscores.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> Here is an example of a constant named <code>MAX_BALANCE</code>.</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span></span>{
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> MAX_BALANCE = <span class="hljs-number">1000000.0</span>;
+
+}
+
 </code></pre>
-            <p><strong>A Java interface can contain <a href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html"><em>default</em> method implementations</a>.</strong></p>
-          </tip-box>
+                    </box>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </modal>
+          <box>
+            <p><span class="fas fa-cube"></span> This example adds a constant <code>MAX_SPEED</code> and a static method <code>isSpeedAllowed</code> to the interface <code>DrivableVehicle</code>.</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">DrivableVehicle</span> </span>{
+
+    <span class="hljs-keyword">int</span> MAX_SPEED = <span class="hljs-number">150</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isSpeedAllowed</span><span class="hljs-params">(<span class="hljs-keyword">int</span> speed)</span></span>{
+        <span class="hljs-keyword">return</span> speed &lt;= MAX_SPEED;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">turn</span><span class="hljs-params">(Direction direction)</span></span>;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">changeLanes</span><span class="hljs-params">(Direction direction)</span></span>;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">signalTurn</span><span class="hljs-params">(Direction direction, <span class="hljs-keyword">boolean</span> signalOn)</span></span>;
+    <span class="hljs-comment">// more method signatures</span>
+}
+</code></pre>
+          </box>
+          <p><span class="fas fa-info-circle"></span> Interfaces can contain <a href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html"><em>default</em> method implementations</a> and <em>nested types</em>. There are not covered here.</p>
         </div>
       </div>
       <div>
@@ -1925,113 +2052,143 @@ Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number
           <h4 id="polymorphism">Polymorphism</h4>
         </div>
         <div>
-          <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-          <blockquote>
-            <p>Consider the <code>Bicycle</code> class below:</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bicycle</span> </span>{
+          <p><strong>Java is a <em>strongly-typed</em> language which means the code works with only the object types that it targets.</strong></p>
+          <box>
+            <p><span class="fas fa-cube"></span> The following code <code>PetShelter</code> keeps a list of <code>Cat</code> objects and make them <code>speak</code>. The code will not work with any other type, for example, <code>Dog</code> objects.</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Cat[] cats = <span class="hljs-keyword">new</span> Cat[]{
+            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),
+            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>)};
 
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> gear;
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> speed;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Bicycle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear)</span> </span>{
-        gear = startGear;
-        speed = startSpeed;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGear</span><span class="hljs-params">(<span class="hljs-keyword">int</span> newValue)</span> </span>{
-        gear = newValue;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">applyBrake</span><span class="hljs-params">(<span class="hljs-keyword">int</span> decrement)</span> </span>{
-        speed -= decrement;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">speedUp</span><span class="hljs-params">(<span class="hljs-keyword">int</span> increment)</span> </span>{
-        speed += increment;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printDescription</span><span class="hljs-params">()</span> </span>{
-        System.out.println(<span class="hljs-string">"Bike is in gear "</span> + gear + <span class="hljs-string">" and travelling at a speed of "</span> + speed + <span class="hljs-string">"."</span>);
-    }
-
-}
-</code></pre>
-            <p>To demonstrate <em>polymorphic</em> features in the Java language, let's extend the <code>Bicycle</code> class with a <code>MountainBike</code> and a <code>RoadBike</code> class. For <code>MountainBike</code>, let's add a field for <code>suspension</code>,
-              which is a <code>String</code> value that indicates if the bike has a front shock absorber, <code>Front</code>. Or, the bike has a front and back shock absorber, <code>Dual</code>.</p>
-            <p>Here is the updated class:</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MountainBike</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Bicycle</span> </span>{
-    <span class="hljs-keyword">private</span> String suspension;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MountainBike</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear, String suspensionType)</span></span>{
-        <span class="hljs-keyword">super</span>(startSpeed, startGear);
-        <span class="hljs-keyword">this</span>.setSuspension(suspensionType);
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getSuspension</span><span class="hljs-params">()</span></span>{
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.suspension;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setSuspension</span><span class="hljs-params">(String suspensionType)</span> </span>{
-        <span class="hljs-keyword">this</span>.suspension = suspensionType;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printDescription</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">super</span>.printDescription();
-        System.out.println(<span class="hljs-string">"The "</span> + <span class="hljs-string">"MountainBike has a"</span> + getSuspension() + <span class="hljs-string">" suspension."</span>);
-    }
-}
-</code></pre>
-            <p>Note the overridden <code>printDescription</code> method. In addition to the information provided before, additional data about the suspension is included to the output.</p>
-            <p>Next, let's create the <code>RoadBike</code> class. Because road or racing bikes have skinny tires, add an attribute to track the tire width. Here is the <code>RoadBike</code> class:</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RoadBike</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Bicycle</span></span>{
-    <span class="hljs-comment">// In millimeters (mm)</span>
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> tireWidth;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">RoadBike</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear, <span class="hljs-keyword">int</span> newTireWidth)</span></span>{
-        <span class="hljs-keyword">super</span>(startSpeed, startGear);
-        <span class="hljs-keyword">this</span>.setTireWidth(newTireWidth);
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getTireWidth</span><span class="hljs-params">()</span></span>{
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.tireWidth;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setTireWidth</span><span class="hljs-params">(<span class="hljs-keyword">int</span> newTireWidth)</span></span>{
-        <span class="hljs-keyword">this</span>.tireWidth = newTireWidth;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printDescription</span><span class="hljs-params">()</span></span>{
-        <span class="hljs-keyword">super</span>.printDescription();
-        System.out.println(<span class="hljs-string">"The RoadBike"</span> + <span class="hljs-string">" has "</span> + getTireWidth() + <span class="hljs-string">" MM tires."</span>);
-    }
-}
-</code></pre>
-            <p>Note that once again, the <code>printDescription</code> method has been overridden. This time, information about the tire width is displayed.</p>
-            <p>To summarize, there are three classes: <code>Bicycle</code>, <code>MountainBike</code>, and <code>RoadBike</code>. The two subclasses override the <code>printDescription</code> method and print unique information.</p>
-            <p>Here is a test program that creates three Bicycle variables. Each variable is assigned to one of the three bicycle classes. Each variable is then printed.</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestBikes</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        Bicycle bike01, bike02, bike03;
-
-        bike01 = <span class="hljs-keyword">new</span> Bicycle(<span class="hljs-number">10</span>, <span class="hljs-number">1</span>);
-        bike02 = <span class="hljs-keyword">new</span> MountainBike(<span class="hljs-number">10</span>, <span class="hljs-number">5</span>, <span class="hljs-string">"Dual"</span>);
-        bike03 = <span class="hljs-keyword">new</span> RoadBike(<span class="hljs-number">20</span>, <span class="hljs-number">8</span>, <span class="hljs-number">23</span>);
-
-        bike01.printDescription();
-        bike02.printDescription();
-        bike03.printDescription();
+        <span class="hljs-keyword">for</span> (Cat c: cats){
+            System.out.println(c.speak());
+        }
     }
 }
 </code></pre>
             <p><span class="fas fa-arrow-down"></span></p>
-            <pre class="hljs"><code>Bike is in gear 1 and travelling at a speed of 10.
-Bike is in gear 5 and travelling at a speed of 10.
-The MountainBike has aDual suspension.
-Bike is in gear 8 and travelling at a speed of 20.
-The RoadBike has 23 MM tires.
+            <pre class="hljs"><code>Mittens: Meow
+Snowball: Meow
 </code></pre>
-            <p>The Java virtual machine (JVM) calls the appropriate method for the object that is referred to in each variable. It does not call the method that is defined by the variable's type. This behavior is referred to as <em>virtual method invocation</em>              and demonstrates an aspect of the important polymorphism features in the Java language.</p>
-          </blockquote>
+            <panel type="seamless" header="%%The `Cat` class%%">
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Cat</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">super</span>(name);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Meow"</span>;
+    }
+}
+</code></pre>
+            </panel>
+          </box>
+          <p>This <strong>strong-typing can lead to unnecessary verbosity</strong> caused by repetitive similar code that do similar things with different object types.</p>
+          <box>
+            <p><span class="fas fa-cube"></span> If the <code>PetShelter</code> is to keep both cats and dogs, you'll need two arrays and two loops:</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Cat[] cats = <span class="hljs-keyword">new</span> Cat[]{
+            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),
+            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>)};
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Dog[] dogs = <span class="hljs-keyword">new</span> Dog[]{
+            <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">"Spot"</span>)};
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">for</span> (Cat c: cats){
+            System.out.println(c.speak());
+        }
+        <span class="hljs-keyword">for</span>(Dog d: dogs){
+            System.out.println(d.speak());
+        }
+    }
+}
+</code></pre>
+            <p><span class="fas fa-arrow-down"></span></p>
+            <pre class="hljs"><code>Mittens: Meow
+Snowball: Meow
+Spot: Woof
+</code></pre>
+            <panel type="seamless" header="%%The `Dog` class%%">
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Dog</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">super</span>(name);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Woof"</span>;
+    }
+}
+</code></pre>
+            </panel>
+          </box>
+          <p>A better way is to <strong>take advantage of polymorphism to write code that targets a superclass but works with any subclass objects.</strong></p>
+          <box>
+            <p><span class="fas fa-cube"></span> The <code>PetShelter2</code> use one data structure to keep both types of animals and one loop to make them speak. The code targets the <code>Animal</code> superclass (assuming <code>Cat</code> and <code>Dog</code>              inherits from the <code>Animal</code> class) instead of repeating the code for each animal type.</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter2</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Animal[] animals = <span class="hljs-keyword">new</span> Animal[]{
+            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),
+            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>),
+            <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">"Spot"</span>)};
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">for</span> (Animal a: animals){
+            System.out.println(a.speak());
+        }
+    }
+}
+</code></pre>
+            <p><span class="fas fa-arrow-down"></span></p>
+            <pre class="hljs"><code>Mittens: Meow
+Snowball: Meow
+Spot: Woof
+</code></pre>
+            <panel type="seamless" header="%%The `Animal`, `Cat`, and `Dog` classes%%">
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
+
+    <span class="hljs-keyword">protected</span> String name;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Animal</span><span class="hljs-params">(String name)</span></span>{
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> name;
+    }
+}
+</code></pre>
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Cat</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">super</span>(name);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Meow"</span>;
+    }
+}
+</code></pre>
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Dog</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">super</span>(name);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Woof"</span>;
+    }
+}
+</code></pre>
+            </panel>
+            <p><span class="dimmed">Explanation: Because Java supports polymorphism, you can store both <code>Cat</code> and <code>Dog</code> objects in an array of <code>Animal</code> objects. Similarly, you can call the <code>speak</code> method on any <code>Animal</code> object (as done in the loop) and yet get different behavior from <code>Cat</code> objects and <code>Dog</code> objects.</span></p>
+            <p>💡 Suggestion: try to add an <code>Animal</code> object (e.g., <code>new Animal(&quot;Unnamed&quot;)</code>) to the <code>animals</code> array and see what happens.
+            </p>
+          </box>
+          <p><strong>Polymorphic code is better</strong> in several ways:</p>
+          <ul>
+            <li>It is <strong>shorter</strong>.</li>
+            <li>It is <strong>simpler</strong>.</li>
+            <li>It is more <strong>flexible</strong> (in the above example, the <code>main</code> method will work even if we add more animal types).</li>
+          </ul>
         </div>
       </div>
       <div>
@@ -2039,75 +2196,63 @@ The RoadBike has 23 MM tires.
           <h4 id="abstract-classes-and-methods">Abstract Classes and Methods</h4>
         </div>
         <div>
-          <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-          <blockquote>
-            <ul>
-              <li>An <em>abstract class</em> is a class that is declared <code>abstract</code>—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.</li>
-              <li>An <em>abstract method</em> is a method that is declared without an implementation (without braces, and followed by a semicolon), like this:<br>
-                <code>abstract void moveTo(double deltaX, double deltaY);</code></li>
-            </ul>
-            <p>If a class includes abstract methods, then the class itself must be declared abstract, as in:</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GraphicObject</span> </span>{
-   <span class="hljs-comment">// declare fields</span>
-   <span class="hljs-comment">// declare nonabstract methods</span>
-   <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span></span>;
-}
-</code></pre>
-            <p>When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class. However, if it does not, then the subclass must also be declared abstract.</p>
-            <p>In an object-oriented drawing application, you can draw circles, rectangles, lines, Bezier curves, and many other graphic objects. These objects all have certain states (for example: position, orientation, line color, fill color) and behaviors
-              (for example: moveTo, rotate, resize, draw) in common. Some of these states and behaviors are the same for all graphic objects (for example: position, fill color, and moveTo). Others require different implementations (for example, resize
-              or draw). All <code>GraphicObjects</code> must be able to draw or resize themselves; they just differ in how they do it. This is a perfect situation for an abstract superclass. You can take advantage of the similarities and declare all the
-              graphic objects to inherit from the same abstract parent object (for example, <code>GraphicObject</code>). Classes <code>Rectangle</code>, <code>Line</code>, <code>Bezier</code>, and <code>Circle</code> inherit from <code>GraphicObject</code>.</p>
-            <p>First, you declare an abstract class, <code>GraphicObject</code>, to provide member variables and methods that are wholly shared by all subclasses, such as the current position and the <code>moveTo</code> method. <code>GraphicObject</code>              also declares abstract methods for methods, such as draw or resize, that need to be implemented by all subclasses but must be implemented in different ways. The <code>GraphicObject</code> class can look something like this:</p>
-            <pre><code class="hljs java"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GraphicObject</span> </span>{
-    <span class="hljs-keyword">int</span> x, y;
-    ...
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">moveTo</span><span class="hljs-params">(<span class="hljs-keyword">int</span> newX, <span class="hljs-keyword">int</span> newY)</span> </span>{
-        ...
-    }
-    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span></span>;
-    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">()</span></span>;
-}
-</code></pre>
-            <p>Each subclass of <code>GraphicObject</code>, such as <code>Circle</code> and <code>Rectangle</code>, must provide implementations for the <code>draw</code> and <code>resize</code> methods or else must be declared <code>abstract</code> themselves:</p>
-            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">GraphicObject</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
-        ...
-    }
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">()</span> </span>{
-        ...
-    }
-}
+          <p>In Java, <strong>an <em>abstract method</em> is declared with the keyword <code>abstract</code> and given without an implementation</strong>. If a class includes abstract methods, then the class itself must be declared abstract.</p>
+          <box>
+            <p><span class="fas fa-cube"></span> The <code>speak</code> method in this <code>Animal</code> class is <code>abstract</code>. Note how the method signature ends with a semicolon and there is no method body. This makes sense as the implementation
+              of the <code>speak</code> method depends on the type of the animal and it is meaningless to provide a common implementation for all animal types.</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
 
-<span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">GraphicObject</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
-        ...
+    <span class="hljs-keyword">protected</span> String name;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Animal</span><span class="hljs-params">(String name)</span></span>{
+        <span class="hljs-keyword">this</span>.name = name;
     }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>;
 }
 </code></pre>
-            <p>The <code>Rectangle</code> class above is abstract because it does not provide an implementation for the <code>resize</code> method.</p>
-          </blockquote>
-          <panel type="seamless" header="<span class='fas fa-cube'></span> Another example of an abstract class" minimized="">
-            <pre><code class="hljs java"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+            <p>As one method of the class is <code>abstract</code>, the class itself is <code>abstract</code>.</p>
+          </box>
+          <p><strong>An <em>abstract class</em> is declared with the keyword <code>abstract</code>. Abstract classes can be used as reference type but cannot be instantiated.</strong></p>
+          <box>
+            <p><span class="fas fa-cube"></span> This <code>Account</code> class has been declared as abstract although it does not have any abstract methods. Attempting to instantiate <code>Account</code> objects will result in a compile error.</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
 
     <span class="hljs-keyword">int</span> number;
-
-    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span></span>;
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">close</span><span class="hljs-params">()</span></span>{
         <span class="hljs-comment">//...</span>
     }
 }
+</code></pre>
+            <p><code>Account a;</code> <span class="fas fa-arrow-right"></span> <span style="color:green"><span class="fas fa-check"></span></span><br> OK to use as a type
+              <code>a = new Account();</code> <span class="fas fa-arrow-right"></span> <span style="color:red"><span class="fas fa-times"></span></span> Compile error!</p>
+          </box>
+          <p><strong>When an abstract class is subclassed, the subclass should provides implementations for all of the abstract methods in its superclass or else the subclass must also be declared abstract.</strong></p>
+          <box>
+            <p><span class="fas fa-cube"></span> The <code>Feline</code> class below inherits from the abstract class <code>Animal</code> but it does not provide an implementation for the abstract method <code>speak</code>. As a result, the <code>Feline</code>              class needs to be abstract too.</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Feline</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Feline</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">super</span>(name);
+    }
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CurrentAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
+}
+</code></pre>
+            <p>The <code>DomesticCat</code> class inherits the abstract <code>Feline</code> class and provides the implementation for the abstract method <code>speak</code>. As a result, it need not be declared abstract.</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DomesticCat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Feline</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">DomesticCat</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">super</span>(name);
+    }
 
     <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">//...</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Meow"</span>;
     }
 }
 </code></pre>
-          </panel>
+            <p><code>Animal a = new Feline(&quot;Mittens&quot;);</code> <span class="fas fa-arrow-right"></span> <span style="color:red"><span class="fas fa-times"></span></span> Compile error! <code>Feline</code> is abstract.</p>
+            <p><code>Animal a = new DomesticCat(&quot;Mittens&quot;);</code> <span class="fas fa-arrow-right"></span> <span style="color:green"><span class="fas fa-check"></span></span> OK. <code>DomesticCat</code> can be instantiated and assigned to a variable
+              of <code>Animal</code> type <span class="dimmed">(the assignment is allowed by polymorphism)</span>.</p>
+          </box>
         </div>
       </div>
       <h2 id="exceptions">Exceptions</h2>
@@ -2116,64 +2261,44 @@ The RoadBike has 23 MM tires.
           <h4 id="what-are-exceptions">What are Exceptions?</h4>
         </div>
         <div>
-          <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-          <blockquote>
-            <tip-box type="definition">
-              <div>
-                <p><strong>Exception</strong>:</p>
-                <blockquote>
-                  <p>The term <em>exception</em> is shorthand for the phrase &quot;exceptional event.&quot; An <em>exception</em> is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. –-
-                    Java Tutorial (Oracle Inc.)</p>
-                </blockquote>
-              </div>
-            </tip-box>
-            <p><strong>When an error occurs within a method, the method creates an <em>exception object</em> and hands it off to the runtime system.</strong> The exception object contains information about the error, including its type and the state of the
-              program when the error occurred. Creating an exception object and handing it to the runtime system is called <em>throwing</em> an exception.</p>
-            <p><strong>After a method throws an exception, the runtime system attempts to find something to handle it in the <tooltip content="the ordered list of methods that had been called to get to the method where the error occurred"><em>call stack</em></tooltip>.</strong>              The runtime system searches the call stack for a method that contains a block of code that can handle the exception. This block of code is called an <em>exception handler</em>. The search begins with the method in which the error occurred
-              and proceeds through the call stack in the reverse order in which the methods were called. When an appropriate handler is found, the runtime system passes the exception to the handler. An exception handler is considered appropriate if the
-              type of the exception object thrown matches the type that can be handled by the handler.</p>
-            <p><strong>The exception handler chosen is said to <em>catch</em> the exception.</strong> If the runtime system exhaustively searches all the methods on the call stack without finding an appropriate exception handler, the program terminates.</p>
-            <p><strong>Java code must honor the <em>Catch or Specify</em> Requirement.</strong> This means that code that might throw certain exceptions must be enclosed by either of the following:</p>
+          <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with some adaptations.</p>
+          <div class="indented">
+            <p><strong>There are three basic categories of exceptions In Java:</strong></p>
             <ul>
-              <li>A <code>try</code> statement that catches the exception. The <code>try</code> must provide a handler for the exception.</li>
-              <li>A method that specifies that it can throw the exception. The method must provide a <code>throws</code> clause that lists the exception.</li>
+              <li><strong><mark><em>Checked</em> exceptions</mark>: exceptional conditions that a well-written application should anticipate and recover from.</strong> All exceptions are checked exceptions, except for <code>Error</code>, <code>RuntimeException</code>,
+                and their subclasses.</li>
             </ul>
-            <p><strong>There are three basic categories of exceptions, only one of which is subject to the 'Catch or Specify' Requirement.</strong></p>
-            <ul>
-              <li><strong><em>Checked</em> exceptions</strong>: These are exceptional conditions that a well-written application should anticipate and recover from. For example, suppose an application prompts a user for an input file name, then opens the
-                file by passing the name to the constructor for java.io.FileReader. Normally, the user provides the name of an existing, readable file, so the construction of the <code>FileReader</code> object succeeds, and the execution of the application
-                proceeds normally. But sometimes the user supplies the name of a nonexistent file, and the constructor throws <code>java.io.FileNotFoundException</code>. A well-written program will catch this exception and notify the user of the mistake,
-                possibly prompting for a corrected file name.
-                <ul>
-                  <li><mark>Checked exceptions are subject to the Catch or Specify Requirement.</mark></li>
-                  <li>All exceptions are checked exceptions, except for <code>Error</code>, <code>RuntimeException</code>, and their subclasses.</li>
-                </ul>
-              </li>
-            </ul>
+            <div class="indented-level2">
+              <box>
+                <p><span class="fas fa-cube"></span> Suppose an application prompts a user for an input file name, then opens the file by passing the name to the constructor for java.io.FileReader. Normally, the user provides the name of an existing, readable
+                  file, so the construction of the <code>FileReader</code> object succeeds, and the execution of the application proceeds normally. But sometimes the user supplies the name of a nonexistent file, and the constructor throws <code>java.io.FileNotFoundException</code>.
+                  A well-written program will catch this exception and notify the user of the mistake, possibly prompting for a corrected file name.</p>
+              </box>
+            </div>
             <p></p>
             <ul>
-              <li><strong>Errors</strong>: These are exceptional conditions that are external to the application, and that the application usually cannot anticipate or recover from. For example, suppose that an application successfully opens a file for input,
-                but is unable to read the file because of a hardware or system malfunction. The unsuccessful read will throw <code>java.io.IOError</code>. An application might choose to catch this exception, in order to notify the user of the problem
-                — but it also might make sense for the program to print a stack trace and exit.
-                <ul>
-                  <li>Errors are not subject to the 'Catch or Specify' Requirement.</li>
-                  <li>Errors are those exceptions indicated by <code>Error</code> and its subclasses.</li>
-                </ul>
-              </li>
+              <li><strong><mark><em>Errors</em></mark>: exceptional conditions that are external to the application, and that the application usually cannot anticipate or recover from.</strong> Errors are those exceptions indicated by <code>Error</code> and
+                its subclasses.</li>
             </ul>
+            <div class="indented-level2">
+              <box>
+                <p><span class="fas fa-cube"></span> Suppose that an application successfully opens a file for input, but is unable to read the file because of a hardware or system malfunction. The unsuccessful read will throw <code>java.io.IOError</code>.
+                  An application might choose to catch this exception, in order to notify the user of the problem — but it also might make sense for the program to print a stack trace and exit.</p>
+              </box>
+            </div>
             <p></p>
             <ul>
-              <li><strong>Runtime exceptions</strong>: These are exceptional conditions that are internal to the application, and that the application usually cannot anticipate or recover from. These usually indicate programming bugs, such as logic errors
-                or improper use of an API. For example, consider the application described previously that passes a file name to the constructor for FileReader. If a logic error causes a null to be passed to the constructor, the constructor will throw
-                <code>NullPointerException</code>. The application can catch this exception, but it probably makes more sense to eliminate the bug that caused the exception to occur.
-                <ul>
-                  <li>Runtime exceptions are not subject to the 'Catch or Specify' Requirement.</li>
-                  <li>Runtime exceptions are those indicated by <code>RuntimeException</code> and its subclasses.</li>
-                </ul>
-              </li>
+              <li><strong><mark><em>Runtime exceptions</em></mark>: conditions that are internal to the application, and that the application usually cannot anticipate or recover from.</strong> Runtime exceptions are those indicated by <code>RuntimeException</code>                and its subclasses. These usually indicate programming bugs, such as logic errors or improper use of an API.</li>
             </ul>
-            <p><strong>Errors and runtime exceptions are collectively known as <em>unchecked</em> exceptions.</strong></p>
-          </blockquote>
+            <div class="indented-level2">
+              <box>
+                <p><span class="fas fa-cube"></span> Consider the application described previously that passes a file name to the constructor for FileReader. If a logic error causes a null to be passed to the constructor, the constructor will throw <code>NullPointerException</code>.
+                  The application can catch this exception, but it probably makes more sense to eliminate the bug that caused the exception to occur.</p>
+              </box>
+            </div>
+            <p></p>
+            <p><strong>Errors and runtime exceptions are collectively known as <mark><em>unchecked</em> exceptions</mark>.</strong></p>
+          </div>
         </div>
       </div>
       <div>
@@ -2181,72 +2306,146 @@ The RoadBike has 23 MM tires.
           <h4 id="how-to-use-exceptions">How to Use Exceptions</h4>
         </div>
         <div>
-          <p><span class="fas fa-cube"></span> In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code> method inside
-            a <code>try{ }</code> block and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p>
-          <img src="/se-book/errorHandling/exceptions/how/images/processInput.png" width="400">
-          <p></p>
-          <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-          <blockquote>
-            <p><strong>A program can catch exceptions by using a combination of the <code>try</code>, <code>catch</code>, and <code>finally</code> blocks.</strong> Here is an example:</p>
+          <p>The content below uses extracts from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with some adaptations.</p>
+          <p><strong>A program can catch exceptions by using a combination of the <code>try</code>, <code>catch</code> blocks.</strong></p>
+          <ul>
+            <li>The <code>try</code> block identifies a block of code in which an exception can occur.</li>
+            <li>The <code>catch</code> block identifies a block of code, known as an exception handler, that can handle a particular type of exception.</li>
+          </ul>
+          <box>
+            <p><span class="fas fa-cube"></span> The <code>writeList()</code> method below calls a method <code>process()</code> that can cause two type of exceptions. It uses a try-catch construct to deal with each exception.</p>
             <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> </span>{
-    PrintWriter out = <span class="hljs-keyword">null</span>;
-
+    print(<span class="hljs-string">"starting method"</span>);
     <span class="hljs-keyword">try</span> {
-        System.out.println(<span class="hljs-string">"Entering"</span> + <span class="hljs-string">" try statement"</span>);
+        print(<span class="hljs-string">"starting process"</span>);
+        process();
+        print(<span class="hljs-string">"finishing process"</span>);
 
-        out = <span class="hljs-keyword">new</span> PrintWriter(<span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"OutFile.txt"</span>));
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; SIZE; i++) {
-            out.println(<span class="hljs-string">"Value at: "</span> + i + <span class="hljs-string">" = "</span> + list.get(i));
-        }
     } <span class="hljs-keyword">catch</span> (IndexOutOfBoundsException e) {
-        System.err.println(<span class="hljs-string">"Caught IndexOutOfBoundsException: "</span> + e.getMessage());
+        print(<span class="hljs-string">"caught IOOBE"</span>);
 
     } <span class="hljs-keyword">catch</span> (IOException e) {
-        System.err.println(<span class="hljs-string">"Caught IOException: "</span> +  e.getMessage());
+        print(<span class="hljs-string">"caught IOE"</span>);
 
-    } <span class="hljs-keyword">finally</span> {
-        <span class="hljs-keyword">if</span> (out != <span class="hljs-keyword">null</span>) {
-            System.out.println(<span class="hljs-string">"Closing PrintWriter"</span>);
-            out.close();
-        } <span class="hljs-keyword">else</span> {
-            System.out.println(<span class="hljs-string">"PrintWriter not open"</span>);
-        }
     }
+    print(<span class="hljs-string">"finishing method"</span>);
 }
 </code></pre>
-            <ul>
-              <li>
-                <p>The <code>try</code> block identifies a block of code in which an exception can occur.</p>
-              </li>
-              <li>
-                <p>The <code>catch</code> block identifies a block of code, known as an exception handler, that can handle a particular type of exception.</p>
-              </li>
-              <li>
-                <p>The <code>finally</code> block identifies a block of code that is guaranteed to execute, and is the right place to close files, recover resources, and otherwise clean up after the code enclosed in the try block.</p>
-              </li>
-              <li>
-                <p>The <code>try</code> statement should contain at least one <code>catch</code> block or a finally block and may have multiple <code>catch</code> blocks.</p>
-              </li>
-              <li>
-                <p>The class of the exception object indicates the type of exception thrown. The exception object can contain further information about the error, including an error message.</p>
-              </li>
-            </ul>
-            <p><strong>You can use the <code>throw</code> statement to throw an exception.</strong> The throw statement requires a single argument: a throwable object. Throwable objects are instances of any subclass of the <code>Throwable</code> class. Here's
-              an example of a throw statement.</p>
+            <p>Some possible outputs:</p>
+            <div class="table-responsive">
+              <table class="markbind-table table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>No exceptions <span class="fas fa-arrow-down"></span></th>
+                    <th><code>IOException</code> <span class="fas fa-arrow-down"></span></th>
+                    <th><code>IndexOutOfBoundsException</code> <span class="fas fa-arrow-down"></span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="text-monospace">starting method<br>starting process<br>finishing process<br>finishing method</span></td>
+                    <td><span class="text-monospace">starting method<br>starting process<br><s>finishing process</s><br><mark>caught IOE</mark><br>finishing method </span></td>
+                    <td><span class="text-monospace">starting method<br>starting process<br><s>finishing process</s><br><mark>caught IOOBE</mark><br>finishing method</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </box>
+          <p>You can <strong>use a <code>finally</code> block to specify code that is guaranteed to execute with or without the exception.</strong> This is the right place to close files, recover resources, and otherwise clean up after the code enclosed
+            in the <code>try</code> block.</p>
+          <p><span class="fas fa-cube"></span> The <code>writeList()</code> method below has a <code>finally</code> block that will run</p>
+          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> </span>{
+    print(<span class="hljs-string">"starting method"</span>);
+    <span class="hljs-keyword">try</span> {
+        print(<span class="hljs-string">"starting process"</span>);
+        process();
+        print(<span class="hljs-string">"finishing process"</span>);
+
+    } <span class="hljs-keyword">catch</span> (IndexOutOfBoundsException e) {
+        print(<span class="hljs-string">"caught IOOBE"</span>);
+
+    } <span class="hljs-keyword">catch</span> (IOException e) {
+        print(<span class="hljs-string">"caught IOE"</span>);
+
+    } <span class="hljs-keyword">finally</span> {
+        <span class="hljs-comment">// clean up</span>
+        print(<span class="hljs-string">"cleaning up"</span>);
+    }
+    print(<span class="hljs-string">"finishing method"</span>);
+}
+</code></pre>
+          <p>Some possible outputs:</p>
+          <div class="table-responsive">
+            <table class="markbind-table table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>No exceptions <span class="fas fa-arrow-down"></span></th>
+                  <th><code>IOException</code> <span class="fas fa-arrow-down"></span></th>
+                  <th><code>IndexOutOfBoundsException</code> <span class="fas fa-arrow-down"></span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="text-monospace">starting method<br>starting process<br>finishing process<br><mark>cleaning up</mark><br>finishing method</span></td>
+                  <td><span class="text-monospace">starting method<br>starting process<br><s>finishing process</s><br>caught IOE<br><mark>cleaning up</mark><br>finishing method </span></td>
+                  <td><span class="text-monospace">starting method<br>starting process<br><s>finishing process</s><br>caught IOOBE<br><mark>cleaning up</mark><br>finishing method</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul>
+            <li>
+              <p>The <code>try</code> statement should contain at least one <code>catch</code> block or a finally block and may have multiple <code>catch</code> blocks.</p>
+            </li>
+            <li>
+              <p>The class of the exception object indicates the type of exception thrown. The exception object can contain further information about the error, including an error message.</p>
+            </li>
+          </ul>
+          <p><strong>You can use the <code>throw</code> statement to throw an exception.</strong> The throw statement requires a
+            <tooltip content="Throwable objects are instances of any subclass of the `Throwable` class.">throwable</tooltip> object as the argument.</p>
+          <box>
+            <p><span class="fas fa-cube"></span> Here's an example of a <code>throw</code> statement.</p>
             <pre><code class="hljs java"><span class="hljs-keyword">if</span> (size == <span class="hljs-number">0</span>) {
     <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> EmptyStackException();
 }
 </code></pre>
-            <p><strong>If the a method doesn't catch the checked exceptions that can occur within it, it must specify that it can throw these exceptions</strong> using a <code>throws</code> clause. Here's an example.</p>
+          </box>
+          <p>In Java, <strong>Checked exceptions are subject to the <em>Catch or Specify Requirement</em></strong>: code that might throw checked exceptions must be enclosed by either of the following:</p>
+          <ul>
+            <li>A <code>try</code> statement that catches the exception. The <code>try</code> must provide a handler for the exception.</li>
+            <li>A method that specifies that it can throw the exception. The method must provide a <code>throws</code> clause that lists the exception.</li>
+          </ul>
+          <p>Unchecked exceptions are not required to follow to the <em>Catch or Specify Requirement</em> but you can apply the requirement to them too.</p>
+          <box>
+            <p><span class="fas fa-cube"></span> Here's an example of a method specifying that it throws certain checked exceptions:</p>
             <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException, IndexOutOfBoundsException </span>{
-    PrintWriter out = <span class="hljs-keyword">new</span> PrintWriter(<span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"OutFile.txt"</span>));
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; SIZE; i++) {
-        out.println(<span class="hljs-string">"Value at: "</span> + i + <span class="hljs-string">" = "</span> + list.get(i));
-    }
-    out.close();
+    print(<span class="hljs-string">"starting method"</span>);
+    process();
+    print(<span class="hljs-string">"finishing method"</span>);
 }
 </code></pre>
-          </blockquote>
+            <pre><code>Some possible outputs:
+</code></pre>
+            <div class="table-responsive">
+              <table class="markbind-table table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>No exceptions <span class="fas fa-arrow-down"></span></th>
+                    <th><code>IOException</code> <span class="fas fa-arrow-down"></span></th>
+                    <th><code>IndexOutOfBoundsException</code> <span class="fas fa-arrow-down"></span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="text-monospace">starting method<br>finishing method</span></td>
+                    <td><span class="text-monospace">starting method<br><s>finishing method</s></span></td>
+                    <td><span class="text-monospace">starting method<br><s>finishing method</s></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </box>
+          <p><strong>Java comes with a collection of <a href="https://www.geeksforgeeks.org/built-exceptions-java-examples/">built-in exception classes</a></strong> that you can use. When they are not enough, <strong>it is possible to <a href="https://www.javatpoint.com/custom-exception">create your own exception classes</a></strong>.</p>
         </div>
       </div>
       <h2 id="generics">Generics</h2>
@@ -2540,7 +2739,7 @@ Number of keys after clearing: 0
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
 </footer>
 </div>
 </body>

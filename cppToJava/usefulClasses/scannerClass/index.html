@@ -49,8 +49,8 @@
           </div>
           <div id="main">
             <div>
-              <p><code>Scanner</code> is a class that provides methods for inputting words, numbers, and other data.
-                <code>Scanner</code> provides a method called nextLine that reads a line of input from the keyboard and returns a String. The following example reads two lines and repeats them back to the user:</p>
+              <p><strong><code>Scanner</code> is a class that provides methods for inputting words, numbers, and other data.</strong> <code>Scanner</code> provides a method called <code>nextLine</code> that reads a line of input from the keyboard and returns
+                a String. The following example reads two lines and repeats them back to the user:</p>
               <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Echo</span> </span>{
@@ -69,8 +69,10 @@
     }
 }
 </code></pre>
-              <p><code>Scanner</code> class normally reads inputs as strings but it can read in a specific type of input too. The code below uses the <code>nextInt</code> method of the <code>Scanner</code> class to read an input as an integer.</p>
-              <pre><code class="hljs java">
+              <p><code>Scanner</code> class normally reads inputs as strings but it can read in a specific type of input too.</p>
+              <box>
+                <p><span class="fas fa-cube"></span> The code below uses the <code>nextInt</code> method of the <code>Scanner</code> class to read an input as an integer.</p>
+                <pre><code class="hljs java">
 Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
 
 System.out.print(<span class="hljs-string">"What is your age? "</span>);
@@ -80,8 +82,207 @@ System.out.print(<span class="hljs-string">"What is your name? "</span>);
 String name = in.nextLine();
 System.out.printf(<span class="hljs-string">"Hello %s, age %d\n"</span>, name, age);
 </code></pre>
+                <p>💡 Note the <a href="https://docs.oracle.com/javase/tutorial/java/data/numberformat.html">use of <code>printf</code> method for formatting the output</a>.</p>
+              </box>
             </div>
-            <div></div>
+            <div>
+              <div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> find total expenditure">
+                        <question>
+                          <p>Write a program to ask the user for a description of overseas expenses (presumably, the user has just returned from an overseas trip) and calculate the total in local currency.</p>
+                          <ul>
+                            <li>The conversion rate from overseas currency to local currency : overseas <code>$1.0</code> = local <code>$1.70</code></li>
+                            <li>The user can describe expenses is in free form text, as one line. The program takes all amounts mentioned in the format <code>$amount</code> e.g., <code>$1.50</code></li>
+                          </ul>
+                          <p>Here is one example output: <span class="fas fa-arrow-down"></span></p>
+                          <pre class="hljs"><code>Your expenses while overseas?beer $4.50 books $3.00 $5.00 for food, that's all
+Expenses in overseas currency:[$4.50, $3.00, $5.00]
+Total in local currency: $21.25
+</code></pre>
+                          <p>Here is another: <span class="fas fa-arrow-down"></span></p>
+                          <pre class="hljs"><code>Your expenses while overseas?nothing. I lived off my friends all the time.
+Expenses in overseas currency:[]
+Total in local currency: $0.00
+</code></pre>
+                          <p>One more: <span class="fas fa-arrow-down"></span></p>
+                          <pre class="hljs"><code>Your expenses while overseas? Just $10
+Expenses in overseas currency:[$10]
+Total in local currency: $17.00
+</code></pre>
+                          <p>Here's the skeleton code to use as the starting point:</p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// You can add more methods here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String line;
+        Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+
+        System.out.print(<span class="hljs-string">"Your expenses while overseas?"</span>);
+       <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span>
+    }
+}
+</code></pre>
+                          <p>💡 You can use the <code>split</code> method of the <code>String</code> class to convert a sentence into an array of words. e.g.,<br></p>
+                          <pre><code class="hljs java">String sentence = <span class="hljs-string">"hello my dear"</span>;
+String[] words = sentence.split(<span class="hljs-string">" "</span>); <span class="hljs-comment">// split using the space as the delimiter</span>
+System.out.println(Arrays.toString(words));
+</code></pre>
+                          <p><span class="fas fa-arrow-right"></span> <code>[hello, my, dear]</code></p>
+                          <div slot="hint">
+                            <p>💡 You can use <code>String.format(&quot;%.2f&quot;, doubleValue)</code> to format <code>doubleValue</code> to two decimal points.<br> e.g., <code>String.format(&quot;%.2f&quot;, 1.3334)</code> <span class="fas fa-arrow-right"></span>                              <code>1.33</code></p>
+                            <panel type="seamless" header="Partial solution">
+                              <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Arrays;
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String[] filterAmounts(String sentence) {
+        String[] words = sentence.split(<span class="hljs-string">" "</span>);
+        String[] result = <span class="hljs-keyword">new</span> String[words.length];
+        <span class="hljs-keyword">int</span> wordCount = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (String word : words) {
+            <span class="hljs-keyword">if</span> (word.startsWith(<span class="hljs-string">"$"</span>)) {
+                result[wordCount] = word;
+                wordCount++;
+            }
+        }
+        <span class="hljs-keyword">return</span> Arrays.copyOf(result, wordCount);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String line;
+        Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+
+        System.out.print(<span class="hljs-string">"Your expenses while overseas?"</span>);
+        line = in.nextLine();
+
+        String[] amounts = filterAmounts(line);
+        System.out.println(<span class="hljs-string">"Expenses in overseas currency:"</span> + Arrays.toString(amounts));
+        <span class="hljs-keyword">double</span> total = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (String amount : amounts) {
+            <span class="hljs-comment">// convert amount to double, multiply by currency conversion rate, and add to total</span>
+        }
+        System.out.println(<span class="hljs-string">"Total in local currency: $"</span> + String.format(<span class="hljs-string">"%.2f"</span>, total));
+
+    }
+}
+</code></pre>
+                            </panel>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 1">
+                        <question>
+                          <p>This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small <code>TaskManager</code> program that can store a list of tasks.</p>
+                          <ul>
+                            <li>It is a
+                              <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program.</li>
+                            <li>In this version, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></li>
+                          </ul>
+                          <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                          <pre class="hljs"><code>Welcome to TaskManager-Level1!
+Your task? add submit report
+Tasks in the list: 1
+Your task? add return library book
+Tasks in the list: 2
+Your task? add remind boss about meeting
+Tasks in the list: 3
+Your task? xyz
+Unknown command! please try again
+Your task? print
+[1] submit report
+[2] return library book
+[3] remind boss about meeting
+Your task? add set up meeting with boss
+Tasks in the list: 4
+Your task? print
+[1] submit report
+[2] return library book
+[3] remind boss about meeting
+[4] set up meeting with boss
+Your task? exit
+Bye!
+</code></pre>
+                          <p>Summary of behavior:</p>
+                          <ul>
+                            <li>Task Manager prompts for user input with the message <code>Your task?</code></li>
+                            <li><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</li>
+                            <li><strong><code>print</code></strong>: prints the tasks added so far</li>
+                            <li><strong><code>exit</code></strong> or empty input: terminates the program</li>
+                          </ul>
+                          <p>If you are new to programming, we recommend you to build the program in small steps, as follows:</p>
+                          <ol>
+                            <li>Write a program that reads any user input, prints it back to the user, and exits.</li>
+                            <li>Update the program to do the above in a loop until user types <code>exit</code>.</li>
+                            <li>Add greetings printed at the start and the end.</li>
+                            <li>If the first word is not <code>add</code> or <code>exit</code>, print an error message. Suggestion: use a <code>switch</code> statement to choose between multiple actions.</li>
+                            <li>Create a <code>Task</code> class to represent tasks and add an <code>Task[]</code> to store tasks.</li>
+                            <li>If the first word of the user input is <code>add</code>, add the whole line (no need to omit the first word) to the task list.</li>
+                            <li>Update the code in the previous step to omit the word <code>add</code> from the task description.</li>
+                            <li>Add support for the <code>print</code> command.</li>
+                            <li>Add support for terminating if the user input is empty</li>
+                            <li>and so on ...</li>
+                          </ol>
+                          <div slot="hint">
+                            <panel type="seamless" header="Partial solution">
+                              <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+    <span class="hljs-keyword">static</span> Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;  <span class="hljs-comment">// to keep track of number of tasks in the list</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printWelcome();
+        String line;
+        <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">while</span> (!isExit) {
+            line = getInput();
+            String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>]; <span class="hljs-comment">//extract the first word of the user input</span>
+            <span class="hljs-keyword">switch</span> (command) {
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"exit"</span>:
+                <span class="hljs-keyword">case</span> <span class="hljs-string">""</span>: <span class="hljs-comment">// exit if user input is empty</span>
+                    isExit = <span class="hljs-keyword">true</span>;
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"add"</span>:
+                    <span class="hljs-comment">// todo: add code here</span>
+                <span class="hljs-keyword">default</span>:
+                    printError();
+            }
+        }
+        exit();
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printWelcome</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Welcome to TaskManager-Level1!"</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTasks</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; count; i++) {
+            System.out.println(<span class="hljs-string">"["</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">"] "</span> + tasks[i].getDescription());
+        }
+    }
+
+    <span class="hljs-comment">// todo: add missing methods</span>
+}
+
+</code></pre>
+                            </panel>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </panel>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -91,7 +292,7 @@ System.out.printf(<span class="hljs-string">"Hello %s, age %d\n"</span>, name, a
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
 </footer>
 </div>
 </body>

@@ -12,7 +12,7 @@
 
 Given below is an extract from the {{ oracle }}, with slight adaptations.
 
-<blockquote>
+<div class="indented">
 
 {{ similar }} **A class that is derived from another class is called a _subclass_** (also a _derived_ class, _extended_ class, or _child_ class). The class from which the subclass is derived is called a _superclass_ (also a _base_ class or a _parent_ class).
 
@@ -22,16 +22,18 @@ Given below is an extract from the {{ oracle }}, with slight adaptations.
 
 {{ different }} **The `java.lang.Object` class defines and implements behavior common to all classes**—including the ones that you write. In the Java platform, many classes derive directly from `Object`, other classes derive from some of those classes, and so on, forming a hierarchy of classes.
 
-Here is the sample code for a possible implementation of a Bicycle class that was presented in the Classes and Objects lesson:
+**The keyword `extends` indicates one class inheriting from another.**
+
+<box>
+
+{{ icon_example }} Here is the sample code for a possible implementation of a `Bicycle` class and a `MountainBike` class that is a subclass of the `Bicycle`:
 
 ```java
 public class Bicycle {
 
-    // the Bicycle class has two fields
     public int gear;
     public int speed;
 
-    // the Bicycle class has one constructor
     public Bicycle(int startSpeed, int startGear) {
         gear = startGear;
         speed = startSpeed;
@@ -52,10 +54,6 @@ public class Bicycle {
 }
 ```
 
-The keyword `extends` indicates one class inheriting from another.
-
-A class declaration for a MountainBike class that is a subclass of Bicycle might look like this:
-
 ```java
 public class MountainBike extends Bicycle {
 
@@ -74,12 +72,17 @@ public class MountainBike extends Bicycle {
     }
 }
 ```
+</box>
 
-`MountainBike` inherits all the fields and methods of `Bicycle` and adds the field `seatHeight` and a method to set it. Except for the constructor, it is as if you had written a new `MountainBike` class entirely from scratch, with four fields and five methods. However, you didn't have to do all the work. This would be especially valuable if the methods in the `Bicycle` class were complex and had taken substantial time to debug.
+**A subclass inherits all the fields and methods of the superclass.** In the example above, `MountainBike` inherits all the fields and methods of `Bicycle` and adds the field `seatHeight` and a method to set it.
 
 ##### Accessing Superclass Members
 
-If your method overrides one of its superclass's methods, you can invoke the overridden method through the use of the keyword super. You can also use super to refer to a hidden field (although hiding fields is discouraged). Consider this class, Superclass:
+**If your method overrides one of its superclass's methods, you can invoke the overridden method through the use of the keyword `super`.** You can also use `super` to refer to a <tooltip content="when both the superclass and the subclass use the same variable name, the superclass variables is said to be _hidden/shadowed_ by the subclass variable">hidden field</tooltip> (although hiding fields is discouraged).
+
+<box>
+
+{{ icon_example }} Consider this class, `Superclass` and a subclass, called `Subclass`, that overrides `printMethod()`:
 
 ```java
 public class Superclass {
@@ -89,9 +92,6 @@ public class Superclass {
     }
 }
 ```
-
-Here is a subclass, called `Subclass`, that overrides `printMethod()`:
-
 ```java
 public class Subclass extends Superclass {
 
@@ -106,60 +106,24 @@ public class Subclass extends Superclass {
     }
 }
 ```
-
-Within `Subclass`, the simple name `printMethod()` refers to the one declared in `Subclass`, which overrides the one in `Superclass`. So, to refer to `printMethod()` inherited from `Superclass`, `Subclass` must use a qualified name, using super as shown. Compiling and executing `Subclass` prints the following:
+{{ icon_output }}
 ```
 Printed in Superclass.
 Printed in Subclass
 ```
-</blockquote>
 
-<panel type="seamless" header="{{ icon_example }} Another example of method overriding">
+Within `Subclass`, the simple name `printMethod()` refers to the one declared in `Subclass`, which overrides the one in `Superclass`. So, to refer to `printMethod()` inherited from `Superclass`, `Subclass` must use a qualified name, using `super` as shown. Compiling and executing `Subclass` prints the following:
 
-A simple example where the `Report#print()` method is overridden by `EvaluationReport#print()` method:
-
-```java
-
-class Report{
-
-    void print(){
-        System.out.println("Printing report");
-    }
-
-}
-
-class EvaluationReport extends Report{
-
-    @Override  // this annotation is optional
-    void print(){
-        System.out.println("Printing evaluation report");
-    }
-
-}
-
-class ReportMain{
-
-    public static void main(String[] args){
-        Report report = new Report();
-        report.print(); // prints "Printing report"
-
-        EvaluationReport evaluationReport = new EvaluationReport();
-        evaluationReport.print(); // prints "Printing evaluation report"
-    }
-}
-```
-{{ icon_output }}
-```
-Printing report
-Printing evaluation report
-```
-</panel>
-
-<blockquote>
+</box>
 
 ##### Subclass Constructors
 
-The following example illustrates how to use the `super` keyword to invoke a superclass's constructor. Recall from the `Bicycle` example that `MountainBike` is a subclass of `Bicycle`. Here is the `MountainBike` (subclass) constructor that calls the superclass constructor and then adds initialization code of its own:
+**A subclass constructor can invoke the superclass constructor.** Invocation of a superclass constructor must be the first line in the subclass constructor.
+The syntax for calling a superclass constructor is `super()` %%(which invokes the no-argument constructor of the superclass)%% or `super(parameter list)` %%(to invoke the superclass constructor with a matching parameter list)%%.
+
+<box>
+
+{{ icon_example }} The following example illustrates how to use the `super` keyword to invoke a superclass's constructor. Recall from the `Bicycle` example that `MountainBike` is a subclass of `Bicycle`. Here is the `MountainBike` (subclass) constructor that calls the superclass constructor and then adds initialization code of its own:
 
 ```java
 public MountainBike(int startHeight, int startSpeed, int startGear) {
@@ -167,43 +131,30 @@ public MountainBike(int startHeight, int startSpeed, int startGear) {
     seatHeight = startHeight;
 }
 ```
+</box>
 
-Invocation of a superclass constructor must be the first line in the subclass constructor.
-The syntax for calling a superclass constructor is `super();` or `super(parameter list);`
+Note: If a constructor does not explicitly invoke a superclass constructor, the Java compiler automatically inserts a call to the no-argument constructor of the superclass. If the superclass does not have a no-argument constructor, you will get a compile-time error. `Object` does have such a constructor, so if `Object` is the only superclass, there is no problem.
 
-With `super()`, the superclass no-argument constructor is called. With `super(parameter list)`, the superclass constructor with a matching parameter list is called.
+##### Access Modifiers (simplified)
 
-Note: If a constructor does not explicitly invoke a superclass constructor, the Java compiler automatically inserts a call to the no-argument constructor of the superclass. If the super class does not have a no-argument constructor, you will get a compile-time error. Object does have such a constructor, so if Object is the only superclass, there is no problem.
+**Access level modifiers determine whether other classes can use a particular field or invoke a particular method.** Given below is a simplified version of Java access modifiers, ==assuming you have not yet started placing your classes in different packages== i.e., all classes are places in the root level. A full explanation of access modifiers is given in a later topic.
 
-If a subclass constructor invokes a constructor of its superclass, either explicitly or implicitly, you might think that there will be a whole chain of constructors called, all the way back to the constructor of `Object`. In fact, this is the case. It is called constructor chaining, and you need to be aware of it when there is a long line of class descent.
+There are two levels of access control:
 
-##### Access Modifiers
+1. **At the class level**:
+   * **`public`**: the class is visible to all other classes
+   * **no modifier**: same as `public`<br><br>
 
-Access level modifiers determine whether other classes can use a particular field or invoke a particular method. There are two levels of access control:
+2. **At the member level**:
+   * **`public`** : the class is visible to all other classes
+   * **no modifier**: same as `public`
+   * **`protected`**: same as `public`
+   * **`private`**: the member can only be accessed in its own class
 
-* At the top level—`public`, or _package-private_ (no explicit modifier).
-* At the member level—`public`, `private`, `protected`, or _package-private_ (no explicit modifier).
-
-A class may be declared with the modifier `public`, in which case that class is visible to all classes everywhere. If a class has no modifier (the default, also known as _package-private_), it is visible only within its own package (packages are named groups of related classes — you will learn about them in a later lesson.)
-
-At the member level, you can also use the `public` modifier or no modifier (_package-private_) just as with top-level classes, and with the same meaning. For members, there are two additional access modifiers: `private` and `protected`. The `private` modifier specifies that the member can only be accessed in its own class. The `protected` modifier specifies that the member can only be accessed within its own package (as with package-private) and, in addition, by a subclass of its class in another package.
-
-The following table shows the access to members permitted by each modifier.
-
-Modifier |	Class |	Package |	Subclass |	World
----------|-------|---------|----------|------
-public	     | {{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_tick_green }}
-protected	  | {{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_x_red }}
-no modifier	| {{ icon_tick_green }} |	{{ icon_tick_green }} |	{{ icon_x_red }}      |	{{ icon_x_red }}
-private	    | {{ icon_tick_green }} |	{{ icon_x_red }}      |	{{ icon_x_red }}      |	{{ icon_x_red }}
-
-The first data column indicates whether the class itself has access to the member defined by the access level. As you can see, a class always has access to its own members. The second column indicates whether classes in the same package as the class (regardless of their parentage) have access to the member. The third column indicates whether subclasses of the class declared outside this package have access to the member. The fourth column indicates whether all classes have access to the member.
-
-Access levels affect you in two ways. First, when you use classes that come from another source, such as the classes in the Java platform, access levels determine which members of those classes your own classes can use. Second, when you write a class, you need to decide what access level every member variable and every method in your class should have.
-
-</blockquote>
+</div>
 
 </div>
 
 <div id="extras">
+  <include src="exercisesPanel.md" boilerplate />
 </div>

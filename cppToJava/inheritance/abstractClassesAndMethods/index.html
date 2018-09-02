@@ -49,77 +49,99 @@
           </div>
           <div id="main">
             <div>
-              <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-              <blockquote>
-                <ul>
-                  <li>An <em>abstract class</em> is a class that is declared <code>abstract</code>—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.</li>
-                  <li>An <em>abstract method</em> is a method that is declared without an implementation (without braces, and followed by a semicolon), like this:<br>
-                    <code>abstract void moveTo(double deltaX, double deltaY);</code></li>
-                </ul>
-                <p>If a class includes abstract methods, then the class itself must be declared abstract, as in:</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GraphicObject</span> </span>{
-   <span class="hljs-comment">// declare fields</span>
-   <span class="hljs-comment">// declare nonabstract methods</span>
-   <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span></span>;
-}
-</code></pre>
-                <p>When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class. However, if it does not, then the subclass must also be declared abstract.</p>
-                <p>In an object-oriented drawing application, you can draw circles, rectangles, lines, Bezier curves, and many other graphic objects. These objects all have certain states (for example: position, orientation, line color, fill color) and behaviors
-                  (for example: moveTo, rotate, resize, draw) in common. Some of these states and behaviors are the same for all graphic objects (for example: position, fill color, and moveTo). Others require different implementations (for example, resize
-                  or draw). All <code>GraphicObjects</code> must be able to draw or resize themselves; they just differ in how they do it. This is a perfect situation for an abstract superclass. You can take advantage of the similarities and declare all
-                  the graphic objects to inherit from the same abstract parent object (for example, <code>GraphicObject</code>). Classes <code>Rectangle</code>, <code>Line</code>, <code>Bezier</code>, and <code>Circle</code> inherit from <code>GraphicObject</code>.</p>
-                <p>First, you declare an abstract class, <code>GraphicObject</code>, to provide member variables and methods that are wholly shared by all subclasses, such as the current position and the <code>moveTo</code> method. <code>GraphicObject</code>                  also declares abstract methods for methods, such as draw or resize, that need to be implemented by all subclasses but must be implemented in different ways. The <code>GraphicObject</code> class can look something like this:</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GraphicObject</span> </span>{
-    <span class="hljs-keyword">int</span> x, y;
-    ...
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">moveTo</span><span class="hljs-params">(<span class="hljs-keyword">int</span> newX, <span class="hljs-keyword">int</span> newY)</span> </span>{
-        ...
-    }
-    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span></span>;
-    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">()</span></span>;
-}
-</code></pre>
-                <p>Each subclass of <code>GraphicObject</code>, such as <code>Circle</code> and <code>Rectangle</code>, must provide implementations for the <code>draw</code> and <code>resize</code> methods or else must be declared <code>abstract</code>                  themselves:</p>
-                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">GraphicObject</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
-        ...
-    }
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">()</span> </span>{
-        ...
-    }
-}
+              <p>In Java, <strong>an <em>abstract method</em> is declared with the keyword <code>abstract</code> and given without an implementation</strong>. If a class includes abstract methods, then the class itself must be declared abstract.</p>
+              <box>
+                <p><span class="fas fa-cube"></span> The <code>speak</code> method in this <code>Animal</code> class is <code>abstract</code>. Note how the method signature ends with a semicolon and there is no method body. This makes sense as the implementation
+                  of the <code>speak</code> method depends on the type of the animal and it is meaningless to provide a common implementation for all animal types.</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
 
-<span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">GraphicObject</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
-        ...
+    <span class="hljs-keyword">protected</span> String name;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Animal</span><span class="hljs-params">(String name)</span></span>{
+        <span class="hljs-keyword">this</span>.name = name;
     }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>;
 }
 </code></pre>
-                <p>The <code>Rectangle</code> class above is abstract because it does not provide an implementation for the <code>resize</code> method.</p>
-              </blockquote>
-              <panel type="seamless" header="<span class='fas fa-cube'></span> Another example of an abstract class" minimized="">
-                <pre><code class="hljs java"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+                <p>As one method of the class is <code>abstract</code>, the class itself is <code>abstract</code>.</p>
+              </box>
+              <p><strong>An <em>abstract class</em> is declared with the keyword <code>abstract</code>. Abstract classes can be used as reference type but cannot be instantiated.</strong></p>
+              <box>
+                <p><span class="fas fa-cube"></span> This <code>Account</code> class has been declared as abstract although it does not have any abstract methods. Attempting to instantiate <code>Account</code> objects will result in a compile error.</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
 
     <span class="hljs-keyword">int</span> number;
-
-    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span></span>;
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">close</span><span class="hljs-params">()</span></span>{
         <span class="hljs-comment">//...</span>
     }
 }
+</code></pre>
+                <p><code>Account a;</code> <span class="fas fa-arrow-right"></span> <span style="color:green"><span class="fas fa-check"></span></span><br> OK to use as a type
+                  <code>a = new Account();</code> <span class="fas fa-arrow-right"></span> <span style="color:red"><span class="fas fa-times"></span></span> Compile error!</p>
+              </box>
+              <p><strong>When an abstract class is subclassed, the subclass should provides implementations for all of the abstract methods in its superclass or else the subclass must also be declared abstract.</strong></p>
+              <box>
+                <p><span class="fas fa-cube"></span> The <code>Feline</code> class below inherits from the abstract class <code>Animal</code> but it does not provide an implementation for the abstract method <code>speak</code>. As a result, the <code>Feline</code>                  class needs to be abstract too.</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Feline</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Feline</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">super</span>(name);
+    }
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CurrentAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
+}
+</code></pre>
+                <p>The <code>DomesticCat</code> class inherits the abstract <code>Feline</code> class and provides the implementation for the abstract method <code>speak</code>. As a result, it need not be declared abstract.</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DomesticCat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Feline</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">DomesticCat</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">super</span>(name);
+    }
 
     <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">//...</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Meow"</span>;
     }
 }
 </code></pre>
-              </panel>
+                <p><code>Animal a = new Feline(&quot;Mittens&quot;);</code> <span class="fas fa-arrow-right"></span> <span style="color:red"><span class="fas fa-times"></span></span> Compile error! <code>Feline</code> is abstract.</p>
+                <p><code>Animal a = new DomesticCat(&quot;Mittens&quot;);</code> <span class="fas fa-arrow-right"></span> <span style="color:green"><span class="fas fa-check"></span></span> OK. <code>DomesticCat</code> can be instantiated and assigned to
+                  a variable of <code>Animal</code> type <span class="dimmed">(the assignment is allowed by polymorphism)</span>.</p>
+              </box>
             </div>
-            <div></div>
+            <div>
+              <div>
+                <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                  <div>
+                    <ul>
+                      <li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">Oracle’s Java Tutorials: Abstract Methods and Classes</a></li>
+                    </ul>
+                  </div>
+                </panel>
+              </div>
+              <div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about abstract classes">
+                        <question>
+                          <p>Choose the correct statements about Java abstract classes and
+                            <tooltip content="classes that are not abstract">concrete classes</tooltip>.</p>
+                          <ul class="task-list">
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A concrete class can contain an abstract method.</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An abstract class can contain concrete methods.</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. An abstract class need not contain any concrete methods.</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. An abstract class cannot be instantiated.</li>
+                          </ul>
+                          <div slot="answer">
+                            <p>(b)(c)(d)</p>
+                            <p>Explanation: A concrete class cannot contain even a single abstract method.</p>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </panel>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -129,7 +151,7 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
 </footer>
 </div>
 </body>

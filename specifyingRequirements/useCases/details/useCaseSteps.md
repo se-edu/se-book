@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
-**The main body of the use case is the sequence of steps that describes the interaction between the system and the actors.** Each step is given as a simple statement describing who does what.
+**The main body of the use case is the sequence of steps that describes the interaction between the system and the actors.** Each step is given as a simple statement describing _who does what_.
 
 <tip-box>
   
@@ -25,20 +25,27 @@
 
 **A step gives the intention of the actor (not the mechanics).** That means UI details are usually omitted. The idea is to leave as much flexibility to the UI designer as possible. That is, the use case specification should be as general as possible (less specific) about the UI. 
 
+<box>
+
+{{ icon_example }} The first example below is not a good use case step because contains UI-specific details. The second one is better because it omits UI-specific details.
+
+<div class="indented">
+
+{{ bad }} : User right-clicks the text box and chooses ‘clear’
+
+{{ good }} : User clears the input
+
+</div>
+</box>
+
+A use case description can show loops too.
+
 <tip-box>
 
-:x: User right-clicks the text box and chooses ‘clear’ %%&nbsp;: this contains UI-specific details and is not a good use case step)%%
-
-:white_check_mark: User clears the input %%&nbsp;: this is better because it omits UI-specific details%%
-
-</tip-box>
-
-This is how you can include repetitive steps in a scenario.
-
-<tip-box>
+{{ icon_example }} An example of how you can show a loop:
 
 Software System: Square game
-Use case:  <popover effect="fade" placement="right" content="Each use case can be given a unique identification for easier cross reference."> UC02 </popover>  - Play a Game
+Use case:  <popover content="Each use case can be given a unique identification for easier cross reference."> UC02 </popover>  - Play a Game
 Actors: Player (multiple players)
 
 1. A Player starts the game.

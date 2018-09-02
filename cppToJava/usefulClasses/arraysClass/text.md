@@ -10,23 +10,30 @@
 
 <div id="body">
 
-The Java library provides a utility class `java.util.Arrays` that provides methods for working with arrays. One of them, `toString`, returns a string representation of an array.
+**[`java.util.Arrays`](https://docs.oracle.com/javase/9/docs/api/java/util/Arrays.html) provides methods for working with arrays.** One of them, `toString`, returns a string representation of an array. It also provides a `copyOf` that copies an array.
+
+<box>
+
+{{ icon_example }} Using `Arrays.copyOf` and `Arrays.toString`:
 
 ```java
 int[] a = new int[]{1,2,3,4};
-System.out.println(Arrays.toString(a));
-```
-{{ icon_output_right }} `[1, 2, 3, 4]`
 
-It also provides a `copyOf` that copies an array.
+int[] b = Arrays.copyOf(a, 3); // copy first three elements
+System.out.println(Arrays.toString(b));
 
-```java
-double[] b = Arrays.copyOf(a, 3);
-You can also use a.length with Arrays.copyOf:
-double[] b = Arrays.copyOf(a, a.length);
+int[] c = Arrays.copyOf(a, a.length); // copy all elements
+System.out.println(Arrays.toString(c));
 ```
+{{ icon_output }}
+```
+[1, 2, 3]
+[1, 2, 3, 4]
+```
+</box>
 
 </div>
 
 <div id="extras">
+  <include src="exercisesPanel.md" boilerplate />
 </div>

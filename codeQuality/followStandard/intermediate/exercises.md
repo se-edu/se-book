@@ -1,3 +1,2 @@
-<panel header="{{ icon_exercise }} Exercises" expandable>
-  <include src="q-tick-naming.md" />
-</panel>
+<include src="q-tick-naming.md" />
+<include src="q-listViolations.md" />

@@ -902,9 +902,9 @@
                 between <code>Man</code> and <code>Woman</code> for certain other things. A solution is to add the <code>Person</code> class as a super class (to contain the code common to men and woment) and let <code>Man</code> and <code>Woman</code>                inherit from <code>Person</code> class.</p>
             </tip-box>
             <p><strong>Inheritance implies the derived class can be considered as a <em>sub-type</em> of the base class (and the base class is a <em>super-type</em> of the derived class), resulting in an <em>is a</em> relationship.</strong></p>
-            <tip-box type="info">
-              <p>Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type relationship.</p>
-            </tip-box>
+            <p><span class="dimmed"><span class="fas fa-info-circle"></span> Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type
+              relationship.</span>
+            </p>
             <tip-box>
               <p><span class="fas fa-cube"></span> To continue the previous example,</p>
               <ul>
@@ -914,15 +914,16 @@
             </tip-box>
             <p><strong>Inheritance relationships through a chain of classes can result in inheritance <em>hierarchies</em> (aka inheritance <em>trees</em>).</strong></p>
             <tip-box>
-              <p><span class="fas fa-cube"></span> Two inheritance hierarchies/trees are given below. Note that <code>Parrot</code> <em>is a</em> <code>Bird</code> as well as it <em>is an</em> <code>Animal</code>. Note that the triangle points to the parent
-                class.</p>
+              <p><span class="fas fa-cube"></span> Two inheritance hierarchies/trees are given below. <span class="dimmed">Note that the triangle points to the parent class.</span> Observe how the <code>Parrot</code> <em>is a</em> <code>Bird</code> as well
+                as it <em>is an</em> <code>Animal</code>.</p>
               <img src="/se-book/oop/inheritance/what/images/inheritanceTreesExamples.png" width="500">
               <p></p>
             </tip-box>
             <p><strong><em>Multiple Inheritance</em> is when a class inherits <em>directly</em> from multiple classes.</strong> Multiple inheritance among classes is allowed in some languages (e.g., Python, C++) but not in other languages (e.g., Java, C#).</p>
             <tip-box>
-              <p><span class="fas fa-cube"></span> The <code>Honey</code> class inherits from the <code>Food</code> class <em>and</em> the <code>Medicine</code> class <span class="dimmed">because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)</span>.</p>
-            </tip-box>
+              <p><span class="fas fa-cube"></span> The <code>Honey</code> class inherits from the <code>Food</code> class <em>and</em> the <code>Medicine</code> class <span class="dimmed">because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)</span>.
+                Similarly, a <code>Car</code> is an <code>Vehicle</code>, an <code>Asset</code> and a <code>Liability</code>.</p>
+              <img src="/se-book/oop/inheritance/what/images/multipleInheritanceExamples.png" width="440"></tip-box>
           </div>
         </div>
         <div>
@@ -932,12 +933,35 @@
           <div>
             <p><strong>Method <em>overriding</em> is when a sub-class changes the behavior inherited from the parent class</strong> by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.</p>
             <tip-box>
-              <p><span class="fas fa-cube"></span> In a case where <code>EvaluationReport</code> class inherits the <code>Report</code> class,</p>
-              <ul>
-                <li><code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method.</li>
-                <li><code>Report#write(String)</code> method is overridden by <code>EvaluationReport#write(String)</code> method.</li>
-                <li><code>Report#read():String</code> method is <strong>NOT</strong> overridden by <code>EvaluationReport#read(int):String</code> method. <span class="dimmed"> Reason: the two methods have different signatures; <code>EvaluationReport#read(int):String</code> <trigger trigger="click" for="modal:overriding-overloading"> <em>overloads</em></trigger> (rather than overrides) the <code>Report#read():String</code> method.</span></li>
-              </ul>
+              <p><span class="fas fa-cube"></span> Consider the following case of <code>EvaluationReport</code> class inheriting the <code>Report</code> class:</p>
+              <div class="table-responsive">
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th><code>Report</code> methods</th>
+                      <th><code>EvaluationReport</code> methods</th>
+                      <th>Overrides?</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>print()</code></td>
+                      <td><code>print()</code></td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td><code>write(String)</code></td>
+                      <td><code>write(String)</code></td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td><code>read():String</code></td>
+                      <td><code>read(int):String</code></td>
+                      <td>No. <span class="dimmed"> Reason: the two methods have different signatures; This is a case of <trigger trigger="click" for="modal:overriding-overloading"> <em>overloading</em></trigger> (rather than overriding).</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <modal title="**Overloading**" id="modal:overriding-overloading">
                 <div>
                   <div></div>
@@ -1079,20 +1103,30 @@
         </div>
         <div>
           <div>
-            <h4 id="abstract-classes">Abstract Classes</h4>
+            <h4 id="abstract-classes-and-methods">Abstract Classes and Methods</h4>
           </div>
           <div>
-            <tip-box type="definition">
+            <box type="definition">
               <div>
-                <p><strong>Abstract Class</strong>:</p>
-                <p>An <em>abstract class</em> is a class that is declared <code>abstract</code>—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed. <sub>-- <a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">Oracle's Java Documentation</a></sub></p>
+                <p><strong>Abstract Class</strong>: A class declared as an <em>abstract class</em> cannot be instantiated, but they can be subclassed.</p>
               </div>
-            </tip-box>
-            <p><strong>An abstract method is simply the method interface without the implementation.</strong></p>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> The <code>Account</code> class has an abstract method (<code>addInterest()</code>).</p>
-            </tip-box>
-            <p><strong>A class that has an abstract method becomes an abstract class</strong>. Evan a class that does not have any abstract method can be declared as an abstract class. Abstract classes cannot be instantiated.</p>
+            </box>
+            <p><strong>You can use declare a class as abstract when a class is merely a representation of commonalities among its subclasses</strong> in which case it does not make sense to instantiate objects of that class.</p>
+            <box>
+              <p><span class="fas fa-cube"></span> The <code>Animal</code> class that exist as a generalization of its subclasses <code>Cat</code>, <code>Dog</code>, <code>Horse</code>, <code>Tiger</code> etc. can be declared as abstract because it does
+                not make sense to instantiate an <code>Animal</code> object.</p>
+            </box>
+            <box type="definition">
+              <div>
+                <p><strong>Abstract Method</strong>: An <em>abstract method</em> is a method signature without a method implementation.</p>
+              </div>
+            </box>
+            <box>
+              <p><span class="fas fa-cube"></span> The <code>move</code> method of the <code>Animal</code> class is likely to be an abstract method as it is not possible to implement a <code>move</code> method at the <code>Animal</code> class level to fit
+                all subclasses <span class="dimmed">because each animal type can move in a different way</span>.</p>
+            </box>
+            <p><strong>A class that has an abstract method becomes an abstract class</strong> because the class definition is incomplete (due to the missing method body) and it is not possible to create objects using an incomplete class definition.</p>
+            <p>Evan <strong>a class that does not have any abstract methods <em>can</em> be declared as an abstract class.</strong></p>
           </div>
         </div>
         <div>
@@ -1131,12 +1165,35 @@
                     <div>
                       <p><strong>Method <em>overriding</em> is when a sub-class changes the behavior inherited from the parent class</strong> by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.</p>
                       <tip-box>
-                        <p><span class="fas fa-cube"></span> In a case where <code>EvaluationReport</code> class inherits the <code>Report</code> class,</p>
-                        <ul>
-                          <li><code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method.</li>
-                          <li><code>Report#write(String)</code> method is overridden by <code>EvaluationReport#write(String)</code> method.</li>
-                          <li><code>Report#read():String</code> method is <strong>NOT</strong> overridden by <code>EvaluationReport#read(int):String</code> method. <span class="dimmed"> Reason: the two methods have different signatures; <code>EvaluationReport#read(int):String</code> <trigger trigger="click" for="modal:overriding-overloading"> <em>overloads</em></trigger> (rather than overrides) the <code>Report#read():String</code> method.</span></li>
-                        </ul>
+                        <p><span class="fas fa-cube"></span> Consider the following case of <code>EvaluationReport</code> class inheriting the <code>Report</code> class:</p>
+                        <div class="table-responsive">
+                          <table class="markbind-table table table-bordered table-striped">
+                            <thead>
+                              <tr>
+                                <th><code>Report</code> methods</th>
+                                <th><code>EvaluationReport</code> methods</th>
+                                <th>Overrides?</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><code>print()</code></td>
+                                <td><code>print()</code></td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td><code>write(String)</code></td>
+                                <td><code>write(String)</code></td>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <td><code>read():String</code></td>
+                                <td><code>read(int):String</code></td>
+                                <td>No. <span class="dimmed"> Reason: the two methods have different signatures; This is a case of <trigger trigger="click" for="modal:overriding-overloading"> <em>overloading</em></trigger> (rather than overriding).</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
                         <modal title="**Overloading**" id="modal:overriding-overloading">
                           <div>
                             <div></div>
@@ -1365,7 +1422,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
             <h4 id="what-4">What</h4>
           </div>
           <div>
-            <tip-box type="primary">
+            <tip-box type="definition">
               <div>
                 <p><strong>Polymorphism</strong>:</p>
                 <blockquote>
@@ -1373,54 +1430,20 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
                 </blockquote>
               </div>
             </tip-box>
-            <p>Take the example of writing a payroll application for a university to facilitate payroll processing of university staff. Suppose an <code>adjustSalary(int)</code> operation adjusts the salaries of all staff members. This operation will be
-              executed whenever the university initiates a salary adjustment for its staff. However, the adjustment formula is different for different staff categories, say admin and academic. Here is one possible way of designing the classes in the <code>Payroll</code>              system.</p>
-            <p>Here is the implementation of the <code>adjustSalary(int)</code> operation.</p>
-            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll1</span> </span>{
-    ArrayList&lt;Admin&gt; admins;
-    ArrayList&lt;Academic&gt; academics;
-    <span class="hljs-comment">// ...</span>
+            <p><strong><em>Polymorphism</em> allows you to write code targeting superclass objects, use that code on subclass objects, and achieve possibly different results based on the actual class of the object.</strong></p>
+            <box>
+              <p><span class="fas fa-cube"></span> Assume classes <code>Cat</code> and <code>Dog</code> are both subclasses of the <code>Animal</code> class. You can write code targeting <code>Animal</code> objects and use that code on <code>Cat</code> and
+                <code>Dog</code> objects, achieving possibly different results based on whether it is a <code>Cat</code> object or a <code>Dog</code> object. Some examples:</p>
+              <ul>
+                <li>Declare an array of type <code>Animal</code> and still be able to store <code>Dog</code> and <code>Cat</code> objects in it.</li>
+                <li>Define a method that takes an <code>Animal</code> object as a parameter and yet be able to pass <code>Dog</code> and <code>Cat</code> objects to it.</li>
+                <li>Call a method on a <code>Dog</code> or a <code>Cat</code> object as if it is an <code>Animal</code> object <span class="dimmed">(i.e., without knowing whether it is a <code>Dog</code> object or a <code>Cat</code> object)</span> and get
+                  a different response from it based on its actual class <span class="dimmed">e.g., call the <code>Animal</code> class' method <code>speak()</code> on object <code>a</code> and get a <code>Meow</code> as the return value if <code>a</code> is a <code>Cat</code> object and <code>Woof</code> if it is a <code>Dog</code> object</span>.
+                </li>
+              </ul>
+            </box>
 
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Admin ad: admins) {
-            ad.adjustSalary(byPercent);
-        }
-        <span class="hljs-keyword">for</span> (Academic ac: academics) {
-            ac.adjustSalary(byPercent);
-        }
-    }
-}
-</code></pre>
-            <p>Note how processing is similar for the two staff types. It is as if the type of staff members is irrelevant to how they are processed inside this operation! If that is the case, can the staff type be &quot;abstracted away&quot; from this method?
-              Here is such an implementation of <code>adjustSalary(int)</code>:</p>
-            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll2</span> </span>{
-    ArrayList&lt;Staff&gt; staff;
-    <span class="hljs-comment">// ...</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Staff s: staff) {
-            s.adjustSalary(byPercent);
-        }
-    }
-}
-</code></pre>
-            <p>Notice the following:</p>
-            <ul>
-              <li>Only one data structure <code>ArrayList&lt;Staff&gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
-              <li>Only one loop</li>
-              <li>Outcome of the <code>s.adjustSalary(byPercent)</code> method call depends on whether <code>s</code> is an <code>Academic</code> or <code>Admin</code> object</li>
-            </ul>
-            <p>The above code is better in several ways:</p>
-            <ul>
-              <li>It is shorter.</li>
-              <li>It is simpler.</li>
-              <li>It is more flexible (this code will remain the same even if more staff types are added).</li>
-            </ul>
-            <p>This does not mean we are getting rid of the <code>Academic</code> and <code>Admin</code> classes completely and replacing them with a more general class called <code>Staff</code>. Rather, this part of the code “treats” both <code>Admin</code>              and <code>Academic</code> objects as one type called <code>Staff</code>.</p>
-            <p>For example, <code>ArrayList</code> staff contains both <code>Admin</code> and <code>Academic</code> objects although it treats all of them as <code>Staff</code> objects. However, when the <code>adjustSalary(int)</code> operation of these
-              objects is called, the resulting salary adjustment will be different for <code>Admin</code> objects and <code>Academic</code> objects. Therefore, different types of objects are treated as a single general type, but yet each type of object
-              exhibits a different kind of behavior. This is called <em>polymorphism</em> (literally, it means “ability to take many forms”). In this example, an object that is perceived as type <code>Staff</code> can be an <code>Admin</code> object or
-              an <code>Academic</code> object.</p>
+            <p><em>Polymorphism</em> literally means &quot;ability to take many forms&quot;.</p>
           </div>
         </div>
         <div>
@@ -1473,19 +1496,20 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
           </div>
           <div>
             <p><strong>A <em>software requirement</em> specifies a need to be fulfilled by the software product.</strong></p>
-            <p>A software project may be,</p>
+            <p><strong>A software project may be,</strong></p>
             <ul>
-              <li>a <em>brown-field</em> project i.e., develop a product to replace/update an existing software product</li>
-              <li>a <em>green-field</em> project i.e., develop a totally new system with no precedent</li>
+              <li><strong>a <em>brown-field</em> project</strong> i.e., develop a product to replace/update an existing software product</li>
+              <li><strong>a <em>green-field</em> project</strong> i.e., develop a totally new system with no precedent</li>
             </ul>
             <p>In either case, requirements need to be gathered, analyzed, specified, and managed.</p>
             <p><strong>Requirements come from <em>stakeholders</em>.</strong></p>
-            <tip-box type="info">
+            <tip-box type="definition">
               <div>
                 <p><strong>Stakeholder</strong>: A party that is potentially affected by the software project. e.g. users, sponsors, developers, interest groups, government agencies, etc.</p>
               </div>
             </tip-box>
-            <p>Identifying requirements is often not easy. For example, stakeholders may not be aware of their precise needs, may not know how to communicate their requirements correctly, may not be willing to spend effort in identifying requirements, etc.</p>
+            <p><strong>Identifying requirements is often not easy.</strong> For example, stakeholders may not be aware of their precise needs, may not know how to communicate their requirements correctly, may not be willing to spend effort in identifying
+              requirements, etc.</p>
           </div>
         </div>
         <div>
@@ -1522,7 +1546,11 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
                 </ul>
               </panel>
             </tip-box>
-            <p>We should spend extra effort in digging NFRs out as early as possible because <strong>NFRs are easier to miss</strong> <span class="dimmed"> e.g., stakeholders tend to think of functional requirements first</span> and sometimes <strong>they are critical to the success of the software.</strong>              <span class="dimmed"> E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.</span></p>
+            <p>We may have to spend an extra effort in digging NFRs out as early as possible because,</p>
+            <ol>
+              <li><strong>NFRs are easier to miss</strong> <span class="dimmed"> e.g., stakeholders tend to think of functional requirements first</span></li>
+              <li>sometimes <strong>NFRs are critical to the success of the software.</strong> <span class="dimmed"> E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.</span></li>
+            </ol>
           </div>
         </div>
         <div>
@@ -1630,7 +1658,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
             <h4 id="interviews">Interviews</h4>
           </div>
           <div>
-            <p><strong>Interviewing stakeholders and <trigger for="pop:interviews-domainExpert">domain experts</trigger> can give us useful information that project requirements.</strong></p>
+            <p><strong>Interviewing stakeholders and <trigger for="pop:interviews-domainExpert">domain experts</trigger> can produce useful information that project requirements.</strong></p>
             <popover id="pop:interviews-domainExpert" title="" placement="top">
             
               <div slot="content">
@@ -1720,7 +1748,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
             <h4 id="what-5">What</h4>
           </div>
           <div>
-            <p><strong>A normal textual description (i.e. <em>prose</em>) can be used to describe requirements.</strong> Prose is especially useful when describing abstract ideas such as the vision of a product.</p>
+            <p><strong>A textual description (i.e. <em>prose</em>) can be used to describe requirements.</strong> Prose is especially useful when describing abstract ideas such as the vision of a product.</p>
             <tip-box>
               <p><span class="fas fa-cube"></span> The product vision of the <a href="https://github.com/TEAMMATES/teammates">TEAMMATES Project</a> given below is described using prose.</p>
               <blockquote>
@@ -1728,7 +1756,8 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
                   tool for Software Engineering students who want to learn SE skills in the context of <strong>a non-trivial real software product</strong>.</p>
               </blockquote>
             </tip-box>
-            <p>❗️ Avoid using lengthy prose to describe requirements; they can be hard to follow.</p>
+            <p>
+              <font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> Avoid using lengthy prose to describe requirements; they can be hard to follow.</p>
           </div>
         </div>
         <h2 id="feature-list">Feature List</h2>
@@ -1779,9 +1808,9 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
             <tip-box>
               <p><span class="fas fa-cube"></span> Examples (from a <em>Learning Management System</em>):</p>
               <ol>
-                <li>As a student, I can download files uploaded by lecturers, so that I can get my own copy of the files</li>
-                <li>As a lecturer, I can create discussion forums, so that students can discuss things online</li>
-                <li>As a tutor, I can print attendance sheets, so that I can take attendance during the class</li>
+                <li><span class="dimmed">As a</span> student, <span class="dimmed">I can</span> download files uploaded by lecturers, <span class="dimmed">so that</span> I can get my own copy of the files</li>
+                <li><span class="dimmed">As a</span> lecturer, <span class="dimmed">I can</span> create discussion forums, <span class="dimmed">so that</span> students can discuss things online</li>
+                <li><span class="dimmed">As a</span> tutor, <span class="dimmed">I can</span> print attendance sheets, <span class="dimmed">so that</span> I can take attendance during the class</li>
               </ol>
             </tip-box>
             <p></p>
@@ -1812,15 +1841,15 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
             <tip-box>
               <p>As a user, I can login to the system <s>so that I can access my data</s></p>
             </tip-box>
-            <p>❗️ It is recommended to confirm there is a concrete benefit even if you omit it from the user story. If not, we could end up adding features that have no real benefit.</p>
-            <p>We can add more characteristics to the <code>{user role}</code> to provide more context to the user story.</p>
+            <p>💡 It is recommended to confirm there is a concrete benefit even if you omit it from the user story. If not, you could end up adding features that have no real benefit.</p>
+            <p>You can add more characteristics to the <code>{user role}</code> to provide more context to the user story.</p>
             <tip-box>
               <ul>
                 <li>As a <mark>forgetful</mark> user, I can view a password hint, so that I can recall my password.</li>
                 <li>As an <mark>expert</mark> user, I can tweak the underlying formatting tags of the document, so that I can format the document exactly as I need.</li>
               </ul>
             </tip-box>
-            <p><strong>We can write user stories at various levels</strong>. High-level user stories, called <mark><em>epics</em></mark> (or <em>themes</em>) cover bigger functionality. We can then break down these epics to multiple user stories of normal
+            <p><strong>You can write user stories at various levels</strong>. High-level user stories, called <mark><em>epics</em></mark> (or <em>themes</em>) cover bigger functionality. You can then break down these epics to multiple user stories of normal
               size.</p>
             <tip-box>
               <p>[Epic] As a lecturer, I can monitor student participation levels</p>
@@ -1830,7 +1859,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
                 <li>As a lecturer, I can view file download statistics of each student so that I can identify the students who do not download lecture materials</li>
               </ul>
             </tip-box>
-            <p><strong>We can add <em>conditions of satisfaction</em> to a user story</strong> to specify things that need to be true for the user story implementation to be accepted as ‘done’.</p>
+            <p><strong>You can add <em>conditions of satisfaction</em> to a user story</strong> to specify things that need to be true for the user story implementation to be accepted as ‘done’.</p>
             <tip-box>
               <ul>
                 <li><em>As a</em> lecturer, <em>I can</em> view the forum post count of each student <em>so that</em> I can identify the activity level of students in the forum.</li>
@@ -1910,7 +1939,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
               </div>
             </tip-box>
             <div id="usageTips">
-              <p>Given their lightweight nature, <strong>user stories are quite handy for recording requirements during early requirements gathering</strong>.</p>
+              <p>Given their lightweight nature, <strong>user stories are quite handy for recording requirements during early stages of requirements gathering</strong>.</p>
               <tip-box>
                 <p>💡 Here are some tips for using user stories for early stages of requirement gathering:</p>
                 <ul>
@@ -2006,7 +2035,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
             </tip-box>
             <p><strong>A use case describes an <em>interaction between the user and the system</em> for a <em>specific functionality</em> of the system.</strong></p>
             <tip-box>
-              <panel header="<span class='fas fa-cube'></span> Example 1: ‘check account balance’ use case for an ATM" type="seamless" expanded="">
+              <panel header="<span class='fas fa-cube'></span> Example 1: 'check account balance' use case for an ATM" type="seamless" expanded="">
                 <ul>
                   <li>System:
                     <popover effect="fade" placement="right" content="Automated Teller Machine">
@@ -2052,7 +2081,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
               </div>
             </modal>
             <p></p>
-            <img src="/se-book/specifyingRequirements/useCases/introduction/images/ticketMachine.png" height="250">
+            <img src="/se-book/specifyingRequirements/useCases/introduction/images/ticketMachine.png" width="300">
             <p></p>
             <p><strong>Use cases capture the <em>functional requirements</em> of a system.</strong></p>
           </div>
@@ -2118,12 +2147,11 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
                 <li>Use cases:<br> a. Conduct a survey<br> b. Take the survey<br> c. Answer survey question</li>
               </ul>
             </tip-box>
-            <tip-box type="warning">
-              <p>While modeling user-system interactions,</p>
-              <p>💡 Start with high level use cases and progressively work toward lower level use cases.
-                <p></p>
-                💡 Be mindful at which level of details you are working on and not to mix use cases of different levels.</p>
-            </tip-box>
+            <p>💡 While modeling user-system interactions,</p>
+            <ul>
+              <li>Start with high level use cases and progressively work toward lower level use cases.</li>
+              <li>Be mindful at which level of details you are working on and not to mix use cases of different levels.</li>
+            </ul>
           </div>
         </div>
         <div>
@@ -2134,7 +2162,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
             <p><strong>Writing use case steps</strong></p>
             <div>
               <link rel="stylesheet" href="/se-book/css/common.css">
-              <p><strong>The main body of the use case is the sequence of steps that describes the interaction between the system and the actors.</strong> Each step is given as a simple statement describing who does what.</p>
+              <p><strong>The main body of the use case is the sequence of steps that describes the interaction between the system and the actors.</strong> Each step is given as a simple statement describing <em>who does what</em>.</p>
               <tip-box>
                 <p><span class="fas fa-cube"></span> An example of the main body of a use case.</p>
                 <ol>
@@ -2153,14 +2181,24 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
               </tip-box>
               <p><strong>A step gives the intention of the actor (not the mechanics).</strong> That means UI details are usually omitted. The idea is to leave as much flexibility to the UI designer as possible. That is, the use case specification should
                 be as general as possible (less specific) about the UI.</p>
+              <box>
+                <p><span class="fas fa-cube"></span> The first example below is not a good use case step because contains UI-specific details. The second one is better because it omits UI-specific details.</p>
+                <div class="indented">
+                  <p>
+                    <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                      </span>
+                    </font> : User right-clicks the text box and chooses ‘clear’</p>
+                  <p>
+                    <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
+                      </span>
+                    </font> : User clears the input</p>
+                </div>
+              </box>
+              <p>A use case description can show loops too.</p>
               <tip-box>
-                <p>❌ User right-clicks the text box and chooses ‘clear’ <span class="dimmed"> : this contains UI-specific details and is not a good use case step)</span></p>
-                <p>✅ User clears the input <span class="dimmed"> : this is better because it omits UI-specific details</span></p>
-              </tip-box>
-              <p>This is how you can include repetitive steps in a scenario.</p>
-              <tip-box>
+                <p><span class="fas fa-cube"></span> An example of how you can show a loop:</p>
                 <p>Software System: Square game Use case:
-                  <popover effect="fade" placement="right" content="Each use case can be given a unique identification for easier cross reference."> UC02 </popover> - Play a Game Actors: Player (multiple players)</p>
+                  <popover content="Each use case can be given a unique identification for easier cross reference."> UC02 </popover> - Play a Game Actors: Player (multiple players)</p>
                 <ol>
                   <li>A Player starts the game.</li>
                   <li>SquareGame asks for player names.</li>
@@ -2263,35 +2301,37 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
               <p>Also note that it is not useful to mention events such as power failures or system crashes as extensions because the system cannot function beyond such catastrophic failures.</p>
               <img src="/se-book/specifyingRequirements/useCases/details/images/extension.png" height="250">
               <p></p>
-              <p>In use case diagrams you can use the <code>&lt;&lt; extend &gt;&gt;</code> arrows to show extensions. Note the direction of the arrow is from the extension to the use case it extends and the arrow uses a dashed line.</p>
+              <p>In use case diagrams you can use the <code>&lt;&lt;extend&gt;&gt;</code> arrows to show extensions. Note the direction of the arrow is from the extension to the use case it extends and the arrow uses a dashed line.</p>
             </div>
             <div>
               <link rel="stylesheet" href="/se-book/css/common.css">
-              <p><strong>A use case can <mark>include</mark> another use case.</strong> Underlined text is commonly used to show an inclusion of a use case.</p>
-              <tip-box>
+              <p><strong>A use case can <mark>include</mark> another use case.</strong> <ins>Underlined text</ins> is commonly used to show an inclusion of a use case.</p>
+              <box>
                 <p><span class="fas fa-cube"></span> This use case includes two other use cases, one in step 1 and one in step 2.</p>
-                <ul>
-                  <li>Software System: LearnSys</li>
-                  <li>Use case: UC01 - Conduct Survey</li>
-                  <li>Actors: Staff, Student</li>
-                  <li>MSS:
-                    <ol>
-                      <li>Staff <span class="underline">creates the survey <b>(UC44).</b></span></li>
-                      <li>Student <span class="underline">completes the survey <b>(UC50).</b></span></li>
-                      <li>Staff views the survey results.</li>
-                      <li class="custom-bullet-point">Use case ends.</li>
-                    </ol>
-                  </li>
-                </ul>
-              </tip-box>
+                <div class="text-monospace">
+                  <ul>
+                    <li><strong>Software System</strong>: LearnSys</li>
+                    <li><strong>Use case</strong>: UC01 - Conduct Survey</li>
+                    <li><strong>Actors</strong>: Staff, Student</li>
+                    <li><strong>MSS</strong>:
+                      <ol>
+                        <li>Staff <ins>creates the survey <strong>(UC44)</strong></ins>.</li>
+                        <li>Student <ins>completes the survey <strong>(UC50)</strong></ins>.</li>
+                        <li>Staff views the survey results.<br> Use case ends.</li>
+                      </ol>
+                    </li>
+                  </ul>
+                </div>
+              </box>
               <p>Inclusions are useful,</p>
               <ul>
                 <li>when you don't want to clutter a use case with too many low-level steps.</li>
                 <li>when a set of steps is repeated in multiple use cases.</li>
               </ul>
-              <p>We use a dotted arrow and a <code>&lt;&lt; include &gt;&gt;</code> annotation to show use case inclusions in a use case diagram. Note how the arrow direction is different from the <code>&lt;&lt; extend &gt;&gt;</code> arrows.</p>
-              <img src="/se-book/specifyingRequirements/useCases/details/images/inclusion.png" height="250">
-              <p></p>
+              <p>We use a dotted arrow and a <code>&lt;&lt;include&gt;&gt;</code> annotation to show use case inclusions in a use case diagram. Note how the arrow direction is different from the <code>&lt;&lt;extend&gt;&gt;</code> arrows.</p>
+              <p><img src="/se-book/specifyingRequirements/useCases/details/images/inclusion.png" height="250">
+                <p></p>
+              </p>
             </div>
             <div>
               <link rel="stylesheet" href="/se-book/css/common.css">
@@ -2400,7 +2440,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
           <div>
             <p><strong>A <em>supplementary requirements</em> section can be used to capture <em>requirements that do not fit elsewhere</em></strong>. Typically, this is where most
               <trigger trigger="click" for="modal:supplementary-nfr">Non Functional Requirements</trigger> will be listed.</p>
-            <modal large="" title="" id="modal:supplementary-nfr">
+            <modal large="" title="%%Textbook »%%" id="modal:supplementary-nfr">
             
               <div>
                 <div></div>
@@ -2445,7 +2485,11 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
                           </ul>
                         </panel>
                       </tip-box>
-                      <p>We should spend extra effort in digging NFRs out as early as possible because <strong>NFRs are easier to miss</strong> <span class="dimmed"> e.g., stakeholders tend to think of functional requirements first</span> and sometimes <strong>they are critical to the success of the software.</strong>                        <span class="dimmed"> E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.</span></p>
+                      <p>We may have to spend an extra effort in digging NFRs out as early as possible because,</p>
+                      <ol>
+                        <li><strong>NFRs are easier to miss</strong> <span class="dimmed"> e.g., stakeholders tend to think of functional requirements first</span></li>
+                        <li>sometimes <strong>NFRs are critical to the success of the software.</strong> <span class="dimmed"> E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.</span></li>
+                      </ol>
                     </div>
                     <div>
                       <div>
@@ -4975,11 +5019,9 @@ exit();
           <div>
             <p><strong>One essential way to improve code quality is to follow a consistent style. That is why software engineers follow a strict coding standard (aka <em>style guide</em>).</strong></p>
             <p><strong>The aim of a coding standard is to make the entire code base look like it was written by one person</strong>. A coding standard is usually specific to a programming language and specifies guidelines such as the location of opening
-              and closing braces, indentation styles and naming styles (e.g. whether to use Hungarian style, Pascal casing, Camel casing, etc.). It is important that the whole team/company use the same coding standard and that standard is not generally
-              inconsistent with typical industry practices. <span class="dimmed">If a company's coding standards is very different from what is used typically in the industry, new recruits will take longer to get used to the company's coding style.</span></p>
-            <tip-box type="tip">
-              <p>IDEs can help to enforce some parts of a coding standard e.g. indentation rules.</p>
-            </tip-box>
+              and closing braces, indentation styles and naming styles (e.g. whether to use <em>Hungarian style</em>, <em>Pascal casing</em>, <em>Camel casing</em>, etc.). It is important that the whole team/company use the same coding standard and that
+              standard is not generally inconsistent with typical industry practices. <span class="dimmed">If a company's coding standards is very different from what is used typically in the industry, new recruits will take longer to get used to the company's coding style.</span></p>
+            <p>💡 IDEs can help to enforce some parts of a coding standard e.g. indentation rules.</p>
           </div>
         </div>
         <div>
@@ -4987,11 +5029,12 @@ exit();
             <h4 id="basic-7">Basic</h4>
           </div>
           <div>
-            <p>Some coding standards you can adopt:</p>
-            <ul>
-              <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html"><strong>Java</strong> coding standard -- by OSS-Generic</a></li>
-              <li><a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 <strong>Python</strong> Style Guide -- by Python.org</a></li>
-            </ul>
+            <div class="alt-java">
+              <p>Learn <em>basic</em> guidelines of the <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html"><strong>Java</strong> coding standard (by OSS-Generic)</a></p>
+            </div>
+            <div class="alt-python">
+              <p>Sample coding standard: <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 <strong>Python</strong> Style Guide -- by Python.org</a></p>
+            </div>
           </div>
         </div>
         <div>
@@ -5904,12 +5947,10 @@ send()
                 </div>
               </div>
             </tip-box>
-            <tip-box>
-              <p>💡 Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
-            </tip-box>
-            <tip-box type="important">
-              <p>Important: Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.</p>
-            </tip-box>
+            <p>💡 Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
+            <p>
+              <font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression
+              testing.</p>
           </div>
         </div>
         <div>
@@ -6129,9 +6170,7 @@ send()
  }
 </code></pre>
               <p><span class="fas fa-cube"></span> Generated HTML documentation:</p>
-              <p><img src="/se-book/documentation/tools/javaDoc/what/images/generatedHtml.png">
-                <p></p>
-              </p>
+              <p><a href="/se-book/documentation/tools/javaDoc/what/images/generatedHtml.png" target="_self"><img src="/se-book/documentation/tools/javaDoc/what/images/generatedHtml.png" alt="" class="img-fluid"></a></p>
               <p><span class="fas fa-cube"></span> Tooltip generated by Intellij IDE:</p>
               <p><img src="/se-book/documentation/tools/javaDoc/what/images/intellijTooltip.png">
                 <p></p>
@@ -6157,6 +6196,9 @@ send()
           </div>
           <div>
             <p>AsciiDoc is similar to Markdown but has more powerful (but also more complex) syntax.</p>
+            <ul>
+              <li><a href="https://asciidoctor.org/docs/asciidoc-writers-guide/">AsciiDoc Writers Guide</a> <span class="dimmed">--from <a href="http://Asciidoctor.org">Asciidoctor.org</a></span></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -6170,7 +6212,7 @@ send()
           <div>
             <blockquote>
               <p>Well-written applications include error-handling code that allows them to recover gracefully from unexpected errors. When an error occurs, the application may need to request user intervention, or it may be able to recover on its own. In
-                extreme cases, the application may log the user off or shut down the system. --<sub><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms679320(v=vs.85).aspx">(source)</a></sub></p>
+                extreme cases, the application may log the user off or shut down the system. --<sub><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms679320(v=vs.85).aspx">Microsoft</a></sub></p>
             </blockquote>
           </div>
         </div>
@@ -6204,11 +6246,16 @@ send()
             <h4 id="how-9">How</h4>
           </div>
           <div>
-            <p><strong>Most languages allow a method/function to encapsulate the unusual situation in an Exception object and 'throw'/'raise' that object so that another piece of code can 'catch' it and deal with it.</strong> This is especially useful when
-              code segment that encountered the unusual situation does not know how to deal with it.</p>
-            <p><strong>Exception objects can propagate up the function call hierarchy until it is dealt with.</strong> Usually, an exception thrown by a function is caught by the caller function. If the called function does not know how to deal with the
-              exception it caught, it can throw/raise the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the
-              <tooltip content="the hieararchy of function calls">function call stack</tooltip> until it is received by the main function and thrown to the runtime, thus halting the system.</p>
+            <p><strong>Most languages allow code that encountered an &quot;exceptional&quot; situation to encapsulate details of the situation in an <em>Exception</em> object and <em>throw</em>/<em>raise</em> that object so that another piece of code can <em>catch</em> it and deal with it.</strong>              This is especially useful when the code that encountered the unusual situation does not know how to deal with it.</p>
+            <p>The extract below from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small> (with slight adaptations) explains how exceptions are typically handled.</p>
+            <div class="indented">
+              <p><strong>When an error occurs at some point in the execution, the code being executed creates an <em>exception object</em> and hands it off to the runtime system.</strong> The exception object contains information about the error, including
+                its type and the state of the program when the error occurred. Creating an exception object and handing it to the runtime system is called <em>throwing</em> an exception.</p>
+              <p><strong>After a method throws an exception, the runtime system attempts to find something to handle it in the <tooltip content="the ordered list of methods that had been called to get to the method where the error occurred"><em>call stack</em></tooltip>.</strong>                The runtime system searches the call stack for a method that contains a block of code that can handle the exception. This block of code is called an <em>exception handler</em>. The search begins with the method in which the error occurred
+                and proceeds through the call stack in the reverse order in which the methods were called. When an appropriate handler is found, the runtime system passes the exception to the handler. An exception handler is considered appropriate if
+                the type of the exception object thrown matches the type that can be handled by the handler.</p>
+              <p><strong>The exception handler chosen is said to <em>catch</em> the exception.</strong> If the runtime system exhaustively searches all the methods on the call stack without finding an appropriate exception handler, the program terminates.</p>
+            </div>
             <p>Advantages of exception handling in this way:</p>
             <ul>
               <li>The ability to propagate error information through the call stack.</li>
@@ -9843,7 +9890,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
           </div>
           <div>
             <p><strong><mark><em>Branching</em></mark> is the process of evolving multiple versions of the software in parallel.</strong> For example, one team member can create a new branch and add an experimental feature to it while the rest of the team
-              keeps working on another branch. Branches can be given names e.g. <code>master</code> <code>release</code> <code>dev</code>.</p>
+              keeps working on another branch. Branches can be given names e.g. <code>master</code>, <code>release</code>, <code>dev</code>.</p>
             <p><strong>A branch can be <mark><em>merged</em></mark> into another branch.</strong> Merging usually result in a new commit that represents the changes done in the branch being merged.</p>
             <pic src="/se-book/revisionControl/branching/images/diagram.png" height="180">
               <strong>Branching and merging</strong></pic>
@@ -10927,7 +10974,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             </tip-box>
           </div>
         </div>
-        <h3 id="abstract-classes-2">Abstract Classes</h3>
+        <h3 id="abstract-classes">Abstract Classes</h3>
         <div>
           <div>
             <h4 id="what-81">What</h4>
@@ -11948,7 +11995,7 @@ index 15b57f7..17f4528 100644
                   <img src="/se-book/gitAndGithub/pull/images/sourcetree_2.png" height="150">
                   <p></p>
                   <p>Note the following (cross refer the screenshot above):</p>
-                  <p>(a) The local repo is now at this commit, marked by the <code>master</code> label.<br> (b) <code>origin/master</code> shows what is the latest commit in the <code>master</code> branch in the remote repo.</p>
+                  <p>Arrow marked as <code>a</code>: The local repo is now at this commit, marked by the <code>master</code> label.<br> Arrow marked as <code>b</code>: <code>origin/master</code> label shows what is the latest commit in the <code>master</code>                    branch in the remote repo.</p>
                 </div>
                 <hr>
               </tab>
@@ -11969,7 +12016,7 @@ index 15b57f7..17f4528 100644
                   <p>Click the <code>Pull</code> button in the main menu, choose <code>origin</code> and <code>master</code> in the next dialog, and click <code>OK</code>.</p>
                   <img src="/se-book/gitAndGithub/pull/images/sourcetree_3.png" height="160">
                   <p></p>
-                  <p>Now you should see something like this where <code>master</code> and <code>origin\master</code> are both pointing the same commit.</p>
+                  <p>Now you should see something like this where <code>master</code> and <code>origin/master</code> are both pointing the same commit.</p>
                   <img src="/se-book/gitAndGithub/pull/images/sourcetree_4.png" height="100">
                   <p></p>
                 </div>
@@ -12078,7 +12125,7 @@ git checkout feature1
               </tab>
             </tabs>
             <p><strong>2. Create some commits in the new branch.</strong> <span class="dimmed">Just commit as per normal. Commits you add while on a certain branch will become part of that branch.</span></p>
-            <p><strong>3. Switch to <code>master</code> branch.</strong> Note how the changes you did in the <code>feature1</code> branch are no longer in the working directory.</p>
+            <p><strong>3. Switch to the <code>master</code> branch.</strong> Note how the changes you did in the <code>feature1</code> branch are no longer in the working directory.</p>
             <tabs>
               <tab header="SourceTree">
                 <div>
@@ -14105,7 +14152,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
 </footer>
 </div>
 </body>

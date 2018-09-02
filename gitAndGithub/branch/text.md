@@ -34,7 +34,7 @@
 
 **2. Create some commits in the new branch.** %%Just commit as per normal. Commits you add while on a certain branch will become part of that branch.%%
 
-**3. Switch to `master` branch.** Note how the changes you did in the `feature1` branch are no longer in the working directory.
+**3. Switch to the `master` branch.** Note how the changes you did in the `feature1` branch are no longer in the working directory.
 
 <tabs>
   <tab header="SourceTree">

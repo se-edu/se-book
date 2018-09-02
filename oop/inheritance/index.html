@@ -70,9 +70,9 @@
                       to distinguish between <code>Man</code> and <code>Woman</code> for certain other things. A solution is to add the <code>Person</code> class as a super class (to contain the code common to men and woment) and let <code>Man</code>                      and <code>Woman</code> inherit from <code>Person</code> class.</p>
                   </tip-box>
                   <p><strong>Inheritance implies the derived class can be considered as a <em>sub-type</em> of the base class (and the base class is a <em>super-type</em> of the derived class), resulting in an <em>is a</em> relationship.</strong></p>
-                  <tip-box type="info">
-                    <p>Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type relationship.</p>
-                  </tip-box>
+                  <p><span class="dimmed"><span class="fas fa-info-circle"></span> Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies
+                    a sub-type relationship.</span>
+                  </p>
                   <tip-box>
                     <p><span class="fas fa-cube"></span> To continue the previous example,</p>
                     <ul>
@@ -82,16 +82,16 @@
                   </tip-box>
                   <p><strong>Inheritance relationships through a chain of classes can result in inheritance <em>hierarchies</em> (aka inheritance <em>trees</em>).</strong></p>
                   <tip-box>
-                    <p><span class="fas fa-cube"></span> Two inheritance hierarchies/trees are given below. Note that <code>Parrot</code> <em>is a</em> <code>Bird</code> as well as it <em>is an</em> <code>Animal</code>. Note that the triangle points to the
-                      parent class.</p>
+                    <p><span class="fas fa-cube"></span> Two inheritance hierarchies/trees are given below. <span class="dimmed">Note that the triangle points to the parent class.</span> Observe how the <code>Parrot</code> <em>is a</em> <code>Bird</code>                      as well as it <em>is an</em> <code>Animal</code>.</p>
                     <img src="/se-book/oop/inheritance/what/images/inheritanceTreesExamples.png" width="500">
                     <p></p>
                   </tip-box>
                   <p><strong><em>Multiple Inheritance</em> is when a class inherits <em>directly</em> from multiple classes.</strong> Multiple inheritance among classes is allowed in some languages (e.g., Python, C++) but not in other languages (e.g., Java,
                     C#).</p>
                   <tip-box>
-                    <p><span class="fas fa-cube"></span> The <code>Honey</code> class inherits from the <code>Food</code> class <em>and</em> the <code>Medicine</code> class <span class="dimmed">because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)</span>.</p>
-                  </tip-box>
+                    <p><span class="fas fa-cube"></span> The <code>Honey</code> class inherits from the <code>Food</code> class <em>and</em> the <code>Medicine</code> class <span class="dimmed">because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)</span>.
+                      Similarly, a <code>Car</code> is an <code>Vehicle</code>, an <code>Asset</code> and a <code>Liability</code>.</p>
+                    <img src="/se-book/oop/inheritance/what/images/multipleInheritanceExamples.png" width="440"></tip-box>
                 </div>
                 <div>
                   <div>
@@ -135,12 +135,35 @@
                 <div>
                   <p><strong>Method <em>overriding</em> is when a sub-class changes the behavior inherited from the parent class</strong> by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.</p>
                   <tip-box>
-                    <p><span class="fas fa-cube"></span> In a case where <code>EvaluationReport</code> class inherits the <code>Report</code> class,</p>
-                    <ul>
-                      <li><code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method.</li>
-                      <li><code>Report#write(String)</code> method is overridden by <code>EvaluationReport#write(String)</code> method.</li>
-                      <li><code>Report#read():String</code> method is <strong>NOT</strong> overridden by <code>EvaluationReport#read(int):String</code> method. <span class="dimmed"> Reason: the two methods have different signatures; <code>EvaluationReport#read(int):String</code> <trigger trigger="click" for="modal:overriding-overloading"> <em>overloads</em></trigger> (rather than overrides) the <code>Report#read():String</code> method.</span></li>
-                    </ul>
+                    <p><span class="fas fa-cube"></span> Consider the following case of <code>EvaluationReport</code> class inheriting the <code>Report</code> class:</p>
+                    <div class="table-responsive">
+                      <table class="markbind-table table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th><code>Report</code> methods</th>
+                            <th><code>EvaluationReport</code> methods</th>
+                            <th>Overrides?</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><code>print()</code></td>
+                            <td><code>print()</code></td>
+                            <td>Yes</td>
+                          </tr>
+                          <tr>
+                            <td><code>write(String)</code></td>
+                            <td><code>write(String)</code></td>
+                            <td>Yes</td>
+                          </tr>
+                          <tr>
+                            <td><code>read():String</code></td>
+                            <td><code>read(int):String</code></td>
+                            <td>No. <span class="dimmed"> Reason: the two methods have different signatures; This is a case of <trigger trigger="click" for="modal:overriding-overloading"> <em>overloading</em></trigger> (rather than overriding).</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                     <modal title="**Overloading**" id="modal:overriding-overloading">
                       <div>
                         <div></div>
@@ -335,7 +358,7 @@
           <div>
             <panel type="seamless" expanded="">
               <span slot="header" class="card-title"><div>
-<h4 id="abstract-classes">Abstract Classes</h4></div></span>
+<h4 id="abstract-classes-and-methods">Abstract Classes and Methods</h4></div></span>
               <div class="indented">
                 <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can implement abstract classes</span>
                   </span>
@@ -345,42 +368,29 @@
                 </p>
                 <p></p>
                 <div>
-                  <tip-box type="definition">
+                  <box type="definition">
                     <div>
-                      <p><strong>Abstract Class</strong>:</p>
-                      <p>An <em>abstract class</em> is a class that is declared <code>abstract</code>—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed. <sub>-- <a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">Oracle's Java Documentation</a></sub></p>
+                      <p><strong>Abstract Class</strong>: A class declared as an <em>abstract class</em> cannot be instantiated, but they can be subclassed.</p>
                     </div>
-                  </tip-box>
-                  <p><strong>An abstract method is simply the method interface without the implementation.</strong></p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> The <code>Account</code> class has an abstract method (<code>addInterest()</code>).</p>
-                  </tip-box>
-                  <p><strong>A class that has an abstract method becomes an abstract class</strong>. Evan a class that does not have any abstract method can be declared as an abstract class. Abstract classes cannot be instantiated.</p>
+                  </box>
+                  <p><strong>You can use declare a class as abstract when a class is merely a representation of commonalities among its subclasses</strong> in which case it does not make sense to instantiate objects of that class.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> The <code>Animal</code> class that exist as a generalization of its subclasses <code>Cat</code>, <code>Dog</code>, <code>Horse</code>, <code>Tiger</code> etc. can be declared as abstract because it
+                      does not make sense to instantiate an <code>Animal</code> object.</p>
+                  </box>
+                  <box type="definition">
+                    <div>
+                      <p><strong>Abstract Method</strong>: An <em>abstract method</em> is a method signature without a method implementation.</p>
+                    </div>
+                  </box>
+                  <box>
+                    <p><span class="fas fa-cube"></span> The <code>move</code> method of the <code>Animal</code> class is likely to be an abstract method as it is not possible to implement a <code>move</code> method at the <code>Animal</code> class level
+                      to fit all subclasses <span class="dimmed">because each animal type can move in a different way</span>.</p>
+                  </box>
+                  <p><strong>A class that has an abstract method becomes an abstract class</strong> because the class definition is incomplete (due to the missing method body) and it is not possible to create objects using an incomplete class definition.</p>
+                  <p>Evan <strong>a class that does not have any abstract methods <em>can</em> be declared as an abstract class.</strong></p>
                 </div>
-                <div>
-                  <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                      <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about abstract classes">
-                          <question>
-                            <p>Choose the correct statements about Java abstract classes and
-                              <tooltip content="classes that are not abstract">concrete classes</tooltip>.</p>
-                            <ul class="task-list">
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A concrete class can contain an abstract method.</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An abstract class can contain concrete methods.</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. An abstract class need not contain any concrete methods.</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. An abstract class cannot be instantiated.</li>
-                            </ul>
-                            <div slot="answer">
-                              <p>(b)(c)(d)</p>
-                              <p>Explanation: A concrete class cannot contain even a single abstract method.</p>
-                            </div>
-                          </question>
-                        </panel>
-                      </div>
-                    </panel>
-                  </div>
-                </div>
+                <div></div>
               </div>
             </panel>
           </div>
@@ -463,12 +473,35 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
                             <p><strong>Method <em>overriding</em> is when a sub-class changes the behavior inherited from the parent class</strong> by re-implementing the method. Overridden methods have the same name, same type signature, and same return
                               type.</p>
                             <tip-box>
-                              <p><span class="fas fa-cube"></span> In a case where <code>EvaluationReport</code> class inherits the <code>Report</code> class,</p>
-                              <ul>
-                                <li><code>Report#print()</code> method is overridden by <code>EvaluationReport#print()</code> method.</li>
-                                <li><code>Report#write(String)</code> method is overridden by <code>EvaluationReport#write(String)</code> method.</li>
-                                <li><code>Report#read():String</code> method is <strong>NOT</strong> overridden by <code>EvaluationReport#read(int):String</code> method. <span class="dimmed"> Reason: the two methods have different signatures; <code>EvaluationReport#read(int):String</code> <trigger trigger="click" for="modal:overriding-overloading"> <em>overloads</em></trigger> (rather than overrides) the <code>Report#read():String</code> method.</span></li>
-                              </ul>
+                              <p><span class="fas fa-cube"></span> Consider the following case of <code>EvaluationReport</code> class inheriting the <code>Report</code> class:</p>
+                              <div class="table-responsive">
+                                <table class="markbind-table table table-bordered table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th><code>Report</code> methods</th>
+                                      <th><code>EvaluationReport</code> methods</th>
+                                      <th>Overrides?</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td><code>print()</code></td>
+                                      <td><code>print()</code></td>
+                                      <td>Yes</td>
+                                    </tr>
+                                    <tr>
+                                      <td><code>write(String)</code></td>
+                                      <td><code>write(String)</code></td>
+                                      <td>Yes</td>
+                                    </tr>
+                                    <tr>
+                                      <td><code>read():String</code></td>
+                                      <td><code>read(int):String</code></td>
+                                      <td>No. <span class="dimmed"> Reason: the two methods have different signatures; This is a case of <trigger trigger="click" for="modal:overriding-overloading"> <em>overloading</em></trigger> (rather than overriding).</span></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
                               <modal title="**Overloading**" id="modal:overriding-overloading">
                                 <div>
                                   <div></div>
@@ -683,7 +716,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
 </footer>
 </div>
 </body>

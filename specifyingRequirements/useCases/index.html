@@ -71,7 +71,7 @@
                   </tip-box>
                   <p><strong>A use case describes an <em>interaction between the user and the system</em> for a <em>specific functionality</em> of the system.</strong></p>
                   <tip-box>
-                    <panel header="<span class='fas fa-cube'></span> Example 1: ‘check account balance’ use case for an ATM" type="seamless" expanded="">
+                    <panel header="<span class='fas fa-cube'></span> Example 1: 'check account balance' use case for an ATM" type="seamless" expanded="">
                       <ul>
                         <li>System:
                           <popover effect="fade" placement="right" content="Automated Teller Machine">
@@ -117,7 +117,7 @@
                     </div>
                   </modal>
                   <p></p>
-                  <img src="/se-book/specifyingRequirements/useCases/introduction/images/ticketMachine.png" height="250">
+                  <img src="/se-book/specifyingRequirements/useCases/introduction/images/ticketMachine.png" width="300">
                   <p></p>
                   <p><strong>Use cases capture the <em>functional requirements</em> of a system.</strong></p>
                 </div>
@@ -194,12 +194,11 @@
                       <li>Use cases:<br> a. Conduct a survey<br> b. Take the survey<br> c. Answer survey question</li>
                     </ul>
                   </tip-box>
-                  <tip-box type="warning">
-                    <p>While modeling user-system interactions,</p>
-                    <p>💡 Start with high level use cases and progressively work toward lower level use cases.
-                      <p></p>
-                      💡 Be mindful at which level of details you are working on and not to mix use cases of different levels.</p>
-                  </tip-box>
+                  <p>💡 While modeling user-system interactions,</p>
+                  <ul>
+                    <li>Start with high level use cases and progressively work toward lower level use cases.</li>
+                    <li>Be mindful at which level of details you are working on and not to mix use cases of different levels.</li>
+                  </ul>
                 </div>
                 <div>
                   <div>
@@ -213,7 +212,7 @@
                               or &quot;SOLD OUT!”. Finally, a &quot;Return Change&quot; button allows the customer to get back his unspent money.</p>
                             <p><strong>Draw a use case diagram for the above requirements.</strong></p>
                             <div slot="answer">
-                              <img src="/se-book/specifyingRequirements/useCases/identifying/images/ticketMachine.png" height="250">
+                              <img src="/se-book/specifyingRequirements/useCases/identifying/images/ticketMachine.png" width="300">
                               <p></p>
                               <p>Note that most of the details in the description are better given as part of the use case description rather than as low-level use cases in the diagram.</p>
                             </div>
@@ -232,7 +231,7 @@
                               awaiting to be assigned to programmers etc.</p>
                             <p><strong>Develop a use case diagram to capture their requirements given below.</strong></p>
                             <div slot="answer">
-                              <img src="/se-book/specifyingRequirements/useCases/identifying/images/qaSystem.jpg" height="400">
+                              <img src="/se-book/specifyingRequirements/useCases/identifying/images/qaSystem.jpg" width="400">
                               <p></p>
                               <p><strong>Explanation</strong>: The given description contains information not relevant to use case modeling. Furthermore, the description is not enough to complete the use case diagram All these are realities of real projects.
                                 However, the process of trying to create this use case diagram prompts us to investigate issues such as:</p>
@@ -270,7 +269,7 @@
                   <p><strong>Writing use case steps</strong></p>
                   <div>
                     <link rel="stylesheet" href="/se-book/css/common.css">
-                    <p><strong>The main body of the use case is the sequence of steps that describes the interaction between the system and the actors.</strong> Each step is given as a simple statement describing who does what.</p>
+                    <p><strong>The main body of the use case is the sequence of steps that describes the interaction between the system and the actors.</strong> Each step is given as a simple statement describing <em>who does what</em>.</p>
                     <tip-box>
                       <p><span class="fas fa-cube"></span> An example of the main body of a use case.</p>
                       <ol>
@@ -289,14 +288,24 @@
                     </tip-box>
                     <p><strong>A step gives the intention of the actor (not the mechanics).</strong> That means UI details are usually omitted. The idea is to leave as much flexibility to the UI designer as possible. That is, the use case specification should
                       be as general as possible (less specific) about the UI.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> The first example below is not a good use case step because contains UI-specific details. The second one is better because it omits UI-specific details.</p>
+                      <div class="indented">
+                        <p>
+                          <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                            </span>
+                          </font> : User right-clicks the text box and chooses ‘clear’</p>
+                        <p>
+                          <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
+                            </span>
+                          </font> : User clears the input</p>
+                      </div>
+                    </box>
+                    <p>A use case description can show loops too.</p>
                     <tip-box>
-                      <p>❌ User right-clicks the text box and chooses ‘clear’ <span class="dimmed"> : this contains UI-specific details and is not a good use case step)</span></p>
-                      <p>✅ User clears the input <span class="dimmed"> : this is better because it omits UI-specific details</span></p>
-                    </tip-box>
-                    <p>This is how you can include repetitive steps in a scenario.</p>
-                    <tip-box>
+                      <p><span class="fas fa-cube"></span> An example of how you can show a loop:</p>
                       <p>Software System: Square game Use case:
-                        <popover effect="fade" placement="right" content="Each use case can be given a unique identification for easier cross reference."> UC02 </popover> - Play a Game Actors: Player (multiple players)</p>
+                        <popover content="Each use case can be given a unique identification for easier cross reference."> UC02 </popover> - Play a Game Actors: Player (multiple players)</p>
                       <ol>
                         <li>A Player starts the game.</li>
                         <li>SquareGame asks for player names.</li>
@@ -398,35 +407,37 @@
                     <p>Also note that it is not useful to mention events such as power failures or system crashes as extensions because the system cannot function beyond such catastrophic failures.</p>
                     <img src="/se-book/specifyingRequirements/useCases/details/images/extension.png" height="250">
                     <p></p>
-                    <p>In use case diagrams you can use the <code>&lt;&lt; extend &gt;&gt;</code> arrows to show extensions. Note the direction of the arrow is from the extension to the use case it extends and the arrow uses a dashed line.</p>
+                    <p>In use case diagrams you can use the <code>&lt;&lt;extend&gt;&gt;</code> arrows to show extensions. Note the direction of the arrow is from the extension to the use case it extends and the arrow uses a dashed line.</p>
                   </div>
                   <div>
                     <link rel="stylesheet" href="/se-book/css/common.css">
-                    <p><strong>A use case can <mark>include</mark> another use case.</strong> Underlined text is commonly used to show an inclusion of a use case.</p>
-                    <tip-box>
+                    <p><strong>A use case can <mark>include</mark> another use case.</strong> <ins>Underlined text</ins> is commonly used to show an inclusion of a use case.</p>
+                    <box>
                       <p><span class="fas fa-cube"></span> This use case includes two other use cases, one in step 1 and one in step 2.</p>
-                      <ul>
-                        <li>Software System: LearnSys</li>
-                        <li>Use case: UC01 - Conduct Survey</li>
-                        <li>Actors: Staff, Student</li>
-                        <li>MSS:
-                          <ol>
-                            <li>Staff <span class="underline">creates the survey <b>(UC44).</b></span></li>
-                            <li>Student <span class="underline">completes the survey <b>(UC50).</b></span></li>
-                            <li>Staff views the survey results.</li>
-                            <li class="custom-bullet-point">Use case ends.</li>
-                          </ol>
-                        </li>
-                      </ul>
-                    </tip-box>
+                      <div class="text-monospace">
+                        <ul>
+                          <li><strong>Software System</strong>: LearnSys</li>
+                          <li><strong>Use case</strong>: UC01 - Conduct Survey</li>
+                          <li><strong>Actors</strong>: Staff, Student</li>
+                          <li><strong>MSS</strong>:
+                            <ol>
+                              <li>Staff <ins>creates the survey <strong>(UC44)</strong></ins>.</li>
+                              <li>Student <ins>completes the survey <strong>(UC50)</strong></ins>.</li>
+                              <li>Staff views the survey results.<br> Use case ends.</li>
+                            </ol>
+                          </li>
+                        </ul>
+                      </div>
+                    </box>
                     <p>Inclusions are useful,</p>
                     <ul>
                       <li>when you don't want to clutter a use case with too many low-level steps.</li>
                       <li>when a set of steps is repeated in multiple use cases.</li>
                     </ul>
-                    <p>We use a dotted arrow and a <code>&lt;&lt; include &gt;&gt;</code> annotation to show use case inclusions in a use case diagram. Note how the arrow direction is different from the <code>&lt;&lt; extend &gt;&gt;</code> arrows.</p>
-                    <img src="/se-book/specifyingRequirements/useCases/details/images/inclusion.png" height="250">
-                    <p></p>
+                    <p>We use a dotted arrow and a <code>&lt;&lt;include&gt;&gt;</code> annotation to show use case inclusions in a use case diagram. Note how the arrow direction is different from the <code>&lt;&lt;extend&gt;&gt;</code> arrows.</p>
+                    <p><img src="/se-book/specifyingRequirements/useCases/details/images/inclusion.png" height="250">
+                      <p></p>
+                    </p>
                   </div>
                   <div>
                     <link rel="stylesheet" href="/se-book/css/common.css">
@@ -836,7 +847,7 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 19 Aug 2018 12:17:58 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
 </footer>
 </div>
 </body>
