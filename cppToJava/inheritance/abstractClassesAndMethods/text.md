@@ -11,11 +11,11 @@
 <div id="body">
 
 
-**An _abstract method_ is a method that is declared without an implementation (without braces, and followed by a semicolon)**. Use an abstract method when you want to specify a method signature but not the implementation. If a class includes abstract methods, then the class itself must be declared abstract. Use the keyword `abstract` to indicate whether a class or a method is abstract.
+In Java, **an _abstract method_ is declared with the keyword `abstract` and given without an implementation**. If a class includes abstract methods, then the class itself must be declared abstract.
 
 <box>
 
-{{ icon_example }} The `speak` method in this `Animal` class is `abstract`. Note how the method signature ends with a semicolon and there is no method body. This makes sense as the implementation of the speak method depends on the type of the animal and it is meaningless to provide a common implementation for all animal types.
+{{ icon_example }} The `speak` method in this `Animal` class is `abstract`. Note how the method signature ends with a semicolon and there is no method body. This makes sense as the implementation of the `speak` method depends on the type of the animal and it is meaningless to provide a common implementation for all animal types.
 
 ```java
 public abstract class Animal {
@@ -32,14 +32,14 @@ As one method of the class is `abstract`, the class itself is `abstract`.
 
 </box>
 
-**An _abstract class_ is a class that is declared `abstract`—it may or may not include abstract methods. Abstract classes can be used a reference type but cannot be instantiated.**
+**An _abstract class_ is declared with the keyword `abstract`. Abstract classes can be used as reference type but cannot be instantiated.**
 
 <box>
 
 {{ icon_example }} This `Account` class has been declared as abstract although it does not have any abstract methods. Attempting to instantiate `Account` objects will result in a compile error.
 
 ```java
-abstract class Account {
+public abstract class Account {
 
     int number;
 
@@ -53,7 +53,7 @@ abstract class Account {
 
 </box>
 
-**When an abstract class is subclassed, the subclass should provides implementations for all of the abstract methods in its parent class or else the subclass must also be declared abstract.**
+**When an abstract class is subclassed, the subclass should provides implementations for all of the abstract methods in its superclass or else the subclass must also be declared abstract.**
 
 <box>
 
@@ -90,4 +90,6 @@ public class DomesticCat extends Feline {
 </div>
 
 <div id="extras">
+  <include src="resourcesPanel.md" boilerplate />
+  <include src="exercisesPanel.md" boilerplate />
 </div>
