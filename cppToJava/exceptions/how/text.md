@@ -17,7 +17,7 @@
 
 Given below is an extract from the {{ oracle }}, with slight adaptations.
 
-<blockquote>
+<div class="indented">
 
 **A program can catch exceptions by using a combination of the `try`, `catch`, and `finally` blocks.** Here is an example:
 
@@ -76,7 +76,7 @@ public void writeList() throws IOException, IndexOutOfBoundsException {
 }
 ```
 
-</blockquote>
+</div>
 
 </div>
 
