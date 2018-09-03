@@ -1,4 +1,5 @@
 <panel header="{{ icon_Q }} TaskManager Level 1">
+<div id="body">
 <question>
 
 This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small `TaskManager` program that can store a list of tasks.
@@ -102,4 +103,5 @@ public class Main {
 
 </div>
 </question>
+</div>
 </panel>

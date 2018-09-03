@@ -178,4 +178,5 @@ public class Dog extends Animal {
 </div>
 
 <div id="extras">
+  <include src="exercisesPanel.md" boilerplate />
 </div>
