@@ -112,7 +112,7 @@ public interface DrivableVehicle {
 
 </box>
 
-{{ icon_info }} Interfaces can contain [_default_ method implementations](https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html) and _nested types_. There are not covered here.
+{{ icon_info }} Interfaces can contain [_default_ method implementations](https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html) and _nested types_. They are not covered here.
 
 </div>
 
