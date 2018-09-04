@@ -47,7 +47,7 @@ No exceptions {{ icon_output }} | `IOException` {{ icon_output }} | `IndexOutOfB
 
 You can **use a `finally` block to specify code that is guaranteed to execute with or without the exception.** This is the right place to close files, recover resources, and otherwise clean up after the code enclosed in the `try` block.
 
-{{ icon_example }} The `writeList()` method below has a `finally` block that will run
+{{ icon_example }} The `writeList()` method below has a `finally` block:
 
 ```java
 public void writeList() {
@@ -124,4 +124,5 @@ No exceptions {{ icon_output }} | `IOException` {{ icon_output }} | `IndexOutOfB
 </div>
 
 <div id="extras">
+  <include src="exercisesPanel.md" boilerplate />
 </div>
