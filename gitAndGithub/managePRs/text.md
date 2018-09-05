@@ -55,7 +55,7 @@ git pull origin master
 
 Observe how the `add-intro` branch is now merged to the `master` branch in your local repo as well.
 
-**5. De-conflict the `add-summary` PR.** Note that GitHub page for the `add-summary` PR is now showing a conflict %%(when you scroll to the bottom of that page, you should see a message `This branch has conflicts that must be resolved`)%%. You can resolve it locally and update the PR accordingly, as explained below.
+**5. De-conflict the `add-summary` PR** <trigger trigger="click" for="modal:managePrs-createPrs">that you created earlier</trigger>. Note that GitHub page for the `add-summary` PR is now showing a conflict %%(when you scroll to the bottom of that page, you should see a message `This branch has conflicts that must be resolved`)%%. You can resolve it locally and update the PR accordingly, as explained below.
 
 5a. Switch to the `add-summary` branch. To make that branch up-to-date with the `master` branch, merge the `master` branch to it, which will surface the merge conflict. Resolve it and complete the merge.
 
@@ -63,11 +63,7 @@ Observe how the `add-intro` branch is now merged to the `master` branch in your 
 
 **6. Merge the `add-summary` PR** using the GitHub interface, similar to how you merged the previous PR. 
 
-<tip-box type="info"> 
-
-Note that you could have merged the `add-summary` branch to the `master` branch locally before pushing it to GitHub. In that case, the PR will be merged on GitHub automatically to reflect that the branch has been merged already.
-  
-</tip-box>
+{{ icon_info }} Note that you could have merged the `add-summary` branch to the `master` branch locally before pushing it to GitHub. In that case, the PR will be merged on GitHub automatically to reflect that the branch has been merged already.
 
 </div>
 

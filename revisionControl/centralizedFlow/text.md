@@ -10,7 +10,7 @@
 
 <div id="body">
 
-**The _centralized workflow_ is similar to the feature branch workflow except all changes are done in the master branch.**
+**The _centralized workflow_ is similar to the feature branch workflow except all changes are done in the `master` branch.**
 
 </div>
 
