@@ -17,6 +17,7 @@
 <span id="icon_like">{{ fas_thumbs_up | safe }}</span>
 <span id="icon_linux">{{ fab_linux | safe }}</span>
 <span id="icon_important_big_red"><font color="red"><big>{{ glyphicon_exclamation_sign |safe }}</big></font></span>
+<span id="icon_important">{{ glyphicon_exclamation_sign |safe }}</span>
 <span id="icon_new_window">{{ glyphicon_new_window | safe }}</span>
 <span id="icon_outcome">{{ fas_trophy | safe }}</span>
 <span id="icon_output">{{ fas_arrow_down | safe }}</span>
