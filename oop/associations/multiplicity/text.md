@@ -18,7 +18,7 @@
 
 </tip-box>
 
-##### <big>Implementing multiplicity</big>
+##### Implementing multiplicity
 
 **A normal instance-level variable gives us a `0..1` multiplicity** (also called _optional associations_) because a variable can hold a reference to a single object or `null`.
 

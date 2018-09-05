@@ -18,7 +18,7 @@
 
 </tip-box>
 
-#####  **Implementing aggregation**
+#####  Implementing aggregation
 
 Implementation is similar to that of composition except the _containee_ object can exist even after the _container_ object is deleted.
 

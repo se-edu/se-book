@@ -18,7 +18,7 @@
 
 </tip-box>
 
-##### <big>Implementing association classes</big>
+##### Implementing association classes
 
 There is no special way to implement an association class. It can be implemented as a normal class that has variables to represent the endpoint of the association it represents. 
 

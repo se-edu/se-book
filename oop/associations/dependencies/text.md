@@ -18,7 +18,7 @@ Dependencies are objects that are not directly linked in the object network can 
 
 </tip-box>
 
-##### <big>Implementing dependencies</big>
+##### Implementing dependencies
 
 Dependencies result from interactions between objects that do not result in a long-term link between the said objects.
 
