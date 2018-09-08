@@ -39,7 +39,7 @@ In addition, **associations can show additional decorations such as _association
 <panel type="seamless" src="../../../oop/associations/multiplicity/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} OOP {{ icon_embedding }} Associations → Multiplicity" alt="{{ icon_prereq }} OOP/Multiplicity"/>
 <panel type="seamless" src="../../../../book/uml/classDiagrams/associations/multiplicity/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations → Multiplicity" alt="{{ icon_prereq }} UML/Multiplicity" />
 <panel type="seamless" src="../../../oop/associations/navigability/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} OOP {{ icon_embedding }} Associations → Navigability" alt="{{ icon_prereq }} OOP/Navigability"/>
-<panel type="seamless" src="../../../../book/uml/classDiagrams/associations/navigability/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations → UML/Navigability" alt="{{ icon_prereq }} Navigability" />
+<panel type="seamless" src="../../../../book/uml/classDiagrams/associations/navigability/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations → Navigability" alt="{{ icon_prereq }} UML/Navigability" />
 
 <tip-box> 
 
