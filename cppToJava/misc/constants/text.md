@@ -24,7 +24,7 @@ public class Account{
 }
 ```
 
-{{ icon_example }} [`Math.PI`](https://docs.oracle.com/javase/9/docs/api/java/lang/Math.html#PI) is an example constant that comes with Java.
+{{ icon_example }} [`Math.PI`]({{ java_api }}/java/lang/Math.html#PI) is an example constant that comes with Java.
 
 </box>
 
