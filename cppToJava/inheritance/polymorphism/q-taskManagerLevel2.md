@@ -1,7 +1,8 @@
 <panel header="{{ icon_Q }} TaskManager Level 2">
 <question>
+<div id="body">
 
-<panel header="%%{{ icon_prereq }} TaksManager Level1 (for reference)%%">
+<panel header="%%{{ icon_prereq }} TaskManager Level1 (for reference)%%">
   <include src="../../usefulClasses/scannerClass/q-taskManagerLevel1.md#body" />
 </panel>
 
@@ -119,5 +120,6 @@ public class Main {
 ```
 </panel>
 
+</div>
 </question>
 </panel>
