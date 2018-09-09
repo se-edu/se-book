@@ -20,7 +20,7 @@
 
 <div class="alt-java">
 
-* {{ icon_example }} Example of API Documentation: [String API](http://download.oracle.com/javase/8/docs/api/).
+* {{ icon_example }} Example of API Documentation: [String API]({{ java_api }}/java/lang/String.html).
 * {{ icon_example }} Example of tutorial-style documentation: [Java Intenatioanalization Tutorial]({{ java_tutorial }}/i18n/index.html)
 
 </div>
