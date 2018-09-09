@@ -140,7 +140,7 @@ The code, `new OrderedPair<String, Integer>`, instantiates `K` as a `String` and
 * `N` - Number
 * `T` - Type
 * `V` - Value
-* `S`,`U`,`V` etc. - 2nd, 3rd, 4th types
+* `S`, `U`, `V` etc. - 2nd, 3rd, 4th types
 
 </div>
 

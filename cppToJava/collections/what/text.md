@@ -32,19 +32,17 @@ This section uses extracts from the {{ oracle }}, with some adaptations.
 * **Algorithms**: These are the methods that perform useful computations, such as _searching_ and _sorting_, on objects that implement collection interfaces. The algorithms are said to be polymorphic: that is, the same method can be used on many different implementations of the appropriate collection interface.<br>
   %%{{ icon_example }} Example: the `sort(List<E>)` method can sort a collection that implements the `List<E>` interface.%%
 
-{{ similar }} **A well-known example of collections frameworks is the C++ Standard Template Library (STL)**. {{ different }} Although both are collections frameworks and the syntax look similar, note that there are important philosophical and implementation differences between the twoo.
+{{ similar }} **A well-known example of collections frameworks is the C++ _Standard Template Library (STL)_**. {{ different }} Although both are collections frameworks and the syntax look similar, note that there are important philosophical and implementation differences between the two.
 
 The following list describes the core collection interfaces:
 
-* **`Collection`** — the root of the collection hierarchy. A collection represents a group of objects known as its elements. The Collection interface is the least common denominator that all collections implement and is used to pass collections around and to manipulate them when maximum generality is desired. Some types of collections allow duplicate elements, and others do not. Some are ordered and others are unordered. The Java platform doesn't provide any direct implementations of this interface but provides implementations of more specific subinterfaces, such as Set and List. Also see The Collection Interface section.
-* **`Set`** — a collection that cannot contain duplicate elements. This interface models the mathematical set abstraction and is used to represent sets, such as the cards comprising a poker hand, the courses making up a student's schedule, or the processes running on a machine. See also The Set Interface section.
-* **`List`** — an ordered collection (sometimes called a sequence). Lists can contain duplicate elements. The user of a List generally has precise control over where in the list each element is inserted and can access elements by their integer index (position). If you've used Vector, you're familiar with the general flavor of List. Also see The List Interface section.
-* **`Queue`** — a collection used to hold multiple elements prior to processing. Besides basic Collection operations, a Queue provides additional insertion, extraction, and inspection operations.
-* **`Map`** — an object that maps keys to values. A Map cannot contain duplicate keys; each key can map to at most one value. If you've used Hashtable, you're already familiar with the basics of Map. Also see The Map Interface section.
+* **`Collection`** — the root of the collection hierarchy. A collection represents a group of objects known as its elements. The Collection interface is the least common denominator that all collections implement and is used to pass collections around and to manipulate them when maximum generality is desired. Some types of collections allow duplicate elements, and others do not. Some are ordered and others are unordered. The Java platform doesn't provide any direct implementations of this interface but provides implementations of more specific subinterfaces, such as `Set` and `List`. %%Also see the [`Collection` API]({{ java_api }}/java/util/Collection.html).%%
+* **`Set`** — a collection that cannot contain duplicate elements. This interface models the mathematical set abstraction and is used to represent sets, such as the cards comprising a poker hand, the courses making up a student's schedule, or the processes running on a machine. %%Also see the [`Set` API]({{ java_api }}/java/util/Set.html).%%
+* **`List`** — an ordered collection (sometimes called a _sequence_). `List`s can contain duplicate elements. The user of a `List` generally has precise control over where in the list each element is inserted and can access elements by their integer index (position). %%Also see the [`List` API]({{ java_api }}/java/util/List.html).%%
+* **`Queue`** — a collection used to hold multiple elements prior to processing. Besides basic `Collection` operations, a `Queue` provides additional insertion, extraction, and inspection operations. %%Also see the [`Queue` API]({{ java_api }}/java/util/Queue.html).%%
+* **`Map`** — an object that maps keys to values. A `Map` cannot contain duplicate keys; each key can map to at most one value. %%Also see the [`Map` API]({{ java_api }}/java/util/Map.html).%%
 
 * Others: `Deque`, `SortedSet`, `SortedMap`
-
-
 
 </div>
 
