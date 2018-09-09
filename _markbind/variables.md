@@ -50,3 +50,4 @@
 
 <span id="java_version">9</span>
 <span id="java_api">https://docs.oracle.com/javase/{{ java_version }}/docs/api</span>
+<span id="java_tutorial">https://docs.oracle.com/javase/tutorial</span>

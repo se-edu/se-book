@@ -1,1 +1,1 @@
-* [Oracle’s Java Tutorials: Abstract Methods and Classes](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)
+* [Oracle’s Java Tutorials: Abstract Methods and Classes]({{ java_tutorial }}/java/IandI/abstract.html)
