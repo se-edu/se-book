@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{ icon_outcome }} Can explain object diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can use basic object diagrams</span>
 
 <div id="title">
 
