@@ -10,7 +10,7 @@
 
 <div id="body">
 
-We can use _italics_ or `{abstract}` keyword to denote abstract classes/methods.
+**You can use _italics_ or `{abstract}` (preferred) keyword to denote abstract classes/methods.**
 
 <img src="{{baseUrl}}/uml/classDiagrams/abstractClasses/what/images/notation.png" height="110" />
 <p/>

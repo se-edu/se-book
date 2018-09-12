@@ -4,47 +4,21 @@
 
 </div>
 
-<span id="prereqs"><panel src="../../../uml/sequenceDiagrams/basic/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%UML → Sequence Diagrams → Basic%%" />
-<panel src="../../../uml/sequenceDiagrams/loops/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%UML → Sequence Diagrams → Loops%%" />
-<panel src="../../../uml/sequenceDiagrams/objectCreation/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%UML → Sequence Diagrams → Object Creation%%" />
-<panel src="../../../uml/sequenceDiagrams/minimalNotation/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%UML → Sequence Diagrams → Minimal Notation%%" /></span>
+<span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can draw basic sequence diagrams</span>
 
 <div id="body">
 
-**Sequence diagrams model interactions between entities for a given scenario.**
+<panel type="seamless" src="../../../uml/sequenceDiagrams/introduction/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Introduction" alt="{{ icon_prereq }} UML/SequenceDiagrams" />
 
-<tip-box> 
+<panel type="seamless" src="../../../uml/sequenceDiagrams/basic/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Basic Notation" alt="{{ icon_prereq }} UML/SD/Basic" />
 
-{{ icon_example }} Consider the code below.
+<panel type="seamless" src="../../../uml/sequenceDiagrams/loops/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Loops" alt="{{ icon_prereq }} UML/SD/Loops" />
+<panel type="seamless" src="../../../uml/sequenceDiagrams/objectCreation/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Object Creation" alt="{{ icon_prereq }} UML/SD/Creation" />
 
-```java
-class Machine {
+<panel type="seamless" src="../../../uml/sequenceDiagrams/minimalNotation/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Minimal Notation" alt="{{ icon_prereq }} UML/SD/Minimal" />
 
-    Unit producePrototype() {
-        Unit prototype = new Unit();
-        for (int i = 0; i < 5; i++) {
-            prototype.stressTest();
-        }
-        return prototype;
-    }
-}
-
-class Unit {
-
-    public void stressTest() {
-
-    }
-}
-
-```
-Here is the sequence diagram to model the interactions for the method call `prouducePrototype()` on a `Machine` object.
-
-<img src="{{baseUrl}}/modeling/modelingBehaviors/sequenceDiagramsBasic/images/Machine.png" width="450" />
-<p/>
-
-</tip-box>
 
 </div>
 

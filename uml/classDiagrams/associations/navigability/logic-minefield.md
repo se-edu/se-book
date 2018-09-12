@@ -1,8 +1,5 @@
-<table> 
-<tr>
-  <td>
+<div class="alt-java">
 
-Java {{ icon_output }}
 ```java
 class Logic{
     Minefield minefield;
@@ -11,15 +8,10 @@ class Logic{
 class Minefield{
     ...
 }
-
-
-
 ```
-  </td>
-  <td valign="bottom">&nbsp;&nbsp;<br><br></td>
-  <td valign="bottom">
+</div>
+<div class="alt-python">
 
-Python {{ icon_output }}
 ```python
 class Logic:
   
@@ -32,6 +24,4 @@ class Logic:
 class Minefield:
   # ...
 ```
-  </td>
-</tr>
-</table>
+</div>

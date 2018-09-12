@@ -30,15 +30,15 @@ The `:TextUi` in the above example denotes _an unnamed instance of the class Tex
 
 **Arrows representing method calls should be solid arrows while those representing method returns should be dashed arrows**.
 
-Note that unlike in Object Diagrams, the **class/object name is not underlined in sequence diagrams**.
+Note that unlike in object diagrams, the **class/object name is not underlined in sequence diagrams**.
 
 <tip-box> 
 
-:x: **[Common notation error] Activation bar too long:** The activation bar of a method cannot start before the method call arrives and a method cannot remain active after the method had returned. %%&nbsp;In the two sequence diagrams below, the one on the left commits this error because the activation bar starts _before_ the method `Foo#xyz()` is called and remains active _after_ the method returns.%%
+{{ icon_x_red }} **[Common notation error] Activation bar too long:** The activation bar of a method cannot start before the method call arrives and a method cannot remain active after the method had returned. %%&nbsp;In the two sequence diagrams below, the one on the left commits this error because the activation bar starts _before_ the method `Foo#xyz()` is called and remains active _after_ the method returns.%%
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/basic/images/commonError-activationBarTooLong.png" height="120" />
 
-:x: **[Common notation error] Broken activation bar:** The activation bar should remain unbroken from the point the method is called until the method returns. %%&nbsp;In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method `Foo#abc()` is not contiguous, but appears as two pieces instead.%%
+{{ icon_x_red }} **[Common notation error] Broken activation bar:** The activation bar should remain unbroken from the point the method is called until the method returns. %%&nbsp;In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method `Foo#abc()` is not contiguous, but appears as two pieces instead.%%
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/basic/images/commonError-brokenActivationBar.png" height="120" />
 
