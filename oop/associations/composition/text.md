@@ -28,37 +28,31 @@
 
 ##### Implementing composition
 
-**Composition too is implemented using a normal variable.** If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’ object.
+**Composition is implemented using a normal variable.** If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’ object.
 
 <tip-box>
 
 {{ icon_example }} In the code below, the `Email` has a composition type relationship with the `Subject` class, in the sense that the subject is part of the email.
 
-<table> 
-<tr>
-  <td valign="top">
+<div class="alt-java">
 
-Java {{ icon_output }}
 ```java
 class Email {
     private Subject subject;
   ...
 }
 ```
-  </td>
-  <td>&nbsp;&nbsp;<br><br></td>
-  <td valign="top">
 
-Python {{ icon_output }}
+</div>
+<div class="alt-python">
+
 ```python
 class Email:
   
   def __init__(self):
     self.__subject = Subject()
 ```
-  </td>
-</tr>
-</table>
+</div>
 
 
 </tip-box>

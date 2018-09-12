@@ -14,7 +14,7 @@
 
 <tip-box> 
 
-{{ icon_example }} `SportsClub` acts as a _container_ for `Person` objects. `Person` objects can survive without a `SportsClub` object.
+{{ icon_example }} `SportsClub` can act as a _container_ for `Person` objects who are members of the club. `Person` objects can survive without a `SportsClub` object.
 
 </tip-box>
 
@@ -26,37 +26,30 @@ Implementation is similar to that of composition except the _containee_ object c
 
 {{ icon_example }} In the code below, there is an aggregation association between the `Team` class and the `Person` in that a `Team` contains `Person` a object who is the leader of the team.
 
-<table> 
-<tr>
-  <td valign="top">
+<div class="alt-java">
 
-Java {{ icon_output }}
 ```java
 class Team {
     Person leader;
     ...
-    void drive(Person p) {
+    void setLeader(Person p) {
         leader = p;
     }
 }
 ```
-  </td>
-  <td>&nbsp;&nbsp;<br><br></td>
-  <td valign="top">
+</div>
+<div class="alt-python">
 
-Python {{ icon_output }}
 ```python
 class Team:
   
   def __init__(self):
     self.__leader = None
     
-  def drive(self, person):
+  def set_leader(self, person):
     self.__leader = person
 ```
-  </td>
-</tr>
-</table>
+</div>
 
 </tip-box>
 

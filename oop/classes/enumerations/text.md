@@ -25,5 +25,4 @@ An enumeration is often useful when using a regular data type such as `int` or `
 </div>
 
 <div id="extras">
-  <include src="exercises.md"/>
 </div>
