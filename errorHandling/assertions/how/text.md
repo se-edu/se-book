@@ -39,17 +39,9 @@ assert x == 0 : "x should be 0";
 
 </tip-box>
 
-<tip-box> 
-
 :bulb: Enable assertions in Intellij ([how?](https://stackoverflow.com/questions/18168257/where-to-add-compiler-options-like-ea-in-intellij-idea)) and get an assertion to fail temporarily (e.g. insert an `assert false` into the code temporarily) to confirm assertions are being verified.
 
-</tip-box>
-
-<tip-box type="info"> 
-
-**Java `assert` vs JUnit assertions**: They are similar in purpose but JUnit assertions are more powerful and customized for testing. In addition, JUnit assertions are not disabled by default. We recommend you use JUnit assertions in test code and Java `assert` in functional code. 
-
-</tip-box>
+{{ icon_info }} **Java `assert` vs JUnit assertions: They are similar in purpose but JUnit assertions are more powerful and customized for testing.** In addition, JUnit assertions are not disabled by default. We recommend you use JUnit assertions in test code and Java `assert` in functional code.
 
 </div>
 
