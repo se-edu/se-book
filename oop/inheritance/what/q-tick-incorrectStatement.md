@@ -3,17 +3,17 @@
 
 Which of these are correct?
 
-- [ ] a. Super class is more general than the sub class.
+- [ ] a. Superclass is more general than the subclass.
 - [ ] b. Child class is more specialized than the parent class.
 - [ ] c. A class can inherit behavior from its ancestor classes (ancestor classes = classes above it in the inheritance hierarchy).
 - [ ] d. Code reuse can be one benefit of inheritance.
-- [ ] e. A change to the super class will not affect its sub classes.
+- [ ] e. A change to the superclass will not affect its subclasses.
 
 <div slot="answer">
 
 (a) (b) (c) (d) 
 
-Explanation: (e) is incorrect. Because sub classes inherit behavior from the super class, any changes to the super class could affect sub classes. 
+Explanation: (e) is incorrect. Because subclasses inherit behavior from the superclass, any changes to the superclass could affect subclasses.
 
 </div>
 </question>
