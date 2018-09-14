@@ -29,7 +29,7 @@ Revision control is also known as _Version Control Software (VCS)_, and a few ot
 >
 > **It will help you to work simultaneously on, and manage the drift between, multiple versions of your project.** Most of these reasons are equally valid, at least in theory, whether you're working on a project by yourself, or with a hundred other people.
 >
-> -- [adapted from <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]
+> -- [adapted from <trigger trigger="click" for="modal:rcsWhat-bryanMercurialGuide">bryan-mercurial-guide</trigger>
 
   <hr></tab>
   <tab header="{{ icon_video }}">
@@ -39,11 +39,9 @@ Revision control is also known as _Version Control Software (VCS)_, and a few ot
   <hr></tab>
 </tabs>
 
-<popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide {{icon_preview}}" placement="right">
-  <div slot="content">
-    <include src="../../common/references.md#bryan-mercurial-guide" />
-  </div>
-</popover>
+<modal large title="Reference » Mercurial: The Definitive Guide" id="modal:rcsWhat-bryanMercurialGuide">
+  <include src="../../common/references.md#bryan-mercurial-guide" />
+</modal>
 
 </div>
 
