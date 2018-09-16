@@ -20,4 +20,5 @@
 </div>
 
 <div id="extras">
+  <include src="exercisesPanel.md" boilerplate />
 </div>
