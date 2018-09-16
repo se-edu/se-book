@@ -44,4 +44,5 @@ Note that while enumerations are usually a simple set of fixed values, **Java en
 </div>
 
 <div id="extras">
+  <include src="exercisesPanel.md" boilerplate />
 </div>
