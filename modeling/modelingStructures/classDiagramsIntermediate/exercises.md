@@ -1,3 +1,3 @@
-<panel header="{{ icon_exercise }} Exercises" expandable>
-    <include src="q-tick-statementMismatch.md" />
-</panel>
+<include src="q-tick-statementMismatch.md" />
+<include src="q-explainAddressBookClassDiagram.md" />
+<include src="q-drawClassDiagramForItemEtc.md" />
