@@ -71,7 +71,7 @@ public class Inventory {
         // ...
     }
 
-    public void add(StockItem s) {
+    public void add(Item s) {
         items.add(s);
     }
 }
