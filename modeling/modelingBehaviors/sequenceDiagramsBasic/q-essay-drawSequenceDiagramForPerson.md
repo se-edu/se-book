@@ -39,7 +39,7 @@ Draw a sequence diagram to illustrate the object interactions that happen in the
 ```java
 PersonList personList = new PersonList();
 while (hasRoom){
-    Person p = new Person("Adam");
+    Person p = new Person("Adam", "friend");
     personList.addPerson(p);
 }
 ```
