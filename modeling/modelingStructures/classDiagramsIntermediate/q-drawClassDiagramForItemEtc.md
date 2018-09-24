@@ -79,8 +79,8 @@ public class Inventory {
   </div>
 </div>
 
-(a) Draw a class diagram to represent the code below<br>
-(b) Draw an object diagram to represent the situation where the Inventory has one item with a name `spanner` and a review of `POOR` rating.
+(a) Draw a class diagram to represent the code<br>
+(b) Draw an object diagram to represent the situation where the inventory has one item with a name `spanner` and a review of `POOR` rating.
 
 </question>
 </panel>
