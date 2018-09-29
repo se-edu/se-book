@@ -245,13 +245,19 @@ Also known as
 
 <div id="def-rcs">
 
-**RCS** :  Revision Control Software.
+**RCS** :  **Revision Control Software** are the software tools that automate the process of _Revision Control_ i.e. managing revisions of software artifacts.
 
 </div>
 
 <div id="def-repo">
 
 **Repository** (_repo_ for short):  The database of the history of a directory being tracked by an RCS software (e.g. Git).
+
+</div>
+
+<div id="def-revision">
+
+**Revision**: A _revision_ (some seem to use it interchangeably with _version_ while others seem to distinguish the two -- here, let us treat them as the same, for simplicity) is a state of a piece of information at a specific time that is a result of some changes to it %%e.g., if you modify the code and save the file, you have a new revision (or a version) of that file%%.
 
 </div>
 

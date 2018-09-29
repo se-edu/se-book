@@ -48,7 +48,7 @@ Although git has detected the file in the working directory, it will not do anyt
   <hr></tab>
 </tabs>
 
-Next, we can commit the staged version of `fruits.txt`
+Now, you can commit the staged version of `fruits.txt`
 
 <tabs>
   <tab header="SourceTree">
@@ -61,7 +61,7 @@ Next, we can commit the staged version of `fruits.txt`
 
 Note the existence of something called the `master` branch. Git allows you to have multiple branches (i.e. it is a way to evolve the content in parallel) and Git creates a default branch named `master` on which the commits go on by default.
 
-Do some changes to `fruits.txt` (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps we followed before. You should end up with something like this.
+Do some changes to `fruits.txt` (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps you followed before. You should end up with something like this.
 
 <img src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_6.png" height="180" />
 <p/>
