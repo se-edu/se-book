@@ -1,12 +1,14 @@
 <panel header="{{ icon_Q }} TaskManager Level 4">
-<question>
 <div id="body">
 
-<panel header="%%{{ icon_prereq }} TaskManager Level3 (for reference)%%">
-  <include src="../../exceptions/how/q-taskManagerLevel3.md#body" />
-</panel>
+<panel type="seamless" src="../../project/taskManager/q-taskManagerLevel1.md#main" header="{{ icon_prereq }} TM-L1" minimized />
+<panel type="seamless" src="../../project/taskManager/q-taskManagerLevel2.md#main" header="{{ icon_prereq }} TM-L2" minimized />
+<panel type="seamless" src="../../project/taskManager/q-taskManagerLevel3.md#main" header="{{ icon_prereq }} TM-L3" minimized />
 
-This exercise continues from the `TaskManager Level3` exercise quoted above.
+%%This exercise continues from the `TaskManager Level 1-3` exercises quoted above.%%
+
+<div id="main">
+
 
 Enhance the TaskManager in the following ways:
 1. Use a suitable Collection class to store tasks, instead of using an array.
@@ -96,5 +98,6 @@ public class Main {
 </panel>
 
 </div>
-</question>
+
+</div>
 </panel>

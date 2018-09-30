@@ -1,12 +1,11 @@
 <panel header="{{ icon_Q }} TaskManager Level 2">
-<question>
 <div id="body">
 
-<panel header="%%{{ icon_prereq }} TaskManager Level1 (for reference)%%">
-  <include src="../../usefulClasses/scannerClass/q-taskManagerLevel1.md#body" />
-</panel>
+<panel type="seamless" src="../../project/taskManager/q-taskManagerLevel1.md#main" header="{{ icon_prereq }} TM-L1" minimized />
 
-This exercise continues from the `TaskManager Level1` exercise quoted above.
+%%This exercise continues from the `TaskManager Level1` exercise quoted above.%%
+
+<div id="main">
 
 Enhance your TaskManager program in the following ways.
 
@@ -121,5 +120,6 @@ public class Main {
 </panel>
 
 </div>
-</question>
+
+</div>
 </panel>

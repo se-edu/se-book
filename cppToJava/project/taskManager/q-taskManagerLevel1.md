@@ -1,6 +1,6 @@
 <panel header="{{ icon_Q }} TaskManager Level 1">
 <div id="body">
-<question>
+<div id="main">
 
 This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small `TaskManager` program that can store a list of tasks.
 * It is a <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program.
@@ -102,6 +102,6 @@ public class Main {
 </panel>
 
 </div>
-</question>
+</div>
 </div>
 </panel>

@@ -1,12 +1,15 @@
 <panel header="{{ icon_Q }} TaskManager Level 5">
-<question>
 <div id="body">
 
-<panel header="%%{{ icon_prereq }} TaskManager Level4 (for reference)%%">
-  <include src="../../collections/arrayListClass/q-taskManagerLevel4.md#body" />
-</panel>
+<panel type="seamless" src="../../project/taskManager/q-taskManagerLevel1.md#main" header="{{ icon_prereq }} TM-L1" minimized />
+<panel type="seamless" src="../../project/taskManager/q-taskManagerLevel2.md#main" header="{{ icon_prereq }} TM-L2" minimized />
+<panel type="seamless" src="../../project/taskManager/q-taskManagerLevel3.md#main" header="{{ icon_prereq }} TM-L3" minimized />
+<panel type="seamless" src="../../project/taskManager/q-taskManagerLevel4.md#main" header="{{ icon_prereq }} TM-L4" minimized />
 
-This exercise continues from the `TaskManager Level4` exercise quoted above.
+%%This exercise continues from the `TaskManager Level 1-4` exercises quoted above.%%
+
+<div id="main">
+
 
 **Enhance the TaskManager to store tasks in a text file** between runs:
 1. The text file can follow a format of your choice. For example, each line can represent one task. The attributes can be separated using a suitable delimiter.<br>Here is an example format:
@@ -44,5 +47,6 @@ Here's an example method for loading data from the text file. Use this method at
 </panel>
 
 </div>
-</question>
+
+</div>
 </panel>

@@ -1,12 +1,12 @@
 <panel header="{{ icon_Q }} TaskManager Level 3">
-<question>
 <div id="body">
 
-<panel header="%%{{ icon_prereq }} TaskManager Level2 (for reference)%%">
-  <include src="../../inheritance/polymorphism/q-taskManagerLevel2.md#body" />
-</panel>
+<panel type="seamless" src="../../project/taskManager/q-taskManagerLevel1.md#main" header="{{ icon_prereq }} TM-L1" minimized />
+<panel type="seamless" src="../../project/taskManager/q-taskManagerLevel2.md#main" header="{{ icon_prereq }} TM-L2" minimized />
 
-This exercise continues from the `TaskManager Level2` exercise quoted above.
+%%This exercise continues from the `TaskManager Level 1-2` exercises quoted above.%%
+
+<div id="main">
 
 Enhance the TaskManager to print an error message if a command is missing parts. Use exceptions so that error detection and printing of error message happen at different places of code and the error information is passed between the two places using an Exception object.
 
@@ -75,5 +75,8 @@ public class TaskManagerException extends Exception{
 </panel>
 
 </div>
+
+</div>
+
 </question>
 </panel>
