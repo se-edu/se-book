@@ -15,7 +15,7 @@ Suggest ways to improve the quality of the code below.
 import java.io.FileNotFoundException;
 import java.util.*;
 
-public class Main {
+public class CliApp {
 
     //...
     private static final String MESSAGE_COMMAND_HELP_PARAMETERS = "Parameters: %1$s";
