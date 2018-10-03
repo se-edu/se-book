@@ -23,11 +23,11 @@ public void testTotalSalary(){
 
     //test case 1
     p.setEmployees(new String[]{"E001", "E002"});
-    assertEquals(p.totalSalary(), 6400);
+    assertEquals(6400, p.totalSalary());
 
     //test case 2
     p.setEmployees(new String[]{"E001"});
-    assertEquals(p.totalSalary(), 2300);
+    assertEquals(2300, p.totalSalary());
 
     //more tests...
 }
