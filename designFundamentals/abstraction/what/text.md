@@ -14,9 +14,9 @@
 <include src="../../../common/definitions.md#def-abstraction" />
 </tip-box>
 
-Most programs are written to solve complex problems involving large amounts of intricate details. It is impossible to deal with all these details at the same time.  The guiding principle of abstraction stipulates that we capture only details that are relevant to the current perspective or the task at hand. 
+**The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand needs to be considered.** As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.
 
-**Ignoring lower level data items and thinking in terms of bigger entities is called _data abstraction_.**
+**Ignoring lower level data items and thinking in terms of bigger entities is called ==_data abstraction_==.**
 
 <tip-box> 
 
@@ -24,7 +24,7 @@ Most programs are written to solve complex problems involving large amounts of i
 
 </tip-box>
 
-**_Control abstraction_ abstracts away details of the actual control flow to focus on tasks at a simplified level.**
+**==_Control abstraction_== abstracts away details of the actual control flow to focus on tasks at a simplified level.**
  
 <tip-box> 
 

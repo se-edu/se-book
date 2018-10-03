@@ -26,7 +26,7 @@ footer: footer.md
 
 <div id="def-abstraction">
 
-**Abstraction** is a technique for dealing with complexity. It works by establishing a level of complexity (or an aspect) we are interested in, and suppressing the more complex details below that level (or irrelevant to that aspect). 
+**Abstraction** is a technique for dealing with complexity. It works by establishing a level of complexity we are interested in, and suppressing the more complex details below that level.
 
 </div>
 
