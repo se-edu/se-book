@@ -10,7 +10,8 @@
 
 <div id="body">
 
-1. Fork the [samplerepo-things](https://github.com/se-edu/samplerepo-things) to your GitHub account: 
+1. Create a GitHub account if you don't have one yet.
+1. Fork the [samplerepo-things](https://github.com/se-edu/samplerepo-things) to your GitHub account:
 
    <panel type="seamless" header="%%How to fork a repo?%%">
     
