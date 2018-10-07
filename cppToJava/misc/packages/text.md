@@ -148,7 +148,7 @@ Note how the class can use `PREFIX` and `format` (instead of `Formatter.PREFIX` 
 * when compiling from the `<source folder>`, the command is:<br>
   `javac seedu/tojava/Main.java`
 * when running it from the `<compiler output folder>`, the command is:<br>
-  `javac seedu.tojava.Main`
+  `java seedu.tojava.Main`
 
 </box>
 
