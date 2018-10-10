@@ -4,7 +4,8 @@
 
 </div>
 
-<span id="prereqs"></span>
+<span id="prereqs"><panel src="../../multilevelDesign/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Design Approaches → Multi-Level Design → What%%" /></span>
+
 
 <span id="outcomes">{{ icon_outcome }} Can explain top-down and bottom-up design</span>
 
