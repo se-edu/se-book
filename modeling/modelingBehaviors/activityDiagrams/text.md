@@ -1,16 +1,17 @@
 <div id="title">
 
-#### Activity Diagrams
+#### Activity Diagrams - Basic Notations
 
 </div>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{ icon_outcome }} Can use activity diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can use basic-level activity diagrams</span>
 
 <div id="body">
 
 **Software projects often involve _workflows_.** Workflows define the <tooltip content="a connected sequence of steps"></tooltip>flow in which a process or a set of tasks is executed.
+Understanding such workflows is important for the success of the software project.
 
 <tip-box> 
 
@@ -22,31 +23,14 @@ Some examples in which a certain workflow is relevant to software project:
 
 </tip-box>
 
-Understanding such workflows is important for the success of the software project. **<trigger trigger="click" for="modal:modelingAd-uml">UML</trigger> _&nbsp;activity diagrams_ (AD) can model workflows.&nbsp;** %%_Flow charts_ is another type of diagrams that can model workflows. Activity diagrams are the UML equivalent of flow charts.%%
+<panel type="seamless" src="../../../uml/activityDiagrams/introduction/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Introduction → What" alt="{{ icon_prereq }} UML/AD/Intro" /><p/>
 
-<modal title="**Unified Modeling Language (UML)**" id="modal:modelingAd-uml">
-  <include src="../../../common/definitions.md#def-uml" />
-</modal>
 
-<tip-box> 
+<panel type="seamless" src="../../../uml/activityDiagrams/basicNotations/linearPaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Basic Notation → Linear Paths" alt="{{ icon_prereq }} UML/AD/LinearPaths" />
 
-{{ icon_example }} An example activity diagram <sub>[[source:wikipeida](https://en.wikipedia.org/wiki/Activity_diagram)]</sub>:
+<panel type="seamless" src="../../../uml/activityDiagrams/basicNotations/alternatePaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Basic Notation → Alternate Paths" alt="{{ icon_prereq }} UML/AD/AlternatePaths" />
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Activity_conducting.svg" width="430">
-
-</tip-box>
-
-The most basic activity diagram is simply a linear sequence of actions.
-
-<panel src="../../../uml/activityDiagrams/basicNotations/linearPaths/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} UML → Activity Diagrams → Basic Notations → Linear Paths" expanded />
-
-Some workflows have alternate paths where only one of the alternate paths is taken based on some condition.
-
-<panel src="../../../uml/activityDiagrams/basicNotations/alternatePaths/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} UML → Activity Diagrams → Basic Notations → Alternative Paths" expanded />
-
-In some workflows, multiple paths happen in parallel. 
-
-<panel src="../../../uml/activityDiagrams/basicNotations/parallelPaths/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} UML → Activity Diagrams → Basic Notations → Parallel Paths" expanded />
+<panel type="seamless" src="../../../uml/activityDiagrams/basicNotations/parallelPaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Basic Notation → Parellel Paths" alt="{{ icon_prereq }} UML/AD/ParallelPaths" />
 
 </div>
 
