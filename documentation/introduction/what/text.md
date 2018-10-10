@@ -21,7 +21,7 @@
 <div class="alt-java">
 
 * {{ icon_example }} Example of API Documentation: [String API]({{ java_api }}/java/lang/String.html).
-* {{ icon_example }} Example of tutorial-style documentation: [Java Intenatioanalization Tutorial]({{ java_tutorial }}/i18n/index.html)
+* {{ icon_example }} Example of tutorial-style documentation: [Java Internationalization Tutorial]({{ java_tutorial }}/i18n/index.html)
 
 </div>
 <div class="alt-python">
