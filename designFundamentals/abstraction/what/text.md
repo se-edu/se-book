@@ -42,6 +42,18 @@
 
 </tip-box>
 
+**Abstraction is a general concept that is not limited to just data or control abstractions.**
+
+<box>
+
+{{ icon_example }} Some more general examples of abstraction:
+
+* An OOP _class_ is an abstraction over related data and behaviors.
+* An _architecture_ is a higher-level abstraction of the design of a software.
+* Models (e.g., UML models) are abstractions of some aspect of reality.
+
+</box>
+
 </div>
 
 <div id="extras">
