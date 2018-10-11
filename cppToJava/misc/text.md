@@ -5,6 +5,7 @@
 
 <div id="body">
 
+<include src="enums/unit-inParent-asPanel.md" boilerplate />
 <include src="packages/unit-inParent-asPanel.md" boilerplate />
 <include src="accessModifiers/unit-inParent-asPanel.md" boilerplate />
 <include src="constants/unit-inParent-asPanel.md" boilerplate />
