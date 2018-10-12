@@ -34,7 +34,7 @@
    ...
    ui.showWelcomeMessage();
    ...
-   Sting fullCommand = ui.readUserCommand();
+   String fullCommand = ui.readUserCommand();
    ```
    Note: The `Scanner` object should be inside the `Ui` class.
 
@@ -45,7 +45,7 @@
    t = Parser.createTodo(fullCommand);
    tasks.addTask(t);
    ...
-   Sting taskListDescription = tasks.getDescription();
+   String taskListDescription = tasks.getDescription();
    ui.showToUser(taskListDescription);
    ```
 
