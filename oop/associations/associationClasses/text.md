@@ -37,7 +37,7 @@ class Transaction{
     Date date;
     String receiptNumber;
     
-    Marriage (Person seller, Person buyer, Date date, String receiptNumber){
+    Transaction (Person seller, Person buyer, Date date, String receiptNumber){
         //set fields
     }
 }
