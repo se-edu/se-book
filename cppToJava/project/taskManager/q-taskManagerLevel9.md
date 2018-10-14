@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} TaskManager Level 9">
+<panel header="{{ icon_Q }} TaskManager Level 9 - **Use javadoc comments**">
 <div id="body">
 
 <panel type="seamless" src="../../project/taskManager/q-taskManagerLevel1.md#main" header="{{ icon_prereq }} TM-L1" minimized />

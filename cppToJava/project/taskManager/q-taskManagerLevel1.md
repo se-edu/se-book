@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} TaskManager Level 1">
+<panel header="{{ icon_Q }} TaskManager Level 1 - **Create a CLI**">
 <div id="body">
 <div id="main">
 
