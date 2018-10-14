@@ -1,3 +1,2 @@
-<panel header="{{ icon_exercise }} Exercises" expandable>
-  <include src="q-tick-sequence.md" />
-</panel>
+<include src="q-tick-sequence.md" />
+<include src="q-modelWorkflowOfBurgerShop.md" />
