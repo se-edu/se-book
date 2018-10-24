@@ -10,7 +10,7 @@ A course has a name and a code. A course is read by 10 or more students, and tau
 </div>
 
 <panel type="seamless" header="Example OODM" minimized >
-  <img src="{{ baseUrl }}/../../../book/modeling/modelingStructures/objectOrientedDomainModels/images/diagram.png" width="700" />
+  <img src="{{ baseUrl }}/modeling/modelingStructures/objectOrientedDomainModels/images/diagram.png" width="700" />
 </panel>
 
 </question>
