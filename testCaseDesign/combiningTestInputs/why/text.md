@@ -16,16 +16,14 @@
 
 {{ icon_example }} an SUT that takes multiple inputs and some values chosen as values for each input:
 
-* Scenario: calculateGrade
-* Method to test: calculateGrade(participation, projectGrade, isAbsent, examScore)
-* Values to test (invalid values are **bold**)
-
-Input         | valid values to test | invalid values to test
-------------- | -------------------- | ----------------------
-participation | 0, 1, 19, 20         | 21, 22
-projectGrade  | A, B, C, D, F        |
-isAbsent      | true, false          |
-examScore     | 0, 1, 69, 70,        | 71, 72
+* Method to test: `calculateGrade(participation, projectGrade, isAbsent, examScore)`
+* Values to test:
+  Input         | valid values to test | invalid values to test
+  ------------- | -------------------- | ----------------------
+  participation | 0, 1, 19, 20         | 21, 22
+  projectGrade  | A, B, C, D, F        |
+  isAbsent      | true, false          |
+  examScore     | 0, 1, 69, 70,        | 71, 72
 
 </tip-box>
 
