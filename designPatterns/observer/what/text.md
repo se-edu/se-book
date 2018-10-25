@@ -11,10 +11,13 @@
 <div id="body">
 
 
+**Context**
+
+An object (possibly, more than one) is interested to get notified when a change happens to another object. That is, some objects want to ‘observe’ another object.
 
 <tip-box>
 
-{{ icon_example }} Here is a scenario from the a student management system where the user is adding a new student to the system.
+{{ icon_example }} Consider this scenario from the a student management system where the user is adding a new student to the system.
 
 <img src="{{baseUrl}}/designPatterns/observer/what/images/sequenceDiagram.png" height="330" />
 <p/>
@@ -33,10 +36,6 @@ However, the `StudentList` object has no knowledge about `StudentListUi` and `St
 
 </tip-box>
 
-**Context**
-
-An object (possibly, more than one) is interested to get notified when a change happens to another object. That is, some objects want to ‘observe’ another object.
-
 **Problem**
 
 The ‘observed’ object does not want to be coupled to objects that are ‘observing’ it.
@@ -52,52 +51,53 @@ Force the communication through an interface known to both parties.
 
 {{ icon_example }} Here is the Observer pattern applied to the student management system.
 
-During initialization of the system,
+**During the initialization of the system,**
 
 1. First, create the relevant objects.
 
-```java
-StudentList studentList = new StudentList();
-StudentListUi listUi = new StudentListUi();
-StudentStatusUi statusUi = new StudentStatsUi();
-```
+   ```java
+   StudentList studentList = new StudentList();
+   StudentListUi listUi = new StudentListUi();
+   StudentStatusUi statusUi = new StudentStatsUi();
+   ```
 
 2. Next, the two UIs indicate to the `StudentList` that they are interested in being updated whenever `StudentList` changes. This is also known as ‘subscribing for updates’.
 
-```java
-studentList.addUi(listUi);
-studentList.addUi(statusUi);
-```
+   ```java
+   studentList.addUi(listUi);
+   studentList.addUi(statusUi);
+   ```
 
-Within the `addUi` operation of `StudentList`, all Observer objects subscribers are added to an internal data structure called `observerList`.
+3. Within the `addUi` operation of `StudentList`, all Observer objects subscribers are added to an internal data structure called `observerList`.
 
-```java
-//StudentList class
-public void addUi(Observer o) {
-    observerList.add(o);
-}
-```
+   ```java
+   //StudentList class
+   public void addUi(Observer o) {
+       observerList.add(o);
+   }
+   ```
 
-As such, whenever the data in `StudentList` changes (e.g. when a new student is added to the `StudentList`), all interested observers are updated by calling the `notifyUIs` operation.
+**Now, whenever the data in `StudentList` changes** (e.g. when a new student is added to the `StudentList`),
 
-```java
-//StudentList class
-public void notifyUIs() {
-    for(Observer o: observerList) //for each observer in the list
-        o.update();
-}
-```
+1. All interested observers are updated by calling the `notifyUIs` operation.
+   ```java
+   //StudentList class
+   public void notifyUIs() {
+       //for each observer in the list
+       for(Observer o: observerList){
+           o.update();
+       }
+   }
+   ```
 
-UIs can then pull data from the `StudentList` whenever the `update` operation is called.
-
-```java
-//StudentListUI class
-public void update() {
-    //refresh UI by pulling data from StudentList
-}
-```
-
-Note that `StudentList` is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.
+1. UIs can then pull data from the `StudentList` whenever the `update` operation is called.
+   ```java
+   //StudentListUI class
+   public void update() {
+       //refresh UI by pulling data from StudentList
+   }
+   ```
+   Note that `StudentList` is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.
 
 </tip-box>
 
@@ -110,7 +110,11 @@ Here is the generic description of the observer pattern:
 * The `<<Observable>>` maintains a list of `<<Observer>>` objects. `addObserver(Observer)` operation adds a new `<<Observer>>` to the list of `<<Observer>>s`.
 * Whenever there is a change in the `<<Observable>>`, the `notifyObservers()` operation is called that will call the `update()` operation of all `<<Observer>>s` in the list.
 
-In a GUI application, how is the Controller notified when the “save” button is clicked? UI frameworks such as JavaFX has inbuilt support for the Observer pattern.
+<box>
+
+{{ icon_example }} In a GUI application, how is the Controller notified when the “save” button is clicked? UI frameworks such as JavaFX has inbuilt support for the Observer pattern.
+
+</box>
 
 </div>
 
