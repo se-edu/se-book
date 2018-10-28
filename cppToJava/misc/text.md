@@ -11,5 +11,6 @@
 <include src="constants/unit-inParent-asPanel.md" boilerplate />
 <include src="casting/unit-inParent-asPanel.md" boilerplate />
 <include src="fileAccess/unit-inParent-asPanel.md" boilerplate />
+<include src="jar/unit-inParent-asPanel.md" boilerplate />
 
 </div>
