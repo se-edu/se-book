@@ -1,6 +1,6 @@
 <div id="title">
 
-#### Activity Diagrams - Basic Notations
+#### Activity Diagrams - Basic
 
 </div>
 
