@@ -12,7 +12,7 @@
 
 Comments should explain _what_ and _why_ aspect of the code, rather than the _how_ aspect. 
 
-:+1: **What** : The specification of what the code _supposed_ to do. The reader can compare such comments to the implementation to verify if the implementation is correct 
+{{ icon_tick_green }} **What** : The specification of what the code _supposed_ to do. The reader can compare such comments to the implementation to verify if the implementation is correct
 
 <tip-box>
 
@@ -26,7 +26,7 @@ void compact(String input){
 ```
 </tip-box>
 
-:+1: **Why** : The rationale for the current implementation.
+{{ icon_tick_green }} **Why** : The rationale for the current implementation.
 
 <tip-box>
 
@@ -39,7 +39,7 @@ compact(input);
 
 </tip-box>
 
-:-1: **How** : The explanation for how the code works. This should already be apparent from the code, if the code is self-explanatory. Adding comments to explain the same thing is redundant.
+{{ icon_x_red }} **How** : The explanation for how the code works. This should already be apparent from the code, if the code is self-explanatory. Adding comments to explain the same thing is redundant.
 
 <tip-box>
 
