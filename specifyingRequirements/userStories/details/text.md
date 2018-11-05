@@ -63,6 +63,7 @@ Conditions:
 * Size: the estimated effort to implement the user story
 * Urgency: how soon the feature is needed
 
+<span class="non-printable">
 <panel minimized >
 <span slot="header" class="card-title">{{ icon_example }} More examples {{ icon_tangential }}</md></span>
 
@@ -85,6 +86,7 @@ User stories for a travel website (credit: Mike Cohen)
 </tip-box>
 
 </panel>
+</span>
 
 </div>
 
