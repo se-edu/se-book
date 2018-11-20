@@ -26,7 +26,7 @@ Objects in an OO solution need to be connected to each other to form a network s
 
 </tip-box>
 
-**Associations among objects can be generalized as associations between the corresponding classles too.**
+**Associations among objects can be generalized as associations between the corresponding classes too.**
 
 <tip-box> 
 
