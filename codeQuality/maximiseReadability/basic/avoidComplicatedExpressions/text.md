@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Avoid Complicated Expressions
-
-</div>
+<span id="title">Avoid Complicated Expressions</span>
 
 <span id="prereqs"></span>
 

@@ -1,7 +1,4 @@
-<div id="title">
-
-## Libraries
-</div>
+<span id="title">Libraries</span>
 
 <div id="body">
 

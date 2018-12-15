@@ -1,8 +1,4 @@
-<div id="title">
-
-#### How
-
-</div>
+<span id="title">How</span>
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Testing → Integration Testing → What →%%" /></span>
 

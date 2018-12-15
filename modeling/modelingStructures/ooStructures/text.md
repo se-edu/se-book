@@ -1,8 +1,4 @@
-<div id="title">
-
-#### OO Structures
-
-</div>
+<span id="title">OO Structures</span>
 
 <span id="prereqs"><panel src="../../../oop/classes/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Design → OOP → Classes → Basic%%" /></span>
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Do Not 'Trip Up' Reader
-
-</div>
+<span id="title">Do Not 'Trip Up' Reader</span>
 
 <span id="prereqs"></span>
 

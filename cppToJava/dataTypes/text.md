@@ -1,7 +1,4 @@
-<div id="title">
-
-## Data Types
-</div>
+<span id="title">Data Types</span>
 
 <div id="body">
 

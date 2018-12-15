@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Object Creation
-
-</div>
+<span id="title">Object Creation</span>
 
 <span id="prereqs"></span>
 

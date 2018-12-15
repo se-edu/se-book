@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Reading
-
-</div>
+<span id="title">Reading</span>
 
 <span id="prereqs"><panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Architecture → Introduction → What%%" /></span>
 

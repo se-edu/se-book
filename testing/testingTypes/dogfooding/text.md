@@ -1,7 +1,4 @@
-<div id="title">
-
-### Dogfooding
-</div>
+<span id="title">Dogfooding</span>
 
 <div id="body">
 

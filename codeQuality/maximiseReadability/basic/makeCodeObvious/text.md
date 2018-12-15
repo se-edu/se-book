@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Make the Code Obvious
-
-</div>
+<span id="title">Make the Code Obvious</span>
 
 <span id="prereqs"></span>
 

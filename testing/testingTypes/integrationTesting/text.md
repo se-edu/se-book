@@ -1,7 +1,4 @@
-<div id="title">
-
-### Integration Testing
-</div>
+<span id="title">Integration Testing</span>
 
 <div id="body">
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Class Diagrams - Advanced
-
-</div>
+<span id="title">Class Diagrams - Advanced</span>
 
 <span id="prereqs"><panel src="../classDiagramsIntermediate/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Class Diagrams (Intermediate)%%" /></span>
 

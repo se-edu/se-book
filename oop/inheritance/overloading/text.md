@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Overloading
-
-</div>
+<span id="title">Overloading</span>
 
 <span id="prereqs"></span>
 

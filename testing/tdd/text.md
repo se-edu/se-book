@@ -1,7 +1,4 @@
-<div id="title">
-
-## TDD
-</div>
+<span id="title">TDD</span>
 
 <div id="body">
 

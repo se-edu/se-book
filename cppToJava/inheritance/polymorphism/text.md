@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Polymorphism
-
-</div>
+<span id="title">Polymorphism</span>
 
 <span id="prereqs"></span>
 

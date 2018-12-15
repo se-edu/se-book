@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can decide when to apply a given refactoring</span>
 
-<div id="title">
-
-#### When
-
-</div>
+<span id="title">When</span>
 
 <div id="body">
 

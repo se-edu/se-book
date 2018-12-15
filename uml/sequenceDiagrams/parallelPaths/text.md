@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can interpret sequence diagrams with parallel paths</span>
 
-<div id="title">
-
-#### Parallel Paths
-
-</div>
+<span id="title">Parallel Paths</span>
 
 <div id="body">
 

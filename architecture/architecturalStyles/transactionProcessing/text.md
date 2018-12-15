@@ -1,7 +1,4 @@
-<div id="title">
-
-### Transaction Processing Architectural Style
-</div>
+<span id="title">Transaction Processing Architectural Style</span>
 
 <div id="body">
 

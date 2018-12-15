@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can apply heuristic ‘no more than one invalid input in a test case’</span>
 
-<div id="title">
-
-#### Heuristic: No More Than One Invalid Input In A Test Case
-
-</div>
+<span id="title">Heuristic: No More Than One Invalid Input In A Test Case</span>
 
 <div id="body">
 

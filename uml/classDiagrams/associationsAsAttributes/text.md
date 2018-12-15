@@ -1,7 +1,4 @@
-<div id="title">
-
-### Associations as Attributes
-</div>
+<span id="title">Associations as Attributes</span>
 
 <div id="body">
 

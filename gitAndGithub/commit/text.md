@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can commit using Git</span>
 
-<div id="title">
-
-#### Commit
-
-</div>
+<span id="title">Commit</span>
 
 <div id="body">
 

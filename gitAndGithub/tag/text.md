@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can tag commits using Git</span>
 
-<div id="title">
-
-#### Tag
-
-</div>
+<span id="title">Tag</span>
 
 <div id="body">
 

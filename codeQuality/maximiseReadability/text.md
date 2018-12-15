@@ -1,7 +1,4 @@
-<div id="title">
-
-## Guideline: Maximise Readability
-</div>
+<span id="title">Guideline: Maximise Readability</span>
 
 <div id="body">
 

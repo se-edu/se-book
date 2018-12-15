@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Create PRs
-
-</div>
+<span id="title">Create PRs</span>
 
 <span id="prereqs"><panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Branching%%" /></span>
 

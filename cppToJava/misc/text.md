@@ -1,7 +1,4 @@
-<div id="title">
-
-## Miscellaneous Topics
-</div>
+<span id="title">Miscellaneous Topics</span>
 
 <div id="body">
 

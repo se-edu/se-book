@@ -1,7 +1,4 @@
-<div id="title">
-
-## Tools
-</div>
+<span id="title">Tools</span>
 
 <div id="body">
 

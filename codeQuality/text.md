@@ -1,7 +1,4 @@
-<div id="title">
-
-# Code Quality
-</div>
+<span id="title">Code Quality</span>
 
 <div id="body">
 

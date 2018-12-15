@@ -1,8 +1,4 @@
-<div id="title">
-
-#### When
-
-</div>
+<span id="title">When</span>
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Error Handling → Assertions → What%%" />
 <panel src="../../exceptions/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Error Handling → Exceptions → What%%" /></span>

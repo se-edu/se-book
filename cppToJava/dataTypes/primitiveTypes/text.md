@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Primitive Data Types
-
-</div>
+<span id="title">Primitive Data Types</span>
 
 <span id="prereqs"></span>
 

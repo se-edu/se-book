@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Avoid Premature Optimizations
-
-</div>
+<span id="title">Avoid Premature Optimizations</span>
 
 <span id="prereqs"></span>
 

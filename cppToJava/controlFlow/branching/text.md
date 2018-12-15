@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Branching
-
-</div>
+<span id="title">Branching</span>
 
 <span id="prereqs"></span>
 

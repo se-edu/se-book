@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Testability
-
-</div>
+<span id="title">Testability</span>
 
 <span id="prereqs"></span>
 

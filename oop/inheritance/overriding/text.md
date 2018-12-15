@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Overriding
-
-</div>
+<span id="title">Overriding</span>
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Inheritance → What%%" /></span>
 

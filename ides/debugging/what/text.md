@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can explain debugging</span>
 
-<div id="title">
-
-#### What
-
-</div>
+<span id="title">What</span>
 
 <div id="body">
 

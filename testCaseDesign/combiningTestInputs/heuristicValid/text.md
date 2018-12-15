@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Heuristic: Each Valid Input at Least Once in a Positive Test Case
-
-</div>
+<span id="title">Heuristic: Each Valid Input at Least Once in a Positive Test Case</span>
 
 <span id="prereqs"></span>
 

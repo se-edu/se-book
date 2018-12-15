@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can explain dependency inversion principle (DIP)</span>
 
-<div id="title">
-
-#### Dependency Inversion Principle
-
-</div>
+<span id="title">Dependency Inversion Principle</span>
 
 <div id="body">
 

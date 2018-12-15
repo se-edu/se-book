@@ -1,7 +1,4 @@
-<div id="title">
-
-## Architecture Diagrams
-</div>
+<span id="title">Architecture Diagrams</span>
 
 <div id="body">
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### JUnit: Intermediate
-
-</div>
+<span id="title">JUnit: Intermediate</span>
 
 <span id="prereqs"></span>
 

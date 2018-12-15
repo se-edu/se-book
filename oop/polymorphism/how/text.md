@@ -1,8 +1,4 @@
-<div id="title">
-
-#### How
-
-</div>
+<span id="title">How</span>
 
 <span id="prereqs"><panel src="../../../oop/inheritance/substitutability/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Paradigms → Object Oriented Programming → Inheritance → Substitutability%%" />
 <panel src="../../../oop/inheritance/dynamicAndStaticBinding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Paradigms → Object Oriented Programming → Inheritance → Dynamic and Static Binding%%" /></span>

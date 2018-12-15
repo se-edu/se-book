@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Make the Happy Path Prominent
-
-</div>
+<span id="title">Make the Happy Path Prominent</span>
 
 <span id="prereqs"></span>
 

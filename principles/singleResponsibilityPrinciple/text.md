@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Single Responsibility Principle
-
-</div>
+<span id="title">Single Responsibility Principle</span>
 
 <span id="prereqs"></span>
 

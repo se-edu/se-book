@@ -1,7 +1,4 @@
-<div id="title">
-
-# Project Planning
-</div>
+<span id="title">Project Planning</span>
 
 <div id="body">
 

@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can push to a remote repo</span>
 
-<div id="title">
-
-#### Push
-
-</div>
+<span id="title">Push</span>
 
 <div id="body">
 

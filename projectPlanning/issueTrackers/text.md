@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Issue Trackers
-
-</div>
+<span id="title">Issue Trackers</span>
 
 <span id="prereqs"></span>
 

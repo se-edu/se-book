@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Basic
-
-</div>
+<span id="title">Basic</span>
 
 <span id="prereqs"><panel src="../../../modeling/modelingBehaviors/sequenceDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Behaviors → Sequence Diagrams → Basic%%" />
 <panel src="../../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Structures → Class Diagrams → Basic%%" /></span>

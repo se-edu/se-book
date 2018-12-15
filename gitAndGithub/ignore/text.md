@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can set Git to ignore files</span>
 
-<div id="title">
-
-#### Ignore
-
-</div>
+<span id="title">Ignore</span>
 
 <div id="body">
 

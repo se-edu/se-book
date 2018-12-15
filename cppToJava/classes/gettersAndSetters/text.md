@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Getters and setters
-
-</div>
+<span id="title">Getters and setters</span>
 
 <span id="prereqs"></span>
 

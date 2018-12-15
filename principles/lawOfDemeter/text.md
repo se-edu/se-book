@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Law of Demeter
-
-</div>
+<span id="title">Law of Demeter</span>
 
 <span id="prereqs"></span>
 

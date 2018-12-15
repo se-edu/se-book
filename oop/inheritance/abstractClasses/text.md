@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Abstract Classes and Methods
-
-</div>
+<span id="title">Abstract Classes and Methods</span>
 
 <span id="prereqs"></span>
 

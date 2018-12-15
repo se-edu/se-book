@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Reference Frames
-
-</div>
+<span id="title">Reference Frames</span>
 
 <span id="prereqs"></span>
 

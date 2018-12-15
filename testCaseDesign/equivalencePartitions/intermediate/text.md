@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Intermediate
-
-</div>
+<span id="title">Intermediate</span>
 
 <span id="prereqs"></span>
 

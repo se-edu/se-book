@@ -1,7 +1,4 @@
-<div id="title">
-
-## Guideline: Follow a Standard
-</div>
+<span id="title">Guideline: Follow a Standard</span>
 
 <div id="body">
 

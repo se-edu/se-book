@@ -1,7 +1,4 @@
-<div id="title">
-
-## Test Coverage
-</div>
+<span id="title">Test Coverage</span>
 
 <div id="body">
 

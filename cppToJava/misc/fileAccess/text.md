@@ -1,8 +1,4 @@
-<div id="title">
-
-#### File Access
-
-</div>
+<span id="title">File Access</span>
 
 <span id="prereqs"></span>
 

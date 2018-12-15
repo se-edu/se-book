@@ -1,7 +1,4 @@
-<div id="title">
-
-### Guideline: Document Minimally, but Sufficiently
-</div>
+<span id="title">Guideline: Document Minimally, but Sufficiently</span>
 
 <div id="body">
 

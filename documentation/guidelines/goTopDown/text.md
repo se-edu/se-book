@@ -1,7 +1,4 @@
-<div id="title">
-
-### Guideline: Go Top-down, Not Bottom-up
-</div>
+<span id="title">Guideline: Go Top-down, Not Bottom-up</span>
 
 <div id="body">
 

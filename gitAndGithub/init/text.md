@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can create a local Git repo</span>
 
-<div id="title">
-
-#### Init
-
-</div>
+<span id="title">Init</span>
 
 <div id="body">
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Navigability
-
-</div>
+<span id="title">Navigability</span>
 
 <span id="prereqs"></span>
 

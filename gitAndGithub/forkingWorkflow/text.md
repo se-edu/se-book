@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can follow Forking Workflow</span>
 
-<div id="title">
-
-#### Forking Workflow
-
-</div>
+<span id="title">Forking Workflow</span>
 
 <div id="body">
 

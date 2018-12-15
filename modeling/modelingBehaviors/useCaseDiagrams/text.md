@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can explain use case diagrams</span>
 
-<div id="title">
-
-#### Use Case Diagrams
-
-</div>
+<span id="title">Use Case Diagrams</span>
 
 <div id="body">
 

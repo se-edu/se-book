@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Substitutability
-
-</div>
+<span id="title">Substitutability</span>
 
 <span id="prereqs"><panel src="../../../oop/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Paradigms → Object Oriented Programming → Inheritance → What%%" /></span>
 

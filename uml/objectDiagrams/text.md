@@ -1,7 +1,4 @@
-<div id="title">
-
-## Object Diagrams
-</div>
+<span id="title">Object Diagrams</span>
 
 <div id="body">
 

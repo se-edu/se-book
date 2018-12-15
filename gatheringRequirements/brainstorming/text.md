@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Brainstorming
-
-</div>
+<span id="title">Brainstorming</span>
 
 <span id="prereqs"></span>
 

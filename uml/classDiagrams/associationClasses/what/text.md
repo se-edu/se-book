@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Association Classes
-
-</div>
+<span id="title">Association Classes</span>
 
 <span id="prereqs"></span>
 

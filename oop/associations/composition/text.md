@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can explain the meaning of composition</span>
 
-<div id="title">
-
-#### Composition
-
-</div>
+<span id="title">Composition</span>
 
 <div id="body">
 

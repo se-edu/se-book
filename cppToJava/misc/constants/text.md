@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Constants
-
-</div>
+<span id="title">Constants</span>
 
 <span id="prereqs"></span>
 

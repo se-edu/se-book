@@ -1,7 +1,4 @@
-<div id="title">
-
-## Combining Test Inputs
-</div>
+<span id="title">Combining Test Inputs</span>
 
 <div id="body">
 

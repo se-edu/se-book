@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can use Java Collections</span>
 
-<div id="title">
-
-#### Collections
-
-</div>
+<span id="title">Collections</span>
 
 <div id="body">
 

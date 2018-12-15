@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can load a specific version of a Git repo</span>
 
-<div id="title">
-
-#### Checkout
-
-</div>
+<span id="title">Checkout</span>
 
 <div id="body">
 

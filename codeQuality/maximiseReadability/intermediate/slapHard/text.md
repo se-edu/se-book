@@ -1,8 +1,4 @@
-<div id="title">
-
-#### SLAP Hard
-
-</div>
+<span id="title">SLAP Hard</span>
 
 <span id="prereqs"></span>
 

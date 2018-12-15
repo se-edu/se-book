@@ -1,7 +1,4 @@
-<div id="title">
-
-## Logging
-</div>
+<span id="title">Logging</span>
 
 <div id="body">
 

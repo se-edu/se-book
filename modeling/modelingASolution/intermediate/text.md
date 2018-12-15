@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Intermediate
-
-</div>
+<span id="title">Intermediate</span>
 
 <span id="prereqs"><panel src="../../../modeling/modelingBehaviors/sequenceDiagramsIntermediate/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Behaviors → Sequence Diagrams → Intermediate%%" />
 <panel src="../../../modeling/modelingStructures/classDiagramsIntermediate/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Structures → Class Diagrams → Intermediate%%" /></span>

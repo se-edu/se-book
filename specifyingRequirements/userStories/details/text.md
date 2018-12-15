@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can write more detailed user stories</span>
 
-<div id="title">
-
-#### Details
-
-</div>
+<span id="title">Details</span>
 
 <div id="body">
 

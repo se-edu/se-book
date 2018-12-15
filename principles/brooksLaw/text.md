@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Brooks' Law
-
-</div>
+<span id="title">Brooks' Law</span>
 
 <span id="prereqs"></span>
 

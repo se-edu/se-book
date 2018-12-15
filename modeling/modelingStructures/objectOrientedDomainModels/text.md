@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Object Oriented Domain Models
-
-</div>
+<span id="title">Object Oriented Domain Models</span>
 
 <span id="prereqs"></span>
 

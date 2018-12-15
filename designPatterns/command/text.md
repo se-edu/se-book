@@ -1,7 +1,4 @@
-<div id="title">
-
-## Command Pattern
-</div>
+<span id="title">Command Pattern</span>
 
 <div id="body">
 

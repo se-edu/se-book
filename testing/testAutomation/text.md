@@ -1,7 +1,4 @@
-<div id="title">
-
-## Test Automation
-</div>
+<span id="title">Test Automation</span>
 
 <div id="body">
 

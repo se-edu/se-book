@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Why
-
-</div>
+<span id="title">Why</span>
 
 <span id="prereqs"></span>
 

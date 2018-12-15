@@ -1,7 +1,4 @@
-<div id="title">
-
-## Exceptions
-</div>
+<span id="title">Exceptions</span>
 
 <div id="body">
 

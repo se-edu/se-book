@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can explain branching</span>
 
-<div id="title">
-
-#### Branching
-
-</div>
+<span id="title">Branching</span>
 
 <div id="body">
 

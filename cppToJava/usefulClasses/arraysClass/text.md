@@ -1,8 +1,4 @@
-<div id="title">
-
-#### The `Arrays` class
-
-</div>
+<span id="title">The `Arrays` class</span>
 
 <span id="prereqs"></span>
 

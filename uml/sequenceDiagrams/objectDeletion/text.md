@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Object Deletion
-
-</div>
+<span id="title">Object Deletion</span>
 
 <span id="prereqs"></span>
 

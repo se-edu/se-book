@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Explain WHAT and WHY, not HOW
-
-</div>
+<span id="title">Explain WHAT and WHY, not HOW</span>
 
 <span id="prereqs"></span>
 

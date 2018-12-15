@@ -1,7 +1,4 @@
-<div id="title">
-
-## Objects
-</div>
+<span id="title">Objects</span>
 
 <div id="body">
 

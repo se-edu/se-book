@@ -1,8 +1,4 @@
-<div id="title">
-
-#### 'Late and One Time' vs 'Early and Frequent'
-
-</div>
+<span id="title">'Late and One Time' vs 'Early and Frequent'</span>
 
 <span id="prereqs"><panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Integration → Introduction → What%%" /></span>
 

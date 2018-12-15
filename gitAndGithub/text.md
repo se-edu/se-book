@@ -1,7 +1,4 @@
-<div id="title">
-
-# Git and Github
-</div>
+<span id="title">Git and Github</span>
 
 <div id="body">
 

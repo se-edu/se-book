@@ -1,7 +1,4 @@
-<div id="title">
-
-## Activity Diagrams
-</div>
+<span id="title">Activity Diagrams</span>
 
 <div id="body">
 

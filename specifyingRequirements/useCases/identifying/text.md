@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Identifying
-
-</div>
+<span id="title">Identifying</span>
 
 <span id="prereqs"></span>
 

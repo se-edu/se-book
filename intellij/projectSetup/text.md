@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can setup a project in an IDE</span>
 
-<div id="title">
-
-#### Project Setup
-
-</div>
+<span id="title">Project Setup</span>
 
 <div id="body">
 

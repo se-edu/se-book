@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Use Nouns for Things and Verbs for Actions
-
-</div>
+<span id="title">Use Nouns for Things and Verbs for Actions</span>
 
 <span id="prereqs"></span>
 

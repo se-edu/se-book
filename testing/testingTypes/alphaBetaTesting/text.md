@@ -1,7 +1,4 @@
-<div id="title">
-
-### Alpha and Beta Testing
-</div>
+<span id="title">Alpha and Beta Testing</span>
 
 <div id="body">
 

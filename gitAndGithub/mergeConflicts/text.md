@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Merge Conflicts
-
-</div>
+<span id="title">Merge Conflicts</span>
 
 <span id="prereqs"><panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Branching%%" /></span>
 

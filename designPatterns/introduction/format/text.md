@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Format
-
-</div>
+<span id="title">Format</span>
 
 <span id="prereqs"></span>
 

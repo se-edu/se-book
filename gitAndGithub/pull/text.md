@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can pull changes from a repo</span>
 
-<div id="title">
-
-#### Pull
-
-</div>
+<span id="title">Pull</span>
 
 <div id="body">
 

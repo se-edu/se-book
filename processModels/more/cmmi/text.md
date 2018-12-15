@@ -1,8 +1,4 @@
-<div id="title">
-
-#### CMMI
-
-</div>
+<span id="title">CMMI</span>
 
 <span id="prereqs"></span>
 

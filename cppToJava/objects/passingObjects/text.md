@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Passing Objects Around
-
-</div>
+<span id="title">Passing Objects Around</span>
 
 <span id="prereqs"></span>
 

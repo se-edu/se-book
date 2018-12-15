@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Class Diagrams (Basics)
-
-</div>
+<span id="title">Class Diagrams (Basics)</span>
 
 <span id="prereqs"><panel src="../../../oop/classes/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Design → OOP → Classes → Basic%%" /></span>
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Object vs Class Diagrams
-
-</div>
+<span id="title">Object vs Class Diagrams</span>
 
 <span id="prereqs"></span>
 

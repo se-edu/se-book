@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Top-Down and Bottom-Up Design
-
-</div>
+<span id="title">Top-Down and Bottom-Up Design</span>
 
 <span id="prereqs"><panel src="../../multilevelDesign/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Design Approaches → Multi-Level Design → What%%" /></span>
 

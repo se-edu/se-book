@@ -1,7 +1,4 @@
-<div id="title">
-
-## Frameworks
-</div>
+<span id="title">Frameworks</span>
 
 <div id="body">
 

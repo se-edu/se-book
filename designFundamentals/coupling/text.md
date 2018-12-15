@@ -1,7 +1,4 @@
-<div id="title">
-
-## Coupling
-</div>
+<span id="title">Coupling</span>
 
 <div id="body">
 

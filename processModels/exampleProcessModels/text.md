@@ -1,7 +1,4 @@
-<div id="title">
-
-## Example Process Models
-</div>
+<span id="title">Example Process Models</span>
 
 <div id="body">
 

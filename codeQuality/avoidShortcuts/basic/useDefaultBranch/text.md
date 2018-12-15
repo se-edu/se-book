@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Use the Default Branch
-
-</div>
+<span id="title">Use the Default Branch</span>
 
 <span id="prereqs"></span>
 

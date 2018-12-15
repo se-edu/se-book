@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Centralized Flow
-
-</div>
+<span id="title">Centralized Flow</span>
 
 <span id="prereqs"><panel src="../featureBranchFlow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Revision Control → Feature Branch Workflow%%" /></span>
 

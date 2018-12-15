@@ -1,7 +1,4 @@
-<div id="title">
-
-## Modeling Structures
-</div>
+<span id="title">Modeling Structures</span>
 
 <div id="body">
 

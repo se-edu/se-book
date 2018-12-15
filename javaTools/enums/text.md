@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Enums
-
-</div>
+<span id="title">Enums</span>
 
 <span id="prereqs"></span>
 

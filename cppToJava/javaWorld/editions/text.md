@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Java Editions
-
-</div>
+<span id="title">Java Editions</span>
 
 <span id="prereqs"></span>
 

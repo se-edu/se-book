@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can explain test automation tools</span>
 
-<div id="title">
-
-#### Test Automation Tools
-
-</div>
+<span id="title">Test Automation Tools</span>
 
 <div id="body">
 

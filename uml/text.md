@@ -1,7 +1,4 @@
-<div id="title">
-
-# UML
-</div>
+<span id="title">UML</span>
 
 <div id="body">
 

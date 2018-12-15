@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can use automated refactoring features of the IDE</span>
 
-<div id="title">
-
-#### Refactoring
-
-</div>
+<span id="title">Refactoring</span>
 
 <div id="body">
 

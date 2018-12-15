@@ -1,7 +1,4 @@
-<div id="title">
-
-## User Stories
-</div>
+<span id="title">User Stories</span>
 
 <div id="body">
 

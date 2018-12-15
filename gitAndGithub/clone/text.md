@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can clone a remote repo</span>
 
-<div id="title">
-
-#### Clone
-
-</div>
+<span id="title">Clone</span>
 
 <div id="body">
 

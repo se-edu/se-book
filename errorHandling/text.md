@@ -1,7 +1,4 @@
-<div id="title">
-
-# Error Handling
-</div>
+<span id="title">Error Handling</span>
 
 <div id="body">
 

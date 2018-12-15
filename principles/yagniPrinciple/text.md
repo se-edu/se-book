@@ -1,8 +1,4 @@
-<div id="title">
-
-#### YAGNI Principle
-
-</div>
+<span id="title">YAGNI Principle</span>
 
 <span id="prereqs"></span>
 

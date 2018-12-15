@@ -1,7 +1,4 @@
-<div id="title">
-
-## Generics
-</div>
+<span id="title">Generics</span>
 
 <div id="body">
 

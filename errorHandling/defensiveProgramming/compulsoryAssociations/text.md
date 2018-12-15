@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Enforcing Compulsory Associations
-
-</div>
+<span id="title">Enforcing Compulsory Associations</span>
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Error Handling → Defensive Programming → What%%" /></span>
 

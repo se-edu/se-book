@@ -1,7 +1,4 @@
-<div id="title">
-
-## Some Useful Classes
-</div>
+<span id="title">Some Useful Classes</span>
 
 <div id="body">
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Roles
-
-</div>
+<span id="title">Roles</span>
 
 <span id="prereqs"></span>
 

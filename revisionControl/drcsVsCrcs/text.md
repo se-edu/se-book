@@ -1,8 +1,4 @@
-<div id="title">
-
-#### DRCS vs CRCS
-
-</div>
+<span id="title">DRCS vs CRCS</span>
 
 <span id="prereqs"></span>
 

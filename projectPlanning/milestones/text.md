@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Milestones
-
-</div>
+<span id="title">Milestones</span>
 
 <span id="prereqs"></span>
 

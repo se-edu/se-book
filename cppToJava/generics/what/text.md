@@ -1,8 +1,4 @@
-<div id="title">
-
-#### What are Generics?
-
-</div>
+<span id="title">What are Generics?</span>
 
 <span id="prereqs"></span>
 

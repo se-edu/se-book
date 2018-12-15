@@ -1,7 +1,4 @@
-<div id="title">
-
-## Feature Lists
-</div>
+<span id="title">Feature Lists</span>
 
 <div id="body">
 

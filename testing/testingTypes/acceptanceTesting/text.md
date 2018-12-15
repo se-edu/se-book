@@ -1,7 +1,4 @@
-<div id="title">
-
-### Acceptance Testing
-</div>
+<span id="title">Acceptance Testing</span>
 
 <div id="body">
 

@@ -1,7 +1,4 @@
-<div id="title">
-
-## Platforms
-</div>
+<span id="title">Platforms</span>
 
 <div id="body">
 

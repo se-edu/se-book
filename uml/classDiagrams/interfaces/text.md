@@ -1,7 +1,4 @@
-<div id="title">
-
-### Interfaces
-</div>
+<span id="title">Interfaces</span>
 
 <div id="body">
 

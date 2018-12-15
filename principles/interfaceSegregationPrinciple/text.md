@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Interface Segregation Principle
-
-</div>
+<span id="title">Interface Segregation Principle</span>
 
 <span id="prereqs"></span>
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Notes
-
-</div>
+<span id="title">Notes</span>
 
 <span id="prereqs"></span>
 

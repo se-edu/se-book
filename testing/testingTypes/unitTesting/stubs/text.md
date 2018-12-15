@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Stubs
-
-</div>
+<span id="title">Stubs</span>
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Testing → Unit Testing → What →%%" /></span>
 

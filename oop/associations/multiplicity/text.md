@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Multiplicity
-
-</div>
+<span id="title">Multiplicity</span>
 
 <span id="prereqs"></span>
 

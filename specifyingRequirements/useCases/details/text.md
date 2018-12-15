@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Details
-
-</div>
+<span id="title">Details</span>
 
 <span id="prereqs"><panel src="../introduction/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Requirements → Specifying Requirements → Use Cases → Introduction%%" />
 <panel src="../identifying/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Requirements → Specifying Requirements → Use Cases → Identifying%%" /></span>

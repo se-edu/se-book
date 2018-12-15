@@ -1,8 +1,4 @@
-<div id="title">
-
-#### The `HashMap` Class
-
-</div>
+<span id="title">The `HashMap` Class</span>
 
 <span id="prereqs"></span>
 

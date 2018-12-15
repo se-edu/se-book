@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can interpret abstract classes in class diagrams</span>
 
-<div id="title">
-
-#### What
-
-</div>
+<span id="title">What</span>
 
 <div id="body">
 

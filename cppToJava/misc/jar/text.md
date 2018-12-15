@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Using JAR Files
-
-</div>
+<span id="title">Using JAR Files</span>
 
 <span id="prereqs"></span>
 

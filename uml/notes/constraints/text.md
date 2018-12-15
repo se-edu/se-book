@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Constraints
-
-</div>
+<span id="title">Constraints</span>
 
 <span id="prereqs"><panel src="../notes/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} UML → Notes%%" /></span>
 

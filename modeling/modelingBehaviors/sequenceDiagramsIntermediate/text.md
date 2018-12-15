@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Sequence Diagrams - Intermediate
-
-</div>
+<span id="title">Sequence Diagrams - Intermediate</span>
 
 <span id="prereqs"></span>
 

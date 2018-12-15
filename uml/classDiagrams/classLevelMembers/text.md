@@ -1,7 +1,4 @@
-<div id="title">
-
-### Class-Level Members
-</div>
+<span id="title">Class-Level Members</span>
 
 <div id="body">
 

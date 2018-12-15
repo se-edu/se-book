@@ -1,7 +1,4 @@
-<div id="title">
-
-## Review
-</div>
+<span id="title">Review</span>
 
 <div id="body">
 

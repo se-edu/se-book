@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can explain repositories</span>
 
-<div id="title">
-
-#### Repositories
-
-</div>
+<span id="title">Repositories</span>
 
 <div id="body">
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Branch
-
-</div>
+<span id="title">Branch</span>
 
 <span id="prereqs"><panel src="../../revisionControl/branching/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Branching%%" /></span>
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Garbage Collection
-
-</div>
+<span id="title">Garbage Collection</span>
 
 <span id="prereqs"></span>
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Methods
-
-</div>
+<span id="title">Methods</span>
 
 <span id="prereqs"></span>
 
