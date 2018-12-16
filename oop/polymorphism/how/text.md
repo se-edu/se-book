@@ -1,7 +1,7 @@
 <span id="title">How</span>
 
-<span id="prereqs"><panel src="../../../oop/inheritance/substitutability/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Paradigms → Object Oriented Programming → Inheritance → Substitutability%%" />
-<panel src="../../../oop/inheritance/dynamicAndStaticBinding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Paradigms → Object Oriented Programming → Inheritance → Dynamic and Static Binding%%" /></span>
+<span id="prereqs"><panel src="../../../oop/inheritance/substitutability/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Paradigms → Object Oriented Programming → Inheritance → Substitutability%%" popup-url="{{ baseUrl }}/oop/inheritance/substitutability" />
+<panel src="../../../oop/inheritance/dynamicAndStaticBinding/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Paradigms → Object Oriented Programming → Inheritance → Dynamic and Static Binding%%" popup-url="{{ baseUrl }}/oop/inheritance/dynamicAndStaticBinding" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain how substitutability operation overriding, and dynamic binding relates to polymorphism</span>
 

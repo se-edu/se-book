@@ -1,7 +1,7 @@
 <span id="title">Basic</span>
 
-<span id="prereqs"><panel src="../../../modeling/modelingBehaviors/sequenceDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Behaviors → Sequence Diagrams → Basic%%" />
-<panel src="../../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Structures → Class Diagrams → Basic%%" /></span>
+<span id="prereqs"><panel src="../../../modeling/modelingBehaviors/sequenceDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Behaviors → Sequence Diagrams → Basic%%" popup-url="{{ baseUrl }}/modeling/modelingBehaviors/sequenceDiagramsBasic" />
+<panel src="../../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Structures → Class Diagrams → Basic%%" popup-url="{{ baseUrl }}/modeling/modelingStructures/classDiagramsBasic" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can use simple class diagrams and sequence diagrams to model an OO solution</span>
 

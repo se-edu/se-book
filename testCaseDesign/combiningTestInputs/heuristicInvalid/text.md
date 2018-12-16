@@ -1,4 +1,4 @@
-<span id="prereqs"><panel src="../heuristicValid/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: Each Valid Input at Least Once in a Positive Test Case%%" /></span>
+<span id="prereqs"><panel src="../heuristicValid/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: Each Valid Input at Least Once in a Positive Test Case%%" popup-url="{{ baseUrl }}/testCaseDesign/combiningTestInputs/heuristicValid" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can apply heuristic ‘no more than one invalid input in a test case’</span>
 

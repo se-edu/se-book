@@ -1,6 +1,6 @@
 <span id="title">How</span>
 
-<span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Testing → Dependency Injection → What%%" /></span>
+<span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Testing → Dependency Injection → What%%" popup-url="{{ baseUrl }}/testing/dependencyInjection/what" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can use dependency injection</span>
 

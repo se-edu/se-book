@@ -1,6 +1,6 @@
 <span id="title">'Late and One Time' vs 'Early and Frequent'</span>
 
-<span id="prereqs"><panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Integration → Introduction → What%%" /></span>
+<span id="prereqs"><panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Integration → Introduction → What%%" popup-url="{{ baseUrl }}/integration/introduction/what" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain how integration approaches vary based on timing and frequency</span>
 

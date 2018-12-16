@@ -1,4 +1,4 @@
-<span id="prereqs"><panel src="../../revisionControl/repositories/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Repositories%%" /></span>
+<span id="prereqs"><panel src="../../revisionControl/repositories/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Repositories%%" popup-url="{{ baseUrl }}/revisionControl/repositories" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can create a local Git repo</span>
 

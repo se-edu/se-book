@@ -1,8 +1,8 @@
 <span id="title">Manage PRs</span>
 
-<span id="prereqs"><panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Branching%%" />
-<panel src="../createPRs/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Create PRs%%" />
-<panel src="../mergeConflicts/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Merge Conflicts%%" /></span>
+<span id="prereqs"><panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Branching%%" popup-url="{{ baseUrl }}/gitAndGithub/branch" />
+<panel src="../createPRs/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Create PRs%%" popup-url="{{ baseUrl }}/gitAndGithub/createPRs" />
+<panel src="../mergeConflicts/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Merge Conflicts%%" popup-url="{{ baseUrl }}/gitAndGithub/mergeConflicts" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can review and merge PRs on GitHub</span>
 

@@ -1,6 +1,6 @@
 <span id="title">Class Diagrams - Advanced</span>
 
-<span id="prereqs"><panel src="../classDiagramsIntermediate/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Class Diagrams (Intermediate)%%" /></span>
+<span id="prereqs"><panel src="../classDiagramsIntermediate/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Class Diagrams (Intermediate)%%" popup-url="{{ baseUrl }}/modeling/modelingStructures/classDiagramsIntermediate" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can use advanced class diagrams</span>
 

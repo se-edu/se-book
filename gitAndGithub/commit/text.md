@@ -1,4 +1,4 @@
-<span id="prereqs"><panel src="../init/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Git & GitHub → Init%%" /></span>
+<span id="prereqs"><panel src="../init/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Git & GitHub → Init%%" popup-url="{{ baseUrl }}/gitAndGithub/init" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can commit using Git</span>
 
