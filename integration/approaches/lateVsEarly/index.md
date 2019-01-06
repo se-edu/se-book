@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Integration: Approaches: 'Late and One Time' vs 'Early and Frequent'"
+title: "Integration: Approaches: Late-and-One-Time vs Early-and-Frequent"
 footer: footer.md
 </frontmatter>
 
