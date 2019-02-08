@@ -1,7 +1,4 @@
-<div id="title">
-
-### Class Inheritance
-</div>
+<span id="title">Class Inheritance</span>
 
 <div id="body">
 

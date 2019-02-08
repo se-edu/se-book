@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Casting
-
-</div>
+<span id="title">Casting</span>
 
 <span id="prereqs"></span>
 

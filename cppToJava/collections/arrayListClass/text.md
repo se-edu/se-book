@@ -1,8 +1,4 @@
-<div id="title">
-
-#### The `ArrayList` Class
-
-</div>
+<span id="title">The `ArrayList` Class</span>
 
 <span id="prereqs"></span>
 

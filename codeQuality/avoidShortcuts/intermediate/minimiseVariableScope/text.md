@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Minimise Scope of Variables
-
-</div>
+<span id="title">Minimise Scope of Variables</span>
 
 <span id="prereqs"></span>
 

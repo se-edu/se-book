@@ -1,7 +1,4 @@
-<div id="title">
-
-## Boundary Value Analysis
-</div>
+<span id="title">Boundary Value Analysis</span>
 
 <div id="body">
 

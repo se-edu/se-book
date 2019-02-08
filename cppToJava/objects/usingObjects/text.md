@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Using Java Objects
-
-</div>
+<span id="title">Using Java Objects</span>
 
 <span id="prereqs"></span>
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Self Invocation
-
-</div>
+<span id="title">Self Invocation</span>
 
 <span id="prereqs"></span>
 

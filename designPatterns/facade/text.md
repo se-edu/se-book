@@ -1,7 +1,4 @@
-<div id="title">
-
-## Facade Pattern
-</div>
+<span id="title">Facade Pattern</span>
 
 <div id="body">
 

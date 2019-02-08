@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Multiplicity
-
-</div>
+<span id="title">Multiplicity</span>
 
 <span id="prereqs"></span>
 
@@ -14,7 +10,7 @@
 
 <tip-box> 
 
-{{ icon_example }} The navigability of the association between `Course` objects and `Student` objects tells you how many `Course` objects can be associated with one `Student` object and vice versa. 
+{{ icon_example }} The multiplicity of the association between `Course` objects and `Student` objects tells you how many `Course` objects can be associated with one `Student` object and vice versa.
 
 </tip-box>
 

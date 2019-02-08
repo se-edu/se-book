@@ -1,7 +1,4 @@
-<div id="title">
-
-# Refactoring
-</div>
+<span id="title">Refactoring</span>
 
 <div id="body">
 

@@ -1,7 +1,4 @@
-<div id="title">
-
-### AsciiDoc
-</div>
+<span id="title">AsciiDoc</span>
 
 <div id="body">
 

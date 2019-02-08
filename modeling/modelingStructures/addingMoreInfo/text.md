@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Adding more info to UML Models
-
-</div>
+<span id="title">Adding more info to UML Models</span>
 
 <span id="prereqs"></span>
 

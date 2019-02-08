@@ -1,10 +1,6 @@
-<div id="title">
+<span id="title">Branch</span>
 
-#### Branch
-
-</div>
-
-<span id="prereqs"><panel src="../../revisionControl/branching/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Branching%%" /></span>
+<span id="prereqs"><panel src="../../revisionControl/branching/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Branching%%" popup-url="{{ baseUrl }}/revisionControl/branching" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can use Git branching</span>
 

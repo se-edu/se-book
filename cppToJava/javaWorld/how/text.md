@@ -1,8 +1,4 @@
-<div id="title">
-
-#### How Java Works
-
-</div>
+<span id="title">How Java Works</span>
 
 <span id="prereqs"></span>
 

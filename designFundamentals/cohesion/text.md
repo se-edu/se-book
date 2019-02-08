@@ -1,7 +1,4 @@
-<div id="title">
-
-## Cohesion
-</div>
+<span id="title">Cohesion</span>
 
 <div id="body">
 

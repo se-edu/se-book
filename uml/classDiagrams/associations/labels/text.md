@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Labels
-
-</div>
+<span id="title">Labels</span>
 
 <span id="prereqs"></span>
 

@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can combine test case design techniques</span>
 
-<div id="title">
-
-#### Exercises
-
-</div>
+<span id="title">Exercises</span>
 
 <div id="body">
 </div>

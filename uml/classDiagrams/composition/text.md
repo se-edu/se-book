@@ -1,7 +1,4 @@
-<div id="title">
-
-### Composition
-</div>
+<span id="title">Composition</span>
 
 <div id="body">
 

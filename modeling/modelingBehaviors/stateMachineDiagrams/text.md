@@ -1,8 +1,4 @@
-<div id="title">
-
-#### State Machine Diagrams
-
-</div>
+<span id="title">State Machine Diagrams</span>
 
 <span id="prereqs"></span>
 

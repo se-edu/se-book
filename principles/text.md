@@ -1,7 +1,4 @@
-<div id="title">
-
-# Principles
-</div>
+<span id="title">Principles</span>
 
 <div id="body">
 

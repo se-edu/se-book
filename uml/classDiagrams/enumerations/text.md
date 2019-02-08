@@ -1,7 +1,4 @@
-<div id="title">
-
-### Enumerations
-</div>
+<span id="title">Enumerations</span>
 
 <div id="body">
 

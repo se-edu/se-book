@@ -1,8 +1,4 @@
-<div id="title">
-
-#### User Surveys
-
-</div>
+<span id="title">User Surveys</span>
 
 <span id="prereqs"></span>
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Interfaces
-
-</div>
+<span id="title">Interfaces</span>
 
 <span id="prereqs"></span>
 

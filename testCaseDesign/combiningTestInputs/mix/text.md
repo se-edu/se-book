@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Mix
-
-</div>
+<span id="title">Mix</span>
 
 <span id="prereqs"></span>
 

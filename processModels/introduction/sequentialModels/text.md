@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Sequential Models
-
-</div>
+<span id="title">Sequential Models</span>
 
 <span id="prereqs"></span>
 

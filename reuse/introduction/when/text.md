@@ -1,8 +1,4 @@
-<div id="title">
-
-#### When
-
-</div>
+<span id="title">When</span>
 
 <span id="prereqs"></span>
 

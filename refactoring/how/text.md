@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can apply some basic refactoring</span>
 
-<div id="title">
-
-#### How
-
-</div>
+<span id="title">How</span>
 
 <div id="body">
 

@@ -1,7 +1,4 @@
-<div id="title">
-
-### Event-driven Architectural Style
-</div>
+<span id="title">Event-driven Architectural Style</span>
 
 <div id="body">
 

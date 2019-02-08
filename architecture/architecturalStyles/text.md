@@ -1,7 +1,4 @@
-<div id="title">
-
-## Architectural Styles
-</div>
+<span id="title">Architectural Styles</span>
 
 <div id="body">
 

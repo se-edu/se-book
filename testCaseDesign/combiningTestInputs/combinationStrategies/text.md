@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Test Input Combination Strategies
-
-</div>
+<span id="title">Test Input Combination Strategies</span>
 
 <span id="prereqs"></span>
 

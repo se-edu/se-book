@@ -1,7 +1,4 @@
-<div id="title">
-
-## Abstraction
-</div>
+<span id="title">Abstraction</span>
 
 <div id="body">
 

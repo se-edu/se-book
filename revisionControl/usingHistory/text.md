@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can explain using history</span>
 
-<div id="title">
-
-#### Using History
-
-</div>
+<span id="title">Using History</span>
 
 <div id="body">
 

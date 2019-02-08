@@ -1,7 +1,4 @@
-<div id="title">
-
-### System Testing
-</div>
+<span id="title">System Testing</span>
 
 <div id="body">
 

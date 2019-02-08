@@ -1,7 +1,4 @@
-<div id="title">
-
-## Assertions
-</div>
+<span id="title">Assertions</span>
 
 <div id="body">
 

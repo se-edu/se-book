@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Swimlanes
-
-</div>
+<span id="title">Swimlanes</span>
 
 <span id="prereqs"></span>
 

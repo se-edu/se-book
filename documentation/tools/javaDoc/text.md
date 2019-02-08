@@ -1,7 +1,4 @@
-<div id="title">
-
-### JavaDoc
-</div>
+<span id="title">JavaDoc</span>
 
 <div id="body">
 

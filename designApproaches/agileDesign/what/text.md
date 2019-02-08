@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Agile Design
-
-</div>
+<span id="title">Agile Design</span>
 
 <span id="prereqs"></span>
 

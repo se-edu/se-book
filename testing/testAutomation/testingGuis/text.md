@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Automated Testing of GUIs
-
-</div>
+<span id="title">Automated Testing of GUIs</span>
 
 <span id="prereqs"></span>
 

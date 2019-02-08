@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Activity Diagrams - Intermediate Notations
-
-</div>
+<span id="title">Activity Diagrams - Intermediate</span>
 
 <span id="prereqs"></span>
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### SOLID Principles
-
-</div>
+<span id="title">SOLID Principles</span>
 
 <span id="prereqs"></span>
 

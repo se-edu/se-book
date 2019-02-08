@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Scrum
-
-</div>
+<span id="title">Scrum</span>
 
 <span id="prereqs"></span>
 

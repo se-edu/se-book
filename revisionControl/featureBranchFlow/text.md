@@ -1,10 +1,6 @@
-<div id="title">
+<span id="title">Feature Branch Flow</span>
 
-#### Feature Branch Flow
-
-</div>
-
-<span id="prereqs"><panel src="../forkingWorkflow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Revision Control → Forking Workflow%%" /></span>
+<span id="prereqs"><panel src="../forkingWorkflow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Revision Control → Forking Workflow%%" popup-url="{{ baseUrl }}/revisionControl/forkingWorkflow" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain feature branch flow</span>
 

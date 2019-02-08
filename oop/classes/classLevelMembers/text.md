@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Class-Level Members
-
-</div>
+<span id="title">Class-Level Members</span>
 
 <span id="prereqs"></span>
 

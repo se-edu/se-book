@@ -1,7 +1,4 @@
-<div id="title">
-
-## Getting Started
-</div>
+<span id="title">Getting Started</span>
 
 <div id="body">
 

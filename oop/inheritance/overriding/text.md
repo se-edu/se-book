@@ -1,10 +1,6 @@
-<div id="title">
+<span id="title">Overriding</span>
 
-#### Overriding
-
-</div>
-
-<span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Inheritance → What%%" /></span>
+<span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Inheritance → What%%" popup-url="{{ baseUrl }}/oop/inheritance/what" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain method overriding</span>
 

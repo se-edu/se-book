@@ -1,7 +1,4 @@
-<div id="title">
-
-# Test Case Design
-</div>
+<span id="title">Test Case Design</span>
 
 <div id="body">
 

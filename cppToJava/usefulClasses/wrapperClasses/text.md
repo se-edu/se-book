@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Wrapper Classes for Primitive Types
-
-</div>
+<span id="title">Wrapper Classes for Primitive Types</span>
 
 <span id="prereqs"></span>
 

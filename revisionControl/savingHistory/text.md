@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can explain saving history</span>
 
-<div id="title">
-
-#### Saving History
-
-</div>
+<span id="title">Saving History</span>
 
 <div id="body">
 

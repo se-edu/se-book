@@ -1,10 +1,6 @@
-<div id="title">
+<span id="title">Enforcing Compulsory Associations</span>
 
-#### Enforcing Compulsory Associations
-
-</div>
-
-<span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Error Handling → Defensive Programming → What%%" /></span>
+<span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Error Handling → Defensive Programming → What%%" popup-url="{{ baseUrl }}/errorHandling/defensiveProgramming/what" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can use defensive coding to enforce compulsory associations</span>
 

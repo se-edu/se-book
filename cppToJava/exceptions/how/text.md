@@ -1,8 +1,4 @@
-<div id="title">
-
-#### How to Use Exceptions
-
-</div>
+<span id="title">How to Use Exceptions</span>
 
 <span id="prereqs"></span>
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### UML Models
-
-</div>
+<span id="title">UML Models</span>
 
 <span id="prereqs"></span>
 

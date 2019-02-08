@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Packages
-
-</div>
+<span id="title">Packages</span>
 
 <span id="prereqs"></span>
 

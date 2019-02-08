@@ -1,8 +1,4 @@
-<div id="title">
-
-#### The `String` Class
-
-</div>
+<span id="title">The `String` Class</span>
 
 <span id="prereqs"></span>
 

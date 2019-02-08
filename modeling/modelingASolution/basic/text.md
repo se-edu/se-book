@@ -1,11 +1,7 @@
-<div id="title">
+<span id="title">Basic</span>
 
-#### Basic
-
-</div>
-
-<span id="prereqs"><panel src="../../../modeling/modelingBehaviors/sequenceDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Behaviors → Sequence Diagrams → Basic%%" />
-<panel src="../../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Structures → Class Diagrams → Basic%%" /></span>
+<span id="prereqs"><panel src="../../../modeling/modelingBehaviors/sequenceDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Behaviors → Sequence Diagrams → Basic%%" popup-url="{{ baseUrl }}/modeling/modelingBehaviors/sequenceDiagramsBasic" />
+<panel src="../../../modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Modeling → Modeling Structures → Class Diagrams → Basic%%" popup-url="{{ baseUrl }}/modeling/modelingStructures/classDiagramsBasic" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can use simple class diagrams and sequence diagrams to model an OO solution</span>
 
@@ -75,7 +71,7 @@ Given below are the interactions between the player and the Text UI for the whol
 
 :bulb: Note that <tooltip content="using sequence diagramsn">a similar technique</tooltip> can be used when discovering/defining the architecture-level APIs.
 
-<div v-closeable alt="Tic-Tac-Toe Video"> 
+<div v-closeable alt="Tic-Tac-Toe Video" class="non-printable">
 
 {{ icon_video }} Defining the architecture-level APIs for a small Tic-Tac-Toe game:
 

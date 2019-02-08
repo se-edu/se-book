@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Activity Diagrams - Basic Notations
-
-</div>
+<span id="title">Activity Diagrams - Basic</span>
 
 <span id="prereqs"></span>
 

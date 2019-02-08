@@ -1,7 +1,4 @@
-<div id="title">
-
-## Summary
-</div>
+<span id="title">Summary</span>
 
 <div id="body">
 

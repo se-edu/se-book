@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Implementation
-
-</div>
+<span id="title">Implementation</span>
 
 <span id="prereqs"></span>
 

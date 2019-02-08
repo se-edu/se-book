@@ -2,9 +2,7 @@
 <div id="body">
 <div id="main">
 
-This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small `TaskManager` program that can store a list of tasks.
-* It is a <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program.
-* In this version, the task list is not saved to the disk %%i.e., the task list does not persist between multiple runs of the program%%
+In this first version of the TaskManager, the task list is not saved to the disk %%i.e., the task list does not persist between multiple runs of the program%%
 
 Here is an example output: {{ icon_output }}
 ```

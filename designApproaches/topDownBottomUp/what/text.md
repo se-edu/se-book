@@ -1,10 +1,6 @@
-<div id="title">
+<span id="title">Top-Down and Bottom-Up Design</span>
 
-#### Top-Down and Bottom-Up Design
-
-</div>
-
-<span id="prereqs"><panel src="../../multilevelDesign/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Design Approaches → Multi-Level Design → What%%" /></span>
+<span id="prereqs"><panel src="../../multilevelDesign/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Design Approaches → Multi-Level Design → What%%" popup-url="{{ baseUrl }}/designApproaches/multilevelDesign/what" /></span>
 
 
 <span id="outcomes">{{ icon_outcome }} Can explain top-down and bottom-up design</span>

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Open-Closed Principle
-
-</div>
+<span id="title">Open-Closed Principle</span>
 
 <span id="prereqs"></span>
 

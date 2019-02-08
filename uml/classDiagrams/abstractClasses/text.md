@@ -1,7 +1,4 @@
-<div id="title">
-
-### Abstract Classes
-</div>
+<span id="title">Abstract Classes</span>
 
 <div id="body">
 

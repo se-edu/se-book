@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Dependencies
-
-</div>
+<span id="title">Dependencies</span>
 
 <span id="prereqs"></span>
 

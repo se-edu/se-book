@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Buffers
-
-</div>
+<span id="title">Buffers</span>
 
 <span id="prereqs"></span>
 

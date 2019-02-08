@@ -1,8 +1,4 @@
-<div id="title">
-
-#### JUnit: Basic
-
-</div>
+<span id="title">JUnit: Basic</span>
 
 <span id="prereqs"></span>
 

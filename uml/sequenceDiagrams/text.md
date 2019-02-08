@@ -1,7 +1,4 @@
-<div id="title">
-
-## Sequence Diagrams
-</div>
+<span id="title">Sequence Diagrams</span>
 
 <div id="body">
 

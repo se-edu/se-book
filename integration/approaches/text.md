@@ -1,7 +1,4 @@
-<div id="title">
-
-## Approaches
-</div>
+<span id="title">Approaches</span>
 
 <div id="body">
 

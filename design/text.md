@@ -1,7 +1,4 @@
-<div id="title">
-
-# Software Design
-</div>
+<span id="title">Software Design</span>
 
 <div id="body">
 

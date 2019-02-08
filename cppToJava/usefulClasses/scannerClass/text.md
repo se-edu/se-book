@@ -1,8 +1,4 @@
-<div id="title">
-
-#### The `Scanner` class
-
-</div>
+<span id="title">The `Scanner` class</span>
 
 <span id="prereqs"></span>
 

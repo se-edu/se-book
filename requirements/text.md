@@ -1,7 +1,4 @@
-<div id="title">
-
-# Requirements
-</div>
+<span id="title">Requirements</span>
 
 <div id="body">
 

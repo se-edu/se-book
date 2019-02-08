@@ -1,7 +1,4 @@
-<div id="title">
-
-# C++ to Java
-</div>
+<span id="title">C++ to Java</span>
 
 <div id="body">
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Communication Diagrams
-
-</div>
+<span id="title">Communication Diagrams</span>
 
 <span id="prereqs"></span>
 

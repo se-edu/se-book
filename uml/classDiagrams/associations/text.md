@@ -1,7 +1,4 @@
-<div id="title">
-
-### Associations
-</div>
+<span id="title">Associations</span>
 
 <div id="body">
 

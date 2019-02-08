@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Aggregation
-
-</div>
+<span id="title">Aggregation</span>
 
 <span id="prereqs"></span>
 

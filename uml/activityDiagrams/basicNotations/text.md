@@ -1,7 +1,4 @@
-<div id="title">
-
-### Basic Notations
-</div>
+<span id="title">Basic Notations</span>
 
 <div id="body">
 

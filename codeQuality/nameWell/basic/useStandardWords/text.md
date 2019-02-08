@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Use Standard Words
-
-</div>
+<span id="title">Use Standard Words</span>
 
 <span id="prereqs"></span>
 

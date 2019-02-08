@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Test Automation Using Test Drivers
-
-</div>
+<span id="title">Test Automation Using Test Drivers</span>
 
 <span id="prereqs"></span>
 

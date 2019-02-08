@@ -6,7 +6,7 @@
 
 <div id="title">
 
-<include src="text.md#title" />
+# <include src="text.md#title" inline />
 
 </div>
 <div id="main">

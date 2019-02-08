@@ -1,7 +1,4 @@
-<div id="title">
-
-## Debugging
-</div>
+<span id="title">Debugging</span>
 
 <div id="body">
 

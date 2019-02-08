@@ -1,7 +1,4 @@
-<div id="title">
-
-# Teamwork
-</div>
+<span id="title">Teamwork</span>
 
 <div id="body">
 

@@ -1,7 +1,4 @@
-<div id="title">
-
-## Agile Design
-</div>
+<span id="title">Agile Design</span>
 
 <div id="body">
 

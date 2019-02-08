@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Acceptance vs System Testing
-
-</div>
+<span id="title">Acceptance vs System Testing</span>
 
 <span id="prereqs"></span>
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Big-Bang vs Incremental Integration
-
-</div>
+<span id="title">Big-Bang vs Incremental Integration</span>
 
 <span id="prereqs"></span>
 

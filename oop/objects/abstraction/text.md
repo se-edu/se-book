@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Objects as Abstractions
-
-</div>
+<span id="title">Objects as Abstractions</span>
 
 <span id="prereqs"></span>
 

@@ -1,7 +1,4 @@
-<div id="title">
-
-## Top-Down and Bottom-Up Design
-</div>
+<span id="title">Top-Down and Bottom-Up Design</span>
 
 <div id="body">
 

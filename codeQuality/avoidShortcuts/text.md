@@ -1,7 +1,4 @@
-<div id="title">
-
-## Guideline: Avoid Unsafe Shortcuts
-</div>
+<span id="title">Guideline: Avoid Unsafe Shortcuts</span>
 
 <div id="body">
 

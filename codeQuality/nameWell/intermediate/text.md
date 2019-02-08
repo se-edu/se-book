@@ -1,7 +1,4 @@
-<div id="title">
-
-### Intermediate
-</div>
+<span id="title">Intermediate</span>
 
 <div id="body">
 

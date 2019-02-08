@@ -1,10 +1,6 @@
-<div id="title">
+<span id="title">How</span>
 
-#### How
-
-</div>
-
-<span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Testing → Integration Testing → What →%%" /></span>
+<span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Testing → Integration Testing → What →%%" popup-url="{{ baseUrl }}/testing/testingTypes/integrationTesting/what" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can use integration testing</span>
 

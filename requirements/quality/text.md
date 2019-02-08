@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Quality of Requirements
-
-</div>
+<span id="title">Quality of Requirements</span>
 
 <span id="prereqs"></span>
 

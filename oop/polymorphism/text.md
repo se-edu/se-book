@@ -1,7 +1,4 @@
-<div id="title">
-
-## Polymorphism
-</div>
+<span id="title">Polymorphism</span>
 
 <div id="body">
 

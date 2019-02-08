@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Compliling a Program
-
-</div>
+<span id="title">Compliling a Program</span>
 
 <span id="prereqs"></span>
 

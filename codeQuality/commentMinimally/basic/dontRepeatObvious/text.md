@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Do Not Repeat the Obvious
-
-</div>
+<span id="title">Do Not Repeat the Obvious</span>
 
 <span id="prereqs"></span>
 

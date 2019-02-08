@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can identify service-oriented architectural style</span>
 
-<div id="title">
-
-#### What
-
-</div>
+<span id="title">What</span>
 
 <div id="body">
 

@@ -1,7 +1,4 @@
-<div id="title">
-
-### Guideline: Aim for Comprehensibility
-</div>
+<span id="title">Guideline: Aim for Comprehensibility</span>
 
 <div id="body">
 

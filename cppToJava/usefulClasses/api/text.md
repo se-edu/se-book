@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Java API
-
-</div>
+<span id="title">Java API</span>
 
 <span id="prereqs"></span>
 

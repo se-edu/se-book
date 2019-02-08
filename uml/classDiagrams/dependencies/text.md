@@ -1,7 +1,4 @@
-<div id="title">
-
-### Dependencies
-</div>
+<span id="title">Dependencies</span>
 
 <div id="body">
 

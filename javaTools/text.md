@@ -1,7 +1,4 @@
-<div id="title">
-
-# Java
-</div>
+<span id="title">Java</span>
 
 <div id="body">
 

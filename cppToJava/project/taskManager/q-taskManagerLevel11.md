@@ -10,7 +10,7 @@
 <panel type="seamless" src="../../project/taskManager/q-taskManagerLevel7.md#main" header="{{ icon_prereq }} TM-L7" minimized />
 <panel type="seamless" src="../../project/taskManager/q-taskManagerLevel8.md#main" header="{{ icon_prereq }} TM-L8" minimized />
 <panel type="seamless" src="../../project/taskManager/q-taskManagerLevel9.md#main" header="{{ icon_prereq }} TM-L9" minimized />
-<panel type="seamless" src="../../project/taskManager/q-taskManagerLevel10.md#main" header="{{ icon_prereq }} TM-L9" minimized />
+<panel type="seamless" src="../../project/taskManager/q-taskManagerLevel10.md#main" header="{{ icon_prereq }} TM-L10" minimized />
 
 %%This exercise continues from the `TaskManager Level 1-10` exercises quoted above.%%
 

@@ -1,7 +1,4 @@
-<div id="title">
-
-## Use Cases
-</div>
+<span id="title">Use Cases</span>
 
 <div id="body">
 

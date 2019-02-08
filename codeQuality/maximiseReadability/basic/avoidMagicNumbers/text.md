@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Avoid Magic Numbers
-
-</div>
+<span id="title">Avoid Magic Numbers</span>
 
 <span id="prereqs"></span>
 

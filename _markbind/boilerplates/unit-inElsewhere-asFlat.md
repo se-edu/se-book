@@ -2,7 +2,7 @@
 
 %%**<include src="../path.md" inline />**%%
 <div id="title-and-body">
-<include src="text.md#title" />
+<markdown>#### <include src="text.md#title" inline /></markdown>
 
 <div id="main">
 

@@ -1,7 +1,4 @@
-<div id="title">
-
-## Design-by-Contract Approach
-</div>
+<span id="title">Design-by-Contract Approach</span>
 
 <div id="body">
 
