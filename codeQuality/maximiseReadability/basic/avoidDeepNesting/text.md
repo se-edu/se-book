@@ -10,14 +10,21 @@
 
 In particular, avoid [_arrowhead_ style code](https://blog.codinghorror.com/flattening-arrow-code/).
 
-<tip-box>
-
-Example:
-
-<img src="{{baseUrl}}/codeQuality/maximiseReadability/basic/avoidDeepNesting/images/arrowheadStyle.png" height="250" />
+<img src="{{baseUrl}}/codeQuality/maximiseReadability/basic/avoidDeepNesting/images/arrowheadStyle.png" width="500" />
 <p/>
 
-</tip-box>
+<box>
+
+{{ icon_example }} A real code example:
+
+<div class="alt-java">
+  <include src="../../introduction/example-java.md" />
+</div>
+<div class="alt-python">
+  <include src="../../introduction/example-python.md" />
+</div>
+
+</box>
 
 </div>
 

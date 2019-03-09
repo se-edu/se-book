@@ -40,8 +40,8 @@ ArrayList<Person> students;
 
 {{good}}
 ```python
-student = Person('Jim')
-students = [Person('Jim'), Person('Alice')]
+name = 'Jim'
+names = ['Jim', 'Alice']
 ```
 </div>
 
