@@ -4,12 +4,13 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 1.21.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - C++ to Java: Miscellaneous Topics: Constants</title>
     <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css" >
+    <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="../../../markbind/css/github.min.css">
     <link rel="stylesheet" href="../../../markbind/css/markbind.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
@@ -26,7 +27,7 @@
     <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
       </li>
     </navbar>
   </div>
@@ -42,14 +43,20 @@
       <div>
         <link rel="stylesheet" href="/se-book/css/textbook.css">
         <div class="website-content">
-          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can read/write text files using Java</span></span></span></span></p>
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can read/write text files using Java</span>
+            </span>
+            </span>
+            </span>
+          </p>
           <p></p>
           <p></p>
           <div>
             <div></div>
             <p></p>
             <p><span class="dimmed"><strong><span>C++ to Java → Miscellaneous Topics →
-                  </span></strong></span></p>
+</span></strong>
+              </span>
+            </p>
             <div id="title-and-body">
               <div>
                 <h4 id="file-access"><span>File Access</span></h4>
@@ -58,7 +65,8 @@
                 <div>
                   <p><strong>You can use the <a href="https://docs.oracle.com/javase/9/docs/api/java/io/File.html"><code>java.io.File</code></a> class to represent a file object</strong>. It can be used to access properties of the file object.</p>
                   <box>
-                    <p><span class="fas fa-cube"></span> This code creates a <code>File</code> object to represent a file <code>fruits.txt</code> that exists in the <code>data</code> directory <mark>relative to the current working directory</mark> and uses that object to print some properties of the file.</p>
+                    <p><span class="fas fa-cube"></span> This code creates a <code>File</code> object to represent a file <code>fruits.txt</code> that exists in the <code>data</code> directory <mark>relative to the current working directory</mark> and uses
+                      that object to print some properties of the file.</p>
                     <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.io.File;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileClassDemo</span> </span>{
@@ -78,7 +86,9 @@ file exists?: true
 is Directory?: false
 </code></pre>
                   </box>
-                  <p><span class="fas fa-info-circle"></span> If you use backslash to specify the file path in a Windows Computer, you need to use an additional backslash as an escape character because the backslash by itself has a special meaning. e.g., use <span style="color:green"><span class="fas fa-check"></span></span><code>&quot;data\\fruits.txt&quot;</code>, not <span style="color:red"><span class="fas fa-times"></span></span> <code>&quot;data\fruits.txt&quot;</code>. Alternatively, you can use forward slash <span style="color:green"><span class="fas fa-check"></span></span> <code>&quot;data/fruits.txt&quot;</code> (even on Windows).</p>
+                  <p><span class="fas fa-info-circle"></span> If you use backslash to specify the file path in a Windows Computer, you need to use an additional backslash as an escape character because the backslash by itself has a special meaning. e.g.,
+                    use <span style="color:green"><span class="fas fa-check"></span></span><code>&quot;data\\fruits.txt&quot;</code>, not <span style="color:red"><span class="fas fa-times"></span></span> <code>&quot;data\fruits.txt&quot;</code>. Alternatively,
+                    you can use forward slash <span style="color:green"><span class="fas fa-check"></span></span> <code>&quot;data/fruits.txt&quot;</code> (even on Windows).</p>
                   <p><strong>You can read from a file using a <code>Scanner</code> object that uses a <code>File</code> object as the <em>source</em> of data.</strong></p>
                   <box>
                     <p><span class="fas fa-cube"></span> This code uses a <code>Scanner</code> object to read (and print) contents of a text file line-by-line:</p>
@@ -153,7 +163,7 @@ second line
 }
 </code></pre>
                   </box>
-                  <p><strong>The <a href="https://docs.oracle.com/javase/9/docs/api/java/nio/file/Files.html"><code>java.nio.file.Files</code></a> is a utility class provides several useful file operations.</strong> It relies on the <a href="https://docs.oracle.com/javase/9/docs/api/java/nio/file/Paths.html"><code>java.nio.file.Paths</code></a> file to generate <code>Path</code> objects that represent file paths.</p>
+                  <p><strong>The <a href="https://docs.oracle.com/javase/9/docs/api/java/nio/file/Files.html"><code>java.nio.file.Files</code></a> is a utility class provides several useful file operations.</strong> It relies on the <a href="https://docs.oracle.com/javase/9/docs/api/java/nio/file/Paths.html"><code>java.nio.file.Paths</code></a>                    file to generate <code>Path</code> objects that represent file paths.</p>
                   <box>
                     <p><span class="fas fa-cube"></span> This example uses the <code>Files</code> class to copy a file and delete a file.</p>
                     <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.io.IOException;
@@ -174,16 +184,17 @@ second line
                 </div>
                 <div>
                   <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="" class="algolia-no-index">
                       <div>
                         <div>
-                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 5 - **Store data in a file**">
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 5 - **Store data in a file**" class="algolia-no-index">
                             <div id="body">
                               <p>
-                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel1._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L1" minimized fragment="main"></panel>
-                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel2._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L2" minimized fragment="main"></panel>
-                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel3._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L3" minimized fragment="main"></panel>
-                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel4._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L4" minimized fragment="main"></panel>
+                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel1._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L1" minimized="" fragment="main"
+                                  class="algolia-no-index"></panel>
+                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel2._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L2" minimized="" fragment="main" class="algolia-no-index"></panel>
+                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel3._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L3" minimized="" fragment="main" class="algolia-no-index"></panel>
+                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel4._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L4" minimized="" fragment="main" class="algolia-no-index"></panel>
                               </p>
                               <p><span class="dimmed">This exercise continues from the <code>TaskManager Level 1-4</code> exercises quoted above.</span></p>
                               <div id="main">
@@ -202,7 +213,7 @@ T | 1 | join sports club
                                   <li>Load all tasks in the text file to the memory (i.e., convert to <code>Task</code> objects) at the start up of TaskManager. You can assume the data are in a predetermined file <span class="dimmed">e.g., <code>data/tasks.txt</code></span>.</li>
                                   <li>Save all tasks to the text file every time there is a change to the data. <span class="dimmed">Alternatively, you can introduce a new command to save tasks to the text file.</span></li>
                                 </ol>
-                                <panel type="seamless" header="Partial solution">
+                                <panel type="seamless" header="Partial solution" class="algolia-no-index">
                                   <p>Here's an example method for loading data from the text file. Use this method at the start of your main method to load the tasks from the text file.</p>
                                   <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> List&lt;Task&gt; <span class="hljs-title">getTasksFromFile</span><span class="hljs-params">()</span> </span>{
         List&lt;Task&gt; loadedTasks = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
@@ -240,7 +251,7 @@ T | 1 | join sports club
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
 </footer>
 </div>
 </body>

@@ -4,12 +4,13 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 1.21.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Testing: Testing Types: Integration Testing</title>
     <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css" >
+    <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="../../../markbind/css/github.min.css">
     <link rel="stylesheet" href="../../../markbind/css/markbind.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
@@ -26,7 +27,7 @@
     <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
       </li>
     </navbar>
   </div>
@@ -43,78 +44,86 @@
         <link rel="stylesheet" href="/se-book/css/textbook.css">
         <div class="website-content" id="all">
           <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Types →
-                </span></strong></span></p>
+</span></strong>
+            </span>
+          </p>
           <div id="title">
             <h1 id="integration-testing"><span>Integration Testing</span><a class="fa fa-anchor" href="#integration-testing"></a></h1>
           </div>
           <div id="main">
             <div>
               <div>
-                <panel type="seamless" expanded>
-                  <span slot="header" class="card-title">
-                    <div>
-                      <h4 id="what"><span>What</span></h4>
-                    </div>
-                  </span>
-                  <div class="indented">
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain integration testing</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p><strong><em>Integration testing</em> : testing whether different parts of the software <em>work together</em> (i.e. integrates) as expected.</strong> Integration tests aim to discover bugs in the 'glue code' related to how components interact with each other. These bugs are often the result of misunderstanding of what the parts are supposed to do vs what the parts are actually doing.</p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> Suppose a class <code>Car</code> users classes <code>Engine</code> and <code>Wheel</code>. If the <code>Car</code> class assumed a <code>Wheel</code> can support 200 mph speed but the actual <code>Wheel</code> can only support 150 mph, it is the integration test that is supposed to uncover this discrepancy.</p>
-                      </tip-box>
-                    </div>
-                    <div></div>
-                  </div>
-                </panel>
+                <panel type="seamless" expanded="">
+                  <span slot="header" class="card-title"><div><h4 id="what"><span>What</span></h4>
               </div>
-              <div>
-                <panel type="seamless" expanded>
-                  <span slot="header" class="card-title">
-                    <div>
-                      <h4 id="how"><span>How</span></h4>
-                    </div>
+              </span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain integration testing</span>
                   </span>
-                  <div class="indented">
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use integration testing</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p><strong>Integration testing is not simply a repetition of the unit test cases but run using the actual dependencies</strong> (instead of the stubs used in unit testing). Instead, integration tests are additional test cases that focus on the interactions between the parts.</p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> Suppose a class <code>Car</code> uses classes <code>Engine</code> and <code>Wheel</code>. Here is how you would go about doing pure integration tests:</p>
-                        <p>a) First, unit test <code>Engine</code> and <code>Wheel</code>.<br>
-                          b) Next, unit test <code>Car</code> in isolation of <code>Engine</code> and <code>Wheel</code>, <mark>using stubs for <code>Engine</code> and <code>Wheel</code></mark>.<br>
-                          c) After that, do an integration test for <code>Car</code> using it together with the <code>Engine</code> and <code>Wheel</code> classes to ensure the <code>Car</code> integrates properly with the <code>Engine</code> and the <code>Wheel</code>.</p>
-                      </tip-box>
-                      <p><strong>In practice, developers often use a hybrid of unit+integration tests to minimize the need for stubs.</strong></p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> Here's how a hybrid unit+integration approach could be applied to the same example used above:</p>
-                        <p>(a) First, unit test <code>Engine</code> and <code>Wheel</code>.<br>
-                          <s>(b) Next, unit test <code>Car</code> in isolation of <code>Engine</code> and <code>Wheel</code>, using stubs for <code>Engine</code> and <code>Wheel</code>.</s><br>
-                          (c) After that, do an integration test for <code>Car</code> using it together with the <code>Engine</code> and <code>Wheel</code> classes to ensure the <code>Car</code> integrates properly with the <code>Engine</code> and the <code>Wheel</code>. <mark>This step should include test cases that are meant to test the unit <code>Car</code></mark> (i.e. test cases used in the step (b) of the example above) as well as test cases that are meant to test the integration of <code>Car</code> with <code>Wheel</code> and <code>Engine</code> (i.e. pure integration test cases used of the step (c) in the example above).</p>
-                        <p>💡 Note that you no longer need stubs for <code>Engine</code> and <code>Wheel</code>. The downside is that <code>Car</code> is never tested in isolation of its dependencies. Given that its dependencies are already unit tested, the risk of bugs in <code>Engine</code> and <code>Wheel</code> affecting the testing of <code>Car</code> can be considered minimal.</p>
-                      </tip-box>
-                    </div>
-                    <div></div>
-                  </div>
-                </panel>
+                  </span>
+                  </span>
+                </p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <div>
+                  <p><strong><em>Integration testing</em> : testing whether different parts of the software <em>work together</em> (i.e. integrates) as expected.</strong> Integration tests aim to discover bugs in the 'glue code' related to how components
+                    interact with each other. These bugs are often the result of misunderstanding of what the parts are supposed to do vs what the parts are actually doing.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> Suppose a class <code>Car</code> users classes <code>Engine</code> and <code>Wheel</code>. If the <code>Car</code> class assumed a <code>Wheel</code> can support 200 mph speed but the actual <code>Wheel</code>                      can only support 150 mph, it is the integration test that is supposed to uncover this discrepancy.</p>
+                  </tip-box>
+                </div>
+                <div></div>
               </div>
+              </panel>
             </div>
+            <div>
+              <panel type="seamless" expanded="">
+                <span slot="header" class="card-title"><div><h4 id="how"><span>How</span></h4>
+            </div>
+            </span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use integration testing</span>
+                </span>
+                </span>
+                </span>
+              </p>
+              <p></p>
+              <p></p>
+              <p></p>
+              <div>
+                <p><strong>Integration testing is not simply a repetition of the unit test cases but run using the actual dependencies</strong> (instead of the stubs used in unit testing). Instead, integration tests are additional test cases that focus on
+                  the interactions between the parts.</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> Suppose a class <code>Car</code> uses classes <code>Engine</code> and <code>Wheel</code>. Here is how you would go about doing pure integration tests:</p>
+                  <p>a) First, unit test <code>Engine</code> and <code>Wheel</code>.<br> b) Next, unit test <code>Car</code> in isolation of <code>Engine</code> and <code>Wheel</code>, <mark>using stubs for <code>Engine</code> and <code>Wheel</code></mark>.<br>                    c) After that, do an integration test for <code>Car</code> using it together with the <code>Engine</code> and <code>Wheel</code> classes to ensure the <code>Car</code> integrates properly with the <code>Engine</code> and the <code>Wheel</code>.</p>
+                </tip-box>
+                <p><strong>In practice, developers often use a hybrid of unit+integration tests to minimize the need for stubs.</strong></p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> Here's how a hybrid unit+integration approach could be applied to the same example used above:</p>
+                  <p>(a) First, unit test <code>Engine</code> and <code>Wheel</code>.<br>
+                    <s>(b) Next, unit test <code>Car</code> in isolation of <code>Engine</code> and <code>Wheel</code>, using stubs for <code>Engine</code> and <code>Wheel</code>.</s><br> (c) After that, do an integration test for <code>Car</code> using
+                    it together with the <code>Engine</code> and <code>Wheel</code> classes to ensure the <code>Car</code> integrates properly with the <code>Engine</code> and the <code>Wheel</code>. <mark>This step should include test cases that are meant to test the unit <code>Car</code></mark>                    (i.e. test cases used in the step (b) of the example above) as well as test cases that are meant to test the integration of <code>Car</code> with <code>Wheel</code> and <code>Engine</code> (i.e. pure integration test cases used of
+                    the step (c) in the example above).</p>
+                  <p>💡 Note that you no longer need stubs for <code>Engine</code> and <code>Wheel</code>. The downside is that <code>Car</code> is never tested in isolation of its dependencies. Given that its dependencies are already unit tested, the risk
+                    of bugs in <code>Engine</code> and <code>Wheel</code> affecting the testing of <code>Car</code> can be considered minimal.</p>
+                </tip-box>
+              </div>
+              <div></div>
+            </div>
+            </panel>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+</div>
+</div>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
 </footer>
 </div>
 </body>

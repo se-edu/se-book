@@ -4,12 +4,13 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 1.21.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Git and Github: Branch</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css" >
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="../../markbind/css/github.min.css">
     <link rel="stylesheet" href="../../markbind/css/markbind.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
@@ -26,7 +27,7 @@
     <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
       </li>
     </navbar>
   </div>
@@ -42,18 +43,25 @@
       <div>
         <link rel="stylesheet" href="/se-book/css/textbook.css">
         <div class="website-content">
-          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use Git branching</span></span></span></span></p>
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use Git branching</span>
+            </span>
+            </span>
+            </span>
+          </p>
           <p></p>
           <p></p>
           <div>
             <div>
               <p>
-                <panel src="/se-book/revisionControl/branching/unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Project Management → Revision Control → Branching%%" popup-url="/se-book/revisionControl/branching"></panel>
+                <panel src="/se-book/revisionControl/branching/unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Project Management → Revision Control → Branching%%" popup-url="/se-book/revisionControl/branching"
+                  class="algolia-no-index"></panel>
               </p>
             </div>
             <p></p>
             <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
-                  </span></strong></span></p>
+</span></strong>
+              </span>
+            </p>
             <div id="title-and-body">
               <div>
                 <h4 id="branch"><span>Branch</span></h4>
@@ -69,7 +77,7 @@
                       </div>
                       <hr>
                     </tab>
-                    <tab header="CLI">
+                    <tab header="CLI" class="algolia-no-index">
                       <div>
                         <pre><code class="hljs">git status
 </code></pre>
@@ -93,7 +101,7 @@
                       </div>
                       <hr>
                     </tab>
-                    <tab header="CLI">
+                    <tab header="CLI" class="algolia-no-index">
                       <div>
                         <p>You can use the <code>branch</code> command to create a new branch and the <code>checkout</code> command to switch to a specific branch.</p>
                         <pre><code class="hljs">git branch feature1
@@ -117,7 +125,7 @@ git checkout feature1
                       </div>
                       <hr>
                     </tab>
-                    <tab header="CLI">
+                    <tab header="CLI" class="algolia-no-index">
                       <div>
                         <pre><code class="hljs">git checkout master
 </code></pre>
@@ -139,7 +147,7 @@ git checkout feature1
                       </div>
                       <hr>
                     </tab>
-                    <tab header="CLI">
+                    <tab header="CLI" class="algolia-no-index">
                       <div>
                         <pre><code class="hljs">git merge master
 </code></pre>
@@ -158,7 +166,7 @@ git checkout feature1
                       <p>Right-click on the <code>feature1</code> branch and choose <code>Merge...</code>.</p>
                       <hr>
                     </tab>
-                    <tab header="CLI">
+                    <tab header="CLI" class="algolia-no-index">
                       <pre><code class="hljs">git merge feature1
 </code></pre>
                       <hr>
@@ -167,13 +175,15 @@ git checkout feature1
                   <p><strong>10. Create a new branch called <code>add-countries</code>, switch to it, and add some commits to it</strong> <span class="dimmed">(similar to steps 1-2 above)</span>. You should have something like this now:</p>
                   <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80">
                   <p></p>
-                  <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to see something like the below,</p>
+                  <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to see
+                    something like the below,</p>
                   <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100">
                   <p></p>
                   <p>... you are likely to see something like this instead:</p>
                   <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80">
                   <p></p>
-                  <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided it is simpler to just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
+                  <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided it
+                    is simpler to just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
                   <p><strong>It is possible to force Git to create a merge commit even if fast forwarding is possible.</strong></p>
                   <tabs>
                     <tab header="SourceTree">
@@ -184,7 +194,7 @@ git checkout feature1
                       </div>
                       <hr>
                     </tab>
-                    <tab header="CLI">
+                    <tab header="CLI" class="algolia-no-index">
                       <div>
                         <p>Use the <code>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
                         <pre><code class="hljs">git merge --no-ff add-countries
@@ -206,7 +216,7 @@ git checkout feature1
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
 </footer>
 </div>
 </body>

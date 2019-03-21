@@ -4,12 +4,13 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 1.21.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Software Design Patterns: Abstraction Occurrence</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css" >
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="../../markbind/css/github.min.css">
     <link rel="stylesheet" href="../../markbind/css/markbind.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
@@ -26,7 +27,7 @@
     <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
       </li>
     </navbar>
   </div>
@@ -43,119 +44,129 @@
         <link rel="stylesheet" href="/se-book/css/textbook.css">
         <div class="website-content" id="all">
           <p><span class="dimmed"><strong><span>Design → Design Patterns →
-                </span></strong></span></p>
+</span></strong>
+            </span>
+          </p>
           <div id="title">
             <h1 id="abstraction-occurrence-pattern"><span>Abstraction Occurrence Pattern</span><a class="fa fa-anchor" href="#abstraction-occurrence-pattern"></a></h1>
           </div>
           <div id="main">
             <div>
               <div>
-                <panel type="seamless" expanded>
-                  <span slot="header" class="card-title">
-                    <div>
-                      <h4 id="what"><span>What</span></h4>
-                    </div>
+                <panel type="seamless" expanded="">
+                  <span slot="header" class="card-title"><div><h4 id="what"><span>What</span></h4>
+              </div>
+              </span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the Abstraction Occurrence design pattern</span>
                   </span>
-                  <div class="indented">
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the Abstraction Occurrence design pattern</span></span></span></span></p>
+                  </span>
+                  </span>
+                </p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <div>
+                  <p><strong>Context</strong></p>
+                  <p>There is a group of similar entities that appears to be ‘occurrences’ (or ‘copies’) of the same thing, sharing lots of common information, but also differing in significant ways.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> In a library, there can be multiple copies of same book title. Each copy shares common information such as book title, author, ISBN etc. However, there are also significant differences like purchase
+                      date and barcode number (assumed to be unique for each copy of the book).</p>
+                    <p>Other examples:</p>
+                    <ul>
+                      <li>Episodes of the same TV series</li>
+                      <li>Stock items of the same product model (e.g. TV sets of the same model).</li>
+                    </ul>
+                  </tip-box>
+                  <p><strong>Problem</strong></p>
+                  <p>Representing the objects mentioned previously as a single class would be problematic because it results in duplication of data which can lead to inconsistencies in data (if some of the duplicates are not updated consistently).</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial numbers.</p>
+                    <img src="/se-book/designPatterns/abstractionOccurrence/what/images/book.png" height="200">
                     <p></p>
+                    <p>The above solution requires common information to be duplicated by all instances. This will not only waste storage space, but also creates a consistency problem. Suppose that after creating several copies of the same title, the librarian
+                      realized that the author name was wrongly spelt. To correct this mistake, the system needs to go through every copy of the same title to make the correction. Also, if a new copy of the title is added later on, the librarian (or the
+                      system) has to make sure that all information entered is the same as the existing copies to avoid inconsistency.</p>
+                  </tip-box>
+                  <p><strong>Anti-pattern</strong></p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> Refer to the same Library example given above.</p>
+                    <img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookFriends.png" height="240">
                     <p></p>
+                    <p>The design above segregates the common and unique information into a class hierarchy. Each book title is represented by a separate class with common data (i.e. Name, Author, ISBN) hard-coded in the class itself. This solution is problematic
+                      because each book title is represented as a class, resulting in thousands of classes (one for each title). Every time the library buys new books, the source code of the system will have to be updated with new classes.</p>
+                  </tip-box>
+                  <p><strong>Solution</strong></p>
+                  <p>Let a copy of an entity (e.g. a copy of a book)be represented by two objects instead of one, separating the common and unique information into two classes to avoid duplication.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> Given below is how the pattern is applied to the Library example:</p>
+                    <img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookTitleBookCopy.png" height="260">
                     <p></p>
-                    <div>
-                      <p><strong>Context</strong></p>
-                      <p>There is a group of similar entities that appears to be ‘occurrences’ (or ‘copies’) of the same thing, sharing lots of common information, but also differing in significant ways.</p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> In a library, there can be multiple copies of same book title. Each copy shares common information such as book title, author, ISBN etc. However, there are also significant differences like purchase date and barcode number (assumed to be unique for each copy of the book).</p>
-                        <p>Other examples:</p>
-                        <ul>
-                          <li>Episodes of the same TV series</li>
-                          <li>Stock items of the same product model (e.g. TV sets of the same model).</li>
-                        </ul>
-                      </tip-box>
-                      <p><strong>Problem</strong></p>
-                      <p>Representing the objects mentioned previously as a single class would be problematic because it results in duplication of data which can lead to inconsistencies in data (if some of the duplicates are not updated consistently).</p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial numbers.</p>
-                        <img src="/se-book/designPatterns/abstractionOccurrence/what/images/book.png" height="200">
-                        <p></p>
-                        <p>The above solution requires common information to be duplicated by all instances. This will not only waste storage space, but also creates a consistency problem. Suppose that after creating several copies of the same title, the librarian realized that the author name was wrongly spelt. To correct this mistake, the system needs to go through every copy of the same title to make the correction. Also, if a new copy of the title is added later on, the librarian (or the system) has to make sure that all information entered is the same as the existing copies to avoid inconsistency.</p>
-                      </tip-box>
-                      <p><strong>Anti-pattern</strong></p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> Refer to the same Library example given above.</p>
-                        <img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookFriends.png" height="240">
-                        <p></p>
-                        <p>The design above segregates the common and unique information into a class hierarchy. Each book title is represented by a separate class with common data (i.e. Name, Author, ISBN) hard-coded in the class itself. This solution is problematic because each book title is represented as a class, resulting in thousands of classes (one for each title). Every time the library buys new books, the source code of the system will have to be updated with new classes.</p>
-                      </tip-box>
-                      <p><strong>Solution</strong></p>
-                      <p>Let a copy of an entity (e.g. a copy of a book)be represented by two objects instead of one, separating the common and unique information into two classes to avoid duplication.</p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> Given below is how the pattern is applied to the Library example:</p>
-                        <img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookTitleBookCopy.png" height="260">
-                        <p></p>
-                        <p><span class="fas fa-cube"></span> Here's a more generic example:</p>
-                        <img src="/se-book/designPatterns/abstractionOccurrence/what/images/beforeAfter.png" height="370">
-                        <p></p>
-                      </tip-box>
-                      <p>The general solution:</p>
-                      <img src="/se-book/designPatterns/abstractionOccurrence/what/images/abstractionOccurrence.png" height="40">
-                      <p></p>
-                      <p>The <code>&lt;&lt; Abstraction &gt;&gt;</code> class should hold all common information, and the unique information should be kept by the <code>&lt;&lt; Occurrence &gt;&gt;</code> class. Note that ‘Abstraction’ and ‘Occurrence’ are not class names, but roles played by each class. Think of this diagram as a <em>meta-model</em> (i.e. a ‘model of a model’) of the <code>BookTitle-BookCopy</code> class diagram given above.</p>
-                    </div>
-                    <div>
+                    <p><span class="fas fa-cube"></span> Here's a more generic example:</p>
+                    <img src="/se-book/designPatterns/abstractionOccurrence/what/images/beforeAfter.png" height="370">
+                    <p></p>
+                  </tip-box>
+                  <p>The general solution:</p>
+                  <img src="/se-book/designPatterns/abstractionOccurrence/what/images/abstractionOccurrence.png" height="40">
+                  <p></p>
+                  <p>The <code>&lt;&lt; Abstraction &gt;&gt;</code> class should hold all common information, and the unique information should be kept by the <code>&lt;&lt; Occurrence &gt;&gt;</code> class. Note that ‘Abstraction’ and ‘Occurrence’ are not
+                    class names, but roles played by each class. Think of this diagram as a <em>meta-model</em> (i.e. a ‘model of a model’) of the <code>BookTitle-BookCopy</code> class diagram given above.</p>
+                </div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="" class="algolia-no-index">
                       <div>
-                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which situations match the pattern?">
-                              <question has-input="true">
-                                <p>Which pairs of classes are likely to be the <code>&lt;&lt; Abstraction &gt;&gt;</code> and the <code>&lt;&lt; Occurrence &gt;&gt;</code> of the abstraction occurrence pattern?</p>
-                                <ol>
-                                  <li>CarModel, Car. (Here CarModel represents a particular model of a car produced by the car manufacturer. E.g. BMW R4300)</li>
-                                  <li>Car, Wheel</li>
-                                  <li>Club, Member</li>
-                                  <li>TeamLeader, TeamMember</li>
-                                  <li>Magazine (E.g. ReadersDigest, PCWorld), MagazineIssue</li>
-                                </ol>
-                                <div slot="answer">
-                                  <p>One of the key things to keep in mind is that the <code>&lt;&lt; Abstraction &gt;&gt;</code> does not represent a real entity. Rather, it represents some information common to a set of objects. A single real entity is represented by an object of <code>&lt;&lt; Abstraction &gt;&gt;</code> type and <code>&lt;&lt; Occurrence &gt;&gt;</code> type.</p>
-                                  <p>Before applying the pattern, some attributes have the same values for multiple objects. For example, w.r.t. the BookTitle-BookCopy example given in this handout, values of attributes such as <code>book_title</code>, <code>ISBN</code> are exactly the same for copies of the same book.</p>
-                                  <p>After applying the pattern, the <code>Abstraction</code> and the <code>Occurrence</code> classes together represent one entity. It is like one class has been split into two. For example, a <code>BookTitle</code> object and a <code>BookCopy</code> object combines to represent an actual <code>Book</code>.</p>
-                                  <ol>
-                                    <li>CarModel, Car: <strong>Yes</strong></li>
-                                    <li>Car, Wheel: <strong>No. Wheel is a ‘part of’ Car. A wheel is not an occurrence of Car.</strong></li>
-                                    <li>Club, Member: <strong>No. this is a ‘part of’ relationship.</strong></li>
-                                    <li>TeamLeader, TeamMember: <strong>No. A TeamMember is not an occurrence of a TeamLeader or vice versa.</strong></li>
-                                    <li>Magazine, MagazineIssue: <strong>Yes.</strong></li>
-                                  </ol>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Apply pattern?">
-                              <question>
-                                <p>Which one of these is most suited for an application of the Abstraction Occurrence pattern?</p>
-                                <ul radio-group="56836" class="radio-list">
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="56836" type="radio"> a. Stagings of a stage drama at various theatres</label></li>
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="56836" type="radio"> b. Teachers and their students</label></li>
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="56836" type="radio"> c. Modules and exams/assignments given by those modules</label></li>
-                                </ul>
-                                <div slot="answer">
-                                  <p>(a)</p>
-                                  <p>Explanation:</p>
-                                  <p>(a) Stagings of a drama are ‘occurrences’ of the drama. They have many attributes common (e.g., Drama name, producer, cast, etc.) but some attributes are different (e.g., venue, time).</p>
-                                  <p>(b) Students are not occurrences of a Teacher or vice versa</p>
-                                  <p>(c) Module, Exam, Assignment are distinct entities with associations among them. But none of them can be considered an occurrence of another.</p>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which situations match the pattern?" class="algolia-no-index">
+                          <question has-input="true">
+                            <p>Which pairs of classes are likely to be the <code>&lt;&lt; Abstraction &gt;&gt;</code> and the <code>&lt;&lt; Occurrence &gt;&gt;</code> of the abstraction occurrence pattern?</p>
+                            <ol>
+                              <li>CarModel, Car. (Here CarModel represents a particular model of a car produced by the car manufacturer. E.g. BMW R4300)</li>
+                              <li>Car, Wheel</li>
+                              <li>Club, Member</li>
+                              <li>TeamLeader, TeamMember</li>
+                              <li>Magazine (E.g. ReadersDigest, PCWorld), MagazineIssue</li>
+                            </ol>
+                            <div slot="answer">
+                              <p>One of the key things to keep in mind is that the <code>&lt;&lt; Abstraction &gt;&gt;</code> does not represent a real entity. Rather, it represents some information common to a set of objects. A single real entity is represented
+                                by an object of <code>&lt;&lt; Abstraction &gt;&gt;</code> type and <code>&lt;&lt; Occurrence &gt;&gt;</code> type.</p>
+                              <p>Before applying the pattern, some attributes have the same values for multiple objects. For example, w.r.t. the BookTitle-BookCopy example given in this handout, values of attributes such as <code>book_title</code>, <code>ISBN</code>                                are exactly the same for copies of the same book.</p>
+                              <p>After applying the pattern, the <code>Abstraction</code> and the <code>Occurrence</code> classes together represent one entity. It is like one class has been split into two. For example, a <code>BookTitle</code> object and
+                                a <code>BookCopy</code> object combines to represent an actual <code>Book</code>.</p>
+                              <ol>
+                                <li>CarModel, Car: <strong>Yes</strong></li>
+                                <li>Car, Wheel: <strong>No. Wheel is a ‘part of’ Car. A wheel is not an occurrence of Car.</strong></li>
+                                <li>Club, Member: <strong>No. this is a ‘part of’ relationship.</strong></li>
+                                <li>TeamLeader, TeamMember: <strong>No. A TeamMember is not an occurrence of a TeamLeader or vice versa.</strong></li>
+                                <li>Magazine, MagazineIssue: <strong>Yes.</strong></li>
+                              </ol>
+                            </div>
+                          </question>
                         </panel>
                       </div>
-                    </div>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Apply pattern?" class="algolia-no-index">
+                          <question>
+                            <p>Which one of these is most suited for an application of the Abstraction Occurrence pattern?</p>
+                            <ul radio-group="56836" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="56836" type="radio"> a. Stagings of a stage drama at various theatres</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="56836" type="radio"> b. Teachers and their students</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="56836" type="radio"> c. Modules and exams/assignments given by those modules</label></li>
+                            </ul>
+                            <div slot="answer">
+                              <p>(a)</p>
+                              <p>Explanation:</p>
+                              <p>(a) Stagings of a drama are ‘occurrences’ of the drama. They have many attributes common (e.g., Drama name, producer, cast, etc.) but some attributes are different (e.g., venue, time).</p>
+                              <p>(b) Students are not occurrences of a Teacher or vice versa</p>
+                              <p>(c) Module, Exam, Assignment are distinct entities with associations among them. But none of them can be considered an occurrence of another.</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                    </panel>
                   </div>
-                </panel>
+                </div>
               </div>
+              </panel>
             </div>
           </div>
         </div>
@@ -163,10 +174,11 @@
     </div>
   </div>
 </div>
+</div>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
 </footer>
 </div>
 </body>
