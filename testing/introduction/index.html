@@ -4,12 +4,13 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 1.21.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Testing: Introduction</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css" >
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="../../markbind/css/github.min.css">
     <link rel="stylesheet" href="../../markbind/css/markbind.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
@@ -26,7 +27,7 @@
     <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
       </li>
     </navbar>
   </div>
@@ -43,125 +44,133 @@
         <link rel="stylesheet" href="/se-book/css/textbook.css">
         <div class="website-content" id="all">
           <p><span class="dimmed"><strong><span>Quality Assurance → Testing →
-                </span></strong></span></p>
+</span></strong>
+            </span>
+          </p>
           <div id="title">
             <h1 id="introduction"><span>Introduction</span><a class="fa fa-anchor" href="#introduction"></a></h1>
           </div>
           <div id="main">
             <div>
               <div>
-                <panel type="seamless" expanded>
-                  <span slot="header" class="card-title">
-                    <div>
-                      <h4 id="what"><span>What</span></h4>
-                    </div>
+                <panel type="seamless" expanded="">
+                  <span slot="header" class="card-title"><div><h4 id="what"><span>What</span></h4>
+              </div>
+              </span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain testing</span>
                   </span>
-                  <div class="indented">
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain testing</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
+                  </span>
+                  </span>
+                </p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <div>
+                  <tip-box type="definition">
                     <div>
-                      <tip-box type="definition">
-                        <div>
-                          <p><strong>Testing</strong>: Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component. –- source: IEEE</p>
-                        </div>
-                      </tip-box>
-                      <img src="/se-book/testing/introduction/what/images/diagram.png" height="220">
-                      <p></p>
-                      <p><strong>When testing, we execute a set of <em>test cases</em>.</strong> A test case specifies how to perform a test. At a minimum, it specifies the input to the <em>software under test (SUT)</em> and the expected behavior.</p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> Example: A minimal test case for testing a browser:</p>
-                        <ul>
-                          <li><strong>Input</strong> – Start the browser using a blank page (vertical scrollbar disabled). Then, load <code>longfile.html</code> located in the <code>test data</code> folder.</li>
-                          <li><strong>Expected behavior</strong> – The scrollbar should be automatically enabled upon loading <code>longfile.html</code>.</li>
-                        </ul>
-                      </tip-box>
-                      <p><strong>Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.</strong></p>
-                      <panel header="%%Other details a test case can contain%%" type="seamless">
-                        <p>A more elaborate test case can have other details such as those given below.</p>
-                        <ul>
-                          <li>A unique identifier : <span class="dimmed">e.g. TC0034-a</span></li>
-                          <li>A descriptive name: <span class="dimmed">e.g. vertical scrollbar activation for long web pages</span></li>
-                          <li>Objectives: <span class="dimmed">e.g. to check whether the vertical scrollbar is correctly activated when a long web page is loaded to the browser</span></li>
-                          <li>Classification information: <span class="dimmed">e.g. priority - medium, category - UI features</span></li>
-                          <li>Cleanup, if any: <span class="dimmed">e.g. empty the browser cache.</span></li>
-                        </ul>
-                        <p></p>
-                      </panel>
-                      <p></p>
-                      <p>For each test case we do the following:</p>
-                      <ol>
-                        <li>Feed the input to the SUT</li>
-                        <li>Observe the actual output</li>
-                        <li>Compare actual output with the expected output</li>
-                      </ol>
-                      <p><strong>A test case <em>failure</em> is a mismatch between the expected behavior and the actual behavior. A failure is caused by a <em>defect</em> (or a bug).</strong></p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading <code>longfile.html</code>. The defect/bug causing that failure could be an uninitialized variable.</p>
-                      </tip-box>
-                      <panel header="%%A deeper look at the definition of testing%%" type="seamless">
-                        <p>Here is another definition of testing:</p>
-                        <blockquote>
-                          <p>Software testing consists of the <em>dynamic</em> verification that a program provides <em>expected</em> behaviors on a <em>finite</em> set of test cases, suitably <em>selected</em> from the usually infinite execution domain. <sub>-– source: <a href="https://www.computer.org/web/swebok/v3">Software Engineering Book of Knowledge V3</a></sub></p>
-                        </blockquote>
-                        <p>Some things to note (indicated by keywords in the above definition):</p>
-                        <ul>
-                          <li><em>Dynamic</em>: Testing involves executing the software. It is not by examining the code statically.</li>
-                          <li><em>Finite</em>: In most non-trivial cases there are potentially infinite test scenarios but resource constraints dictate that we can test only a finite number of scenarios.</li>
-                          <li><em>Selected</em>: In most cases it is not possible to test all scenarios. That means we need to select what scenarios to test.</li>
-                          <li><em>Expected</em>: Testing requires some knowledge of how the software is expected to behave.</li>
-                        </ul>
-                        <p></p>
-                      </panel>
-                      <p></p>
+                      <p><strong>Testing</strong>: Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component. –- source: IEEE</p>
                     </div>
-                    <div>
+                  </tip-box>
+                  <img src="/se-book/testing/introduction/what/images/diagram.png" height="220">
+                  <p></p>
+                  <p><strong>When testing, we execute a set of <em>test cases</em>.</strong> A test case specifies how to perform a test. At a minimum, it specifies the input to the <em>software under test (SUT)</em> and the expected behavior.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> Example: A minimal test case for testing a browser:</p>
+                    <ul>
+                      <li><strong>Input</strong> – Start the browser using a blank page (vertical scrollbar disabled). Then, load <code>longfile.html</code> located in the <code>test data</code> folder.</li>
+                      <li><strong>Expected behavior</strong> – The scrollbar should be automatically enabled upon loading <code>longfile.html</code>.</li>
+                    </ul>
+                  </tip-box>
+                  <p><strong>Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.</strong></p>
+                  <panel header="%%Other details a test case can contain%%" type="seamless" class="algolia-no-index">
+                    <p>A more elaborate test case can have other details such as those given below.</p>
+                    <ul>
+                      <li>A unique identifier : <span class="dimmed">e.g. TC0034-a</span></li>
+                      <li>A descriptive name: <span class="dimmed">e.g. vertical scrollbar activation for long web pages</span></li>
+                      <li>Objectives: <span class="dimmed">e.g. to check whether the vertical scrollbar is correctly activated when a long web page is loaded to the browser</span></li>
+                      <li>Classification information: <span class="dimmed">e.g. priority - medium, category - UI features</span></li>
+                      <li>Cleanup, if any: <span class="dimmed">e.g. empty the browser cache.</span></li>
+                    </ul>
+                    <p></p>
+                  </panel>
+                  <p></p>
+                  <p>For each test case we do the following:</p>
+                  <ol>
+                    <li>Feed the input to the SUT</li>
+                    <li>Observe the actual output</li>
+                    <li>Compare actual output with the expected output</li>
+                  </ol>
+                  <p><strong>A test case <em>failure</em> is a mismatch between the expected behavior and the actual behavior. A failure is caused by a <em>defect</em> (or a bug).</strong></p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading <code>longfile.html</code>. The defect/bug causing that failure could be an uninitialized
+                      variable.</p>
+                  </tip-box>
+                  <panel header="%%A deeper look at the definition of testing%%" type="seamless" class="algolia-no-index">
+                    <p>Here is another definition of testing:</p>
+                    <blockquote>
+                      <p>Software testing consists of the <em>dynamic</em> verification that a program provides <em>expected</em> behaviors on a <em>finite</em> set of test cases, suitably <em>selected</em> from the usually infinite execution domain. <sub>-– source: <a href="https://www.computer.org/web/swebok/v3">Software Engineering Book of Knowledge V3</a></sub></p>
+                    </blockquote>
+                    <p>Some things to note (indicated by keywords in the above definition):</p>
+                    <ul>
+                      <li><em>Dynamic</em>: Testing involves executing the software. It is not by examining the code statically.</li>
+                      <li><em>Finite</em>: In most non-trivial cases there are potentially infinite test scenarios but resource constraints dictate that we can test only a finite number of scenarios.</li>
+                      <li><em>Selected</em>: In most cases it is not possible to test all scenarios. That means we need to select what scenarios to test.</li>
+                      <li><em>Expected</em>: Testing requires some knowledge of how the software is expected to behave.</li>
+                    </ul>
+                    <p></p>
+                  </panel>
+                  <p></p>
+                </div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="" class="algolia-no-index">
                       <div>
-                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Relate testing, test cases, failure, and defect">
-                              <question has-input>
-                                <p>Explain how the concepts of <em>testing</em>, <em>test case</em>, <em>test failure</em>, and <em>defect</em> are related to each other.</p>
-                              </question>
-                            </panel>
-                          </div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Relate testing, test cases, failure, and defect" class="algolia-no-index">
+                          <question has-input="">
+                            <p>Explain how the concepts of <em>testing</em>, <em>test case</em>, <em>test failure</em>, and <em>defect</em> are related to each other.</p>
+                          </question>
                         </panel>
                       </div>
-                    </div>
+                    </panel>
                   </div>
-                </panel>
+                </div>
               </div>
-              <div>
-                <panel type="seamless" expanded>
-                  <span slot="header" class="card-title">
-                    <div>
-                      <h4 id="testability"><span>Testability</span></h4>
-                    </div>
-                  </span>
-                  <div class="indented">
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain testability</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p><strong><em>Testability</em> is an indication of how easy it is to test an SUT.</strong> As testability depends a lot on the design and implementation. You should try to increase the testability when you design and implement a software. The higher the testability, the easier it is to achieve a better quality software.</p>
-                    </div>
-                    <div></div>
-                  </div>
-                </panel>
-              </div>
+              </panel>
             </div>
+            <div>
+              <panel type="seamless" expanded="">
+                <span slot="header" class="card-title"><div><h4 id="testability"><span>Testability</span></h4>
+            </div>
+            </span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain testability</span>
+                </span>
+                </span>
+                </span>
+              </p>
+              <p></p>
+              <p></p>
+              <p></p>
+              <div>
+                <p><strong><em>Testability</em> is an indication of how easy it is to test an SUT.</strong> As testability depends a lot on the design and implementation. You should try to increase the testability when you design and implement a software.
+                  The higher the testability, the easier it is to achieve a better quality software.</p>
+              </div>
+              <div></div>
+            </div>
+            </panel>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+</div>
+</div>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
 </footer>
 </div>
 </body>

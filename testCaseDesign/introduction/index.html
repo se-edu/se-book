@@ -4,12 +4,13 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 1.21.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Test Case Design: Introduction</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css" >
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="../../markbind/css/github.min.css">
     <link rel="stylesheet" href="../../markbind/css/markbind.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
@@ -26,7 +27,7 @@
     <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
       </li>
     </navbar>
   </div>
@@ -43,227 +44,242 @@
         <link rel="stylesheet" href="/se-book/css/textbook.css">
         <div class="website-content" id="all">
           <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design →
-                </span></strong></span></p>
+</span></strong>
+            </span>
+          </p>
           <div id="title">
             <h1 id="introduction"><span>Introduction</span><a class="fa fa-anchor" href="#introduction"></a></h1>
           </div>
           <div id="main">
             <div>
               <div>
-                <panel type="seamless" expanded>
-                  <span slot="header" class="card-title">
-                    <div>
-                      <h4 id="what"><span>What</span></h4>
-                    </div>
+                <panel type="seamless" expanded="">
+                  <span slot="header" class="card-title"><div><h4 id="what"><span>What</span></h4>
+              </div>
+              </span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the need for deliberate test case design</span>
                   </span>
-                  <div class="indented">
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the need for deliberate test case design</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p><strong>Except for trivial <tooltip content="Software Under Test">SUTs</tooltip>, <tooltip content="testing all possible cases">exhaustive testing</tooltip> is not practical</strong> because such testing often requires a massive/infinite number of test cases.</p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> Consider the test cases for adding a string object to a <tooltip content="Java: `ArrayList`,<br>Python: `list`">collection</tooltip>:</p>
-                        <ul>
-                          <li>Add an item to an empty collection.</li>
-                          <li>Add an item when there is one item in the collection.</li>
-                          <li>Add an item when there are 2, 3, .... n items in the collection.</li>
-                          <li>Add an item that has an English, a French, a Spanish, ... word.</li>
-                          <li>Add an item that is the same as an existing item.</li>
-                          <li>Add an item immediately after adding another item.</li>
-                          <li>Add an item immediately after system startup.</li>
-                          <li>...</li>
-                        </ul>
-                        <p>Exhaustive testing of this operation can take many more test cases.</p>
-                      </tip-box>
-                      <blockquote>
-                        <p>Program testing can be used to show the presence of bugs, but never to show their absence!<br>
-                          <sub>--Edsger Dijkstra</sub></p>
-                      </blockquote>
-                      <div id="e-and-e">
-                        <p><strong>Every test case adds to the cost of testing.</strong> In some systems, a single test case can cost thousands of dollars <span class="dimmed"> e.g. on-field testing of flight-control software</span>. Therefore, <strong>test cases need to be designed to make the best use of testing resources.</strong> In particular:</p>
-                        <ul>
-                          <li>
-                            <p><strong>Testing should be <em>effective</em></strong> i.e., it finds a high percentage of existing bugs <span class="dimmed">e.g., a set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system</span>.</p>
-                          </li>
-                          <li>
-                            <p><strong>Testing should be <em>efficient</em></strong> i.e., it has a high rate of success (bugs found/test cases) <span class="dimmed">a set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects</span>.</p>
-                          </li>
-                        </ul>
-                        <p><strong>For testing to be <tooltip content="Efficient and Effective">E&amp;E</tooltip>, each new test we add should be targeting a potential fault that is not already targeted by existing test cases.</strong> There are test case design techniques that can help us improve E&amp;E of testing.</p>
-                      </div>
-                    </div>
-                    <div>
+                  </span>
+                  </span>
+                </p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <div>
+                  <p><strong>Except for trivial <tooltip content="Software Under Test" class="algolia-no-index">SUTs</tooltip>, <tooltip content="testing all possible cases" class="algolia-no-index">exhaustive testing</tooltip> is not practical</strong>                    because such testing often requires a massive/infinite number of test cases.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> Consider the test cases for adding a string object to a
+                      <tooltip content="Java: `ArrayList`,<br>Python: `list`" class="algolia-no-index">collection</tooltip>:</p>
+                    <ul>
+                      <li>Add an item to an empty collection.</li>
+                      <li>Add an item when there is one item in the collection.</li>
+                      <li>Add an item when there are 2, 3, .... n items in the collection.</li>
+                      <li>Add an item that has an English, a French, a Spanish, ... word.</li>
+                      <li>Add an item that is the same as an existing item.</li>
+                      <li>Add an item immediately after adding another item.</li>
+                      <li>Add an item immediately after system startup.</li>
+                      <li>...</li>
+                    </ul>
+                    <p>Exhaustive testing of this operation can take many more test cases.</p>
+                  </tip-box>
+                  <blockquote>
+                    <p>Program testing can be used to show the presence of bugs, but never to show their absence!<br>
+                      <sub>--Edsger Dijkstra</sub></p>
+                  </blockquote>
+                  <div id="e-and-e">
+                    <p><strong>Every test case adds to the cost of testing.</strong> In some systems, a single test case can cost thousands of dollars <span class="dimmed"> e.g. on-field testing of flight-control software</span>. Therefore, <strong>test cases need to be designed to make the best use of testing resources.</strong>                      In particular:</p>
+                    <ul>
+                      <li>
+                        <p><strong>Testing should be <em>effective</em></strong> i.e., it finds a high percentage of existing bugs <span class="dimmed">e.g., a set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system</span>.</p>
+                      </li>
+                      <li>
+                        <p><strong>Testing should be <em>efficient</em></strong> i.e., it has a high rate of success (bugs found/test cases) <span class="dimmed">a set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects</span>.</p>
+                      </li>
+                    </ul>
+                    <p><strong>For testing to be <tooltip content="Efficient and Effective" class="algolia-no-index">E&amp;E</tooltip>, each new test we add should be targeting a potential fault that is not already targeted by existing test cases.</strong>                      There are test case design techniques that can help us improve E&amp;E of testing.</p>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="" class="algolia-no-index">
                       <div>
-                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Test cases for `TriangleDetector`">
-                              <question has-input="true">
-                                <p>Given below is the sample output from a text-based program <code>TriangleDetector</code> ithat determines whether the three input numbers make up the three sides of a valid triangle. List test cases you would use to test this software. Two sample test cases are given below.</p>
-                                <pre><code class="hljs">C:\&gt; java TriangleDetector
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Test cases for `TriangleDetector`" class="algolia-no-index">
+                          <question has-input="true">
+                            <p>Given below is the sample output from a text-based program <code>TriangleDetector</code> ithat determines whether the three input numbers make up the three sides of a valid triangle. List test cases you would use to test this
+                              software. Two sample test cases are given below.</p>
+                            <pre><code class="hljs">C:\&gt; java TriangleDetector
 Enter side 1: 34
 Enter side 2: 34
 Enter side 3: 32
 Can this be a triangle?:  Yes
 Enter side 1:
 </code></pre>
-                                <p>Sample test cases,</p>
-                                <pre><code class="hljs">34,34,34: Yes
+                            <p>Sample test cases,</p>
+                            <pre><code class="hljs">34,34,34: Yes
 0, any valid, any valid: No
 </code></pre>
-                                <div slot="answer">
-                                  <p>In addition to obvious test cases such as</p>
-                                  <ul>
-                                    <li>sum of two sides == third,</li>
-                                    <li>sum of two sides &lt; third ...</li>
-                                  </ul>
-                                  <p>We may also devise some interesting test cases such as the ones depicted below.</p>
-                                  <p>Note that their applicability depends on the context in which the software is operating.</p>
-                                  <ul>
-                                    <li>Non-integer number, negative numbers, <code>0</code>, numbers formatted differently (e.g. <code>13F</code>), very large numbers (e.g. <code>MAX_INT</code>), numbers with many decimal places, empty string, ...</li>
-                                    <li>Check many triangles one after the other (will the system run out of memory?)</li>
-                                    <li><kbd>Backspace</kbd>, <kbd>tab</kbd>, <kbd>CTRL+C</kbd> , …</li>
-                                    <li>Introduce a long delay between entering data (will the program be affected by, say the screensaver?), minimize and restore window during the operation, hibernate the system in the middle of a calculation, start with invalid inputs (the system may perform error handling differently for the very first test case), …</li>
-                                    <li>Test on different locale.</li>
-                                  </ul>
-                                  <p>The main point to note is how difficult it is to test exhaustively, even on a trivial system.</p>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Exhaustive testing in Minesweeper">
-                              <question has-input="true">
-                                <p>Explain the why exhaustive testing is not practical using the example of testing <code>newGame()</code> operation in the <code>Logic</code> class of a Minesweeper game.</p>
-                                <div slot="answer">
-                                  <p>Consider this sequence of test cases:</p>
-                                  <ul>
-                                    <li>Test case 1. Start Minesweeper. Activate <code>newGame()</code> and see if it works.</li>
-                                    <li>Test case 2. Start Minesweeper. Activate <code>newGame()</code>. Activate <code>newGame()</code> again and see if it works.</li>
-                                    <li>Test case 3. Start Minesweeper. Activate <code>newGame()</code> three times consecutively and see if it works.</li>
-                                    <li>…</li>
-                                    <li>Test case 267. Start Minesweeper. Activate <code>newGame()</code> 267 times consecutively and see if it works.</li>
-                                  </ul>
-                                  <p>Well, you get the idea. Exhaustive testing of <code>newGame()</code> is not practical.</p>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about E&E of testing">
-                              <question>
-                                <p>Improving efficiency and effectiveness of test case design can,</p>
-                                <ul class="task-list">
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. improve the quality of the SUT.</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. save money.</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. save time spent on test execution.</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. save effort on writing and maintaining tests.</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. minimize redundant test cases.</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. forces us to understand the SUT better.</li>
-                                </ul>
-                                <div slot="answer">
-                                  <p>(a)(b)(c)(d)(e)(f)</p>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
+                            <div slot="answer">
+                              <p>In addition to obvious test cases such as</p>
+                              <ul>
+                                <li>sum of two sides == third,</li>
+                                <li>sum of two sides &lt; third ...</li>
+                              </ul>
+                              <p>We may also devise some interesting test cases such as the ones depicted below.</p>
+                              <p>Note that their applicability depends on the context in which the software is operating.</p>
+                              <ul>
+                                <li>Non-integer number, negative numbers, <code>0</code>, numbers formatted differently (e.g. <code>13F</code>), very large numbers (e.g. <code>MAX_INT</code>), numbers with many decimal places, empty string, ...</li>
+                                <li>Check many triangles one after the other (will the system run out of memory?)</li>
+                                <li><kbd>Backspace</kbd>, <kbd>tab</kbd>, <kbd>CTRL+C</kbd> , …</li>
+                                <li>Introduce a long delay between entering data (will the program be affected by, say the screensaver?), minimize and restore window during the operation, hibernate the system in the middle of a calculation, start with invalid
+                                  inputs (the system may perform error handling differently for the very first test case), …</li>
+                                <li>Test on different locale.</li>
+                              </ul>
+                              <p>The main point to note is how difficult it is to test exhaustively, even on a trivial system.</p>
+                            </div>
+                          </question>
                         </panel>
                       </div>
-                    </div>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Exhaustive testing in Minesweeper" class="algolia-no-index">
+                          <question has-input="true">
+                            <p>Explain the why exhaustive testing is not practical using the example of testing <code>newGame()</code> operation in the <code>Logic</code> class of a Minesweeper game.</p>
+                            <div slot="answer">
+                              <p>Consider this sequence of test cases:</p>
+                              <ul>
+                                <li>Test case 1. Start Minesweeper. Activate <code>newGame()</code> and see if it works.</li>
+                                <li>Test case 2. Start Minesweeper. Activate <code>newGame()</code>. Activate <code>newGame()</code> again and see if it works.</li>
+                                <li>Test case 3. Start Minesweeper. Activate <code>newGame()</code> three times consecutively and see if it works.</li>
+                                <li>…</li>
+                                <li>Test case 267. Start Minesweeper. Activate <code>newGame()</code> 267 times consecutively and see if it works.</li>
+                              </ul>
+                              <p>Well, you get the idea. Exhaustive testing of <code>newGame()</code> is not practical.</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about E&E of testing" class="algolia-no-index">
+                          <question>
+                            <p>Improving efficiency and effectiveness of test case design can,</p>
+                            <ul class="task-list">
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. improve the quality of the SUT.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. save money.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. save time spent on test execution.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. save effort on writing and maintaining tests.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. minimize redundant test cases.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. forces us to understand the SUT better.</li>
+                            </ul>
+                            <div slot="answer">
+                              <p>(a)(b)(c)(d)(e)(f)</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                    </panel>
                   </div>
-                </panel>
+                </div>
               </div>
-              <div>
-                <panel type="seamless" expanded>
-                  <span slot="header" class="card-title">
-                    <div>
-                      <h4 id="positive-vs-negative-test-cases"><span>Positive vs Negative Test Cases</span></h4>
-                    </div>
-                  </span>
-                  <div class="indented">
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain positive and negative test cases</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p><strong>A <em>positive test case</em> is when the test is designed to produce an expected/valid behavior. A negative test case is designed to produce a behavior that indicates an invalid/unexpected situation, such as an error message.</strong></p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> Consider testing of the method <code>print(Integer i)</code> which prints the value of <code>i</code>.</p>
-                        <ul>
-                          <li>A positive test case: <code>i == new Integer(50)</code></li>
-                          <li>A negative test case: <code>i == null;</code></li>
-                        </ul>
-                      </tip-box>
-                    </div>
-                    <div></div>
-                  </div>
-                </panel>
-              </div>
-              <div>
-                <panel type="seamless" expanded>
-                  <span slot="header" class="card-title">
-                    <div>
-                      <h4 id="black-box-vs-glass-box"><span>Black Box vs Glass Box</span></h4>
-                    </div>
-                  </span>
-                  <div class="indented">
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain black box and glass box test case design</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p><strong>Test case design can be of three types, based on how much of SUT internal details are considered when designing test cases:</strong></p>
-                      <ul>
-                        <li>
-                          <p><strong><em>Black-box</em> (aka <em>specification-based or responsibility-based</em>) approach</strong>: test cases are designed exclusively based on the SUT’s specified external behavior.</p>
-                        </li>
-                        <li>
-                          <p><strong><em>White-box</em> (aka <em>glass-box or structured or implementation-based</em>) approach</strong>: test cases are designed based on what is known about the SUT’s implementation, i.e. the code.</p>
-                        </li>
-                        <li>
-                          <p><strong><em>Gray-box</em> approach</strong>: test case design uses <em>some</em> important information about the implementation. For example, if the implementation of a sort operation uses different algorithms to sort lists shorter than 1000 items and lists longer than 1000 items, more meaningful test cases can then be added to verify the correctness of both algorithms.</p>
-                        </li>
-                      </ul>
-                      <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> %%Black-box and white-box testing%%">
-                        <p><sub>Note: these videos are from the <a href="https://www.udacity.com/course/software-development-process--ud805">Udacity course <em>Software Development Process</em> by Georgia Tech</a></sub></p>
-                        <tabs>
-                            <tab header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> Black-box vs White-box testing">
-                            <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/jRwwb7iaRsU" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-                            <p>
-                              <hr>
-                            </p>
-                          </tab>
-                            <tab header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> Black-box testing example">
-                            <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/6pbB37nFUZw" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-                            <p>
-                              <hr>
-                            </p>
-                          </tab>
-                            <tab header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> White-box testing example">
-                            <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/KIAkoae6_jE" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-                            <p>
-                              <hr>
-                            </p>
-                          </tab>
-                        </tabs>
-                      </panel>
-                    </div>
-                    <div></div>
-                  </div>
-                </panel>
-              </div>
+              </panel>
             </div>
+            <div>
+              <panel type="seamless" expanded="">
+                <span slot="header" class="card-title"><div><h4 id="positive-vs-negative-test-cases"><span>Positive vs Negative Test Cases</span></h4>
+            </div>
+            </span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain positive and negative test cases</span>
+                </span>
+                </span>
+                </span>
+              </p>
+              <p></p>
+              <p></p>
+              <p></p>
+              <div>
+                <p><strong>A <em>positive test case</em> is when the test is designed to produce an expected/valid behavior. A negative test case is designed to produce a behavior that indicates an invalid/unexpected situation, such as an error message.</strong></p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> Consider testing of the method <code>print(Integer i)</code> which prints the value of <code>i</code>.</p>
+                  <ul>
+                    <li>A positive test case: <code>i == new Integer(50)</code></li>
+                    <li>A negative test case: <code>i == null;</code></li>
+                  </ul>
+                </tip-box>
+              </div>
+              <div></div>
+            </div>
+            </panel>
           </div>
+          <div>
+            <panel type="seamless" expanded="">
+              <span slot="header" class="card-title"><div><h4 id="black-box-vs-glass-box"><span>Black Box vs Glass Box</span></h4>
+          </div>
+          </span>
+          <div class="indented">
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain black box and glass box test case design</span>
+              </span>
+              </span>
+              </span>
+            </p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <div>
+              <p><strong>Test case design can be of three types, based on how much of SUT internal details are considered when designing test cases:</strong></p>
+              <ul>
+                <li>
+                  <p><strong><em>Black-box</em> (aka <em>specification-based or responsibility-based</em>) approach</strong>: test cases are designed exclusively based on the SUT’s specified external behavior.</p>
+                </li>
+                <li>
+                  <p><strong><em>White-box</em> (aka <em>glass-box or structured or implementation-based</em>) approach</strong>: test cases are designed based on what is known about the SUT’s implementation, i.e. the code.</p>
+                </li>
+                <li>
+                  <p><strong><em>Gray-box</em> approach</strong>: test case design uses <em>some</em> important information about the implementation. For example, if the implementation of a sort operation uses different algorithms to sort lists shorter than
+                    1000 items and lists longer than 1000 items, more meaningful test cases can then be added to verify the correctness of both algorithms.</p>
+                </li>
+              </ul>
+              <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> %%Black-box and white-box testing%%" class="algolia-no-index">
+                <p><sub>Note: these videos are from the <a href="https://www.udacity.com/course/software-development-process--ud805">Udacity course <em>Software Development Process</em> by Georgia Tech</a></sub></p>
+                <tabs>
+                
+                  <tab header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> Black-box vs White-box testing">
+                    <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/jRwwb7iaRsU" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                    <p>
+                      <hr>
+                    </p>
+                  </tab>
+                
+                  <tab header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> Black-box testing example" class="algolia-no-index">
+                    <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/6pbB37nFUZw" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                    <p>
+                      <hr>
+                    </p>
+                  </tab>
+                
+                  <tab header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> White-box testing example" class="algolia-no-index">
+                    <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/KIAkoae6_jE" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                    <p>
+                      <hr>
+                    </p>
+                  </tab>
+                </tabs>
+              </panel>
+            </div>
+            <div></div>
+          </div>
+          </panel>
         </div>
       </div>
     </div>
   </div>
 </div>
+</div>
+</div>
+</div>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
 </footer>
 </div>
 </body>

@@ -4,12 +4,13 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 1.21.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Git and Github [Printable]</title>
     <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
     <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../markbind/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css" >
+    <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="../markbind/css/github.min.css">
     <link rel="stylesheet" href="../markbind/css/markbind.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
@@ -26,7 +27,7 @@
     <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
       </li>
     </navbar>
   </div>
@@ -50,19 +51,18 @@
               </div>
             </p>
             <div>
-              <panel header="%%<span class='fas fa-paperclip'></span> Git Overview%%" class="non-printable">
+              <panel header="%%<span class='fas fa-paperclip'></span> Git Overview%%" class="non-printable algolia-no-index">
                 <p>Soon you are going to take your first step in using Git. If you would like to see a quick overview of the full Git landscape before jumping in, watch the video below.</p>
-                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/v40b3ExbM0c" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/v40b3ExbM0c" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
                 <p></p>
               </panel>
               <p></p>
-              <p>Install <a href="https://www.sourcetreeapp.com/">SourceTree</a> which is Git + a GUI for Git. If you prefer to use Git via the command line (i.e., without a GUI), you can <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">install Git</a> instead.</p>
+              <p>Install <a href="https://www.sourcetreeapp.com/">SourceTree</a> which is Git + a GUI for Git. If you prefer to use Git via the command line (i.e., without a GUI), you can <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">install Git</a>                instead.</p>
               <p>Suppose you want to create a repository in an empty directory <code>things</code>. Here are the steps:</p>
               <tabs>
                 <tab header="SourceTree">
                   <div>
-                    <p>Windows: Click <code>File</code> → <code>Clone/New…</code>. Click on <code>Create</code> button.<br>
-                      Mac: <code>New...</code> → <code>Create New Repository</code>.</p>
+                    <p>Windows: Click <code>File</code> → <code>Clone/New…</code>. Click on <code>Create</code> button.<br> Mac: <code>New...</code> → <code>Create New Repository</code>.</p>
                     <p>Enter the location of the directory (Windows version shown below) and click <code>Create</code>.</p>
                     <img src="/se-book/gitAndGithub/init/images/sourcetree_1.png" height="220">
                     <p></p>
@@ -71,7 +71,7 @@
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <p>Open a Git Bash Terminal.</p>
                     <p>If you installed SourceTree, you can click the <code>Terminal</code> button to open a GitBash terminal.</p>
@@ -126,7 +126,7 @@ nothing to commit (create/copy files and use &quot;git add&quot; to track)
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <p>You can use the <code>git status</code> command to check the status of the working directory.</p>
                     <pre><code class="hljs sh">git status
@@ -169,7 +169,7 @@ nothing added to commit but untracked files present (use <span class="hljs-strin
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <p>You can use the <code>stage</code> or the <code>add</code> command (they are synonyms, <code>add</code> is the more popular choice) to stage files.</p>
                     <pre><code class="hljs sh">git add fruits.txt
@@ -200,7 +200,7 @@ git status
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <p>Use the <code>commit</code> command to commit. The <code>-m</code> switch is used to specify the commit message.</p>
                     <pre><code class="hljs sh">git commit -m <span class="hljs-string">"add fruits.txt"</span>
@@ -219,7 +219,8 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
                   <hr>
                 </tab>
               </tabs>
-              <p>Note the existence of something called the <code>master</code> branch. Git allows you to have multiple branches (i.e. it is a way to evolve the content in parallel) and Git creates a default branch named <code>master</code> on which the commits go on by default.</p>
+              <p>Note the existence of something called the <code>master</code> branch. Git allows you to have multiple branches (i.e. it is a way to evolve the content in parallel) and Git creates a default branch named <code>master</code> on which the
+                commits go on by default.</p>
               <p>Do some changes to <code>fruits.txt</code> (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps you followed before. You should end up with something like this.</p>
               <img src="/se-book/gitAndGithub/commit/images/sourcetree_6.png" height="180">
               <p></p>
@@ -246,7 +247,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <p>Create a file named <code>.gitignore</code> in the working directory root and add the following line in it.</p>
                     <pre><code class="hljs">temp.txt
@@ -281,7 +282,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <p>To add a tag to the current commit as <code>v1.0</code>,</p>
                     <pre><code class="hljs">git tag –a v1.0
@@ -313,7 +314,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <pre><code class="hljs sh">git show &lt; part-of-commit-hash &gt;
 </code></pre>
@@ -354,7 +355,7 @@ index 15b57f7..17f4528 100644
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <p>The <code>diff</code> command can be used to view the differences between two points of the history.</p>
                     <ul>
@@ -362,7 +363,7 @@ index 15b57f7..17f4528 100644
                       <li><code>git diff 0023cdd..fcd6199</code>: shows the changes between the points indicated by by commit hashes</li>
                       <li><code>git diff v1.0..HEAD</code>: shows changes that happened from the commit tagged as <code>v1.0</code> to the most recent commit.</li>
                     </ul>
-                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded>
+                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
                       <ul>
                         <li><a href="https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/diffs">Git-Tower Tutorial: Inspecting Changes with Diffs</a></li>
                         <li><a href="https://stackoverflow.com/questions/8640838/how-do-i-navigate-in-the-results-of-diff">How to view the next page of a <code>git</code> command result</a></li>
@@ -372,28 +373,35 @@ index 15b57f7..17f4528 100644
                   <hr>
                 </tab>
               </tabs>
-              <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to <trigger trigger="click" for="modal:checkout-stash">stash</trigger> them first to prevent them from being overwritten.</p>
-              <modal large title="%%Extract%%" id="modal:checkout-stash">
-                  <div>
+              <p>Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to
+                <trigger trigger="click" for="modal:checkout-stash">stash</trigger> them first to prevent them from being overwritten.</p>
+              <modal large="" title="%%Extract%%" id="modal:checkout-stash" class="algolia-no-index">
+              
+                <div>
                   <div></div>
                   <p></p>
                   <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
-                        </span></strong></span></p>
+</span></strong>
+                    </span>
+                  </p>
                   <div id="title-and-body">
                     <div>
                       <h4 id="stash"><span>Stash</span></h4>
                     </div>
                     <div id="main">
                       <div>
-                        <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed changes later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
+                        <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed
+                          changes later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
                         <tabs>
-                            <tab header="Source Tree">
+                        
+                          <tab header="Source Tree">
                             <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
                             <p>
                               <hr>
                             </p>
                           </tab>
-                            <tab header="CLI">
+                        
+                          <tab header="CLI" class="algolia-no-index">
                             <p>Follow <a href="https://www.atlassian.com/git/tutorials/git-stash">this article from Atlassian</a>.</p>
                             <p>
                               <hr>
@@ -423,7 +431,7 @@ index 15b57f7..17f4528 100644
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <p>Use the <code>checkout &lt;commit-identifier&gt;</code> command to change the working directory to the state it was in at a specific past commit.</p>
                     <ul>
@@ -449,15 +457,18 @@ index 15b57f7..17f4528 100644
               </div>
             </p>
             <div>
-              <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed changes later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
+              <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed changes
+                later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
               <tabs>
-                  <tab header="Source Tree">
+              
+                <tab header="Source Tree">
                   <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
                   <p>
                     <hr>
                   </p>
                 </tab>
-                  <tab header="CLI">
+              
+                <tab header="CLI" class="algolia-no-index">
                   <p>Follow <a href="https://www.atlassian.com/git/tutorials/git-stash">this article from Atlassian</a>.</p>
                   <p>
                     <hr>
@@ -475,10 +486,9 @@ index 15b57f7..17f4528 100644
             <div>
               <p>Clone the sample repo <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your computer.</p>
               <tip-box type="error">
-                <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project.
-                  e.g.</p>
-                <p>Github project URL: <code>https://github.com/se-edu/samplerepo-things</code> <br>
-                  Git repo URL: <code>https://github.com/se-edu/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
+                <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project. e.g.
+                </p>
+                <p>Github project URL: <code>https://github.com/se-edu/samplerepo-things</code> <br> Git repo URL: <code>https://github.com/se-edu/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
               </tip-box>
               <tabs>
                 <tab header="SourceTree">
@@ -487,7 +497,7 @@ index 15b57f7..17f4528 100644
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <p>You can use the <code>clone</code> command to clone a repo.</p>
                     <p>Follow instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p>
@@ -504,27 +514,28 @@ index 15b57f7..17f4528 100644
               </div>
             </p>
             <div>
-              <p>Clone the sample repo as explained in <trigger for="modal:clone-repository" trigger="click">[Textbook <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Tools → Git &amp; GitHub → Clone]</trigger>.</p>
+              <p>Clone the sample repo as explained in
+                <trigger for="modal:clone-repository" trigger="click">[Textbook <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Tools → Git &amp; GitHub → Clone]</trigger>.</p>
               <p>Delete the last two commits to simulate cloning the repo 2 commits ago.</p>
-              <modal title="**Clone Repository**" id="modal:clone-repository">
+              <modal title="**Clone Repository**" id="modal:clone-repository" class="algolia-no-index">
                 <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <p>Clone</p>
-                      </div>
-                    </span>
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can clone a remote repo</span></span></span></span></p>
+                  <panel type="seamless" expanded="">
+                    <span slot="header" class="card-title"><div>
+<p>Clone</p></div></span>
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can clone a remote repo</span>
+                      </span>
+                      </span>
+                      </span>
+                    </p>
                     <p></p>
                     <p></p>
                     <p></p>
                     <div>
                       <p>Clone the sample repo <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your computer.</p>
                       <tip-box type="error">
-                        <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project.
-                          e.g.</p>
-                        <p>Github project URL: <code>https://github.com/se-edu/samplerepo-things</code> <br>
-                          Git repo URL: <code>https://github.com/se-edu/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
+                        <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project. e.g.
+                        </p>
+                        <p>Github project URL: <code>https://github.com/se-edu/samplerepo-things</code> <br> Git repo URL: <code>https://github.com/se-edu/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
                       </tip-box>
                       <tabs>
                         <tab header="SourceTree">
@@ -533,7 +544,7 @@ index 15b57f7..17f4528 100644
                           </div>
                           <hr>
                         </tab>
-                        <tab header="CLI">
+                        <tab header="CLI" class="algolia-no-index">
                           <div>
                             <p>You can use the <code>clone</code> command to clone a repo.</p>
                             <p>Follow instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p>
@@ -559,12 +570,11 @@ index 15b57f7..17f4528 100644
                     <img src="/se-book/gitAndGithub/pull/images/sourcetree_2.png" height="150">
                     <p></p>
                     <p>Note the following (cross refer the screenshot above):</p>
-                    <p>Arrow marked as <code>a</code>: The local repo is now at this commit, marked by the <code>master</code> label.<br>
-                      Arrow marked as <code>b</code>: <code>origin/master</code> label shows what is the latest commit in the <code>master</code> branch in the remote repo.</p>
+                    <p>Arrow marked as <code>a</code>: The local repo is now at this commit, marked by the <code>master</code> label.<br> Arrow marked as <code>b</code>: <code>origin/master</code> label shows what is the latest commit in the <code>master</code>                      branch in the remote repo.</p>
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <p>Use the <code>reset</code> command to delete commits at the tip of the revision history.</p>
                     <pre><code class="hljs">git reset --hard HEAD~2
@@ -573,7 +583,8 @@ index 15b57f7..17f4528 100644
                   <hr>
                 </tab>
               </tabs>
-              <p>Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago, as if somebody has added two more commits to the remote repo since you cloned it. To get those commits to your local repo (i.e. to sync your local repo with upstream repo) you can do a pull.</p>
+              <p>Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago, as if somebody has added two more commits to the remote repo since you cloned it. To get those commits to your local repo (i.e. to sync your
+                local repo with upstream repo) you can do a pull.</p>
               <tabs>
                 <tab header="SourceTree">
                   <div>
@@ -586,7 +597,7 @@ index 15b57f7..17f4528 100644
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <p><code>git pull origin</code></p>
                   </div>
@@ -608,7 +619,7 @@ index 15b57f7..17f4528 100644
                 </li>
                 <li>
                   <p>Fork the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your GitHub account:</p>
-                  <panel type="seamless" header="%%How to fork a repo?%%">
+                  <panel type="seamless" header="%%How to fork a repo?%%" class="algolia-no-index">
                     <p>Navigate to the on GitHub and click on the <img src="/se-book/gitAndGithub/push/images/fork.png" height="30"> button on the top-right corner.</p>
                     <p></p>
                   </panel>
@@ -633,7 +644,7 @@ index 15b57f7..17f4528 100644
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <p>Use the command <code>git push origin master</code>. Enter Github username and password when prompted.</p>
                   </div>
@@ -651,8 +662,7 @@ index 15b57f7..17f4528 100644
                     <img src="/se-book/gitAndGithub/push/images/fillNewRepoInfo.png" width="600"></p>
                 </li>
                 <li>
-                  <p>Note the URL of the repo. It will be of the form <code>https://github.com/{your_user_name}/{repo_name}.git</code><br>
-                    e.g., <code>https://github.com/johndoe/foobar.git</code><br>
+                  <p>Note the URL of the repo. It will be of the form <code>https://github.com/{your_user_name}/{repo_name}.git</code><br> e.g., <code>https://github.com/johndoe/foobar.git</code><br>
                     <img src="/se-book/gitAndGithub/push/images/newRepoUrl.png" width="450"></p>
                 </li>
               </ol>
@@ -675,14 +685,12 @@ index 15b57f7..17f4528 100644
                   </ol>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <ol>
                     <li>Navigate to the folder containing the local repo.</li>
-                    <li>Set the new remote repo as a <em>remote</em> of the local repo.<br>
-                      command: <code>git remote add {remote_name} {remote_repo_url}</code><br>
-                      e.g., <code>git remote add origin https://github.com/johndoe/foobar.git</code></li>
-                    <li>Push to the new remote the usual way. You can use the <code>-u</code> flag to inform Git that you wish to <tooltip content="i.e., remember which branch in the remote repo corresponds to which branch in the local repo">track</tooltip> the branch.<br>
-                      e.g., <code>git push -u origin master</code></li>
+                    <li>Set the new remote repo as a <em>remote</em> of the local repo.<br> command: <code>git remote add {remote_name} {remote_repo_url}</code><br> e.g., <code>git remote add origin https://github.com/johndoe/foobar.git</code></li>
+                    <li>Push to the new remote the usual way. You can use the <code>-u</code> flag to inform Git that you wish to
+                      <tooltip content="i.e., remember which branch in the remote repo corresponds to which branch in the local repo" class="algolia-no-index">track</tooltip> the branch.<br> e.g., <code>git push -u origin master</code></li>
                   </ol>
                   <hr>
                 </tab>
@@ -705,7 +713,7 @@ index 15b57f7..17f4528 100644
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <pre><code class="hljs">git status
 </code></pre>
@@ -729,7 +737,7 @@ index 15b57f7..17f4528 100644
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <p>You can use the <code>branch</code> command to create a new branch and the <code>checkout</code> command to switch to a specific branch.</p>
                     <pre><code class="hljs">git branch feature1
@@ -753,7 +761,7 @@ git checkout feature1
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <pre><code class="hljs">git checkout master
 </code></pre>
@@ -775,7 +783,7 @@ git checkout feature1
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <pre><code class="hljs">git merge master
 </code></pre>
@@ -794,7 +802,7 @@ git checkout feature1
                   <p>Right-click on the <code>feature1</code> branch and choose <code>Merge...</code>.</p>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <pre><code class="hljs">git merge feature1
 </code></pre>
                   <hr>
@@ -803,13 +811,15 @@ git checkout feature1
               <p><strong>10. Create a new branch called <code>add-countries</code>, switch to it, and add some commits to it</strong> <span class="dimmed">(similar to steps 1-2 above)</span>. You should have something like this now:</p>
               <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80">
               <p></p>
-              <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to see something like the below,</p>
+              <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to see something
+                like the below,</p>
               <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100">
               <p></p>
               <p>... you are likely to see something like this instead:</p>
               <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80">
               <p></p>
-              <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided it is simpler to just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
+              <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided it is simpler
+                to just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
               <p><strong>It is possible to force Git to create a merge commit even if fast forwarding is possible.</strong></p>
               <tabs>
                 <tab header="SourceTree">
@@ -820,7 +830,7 @@ git checkout feature1
                   </div>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <div>
                     <p>Use the <code>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
                     <pre><code class="hljs">git merge --no-ff add-countries
@@ -854,7 +864,8 @@ green
 red
 white
 </code></pre>
-              <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and a line starting with <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code>=======</code>.</p>
+              <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and a line starting with <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with
+                <code>=======</code>.</p>
               <p>This is the conflicting part that is coming from the <code>master</code> branch:</p>
               <pre><code class="hljs">
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
@@ -903,13 +914,14 @@ This repo can be used to practice creating PRs.
                   <p></p>
                   <hr>
                 </tab>
-                <tab header="CLI">
+                <tab header="CLI" class="algolia-no-index">
                   <pre><code class="hljs">git push origin add-intro
 </code></pre>
                   <hr>
                 </tab>
               </tabs>
-              <p><strong>4. Create a Pull Request from the <code>add-intro</code> branch in your fork to the <code>master</code> branch of the same fork</strong> (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>), as described below.</p>
+              <p><strong>4. Create a Pull Request from the <code>add-intro</code> branch in your fork to the <code>master</code> branch of the same fork</strong> (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>),
+                as described below.</p>
               <p>4a. Go to the GitHub page of your fork (i.e. <code>https://github.com/{your_username}/samplerepo-pr-practice</code>), click on the <code>Pull Requests</code> tab, and then click on <code>New Pull Request</code> button.</p>
               <img src="/se-book/gitAndGithub/createPRs/images/createPrButton.png" width="800">
               <p></p>
@@ -923,7 +935,8 @@ This repo can be used to practice creating PRs.
               <tip-box type="info">
                 <p>The <em>base fork</em> is where changes should be applied. The <em>head fork</em> contains the changes you would like to be applied.</p>
               </tip-box>
-              <p>4c. (1) Set the base branch to <code>master</code> and head branch to <code>add-intro</code>, (2) confirm the <em>diff</em> contains the changes you propose to merge in this PR <span class="dimmed">(i.e. confirm that you did not accidentally include extra commits in the branch)</span>, and (3) click the <code>Create pull request</code> button.</p>
+              <p>4c. (1) Set the base branch to <code>master</code> and head branch to <code>add-intro</code>, (2) confirm the <em>diff</em> contains the changes you propose to merge in this PR <span class="dimmed">(i.e. confirm that you did not accidentally include extra commits in the branch)</span>,
+                and (3) click the <code>Create pull request</code> button.</p>
               <img src="/se-book/gitAndGithub/createPRs/images/checkDiff.png" width="800">
               <p></p>
               <p>4d. (1) Set PR name, (2) set PR description, and (3) Click the <code>Create pull request</code> button.</p>
@@ -931,18 +944,18 @@ This repo can be used to practice creating PRs.
               <p></p>
               <tip-box type="important">
                 <p>A common newbie mistake when creating branch-based PRs is to mix commits of one PR with another. To learn how to avoid that mistake, you are encouraged to continue and create another PR as explained below.
-                   
                 </p>
               </tip-box>
               <p><strong>5. In your local repo, create a new branch <code>add-summary</code></strong> off the <code>master</code> branch.</p>
               <tip-box type="warning">
-                <p>When creating the new branch, it is very important that you switch back to the <code>master</code> branch first. If not, the new branch will be created off the current branch <code>add-intro</code>. And that is how you end up having commits of the first PR in the second PR as well.</p>
+                <p>When creating the new branch, it is very important that you switch back to the <code>master</code> branch first. If not, the new branch will be created off the current branch <code>add-intro</code>. And that is how you end up having commits
+                  of the first PR in the second PR as well.</p>
               </tip-box>
               <p><strong>6. Add a commit in the <code>add-summary</code> branch</strong> that adds a <em>Summary</em> section to the <code>README.md</code>, in exactly the same place you added the <em>Introduction</em> section earlier.</p>
               <img src="/se-book/gitAndGithub/createPRs/images/addSummaryBranch.png" width="400">
               <p></p>
               <p><strong>7. Push the <code>add-summary</code> to your fork and create a new PR</strong> similar to before.</p>
-              <panel header="<span class='fas fa-paperclip'></span> Resources" expanded>
+              <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
                 <ul>
                   <li><a href="https://help.github.com/articles/creating-a-pull-request/">GitHub's own documentation on creating a PR</a></li>
                 </ul>
@@ -956,9 +969,11 @@ This repo can be used to practice creating PRs.
               </div>
             </p>
             <div>
-              <p><strong>1. Go to GitHub page of your fork and review the <code>add-intro</code> PR</strong> you created previously in [<trigger trigger="click" for="modal:managePrs-createPrs">Tools → Git &amp; GitHub → Create PRs</trigger>] to simulate the PR being reviewed by another developer, as explained below. <span class="dimmed">Note that some features available to PR reviewers will be unavailable to you because you are also the author of the PR.</span></p>
-              <modal large title="Tools → Git & GitHub → Create PRs" id="modal:managePrs-createPrs">
-                  <div>
+              <p><strong>1. Go to GitHub page of your fork and review the <code>add-intro</code> PR</strong> you created previously in [
+                <trigger trigger="click" for="modal:managePrs-createPrs">Tools → Git &amp; GitHub → Create PRs</trigger>] to simulate the PR being reviewed by another developer, as explained below. <span class="dimmed">Note that some features available to PR reviewers will be unavailable to you because you are also the author of the PR.</span></p>
+              <modal large="" title="Tools → Git & GitHub → Create PRs" id="modal:managePrs-createPrs" class="algolia-no-index">
+              
+                <div>
                   <div>
                     <p><strong>1. Fork the <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a> onto your GitHub account. Clone it onto your computer.</strong></p>
                     <p><strong>2. Create a branch named <code>add-intro</code> in your clone. Add a couple of commits</strong> which adds/modifies an <em>Introduction</em> section to the <code>README.md</code>. Example:</p>
@@ -975,13 +990,14 @@ This repo can be used to practice creating PRs.
                         <p></p>
                         <hr>
                       </tab>
-                      <tab header="CLI">
+                      <tab header="CLI" class="algolia-no-index">
                         <pre><code class="hljs">git push origin add-intro
 </code></pre>
                         <hr>
                       </tab>
                     </tabs>
-                    <p><strong>4. Create a Pull Request from the <code>add-intro</code> branch in your fork to the <code>master</code> branch of the same fork</strong> (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>), as described below.</p>
+                    <p><strong>4. Create a Pull Request from the <code>add-intro</code> branch in your fork to the <code>master</code> branch of the same fork</strong> (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>),
+                      as described below.</p>
                     <p>4a. Go to the GitHub page of your fork (i.e. <code>https://github.com/{your_username}/samplerepo-pr-practice</code>), click on the <code>Pull Requests</code> tab, and then click on <code>New Pull Request</code> button.</p>
                     <img src="/se-book/gitAndGithub/createPRs/images/createPrButton.png" width="800">
                     <p></p>
@@ -995,7 +1011,8 @@ This repo can be used to practice creating PRs.
                     <tip-box type="info">
                       <p>The <em>base fork</em> is where changes should be applied. The <em>head fork</em> contains the changes you would like to be applied.</p>
                     </tip-box>
-                    <p>4c. (1) Set the base branch to <code>master</code> and head branch to <code>add-intro</code>, (2) confirm the <em>diff</em> contains the changes you propose to merge in this PR <span class="dimmed">(i.e. confirm that you did not accidentally include extra commits in the branch)</span>, and (3) click the <code>Create pull request</code> button.</p>
+                    <p>4c. (1) Set the base branch to <code>master</code> and head branch to <code>add-intro</code>, (2) confirm the <em>diff</em> contains the changes you propose to merge in this PR <span class="dimmed">(i.e. confirm that you did not accidentally include extra commits in the branch)</span>,
+                      and (3) click the <code>Create pull request</code> button.</p>
                     <img src="/se-book/gitAndGithub/createPRs/images/checkDiff.png" width="800">
                     <p></p>
                     <p>4d. (1) Set PR name, (2) set PR description, and (3) Click the <code>Create pull request</code> button.</p>
@@ -1003,18 +1020,18 @@ This repo can be used to practice creating PRs.
                     <p></p>
                     <tip-box type="important">
                       <p>A common newbie mistake when creating branch-based PRs is to mix commits of one PR with another. To learn how to avoid that mistake, you are encouraged to continue and create another PR as explained below.
-                         
                       </p>
                     </tip-box>
                     <p><strong>5. In your local repo, create a new branch <code>add-summary</code></strong> off the <code>master</code> branch.</p>
                     <tip-box type="warning">
-                      <p>When creating the new branch, it is very important that you switch back to the <code>master</code> branch first. If not, the new branch will be created off the current branch <code>add-intro</code>. And that is how you end up having commits of the first PR in the second PR as well.</p>
+                      <p>When creating the new branch, it is very important that you switch back to the <code>master</code> branch first. If not, the new branch will be created off the current branch <code>add-intro</code>. And that is how you end up having
+                        commits of the first PR in the second PR as well.</p>
                     </tip-box>
                     <p><strong>6. Add a commit in the <code>add-summary</code> branch</strong> that adds a <em>Summary</em> section to the <code>README.md</code>, in exactly the same place you added the <em>Introduction</em> section earlier.</p>
                     <img src="/se-book/gitAndGithub/createPRs/images/addSummaryBranch.png" width="400">
                     <p></p>
                     <p><strong>7. Push the <code>add-summary</code> to your fork and create a new PR</strong> similar to before.</p>
-                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded>
+                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
                       <ul>
                         <li><a href="https://help.github.com/articles/creating-a-pull-request/">GitHub's own documentation on creating a PR</a></li>
                       </ul>
@@ -1023,7 +1040,8 @@ This repo can be used to practice creating PRs.
                   <div></div>
                 </div>
               </modal>
-              <p>1a. Go to the respective PR page and click on the <code>Files changed</code> tab. Hover over the line you want to comment on and click on the <span style="color:#0066ff"><span class="fas fa-plus-square"></span></span> icon that appears on the left margin. That should create a text box for you to enter your comment.</p>
+              <p>1a. Go to the respective PR page and click on the <code>Files changed</code> tab. Hover over the line you want to comment on and click on the <span style="color:#0066ff"><span class="fas fa-plus-square"></span></span> icon that appears on
+                the left margin. That should create a text box for you to enter your comment.</p>
               <img src="/se-book/gitAndGithub/managePRs/images/startReview.png" width="800">
               <p></p>
               <p>1b. Enter some dummy comment and click on <code>Start a review</code> button.</p>
@@ -1033,22 +1051,25 @@ This repo can be used to practice creating PRs.
               <p>1d. Click on the <code>Review Changes</code> button, enter an overall comment, and click on the <code>Submit review</code> button.</p>
               <img src="/se-book/gitAndGithub/managePRs/images/submitReview.png" width="500">
               <p></p>
-              <p><strong>2. Update the PR</strong> to simulate revising the code based on reviewer comments. Add some more commits to the <code>add-intro</code> branch and push the new commits to the fork. Observe how the PR is updated automatically to reflect the new code.</p>
-              <p><strong>3. Merge the PR.</strong> Go to the GitHub page of the respective PR, scroll to the bottom of the <code>Conversation</code> tab, and click on the <code>Merge pull request</code> button, followed by the <code>Confirm merge</code> button. You should see a <code>Pull request successfully merged and closed</code> message after the PR is merged.</p>
+              <p><strong>2. Update the PR</strong> to simulate revising the code based on reviewer comments. Add some more commits to the <code>add-intro</code> branch and push the new commits to the fork. Observe how the PR is updated automatically to reflect
+                the new code.</p>
+              <p><strong>3. Merge the PR.</strong> Go to the GitHub page of the respective PR, scroll to the bottom of the <code>Conversation</code> tab, and click on the <code>Merge pull request</code> button, followed by the <code>Confirm merge</code>                button. You should see a <code>Pull request successfully merged and closed</code> message after the PR is merged.</p>
               <img src="/se-book/gitAndGithub/managePRs/images/mergePr.png" width="800">
               <p></p>
-              <p><strong>4. Sync the local repo with the remote repo.</strong> Because of the merge you did on the GitHub, the <code>master</code> branch of your fork is now ahead of your local repo by one commit. To sync the local repo with the remote repo, pull the <code>master</code> branch to the local repo.</p>
+              <p><strong>4. Sync the local repo with the remote repo.</strong> Because of the merge you did on the GitHub, the <code>master</code> branch of your fork is now ahead of your local repo by one commit. To sync the local repo with the remote repo,
+                pull the <code>master</code> branch to the local repo.</p>
               <pre><code class="hljs">git checkout master
 git pull origin master
 </code></pre>
               <p>Observe how the <code>add-intro</code> branch is now merged to the <code>master</code> branch in your local repo as well.</p>
               <p><strong>5. De-conflict the <code>add-summary</code> PR</strong>
-                <trigger trigger="click" for="modal:managePrs-createPrs">that you created earlier</trigger>. Note that GitHub page for the <code>add-summary</code> PR is now showing a conflict <span class="dimmed">(when you scroll to the bottom of that page, you should see a message <code>This branch has conflicts that must be resolved</code>)</span>. You can resolve it locally and update the PR accordingly, as explained below.
-              </p>
+                <trigger trigger="click" for="modal:managePrs-createPrs">that you created earlier</trigger>. Note that GitHub page for the <code>add-summary</code> PR is now showing a conflict <span class="dimmed">(when you scroll to the bottom of that page, you should see a message <code>This branch has conflicts that must be resolved</code>)</span>.
+                You can resolve it locally and update the PR accordingly, as explained below.</p>
               <p>5a. Switch to the <code>add-summary</code> branch. To make that branch up-to-date with the <code>master</code> branch, merge the <code>master</code> branch to it, which will surface the merge conflict. Resolve it and complete the merge.</p>
               <p>5b. Push the updated <code>add-summary</code> branch to the fork. That will remove the 'merge conflicts' warning in the GitHub page of the PR.</p>
               <p><strong>6. Merge the <code>add-summary</code> PR</strong> using the GitHub interface, similar to how you merged the previous PR.</p>
-              <p><span class="fas fa-info-circle"></span> Note that you could have merged the <code>add-summary</code> branch to the <code>master</code> branch locally before pushing it to GitHub. In that case, the PR will be merged on GitHub automatically to reflect that the branch has been merged already.</p>
+              <p><span class="fas fa-info-circle"></span> Note that you could have merged the <code>add-summary</code> branch to the <code>master</code> branch locally before pushing it to GitHub. In that case, the PR will be merged on GitHub automatically
+                to reflect that the branch has been merged already.</p>
             </div>
           </div>
           <div>
@@ -1063,7 +1084,7 @@ git pull origin master
                 <li>
                   <p><strong>One member: set up the team org and the team repo.</strong></p>
                   <ul>
-                    <li><strong><a href="https://help.github.com/articles/creating-a-new-organization-from-scratch/">Create a GitHub organization</a></strong> for your team. The org name is up to you. We'll refer to this organization as <em>team org</em> from now on.</li>
+                    <li><strong><a href="https://help.github.com/articles/creating-a-new-organization-from-scratch/">Create a GitHub organization</a></strong> for your team. The org name is up to you. We'll refer to this organization as <em>team org</em>                      from now on.</li>
                     <li><strong><a href="https://help.github.com/enterprise/2.10/admin/guides/user-management/creating-teams/">Add a team </a></strong> called <code>developers</code> to your team org.</li>
                     <li><strong><a href="https://help.github.com/enterprise/2.0/admin/guides/user-management/adding-or-inviting-people-to-teams/">Add your team members</a></strong> to the <code>developers</code> team.</li>
                     <li><strong>Fork <a href="https://github.com/se-edu/samplerepo-workflow-practice">se-edu/samplerepo-workflow-practice</a> to your team org</strong>. We'll refer to this as the <em>team repo</em>.</li>
@@ -1097,7 +1118,8 @@ git pull origin master
                   <p><strong>Merge conflicting PRs one at a time.</strong> Before merging a PR, you’ll have to resolve conflicts. Steps:</p>
                   <ul>
                     <li>[Optional] A member can inform the PR author (by posting a comment) that there is a conflict in the PR.</li>
-                    <li>PR author: Pull the <code>master</code> branch from the repo in your team org. Merge the pulled <code>master</code> branch to your PR branch. Resolve the merge conflict that crops up during the merge. Push the updated PR branch to your fork.</li>
+                    <li>PR author: Pull the <code>master</code> branch from the repo in your team org. Merge the pulled <code>master</code> branch to your PR branch. Resolve the merge conflict that crops up during the merge. Push the updated PR branch to
+                      your fork.</li>
                     <li>Another member or the PR author: When GitHub does not indicate a conflict anymore, you can go ahead and merge the PR.</li>
                   </ul>
                 </li>
@@ -1112,7 +1134,7 @@ git pull origin master
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
 </footer>
 </div>
 </body>

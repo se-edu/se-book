@@ -4,12 +4,13 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 1.21.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - JUnit</title>
     <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
     <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../markbind/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css" >
+    <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="../markbind/css/github.min.css">
     <link rel="stylesheet" href="../markbind/css/markbind.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
@@ -26,7 +27,7 @@
     <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
       </li>
     </navbar>
   </div>
@@ -42,29 +43,33 @@
       <div>
         <link rel="stylesheet" href="/se-book/css/textbook.css">
         <div class="website-content" id="all">
-          <p><span class="dimmed"><strong><span></span></strong></span></p>
+          <p><span class="dimmed"><strong><span></span></strong>
+            </span>
+          </p>
           <div id="title">
             <h1 id="junit"><span>JUnit</span><a class="fa fa-anchor" href="#junit"></a></h1>
           </div>
           <div id="main">
             <div>
               <div>
-                <panel type="seamless" expanded>
-                  <span slot="header" class="card-title">
-                    <div>
-                      <h4 id="junit-basic"><span>JUnit: Basic</span></h4>
-                    </div>
+                <panel type="seamless" expanded="">
+                  <span slot="header" class="card-title"><div><h4 id="junit-basic"><span>JUnit: Basic</span></h4>
+              </div>
+              </span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use simple JUnit tests</span>
                   </span>
-                  <div class="indented">
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use simple JUnit tests</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p>When writing JUnit tests for a class <code>Foo</code>, the common practice is to create a <code>FooTest</code> class, which will contain various test methods.</p>
-                      <box>
-                        <p><span class="fas fa-cube"></span> Suppose we want to write tests for the <code>IntPair</code> class below.</p>
-                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IntPair</span> </span>{
+                  </span>
+                  </span>
+                </p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <div>
+                  <p>When writing JUnit tests for a class <code>Foo</code>, the common practice is to create a <code>FooTest</code> class, which will contain various test methods.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> Suppose we want to write tests for the <code>IntPair</code> class below.</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IntPair</span> </span>{
     <span class="hljs-keyword">int</span> first;
     <span class="hljs-keyword">int</span> second;
 
@@ -86,8 +91,8 @@
     }
 }
 </code></pre>
-                        <p>Here's a <code>IntPairTest</code> class to match.</p>
-                        <pre><code class="hljs java"><span class="hljs-keyword">import</span> org.junit.Test;
+                    <p>Here's a <code>IntPairTest</code> class to match.</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">import</span> org.junit.Test;
 <span class="hljs-keyword">import</span> org.junit.Assert;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IntPairTest</span> </span>{
@@ -115,83 +120,87 @@
     }
 }
 </code></pre>
-                      </box>
-                      <p>Notes:</p>
-                      <ul>
-                        <li>Each test method is marked with a <code>@Test</code> annotation.</li>
-                        <li>Tests use <code>Assert.assertEquals(expected, actual)</code> methods to compare the expected output with the actual output. If they do not match, the test will fail. JUnit comes with other similar methods such as <code>Assert.assertNull</code> and <code>Assert.assertTrue</code>.</li>
-                        <li>Java code normally use camelCase for method names e.g., <code>testStringConversion</code> but when writing test methods, sometimes another convention is used: <code>whatIsBeingTested_descriptionOfTestInputs_expectedOutcome</code> e.g., <code>intDivision_zeroDivisor_exceptionThrown</code></li>
-                        <li>There are <a href="https://github.com/junit-team/junit4/wiki/exception-testing">several ways to verify the code throws the correct exception</a>. The third test method in the example above shows one of the simpler methods. If the exception is thrown, it will be caught and further verified inside the <code>catch</code> block. But if it is not thrown as expected, the test will reach <code>Assert.fail()</code> line and will fail as a result.</li>
-                        <li>The easiest way to run JUnit tests is to do it via the IDE. For example, in Intellij you can right-click the folder containing test classes and choose 'Run all tests...'</li>
-                        <li>Optionally, you can use <a href="https://docs.oracle.com/javase/1.5.0/docs/guide/language/static-import.html">static imports</a> to avoid having to specify <code>Assert.</code> everywhere.
-                          <pre><code class="hljs java"><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.junit.Assert.assertEquals;
+                  </box>
+                  <p>Notes:</p>
+                  <ul>
+                    <li>Each test method is marked with a <code>@Test</code> annotation.</li>
+                    <li>Tests use <code>Assert.assertEquals(expected, actual)</code> methods to compare the expected output with the actual output. If they do not match, the test will fail. JUnit comes with other similar methods such as <code>Assert.assertNull</code>                      and <code>Assert.assertTrue</code>.</li>
+                    <li>Java code normally use camelCase for method names e.g., <code>testStringConversion</code> but when writing test methods, sometimes another convention is used: <code>whatIsBeingTested_descriptionOfTestInputs_expectedOutcome</code> e.g.,
+                      <code>intDivision_zeroDivisor_exceptionThrown</code></li>
+                    <li>There are <a href="https://github.com/junit-team/junit4/wiki/exception-testing">several ways to verify the code throws the correct exception</a>. The third test method in the example above shows one of the simpler methods. If the exception
+                      is thrown, it will be caught and further verified inside the <code>catch</code> block. But if it is not thrown as expected, the test will reach <code>Assert.fail()</code> line and will fail as a result.</li>
+                    <li>The easiest way to run JUnit tests is to do it via the IDE. For example, in Intellij you can right-click the folder containing test classes and choose 'Run all tests...'</li>
+                    <li>Optionally, you can use <a href="https://docs.oracle.com/javase/1.5.0/docs/guide/language/static-import.html">static imports</a> to avoid having to specify <code>Assert.</code> everywhere.
+                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.junit.Assert.assertEquals;
 <span class="hljs-comment">//...</span>
 <span class="hljs-meta">@Test</span>
 <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testStringConversion</span><span class="hljs-params">()</span> </span>{
     assertEquals(<span class="hljs-string">"4,7"</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">4</span>, <span class="hljs-number">7</span>).toString());
 }
 </code></pre>
-                        </li>
-                      </ul>
-                      <div v-closeable alt="Junit tutorial video" class="non-printable">
-                        <box>
-                          <p><strong><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> JUnit 4 with IntelliJ: A quick introduction</strong> <sub>-- by DrBFraser</sub></p>
-                          <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Bld3644bIAo" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-                        </box>
-                      </div>
-                    </div>
-                    <div>
-                      <div>
-                        <panel header="<span class='fas fa-paperclip'></span> Resources" expanded>
-                          <ul>
-                            <li><a href="http://junit.sourceforge.net/doc/cookbook/cookbook.htm">JUnit cookbook</a> - a short tutorial from JUnit creators</li>
-                            <li><a href="http://www.vogella.com/articles/JUnit/article.html">JUnit tutorial</a> - a more detailed tutorial from a developer Lars Vogel</li>
-                            <li>How to test private methods in Java?
-                              [ <a href="http://stackoverflow.com/questions/34571/whats-the-proper-way-to-test-a-class-with-private-methods-using-junit">short answer</a> ]
-                              [ <a href="http://www.artima.com/suiterunner/private.html">long answer</a> ]</li>
-                          </ul>
-                        </panel>
-                      </div>
-                    </div>
+                    </li>
+                  </ul>
+                  <div v-closeable="" alt="Junit tutorial video" class="non-printable">
+                    <box>
+                      <p><strong><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> JUnit 4 with IntelliJ: A quick introduction</strong> <sub>-- by DrBFraser</sub></p>
+                      <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Bld3644bIAo" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                    </box>
                   </div>
-                </panel>
-              </div>
-              <div>
-                <panel type="seamless" expanded>
-                  <span slot="header" class="card-title">
-                    <div>
-                      <h4 id="junit-intermediate"><span>JUnit: Intermediate</span></h4>
-                    </div>
-                  </span>
-                  <div class="indented">
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use intermediate features of JUnit</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p>Some intermediate JUnit techniques that may be useful:</p>
+                </div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
                       <ul>
-                        <li><strong>It is possible for a <a href="https://github.com/junit-team/junit4/wiki/Exception-testing">JUnit test case to verify if the SUT throws the right exception</a></strong>.</li>
-                        <li><strong><a href="https://github.com/junit-team/junit4/wiki/Rules">JUnit <em>Rules</em></a> are a way to add additional behavior to a test.</strong> e.g. to make a test case use a temporary folder for storing files needed for (or generated by) the test.</li>
-                        <li><strong>It is possible to <a href="https://www.mkyong.com/unittest/junit-4-tutorial-1-basic-usage/">write methods thar are automatically run before/after a test method/class</a></strong>. These are useful to do pre/post cleanups for example.</li>
-                        <li><strong><a href="http://www.artima.com/suiterunner/private.html">Testing private methods is possible, although not always necessray</a></strong></li>
+                        <li><a href="http://junit.sourceforge.net/doc/cookbook/cookbook.htm">JUnit cookbook</a> - a short tutorial from JUnit creators</li>
+                        <li><a href="http://www.vogella.com/articles/JUnit/article.html">JUnit tutorial</a> - a more detailed tutorial from a developer Lars Vogel</li>
+                        <li>How to test private methods in Java? [ <a href="http://stackoverflow.com/questions/34571/whats-the-proper-way-to-test-a-class-with-private-methods-using-junit">short answer</a> ] [ <a href="http://www.artima.com/suiterunner/private.html">long answer</a>                          ]</li>
                       </ul>
-                    </div>
-                    <div></div>
+                    </panel>
                   </div>
-                </panel>
+                </div>
               </div>
+              </panel>
             </div>
+            <div>
+              <panel type="seamless" expanded="">
+                <span slot="header" class="card-title"><div><h4 id="junit-intermediate"><span>JUnit: Intermediate</span></h4>
+            </div>
+            </span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use intermediate features of JUnit</span>
+                </span>
+                </span>
+                </span>
+              </p>
+              <p></p>
+              <p></p>
+              <p></p>
+              <div>
+                <p>Some intermediate JUnit techniques that may be useful:</p>
+                <ul>
+                  <li><strong>It is possible for a <a href="https://github.com/junit-team/junit4/wiki/Exception-testing">JUnit test case to verify if the SUT throws the right exception</a></strong>.</li>
+                  <li><strong><a href="https://github.com/junit-team/junit4/wiki/Rules">JUnit <em>Rules</em></a> are a way to add additional behavior to a test.</strong> e.g. to make a test case use a temporary folder for storing files needed for (or generated
+                    by) the test.</li>
+                  <li><strong>It is possible to <a href="https://www.mkyong.com/unittest/junit-4-tutorial-1-basic-usage/">write methods thar are automatically run before/after a test method/class</a></strong>. These are useful to do pre/post cleanups for
+                    example.</li>
+                  <li><strong><a href="http://www.artima.com/suiterunner/private.html">Testing private methods is possible, although not always necessray</a></strong></li>
+                </ul>
+              </div>
+              <div></div>
+            </div>
+            </panel>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+</div>
+</div>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
 </footer>
 </div>
 </body>

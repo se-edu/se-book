@@ -4,12 +4,13 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 1.21.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Refactoring: What</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css" >
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="../../markbind/css/github.min.css">
     <link rel="stylesheet" href="../../markbind/css/markbind.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
@@ -26,7 +27,7 @@
     <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
       </li>
     </navbar>
   </div>
@@ -42,21 +43,28 @@
       <div>
         <link rel="stylesheet" href="/se-book/css/textbook.css">
         <div class="website-content">
-          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain refactoring</span></span></span></span></p>
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain refactoring</span>
+            </span>
+            </span>
+            </span>
+          </p>
           <p></p>
           <p></p>
           <div>
             <div></div>
             <p></p>
             <p><span class="dimmed"><strong><span>Implementation → Refactoring →
-                  </span></strong></span></p>
+</span></strong>
+              </span>
+            </p>
             <div id="title-and-body">
               <div>
                 <h4 id="what"><span>What</span></h4>
               </div>
               <div id="main">
                 <div>
-                  <p>The first version of the code you write may not be of production quality. It is OK to first concentrate on making the code work, rather than worry over the quality of the code, as long as you improve the quality later. This process of <strong>improving a program's internal structure in small steps without modifying its external behavior is called <em>refactoring</em>.</strong></p>
+                  <p>The first version of the code you write may not be of production quality. It is OK to first concentrate on making the code work, rather than worry over the quality of the code, as long as you improve the quality later. This process of
+                    <strong>improving a program's internal structure in small steps without modifying its external behavior is called <em>refactoring</em>.</strong></p>
                   <ul>
                     <li><strong>Refactoring is not rewriting</strong>: Discarding poorly-written code entirely and re-writing it from scratch is not refactoring because refactoring needs to be done in small steps.</li>
                     <li><strong>Refactoring is not bug fixing</strong>: By definition, refactoring is different from bug fixing or any other modifications that alter the external behavior (e.g. adding a feature) of the component in concern.</li>
@@ -68,11 +76,13 @@
                       <li>improve performance (sometimes, simpler code runs faster than complex code because simpler code is easier for the compiler to optimize).</li>
                     </ul>
                   </tip-box>
-                  <p>Given below are two common refactorings (<trigger trigger="click" for="modal:refactoring-catalog-what">more</trigger>).</p>
-                  <modal title="**Refactoring Catalogs**" id="modal:refactoring-catalog-what">
+                  <p>Given below are two common refactorings (
+                    <trigger trigger="click" for="modal:refactoring-catalog-what">more</trigger>).</p>
+                  <modal title="**Refactoring Catalogs**" id="modal:refactoring-catalog-what" class="algolia-no-index">
                     <div>
                       <ul>
-                        <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
+                        <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’
+                          on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
                         <li>Python: <a href="https://refactoring.guru/refactoring/catalog">https://refactoring.guru/refactoring/catalog</a> -- A catalog of refactorings applicable to Python code.</li>
                       </ul>
                     </div>
@@ -86,7 +96,8 @@
                       <div>
                         <table>
                           <tr>
-                              <td valign="top">
+                          
+                            <td valign="top">
                               <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isSpecialDeal()) {
     total = price * <span class="hljs-number">0.95</span>;
     send();
@@ -97,8 +108,10 @@
 </code></pre>
                               <p></p>
                             </td>
-                              <td valign="center"> → </td>
-                              <td valign="top">
+                          
+                            <td valign="center"> → </td>
+                          
+                            <td valign="top">
                               <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isSpecialDeal()){
     total = price * <span class="hljs-number">0.95</span>;
 } <span class="hljs-keyword">else</span> {
@@ -117,7 +130,8 @@ send();
                       <div>
                         <table>
                           <tr>
-                              <td valign="top">
+                          
+                            <td valign="top">
                               <pre><code class="hljs python"><span class="hljs-keyword">if</span> is_special_deal:
     total = price * <span class="hljs-number">0.95</span>
     send()
@@ -127,8 +141,10 @@ send();
 </code></pre>
                               <p></p>
                             </td>
-                              <td valign="center"> → </td>
-                              <td valign="top">
+                          
+                            <td valign="center"> → </td>
+                          
+                            <td valign="top">
                               <pre><code class="hljs python"><span class="hljs-keyword">if</span> is_special_deal:
     total = price * <span class="hljs-number">0.95</span>
 <span class="hljs-keyword">else</span>:
@@ -194,14 +210,14 @@ send()
                   </tip-box>
                   <p>💡 Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
                   <p>
-                    <font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.
-                  </p>
+                    <font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed
+                    by regression testing.</p>
                 </div>
                 <div>
                   <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="" class="algolia-no-index">
                       <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Results of Refactoring">
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Results of Refactoring" class="algolia-no-index">
                           <question>
                             <p>Choose the correct statements</p>
                             <ul class="task-list">
@@ -222,7 +238,7 @@ send()
                         </panel>
                       </div>
                       <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Do you agree with the following statement? Refactoring and regression testing">
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Do you agree with the following statement? Refactoring and regression testing" class="algolia-no-index">
                           <question has-input="true">
                             <p>Do you agree with the following statement? Justify your answer.</p>
                             <p>Statement: <code>Whenever we refactor code to fix bugs, we need not do regression testing if the bug fix was minor.</code></p>
@@ -240,8 +256,8 @@ send()
                         </panel>
                       </div>
                       <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Refactoring">
-                          <question has-input>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Refactoring" class="algolia-no-index">
+                          <question has-input="">
                             <p>Explain what is refactoring and why it is not the same as rewriting, bug fixing, or adding features.</p>
                           </question>
                         </panel>
@@ -260,7 +276,7 @@ send()
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
 </footer>
 </div>
 </body>

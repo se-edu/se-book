@@ -4,12 +4,13 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 1.21.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - C++ to Java: Generics</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css" >
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="../../markbind/css/github.min.css">
     <link rel="stylesheet" href="../../markbind/css/markbind.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
@@ -26,7 +27,7 @@
     <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
       </li>
     </navbar>
   </div>
@@ -43,31 +44,35 @@
         <link rel="stylesheet" href="/se-book/css/textbook.css">
         <div class="website-content" id="all">
           <p><span class="dimmed"><strong><span>C++ to Java →
-                </span></strong></span></p>
+</span></strong>
+            </span>
+          </p>
           <div id="title">
             <h1 id="generics"><span>Generics</span><a class="fa fa-anchor" href="#generics"></a></h1>
           </div>
           <div id="main">
             <div>
               <div>
-                <panel type="seamless" expanded>
-                  <span slot="header" class="card-title">
-                    <div>
-                      <h4 id="what-are-generics"><span>What are Generics?</span></h4>
-                    </div>
+                <panel type="seamless" expanded="">
+                  <span slot="header" class="card-title"><div><h4 id="what-are-generics"><span>What are Generics?</span></h4>
+              </div>
+              </span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain Java Generics</span>
                   </span>
+                  </span>
+                  </span>
+                </p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <div>
+                  <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with some adaptations.</p>
                   <div class="indented">
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain Java Generics</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with some adaptations.</p>
-                      <div class="indented">
-                        <p><strong>You can use polymorphism to write code that can work with multiple types, but that approach has some shortcomings.</strong></p>
-                        <box>
-                          <p><span class="fas fa-cube"></span> Consider the following <code>Box</code> class. It can be used only for storing <code>Integer</code> objects.</p>
-                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BoxForIntegers</span> </span>{
+                    <p><strong>You can use polymorphism to write code that can work with multiple types, but that approach has some shortcomings.</strong></p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> Consider the following <code>Box</code> class. It can be used only for storing <code>Integer</code> objects.</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BoxForIntegers</span> </span>{
     <span class="hljs-keyword">private</span> Integer x;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">set</span><span class="hljs-params">(Integer x)</span> </span>{
@@ -78,8 +83,9 @@
     }
 }
 </code></pre>
-                          <p>To store <code>String</code> objects, another similar class is needed, resulting in the duplication of the entire class. As you can see, if you need to store many different types of objects, you could end up writing many similar classes.</p>
-                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BoxForString</span> </span>{
+                      <p>To store <code>String</code> objects, another similar class is needed, resulting in the duplication of the entire class. As you can see, if you need to store many different types of objects, you could end up writing many similar
+                        classes.</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BoxForString</span> </span>{
     <span class="hljs-keyword">private</span> String x;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">set</span><span class="hljs-params">(String x)</span> </span>{
@@ -90,8 +96,8 @@
     }
 }
 </code></pre>
-                          <p>One solution for this problem is to use <em>polymorphism</em> i.e., write the <code>Box</code> class to store <code>Object</code> objects.</p>
-                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
+                      <p>One solution for this problem is to use <em>polymorphism</em> i.e., write the <code>Box</code> class to store <code>Object</code> objects.</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
     <span class="hljs-keyword">private</span> Object x;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">set</span><span class="hljs-params">(Object x)</span> </span>{
@@ -102,42 +108,48 @@
     }
 }
 </code></pre>
-                          <p>The problem with this solution is, since its methods accept or return an <code>Object</code>, you are free to pass in whatever you want, provided that it is not one of the primitive types. There is no way to verify, at compile time, how the class is used. One part of the code may place an <code>Integer</code> in the box and expect to get <code>Integers</code> out of it, while another part of the code may mistakenly pass in a <code>String</code>, resulting in a runtime error.
-                          </p>
-                        </box>
-                        <p><strong>Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces and methods.</strong> Much like the more familiar formal parameters used in method declarations, type parameters provide a way for you to re-use the same code with different inputs. The difference is that the inputs to formal parameters are values, while the inputs to type parameters are types.</p>
-                        <box>
-                          <p><span class="fas fa-cube"></span> A <em>generic</em> <code>Box</code> class allows you to define what type of elements will be put in the <code>Box</code>. For example, you can instantiate a <code>Box</code> object to keep <code>Integer</code> elements so that any attempt to put a non-<code>Integer</code> object in that <code>Box</code> object will result in a compile error.</p>
-                        </box>
-                      </div>
-                    </div>
-                    <div></div>
+                      <p>The problem with this solution is, since its methods accept or return an <code>Object</code>, you are free to pass in whatever you want, provided that it is not one of the primitive types. There is no way to verify, at compile time,
+                        how the class is used. One part of the code may place an <code>Integer</code> in the box and expect to get <code>Integers</code> out of it, while another part of the code may mistakenly pass in a <code>String</code>, resulting
+                        in a runtime error.
+                      </p>
+                    </box>
+                    <p><strong>Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces and methods.</strong> Much like the more familiar formal parameters used in method declarations, type parameters provide a way
+                      for you to re-use the same code with different inputs. The difference is that the inputs to formal parameters are values, while the inputs to type parameters are types.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> A <em>generic</em> <code>Box</code> class allows you to define what type of elements will be put in the <code>Box</code>. For example, you can instantiate a <code>Box</code> object to keep <code>Integer</code>                        elements so that any attempt to put a non-<code>Integer</code> object in that <code>Box</code> object will result in a compile error.</p>
+                    </box>
                   </div>
-                </panel>
+                </div>
+                <div></div>
               </div>
+              </panel>
+            </div>
+            <div>
+              <panel type="seamless" expanded="">
+                <span slot="header" class="card-title"><div><h4 id="how-to-use-generics"><span>How to use Generics</span></h4>
+            </div>
+            </span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use Java Generics</span>
+                </span>
+                </span>
+                </span>
+              </p>
+              <p></p>
+              <p></p>
+              <p></p>
               <div>
-                <panel type="seamless" expanded>
-                  <span slot="header" class="card-title">
-                    <div>
-                      <h4 id="how-to-use-generics"><span>How to use Generics</span></h4>
-                    </div>
-                  </span>
-                  <div class="indented">
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use Java Generics</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p>This section includes extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with some adaptations.</p>
-                      <p><strong>The definition of a generic class includes a <em>type parameter section</em>, delimited by angle brackets (<code>&lt;&gt;</code>).</strong> It specifies the <em>type parameters</em> (also called <em>type variables</em>) <code>T1</code>, <code>T2</code>, ..., and <code>Tn</code>. A generic class is defined with the following format:</p>
-                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">name</span>&lt;<span class="hljs-title">T1</span>, <span class="hljs-title">T2</span>, ..., <span class="hljs-title">Tn</span>&gt; </span>{ <span class="hljs-comment">/* ... */</span> }
+                <p>This section includes extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with some adaptations.</p>
+                <p><strong>The definition of a generic class includes a <em>type parameter section</em>, delimited by angle brackets (<code>&lt;&gt;</code>).</strong> It specifies the <em>type parameters</em> (also called <em>type variables</em>) <code>T1</code>,
+                  <code>T2</code>, ..., and <code>Tn</code>. A generic class is defined with the following format:</p>
+                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">name</span>&lt;<span class="hljs-title">T1</span>, <span class="hljs-title">T2</span>, ..., <span class="hljs-title">Tn</span>&gt; </span>{ <span class="hljs-comment">/* ... */</span> }
 </code></pre>
-                      <box>
-                        <p><span class="fas fa-cube"></span> Here is a generic <code>Box</code> class. The class declaration <code>Box&lt;T&gt;</code> introduces the type variable, <code>T</code>, which is also used inside the class to refer to the same type.</p>
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <p>Using <code>Object</code> as the type:</p>
-                            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
+                <box>
+                  <p><span class="fas fa-cube"></span> Here is a generic <code>Box</code> class. The class declaration <code>Box&lt;T&gt;</code> introduces the type variable, <code>T</code>, which is also used inside the class to refer to the same type.</p>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <p>Using <code>Object</code> as the type:</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
     <span class="hljs-keyword">private</span> Object x;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">set</span><span class="hljs-params">(Object x)</span> </span>{
@@ -149,10 +161,10 @@
     }
 }
 </code></pre>
-                          </div>
-                          <div class="col-sm-6">
-                            <p>A generic <code>Box</code> using type parameter <code>T</code>:</p>
-                            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
+                    </div>
+                    <div class="col-sm-6">
+                      <p>A generic <code>Box</code> using type parameter <code>T</code>:</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
     <span class="hljs-keyword">private</span> T x;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">set</span><span class="hljs-params">(T x)</span> </span>{
@@ -164,40 +176,43 @@
     }
 }
 </code></pre>
-                          </div>
-                        </div>
-                        <p>As you can see, all occurrences of <code>Object</code> are replaced by <code>T</code>.
-                        </p>
-                      </box>
-                      <p><strong>To reference the generic <code>Box</code> class from within your code, you must perform a generic type invocation, which replaces <code>T</code> with some concrete value</strong>, such as <code>Integer</code>. It is similar to an ordinary method invocation, but instead of passing an argument to a method, you are passing a type argument enclosed within angle brackets — e.g., <code>&lt;Integer&gt;</code> or <code>&lt;String, Integer&gt;</code> — to the generic class itself. Note that in some cases you can omit the type parameter i.e., <code>&lt;&gt;</code> if the type parameter can be inferred from the context.</p>
-                      <box>
-                        <p><span class="fas fa-cube"></span> Using the generic <code>Box</code> class to store <code>Integer</code> objects:</p>
-                        <pre><code class="hljs java">Box&lt;Integer&gt; integerBox;
+                    </div>
+                  </div>
+                  <p>As you can see, all occurrences of <code>Object</code> are replaced by <code>T</code>.
+                  </p>
+                </box>
+                <p><strong>To reference the generic <code>Box</code> class from within your code, you must perform a generic type invocation, which replaces <code>T</code> with some concrete value</strong>, such as <code>Integer</code>. It is similar to
+                  an ordinary method invocation, but instead of passing an argument to a method, you are passing a type argument enclosed within angle brackets — e.g., <code>&lt;Integer&gt;</code> or <code>&lt;String, Integer&gt;</code> — to the generic
+                  class itself. Note that in some cases you can omit the type parameter i.e., <code>&lt;&gt;</code> if the type parameter can be inferred from the context.</p>
+                <box>
+                  <p><span class="fas fa-cube"></span> Using the generic <code>Box</code> class to store <code>Integer</code> objects:</p>
+                  <pre><code class="hljs java">Box&lt;Integer&gt; integerBox;
 integerBox = <span class="hljs-keyword">new</span> Box&lt;&gt;(); <span class="hljs-comment">// type parameter omitted as it can be inferred</span>
 integerBox.set(Integer.valueOf(<span class="hljs-number">4</span>));
 Integer i = integerBox.get(); <span class="hljs-comment">// returns an Integer</span>
 </code></pre>
-                        <ul>
-                          <li><code>Box&lt;Integer&gt; integerBox;</code> simply declares that <code>integerBox</code> will hold a reference to a &quot;Box of Integer&quot;, which is how <code>Box&lt;Integer&gt;</code> is read.</li>
-                          <li><code>integerBox = new Box&lt;&gt;();</code> instantiates a <code>Box&lt;Integer&gt;</code> class. Note the <code>&lt;&gt;</code> (an empty pair of angle brackets, also called the <em>diamond operator</em>) between the class name and the parenthesis.</li>
-                        </ul>
-                      </box>
-                      <p><strong>The compiler is able to check for type errors when using generic code.</strong></p>
-                      <box>
-                        <p><span class="fas fa-cube"></span> The code below will fail because it creates a <code>Box&lt;String&gt;</code> and then tries to pass <code>Double</code> objects into it.</p>
-                        <pre><code class="hljs java">Box&lt;String&gt; stringBox = <span class="hljs-keyword">new</span> Box&lt;&gt;();
+                  <ul>
+                    <li><code>Box&lt;Integer&gt; integerBox;</code> simply declares that <code>integerBox</code> will hold a reference to a &quot;Box of Integer&quot;, which is how <code>Box&lt;Integer&gt;</code> is read.</li>
+                    <li><code>integerBox = new Box&lt;&gt;();</code> instantiates a <code>Box&lt;Integer&gt;</code> class. Note the <code>&lt;&gt;</code> (an empty pair of angle brackets, also called the <em>diamond operator</em>) between the class name and
+                      the parenthesis.</li>
+                  </ul>
+                </box>
+                <p><strong>The compiler is able to check for type errors when using generic code.</strong></p>
+                <box>
+                  <p><span class="fas fa-cube"></span> The code below will fail because it creates a <code>Box&lt;String&gt;</code> and then tries to pass <code>Double</code> objects into it.</p>
+                  <pre><code class="hljs java">Box&lt;String&gt; stringBox = <span class="hljs-keyword">new</span> Box&lt;&gt;();
 stringBox.set(Double.valueOf(<span class="hljs-number">5.0</span>)); <span class="hljs-comment">//compile error!</span>
 </code></pre>
-                      </box>
-                      <p><strong>A generic class can have multiple type parameters.</strong></p>
-                      <box>
-                        <p><span class="fas fa-cube"></span> The generic <code>OrderedPair</code> class, which implements the generic Pair interface:</p>
-                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Pair</span>&lt;<span class="hljs-title">K</span>, <span class="hljs-title">V</span>&gt; </span>{
+                </box>
+                <p><strong>A generic class can have multiple type parameters.</strong></p>
+                <box>
+                  <p><span class="fas fa-cube"></span> The generic <code>OrderedPair</code> class, which implements the generic Pair interface:</p>
+                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Pair</span>&lt;<span class="hljs-title">K</span>, <span class="hljs-title">V</span>&gt; </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> K <span class="hljs-title">getKey</span><span class="hljs-params">()</span></span>;
     <span class="hljs-function"><span class="hljs-keyword">public</span> V <span class="hljs-title">getValue</span><span class="hljs-params">()</span></span>;
 }
 </code></pre>
-                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OrderedPair</span>&lt;<span class="hljs-title">K</span>, <span class="hljs-title">V</span>&gt; <span class="hljs-keyword">implements</span> <span class="hljs-title">Pair</span>&lt;<span class="hljs-title">K</span>, <span class="hljs-title">V</span>&gt; </span>{
+                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OrderedPair</span>&lt;<span class="hljs-title">K</span>, <span class="hljs-title">V</span>&gt; <span class="hljs-keyword">implements</span> <span class="hljs-title">Pair</span>&lt;<span class="hljs-title">K</span>, <span class="hljs-title">V</span>&gt; </span>{
 
     <span class="hljs-keyword">private</span> K key;
     <span class="hljs-keyword">private</span> V value;
@@ -211,39 +226,40 @@ stringBox.set(Double.valueOf(<span class="hljs-number">5.0</span>)); <span class
     <span class="hljs-function"><span class="hljs-keyword">public</span> V <span class="hljs-title">getValue</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> value; }
 }
 </code></pre>
-                        <p>The following statements create two instantiations of the <code>OrderedPair</code> class:</p>
-                        <pre><code class="hljs java">Pair&lt;String, Integer&gt; p1 = <span class="hljs-keyword">new</span> OrderedPair&lt;&gt;(<span class="hljs-string">"Even"</span>, <span class="hljs-number">8</span>);
+                  <p>The following statements create two instantiations of the <code>OrderedPair</code> class:</p>
+                  <pre><code class="hljs java">Pair&lt;String, Integer&gt; p1 = <span class="hljs-keyword">new</span> OrderedPair&lt;&gt;(<span class="hljs-string">"Even"</span>, <span class="hljs-number">8</span>);
 Pair&lt;String, String&gt;  p2 = <span class="hljs-keyword">new</span> OrderedPair&lt;&gt;(<span class="hljs-string">"hello"</span>, <span class="hljs-string">"world"</span>);
 </code></pre>
-                        <p>The code, <code>new OrderedPair&lt;String, Integer&gt;</code>, instantiates <code>K</code> as a <code>String</code> and <code>V</code> as an <code>Integer</code>. Therefore, the parameter types of <code>OrderedPair</code>'s constructor are <code>String</code> and <code>Integer</code>, respectively.
-                        </p>
-                      </box>
-                      <p><strong>A type variable can be any non-primitive type you specify</strong>: any class type, any interface type, any array type, or even another type variable.</p>
-                      <p><strong>By convention, type parameter names are single, uppercase letters.</strong> The most commonly used type parameter names are:</p>
-                      <ul>
-                        <li><code>E</code> - Element (used extensively by the Java Collections Framework)</li>
-                        <li><code>K</code> - Key</li>
-                        <li><code>N</code> - Number</li>
-                        <li><code>T</code> - Type</li>
-                        <li><code>V</code> - Value</li>
-                        <li><code>S</code>, <code>U</code>, <code>V</code> etc. - 2nd, 3rd, 4th types</li>
-                      </ul>
-                    </div>
-                    <div></div>
-                  </div>
-                </panel>
+                  <p>The code, <code>new OrderedPair&lt;String, Integer&gt;</code>, instantiates <code>K</code> as a <code>String</code> and <code>V</code> as an <code>Integer</code>. Therefore, the parameter types of <code>OrderedPair</code>'s constructor
+                    are <code>String</code> and <code>Integer</code>, respectively.
+                  </p>
+                </box>
+                <p><strong>A type variable can be any non-primitive type you specify</strong>: any class type, any interface type, any array type, or even another type variable.</p>
+                <p><strong>By convention, type parameter names are single, uppercase letters.</strong> The most commonly used type parameter names are:</p>
+                <ul>
+                  <li><code>E</code> - Element (used extensively by the Java Collections Framework)</li>
+                  <li><code>K</code> - Key</li>
+                  <li><code>N</code> - Number</li>
+                  <li><code>T</code> - Type</li>
+                  <li><code>V</code> - Value</li>
+                  <li><code>S</code>, <code>U</code>, <code>V</code> etc. - 2nd, 3rd, 4th types</li>
+                </ul>
               </div>
+              <div></div>
             </div>
+            </panel>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+</div>
+</div>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
 </footer>
 </div>
 </body>

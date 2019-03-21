@@ -4,12 +4,13 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 1.21.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Integration: Approaches: Top-Down vs Bottom-Up Integration</title>
     <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css" >
+    <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="../../../markbind/css/github.min.css">
     <link rel="stylesheet" href="../../../markbind/css/markbind.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
@@ -26,7 +27,7 @@
     <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
       </li>
     </navbar>
   </div>
@@ -42,18 +43,25 @@
       <div>
         <link rel="stylesheet" href="/se-book/css/textbook.css">
         <div class="website-content">
-          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain how integration approaches vary based on the order of integration</span></span></span></span></p>
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain how integration approaches vary based on the order of integration</span>
+            </span>
+            </span>
+            </span>
+          </p>
           <p></p>
           <p></p>
           <div>
             <div>
               <p>
-                <panel src="/se-book/integration/approaches/bigBangVsIncremental/unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Implementation → Integration → Approaches → Big-Bang Vs Incremental%%" popup-url="/se-book/integration/approaches/bigBangVsIncremental"></panel>
+                <panel src="/se-book/integration/approaches/bigBangVsIncremental/unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Implementation → Integration → Approaches → Big-Bang Vs Incremental%%"
+                  popup-url="/se-book/integration/approaches/bigBangVsIncremental" class="algolia-no-index"></panel>
               </p>
             </div>
             <p></p>
             <p><span class="dimmed"><strong><span>Implementation → Integration → Approaches →
-                  </span></strong></span></p>
+</span></strong>
+              </span>
+            </p>
             <div id="title-and-body">
               <div>
                 <h4 id="top-down-vs-bottom-up-integration"><span>Top-Down vs Bottom-Up Integration</span></h4>
@@ -63,26 +71,32 @@
                   <img src="/se-book/integration/approaches/topDownVsBottomUp/images/approaches.png" height="100">
                   <p></p>
                   <p><strong>Based on the order in which components are integrated, incremental integration can be done in three ways.</strong></p>
-                  <p><strong><em>Top-down</em> integration: higher-level components are integrated before bringing in the lower-level components.</strong> One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that this requires the use of <trigger for="pop:topdown-stub">stubs</trigger> in place of lower level components until the real lower-level components are integrated to the system. Otherwise, higher-level components cannot function as they depend on lower level ones.</p>
-                  <popover id="pop:topdown-stub" title="<span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span>" placement="top">
-                      <div slot="content">
+                  <p><strong><em>Top-down</em> integration: higher-level components are integrated before bringing in the lower-level components.</strong> One advantage of this approach is that higher-level problems can be discovered early. One disadvantage
+                    is that this requires the use of
+                    <trigger for="pop:topdown-stub">stubs</trigger> in place of lower level components until the real lower-level components are integrated to the system. Otherwise, higher-level components cannot function as they depend on lower level ones.</p>
+                  <popover id="pop:topdown-stub" title="<span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span>" placement="top" class="algolia-no-index">
+                  
+                    <div slot="content">
                       <div>
-                        <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
+                        <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set
+                          of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
                       </div>
                     </div>
                   </popover>
-                  <p><strong><em>Bottom-up</em> integration: the reverse of top-down integration.</strong> Note that when integrating lower level components, <tooltip content="additional code written to provide inputs to a component via an API">drivers</tooltip> may be needed to test the integrated components <span class="dimmed"> because the UI may not be integrated yet</span>, just like top-down integration needs stubs.</p>
+                  <p><strong><em>Bottom-up</em> integration: the reverse of top-down integration.</strong> Note that when integrating lower level components,
+                    <tooltip content="additional code written to provide inputs to a component via an API" class="algolia-no-index">drivers</tooltip> may be needed to test the integrated components <span class="dimmed"> because the UI may not be integrated yet</span>, just like top-down integration needs stubs.</p>
                   <p><strong><em>Sandwich</em> integration: a mix of the top-down and the bottom-up approaches.</strong> The idea is to do both top-down and bottom-up so as to 'meet' in the middle.</p>
-                  <div v-closeable alt="slideshow: comparison">
+                  <div v-closeable="" alt="slideshow: comparison">
                     <p>Here is an animation that compares the three approaches:</p>
-                    <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212318&authkey=AD27jxfKqq3nqpQ&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                    <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212318&authkey=AD27jxfKqq3nqpQ&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen=""
+                        mozallowfullscreen="" allowfullscreen></iframe></div>
                   </div>
                 </div>
                 <div>
                   <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="" class="algolia-no-index">
                       <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Suggest an integration strategy">
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Suggest an integration strategy" class="algolia-no-index">
                           <question has-input="true">
                             <p>Suggest an integration strategy for the system represented by following diagram. You need not follow a strict top-down, bottom-up, sandwich, or big bang approach. Dashed arrows represent dependencies between classes.</p>
                             <p>Also take into account the following facts in your test strategy.</p>
@@ -99,7 +113,8 @@
                               <ul>
                                 <li>Because <code>HospitalUI</code> will be developed early, it’s OK to integrate it early, using stubs, rather than wait for the rest of the system to finish. (i.e. a top-down integration is suitable for <code>HospitalUI</code>)</li>
                                 <li>Because <code>HospitalFacade</code> is unlikely to have a lot of business logic, it may not be worth to write stubs to test it (i.e. a bottom-up integration is better for <code>HospitalFacade</code>).</li>
-                                <li>Because <code>IO_Helper</code> is to be reused from an earlier project, we can finish it early. This is especially suitable since there are many classes that use it. Therefore <code>IO_Helper</code> can be integrated with the dependent classes in bottom-up fashion.</li>
+                                <li>Because <code>IO_Helper</code> is to be reused from an earlier project, we can finish it early. This is especially suitable since there are many classes that use it. Therefore <code>IO_Helper</code> can be integrated with
+                                  the dependent classes in bottom-up fashion.</li>
                                 <li>Because <code>OutPatient</code> class may be delayed, we may have to integrate <code>PatientMgr</code> using a stub.</li>
                                 <li><code>TypeA</code>, <code>TypeB</code>, and <code>TypeC</code> seem to be tightly coupled. It may be a good idea to test them together.</li>
                               </ul>
@@ -111,12 +126,10 @@
                         </panel>
                       </div>
                       <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Integration order">
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Integration order" class="algolia-no-index">
                           <question has-input="false">
                             <p>Consider the architecture given below. Describe the order in which components will be integrated with one another if the following integration strategies were adopted.</p>
-                            <p>a) top-down
-                              b) bottom-up
-                              c) sandwich</p>
+                            <p>a) top-down b) bottom-up c) sandwich</p>
                             <p>Note that dashed arrows show dependencies (e.g. A depend on B, C, D and therefore, higher-level than B, C and D).</p>
                             <img src="/se-book/integration/approaches/topDownVsBottomUp/images/abc.png" height="190">
                             <p></p>
@@ -148,7 +161,7 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
 </footer>
 </div>
 </body>

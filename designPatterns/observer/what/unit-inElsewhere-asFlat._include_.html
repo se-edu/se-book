@@ -1,7 +1,9 @@
 <div></div>
 <p></p>
 <p><span class="dimmed"><strong><span>Design → Design Patterns → Observer Pattern →
-      </span></strong></span></p>
+</span></strong>
+  </span>
+</p>
 <div id="title-and-body">
   <div>
     <h4 id="what"><span>What</span></h4>
@@ -22,7 +24,8 @@
         <p>When a student is added to the database using <code>NewStudentUi</code> shown above, both <code>StudentListUi</code> and <code>StudentStatsUi</code> should get updated automatically, as shown below.</p>
         <img src="/se-book/designPatterns/observer/what/images/studentListUI.png" height="180">
         <p></p>
-        <p>However, the <code>StudentList</code> object has no knowledge about <code>StudentListUi</code> and <code>StudentStatsUi</code> (note the direction of the navigability) and has no way to inform those objects. This is an example of the type of problem addressed by the Observer pattern.</p>
+        <p>However, the <code>StudentList</code> object has no knowledge about <code>StudentListUi</code> and <code>StudentStatsUi</code> (note the direction of the navigability) and has no way to inform those objects. This is an example of the type of problem
+          addressed by the Observer pattern.</p>
       </tip-box>
       <p><strong>Problem</strong></p>
       <p>The ‘observed’ object does not want to be coupled to objects that are ‘observing’ it.</p>
@@ -84,7 +87,8 @@ studentList.addUi(statusUi);
       <img src="/se-book/designPatterns/observer/what/images/observableInterfaceDiagram.png" height="100">
       <p></p>
       <ul>
-        <li><code>&lt;&lt;Observer&gt;&gt;</code> is an interface: any class that implements it can observe an <code>&lt;&lt;Observable&gt;&gt;</code>. Any number of <code>&lt;&lt;Observer&gt;&gt;</code> objects can observe (i.e. listen to changes of) the <code>&lt;&lt;Observable&gt;&gt;</code> object.</li>
+        <li><code>&lt;&lt;Observer&gt;&gt;</code> is an interface: any class that implements it can observe an <code>&lt;&lt;Observable&gt;&gt;</code>. Any number of <code>&lt;&lt;Observer&gt;&gt;</code> objects can observe (i.e. listen to changes of) the
+          <code>&lt;&lt;Observable&gt;&gt;</code> object.</li>
         <li>The <code>&lt;&lt;Observable&gt;&gt;</code> maintains a list of <code>&lt;&lt;Observer&gt;&gt;</code> objects. <code>addObserver(Observer)</code> operation adds a new <code>&lt;&lt;Observer&gt;&gt;</code> to the list of <code>&lt;&lt;Observer&gt;&gt;s</code>.</li>
         <li>Whenever there is a change in the <code>&lt;&lt;Observable&gt;&gt;</code>, the <code>notifyObservers()</code> operation is called that will call the <code>update()</code> operation of all <code>&lt;&lt;Observer&gt;&gt;s</code> in the list.</li>
       </ul>
@@ -94,7 +98,7 @@ studentList.addUi(statusUi);
     </div>
     <div>
       <div>
-        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
           <div>
             <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> polymorphism and Observer pattern.">
               <question has-input="true">
@@ -102,7 +106,7 @@ studentList.addUi(statusUi);
                 <div slot="answer">
                   <img src="/se-book/designPatterns/observer/what/images/observableInterfaceNotation.png" height="90">
                   <p></p>
-                  <p>With respect to the general form of the Observer pattern given above, when the Observable object invokes the <code>notifyObservers()</code> method, it is treating all <code>ConcreteObserver</code> objects as a general type called <code>Observer</code> and calling the <code>update()</code> method of each of them. However, the <code>update()</code> method of each <code>ConcreteObserver</code> could potentially show different behavior based on its actual type. That is, <code>update()</code> method shows polymorphic behavior.</p>
+                  <p>With respect to the general form of the Observer pattern given above, when the Observable object invokes the <code>notifyObservers()</code> method, it is treating all <code>ConcreteObserver</code> objects as a general type called <code>Observer</code>                    and calling the <code>update()</code> method of each of them. However, the <code>update()</code> method of each <code>ConcreteObserver</code> could potentially show different behavior based on its actual type. That is, <code>update()</code>                    method shows polymorphic behavior.</p>
                   <p>In the example given below, the <code>notifyUIs</code> operation can result in <code>StudentListUi</code> and <code>StudentStatsUi</code> changing their views in two different ways.</p>
                   <img src="/se-book/designPatterns/observer/what/images/studentListStudentListObserver.png" height="190">
                   <p></p>

@@ -4,12 +4,13 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 1.21.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Software Design Patterns: Model View Controller</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css" >
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="../../markbind/css/github.min.css">
     <link rel="stylesheet" href="../../markbind/css/markbind.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
@@ -26,7 +27,7 @@
     <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
       </li>
     </navbar>
   </div>
@@ -43,52 +44,56 @@
         <link rel="stylesheet" href="/se-book/css/textbook.css">
         <div class="website-content" id="all">
           <p><span class="dimmed"><strong><span>Design → Design Patterns →
-                </span></strong></span></p>
+</span></strong>
+            </span>
+          </p>
           <div id="title">
             <h1 id="model-view-controller-mvc-pattern"><span>Model View Controller (MVC) Pattern</span><a class="fa fa-anchor" href="#model-view-controller-mvc-pattern"></a></h1>
           </div>
           <div id="main">
             <div>
               <div>
-                <panel type="seamless" expanded>
-                  <span slot="header" class="card-title">
-                    <div>
-                      <h4 id="what"><span>What</span></h4>
-                    </div>
-                  </span>
-                  <div class="indented">
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the Model View Controller (MVC) design pattern</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p><strong>Context</strong></p>
-                      <p>Most applications support storage/retrieval of information, displaying of information to the user (often via multiple UIs having different formats), and changing stored information based on external inputs.</p>
-                      <p><strong>Problem</strong></p>
-                      <p>The high coupling that can result from the interlinked nature of the features described above.</p>
-                      <p><strong>Solution</strong></p>
-                      <p>Decouple data, presentation, and control logic of an application by separating them into three different components: <em>Model</em>, <em>View</em> and <em>Controller</em>.</p>
-                      <ul>
-                        <li><em>View</em>: Displays data, interacts with the user, and pulls data from the model if necessary.</li>
-                        <li><em>Controller</em>: Detects UI events such as mouse clicks, button pushes and takes follow up action. Updates/changes the model/view when necessary.</li>
-                        <li><em>Model</em>: Stores and maintains data. Updates views if necessary.</li>
-                      </ul>
-                      <p>The relationship between the components can be observed in the diagram below. Typically, the UI is the combination of view and controller.</p>
-                      <img src="/se-book/designPatterns/modelViewController/what/images/classDiagram.png" width="400">
-                      <p></p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving data of one student.</p>
-                        <img src="/se-book/designPatterns/modelViewController/what/images/sequenceDiagram.png" width="500">
-                        <p></p>
-                        <p>In the diagram above, when the user clicks on a button using the UI, the ‘click’ event is caught and handled by the <code>UiController</code>. The <code>ref</code> frame indicates that the interactions within that frame have been extracted out to another separate sequence diagram.</p>
-                      </tip-box>
-                      <p>Note that in a simple UI where there’s only one view, Controller and View can be combined as one class.</p>
-                      <p>There are many variations of the MVC model used in different domains. For example, the one used in a desktop GUI could be different from the one used in a Web application.</p>
-                    </div>
-                    <div></div>
-                  </div>
-                </panel>
+                <panel type="seamless" expanded="">
+                  <span slot="header" class="card-title"><div><h4 id="what"><span>What</span></h4>
               </div>
+              </span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the Model View Controller (MVC) design pattern</span>
+                  </span>
+                  </span>
+                  </span>
+                </p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <div>
+                  <p><strong>Context</strong></p>
+                  <p>Most applications support storage/retrieval of information, displaying of information to the user (often via multiple UIs having different formats), and changing stored information based on external inputs.</p>
+                  <p><strong>Problem</strong></p>
+                  <p>The high coupling that can result from the interlinked nature of the features described above.</p>
+                  <p><strong>Solution</strong></p>
+                  <p>Decouple data, presentation, and control logic of an application by separating them into three different components: <em>Model</em>, <em>View</em> and <em>Controller</em>.</p>
+                  <ul>
+                    <li><em>View</em>: Displays data, interacts with the user, and pulls data from the model if necessary.</li>
+                    <li><em>Controller</em>: Detects UI events such as mouse clicks, button pushes and takes follow up action. Updates/changes the model/view when necessary.</li>
+                    <li><em>Model</em>: Stores and maintains data. Updates views if necessary.</li>
+                  </ul>
+                  <p>The relationship between the components can be observed in the diagram below. Typically, the UI is the combination of view and controller.</p>
+                  <img src="/se-book/designPatterns/modelViewController/what/images/classDiagram.png" width="400">
+                  <p></p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving data of one student.</p>
+                    <img src="/se-book/designPatterns/modelViewController/what/images/sequenceDiagram.png" width="500">
+                    <p></p>
+                    <p>In the diagram above, when the user clicks on a button using the UI, the ‘click’ event is caught and handled by the <code>UiController</code>. The <code>ref</code> frame indicates that the interactions within that frame have been extracted
+                      out to another separate sequence diagram.</p>
+                  </tip-box>
+                  <p>Note that in a simple UI where there’s only one view, Controller and View can be combined as one class.</p>
+                  <p>There are many variations of the MVC model used in different domains. For example, the one used in a desktop GUI could be different from the one used in a Web application.</p>
+                </div>
+                <div></div>
+              </div>
+              </panel>
             </div>
           </div>
         </div>
@@ -96,10 +101,11 @@
     </div>
   </div>
 </div>
+</div>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
 </footer>
 </div>
 </body>

@@ -1,7 +1,9 @@
 <div></div>
 <p></p>
 <p><span class="dimmed"><strong><span>Tools → Java →
-      </span></strong></span></p>
+</span></strong>
+  </span>
+</p>
 <div id="title-and-body">
   <div>
     <h4 id="javafx-basic"><span>JavaFX: Basic</span></h4>
@@ -9,7 +11,7 @@
   <div id="main">
     <div>
       <p><span class="dimmed">Adapted (with permissions) from <a href="http://code.makery.ch/library/javafx-8-tutorial/">Marco Jakob's JavaFX 8 tutorial</a>.</span></p>
-      <panel header="**Part 1: Scene Builder**" minimized>
+      <panel header="**Part 1: Scene Builder**" minimized="">
         <div>
           <h1 id="javafx-9-tutorial-part-1-scene-builder">JavaFx 9 Tutorial - Part 1: Scene Builder</h1>
           <h2 id="introduction">Introduction</h2>
@@ -122,13 +124,15 @@
           <img src="/se-book/javaTools/javaFXBasic/part01/images/design-scene-builder-fit-to-parent.png" height="250">
           <p></p>
           <ol start="3">
-            <li>Drag a <code>TableView</code> (under <code>Controls</code> in Library view) into the left side of the <code>SplitPane</code>. Select the <code>TableView</code> (not a Column) and set the following layout constraints in the Inspector to the <code>TableView</code>. Inside an <code>AnchorPane</code> you can always set anchors to the four borders (see <a href="http://docs.oracle.com/javase/8/javafx/layout-tutorial/builtin_layouts.htm">this page</a> for more information on Layouts).</li>
+            <li>Drag a <code>TableView</code> (under <code>Controls</code> in Library view) into the left side of the <code>SplitPane</code>. Select the <code>TableView</code> (not a Column) and set the following layout constraints in the Inspector to the
+              <code>TableView</code>. Inside an <code>AnchorPane</code> you can always set anchors to the four borders (see <a href="http://docs.oracle.com/javase/8/javafx/layout-tutorial/builtin_layouts.htm">this page</a> for more information on Layouts).</li>
           </ol>
           <img src="/se-book/javaTools/javaFXBasic/part01/images/design-scene-builder-table-anchors.png" height="250">
           <p></p>
           <ol start="4">
             <li>
-              <p>Go to the menu <code>Preview</code> → <code>Show Preview in Window</code> to see whether the layout configuration is done correctly. Try resizing the window. The <code>TableView</code> should resize together with the window as it is anchored to the borders.</p>
+              <p>Go to the menu <code>Preview</code> → <code>Show Preview in Window</code> to see whether the layout configuration is done correctly. Try resizing the window. The <code>TableView</code> should resize together with the window as it is anchored
+                to the borders.</p>
             </li>
             <li>
               <p>Change the column text (under Properties) to &quot;First Name&quot; and &quot;Last Name&quot;.</p>
@@ -236,12 +240,12 @@
           <h2 id="the-javafx-main-class">The JavaFX Main Class</h2>
           <p>Now, we need to create the <em>main Java class</em> that starts up our application with the <code>RootLayout.fxml</code> and adds the <code>PersonOverview.fxml</code> in the center.</p>
           <p>Right-click on your <code>seedu.address</code> package, and choose <code>New</code> → <code>JavaFXApplication</code>. For the class name, type <code>MainApp</code>.</p>
-          <p>The generated <code>MainApp.java</code> class extends from <code>Application</code> and contains two methods. This is the basic structure that we need to start a JavaFX Application. The most important part for us is the <code>start(Stage primaryStage)</code> method. It is automatically called when the application is <code>launch()</code> from within the <code>main()</code> method.</p>
+          <p>The generated <code>MainApp.java</code> class extends from <code>Application</code> and contains two methods. This is the basic structure that we need to start a JavaFX Application. The most important part for us is the <code>start(Stage primaryStage)</code>            method. It is automatically called when the application is <code>launch()</code> from within the <code>main()</code> method.</p>
           <p>As you see, the <code>start(...)</code> method receives a <code>Stage</code> as parameter. The following graphic illustrates the structure of every JavaFX application:</p>
           <img src="/se-book/javaTools/javaFXBasic/part01/images/javafx-hierarchy.png" height="350">
           <p></p>
           <p>Image Source: <a href="http://www.oracle.com">http://www.oracle.com</a></p>
-          <p><em>It's like a theater play:</em> The <code>Stage</code> is the main container which is usually a <code>Window</code> with a border and the typical minimize, maximize and close buttons. Inside the <code>Stage</code> you add a <code>Scene</code> which can, of course, be switched out by another <code>Scene</code>. Inside the <code>Scene</code> the actual JavaFX nodes like <code>AnchorPane</code>, <code>TextBox</code>, etc. are added.</p>
+          <p><em>It's like a theater play:</em> The <code>Stage</code> is the main container which is usually a <code>Window</code> with a border and the typical minimize, maximize and close buttons. Inside the <code>Stage</code> you add a <code>Scene</code>            which can, of course, be switched out by another <code>Scene</code>. Inside the <code>Scene</code> the actual JavaFX nodes like <code>AnchorPane</code>, <code>TextBox</code>, etc. are added.</p>
           <p>See <a href="http://docs.oracle.com/javase/8/javafx/scene-graph-tutorial/scenegraph.htm">this page</a> for more info on working with the JavaFX Scene Graph.</p>
           <hr>
           <p>Open <code>MainApp.java</code> and replace the code with the following:</p>
@@ -351,15 +355,17 @@
           <p><code>fx:controller=&quot;seedu.address.view.PersonOverview&quot;</code></p>
         </div>
       </panel>
-      <panel header="**Part 2: Model and TableView**" minimized>
+      <panel header="**Part 2: Model and TableView**" minimized="">
         <div>
           <h1 id="javafx-9-tutorial-part-2-model-and-tableview">JavaFx 9 tutorial - Part 2: Model and TableView</h1>
           <h2 id="introduction-2">Introduction</h2>
-          <p>In this tutorial, we will create the other parts of the application (mainly the model and the controller). We will also use <code>ObservableList</code> and <code>*Property</code> to bind our list of new model's <code>Person</code>s, and their individual details, to the view, with the controller as the &quot;middleman&quot;.</p>
+          <p>In this tutorial, we will create the other parts of the application (mainly the model and the controller). We will also use <code>ObservableList</code> and <code>*Property</code> to bind our list of new model's <code>Person</code>s, and their
+            individual details, to the view, with the controller as the &quot;middleman&quot;.</p>
           <img src="/se-book/javaTools/javaFXBasic/part02/images/address-app-final-screenshot.png" height="350">
           <p></p>
           <h2 id="create-the-model-class">Create the Model class</h2>
-          <p>We need a model class in order to hold information about the people in our address book. Add a new class to the <code>model</code> package (<code>seedu.address.model</code>) called <code>Person</code>. The <code>Person</code> class will encapsulate the details of an individual person such as name, address and birthday. Add the following code to the class. The JavaFX specifics will be explained after the code snippet.</p>
+          <p>We need a model class in order to hold information about the people in our address book. Add a new class to the <code>model</code> package (<code>seedu.address.model</code>) called <code>Person</code>. The <code>Person</code> class will encapsulate
+            the details of an individual person such as name, address and birthday. Add the following code to the class. The JavaFX specifics will be explained after the code snippet.</p>
           <p><strong>Person.java</strong></p>
           <pre><code class="hljs java"><span class="hljs-keyword">package</span> seedu.address.model;
 
@@ -480,15 +486,18 @@
 </code></pre>
           <h3 id="explanations">Explanations</h3>
           <ul>
-            <li>With JavaFX, it is common to use <code>*Property</code> for all fields of a model class. A <code>Property</code> allows us, for example, to automatically be notified when the <code>lastName</code> or any other variable is changed. This helps us keep the view in sync with the data.</li>
+            <li>With JavaFX, it is common to use <code>*Property</code> for all fields of a model class. A <code>Property</code> allows us, for example, to automatically be notified when the <code>lastName</code> or any other variable is changed. This helps
+              us keep the view in sync with the data.</li>
             <li>To learn more about <code>*Property</code>, refer to <a href="http://docs.oracle.com/javase/8/javafx/properties-binding-tutorial/binding.htm">Using JavaFX Properties and Binding</a></li>
             <li><code>LocalDate</code>, the type that we are using for <code>birthday</code>, is part of the <a href="http://docs.oracle.com/javase/tutorial/datetime/iso/">new Date and Time API since JDK 8</a></li>
           </ul>
           <h2 id="a-list-of-persons">A List of Persons</h2>
-          <p>The main data that our application manages is simply a bunch of persons. Let's create a list of <code>Person</code> objects inside the <code>MainApp</code> class. All other controller classes will later get access to that central list inside the <code>MainApp</code>.</p>
+          <p>The main data that our application manages is simply a bunch of persons. Let's create a list of <code>Person</code> objects inside the <code>MainApp</code> class. All other controller classes will later get access to that central list inside
+            the <code>MainApp</code>.</p>
           <h3 id="observablelist">ObservableList</h3>
           <p>We are working with JavaFX view classes that need to be informed about any changes made to the list of persons. This is important, since otherwise the view would not be in sync with the data. For this purpose, JavaFX introduces some new <a href="http://docs.oracle.com/javase/8/javafx/collections-tutorial/collections.htm">Collection classes</a>.</p>
-          <p>Among all these collections, we need the <code>ObservableList</code>. To create a new <code>ObservableList</code>, add the following code at the beginning of the <code>MainApp</code> class. We'll also add a constructor that creates some sample data and a public getter method:</p>
+          <p>Among all these collections, we need the <code>ObservableList</code>. To create a new <code>ObservableList</code>, add the following code at the beginning of the <code>MainApp</code> class. We'll also add a constructor that creates some sample
+            data and a public getter method:</p>
           <p><strong>MainApp.java</strong></p>
           <pre><code class="hljs java"><span class="hljs-comment">// ... AFTER THE OTHER VARIABLES ...</span>
 
@@ -528,7 +537,8 @@
           <tip-box type="tip">
             <p>Note: We must put the class inside the same package as <code>PersonOverview.fxml</code>, otherwise the SceneBuilder won't be able to find it.</p>
           </tip-box>
-          <p>We will add some instance variables that give us access to the table and the labels inside the view. The fields and some methods have a special <code>@FXML</code> annotation. This is necessary in order for the <code>.fxml</code> file to have access to private fields and private methods. After we have everything set up in the <code>.fxml</code> file, the application will automatically fill the variables when the <code>.fxml</code> file is loaded.</p>
+          <p>We will add some instance variables that give us access to the table and the labels inside the view. The fields and some methods have a special <code>@FXML</code> annotation. This is necessary in order for the <code>.fxml</code> file to have
+            access to private fields and private methods. After we have everything set up in the <code>.fxml</code> file, the application will automatically fill the variables when the <code>.fxml</code> file is loaded.</p>
           <p>So let's add the following code:</p>
           <tip-box type="tip">
             <p>Note: Remember to always use the <code>javafx</code> imports, NOT <code>awt</code> or <code>swing</code>.</p>
@@ -603,18 +613,21 @@
               </ul>
             </li>
             <li>The <code>initialize()</code> method is automatically called after the <code>.fxml</code> file has been loaded. At this time, all the FXML fields should have been initialized already.</li>
-            <li>The <code>setCellValueFactory(...)</code> that we set on the table colums are used to determine which field inside the <code>Person</code> objects should be used for the particular column. The arrow <code>-&gt;</code> indicates that we're using a Java 8 feature called Lambdas. (Another option would be to use a <a href="https://docs.oracle.com/javase/9/docs/api/javafx/scene/control/cell/PropertyValueFactory.html"><code>PropertyValueFactory</code></a>, but this is not type-safe).</li>
+            <li>The <code>setCellValueFactory(...)</code> that we set on the table colums are used to determine which field inside the <code>Person</code> objects should be used for the particular column. The arrow <code>-&gt;</code> indicates that we're
+              using a Java 8 feature called Lambdas. (Another option would be to use a <a href="https://docs.oracle.com/javase/9/docs/api/javafx/scene/control/cell/PropertyValueFactory.html"><code>PropertyValueFactory</code></a>, but this is not type-safe).</li>
           </ul>
           <tip-box type="tip">
             <p>Note:</p>
-            <p>We're only using <code>StringProperty</code> values for our table columns in this example. When you want to use <code>IntegerProperty</code> or <code>DoubleProperty</code>, the <code>setCellValueFactory(...)</code> must have an additional <code>asObject()</code>:</p>
+            <p>We're only using <code>StringProperty</code> values for our table columns in this example. When you want to use <code>IntegerProperty</code> or <code>DoubleProperty</code>, the <code>setCellValueFactory(...)</code> must have an additional
+              <code>asObject()</code>:</p>
             <pre><code class="hljs java">myIntegerColumn.setCellValueFactory(cellData -&gt;
     cellData.getValue().myIntegerProperty().asObject());
 </code></pre>
             <p>This is necessary because of a bad design decision of JavaFX (see <a href="https://community.oracle.com/thread/2575601">this discussion</a> for more details).</p>
           </tip-box>
           <h3 id="connecting-mainapp-with-the-personoverviewcontroller">Connecting MainApp with the PersonOverviewController</h3>
-          <p>The <code>setMainApp(...)</code> method must be called by the <code>MainApp</code> class. This gives us a way to access the <code>MainApp</code> object and get the list of <code>Persons</code> and other things. Add the following three lines to <code>showPersonOverview()</code> the method:</p>
+          <p>The <code>setMainApp(...)</code> method must be called by the <code>MainApp</code> class. This gives us a way to access the <code>MainApp</code> object and get the list of <code>Persons</code> and other things. Add the following three lines
+            to <code>showPersonOverview()</code> the method:</p>
           <p><strong>MainApp.java - additional lines to add to showPersonOverview() method</strong></p>
           <pre><code class="hljs java"><span class="hljs-comment">// (.... root layout statement goes here ....)</span>
 

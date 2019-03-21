@@ -4,12 +4,13 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 1.21.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - C++ to Java: Project - Task Manager</title>
     <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css" >
+    <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="../../../markbind/css/github.min.css">
     <link rel="stylesheet" href="../../../markbind/css/markbind.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
@@ -26,7 +27,7 @@
     <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
       </li>
     </navbar>
   </div>
@@ -43,7 +44,7 @@
         <navbar placement="top" type="inverse" class="temp-navbar">
           <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
           <li slot="right">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
           </li>
         </navbar>
       </div>
@@ -51,13 +52,16 @@
         <link rel="stylesheet" href="/se-book/css/textbook.css">
         <div class="website-content" id="all">
           <p><span class="dimmed"><strong><span>C++ to Java → Practice Projects →
-                </span></strong></span></p>
+</span></strong>
+            </span>
+          </p>
           <div id="title">
             <h1 id="practice-project-taskmanager"><span>Practice Project - TaskManager</span><a class="fa fa-anchor" href="#practice-project-taskmanager"></a></h1>
           </div>
           <div id="main">
             <div>
-              <p>In this practice project, you will create a small <code>TaskManager</code> program that can store a list of tasks. It is a <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program. You will start with a very simple version (aka TaskManager Level 1) and grow its functionality in small steps.</p>
+              <p>In this practice project, you will create a small <code>TaskManager</code> program that can store a list of tasks. It is a
+                <tooltip content="Command Line Interface i.e., no Graphical User Interface" class="algolia-no-index">CLI</tooltip> program. You will start with a very simple version (aka TaskManager Level 1) and grow its functionality in small steps.</p>
               <h4 id="taskmanager-level-1">TaskManager Level 1</h4>
               <div>
                 <p>In this first version of the TaskManager, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></p>
@@ -106,7 +110,7 @@ Bye!
                   <li>and so on ...</li>
                 </ol>
                 <div slot="hint">
-                  <panel type="seamless" header="Partial solution">
+                  <panel type="seamless" header="Partial solution" class="algolia-no-index">
                     <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
@@ -203,12 +207,15 @@ Bye!
                   <li>Use polymorphism to store both types of tasks in an array of <code>Task</code> type and use one loop to print both types of tasks.</li>
                 </ul>
                 <p><strong>B. Add support for <trigger trigger="click" for="modal:taskManagerLevel2-testingClis">semi-automated regression testing using input/output redirection</trigger></strong>.</p>
-                <modal large title="Textbook »" id="modal:taskManagerLevel2-testingClis">
-                    <div>
+                <modal large="" title="Textbook »" id="modal:taskManagerLevel2-testingClis" class="algolia-no-index">
+                
+                  <div>
                     <div></div>
                     <p></p>
                     <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
-                          </span></strong></span></p>
+</span></strong>
+                      </span>
+                    </p>
                     <div id="title-and-body">
                       <div>
                         <h4 id="automated-testing-of-cli-apps"><span>Automated Testing of CLI Apps</span></h4>
@@ -224,7 +231,7 @@ Bye!
                           <ol>
                             <li>
                               <p>Store the test input in the text file <code>input.txt</code>.</p>
-                              <panel header="%%<span class='fas fa-cube'></span> Example `input.txt`%%" type="seamless">
+                              <panel header="%%<span class='fas fa-cube'></span> Example `input.txt`%%" type="seamless" class="algolia-no-index">
                                 <pre><code class="hljs">add Valid Name p/12345 valid@email.butNoPrefix
 add Valid Name 12345 e/valid@email.butPhonePrefixMissing
 </code></pre>
@@ -232,7 +239,7 @@ add Valid Name 12345 e/valid@email.butPhonePrefixMissing
                             </li>
                             <li>
                               <p>Store the output we expect from the SUT in another text file <code>expected.txt</code>.</p>
-                              <panel header="%%<span class='fas fa-cube'></span> Example `expected.txt`%%" type="seamless">
+                              <panel header="%%<span class='fas fa-cube'></span> Example `expected.txt`%%" type="seamless" class="algolia-no-index">
                                 <pre><code class="hljs">Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
 Invalid command format: add 
 
@@ -242,25 +249,26 @@ Invalid command format: add
                               </panel>
                             </li>
                             <li>
-                              <p>Run the program as given below, which will redirect the text in <code>input.txt</code> as the input to <code>AddressBook</code> and similarly, will redirect the output of AddressBook to a text file <code>output.txt</code>. <span class="dimmed">Note that this does not require any code changes to <code>AddressBook</code>.</span></p>
+                              <p>Run the program as given below, which will redirect the text in <code>input.txt</code> as the input to <code>AddressBook</code> and similarly, will redirect the output of AddressBook to a text file <code>output.txt</code>.
+                                <span class="dimmed">Note that this does not require any code changes to <code>AddressBook</code>.</span></p>
                               <pre><code class="hljs sh">java AddressBook &lt; input.txt &gt; output.txt
 </code></pre>
                               <ul>
                                 <li>
-                                  <p>💡 The way to run a CLI program differs based on the language.<br>
-                                    e.g., In Python, assuming the code is in <code>AddressBook.py</code> file, use the command<br>
+                                  <p>💡 The way to run a CLI program differs based on the language.<br> e.g., In Python, assuming the code is in <code>AddressBook.py</code> file, use the command<br>
                                     <code>python AddressBook.py &lt; input.txt &gt; output.txt</code></p>
                                 </li>
                                 <li>
                                   <p>💡 If you are using Windows, use a normal command window to run the app, not a Power Shell window.</p>
                                 </li>
                               </ul>
-                              <panel header minimized>
-                                <span slot="header" class="card-title"><span>More on the <code>&gt;</code> operator and the <code>&lt;</code> operator. <span class="badge badge-pill badge-secondary">tangential</span></span></span>
-                                <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code>&lt;</code> and <code>&gt;</code> operators. For example, if you run <code>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
+                              <panel header="" minimized="" class="algolia-no-index">
+                                <span slot="header" class="card-title"><span>More on the <code>&gt;</code> operator and the <code>&lt;</code> operator. <span class="badge badge-pill badge-secondary">tangential</span></span>
+                                </span>
+                                <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code>&lt;</code> and <code>&gt;</code>                                  operators. For example, if you run <code>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
                                 <pre><code class="hljs sh">java AddressBook &gt; output.txt 
 </code></pre>
-                                <p>the Operating System then creates a file <code>output.txt</code> and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding <code>&lt; input.txt</code> (or any other filename) makes the OS redirect the contents of the file as input to the program, as if the user typed the content of the file one line at a time.</p>
+                                <p>the Operating System then creates a file <code>output.txt</code> and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding <code>&lt; input.txt</code>                                  (or any other filename) makes the OS redirect the contents of the file as input to the program, as if the user typed the content of the file one line at a time.</p>
                                 <tip-box>
                                   <p><span class="fas fa-paperclip"></span> Resources:</p>
                                   <ul>
@@ -272,14 +280,15 @@ Invalid command format: add
                               <p></p>
                             </li>
                             <li>
-                              <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such as <em>WinMerge</em>.</p>
+                              <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such
+                                as <em>WinMerge</em>.</p>
                               <pre><code class="hljs">FC output.txt expected.txt
 </code></pre>
                             </li>
                           </ol>
                           <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. <span class="dimmed">If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases we need more sophisticated ways of automating tests.</span></p>
                           <div>
-                            <popover id="pop:cli" placement="top">
+                            <popover id="pop:cli" placement="top" class="algolia-no-index">
                               <div slot="content">
                                 <div>
                                   <p><strong>CLI App</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p>
@@ -293,7 +302,7 @@ Invalid command format: add
                     </div>
                   </div>
                 </modal>
-                <panel type="seamless" header="Partial solution">
+                <panel type="seamless" header="Partial solution" class="algolia-no-index">
                   <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
@@ -352,7 +361,8 @@ Invalid command format: add
               <hr>
               <h4 id="taskmanager-level-3">TaskManager Level 3</h4>
               <div>
-                <p>Enhance the TaskManager to print an error message if a command is missing parts. Use exceptions so that error detection and printing of error message happen at different places of code and the error information is passed between the two places using an Exception object.</p>
+                <p>Enhance the TaskManager to print an error message if a command is missing parts. Use exceptions so that error detection and printing of error message happen at different places of code and the error information is passed between the two
+                  places using an Exception object.</p>
                 <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
                 <box>
                   <div class="text-monospace">
@@ -370,11 +380,11 @@ Invalid command format: add
                 </box>
                 <p>Suggested approach:</p>
                 <ul>
-                  <li>Create a <code>TaskManagerException</code> class that inherits the <code>Exception</code> class. Override the constructor that takes a <code>String</code> parameter so that you can specify the error information when you create a <code>TaskManagerException</code> object.</li>
+                  <li>Create a <code>TaskManagerException</code> class that inherits the <code>Exception</code> class. Override the constructor that takes a <code>String</code> parameter so that you can specify the error information when you create a <code>TaskManagerException</code>                    object.</li>
                   <li>Throw a new <code>TaskManagerException</code> object when you detect some necessary information is missing in the command.</li>
                   <li>Catch that exception somewhere else and print the message inside the exception object.</li>
                 </ul>
-                <panel type="seamless" header="Partial solution">
+                <panel type="seamless" header="Partial solution" class="algolia-no-index">
                   <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TaskManagerException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Exception</span></span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">TaskManagerException</span><span class="hljs-params">(String message)</span> </span>{
         <span class="hljs-keyword">super</span>(message);
@@ -450,7 +460,7 @@ Invalid command format: add
                 <ul>
                   <li>Move the <code>isDone</code> variable to the <code>Task</code> class and provide a <code>setDone(boolean)</code> method.</li>
                 </ul>
-                <panel type="seamless" header="Partial solution">
+                <panel type="seamless" header="Partial solution" class="algolia-no-index">
                   <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
     <span class="hljs-keyword">protected</span> String description;
     <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;
@@ -514,7 +524,7 @@ T | 1 | join sports club
                   <li>Load all tasks in the text file to the memory (i.e., convert to <code>Task</code> objects) at the start up of TaskManager. You can assume the data are in a predetermined file <span class="dimmed">e.g., <code>data/tasks.txt</code></span>.</li>
                   <li>Save all tasks to the text file every time there is a change to the data. <span class="dimmed">Alternatively, you can introduce a new command to save tasks to the text file.</span></li>
                 </ol>
-                <panel type="seamless" header="Partial solution">
+                <panel type="seamless" header="Partial solution" class="algolia-no-index">
                   <p>Here's an example method for loading data from the text file. Use this method at the start of your main method to load the tasks from the text file.</p>
                   <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> List&lt;Task&gt; <span class="hljs-title">getTasksFromFile</span><span class="hljs-params">()</span> </span>{
         List&lt;Task&gt; loadedTasks = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
@@ -542,10 +552,8 @@ T | 1 | join sports club
                   <li>
                     <p>A <code>Parser</code> class containing methods that deals with parsing the user command to extract meaningful details from it. Some example methods:</p>
                     <ul>
-                      <li><code>public static getCommandWord(String fullCommand)</code>: Returns a the <em>command word</em> <span class="dimmed">i.e., the first word</span> of the given <code>fullCommand</code><br>
-                        e.g., <code>Parser.getCommandWord(&quot;todo read book&quot;)</code> <span class="fas fa-arrow-right"></span> <code>&quot;todo&quot;</code></li>
-                      <li><code>public static createTodo(String fullCommand)</code>: Returns a <code>Todo</code> object to match the <code>fullCommand</code>. Assumption: the <code>fullCommand</code> is for creating a Todo object.<br>
-                        e.g., <code>Parser.createTodo(&quot;todo read book&quot;)</code> <span class="fas fa-arrow-right"></span> a <code>Todo</code> object containing the description <code>&quot;read book&quot;</code></li>
+                      <li><code>public static getCommandWord(String fullCommand)</code>: Returns a the <em>command word</em> <span class="dimmed">i.e., the first word</span> of the given <code>fullCommand</code><br> e.g., <code>Parser.getCommandWord(&quot;todo read book&quot;)</code>                        <span class="fas fa-arrow-right"></span> <code>&quot;todo&quot;</code></li>
+                      <li><code>public static createTodo(String fullCommand)</code>: Returns a <code>Todo</code> object to match the <code>fullCommand</code>. Assumption: the <code>fullCommand</code> is for creating a Todo object.<br> e.g., <code>Parser.createTodo(&quot;todo read book&quot;)</code>                        <span class="fas fa-arrow-right"></span> a <code>Todo</code> object containing the description <code>&quot;read book&quot;</code></li>
                     </ul>
                   </li>
                   <li>
@@ -586,7 +594,7 @@ ui.showToUser(taskListDescription);
                     <p>Note: As a result of the above, you will have to convert most of the static methods in the <code>TaskManager</code> class to non-static methods, which is more OO.</p>
                   </li>
                 </ol>
-                <panel type="seamless" header="Partial solution">
+                <panel type="seamless" header="Partial solution" class="algolia-no-index">
                   <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TaskManager</span> </span>{
 
     <span class="hljs-keyword">private</span> Storage storage;
@@ -655,7 +663,7 @@ ui.showToUser(taskListDescription);
               <h4 id="taskmanager-level-7">TaskManager Level 7</h4>
               <div>
                 <p><strong>Add JUnit tests</strong> for some of the methods in your code.</p>
-                <panel type="seamless" header="Partial solution">
+                <panel type="seamless" header="Partial solution" class="algolia-no-index">
                   <pre><code class="hljs java"><span class="hljs-keyword">import</span> org.junit.Test;
 
 <span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> junit.framework.TestCase.assertEquals;
@@ -694,7 +702,8 @@ ui.showToUser(taskListDescription);
               <div>
                 <p>Add javadoc comments to all non-trivial public classes and methods. Follow the format of the <em>minimal</em> javadoc comment examples given below.</p>
                 <p>
-                  <panel type="seamless" src="/se-book/documentation/tools/javaDoc/how/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Documentation <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Tools → JavaDoc → How" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> JavaDoc/How" fragment="main"></panel>
+                  <panel type="seamless" src="/se-book/documentation/tools/javaDoc/how/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Documentation <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Tools → JavaDoc → How"
+                    alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> JavaDoc/How" fragment="main" class="algolia-no-index"></panel>
                 </p>
               </div>
               <hr>
@@ -723,7 +732,7 @@ ui.showToUser(taskListDescription);
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
 </footer>
 </div>
 </body>
