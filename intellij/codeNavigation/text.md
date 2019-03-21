@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can navigate code effectively using IDE features</span>
 
-<div id="title">
-
-#### Code Navigation
-
-</div>
+<span id="title">Code Navigation</span>
 
 <div id="body">
 

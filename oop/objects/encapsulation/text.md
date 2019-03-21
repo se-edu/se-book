@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Encapsulation Of Objects
-
-</div>
+<span id="title">Encapsulation Of Objects</span>
 
 <span id="prereqs"></span>
 

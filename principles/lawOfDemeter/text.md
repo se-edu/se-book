@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Law of Demeter
-
-</div>
+<span id="title">Law of Demeter</span>
 
 <span id="prereqs"></span>
 
@@ -20,7 +16,7 @@ More concretely, a method `m` of an object `O` should invoke only the methods of
 
 * The object `O` itself
 * Objects passed as parameters of `m`
-* Objects created/instantiated in `m`
+* Objects created/instantiated in `m` (directly or indirectly)
 * Objects from the <tooltip content="objects that are held by instance variables of">direct association of</tooltip> `O`
 
 <tip-box>
@@ -36,11 +32,9 @@ void foo(Bar b) {
 
 </tip-box>
 
-**LoD aims to reduce coupling by limiting the interaction to a closely related group of classes.**
+**LoD aims to prevent objects navigating internal structures of other objects.**
  
 <tip-box> 
-
-{{ icon_example }} In the example above, `foo` is already coupled to `Bar`. Upholding LoD avoids `foo` being coupled to `Goo` as well.
 
 {{ icon_example }} An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.
 

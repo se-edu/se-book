@@ -1,7 +1,4 @@
-<div id="title">
-
-## Guideline: Name Well
-</div>
+<span id="title">Guideline: Name Well</span>
 
 <div id="body">
 

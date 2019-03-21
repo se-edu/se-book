@@ -1,7 +1,4 @@
-<div id="title">
-
-# JUnit
-</div>
+<span id="title">JUnit</span>
 
 <div id="body">
 

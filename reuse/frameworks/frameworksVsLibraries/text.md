@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Frameworks vs Libraries
-
-</div>
+<span id="title">Frameworks vs Libraries</span>
 
 <span id="prereqs"></span>
 

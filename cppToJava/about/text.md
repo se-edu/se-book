@@ -1,8 +1,4 @@
-<div id="title">
-
-#### About this Chapter
-
-</div>
+<span id="title">About this Chapter</span>
 
 <span id="prereqs"></span>
 
@@ -24,7 +20,7 @@ Some conventions used in this chapter:
 
 Other resources used:
 * [C++ and Java Syntax Differences Cheat Sheet](https://www.cprogramming.com/tutorial/java/syntax-differences-java-c++.html) by Alex Allain
-* [_Java Tutorial_ provided by Oracle](https://docs.oracle.com/javase/tutorial/). Extracts from this resource are marked as {{ oracle }}
+* [_Java Tutorial_ provided by Oracle]({{ java_tutorial }}/). Extracts from this resource are marked as {{ oracle }}
 
 </div>
 

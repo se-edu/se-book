@@ -6,102 +6,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Software Architecture: Introduction: What</title>
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain Software Architecture</span>
-        </span>
-        </span>
-        </span>
-        <p></p>
-      </p>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
       <div>
-        <div></div>
-        <p></p>
-        <p><span class="dimmed"><strong><span>Design → Architecture → Introduction →
-</span></strong>
-          </span>
-        </p>
-        <div id="title-and-body">
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain Software Architecture</span></span></span></span></p>
+          <p></p>
+          <p></p>
           <div>
-            <h4 id="what">What</h4>
-          </div>
-          <div id="main">
-            <div>
-              <blockquote>
-                <p>The software architecture of a program or computing system is the structure or structures of the system, which comprise software elements, the externally visible properties of those elements, and the relationships among them. Architecture
-                  is concerned with the public side of interfaces; private details of elements—details having to do solely with internal implementation—are not architectural.
-                  <sub>-- <em>Software Architecture in Practice (2nd edition)</em>, Bass, Clements, and Kazman</sub></p>
-              </blockquote>
-              <p><strong>The software architecture shows the overall organization of the system and can be viewed as a very high-level design.</strong> It usually consists of a set of interacting components that fit together to achieve the required functionality.
-                It should be a simple and technically viable structure that is well-understood and agreed-upon by everyone in the development team, and it forms the basis for the implementation.</p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> A possible architecture for a <em>Minesweeper</em> game</p>
-                <table>
-                  <tr>
-                    <td><img src="/se-book/architecture/introduction/what/images/minesweeper.png" height="220"></td>
-                    <td width="10px"></td>
-                    <td><img src="/se-book/architecture/introduction/what/images/minesweeperArchitecture.png" height="160"></td>
-                  </tr>
-                </table>
-                <p></p>
-                <p>Main components:</p>
-                <ul>
-                  <li><code>GUI</code>: Graphical user interface</li>
-                  <li><code>TextUi</code>: Textual user interface</li>
-                  <li><code>ATD</code>: An automated test driver used for testing the game logic</li>
-                  <li><code>Logic</code>: computation and logic of the game</li>
-                  <li><code>Store</code>: storage and retrieval of game data (high scores etc.)</li>
-                </ul>
-              </tip-box>
-              <p><strong>The architecture is typically designed by the <em>software architect</em></strong>, who provides the technical vision of the system and makes high-level (i.e. architecture-level) technical decisions about the project.</p>
-            </div>
-            <div>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Design → Architecture → Introduction →
+                  </span></strong></span></p>
+            <div id="title-and-body">
               <div>
-                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                <h4 id="what"><span>What</span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <blockquote>
+                    <p>The software architecture of a program or computing system is the structure or structures of the system, which comprise software elements, the externally visible properties of those elements, and the relationships among them. Architecture is concerned with the public side of interfaces; private details of elements—details having to do solely with internal implementation—are not architectural.
+                      <sub>-- <em>Software Architecture in Practice (2nd edition)</em>, Bass, Clements, and Kazman</sub></p>
+                  </blockquote>
+                  <p><strong>The software architecture shows the overall organization of the system and can be viewed as a very high-level design.</strong> It usually consists of a set of interacting components that fit together to achieve the required functionality. It should be a simple and technically viable structure that is well-understood and agreed-upon by everyone in the development team, and it forms the basis for the implementation.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> A possible architecture for a <em>Minesweeper</em> game</p>
+                    <table>
+                      <tr>
+                        <td><img src="/se-book/architecture/introduction/what/images/minesweeper.png" height="220"></td>
+                        <td width="10px"></td>
+                        <td><img src="/se-book/architecture/introduction/what/images/minesweeperArchitecture.png" height="160"></td>
+                      </tr>
+                    </table>
+                    <p></p>
+                    <p>Main components:</p>
+                    <ul>
+                      <li><code>GUI</code>: Graphical user interface</li>
+                      <li><code>TextUi</code>: Textual user interface</li>
+                      <li><code>ATD</code>: An automated test driver used for testing the game logic</li>
+                      <li><code>Logic</code>: computation and logic of the game</li>
+                      <li><code>Store</code>: storage and retrieval of game data (high scores etc.)</li>
+                    </ul>
+                  </tip-box>
+                  <p><strong>The architecture is typically designed by the <em>software architect</em></strong>, who provides the technical vision of the system and makes high-level (i.e. architecture-level) technical decisions about the project.</p>
+                </div>
+                <div>
                   <div>
-                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about architecture">
-                      <question>
-                        <p>Choose the correct statement</p>
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. The architecture of a system should be simple enough for all team members to understand it.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. The architecture is primarily a high-level design of the system.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. The architecture is usually decided by the project manager.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. The architecture can contain details private to a component.</li>
-                        </ul>
-                        <div slot="answer">
-                          <p>(a)(b)</p>
-                          <p><s>(c)</s> Reason: Architecture is usually designed by the Architect</p>
-                          <p><s>(d)</s> Reason:</p>
-                          <blockquote>
-                            <p>... private details of elements—details having to do solely with internal implementation—are not architectural.</p>
-                          </blockquote>
-                        </div>
-                      </question>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about architecture">
+                          <question>
+                            <p>Choose the correct statement</p>
+                            <ul class="task-list">
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. The architecture of a system should be simple enough for all team members to understand it.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. The architecture is primarily a high-level design of the system.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. The architecture is usually decided by the project manager.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. The architecture can contain details private to a component.</li>
+                            </ul>
+                            <div slot="answer">
+                              <p>(a)(b)</p>
+                              <p><s>(c)</s> Reason: Architecture is usually designed by the Architect</p>
+                              <p><s>(d)</s> Reason:</p>
+                              <blockquote>
+                                <p>... private details of elements—details having to do solely with internal implementation—are not architectural.</p>
+                              </blockquote>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
                     </panel>
                   </div>
-                </panel>
+                </div>
               </div>
             </div>
           </div>
@@ -113,16 +120,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../../markbind/js/vue.min.js"></script>
+<script src="../../../markbind/js/vue-strap.min.js"></script>
+<script src="../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\..\markbind\js\setup.js"></script>
+<script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../../markbind/layouts/default/scripts.js"></script>
 </html>

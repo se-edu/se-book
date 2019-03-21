@@ -1,16 +1,14 @@
 <div>
   <p>
-    <panel src="/se-book\errorHandling\defensiveProgramming\what\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Implementation → Error Handling → Defensive Programming → What%%"></panel>
+    <panel src="/se-book/errorHandling/defensiveProgramming/what/unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Implementation → Error Handling → Defensive Programming → What%%" popup-url="/se-book/errorHandling/defensiveProgramming/what"></panel>
   </p>
 </div>
 <p></p>
 <p><span class="dimmed"><strong><span>Implementation → Error Handling → Defensive Programming →
-</span></strong>
-  </span>
-</p>
+      </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="enforcing-referential-integrity">Enforcing Referential Integrity</h4>
+    <h4 id="enforcing-referential-integrity"><span>Enforcing Referential Integrity</span></h4>
   </div>
   <div id="main">
     <div>
@@ -47,8 +45,7 @@ jean.setBoyfriend(james);
 james.setGirlfriend(jean);  
 jean.setBoyfriend(yong);  
 </code></pre>
-      <p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this &quot;love triangle&quot;. In such a situation, we say that <em>the referential integrity has been violated</em>.
-        It simply means <em>there is an inconsistency in object references</em>.</p>
+      <p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this &quot;love triangle&quot;. In such a situation, we say that <em>the referential integrity has been violated</em>. It simply means <em>there is an inconsistency in object references</em>.</p>
       <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
       <p></p>
       <p>One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.</p>
@@ -91,17 +88,18 @@ jean.setBoyfriend(yong);
    ...
 }
 </code></pre>
-      <p>When the code <code>james.setGirlfriend(jean)</code> is executed, the code ensures that <code>james</code> break up with any current girlfriend before he accepts <code>jean</code> as the girlfriend. Furthermore, the code ensures that <code>jean</code>        breaks up with any existing boyfriends and accepts <code>james</code> as the boyfriend.</p>
+      <p>When the code <code>james.setGirlfriend(jean)</code> is executed, the code ensures that <code>james</code> break up with any current girlfriend before he accepts <code>jean</code> as the girlfriend. Furthermore, the code ensures that <code>jean</code> breaks up with any existing boyfriends and accepts <code>james</code> as the boyfriend.</p>
     </div>
     <div>
       <div>
-        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
           <div>
             <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Implement `Player` and `Region`">
               <question has-input="true">
                 <p>Imagine that we now support the following feature in our Minesweeper game.</p>
                 <tip-box>
-                  <p>Feature ID: multiplayer<br> Description: A minefield is divided into mine regions. Each region is assigned to a single player. Players can swap regions. To win the game, all regions must be cleared.</p>
+                  <p>Feature ID: multiplayer<br>
+                    Description: A minefield is divided into mine regions. Each region is assigned to a single player. Players can swap regions. To win the game, all regions must be cleared.</p>
                 </tip-box>
                 <p>Given below is an extract from our class diagram.</p>
                 <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100">
@@ -210,14 +208,12 @@ r1.setPlayer(p2);
           <div>
             <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Bidirectional association between `Bank` and `Account`">
               <question has-input="true">
-                <p>Implement this bidirectional association. Note that the <code>Bank</code> uses <code>accNumber</code> attribute to uniquely identify an <code>Account</code> object. Assume the <code>Bank</code> class is responsible for maintaining the
-                  links between objects.</p>
+                <p>Implement this bidirectional association. Note that the <code>Bank</code> uses <code>accNumber</code> attribute to uniquely identify an <code>Account</code> object. Assume the <code>Bank</code> class is responsible for maintaining the links between objects.</p>
                 <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60">
                 <p></p>
                 <div slot="answer">
                   <p>The code below contains a method in the <code>Bank</code> class to create an account; the bank field in the new account is thereby filled by the bank creating it.</p>
-                  <p>We assume that once an <code>Account</code> has been assigned to one <code>Bank</code>, it cannot be assigned to a different <code>Bank</code>. Once the <code>Account</code> is removed from the <code>Bank</code>, it will not be used
-                    any more (hence, no need to remove the link from <code>Account</code> to <code>Bank</code>).</p>
+                  <p>We assume that once an <code>Account</code> has been assigned to one <code>Bank</code>, it cannot be assigned to a different <code>Bank</code>. Once the <code>Account</code> is removed from the <code>Bank</code>, it will not be used any more (hence, no need to remove the link from <code>Account</code> to <code>Bank</code>).</p>
                   <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> accNumber ;
     <span class="hljs-keyword">private</span> Bank theBank ;
@@ -289,9 +285,7 @@ r1.setPlayer(p2);
                 <p></p>
                 <div slot="answer">
                   <p>(a) Yes. Each links is mutable and unidirectional. A simple reference variable is suitable to hold the link.</p>
-                  <p><code>Teacher</code> class can be made even more defensive by introducing a <code>resetFavoriteStudent()</code> method to unlink the current favorite student from a teacher. In that case, <code>setFavoriteStudent(Student)</code> method
-                    should not accept null. This approach is more defensive because it prevents a null value being passed to <code>setFavoriteStudent(Student)</code> by mistake and being interpreted as a request to de-link the current favorite student
-                    from the <code>Teacher</code> object.</p>
+                  <p><code>Teacher</code> class can be made even more defensive by introducing a <code>resetFavoriteStudent()</code> method to unlink the current favorite student from a teacher. In that case, <code>setFavoriteStudent(Student)</code> method should not accept null. This approach is more defensive because it prevents a null value being passed to <code>setFavoriteStudent(Student)</code> by mistake and being interpreted as a request to de-link the current favorite student from the <code>Teacher</code> object.</p>
                   <p>(b) First diagram has unidirectional links. Second has a bidirectional link. RI is only applicable to the second.</p>
                   <p>(c)</p>
                   <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">removeMember</span><span class="hljs-params">(Member m)</span> </span>{

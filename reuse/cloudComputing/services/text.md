@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Iaas, PaaS, and SaaS
-
-</div>
+<span id="title">Iaas, PaaS, and SaaS</span>
 
 <span id="prereqs"></span>
 

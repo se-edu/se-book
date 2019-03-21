@@ -1,8 +1,4 @@
-<div id="title">
-
-#### The `String` Class
-
-</div>
+<span id="title">The `String` Class</span>
 
 <span id="prereqs"></span>
 
@@ -14,7 +10,7 @@ String is a built-in Java class that you <trigger trigger="click" for="modal:str
 
 <modal id="modal:stringClass-javaLang" title=":bulb: `java.lang` classes can be used without importing" placement="top">
 
- Any class in the [`java.lang`](https://docs.oracle.com/javase/9/docs/api/java/lang/package-summary.html) package can be used without importing.
+ Any class in the [`java.lang`]({{ java_api }}/java/lang/package-summary.html) package can be used without importing.
 </modal>
 
 

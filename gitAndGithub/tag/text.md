@@ -1,12 +1,8 @@
-<span id="prereqs"><panel src="../../revisionControl/savingHistory/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Saving History%%" /></span>
+<span id="prereqs"><panel src="../../revisionControl/savingHistory/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Saving History%%" popup-url="{{ baseUrl }}/revisionControl/savingHistory" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can tag commits using Git</span>
 
-<div id="title">
-
-#### Tag
-
-</div>
+<span id="title">Tag</span>
 
 <div id="body">
 

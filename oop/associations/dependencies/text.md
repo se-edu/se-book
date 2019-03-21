@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Dependencies
-
-</div>
+<span id="title">Dependencies</span>
 
 <span id="prereqs"></span>
 
@@ -10,7 +6,7 @@
 
 <div id="body">
 
-Dependencies are objects that are not directly linked in the object network can still interact with each other. These are a weaker form of associations we call _dependencies_.
+In the context of OOP associations, **a _dependency_ is a need for one class to depend on another without having a direction association with it.** One cause of dependencies is interactions between objects that do not have a long-term link between them.
 
 <tip-box> 
 
@@ -18,19 +14,14 @@ Dependencies are objects that are not directly linked in the object network can 
 
 </tip-box>
 
-##### <big>Implementing dependencies</big>
-
-Dependencies result from interactions between objects that do not result in a long-term link between the said objects.
+##### Implementing dependencies
 
 <tip-box>
 
 {{ icon_example }} In the code below, `Foo` has a dependency on `Bar` but it is not an association because it is only a <tooltip content="temporary">transient</tooltip> interaction and there is no long term relationship between a `Foo` object and a `Bar` object. %%i.e. the `Foo` object does not keep the `Bar` object it receives as a parameter%%.
 
-<table> 
-<tr>
-  <td>
+<div class="alt-java">
 
-Java {{ icon_output }}
 ```java
 class Foo{
     
@@ -47,11 +38,9 @@ class Bar{
     }
 }
 ```
-  </td>
-  <td>&nbsp;&nbsp;<br><br></td>
-  <td valign="top">
+</div>
+<div class="alt-python">
 
-Python {{ icon_output }}
 ```python
 class Foo:
     
@@ -63,11 +52,7 @@ class Bar:
     def __init__(self, value):
       self.value = value
 ```
-  </td>
-</tr>
-</table>
-
-The code above results in a dependency from `Foo` class to the `Bar` class.
+</div>
 
 </tip-box>
 

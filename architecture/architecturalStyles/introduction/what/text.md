@@ -1,10 +1,6 @@
-<div id="title">
+<span id="title">What</span>
 
-#### What
-
-</div>
-
-<span id="prereqs"><panel src="../../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Architecture → Introduction → What%%" /></span>
+<span id="prereqs"><panel src="../../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Architecture → Introduction → What%%" popup-url="{{ baseUrl }}/architecture/introduction/what" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain architectural styles</span>
 
@@ -18,9 +14,9 @@
 
 </tip-box>
 
-<modal title="" id="modal:archiStyles-buildingArchitectures">
+<modal large title="Building Architecture Styles" id="modal:archiStyles-buildingArchitectures">
 
-<img src="https://inspectapedia.com/exterior/ArchitectureStyles.jpg" /><br>
+<img src="https://inspectapedia.com/exterior/ArchitectureStyles.jpg" width="600"/><br>
 <sub>source: https://inspectapedia.com</sub>
 
 </modal>

@@ -1,48 +1,38 @@
 <div></div>
 <p></p>
 <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Dependency Injection →
-</span></strong>
-  </span>
-</p>
+      </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="what">What</h4>
+    <h4 id="what"><span>What</span></h4>
   </div>
   <div id="main">
     <div>
-      <p><strong><em>Dependency injection</em> is the process of 'injecting' objects to replace current dependencies with a different object.</strong> This is often used to inject
-        <trigger trigger="click" for="modal:explainDi-stub">stubs</trigger> to isolate the
-        <tooltip content="Software Under Test">SUT</tooltip> from its
-        <tooltip content="objects it depends on">dependencies</tooltip> so that it can be tested in isolation.</p>
-      <modal large="" title="" id="modal:explainDi-stub">
-      
-        <div>
+      <p><strong><em>Dependency injection</em> is the process of 'injecting' objects to replace current dependencies with a different object.</strong> This is often used to inject <trigger trigger="click" for="modal:explainDi-stub">stubs</trigger> to isolate the <tooltip content="Software Under Test">SUT</tooltip> from its <tooltip content="objects it depends on">dependencies</tooltip> so that it can be tested in isolation.</p>
+      <modal large title id="modal:explainDi-stub">
+          <div>
           <div>
             <p>
-              <panel src="/se-book\testing\testingTypes\unitTesting\what\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Quality Assurance → Testing → Unit Testing → What →%%"></panel>
+              <panel src="/se-book/testing/testingTypes/unitTesting/what/unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Quality Assurance → Testing → Unit Testing → What →%%" popup-url="/se-book/testing/testingTypes/unitTesting/what"></panel>
             </p>
           </div>
           <p></p>
           <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Unit Testing →
-</span></strong>
-            </span>
-          </p>
+                </span></strong></span></p>
           <div id="title-and-body">
             <div>
-              <h4 id="stubs">Stubs</h4>
+              <h4 id="stubs"><span>Stubs</span></h4>
             </div>
             <div id="main">
               <div>
-                <p><strong>A proper unit test requires the <em>unit</em> to be tested <mark>in isolation</mark></strong> so that bugs in the
-                  <tooltip content="code the unit depends on">dependencies</tooltip> cannot influence the test <span class="dimmed"> i.e. bugs outside of the unit should not affect the unit tests</span>.</p>
+                <p><strong>A proper unit test requires the <em>unit</em> to be tested <mark>in isolation</mark></strong> so that bugs in the <tooltip content="code the unit depends on">dependencies</tooltip> cannot influence the test <span class="dimmed"> i.e. bugs outside of the unit should not affect the unit tests</span>.</p>
                 <tip-box>
                   <p><span class="fas fa-cube"></span> If a <code>Logic</code> class depends on a <code>Storage</code> class, unit testing the <code>Logic</code> class requires isolating the <code>Logic</code> class from the <code>Storage</code> class.</p>
                 </tip-box>
                 <p><strong><em>Stubs</em> can isolate the <popover content="Software Under Test (in this case, the _unit_ being tested)">SUT</popover> from its dependencies</strong>.</p>
                 <tip-box type="definition">
                   <div>
-                    <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of
-                      predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
+                    <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
                   </div>
                 </tip-box>
                 <tip-box>
@@ -86,7 +76,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
     assertEquals(<span class="hljs-string">"Name: John"</span>, logic.getName(<span class="hljs-number">5</span>));
 }
 </code></pre>
-                  <p>However, this <code>logic</code> object being tested is making use of a <code>DataBaseStorage</code> object which means a bug in the <code>DatabaseStorage</code> class can affect the test. Therefore, this test is not testing <code>Logic</code>                    <em>in isolation from its dependencies</em> and hence it is not a pure unit test.</p>
+                  <p>However, this <code>logic</code> object being tested is making use of a <code>DataBaseStorage</code> object which means a bug in the <code>DatabaseStorage</code> class can affect the test. Therefore, this test is not testing <code>Logic</code> <em>in isolation from its dependencies</em> and hence it is not a pure unit test.</p>
                   <p>Here is a stub class you can use in place of <code>DatabaseStorage</code>:</p>
                   <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StorageStub</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Storage</span> </span>{
 
@@ -100,7 +90,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
     }
 }
 </code></pre>
-                  <p>Note how the stub has the same interface as the real dependency, is so simple that it is unlikely to contain bugs, and is pre-configured to respond with a hard-coded response, presumably, the correct response <code>DatabaseStorage</code>                    is expected to return for the given test input.</p>
+                  <p>Note how the stub has the same interface as the real dependency, is so simple that it is unlikely to contain bugs, and is pre-configured to respond with a hard-coded response, presumably, the correct response <code>DatabaseStorage</code> is expected to return for the given test input.</p>
                   <p>Here is how you can use the stub to write a unit test. This test is not affected by any bugs in the <code>DatabaseStorage</code> class and hence is a pure unit test.</p>
                   <pre><code class="hljs java"><span class="hljs-meta">@Test</span>
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
@@ -113,14 +103,14 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               </div>
               <div>
                 <div>
-                  <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                  <panel header="<span class='fas fa-paperclip'></span> Resources" expanded>
                     <ul>
                       <li><a href="https://martinfowler.com/articles/mocksArentStubs.html"><strong>Mocks Aren't Stubs</strong></a> by Martin Fowler -- An in-depth article about how Stubs differ from other types of test helpers.</li>
                     </ul>
                   </panel>
                 </div>
                 <div>
-                  <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
                     <div>
                       <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Purpose of stubs">
                         <question>
@@ -143,9 +133,9 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         </div>
       </modal>
       <tip-box>
-        <p><span class="fas fa-cube"></span> A <code>Foo</code> object normally depends on a <code>Bar</code> object, but we can inject a <code>BarStub</code> object so that the <code>Foo</code> object no longer depends on a <code>Bar</code> object. Now
-          we can test the <code>Foo</code> object in isolation from the <code>Bar</code> object.</p>
-        <img src="/se-book/testing/dependencyInjection/what/images/diagram.png" height="150"></tip-box>
+        <p><span class="fas fa-cube"></span> A <code>Foo</code> object normally depends on a <code>Bar</code> object, but we can inject a <code>BarStub</code> object so that the <code>Foo</code> object no longer depends on a <code>Bar</code> object. Now we can test the <code>Foo</code> object in isolation from the <code>Bar</code> object.</p>
+        <img src="/se-book/testing/dependencyInjection/what/images/diagram.png" height="150">
+      </tip-box>
     </div>
     <div></div>
   </div>

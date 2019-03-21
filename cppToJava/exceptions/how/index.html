@@ -6,58 +6,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - C++ to Java: Exceptions: How to use</title>
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use Java Exceptions</span>
-        </span>
-        </span>
-        </span>
-        <p></p>
-      </p>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
       <div>
-        <div></div>
-        <p></p>
-        <p><span class="dimmed"><strong><span>C++ to Java → Exceptions →
-</span></strong>
-          </span>
-        </p>
-        <div id="title-and-body">
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use Java Exceptions</span></span></span></span></p>
+          <p></p>
+          <p></p>
           <div>
-            <h4 id="how-to-use-exceptions">How to Use Exceptions</h4>
-          </div>
-          <div id="main">
-            <div>
-              <p>The content below uses extracts from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with some adaptations.</p>
-              <p><strong>A program can catch exceptions by using a combination of the <code>try</code>, <code>catch</code> blocks.</strong></p>
-              <ul>
-                <li>The <code>try</code> block identifies a block of code in which an exception can occur.</li>
-                <li>The <code>catch</code> block identifies a block of code, known as an exception handler, that can handle a particular type of exception.</li>
-              </ul>
-              <box>
-                <p><span class="fas fa-cube"></span> The <code>writeList()</code> method below calls a method <code>process()</code> that can cause two type of exceptions. It uses a try-catch construct to deal with each exception.</p>
-                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> </span>{
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>C++ to Java → Exceptions →
+                  </span></strong></span></p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="how-to-use-exceptions"><span>How to Use Exceptions</span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p>The content below uses extracts from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with some adaptations.</p>
+                  <p><strong>A program can catch exceptions by using a combination of the <code>try</code>, <code>catch</code> blocks.</strong></p>
+                  <ul>
+                    <li>The <code>try</code> block identifies a block of code in which an exception can occur.</li>
+                    <li>The <code>catch</code> block identifies a block of code, known as an exception handler, that can handle a particular type of exception.</li>
+                  </ul>
+                  <box>
+                    <p><span class="fas fa-cube"></span> The <code>writeList()</code> method below calls a method <code>process()</code> that can cause two type of exceptions. It uses a try-catch construct to deal with each exception.</p>
+                    <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> </span>{
     print(<span class="hljs-string">"starting method"</span>);
     <span class="hljs-keyword">try</span> {
         print(<span class="hljs-string">"starting process"</span>);
@@ -74,30 +81,29 @@
     print(<span class="hljs-string">"finishing method"</span>);
 }
 </code></pre>
-                <p>Some possible outputs:</p>
-                <div class="table-responsive">
-                  <table class="markbind-table table table-bordered table-striped">
-                    <thead>
-                      <tr>
-                        <th>No exceptions <span class="fas fa-arrow-down"></span></th>
-                        <th><code>IOException</code> <span class="fas fa-arrow-down"></span></th>
-                        <th><code>IndexOutOfBoundsException</code> <span class="fas fa-arrow-down"></span></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><span class="text-monospace">starting method<br>starting process<br>finishing process<br>finishing method</span></td>
-                        <td><span class="text-monospace">starting method<br>starting process<br><s>finishing process</s><br><mark>caught IOE</mark><br>finishing method </span></td>
-                        <td><span class="text-monospace">starting method<br>starting process<br><s>finishing process</s><br><mark>caught IOOBE</mark><br>finishing method</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </box>
-              <p>You can <strong>use a <code>finally</code> block to specify code that is guaranteed to execute with or without the exception.</strong> This is the right place to close files, recover resources, and otherwise clean up after the code enclosed
-                in the <code>try</code> block.</p>
-              <p><span class="fas fa-cube"></span> The <code>writeList()</code> method below has a <code>finally</code> block that will run</p>
-              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> </span>{
+                    <p>Some possible outputs:</p>
+                    <div class="table-responsive">
+                      <table class="markbind-table table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>No exceptions <span class="fas fa-arrow-down"></span></th>
+                            <th><code>IOException</code> <span class="fas fa-arrow-down"></span></th>
+                            <th><code>IndexOutOfBoundsException</code> <span class="fas fa-arrow-down"></span></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><span class="text-monospace">starting method<br>starting process<br>finishing process<br>finishing method</span></td>
+                            <td><span class="text-monospace">starting method<br>starting process<br><s>finishing process</s><br><mark>caught IOE</mark><br>finishing method </span></td>
+                            <td><span class="text-monospace">starting method<br>starting process<br><s>finishing process</s><br><mark>caught IOOBE</mark><br>finishing method</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </box>
+                  <p>You can <strong>use a <code>finally</code> block to specify code that is guaranteed to execute with or without the exception.</strong> This is the right place to close files, recover resources, and otherwise clean up after the code enclosed in the <code>try</code> block.</p>
+                  <p><span class="fas fa-cube"></span> The <code>writeList()</code> method below has a <code>finally</code> block:</p>
+                  <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> </span>{
     print(<span class="hljs-string">"starting method"</span>);
     <span class="hljs-keyword">try</span> {
         print(<span class="hljs-string">"starting process"</span>);
@@ -117,80 +123,252 @@
     print(<span class="hljs-string">"finishing method"</span>);
 }
 </code></pre>
-              <p>Some possible outputs:</p>
-              <div class="table-responsive">
-                <table class="markbind-table table table-bordered table-striped">
-                  <thead>
-                    <tr>
-                      <th>No exceptions <span class="fas fa-arrow-down"></span></th>
-                      <th><code>IOException</code> <span class="fas fa-arrow-down"></span></th>
-                      <th><code>IndexOutOfBoundsException</code> <span class="fas fa-arrow-down"></span></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><span class="text-monospace">starting method<br>starting process<br>finishing process<br><mark>cleaning up</mark><br>finishing method</span></td>
-                      <td><span class="text-monospace">starting method<br>starting process<br><s>finishing process</s><br>caught IOE<br><mark>cleaning up</mark><br>finishing method </span></td>
-                      <td><span class="text-monospace">starting method<br>starting process<br><s>finishing process</s><br>caught IOOBE<br><mark>cleaning up</mark><br>finishing method</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <ul>
-                <li>
-                  <p>The <code>try</code> statement should contain at least one <code>catch</code> block or a finally block and may have multiple <code>catch</code> blocks.</p>
-                </li>
-                <li>
-                  <p>The class of the exception object indicates the type of exception thrown. The exception object can contain further information about the error, including an error message.</p>
-                </li>
-              </ul>
-              <p><strong>You can use the <code>throw</code> statement to throw an exception.</strong> The throw statement requires a
-                <tooltip content="Throwable objects are instances of any subclass of the `Throwable` class.">throwable</tooltip> object as the argument.</p>
-              <box>
-                <p><span class="fas fa-cube"></span> Here's an example of a <code>throw</code> statement.</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">if</span> (size == <span class="hljs-number">0</span>) {
+                  <p>Some possible outputs:</p>
+                  <div class="table-responsive">
+                    <table class="markbind-table table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>No exceptions <span class="fas fa-arrow-down"></span></th>
+                          <th><code>IOException</code> <span class="fas fa-arrow-down"></span></th>
+                          <th><code>IndexOutOfBoundsException</code> <span class="fas fa-arrow-down"></span></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><span class="text-monospace">starting method<br>starting process<br>finishing process<br><mark>cleaning up</mark><br>finishing method</span></td>
+                          <td><span class="text-monospace">starting method<br>starting process<br><s>finishing process</s><br>caught IOE<br><mark>cleaning up</mark><br>finishing method </span></td>
+                          <td><span class="text-monospace">starting method<br>starting process<br><s>finishing process</s><br>caught IOOBE<br><mark>cleaning up</mark><br>finishing method</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <ul>
+                    <li>
+                      <p>The <code>try</code> statement should contain at least one <code>catch</code> block or a finally block and may have multiple <code>catch</code> blocks.</p>
+                    </li>
+                    <li>
+                      <p>The class of the exception object indicates the type of exception thrown. The exception object can contain further information about the error, including an error message.</p>
+                    </li>
+                  </ul>
+                  <p><strong>You can use the <code>throw</code> statement to throw an exception.</strong> The throw statement requires a <tooltip content="Throwable objects are instances of any subclass of the `Throwable` class.">throwable</tooltip> object as the argument.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> Here's an example of a <code>throw</code> statement.</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">if</span> (size == <span class="hljs-number">0</span>) {
     <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> EmptyStackException();
 }
 </code></pre>
-              </box>
-              <p>In Java, <strong>Checked exceptions are subject to the <em>Catch or Specify Requirement</em></strong>: code that might throw checked exceptions must be enclosed by either of the following:</p>
-              <ul>
-                <li>A <code>try</code> statement that catches the exception. The <code>try</code> must provide a handler for the exception.</li>
-                <li>A method that specifies that it can throw the exception. The method must provide a <code>throws</code> clause that lists the exception.</li>
-              </ul>
-              <p>Unchecked exceptions are not required to follow to the <em>Catch or Specify Requirement</em> but you can apply the requirement to them too.</p>
-              <box>
-                <p><span class="fas fa-cube"></span> Here's an example of a method specifying that it throws certain checked exceptions:</p>
-                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException, IndexOutOfBoundsException </span>{
+                  </box>
+                  <p>In Java, <strong>Checked exceptions are subject to the <em>Catch or Specify Requirement</em></strong>: code that might throw checked exceptions must be enclosed by either of the following:</p>
+                  <ul>
+                    <li>A <code>try</code> statement that catches the exception. The <code>try</code> must provide a handler for the exception.</li>
+                    <li>A method that specifies that it can throw the exception. The method must provide a <code>throws</code> clause that lists the exception.</li>
+                  </ul>
+                  <p>Unchecked exceptions are not required to follow to the <em>Catch or Specify Requirement</em> but you can apply the requirement to them too.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> Here's an example of a method specifying that it throws certain checked exceptions:</p>
+                    <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeList</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException, IndexOutOfBoundsException </span>{
     print(<span class="hljs-string">"starting method"</span>);
     process();
     print(<span class="hljs-string">"finishing method"</span>);
 }
 </code></pre>
-                <pre><code>Some possible outputs:
+                    <pre><code>Some possible outputs:
 </code></pre>
-                <div class="table-responsive">
-                  <table class="markbind-table table table-bordered table-striped">
-                    <thead>
-                      <tr>
-                        <th>No exceptions <span class="fas fa-arrow-down"></span></th>
-                        <th><code>IOException</code> <span class="fas fa-arrow-down"></span></th>
-                        <th><code>IndexOutOfBoundsException</code> <span class="fas fa-arrow-down"></span></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><span class="text-monospace">starting method<br>finishing method</span></td>
-                        <td><span class="text-monospace">starting method<br><s>finishing method</s></span></td>
-                        <td><span class="text-monospace">starting method<br><s>finishing method</s></span></td>
-                      </tr>
-                    </tbody>
-                  </table>
+                    <div class="table-responsive">
+                      <table class="markbind-table table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>No exceptions <span class="fas fa-arrow-down"></span></th>
+                            <th><code>IOException</code> <span class="fas fa-arrow-down"></span></th>
+                            <th><code>IndexOutOfBoundsException</code> <span class="fas fa-arrow-down"></span></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><span class="text-monospace">starting method<br>finishing method</span></td>
+                            <td><span class="text-monospace">starting method<br><s>finishing method</s></span></td>
+                            <td><span class="text-monospace">starting method<br><s>finishing method</s></span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </box>
+                  <p><strong>Java comes with a collection of <a href="https://www.geeksforgeeks.org/built-exceptions-java-examples/">built-in exception classes</a></strong> that you can use. When they are not enough, <strong>it is possible to <a href="https://www.javatpoint.com/custom-exception">create your own exception classes</a></strong>.</p>
                 </div>
-              </box>
-              <p><strong>Java comes with a collection of <a href="https://www.geeksforgeeks.org/built-exceptions-java-examples/">built-in exception classes</a></strong> that you can use. When they are not enough, <strong>it is possible to <a href="https://www.javatpoint.com/custom-exception">create your own exception classes</a></strong>.</p>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                      <div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> parse rectangle descriptor">
+                            <question>
+                              <p>The <code>Main</code> class below parses a string descriptor of a rectangle of the format <code>&quot;WIDTHxHEIGHT&quot;</code> <span class="dimmed">e.g., <code>&quot;3x4&quot;</code></span> and prints the area of the rectangle.</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printArea</span><span class="hljs-params">(String descriptor)</span></span>{
+        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> modify the code below</span>
+        System.out.println(descriptor + <span class="hljs-string">"="</span> + calculateArea(descriptor));
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(String descriptor)</span> </span>{
+        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> modify the code below</span>
+        String[] dimensions = descriptor.split(<span class="hljs-string">"x"</span>);
+        <span class="hljs-keyword">return</span> Integer.parseInt(dimensions[<span class="hljs-number">0</span>]) * Integer.parseInt(dimensions[<span class="hljs-number">1</span>]);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printArea(<span class="hljs-string">"3x4"</span>);
+        printArea(<span class="hljs-string">"5x5"</span>);
+    }
+}
+</code></pre>
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre><code class="hljs">3x4=12
+5x5=25
+</code></pre>
+                              <ol>
+                                <li>
+                                  <p>Update the code of <code>printArea</code> to print an error message if <code>WIDTH</code> and/or <code>HEIGHT</code> are not numbers <span class="dimmed">e.g., <code>&quot;Ax4&quot;</code></span><br>
+                                    💡 <code>calculateArea</code> will throw the unchecked exception <code>NumberFormatException</code> if the code tries to parse a non-number to an integer.</p>
+                                </li>
+                                <li>
+                                  <p>Update the code of <code>printArea</code> to print an error message if the descriptor is missing <code>WIDTH</code> and/or <code>HEIGHT</code> <span class="dimmed">e.g., <code>&quot;x4&quot;</code></span><br>
+                                    💡 <code>calculateArea</code> will throw the unchecked exception <code>IndexOutOfBoundsException</code> if one or both dimensions are missing.</p>
+                                </li>
+                                <li>
+                                  <p>Update the code of <code>calculateArea</code> to throw the checked exception <code>IllegalShapeException</code> if there are more than 2 dimensions <span class="dimmed">e.g., <code>&quot;5x4x3&quot;</code></span> and update the <code>printArea</code> to print an error message for those cases. Here is the code for the <code>IllegalShapeException.java</code></p>
+                                </li>
+                              </ol>
+                              <div class="indented-level2">
+                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IllegalShapeException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Exception</span> </span>{
+  <span class="hljs-comment">//no other code needed</span>
+}
+</code></pre>
+                              </div>
+                              <p>Here is the expected behavior after you have done the above changes:</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">//...</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printArea(<span class="hljs-string">"3x4"</span>);
+        printArea(<span class="hljs-string">"3xy"</span>);
+        printArea(<span class="hljs-string">"3x"</span>);
+        printArea(<span class="hljs-string">"3"</span>);
+        printArea(<span class="hljs-string">"3x4x5"</span>);
+    }
+}
+</code></pre>
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre><code class="hljs">3x4=12
+WIDTH or HEIGHT is not a number: 3xy
+WIDTH or HEIGHT is missing: 3x
+WIDTH or HEIGHT is missing: 3
+Too many dimensions: 3x4x5
+</code></pre>
+                              <panel type="seamless" header="Partial solution">
+                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printArea</span><span class="hljs-params">(String descriptor)</span></span>{
+        <span class="hljs-keyword">try</span> {
+            System.out.println(descriptor + <span class="hljs-string">"="</span> + calculateArea(descriptor));
+        } <span class="hljs-keyword">catch</span> (NumberFormatException e) {
+            System.out.println(<span class="hljs-string">"WIDTH or HEIGHT is not a number: "</span> + descriptor);
+        } <span class="hljs-comment">// add more catch blocks here</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(String descriptor)</span> <span class="hljs-keyword">throws</span> IllegalShapeException </span>{
+        String[] dimensions = descriptor.split(<span class="hljs-string">"x"</span>);
+
+        <span class="hljs-comment">//throw IllegalShapeException here if dimensions.length &gt; 2</span>
+
+        <span class="hljs-keyword">return</span> Integer.parseInt(dimensions[<span class="hljs-number">0</span>]) * Integer.parseInt(dimensions[<span class="hljs-number">1</span>]);
+    }
+
+
+}
+</code></pre>
+                              </panel>
+                            </question>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 3 - **Use exceptions**">
+                            <div id="body">
+                              <p>
+                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel1._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L1" minimized fragment="main"></panel>
+                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel2._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L2" minimized fragment="main"></panel>
+                              </p>
+                              <p><span class="dimmed">This exercise continues from the <code>TaskManager Level 1-2</code> exercises quoted above.</span></p>
+                              <div id="main">
+                                <p>Enhance the TaskManager to print an error message if a command is missing parts. Use exceptions so that error detection and printing of error message happen at different places of code and the error information is passed between the two places using an Exception object.</p>
+                                <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                                <box>
+                                  <div class="text-monospace">
+                                    <p>Welcome to TaskManager-Level3!
+                                      <br>Your task? todo
+                                      <br><mark>Error: Empty description for TODO</mark>
+                                      <br>Your task? todo read book
+                                      <br>Tasks in the list: 1
+                                      <br>Your task? print
+                                      <br>Tasks:
+                                      <br>[1] description: read book
+                                      <br> is done? No
+                                      <br>Your task?</p>
+                                  </div>
+                                </box>
+                                <p>Suggested approach:</p>
+                                <ul>
+                                  <li>Create a <code>TaskManagerException</code> class that inherits the <code>Exception</code> class. Override the constructor that takes a <code>String</code> parameter so that you can specify the error information when you create a <code>TaskManagerException</code> object.</li>
+                                  <li>Throw a new <code>TaskManagerException</code> object when you detect some necessary information is missing in the command.</li>
+                                  <li>Catch that exception somewhere else and print the message inside the exception object.</li>
+                                </ul>
+                                <panel type="seamless" header="Partial solution">
+                                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TaskManagerException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Exception</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">TaskManagerException</span><span class="hljs-params">(String message)</span> </span>{
+        <span class="hljs-keyword">super</span>(message);
+    }
+}
+</code></pre>
+                                  <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">// ...</span>
+        <span class="hljs-keyword">while</span> (!isExit) {
+            <span class="hljs-keyword">try</span> {
+                line = getInput();
+                String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>];
+                <span class="hljs-keyword">switch</span> (command) {
+                    <span class="hljs-keyword">case</span> <span class="hljs-string">"todo"</span>:
+                        addTodo(line);
+                        <span class="hljs-keyword">break</span>;
+                    <span class="hljs-comment">// ...</span>
+                }
+            } <span class="hljs-keyword">catch</span> (TaskManagerException e) {
+                printError(e.getMessage());
+            }
+        }
+        <span class="hljs-comment">// ...</span>
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addTodo</span><span class="hljs-params">(String line)</span> <span class="hljs-keyword">throws</span> TaskManagerException </span>{
+        String description = line.substring(<span class="hljs-string">"todo"</span>.length()).trim();
+        <span class="hljs-keyword">if</span> (description.isEmpty()){
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> TaskManagerException(<span class="hljs-string">"Empty description for TODO"</span>);
+        }
+        <span class="hljs-comment">// ...</span>
+    }
+</code></pre>
+                                </panel>
+                              </div>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div></div>
           </div>
         </div>
       </div>
@@ -200,16 +378,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../../markbind/js/vue.min.js"></script>
+<script src="../../../markbind/js/vue-strap.min.js"></script>
+<script src="../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\..\markbind\js\setup.js"></script>
+<script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../../markbind/layouts/default/scripts.js"></script>
 </html>

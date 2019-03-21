@@ -1,7 +1,4 @@
-<div id="title">
-
-## Build Automation
-</div>
+<span id="title">Build Automation</span>
 
 <div id="body">
 

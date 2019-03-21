@@ -1,8 +1,4 @@
-<div id="title">
-
-#### What
-
-</div>
+<span id="title">What</span>
 
 <span id="prereqs"></span>
 
@@ -14,9 +10,9 @@
 <include src="../../../common/definitions.md#def-abstraction" />
 </tip-box>
 
-Most programs are written to solve complex problems involving large amounts of intricate details. It is impossible to deal with all these details at the same time.  The guiding principle of abstraction stipulates that we capture only details that are relevant to the current perspective or the task at hand. 
+**The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand needs to be considered.** As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.
 
-**Ignoring lower level data items and thinking in terms of bigger entities is called _data abstraction_.**
+**Ignoring lower level data items and thinking in terms of bigger entities is called ==_data abstraction_==.**
 
 <tip-box> 
 
@@ -24,7 +20,7 @@ Most programs are written to solve complex problems involving large amounts of i
 
 </tip-box>
 
-**_Control abstraction_ abstracts away details of the actual control flow to focus on tasks at a simplified level.**
+**==_Control abstraction_== abstracts away details of the actual control flow to focus on tasks at a simplified level.**
  
 <tip-box> 
 
@@ -41,6 +37,18 @@ Most programs are written to solve complex problems involving large amounts of i
 {{ icon_example }} An example of different levels of control abstraction: `execute(Game)` is at a higher level than `print(Char)` which is at a higher than an Assembly language instruction `MOV`.
 
 </tip-box>
+
+**Abstraction is a general concept that is not limited to just data or control abstractions.**
+
+<box>
+
+{{ icon_example }} Some more general examples of abstraction:
+
+* An OOP _class_ is an abstraction over related data and behaviors.
+* An _architecture_ is a higher-level abstraction of the design of a software.
+* Models (e.g., UML models) are abstractions of some aspect of reality.
+
+</box>
 
 </div>
 

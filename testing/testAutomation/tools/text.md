@@ -2,37 +2,30 @@
 
 <span id="outcomes">{{ icon_outcome }} Can explain test automation tools</span>
 
-<div id="title">
-
-#### Test Automation Tools
-
-</div>
+<span id="title">Test Automation Tools</span>
 
 <div id="body">
 
-**JUnit is a tool for automated testing of Java programs.** Similar tools are available for other languages.
+**JUnit is a tool for automated testing of Java programs.** Similar tools are available for other languages and for automating different types of testing.
 
 <tip-box> 
 
 {{ icon_example }} This an automated test for a `Payroll` class, written using JUnit libraries.
 
 ```java
-public class PayrollTestJUnit {
+@Test
+public void testTotalSalary(){
+    Payroll p = new Payroll();
 
-    @Test
-    public void testTotalSalary(){
-        Payroll p = new Payroll();
+    //test case 1
+    p.setEmployees(new String[]{"E001", "E002"});
+    assertEquals(6400, p.totalSalary());
 
-        //test case 1
-        p.setEmployees(new String[]{"E001", "E002"});
-        assertEquals(p.totalSalary(), 6400);
+    //test case 2
+    p.setEmployees(new String[]{"E001"});
+    assertEquals(2300, p.totalSalary());
 
-        //test case 2
-        p.setEmployees(new String[]{"E001"});
-        assertEquals(p.totalSalary(), 2300);
-
-        //more tests...
-    }
+    //more tests...
 }
 ```
 </tip-box>

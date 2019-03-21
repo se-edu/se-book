@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Basic
-
-</div>
+<span id="title">Basic</span>
 
 <span id="prereqs"></span>
 
@@ -16,9 +12,9 @@
 
 {{ icon_example }} These could be EPs for the <trigger for="pop:epBasic-isValidMonth">isValidMonth</trigger> example:
 
-* [MIN_INT ... 0] : **below** the range that produces `true`
+* [MIN_INT ... 0] : **below** the range that produces `true` (produces `false`)
 * [1 … 12] : the range that produces `true`
-* [13 … MAX_INT] : **above** the range that produces `true`
+* [13 … MAX_INT] : **above** the range that produces `true` (produces `false`)
 
 </tip-box>
 

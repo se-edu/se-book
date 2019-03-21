@@ -1,7 +1,4 @@
-<div id="title">
-
-### Markdown
-</div>
+<span id="title">Markdown</span>
 
 <div id="body">
 

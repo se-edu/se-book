@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Forking Flow
-
-</div>
+<span id="title">Forking Flow</span>
 
 <span id="prereqs"></span>
 

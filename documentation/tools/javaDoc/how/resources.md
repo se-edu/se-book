@@ -1,0 +1,2 @@
+* [A short tutorial on writing JavaDoc comments](https://www.tutorialspoint.com/java/java_documentation.htm) %%-- from tutorialspoint.com%%
+* [A more detailed description](http://www.oracle.com/technetwork/articles/java/index-137868.html) %%--from Oracle%%

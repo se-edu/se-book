@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can use JavaFX to build a simple GUI</span>
 
-<div id="title">
-
-#### JavaFX: Basic
-
-</div>
+<span id="title">JavaFX: Basic</span>
 
 <div id="body">
 

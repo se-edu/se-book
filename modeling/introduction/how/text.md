@@ -1,8 +1,4 @@
-<div id="title">
-
-#### How
-
-</div>
+<span id="title">How</span>
 
 <span id="prereqs"></span>
 
@@ -39,7 +35,7 @@ b) **To communicate information among stakeholders.**  Models can be used as a v
 
 An _architecture diagram_ depicts the high-level design of a software.
 
-  <include src="../../../../book/architecture/architectureDiagrams/reading/text.md#architecture-diagram-examples"/>
+  <include src="../../../architecture/architectureDiagrams/reading/text.md#architecture-diagram-examples"/>
 </modal>
 
 c) **As a blueprint for creating software.** Models can be used as instructions for building software.

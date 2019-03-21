@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Iterative Models
-
-</div>
+<span id="title">Iterative Models</span>
 
 <span id="prereqs"></span>
 

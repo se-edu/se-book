@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can explain the Design-by-Contract approach</span>
 
-<div id="title">
-
-#### Design by Contract
-
-</div>
+<span id="title">Design by Contract</span>
 
 <div id="body">
 

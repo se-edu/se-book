@@ -6,74 +6,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Requirements: Prioritizing Requirements</title>
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain prioritizing requirements</span>
-        </span>
-        </span>
-        </span>
-        <p></p>
-      </p>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
       <div>
-        <div></div>
-        <p></p>
-        <p><span class="dimmed"><strong><span>Requirements → Requirements →
-</span></strong>
-          </span>
-        </p>
-        <div id="title-and-body">
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain prioritizing requirements</span></span></span></span></p>
+          <p></p>
+          <p></p>
           <div>
-            <h4 id="prioritizing-requirements">Prioritizing Requirements</h4>
-          </div>
-          <div id="main">
-            <div>
-              <p><strong>Requirements can be prioritized based the importance and urgency</strong>, while keeping in mind the constraints of schedule, budget, staff resources, quality goals, and other constraints.</p>
-              <p>A common approach is to group requirements into priority categories. Note that all such scales are subjective, and stakeholders define the meaning of each level in the scale for the project at hand.</p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> An example scheme for categorizing requirements:</p>
-                <ul>
-                  <li><code>Essential</code>: The product must have this requirement fulfilled or else it does not get user acceptance</li>
-                  <li><code>Typical</code>: Most similar systems have this feature although the product can survive without it.</li>
-                  <li><code>Novel</code>: New features that could differentiate this product from the rest.</li>
-                </ul>
-                <p><span class="fas fa-cube"></span> Other schemes:</p>
-                <ul>
-                  <li><code>High</code>, <code>Medium</code>, <code>Low</code></li>
-                  <li><code>Must-have</code>, <code>Nice-to-have</code>, <code>Unlikely-to-have</code></li>
-                  <li><code>Level 0</code>, <code>Level 1</code>, <code>Level 2</code>, ...</li>
-                </ul>
-              </tip-box>
-              <p><strong>Some requirements can be discarded if they are considered ‘out of <em><tooltip content="the extent to which the software features should go">scope</tooltip></em>’.</strong></p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> The requirement given below is for a Calendar application. Stakeholder of the software (e.g. product designers) might decide the following requirement is not in the scope of the software.</p>
-                <blockquote>
-                  <p>The software records the actual time taken by each task and show the difference between the <em>actual</em> and <em>scheduled</em> time for the task.</p>
-                </blockquote>
-              </tip-box>
-            </div>
             <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Requirements → Requirements →
+                  </span></strong></span></p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="prioritizing-requirements"><span>Prioritizing Requirements</span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p><strong>Requirements can be prioritized based the importance and urgency</strong>, while keeping in mind the constraints of schedule, budget, staff resources, quality goals, and other constraints.</p>
+                  <p>A common approach is to group requirements into priority categories. Note that all such scales are subjective, and stakeholders define the meaning of each level in the scale for the project at hand.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> An example scheme for categorizing requirements:</p>
+                    <ul>
+                      <li><code>Essential</code>: The product must have this requirement fulfilled or else it does not get user acceptance</li>
+                      <li><code>Typical</code>: Most similar systems have this feature although the product can survive without it.</li>
+                      <li><code>Novel</code>: New features that could differentiate this product from the rest.</li>
+                    </ul>
+                    <p><span class="fas fa-cube"></span> Other schemes:</p>
+                    <ul>
+                      <li><code>High</code>, <code>Medium</code>, <code>Low</code></li>
+                      <li><code>Must-have</code>, <code>Nice-to-have</code>, <code>Unlikely-to-have</code></li>
+                      <li><code>Level 0</code>, <code>Level 1</code>, <code>Level 2</code>, ...</li>
+                    </ul>
+                  </tip-box>
+                  <p><strong>Some requirements can be discarded if they are considered ‘out of <em>
+                        <tooltip content="the extent to which the software features should go">scope</tooltip>
+                      </em>’.</strong></p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> The requirement given below is for a Calendar application. Stakeholder of the software (e.g. product designers) might decide the following requirement is not in the scope of the software.</p>
+                    <blockquote>
+                      <p>The software records the actual time taken by each task and show the difference between the <em>actual</em> and <em>scheduled</em> time for the task.</p>
+                    </blockquote>
+                  </tip-box>
+                </div>
+                <div></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -83,16 +94,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/vue-strap.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\markbind\js\setup.js"></script>
+<script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

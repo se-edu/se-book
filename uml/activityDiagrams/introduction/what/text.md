@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Introduction
-
-</div>
+<span id="title">Introduction</span>
 
 <span id="prereqs"></span>
 
@@ -10,7 +6,11 @@
 
 <div id="body">
 
-**A UML Activity diagram (AD) can model workflows.**
+**<trigger trigger="click" for="modal:modelingAd-uml">UML</trigger> _&nbsp;activity diagrams_ (AD) can model workflows.&nbsp;** %%_Flow charts_ is another type of diagrams that can model workflows. Activity diagrams are the UML equivalent of flow charts.%%
+
+<modal title="**Unified Modeling Language (UML)**" id="modal:modelingAd-uml">
+  <include src="../../../../common/definitions.md#def-uml" />
+</modal>
 
 <div v-closeable alt="">
 

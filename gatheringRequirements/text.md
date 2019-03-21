@@ -1,7 +1,4 @@
-<div id="title">
-
-# Gathering Requirements
-</div>
+<span id="title">Gathering Requirements</span>
 
 <div id="body">
 

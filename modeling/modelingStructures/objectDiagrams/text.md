@@ -1,23 +1,20 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{ icon_outcome }} Can explain object diagrams</span>
+<span id="outcomes">{{ icon_outcome }} Can use basic object diagrams</span>
 
-<div id="title">
-
-#### Object Diagrams
-
-</div>
+<span id="title">Object Diagrams</span>
 
 <div id="body">
 
-**An object diagrams shows the object structure (i.e., objects and their associations) at a specific time.** 
+<panel type="seamless" src="../../../uml/objectDiagrams/introduction/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML → Object Diagrams → Introduction" alt="{{ icon_prereq }} Object Diagrams"/>
 
-<include src="../../../uml/objectDiagrams/introduction/text.md#body" />
+**Object diagrams can be used to complement class diagrams.** For example, you can use object diagrams to model different object structures that can result from a design represented by a given class diagram.
 
-<panel src="../../../../book/uml/objectDiagrams/objects/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML → Object Diagrams → Objects" alt="{{ icon_prereq }} Objects" minimized/>
-<panel src="../../../../book/uml/objectDiagrams/associations/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML → Object Diagrams → Associations → What" alt="{{ icon_prereq }} Associations" minimized/>
+<panel type="seamless" src="../../../uml/objectDiagrams/objects/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML → Object Diagrams → Objects" alt="{{ icon_prereq }} OD/Objects"/>
+<panel type="seamless" src="../../../uml/objectDiagrams/associations/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML → Object Diagrams → Associations" alt="{{ icon_prereq }} OD/Associations"/>
 
 </div>
 
 <div id="extras">
+  <include src="exercisesPanel.md" boilerplate />
 </div>

@@ -6,295 +6,313 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Definitions</title>
-    <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <link rel="stylesheet" href="/se-book/css/textbook.css">
-  <div class="website-content">
-    <h1 id="definitions">Definitions</h1>
-    <h2 id="a">A</h2>
-    <div id="def-abstractClass">
-      <p><strong>Abstract Class</strong>: A class declared as an <em>abstract class</em> cannot be instantiated, but they can be subclassed.</p>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
     </div>
-    <div id="def-abstractMethod">
-      <p><strong>Abstract Method</strong>: An <em>abstract method</em> is a method signature without a method implementation.</p>
-    </div>
-    <div id="def-abstraction">
-      <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity (or an aspect) we are interested in, and suppressing the more complex details below that level (or irrelevant to that aspect).</p>
-    </div>
-    <div id="def-actor">
-      <p><strong>Actor</strong>: An actor (in a use case) is a role played by a user. An actor can be a human or another system. Actors are not part of the system; they reside outside the system.</p>
-    </div>
-    <div id="def-architecture">
-      <p><strong>Architecture</strong>: The high level structures of a software system, the discipline of creating such structures, and the documentation of these structures. These structures are needed to reason about the software system. Each structure
-        comprises software elements, relations among them, and properties of both elements and relations. The architecture of a software system is a metaphor, analogous to the architecture of a building.</p>
-    </div>
-    <h2 id="b">B</h2>
-    <div id="def-brainstorming">
-      <p><strong>Brainstorming</strong>: A group activity designed to <em>generate a large number of diverse and creative ideas</em> for the <em>solution</em> of a problem.</p>
-    </div>
-    <div id="def-brooks-law">
-      <p><strong>Brooks' Law</strong>: Adding people to a late project will make it later. -- Fred Brooks (author of <em>The Mythical Man-Month</em>)</p>
-    </div>
-    <h2 id="c">C</h2>
-    <div id="def-camel-case">
-      <blockquote>
-        <pic src="https://upload.wikimedia.org/wikipedia/commons/e/ef/CamelCase.svg" width="200" alt="camelCase"></pic>
-        <p><em>CamelCase</em> is named after the &quot;humps&quot; of its capital letters, similar to the humps of a Bactrian camel. Camel case (stylized as <code>camelCase</code>) is the practice of writing compound words or phrases such that each word
-          or abbreviation in the middle of the phrase begins with a capital letter, with no intervening spaces or punctuation.</p>
-        <p><small><span class="dimmed">-- adapted from <a href="https://en.wikipedia.org/wiki/Camel_case">Wikipedia</a></span></small></p>
-      </blockquote>
-      <p>e.g., <code>createEmptyList</code>, <code>listOfIntegers</code>, <code>htmlText</code>, <code>dvdPlayer</code>. This book defines camelCase style as requiring the first letter to be lower case. If the first letter is upper case instead e.g., <code>CreateEmptyList</code>,
-        it is called <em>UpperCamelCase</em> or <em>PascalCase</em>.</p>
-    </div>
-    <div id="def-client-code">
-      <p><strong>Client component/method/object</strong>: The component/method/object that is interacting with a given code.</p>
-    </div>
-    <div id="def-cli">
-      <p><strong>CLI App</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p>
-    </div>
-    <div id="def-commit">
-      <p><strong>Commit</strong>: Saving the current state of the working folder into the Git revision history.</p>
-    </div>
-    <div id="def-coupling">
-      <p><strong>Coupling</strong>: The degree of interdependence between software modules; a measure of how closely connected two routines or modules are; the strength of the relationships between module.</p>
-    </div>
-    <h2 id="d">D</h2>
-    <div id="def-dependency-inversion-principle">
-      <p><strong>Dependency Inversion Principle</strong>:</p>
-      <ol>
-        <li>High-level modules should not depend on low-level modules. Both should depend on abstractions.</li>
-        <li>Abstractions should not depend on details. Details should depend on abstractions.</li>
-      </ol>
-    </div>
-    <div id="def-design-pattern">
-      <p><strong>Design Pattern</strong> : An <em>elegant reusable solution</em> to a <em>commonly recurring problem</em> within a <em>given context</em> in software design.</p>
-    </div>
-    <div id="def-domain-expert">
-      <p><strong>Domain Expert</strong> : An expert of a discipline to which the product is connected <span class="dimmed"> e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting</span>.</p>
-    </div>
-    <div id="def-dry-principle">
-      <p><strong>DRY (Don't Repeat Yourself) Principle</strong>: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub><em>The Pragmatic Programmer</em>, by Andy Hunt and Dave Thomas</sub></p>
-    </div>
-    <div id="def-dynamic-binding">
-      <p><strong>Dynamic Binding</strong> (
-        <tooltip content="There are subtle differences between late binding and dynamic binding, but they are beyond the scope of this document">aka late binding</tooltip>) : a mechanism where method calls in code are
-        <tooltip content="deciding which method implementation to execure">resolved</tooltip> at
-        <tooltip content="at the moment the method call is executed">runtime</tooltip>, rather than at compile time.</p>
-    </div>
-    <h2 id="e">E</h2>
-    <div id="def-enterprise-application">
-      <p><strong>Enterprise Application</strong>: ‘enterprise applications’ means software applications used at organizations level and therefore has to meet much higher demands (such as in scalability, security, performance, and robustness) than software
-        meant for individual use.</p>
-    </div>
-    <div id="def-exception">
-      <p><strong>Exception</strong>:</p>
-      <blockquote>
-        <p>The term <em>exception</em> is shorthand for the phrase &quot;exceptional event.&quot; An <em>exception</em> is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. –- Java Tutorial
-          (Oracle Inc.)</p>
-      </blockquote>
-    </div>
-    <div id="def-equivalence-partition">
-      <p><strong>Equivalence partition (aka equivalence class)</strong>: A group of test inputs that are likely to be processed by the SUT in the same way.</p>
-    </div>
-    <h2 id="f">F</h2>
-    <div id="def-feature-list">
-      <p><strong>Feature List</strong>: A list of features of a product <em>grouped according to some criteria</em> such as aspect, priority, order of delivery, etc.</p>
-    </div>
-    <div id="def-focus-group">
-      <p><strong>Focus Groups</strong>: A kind of <em>informal interview</em> within an <em>interactive group setting</em>.</p>
-    </div>
-    <h2 id="g">G</h2>
-    <div id="def-glossary">
-      <p><strong>Glossary</strong>: A glossary serves to ensure that <em>all stakeholders have a common understanding</em> of the noteworthy terms, abbreviation, acronyms etc.</p>
-    </div>
-    <h2 id="i">I</h2>
-    <div id="def-interface-segregation-principle">
-      <p><strong>Interface Segregation Principle (ISP)</strong>: No client should be forced to depend on methods it does not use.</p>
-    </div>
-    <h2 id="l">L</h2>
-    <div id="def-law-of-demeter">
-      <p><strong>Law of Demeter (LoD)</strong>:</p>
-      <ul>
-        <li>An object should have limited knowledge of another object.</li>
-        <li>An object should only interact with objects that are closely related to it.</li>
-      </ul>
-      <p>Also known as</p>
-      <ul>
-        <li>Don’t talk to strangers.</li>
-        <li>Principle of least knowledge</li>
-      </ul>
-    </div>
-    <div id="def-liskov-substitution-principle">
-      <p><strong>Liskov Substitution Principle (LSP)</strong>: Derived classes must be substitutable for their base classes. <sub>-- proposed by <a href="https://en.wikipedia.org/wiki/Barbara_Liskov">Barbara Liskov</a></sub></p>
-    </div>
-    <h2 id="o">O</h2>
-    <div id="def-open-closed-principle">
-      <p><strong>Open-Closed Principle (OCP)</strong>: A module should be <em>open</em> for extension but <em>closed</em> for modification. That is, modules should be written so that they can be extended, without requiring them to be modified. <sub>-- proposed by <a href="https://en.wikipedia.org/wiki/Bertrand_Meyer">Bertrand Meyer</a></sub></p>
-    </div>
-    <h2 id="p">P</h2>
-    <div id="def-pair-programming">
-      <p><strong>Pair Programming</strong>:</p>
-      <blockquote>
-        <p>Pair programming is an agile software development technique in which two programmers work together at one workstation. One, the driver, writes code while the other, the observer or navigator, reviews each line of code as it is typed in. The two
-          programmers switch roles frequently. <sub>[<a href="https://en.wikipedia.org/wiki/Pair_programming">source: Wikipedia</a>]</sub></p>
-      </blockquote>
-    </div>
-    <div id="def-prototyping">
-      <p><strong>Prototype</strong>: A prototype is a <em>mock up, a scaled down version, or a partial system constructed</em></p>
-      <ul>
-        <li>to get users’ feedback.</li>
-        <li>to validate a technical concept (a &quot;proof-of-concept&quot; prototype).</li>
-        <li>to give a preview of what is to come, or to compare multiple alternatives on a small scale before committing fully to one alternative.</li>
-        <li>for early field-testing under controlled conditions.</li>
-      </ul>
-    </div>
-    <div id="def-polymorphism">
-      <p><strong>Polymorphism</strong>:</p>
-      <blockquote>
-        <p>The ability of different objects to respond, each in its own way, to identical messages is called polymorphism. <sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
-      </blockquote>
-    </div>
-    <h2 id="r">R</h2>
-    <div id="def-rcs">
-      <p><strong>RCS</strong> : Revision Control Software.</p>
-    </div>
-    <div id="def-repo">
-      <p><strong>Repository</strong> (<em>repo</em> for short): The database of the history of a directory being tracked by an RCS software (e.g. Git).</p>
-    </div>
-    <h2 id="s">S</h2>
-    <div id="def-separation-concerns-principle">
-      <p><strong>Separation of Concerns Principle (SoC)</strong>: To achieve better modularity, separate the code into distinct sections, such that each section addresses a separate <em>concern</em>. -- Proposed by <a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger W. Dijkstra</a></p>
-    </div>
-    <div id="def-single-responsibility-principle">
-      <p><strong>Single Responsibility Principle (SRP)</strong>: A class should have one, and only one, reason to change. <sub>-- Robert C. Martin</sub></p>
-    </div>
-    <div id="def-se">
-      <p><strong>Software Engineering</strong>: Software Engineering is the application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software&quot; <sub>-- IEEE Standard Glossary of Software Engineering Terminology</sub></p>
-    </div>
-    <div id="def-stage">
-      <p><strong>Stage</strong>: Instructing Git to prepare a file for committing.</p>
-    </div>
-    <div id="def-stakeholder">
-      <p><strong>Stakeholder</strong>: A party that is potentially affected by the software project. e.g. users, sponsors, developers, interest groups, government agencies, etc.</p>
-    </div>
-    <div id="def-static-analysis">
-      <p><strong>Static analysis</strong>: Static analysis is the analysis of code without actually executing the code.</p>
-    </div>
-    <div id="def-static-binding">
-      <p><strong>Static binding</strong> (aka early binding): When a method call is resolved at compile time.</p>
-    </div>
-    <div id="def-stub">
-      <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined
-        inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
-    </div>
-    <div id="def-sut">
-      <p><strong>SUT</strong>: Software Under Test</p>
-    </div>
-    <h2 id="t">T</h2>
-    <div id="def-testing">
-      <p><strong>Testing</strong>: Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component. –- source: IEEE</p>
-    </div>
-    <div id="def-type-signature">
-      <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.</p>
-      <panel type="seamless" header="%%Examples%%">
-        <div class="table-responsive">
-          <table class="markbind-table table table-bordered table-striped">
-            <thead>
-              <tr>
-                <th style="text-align:center">Method</th>
-                <th style="text-align:center">Type Signature</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="text-align:center"><code>int add(int X, int Y)</code></td>
-                <td style="text-align:center"><code>(int, int)</code></td>
-              </tr>
-              <tr>
-                <td style="text-align:center"><code>void add(int A, int B)</code></td>
-                <td style="text-align:center"><code>(int, int)</code></td>
-              </tr>
-              <tr>
-                <td style="text-align:center"><code>void m(int X, double Y)</code></td>
-                <td style="text-align:center"><code>(int, double)</code></td>
-              </tr>
-              <tr>
-                <td style="text-align:center"><code>void m(double X, int Y)</code></td>
-                <td style="text-align:center"><code>(double, int)</code></td>
-              </tr>
-            </tbody>
-          </table>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
+      <link rel="stylesheet" href="/se-book/css/textbook.css">
+      <div class="website-content">
+        <h1 id="definitions">Definitions<a class="fa fa-anchor" href="#definitions"></a></h1>
+        <h2 id="a">A<a class="fa fa-anchor" href="#a"></a></h2>
+        <div id="def-abstractClass">
+          <p><strong>Abstract Class</strong>: A class declared as an <em>abstract class</em> cannot be instantiated, but they can be subclassed.</p>
         </div>
-      </panel>
-    </div>
-    <h2 id="u">U</h2>
-    <div id="def-uml">
-      <p><a href="http://www.uml.org/#UML2.0"><strong>Unified Modeling Language (UML)</strong></a> is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady
-        Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently
-        the <em>de facto</em> modeling notation used in the software industry.</p>
-    </div>
-    <div id="def-use-case">
-      <p><strong>Use Case</strong>: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an
-        <trigger for="pop:actor">actor</trigger>.[ 📖 :
-        <popover effect="fade" placement="top">uml-user-guide<span slot="content"><span><em><strong>The Unified Modeling Language User Guide</strong></em>, 2e, G Booch, J Rumbaugh, and I Jacobson </span></span>
-        </popover>]</p>
-      <popover id="pop:actor" title="<span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span>" placement="top">
-        <div slot="content">
-          <div>
-            <p><strong>Actor</strong>: An actor (in a use case) is a role played by a user. An actor can be a human or another system. Actors are not part of the system; they reside outside the system.</p>
-          </div>
+        <div id="def-abstractMethod">
+          <p><strong>Abstract Method</strong>: An <em>abstract method</em> is a method signature without a method implementation.</p>
         </div>
-      </popover>
+        <div id="def-abstraction">
+          <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity we are interested in, and suppressing the more complex details below that level.</p>
+        </div>
+        <div id="def-actor">
+          <p><strong>Actor</strong>: An actor (in a use case) is a role played by a user. An actor can be a human or another system. Actors are not part of the system; they reside outside the system.</p>
+        </div>
+        <div id="def-architecture">
+          <p><strong>Architecture</strong>: The high level structures of a software system, the discipline of creating such structures, and the documentation of these structures. These structures are needed to reason about the software system. Each structure comprises software elements, relations among them, and properties of both elements and relations. The architecture of a software system is a metaphor, analogous to the architecture of a building.</p>
+        </div>
+        <h2 id="b">B<a class="fa fa-anchor" href="#b"></a></h2>
+        <div id="def-brainstorming">
+          <p><strong>Brainstorming</strong>: A group activity designed to <em>generate a large number of diverse and creative ideas</em> for the <em>solution</em> of a problem.</p>
+        </div>
+        <div id="def-brooks-law">
+          <p><strong>Brooks' Law</strong>: Adding people to a late project will make it later. -- Fred Brooks (author of <em>The Mythical Man-Month</em>)</p>
+        </div>
+        <h2 id="c">C<a class="fa fa-anchor" href="#c"></a></h2>
+        <div id="def-camel-case">
+          <blockquote>
+            <pic src="https://upload.wikimedia.org/wikipedia/commons/e/ef/CamelCase.svg" width="200" alt="camelCase"></pic>
+            <p><em>CamelCase</em> is named after the &quot;humps&quot; of its capital letters, similar to the humps of a Bactrian camel. Camel case (stylized as <code>camelCase</code>) is the practice of writing compound words or phrases such that each word or abbreviation in the middle of the phrase begins with a capital letter, with no intervening spaces or punctuation.</p>
+            <p><small><span class="dimmed">-- adapted from <a href="https://en.wikipedia.org/wiki/Camel_case">Wikipedia</a></span></small></p>
+          </blockquote>
+          <p>e.g., <code>createEmptyList</code>, <code>listOfIntegers</code>, <code>htmlText</code>, <code>dvdPlayer</code>. This book defines camelCase style as requiring the first letter to be lower case. If the first letter is upper case instead e.g., <code>CreateEmptyList</code>, it is called <em>UpperCamelCase</em> or <em>PascalCase</em>.</p>
+        </div>
+        <div id="def-client-code">
+          <p><strong>Client component/method/object</strong>: The component/method/object that is interacting with a given code.</p>
+        </div>
+        <div id="def-cli">
+          <p><strong>CLI App</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p>
+        </div>
+        <div id="def-commit">
+          <p><strong>Commit</strong>: Saving the current state of the working folder into the Git revision history.</p>
+        </div>
+        <div id="def-coupling">
+          <p><strong>Coupling</strong>: The degree of interdependence between software modules; a measure of how closely connected two routines or modules are; the strength of the relationships between module.</p>
+        </div>
+        <h2 id="d">D<a class="fa fa-anchor" href="#d"></a></h2>
+        <div id="def-dependency-inversion-principle">
+          <p><strong>Dependency Inversion Principle</strong>:</p>
+          <ol>
+            <li>High-level modules should not depend on low-level modules. Both should depend on abstractions.</li>
+            <li>Abstractions should not depend on details. Details should depend on abstractions.</li>
+          </ol>
+        </div>
+        <div id="def-design-pattern">
+          <p><strong>Design Pattern</strong> : An <em>elegant reusable solution</em> to a <em>commonly recurring problem</em> within a <em>given context</em> in software design.</p>
+        </div>
+        <div id="def-domain-expert">
+          <p><strong>Domain Expert</strong> : An expert of a discipline to which the product is connected <span class="dimmed"> e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting</span>.</p>
+        </div>
+        <div id="def-dry-principle">
+          <p><strong>DRY (Don't Repeat Yourself) Principle</strong>: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub><em>The Pragmatic Programmer</em>, by Andy Hunt and Dave Thomas</sub></p>
+        </div>
+        <div id="def-dynamic-binding">
+          <p><strong>Dynamic Binding</strong> (<tooltip content="There are subtle differences between late binding and dynamic binding, but they are beyond the scope of this document">aka late binding</tooltip>) : a mechanism where method calls in code are <tooltip content="deciding which method implementation to execure">resolved</tooltip> at <tooltip content="at the moment the method call is executed">runtime</tooltip>, rather than at compile time.</p>
+        </div>
+        <h2 id="e">E<a class="fa fa-anchor" href="#e"></a></h2>
+        <div id="def-enterprise-application">
+          <p><strong>Enterprise Application</strong>: ‘enterprise applications’ means software applications used at organizations level and therefore has to meet much higher demands (such as in scalability, security, performance, and robustness) than software meant for individual use.</p>
+        </div>
+        <div id="def-exception">
+          <p><strong>Exception</strong>:</p>
+          <blockquote>
+            <p>The term <em>exception</em> is shorthand for the phrase &quot;exceptional event.&quot; An <em>exception</em> is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. –- Java Tutorial (Oracle Inc.)</p>
+          </blockquote>
+        </div>
+        <div id="def-equivalence-partition">
+          <p><strong>Equivalence partition (aka equivalence class)</strong>: A group of test inputs that are likely to be processed by the SUT in the same way.</p>
+        </div>
+        <h2 id="f">F<a class="fa fa-anchor" href="#f"></a></h2>
+        <div id="def-feature-list">
+          <p><strong>Feature List</strong>: A list of features of a product <em>grouped according to some criteria</em> such as aspect, priority, order of delivery, etc.</p>
+        </div>
+        <div id="def-focus-group">
+          <p><strong>Focus Groups</strong>: A kind of <em>informal interview</em> within an <em>interactive group setting</em>.</p>
+        </div>
+        <h2 id="g">G<a class="fa fa-anchor" href="#g"></a></h2>
+        <div id="def-glossary">
+          <p><strong>Glossary</strong>: A glossary serves to ensure that <em>all stakeholders have a common understanding</em> of the noteworthy terms, abbreviation, acronyms etc.</p>
+        </div>
+        <h2 id="i">I<a class="fa fa-anchor" href="#i"></a></h2>
+        <div id="def-interface-segregation-principle">
+          <p><strong>Interface Segregation Principle (ISP)</strong>: No client should be forced to depend on methods it does not use.</p>
+        </div>
+        <h2 id="l">L<a class="fa fa-anchor" href="#l"></a></h2>
+        <div id="def-law-of-demeter">
+          <p><strong>Law of Demeter (LoD)</strong>:</p>
+          <ul>
+            <li>An object should have limited knowledge of another object.</li>
+            <li>An object should only interact with objects that are closely related to it.</li>
+          </ul>
+          <p>Also known as</p>
+          <ul>
+            <li>Don’t talk to strangers.</li>
+            <li>Principle of least knowledge</li>
+          </ul>
+        </div>
+        <div id="def-liskov-substitution-principle">
+          <p><strong>Liskov Substitution Principle (LSP)</strong>: Derived classes must be substitutable for their base classes. <sub>-- proposed by <a href="https://en.wikipedia.org/wiki/Barbara_Liskov">Barbara Liskov</a></sub></p>
+        </div>
+        <h2 id="o">O<a class="fa fa-anchor" href="#o"></a></h2>
+        <div id="def-open-closed-principle">
+          <p><strong>Open-Closed Principle (OCP)</strong>: A module should be <em>open</em> for extension but <em>closed</em> for modification. That is, modules should be written so that they can be extended, without requiring them to be modified. <sub>-- proposed by <a href="https://en.wikipedia.org/wiki/Bertrand_Meyer">Bertrand Meyer</a></sub></p>
+        </div>
+        <h2 id="p">P<a class="fa fa-anchor" href="#p"></a></h2>
+        <div id="def-pair-programming">
+          <p><strong>Pair Programming</strong>:</p>
+          <blockquote>
+            <p>Pair programming is an agile software development technique in which two programmers work together at one workstation. One, the driver, writes code while the other, the observer or navigator, reviews each line of code as it is typed in. The two programmers switch roles frequently. <sub>[<a href="https://en.wikipedia.org/wiki/Pair_programming">source: Wikipedia</a>]</sub></p>
+          </blockquote>
+        </div>
+        <div id="def-prototyping">
+          <p><strong>Prototype</strong>: A prototype is a <em>mock up, a scaled down version, or a partial system constructed</em></p>
+          <ul>
+            <li>to get users’ feedback.</li>
+            <li>to validate a technical concept (a &quot;proof-of-concept&quot; prototype).</li>
+            <li>to give a preview of what is to come, or to compare multiple alternatives on a small scale before committing fully to one alternative.</li>
+            <li>for early field-testing under controlled conditions.</li>
+          </ul>
+        </div>
+        <div id="def-polymorphism">
+          <p><strong>Polymorphism</strong>:</p>
+          <blockquote>
+            <p>The ability of different objects to respond, each in its own way, to identical messages is called polymorphism. <sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
+          </blockquote>
+        </div>
+        <h2 id="r">R<a class="fa fa-anchor" href="#r"></a></h2>
+        <div id="def-rcs">
+          <p><strong>RCS</strong> : <strong>Revision Control Software</strong> are the software tools that automate the process of <em>Revision Control</em> i.e. managing revisions of software artifacts.</p>
+        </div>
+        <div id="def-repo">
+          <p><strong>Repository</strong> (<em>repo</em> for short): The database of the history of a directory being tracked by an RCS software (e.g. Git).</p>
+        </div>
+        <div id="def-revision">
+          <p><strong>Revision</strong>: A <em>revision</em> (some seem to use it interchangeably with <em>version</em> while others seem to distinguish the two -- here, let us treat them as the same, for simplicity) is a state of a piece of information at a specific time that is a result of some changes to it <span class="dimmed">e.g., if you modify the code and save the file, you have a new revision (or a version) of that file</span>.</p>
+        </div>
+        <h2 id="s">S<a class="fa fa-anchor" href="#s"></a></h2>
+        <div id="def-separation-concerns-principle">
+          <p><strong>Separation of Concerns Principle (SoC)</strong>: To achieve better modularity, separate the code into distinct sections, such that each section addresses a separate <em>concern</em>. -- Proposed by <a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger W. Dijkstra</a></p>
+        </div>
+        <div id="def-single-responsibility-principle">
+          <p><strong>Single Responsibility Principle (SRP)</strong>: A class should have one, and only one, reason to change. <sub>-- Robert C. Martin</sub></p>
+        </div>
+        <div id="def-se">
+          <p><strong>Software Engineering</strong>: Software Engineering is the application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software&quot; <sub>-- IEEE Standard Glossary of Software Engineering Terminology</sub></p>
+        </div>
+        <div id="def-stage">
+          <p><strong>Stage</strong>: Instructing Git to prepare a file for committing.</p>
+        </div>
+        <div id="def-stakeholder">
+          <p><strong>Stakeholder</strong>: A party that is potentially affected by the software project. e.g. users, sponsors, developers, interest groups, government agencies, etc.</p>
+        </div>
+        <div id="def-static-analysis">
+          <p><strong>Static analysis</strong>: Static analysis is the analysis of code without actually executing the code.</p>
+        </div>
+        <div id="def-static-binding">
+          <p><strong>Static binding</strong> (aka early binding): When a method call is resolved at compile time.</p>
+        </div>
+        <div id="def-stub">
+          <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
+        </div>
+        <div id="def-sut">
+          <p><strong>SUT</strong>: Software Under Test</p>
+        </div>
+        <h2 id="t">T<a class="fa fa-anchor" href="#t"></a></h2>
+        <div id="def-testing">
+          <p><strong>Testing</strong>: Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component. –- source: IEEE</p>
+        </div>
+        <div id="def-type-signature">
+          <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.</p>
+          <panel type="seamless" header="%%Examples%%">
+            <div class="table-responsive">
+              <table class="markbind-table table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th style="text-align:center">Method</th>
+                    <th style="text-align:center">Type Signature</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="text-align:center"><code>int add(int X, int Y)</code></td>
+                    <td style="text-align:center"><code>(int, int)</code></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:center"><code>void add(int A, int B)</code></td>
+                    <td style="text-align:center"><code>(int, int)</code></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:center"><code>void m(int X, double Y)</code></td>
+                    <td style="text-align:center"><code>(int, double)</code></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:center"><code>void m(double X, int Y)</code></td>
+                    <td style="text-align:center"><code>(double, int)</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </panel>
+        </div>
+        <h2 id="u">U<a class="fa fa-anchor" href="#u"></a></h2>
+        <div id="def-uml">
+          <p><a href="http://www.uml.org/#UML2.0"><strong>Unified Modeling Language (UML)</strong></a> is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the <em>de facto</em> modeling notation used in the software industry.</p>
+        </div>
+        <div id="def-use-case">
+          <p><strong>Use Case</strong>: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an <trigger for="pop:actor">actor</trigger>.[ 📖 : <popover effect="fade" placement="top">uml-user-guide<span slot="content"><span><em><strong>The Unified Modeling Language User Guide</strong></em>, 2e, G Booch, J Rumbaugh, and I Jacobson </span></span></popover>]</p>
+          <popover id="pop:actor" title="<span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span>" placement="top">
+            <div slot="content">
+              <div>
+                <p><strong>Actor</strong>: An actor (in a use case) is a role played by a user. An actor can be a human or another system. Actors are not part of the system; they reside outside the system.</p>
+              </div>
+            </div>
+          </popover>
+        </div>
+        <div id="def-user-story">
+          <p><strong>User story</strong>: User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. <sub>[<a href="https://www.mountaingoatsoftware.com/agile/user-stories">Mike Cohn</a>]</sub></p>
+        </div>
+        <div id="def-user-story-format">
+          <p><strong>User story format</strong>: <code>As a {user type/role} I can {function} so that {benefit}</code></p>
+        </div>
+        <h2 id="w">W<a class="fa fa-anchor" href="#w"></a></h2>
+        <div id="def-working-directory">
+          <p><strong>Working directory</strong>: The directory the repo is based in is called the <em>working directory</em>.</p>
+        </div>
+        <h2 id="y">Y<a class="fa fa-anchor" href="#y"></a></h2>
+        <div id="def-yagni-principle">
+          <p><strong>YAGNI (You Aren't Gonna Need It!) Principle</strong>: Do not add code simply because ‘you might need it in the future’.</p>
+        </div>
+        <hr>
+      </div>
     </div>
-    <div id="def-user-story">
-      <p><strong>User story</strong>: User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. <sub>[<a href="https://www.mountaingoatsoftware.com/agile/user-stories">Mike Cohn</a>]</sub></p>
-    </div>
-    <div id="def-user-story-format">
-      <p><strong>User story format</strong>: <code>As a {user type/role} I can {function} so that {benefit}</code></p>
-    </div>
-    <h2 id="w">W</h2>
-    <div id="def-working-directory">
-      <p><strong>Working directory</strong>: The directory the repo is based in is called the <em>working directory</em>.</p>
-    </div>
-    <h2 id="y">Y</h2>
-    <div id="def-yagni-principle">
-      <p><strong>YAGNI (You Aren't Gonna Need It!) Principle</strong>: Do not add code simply because ‘you might need it in the future’.</p>
-    </div>
-    <hr>
   </div>
 </div>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\markbind\js\vue.min.js"></script>
-<script src="..\markbind\js\vue-strap.min.js"></script>
-<script src="..\markbind\js\polyfill.min.js"></script>
-<script src="..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../markbind/js/vue.min.js"></script>
+<script src="../markbind/js/vue-strap.min.js"></script>
+<script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../markbind/js/polyfill.min.js"></script>
+<script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\markbind\js\setup.js"></script>
+<script src="../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../markbind/layouts/default/scripts.js"></script>
 </html>

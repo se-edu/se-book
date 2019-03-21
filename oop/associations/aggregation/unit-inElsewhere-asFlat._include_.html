@@ -1,56 +1,41 @@
 <div></div>
 <p></p>
 <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Associations →
-</span></strong>
-  </span>
-</p>
+      </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="aggregation">Aggregation</h4>
+    <h4 id="aggregation"><span>Aggregation</span></h4>
   </div>
   <div id="main">
     <div>
       <p><strong><em>Aggregation</em> represents a <em>container-contained</em> relationship.</strong> It is a weaker relationship than composition.</p>
       <tip-box>
-        <p><span class="fas fa-cube"></span> <code>SportsClub</code> acts as a <em>container</em> for <code>Person</code> objects. <code>Person</code> objects can survive without a <code>SportsClub</code> object.</p>
+        <p><span class="fas fa-cube"></span> <code>SportsClub</code> can act as a <em>container</em> for <code>Person</code> objects who are members of the club. <code>Person</code> objects can survive without a <code>SportsClub</code> object.</p>
       </tip-box>
-      <h5 id="implementing-aggregation"><strong>Implementing aggregation</strong></h5>
+      <h5 id="implementing-aggregation">Implementing aggregation</h5>
       <p>Implementation is similar to that of composition except the <em>containee</em> object can exist even after the <em>container</em> object is deleted.</p>
       <tip-box>
-        <p><span class="fas fa-cube"></span> In the code below, there is an aggregation association between the <code>Team</code> class and the <code>Person</code> in that a <code>Team</code> contains <code>Person</code> a object who is the leader of the
-          team.</p>
-        <table>
-          <tr>
-          
-            <td valign="top">
-              <p>Java <span class="fas fa-arrow-down"></span></p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span> </span>{
+        <p><span class="fas fa-cube"></span> In the code below, there is an aggregation association between the <code>Team</code> class and the <code>Person</code> in that a <code>Team</code> contains <code>Person</code> a object who is the leader of the team.</p>
+        <div class="alt-java">
+          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span> </span>{
     Person leader;
     ...
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">drive</span><span class="hljs-params">(Person p)</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setLeader</span><span class="hljs-params">(Person p)</span> </span>{
         leader = p;
     }
 }
 </code></pre>
-              <p></p>
-            </td>
-          
-            <td>  <br><br></td>
-          
-            <td valign="top">
-              <p>Python <span class="fas fa-arrow-down"></span></p>
-              <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span>:</span>
+        </div>
+        <div class="alt-python">
+          <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
-    self.__leader = <span class="hljs-keyword">None</span>
+    self.__leader = <span class="hljs-literal">None</span>
     
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">drive</span><span class="hljs-params">(self, person)</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_leader</span><span class="hljs-params">(self, person)</span>:</span>
     self.__leader = person
 </code></pre>
-              <p></p>
-            </td>
-          </tr>
-        </table>
+        </div>
       </tip-box>
     </div>
     <div></div>

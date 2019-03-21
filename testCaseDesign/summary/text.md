@@ -1,7 +1,4 @@
-<div id="title">
-
-## Recap
-</div>
+<span id="title">Recap</span>
 
 <div id="body">
 

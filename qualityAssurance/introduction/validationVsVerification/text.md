@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Validation vs Verification
-
-</div>
+<span id="title">Validation vs Verification</span>
 
 <span id="prereqs"></span>
 

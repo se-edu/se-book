@@ -1,7 +1,4 @@
-<div id="title">
-
-## Dependency Injection
-</div>
+<span id="title">Dependency Injection</span>
 
 <div id="body">
 

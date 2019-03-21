@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Loops
-
-</div>
+<span id="title">Loops</span>
 
 <span id="prereqs"></span>
 

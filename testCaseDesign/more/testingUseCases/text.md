@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Testing Based on Use Cases
-
-</div>
+<span id="title">Testing Based on Use Cases</span>
 
 <span id="prereqs"></span>
 

@@ -1,7 +1,4 @@
-<div id="title">
-
-## Glossary
-</div>
+<span id="title">Glossary</span>
 
 <div id="body">
 

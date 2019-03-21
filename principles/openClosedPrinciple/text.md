@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Open-Closed Principle
-
-</div>
+<span id="title">Open-Closed Principle</span>
 
 <span id="prereqs"></span>
 
@@ -10,7 +6,7 @@
 
 <div id="body">
 
-While it is possible to isolate the functionalities of a software system into modules, there is no way to remove interaction between modules. When modules interact with each other, coupling naturally increases. Consequently, it is harder to localize any changes to the software system. The Open-Close Principle aims to alleviate this problem. 
+**The Open-Close Principle aims to make a code entity easy to adapt and reuse without needing to modify the code entity itself.**
 
 <tip-box type="definition"> 
   <include src="../../common/definitions.md#def-open-closed-principle"/>

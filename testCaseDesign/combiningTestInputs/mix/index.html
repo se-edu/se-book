@@ -6,432 +6,472 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Test Case Design: Combining Test Inputs: Mix</title>
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can apply multiple test input combination techniques together</span>
-        </span>
-        </span>
-        </span>
-        <p></p>
-      </p>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
       <div>
-        <div></div>
-        <p></p>
-        <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design → Combining Test Inputs →
-</span></strong>
-          </span>
-        </p>
-        <div id="title-and-body">
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can apply multiple test input combination techniques together</span></span></span></span></p>
+          <p></p>
+          <p></p>
           <div>
-            <h4 id="mix">Mix</h4>
-          </div>
-          <div id="main">
-            <div>
-              <p>Consider the calculateGrade scenario given below:</p>
-              <tip-box>
-                <ul>
-                  <li>
-                    <p>Scenario: calculateGrade</p>
-                  </li>
-                  <li>
-                    <p>SUT : <code>calculateGrade(participation, projectGrade, isAbsent, examScore)</code></p>
-                  </li>
-                  <li>
-                    <p>Values to test (invalid values are marked with an ❗️)</p>
-                    <ul>
-                      <li>participation: 0, 1, 19, 20, ❗️ 21, ❗️ 22</li>
-                      <li>projectGrade: A, B, C, D, F</li>
-                      <li>isAbsent: true, false</li>
-                      <li>examScore: 0, 1, 69, 70, ❗️ 71, ❗️ 72</li>
-                    </ul>
-                  </li>
-                </ul>
-              </tip-box>
-              <p>To get the first cut of test cases, let’s apply the ‘at least once’ strategy.</p>
-              <tip-box>
-                <p><strong>Test cases for calculateGrade V1</strong></p>
-                <div class="table-responsive">
-                  <table class="markbind-table table table-bordered table-striped">
-                    <thead>
-                      <tr>
-                        <th style="text-align:center">Case No.</th>
-                        <th style="text-align:center">participation</th>
-                        <th style="text-align:center">projectGrade</th>
-                        <th style="text-align:center">isAbsent</th>
-                        <th style="text-align:center">examScore</th>
-                        <th style="text-align:center">Expected</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td style="text-align:center">1</td>
-                        <td style="text-align:center">0</td>
-                        <td style="text-align:center">A</td>
-                        <td style="text-align:center">true</td>
-                        <td style="text-align:center">0</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">2</td>
-                        <td style="text-align:center">1</td>
-                        <td style="text-align:center">B</td>
-                        <td style="text-align:center">false</td>
-                        <td style="text-align:center">1</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">3</td>
-                        <td style="text-align:center">19</td>
-                        <td style="text-align:center">C</td>
-                        <td style="text-align:center">VV/IV</td>
-                        <td style="text-align:center">69</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">4</td>
-                        <td style="text-align:center">20</td>
-                        <td style="text-align:center">D</td>
-                        <td style="text-align:center">VV/IV</td>
-                        <td style="text-align:center">70</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">5</td>
-                        <td style="text-align:center">❗️ 21</td>
-                        <td style="text-align:center">F</td>
-                        <td style="text-align:center">VV/IV</td>
-                        <td style="text-align:center">❗️ 71</td>
-                        <td style="text-align:center">Err Msg</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">6</td>
-                        <td style="text-align:center">❗️ 22</td>
-                        <td style="text-align:center">VV/IV</td>
-                        <td style="text-align:center">VV/IV</td>
-                        <td style="text-align:center">❗️ 72</td>
-                        <td style="text-align:center">Err Msg</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <p>VV/IV = Any Valid or Invalid Value, Err Msg = Error Message</p>
-              </tip-box>
-              <p>Next, let’s apply the ‘each valid input at least once in a positive test case’ heuristic. Test case 5 has a valid value for <code>projectGrade=F</code> that doesn't appear in any other positive test case. Let's replace test case 5 with 5.1
-                and 5.2 to rectify that.</p>
-              <tip-box>
-                <p><strong>Test cases for calculateGrade V2</strong></p>
-                <div class="table-responsive">
-                  <table class="markbind-table table table-bordered table-striped">
-                    <thead>
-                      <tr>
-                        <th style="text-align:center">Case No.</th>
-                        <th style="text-align:center">participation</th>
-                        <th style="text-align:center">projectGrade</th>
-                        <th style="text-align:center">isAbsent</th>
-                        <th style="text-align:center">examScore</th>
-                        <th style="text-align:center">Expected</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td style="text-align:center">1</td>
-                        <td style="text-align:center">0</td>
-                        <td style="text-align:center">A</td>
-                        <td style="text-align:center">true</td>
-                        <td style="text-align:center">0</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">2</td>
-                        <td style="text-align:center">1</td>
-                        <td style="text-align:center">B</td>
-                        <td style="text-align:center">false</td>
-                        <td style="text-align:center">1</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">3</td>
-                        <td style="text-align:center">19</td>
-                        <td style="text-align:center">C</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">69</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">4</td>
-                        <td style="text-align:center">20</td>
-                        <td style="text-align:center">D</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">70</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center"><mark>5.1</mark></td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">F</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center"><mark>5.2</mark></td>
-                        <td style="text-align:center">❗️ 21</td>
-                        <td style="text-align:center">VV/IV</td>
-                        <td style="text-align:center">VV/IV</td>
-                        <td style="text-align:center">❗️ 71</td>
-                        <td style="text-align:center">Err Msg</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">6</td>
-                        <td style="text-align:center">❗️ 22</td>
-                        <td style="text-align:center">VV/IV</td>
-                        <td style="text-align:center">VV/IV</td>
-                        <td style="text-align:center">❗️ 72</td>
-                        <td style="text-align:center">Err Msg</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <p>VV = Any Valid Value VV/IV = Any Valid or Invalid Value</p>
-              </tip-box>
-              <p>Next, we apply the ‘no more than one invalid input in a test case’ heuristic. Test cases 5.2 and 6 don't follow that heuristic. Let's rectify the situation as follows:</p>
-              <tip-box>
-                <p><strong>Test cases for calculateGrade V3</strong></p>
-                <div class="table-responsive">
-                  <table class="markbind-table table table-bordered table-striped">
-                    <thead>
-                      <tr>
-                        <th style="text-align:center">Case No.</th>
-                        <th style="text-align:center">participation</th>
-                        <th style="text-align:center">projectGrade</th>
-                        <th style="text-align:center">isAbsent</th>
-                        <th style="text-align:center">examScore</th>
-                        <th style="text-align:center">Expected</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td style="text-align:center">1</td>
-                        <td style="text-align:center">0</td>
-                        <td style="text-align:center">A</td>
-                        <td style="text-align:center">true</td>
-                        <td style="text-align:center">0</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">2</td>
-                        <td style="text-align:center">1</td>
-                        <td style="text-align:center">B</td>
-                        <td style="text-align:center">false</td>
-                        <td style="text-align:center">1</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">3</td>
-                        <td style="text-align:center">19</td>
-                        <td style="text-align:center">C</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">69</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">4</td>
-                        <td style="text-align:center">20</td>
-                        <td style="text-align:center">D</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">70</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">5.1</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">F</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">5.2</td>
-                        <td style="text-align:center">❗️ 21</td>
-                        <td style="text-align:center"><mark>VV</mark></td>
-                        <td style="text-align:center"><mark>VV</mark></td>
-                        <td style="text-align:center"><mark>VV</mark></td>
-                        <td style="text-align:center">Err Msg</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center"><mark>5.3</mark></td>
-                        <td style="text-align:center">❗️ 22</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">Err Msg</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center"><mark>6.1</mark></td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">❗️ 71</td>
-                        <td style="text-align:center">Err Msg</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center"><mark>6.2</mark></td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">❗️ 72</td>
-                        <td style="text-align:center">Err Msg</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </tip-box>
-              <p>Next, let us assume that there is a dependency between the inputs <code>examScore</code> and <code>isAbsent</code> such that an absent student can only have <code>examScore=0</code>. To cater for the hidden invalid case arising from this,
-                we can add a new test case where <code>isAbsent=true</code> and <code>examScore!=0</code>. In addition, test cases 3-6.2 should have <code>isAbsent=false</code> so that the input remains valid.</p>
-              <tip-box>
-                <p><strong>Test cases for calculateGrade V4</strong></p>
-                <div class="table-responsive">
-                  <table class="markbind-table table table-bordered table-striped">
-                    <thead>
-                      <tr>
-                        <th style="text-align:center">Case No.</th>
-                        <th style="text-align:center">participation</th>
-                        <th style="text-align:center">projectGrade</th>
-                        <th style="text-align:center">isAbsent</th>
-                        <th style="text-align:center">examScore</th>
-                        <th style="text-align:center">Expected</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td style="text-align:center">1</td>
-                        <td style="text-align:center">0</td>
-                        <td style="text-align:center">A</td>
-                        <td style="text-align:center">true</td>
-                        <td style="text-align:center">0</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">2</td>
-                        <td style="text-align:center">1</td>
-                        <td style="text-align:center">B</td>
-                        <td style="text-align:center">false</td>
-                        <td style="text-align:center">1</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">3</td>
-                        <td style="text-align:center">19</td>
-                        <td style="text-align:center">C</td>
-                        <td style="text-align:center"><mark>false</mark></td>
-                        <td style="text-align:center">69</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">4</td>
-                        <td style="text-align:center">20</td>
-                        <td style="text-align:center">D</td>
-                        <td style="text-align:center"><mark>false</mark></td>
-                        <td style="text-align:center">70</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">5.1</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">F</td>
-                        <td style="text-align:center"><mark>false</mark></td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">...</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">5.2</td>
-                        <td style="text-align:center">❗️ 21</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center"><mark>false</mark></td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">Err Msg</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">5.3</td>
-                        <td style="text-align:center">❗️ 22</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center"><mark>false</mark></td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">Err Msg</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">6.1</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center"><mark>false</mark></td>
-                        <td style="text-align:center">❗️ 71</td>
-                        <td style="text-align:center">Err Msg</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center">6.2</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center">VV</td>
-                        <td style="text-align:center"><mark>false</mark></td>
-                        <td style="text-align:center">❗️ 72</td>
-                        <td style="text-align:center">Err Msg</td>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center"><mark>7</mark></td>
-                        <td style="text-align:center"><mark>VV</mark></td>
-                        <td style="text-align:center"><mark>VV</mark></td>
-                        <td style="text-align:center"><mark>true</mark></td>
-                        <td style="text-align:center"><mark>!=0</mark></td>
-                        <td style="text-align:center"><mark>Err Msg</mark></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </tip-box>
-            </div>
-            <div>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design → Combining Test Inputs →
+                  </span></strong></span></p>
+            <div id="title-and-body">
               <div>
-                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                  <div>
-                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> statements about test input combinations">
-                      <question>
-                        <p>Which of these contradict the heuristics recommended when creating test cases with multiple inputs?</p>
-                        <ul radio-group="1da4e" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> a. All invalid test inputs must be tested together.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> b. It is ok to combine valid values for different inputs.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> c. No more than one invalid test input should be in a given test case.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> d. Each valid test input should appear at least once in a test case that doesn’t have any invalid inputs.</label></li>
+                <h4 id="mix"><span>Mix</span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p>Consider the calculateGrade scenario given below:</p>
+                  <tip-box>
+                    <ul>
+                      <li>SUT : <code>calculateGrade(participation, projectGrade, isAbsent, examScore)</code></li>
+                      <li>Values to test: invalid values are <ins>underlined</ins>
+                        <ul>
+                          <li>participation: 0, 1, 19, 20, <ins>21</ins>, <ins>22</ins></li>
+                          <li>projectGrade: A, B, C, D, F</li>
+                          <li>isAbsent: true, false</li>
+                          <li>examScore: 0, 1, 69, 70, <ins>71</ins>, <ins>72</ins></li>
                         </ul>
-                        <div slot="answer">
-                          <p>(a) inputs.</p>
-                          <p>Explanation: If you test all invalid test inputs together, you will not know if each one of the invalid inputs are handled correctly by the SUT. This is because most SUTs return an error message upon encountering the first invalid
-                            input.</p>
+                      </li>
+                    </ul>
+                  </tip-box>
+                  <p>To get the first cut of test cases, let’s apply the <em>at least once</em> strategy.</p>
+                  <tip-box>
+                    <p><strong>Test cases for calculateGrade V1</strong></p>
+                    <div class="table-responsive">
+                      <table class="markbind-table table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th style="text-align:center">Case No.</th>
+                            <th style="text-align:center">participation</th>
+                            <th style="text-align:center">projectGrade</th>
+                            <th style="text-align:center">isAbsent</th>
+                            <th style="text-align:center">examScore</th>
+                            <th style="text-align:center">Expected</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td style="text-align:center">1</td>
+                            <td style="text-align:center">0</td>
+                            <td style="text-align:center">A</td>
+                            <td style="text-align:center">true</td>
+                            <td style="text-align:center">0</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">2</td>
+                            <td style="text-align:center">1</td>
+                            <td style="text-align:center">B</td>
+                            <td style="text-align:center">false</td>
+                            <td style="text-align:center">1</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">3</td>
+                            <td style="text-align:center">19</td>
+                            <td style="text-align:center">C</td>
+                            <td style="text-align:center">VV/IV</td>
+                            <td style="text-align:center">69</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">4</td>
+                            <td style="text-align:center">20</td>
+                            <td style="text-align:center">D</td>
+                            <td style="text-align:center">VV/IV</td>
+                            <td style="text-align:center">70</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">5</td>
+                            <td style="text-align:center"><ins>21</ins></td>
+                            <td style="text-align:center">F</td>
+                            <td style="text-align:center">VV/IV</td>
+                            <td style="text-align:center"><ins>71</ins></td>
+                            <td style="text-align:center">Err Msg</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">6</td>
+                            <td style="text-align:center"><ins>22</ins></td>
+                            <td style="text-align:center">VV/IV</td>
+                            <td style="text-align:center">VV/IV</td>
+                            <td style="text-align:center"><ins>72</ins></td>
+                            <td style="text-align:center">Err Msg</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <p>VV/IV = Any Valid or Invalid Value, Err Msg = Error Message</p>
+                  </tip-box>
+                  <p>Next, let’s apply the <em>each valid input at least once in a positive test case</em> heuristic. Test case 5 has a valid value for <code>projectGrade=F</code> that doesn't appear in any other positive test case. Let's replace test case 5 with 5.1 and 5.2 to rectify that.</p>
+                  <tip-box>
+                    <p><strong>Test cases for calculateGrade V2</strong></p>
+                    <div class="table-responsive">
+                      <table class="markbind-table table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th style="text-align:center">Case No.</th>
+                            <th style="text-align:center">participation</th>
+                            <th style="text-align:center">projectGrade</th>
+                            <th style="text-align:center">isAbsent</th>
+                            <th style="text-align:center">examScore</th>
+                            <th style="text-align:center">Expected</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td style="text-align:center">1</td>
+                            <td style="text-align:center">0</td>
+                            <td style="text-align:center">A</td>
+                            <td style="text-align:center">true</td>
+                            <td style="text-align:center">0</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">2</td>
+                            <td style="text-align:center">1</td>
+                            <td style="text-align:center">B</td>
+                            <td style="text-align:center">false</td>
+                            <td style="text-align:center">1</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">3</td>
+                            <td style="text-align:center">19</td>
+                            <td style="text-align:center">C</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">69</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">4</td>
+                            <td style="text-align:center">20</td>
+                            <td style="text-align:center">D</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">70</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center"><mark>5.1</mark></td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">F</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center"><mark>5.2</mark></td>
+                            <td style="text-align:center"><ins>21</ins></td>
+                            <td style="text-align:center">VV/IV</td>
+                            <td style="text-align:center">VV/IV</td>
+                            <td style="text-align:center"><ins>71</ins></td>
+                            <td style="text-align:center">Err Msg</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">6</td>
+                            <td style="text-align:center"><ins>22</ins></td>
+                            <td style="text-align:center">VV/IV</td>
+                            <td style="text-align:center">VV/IV</td>
+                            <td style="text-align:center"><ins>72</ins></td>
+                            <td style="text-align:center">Err Msg</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <p>VV = Any Valid Value VV/IV = Any Valid or Invalid Value</p>
+                  </tip-box>
+                  <p>Next, we apply the <em>no more than one invalid input in a test case</em> heuristic. Test cases 5.2 and 6 don't follow that heuristic. Let's rectify the situation as follows:</p>
+                  <tip-box>
+                    <p><strong>Test cases for calculateGrade V3</strong></p>
+                    <div class="table-responsive">
+                      <table class="markbind-table table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th style="text-align:center">Case No.</th>
+                            <th style="text-align:center">participation</th>
+                            <th style="text-align:center">projectGrade</th>
+                            <th style="text-align:center">isAbsent</th>
+                            <th style="text-align:center">examScore</th>
+                            <th style="text-align:center">Expected</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td style="text-align:center">1</td>
+                            <td style="text-align:center">0</td>
+                            <td style="text-align:center">A</td>
+                            <td style="text-align:center">true</td>
+                            <td style="text-align:center">0</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">2</td>
+                            <td style="text-align:center">1</td>
+                            <td style="text-align:center">B</td>
+                            <td style="text-align:center">false</td>
+                            <td style="text-align:center">1</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">3</td>
+                            <td style="text-align:center">19</td>
+                            <td style="text-align:center">C</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">69</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">4</td>
+                            <td style="text-align:center">20</td>
+                            <td style="text-align:center">D</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">70</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">5.1</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">F</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">5.2</td>
+                            <td style="text-align:center"><ins>21</ins></td>
+                            <td style="text-align:center"><mark>VV</mark></td>
+                            <td style="text-align:center"><mark>VV</mark></td>
+                            <td style="text-align:center"><mark>VV</mark></td>
+                            <td style="text-align:center">Err Msg</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center"><mark>5.3</mark></td>
+                            <td style="text-align:center"><ins>22</ins></td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">Err Msg</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center"><mark>6.1</mark></td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center"><ins>71</ins></td>
+                            <td style="text-align:center">Err Msg</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center"><mark>6.2</mark></td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center"><ins>72</ins></td>
+                            <td style="text-align:center">Err Msg</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </tip-box>
+                  <p>Next, let us assume that there is a dependency between the inputs <code>examScore</code> and <code>isAbsent</code> such that an absent student can only have <code>examScore=0</code>. To cater for the hidden invalid case arising from this, we can add a new test case where <code>isAbsent=true</code> and <code>examScore!=0</code>. In addition, test cases 3-6.2 should have <code>isAbsent=false</code> so that the input remains valid.</p>
+                  <tip-box>
+                    <p><strong>Test cases for calculateGrade V4</strong></p>
+                    <div class="table-responsive">
+                      <table class="markbind-table table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th style="text-align:center">Case No.</th>
+                            <th style="text-align:center">participation</th>
+                            <th style="text-align:center">projectGrade</th>
+                            <th style="text-align:center">isAbsent</th>
+                            <th style="text-align:center">examScore</th>
+                            <th style="text-align:center">Expected</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td style="text-align:center">1</td>
+                            <td style="text-align:center">0</td>
+                            <td style="text-align:center">A</td>
+                            <td style="text-align:center">true</td>
+                            <td style="text-align:center">0</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">2</td>
+                            <td style="text-align:center">1</td>
+                            <td style="text-align:center">B</td>
+                            <td style="text-align:center">false</td>
+                            <td style="text-align:center">1</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">3</td>
+                            <td style="text-align:center">19</td>
+                            <td style="text-align:center">C</td>
+                            <td style="text-align:center"><mark>false</mark></td>
+                            <td style="text-align:center">69</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">4</td>
+                            <td style="text-align:center">20</td>
+                            <td style="text-align:center">D</td>
+                            <td style="text-align:center"><mark>false</mark></td>
+                            <td style="text-align:center">70</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">5.1</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">F</td>
+                            <td style="text-align:center"><mark>false</mark></td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">...</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">5.2</td>
+                            <td style="text-align:center"><ins>21</ins></td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center"><mark>false</mark></td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">Err Msg</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">5.3</td>
+                            <td style="text-align:center"><ins>22</ins></td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center"><mark>false</mark></td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">Err Msg</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">6.1</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center"><mark>false</mark></td>
+                            <td style="text-align:center"><ins>71</ins></td>
+                            <td style="text-align:center">Err Msg</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">6.2</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center">VV</td>
+                            <td style="text-align:center"><mark>false</mark></td>
+                            <td style="text-align:center"><ins>72</ins></td>
+                            <td style="text-align:center">Err Msg</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center"><mark>7</mark></td>
+                            <td style="text-align:center"><mark>VV</mark></td>
+                            <td style="text-align:center"><mark>VV</mark></td>
+                            <td style="text-align:center"><mark>true</mark></td>
+                            <td style="text-align:center"><mark>!=0</mark></td>
+                            <td style="text-align:center"><mark>Err Msg</mark></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </tip-box>
+                </div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                      <div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> statements about test input combinations">
+                            <question>
+                              <p>Which of these contradict the heuristics recommended when creating test cases with multiple inputs?</p>
+                              <ul radio-group="1da4e" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> a. All invalid test inputs must be tested together.</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> b. It is ok to combine valid values for different inputs.</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> c. No more than one invalid test input should be in a given test case.</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> d. Each valid test input should appear at least once in a test case that doesn’t have any invalid inputs.</label></li>
+                              </ul>
+                              <div slot="answer">
+                                <p>(a) inputs.</p>
+                                <p>Explanation: If you test all invalid test inputs together, you will not know if each one of the invalid inputs are handled correctly by the SUT. This is because most SUTs return an error message upon encountering the first invalid input.</p>
+                              </div>
+                            </question>
+                          </panel>
                         </div>
-                      </question>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> test cases for `consume` method">
+                            <question>
+                              <p>Apply heuristics for combining multiple test inputs to improve the E&amp;E of the following test cases, assuming all 6 values in the table need to be tested. <ins>underlines</ins> indicate invalid values. Point out where the heuristics are contradicted and how to improve the test cases.</p>
+                              <box>
+                                <p>SUT: <code>consume(food, drink)</code></p>
+                                <div class="table-responsive">
+                                  <table class="markbind-table table table-bordered table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th>Test case</th>
+                                        <th>food</th>
+                                        <th>drink</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>TC1</td>
+                                        <td>bread</td>
+                                        <td>water</td>
+                                      </tr>
+                                      <tr>
+                                        <td>TC2</td>
+                                        <td>rice</td>
+                                        <td><ins>lava</ins></td>
+                                      </tr>
+                                      <tr>
+                                        <td>TC3</td>
+                                        <td><ins>rock</ins></td>
+                                        <td><ins>acid</ins></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </box>
+                            </question>
+                          </panel>
+                        </div>
+                      </div>
                     </panel>
                   </div>
-                </panel>
+                </div>
               </div>
             </div>
           </div>
@@ -443,16 +483,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../../markbind/js/vue.min.js"></script>
+<script src="../../../markbind/js/vue-strap.min.js"></script>
+<script src="../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\..\markbind\js\setup.js"></script>
+<script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../../markbind/layouts/default/scripts.js"></script>
 </html>

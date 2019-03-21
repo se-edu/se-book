@@ -1,7 +1,4 @@
-<div id="title">
-
-# Intellij IDEA
-</div>
+<span id="title">Intellij IDEA</span>
 
 <div id="body">
 

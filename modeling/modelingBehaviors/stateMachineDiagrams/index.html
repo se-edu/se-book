@@ -6,75 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Modeling: Modeling Behaviors: State Machine Diagrams</title>
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain state machine diagrams</span>
-        </span>
-        </span>
-        </span>
-        <p></p>
-      </p>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
       <div>
-        <div></div>
-        <p></p>
-        <p><span class="dimmed"><strong><span>Design → Modelling → Modelling Behaviors
-</span></strong>
-          </span>
-        </p>
-        <div id="title-and-body">
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain state machine diagrams</span></span></span></span></p>
+          <p></p>
+          <p></p>
           <div>
-            <h4 id="state-machine-diagrams">State Machine Diagrams</h4>
-          </div>
-          <div id="main">
-            <div>
-              <p><strong>A <em>State Machine Diagram</em> models state-dependent behavior.</strong></p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> Consider how a CD player responds when the “eject CD” button is pushed:</p>
-                <ul>
-                  <li>If the CD tray is already open, it does nothing.</li>
-                  <li>If the CD tray is already in the process of opening (opened half-way), it continues to open the CD tray.</li>
-                  <li>If the CD tray is closed and the CD is being played, it stops playing and opens the CD tray.</li>
-                  <li>If the CD tray is closed and CD is not being played, it simply opens the CD tray.</li>
-                  <li>If the CD tray is already in the process of closing (closed half-way), it waits until the CD tray is fully closed and opens it immediately afterwards.</li>
-                </ul>
-                <p>What this means is that the CD player’s response to pushing the “eject CD” button depends on what it was doing at the time of the event. More generally, the CD player’s response to the event received depends on its internal state. Such
-                  a behavior is called a <em>state-dependent behavior</em>.</p>
-              </tip-box>
-              <p>Often, state-dependent behavior displayed by an object in a system is simple enough that it needs no extra attention; such a behavior can be as simple as a <em>conditional</em> behavior like <code>if x&gt;y, then x=x-y</code>. Occasionally,
-                objects may exhibit state-dependent behavior that is complex enough such that it needs to be captured into a separate model. Such state-dependent behavior can be modelled using UML <em>state machine diagrams</em> (SMD for short, sometimes
-                also called ‘state charts’, ‘state diagrams’ or ‘state machines’).</p>
-              <p>An SMD views the life-cycle of an object as consisting of a finite number of states where each state displays a unique behavior pattern. An SMD captures information such as the states an object can be in, during its lifetime, and how the
-                object responds to various events while in each state and how the object transits from one state to another. In contrast to sequence diagrams that capture object behavior one scenario at a time, SMDs capture the object’s behavior over
-                its full life cycle.</p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> An SMD for the Minesweeper game.</p>
-                <img src="/se-book/modeling/modelingBehaviors/stateMachineDiagrams/images/minesweeper.png" height="200">
-                <p></p>
-              </tip-box>
-            </div>
             <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Design → Modelling → Modelling Behaviors
+                  </span></strong></span></p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="state-machine-diagrams"><span>State Machine Diagrams</span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p><strong>A <em>State Machine Diagram</em> models state-dependent behavior.</strong></p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> Consider how a CD player responds when the “eject CD” button is pushed:</p>
+                    <ul>
+                      <li>If the CD tray is already open, it does nothing.</li>
+                      <li>If the CD tray is already in the process of opening (opened half-way), it continues to open the CD tray.</li>
+                      <li>If the CD tray is closed and the CD is being played, it stops playing and opens the CD tray.</li>
+                      <li>If the CD tray is closed and CD is not being played, it simply opens the CD tray.</li>
+                      <li>If the CD tray is already in the process of closing (closed half-way), it waits until the CD tray is fully closed and opens it immediately afterwards.</li>
+                    </ul>
+                    <p>What this means is that the CD player’s response to pushing the “eject CD” button depends on what it was doing at the time of the event. More generally, the CD player’s response to the event received depends on its internal state. Such a behavior is called a <em>state-dependent behavior</em>.</p>
+                  </tip-box>
+                  <p>Often, state-dependent behavior displayed by an object in a system is simple enough that it needs no extra attention; such a behavior can be as simple as a <em>conditional</em> behavior like <code>if x&gt;y, then x=x-y</code>.
+                    Occasionally, objects may exhibit state-dependent behavior that is complex enough such that it needs to be captured into a separate model. Such state-dependent behavior can be modelled using UML <em>state machine diagrams</em> (SMD for short, sometimes also called ‘state charts’, ‘state diagrams’ or ‘state machines’).</p>
+                  <p>An SMD views the life-cycle of an object as consisting of a finite number of states where each state displays a unique behavior pattern. An SMD captures information such as the states an object can be in, during its lifetime, and how the object responds to various events while in each state and how the object transits from one state to another. In contrast to sequence diagrams that capture object behavior one scenario at a time, SMDs capture the object’s behavior over its full life cycle.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> An SMD for the Minesweeper game.</p>
+                    <img src="/se-book/modeling/modelingBehaviors/stateMachineDiagrams/images/minesweeper.png" height="200">
+                    <p></p>
+                  </tip-box>
+                </div>
+                <div></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -84,16 +89,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../../markbind/js/vue.min.js"></script>
+<script src="../../../markbind/js/vue-strap.min.js"></script>
+<script src="../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\..\markbind\js\setup.js"></script>
+<script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../../markbind/layouts/default/scripts.js"></script>
 </html>

@@ -1,12 +1,8 @@
-<span id="prereqs"><panel src="../../revisionControl/repositories/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Repositories%%" /></span>
+<span id="prereqs"><panel src="../../revisionControl/repositories/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Repositories%%" popup-url="{{ baseUrl }}/revisionControl/repositories" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can create a local Git repo</span>
 
-<div id="title">
-
-#### Init
-
-</div>
+<span id="title">Init</span>
 
 <div id="body">
 
@@ -18,9 +14,9 @@ Soon you are going to take your first step in using Git. If you would like to se
 
 </panel><p/>
 
-Install [SourceTree](https://www.sourcetreeapp.com/) which is Git + a GUI for Git.
+Install [SourceTree](https://www.sourcetreeapp.com/) which is Git + a GUI for Git. If you prefer to use Git via the command line (i.e., without a GUI), you can [install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) instead.
 
-Suppose you want to create a repository in an empty directory `things`
+Suppose you want to create a repository in an empty directory `things`. Here are the steps:
 
 <tabs>
   <tab header="SourceTree">

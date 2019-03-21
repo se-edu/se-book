@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Adding more info to UML Models
-
-</div>
+<span id="title">Adding more info to UML Models</span>
 
 <span id="prereqs"></span>
 
@@ -12,7 +8,7 @@
 
 **UML notes can be used to add more info to any UML model.**
 
-<panel src="../../../../book/uml/notes/notes/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML → Notes" expanded />
+<panel src="../../../uml/notes/notes/unit-inElsewhere-asFlat.md#title-and-body" boilerplate header="{{ icon_prereq }} UML → Notes" expanded />
 
 </div>
 

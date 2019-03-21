@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Practice KISSing
-
-</div>
+<span id="title">Practice KISSing</span>
 
 <span id="prereqs"></span>
 

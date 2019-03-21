@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Association Classes
-
-</div>
+<span id="title">Association Classes</span>
 
 <span id="prereqs"></span>
 
@@ -18,7 +14,9 @@
 
 </tip-box>
 
-##### <big>Implementing association classes</big>
+<panel type="seamless" src="../../../uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Association Classes → What" alt="{{ icon_prereq }} UML/AssociationClasses" />
+
+##### Implementing association classes
 
 There is no special way to implement an association class. It can be implemented as a normal class that has variables to represent the endpoint of the association it represents. 
 
@@ -35,7 +33,7 @@ class Transaction{
     Date date;
     String receiptNumber;
     
-    Marriage (Person seller, Person buyer, Date date, String receiptNumber){
+    Transaction (Person seller, Person buyer, Date date, String receiptNumber){
         //set fields
     }
 }

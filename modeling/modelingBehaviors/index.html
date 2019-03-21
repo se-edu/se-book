@@ -6,165 +6,201 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Modeling: Modeling Behaviors</title>
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content" id="all">
-      <p><span class="dimmed"><strong><span>Design → Modeling →
-</span></strong>
-        </span>
-      </p>
-      <div id="title">
-        <div>
-          <h2 id="modeling-behaviors">Modeling Behaviors</h2>
-        </div>
-      </div>
-      <div id="main">
-        <div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="activity-diagrams">Activity Diagrams</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use activity diagrams</span>
-                  </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p><strong>Software projects often involve <em>workflows</em>.</strong> Workflows define the
-                    <tooltip content="a connected sequence of steps"></tooltip>flow in which a process or a set of tasks is executed.</p>
-                  <tip-box>
-                    <p>Some examples in which a certain workflow is relevant to software project:</p>
-                    <p><span class="fas fa-cube"></span> A software that automates the work of an insurance company needs to take into account the workflow of processing an insurance claim.</p>
-                    <p><span class="fas fa-cube"></span> The algorithm of a price of code represents the workflow (i.e. the execution flow) of the code.</p>
-                  </tip-box>
-                  <p>Understanding such workflows is important for the success of the software project. <strong><trigger trigger="click" for="modal:modelingAd-uml">UML</trigger> <em> activity diagrams</em> (AD) can model workflows. </strong> <span class="dimmed"><em>Flow charts</em> is another type of diagrams that can model workflows. Activity diagrams are the UML equivalent of flow charts.</span></p>
-                  <modal title="**Unified Modeling Language (UML)**" id="modal:modelingAd-uml">
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
+      <div>
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content" id="all">
+          <p><span class="dimmed"><strong><span>Design → Modeling →
+                </span></strong></span></p>
+          <div id="title">
+            <h1 id="modeling-behaviors"><span>Modeling Behaviors</span><a class="fa fa-anchor" href="#modeling-behaviors"></a></h1>
+          </div>
+          <div id="main">
+            <div>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
                     <div>
-                      <p><a href="http://www.uml.org/#UML2.0"><strong>Unified Modeling Language (UML)</strong></a> is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James
-                        Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’
-                        in UML). UML is currently the <em>de facto</em> modeling notation used in the software industry.</p>
+                      <h4 id="activity-diagrams-basic"><span>Activity Diagrams - Basic</span></h4>
                     </div>
-                  </modal>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> An example activity diagram <sub>[<a href="https://en.wikipedia.org/wiki/Activity_diagram">source:wikipeida</a>]</sub>:</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Activity_conducting.svg" width="430"></tip-box>
-                  <p>The most basic activity diagram is simply a linear sequence of actions.</p>
-                  <p>
-                    <panel src="/se-book\uml\activityDiagrams\basicNotations\linearPaths\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Activity Diagrams → Basic Notations → Linear Paths"
-                      expanded=""></panel>
-                  </p>
-                  <p>Some workflows have alternate paths where only one of the alternate paths is taken based on some condition.</p>
-                  <p>
-                    <panel src="/se-book\uml\activityDiagrams\basicNotations\alternatePaths\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Activity Diagrams → Basic Notations → Alternative Paths"
-                      expanded=""></panel>
-                  </p>
-                  <p>In some workflows, multiple paths happen in parallel.</p>
-                  <p>
-                    <panel src="/se-book\uml\activityDiagrams\basicNotations\parallelPaths\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Activity Diagrams → Basic Notations → Parallel Paths"
-                      expanded=""></panel>
-                  </p>
-                </div>
-                <div>
-                  <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  </span>
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use basic-level activity diagrams</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong>Software projects often involve <em>workflows</em>.</strong> Workflows define the <tooltip content="a connected sequence of steps"></tooltip>flow in which a process or a set of tasks is executed.
+                        Understanding such workflows is important for the success of the software project.</p>
+                      <tip-box>
+                        <p>Some examples in which a certain workflow is relevant to software project:</p>
+                        <p><span class="fas fa-cube"></span> A software that automates the work of an insurance company needs to take into account the workflow of processing an insurance claim.</p>
+                        <p><span class="fas fa-cube"></span> The algorithm of a price of code represents the workflow (i.e. the execution flow) of the code.</p>
+                      </tip-box>
+                      <p>
+                        <panel type="seamless" src="/se-book/uml/activityDiagrams/introduction/what/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Activity Diagrams → Introduction → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AD/Intro" fragment="main"></panel>
+                      </p>
+                      <p></p>
+                      <p></p>
+                      <p>
+                        <panel type="seamless" src="/se-book/uml/activityDiagrams/basicNotations/linearPaths/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Activity Diagrams → Basic Notation → Linear Paths" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AD/LinearPaths" fragment="main"></panel>
+                      </p>
+                      <p>
+                        <panel type="seamless" src="/se-book/uml/activityDiagrams/basicNotations/alternatePaths/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Activity Diagrams → Basic Notation → Alternate Paths" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AD/AlternatePaths" fragment="main"></panel>
+                      </p>
+                      <p>
+                        <panel type="seamless" src="/se-book/uml/activityDiagrams/basicNotations/parallelPaths/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Activity Diagrams → Basic Notation → Parellel Paths" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AD/ParallelPaths" fragment="main"></panel>
+                      </p>
+                    </div>
+                    <div>
                       <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which sequences are not allowed?">
-                          <question>
-                            <p>Which of these sequence of actions is not allowed by the given activity diagram?</p>
-                            <ul class="task-list">
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> i. start a b c d end</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> ii. start a b c d e f g c d end</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> iii. start a b c d e g f c d end</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> iv. start a b c d g c d end</li>
-                            </ul>
-                            <img src="/se-book/modeling/modelingBehaviors/activityDiagrams/images/sequence.png" height="190">
-                            <p></p>
-                            <div slot="answer">
-                              <p>(iv)</p>
-                              <p>Explanation: <code>-e-f-</code> and <code>-g-</code> are parallel paths. Both paths should complete before the execution reaches <code>c</code> again.</p>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                          <div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which sequences are not allowed?">
+                                <question>
+                                  <p>Which of these sequence of actions is not allowed by the given activity diagram?</p>
+                                  <ul class="task-list">
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> i. start a b c d end</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> ii. start a b c d e f g c d end</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> iii. start a b c d e g f c d end</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> iv. start a b c d g c d end</li>
+                                  </ul>
+                                  <img src="/se-book/modeling/modelingBehaviors/activityDiagrams/images/sequence.png" height="190">
+                                  <p></p>
+                                  <div slot="answer">
+                                    <p>(iv)</p>
+                                    <p>Explanation: <code>-e-f-</code> and <code>-g-</code> are parallel paths. Both paths should complete before the execution reaches <code>c</code> again.</p>
+                                  </div>
+                                </question>
+                              </panel>
                             </div>
-                          </question>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Model workflow of Burger shop">
+                                <question>
+                                  <p>Draw an activity diagram to represent the following workflow a burger shop uses when processing an order by a customer.</p>
+                                  <ul>
+                                    <li>First, a cashier takes the order.</li>
+                                    <li>Then, three workers start preparing the order at the same time; one prepares the drinks, one prepares the burgers, and one prepares the desserts.</li>
+                                    <li>In the meantime, the customer pays for the order. If the customer has a voucher, she pays using the voucher; otherwise she pays using cash.</li>
+                                    <li>After paying, the customer collects the food after all three parts of the order are ready.</li>
+                                  </ul>
+                                  <panel type="seamless" header="Example Activity Diagram" minimized>
+                                    <p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Activity_conducting.svg"><br>
+                                      <sub>[<a href="https://en.wikipedia.org/wiki/Activity_diagram">source:wikipeida</a>]</sub></p>
+                                  </panel>
+                                </question>
+                              </panel>
+                            </div>
+                          </div>
                         </panel>
                       </div>
-                    </panel>
+                    </div>
                   </div>
-                </div>
+                </panel>
               </div>
-            </panel>
-          </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="sequence-diagrams-basic">Sequence Diagrams - Basic</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can draw basic sequence diagrams</span>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="activity-diagrams-intermediate"><span>Activity Diagrams - Intermediate</span></h4>
+                    </div>
                   </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p><strong>Sequence diagrams model interactions between entities for a given scenario.</strong></p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> Consider the code below.</p>
-                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Machine</span> </span>{
-
-    <span class="hljs-function">Unit <span class="hljs-title">producePrototype</span><span class="hljs-params">()</span> </span>{
-        Unit prototype = <span class="hljs-keyword">new</span> Unit();
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
-            prototype.stressTest();
-        }
-        <span class="hljs-keyword">return</span> prototype;
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Unit</span> </span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stressTest</span><span class="hljs-params">()</span> </span>{
-
-    }
-}
-
-</code></pre>
-                    <p>Here is the sequence diagram to model the interactions for the method call <code>prouducePrototype()</code> on a <code>Machine</code> object.</p>
-                    <img src="/se-book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/Machine.png" width="450">
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use intermediate-level activity diagrams</span></span></span></span></p>
                     <p></p>
-                  </tip-box>
-                </div>
-                <div>
-                  <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p>
+                        <panel type="seamless" src="/se-book/uml/activityDiagrams/basicNotations/rakes/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Activity Diagrams → Intermediate Notation → Rakes" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AD/Rakes" fragment="main"></panel>
+                      </p>
+                      <p>
+                        <panel type="seamless" src="/se-book/uml/activityDiagrams/basicNotations/swimlanes/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Activity Diagrams → Intermedidate Notation → Swim Lanes" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AD/SwimLanes" fragment="main"></panel>
+                      </p>
+                    </div>
+                    <div></div>
+                  </div>
+                </panel>
+              </div>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="sequence-diagrams-basic"><span>Sequence Diagrams - Basic</span></h4>
+                    </div>
+                  </span>
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can draw basic sequence diagrams</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p>
+                        <panel type="seamless" src="/se-book/uml/sequenceDiagrams/introduction/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Introduction" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SequenceDiagrams" fragment="main"></panel>
+                      </p>
+                      <p>
+                        <panel type="seamless" src="/se-book/uml/sequenceDiagrams/basic/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Basic Notation" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Basic" fragment="main"></panel>
+                      </p>
+                      <p>
+                        <panel type="seamless" src="/se-book/uml/sequenceDiagrams/loops/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Loops" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Loops" fragment="main"></panel>
+                        <panel type="seamless" src="/se-book/uml/sequenceDiagrams/objectCreation/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Object Creation" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Creation" fragment="main"></panel>
+                      </p>
+                      <p>
+                        <panel type="seamless" src="/se-book/uml/sequenceDiagrams/minimalNotation/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Minimal Notation" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Minimal" fragment="main"></panel>
+                      </p>
+                    </div>
+                    <div>
                       <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw a Sequence Diagram for code snippet">
-                          <question>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                          <div>
                             <div>
-                              <p>Consider the code below:</p>
-                              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Sequence Diagram about Machine">
+                                <question>
+                                  <p>Explain in your own words the interactions illustrated by this Sequence Diagram:</p>
+                                  <img src="/se-book/uml/sequenceDiagrams/introduction/images/Machine.png" width="500">
+                                </question>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw a Sequence Diagram for code snippet">
+                                <question>
+                                  <p>Consider the code below:</p>
+                                  <div class="row">
+                                      <div class="col-sm-7">
+                                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
     Tag tag;
     String name;
 
@@ -173,8 +209,11 @@
         tag = <span class="hljs-keyword">new</span> Tag(tagName);
     }
 }
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span></span>{
+</code></pre>
+                                      <p></p>
+                                    </div>
+                                      <div class="col-sm-5">
+                                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span></span>{
     Tag(String value){
         <span class="hljs-comment">//...</span>
     }
@@ -186,242 +225,290 @@
     }
 }
 </code></pre>
-                              <p>Draw a sequence diagram to illustrate the object interactions that happen in the code snippet below:</p>
-                              <pre><code class="hljs java">PersonList personList = <span class="hljs-keyword">new</span> PersonList();
+                                      <p></p>
+                                    </div>
+                                  </div>
+                                  <p>Draw a sequence diagram to illustrate the object interactions that happen in the code snippet below:</p>
+                                  <pre><code class="hljs java">PersonList personList = <span class="hljs-keyword">new</span> PersonList();
 <span class="hljs-keyword">while</span> (hasRoom){
     Person p = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Adam"</span>, <span class="hljs-string">"friend"</span>);
     personList.addPerson(p);
 }
 </code></pre>
+                                </question>
+                              </panel>
                             </div>
-                          </question>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find notation errors in sequence diagram">
+                                <question>
+                                  <p>Find notation mistakes in the sequence diagram below:</p>
+                                  <img src="/se-book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/notationMistakes.png" width="500">
+                                </question>
+                              </panel>
+                            </div>
+                          </div>
                         </panel>
                       </div>
-                      <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find notation errors in sequence diagram">
-                          <question>
-                            <p>Find notation mistakes in the sequence diagram below:</p>
-                            <img src="/se-book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/notationMistakes.png" width="700"></question>
-                        </panel>
-                      </div>
-                    </panel>
+                    </div>
                   </div>
-                </div>
+                </panel>
               </div>
-            </panel>
-          </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="sequence-diagrams-intermediate">Sequence Diagrams - Intermediate</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can draw intermediate-level sequence diagrams</span>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="sequence-diagrams-intermediate"><span>Sequence Diagrams - Intermediate</span></h4>
+                    </div>
                   </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div></div>
-                <div>
-                  <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can draw intermediate-level sequence diagrams</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p>
+                        <panel type="seamless" src="/se-book/uml/sequenceDiagrams/objectDeletion/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Object Deletion" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Deletion" fragment="main"></panel>
+                        <panel type="seamless" src="/se-book/uml/sequenceDiagrams/selfInvocation/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Self-Invocation" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Self-Invocation" fragment="main"></panel>
+                        <panel type="seamless" src="/se-book/uml/sequenceDiagrams/alternativePaths/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Alternative Paths" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Alternative" fragment="main"></panel>
+                        <panel type="seamless" src="/se-book/uml/sequenceDiagrams/optionalPaths/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Optional Paths" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Optional" fragment="main"></panel>
+                      </p>
+                    </div>
+                    <div>
                       <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What’s going on here?">
-                          <question>
-                            <p>What’s going on here?</p>
-                            <img src="/se-book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/exerciseDiagram.png" height="170">
-                            <p></p>
-                            <ul class="task-list">
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. <code>Logic</code> object is executing a parallel thread.</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. <code>Logic</code> object is executing a loop.</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. <code>Logic</code> object is creating another <code>Logic</code> instance.</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. One of <code>Logic</code> object’s methods is calling another of its methods.</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. <code>Minefield</code> object is calling a method of <code>Logic</code>.</li>
-                            </ul>
-                            <div slot="answer">
-                              <p>(d)</p>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                          <div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What’s going on here?">
+                                <question>
+                                  <p>What’s going on here?</p>
+                                  <img src="/se-book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/exerciseDiagram.png" height="170">
+                                  <p></p>
+                                  <ul class="task-list">
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. <code>Logic</code> object is executing a parallel thread.</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. <code>Logic</code> object is executing a loop.</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. <code>Logic</code> object is creating another <code>Logic</code> instance.</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. One of <code>Logic</code> object’s methods is calling another of its methods.</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. <code>Minefield</code> object is calling a method of <code>Logic</code>.</li>
+                                  </ul>
+                                  <div slot="answer">
+                                    <p>(d)</p>
+                                  </div>
+                                </question>
+                              </panel>
                             </div>
-                          </question>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Sequence Diagram (ParserFactory)">
+                                <question>
+                                  <p>Explain the interactions depicted in this sequence diagram.</p>
+                                  <img src="/se-book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300">
+                                  <p></p>
+                                  <div slot="hint">
+                                    <p>First, the <code>createParser()</code> method of an existing <code>ParserFactory</code> object is called. Then, ...</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw Sequence Diagram for printing a quote">
+                                <question>
+                                  <p>Draw a sequence diagram to represent this code snippet.</p>
+                                  <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isFirstPage) {
+    <span class="hljs-keyword">new</span> Quote().print();
+}
+</code></pre>
+                                  <p>The <code>Quote</code> class:</p>
+                                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Quote</span></span>{
+
+    String q;
+
+    Quote(){
+        q = generate();
+    }
+
+    <span class="hljs-function">String <span class="hljs-title">generate</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">// ...</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
+        System.out.println(q);
+    }
+
+}
+</code></pre>
+                                  <div slot="hint">
+                                    <ul>
+                                      <li>Show <code>new Quote().print();</code> as two method calls.</li>
+                                      <li>As the created Quote object is not assigned to a variable, it can be considered as 'deleted' soon after its <code>print()</code> method is called.</li>
+                                    </ul>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                          </div>
                         </panel>
                       </div>
-                      <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Sequence Diagram (ParserFactory)">
-                          <question>
-                            <p>Explain the interactions depicted in this sequence diagram.</p>
-                            <img src="/se-book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300">
-                            <p></p>
-                            <div slot="hint">
-                              <p>First, the <code>createParser()</code> method of an existing <code>ParserFactory</code> object is called. Then, ...</p>
-                            </div>
-                          </question>
-                        </panel>
-                      </div>
-                    </panel>
+                    </div>
                   </div>
-                </div>
+                </panel>
               </div>
-            </panel>
-          </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="sequence-diagrams-advanced">Sequence Diagrams - Advanced</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can interpret advanced sequence diagrams</span>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="sequence-diagrams-advanced"><span>Sequence Diagrams - Advanced</span></h4>
+                    </div>
                   </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p>
-                    <panel src="/se-book\uml\sequenceDiagrams\parallelPaths\embed._include_.html" header="UML: Sequence Diagrams: Parallel Paths" is-open=""></panel>
-                  </p>
-                </div>
-                <div></div>
-              </div>
-            </panel>
-          </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="use-case-diagrams">Use Case Diagrams</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain use case diagrams</span>
-                  </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p><strong>Use case diagrams model the mapping between features of a system and its user roles.</strong></p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> A simple use case diagram:</p>
-                    <img src="/se-book/specifyingRequirements/useCases/introduction/images/ticketMachine.png" height="250"></tip-box>
-                </div>
-                <div></div>
-              </div>
-            </panel>
-          </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="timing-diagrams">Timing Diagrams</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain timing diagrams</span>
-                  </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p><strong>A <em>timing diagram</em> focus on timing constraints.</strong></p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> Here is an example timing diagram:</p>
-                    <img src="/se-book/modeling/modelingBehaviors/timingDiagrams/images/diagram.png" height="280">
-                    <br>
-                    <p><sub>Adapted from: <em>UML Distilled</em> by Martin Fowler</sub></p>
-                  </tip-box>
-                </div>
-                <div></div>
-              </div>
-            </panel>
-          </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="interaction-overview-diagrams">Interaction Overview Diagrams</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain interaction overview diagrams</span>
-                  </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p><strong>An <em>Interaction overview</em> diagrams is a combination of activity diagrams and sequence diagrams</strong>.</p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> An example:</p>
-                    <img src="/se-book/modeling/modelingBehaviors/interactionOverviewDiagrams/images/diagram.png" height="420">
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can interpret advanced sequence diagrams</span></span></span></span></p>
                     <p></p>
-                    <p><sub>source:<a href="https://en.wikipedia.org/wiki/Interaction_overview_diagram">https://commons.wikimedia.org</a></sub></p>
-                  </tip-box>
-                </div>
-                <div></div>
-              </div>
-            </panel>
-          </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="communication-diagrams">Communication Diagrams</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain communication diagrams</span>
-                  </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p><strong>A <em>Communication diagrams</em> are like sequence diagrams but emphasize the data links between the various participants in the interaction rather than the sequence of interactions.</strong></p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> An example:</p>
-                    <img src="/se-book/modeling/modelingBehaviors/communicationDiagrams/images/diagram.png" height="300">
-                    <br>
-                    <p><sub>Adapted from: <em>UML Distilled</em> by Martin Fowler</sub></p>
-                  </tip-box>
-                </div>
-                <div></div>
-              </div>
-            </panel>
-          </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="state-machine-diagrams">State Machine Diagrams</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain state machine diagrams</span>
-                  </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p><strong>A <em>State Machine Diagram</em> models state-dependent behavior.</strong></p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> Consider how a CD player responds when the “eject CD” button is pushed:</p>
-                    <ul>
-                      <li>If the CD tray is already open, it does nothing.</li>
-                      <li>If the CD tray is already in the process of opening (opened half-way), it continues to open the CD tray.</li>
-                      <li>If the CD tray is closed and the CD is being played, it stops playing and opens the CD tray.</li>
-                      <li>If the CD tray is closed and CD is not being played, it simply opens the CD tray.</li>
-                      <li>If the CD tray is already in the process of closing (closed half-way), it waits until the CD tray is fully closed and opens it immediately afterwards.</li>
-                    </ul>
-                    <p>What this means is that the CD player’s response to pushing the “eject CD” button depends on what it was doing at the time of the event. More generally, the CD player’s response to the event received depends on its internal state.
-                      Such a behavior is called a <em>state-dependent behavior</em>.</p>
-                  </tip-box>
-                  <p>Often, state-dependent behavior displayed by an object in a system is simple enough that it needs no extra attention; such a behavior can be as simple as a <em>conditional</em> behavior like <code>if x&gt;y, then x=x-y</code>. Occasionally,
-                    objects may exhibit state-dependent behavior that is complex enough such that it needs to be captured into a separate model. Such state-dependent behavior can be modelled using UML <em>state machine diagrams</em> (SMD for short, sometimes
-                    also called ‘state charts’, ‘state diagrams’ or ‘state machines’).</p>
-                  <p>An SMD views the life-cycle of an object as consisting of a finite number of states where each state displays a unique behavior pattern. An SMD captures information such as the states an object can be in, during its lifetime, and how
-                    the object responds to various events while in each state and how the object transits from one state to another. In contrast to sequence diagrams that capture object behavior one scenario at a time, SMDs capture the object’s behavior
-                    over its full life cycle.</p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> An SMD for the Minesweeper game.</p>
-                    <img src="/se-book/modeling/modelingBehaviors/stateMachineDiagrams/images/minesweeper.png" height="200">
                     <p></p>
-                  </tip-box>
-                </div>
-                <div></div>
+                    <p></p>
+                    <div>
+                      <p>
+                        <panel src="/se-book/uml/sequenceDiagrams/parallelPaths/embed._include_.html" header="UML: Sequence Diagrams: Parallel Paths" is-open></panel>
+                      </p>
+                    </div>
+                    <div></div>
+                  </div>
+                </panel>
               </div>
-            </panel>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="use-case-diagrams"><span>Use Case Diagrams</span></h4>
+                    </div>
+                  </span>
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain use case diagrams</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong>Use case diagrams model the mapping between features of a system and its user roles.</strong></p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> A simple use case diagram:</p>
+                        <img src="/se-book/specifyingRequirements/useCases/introduction/images/ticketMachine.png" height="250">
+                      </tip-box>
+                    </div>
+                    <div></div>
+                  </div>
+                </panel>
+              </div>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="timing-diagrams"><span>Timing Diagrams</span></h4>
+                    </div>
+                  </span>
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain timing diagrams</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong>A <em>timing diagram</em> focus on timing constraints.</strong></p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Here is an example timing diagram:</p>
+                        <img src="/se-book/modeling/modelingBehaviors/timingDiagrams/images/diagram.png" height="280">
+                        <br>
+                        <p><sub>Adapted from: <em>UML Distilled</em> by Martin Fowler</sub></p>
+                      </tip-box>
+                    </div>
+                    <div></div>
+                  </div>
+                </panel>
+              </div>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="interaction-overview-diagrams"><span>Interaction Overview Diagrams</span></h4>
+                    </div>
+                  </span>
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain interaction overview diagrams</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong>An <em>Interaction overview</em> diagrams is a combination of activity diagrams and sequence diagrams</strong>.</p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> An example:</p>
+                        <img src="/se-book/modeling/modelingBehaviors/interactionOverviewDiagrams/images/diagram.png" height="420">
+                        <p></p>
+                        <p><sub>source:<a href="https://en.wikipedia.org/wiki/Interaction_overview_diagram">https://commons.wikimedia.org</a></sub></p>
+                      </tip-box>
+                    </div>
+                    <div></div>
+                  </div>
+                </panel>
+              </div>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="communication-diagrams"><span>Communication Diagrams</span></h4>
+                    </div>
+                  </span>
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain communication diagrams</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong>A <em>Communication diagrams</em> are like sequence diagrams but emphasize the data links between the various participants in the interaction rather than the sequence of interactions.</strong></p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> An example:</p>
+                        <img src="/se-book/modeling/modelingBehaviors/communicationDiagrams/images/diagram.png" height="300">
+                        <br>
+                        <p><sub>Adapted from: <em>UML Distilled</em> by Martin Fowler</sub></p>
+                      </tip-box>
+                    </div>
+                    <div></div>
+                  </div>
+                </panel>
+              </div>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="state-machine-diagrams"><span>State Machine Diagrams</span></h4>
+                    </div>
+                  </span>
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain state machine diagrams</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong>A <em>State Machine Diagram</em> models state-dependent behavior.</strong></p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Consider how a CD player responds when the “eject CD” button is pushed:</p>
+                        <ul>
+                          <li>If the CD tray is already open, it does nothing.</li>
+                          <li>If the CD tray is already in the process of opening (opened half-way), it continues to open the CD tray.</li>
+                          <li>If the CD tray is closed and the CD is being played, it stops playing and opens the CD tray.</li>
+                          <li>If the CD tray is closed and CD is not being played, it simply opens the CD tray.</li>
+                          <li>If the CD tray is already in the process of closing (closed half-way), it waits until the CD tray is fully closed and opens it immediately afterwards.</li>
+                        </ul>
+                        <p>What this means is that the CD player’s response to pushing the “eject CD” button depends on what it was doing at the time of the event. More generally, the CD player’s response to the event received depends on its internal state. Such a behavior is called a <em>state-dependent behavior</em>.</p>
+                      </tip-box>
+                      <p>Often, state-dependent behavior displayed by an object in a system is simple enough that it needs no extra attention; such a behavior can be as simple as a <em>conditional</em> behavior like <code>if x&gt;y, then x=x-y</code>.
+                        Occasionally, objects may exhibit state-dependent behavior that is complex enough such that it needs to be captured into a separate model. Such state-dependent behavior can be modelled using UML <em>state machine diagrams</em> (SMD for short, sometimes also called ‘state charts’, ‘state diagrams’ or ‘state machines’).</p>
+                      <p>An SMD views the life-cycle of an object as consisting of a finite number of states where each state displays a unique behavior pattern. An SMD captures information such as the states an object can be in, during its lifetime, and how the object responds to various events while in each state and how the object transits from one state to another. In contrast to sequence diagrams that capture object behavior one scenario at a time, SMDs capture the object’s behavior over its full life cycle.</p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> An SMD for the Minesweeper game.</p>
+                        <img src="/se-book/modeling/modelingBehaviors/stateMachineDiagrams/images/minesweeper.png" height="200">
+                        <p></p>
+                      </tip-box>
+                    </div>
+                    <div></div>
+                  </div>
+                </panel>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -431,16 +518,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/vue-strap.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\markbind\js\setup.js"></script>
+<script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

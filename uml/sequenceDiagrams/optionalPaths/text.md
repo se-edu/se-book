@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Optional Paths
-
-</div>
+<span id="title">Optional Paths</span>
 
 <span id="prereqs"></span>
 

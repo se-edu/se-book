@@ -6,156 +6,162 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Reuse: APIs</title>
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content" id="all">
-      <p><span class="dimmed"><strong><span>Implementation → Reuse →
-</span></strong>
-        </span>
-      </p>
-      <div id="title">
-        <div>
-          <h2 id="apis">APIs</h2>
-        </div>
-      </div>
-      <div id="main">
-        <div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="what">What</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain APIs</span>
-                  </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p><strong>An <em>Application Programming Interface (API)</em> specifies the interface through which other programs can interact with a software component.</strong> It is a contract between the component and its clients.</p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> A class has an API (e.g., <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html">API of the Java <code>String</code> class</a>, <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">API of the Python <code>str</code> class</a>)
-                      which is a collection of public methods that you can invoke to make use of the class.</p>
-                    <p><span class="fas fa-cube"></span> The <a href="https://developer.github.com/v3/">GitHub API</a> is a collection of Web request formats GitHub server accepts and the corresponding responses. We can write a program that interacts with
-                      GitHub through that API.</p>
-                  </tip-box>
-                  <p>When developing large systems, if you define the API of each components early, the development team can develop the components in parallel <span class="dimmed"> because the future behavior of the other components are now more predictable</span>.</p>
-                </div>
-                <div>
-                  <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                      <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about APIs">
-                          <question>
-                            <p>Choose the correct statements</p>
-                            <ul class="task-list">
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A software component can have an API.</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Any method of a class is part of its API.</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Private methods of a class are not part of its API.</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. The API forms the contract between the component developer and the component user.</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Sequence diagrams can be used to show how components interact with each other via APIs.</li>
-                            </ul>
-                            <div slot="answer">
-                              <p>(a) (c) (d) (e)</p>
-                              <p>Explanation: (b) is incorrect because private methods cannot be a part of the API</p>
-                            </div>
-                          </question>
-                        </panel>
-                      </div>
-                      <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> True or False?">
-                          <question>
-                            <p>Defining component APIs early is useful for developing components in parallel.</p>
-                            <ul radio-group="9bd8a" class="radio-list">
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="9bd8a" type="radio"> True</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="9bd8a" type="radio"> False</label></li>
-                            </ul>
-                            <div slot="answer">
-                              <p>True</p>
-                              <p>Explanation: Yes, once we know the precise behavior expected of each component, we can start developing them in parallel.</p>
-                            </div>
-                          </question>
-                        </panel>
-                      </div>
-                    </panel>
-                  </div>
-                </div>
-              </div>
-            </panel>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
+      <div>
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content" id="all">
+          <p><span class="dimmed"><strong><span>Implementation → Reuse →
+                </span></strong></span></p>
+          <div id="title">
+            <h1 id="apis"><span>APIs</span><a class="fa fa-anchor" href="#apis"></a></h1>
           </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="designing-apis">Designing APIs</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can design reasonable quality APIs</span>
+          <div id="main">
+            <div>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="what"><span>What</span></h4>
+                    </div>
                   </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p>An API should be well-designed (i.e. should cater for the needs of its users) and well-documented.</p>
-                  <p>When we write software consisting of multiple components, we need to define the API of each component.</p>
-                  <p>One approach is to let the API emerge and evolve over time as we write code.</p>
-                  <p>Another approach is to define the API up-front. Doing so allows us to develop the components in parallel.</p>
-                  <p>We can use UML <em>sequence diagrams</em> to analyze the required interactions between components in order to discover the required API. Given below is an example.</p>
-                  <tip-box>
-                    <p>Example:</p>
-                    <img src="/se-book/reuse/apis/designingAPIs/images/textLogic.png" height="500">
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain APIs</span></span></span></span></p>
                     <p></p>
-                    <p>As we analyze the interactions between components using sequence diagrams, we discover the API of those components. For example, the diagram above tells us that the MSLogic component API should have the methods:</p>
-                    <ul>
-                      <li><code>new()</code></li>
-                      <li><code>getWidth:int</code></li>
-                      <li><code>getHeight():int</code></li>
-                      <li><code>getRemainingMineCount():int</code></li>
-                    </ul>
-                    <p>More details can be included to increase the precision of the method definitions before coding. Such precision is important to avoid misunderstandings between the developer of the class and developers of other classes that interact
-                      with this class.</p>
-                    <ul>
-                      <li><strong>Operation</strong>: <em>newGame(): void</em></li>
-                      <li><strong>Description</strong>: Generates a new <em>WxH</em> minefield with <em>M</em> mines. Any existing minefield will be overwritten.</li>
-                      <li><strong>Preconditions</strong>: None</li>
-                      <li><strong>Postconditions</strong>: A new minefield is created. Game state is READY.</li>
-                    </ul>
-                    <p>Preconditions are the conditions that must be true before calling this operation. Postconditions describe the system after the operation is complete. Note that post conditions do not say what happens during the operation. Here is another
-                      example:</p>
-                    <ul>
-                      <li><strong>Operation</strong>: <em>clearCellAt(int x, int y): void</em></li>
-                      <li><strong>Description</strong>: Records the cell at x,y as cleared.</li>
-                      <li><strong>Parameters</strong>: x, y coordinates of the cell</li>
-                      <li><strong>Preconditions</strong>: game state is READY or IN_PLAY. x and y are in 0..(H-1) and 0..(W-1), respectively.</li>
-                      <li><strong>Postconditions</strong>: Cell at x,y changes state to ZERO, ONE, TWO, THREE, …, EIGHT, or INCORRECTLY_CLEARED. Game state changes to IN_PLAY, WON or LOST as appropriate.</li>
-                    </ul>
-                  </tip-box>
-                </div>
-                <div></div>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong>An <em>Application Programming Interface (API)</em> specifies the interface through which other programs can interact with a software component.</strong> It is a contract between the component and its clients.</p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> A class has an API (e.g., <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/String.html">API of the Java <code>String</code> class</a>, <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">API of the Python <code>str</code> class</a>) which is a collection of public methods that you can invoke to make use of the class.</p>
+                        <p><span class="fas fa-cube"></span> The <a href="https://developer.github.com/v3/">GitHub API</a> is a collection of Web request formats GitHub server accepts and the corresponding responses. We can write a program that interacts with GitHub through that API.</p>
+                      </tip-box>
+                      <p>When developing large systems, if you define the API of each components early, the development team can develop the components in parallel <span class="dimmed"> because the future behavior of the other components are now more predictable</span>.</p>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about APIs">
+                              <question>
+                                <p>Choose the correct statements</p>
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A software component can have an API.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Any method of a class is part of its API.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Private methods of a class are not part of its API.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. The API forms the contract between the component developer and the component user.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Sequence diagrams can be used to show how components interact with each other via APIs.</li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>(a) (c) (d) (e)</p>
+                                  <p>Explanation: (b) is incorrect because private methods cannot be a part of the API</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> True or False?">
+                              <question>
+                                <p>Defining component APIs early is useful for developing components in parallel.</p>
+                                <ul radio-group="9bd8a" class="radio-list">
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="9bd8a" type="radio"> True</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="9bd8a" type="radio"> False</label></li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>True</p>
+                                  <p>Explanation: Yes, once we know the precise behavior expected of each component, we can start developing them in parallel.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </panel>
               </div>
-            </panel>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="designing-apis"><span>Designing APIs</span></h4>
+                    </div>
+                  </span>
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can design reasonable quality APIs</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p>An API should be well-designed (i.e. should cater for the needs of its users) and well-documented.</p>
+                      <p>When we write software consisting of multiple components, we need to define the API of each component.</p>
+                      <p>One approach is to let the API emerge and evolve over time as we write code.</p>
+                      <p>Another approach is to define the API up-front. Doing so allows us to develop the components in parallel.</p>
+                      <p>We can use UML <em>sequence diagrams</em> to analyze the required interactions between components in order to discover the required API. Given below is an example.</p>
+                      <tip-box>
+                        <p>Example:</p>
+                        <img src="/se-book/reuse/apis/designingAPIs/images/textLogic.png" height="500">
+                        <p></p>
+                        <p>As we analyze the interactions between components using sequence diagrams, we discover the API of those components. For example, the diagram above tells us that the MSLogic component API should have the methods:</p>
+                        <ul>
+                          <li><code>new()</code></li>
+                          <li><code>getWidth:int</code></li>
+                          <li><code>getHeight():int</code></li>
+                          <li><code>getRemainingMineCount():int</code></li>
+                        </ul>
+                        <p>More details can be included to increase the precision of the method definitions before coding. Such precision is important to avoid misunderstandings between the developer of the class and developers of other classes that interact with this class.</p>
+                        <ul>
+                          <li><strong>Operation</strong>: <em>newGame(): void</em></li>
+                          <li><strong>Description</strong>: Generates a new <em>WxH</em> minefield with <em>M</em> mines. Any existing minefield will be overwritten.</li>
+                          <li><strong>Preconditions</strong>: None</li>
+                          <li><strong>Postconditions</strong>: A new minefield is created. Game state is READY.</li>
+                        </ul>
+                        <p>Preconditions are the conditions that must be true before calling this operation. Postconditions describe the system after the operation is complete. Note that post conditions do not say what happens during the operation. Here is another example:</p>
+                        <ul>
+                          <li><strong>Operation</strong>: <em>clearCellAt(int x, int y): void</em></li>
+                          <li><strong>Description</strong>: Records the cell at x,y as cleared.</li>
+                          <li><strong>Parameters</strong>: x, y coordinates of the cell</li>
+                          <li><strong>Preconditions</strong>: game state is READY or IN_PLAY. x and y are in 0..(H-1) and 0..(W-1), respectively.</li>
+                          <li><strong>Postconditions</strong>: Cell at x,y changes state to ZERO, ONE, TWO, THREE, …, EIGHT, or INCORRECTLY_CLEARED. Game state changes to IN_PLAY, WON or LOST as appropriate.</li>
+                        </ul>
+                      </tip-box>
+                    </div>
+                    <div></div>
+                  </div>
+                </panel>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -165,16 +171,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/vue-strap.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\markbind\js\setup.js"></script>
+<script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

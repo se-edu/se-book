@@ -1,7 +1,4 @@
-<div id="title">
-
-### Service-oriented Architectural Style
-</div>
+<span id="title">Service-oriented Architectural Style</span>
 
 <div id="body">
 

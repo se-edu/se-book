@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can use Java varargs feature</span>
 
-<div id="title">
-
-#### Varargs
-
-</div>
+<span id="title">Varargs</span>
 
 <div id="body">
 

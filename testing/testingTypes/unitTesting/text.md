@@ -1,7 +1,4 @@
-<div id="title">
-
-### Unit Testing
-</div>
+<span id="title">Unit Testing</span>
 
 <div id="body">
 

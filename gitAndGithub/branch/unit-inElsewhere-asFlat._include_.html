@@ -1,16 +1,14 @@
 <div>
   <p>
-    <panel src="/se-book\revisionControl\branching\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Project Management → Revision Control → Branching%%"></panel>
+    <panel src="/se-book/revisionControl/branching/unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Project Management → Revision Control → Branching%%" popup-url="/se-book/revisionControl/branching"></panel>
   </p>
 </div>
 <p></p>
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
-</span></strong>
-  </span>
-</p>
+      </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="branch">Branch</h4>
+    <h4 id="branch"><span>Branch</span></h4>
   </div>
   <div id="main">
     <div>
@@ -25,10 +23,10 @@
         </tab>
         <tab header="CLI">
           <div>
-            <pre class="hljs"><code>git status
+            <pre><code class="hljs">git status
 </code></pre>
             <p><span class="fas fa-arrow-down"></span></p>
-            <pre class="hljs"><code>on branch master
+            <pre><code class="hljs">on branch master
 </code></pre>
           </div>
           <hr>
@@ -50,11 +48,11 @@
         <tab header="CLI">
           <div>
             <p>You can use the <code>branch</code> command to create a new branch and the <code>checkout</code> command to switch to a specific branch.</p>
-            <pre class="hljs"><code>git branch feature1
+            <pre><code class="hljs">git branch feature1
 git checkout feature1
 </code></pre>
             <p>One-step shortcut to create a branch and switch to it at the same time:</p>
-            <pre class="hljs"><code>git checkout –b feature1
+            <pre><code class="hljs">git checkout –b feature1
 </code></pre>
           </div>
           <hr>
@@ -73,7 +71,7 @@ git checkout feature1
         </tab>
         <tab header="CLI">
           <div>
-            <pre class="hljs"><code>git checkout master
+            <pre><code class="hljs">git checkout master
 </code></pre>
           </div>
           <hr>
@@ -95,7 +93,7 @@ git checkout feature1
         </tab>
         <tab header="CLI">
           <div>
-            <pre class="hljs"><code>git merge master
+            <pre><code class="hljs">git merge master
 </code></pre>
           </div>
           <hr>
@@ -113,7 +111,7 @@ git checkout feature1
           <hr>
         </tab>
         <tab header="CLI">
-          <pre class="hljs"><code>git merge feature1
+          <pre><code class="hljs">git merge feature1
 </code></pre>
           <hr>
         </tab>
@@ -121,15 +119,13 @@ git checkout feature1
       <p><strong>10. Create a new branch called <code>add-countries</code>, switch to it, and add some commits to it</strong> <span class="dimmed">(similar to steps 1-2 above)</span>. You should have something like this now:</p>
       <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80">
       <p></p>
-      <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to see something
-        like the below,</p>
+      <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to see something like the below,</p>
       <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100">
       <p></p>
       <p>... you are likely to see something like this instead:</p>
       <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80">
       <p></p>
-      <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided it is simpler to
-        just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
+      <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided it is simpler to just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
       <p><strong>It is possible to force Git to create a merge commit even if fast forwarding is possible.</strong></p>
       <tabs>
         <tab header="SourceTree">
@@ -143,7 +139,7 @@ git checkout feature1
         <tab header="CLI">
           <div>
             <p>Use the <code>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
-            <pre class="hljs"><code>git merge --no-ff add-countries
+            <pre><code class="hljs">git merge --no-ff add-countries
 </code></pre>
           </div>
           <hr>

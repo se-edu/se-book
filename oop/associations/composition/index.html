@@ -6,91 +6,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Object Oriented Programming: Associations: Composition</title>
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of composition</span>
-        </span>
-        </span>
-        </span>
-        <p></p>
-      </p>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
       <div>
-        <div></div>
-        <p></p>
-        <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Associations →
-</span></strong>
-          </span>
-        </p>
-        <div id="title-and-body">
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of composition</span></span></span></span></p>
+          <p></p>
+          <p></p>
           <div>
-            <h4 id="composition">Composition</h4>
-          </div>
-          <div id="main">
-            <div>
-              <p><strong>A composition is an association that represents a strong <em>whole-part</em> relationship.</strong> When the <em>whole</em> is destroyed, <em>parts</em> are destroyed too.</p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> A <code>Board</code> (used for playing board games) consists of <code>Square</code> objects.</p>
-              </tip-box>
-              <p><strong>Composition also implies that there cannot be cyclical links</strong>.</p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> The ‘sub-folder’ association between <code>Folder</code> objects is a composition type association. That means if the <code>Folder</code> object <code>foo</code> is a sub folder of <code>Folder</code>                  object <code>bar</code>, <code>bar</code> cannot be a sub-folder of <code>foo</code>.</p>
-              </tip-box>
-              <h5 id="implementing-composition"><big>Implementing composition</big></h5>
-              <p><strong>Composition too is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the
-                ‘whole’ object.</p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> In the code below, the <code>Email</code> has a composition type relationship with the <code>Subject</code> class, in the sense that the subject is part of the email.</p>
-                <table>
-                  <tr>
-                  
-                    <td valign="top">
-                      <p>Java <span class="fas fa-arrow-down"></span></p>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Associations →
+                  </span></strong></span></p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="composition"><span>Composition</span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p><strong>A composition is an association that represents a strong <em>whole-part</em> relationship.</strong> When the <em>whole</em> is destroyed, <em>parts</em> are destroyed too.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> A <code>Board</code> (used for playing board games) consists of <code>Square</code> objects.</p>
+                  </tip-box>
+                  <p><strong>Composition also implies that there cannot be cyclical links</strong>.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> The ‘sub-folder’ association between <code>Folder</code> objects is a composition type association. That means if the <code>Folder</code> object <code>foo</code> is a sub folder of <code>Folder</code> object <code>bar</code>, <code>bar</code> cannot be a sub-folder of <code>foo</code>.</p>
+                  </tip-box>
+                  <h5 id="implementing-composition">Implementing composition</h5>
+                  <p><strong>Composition is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’ object.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> In the code below, the <code>Email</code> has a composition type relationship with the <code>Subject</code> class, in the sense that the subject is part of the email.</p>
+                    <div class="alt-java">
                       <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span> </span>{
     <span class="hljs-keyword">private</span> Subject subject;
   ...
 }
 </code></pre>
-                      <p></p>
-                    </td>
-                  
-                    <td>  <br><br></td>
-                  
-                    <td valign="top">
-                      <p>Python <span class="fas fa-arrow-down"></span></p>
+                    </div>
+                    <div class="alt-python">
                       <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
     self.__subject = Subject()
 </code></pre>
-                      <p></p>
-                    </td>
-                  </tr>
-                </table>
-              </tip-box>
+                    </div>
+                  </tip-box>
+                </div>
+                <div></div>
+              </div>
             </div>
-            <div></div>
           </div>
         </div>
       </div>
@@ -100,16 +96,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../../markbind/js/vue.min.js"></script>
+<script src="../../../markbind/js/vue-strap.min.js"></script>
+<script src="../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\..\markbind\js\setup.js"></script>
+<script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../../markbind/layouts/default/scripts.js"></script>
 </html>

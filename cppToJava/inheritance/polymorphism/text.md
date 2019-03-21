@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Polymorphism
-
-</div>
+<span id="title">Polymorphism</span>
 
 <span id="prereqs"></span>
 
@@ -178,4 +174,5 @@ public class Dog extends Animal {
 </div>
 
 <div id="extras">
+  <include src="exercisesPanel.md" boilerplate />
 </div>

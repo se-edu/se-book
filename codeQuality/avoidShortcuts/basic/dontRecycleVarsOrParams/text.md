@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Don't Recycle Variables or Parameters
-
-</div>
+<span id="title">Don't Recycle Variables or Parameters</span>
 
 <span id="prereqs"></span>
 

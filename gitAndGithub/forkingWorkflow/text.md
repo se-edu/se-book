@@ -1,12 +1,8 @@
-<span id="prereqs"><panel src="../../revisionControl/forkingWorkflow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Revision Control → Forking Workflow%%" /></span>
+<span id="prereqs"><panel src="../../revisionControl/forkingWorkflow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Revision Control → Forking Workflow%%" popup-url="{{ baseUrl }}/revisionControl/forkingWorkflow" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can follow Forking Workflow</span>
 
-<div id="title">
-
-#### Forking Workflow
-
-</div>
+<span id="title">Forking Workflow</span>
 
 <div id="body">
 

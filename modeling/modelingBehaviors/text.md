@@ -1,11 +1,9 @@
-<div id="title">
-
-## Modeling Behaviors
-</div>
+<span id="title">Modeling Behaviors</span>
 
 <div id="body">
 
 <include src="activityDiagrams/unit-inParent-asPanel.md" boilerplate />
+<include src="activityDiagramsIntermediate/unit-inParent-asPanel.md" boilerplate />
 <include src="sequenceDiagramsBasic/unit-inParent-asPanel.md" boilerplate />
 <include src="sequenceDiagramsIntermediate/unit-inParent-asPanel.md" boilerplate />
 <include src="sequenceDiagramsAdvanced/unit-inParent-asPanel.md" boilerplate />

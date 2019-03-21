@@ -1,12 +1,8 @@
-<span id="prereqs"><panel src="../../revisionControl/remoteRepositories/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Remote Respositories%%" /></span>
+<span id="prereqs"><panel src="../../revisionControl/remoteRepositories/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Remote Respositories%%" popup-url="{{ baseUrl }}/revisionControl/remoteRepositories" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can clone a remote repo</span>
 
-<div id="title">
-
-#### Clone
-
-</div>
+<span id="title">Clone</span>
 
 <div id="body">
 

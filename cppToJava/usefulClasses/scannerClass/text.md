@@ -1,8 +1,4 @@
-<div id="title">
-
-#### The `Scanner` class
-
-</div>
+<span id="title">The `Scanner` class</span>
 
 <span id="prereqs"></span>
 
@@ -49,7 +45,7 @@ System.out.print("What is your name? ");
 String name = in.nextLine();
 System.out.printf("Hello %s, age %d\n", name, age);
 ```
-:bulb: Note the [use of `printf` method for formatting the output](https://docs.oracle.com/javase/tutorial/java/data/numberformat.html).
+:bulb: Note the [use of `printf` method for formatting the output]({{ java_tutorial }}/java/data/numberformat.html).
 
 </box>
 

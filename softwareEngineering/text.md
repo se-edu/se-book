@@ -1,7 +1,4 @@
-<div id="title">
-
-# Software Engineering
-</div>
+<span id="title">Software Engineering</span>
 
 <div id="body">
 

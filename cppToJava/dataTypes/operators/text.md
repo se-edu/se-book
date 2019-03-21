@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Operators
-
-</div>
+<span id="title">Operators</span>
 
 <span id="prereqs"></span>
 

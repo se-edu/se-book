@@ -1,26 +1,22 @@
-<div>
-  <p>null</p>
-</div>
+<div></div>
 <p></p>
 <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability →
-</span></strong>
-  </span>
-</p>
+      </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h3 id="basic">Basic</h3>
+    <h4 id="basic"><span>Basic</span></h4>
   </div>
   <div id="main">
     <div>
       <div>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><div>
-<h4 id="avoid-long-methods">Avoid Long Methods</h4></div></span>
+        <panel type="seamless" expanded>
+          <span slot="header" class="card-title">
+            <div>
+              <h4 id="avoid-long-methods"><span>Avoid Long Methods</span></h4>
+            </div>
+          </span>
           <div class="indented">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: avoid long methods </span>
-              </span>
-              </span>
-              </span>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: avoid long methods </span></span></span></span>
               <p></p>
             </p>
             <p></p>
@@ -32,14 +28,14 @@
         </panel>
       </div>
       <div>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><div>
-<h4 id="avoid-deep-nesting">Avoid Deep Nesting</h4></div></span>
+        <panel type="seamless" expanded>
+          <span slot="header" class="card-title">
+            <div>
+              <h4 id="avoid-deep-nesting"><span>Avoid Deep Nesting</span></h4>
+            </div>
+          </span>
           <div class="indented">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: avoid deep nesting </span>
-              </span>
-              </span>
-              </span>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: avoid deep nesting </span></span></span></span>
               <p></p>
             </p>
             <p></p>
@@ -48,46 +44,138 @@
                 <p>If you need more than 3 levels of indentation, you're screwed anyway, and should fix your program. <sub>--Linux 1.3.53 CodingStyle</sub></p>
               </blockquote>
               <p>In particular, avoid <a href="https://blog.codinghorror.com/flattening-arrow-code/"><em>arrowhead</em> style code</a>.</p>
-              <tip-box>
-                <p>Example:</p>
-                <img src="/se-book/codeQuality/maximiseReadability/basic/avoidDeepNesting/images/arrowheadStyle.png" height="250">
-                <p></p>
-              </tip-box>
+              <img src="/se-book/codeQuality/maximiseReadability/basic/avoidDeepNesting/images/arrowheadStyle.png" width="500">
+              <p></p>
+              <box>
+                <p><span class="fas fa-cube"></span> A real code example:</p>
+                <div class="alt-java">
+                  <div>
+                    <table>
+                      <tr>
+                          <td>
+                          <p>
+                            <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
+                          </p>
+                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> subsidy;
+    <span class="hljs-keyword">if</span> (!age) {
+        <span class="hljs-keyword">if</span> (!sub) {
+            <span class="hljs-keyword">if</span> (!notFullTime) {
+                subsidy = <span class="hljs-number">500</span>;
+            } <span class="hljs-keyword">else</span> {
+                subsidy = <span class="hljs-number">250</span>;
+            }
+        } <span class="hljs-keyword">else</span> {
+            subsidy = <span class="hljs-number">250</span>;
+        }
+    } <span class="hljs-keyword">else</span> {
+        subsidy = -<span class="hljs-number">1</span>;
+    }
+    <span class="hljs-keyword">return</span> subsidy;
+}
+</code></pre>
+                          <p></p>
+                        </td>
+                          <td>  <br><br></td>
+                          <td valign="top">
+                          <p>
+                            <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
+                          </p>
+                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> subsidy;
+    <span class="hljs-keyword">if</span> (isSenior) {
+        subsidy = REJECT_SENIOR;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {
+        subsidy = SUBSIDISED_SUBSIDY;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {
+        subsidy = FULLTIME_SUBSIDY * RATIO;
+    } <span class="hljs-keyword">else</span> {
+        subsidy = FULLTIME_SUBSIDY;
+    }
+    <span class="hljs-keyword">return</span> subsidy;
+}
+</code></pre>
+                          <p></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="alt-python">
+                  <div>
+                    <table>
+                      <tr>
+                          <td>
+                          <p>
+                            <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
+                          </p>
+                          <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:
+                subsidy = <span class="hljs-number">500</span>
+            <span class="hljs-keyword">else</span>:
+                subsidy = <span class="hljs-number">250</span>
+        <span class="hljs-keyword">else</span>:
+            subsidy = <span class="hljs-number">250</span>
+    <span class="hljs-keyword">else</span>:
+        subsidy = <span class="hljs-number">-1</span>
+    <span class="hljs-keyword">return</span> subsidy
+</code></pre>
+                          <p></p>
+                        </td>
+                          <td>  <br><br></td>
+                          <td valign="top">
+                          <p>
+                            <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
+                          </p>
+                          <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">if</span> is_senior:
+        <span class="hljs-keyword">return</span> REJECT_SENIOR
+    <span class="hljs-keyword">elif</span> is_already_subsidised:
+        <span class="hljs-keyword">return</span> SUBSIDISED_SUBSIDY
+    <span class="hljs-keyword">elif</span> is_parttime:
+        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY
+</code></pre>
+                          <p></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </box>
             </div>
             <div></div>
           </div>
         </panel>
       </div>
       <div>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><div>
-<h4 id="avoid-complicated-expressions">Avoid Complicated Expressions</h4></div></span>
+        <panel type="seamless" expanded>
+          <span slot="header" class="card-title">
+            <div>
+              <h4 id="avoid-complicated-expressions"><span>Avoid Complicated Expressions</span></h4>
+            </div>
+          </span>
           <div class="indented">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: avoid complicated expressions </span>
-              </span>
-              </span>
-              </span>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: avoid complicated expressions </span></span></span></span>
               <p></p>
             </p>
             <p></p>
             <div>
-              <p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate the
-                final value).</p>
+              <p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate the final value).</p>
               <div class="alt-java">
                 <div>
                   <tip-box>
                     <p><span class="fas fa-cube"></span> Example:</p>
                     <p>
-                      <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                        </span>
-                      </font>
+                      <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
                     </p>
                     <pre><code class="hljs java"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);
 </code></pre>
                     <p>
-                      <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                        </span>
-                      </font>
+                      <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
                     </p>
                     <pre><code class="hljs java">
 <span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;
@@ -106,16 +194,12 @@
                   <tip-box>
                     <p><span class="fas fa-cube"></span> Example:</p>
                     <p>
-                      <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                        </span>
-                      </font>
+                      <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
                     </p>
                     <pre><code class="hljs python"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) <span class="hljs-keyword">or</span> (previous_size != length)) <span class="hljs-keyword">and</span> (type_code == URGENT)
 </code></pre>
                     <p>
-                      <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                        </span>
-                      </font>
+                      <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
                     </p>
                     <pre><code class="hljs python">is_within_size_limit = length &lt; MAX_LENGTH
 is_same_size = previous_size != length
@@ -137,32 +221,28 @@ is_urgent = type_code == URGENT
         </panel>
       </div>
       <div>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><div>
-<h4 id="avoid-magic-numbers">Avoid Magic Numbers</h4></div></span>
+        <panel type="seamless" expanded>
+          <span slot="header" class="card-title">
+            <div>
+              <h4 id="avoid-magic-numbers"><span>Avoid Magic Numbers</span></h4>
+            </div>
+          </span>
           <div class="indented">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: avoid magic numbers </span>
-              </span>
-              </span>
-              </span>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: avoid magic numbers </span></span></span></span>
               <p></p>
             </p>
             <p></p>
             <div>
-              <p>When the code has a number that does not explain the meaning of the number, we call that a magic number (as in “the number appears as if by magic”). Using a
-                <tooltip content="e.g., `PI`"><em>named constant</em></tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
+              <p>When the code has a number that does not explain the meaning of the number, we call that a magic number (as in “the number appears as if by magic”). Using a <tooltip content="e.g., `PI`"><em>named constant</em></tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
               <tip-box>
                 <p><span class="fas fa-cube"></span> Example:</p>
                 <div class="alt-java">
                   <div>
                     <table>
                       <tr>
-                      
-                        <td valign="top">
+                          <td valign="top">
                           <p>
-                            <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                              </span>
-                            </font>
+                            <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
                           </p>
                           <pre><code class="hljs java"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>;
 ...
@@ -170,14 +250,10 @@ is_urgent = type_code == URGENT
 </code></pre>
                           <p></p>
                         </td>
-                      
-                        <td>  <br><br></td>
-                      
-                        <td valign="top">
+                          <td>  <br><br></td>
+                          <td valign="top">
                           <p>
-                            <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                              </span>
-                            </font>
+                            <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
                           </p>
                           <pre><code class="hljs java"><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14236</span>;
 <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_SIZE = <span class="hljs-number">10</span>;
@@ -197,12 +273,9 @@ is_urgent = type_code == URGENT
                     <p>Note: Python does not have a way to make a variable a constant. However, you can use a normal variable with an <code>ALL_CAPS</code> name to simulate a constant.</p>
                     <table>
                       <tr>
-                      
-                        <td valign="top">
+                          <td valign="top">
                           <p>
-                            <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                              </span>
-                            </font>
+                            <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
                           </p>
                           <pre><code class="hljs python"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>
 ...
@@ -210,14 +283,10 @@ is_urgent = type_code == URGENT
 </code></pre>
                           <p></p>
                         </td>
-                      
-                        <td>  <br><br></td>
-                      
-                        <td valign="top">
+                          <td>  <br><br></td>
+                          <td valign="top">
                           <p>
-                            <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                              </span>
-                            </font>
+                            <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong></span></font>
                           </p>
                           <pre><code class="hljs python">PI = <span class="hljs-number">3.14236</span>
 MAX_SIZE = <span class="hljs-number">10</span>
@@ -236,9 +305,7 @@ MAX_SIZE = <span class="hljs-number">10</span>
               <p>Similarly, we can have ‘magic’ values of other data types.</p>
               <tip-box>
                 <p>
-                  <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                    </span>
-                  </font>
+                  <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
                 </p>
                 <pre><code class="hljs java"><span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment">// A magic string!</span>
 </code></pre>
@@ -249,14 +316,14 @@ MAX_SIZE = <span class="hljs-number">10</span>
         </panel>
       </div>
       <div>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><div>
-<h4 id="make-the-code-obvious">Make the Code Obvious</h4></div></span>
+        <panel type="seamless" expanded>
+          <span slot="header" class="card-title">
+            <div>
+              <h4 id="make-the-code-obvious"><span>Make the Code Obvious</span></h4>
+            </div>
+          </span>
           <div class="indented">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: make the code obvious </span>
-              </span>
-              </span>
-              </span>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: make the code obvious </span></span></span></span>
               <p></p>
             </p>
             <p></p>
@@ -265,9 +332,7 @@ MAX_SIZE = <span class="hljs-number">10</span>
               <ul>
                 <li>[<code>Java</code>] Use explicit type conversion instead of implicit type conversion.</li>
                 <li>[<code>Java</code>, <code>Python</code>] Use parentheses/braces to show grouping even when they can be skipped.</li>
-                <li>[<code>Java</code>, <code>Python</code>] Use
-                  <trigger trigger="click" for="modal:obviousCode-enums">enumerations</trigger> when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0,1,2 to denote the states 'starting', 'enabled', and
-                  'disabled' respectively, declare 'state' as type <code>SystemState</code> and define an enumeration <code>SystemState</code> that has values <code>'STARTING'</code>, <code>'ENABLED'</code>, and <code>'DISABLED'</code>.</li>
+                <li>[<code>Java</code>, <code>Python</code>] Use <trigger trigger="click" for="modal:obviousCode-enums">enumerations</trigger> when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0,1,2 to denote the states 'starting', 'enabled', and 'disabled' respectively, declare 'state' as type <code>SystemState</code> and define an enumeration <code>SystemState</code> that has values <code>'STARTING'</code>, <code>'ENABLED'</code>, and <code>'DISABLED'</code>.</li>
               </ul>
               <modal title="More about enumerations" id="modal:obviousCode-enums">
                 <ul>
@@ -281,8 +346,6 @@ MAX_SIZE = <span class="hljs-number">10</span>
         </panel>
       </div>
     </div>
-    <div>
-      <p>null</p>
-    </div>
+    <div></div>
   </div>
 </div>

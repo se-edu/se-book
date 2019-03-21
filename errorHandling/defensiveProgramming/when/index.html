@@ -6,84 +6,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Error Handling: Defensive Programming: When</title>
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain when to use defensive programming</span>
-        </span>
-        </span>
-        </span>
-        <p></p>
-      </p>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
       <div>
-        <div>
-          <p>
-            <panel src="/se-book\errorHandling\defensiveProgramming\what\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Implementation → Error Handling → Defensive Programming → What%%"></panel>
-          </p>
-        </div>
-        <p></p>
-        <p><span class="dimmed"><strong><span>Implementation → Error Handling → Defensive Programming →
-</span></strong>
-          </span>
-        </p>
-        <div id="title-and-body">
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain when to use defensive programming</span></span></span></span></p>
+          <p></p>
+          <p></p>
           <div>
-            <h4 id="when">When</h4>
-          </div>
-          <div id="main">
             <div>
-              <p><strong>It is not necessary to be 100% defensive all the time.</strong> While defensive code may be less prone to be misused or abused, such code can also be more complicated and slower to run.</p>
-              <p>The suitable degree of defensiveness depends on many factors such as:</p>
-              <ul>
-                <li>How critical is the system?</li>
-                <li>Will the code be used by programmers other than the author?</li>
-                <li>The level of programming language support for defensive programming</li>
-                <li>The overhead of being defensive</li>
-              </ul>
+              <p>
+                <panel src="/se-book/errorHandling/defensiveProgramming/what/unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Implementation → Error Handling → Defensive Programming → What%%" popup-url="/se-book/errorHandling/defensiveProgramming/what"></panel>
+              </p>
             </div>
-            <div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Implementation → Error Handling → Defensive Programming →
+                  </span></strong></span></p>
+            <div id="title-and-body">
               <div>
-                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                <h4 id="when"><span>When</span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p><strong>It is not necessary to be 100% defensive all the time.</strong> While defensive code may be less prone to be misused or abused, such code can also be more complicated and slower to run.</p>
+                  <p>The suitable degree of defensiveness depends on many factors such as:</p>
+                  <ul>
+                    <li>How critical is the system?</li>
+                    <li>Will the code be used by programmers other than the author?</li>
+                    <li>The level of programming language support for defensive programming</li>
+                    <li>The overhead of being defensive</li>
+                  </ul>
+                </div>
+                <div>
                   <div>
-                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Defensive programming">
-                      <question>
-                        <p>Defensive programming,</p>
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. can make the program slower.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. can make the code longer.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. can make the code more complex.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. can make the code less susceptible to misuse.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. can require extra effort.</li>
-                        </ul>
-                        <div slot="answer">
-                          <p>(a)(b)(c)(d)(e)</p>
-                          <p>Explanation: Defensive programming requires a more checks, possibly making the code longer, more complex, and possibly slower. Use it only when benefits outweigh costs, which is often.</p>
-                        </div>
-                      </question>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Defensive programming">
+                          <question>
+                            <p>Defensive programming,</p>
+                            <ul class="task-list">
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. can make the program slower.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. can make the code longer.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. can make the code more complex.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. can make the code less susceptible to misuse.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. can require extra effort.</li>
+                            </ul>
+                            <div slot="answer">
+                              <p>(a)(b)(c)(d)(e)</p>
+                              <p>Explanation: Defensive programming requires a more checks, possibly making the code longer, more complex, and possibly slower. Use it only when benefits outweigh costs, which is often.</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
                     </panel>
                   </div>
-                </panel>
+                </div>
               </div>
             </div>
           </div>
@@ -95,16 +104,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../../markbind/js/vue.min.js"></script>
+<script src="../../../markbind/js/vue-strap.min.js"></script>
+<script src="../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\..\markbind\js\setup.js"></script>
+<script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../../markbind/layouts/default/scripts.js"></script>
 </html>

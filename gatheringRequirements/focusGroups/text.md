@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Focus Groups
-
-</div>
+<span id="title">Focus Groups</span>
 
 <span id="prereqs"></span>
 

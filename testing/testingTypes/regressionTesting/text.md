@@ -1,7 +1,4 @@
-<div id="title">
-
-### Regression Testing
-</div>
+<span id="title">Regression Testing</span>
 
 <div id="body">
 

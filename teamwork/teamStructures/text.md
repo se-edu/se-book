@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Team Structures
-
-</div>
+<span id="title">Team Structures</span>
 
 <span id="prereqs"></span>
 

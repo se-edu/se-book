@@ -6,69 +6,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - C++ to Java: Inheritance: Interfaces</title>
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use interfaces in Java</span>
-        </span>
-        </span>
-        </span>
-        <p></p>
-      </p>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
       <div>
-        <div></div>
-        <p></p>
-        <p><span class="dimmed"><strong><span>C++ to Java → Inheritance →
-</span></strong>
-          </span>
-        </p>
-        <div id="title-and-body">
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use interfaces in Java</span></span></span></span></p>
+          <p></p>
+          <p></p>
           <div>
-            <h4 id="interfaces">Interfaces</h4>
-          </div>
-          <div id="main">
-            <div>
-              <p>The text given in this section borrows some explanations and code examples from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>.</p>
-              <p>In Java, <strong>an <em>interface</em> is a reference type, similar to a class, mainly containing method signatures.</strong> Defining an interface is similar to creating a new class except it uses the keyword <code>interface</code> in place
-                of <code>class</code>.</p>
-              <box>
-                <p><span class="fas fa-cube"></span> Here is an interface named <code>DrivableVehicle</code> that defines methods needed to drive a vehicle.</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">DrivableVehicle</span> </span>{
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>C++ to Java → Inheritance →
+                  </span></strong></span></p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="interfaces"><span>Interfaces</span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p>The text given in this section borrows some explanations and code examples from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>.</p>
+                  <p>In Java, <strong>an <em>interface</em> is a reference type, similar to a class, mainly containing method signatures.</strong> Defining an interface is similar to creating a new class except it uses the keyword <code>interface</code> in place of <code>class</code>.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> Here is an interface named <code>DrivableVehicle</code> that defines methods needed to drive a vehicle.</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">DrivableVehicle</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">turn</span><span class="hljs-params">(Direction direction)</span></span>;
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">changeLanes</span><span class="hljs-params">(Direction direction)</span></span>;
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">signalTurn</span><span class="hljs-params">(Direction direction, <span class="hljs-keyword">boolean</span> signalOn)</span></span>;
     <span class="hljs-comment">// more method signatures</span>
 }
 </code></pre>
-                <p>Note that the method signatures have no braces and are terminated with a semicolon.
-                </p>
-              </box>
-              <p><strong>Interfaces cannot be instantiated—they can only be implemented by classes</strong>. When an instantiable class implements an interface, indicated by the keyword <code>implements</code>, it provides a method body for each of the methods
-                declared in the interface.</p>
-              <box>
-                <p><span class="fas fa-cube"></span> Here is how a class <code>CarModelX</code> can implement the <code>DrivableVehicle</code> interface.</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CarModelX</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">DrivableVehicle</span> </span>{
+                    <p>Note that the method signatures have no braces and are terminated with a semicolon.
+                    </p>
+                  </box>
+                  <p><strong>Interfaces cannot be instantiated—they can only be implemented by classes</strong>. When an instantiable class implements an interface, indicated by the keyword <code>implements</code>, it provides a method body for each of the methods declared in the interface.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> Here is how a class <code>CarModelX</code> can implement the <code>DrivableVehicle</code> interface.</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CarModelX</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">DrivableVehicle</span> </span>{
 
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">turn</span><span class="hljs-params">(Direction direction)</span> </span>{
@@ -78,67 +83,63 @@
     <span class="hljs-comment">// implementation of other methods</span>
 }
 </code></pre>
-              </box>
-              <p><strong>An interface can be used as a type</strong> e.g., <code>DrivableVechile dv = new CarModelX();</code>.</p>
-              <p><strong>Interfaces can inherit from other interfaces</strong> using the <code>extends</code> keyword, similar to a class inheriting another.</p>
-              <box>
-                <p><span class="fas fa-cube"></span> Here is an interface named <code>SelfDrivableVehicle</code> that inherits the <code>DrivableVehicle</code> interface.</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">SelfDrivableVehicle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">DrivableVehicle</span> </span>{
+                  </box>
+                  <p><strong>An interface can be used as a type</strong> e.g., <code>DrivableVechile dv = new CarModelX();</code>.</p>
+                  <p><strong>Interfaces can inherit from other interfaces</strong> using the <code>extends</code> keyword, similar to a class inheriting another.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> Here is an interface named <code>SelfDrivableVehicle</code> that inherits the <code>DrivableVehicle</code> interface.</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">SelfDrivableVehicle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">DrivableVehicle</span> </span>{
    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">goToAutoPilotMode</span><span class="hljs-params">()</span></span>;
 }
 </code></pre>
-                <p>Note that the method signatures have no braces and are terminated with a semicolon.
-                </p>
-              </box>
-              <p>Furthermore, <strong>Java allows multiple inheritance among interfaces.</strong> A Java interface can inherit multiple other interfaces. <strong>A Java class can <em>implement</em> multiple interfaces</strong> (and inherit from one class).</p>
-              <box>
-                <p><span class="fas fa-cube"></span> The design below is allowed by Java. <span class="dimmed">In case you are not familiar with UML notation used: solid lines indicate normal inheritance; dashed lines indicate interface inheritance; the triangle points to the parent.</span></p>
-                <img src="/se-book/oop/inheritance/interfaces/images/studentStaff.png" height="250">
-                <p></p>
-                <ol>
-                  <li><code>Staff</code> interface inherits (note the solid lines) the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
-                  <li><code>TA</code> class implements both <code>Student</code> interface and the <code>Staff</code> interface.</li>
-                  <li>Because of point 1 above, <code>TA</code> class has to implement all methods in the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
-                  <li>Because of points 1,2,3, a <code>TA</code> <em>is a</em> <code>Staff</code>, <em>is a</em> <code>TaxPayer</code> and <em>is a</em> <code>Citizen</code>.</li>
-                </ol>
-              </box>
-              <p><strong>Interfaces can also contain <trigger trigger="click" for="modal:javaInterfaces-constants">constants</trigger> and static methods</strong>.</p>
-              <modal large="" title="%%Textbook »%%" id="modal:javaInterfaces-constants">
-              
-                <div>
-                  <div></div>
-                  <p></p>
-                  <p><span class="dimmed"><strong><span>C++ to Java → Miscellaneous Topics →
-</span></strong>
-                    </span>
-                  </p>
-                  <div id="title-and-body">
-                    <div>
-                      <h4 id="constants">Constants</h4>
-                    </div>
-                    <div id="main">
-                      <div>
-                        <p>Java does not directly support constants. The convention is to use a <code>static</code> <code>final</code> variable where a constant is needed. The <code>static</code> modifier causes the variable to be available without instantiating
-                          an object. The <code>final</code> modifier causes the variable to be unchangeable. Java constants are normally declared in ALL CAPS separated by underscores.</p>
-                        <box>
-                          <p><span class="fas fa-cube"></span> Here is an example of a constant named <code>MAX_BALANCE</code>.</p>
-                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span></span>{
+                    <p>Note that the method signatures have no braces and are terminated with a semicolon.
+                    </p>
+                  </box>
+                  <p>Furthermore, <strong>Java allows multiple inheritance among interfaces.</strong> A Java interface can inherit multiple other interfaces. <strong>A Java class can <em>implement</em> multiple interfaces</strong> (and inherit from one class).</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> The design below is allowed by Java. <span class="dimmed">In case you are not familiar with UML notation used: solid lines indicate normal inheritance; dashed lines indicate interface inheritance; the triangle points to the parent.</span></p>
+                    <img src="/se-book/oop/inheritance/interfaces/images/studentStaff.png" height="250">
+                    <p></p>
+                    <ol>
+                      <li><code>Staff</code> interface inherits (note the solid lines) the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
+                      <li><code>TA</code> class implements both <code>Student</code> interface and the <code>Staff</code> interface.</li>
+                      <li>Because of point 1 above, <code>TA</code> class has to implement all methods in the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
+                      <li>Because of points 1,2,3, a <code>TA</code> <em>is a</em> <code>Staff</code>, <em>is a</em> <code>TaxPayer</code> and <em>is a</em> <code>Citizen</code>.</li>
+                    </ol>
+                  </box>
+                  <p><strong>Interfaces can also contain <trigger trigger="click" for="modal:javaInterfaces-constants">constants</trigger> and static methods</strong>.</p>
+                  <modal large title="%%Textbook »%%" id="modal:javaInterfaces-constants">
+                      <div>
+                      <div></div>
+                      <p></p>
+                      <p><span class="dimmed"><strong><span>C++ to Java → Miscellaneous Topics →
+                            </span></strong></span></p>
+                      <div id="title-and-body">
+                        <div>
+                          <h4 id="constants"><span>Constants</span></h4>
+                        </div>
+                        <div id="main">
+                          <div>
+                            <p>Java does not directly support constants. The convention is to use a <code>static</code> <code>final</code> variable where a constant is needed. The <code>static</code> modifier causes the variable to be available without instantiating an object. The <code>final</code> modifier causes the variable to be unchangeable. Java constants are normally declared in ALL CAPS separated by underscores.</p>
+                            <box>
+                              <p><span class="fas fa-cube"></span> Here is an example of a constant named <code>MAX_BALANCE</code> which can be accessed as <code>Account.MAX_BALANCE</code>.</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span></span>{
 
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> MAX_BALANCE = <span class="hljs-number">1000000.0</span>;
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> MAX_BALANCE = <span class="hljs-number">1000000.0</span>;
 
 }
-
 </code></pre>
-                        </box>
+                              <p><span class="fas fa-cube"></span> <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Math.html#PI"><code>Math.PI</code></a> is an example constant that comes with Java.</p>
+                            </box>
+                          </div>
+                          <div></div>
+                        </div>
                       </div>
-                      <div></div>
                     </div>
-                  </div>
-                </div>
-              </modal>
-              <box>
-                <p><span class="fas fa-cube"></span> This example adds a constant <code>MAX_SPEED</code> and a static method <code>isSpeedAllowed</code> to the interface <code>DrivableVehicle</code>.</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">DrivableVehicle</span> </span>{
+                  </modal>
+                  <box>
+                    <p><span class="fas fa-cube"></span> This example adds a constant <code>MAX_SPEED</code> and a static method <code>isSpeedAllowed</code> to the interface <code>DrivableVehicle</code>.</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">DrivableVehicle</span> </span>{
 
     <span class="hljs-keyword">int</span> MAX_SPEED = <span class="hljs-number">150</span>;
 
@@ -152,11 +153,108 @@
     <span class="hljs-comment">// more method signatures</span>
 }
 </code></pre>
-              </box>
-              <p><span class="fas fa-info-circle"></span> Interfaces can contain <a href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html"><em>default</em> method implementations</a> and <em>nested types</em>. There are not covered
-                here.</p>
+                  </box>
+                  <p><span class="fas fa-info-circle"></span> Interfaces can contain <a href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html"><em>default</em> method implementations</a> and <em>nested types</em>. They are not covered here.</p>
+                </div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                      <div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> print `Printable` items">
+                            <question>
+                              <p>The <code>Main</code> class below passes a list of <code>Printable</code> objects (i.e., objects that implement the <code>Printable</code> interface) for another method to be printed.</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printObjects</span><span class="hljs-params">(Printable[] items)</span> </span>{
+        <span class="hljs-keyword">for</span> (Printable p : items) {
+            p.print();
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Printable[] printableItems = <span class="hljs-keyword">new</span> Printable[]{
+                <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">5</span>),
+                <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>),
+                <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"James Cook"</span>)};
+
+        printObjects(printableItems);
+    }
+}
+</code></pre>
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre><code class="hljs">Circle of area 78
+Rectangle of area 12
+Person of name James Cook
+</code></pre>
+                              <p>Classes <code>Shape</code>, <code>Circle</code>, and <code>Rectangle</code> are given below:</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Shape</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Printable</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> radius;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> radius)</span> </span>{
+        <span class="hljs-keyword">this</span>.radius = radius;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>)(Math.PI * radius * radius);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Circle of area "</span> + area());
+    }
+}
+</code></pre>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Printable</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> height;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> width;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Rectangle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{
+        <span class="hljs-keyword">this</span>.height = height;
+        <span class="hljs-keyword">this</span>.width = width;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> height * width;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Rectangle of area "</span> + area());
+    }
+}
+</code></pre>
+                              <p>Add the missing <code>Printable</code> interface. Add the missing methods of the <code>Person</code> class given below.</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Printable</span> </span>{
+
+    <span class="hljs-keyword">private</span> String name;
+
+    <span class="hljs-comment">// todo: add missing methods</span>
+}
+</code></pre>
+                              <panel type="seamless" header="Partial solution">
+                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Printable</span> </span>{
+    <span class="hljs-comment">//...</span>
+}
+</code></pre>
+                              </panel>
+                            </question>
+                          </panel>
+                        </div>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div></div>
           </div>
         </div>
       </div>
@@ -166,16 +264,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../../markbind/js/vue.min.js"></script>
+<script src="../../../markbind/js/vue-strap.min.js"></script>
+<script src="../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\..\markbind\js\setup.js"></script>
+<script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../../markbind/layouts/default/scripts.js"></script>
 </html>

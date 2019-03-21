@@ -1,7 +1,4 @@
-<div id="title">
-
-### Advanced
-</div>
+<span id="title">Advanced</span>
 
 <div id="body">
 

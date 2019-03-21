@@ -1,7 +1,4 @@
-<div id="title">
-
-### Aggregation
-</div>
+<span id="title">Aggregation</span>
 
 <div id="body">
 

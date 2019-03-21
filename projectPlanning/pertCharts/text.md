@@ -1,8 +1,4 @@
-<div id="title">
-
-#### PERT Charts
-
-</div>
+<span id="title">PERT Charts</span>
 
 <span id="prereqs"></span>
 

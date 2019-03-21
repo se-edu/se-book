@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can design reasonable quality APIs</span>
 
-<div id="title">
-
-#### Designing APIs
-
-</div>
+<span id="title">Designing APIs</span>
 
 <div id="body">
 

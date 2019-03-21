@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Prototyping
-
-</div>
+<span id="title">Prototyping</span>
 
 <span id="prereqs"></span>
 

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - C++ to Java: Miscellaneous Topics: Constants</title>
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
+    
+    
+    
+    <link rel="icon" href="/se-book/favicon.ico">
+</head>
+<body>
+<div id="app">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
+      <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+      <li slot="right">
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+      </li>
+    </navbar>
+  </div>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
+      <div>
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use Java packages</span></span></span></span></p>
+          <p></p>
+          <p></p>
+          <div>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>C++ to Java → Miscellaneous Topics →
+                  </span></strong></span></p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="packages"><span>Packages</span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p><strong>You can organize your <em>types</em> (i.e., classes, interfaces, enumerations, etc.) into <em>packages</em></strong> for easier management (among <a href="https://www.tutorialspoint.com/Advantages-of-using-packages-in-Java">other benefits</a>).</p>
+                  <p><strong>To create a package, you put a package statement at the very top of every source file in that package.</strong> The package statement must be the first line in the source file and there can be no more than one package statement in each source file.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> The <code>Formatter</code> class below (in <code>Formatter.java</code> file) is in the package <code>seedu.tojava.util</code>:</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">package</span> seedu.tojava.util;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Formatter</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PREFIX = <span class="hljs-string">"&gt;&gt;"</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">format</span><span class="hljs-params">(String s)</span></span>{
+        <span class="hljs-keyword">return</span> PREFIX + s;
+    }
+}
+</code></pre>
+                  </box>
+                  <p><strong>Package names are written in all lower case</strong> (not camelCase), using the dot as a separate. Companies use their reversed Internet domain name to begin their package names. Packages in the Java language itself begin with <code>java</code>. or <code>javax</code>.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> For example, <code>com.foobar.doohickey.util</code> can be the name of a package created by a company with a domain name <code>foobar.com</code></p>
+                  </box>
+                  <p><strong>To use a public <tooltip content="types contained in the package">package member</tooltip> from outside its package, you must do one of the following:</strong></p>
+                  <ol>
+                    <li><strong>Use the <tooltip content="type name prefixed by the package name e.g., `java.io.IOException`">fully qualified name</tooltip></strong> to refer to the member</li>
+                    <li><strong>Import</strong> the package or the specific package member</li>
+                  </ol>
+                  <box>
+                    <p><span class="fas fa-cube"></span> The <code>Main</code> class below has two import statements:</p>
+                    <ul>
+                      <li><code>import seedu.tojava.util.StringParser</code>: imports the class <code>StringParser</code> in the <code>seedu.tojava.util</code> package</li>
+                      <li><code>import seedu.tojava.frontend.*</code>: imports all the classes in the <code>seedu.tojava.frontend</code> package</li>
+                    </ul>
+                    <pre><code class="hljs java"><span class="hljs-keyword">package</span> seedu.tojava;
+
+<span class="hljs-keyword">import</span> seedu.tojava.util.StringParser;
+<span class="hljs-keyword">import</span> seedu.tojava.frontend.*;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+
+        <span class="hljs-comment">// Using the fully qualified name to access the Processor class</span>
+        String status = seedu.tojava.logic.Processor.getStatus();
+
+        <span class="hljs-comment">// Using the StringParser previously imported</span>
+        StringParser sp = <span class="hljs-keyword">new</span> StringParser();
+
+        <span class="hljs-comment">// Using classes from the tojava.frontend package</span>
+        Ui ui = <span class="hljs-keyword">new</span> Ui();
+        Message m = <span class="hljs-keyword">new</span> Message();
+
+    }
+}
+</code></pre>
+                    <p>Note how the class can still use the <code>Processor</code> without importing it first, by using its fully qualified name <code>seedu.tojava.logic.Processor</code></p>
+                  </box>
+                  <p><strong>Importing a package does not import its sub-packages</strong>, as packages do not behave as hierarchies despite appearances.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> <code>import seedu.tojava.frontend.*</code> does not import the classes in the sub-package <code>seedu.tojava.frontend.widget</code>.</p>
+                  </box>
+                  <p><strong>If you do not use a package statement, your type doesn't have a package</strong> -- a practice not recommended (except for small code examples) as it is not possible for a type in a package to import a type that is not in a package.</p>
+                  <p><strong>Optionally, a <em>static import</em> can be used to import static members of a type</strong> so that the imported members can be used without specifying the type name.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> The class below uses static imports to import the constant <code>PREFIX</code> and the method <code>format()</code> from the <code>seedu.tojava.util.Formatter</code> class.</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> seedu.tojava.util.Formatter.PREFIX;
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> seedu.tojava.util.Formatter.format;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+
+        String formatted = format(<span class="hljs-string">"Hello"</span>);
+        <span class="hljs-keyword">boolean</span> isFormatted = formatted.startsWith(PREFIX);
+        System.out.println(formatted);
+    }
+}
+</code></pre>
+                    <panel type="seamless" header="`Foramtter` class">
+                      <pre><code class="hljs java"><span class="hljs-keyword">package</span> seedu.tojava.util;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Formatter</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PREFIX = <span class="hljs-string">"&gt;&gt;"</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">format</span><span class="hljs-params">(String s)</span></span>{
+        <span class="hljs-keyword">return</span> PREFIX + s;
+    }
+}
+</code></pre>
+                    </panel>
+                    <p>Note how the class can use <code>PREFIX</code> and <code>format</code> (instead of <code>Formatter.PREFIX</code> and <code>Formatter.format()</code>).</p>
+                  </box>
+                  <p><strong>The package of a type should match the folder path of the source file.</strong> Similarly, the compiler will put the <code>.class</code> files in a folder structure that matches the package names.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> If the <code>seedu.tojava.Main</code> class in defined in the file <code>Main.java</code>,</p>
+                    <ul>
+                      <li>the file should be in the location <code>&lt;source folder&gt;/seedu/tojava/</code></li>
+                      <li>when it is compiled, the <code>Main.class</code> file will be in the location <code>&lt;compiler output folder&gt;/seedu/tojava/</code></li>
+                    </ul>
+                  </box>
+                  <p><strong>When using the commandline to compile/run Java, you should take the package into account.</strong></p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> If the <code>seedu.tojava.Main</code> class in defined in the file <code>Main.java</code>,</p>
+                    <ul>
+                      <li>when compiling from the <code>&lt;source folder&gt;</code>, the command is:<br>
+                        <code>javac seedu/tojava/Main.java</code></li>
+                      <li>when running it from the <code>&lt;compiler output folder&gt;</code>, the command is:<br>
+                        <code>java seedu.tojava.Main</code></li>
+                    </ul>
+                  </box>
+                </div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded>
+                      <div>
+                        <ul>
+                          <li>Oracle's tutorial on packages: [<a href="https://docs.oracle.com/javase/tutorial/java/concepts/package.html">What is a Package?</a>] [<a href="https://docs.oracle.com/javase/tutorial/java/package/index.html">Creating and Using Packages</a>]</li>
+                        </ul>
+                      </div>
+                    </panel>
+                  </div>
+                  <div>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                      <div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 8 - **Use packages**">
+                            <div id="body">
+                              <p>
+                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel1._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L1" minimized fragment="main"></panel>
+                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel2._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L2" minimized fragment="main"></panel>
+                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel3._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L3" minimized fragment="main"></panel>
+                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel4._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L4" minimized fragment="main"></panel>
+                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel5._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L5" minimized fragment="main"></panel>
+                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel6._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L6" minimized fragment="main"></panel>
+                                <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel7._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L7" minimized fragment="main"></panel>
+                              </p>
+                              <p><span class="dimmed">This exercise continues from the <code>TaskManager Level 1-7</code> exercises quoted above.</span></p>
+                              <div id="main">
+                                <p>Move the classes in your TaskManager into a package. For example, assuming your name in John Doe, you can move it to a pacakge <code>johndoe.tojava.taskmanager</code>. Optionally, you can add sub-packages too.</p>
+                              </div>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="flex-div"></div>
+<footer>
+  <div class="text-center">
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
+</footer>
+</div>
+</body>
+<script src="../../../markbind/js/vue.min.js"></script>
+<script src="../../../markbind/js/vue-strap.min.js"></script>
+<script src="../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+    const baseUrl = '/se-book'
+    const enableSearch = true
+</script>
+<script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../../markbind/layouts/default/scripts.js"></script>
+</html>

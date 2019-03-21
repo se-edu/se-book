@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can interpret class inheritance in class diagrams</span>
 
-<div id="title">
-
-#### Inheritance
-
-</div>
+<span id="title">Inheritance</span>
 
 <div id="body">
 

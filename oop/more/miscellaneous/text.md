@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can answer frequently asked OOP questions</span>
 
-<div id="title">
-
-#### Miscellaneous
-
-</div>
+<span id="title">Miscellaneous</span>
 
 <div id="body">
 

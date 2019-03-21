@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Multi-Level Design
-
-</div>
+<span id="title">Multi-Level Design</span>
 
 <span id="prereqs"></span>
 

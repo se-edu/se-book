@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Interviews
-
-</div>
+<span id="title">Interviews</span>
 
 <span id="prereqs"></span>
 

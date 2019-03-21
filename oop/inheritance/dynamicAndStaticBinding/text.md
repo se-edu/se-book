@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can explain dynamic and static binding</span>
 
-<div id="title">
-
-#### Dynamic and Static Binding
-
-</div>
+<span id="title">Dynamic and Static Binding</span>
 
 <div id="body">
 
@@ -31,7 +27,7 @@ void adjustSalary(int byPercent) {
     }
 }
 ```
-However, at runtime s can receive an object of any sub class of `Staff`. That means the `adjustSalary(int)` operation of the actual subclass object will be called. If the subclass does not override that operation, the operation defined in the superclass (in this case, `Staff` class) will be called.
+However, at runtime s can receive an object of any subclass of `Staff`. That means the `adjustSalary(int)` operation of the actual subclass object will be called. If the subclass does not override that operation, the operation defined in the superclass (in this case, `Staff` class) will be called.
 
 </tip-box>
 

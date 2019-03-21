@@ -1,7 +1,4 @@
-<div id="title">
-
-## Testing Types
-</div>
+<span id="title">Testing Types</span>
 
 <div id="body">
 

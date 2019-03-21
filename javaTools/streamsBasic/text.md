@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Streams: Basic
-
-</div>
+<span id="title">Streams: Basic</span>
 
 <span id="prereqs"></span>
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Abstract Classes and Methods
-
-</div>
+<span id="title">Abstract Classes and Methods</span>
 
 <span id="prereqs"></span>
 
@@ -48,7 +44,7 @@ public abstract class Account {
     }
 }
 ```
-`Account a;` {{ icon_output_right }} {{ icon_tick_green }}<br> OK to use as a type
+`Account a;` {{ icon_output_right }} {{ icon_tick_green }} OK to use as a type <br>
 `a = new Account();` {{ icon_output_right }} {{ icon_x_red }} Compile error!
 
 </box>

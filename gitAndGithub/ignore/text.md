@@ -1,12 +1,8 @@
-<span id="prereqs"><panel src="../../revisionControl/savingHistory/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} Revision Control: Saving History" /></span>
+<span id="prereqs"><panel src="../../revisionControl/savingHistory/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} Revision Control: Saving History" popup-url="{{ baseUrl }}/revisionControl/savingHistory" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can set Git to ignore files</span>
 
-<div id="title">
-
-#### Ignore
-
-</div>
+<span id="title">Ignore</span>
 
 <div id="body">
 

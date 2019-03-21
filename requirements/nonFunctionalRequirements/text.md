@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Non-Functional Requirements
-
-</div>
+<span id="title">Non-Functional Requirements</span>
 
 <span id="prereqs"></span>
 

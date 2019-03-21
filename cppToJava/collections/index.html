@@ -6,116 +6,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - C++ to Java: Collections</title>
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content" id="all">
-      <p><span class="dimmed"><strong><span>C++ to Java →
-</span></strong>
-        </span>
-      </p>
-      <div id="title">
-        <div>
-          <h2 id="collections">Collections</h2>
-        </div>
-      </div>
-      <div id="main">
-        <div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="the-collections-framework">The Collections Framework</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the Collections framework</span>
-                  </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-                  <blockquote>
-                    <p><strong>A <em>collection</em> — sometimes called a <em>container</em> — is simply an object that groups multiple elements into a single unit.</strong> Collections are used to store, retrieve, manipulate, and communicate aggregate data.
-                      Typically, they represent data items that form a natural group, such as a poker hand (a collection of cards), a mail folder (a collection of letters), or a telephone directory (a mapping of names to phone numbers). If you have used
-                      the Java programming language — or just about any other programming language — you are already familiar with collections.</p>
-                    <p><strong>A collections framework is a unified architecture for representing and manipulating collections.</strong> All collections frameworks contain the following:</p>
-                    <ul>
-                      <li><strong>Interfaces</strong>: These are abstract data types that represent collections. Interfaces allow collections to be manipulated independently of the details of their representation. In object-oriented languages, interfaces
-                        generally form a hierarchy.</li>
-                      <li><strong>Implementations</strong>: These are the concrete implementations of the collection interfaces. In essence, they are reusable data structures.</li>
-                      <li><strong>Algorithms</strong>: These are the methods that perform useful computations, such as searching and sorting, on objects that implement collection interfaces. The algorithms are said to be polymorphic: that is, the same method
-                        can be used on many different implementations of the appropriate collection interface. In essence, algorithms are reusable functionality.</li>
-                    </ul>
-                    <p>Apart from the Java Collections Framework, <strong>the best-known examples of collections frameworks are the C++ Standard Template Library (STL)</strong> and Smalltalk's collection hierarchy.</p>
-                    <p>The following list describes the core collection interfaces:</p>
-                    <ul>
-                      <li>
-                        <p><code>Collection</code> — the root of the collection hierarchy. A collection represents a group of objects known as its elements. The Collection interface is the least common denominator that all collections implement and is used
-                          to pass collections around and to manipulate them when maximum generality is desired. Some types of collections allow duplicate elements, and others do not. Some are ordered and others are unordered. The Java platform doesn't
-                          provide any direct implementations of this interface but provides implementations of more specific subinterfaces, such as Set and List. Also see The Collection Interface section.</p>
-                      </li>
-                      <li>
-                        <p><code>Set</code> — a collection that cannot contain duplicate elements. This interface models the mathematical set abstraction and is used to represent sets, such as the cards comprising a poker hand, the courses making up a student's
-                          schedule, or the processes running on a machine. See also The Set Interface section.</p>
-                      </li>
-                      <li>
-                        <p><code>List</code> — an ordered collection (sometimes called a sequence). Lists can contain duplicate elements. The user of a List generally has precise control over where in the list each element is inserted and can access elements
-                          by their integer index (position). If you've used Vector, you're familiar with the general flavor of List. Also see The List Interface section.</p>
-                      </li>
-                      <li>
-                        <p><code>Queue</code> — a collection used to hold multiple elements prior to processing. Besides basic Collection operations, a Queue provides additional insertion, extraction, and inspection operations.</p>
-                      </li>
-                      <li>
-                        <p><code>Map</code> — an object that maps keys to values. A Map cannot contain duplicate keys; each key can map to at most one value. If you've used Hashtable, you're already familiar with the basics of Map. Also see The Map Interface
-                          section.</p>
-                      </li>
-                      <li>
-                        <p>Others: <code>Deque</code>, <code>SortedSet</code>, <code>SortedMap</code></p>
-                      </li>
-                    </ul>
-                  </blockquote>
-                </div>
-                <div></div>
-              </div>
-            </panel>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
+      <div>
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content" id="all">
+          <p><span class="dimmed"><strong><span>C++ to Java →
+                </span></strong></span></p>
+          <div id="title">
+            <h1 id="collections"><span>Collections</span><a class="fa fa-anchor" href="#collections"></a></h1>
           </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="the-arraylist-class">The <code>ArrayList</code> Class</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use the ArrayList class</span>
+          <div id="main">
+            <div>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="the-collections-framework"><span>The Collections Framework</span></h4>
+                    </div>
                   </span>
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the Collections framework</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p>This section uses extracts from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with some adaptations.</p>
+                      <p><strong>A <em>collection</em> — sometimes called a <em>container</em> — is simply an object that groups multiple elements into a single unit.</strong> Collections are used to store, retrieve, manipulate, and communicate aggregate data.</p>
+                      <box>
+                        <p><span class="fas fa-cube"></span> Typically, collections represent data items that form a natural group, such as a poker hand (a collection of cards), a mail folder (a collection of letters), or a telephone directory (a mapping of names to phone numbers).</p>
+                      </box>
+                      <p><strong>The collections framework is a unified architecture for representing and manipulating collections.</strong> It contains the following:</p>
+                      <ul>
+                        <li>
+                          <p><strong>Interfaces</strong>: These are abstract data types that represent collections. Interfaces allow collections to be manipulated independently of the details of their representation.<br>
+                            <span class="dimmed"><span class="fas fa-cube"></span> Example: the <code>List&lt;E&gt;</code> interface can be used to manipulate list-like collections which may be implemented in different ways such as <code>ArrayList&lt;E&gt;</code> or <code>LinkedList&lt;E&gt;</code>.</span><br></p>
+                        </li>
+                        <li>
+                          <p><strong>Implementations</strong>: These are the concrete implementations of the collection interfaces. In essence, they are reusable data structures.<br>
+                            <span class="dimmed"><span class="fas fa-cube"></span> Example: the <code>ArrayList&lt;E&gt;</code> class implements the <code>List&lt;E&gt;</code> interface while the <code>HashMap&lt;K, V&gt;</code> class implements the <code>Map&lt;K, V&gt;</code> interface.</span><br></p>
+                        </li>
+                        <li>
+                          <p><strong>Algorithms</strong>: These are the methods that perform useful computations, such as <em>searching</em> and <em>sorting</em>, on objects that implement collection interfaces. The algorithms are said to be polymorphic: that is, the same method can be used on many different implementations of the appropriate collection interface.<br>
+                            <span class="dimmed"><span class="fas fa-cube"></span> Example: the <code>sort(List&lt;E&gt;)</code> method can sort a collection that implements the <code>List&lt;E&gt;</code> interface.</span></p>
+                        </li>
+                      </ul>
+                      <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span></span> <strong>A well-known example of collections frameworks is the C++ <em>Standard Template Library (STL)</em></strong>. <span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span></span> Although both are collections frameworks and the syntax look similar, note that there are important philosophical and implementation differences between the two.</p>
+                      <p>The following list describes the core collection interfaces:</p>
+                      <ul>
+                        <li>
+                          <p><strong><code>Collection</code></strong> — the root of the collection hierarchy. A collection represents a group of objects known as its elements. The Collection interface is the least common denominator that all collections implement and is used to pass collections around and to manipulate them when maximum generality is desired. Some types of collections allow duplicate elements, and others do not. Some are ordered and others are unordered. The Java platform doesn't provide any direct implementations of this interface but provides implementations of more specific subinterfaces, such as <code>Set</code> and <code>List</code>. <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Collection.html"><code>Collection</code> API</a>.</span></p>
+                        </li>
+                        <li>
+                          <p><strong><code>Set</code></strong> — a collection that cannot contain duplicate elements. This interface models the mathematical set abstraction and is used to represent sets, such as the cards comprising a poker hand, the courses making up a student's schedule, or the processes running on a machine. <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Set.html"><code>Set</code> API</a>.</span></p>
+                        </li>
+                        <li>
+                          <p><strong><code>List</code></strong> — an ordered collection (sometimes called a <em>sequence</em>). <code>List</code>s can contain duplicate elements. The user of a <code>List</code> generally has precise control over where in the list each element is inserted and can access elements by their integer index (position). <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html"><code>List</code> API</a>.</span></p>
+                        </li>
+                        <li>
+                          <p><strong><code>Queue</code></strong> — a collection used to hold multiple elements prior to processing. Besides basic <code>Collection</code> operations, a <code>Queue</code> provides additional insertion, extraction, and inspection operations. <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Queue.html"><code>Queue</code> API</a>.</span></p>
+                        </li>
+                        <li>
+                          <p><strong><code>Map</code></strong> — an object that maps keys to values. A <code>Map</code> cannot contain duplicate keys; each key can map to at most one value. <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Map.html"><code>Map</code> API</a>.</span></p>
+                        </li>
+                        <li>
+                          <p>Others: <code>Deque</code>, <code>SortedSet</code>, <code>SortedMap</code></p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div></div>
+                  </div>
+                </panel>
+              </div>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="the-arraylist-class"><span>The <code>ArrayList</code> Class</span></h4>
+                    </div>
                   </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p>The <code>ArrayList</code> class is a resizable-array implementation of the <code>List</code> interface. Unlike a normal <code>array</code>, an <code>ArrayList</code> can grow in size as you add more items to it. The example below illustrate
-                    some of the useful methods of the <code>ArrayList</code> class using an <code>ArrayList</code> of <code>String</code> objects.</p>
-                  <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use the ArrayList class</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p>The <code>ArrayList</code> class is a resizable-array implementation of the <code>List</code> interface. Unlike a normal <code>array</code>, an <code>ArrayList</code> can grow in size as you add more items to it. The example below illustrate some of the useful methods of the <code>ArrayList</code> class using an <code>ArrayList</code> of <code>String</code> objects.</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayListDemo</span> </span>{
 
@@ -159,8 +167,8 @@
     }
 }
 </code></pre>
-                  <p><span class="fas fa-arrow-down"></span></p>
-                  <pre class="hljs"><code>Before adding any items:[]
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre><code class="hljs">Before adding any items:[]
 After adding four items: [Apple, Box, Cup, Dart]
 After removing Box: [Apple, Cup, Dart]
 After adding Banana: [Apple, Banana, Cup, Dart]
@@ -173,39 +181,193 @@ Do we have a Box?: false
 Do we have an Apple?: true
 After clearing: []
 </code></pre>
-                  <p><small>[<a href="https://repl.it/@seedu/Demo-ArrayList">Try the above code on Repl.it</a>]</small></p>
-                </div>
-                <div>
-                  <div>
-                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                      <p><small>[<a href="https://repl.it/@seedu/Demo-ArrayList">Try the above code on Repl.it</a>]</small></p>
+                    </div>
+                    <div>
                       <div>
-                        <ul>
-                          <li><a href="https://docs.oracle.com/javase/9/docs/api/java/util/ArrayList.html"><code>ArrayList</code> API</a></li>
-                          <li><a href="https://beginnersbook.com/2013/12/java-arraylist/">A tutorial on ArrayLists</a> from <a href="http://beginnersbook.com">beginnersbook.com</a></li>
-                        </ul>
+                        <panel header="<span class='fas fa-paperclip'></span> Resources" expanded>
+                          <div>
+                            <ul>
+                              <li><a href="https://docs.oracle.com/javase/9/docs/api/java/util/ArrayList.html"><code>ArrayList</code> API</a></li>
+                              <li><a href="https://beginnersbook.com/2013/12/java-arraylist/">A tutorial on ArrayLists</a> from <a href="http://beginnersbook.com">beginnersbook.com</a></li>
+                            </ul>
+                          </div>
+                        </panel>
                       </div>
-                    </panel>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                          <div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Numbers list">
+                                <question>
+                                  <p>Add the missing methods to the class given below so that it produces the output given.</p>
+                                  <p>💡 Use an <code>ArrayList</code> to store the numbers.</p>
+                                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(<span class="hljs-string">"Adding numbers to the list"</span>);
+        addNumber(<span class="hljs-number">3</span>);
+        addNumber(<span class="hljs-number">8</span>);
+        addNumber(<span class="hljs-number">24</span>);
+        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());
+        System.out.println(<span class="hljs-string">"8 in the list : "</span> + isFound(<span class="hljs-number">8</span>) );
+        System.out.println(<span class="hljs-string">"5 in the list : "</span> + isFound(<span class="hljs-number">5</span>) );
+        removeNumber(<span class="hljs-number">8</span>);
+        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());
+    }
+
+}
+</code></pre>
+                                  <p><span class="fas fa-arrow-down"></span></p>
+                                  <pre><code class="hljs">Adding numbers to the list
+[3]
+[3, 8]
+[3, 8, 24]
+The total is: 35
+8 in the list : true
+5 in the list : false
+[3, 24]
+The total is: 27
+</code></pre>
+                                  <div slot="hint">
+                                    <p>Partial solution:</p>
+                                    <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> ArrayList&lt;Integer&gt; numbers = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{
+        numbers.add(Integer.valueOf(i));
+        System.out.println(numbers);
+    }
+
+    <span class="hljs-comment">// ...</span>
+
+}
+</code></pre>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 4 - **Use `Collections`**">
+                                <div id="body">
+                                  <p>
+                                    <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel1._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L1" minimized fragment="main"></panel>
+                                    <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel2._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L2" minimized fragment="main"></panel>
+                                    <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel3._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L3" minimized fragment="main"></panel>
+                                  </p>
+                                  <p><span class="dimmed">This exercise continues from the <code>TaskManager Level 1-3</code> exercises quoted above.</span></p>
+                                  <div id="main">
+                                    <p>Enhance the TaskManager in the following ways:</p>
+                                    <ol>
+                                      <li>Use a suitable Collection class to store tasks, instead of using an array.</li>
+                                      <li>Introduce a <code>done n</code> command to mark the task at index <code>n</code> as done.</li>
+                                    </ol>
+                                    <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                                    <box>
+                                      <div class="text-monospace">
+                                        <p>Welcome to TaskManager-Level4!
+                                          <br>Your task? todo read book
+                                          <br>Tasks in the list: 1
+                                          <br>Your task? deadline return book /by Friday
+                                          <br>Tasks in the list: 2
+                                          <br>Your task? print
+                                          <br>Tasks:
+                                          <br>[1] description: read book
+                                          <br> is done? No
+                                          <br>[2] description: return book
+                                          <br> is done? No
+                                          <br> do by: Friday
+                                          <br>Your task? <mark>done 1</mark>
+                                          <br>Tasks in the list: 2
+                                          <br>Your task? print
+                                          <br>Tasks:
+                                          <br>[1] description: read book
+                                          <br> is done? <mark>Yes</mark>
+                                          <br>[2] description: return book
+                                          <br> is done? No
+                                          <br> do by: Friday
+                                          <br>Your task?</p>
+                                      </div>
+                                    </box>
+                                    <p>Suggestions:</p>
+                                    <ul>
+                                      <li>Move the <code>isDone</code> variable to the <code>Task</code> class and provide a <code>setDone(boolean)</code> method.</li>
+                                    </ul>
+                                    <panel type="seamless" header="Partial solution">
+                                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-keyword">protected</span> String description;
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;
+
+    <span class="hljs-comment">// ...</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setDone</span><span class="hljs-params">(<span class="hljs-keyword">boolean</span> isDone)</span></span>{
+        <span class="hljs-keyword">this</span>.isDone = isDone;
+    }
+}
+</code></pre>
+                                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+    <span class="hljs-keyword">static</span> List&lt;Task&gt; tasks = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">// ...</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addTodo</span><span class="hljs-params">(String line)</span> <span class="hljs-keyword">throws</span> TaskManagerException </span>{
+        <span class="hljs-comment">//...</span>
+        tasks.add(<span class="hljs-keyword">new</span> Todo(description));
+        <span class="hljs-comment">//...</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">markAsDone</span><span class="hljs-params">(String line)</span> </span>{
+        <span class="hljs-keyword">int</span> index = Integer.parseInt(line.substring(<span class="hljs-string">"done"</span>.length()).trim());
+        tasks.get(index - <span class="hljs-number">1</span>).setDone(<span class="hljs-keyword">true</span>);
+        System.out.println(<span class="hljs-string">"Tasks in the list: "</span> + tasks.size());
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTasks</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// ...</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; tasks.size(); i++) {
+            System.out.println(<span class="hljs-string">"["</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">"] "</span> + tasks.get(i));
+        }
+    }
+}
+</code></pre>
+                                    </panel>
+                                  </div>
+                                </div>
+                              </panel>
+                            </div>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </panel>
               </div>
-            </panel>
-          </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="the-hashmap-class">The <code>HashMap</code> Class</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use the HashMap class</span>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="the-hashmap-class"><span>The <code>HashMap</code> Class</span></h4>
+                    </div>
                   </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p><code>HashMap</code> is an implementation of the <code>Map</code> interface. It allows you to store a collection of <em>key-value pairs</em>. The example below illustrates how to use a <code>HashMap&lt;String, Point&gt;</code> to maintain
-                    a list of coordinates and their identifiers e.g., the identifier <code>x1</code> is used to identify the point <code>0,0</code> where <code>x1</code> is the <em>key</em> and <code>0,0</code> is the <em>value</em>.</p>
-                  <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use the HashMap class</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><code>HashMap</code> is an implementation of the <code>Map</code> interface. It allows you to store a collection of <em>key-value pairs</em>. The example below illustrates how to use a <code>HashMap&lt;String, Point&gt;</code> to maintain a list of coordinates and their identifiers e.g., the identifier <code>x1</code> is used to identify the point <code>0,0</code> where <code>x1</code> is the <em>key</em> and <code>0,0</code> is the <em>value</em>.</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
 <span class="hljs-keyword">import</span> java.util.HashMap;
 <span class="hljs-keyword">import</span> java.util.Map;
 
@@ -251,8 +413,8 @@ After clearing: []
     }
 }
 </code></pre>
-                  <p><span class="fas fa-arrow-down"></span></p>
-                  <pre class="hljs"><code>Coordinates of x1: [0,0]
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre><code class="hljs">Coordinates of x1: [0,0]
 Key x1 exists? true
 Key x1 exists? false
 Value (0,0) exists? true
@@ -264,22 +426,80 @@ x4 = [5,0]
 Number of keys: 4
 Number of keys after clearing: 0
 </code></pre>
-                  <p><small>[<a href="https://repl.it/@seedu/Demo-HashMap">Try the above code on Repl.it</a>]</small></p>
-                </div>
-                <div>
-                  <div>
-                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                      <p><small>[<a href="https://repl.it/@seedu/Demo-HashMap">Try the above code on Repl.it</a>]</small></p>
+                    </div>
+                    <div>
                       <div>
-                        <ul>
-                          <li><a href="https://docs.oracle.com/javase/9/docs/api/java/util/HashMap.html"><code>HashMap</code> API</a></li>
-                          <li><a href="https://www.journaldev.com/11560/java-hashmap">A tutorial on HashMaps</a> from <a href="http://journaldev.com">journaldev.com</a></li>
-                        </ul>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                          <div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Weekly roster">
+                                <question>
+                                  <p>The class given below keeps track of how many people signup to attend an event on each day of the week. Add the missing methods so that it produces the output given.</p>
+                                  <p>💡 Use an <code>HashMap</code> to store the number of entries for each day.</p>
+                                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        addToRoster(<span class="hljs-string">"Monday"</span>); <span class="hljs-comment">// i.e., one person signed up for Monday</span>
+        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., one person signed up for Wednesday</span>
+        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., another person signed up for Wednesday</span>
+        addToRoster(<span class="hljs-string">"Friday"</span>);
+        addToRoster(<span class="hljs-string">"Monday"</span>);
+        printRoster();
+    }
+
+}
+</code></pre>
+                                  <p><span class="fas fa-arrow-down"></span></p>
+                                  <pre><code class="hljs">Monday =&gt; 2
+Friday =&gt; 1
+Wednesday =&gt; 2
+</code></pre>
+                                  <div slot="hint">
+                                    <p>Partial solution:</p>
+                                    <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.HashMap;
+<span class="hljs-keyword">import</span> java.util.Map;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addToRoster</span><span class="hljs-params">(String day)</span> </span>{
+        <span class="hljs-keyword">if</span> (roster.containsKey(day)){
+            Integer newValue = Integer.valueOf(roster.get(day).intValue() + <span class="hljs-number">1</span>);
+            roster.put(day, newValue);
+        } <span class="hljs-keyword">else</span> {
+            roster.put(day, Integer.valueOf(<span class="hljs-number">1</span>));
+        }
+    }
+
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                          </div>
+                        </panel>
                       </div>
-                    </panel>
+                      <div>
+                        <panel header="<span class='fas fa-paperclip'></span> Resources" expanded>
+                          <div>
+                            <ul>
+                              <li><a href="https://docs.oracle.com/javase/9/docs/api/java/util/HashMap.html"><code>HashMap</code> API</a></li>
+                              <li><a href="https://www.journaldev.com/11560/java-hashmap">A tutorial on HashMaps</a> from <a href="http://journaldev.com">journaldev.com</a></li>
+                            </ul>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </panel>
               </div>
-            </panel>
+            </div>
           </div>
         </div>
       </div>
@@ -289,16 +509,32 @@ Number of keys after clearing: 0
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/vue-strap.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\markbind\js\setup.js"></script>
+<script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

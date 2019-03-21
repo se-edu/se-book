@@ -6,116 +6,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Testing: TDD</title>
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content" id="all">
-      <p><span class="dimmed"><strong><span>Quality Assurance → Testing →
-</span></strong>
-        </span>
-      </p>
-      <div id="title">
-        <div>
-          <h2 id="tdd">TDD</h2>
-        </div>
-      </div>
-      <div id="main">
-        <div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="what">What</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain TDD</span>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
+      <div>
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content" id="all">
+          <p><span class="dimmed"><strong><span>Quality Assurance → Testing →
+                </span></strong></span></p>
+          <div id="title">
+            <h1 id="tdd"><span>TDD</span><a class="fa fa-anchor" href="#tdd"></a></h1>
+          </div>
+          <div id="main">
+            <div>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="what"><span>What</span></h4>
+                    </div>
                   </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p><strong>Test-Driven Development(TDD)_ advocates writing the tests before writing the SUT, while evolving functionality and tests in small increments</strong>. In TDD you first define the precise behavior of the SUT using test cases,
-                    and then write the SUT to match the specified behavior. While TDD has its fair share of detractors, there are many who consider it a good way to reduce defects. One big advantage of TDD is that it guarantees the code is testable.</p>
-                </div>
-                <div>
-                  <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain TDD</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong>Test-Driven Development(TDD)_ advocates writing the tests before writing the SUT, while evolving functionality and tests in small increments</strong>. In TDD you first define the precise behavior of the SUT using test cases, and then write the SUT to match the specified behavior. While TDD has its fair share of detractors, there are many who consider it a good way to reduce defects. One big advantage of TDD is that it guarantees the code is testable.</p>
+                    </div>
+                    <div>
                       <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> When do we write tests in TDD?">
-                          <question>
-                            <p>A) In TDD, we write all the test cases before we start writing functional code.</p>
-                            <ul radio-group="d75ae" class="radio-list">
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="d75ae" type="radio"> True</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="d75ae" type="radio"> False</label></li>
-                            </ul>
-                            <p>B) Testing tools such as Junit require us to follow TDD.</p>
-                            <ul radio-group="b90f5" class="radio-list">
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="b90f5" type="radio"> True</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="b90f5" type="radio"> False</label></li>
-                            </ul>
-                            <div slot="answer">
-                              <p>A) False</p>
-                              <p>Explanation: No, not <em>all</em>. We proceed in small steps, writing tests and functional code in tandem, but writing the test before we write the corresponding functional code.</p>
-                              <p>B) False</p>
-                              <p>Explanation: They can be used for TDD, but they can be used without TDD too.</p>
-                            </div>
-                          </question>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> When do we write tests in TDD?">
+                              <question>
+                                <p>A) In TDD, we write all the test cases before we start writing functional code.</p>
+                                <ul radio-group="d75ae" class="radio-list">
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="d75ae" type="radio"> True</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="d75ae" type="radio"> False</label></li>
+                                </ul>
+                                <p>B) Testing tools such as Junit require us to follow TDD.</p>
+                                <ul radio-group="b90f5" class="radio-list">
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="b90f5" type="radio"> True</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="b90f5" type="radio"> False</label></li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>A) False</p>
+                                  <p>Explanation: No, not <em>all</em>. We proceed in small steps, writing tests and functional code in tandem, but writing the test before we write the corresponding functional code.</p>
+                                  <p>B) False</p>
+                                  <p>Explanation: They can be used for TDD, but they can be used without TDD too.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
                         </panel>
                       </div>
-                    </panel>
+                    </div>
                   </div>
-                </div>
+                </panel>
               </div>
-            </panel>
-          </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="how">How</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can follow TDD</span>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="how"><span>How</span></h4>
+                    </div>
                   </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p>Note that TDD does not imply writing all the test cases first before writing functional code. Rather, proceed in small steps:</p>
-                  <ol>
-                    <li>Decide what behavior to implement.</li>
-                    <li>Write test cases to test that behavior.</li>
-                    <li>Run those test cases and watch them fail.</li>
-                    <li>Implement the behavior.</li>
-                    <li>Run the test case.</li>
-                    <li>Keep modifying the code and rerunning test cases until they all pass.</li>
-                    <li>Refactor code to improve quality.</li>
-                    <li>Repeat the cycle for each small unit of behavior that needs to be implemented.</li>
-                  </ol>
-                </div>
-                <div></div>
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can follow TDD</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p>Note that TDD does not imply writing all the test cases first before writing functional code. Rather, proceed in small steps:</p>
+                      <ol>
+                        <li>Decide what behavior to implement.</li>
+                        <li>Write test cases to test that behavior.</li>
+                        <li>Run those test cases and watch them fail.</li>
+                        <li>Implement the behavior.</li>
+                        <li>Run the test case.</li>
+                        <li>Keep modifying the code and rerunning test cases until they all pass.</li>
+                        <li>Refactor code to improve quality.</li>
+                        <li>Repeat the cycle for each small unit of behavior that needs to be implemented.</li>
+                      </ol>
+                    </div>
+                    <div></div>
+                  </div>
+                </panel>
               </div>
-            </panel>
+            </div>
           </div>
         </div>
       </div>
@@ -125,16 +134,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/vue-strap.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\markbind\js\setup.js"></script>
+<script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

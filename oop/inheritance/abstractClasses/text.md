@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Abstract Classes and Methods
-
-</div>
+<span id="title">Abstract Classes and Methods</span>
 
 <span id="prereqs"></span>
 
@@ -38,7 +34,7 @@
 
 **A class that has an abstract method becomes an abstract class** because the class definition is incomplete (due to the missing method body) and it is not possible to create objects using an incomplete class definition.
 
-Evan **a class that does not have any abstract methods _can_ be declared as an abstract class.**
+Even **a class that does not have any abstract methods _can_ be declared as an abstract class.**
 
 
 </div>

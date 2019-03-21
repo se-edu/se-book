@@ -1,7 +1,4 @@
-<div id="title">
-
-# Reuse
-</div>
+<span id="title">Reuse</span>
 
 <div id="body">
 

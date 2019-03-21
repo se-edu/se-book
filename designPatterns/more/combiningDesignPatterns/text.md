@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Combining Design Patterns
-
-</div>
+<span id="title">Combining Design Patterns</span>
 
 <span id="prereqs"></span>
 

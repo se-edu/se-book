@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Other Design Patterns
-
-</div>
+<span id="title">Other Design Patterns</span>
 
 <span id="prereqs"></span>
 

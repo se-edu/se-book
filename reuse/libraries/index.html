@@ -6,96 +6,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Reuse: Libraries</title>
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content" id="all">
-      <p><span class="dimmed"><strong><span>Implementation → Reuse →
-</span></strong>
-        </span>
-      </p>
-      <div id="title">
-        <div>
-          <h2 id="libraries">Libraries</h2>
-        </div>
-      </div>
-      <div id="main">
-        <div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="what">What</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain libraries</span>
-                  </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p>A library is a collection of modular code that is general and can be used by other programs.</p>
-                  <tip-box>
-                    <div class="alt-java">
-                      <p><span class="fas fa-cube"></span> Java classes you get with the JDK (such as <code>String</code>, <code>ArrayList</code>, <code>HashMap</code>, etc.) are library classes that are provided in the default Java distribution.</p>
-                      <p><span class="fas fa-cube"></span> <a href="https://github.com/joestelmach/natty">Natty</a> is a Java library that can be used for parsing strings that represent dates e.g. <code>The 31st of April in the year 2008</code></p>
-                    </div>
-                    <div class="alt-python">
-                      <p><span class="fas fa-cube"></span> built-in modules you get with Python (such as <code>csv</code>, <code>random</code>, <code>sys</code>, etc.) are libraries that are provided in the default Python distribution. Classes such as <code>list</code>,
-                        <code>str</code>, <code>dict</code> are built-in library classes that you get with Python.</p>
-                      <p><span class="fas fa-cube"></span> <a href="https://pypi.python.org/pypi/colorama">Colorama</a> is a Python library that can be used for colorizing text in a CLI.</p>
-                    </div>
-                  </tip-box>
-                </div>
-                <div></div>
-              </div>
-            </panel>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
+      <div>
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content" id="all">
+          <p><span class="dimmed"><strong><span>Implementation → Reuse →
+                </span></strong></span></p>
+          <div id="title">
+            <h1 id="libraries"><span>Libraries</span><a class="fa fa-anchor" href="#libraries"></a></h1>
           </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="how">How</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can make use of a library</span>
+          <div id="main">
+            <div>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="what"><span>What</span></h4>
+                    </div>
                   </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p>These are the typical steps required to use a library.</p>
-                  <ol>
-                    <li>Read the documentation to confirm that its functionality fits your needs</li>
-                    <li>Check the license to confirm that it allows reuse in the way you plan to reuse it. For example, some libraries might allow non-commercial use only.</li>
-                    <li>Download the library and make it accessible to your project. Alternatively, you can configure your
-                      <tooltip content="e.g. _Gradle_ (for Java) and _Pipenv_ (for Python)">dependency management tool</tooltip> to do it for you.</li>
-                    <li>Call the library API from your code where you need to use the library functionality.</li>
-                  </ol>
-                </div>
-                <div></div>
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain libraries</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p>A library is a collection of modular code that is general and can be used by other programs.</p>
+                      <tip-box>
+                        <div class="alt-java">
+                          <p><span class="fas fa-cube"></span> Java classes you get with the JDK (such as <code>String</code>, <code>ArrayList</code>, <code>HashMap</code>, etc.) are library classes that are provided in the default Java distribution.</p>
+                          <p><span class="fas fa-cube"></span> <a href="https://github.com/joestelmach/natty">Natty</a> is a Java library that can be used for parsing strings that represent dates e.g. <code>The 31st of April in the year 2008</code></p>
+                        </div>
+                        <div class="alt-python">
+                          <p><span class="fas fa-cube"></span> built-in modules you get with Python (such as <code>csv</code>, <code>random</code>, <code>sys</code>, etc.) are libraries that are provided in the default Python distribution. Classes such as <code>list</code>, <code>str</code>, <code>dict</code> are built-in library classes that you get with Python.</p>
+                          <p><span class="fas fa-cube"></span> <a href="https://pypi.python.org/pypi/colorama">Colorama</a> is a Python library that can be used for colorizing text in a CLI.</p>
+                        </div>
+                      </tip-box>
+                    </div>
+                    <div></div>
+                  </div>
+                </panel>
               </div>
-            </panel>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="how"><span>How</span></h4>
+                    </div>
+                  </span>
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can make use of a library</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p>These are the typical steps required to use a library.</p>
+                      <ol>
+                        <li>Read the documentation to confirm that its functionality fits your needs</li>
+                        <li>Check the license to confirm that it allows reuse in the way you plan to reuse it. For example, some libraries might allow non-commercial use only.</li>
+                        <li>Download the library and make it accessible to your project. Alternatively, you can configure your <tooltip content="e.g. _Gradle_ (for Java) and _Pipenv_ (for Python)">dependency management tool</tooltip> to do it for you.</li>
+                        <li>Call the library API from your code where you need to use the library functionality.</li>
+                      </ol>
+                    </div>
+                    <div></div>
+                  </div>
+                </panel>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -105,16 +113,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/vue-strap.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\markbind\js\setup.js"></script>
+<script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Introduction
-
-</div>
+<span id="title">Introduction</span>
 
 <span id="prereqs"></span>
 
@@ -12,11 +8,13 @@
 
 **An object diagram shows an object structure at a given point of time.**
 
-<tip-box> 
+<box>
 
-<img src="{{baseUrl}}/oop/associations/what/images/completeStructure.png" height="120" />
+{{ icon_example }} An example object diagram:
 
-</tip-box>
+<img src="{{baseUrl}}/modeling/modelingStructures/ooStructures/images/objectDiagram.png" height="120" />
+
+</box>
 
 
 </div>

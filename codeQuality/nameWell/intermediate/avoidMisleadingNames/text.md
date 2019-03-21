@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Avoid Misleading Names
-
-</div>
+<span id="title">Avoid Misleading Names</span>
 
 <span id="prereqs"></span>
 

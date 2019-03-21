@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Package Diagrams
-
-</div>
+<span id="title">Package Diagrams</span>
 
 <span id="prereqs"></span>
 

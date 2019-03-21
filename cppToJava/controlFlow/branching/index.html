@@ -6,64 +6,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - C++ to Java: Control Flow: Branching</title>
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use branching</span>
-        </span>
-        </span>
-        </span>
-        <p></p>
-      </p>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
       <div>
-        <div></div>
-        <p></p>
-        <p><span class="dimmed"><strong><span>C++ to Java → Control Flow →
-</span></strong>
-          </span>
-        </p>
-        <div id="title-and-body">
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use branching</span></span></span></span></p>
+          <p></p>
+          <p></p>
           <div>
-            <h4 id="branching">Branching</h4>
-          </div>
-          <div id="main">
-            <div>
-              <h5 id="if-else-statements"><code>if-else</code> statements</h5>
-              <div class="indented">
-                <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
-                  </span> Java supports the usual forms of <code>if</code> statements:</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">if</span> (x &gt; <span class="hljs-number">0</span>) {
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>C++ to Java → Control Flow →
+                  </span></strong></span></p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="branching"><span>Branching</span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <h5 id="if-else-statements"><code>if-else</code> statements</h5>
+                  <div class="indented">
+                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span></span> Java supports the usual forms of <code>if</code> statements:</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">if</span> (x &gt; <span class="hljs-number">0</span>) {
     System.out.println(<span class="hljs-string">"x is positive"</span>);
 }
 </code></pre>
-                <pre><code class="hljs java"><span class="hljs-keyword">if</span> (x % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) {
+                    <pre><code class="hljs java"><span class="hljs-keyword">if</span> (x % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) {
     System.out.println(<span class="hljs-string">"x is even"</span>);
 } <span class="hljs-keyword">else</span> {
     System.out.println(<span class="hljs-string">"x is odd"</span>);
 }
 </code></pre>
-                <pre><code class="hljs java"><span class="hljs-keyword">if</span> (x &gt; <span class="hljs-number">0</span>) {
+                    <pre><code class="hljs java"><span class="hljs-keyword">if</span> (x &gt; <span class="hljs-number">0</span>) {
     System.out.println(<span class="hljs-string">"x is positive"</span>);
 } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (x &lt; <span class="hljs-number">0</span>) {
     System.out.println(<span class="hljs-string">"x is negative"</span>);
@@ -71,7 +77,7 @@
     System.out.println(<span class="hljs-string">"x is zero"</span>);
 }
 </code></pre>
-                <pre><code class="hljs java"><span class="hljs-keyword">if</span> (x == <span class="hljs-number">0</span>) {
+                    <pre><code class="hljs java"><span class="hljs-keyword">if</span> (x == <span class="hljs-number">0</span>) {
     System.out.println(<span class="hljs-string">"x is zero"</span>);
 } <span class="hljs-keyword">else</span> {
     <span class="hljs-keyword">if</span> (x &gt; <span class="hljs-number">0</span>) {
@@ -81,23 +87,19 @@
     }
 }
 </code></pre>
-                <p>The braces are optional (but recommended) for branches that have only one statement. So we <em>could have</em> written the previous example this way (
-                  <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                    </span>
-                  </font>):</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">if</span> (x % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>)
+                    <p>The braces are optional (but recommended) for branches that have only one statement.
+                      So we <em>could have</em> written the previous example this way (<font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>):</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">if</span> (x % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>)
     System.out.println(<span class="hljs-string">"x is even"</span>);
 <span class="hljs-keyword">else</span>
     System.out.println(<span class="hljs-string">"x is odd"</span>);
 </code></pre>
-              </div>
-              <h5 id="switch-statements"><code>switch</code> statements</h5>
-              <div class="indented">
-                <p>The <code>switch</code> statement can have a number of possible execution paths. A <code>switch</code> works with the <code>byte</code>, <code>short</code>, <code>char</code>, and <code>int</code> primitive data types. It also works with
-                  enums, <code>String</code>.</p>
-                <p>Here is an example <span class="dimmed">(adapted from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span>
-                  </small>)</span>:</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SwitchDemo</span> </span>{
+                  </div>
+                  <h5 id="switch-statements"><code>switch</code> statements</h5>
+                  <div class="indented">
+                    <p>The <code>switch</code> statement can have a number of possible execution paths. A <code>switch</code> works with the <code>byte</code>, <code>short</code>, <code>char</code>, and <code>int</code> primitive data types. It also works with enums, <code>String</code>.</p>
+                    <p>Here is an example <span class="dimmed">(adapted from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>)</span>:</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SwitchDemo</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
 
         <span class="hljs-keyword">int</span> month = <span class="hljs-number">8</span>;
@@ -134,51 +136,54 @@
     }
 }
 </code></pre>
-                <p><span class="fas fa-arrow-right"></span> <code>August</code></p>
-              </div>
-            </div>
-            <div>
-              <div>
-                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                    <p><span class="fas fa-arrow-right"></span> <code>August</code></p>
+                  </div>
+                </div>
+                <div>
                   <div>
-                    <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Greeter">
-                        <question>
-                          <p>Write a Java program that takes several command line arguments that describe a person or a family | and prints out a greeting. The parameters can be one of two formats.</p>
-                          <div class="table-responsive">
-                            <table class="markbind-table table table-bordered table-striped">
-                              <thead>
-                                <tr>
-                                  <th>arguments format</th>
-                                  <th>explanation</th>
-                                  <th>expected output</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td><code>NAME GENDER</code></td>
-                                  <td>Indicates a single person. <code>GENDER</code> can be <code>M</code> or <code>F</code></td>
-                                  <td><code>Smith M</code> <span class="fas fa-arrow-right"></span> <code>Dear Mr. Smith</code><br> <code>Lee F</code> <span class="fas fa-arrow-right"></span> <code>Dear Mdm. Lee</code></td>
-                                </tr>
-                                <tr>
-                                  <td><code>NAME MULTIPLE_GENDERS</code></td>
-                                  <td>Indicates a family.</td>
-                                  <td><code>Tan M M F</code> <span class="fas fa-arrow-right"></span> <code>Dear Tan family</code></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                          <p>Follow the sample output given below.</p>
-                          <p>
-                            <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Smith M</code> <span class="fas fa-arrow-right"></span> <code>Dear Mr. Smith</code></p>
-                          <p>
-                            <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Lee F</code> <span class="fas fa-arrow-right"></span> <code>Dear Mdm. Lee</code></p>
-                          <p>
-                            <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Tan M M F</code> <span class="fas fa-arrow-right"></span> <code>Dear Tan family</code></p>
-                          <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
-                          <div slot="hint">
-                            <p>Partial solution:</p>
-                            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Greeter</span> </span>{
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                      <div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Greeter">
+                            <question>
+                              <p>Write a Java program that takes several command line arguments that describe a person or a family | and prints out a greeting. The parameters can be one of two formats.</p>
+                              <div class="table-responsive">
+                                <table class="markbind-table table table-bordered table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th>arguments format</th>
+                                      <th>explanation</th>
+                                      <th>expected output</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td><code>NAME GENDER</code></td>
+                                      <td>Indicates a single person. <code>GENDER</code> can be <code>M</code> or <code>F</code></td>
+                                      <td><code>Smith M</code> <span class="fas fa-arrow-right"></span> <code>Dear Mr. Smith</code><br> <code>Lee F</code> <span class="fas fa-arrow-right"></span> <code>Dear Mdm. Lee</code></td>
+                                    </tr>
+                                    <tr>
+                                      <td><code>NAME MULTIPLE_GENDERS</code></td>
+                                      <td>Indicates a family.</td>
+                                      <td><code>Tan M M F</code> <span class="fas fa-arrow-right"></span> <code>Dear Tan family</code></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <p>Follow the sample output given below.</p>
+                              <p>
+                                <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Smith M</code> <span class="fas fa-arrow-right"></span> <code>Dear Mr. Smith</code>
+                              </p>
+                              <p>
+                                <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Lee F</code> <span class="fas fa-arrow-right"></span> <code>Dear Mdm. Lee</code>
+                              </p>
+                              <p>
+                                <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java Greeter Tan M M F</code> <span class="fas fa-arrow-right"></span> <code>Dear Tan family</code>
+                              </p>
+                              <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
+                              <div slot="hint">
+                                <p>Partial solution:</p>
+                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Greeter</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
         String first = args[<span class="hljs-number">0</span>];
         String second = args[<span class="hljs-number">1</span>];
@@ -192,52 +197,53 @@
     }
 }
 </code></pre>
-                          </div>
-                        </question>
-                      </panel>
-                    </div>
-                    <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Grade Helper">
-                        <question>
-                          <p>Write a Java program that takes a letter grade e.g., <code>A+</code> as a command line argument and prints the CAP value for that grade.</p>
-                          <p>💡 Use a <code>switch</code> statement in your code.</p>
-                          <div id="capConversion">
-                            <div class="table-responsive">
-                              <table class="markbind-table table table-bordered table-striped">
-                                <thead>
-                                  <tr>
-                                    <th>A+</th>
-                                    <th>A</th>
-                                    <th>A-</th>
-                                    <th>B+</th>
-                                    <th>B</th>
-                                    <th>B-</th>
-                                    <th>C</th>
-                                    <th>Else</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td>5.0</td>
-                                    <td>5.0</td>
-                                    <td>4.5</td>
-                                    <td>4.0</td>
-                                    <td>3.5</td>
-                                    <td>3.0</td>
-                                    <td>2.5</td>
-                                    <td>0</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                          <p>Follow the sample output given below.</p>
-                          <p>
-                            <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java GradeHelper B</code> <span class="fas fa-arrow-right"></span> <code>CAP for grade B is 3.5</code></p>
-                          <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
-                          <div slot="hint">
-                            <p>Partial solution:</p>
-                            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GradeHelper</span> </span>{
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Grade Helper">
+                            <question>
+                              <p>Write a Java program that takes a letter grade e.g., <code>A+</code> as a command line argument and prints the CAP value for that grade.</p>
+                              <p>💡 Use a <code>switch</code> statement in your code.</p>
+                              <div id="capConversion">
+                                <div class="table-responsive">
+                                  <table class="markbind-table table table-bordered table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th>A+</th>
+                                        <th>A</th>
+                                        <th>A-</th>
+                                        <th>B+</th>
+                                        <th>B</th>
+                                        <th>B-</th>
+                                        <th>C</th>
+                                        <th>Else</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>5.0</td>
+                                        <td>5.0</td>
+                                        <td>4.5</td>
+                                        <td>4.0</td>
+                                        <td>3.5</td>
+                                        <td>3.0</td>
+                                        <td>2.5</td>
+                                        <td>0</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                              <p>Follow the sample output given below.</p>
+                              <p>
+                                <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java GradeHelper B</code> <span class="fas fa-arrow-right"></span> <code>CAP for grade B is 3.5</code>
+                              </p>
+                              <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
+                              <div slot="hint">
+                                <p>Partial solution:</p>
+                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GradeHelper</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
         String grade = args[<span class="hljs-number">0</span>];
         <span class="hljs-keyword">double</span> cutoff = <span class="hljs-number">0</span>;
@@ -249,21 +255,23 @@
     }
 }
 </code></pre>
-                          </div>
-                        </question>
-                      </panel>
-                    </div>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </div>
+                    </panel>
                   </div>
-                </panel>
-              </div>
-              <div>
-                <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
                   <div>
-                    <ul>
-                      <li>Oracle's tutorials on [<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html"><code>if</code>-<code>else</code></a>][<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html"><code>switch</code></a>]</li>
-                    </ul>
+                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded>
+                      <div>
+                        <ul>
+                          <li>Oracle's tutorials on [<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html"><code>if</code>-<code>else</code></a>][<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html"><code>switch</code></a>]</li>
+                        </ul>
+                      </div>
+                    </panel>
                   </div>
-                </panel>
+                </div>
               </div>
             </div>
           </div>
@@ -275,16 +283,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../../markbind/js/vue.min.js"></script>
+<script src="../../../markbind/js/vue-strap.min.js"></script>
+<script src="../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\..\markbind\js\setup.js"></script>
+<script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../../markbind/layouts/default/scripts.js"></script>
 </html>

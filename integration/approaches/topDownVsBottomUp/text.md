@@ -1,10 +1,6 @@
-<div id="title">
+<span id="title">Top-Down vs Bottom-Up Integration</span>
 
-#### Top-Down vs Bottom-Up Integration
-
-</div>
-
-<span id="prereqs"><panel src="../bigBangVsIncremental/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Integration → Approaches → Big-Bang Vs Incremental%%" /></span>
+<span id="prereqs"><panel src="../bigBangVsIncremental/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Integration → Approaches → Big-Bang Vs Incremental%%" popup-url="{{ baseUrl }}/integration/approaches/bigBangVsIncremental" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain how integration approaches vary based on the order of integration</span>
 

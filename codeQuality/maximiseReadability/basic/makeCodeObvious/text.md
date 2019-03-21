@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Make the Code Obvious
-
-</div>
+<span id="title">Make the Code Obvious</span>
 
 <span id="prereqs"></span>
 
@@ -18,7 +14,7 @@ Make the code as explicit as possible, even if the language syntax allows them t
 
 <modal title="More about enumerations" id="modal:obviousCode-enums">
 
-* [More about Java enumerations](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)
+* [More about Java enumerations]({{ java_tutorial }}/java/javaOO/enum.html)
 * [More about Python enumerations](https://docs.python.org/3/library/enum.html)
 
 </modal>

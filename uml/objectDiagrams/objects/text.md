@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Objects
-
-</div>
+<span id="title">Objects</span>
 
 <span id="prereqs"></span>
 

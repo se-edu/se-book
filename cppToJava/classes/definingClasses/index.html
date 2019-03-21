@@ -6,123 +6,127 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - C++ to Java: Objects: Using Java Objects</title>
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can define Java classes</span>
-        </span>
-        </span>
-        </span>
-        <p></p>
-      </p>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
       <div>
-        <div></div>
-        <p></p>
-        <p><span class="dimmed"><strong><span>C++ to Java → Classes →
-</span></strong>
-          </span>
-        </p>
-        <div id="title-and-body">
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can define Java classes</span></span></span></span></p>
+          <p></p>
+          <p></p>
           <div>
-            <h4 id="defining-classes">Defining Classes</h4>
-          </div>
-          <div id="main">
-            <div>
-              <p>As you know,</p>
-              <ul>
-                <li>Defining a class creates a new object type with the same name.</li>
-                <li>Every object belongs to some object type; that is, it is an instance of some class.</li>
-                <li>A class definition is like a template for objects: it specifies what attributes the objects have and what methods can operate on them.</li>
-                <li>The <code>new</code> operator instantiates objects, that is, it creates new instances of a class.</li>
-                <li>The methods that operate on an object type are defined in the class for that object.</li>
-              </ul>
-              <box>
-                <p><span class="fas fa-cube"></span> Here's a class called <code>Time</code>, intended to represent a moment in time. It has three attributes and no methods.</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span> </span>{
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>C++ to Java → Classes →
+                  </span></strong></span></p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="defining-classes"><span>Defining Classes</span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p>As you know,</p>
+                  <ul>
+                    <li>Defining a class creates a new object type with the same name.</li>
+                    <li>Every object belongs to some object type; that is, it is an instance of some class.</li>
+                    <li>A class definition is like a template for objects: it specifies what attributes the objects have and what methods can operate on them.</li>
+                    <li>The <code>new</code> operator instantiates objects, that is, it creates new instances of a class.</li>
+                    <li>The methods that operate on an object type are defined in the class for that object.</li>
+                  </ul>
+                  <box>
+                    <p><span class="fas fa-cube"></span> Here's a class called <code>Time</code>, intended to represent a moment in time. It has three attributes and no methods.</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span> </span>{
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> hour;
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> minute;
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> second;
 }
 </code></pre>
-              </box>
-              <p>You can give a class any name you like. <strong>The Java convention is to use <tooltip content="e.g., `MyHelloWord` rather than `myHelloWorld` or `myhelloword` or `my_hello_world`">PascalCase</tooltip> format for class names</strong>.</p>
-              <p>The code should be in a file whose name matches the class <span class="dimmed">e.g., the <code>Time</code> class should be in a file named <code>Time.java</code></span>.</p>
-              <p>When a class is <code>public</code> <span class="dimmed">(e.g., the <code>Time</code> class in the above example)</span> it can be used in other classes. But the
-                <tooltip content="Attributes are also called **instance variables**, because each instance has its own variables.">instance variables</tooltip> that are <code>private</code> <span class="dimmed">(e.g., the hour, <code>minute</code> and <code>second</code> attributes of the <code>Time</code> class)</span> can only be accessed from inside the <code>Time</code>                class.</p>
-              <h5 id="constructos">Constructos</h5>
-              <div class="indented">
-                <p>The syntax for
-                  <tooltip content="special methods that construct the object and initialize the instance variables">constructors</tooltip> is similar to that of other methods, except:</p>
-                <ul>
-                  <li>The name of the constructor is the same as the name of the class.</li>
-                  <li>The keyword <code>static</code> is omitted.</li>
-                  <li>Do not return anything. A constructor returns the created object by default.</li>
-                </ul>
-                <p>When you invoke <code>new</code>, Java creates the object and calls your constructor to initialize the instance variables. When the constructor is done, new returns a reference to the new object.</p>
-                <box>
-                  <p><span class="fas fa-cube"></span> Here is an example constructor for the <code>Time</code> class:</p>
-                  <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">()</span> </span>{
+                  </box>
+                  <p>You can give a class any name you like. <strong>The Java convention is to use <tooltip content="e.g., `MyHelloWord` rather than `myHelloWorld` or `myhelloword` or `my_hello_world`">PascalCase</tooltip> format for class names</strong>.</p>
+                  <p>The code should be in a file whose name matches the class <span class="dimmed">e.g., the <code>Time</code> class should be in a file named <code>Time.java</code></span>.</p>
+                  <p>When a class is <code>public</code> <span class="dimmed">(e.g., the <code>Time</code> class in the above example)</span> it can be used in other classes. But the <tooltip content="Attributes are also called **instance variables**, because each instance has its own variables.">instance variables</tooltip> that are <code>private</code> <span class="dimmed">(e.g., the hour, <code>minute</code> and <code>second</code> attributes of the <code>Time</code> class)</span> can only be accessed from inside the <code>Time</code> class.</p>
+                  <h5 id="constructos">Constructos</h5>
+                  <div class="indented">
+                    <p>The syntax for <tooltip content="special methods that construct the object and initialize the instance variables">constructors</tooltip> is similar to that of other methods, except:</p>
+                    <ul>
+                      <li>The name of the constructor is the same as the name of the class.</li>
+                      <li>The keyword <code>static</code> is omitted.</li>
+                      <li>Do not return anything. A constructor returns the created object by default.</li>
+                    </ul>
+                    <p>When you invoke <code>new</code>, Java creates the object and calls your constructor to initialize the instance variables. When the constructor is done, new returns a reference to the new object.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> Here is an example constructor for the <code>Time</code> class:</p>
+                      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">()</span> </span>{
     hour = <span class="hljs-number">0</span>;
     minute = <span class="hljs-number">0</span>;
     second = <span class="hljs-number">0</span>;
 }
 </code></pre>
-                  <p>This constructor does not take any arguments. Each line initializes an instance variable to zero (which in this example means midnight). Now you can create <code>Time</code> objects.</p>
-                  <p><code>Time time = new Time();</code></p>
-                </box>
-                <p>Like other methods, constructors can be overloaded, which means you can provide multiple constructors with different parameters.</p>
-                <box>
-                  <p><span class="fas fa-cube"></span> You can add another constructor to the <code>Time</code> class to allow creating <code>Time</code> objects that are initialized to a specific time:</p>
-                  <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">(<span class="hljs-keyword">int</span> h, <span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> s)</span> </span>{
+                      <p>This constructor does not take any arguments. Each line initializes an instance variable to zero (which in this example means midnight).
+                        Now you can create <code>Time</code> objects.</p>
+                      <p><code>Time time = new Time();</code></p>
+                    </box>
+                    <p>Like other methods, constructors can be overloaded, which means you can provide multiple constructors with different parameters.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> You can add another constructor to the <code>Time</code> class to allow creating <code>Time</code> objects that are initialized to a specific time:</p>
+                      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">(<span class="hljs-keyword">int</span> h, <span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> s)</span> </span>{
     hour = h;
     minute = m;
     second = s;
 }
 </code></pre>
-                  <p>Here's how you can invoke the new constructor:</p>
-                  <pre><code class="hljs java">Time justBeforeMidnight = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">11</span>, <span class="hljs-number">59</span>, <span class="hljs-number">59</span>);
+                      <p>Here's how you can invoke the new constructor:</p>
+                      <pre><code class="hljs java">Time justBeforeMidnight = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">11</span>, <span class="hljs-number">59</span>, <span class="hljs-number">59</span>);
 </code></pre>
-                </box>
-              </div>
-              <h5 id="this-keyword"><code>this</code> keyword</h5>
-              <div class="indented">
-                <p><strong>The <code>this</code> keyword is a reference variable in Java that refers to the current object.</strong> You can use <code>this</code> the same way you use the name of any other object. For example, you can read and write the
-                  instance variables of <code>this</code>, and you can pass <code>this</code> as an argument to other methods. But you do not declare <code>this</code>, and you can’t make an assignment to it.</p>
-                <box>
-                  <p><span class="fas fa-cube"></span> In the following version of the constructor, the names and types of the parameters are the same as the instance variables (parameters don’t have to use the same names, but that’s a common style). As
-                    a result, the parameters <strong><em>shadow</em></strong> (or hide) the instance variables, so the keyword <code>this</code> is necessary to tell them apart.</p>
-                  <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute, <span class="hljs-keyword">int</span> second)</span> </span>{
+                    </box>
+                  </div>
+                  <h5 id="this-keyword"><code>this</code> keyword</h5>
+                  <div class="indented">
+                    <p><strong>The <code>this</code> keyword is a reference variable in Java that refers to the current object.</strong> You can use <code>this</code> the same way you use the name of any other object. For example, you can read and write the instance variables of <code>this</code>, and you can pass <code>this</code> as an argument to other methods. But you do not declare <code>this</code>, and you can’t make an assignment to it.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> In the following version of the constructor, the names and types of the parameters are the same as the instance variables (parameters don’t have to use the same names, but that’s a common style). As a result, the parameters <strong><em>shadow</em></strong> (or hide) the instance variables, so the keyword <code>this</code> is necessary to tell them apart.</p>
+                      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute, <span class="hljs-keyword">int</span> second)</span> </span>{
     <span class="hljs-keyword">this</span>.hour = hour;
     <span class="hljs-keyword">this</span>.minute = minute;
     <span class="hljs-keyword">this</span>.second = second;
 }
 </code></pre>
-                </box>
-                <p><strong><code>this</code> can be used to refer to a constructor of a class within the same class too.</strong></p>
-                <box>
-                  <p><span class="fas fa-cube"></span> In this example the constructor <code>Time()</code> uses the <code>this</code> keyword to call its own overloaded constructor <code>Time(int, int, int)</code></p>
-                  <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">()</span> </span>{
+                    </box>
+                    <p><strong><code>this</code> can be used to refer to a constructor of a class within the same class too.</strong></p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> In this example the constructor <code>Time()</code> uses the <code>this</code> keyword to call its own overloaded constructor <code>Time(int, int, int)</code></p>
+                      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">()</span> </span>{
     <span class="hljs-keyword">this</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>); <span class="hljs-comment">// call the overloaded constructor</span>
 }
 
@@ -131,51 +135,54 @@
 }
 
 </code></pre>
-                </box>
-                <h5 id="instance-methods">Instance methods</h5>
-                <p><strong>You can add methods to a class which can then be used from the objects of that class.</strong> These <em>instance</em> methods do not have the <code>static</code> keyword in the method signature. Instance methods can access attributes
-                  of the class.</p>
-                <box>
-                  <p><span class="fas fa-cube"></span> Here's how you can add a method to the <code>Time</code> class to get the number of seconds passed till midnight.</p>
-                  <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">secondsSinceMidnight</span><span class="hljs-params">()</span> </span>{
+                    </box>
+                    <h5 id="instance-methods">Instance methods</h5>
+                    <p><strong>You can add methods to a class which can then be used from the objects of that class.</strong> These <em>instance</em> methods do not have the <code>static</code> keyword in the method signature. Instance methods can access attributes of the class.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> Here's how you can add a method to the <code>Time</code> class to get the number of seconds passed till midnight.</p>
+                      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">secondsSinceMidnight</span><span class="hljs-params">()</span> </span>{
     <span class="hljs-keyword">return</span> hour*<span class="hljs-number">60</span>*<span class="hljs-number">60</span> + minute*<span class="hljs-number">60</span> + second;
 }
 </code></pre>
-                  <p>Here's how you can use that method.</p>
-                  <pre><code class="hljs java">Time t = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>);
+                      <p>Here's how you can use that method.</p>
+                      <pre><code class="hljs java">Time t = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>);
 System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" seconds since midnight!"</span>);
 </code></pre>
-                </box>
-              </div>
-            </div>
-            <div>
-              <div>
-                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                    </box>
+                  </div>
+                </div>
+                <div>
                   <div>
-                    <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> define a `Circle` class">
-                        <question>
-                          <p>Define a <code>Circle</code> class so that the code given below produces the given output. The nature of the class is a follows:</p>
-                          <ul>
-                            <li>Attributes(all <code>private</code>):
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                      <div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> define a `Circle` class">
+                            <question>
+                              <p>Define a <code>Circle</code> class so that the code given below produces the given output. The nature of the class is a follows:</p>
                               <ul>
-                                <li><strong><code>int x</code>, <code>int y</code></strong>: represents the location of the circle</li>
-                                <li><strong><code>double radius</code></strong>: the radius of the circle</li>
+                                <li>Attributes(all <code>private</code>):
+                                  <ul>
+                                    <li><strong><code>int x</code>, <code>int y</code></strong>: represents the location of the circle</li>
+                                    <li><strong><code>double radius</code></strong>: the radius of the circle</li>
+                                  </ul>
+                                </li>
+                                <li>Constructors:
+                                  <ul>
+                                    <li><strong><code>Circle()</code></strong>: initializes <code>x</code>, <code>y</code>, <code>radius</code> to 0</li>
+                                    <li><strong><code>Circle(int x, int y, double radius)</code></strong>: initializes the attributes to the given values</li>
+                                  </ul>
+                                </li>
+                                <li>Methods:
+                                  <ul>
+                                    <li><strong><code>getArea()</code></strong>: <code>int</code><br>
+                                      Returns the area of the circle as an <code>int</code> value (not <code>double</code>). Calculated as 2xPIx(radius)<sup>2</sup><br>
+                                      💡 You can convert to <code>double</code> to an <code>int</code> using <code>(int)</code> e.g., <code>x = (int)2.25</code> gives <code>x</code> the value <code>2</code>.<br>
+                                      💡 You can use <code>Math.PI</code> to get the value of Pi<br>
+                                      💡 You can use <code>Math.pow()</code> to raise a number to a specific power e.g., <code>Math.pow(3, 2)</code> calculates 3<sup>2</sup></li>
+                                  </ul>
+                                </li>
                               </ul>
-                            </li>
-                            <li>Constructors:
-                              <ul>
-                                <li><strong><code>Circle()</code></strong>: initializes <code>x</code>, <code>y</code>, <code>radius</code> to 0</li>
-                                <li><strong><code>Circle(int x, int y, double radius)</code></strong>: initializes the attributes to the given values</li>
-                              </ul>
-                            </li>
-                            <li>Methods:
-                              <ul>
-                                <li><strong><code>getArea()</code></strong>: <code>int</code><br> Returns the area of the circle as an <code>int</code> value (not <code>double</code>). Calculated as 2xPIx(radius)<sup>2</sup><br> 💡 You can convert to <code>double</code>                                  to an <code>int</code> using <code>(int)</code> e.g., <code>x = (int)2.25</code> gives <code>x</code> the value <code>2</code>.<br> 💡 You can use <code>Math.PI</code> to get the value of Pi<br> 💡 You can use <code>Math.pow()</code>                                  to raise a number to a specific power e.g., <code>Math.pow(3, 2)</code> calculates 3<sup>2</sup></li>
-                              </ul>
-                            </li>
-                          </ul>
-                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
         Circle c = <span class="hljs-keyword">new</span> Circle();
 
@@ -186,16 +193,16 @@ System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" second
     }
 }
 </code></pre>
-                          <p><span class="fas fa-arrow-down"></span></p>
-                          <pre class="hljs"><code>0
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre><code class="hljs">0
 78
 </code></pre>
-                          <div slot="hint">
-                            <ul>
-                              <li>Put the <code>Circle</code> class in a file called <code>Circle.java</code></li>
-                            </ul>
-                            <p>Partial solution:</p>
-                            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{
+                              <div slot="hint">
+                                <ul>
+                                  <li>Put the <code>Circle</code> class in a file called <code>Circle.java</code></li>
+                                </ul>
+                                <p>Partial solution:</p>
+                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> x;
     <span class="hljs-comment">// ...</span>
 
@@ -215,12 +222,14 @@ System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" second
 
 }
 </code></pre>
-                          </div>
-                        </question>
-                      </panel>
-                    </div>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </div>
+                    </panel>
                   </div>
-                </panel>
+                </div>
               </div>
             </div>
           </div>
@@ -232,16 +241,32 @@ System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" second
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../../markbind/js/vue.min.js"></script>
+<script src="../../../markbind/js/vue-strap.min.js"></script>
+<script src="../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\..\markbind\js\setup.js"></script>
+<script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../../markbind/layouts/default/scripts.js"></script>
 </html>

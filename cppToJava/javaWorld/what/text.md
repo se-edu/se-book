@@ -1,8 +1,4 @@
-<div id="title">
-
-#### What is Java?
-
-</div>
+<span id="title">What is Java?</span>
 
 <span id="prereqs"></span>
 

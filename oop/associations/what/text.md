@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Basic
-
-</div>
+<span id="title">Basic</span>
 
 <span id="prereqs"></span>
 
@@ -26,7 +22,7 @@ Objects in an OO solution need to be connected to each other to form a network s
 
 </tip-box>
 
-**Associations among objects can be generalized as associations between the corresponding classles too.**
+**Associations among objects can be generalized as associations between the corresponding classes too.**
 
 <tip-box> 
 
@@ -34,7 +30,7 @@ Objects in an OO solution need to be connected to each other to form a network s
 
 </tip-box>
 
-##### <big>Implementing associations</big>
+##### Implementing associations
 
 **We use instance level variables to implement associations.**
 

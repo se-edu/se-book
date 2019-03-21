@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can explain pros and cons of software engineering</span>
 
-<div id="title">
-
-#### Pros and Cons
-
-</div>
+<span id="title">Pros and Cons</span>
 
 <div id="body">
 

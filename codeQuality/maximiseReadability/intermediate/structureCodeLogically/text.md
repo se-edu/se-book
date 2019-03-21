@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Structure Code Logically
-
-</div>
+<span id="title">Structure Code Logically</span>
 
 <span id="prereqs"></span>
 

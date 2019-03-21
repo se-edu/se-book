@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Aggregation
-
-</div>
+<span id="title">Aggregation</span>
 
 <span id="prereqs"></span>
 
@@ -25,13 +21,13 @@ Notation:
 
 </tip-box>
 
-<tip-box type="tip"> 
+<box>
 
 **Aggregation vs Composition**
 
-The distinction between composition (&#9670;) and aggregation (&#9671;) is rather blurred. Martin Fowler’s famous book _UML Distilled_ advocates omitting the aggregation symbol altogether because using it adds more confusion than clarity.
+:bulb: The distinction between composition (&#9670;) and aggregation (&#9671;) is rather blurred. Martin Fowler’s famous book _UML Distilled_ advocates omitting the aggregation symbol altogether because using it adds more confusion than clarity.
 
-</tip-box>
+</box>
 
 </div>
 

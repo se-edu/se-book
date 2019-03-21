@@ -6,158 +6,177 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Requirements [Printable]</title>
-    <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <link rel="stylesheet" href="/se-book/css/textbook.css">
-  <div class="website-content">
-    <div id="main">
-      <h1 id="requirements">Requirements</h1>
-      <div>
-        <div>
-          <h4 id="introduction">Introduction</h4>
-        </div>
-        <div>
-          <p><strong>A <em>software requirement</em> specifies a need to be fulfilled by the software product.</strong></p>
-          <p><strong>A software project may be,</strong></p>
-          <ul>
-            <li><strong>a <em>brown-field</em> project</strong> i.e., develop a product to replace/update an existing software product</li>
-            <li><strong>a <em>green-field</em> project</strong> i.e., develop a totally new system with no precedent</li>
-          </ul>
-          <p>In either case, requirements need to be gathered, analyzed, specified, and managed.</p>
-          <p><strong>Requirements come from <em>stakeholders</em>.</strong></p>
-          <tip-box type="definition">
-            <div>
-              <p><strong>Stakeholder</strong>: A party that is potentially affected by the software project. e.g. users, sponsors, developers, interest groups, government agencies, etc.</p>
-            </div>
-          </tip-box>
-          <p><strong>Identifying requirements is often not easy.</strong> For example, stakeholders may not be aware of their precise needs, may not know how to communicate their requirements correctly, may not be willing to spend effort in identifying requirements,
-            etc.</p>
-        </div>
-      </div>
-      <div>
-        <div>
-          <h4 id="non-functional-requirements">Non-Functional Requirements</h4>
-        </div>
-        <div>
-          <p>There are two kinds of requirements:</p>
-          <ol>
-            <li><strong><em>Functional requirements</em> specify what the system should do.</strong></li>
-            <li><strong><em>Non-functional requirements</em> specify the constraints under which system is developed and operated.</strong></li>
-          </ol>
-          <tip-box>
-            <p><span class="fas fa-cube"></span> Some examples of non-functional requirement categories:</p>
-            <ul>
-              <li>Data requirements e.g. size,
-                <tooltip content="how often do data change">volatility</tooltip>,
-                <tooltip content="saving data permanenetly">persistency</tooltip> etc.,</li>
-              <li>Environment requirements e.g. technical environment in which system would operate or need to be compatible with.</li>
-              <li>Accessibility, Capacity, Compliance with regulations, Documentation, Disaster recovery, Efficiency, Extensibility, Fault tolerance, Interoperability, Maintainability, Privacy, Portability, Quality, Reliability, Response time, Robustness,
-                Scalability, Security, Stability, Testability, and more ...</li>
-            </ul>
-            <panel type="seamless" header="<span class='fas fa-cube'></span> Some concrete examples of NFRs" expanded="">
-              <ul>
-                <li>Business/domain rules: e.g. the size of the minefield cannot be smaller than five.</li>
-                <li>Constraints: e.g. the system should be backward compatible with data produced by earlier versions of the system; system testers are available only during the last month of the project; the total project cost should not exceed $1.5 million.</li>
-                <li>Technical requirements: e.g. the system should work on both 32-bit and 64-bit environments.</li>
-                <li>Performance requirements: e.g. the system should respond within two seconds.</li>
-                <li>Quality requirements: e.g. the system should be usable by a novice who has never carried out an online purchase.</li>
-                <li>Process requirements: e.g. the project is expected to adhere to a schedule that delivers a feature set every one month.</li>
-                <li>Notes about project scope: e.g. the product is not required to handle the printing of reports.</li>
-                <li>Any other noteworthy points: e.g. the game should not use images deemed offensive to those injured in real mine clearing activities.
-                </li>
-              </ul>
-            </panel>
-          </tip-box>
-          <p>We may have to spend an extra effort in digging NFRs out as early as possible because,</p>
-          <ol>
-            <li><strong>NFRs are easier to miss</strong> <span class="dimmed"> e.g., stakeholders tend to think of functional requirements first</span></li>
-            <li>sometimes <strong>NFRs are critical to the success of the software.</strong> <span class="dimmed"> E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.</span></li>
-          </ol>
-        </div>
-      </div>
-      <div>
-        <div>
-          <h4 id="prioritizing-requirements">Prioritizing Requirements</h4>
-        </div>
-        <div>
-          <p><strong>Requirements can be prioritized based the importance and urgency</strong>, while keeping in mind the constraints of schedule, budget, staff resources, quality goals, and other constraints.</p>
-          <p>A common approach is to group requirements into priority categories. Note that all such scales are subjective, and stakeholders define the meaning of each level in the scale for the project at hand.</p>
-          <tip-box>
-            <p><span class="fas fa-cube"></span> An example scheme for categorizing requirements:</p>
-            <ul>
-              <li><code>Essential</code>: The product must have this requirement fulfilled or else it does not get user acceptance</li>
-              <li><code>Typical</code>: Most similar systems have this feature although the product can survive without it.</li>
-              <li><code>Novel</code>: New features that could differentiate this product from the rest.</li>
-            </ul>
-            <p><span class="fas fa-cube"></span> Other schemes:</p>
-            <ul>
-              <li><code>High</code>, <code>Medium</code>, <code>Low</code></li>
-              <li><code>Must-have</code>, <code>Nice-to-have</code>, <code>Unlikely-to-have</code></li>
-              <li><code>Level 0</code>, <code>Level 1</code>, <code>Level 2</code>, ...</li>
-            </ul>
-          </tip-box>
-          <p><strong>Some requirements can be discarded if they are considered ‘out of <em><tooltip content="the extent to which the software features should go">scope</tooltip></em>’.</strong></p>
-          <tip-box>
-            <p><span class="fas fa-cube"></span> The requirement given below is for a Calendar application. Stakeholder of the software (e.g. product designers) might decide the following requirement is not in the scope of the software.</p>
-            <blockquote>
-              <p>The software records the actual time taken by each task and show the difference between the <em>actual</em> and <em>scheduled</em> time for the task.</p>
-            </blockquote>
-          </tip-box>
-        </div>
-      </div>
-      <div>
-        <div>
-          <h4 id="quality-of-requirements">Quality of Requirements</h4>
-        </div>
-        <div>
-          <p>Here are some characteristics of well-defined requirements
-            <trigger for="pop:zielczynski"><sup>[📖 zielczynski]</sup></trigger>:</p>
-          <ul>
-            <li>Unambiguous</li>
-            <li>Testable (verifiable)</li>
-            <li>Clear (concise, terse, simple, precise)</li>
-            <li>Correct</li>
-            <li>Understandable</li>
-            <li>Feasible (realistic, possible)</li>
-            <li>Independent</li>
-            <li>
-              <tooltip content="Not divisible any further">Atomic</tooltip>
-            </li>
-            <li>Necessary</li>
-            <li>Implementation-free (i.e. abstract)</li>
-          </ul>
-          <p>Besides these criteria for individual requirements, the set of requirements as a whole should be</p>
-          <ul>
-            <li>Consistent</li>
-            <li>Non-redundant</li>
-            <li>Complete</li>
-          </ul>
-          <popover id="pop:zielczynski">
-            <div slot="content">
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
+      <link rel="stylesheet" href="/se-book/css/textbook.css">
+      <div class="website-content">
+        <div id="main">
+          <h1 id="requirements">Requirements<a class="fa fa-anchor" href="#requirements"></a></h1>
+          <div>
+            <p>
               <div>
-                <p>Peter Zielczynski, <em><strong>Requirements Management Using IBM Rational RequisitePro</strong></em>, IBM Press, 2008</p>
+                <h4 id="introduction"><span>Introduction</span></h4>
               </div>
+            </p>
+            <div>
+              <p><strong>A <em>software requirement</em> specifies a need to be fulfilled by the software product.</strong></p>
+              <p><strong>A software project may be,</strong></p>
+              <ul>
+                <li><strong>a <em>brown-field</em> project</strong> i.e., develop a product to replace/update an existing software product</li>
+                <li><strong>a <em>green-field</em> project</strong> i.e., develop a totally new system with no precedent</li>
+              </ul>
+              <p>In either case, requirements need to be gathered, analyzed, specified, and managed.</p>
+              <p><strong>Requirements come from <em>stakeholders</em>.</strong></p>
+              <tip-box type="definition">
+                <div>
+                  <p><strong>Stakeholder</strong>: A party that is potentially affected by the software project. e.g. users, sponsors, developers, interest groups, government agencies, etc.</p>
+                </div>
+              </tip-box>
+              <p><strong>Identifying requirements is often not easy.</strong> For example, stakeholders may not be aware of their precise needs, may not know how to communicate their requirements correctly, may not be willing to spend effort in identifying requirements, etc.</p>
             </div>
-          </popover>
+          </div>
+          <div>
+            <p>
+              <div>
+                <h4 id="non-functional-requirements"><span>Non-Functional Requirements</span></h4>
+              </div>
+            </p>
+            <div>
+              <p>There are two kinds of requirements:</p>
+              <ol>
+                <li><strong><em>Functional requirements</em> specify what the system should do.</strong></li>
+                <li><strong><em>Non-functional requirements</em> specify the constraints under which system is developed and operated.</strong></li>
+              </ol>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> Some examples of non-functional requirement categories:</p>
+                <ul>
+                  <li>Data requirements e.g. size, <tooltip content="how often do data change">volatility</tooltip>, <tooltip content="saving data permanenetly">persistency</tooltip> etc.,</li>
+                  <li>Environment requirements e.g. technical environment in which system would operate or need to be compatible with.</li>
+                  <li>Accessibility, Capacity, Compliance with regulations, Documentation, Disaster recovery, Efficiency, Extensibility, Fault tolerance, Interoperability, Maintainability, Privacy, Portability, Quality, Reliability, Response time, Robustness, Scalability, Security, Stability, Testability, and more ...</li>
+                </ul>
+                <panel type="seamless" header="<span class='fas fa-cube'></span> Some concrete examples of NFRs" expanded>
+                  <ul>
+                    <li>Business/domain rules: e.g. the size of the minefield cannot be smaller than five.</li>
+                    <li>Constraints: e.g. the system should be backward compatible with data produced by earlier versions of the system; system testers are available only during the last month of the project; the total project cost should not exceed $1.5 million.</li>
+                    <li>Technical requirements: e.g. the system should work on both 32-bit and 64-bit environments.</li>
+                    <li>Performance requirements: e.g. the system should respond within two seconds.</li>
+                    <li>Quality requirements: e.g. the system should be usable by a novice who has never carried out an online purchase.</li>
+                    <li>Process requirements: e.g. the project is expected to adhere to a schedule that delivers a feature set every one month.</li>
+                    <li>Notes about project scope: e.g. the product is not required to handle the printing of reports.</li>
+                    <li>Any other noteworthy points: e.g. the game should not use images deemed offensive to those injured in real mine clearing activities.
+                    </li>
+                  </ul>
+                </panel>
+              </tip-box>
+              <p>We may have to spend an extra effort in digging NFRs out as early as possible because,</p>
+              <ol>
+                <li><strong>NFRs are easier to miss</strong> <span class="dimmed"> e.g., stakeholders tend to think of functional requirements first</span></li>
+                <li>sometimes <strong>NFRs are critical to the success of the software.</strong> <span class="dimmed"> E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.</span></li>
+              </ol>
+            </div>
+          </div>
+          <div>
+            <p>
+              <div>
+                <h4 id="prioritizing-requirements"><span>Prioritizing Requirements</span></h4>
+              </div>
+            </p>
+            <div>
+              <p><strong>Requirements can be prioritized based the importance and urgency</strong>, while keeping in mind the constraints of schedule, budget, staff resources, quality goals, and other constraints.</p>
+              <p>A common approach is to group requirements into priority categories. Note that all such scales are subjective, and stakeholders define the meaning of each level in the scale for the project at hand.</p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> An example scheme for categorizing requirements:</p>
+                <ul>
+                  <li><code>Essential</code>: The product must have this requirement fulfilled or else it does not get user acceptance</li>
+                  <li><code>Typical</code>: Most similar systems have this feature although the product can survive without it.</li>
+                  <li><code>Novel</code>: New features that could differentiate this product from the rest.</li>
+                </ul>
+                <p><span class="fas fa-cube"></span> Other schemes:</p>
+                <ul>
+                  <li><code>High</code>, <code>Medium</code>, <code>Low</code></li>
+                  <li><code>Must-have</code>, <code>Nice-to-have</code>, <code>Unlikely-to-have</code></li>
+                  <li><code>Level 0</code>, <code>Level 1</code>, <code>Level 2</code>, ...</li>
+                </ul>
+              </tip-box>
+              <p><strong>Some requirements can be discarded if they are considered ‘out of <em>
+                    <tooltip content="the extent to which the software features should go">scope</tooltip>
+                  </em>’.</strong></p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> The requirement given below is for a Calendar application. Stakeholder of the software (e.g. product designers) might decide the following requirement is not in the scope of the software.</p>
+                <blockquote>
+                  <p>The software records the actual time taken by each task and show the difference between the <em>actual</em> and <em>scheduled</em> time for the task.</p>
+                </blockquote>
+              </tip-box>
+            </div>
+          </div>
+          <div>
+            <p>
+              <div>
+                <h4 id="quality-of-requirements"><span>Quality of Requirements</span></h4>
+              </div>
+            </p>
+            <div>
+              <p>Here are some characteristics of well-defined requirements <trigger for="pop:zielczynski"><sup>[📖 zielczynski]</sup></trigger>:</p>
+              <ul>
+                <li>Unambiguous</li>
+                <li>Testable (verifiable)</li>
+                <li>Clear (concise, terse, simple, precise)</li>
+                <li>Correct</li>
+                <li>Understandable</li>
+                <li>Feasible (realistic, possible)</li>
+                <li>Independent</li>
+                <li>
+                  <tooltip content="Not divisible any further">Atomic</tooltip>
+                </li>
+                <li>Necessary</li>
+                <li>Implementation-free (i.e. abstract)</li>
+              </ul>
+              <p>Besides these criteria for individual requirements, the set of requirements as a whole should be</p>
+              <ul>
+                <li>Consistent</li>
+                <li>Non-redundant</li>
+                <li>Complete</li>
+              </ul>
+              <popover id="pop:zielczynski">
+                <div slot="content">
+                  <div>
+                    <p>Peter Zielczynski, <em><strong>Requirements Management Using IBM Rational RequisitePro</strong></em>, IBM Press, 2008</p>
+                  </div>
+                </div>
+              </popover>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -166,16 +185,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\markbind\js\vue.min.js"></script>
-<script src="..\markbind\js\vue-strap.min.js"></script>
-<script src="..\markbind\js\polyfill.min.js"></script>
-<script src="..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../markbind/js/vue.min.js"></script>
+<script src="../markbind/js/vue-strap.min.js"></script>
+<script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../markbind/js/polyfill.min.js"></script>
+<script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\markbind\js\setup.js"></script>
+<script src="../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../markbind/layouts/default/scripts.js"></script>
 </html>

@@ -1,7 +1,4 @@
-<div id="title">
-
-## APIs
-</div>
+<span id="title">APIs</span>
 
 <div id="body">
 

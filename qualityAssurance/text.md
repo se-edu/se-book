@@ -1,7 +1,4 @@
-<div id="title">
-
-# Quality Assurance
-</div>
+<span id="title">Quality Assurance</span>
 
 <div id="body">
 

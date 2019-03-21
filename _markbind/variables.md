@@ -17,6 +17,7 @@
 <span id="icon_like">{{ fas_thumbs_up | safe }}</span>
 <span id="icon_linux">{{ fab_linux | safe }}</span>
 <span id="icon_important_big_red"><font color="red"><big>{{ glyphicon_exclamation_sign |safe }}</big></font></span>
+<span id="icon_important">{{ glyphicon_exclamation_sign |safe }}</span>
 <span id="icon_new_window">{{ glyphicon_new_window | safe }}</span>
 <span id="icon_outcome">{{ fas_trophy | safe }}</span>
 <span id="icon_output">{{ fas_arrow_down | safe }}</span>
@@ -46,3 +47,7 @@
 <span id="different"><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger">{{ fas_not_equal | safe }}</span></span></span>
 <span id="oracle"><small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></span>
 <span id="similar"><span style="opacity: 0.5"> <span class="badge badge-pill badge-success">{{ fas_equals | safe }}</span></span></span>
+
+<span id="java_version">9</span>
+<span id="java_api">https://docs.oracle.com/javase/{{ java_version }}/docs/api</span>
+<span id="java_tutorial">https://docs.oracle.com/javase/tutorial</span>

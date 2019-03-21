@@ -1,8 +1,4 @@
-<div id="title">
-
-#### GANTT Charts
-
-</div>
+<span id="title">GANTT Charts</span>
 
 <span id="prereqs"></span>
 

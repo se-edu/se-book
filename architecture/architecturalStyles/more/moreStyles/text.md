@@ -1,8 +1,4 @@
-<div id="title">
-
-#### More Styles
-
-</div>
+<span id="title">More Styles</span>
 
 <span id="prereqs"></span>
 

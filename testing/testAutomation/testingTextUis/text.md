@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can semi-automate testing of CLIs</span>
 
-<div id="title">
-
-#### Automated Testing of CLI Apps
-
-</div>
+<span id="title">Automated Testing of CLI Apps</span>
 
 <div id="body">
 

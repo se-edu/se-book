@@ -1,7 +1,4 @@
-<div id="title">
-
-# Integration
-</div>
+<span id="title">Integration</span>
 
 <div id="body">
 

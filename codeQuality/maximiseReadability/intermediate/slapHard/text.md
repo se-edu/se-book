@@ -1,12 +1,8 @@
-<div id="title">
-
-#### SLAP Hard
-
-</div>
+<span id="title">SLAP Hard</span>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{ icon_outcome }} Can improve code quality using technique: slap hard </span>
+<span id="outcomes">{{ icon_outcome }} Can improve code quality using technique: SLAP hard </span>
 
 <div id="body">
 

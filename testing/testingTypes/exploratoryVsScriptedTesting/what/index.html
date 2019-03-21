@@ -6,124 +6,130 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Testing Types: Exploratory vs Scripted Testing: What</title>
-    <link rel="stylesheet" href="..\..\..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain exploratory testing and scripted testing</span>
-        </span>
-        </span>
-        </span>
-        <p></p>
-      </p>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
       <div>
-        <div></div>
-        <p></p>
-        <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Exploratory and Scripted Testing →
-</span></strong>
-          </span>
-        </p>
-        <div id="title-and-body">
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain exploratory testing and scripted testing</span></span></span></span></p>
+          <p></p>
+          <p></p>
           <div>
-            <h4 id="what">What</h4>
-          </div>
-          <div id="main">
-            <div>
-              <p><strong>Here are two alternative approaches to testing a software: <em>Scripted</em> testing and <em>Exploratory</em> testing</strong></p>
-              <ol>
-                <li>
-                  <p><strong>Scripted testing:</strong> First write a set of test cases based on the expected behavior of the SUT, and then perform testing based on that set of test cases.</p>
-                </li>
-                <li>
-                  <p><strong>Exploratory testing:</strong> Devise test cases on-the-fly, creating new test cases based on the results of the past test cases.</p>
-                </li>
-              </ol>
-              <p>Exploratory testing is ‘the simultaneous learning, test design, and test execution’
-                <trigger trigger="click" for="modal:exploratoryWhat-bach-et-explained">[source: bach-et-explained]</trigger> whereby the nature of the follow-up test case is decided based on the behavior of the previous test cases. In other words, running the system and trying out various operations. It is called <em>exploratory testing</em>                because testing is driven by observations during testing. Exploratory testing usually starts with areas identified as error-prone, based on the tester’s past experience with similar systems. One tends to conduct more tests for those operations
-                where more faults are found.</p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> Here is an example thought process behind a segment of an exploratory testing session:</p>
-                <blockquote>
-                  <p>“Hmm... looks like feature x is broken. This usually means feature n and k could be broken too; we need to look at them soon. But before that, let us give a good test run to feature y because users can still use the product if feature
-                    y works, even if x doesn’t work. Now, if feature y doesn’t work 100%, we have a major problem and this has to be made known to the development team sooner rather than later...”</p>
-                </blockquote>
-              </tip-box>
-              <tip-box>
-                <p>💡 <strong>Exploratory testing is also known as <em>reactive testing, error guessing technique, attack-based testing,</em> and <em>bug hunting</em>.</strong></p>
-              </tip-box>
-              <modal id="modal:exploratoryWhat-bach-et-explained" title="bach-et-explained <span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span>">
-                <div>
-                  <p><a href="http://www.satisfice.com/articles/et-article.pdf"><strong>Exploratory Testing Explained</strong></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a> -- James Bach is an industry thought
-                    leader in software testing).</p>
-                </div>
-              </modal>
-            </div>
-            <div>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Exploratory and Scripted Testing →
+                  </span></strong></span></p>
+            <div id="title-and-body">
               <div>
-                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                <h4 id="what"><span>What</span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p><strong>Here are two alternative approaches to testing a software: <em>Scripted</em> testing and <em>Exploratory</em> testing</strong></p>
+                  <ol>
+                    <li>
+                      <p><strong>Scripted testing:</strong> First write a set of test cases based on the expected behavior of the SUT, and then perform testing based on that set of test cases.</p>
+                    </li>
+                    <li>
+                      <p><strong>Exploratory testing:</strong> Devise test cases on-the-fly, creating new test cases based on the results of the past test cases.</p>
+                    </li>
+                  </ol>
+                  <p>Exploratory testing is ‘the simultaneous learning, test design, and test execution’ <trigger trigger="click" for="modal:exploratoryWhat-bach-et-explained">[source: bach-et-explained]</trigger> whereby the nature of the follow-up test case is decided based on the behavior of the previous test cases. In other words, running the system and trying out various operations. It is called <em>exploratory testing</em> because testing is driven by observations during testing. Exploratory testing usually starts with areas identified as error-prone, based on the tester’s past experience with similar systems. One tends to conduct more tests for those operations where more faults are found.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> Here is an example thought process behind a segment of an exploratory testing session:</p>
+                    <blockquote>
+                      <p>“Hmm... looks like feature x is broken. This usually means feature n and k could be broken too; we need to look at them soon.
+                        But before that, let us give a good test run to feature y because users can still use the product if feature y works, even if x doesn’t work. Now, if feature y doesn’t work 100%, we have a major problem and this has to be made known to the development team sooner rather than later...”</p>
+                    </blockquote>
+                  </tip-box>
+                  <tip-box>
+                    <p>💡 <strong>Exploratory testing is also known as <em>reactive testing, error guessing technique, attack-based testing,</em> and <em>bug hunting</em>.</strong></p>
+                  </tip-box>
+                  <modal id="modal:exploratoryWhat-bach-et-explained" title="bach-et-explained <span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span>">
+                    <div>
+                      <p><a href="http://www.satisfice.com/articles/et-article.pdf"><strong>Exploratory Testing Explained</strong></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a> -- James Bach is an industry thought leader in software testing).</p>
+                    </div>
+                  </modal>
+                </div>
+                <div>
                   <div>
-                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> statements about exploratory and scripted testing">
-                      <question>
-                        <p>Scripted testing requires tests to be written in a scripting language; Manual testing is called exploratory testing.</p>
-                        <ul radio-group="db31a" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="db31a" type="radio"> True</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="db31a" type="radio"> False</label></li>
-                        </ul>
-                        <div slot="answer">
-                          <p>A) False</p>
-                          <p>Explanation: “Scripted” means test cases are predetermined. They need not be an executable script. However, exploratory testing is usually manual.</p>
-                        </div>
-                      </question>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> statements about exploratory and scripted testing">
+                          <question>
+                            <p>Scripted testing requires tests to be written in a scripting language; Manual testing is called exploratory testing.</p>
+                            <ul radio-group="db31a" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="db31a" type="radio"> True</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="db31a" type="radio"> False</label></li>
+                            </ul>
+                            <div slot="answer">
+                              <p>A) False</p>
+                              <p>Explanation: “Scripted” means test cases are predetermined. They need not be an executable script. However, exploratory testing is usually manual.</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which testing technique is better?">
+                          <question>
+                            <p>Which testing technique is better?</p>
+                            <ul radio-group="9fd35" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> a. error guessing</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> b. bug hunting</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> c. attack-based testing</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> d. reactive testing</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> e. These are different names used to describe exploratory testing.</label></li>
+                            </ul>
+                            <div slot="answer">
+                              <p>(e)</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Explain the concept of exploratory testing using Minesweeper as an example.">
+                          <question has-input="true">
+                            <p>Explain the concept of exploratory testing using Minesweeper as an example.</p>
+                            <div slot="answer">
+                              <p>When we test the Minesweeper by simply playing it in various ways, especially trying out those that are likely to be buggy, that would be exploratory testing.</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
                     </panel>
                   </div>
-                  <div>
-                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which testing technique is better?">
-                      <question>
-                        <p>Which testing technique is better?</p>
-                        <ul radio-group="9fd35" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> a. error guessing</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> b. bug hunting</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> c. attack-based testing</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> d. reactive testing</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> e. These are different names used to describe exploratory testing.</label></li>
-                        </ul>
-                        <div slot="answer">
-                          <p>(e)</p>
-                        </div>
-                      </question>
-                    </panel>
-                  </div>
-                  <div>
-                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Explain the concept of exploratory testing using Minesweeper as an example.">
-                      <question has-input="true">
-                        <p>Explain the concept of exploratory testing using Minesweeper as an example.</p>
-                        <div slot="answer">
-                          <p>When we test the Minesweeper by simply playing it in various ways, especially trying out those that are likely to be buggy, that would be exploratory testing.</p>
-                        </div>
-                      </question>
-                    </panel>
-                  </div>
-                </panel>
+                </div>
               </div>
             </div>
           </div>
@@ -135,16 +141,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../../../markbind/js/vue.min.js"></script>
+<script src="../../../../markbind/js/vue-strap.min.js"></script>
+<script src="../../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\..\..\markbind\js\setup.js"></script>
+<script src="../../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../../../markbind/layouts/default/scripts.js"></script>
 </html>

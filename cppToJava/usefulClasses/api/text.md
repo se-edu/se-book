@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Java API
-
-</div>
+<span id="title">Java API</span>
 
 <span id="prereqs"></span>
 
@@ -12,8 +8,8 @@
 
 Java comes with a rich collection of classes that you can use. They form what is known as the Java API (Application Programming Interface). **Each class in the API comes with documentation in a standard format.**
 
-* [List of all Java classes](https://docs.oracle.com/javase/9/docs/api/index.html?overview-summary.html)
-* [Example: API documentation of the `String` class](https://docs.oracle.com/javase/9/docs/api/java/lang/String.html)
+* [List of all Java classes]({{ java_api }}/index.html?overview-summary.html)
+* [Example: API documentation of the `String` class]({{ java_api }}/java/lang/String.html)
 
 
 </div>

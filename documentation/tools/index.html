@@ -6,71 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Documentation: Tools</title>
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content" id="all">
-      <p><span class="dimmed"><strong><span>Implementation → Documentation →
-</span></strong>
-        </span>
-      </p>
-      <div id="title">
-        <div>
-          <h2 id="tools">Tools</h2>
-        </div>
-      </div>
-      <div id="main">
-        <div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h3 id="javadoc">JavaDoc</h3></div></span>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
+      <div>
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content" id="all">
+          <p><span class="dimmed"><strong><span>Implementation → Documentation →
+                </span></strong></span></p>
+          <div id="title">
+            <h1 id="tools"><span>Tools</span><a class="fa fa-anchor" href="#tools"></a></h1>
+          </div>
+          <div id="main">
+            <div>
               <div>
-                <div>
-                  <panel type="seamless" expanded="">
-                    <span slot="header" class="card-title"><div>
-<h4 id="what">What</h4></div></span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain JavaDoc</span>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h2 id="javadoc"><span>JavaDoc</span><a class="fa fa-anchor" href="#javadoc"></a></h2>
+                    </div>
+                  </span>
+                  <div>
+                    <div>
+                      <panel type="seamless" expanded>
+                        <span slot="header" class="card-title">
+                          <div>
+                            <h4 id="what"><span>What</span></h4>
+                          </div>
                         </span>
-                        </span>
-                        </span>
-                        <p></p>
-                      </p>
-                      <p></p>
-                      <div>
-                        <p><strong>Javadoc is a tool for generating API documentation in HTML format from doc comments in source.</strong> In addition, modern IDEs use JavaDoc comments to generate explanatory tool tips.</p>
-                        <tip-box>
-                          <p><span class="fas fa-cube"></span> An example method header comment in JavaDoc format (adapted from <a href="http://www.oracle.com/technetwork/articles/java/index-137868.html">Oracle's Java documentation</a>)</p>
-                          <pre><code class="hljs java"><span class="hljs-comment">/**
- * Returns an Image object that can then be painted on the screen. 
+                        <div class="indented">
+                          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain JavaDoc</span></span></span></span></p>
+                          <p></p>
+                          <p></p>
+                          <p></p>
+                          <div>
+                            <p><strong>Javadoc is a tool for generating API documentation in HTML format from doc comments in source.</strong> In addition, modern IDEs use JavaDoc comments to generate explanatory tool tips.</p>
+                            <tip-box>
+                              <p><span class="fas fa-cube"></span> An example method header comment in JavaDoc format (adapted from <a href="http://www.oracle.com/technetwork/articles/java/index-137868.html">Oracle's Java documentation</a>)</p>
+                              <pre><code class="hljs java"><span class="hljs-comment">/**
+ * Returns an Image object that can then be painted on the screen.
  * The url argument must specify an absolute {<span class="hljs-doctag">@link</span> URL}. The name
- * argument is a specifier that is relative to the url argument. 
+ * argument is a specifier that is relative to the url argument.
  * &lt;p&gt;
- * This method always returns immediately, whether or not the 
+ * This method always returns immediately, whether or not the
  * image exists. When this applet attempts to draw the image on
- * the screen, the data will be loaded. The graphics primitives 
- * that draw the image will incrementally paint on the screen. 
+ * the screen, the data will be loaded. The graphics primitives
+ * that draw the image will incrementally paint on the screen.
  *
  * <span class="hljs-doctag">@param</span> url an absolute URL giving the base location of the image
  * <span class="hljs-doctag">@param</span> name the location of the image, relative to the url argument
@@ -85,120 +96,165 @@
         }
  }
 </code></pre>
-                          <p><span class="fas fa-cube"></span> Generated HTML documentation:</p>
-                          <p><a href="/se-book/documentation/tools/javaDoc/what/images/generatedHtml.png" target="_self"><img src="/se-book/documentation/tools/javaDoc/what/images/generatedHtml.png" alt="" class="img-fluid"></a></p>
-                          <p><span class="fas fa-cube"></span> Tooltip generated by Intellij IDE:</p>
-                          <p><img src="/se-book/documentation/tools/javaDoc/what/images/intellijTooltip.png">
-                            <p></p>
-                          </p>
-                        </tip-box>
-                      </div>
-                      <div></div>
+                              <p><span class="fas fa-cube"></span> Generated HTML documentation:</p>
+                              <p><a href="/se-book/documentation/tools/javaDoc/what/images/generatedHtml.png" target="_self"><img src="/se-book/documentation/tools/javaDoc/what/images/generatedHtml.png" alt class="img-fluid"></a></p>
+                              <p><span class="fas fa-cube"></span> Tooltip generated by Intellij IDE:</p>
+                              <p><img src="/se-book/documentation/tools/javaDoc/what/images/intellijTooltip.png"></p>
+                              <p></p>
+                              <p></p>
+                            </tip-box>
+                          </div>
+                          <div></div>
+                        </div>
+                      </panel>
                     </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded="">
-                    <span slot="header" class="card-title"><div>
-<h4 id="how">How</h4></div></span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can write Javadoc comments</span>
+                    <div>
+                      <panel type="seamless" expanded>
+                        <span slot="header" class="card-title">
+                          <div>
+                            <h4 id="how"><span>How</span></h4>
+                          </div>
                         </span>
-                        </span>
-                        </span>
-                        <p></p>
-                      </p>
-                      <p></p>
-                      <div>
-                        <ul>
-                          <li><a href="https://www.tutorialspoint.com/java/java_documentation.htm">A short tutorial on writing JavaDoc comments</a> <span class="dimmed">-- from <a href="http://tutorialspoint.com">tutorialspoint.com</a></span></li>
-                          <li><a href="http://www.oracle.com/technetwork/articles/java/index-137868.html">A more detailed description</a> <span class="dimmed">--from Oracle</span></li>
-                        </ul>
-                      </div>
-                      <div></div>
+                        <div class="indented">
+                          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can write Javadoc comments</span></span></span></span></p>
+                          <p></p>
+                          <p></p>
+                          <p></p>
+                          <div>
+                            <p>In the absence of more extensive guidelines (e.g., given in a coding standard adopted by your project), you can follow the two examples below in your code.</p>
+                            <p><strong>A minimal javadoc comment example for methods:</strong></p>
+                            <pre><code class="hljs java"><span class="hljs-comment">/**
+ * Returns lateral location of the specified position.
+ * If the position is unset, NaN is returned.
+ *
+ * <span class="hljs-doctag">@param</span> x  X coordinate of position.
+ * <span class="hljs-doctag">@param</span> y Y coordinate of position.
+ * <span class="hljs-doctag">@param</span> zone Zone of position.
+ * <span class="hljs-doctag">@return</span> Lateral location.
+ * <span class="hljs-doctag">@throws</span> IllegalArgumentException  If zone is &lt;= 0.
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> <span class="hljs-title">computeLocation</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x, <span class="hljs-keyword">double</span> y, <span class="hljs-keyword">int</span> zone)</span>
+    <span class="hljs-keyword">throws</span> IllegalArgumentException </span>{
+  ...
+}
+</code></pre>
+                            <p><strong>A minimal javadoc comment example for classes:</strong></p>
+                            <pre><code class="hljs java"><span class="hljs-keyword">package</span> ...
+
+<span class="hljs-keyword">import</span> ...
+
+<span class="hljs-comment">/**
+ * Represents a location in a 2D space. A &lt;code&gt;Point&lt;/code&gt; object corresponds to
+ * a coordinate represented by two integers e.g., &lt;code&gt;3,6&lt;/code&gt;
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span></span>{
+    <span class="hljs-comment">//...</span>
+}
+</code></pre>
+                          </div>
+                          <div>
+                            <div>
+                              <panel header="<span class='fas fa-paperclip'></span> Resources" expanded>
+                                <div>
+                                  <ul>
+                                    <li><a href="https://www.tutorialspoint.com/java/java_documentation.htm">A short tutorial on writing JavaDoc comments</a> <span class="dimmed">-- from <a href="http://tutorialspoint.com">tutorialspoint.com</a></span></li>
+                                    <li><a href="http://www.oracle.com/technetwork/articles/java/index-137868.html">A more detailed description</a> <span class="dimmed">--from Oracle</span></li>
+                                  </ul>
+                                </div>
+                              </panel>
+                            </div>
+                          </div>
+                        </div>
+                      </panel>
                     </div>
-                  </panel>
-                </div>
+                  </div>
+                </panel>
               </div>
-            </panel>
-          </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h3 id="markdown">Markdown</h3></div></span>
               <div>
-                <div>
-                  <panel type="seamless" expanded="">
-                    <span slot="header" class="card-title"><div>
-<h4 id="what-2">What</h4></div></span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain Markdown</span>
-                        </span>
-                        </span>
-                        </span>
-                        <p></p>
-                      </p>
-                      <p></p>
-                      <div>
-                        <p>Markdown is a lightweight markup language with plain text formatting syntax.</p>
-                      </div>
-                      <div></div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h2 id="markdown"><span>Markdown</span><a class="fa fa-anchor" href="#markdown"></a></h2>
                     </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded="">
-                    <span slot="header" class="card-title"><div>
-<h4 id="how-2">How</h4></div></span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can write documents in Markdown format</span>
+                  </span>
+                  <div>
+                    <div>
+                      <panel type="seamless" expanded>
+                        <span slot="header" class="card-title">
+                          <div>
+                            <h4 id="what"><span>What</span></h4>
+                          </div>
                         </span>
-                        </span>
-                        </span>
-                        <p></p>
-                      </p>
-                      <p></p>
-                      <div>
-                        <ul>
-                          <li><a href="https://guides.github.com/features/mastering-markdown/">A tutorial on <em>Mastering Markdown</em></a> <span class="dimmed">--from GitHub</span></li>
-                        </ul>
-                      </div>
-                      <div></div>
+                        <div class="indented">
+                          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain Markdown</span></span></span></span></p>
+                          <p></p>
+                          <p></p>
+                          <p></p>
+                          <div>
+                            <p>Markdown is a lightweight markup language with plain text formatting syntax.</p>
+                          </div>
+                          <div></div>
+                        </div>
+                      </panel>
                     </div>
-                  </panel>
-                </div>
+                    <div>
+                      <panel type="seamless" expanded>
+                        <span slot="header" class="card-title">
+                          <div>
+                            <h4 id="how"><span>How</span></h4>
+                          </div>
+                        </span>
+                        <div class="indented">
+                          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can write documents in Markdown format</span></span></span></span></p>
+                          <p></p>
+                          <p></p>
+                          <p></p>
+                          <div>
+                            <ul>
+                              <li><a href="https://guides.github.com/features/mastering-markdown/">A tutorial on <em>Mastering Markdown</em></a> <span class="dimmed">--from GitHub</span></li>
+                            </ul>
+                          </div>
+                          <div></div>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </panel>
               </div>
-            </panel>
-          </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h3 id="asciidoc">AsciiDoc</h3></div></span>
               <div>
-                <div>
-                  <panel type="seamless" expanded="">
-                    <span slot="header" class="card-title"><div>
-<h4 id="what-3">What</h4></div></span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain AsciiDoc</span>
-                        </span>
-                        </span>
-                        </span>
-                        <p></p>
-                      </p>
-                      <p></p>
-                      <div>
-                        <p>AsciiDoc is similar to Markdown but has more powerful (but also more complex) syntax.</p>
-                        <ul>
-                          <li><a href="https://asciidoctor.org/docs/asciidoc-writers-guide/">AsciiDoc Writers Guide</a> <span class="dimmed">--from <a href="http://Asciidoctor.org">Asciidoctor.org</a></span></li>
-                        </ul>
-                      </div>
-                      <div></div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h2 id="asciidoc"><span>AsciiDoc</span><a class="fa fa-anchor" href="#asciidoc"></a></h2>
                     </div>
-                  </panel>
-                </div>
+                  </span>
+                  <div>
+                    <div>
+                      <panel type="seamless" expanded>
+                        <span slot="header" class="card-title">
+                          <div>
+                            <h4 id="what"><span>What</span></h4>
+                          </div>
+                        </span>
+                        <div class="indented">
+                          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain AsciiDoc</span></span></span></span></p>
+                          <p></p>
+                          <p></p>
+                          <p></p>
+                          <div>
+                            <p>AsciiDoc is similar to Markdown but has more powerful (but also more complex) syntax.</p>
+                            <ul>
+                              <li><a href="https://asciidoctor.org/docs/asciidoc-writers-guide/">AsciiDoc Writers Guide</a> <span class="dimmed">--from <a href="http://Asciidoctor.org">Asciidoctor.org</a></span></li>
+                            </ul>
+                          </div>
+                          <div></div>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </panel>
               </div>
-            </panel>
+            </div>
           </div>
         </div>
       </div>
@@ -208,16 +264,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/vue-strap.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\markbind\js\setup.js"></script>
+<script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

@@ -6,85 +6,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Error Handling: Design-by-Contract Approach</title>
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content" id="all">
-      <p><span class="dimmed"><strong><span>Implementation → Error Handling →
-</span></strong>
-        </span>
-      </p>
-      <div id="title">
-        <div>
-          <h2 id="design-by-contract-approach">Design-by-Contract Approach</h2>
-        </div>
-      </div>
-      <div id="main">
-        <div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="design-by-contract">Design by Contract</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the Design-by-Contract approach</span>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
+      <div>
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content" id="all">
+          <p><span class="dimmed"><strong><span>Implementation → Error Handling →
+                </span></strong></span></p>
+          <div id="title">
+            <h1 id="design-by-contract-approach"><span>Design-by-Contract Approach</span><a class="fa fa-anchor" href="#design-by-contract-approach"></a></h1>
+          </div>
+          <div id="main">
+            <div>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="design-by-contract"><span>Design by Contract</span></h4>
+                    </div>
                   </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p><strong><tooltip content="term was coined by Bertrand Meyer">Design by contract (DbC)</tooltip> is an approach for designing software that requires defining formal, precise and verifiable interface specifications for software components.</strong></p>
-                  <p>Suppose an operation is implemented with the behavior specified precisely in the API (preconditions, post conditions, exceptions etc.). When following the defensive approach, the code should first check if the preconditions have been
-                    met. Typically, exceptions are thrown if preconditions are violated. In contrast, the <em>Design-by-Contract (DbC)</em> approach to coding assumes that it is the responsibility of the caller to ensure all preconditions are met. The
-                    operation will honor the contract only if the preconditions have been met. If any of them have not been met, the behavior of the operation is &quot;unspecified&quot;.</p>
-                  <p>Languages such as Eiffel have native support for DbC. For example, preconditions of an operation can be specified in Eiffel and the language runtime will check precondition violations without the need to do it explicitly in the code.
-                    To follow the DbC approach in languages such as Java and C++ where there is no built-in DbC support, assertions can be used to confirm pre-conditions.</p>
-                </div>
-                <div>
-                  <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the Design-by-Contract approach</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong>
+                          <tooltip content="term was coined by Bertrand Meyer">Design by contract (DbC)</tooltip> is an approach for designing software that requires defining formal, precise and verifiable interface specifications for software components.
+                        </strong></p>
+                      <p>Suppose an operation is implemented with the behavior specified precisely in the API (preconditions, post conditions, exceptions etc.). When following the defensive approach, the code should first check if the preconditions have been met. Typically, exceptions are thrown if preconditions are violated. In contrast, the <em>Design-by-Contract (DbC)</em> approach to coding assumes that it is the responsibility of the caller to ensure all preconditions are met. The operation will honor the contract only if the preconditions have been met. If any of them have not been met, the behavior of the operation is &quot;unspecified&quot;.</p>
+                      <p>Languages such as Eiffel have native support for DbC. For example, preconditions of an operation can be specified in Eiffel and the language runtime will check precondition violations without the need to do it explicitly in the code. To follow the DbC approach in languages such as Java and C++ where there is no built-in DbC support, assertions can be used to confirm pre-conditions.</p>
+                    </div>
+                    <div>
                       <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about the Design-by-contract approach?">
-                          <question>
-                            <p>Which statements are correct?</p>
-                            <ul class="task-list">
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. It is not natively supported by Java and C++.</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. It is an alternative to OOP.</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. It assumes the caller of a method is responsible for ensuring all preconditions are met.</li>
-                            </ul>
-                            <div slot="answer">
-                              <p>(a)<s>(b)</s>(c)</p>
-                              <p>Explanation: DbC is not an alternative to OOP. We can use DbC in an OOP solution.</p>
-                            </div>
-                          </question>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about the Design-by-contract approach?">
+                              <question>
+                                <p>Which statements are correct?</p>
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. It is not natively supported by Java and C++.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. It is an alternative to OOP.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. It assumes the caller of a method is responsible for ensuring all preconditions are met.</li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>(a)<s>(b)</s>(c)</p>
+                                  <p>Explanation: DbC is not an alternative to OOP. We can use DbC in an OOP solution.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
                         </panel>
                       </div>
-                    </panel>
+                    </div>
                   </div>
-                </div>
+                </panel>
               </div>
-            </panel>
+            </div>
           </div>
         </div>
       </div>
@@ -94,16 +103,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/vue-strap.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\markbind\js\setup.js"></script>
+<script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

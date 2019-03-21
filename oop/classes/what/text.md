@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Basic
-
-</div>
+<span id="title">Basic</span>
 
 <span id="prereqs"></span>
 
@@ -39,6 +35,6 @@ Class | Objects
 </div>
 
 <div id="extras">
-  <include src="exercises.md" />
+  <include src="exercisesPanel.md" boilerplate />
 </div>
 

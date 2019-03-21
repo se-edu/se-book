@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Object Oriented Domain Models
-
-</div>
+<span id="title">Object Oriented Domain Models</span>
 
 <span id="prereqs"></span>
 
@@ -37,6 +33,6 @@ The above OO domain model omits the ladder class for simplicity. It can be inclu
 
 <div id="extras">
 
-<include src="exercises.md" />
+<include src="exercisesPanel.md" boilerplate />
 
 </div>

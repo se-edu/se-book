@@ -2,11 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can combine some integration concepts</span>
 
-<div id="title">
-
-#### Review
-
-</div>
+<span id="title">Review</span>
 
 <div id="body">
 

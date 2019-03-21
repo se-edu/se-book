@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Liskov Substitution Principle
-
-</div>
+<span id="title">Liskov Substitution Principle</span>
 
 <span id="prereqs"></span>
 

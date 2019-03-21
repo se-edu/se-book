@@ -1,7 +1,4 @@
-<div id="title">
-
-## Model View Controller (MVC) Pattern
-</div>
+<span id="title">Model View Controller (MVC) Pattern</span>
 
 <div id="body">
 

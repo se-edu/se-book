@@ -1,8 +1,4 @@
-<div id="title">
-
-#### The `Arrays` class
-
-</div>
+<span id="title">The `Arrays` class</span>
 
 <span id="prereqs"></span>
 
@@ -10,7 +6,7 @@
 
 <div id="body">
 
-**[`java.util.Arrays`](https://docs.oracle.com/javase/9/docs/api/java/util/Arrays.html) provides methods for working with arrays.** One of them, `toString`, returns a string representation of an array. It also provides a `copyOf` that copies an array.
+**[`java.util.Arrays`]({{ java_api }}/java/util/Arrays.html) provides methods for working with arrays.** One of them, `toString`, returns a string representation of an array. It also provides a `copyOf` that copies an array.
 
 <box>
 

@@ -6,126 +6,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Modeling: Modeling a Solution: Basic</title>
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use simple class diagrams and sequence diagrams to model an OO solution</span>
-        </span>
-        </span>
-        </span>
-        <p></p>
-      </p>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
       <div>
-        <div>
-          <p>
-            <panel src="/se-book\modeling\modelingBehaviors\sequenceDiagramsBasic\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Design → Modeling → Modeling Behaviors → Sequence Diagrams → Basic%%"></panel>
-            <panel src="/se-book\modeling\modelingStructures\classDiagramsBasic\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Design → Modeling → Modeling Structures → Class Diagrams → Basic%%"></panel>
-          </p>
-        </div>
-        <p></p>
-        <p><span class="dimmed"><strong><span>Design → Modeling → Modeling a Solution →
-</span></strong>
-          </span>
-        </p>
-        <div id="title-and-body">
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use simple class diagrams and sequence diagrams to model an OO solution</span></span></span></span></p>
+          <p></p>
+          <p></p>
           <div>
-            <h4 id="basic">Basic</h4>
-          </div>
-          <div id="main">
             <div>
-              <p>As mentioned in [
-                <trigger trigger="click" for="modal:basicModelling-modelingIntro">Design → Modeling → Modeling a Solutions → Introduction</trigger>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.</p>
-              <modal title="Textbook <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span>" id="modal:basicModelling-modelingIntro">
-              
-                <div>
-                  <div></div>
-                  <p></p>
-                  <p><span class="dimmed"><strong><span>Design → Modeling → Modeling a Solution →
-</span></strong>
-                    </span>
-                  </p>
-                  <div id="title-and-body">
-                    <div>
-                      <h4 id="introduction">Introduction</h4>
-                    </div>
-                    <div id="main">
-                      <div>
-                        <p><strong>You can use models to analyze and design a software before you start coding.</strong></p>
-                        <p>Suppose You are planning to implement a simple minesweeper game that has a text based UI and a GUI. Given below is a possible OOP design for the game.</p>
-                        <img src="/se-book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50">
-                        <p></p>
-                        <p>Before jumping into coding, you may want to find out things such as,</p>
-                        <ul>
-                          <li>Is this class structure is able to produce the behavior we want?</li>
-                          <li>What API should each class have?</li>
-                          <li>Do we need more classes?</li>
-                        </ul>
-                        <p>To answer those questions, you can analyze the how the objects of these classes will interact with each other to produce the behavior you want.</p>
-                      </div>
-                      <div></div>
-                    </div>
-                  </div>
-                </div>
-              </modal>
-              <img src="/se-book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50">
-              <p></p>
-              <p>Let us start by modelling a sample interaction between the person playing the game and the TextUi object.</p>
-              <tip-box>
-                <img src="/se-book/modeling/modelingASolution/basic/images/playerText.png" height="300">
-                <p></p>
-                <p><code>newgame</code> and <code>clear x y</code> represent commands typed by the <code>Player</code> on the <code>TextUi</code>.</p>
-              </tip-box>
-              <p>How does the <code>TextUi</code> object carry out the requests it has received from player? It would need to interact with other objects of the system. Because the <code>Logic</code> class is the one that controls the game logic, the <code>TextUi</code>                needs to collaborate with <code>Logic</code> to fulfill the <code>newgame</code> request. Let us extend the model to capture that interaction.</p>
-              <tip-box>
-                <img src="/se-book/modeling/modelingASolution/basic/images/playerTextLogic.png" height="280">
-                <p></p>
-                <p>W = Width of the minefield; H = Height of the minefield</p>
-              </tip-box>
-              <p>The above diagram assumes that <code>W</code> and <code>H</code> are the only information <code>TextUi</code> requires to display the minefield to the <code>Player</code>. Note that there could be other ways of doing this.<br> The <code>Logic</code>                methods we conceptualized in our modelling so far are:</p>
-              <tip-box>
-                <img src="/se-book/modeling/modelingASolution/basic/images/textLogicMinefieldCell.png" height="115"></tip-box>
-              <p>Now, let us look at what other objects and interactions are needed to support the <code>newGame()</code> operation. It is likely that a new <code>Minefield</code> object is created when the <code>newGame()</code> method is called.</p>
-              <tip-box>
-                <img src="/se-book/modeling/modelingASolution/basic/images/logicMinefield.png" height="150"></tip-box>
-              <p>Note that the behavior of the <code>Minefield</code> constructor has been abstracted away. It can be designed at a later stage.</p>
-              <p>Given below are the interactions between the player and the Text UI for the whole game.</p>
-              <tip-box>
-                <img src="/se-book/modeling/modelingASolution/basic/images/playerTextLoop.png" height="300">
-                <p></p>
-                <p></p>
-              </tip-box>
-              <p></p>
-              <tip-box>
-                <p>💡 Note that
-                  <tooltip content="using sequence diagramsn">a similar technique</tooltip> can be used when discovering/defining the architecture-level APIs.</p>
-                <div v-closeable="" alt="Tic-Tac-Toe Video">
-                  <p><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Defining the architecture-level APIs for a small Tic-Tac-Toe game:</p>
-                  <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Un80XoRT1ME" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                </div>
-              </tip-box>
+              <p>
+                <panel src="/se-book/modeling/modelingBehaviors/sequenceDiagramsBasic/unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Design → Modeling → Modeling Behaviors → Sequence Diagrams → Basic%%" popup-url="/se-book/modeling/modelingBehaviors/sequenceDiagramsBasic"></panel>
+                <panel src="/se-book/modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Design → Modeling → Modeling Structures → Class Diagrams → Basic%%" popup-url="/se-book/modeling/modelingStructures/classDiagramsBasic"></panel>
+              </p>
             </div>
-            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Design → Modeling → Modeling a Solution →
+                  </span></strong></span></p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="basic"><span>Basic</span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p>As mentioned in [<trigger trigger="click" for="modal:basicModelling-modelingIntro">Design → Modeling → Modeling a Solutions → Introduction</trigger>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.</p>
+                  <modal large title="Textbook <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span>" id="modal:basicModelling-modelingIntro">
+                      <div>
+                      <div></div>
+                      <p></p>
+                      <p><span class="dimmed"><strong><span>Design → Modeling → Modeling a Solution →
+                            </span></strong></span></p>
+                      <div id="title-and-body">
+                        <div>
+                          <h4 id="introduction"><span>Introduction</span></h4>
+                        </div>
+                        <div id="main">
+                          <div>
+                            <p><strong>You can use models to analyze and design a software before you start coding.</strong></p>
+                            <p>Suppose You are planning to implement a simple minesweeper game that has a text based UI and a GUI. Given below is a possible OOP design for the game.</p>
+                            <img src="/se-book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50">
+                            <p></p>
+                            <p>Before jumping into coding, you may want to find out things such as,</p>
+                            <ul>
+                              <li>Is this class structure is able to produce the behavior we want?</li>
+                              <li>What API should each class have?</li>
+                              <li>Do we need more classes?</li>
+                            </ul>
+                            <p>To answer those questions, you can analyze the how the objects of these classes will interact with each other to produce the behavior you want.</p>
+                          </div>
+                          <div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </modal>
+                  <img src="/se-book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50">
+                  <p></p>
+                  <p>Let us start by modelling a sample interaction between the person playing the game and the <code>TextUi</code> object.</p>
+                  <tip-box>
+                    <img src="/se-book/modeling/modelingASolution/basic/images/playerText.png" height="300">
+                    <p></p>
+                    <p><code>newgame</code> and <code>clear x y</code> represent commands typed by the <code>Player</code> on the <code>TextUi</code>.</p>
+                  </tip-box>
+                  <p>How does the <code>TextUi</code> object carry out the requests it has received from player? It would need to interact with other objects of the system. Because the <code>Logic</code> class is the one that controls the game logic, the <code>TextUi</code> needs to collaborate with <code>Logic</code> to fulfill the <code>newgame</code> request. Let us extend the model to capture that interaction.</p>
+                  <tip-box>
+                    <img src="/se-book/modeling/modelingASolution/basic/images/playerTextLogic.png" height="280">
+                    <p></p>
+                    <p><code>W</code> = Width of the minefield; <code>H</code> = Height of the minefield</p>
+                  </tip-box>
+                  <p>The above diagram assumes that <code>W</code> and <code>H</code> are the only information <code>TextUi</code> requires to display the minefield to the <code>Player</code>. Note that there could be other ways of doing this.<br>
+                    The <code>Logic</code> methods we conceptualized in our modelling so far are:</p>
+                  <tip-box>
+                    <img src="/se-book/modeling/modelingASolution/basic/images/textLogicMinefieldCell.png" height="115"></tip-box>
+                  <p>Now, let us look at what other objects and interactions are needed to support the <code>newGame()</code> operation. It is likely that a new <code>Minefield</code> object is created when the <code>newGame()</code> method is called.</p>
+                  <tip-box>
+                    <img src="/se-book/modeling/modelingASolution/basic/images/logicMinefield.png" height="150"></tip-box>
+                  <p>Note that the behavior of the <code>Minefield</code> constructor has been abstracted away. It can be designed at a later stage.</p>
+                  <p>Given below are the interactions between the player and the Text UI for the whole game.</p>
+                  <tip-box>
+                    <img src="/se-book/modeling/modelingASolution/basic/images/playerTextLoop.png" height="300">
+                    <p></p>
+                    <p></p>
+                  </tip-box>
+                  <p></p>
+                  <tip-box>
+                    <p>💡 Note that <tooltip content="using sequence diagramsn">a similar technique</tooltip> can be used when discovering/defining the architecture-level APIs.</p>
+                    <div v-closeable alt="Tic-Tac-Toe Video" class="non-printable">
+                      <p><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Defining the architecture-level APIs for a small Tic-Tac-Toe game:</p>
+                      <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Un80XoRT1ME" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                    </div>
+                  </tip-box>
+                </div>
+                <div></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -135,16 +140,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../../markbind/js/vue.min.js"></script>
+<script src="../../../markbind/js/vue-strap.min.js"></script>
+<script src="../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\..\markbind\js\setup.js"></script>
+<script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../../markbind/layouts/default/scripts.js"></script>
 </html>

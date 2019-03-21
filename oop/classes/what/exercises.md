@@ -1,3 +1,2 @@
-<panel header="{{ icon_exercise }} Exercises" expandable>
-  <include src="q-essay-identifyClassesAndObjects.md" />
-</panel>
+<include src="q-essay-identifyClassesAndObjects.md" />
+<include src="q-essay-classesForCityConnect.md" />

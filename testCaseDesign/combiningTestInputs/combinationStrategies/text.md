@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Test Input Combination Strategies
-
-</div>
+<span id="title">Test Input Combination Strategies</span>
 
 <span id="prereqs"></span>
 
@@ -18,7 +14,7 @@ Given below are some basic strategies for generating a set of test cases by comb
 
 SUT: `foo(p1 char, p2 int, p3 boolean)`
 
-Selected values for each input:
+Values to test:
 
 | Input   | Values      |
 | :-----: | :---------: |
@@ -28,7 +24,7 @@ Selected values for each input:
 
 </tip-box>
 
-**all combinations**: generate test cases for each unique combination of test inputs
+**The _all combinations_ strategy generates test cases for each unique combination of test inputs.**
 
 <tip-box>
 
@@ -44,7 +40,7 @@ Selected values for each input:
 
 </tip-box>
 
-**at least once**: include each test input at least once.
+**The _at least once_ strategy includes each test input at least once.**
 
 <tip-box>
 
@@ -60,7 +56,7 @@ VV/IV = Any Valid Value / Any Invalid Value
 
 </tip-box>
 
-**all pairs**: This strategy creates test cases so that for any given pair of inputs, all combinations between them are tested. It is based on the observations that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the "all combinations" strategy, but higher than the "at least once" approach.
+**The _all pairs_ strategy creates test cases so that for any given pair of inputs, all combinations between them are tested.** It is based on the observations that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the _all combinations_ strategy, but higher than the _at least once_ approach.
 
 <tip-box>
 
@@ -123,9 +119,9 @@ A variation of this strategy is to test all pairs of inputs but only for inputs 
 
 </tip-box>
 
-**d) random:** This strategy generates test cases using one of the other strategies and then pick a subset randomly (presumably because the original set of test cases is too big).
+**The _random_ strategy generates test cases using one of the other strategies and then pick a subset randomly** (presumably because the original set of test cases is too big).
 
-**e) other**: There are other strategies that can be used.
+**There are other strategies that can be used too.**
 
 </div>
 

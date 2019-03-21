@@ -1,7 +1,4 @@
-<div id="title">
-
-## Inheritance
-</div>
+<span id="title">Inheritance</span>
 
 <div id="body">
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Component Diagrams
-
-</div>
+<span id="title">Component Diagrams</span>
 
 <span id="prereqs"></span>
 

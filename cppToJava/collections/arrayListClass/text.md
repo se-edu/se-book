@@ -1,8 +1,4 @@
-<div id="title">
-
-#### The `ArrayList` Class
-
-</div>
+<span id="title">The `ArrayList` Class</span>
 
 <span id="prereqs"></span>
 
@@ -78,4 +74,5 @@ After clearing: []
 
 <div id="extras">
   <include src="resourcesPanel.md" boilerplate />
+  <include src="exercisesPanel.md" boilerplate />
 </div>

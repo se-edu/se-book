@@ -1,28 +1,24 @@
 <div></div>
 <p></p>
 <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design → Equivalence Partitions →
-</span></strong>
-  </span>
-</p>
+      </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="basic">Basic</h4>
+    <h4 id="basic"><span>Basic</span></h4>
   </div>
   <div id="main">
     <div>
       <p><strong>Equivalence partitions (EPs) are usually derived from the specifications of the SUT.</strong></p>
       <tip-box>
-        <p><span class="fas fa-cube"></span> These could be EPs for the
-          <trigger for="pop:epBasic-isValidMonth">isValidMonth</trigger> example:</p>
+        <p><span class="fas fa-cube"></span> These could be EPs for the <trigger for="pop:epBasic-isValidMonth">isValidMonth</trigger> example:</p>
         <ul>
-          <li>[MIN_INT ... 0] : <strong>below</strong> the range that produces <code>true</code></li>
+          <li>[MIN_INT ... 0] : <strong>below</strong> the range that produces <code>true</code> (produces <code>false</code>)</li>
           <li>[1 … 12] : the range that produces <code>true</code></li>
-          <li>[13 … MAX_INT] : <strong>above</strong> the range that produces <code>true</code></li>
+          <li>[13 … MAX_INT] : <strong>above</strong> the range that produces <code>true</code> (produces <code>false</code>)</li>
         </ul>
       </tip-box>
       <popover id="pop:epBasic-isValidMonth" title="`isValidMonth`" placement="top">
-      
-        <div slot="content">
+          <div slot="content">
           <div>
             <p><code>isValidMonth(m)</code> : returns <code>true</code> if <code>m</code> (and <code>int</code>) is in the range [1..12]</p>
           </div>
@@ -55,11 +51,9 @@
       </tip-box>
       <p>Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases we have to consider each value as a partition by itself.</p>
       <tip-box>
-        <p><span class="fas fa-cube"></span> Consider the method <code>showStatusMessage(GameStatus s): String</code> that returns a unique <code>String</code> for each of the possible value of s (<code>GameStatus</code> is an <code>enum</code>). In this
-          case, each possible value for <code>s</code> will have to be considered as a partition.</p>
+        <p><span class="fas fa-cube"></span> Consider the method <code>showStatusMessage(GameStatus s): String</code> that returns a unique <code>String</code> for each of the possible value of s (<code>GameStatus</code> is an <code>enum</code>). In this case, each possible value for <code>s</code> will have to be considered as a partition.</p>
       </tip-box>
-      <p>Note that the EP technique is merely a heuristic and not an exact science, especially when applied manually (as opposed to using an automated program analysis tool to derive EPs). The partitions derived depend on how one ‘speculates’ the SUT to
-        behave internally. Applying EP under a glass-box or gray-box approach can yield more precise partitions.</p>
+      <p>Note that the EP technique is merely a heuristic and not an exact science, especially when applied manually (as opposed to using an automated program analysis tool to derive EPs). The partitions derived depend on how one ‘speculates’ the SUT to behave internally. Applying EP under a glass-box or gray-box approach can yield more precise partitions.</p>
       <tip-box>
         <p><span class="fas fa-cube"></span> Consider the method EPs given above for the <code>isValidMonth</code>. A different tester might use these EPs instead:</p>
         <ul>
@@ -76,7 +70,8 @@
           </tr>
           <tr>
             <td>
-              <p><code>isValidFlag(String s): boolean</code><br> Returns <code>true</code> if s is one of [<code>&quot;F&quot;</code>, <code>&quot;T&quot;</code>, <code>&quot;D&quot;</code>]. The comparison is case-sensitive.</p>
+              <p><code>isValidFlag(String s): boolean</code><br>
+                Returns <code>true</code> if s is one of [<code>&quot;F&quot;</code>, <code>&quot;T&quot;</code>, <code>&quot;D&quot;</code>]. The comparison is case-sensitive.</p>
             </td>
             <td>
               <p>[<code>&quot;F&quot;</code>] [<code>&quot;T&quot;</code>] [<code>&quot;D&quot;</code>] [<code>&quot;f&quot;</code>, <code>&quot;t&quot;</code>, <code>&quot;d&quot;</code>] [any other string][null]</p>
@@ -84,7 +79,9 @@
           </tr>
           <tr>
             <td>
-              <p><code>squareRoot(String s): int</code><br> Pre-conditions: s represents a positive integer<br> Returns the square root of <code>s</code> if the square root is an integer; returns <code>0</code> otherwise.</p>
+              <p><code>squareRoot(String s): int</code><br>
+                Pre-conditions: s represents a positive integer<br>
+                Returns the square root of <code>s</code> if the square root is an integer; returns <code>0</code> otherwise.</p>
             </td>
             <td>
               <p>[<code>s</code> is not a valid number] [<code>s</code> is a negative integer] [<code>s</code> has an integer square root] [<code>s</code> does not have an integer square root]</p>
@@ -95,7 +92,7 @@
     </div>
     <div>
       <div>
-        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
           <div>
             <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> EPs for `isValidName` method">
               <question>

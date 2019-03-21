@@ -1,7 +1,4 @@
-<div id="title">
-
-## Supplementary Requirements
-</div>
+<span id="title">Supplementary Requirements</span>
 
 <div id="body">
 

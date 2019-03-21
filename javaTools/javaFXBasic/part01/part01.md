@@ -54,8 +54,8 @@ If this is the first time using IntelliJ, you need to tell IntelliJ where to fin
 
 The JavaDocs will come in handy when writing your own JavaFX applications:
 
-* [Java 9 API](https://docs.oracle.com/javase/9/docs/api)
-* [JavaFX 9 API](https://docs.oracle.com/javase/9/docs/api/overview-summary.html)
+* [Java 9 API]({{ java_api }})
+* [JavaFX 9 API]({{ java_api }}/overview-summary.html)
 * [ControlsFX API](http://controlsfx.bitbucket.org/)
 
 Additionally, [Oracle also has a tutorial on JavaFX](http://docs.oracle.com/javase/8/javafx/get-started-tutorial/get_start_apps.htm) if you are interested.

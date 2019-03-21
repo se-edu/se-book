@@ -1,0 +1,127 @@
+<panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 6 - **Make the codoe more OOP**">
+  <div id="body">
+    <p>
+      <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel1._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L1" minimized fragment="main"></panel>
+      <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel2._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L2" minimized fragment="main"></panel>
+      <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel3._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L3" minimized fragment="main"></panel>
+      <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel4._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L4" minimized fragment="main"></panel>
+      <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel5._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L5" minimized fragment="main"></panel>
+    </p>
+    <p><span class="dimmed">This exercise continues from the <code>TaskManager Level 1-5</code> exercises quoted above.</span></p>
+    <div id="main">
+      <p><strong>Refactor the TaskManager to have classes such as the below</strong> so that your code is more Object-Oriented:</p>
+      <ol>
+        <li>
+          <p>A <code>Parser</code> class containing methods that deals with parsing the user command to extract meaningful details from it. Some example methods:</p>
+          <ul>
+            <li><code>public static getCommandWord(String fullCommand)</code>: Returns a the <em>command word</em> <span class="dimmed">i.e., the first word</span> of the given <code>fullCommand</code><br>
+              e.g., <code>Parser.getCommandWord(&quot;todo read book&quot;)</code> <span class="fas fa-arrow-right"></span> <code>&quot;todo&quot;</code></li>
+            <li><code>public static createTodo(String fullCommand)</code>: Returns a <code>Todo</code> object to match the <code>fullCommand</code>. Assumption: the <code>fullCommand</code> is for creating a Todo object.<br>
+              e.g., <code>Parser.createTodo(&quot;todo read book&quot;)</code> <span class="fas fa-arrow-right"></span> a <code>Todo</code> object containing the description <code>&quot;read book&quot;</code></li>
+          </ul>
+        </li>
+        <li>
+          <p>A <code>Storage</code> class that will help to load Tasks from the hard disk and save tasks to the hard disk. Some example usage:</p>
+          <pre><code class="hljs java">Storage storage = <span class="hljs-keyword">new</span> Storage(<span class="hljs-string">"data/tasks.txt"</span>);
+List&lt;Task&gt; tasks = storage.load();
+...
+storage.save(tasks);
+</code></pre>
+        </li>
+        <li>
+          <p>A <code>Ui</code> class that will be responsible for interacting with the user. Ideally, only this class should interact with the user. Some example usage:</p>
+          <pre><code class="hljs java">ui = <span class="hljs-keyword">new</span> Ui();
+...
+ui.showWelcomeMessage();
+...
+String fullCommand = ui.readUserCommand();
+</code></pre>
+          <p>Note: The <code>Scanner</code> object should be inside the <code>Ui</code> class.</p>
+        </li>
+        <li>
+          <p>A <code>TaskList</code> class that is responsible for keeping the in-memory task list. Most likely this class will use an <code>ArrayList</code> inside it. Some example usage:</p>
+          <pre><code class="hljs java"><span class="hljs-keyword">private</span> TaskList tasks = <span class="hljs-keyword">new</span> TaskList(storage.load());
+...
+t = Parser.createTodo(fullCommand);
+tasks.addTask(t);
+...
+String taskListDescription = tasks.getDescription();
+ui.showToUser(taskListDescription);
+</code></pre>
+        </li>
+        <li>
+          <p>Tweak the main class (you can name it <code>TaskManager</code>) class so that the <code>main</code> method can be simplified as follows:</p>
+          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+    <span class="hljs-keyword">new</span> TaskManager(<span class="hljs-string">"data/tasks.txt"</span>).run();
+}
+</code></pre>
+          <p>Note: As a result of the above, you will have to convert most of the static methods in the <code>TaskManager</code> class to non-static methods, which is more OO.</p>
+        </li>
+      </ol>
+      <panel type="seamless" header="Partial solution">
+        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TaskManager</span> </span>{
+
+    <span class="hljs-keyword">private</span> Storage storage;
+    <span class="hljs-keyword">private</span> TaskList tasks;
+    <span class="hljs-keyword">private</span> Ui ui;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">TaskManager</span><span class="hljs-params">(String filePath)</span> </span>{
+        ui = <span class="hljs-keyword">new</span> Ui();
+        storage = <span class="hljs-keyword">new</span> Storage(filePath);
+        <span class="hljs-keyword">try</span> {
+            tasks = <span class="hljs-keyword">new</span> TaskList(storage.load());
+        } <span class="hljs-keyword">catch</span> (TaskManagerException e) {
+            ui.showToUser(<span class="hljs-string">"Problem reading file. Starting with an empty task list"</span>);
+            tasks = <span class="hljs-keyword">new</span> TaskList();
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+        ui.printWelcome();
+
+        <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">while</span> (!isExit) {
+            <span class="hljs-keyword">try</span> {
+                String fullCommand = ui.readUserCommand();
+                String commandWord = Parser.getCommandWord(fullCommand);
+                <span class="hljs-keyword">switch</span> (commandWord) {
+                    <span class="hljs-keyword">case</span> <span class="hljs-string">"exit"</span>:
+                    <span class="hljs-keyword">case</span> <span class="hljs-string">""</span>:
+                    <span class="hljs-comment">// ...</span>
+                }
+            } <span class="hljs-keyword">catch</span> (TaskManagerException e) {
+                ui.printError(e.getMessage());
+            }
+        }
+        exit();
+    }
+
+    <span class="hljs-comment">// ...</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">new</span> TaskManager(<span class="hljs-string">"data/tasks.txt"</span>).run();
+    }
+}
+</code></pre>
+        <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ui</span> </span>{
+
+    <span class="hljs-keyword">private</span> Scanner in;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Ui</span><span class="hljs-params">()</span> </span>{
+        in = <span class="hljs-keyword">new</span> Scanner(System.in);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">readUserCommand</span><span class="hljs-params">()</span> </span>{
+        System.out.print(<span class="hljs-string">"Your task? "</span>);
+        <span class="hljs-keyword">return</span> in.nextLine().trim();
+    }
+
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+      </panel>
+    </div>
+  </div>
+</panel>

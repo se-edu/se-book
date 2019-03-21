@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Using Java Objects
-
-</div>
+<span id="title">Using Java Objects</span>
 
 <span id="prereqs"></span>
 
@@ -12,7 +8,7 @@
 
 Java is an "object-oriented" language, which means that it uses objects to represent data and provide methods related to them. Object types are called _classes_ e.g., you can use `String` objects in Java and those objects belong to the `String` class.
 
-##### packages
+##### importing
 
 <div class="indented">
 

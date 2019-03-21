@@ -6,148 +6,154 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Object Oriented Programming: Introduction</title>
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content" id="all">
-      <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming →
-</span></strong>
-        </span>
-      </p>
-      <div id="title">
-        <div>
-          <h2 id="introduction">Introduction</h2>
-        </div>
-      </div>
-      <div id="main">
-        <div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="what">What</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can describe OOP at a higher level</span>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
+      <div>
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content" id="all">
+          <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming →
+                </span></strong></span></p>
+          <div id="title">
+            <h1 id="introduction"><span>Introduction</span><a class="fa fa-anchor" href="#introduction"></a></h1>
+          </div>
+          <div id="main">
+            <div>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="what"><span>What</span></h4>
+                    </div>
                   </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p><strong>Object-Oriented Programming (OOP) is a <em>programming paradigm</em>.</strong> A programming paradigm guides programmers to analyze programming problems, and structure programming solutions, in a specific way.</p>
-                  <blockquote>
-                    <p>Programming languages have traditionally divided the world into two parts—data and operations on data. Data is static and immutable, except as the operations may change it. The procedures and functions that operate on data have no
-                      lasting state of their own; they’re useful only in their ability to affect data.</p>
-                    <p>This division is, of course, grounded in the way computers work, so it’s not one that you can easily ignore or push aside. Like the equally pervasive distinctions between matter and energy and between nouns and verbs, it forms the
-                      background against which we work. At some point, all programmers—even object-oriented programmers—must lay out the data structures that their programs will use and define the functions that will act on the data.</p>
-                    <p>With a procedural programming language like C, that’s about all there is to it. The language may offer various kinds of support for organizing data and functions, but it won’t divide the world any differently. Functions and data structures
-                      are the basic elements of design.</p>
-                    <p>Object-oriented programming doesn’t so much dispute this view of the world as restructure it at a higher level. It groups operations and data into modular units called objects and lets you combine objects into structured networks to
-                      form a complete program. In an object-oriented programming language, objects and object interactions are the basic elements of design.</p>
-                    <p><sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
-                  </blockquote>
-                  <p>Some other examples of programming paradigms are:</p>
-                  <div class="table-responsive">
-                    <table class="markbind-table table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th>Paradigm</th>
-                          <th>Programming Languages</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><a href="https://en.wikipedia.org/wiki/Procedural_programming"><em>Procedural Programming</em> paradigm</a></td>
-                          <td>C</td>
-                        </tr>
-                        <tr>
-                          <td><a href="https://en.wikipedia.org/wiki/Functional_programming"><em>Functional Programming</em> paradigm</a></td>
-                          <td>F#, Haskel, Scala</td>
-                        </tr>
-                        <tr>
-                          <td><a href="https://en.wikipedia.org/wiki/Logic_programming"><em>Logic Programming</em> paradigm</a></td>
-                          <td>Prolog</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <p><strong>Some programming languages support multiple paradigms.</strong></p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> Java is primarily an OOP language but it supports limited forms of functional programming and it can be used to (although not recommended) write procedural code. <span class="dimmed"> e.g. <a href="https://github.com/se-edu/addressbook-level1">se-edu/addressbook-level1</a></span></p>
-                    <p><span class="fas fa-cube"></span> JavaScript and Python support functional, procedural, and OOP programming.</p>
-                  </tip-box>
-                </div>
-                <div>
-                  <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can describe OOP at a higher level</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong>Object-Oriented Programming (OOP) is a <em>programming paradigm</em>.</strong> A programming paradigm guides programmers to analyze programming problems, and structure programming solutions, in a specific way.</p>
+                      <blockquote>
+                        <p>Programming languages have traditionally divided the world into two parts—data and operations on data. Data is static and immutable, except as the operations may change it. The procedures and functions that operate on data have no lasting state of their own; they’re useful only in their ability to affect data.</p>
+                        <p>This division is, of course, grounded in the way computers work, so it’s not one that you can easily ignore or push aside. Like the equally pervasive distinctions between matter and energy and between nouns and verbs, it forms the background against which we work. At some point, all programmers—even object-oriented programmers—must lay out the data structures that their programs will use and define the functions that will act on the data.</p>
+                        <p>With a procedural programming language like C, that’s about all there is to it. The language may offer various kinds of support for organizing data and functions, but it won’t divide the world any differently. Functions and data structures are the basic elements of design.</p>
+                        <p>Object-oriented programming doesn’t so much dispute this view of the world as restructure it at a higher level. It groups operations and data into modular units called objects and lets you combine objects into structured networks to form a complete program. In an object-oriented programming language, objects and object interactions are the basic elements of design.</p>
+                        <p><sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
+                      </blockquote>
+                      <p>Some other examples of programming paradigms are:</p>
+                      <div class="table-responsive">
+                        <table class="markbind-table table table-bordered table-striped">
+                          <thead>
+                            <tr>
+                              <th>Paradigm</th>
+                              <th>Programming Languages</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><a href="https://en.wikipedia.org/wiki/Procedural_programming"><em>Procedural Programming</em> paradigm</a></td>
+                              <td>C</td>
+                            </tr>
+                            <tr>
+                              <td><a href="https://en.wikipedia.org/wiki/Functional_programming"><em>Functional Programming</em> paradigm</a></td>
+                              <td>F#, Haskel, Scala</td>
+                            </tr>
+                            <tr>
+                              <td><a href="https://en.wikipedia.org/wiki/Logic_programming"><em>Logic Programming</em> paradigm</a></td>
+                              <td>Prolog</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <p><strong>Some programming languages support multiple paradigms.</strong></p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Java is primarily an OOP language but it supports limited forms of functional programming and it can be used to (although not recommended) write procedural code. <span class="dimmed"> e.g. <a href="https://github.com/se-edu/addressbook-level1">se-edu/addressbook-level1</a></span></p>
+                        <p><span class="fas fa-cube"></span> JavaScript and Python support functional, procedural, and OOP programming.</p>
+                      </tip-box>
+                    </div>
+                    <div>
                       <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> statements about OOP">
-                          <question>
-                            <p>A) Choose the correct statements</p>
-                            <ul class="task-list">
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. OO is a programming paradigm</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. OO guides us in how to structure the solution</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. OO is mainly an abstraction mechanism</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. OO is a programming language</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. OO is modeled after how the objects in real world work</li>
-                            </ul>
-                            <p>B) Choose the correct statements</p>
-                            <ul class="task-list">
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Java and C++ are OO languages</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. C language follows the <em>Functional Programming</em> paradigm</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Java can be used to write procedural code</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Prolog follows the Logic Programming paradigm</li>
-                            </ul>
-                            <div slot="answer">
-                              <p>A) (a)(b)(c)(e)</p>
-                              <p>Explanation: While many languages support the OO paradigm, OO is not a language itself.</p>
-                              <p>B) Choose the correct statement</p>
-                              <p>(a)<s>(b)</s>(c)(d)</p>
-                              <p>Explanation: C follows the procedural paradigm. Yes, we can write procedural code using OO languages e.g., AddressBook-level1.</p>
-                            </div>
-                          </question>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> statements about OOP">
+                              <question>
+                                <p>A) Choose the correct statements</p>
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. OO is a programming paradigm</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. OO guides us in how to structure the solution</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. OO is mainly an abstraction mechanism</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. OO is a programming language</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. OO is modeled after how the objects in real world work</li>
+                                </ul>
+                                <p>B) Choose the correct statements</p>
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Java and C++ are OO languages</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. C language follows the <em>Functional Programming</em> paradigm</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Java can be used to write procedural code</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Prolog follows the Logic Programming paradigm</li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>A) (a)(b)(c)(e)</p>
+                                  <p>Explanation: While many languages support the OO paradigm, OO is not a language itself.</p>
+                                  <p>B) Choose the correct statement</p>
+                                  <p>(a)<s>(b)</s>(c)(d)</p>
+                                  <p>Explanation: C follows the procedural paradigm. Yes, we can write procedural code using OO languages e.g., AddressBook-level1.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> procedural vs OOP">
+                              <question>
+                                <p>OO is a higher level mechanism than the procedural paradigm.</p>
+                                <ul radio-group="07027" class="radio-list">
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> True</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> False</label></li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>True.</p>
+                                  <p>Explanation: Procedural languages work at simple data structures (e.g., integers, arrays) and functions level. Because an object is an abstraction over data+related functions, OO works at a higher level.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
                         </panel>
                       </div>
-                      <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> procedural vs OOP">
-                          <question>
-                            <p>OO is a higher level mechanism than the procedural paradigm.</p>
-                            <ul radio-group="07027" class="radio-list">
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> True</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> False</label></li>
-                            </ul>
-                            <div slot="answer">
-                              <p>True.</p>
-                              <p>Explanation: Procedural languages work at simple data structures (e.g., integers, arrays) and functions level. Because an object is an abstraction over data+related functions, OO works at a higher level.</p>
-                            </div>
-                          </question>
-                        </panel>
-                      </div>
-                    </panel>
+                    </div>
                   </div>
-                </div>
+                </panel>
               </div>
-            </panel>
+            </div>
           </div>
         </div>
       </div>
@@ -157,16 +163,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/vue-strap.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\markbind\js\setup.js"></script>
+<script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

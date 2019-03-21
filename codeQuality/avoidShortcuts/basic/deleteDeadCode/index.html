@@ -6,53 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Coding Best Practices: [Practice] Delete Dead Code</title>
-    <link rel="stylesheet" href="..\..\..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: delete dead code </span>
-        </span>
-        </span>
-        </span>
-        <p></p>
-      </p>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
       <div>
-        <div></div>
-        <p></p>
-        <p><span class="dimmed"><strong><span>Implementation → Code Quality → Error-Prone Practices → Basic →
-</span></strong>
-          </span>
-        </p>
-        <div id="title-and-body">
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: delete dead code </span></span></span></span></p>
+          <p></p>
+          <p></p>
           <div>
-            <h4 id="delete-dead-code">Delete Dead Code</h4>
-          </div>
-          <div id="main">
-            <div>
-              <p>We all feel reluctant to delete code we have painstakingly written, even if we have no use for that code any more (&quot;I spent a lot of time writing that code; what if we need it again?&quot;). Consider all code as baggage you have to
-                carry; get rid of unused code the moment it becomes redundant. If you need that code again, simply recover it from the revision control tool you are using. Deleting code you wrote previously is a sign that you are improving.</p>
-            </div>
             <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Implementation → Code Quality → Error-Prone Practices → Basic →
+                  </span></strong></span></p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="delete-dead-code"><span>Delete Dead Code</span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p>We all feel reluctant to delete code we have painstakingly written, even if we have no use for that code any more (&quot;I spent a lot of time writing that code; what if we need it again?&quot;). Consider all code as baggage you have to carry; get rid of unused code the moment it becomes redundant. If you need that code again, simply recover it from the revision control tool you are using. Deleting code you wrote previously is a sign that you are improving.</p>
+                </div>
+                <div></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -62,16 +70,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../../../markbind/js/vue.min.js"></script>
+<script src="../../../../markbind/js/vue-strap.min.js"></script>
+<script src="../../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\..\..\markbind\js\setup.js"></script>
+<script src="../../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../../../markbind/layouts/default/scripts.js"></script>
 </html>

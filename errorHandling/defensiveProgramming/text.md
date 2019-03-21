@@ -1,7 +1,4 @@
-<div id="title">
-
-## Defensive Programming
-</div>
+<span id="title">Defensive Programming</span>
 
 <div id="body">
 

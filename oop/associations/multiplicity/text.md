@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Multiplicity
-
-</div>
+<span id="title">Multiplicity</span>
 
 <span id="prereqs"></span>
 
@@ -14,11 +10,11 @@
 
 <tip-box> 
 
-{{ icon_example }} The navigability of the association between `Course` objects and `Student` objects tells you how many `Course` objects can be associated with one `Student` object and vice versa. 
+{{ icon_example }} The multiplicity of the association between `Course` objects and `Student` objects tells you how many `Course` objects can be associated with one `Student` object and vice versa.
 
 </tip-box>
 
-##### <big>Implementing multiplicity</big>
+##### Implementing multiplicity
 
 **A normal instance-level variable gives us a `0..1` multiplicity** (also called _optional associations_) because a variable can hold a reference to a single object or `null`.
 
@@ -66,17 +62,13 @@ class Logic:
 
 {{ icon_example }} In the code below, the `Foo` class has a variable to hold a `Bar` object and vice versa %%i.e., each object can have an association with an object of the other type%%.
 
-<table> 
-<tr>
-  <td>
+<div class="alt-java">
 
-Java {{ icon_output }}
 ```java
 class Foo {
     Bar bar;
     //...
 }
-
 
 class Bar {
     Foo foo;
@@ -84,11 +76,9 @@ class Bar {
 }
 
 ```
-  </td>
-  <td valign="bottom">&nbsp;&nbsp;<br><br></td>
-  <td valign="bottom">
+</div>
+<div class="alt-python">
 
-Python {{ icon_output }}
 ```python
 class Foo:
   
@@ -102,9 +92,7 @@ class Bar:
     self.foo = foo;
     
 ```
-  </td>
-</tr>
-</table>
+</div>
 
 
 </tip-box>
@@ -112,31 +100,24 @@ class Bar:
 **To implement other multiplicities, choose a suitable data structure** such as Arrays, ArrayLists, HashMaps, Sets, etc.
 
 <tip-box>
-<table> 
-<tr>
-  <td>
+<div class="alt-java">
 
-Java {{ icon_output }}
 ```java
 class Minefield {
     Cell[][] cell;
     ...
 }
 ```
-  </td>
-  <td valign="bottom">&nbsp;&nbsp;<br><br></td>
-  <td valign="bottom">
+</div>
+<div class="alt-python">
 
-Python {{ icon_output }}
 ```python
 class Minefield:
   
   def __init__(self):
     self.cells = {1:[], 2:[], 3:[]}
 ```
-  </td>
-</tr>
-</table>
+</div>
 
 
 </tip-box>

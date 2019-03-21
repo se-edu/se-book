@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Prioritizing Requirements
-
-</div>
+<span id="title">Prioritizing Requirements</span>
 
 <span id="prereqs"></span>
 

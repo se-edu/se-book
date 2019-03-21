@@ -6,115 +6,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Quality Assurance: Code Reviews</title>
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content" id="all">
-      <p><span class="dimmed"><strong><span>Quality Assurance → Quality Assurance →
-</span></strong>
-        </span>
-      </p>
-      <div id="title">
-        <div>
-          <h2 id="code-reviews">Code Reviews</h2>
-        </div>
-      </div>
-      <div id="main">
-        <div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div>
-<h4 id="what">What</h4></div></span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain code reviews</span>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
+      <div>
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content" id="all">
+          <p><span class="dimmed"><strong><span>Quality Assurance → Quality Assurance →
+                </span></strong></span></p>
+          <div id="title">
+            <h1 id="code-reviews"><span>Code Reviews</span><a class="fa fa-anchor" href="#code-reviews"></a></h1>
+          </div>
+          <div id="main">
+            <div>
+              <div>
+                <panel type="seamless" expanded>
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h4 id="what"><span>What</span></h4>
+                    </div>
                   </span>
-                  </span>
-                  </span>
-                  <p></p>
-                </p>
-                <p></p>
-                <div>
-                  <p><strong>Code review is the systematic examination code with the intention of finding where the code can be improved.</strong></p>
-                  <p>Reviews can be done in various forms. Some examples below:</p>
-                  <ul>
-                    <li>
-                      <p><strong>In <trigger trigger="click" for="modal:codeReview-pairProgramming">pair programming</trigger></strong></p>
-                      <ul>
-                        <li>As pair programming involves two programmers working on the same code at the same time, there is an implicit review of the code by the other member of the pair.</li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <modal large="" title="Pair Programming" id="modal:codeReview-pairProgramming">
-                    <tip-box type="definition">
-                      <div>
-                        <p><strong>Pair Programming</strong>:</p>
-                        <blockquote>
-                          <p>Pair programming is an agile software development technique in which two programmers work together at one workstation. One, the driver, writes code while the other, the observer or navigator, reviews each line of code as it is
-                            typed in. The two programmers switch roles frequently. <sub>[<a href="https://en.wikipedia.org/wiki/Pair_programming">source: Wikipedia</a>]</sub></p>
-                        </blockquote>
-                      </div>
-                    </tip-box>
-                    <p><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Pair_programming_1.jpg" width="400"><br>
-                      <sub>[<a href="https://en.wikipedia.org/wiki/Pair_programming">image credit: Wikipedia</a>]</sub></p>
-                    <p><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> A good introduction to pair programming:</p>
-                    <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/ET3Q6zNK3Io" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                  </modal>
-                  <ul>
-                    <li>
-                      <p><strong>Pull Request reviews</strong></p>
-                      <ul>
-                        <li>Project Management Platforms such as GitHub and BitBucket allows the new code to be proposed as Pull Requests and provides the ability for others to review the code in the PR.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <p><strong>Formal inspections</strong></p>
+                  <div class="indented">
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain code reviews</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong>Code review is the systematic examination code with the intention of finding where the code can be improved.</strong></p>
+                      <p>Reviews can be done in various forms. Some examples below:</p>
                       <ul>
                         <li>
-                          <p>Inspections involve a group of people systematically examining a project artifacts to discover defects. Members of the inspection team play various roles during the process, such as:</p>
+                          <p><strong>In <trigger trigger="click" for="modal:codeReview-pairProgramming">pair programming</trigger></strong></p>
                           <ul>
-                            <li>the author - the creator of the artifact</li>
-                            <li>the moderator - the planner and executor of the inspection meeting</li>
-                            <li>the secretary - the recorder of the findings of the inspection</li>
-                            <li>the inspector/reviewer - the one who inspects/reviews the artifact.</li>
+                            <li>As pair programming involves two programmers working on the same code at the same time, there is an implicit review of the code by the other member of the pair.</li>
                           </ul>
                         </li>
                       </ul>
-                    </li>
-                  </ul>
-                  <p>Advantages of code reviews over testing:</p>
-                  <ul>
-                    <li>It can detect functionality defects as well as other problems such as coding standard violations.</li>
-                    <li>Can verify non-code artifacts and incomplete code</li>
-                    <li>Do not require test drivers or stubs.</li>
-                  </ul>
-                  <p>Disadvantages:</p>
-                  <ul>
-                    <li>It is a manual process and therefore, error prone.</li>
-                  </ul>
-                </div>
-                <div></div>
+                      <modal large title="Pair Programming" id="modal:codeReview-pairProgramming">
+                        <tip-box type="definition">
+                          <div>
+                            <p><strong>Pair Programming</strong>:</p>
+                            <blockquote>
+                              <p>Pair programming is an agile software development technique in which two programmers work together at one workstation. One, the driver, writes code while the other, the observer or navigator, reviews each line of code as it is typed in. The two programmers switch roles frequently. <sub>[<a href="https://en.wikipedia.org/wiki/Pair_programming">source: Wikipedia</a>]</sub></p>
+                            </blockquote>
+                          </div>
+                        </tip-box>
+                        <p><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Pair_programming_1.jpg" width="400"><br>
+                          <sub>[<a href="https://en.wikipedia.org/wiki/Pair_programming">image credit: Wikipedia</a>]</sub></p>
+                        <p><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> A good introduction to pair programming:</p>
+                        <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/ET3Q6zNK3Io" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                      </modal>
+                      <ul>
+                        <li>
+                          <p><strong>Pull Request reviews</strong></p>
+                          <ul>
+                            <li>Project Management Platforms such as GitHub and BitBucket allows the new code to be proposed as Pull Requests and provides the ability for others to review the code in the PR.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p><strong>Formal inspections</strong></p>
+                          <ul>
+                            <li>
+                              <p>Inspections involve a group of people systematically examining a project artifacts to discover defects. Members of the inspection team play various roles during the process, such as:</p>
+                              <ul>
+                                <li>the author - the creator of the artifact</li>
+                                <li>the moderator - the planner and executor of the inspection meeting</li>
+                                <li>the secretary - the recorder of the findings of the inspection</li>
+                                <li>the inspector/reviewer - the one who inspects/reviews the artifact.</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <p>Advantages of code reviews over testing:</p>
+                      <ul>
+                        <li>It can detect functionality defects as well as other problems such as coding standard violations.</li>
+                        <li>Can verify non-code artifacts and incomplete code</li>
+                        <li>Do not require test drivers or stubs.</li>
+                      </ul>
+                      <p>Disadvantages:</p>
+                      <ul>
+                        <li>It is a manual process and therefore, error prone.</li>
+                      </ul>
+                    </div>
+                    <div></div>
+                  </div>
+                </panel>
               </div>
-            </panel>
+            </div>
           </div>
         </div>
       </div>
@@ -124,16 +133,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/vue-strap.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\markbind\js\setup.js"></script>
+<script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Access Modifiers
-
-</div>
+<span id="title">Access Modifiers</span>
 
 <span id="prereqs"></span>
 

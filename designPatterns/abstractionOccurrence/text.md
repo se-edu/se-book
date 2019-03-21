@@ -1,7 +1,4 @@
-<div id="title">
-
-## Abstraction Occurrence Pattern
-</div>
+<span id="title">Abstraction Occurrence Pattern</span>
 
 <div id="body">
 

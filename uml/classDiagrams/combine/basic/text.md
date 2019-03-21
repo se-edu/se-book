@@ -1,7 +1,4 @@
-<div id="title">
-
-### Basic
-</div>
+<span id="title">Basic</span>
 
 <span id="prereqs"></span>
 

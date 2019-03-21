@@ -1,8 +1,4 @@
-<div id="title">
-
-#### DRY Principle
-
-</div>
+<span id="title">DRY Principle</span>
 
 <span id="prereqs"></span>
 

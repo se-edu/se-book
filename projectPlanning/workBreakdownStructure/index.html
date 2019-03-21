@@ -6,85 +6,169 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Project Planning: Work Breakdown Structure</title>
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain work breakdown structures</span>
-        </span>
-        </span>
-        </span>
-        <p></p>
-      </p>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
       <div>
-        <div></div>
-        <p></p>
-        <p><span class="dimmed"><strong><span>Project Management → Project Planning →
-</span></strong>
-          </span>
-        </p>
-        <div id="title-and-body">
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain work breakdown structures</span></span></span></span></p>
+          <p></p>
+          <p></p>
           <div>
-            <h4 id="work-breakdown-structure">Work Breakdown Structure</h4>
-          </div>
-          <div id="main">
-            <div>
-              <p><strong>A <em>Work Breakdown Structure (WBS)</em> depicts information about tasks and their details in terms of subtasks.</strong> When managing projects it is useful to divide the total work into smaller, well-defined units. Relatively
-                complex tasks can be further split into subtasks. In complex projects a WBS can also include prerequisite tasks and effort estimates for each task.</p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> The high level tasks for a single iteration of a small project could look like the following:</p>
-                <div class="table-responsive">
-                  <table class="markbind-table table table-bordered table-striped">
-                    <thead>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Project Management → Project Planning →
+                  </span></strong></span></p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="work-breakdown-structure"><span>Work Breakdown Structure</span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p><strong>A <em>Work Breakdown Structure (WBS)</em> depicts information about tasks and their details in terms of subtasks.</strong> When managing projects it is useful to divide the total work into smaller, well-defined units. Relatively complex tasks can be further split into subtasks. In complex projects a WBS can also include prerequisite tasks and effort estimates for each task.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> The high level tasks for a single iteration of a small project could look like the following:</p>
+                    <div class="table-responsive">
+                      <table class="markbind-table table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Task ID</th>
+                            <th>Task</th>
+                            <th>Estimated Effort</th>
+                            <th>Prerequisite Task</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>A</td>
+                            <td>Analysis</td>
+                            <td>1 man day</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <td>B</td>
+                            <td>Design</td>
+                            <td>2 man day</td>
+                            <td>A</td>
+                          </tr>
+                          <tr>
+                            <td>C</td>
+                            <td>Implementation</td>
+                            <td>4.5 man day</td>
+                            <td>B</td>
+                          </tr>
+                          <tr>
+                            <td>D</td>
+                            <td>Testing</td>
+                            <td>1 man day</td>
+                            <td>C</td>
+                          </tr>
+                          <tr>
+                            <td>E</td>
+                            <td>Planning for next version</td>
+                            <td>1 man day</td>
+                            <td>D</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </tip-box>
+                  <p><strong>The effort is traditionally measured in <em>man hour/day/month</em></strong> i.e. work that can be done by one person in one hour/day/month. The <em>Task ID</em> is a label for easy reference to a task. Simple labeling is suitable for a small project, while a more informative labeling system can be adopted for bigger projects.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> An example WBS for a project for developing a game.</p>
+                    <table class="table">
                       <tr>
                         <th>Task ID</th>
                         <th>Task</th>
                         <th>Estimated Effort</th>
                         <th>Prerequisite Task</th>
                       </tr>
-                    </thead>
-                    <tbody>
                       <tr>
                         <td>A</td>
-                        <td>Analysis</td>
+                        <td>High level design</td>
                         <td>1 man day</td>
                         <td>-</td>
                       </tr>
                       <tr>
                         <td>B</td>
-                        <td>Design</td>
-                        <td>2 man day</td>
+                        <td>
+                          Detail design
+                          <ol>
+                            <li>User Interface</li>
+                            <li>Game Logic</li>
+                            <li>Persistency Support</li>
+                          </ol>
+                        </td>
+                        <td>
+                          2 man day
+                          <ul>
+                            <li>0.5 man day</li>
+                            <li>1 man day</li>
+                            <li>0.5 man day</li>
+                          </ul>
+                        </td>
                         <td>A</td>
                       </tr>
                       <tr>
                         <td>C</td>
-                        <td>Implementation</td>
-                        <td>4.5 man day</td>
-                        <td>B</td>
+                        <td>
+                          Implementation
+                          <ol>
+                            <li>User Interface</li>
+                            <li>Game Logic</li>
+                            <li>Persistency Support</li>
+                          </ol>
+                        </td>
+                        <td>
+                          4.5 man day
+                          <ul>
+                            <li>1.5 man day</li>
+                            <li>2 man day</li>
+                            <li>1 man day</li>
+                          </ul>
+                        </td>
+                        <td>
+                          <ul>
+                            <li>B.1</li>
+                            <li>B.2</li>
+                            <li>B.3</li>
+                          </ul>
+                        </td>
                       </tr>
                       <tr>
                         <td>D</td>
-                        <td>Testing</td>
+                        <td>System Testing</td>
                         <td>1 man day</td>
                         <td>C</td>
                       </tr>
@@ -94,139 +178,59 @@
                         <td>1 man day</td>
                         <td>D</td>
                       </tr>
-                    </tbody>
-                  </table>
+                    </table>
+                  </tip-box>
+                  <p><strong>All tasks should be well-defined.</strong> In particular, it should be clear as to when the task will be considered <em>done</em>.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> Some examples of ill-defined tasks and their better-defined counterparts:</p>
+                    <div class="table-responsive">
+                      <table class="markbind-table table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>
+                              <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong></span></font>
+                            </th>
+                            <th><span class="text-success"><span class="fas fa-thumbs-up"></span> Better </span></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>more coding</td>
+                            <td>implement component X</td>
+                          </tr>
+                          <tr>
+                            <td>do research on UI testing</td>
+                            <td>find a suitable tool for testing the UI</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </tip-box>
                 </div>
-              </tip-box>
-              <p><strong>The effort is traditionally measured in <em>man hour/day/month</em></strong> i.e. work that can be done by one person in one hour/day/month. The <em>Task ID</em> is a label for easy reference to a task. Simple labeling is suitable
-                for a small project, while a more informative labeling system can be adopted for bigger projects.</p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> An example WBS for a project for developing a game.</p>
-                <table class="table">
-                  <tr>
-                    <th>Task ID</th>
-                    <th>Task</th>
-                    <th>Estimated Effort</th>
-                    <th>Prerequisite Task</th>
-                  </tr>
-                  <tr>
-                    <td>A</td>
-                    <td>High level design</td>
-                    <td>1 man day</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>B</td>
-                    <td>
-                      Detail design
-                      <ol>
-                        <li>User Interface</li>
-                        <li>Game Logic</li>
-                        <li>Persistency Support</li>
-                      </ol>
-                    </td>
-                    <td>
-                      2 man day
-                      <ul>
-                        <li>0.5 man day</li>
-                        <li>1 man day</li>
-                        <li>0.5 man day</li>
-                      </ul>
-                    </td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>C</td>
-                    <td>
-                      Implementation
-                      <ol>
-                        <li>User Interface</li>
-                        <li>Game Logic</li>
-                        <li>Persistency Support</li>
-                      </ol>
-                    </td>
-                    <td>
-                      4.5 man day
-                      <ul>
-                        <li>1.5 man day</li>
-                        <li>2 man day</li>
-                        <li>1 man day</li>
-                      </ul>
-                    </td>
-                    <td>
-                      <ul>
-                        <li>B.1</li>
-                        <li>B.2</li>
-                        <li>B.3</li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>D</td>
-                    <td>System Testing</td>
-                    <td>1 man day</td>
-                    <td>C</td>
-                  </tr>
-                  <tr>
-                    <td>E</td>
-                    <td>Planning for next version</td>
-                    <td>1 man day</td>
-                    <td>D</td>
-                  </tr>
-                </table>
-              </tip-box>
-              <p><strong>All tasks should be well-defined.</strong> In particular, it should be clear as to when the task will be considered <em>done</em>.</p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> Some examples of ill-defined tasks and their better-defined counterparts:</p>
-                <div class="table-responsive">
-                  <table class="markbind-table table table-bordered table-striped">
-                    <thead>
-                      <tr>
-                        <th>
-                          <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                            </span>
-                          </font>
-                        </th>
-                        <th><span class="text-success"><span class="fas fa-thumbs-up"></span> Better </span>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>more coding</td>
-                        <td>implement component X</td>
-                      </tr>
-                      <tr>
-                        <td>do research on UI testing</td>
-                        <td>find a suitable tool for testing the UI</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </tip-box>
-            </div>
-            <div>
-              <div>
-                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                <div>
                   <div>
-                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which one is not a well-defined task?">
-                      <question>
-                        <p>Which one these project tasks is not well-defined?</p>
-                        <ul radio-group="9211e" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> a. Implement the 'delete' feature.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> b. Fix bug #12315.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> c. Do some more testing.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> d. Choose a tool to draw UML diagrams.</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> e. Clarify submission requirements with the customer.</label></li>
-                        </ul>
-                        <div slot="answer">
-                          <p>(c)</p>
-                          <p>Explanation: ‘More testing’ is not well-defined. How much is ‘more’? ‘Test the delete functionality’ is a better-defined task.</p>
-                        </div>
-                      </question>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which one is not a well-defined task?">
+                          <question>
+                            <p>Which one these project tasks is not well-defined?</p>
+                            <ul radio-group="9211e" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> a. Implement the 'delete' feature.</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> b. Fix bug #12315.</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> c. Do some more testing.</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> d. Choose a tool to draw UML diagrams.</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> e. Clarify submission requirements with the customer.</label></li>
+                            </ul>
+                            <div slot="answer">
+                              <p>(c)</p>
+                              <p>Explanation: ‘More testing’ is not well-defined. How much is ‘more’? ‘Test the delete functionality’ is a better-defined task.</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
                     </panel>
                   </div>
-                </panel>
+                </div>
               </div>
             </div>
           </div>
@@ -238,16 +242,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/vue-strap.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\markbind\js\setup.js"></script>
+<script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Constants
-
-</div>
+<span id="title">Constants</span>
 
 <span id="prereqs"></span>
 
@@ -14,16 +10,17 @@ Java does not directly support constants. The convention is to use a `static` `f
 
 <box>
 
-{{ icon_example }} Here is an example of a constant named `MAX_BALANCE`.
+{{ icon_example }} Here is an example of a constant named `MAX_BALANCE` which can be accessed as `Account.MAX_BALANCE`.
 
 ```java
 public class Account{
 
-public static final double MAX_BALANCE = 1000000.0;
+  public static final double MAX_BALANCE = 1000000.0;
 
 }
-
 ```
+
+{{ icon_example }} [`Math.PI`]({{ java_api }}/java/lang/Math.html#PI) is an example constant that comes with Java.
 
 </box>
 

@@ -1,7 +1,4 @@
-<div id="title">
-
-## Modeling a Solution
-</div>
+<span id="title">Modeling a Solution</span>
 
 <div id="body">
 

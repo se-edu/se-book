@@ -1,7 +1,4 @@
-<div id="title">
-
-## Java Classes
-</div>
+<span id="title">Java Classes</span>
 
 <div id="body">
 

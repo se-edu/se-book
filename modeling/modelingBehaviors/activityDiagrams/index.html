@@ -6,106 +6,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SEforSDL - Modeling: Modeling Behaviors: Activity Diagrams</title>
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+    <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
+    
     
     
     <link rel="icon" href="/se-book/favicon.ico">
 </head>
 <body>
 <div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
+    <div id="flex-body">
+  <div id="site-nav">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+        <searchbar placeholder="Search" algolia menu-align-right></searchbar>
       </li>
     </navbar>
   </div>
-  <div>
-    <link rel="stylesheet" href="/se-book/css/textbook.css">
-    <div class="website-content">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use activity diagrams</span>
-        </span>
-        </span>
-        </span>
-        <p></p>
-      </p>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
+    <div id="content-wrapper">
       <div>
-        <div></div>
-        <p></p>
-        <p><span class="dimmed"><strong><span>Design → Modelling → Modelling Behaviors
-</span></strong>
-          </span>
-        </p>
-        <div id="title-and-body">
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use basic-level activity diagrams</span></span></span></span></p>
+          <p></p>
+          <p></p>
           <div>
-            <h4 id="activity-diagrams">Activity Diagrams</h4>
-          </div>
-          <div id="main">
-            <div>
-              <p><strong>Software projects often involve <em>workflows</em>.</strong> Workflows define the
-                <tooltip content="a connected sequence of steps"></tooltip>flow in which a process or a set of tasks is executed.</p>
-              <tip-box>
-                <p>Some examples in which a certain workflow is relevant to software project:</p>
-                <p><span class="fas fa-cube"></span> A software that automates the work of an insurance company needs to take into account the workflow of processing an insurance claim.</p>
-                <p><span class="fas fa-cube"></span> The algorithm of a price of code represents the workflow (i.e. the execution flow) of the code.</p>
-              </tip-box>
-              <p>Understanding such workflows is important for the success of the software project. <strong><trigger trigger="click" for="modal:modelingAd-uml">UML</trigger> <em> activity diagrams</em> (AD) can model workflows. </strong> <span class="dimmed"><em>Flow charts</em> is another type of diagrams that can model workflows. Activity diagrams are the UML equivalent of flow charts.</span></p>
-              <modal title="**Unified Modeling Language (UML)**" id="modal:modelingAd-uml">
-                <div>
-                  <p><a href="http://www.uml.org/#UML2.0"><strong>Unified Modeling Language (UML)</strong></a> is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh,
-                    Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML).
-                    UML is currently the <em>de facto</em> modeling notation used in the software industry.</p>
-                </div>
-              </modal>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> An example activity diagram <sub>[<a href="https://en.wikipedia.org/wiki/Activity_diagram">source:wikipeida</a>]</sub>:</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Activity_conducting.svg" width="430"></tip-box>
-              <p>The most basic activity diagram is simply a linear sequence of actions.</p>
-              <p>
-                <panel src="/se-book\uml\activityDiagrams\basicNotations\linearPaths\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Activity Diagrams → Basic Notations → Linear Paths"
-                  expanded=""></panel>
-              </p>
-              <p>Some workflows have alternate paths where only one of the alternate paths is taken based on some condition.</p>
-              <p>
-                <panel src="/se-book\uml\activityDiagrams\basicNotations\alternatePaths\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Activity Diagrams → Basic Notations → Alternative Paths"
-                  expanded=""></panel>
-              </p>
-              <p>In some workflows, multiple paths happen in parallel.</p>
-              <p>
-                <panel src="/se-book\uml\activityDiagrams\basicNotations\parallelPaths\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Activity Diagrams → Basic Notations → Parallel Paths"
-                  expanded=""></panel>
-              </p>
-            </div>
-            <div>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Design → Modelling → Modelling Behaviors
+                  </span></strong></span></p>
+            <div id="title-and-body">
               <div>
-                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                <h4 id="activity-diagrams-basic"><span>Activity Diagrams - Basic</span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p><strong>Software projects often involve <em>workflows</em>.</strong> Workflows define the <tooltip content="a connected sequence of steps"></tooltip>flow in which a process or a set of tasks is executed.
+                    Understanding such workflows is important for the success of the software project.</p>
+                  <tip-box>
+                    <p>Some examples in which a certain workflow is relevant to software project:</p>
+                    <p><span class="fas fa-cube"></span> A software that automates the work of an insurance company needs to take into account the workflow of processing an insurance claim.</p>
+                    <p><span class="fas fa-cube"></span> The algorithm of a price of code represents the workflow (i.e. the execution flow) of the code.</p>
+                  </tip-box>
+                  <p>
+                    <panel type="seamless" src="/se-book/uml/activityDiagrams/introduction/what/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Activity Diagrams → Introduction → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AD/Intro" fragment="main"></panel>
+                  </p>
+                  <p></p>
+                  <p></p>
+                  <p>
+                    <panel type="seamless" src="/se-book/uml/activityDiagrams/basicNotations/linearPaths/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Activity Diagrams → Basic Notation → Linear Paths" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AD/LinearPaths" fragment="main"></panel>
+                  </p>
+                  <p>
+                    <panel type="seamless" src="/se-book/uml/activityDiagrams/basicNotations/alternatePaths/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Activity Diagrams → Basic Notation → Alternate Paths" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AD/AlternatePaths" fragment="main"></panel>
+                  </p>
+                  <p>
+                    <panel type="seamless" src="/se-book/uml/activityDiagrams/basicNotations/parallelPaths/unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Activity Diagrams → Basic Notation → Parellel Paths" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AD/ParallelPaths" fragment="main"></panel>
+                  </p>
+                </div>
+                <div>
                   <div>
-                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which sequences are not allowed?">
-                      <question>
-                        <p>Which of these sequence of actions is not allowed by the given activity diagram?</p>
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> i. start a b c d end</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> ii. start a b c d e f g c d end</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> iii. start a b c d e g f c d end</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> iv. start a b c d g c d end</li>
-                        </ul>
-                        <img src="/se-book/modeling/modelingBehaviors/activityDiagrams/images/sequence.png" height="190">
-                        <p></p>
-                        <div slot="answer">
-                          <p>(iv)</p>
-                          <p>Explanation: <code>-e-f-</code> and <code>-g-</code> are parallel paths. Both paths should complete before the execution reaches <code>c</code> again.</p>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable>
+                      <div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which sequences are not allowed?">
+                            <question>
+                              <p>Which of these sequence of actions is not allowed by the given activity diagram?</p>
+                              <ul class="task-list">
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> i. start a b c d end</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> ii. start a b c d e f g c d end</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> iii. start a b c d e g f c d end</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> iv. start a b c d g c d end</li>
+                              </ul>
+                              <img src="/se-book/modeling/modelingBehaviors/activityDiagrams/images/sequence.png" height="190">
+                              <p></p>
+                              <div slot="answer">
+                                <p>(iv)</p>
+                                <p>Explanation: <code>-e-f-</code> and <code>-g-</code> are parallel paths. Both paths should complete before the execution reaches <code>c</code> again.</p>
+                              </div>
+                            </question>
+                          </panel>
                         </div>
-                      </question>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Model workflow of Burger shop">
+                            <question>
+                              <p>Draw an activity diagram to represent the following workflow a burger shop uses when processing an order by a customer.</p>
+                              <ul>
+                                <li>First, a cashier takes the order.</li>
+                                <li>Then, three workers start preparing the order at the same time; one prepares the drinks, one prepares the burgers, and one prepares the desserts.</li>
+                                <li>In the meantime, the customer pays for the order. If the customer has a voucher, she pays using the voucher; otherwise she pays using cash.</li>
+                                <li>After paying, the customer collects the food after all three parts of the order are ready.</li>
+                              </ul>
+                              <panel type="seamless" header="Example Activity Diagram" minimized>
+                                <p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Activity_conducting.svg"><br>
+                                  <sub>[<a href="https://en.wikipedia.org/wiki/Activity_diagram">source:wikipeida</a>]</sub></p>
+                              </panel>
+                            </question>
+                          </panel>
+                        </div>
+                      </div>
                     </panel>
                   </div>
-                </panel>
+                </div>
               </div>
             </div>
           </div>
@@ -117,16 +133,32 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 02 Sep 2018 14:34:23 GMT.</small></div>
+    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.20.0</a> at Thu, 21 Mar 2019 04:14:45 GMT.</small></div>
 </footer>
 </div>
 </body>
-<script src="..\..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\..\markbind\js\bootstrap-vue.min.js"></script>
+<script src="../../../markbind/js/vue.min.js"></script>
+<script src="../../../markbind/js/vue-strap.min.js"></script>
+<script src="../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/se-book'
+    const enableSearch = true
 </script>
-<script src="..\..\..\markbind\js\setup.js"></script>
+<script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+        indexName: "se-edu",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+<script src="../../../markbind/layouts/default/scripts.js"></script>
 </html>

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Variables
-
-</div>
+<span id="title">Variables</span>
 
 <span id="prereqs"></span>
 

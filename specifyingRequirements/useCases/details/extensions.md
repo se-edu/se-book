@@ -17,7 +17,7 @@
       <li>OBS transfers the money and displays the new account balance.</li>
       <li class="custom-bullet-point">Use case ends.</li>
     </ol>
-  </li>
+  </li><br>
   <li> Extensions:
     <ol class="custom-bullet-list">
       <li>3a. OBS detects an error in the entered data.
@@ -25,21 +25,21 @@
           <li>3a1. OBS requests for the correct data.</li>
           <li>3a2. User enters new data.</li>
           <li>Steps 3a1-3a2 are repeated until the data entered are correct.</li>
-          <li>Use case resumes from step 4.</li>
+          <li>Use case resumes from step 4.</li><br>
         </ol>
       </li>
       <li>3b. User requests to effect the transfer in a future date.
         <ol class="custom-bullet-list">
           <li>3b1. OBS requests for confirmation.</li>
           <li>3b2. User confirms future transfer.</li>
-          <li>Use case ends.</li>
+          <li>Use case ends.</li><br>
         </ol>
       </li>
       <li>*a. At any time, User chooses to cancel the transfer.
         <ol class="custom-bullet-list">
           <li>*a1. OBS requests to confirm the cancellation.</li>
           <li>*a2. User confirms the cancellation.</li>
-          <li>Use case ends.</li>
+          <li>Use case ends.</li><br>
         </ol>
       </li>
       <li>*b. At any time, 120 seconds lapse without any input from the User.

@@ -1,7 +1,4 @@
-<div id="title">
-
-# Object-Oriented Programming
-</div>
+<span id="title">Object-Oriented Programming</span>
 
 <div id="body">
 

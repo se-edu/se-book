@@ -1,7 +1,4 @@
-<div id="title">
-
-### Association Classes
-</div>
+<span id="title">Association Classes</span>
 
 <div id="body">
 

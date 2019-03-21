@@ -1,8 +1,4 @@
-<div id="title">
-
-#### The `HashMap` Class
-
-</div>
+<span id="title">The `HashMap` Class</span>
 
 <span id="prereqs"></span>
 
@@ -79,5 +75,6 @@ Number of keys after clearing: 0
 </div>
 
 <div id="extras">
+  <include src="exercisesPanel.md" boilerplate />
   <include src="resourcesPanel.md" boilerplate />
 </div>

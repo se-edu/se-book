@@ -1,10 +1,6 @@
-<div id="title">
+<span id="title">Substitutability</span>
 
-#### Substitutability
-
-</div>
-
-<span id="prereqs"><panel src="../../../oop/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Paradigms → Object Oriented Programming → Inheritance → What%%" /></span>
+<span id="prereqs"><panel src="../../../oop/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Paradigms → Object Oriented Programming → Inheritance → What%%" popup-url="{{ baseUrl }}/oop/inheritance/what" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain substitutability</span>
 

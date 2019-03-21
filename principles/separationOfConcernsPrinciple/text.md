@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Separation of Concerns Principle
-
-</div>
+<span id="title">Separation of Concerns Principle</span>
 
 <span id="prereqs"></span>
 

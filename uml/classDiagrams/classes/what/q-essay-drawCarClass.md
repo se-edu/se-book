@@ -9,14 +9,14 @@ Draw a UML diagram to represent the `Car` class as given below. Include visibili
 class Car{
 
     Engine engine;
-    private List<Wheel>[] wheels = null;
+    private List<Wheel> wheels = null;
     public String model;
 
     public void drive(int speed){
         move(speed);
     }
 
-    private move(int speed){
+    private void move(int speed){
         ...
     }
 }

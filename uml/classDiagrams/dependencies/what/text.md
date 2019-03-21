@@ -1,16 +1,10 @@
-<div id="title">
-
-#### Dependencies
-
-</div>
+<span id="title">Dependencies</span>
 
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can use dependencies in a class diagram</span>
 
 <div id="body">
-
-In a UML class diagram, a **dependency is a weaker form of an association where there is an interactions between objects that do not result in a long-term relationship** between the said objects.
 
 **UML uses a dashed arrow to show dependencies.**
 

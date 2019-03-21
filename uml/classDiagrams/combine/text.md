@@ -1,7 +1,4 @@
-<div id="title">
-
-### Combine
-</div>
+<span id="title">Combine</span>
 
 <div id="body">
 

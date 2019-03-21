@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Inheritance (Basics)
-
-</div>
+<span id="title">Inheritance (Basics)</span>
 
 <span id="prereqs"></span>
 

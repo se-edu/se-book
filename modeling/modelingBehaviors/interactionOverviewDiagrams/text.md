@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Interaction Overview Diagrams
-
-</div>
+<span id="title">Interaction Overview Diagrams</span>
 
 <span id="prereqs"></span>
 

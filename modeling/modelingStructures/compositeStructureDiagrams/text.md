@@ -1,8 +1,4 @@
-<div id="title">
-
-#### Composite Structure Diagrams
-
-</div>
+<span id="title">Composite Structure Diagrams</span>
 
 <span id="prereqs"></span>
 

@@ -1,8 +1,4 @@
-<div id="title">
-
-#### What
-
-</div>
+<span id="title">What</span>
 
 <span id="prereqs"></span>
 
@@ -26,4 +22,5 @@ Notation:
 </div>
 
 <div id="extras">
+  <include src="exercisesPanel.md" boilerplate />
 </div>
