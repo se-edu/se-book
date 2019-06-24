@@ -1,247 +1,222 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 1.21.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SEforSDL - Error Handling [Printable]</title>
-    <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css" >
-    <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../markbind/css/markbind.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
-    <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
-    
-    
-    
-    <link rel="icon" href="/se-book/favicon.ico">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SEforSDL - Error Handling [Printable]</title>
+  <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+  <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
+
+
+
+  <link rel="icon" href="/se-book/favicon.ico">
 </head>
+
 <body>
-<div id="app">
+  <div id="app">
+    <header>
+      <navbar placement="top" type="primary">
+        <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+        <li slot="right">
+          <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        </li>
+      </navbar>
+    </header>
     <div id="flex-body">
-  <div id="site-nav">
-    <navbar placement="top" type="inverse" class="temp-navbar">
-      <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
-      <li slot="right">
-        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
-      </li>
-    </navbar>
-  </div>
-  <div id="site-nav-btn-wrap">
-    <div id="site-nav-btn">
-      <div class="menu-top-bar"></div>
-      <div class="menu-middle-bar"></div>
-      <div class="menu-bottom-bar"></div>
-    </div>
-  </div>
-  <div id="page-content">
-    <div id="content-wrapper">
-      <link rel="stylesheet" href="/se-book/css/textbook.css">
-      <div class="website-content">
-        <div id="main">
-          <h1 id="error-handling">Error Handling<a class="fa fa-anchor" href="#error-handling"></a></h1>
-          <h2 id="introduction">Introduction<a class="fa fa-anchor" href="#introduction"></a></h2>
-          <div>
-            <p>
-              <div>
-                <h4 id="what"><span>What</span></h4>
-              </div>
-            </p>
+      <div id="content-wrapper">
+        <link rel="stylesheet" href="/se-book/css/textbook.css">
+        <div class="website-content">
+          <div id="main">
+            <h1 id="error-handling">Error Handling<a class="fa fa-anchor" href="#error-handling"></a></h1>
+            <h2 id="introduction">Introduction<a class="fa fa-anchor" href="#introduction"></a></h2>
             <div>
-              <blockquote>
-                <p>Well-written applications include error-handling code that allows them to recover gracefully from unexpected errors. When an error occurs, the application may need to request user intervention, or it may be able to recover on its own.
-                  In extreme cases, the application may log the user off or shut down the system. --<sub><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms679320(v=vs.85).aspx">Microsoft</a></sub></p>
-              </blockquote>
-            </div>
-          </div>
-          <h2 id="exceptions">Exceptions<a class="fa fa-anchor" href="#exceptions"></a></h2>
-          <div>
-            <p>
-              <div>
-                <h4 id="what"><span>What</span></h4>
-              </div>
-            </p>
-            <div>
-              <p><strong>Exceptions are used to deal with <em>'unusual' but not entirely unexpected</em> situations</strong> that the program might encounter at run time.</p>
-              <tip-box type="definition">
+              <p>
                 <div>
-                  <p><strong>Exception</strong>:</p>
-                  <blockquote>
-                    <p>The term <em>exception</em> is shorthand for the phrase &quot;exceptional event.&quot; An <em>exception</em> is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
-                      –- Java Tutorial (Oracle Inc.)</p>
-                  </blockquote>
+                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
                 </div>
-              </tip-box>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> Examples:</p>
-                <ul>
-                  <li>A network connection encounters a timeout due to a slow server.</li>
-                  <li>The code tries to read a file from the hard disk but the file is corrupted and cannot be read.</li>
-                </ul>
-              </tip-box>
-            </div>
-          </div>
-          <div>
-            <p>
+              </p>
               <div>
-                <h4 id="how"><span>How</span></h4>
+                <blockquote>
+                  <p>Well-written applications include error-handling code that allows them to recover gracefully from unexpected errors. When an error occurs, the application may need to request user intervention, or it may be able to recover on its own. In extreme cases, the application may log the user off or shut down the system. --<sub><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms679320(v=vs.85).aspx">Microsoft</a></sub></p>
+                </blockquote>
               </div>
-            </p>
-            <div>
-              <p><strong>Most languages allow code that encountered an &quot;exceptional&quot; situation to encapsulate details of the situation in an <em>Exception</em> object and <em>throw</em>/<em>raise</em> that object so that another piece of code can <em>catch</em> it and deal with it.</strong>                This is especially useful when the code that encountered the unusual situation does not know how to deal with it.</p>
-              <p>The extract below from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small> (with slight adaptations) explains how exceptions are typically handled.</p>
-              <div class="indented">
-                <p><strong>When an error occurs at some point in the execution, the code being executed creates an <em>exception object</em> and hands it off to the runtime system.</strong> The exception object contains information about the error, including
-                  its type and the state of the program when the error occurred. Creating an exception object and handing it to the runtime system is called <em>throwing</em> an exception.</p>
-                <p><strong>After a method throws an exception, the runtime system attempts to find something to handle it in the <tooltip content="the ordered list of methods that had been called to get to the method where the error occurred" class="algolia-no-index"><em>call stack</em></tooltip>.</strong>                  The runtime system searches the call stack for a method that contains a block of code that can handle the exception. This block of code is called an <em>exception handler</em>. The search begins with the method in which the error occurred
-                  and proceeds through the call stack in the reverse order in which the methods were called. When an appropriate handler is found, the runtime system passes the exception to the handler. An exception handler is considered appropriate if
-                  the type of the exception object thrown matches the type that can be handled by the handler.</p>
-                <p><strong>The exception handler chosen is said to <em>catch</em> the exception.</strong> If the runtime system exhaustively searches all the methods on the call stack without finding an appropriate exception handler, the program terminates.</p>
-              </div>
-              <p>Advantages of exception handling in this way:</p>
-              <ul>
-                <li>The ability to propagate error information through the call stack.</li>
-                <li>The separation of code that deals with 'unusual' situations from the code that does the 'usual' work.</li>
-              </ul>
             </div>
-          </div>
-          <div>
-            <p>
-              <div>
-                <h4 id="when"><span>When</span></h4>
-              </div>
-            </p>
+            <h2 id="exceptions">Exceptions<a class="fa fa-anchor" href="#exceptions"></a></h2>
             <div>
-              <p>In general, use exceptions only for 'unusual' conditions. Use normal <code>return</code> statements to pass control to the caller for conditions that are 'normal'.</p>
-            </div>
-          </div>
-          <h2 id="assertions">Assertions<a class="fa fa-anchor" href="#assertions"></a></h2>
-          <div>
-            <p>
+              <p>
+                <div>
+                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                </div>
+              </p>
               <div>
-                <h4 id="what"><span>What</span></h4>
-              </div>
-            </p>
-            <div>
-              <p><strong><em>Assertions</em> are used to define assumptions about the program state so that the runtime can verify them.</strong> An assertion failure indicates a possible bug in the code <span class="dimmed">because the code has resulted in a program state that violates an assumption about how the code <em>should</em> behave</span>.</p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> An assertion can be used to express something like <em>when the execution comes to this point, the variable <code>v</code> cannot be null</em>.</p>
-              </tip-box>
-              <p><strong>If the runtime detects an <em>assertion failure</em>, it typically take some drastic action</strong> such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner
-                the execution stops, the safer it is.</p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> In the Java code below, suppose we set an assertion that <code>timeout</code> returned by <code>Config.getTimeout()</code> is greater than <code>0</code>. Now, if the <code>Config.getTimeout()</code> returned
-                  <code>-1</code> in a specific execution of this line, the runtime can detect it as a <em>assertion failure</em> -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result
-                  of a bug -- and take some drastic action such as terminating the execution.</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); 
-</code></pre>
-              </tip-box>
-            </div>
-          </div>
-          <div>
-            <p>
-              <div>
-                <h4 id="how"><span>How</span></h4>
-              </div>
-            </p>
-            <div>
-              <p>Use the <code>assert</code> keyword to define assertions.</p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> This assertion will fail with the message <code>x should be 0</code> if <code>x</code> is not 0 at this point.</p>
-                <pre><code class="hljs java">x = getX();
-<span class="hljs-keyword">assert</span> x == <span class="hljs-number">0</span> : <span class="hljs-string">"x should be 0"</span>;
-...
-</code></pre>
-              </tip-box>
-              <p><strong>Assertions can be disabled without modifying the code.</strong></p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> <code>java -enableassertions HelloWorld</code> (or <code>java -ea HelloWorld</code>) will run <code>HelloWorld</code> with assertions enabled while <code>java -disableassertions HelloWorld</code> will
-                  run it without verifying assertions.</p>
-              </tip-box>
-              <tip-box type="important">
-                <p><strong>Java disables assertions by default.</strong> This could create a situation where you think all assertions are being verified as <code>true</code> while in fact they are not being verified at all. Therefore, remember to enable
-                  assertions when you run the program if you want them to be in effect.</p>
-              </tip-box>
-              <p>💡 Enable assertions in Intellij (<a href="https://stackoverflow.com/questions/18168257/where-to-add-compiler-options-like-ea-in-intellij-idea">how?</a>) and get an assertion to fail temporarily (e.g. insert an <code>assert false</code>                into the code temporarily) to confirm assertions are being verified.</p>
-              <p><span class="fas fa-info-circle"></span> <strong>Java <code>assert</code> vs JUnit assertions: They are similar in purpose but JUnit assertions are more powerful and customized for testing.</strong> In addition, JUnit assertions are not
-                disabled by default. We recommend you use JUnit assertions in test code and Java <code>assert</code> in functional code.</p>
-            </div>
-          </div>
-          <div>
-            <p>
-              <div>
-                <h4 id="when"><span>When</span></h4>
-              </div>
-            </p>
-            <div>
-              <p><strong>It is recommended that assertions be used liberally in the code.</strong> Their impact on performance is considered low and worth the additional safety they provide.</p>
-              <p><strong>Do not use assertions to do <em>work</em></strong> because assertions can be disabled. If not, your program will stop working when assertions are not enabled.</p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> The code below will not invoke the <code>writeFile()</code> method when assertions are disabled. <span class="dimmed"> If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.</span></p>
-                <pre><code class="hljs java">...
-<span class="hljs-function"><span class="hljs-keyword">assert</span> <span class="hljs-title">writeFile</span><span class="hljs-params">()</span> : "File writing is supposed to return <span class="hljs-keyword">true</span>"</span>;
-</code></pre>
-              </tip-box>
-              <p><strong>Assertions are suitable for verifying assumptions about <em>Internal Invariants</em>, <em>Control-Flow Invariants</em>,
-<em>Preconditions</em>, <em>Postconditions</em>, and <em>Class Invariants</em>.</strong> Refer to [<a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#usage">Programming with Assertions (second half)</a>] to learn more.</p>
-              <p><strong>Exceptions and assertions are two complementary ways of handling errors in software but they serve different purposes.</strong> Therefore, both assertions and exceptions should be used in code.</p>
-              <ul>
-                <li>The raising of an exception indicates an unusual condition created by the user <span class="dimmed"> (e.g.  user inputs an unacceptable input)</span> or the environment <span class="dimmed"> (e.g., a file needed for the program is missing)</span>.</li>
-                <li>An assertion failure indicates the programmer made a mistake in the code <span class="dimmed"> (e.g., a null value is returned from a method that is not supposed to return null under any circumstances)</span>.</li>
-              </ul>
-            </div>
-          </div>
-          <h2 id="logging">Logging<a class="fa fa-anchor" href="#logging"></a></h2>
-          <div>
-            <p>
-              <div>
-                <h4 id="what"><span>What</span></h4>
-              </div>
-            </p>
-            <div>
-              <p><strong><em>Logging</em> is the deliberate recording of certain information during a program execution for future reference.</strong> Logs are typically written to a log file but it is also possible to log information in other ways
-                <span
-                  class="dimmed"> e.g. into a database or a remote server</span>.</p>
-              <p><strong><em>Logging</em> can be useful for troubleshooting problems</strong>. A good logging system records some system information regularly. When bad things happen to a system <span class="dimmed"> e.g. an unanticipated failure</span>,
-                their associated log files may provide indications of what went wrong and action can then be taken to prevent it from happening again.</p>
-              <div v-closeable="" alt="blackbox photo">
-                <tip-box>
-                  <p>💡 <strong>A log file is like the <tooltip content="flight data recorder" class="algolia-no-index">black box</tooltip> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong after
-                    the fact.</p>
-                  <div class="non-printable">
-                    <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br>
-                      <sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub></p>
+                <p><strong>Exceptions are used to deal with <em>'unusual' but not entirely unexpected</em> situations</strong> that the program might encounter at run time.</p>
+                <tip-box type="definition">
+                  <div>
+                    <p><strong>Exception</strong>:</p>
+                    <blockquote>
+                      <p>The term <em>exception</em> is shorthand for the phrase &quot;exceptional event.&quot; An <em>exception</em> is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. –- Java Tutorial (Oracle Inc.)</p>
+                    </blockquote>
                   </div>
+                </tip-box>
+                <tip-box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples:</p>
+                  <ul>
+                    <li>A network connection encounters a timeout due to a slow server.</li>
+                    <li>The code tries to read a file from the hard disk but the file is corrupted and cannot be read.</li>
+                  </ul>
                 </tip-box>
               </div>
             </div>
-          </div>
-          <div>
-            <p>
-              <div>
-                <h4 id="how"><span>How</span></h4>
-              </div>
-            </p>
             <div>
-              <p><strong>Most programming environments come with logging systems that allow sophisticated forms of logging.</strong> They have features such as the ability to enable and disable logging easily or to change the logging
-                <tooltip content="how much information to record"
-                  class="algolia-no-index">intensity</tooltip>.</p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> This sample Java code uses Java’s default logging mechanism.</p>
-                <p>First, import the relevant Java package:</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.logging.*;
+              <p>
+                <div>
+                  <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how"></a></h4>
+                </div>
+              </p>
+              <div>
+                <p><strong>Most languages allow code that encountered an &quot;exceptional&quot; situation to encapsulate details of the situation in an <em>Exception</em> object and <em>throw</em>/<em>raise</em> that object so that another piece of code can <em>catch</em> it and deal with it.</strong> This is especially useful when the code that encountered the unusual situation does not know how to deal with it.</p>
+                <p>The extract below from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small> (with slight adaptations) explains how exceptions are typically handled.</p>
+                <div class="indented">
+                  <p><strong>When an error occurs at some point in the execution, the code being executed creates an <em>exception object</em> and hands it off to the runtime system.</strong> The exception object contains information about the error, including its type and the state of the program when the error occurred. Creating an exception object and handing it to the runtime system is called <em>throwing</em> an exception.</p>
+                  <p><strong>After a method throws an exception, the runtime system attempts to find something to handle it in the <tooltip content="the ordered list of methods that had been called to get to the method where the error occurred"><em>call stack</em></tooltip>.</strong> The runtime system searches the call stack for a method that contains a block of code that can handle the exception. This block of code is called an <em>exception handler</em>. The search begins with the method in which the error occurred and proceeds through the call stack in the reverse order in which the methods were called. When an appropriate handler is found, the runtime system passes the exception to the handler. An exception handler is considered appropriate if the type of the exception object thrown matches the type that can be handled by the handler.</p>
+                  <p><strong>The exception handler chosen is said to <em>catch</em> the exception.</strong> If the runtime system exhaustively searches all the methods on the call stack without finding an appropriate exception handler, the program terminates.</p>
+                </div>
+                <p>Advantages of exception handling in this way:</p>
+                <ul>
+                  <li>The ability to propagate error information through the call stack.</li>
+                  <li>The separation of code that deals with 'unusual' situations from the code that does the 'usual' work.</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <p>
+                <div>
+                  <h4 id="when"><span>When</span><a class="fa fa-anchor" href="#when"></a></h4>
+                </div>
+              </p>
+              <div>
+                <p>In general, use exceptions only for 'unusual' conditions. Use normal <code>return</code> statements to pass control to the caller for conditions that are 'normal'.</p>
+              </div>
+            </div>
+            <h2 id="assertions">Assertions<a class="fa fa-anchor" href="#assertions"></a></h2>
+            <div>
+              <p>
+                <div>
+                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                </div>
+              </p>
+              <div>
+                <p><strong><em>Assertions</em> are used to define assumptions about the program state so that the runtime can verify them.</strong> An assertion failure indicates a possible bug in the code <span class="dimmed">because the code has resulted in a program state that violates an assumption about how the code <em>should</em> behave</span>.</p>
+                <tip-box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An assertion can be used to express something like <em>when the execution comes to this point, the variable <code>v</code> cannot be null</em>.</p>
+                </tip-box>
+                <p><strong>If the runtime detects an <em>assertion failure</em>, it typically take some drastic action</strong> such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner the execution stops, the safer it is.</p>
+                <tip-box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the Java code below, suppose we set an assertion that <code>timeout</code> returned by <code>Config.getTimeout()</code> is greater than <code>0</code>. Now, if the <code>Config.getTimeout()</code> returned <code>-1</code> in a specific execution of this line, the runtime can detect it as a <em>assertion failure</em> -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result of a bug -- and take some drastic action such as terminating the execution.</p>
+                  <pre><code class="hljs java"><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); 
 </code></pre>
-                <p>Next, create a <code>Logger</code>:</p>
-                <pre><code class="hljs java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);
+                </tip-box>
+              </div>
+            </div>
+            <div>
+              <p>
+                <div>
+                  <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how"></a></h4>
+                </div>
+              </p>
+              <div>
+                <p>Use the <code>assert</code> keyword to define assertions.</p>
+                <tip-box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This assertion will fail with the message <code>x should be 0</code> if <code>x</code> is not 0 at this point.</p>
+                  <pre><code class="hljs java">x = getX();
+<span class="hljs-keyword">assert</span> x == <span class="hljs-number">0</span> : <span class="hljs-string">"x should be 0"</span>;
+...
 </code></pre>
-                <p>Now, you can use the <code>Logger</code> object to log information. Note the use of
-                  <popover content="`INFO`, `WARNING` etc." class="algolia-no-index">logging level</popover> for each message. When running the code, the logging level can be set to <code>WARNING</code> so that log messages specified as <code>INFO</code> level (which is a lower level than <code>WARNING</code>) will not
-                  be written to the log file at all.</p>
-                <pre><code class="hljs java"><span class="hljs-comment">// log a message at INFO level</span>
+                </tip-box>
+                <p><strong>Assertions can be disabled without modifying the code.</strong></p>
+                <tip-box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>java -enableassertions HelloWorld</code> (or <code>java -ea HelloWorld</code>) will run <code>HelloWorld</code> with assertions enabled while <code>java -disableassertions HelloWorld</code> will run it without verifying assertions.</p>
+                </tip-box>
+                <tip-box type="important">
+                  <p><strong>Java disables assertions by default.</strong> This could create a situation where you think all assertions are being verified as <code>true</code> while in fact they are not being verified at all. Therefore, remember to enable assertions when you run the program if you want them to be in effect.</p>
+                </tip-box>
+                <p>💡 Enable assertions in Intellij (<a href="https://stackoverflow.com/questions/18168257/where-to-add-compiler-options-like-ea-in-intellij-idea">how?</a>) and get an assertion to fail temporarily (e.g. insert an <code>assert false</code> into the code temporarily) to confirm assertions are being verified.</p>
+                <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> <strong>Java <code>assert</code> vs JUnit assertions: They are similar in purpose but JUnit assertions are more powerful and customized for testing.</strong> In addition, JUnit assertions are not disabled by default. We recommend you use JUnit assertions in test code and Java <code>assert</code> in functional code.</p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <div>
+                  <h4 id="when"><span>When</span><a class="fa fa-anchor" href="#when"></a></h4>
+                </div>
+              </p>
+              <div>
+                <p><strong>It is recommended that assertions be used liberally in the code.</strong> Their impact on performance is considered low and worth the additional safety they provide.</p>
+                <p><strong>Do not use assertions to do <em>work</em></strong> because assertions can be disabled. If not, your program will stop working when assertions are not enabled.</p>
+                <tip-box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below will not invoke the <code>writeFile()</code> method when assertions are disabled. <span class="dimmed"> If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.</span></p>
+                  <pre><code class="hljs java">...
+<span class="hljs-function"><span class="hljs-keyword">assert</span> <span class="hljs-title">writeFile</span><span class="hljs-params">()</span> : "File writing is supposed to return <span class="hljs-keyword">true</span>"</span>;
+</code></pre>
+                </tip-box>
+                <p><strong>Assertions are suitable for verifying assumptions about <em>Internal Invariants</em>, <em>Control-Flow Invariants</em>,
+                    <em>Preconditions</em>, <em>Postconditions</em>, and <em>Class Invariants</em>.</strong> Refer to [<a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#usage">Programming with Assertions (second half)</a>] to learn more.</p>
+                <p><strong>Exceptions and assertions are two complementary ways of handling errors in software but they serve different purposes.</strong> Therefore, both assertions and exceptions should be used in code.</p>
+                <ul>
+                  <li>The raising of an exception indicates an unusual condition created by the user <span class="dimmed"> (e.g. user inputs an unacceptable input)</span> or the environment <span class="dimmed"> (e.g., a file needed for the program is missing)</span>.</li>
+                  <li>An assertion failure indicates the programmer made a mistake in the code <span class="dimmed"> (e.g., a null value is returned from a method that is not supposed to return null under any circumstances)</span>.</li>
+                </ul>
+              </div>
+            </div>
+            <h2 id="logging">Logging<a class="fa fa-anchor" href="#logging"></a></h2>
+            <div>
+              <p>
+                <div>
+                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                </div>
+              </p>
+              <div>
+                <p><strong><em>Logging</em> is the deliberate recording of certain information during a program execution for future reference.</strong> Logs are typically written to a log file but it is also possible to log information in other ways <span class="dimmed"> e.g. into a database or a remote server</span>.</p>
+                <p><strong><em>Logging</em> can be useful for troubleshooting problems</strong>. A good logging system records some system information regularly. When bad things happen to a system <span class="dimmed"> e.g. an unanticipated failure</span>, their associated log files may provide indications of what went wrong and action can then be taken to prevent it from happening again.</p>
+                <div v-closeable alt="blackbox photo">
+                  <tip-box>
+                    <p>💡 <strong>A log file is like the <tooltip content="flight data recorder">black box</tooltip> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.</p>
+                    <div class="non-printable">
+                      <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br>
+                        <sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub></p>
+                    </div>
+                  </tip-box>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p>
+                <div>
+                  <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how"></a></h4>
+                </div>
+              </p>
+              <div>
+                <p><strong>Most programming environments come with logging systems that allow sophisticated forms of logging.</strong> They have features such as the ability to enable and disable logging easily or to change the logging <tooltip content="how much information to record">intensity</tooltip>.</p>
+                <tip-box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This sample Java code uses Java’s default logging mechanism.</p>
+                  <p>First, import the relevant Java package:</p>
+                  <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.logging.*;
+</code></pre>
+                  <p>Next, create a <code>Logger</code>:</p>
+                  <pre><code class="hljs java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);
+</code></pre>
+                  <p>Now, you can use the <code>Logger</code> object to log information. Note the use of <popover content="`INFO`, `WARNING` etc.">logging level</popover> for each message. When running the code, the logging level can be set to <code>WARNING</code> so that log messages specified as <code>INFO</code> level (which is a lower level than <code>WARNING</code>) will not be written to the log file at all.</p>
+                  <pre><code class="hljs java"><span class="hljs-comment">// log a message at INFO level</span>
 logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);
 <span class="hljs-comment">//...</span>
 processInput();
@@ -252,22 +227,21 @@ processInput();
 <span class="hljs-comment">//...</span>
 logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
 </code></pre>
-              </tip-box>
-            </div>
-          </div>
-          <h2 id="defensive-programming">Defensive Programming<a class="fa fa-anchor" href="#defensive-programming"></a></h2>
-          <div>
-            <p>
-              <div>
-                <h4 id="what"><span>What</span></h4>
+                </tip-box>
               </div>
-            </p>
+            </div>
+            <h2 id="defensive-programming">Defensive Programming<a class="fa fa-anchor" href="#defensive-programming"></a></h2>
             <div>
-              <p><strong>A defensive programmer codes under the assumption &quot;if we leave room for things to go wrong, they <em>will</em> go wrong&quot;.</strong> Therefore, a defensive programmer proactively tries to eliminate any room for things to
-                go wrong.</p>
-              <tip-box>
-                <p><span class="fas fa-cube"></span> Consider a <code>MainApp#getConfig()</code> a method that returns a <code>Config</code> object containing configuration data. A typical implementation is given below:</p>
-                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainApp</span></span>{
+              <p>
+                <div>
+                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                </div>
+              </p>
+              <div>
+                <p><strong>A defensive programmer codes under the assumption &quot;if we leave room for things to go wrong, they <em>will</em> go wrong&quot;.</strong> Therefore, a defensive programmer proactively tries to eliminate any room for things to go wrong.</p>
+                <tip-box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider a <code>MainApp#getConfig()</code> a method that returns a <code>Config</code> object containing configuration data. A typical implementation is given below:</p>
+                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainApp</span></span>{
     Config config;
     
     <span class="hljs-comment">/** Returns the config object */</span>
@@ -276,29 +250,29 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
     }
 }
 </code></pre>
-                <p>If the returned Config object is not meant to be modified, a defensive programmer might use a more <em>defensive</em> implementation given below. <span class="dimmed">  This is more defensive because even if the returned <code>Config</code> object is modified (although it is not meant to be) it will not affect the <code>config</code> object inside the <code>MainApp</code> object.</span></p>
-                <pre><code class="hljs java">    <span class="hljs-comment">/** Returns a copy of the config object */</span>
+                  <p>If the returned Config object is not meant to be modified, a defensive programmer might use a more <em>defensive</em> implementation given below. <span class="dimmed">  This is more defensive because even if the returned <code>Config</code> object is modified (although it is not meant to be) it will not affect the <code>config</code> object inside the <code>MainApp</code> object.</span></p>
+                  <pre><code class="hljs java">    <span class="hljs-comment">/** Returns a copy of the config object */</span>
     <span class="hljs-function">Config <span class="hljs-title">getConfig</span><span class="hljs-params">()</span></span>{
         <span class="hljs-keyword">return</span> config.copy(); <span class="hljs-comment">//return a defensive copy</span>
     }
 </code></pre>
-              </tip-box>
-            </div>
-          </div>
-          <div>
-            <p>
-              <div>
-                <h4 id="enforcing-compulsory-associations"><span>Enforcing Compulsory Associations</span></h4>
+                </tip-box>
               </div>
-            </p>
+            </div>
             <div>
-              <p>Consider two classes, <code>Account</code> and <code>Guarantor</code>, with an association as shown in the following diagram:</p>
-              <tip-box>
-                <p>Example:</p>
-                <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50">
-                <p></p>
-                <p>Here, the association is compulsory i.e. an <code>Account</code> object should always be linked to a <code>Guarantor</code>. One way to implement this is to simply use a reference variable, like this:</p>
-                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+              <p>
+                <div>
+                  <h4 id="enforcing-compulsory-associations"><span>Enforcing Compulsory Associations</span><a class="fa fa-anchor" href="#enforcing-compulsory-associations"></a></h4>
+                </div>
+              </p>
+              <div>
+                <p>Consider two classes, <code>Account</code> and <code>Guarantor</code>, with an association as shown in the following diagram:</p>
+                <tip-box>
+                  <p>Example:</p>
+                  <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50">
+                  <p></p>
+                  <p>Here, the association is compulsory i.e. an <code>Account</code> object should always be linked to a <code>Guarantor</code>. One way to implement this is to simply use a reference variable, like this:</p>
+                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
     Guarantor guarantor;
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span><span class="hljs-params">(Guarantor g)</span> </span>{
@@ -306,13 +280,12 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
     }
 }
 </code></pre>
-                <p>However, what if someone else used the <code>Account</code> class like this?</p>
-                <pre><code class="hljs java">Account a = <span class="hljs-keyword">new</span> Account();
+                  <p>However, what if someone else used the <code>Account</code> class like this?</p>
+                  <pre><code class="hljs java">Account a = <span class="hljs-keyword">new</span> Account();
 a.setGuarantor(<span class="hljs-keyword">null</span>);
 </code></pre>
-                <p>This results in an <code>Account</code> without a <code>Guarantor</code>! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. We can make the code more defensive
-                  by proactively enforcing the multiplicity constraint, like this:</p>
-                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+                  <p>This results in an <code>Account</code> without a <code>Guarantor</code>! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. We can make the code more defensive by proactively enforcing the multiplicity constraint, like this:</p>
+                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
     <span class="hljs-keyword">private</span> Guarantor guarantor;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span></span>{
@@ -330,22 +303,21 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     …
 }
 </code></pre>
-              </tip-box>
-            </div>
-          </div>
-          <div>
-            <p>
-              <div>
-                <h4 id="enforcing-1-to-1-associations"><span>Enforcing 1-to-1 Associations</span></h4>
+                </tip-box>
               </div>
-            </p>
+            </div>
             <div>
-              <p>Consider the association given below. A defensive implementation requires to ensure a <code>MinedCell</code> cannot exist without a <code>Mine</code> and vice versa which requires simultaneous object creation. However, Java can only create
-                one object at a time. Given below are two alternatives implementations, both of which violate the multiplicity for a short period of time.</p>
-              <img src="/se-book/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png" height="50">
-              <p></p>
-              <p>Option 1:</p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
+              <p>
+                <div>
+                  <h4 id="enforcing-1-to-1-associations"><span>Enforcing 1-to-1 Associations</span><a class="fa fa-anchor" href="#enforcing-1-to-1-associations"></a></h4>
+                </div>
+              </p>
+              <div>
+                <p>Consider the association given below. A defensive implementation requires to ensure a <code>MinedCell</code> cannot exist without a <code>Mine</code> and vice versa which requires simultaneous object creation. However, Java can only create one object at a time. Given below are two alternatives implementations, both of which violate the multiplicity for a short period of time.</p>
+                <img src="/se-book/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png" height="50">
+                <p></p>
+                <p>Option 1:</p>
+                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
     <span class="hljs-keyword">private</span> Mine mine;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinedCell</span><span class="hljs-params">(Mine m)</span></span>{
@@ -357,9 +329,9 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     …
 }
 </code></pre>
-              <p>Option 1 forces us to keep a <code>Mine</code> without a <code>MinedCell</code> (until the <code>MinedCell</code> is created).</p>
-              <p>Option 2:</p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
+                <p>Option 1 forces us to keep a <code>Mine</code> without a <code>MinedCell</code> (until the <code>MinedCell</code> is created).</p>
+                <p>Option 2:</p>
+                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
     <span class="hljs-keyword">private</span> Mine mine;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinedCell</span><span class="hljs-params">()</span></span>{
@@ -368,20 +340,20 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     …
 }
 </code></pre>
-              <p>Option 2 is more defensive because the <code>Mine</code> is immediately linked to a <code>MinedCell</code>.</p>
-            </div>
-          </div>
-          <div>
-            <p>
-              <div>
-                <h4 id="enforcing-referential-integrity"><span>Enforcing Referential Integrity</span></h4>
+                <p>Option 2 is more defensive because the <code>Mine</code> is immediately linked to a <code>MinedCell</code>.</p>
               </div>
-            </p>
+            </div>
             <div>
-              <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p>
-              <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
-              <p></p>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
+              <p>
+                <div>
+                  <h4 id="enforcing-referential-integrity"><span>Enforcing Referential Integrity</span><a class="fa fa-anchor" href="#enforcing-referential-integrity"></a></h4>
+                </div>
+              </p>
+              <div>
+                <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p>
+                <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
+                <p></p>
+                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
     Woman girlfriend;
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setGirlfriend</span><span class="hljs-params">(Woman w)</span> </span>{
@@ -390,7 +362,7 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     …
 }
 </code></pre>
-              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
+                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
     Man boyfriend;
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setBoyfriend</span><span class="hljs-params">(Man m)</span> </span>{
@@ -398,25 +370,24 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
     }
 }
 </code></pre>
-              <p>The two classes are meant to be used as follows:</p>
-              <pre><code class="hljs java">Woman jean;
+                <p>The two classes are meant to be used as follows:</p>
+                <pre><code class="hljs java">Woman jean;
 Man james;
 …
 james.setGirlfriend(jean);
 jean.setBoyfriend(james);
 </code></pre>
-              <p>Suppose the two classes were used this instead:</p>
-              <pre><code class="hljs java">Woman jean; Man james, yong;
+                <p>Suppose the two classes were used this instead:</p>
+                <pre><code class="hljs java">Woman jean; Man james, yong;
 …
 james.setGirlfriend(jean);  
 jean.setBoyfriend(yong);  
 </code></pre>
-              <p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this &quot;love triangle&quot;. In such a situation, we say that <em>the referential integrity has been violated</em>.
-                It simply means <em>there is an inconsistency in object references</em>.</p>
-              <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
-              <p></p>
-              <p>One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.</p>
-              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
+                <p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this &quot;love triangle&quot;. In such a situation, we say that <em>the referential integrity has been violated</em>. It simply means <em>there is an inconsistency in object references</em>.</p>
+                <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
+                <p></p>
+                <p>One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.</p>
+                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
     <span class="hljs-keyword">private</span> Man boyfriend;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setBoyfriend</span><span class="hljs-params">(Man m)</span> </span>{
@@ -436,7 +407,7 @@ jean.setBoyfriend(yong);
     ...
 }
 </code></pre>
-              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span></span>{
+                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span></span>{
     <span class="hljs-keyword">private</span> Woman girlfriend;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGirlfriend</span><span class="hljs-params">(Woman w)</span> </span>{
@@ -455,53 +426,50 @@ jean.setBoyfriend(yong);
    ...
 }
 </code></pre>
-              <p>When the code <code>james.setGirlfriend(jean)</code> is executed, the code ensures that <code>james</code> break up with any current girlfriend before he accepts <code>jean</code> as the girlfriend. Furthermore, the code ensures that <code>jean</code>                breaks up with any existing boyfriends and accepts <code>james</code> as the boyfriend.</p>
-            </div>
-          </div>
-          <div>
-            <p>
-              <div>
-                <h4 id="when"><span>When</span></h4>
+                <p>When the code <code>james.setGirlfriend(jean)</code> is executed, the code ensures that <code>james</code> break up with any current girlfriend before he accepts <code>jean</code> as the girlfriend. Furthermore, the code ensures that <code>jean</code> breaks up with any existing boyfriends and accepts <code>james</code> as the boyfriend.</p>
               </div>
-            </p>
-            <div>
-              <p><strong>It is not necessary to be 100% defensive all the time.</strong> While defensive code may be less prone to be misused or abused, such code can also be more complicated and slower to run.</p>
-              <p>The suitable degree of defensiveness depends on many factors such as:</p>
-              <ul>
-                <li>How critical is the system?</li>
-                <li>Will the code be used by programmers other than the author?</li>
-                <li>The level of programming language support for defensive programming</li>
-                <li>The overhead of being defensive</li>
-              </ul>
             </div>
-          </div>
-          <h2 id="design-by-contract-approach">Design-by-Contract Approach<a class="fa fa-anchor" href="#design-by-contract-approach"></a></h2>
-          <div>
-            <p>
-              <div>
-                <h4 id="design-by-contract"><span>Design by Contract</span></h4>
-              </div>
-            </p>
             <div>
-              <p><strong><tooltip content="term was coined by Bertrand Meyer" class="algolia-no-index">Design by contract (DbC)</tooltip> is an approach for designing software that requires defining formal, precise and verifiable interface specifications for software components.</strong></p>
-              <p>Suppose an operation is implemented with the behavior specified precisely in the API (preconditions, post conditions, exceptions etc.). When following the defensive approach, the code should first check if the preconditions have been met.
-                Typically, exceptions are thrown if preconditions are violated. In contrast, the <em>Design-by-Contract (DbC)</em> approach to coding assumes that it is the responsibility of the caller to ensure all preconditions are met. The operation
-                will honor the contract only if the preconditions have been met. If any of them have not been met, the behavior of the operation is &quot;unspecified&quot;.</p>
-              <p>Languages such as Eiffel have native support for DbC. For example, preconditions of an operation can be specified in Eiffel and the language runtime will check precondition violations without the need to do it explicitly in the code. To
-                follow the DbC approach in languages such as Java and C++ where there is no built-in DbC support, assertions can be used to confirm pre-conditions.</p>
+              <p>
+                <div>
+                  <h4 id="when"><span>When</span><a class="fa fa-anchor" href="#when"></a></h4>
+                </div>
+              </p>
+              <div>
+                <p><strong>It is not necessary to be 100% defensive all the time.</strong> While defensive code may be less prone to be misused or abused, such code can also be more complicated and slower to run.</p>
+                <p>The suitable degree of defensiveness depends on many factors such as:</p>
+                <ul>
+                  <li>How critical is the system?</li>
+                  <li>Will the code be used by programmers other than the author?</li>
+                  <li>The level of programming language support for defensive programming</li>
+                  <li>The overhead of being defensive</li>
+                </ul>
+              </div>
+            </div>
+            <h2 id="design-by-contract-approach">Design-by-Contract Approach<a class="fa fa-anchor" href="#design-by-contract-approach"></a></h2>
+            <div>
+              <p>
+                <div>
+                  <h4 id="design-by-contract"><span>Design by Contract</span><a class="fa fa-anchor" href="#design-by-contract"></a></h4>
+                </div>
+              </p>
+              <div>
+                <p><strong>
+                    <tooltip content="term was coined by Bertrand Meyer">Design by contract (DbC)</tooltip> is an approach for designing software that requires defining formal, precise and verifiable interface specifications for software components.
+                  </strong></p>
+                <p>Suppose an operation is implemented with the behavior specified precisely in the API (preconditions, post conditions, exceptions etc.). When following the defensive approach, the code should first check if the preconditions have been met. Typically, exceptions are thrown if preconditions are violated. In contrast, the <em>Design-by-Contract (DbC)</em> approach to coding assumes that it is the responsibility of the caller to ensure all preconditions are met. The operation will honor the contract only if the preconditions have been met. If any of them have not been met, the behavior of the operation is &quot;unspecified&quot;.</p>
+                <p>Languages such as Eiffel have native support for DbC. For example, preconditions of an operation can be specified in Eiffel and the language runtime will check precondition violations without the need to do it explicitly in the code. To follow the DbC approach in languages such as Java and C++ where there is no built-in DbC support, assertions can be used to confirm pre-conditions.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <footer>
+      <div class="text-center">
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+    </footer>
   </div>
-</div>
-<div id="flex-div"></div>
-<footer>
-  <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
-</footer>
-</div>
 </body>
 <script src="../markbind/js/vue.min.js"></script>
 <script src="../markbind/js/vue-strap.min.js"></script>
@@ -509,22 +477,23 @@ jean.setBoyfriend(yong);
 <script src="../markbind/js/polyfill.min.js"></script>
 <script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
-    const baseUrl = '/se-book'
-    const enableSearch = true
+  const baseUrl = '/se-book'
+  const enableSearch = true
 </script>
 <script src="../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
-    function initAlgolia() {
-      docsearch({
-        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
-        indexName: "se-edu",
-        inputSelector: "#algolia-search-input",
-        algoliaOptions: {},
-        debug: false,
-      });
-    }
-    MarkBind.afterSetup(initAlgolia);
-  </script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+      indexName: "se-edu",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {},
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 <script src="../markbind/layouts/default/scripts.js"></script>
+
 </html>

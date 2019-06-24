@@ -1,39 +1,43 @@
 <div>
-  <p>
-    <panel src="/se-book/designFundamentals/cohesion/what/unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Design → Design Fundamentals → Cohesion →
+  <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\designFundamentals\cohesion\how\text.md">
+    <p>
+      <panel src="/se-book/designFundamentals/cohesion/what/unit-inElsewhere-asFlat._include_.html" header="%%<md>:glyphicon-education:</md> Design → Design Fundamentals → Cohesion →
 What%%"></panel>
-  </p>
+    </p>
+  </div>
 </div>
 <p></p>
-<p><span class="dimmed"><strong><span>Design → Design Fundamentals → Cohesion →
-</span></strong>
-  </span>
-</p>
+<p><span class="dimmed"><strong><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\designFundamentals\cohesion\path.md">Design → Design Fundamentals → Cohesion →
+        </span></span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="how"><span>How</span></h4>
+    <h4 id="how"><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\designFundamentals\cohesion\how\text.md">How</span></span></h4>
   </div>
   <div id="main">
     <div>
-      <p><strong>Cohesion can be present in many forms</strong>. Some examples:</p>
-      <ul>
-        <li>Code related to a single concept is kept together, e.g. the <code>Student</code> component handles everything related to students.</li>
-        <li>Code that is invoked close together in time is kept together, e.g. all code related to initializing the system is kept together.</li>
-        <li>Code that manipulates the same data structure is kept together, e.g. the <code>GameArchive</code> component handles everything related to the storage and retrieval of game sessions.</li>
-      </ul>
-      <tip-box>
-        <p><span class="fas fa-cube"></span> Suppose a Payroll application contains a class that deals with writing data to the database. If the class include some code to show an error dialog to the user if the database is unreachable, that class is not
-          cohesive because it seems to be interacting with the user as well as the database.</p>
-      </tip-box>
+      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\designFundamentals\cohesion\how\text.md">
+        <p><strong>Cohesion can be present in many forms</strong>. Some examples:</p>
+        <ul>
+          <li>Code related to a single concept is kept together, e.g. the <code>Student</code> component handles everything related to students.</li>
+          <li>Code that is invoked close together in time is kept together, e.g. all code related to initializing the system is kept together.</li>
+          <li>Code that manipulates the same data structure is kept together, e.g. the <code>GameArchive</code> component handles everything related to the storage and retrieval of game sessions.</li>
+        </ul>
+        <tip-box>
+          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose a Payroll application contains a class that deals with writing data to the database. If the class include some code to show an error dialog to the user if the database is unreachable, that class is not cohesive because it seems to be interacting with the user as well as the database.</p>
+        </tip-box>
+      </div>
     </div>
     <div>
-      <div>
-        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-          <div>
-            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which class is more cohesive?">
-              <question has-input="true">
-                <p>Compare the cohesion of the following two versions of the <code>EmailMessage</code> class. Which one is more cohesive and why?</p>
-                <pre><code class="hljs java"><span class="hljs-comment">// version-1</span>
+      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\designFundamentals\cohesion\how\text.md">
+        <div>
+          <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\designFundamentals\cohesion\how\exercises.md">
+            <panel header="<md>:fas-dumbbell:</md> Exercises" expandable>
+              <div>
+                <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\designFundamentals\cohesion\how\q-essay-emailMessage.md">
+                  <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Which class is more cohesive?">
+                    <question has-input="true">
+                      <p>Compare the cohesion of the following two versions of the <code>EmailMessage</code> class. Which one is more cohesive and why?</p>
+                      <pre><code class="hljs java"><span class="hljs-comment">// version-1</span>
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{
     <span class="hljs-keyword">private</span> String sendTo;
  	  <span class="hljs-keyword">private</span> String subject;
@@ -73,15 +77,17 @@ What%%"></panel>
     }
 }
 </code></pre>
-                <div slot="answer">
-                  <p>Version 2 is less cohesive.</p>
-                  <p>Explanation: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, we can improve the cohesion of both versions
-                    by removing the sendMessage functionality. Although sending message is related to emails, this class is supposed to represent an email message, not an email server.</p>
+                      <div slot="answer">
+                        <p>Version 2 is less cohesive.</p>
+                        <p>Explanation: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, we can improve the cohesion of both versions by removing the sendMessage functionality. Although sending message is related to emails, this class is supposed to represent an email message, not an email server.</p>
+                      </div>
+                    </question>
+                  </panel>
                 </div>
-              </question>
+              </div>
             </panel>
           </div>
-        </panel>
+        </div>
       </div>
     </div>
   </div>

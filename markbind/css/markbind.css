@@ -56,7 +56,7 @@ code.hljs.inline {
     background: #f8f8f8;
     color: #333;
     display: initial;
-    padding: 0px;
+    padding: 0;
 }
 
 .markbind-table {
@@ -78,28 +78,68 @@ code.hljs.inline {
     background-color: #fff;
 }
 
+/**
+  * Holy Grail Layout
+  *
+  * This section covers the common styles used within Header, Footer and Side Navigation bars
+  */
+
+/* #app is treated as the main container */
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#flex-body {
+    display: flex;
+    flex: 1;
+}
+
 #content-wrapper {
+    flex: 1;
     margin: 0 auto;
     max-width: 1000px;
-    overflow-x: hidden;
     padding: 0 20px;
+    transition: 0.4s;
     width: 100%;
+    -webkit-transition: 0.4s;
+}
+
+/* Footer */
+footer {
+    background-color: #f5f5f5;
+    color: dimgrey;
+    padding: 10px 0;
+}
+
+/* Side Navigation menus */
+
+.border-left-grey {
+    border-left: 1px solid lightgrey;
+}
+
+.border-right-grey {
+    border-right: 1px solid lightgrey;
+}
+
+.nav-inner {
+    /* This class is used in both site and page navigation menus,
+       specifically for the sticky container to ensure adequate
+       spacing between itself and the boundaries of the menus
+     */
+    max-height: 90vh;
+    overflow-y: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 1rem;
+    top: 0;
 }
 
 /* Bootstrap small(sm) responsive breakpoint */
 @media (max-width: 767.98px) {
     .dropdown-menu > li > a {
         white-space: normal;
-    }
-
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a,
-    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-        color: #333;
-    }
-
-    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-    .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a {
-        background-color: #337ab7;
     }
 
     .navbar-nav .open .dropdown-menu {
@@ -109,24 +149,6 @@ code.hljs.inline {
     #content-wrapper {
         padding: 0 10px;
     }
-}
-
-/* Footer */
-
-footer {
-    background-color: #f5f5f5;
-    color: dimgrey;
-    padding: 10px 0;
-}
-
-#app {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-#flex-div {
-    flex: 1;
 }
 
 /* Scrollbar */
@@ -160,8 +182,9 @@ footer {
 }
 
 /* Temporary Anti-FOUC Styles */
-/* By default, some VueStrap components break the layout of the page before Vue is mounted, */
-/* so we apply temporary styles to fix the layout until Vue correctly updates the DOM. */
+
+/* By default, some VueStrap components break the layout of the page before Vue is mounted,
+so we apply temporary styles to fix the layout until Vue correctly updates the DOM. */
 
 .temp-navbar {
     display: flex;

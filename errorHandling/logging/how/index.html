@@ -1,83 +1,67 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 1.21.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SEforSDL - Error Handling: Logging: How</title>
-    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css" >
-    <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/markbind.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
-    <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-    
-    
-    
-    <link rel="icon" href="/se-book/favicon.ico">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SEforSDL - Error Handling: Logging: How</title>
+  <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+  <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
+
+
+
+  <link rel="icon" href="/se-book/favicon.ico">
 </head>
+
 <body>
-<div id="app">
+  <div id="app">
+    <header>
+      <navbar placement="top" type="primary">
+        <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+        <li slot="right">
+          <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        </li>
+      </navbar>
+    </header>
     <div id="flex-body">
-  <div id="site-nav">
-    <navbar placement="top" type="inverse" class="temp-navbar">
-      <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
-      <li slot="right">
-        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
-      </li>
-    </navbar>
-  </div>
-  <div id="site-nav-btn-wrap">
-    <div id="site-nav-btn">
-      <div class="menu-top-bar"></div>
-      <div class="menu-middle-bar"></div>
-      <div class="menu-bottom-bar"></div>
-    </div>
-  </div>
-  <div id="page-content">
-    <div id="content-wrapper">
-      <div>
-        <link rel="stylesheet" href="/se-book/css/textbook.css">
-        <div class="website-content">
-          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use logging</span>
-            </span>
-            </span>
-            </span>
-          </p>
-          <p></p>
-          <p></p>
-          <div>
-            <div></div>
+      <div id="content-wrapper">
+        <div>
+          <link rel="stylesheet" href="/se-book/css/textbook.css">
+          <div class="website-content">
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use logging</span></span></span></span></p>
             <p></p>
-            <p><span class="dimmed"><strong><span>Implementation → Error Handling → Logging →
-</span></strong>
-              </span>
-            </p>
-            <div id="title-and-body">
-              <div>
-                <h4 id="how"><span>How</span></h4>
-              </div>
-              <div id="main">
+            <p></p>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Implementation → Error Handling → Logging →
+                    </span></strong></span></p>
+              <div id="title-and-body">
                 <div>
-                  <p><strong>Most programming environments come with logging systems that allow sophisticated forms of logging.</strong> They have features such as the ability to enable and disable logging easily or to change the logging
-                    <tooltip content="how much information to record"
-                      class="algolia-no-index">intensity</tooltip>.</p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> This sample Java code uses Java’s default logging mechanism.</p>
-                    <p>First, import the relevant Java package:</p>
-                    <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.logging.*;
+                  <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how"></a></h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p><strong>Most programming environments come with logging systems that allow sophisticated forms of logging.</strong> They have features such as the ability to enable and disable logging easily or to change the logging <tooltip content="how much information to record">intensity</tooltip>.</p>
+                    <tip-box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This sample Java code uses Java’s default logging mechanism.</p>
+                      <p>First, import the relevant Java package:</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.logging.*;
 </code></pre>
-                    <p>Next, create a <code>Logger</code>:</p>
-                    <pre><code class="hljs java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);
+                      <p>Next, create a <code>Logger</code>:</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);
 </code></pre>
-                    <p>Now, you can use the <code>Logger</code> object to log information. Note the use of
-                      <popover content="`INFO`, `WARNING` etc." class="algolia-no-index">logging level</popover> for each message. When running the code, the logging level can be set to <code>WARNING</code> so that log messages specified as <code>INFO</code> level (which is a lower level than <code>WARNING</code>) will
-                      not be written to the log file at all.</p>
-                    <pre><code class="hljs java"><span class="hljs-comment">// log a message at INFO level</span>
+                      <p>Now, you can use the <code>Logger</code> object to log information. Note the use of <popover content="`INFO`, `WARNING` etc.">logging level</popover> for each message. When running the code, the logging level can be set to <code>WARNING</code> so that log messages specified as <code>INFO</code> level (which is a lower level than <code>WARNING</code>) will not be written to the log file at all.</p>
+                      <pre><code class="hljs java"><span class="hljs-comment">// log a message at INFO level</span>
 logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);
 <span class="hljs-comment">//...</span>
 processInput();
@@ -88,28 +72,29 @@ processInput();
 <span class="hljs-comment">//...</span>
 logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
 </code></pre>
-                  </tip-box>
-                </div>
-                <div>
+                    </tip-box>
+                  </div>
                   <div>
-                    <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
-                      <p><strong>Tutorials</strong>:</p>
-                      <ul>
-                        <li><a href="http://www.vogella.com/tutorials/Logging/article.html"><strong>Java Logging API - Tutorial</strong></a> -- A tutorial by <em>Lars Vogella</em></li>
-                        <li><a href="http://tutorials.jenkov.com/java-logging/index.html"><strong>Java Logging Tutorial</strong></a> -- An alternative tutorial by <em>Jakob Jenkov</em></li>
-                      </ul>
-                      <div v-closeable="" alt="video:logging">
+                    <div>
+                      <panel header="<md>:fas-paperclip:</md> Resources" expanded>
+                        <p><strong>Tutorials</strong>:</p>
                         <ul>
-                          <li>A video tutorial by <em>SimplyCoded</em>:<br></li>
+                          <li><a href="http://www.vogella.com/tutorials/Logging/article.html"><strong>Java Logging API - Tutorial</strong></a> -- A tutorial by <em>Lars Vogella</em></li>
+                          <li><a href="http://tutorials.jenkov.com/java-logging/index.html"><strong>Java Logging Tutorial</strong></a> -- An alternative tutorial by <em>Jakob Jenkov</em></li>
                         </ul>
-                        <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/W0_Man88Z3Q" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                      </div>
-                      <p><strong>Best Practices</strong>:</p>
-                      <ul>
-                        <li><a href="https://www.javacodegeeks.com/2011/01/10-tips-proper-application-logging.html"><strong>10 Tips for Proper Application Logging</strong></a> -- by <em>Tomasz Nurkiewicz</em></li>
-                        <li><a href="http://commons.apache.org/proper/commons-logging/guide.html#Message_PrioritiesLevels"><strong>What each logging level means</strong></a> -- conventions recommended by <em>Apache Project</em></li>
-                      </ul>
-                    </panel>
+                        <div v-closeable alt="video:logging">
+                          <ul>
+                            <li>A video tutorial by <em>SimplyCoded</em>:<br></li>
+                          </ul>
+                          <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/W0_Man88Z3Q" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                        </div>
+                        <p><strong>Best Practices</strong>:</p>
+                        <ul>
+                          <li><a href="https://www.javacodegeeks.com/2011/01/10-tips-proper-application-logging.html"><strong>10 Tips for Proper Application Logging</strong></a> -- by <em>Tomasz Nurkiewicz</em></li>
+                          <li><a href="http://commons.apache.org/proper/commons-logging/guide.html#Message_PrioritiesLevels"><strong>What each logging level means</strong></a> -- conventions recommended by <em>Apache Project</em></li>
+                        </ul>
+                      </panel>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -118,14 +103,11 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
         </div>
       </div>
     </div>
+    <footer>
+      <div class="text-center">
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+    </footer>
   </div>
-</div>
-<div id="flex-div"></div>
-<footer>
-  <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
-</footer>
-</div>
 </body>
 <script src="../../../markbind/js/vue.min.js"></script>
 <script src="../../../markbind/js/vue-strap.min.js"></script>
@@ -133,22 +115,23 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
 <script src="../../../markbind/js/polyfill.min.js"></script>
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
-    const baseUrl = '/se-book'
-    const enableSearch = true
+  const baseUrl = '/se-book'
+  const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
-    function initAlgolia() {
-      docsearch({
-        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
-        indexName: "se-edu",
-        inputSelector: "#algolia-search-input",
-        algoliaOptions: {},
-        debug: false,
-      });
-    }
-    MarkBind.afterSetup(initAlgolia);
-  </script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+      indexName: "se-edu",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {},
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+
 </html>

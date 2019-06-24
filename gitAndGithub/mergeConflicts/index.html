@@ -1,131 +1,115 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 1.21.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SEforSDL - Git and Github: Merge Conflicts</title>
-    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css" >
-    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../markbind/css/markbind.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
-    <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-    
-    
-    
-    <link rel="icon" href="/se-book/favicon.ico">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SEforSDL - Git and Github: Merge Conflicts</title>
+  <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+  <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+
+
+
+  <link rel="icon" href="/se-book/favicon.ico">
 </head>
+
 <body>
-<div id="app">
+  <div id="app">
+    <header>
+      <navbar placement="top" type="primary">
+        <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+        <li slot="right">
+          <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        </li>
+      </navbar>
+    </header>
     <div id="flex-body">
-  <div id="site-nav">
-    <navbar placement="top" type="inverse" class="temp-navbar">
-      <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
-      <li slot="right">
-        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
-      </li>
-    </navbar>
-  </div>
-  <div id="site-nav-btn-wrap">
-    <div id="site-nav-btn">
-      <div class="menu-top-bar"></div>
-      <div class="menu-middle-bar"></div>
-      <div class="menu-bottom-bar"></div>
-    </div>
-  </div>
-  <div id="page-content">
-    <div id="content-wrapper">
-      <div>
-        <link rel="stylesheet" href="/se-book/css/textbook.css">
-        <div class="website-content">
-          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use Git to resolve merge conflicts</span>
-            </span>
-            </span>
-            </span>
-          </p>
-          <p></p>
-          <p></p>
-          <div>
-            <div>
-              <p>
-                <panel src="/se-book/gitAndGithub/branch/unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%Tools → Git & GitHub → Branching%%" popup-url="/se-book/gitAndGithub/branch"
-                  class="algolia-no-index"></panel>
-              </p>
-            </div>
+      <div id="content-wrapper">
+        <div>
+          <link rel="stylesheet" href="/se-book/css/textbook.css">
+          <div class="website-content">
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Git to resolve merge conflicts</span></span></span></span></p>
             <p></p>
-            <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
-</span></strong>
-              </span>
-            </p>
-            <div id="title-and-body">
+            <p></p>
+            <div>
               <div>
-                <h4 id="merge-conflicts"><span>Merge Conflicts</span></h4>
+                <p>
+                  <panel src="/se-book/gitAndGithub/branch/unit-inElsewhere-asFlat._include_.html" header="<md>:glyphicon-education:</md> %%Tools → Git & GitHub → Branching%%" popup-url="/se-book/gitAndGithub/branch" class="algolia-no-index"></panel>
+                </p>
               </div>
-              <div id="main">
+              <p></p>
+              <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+                    </span></strong></span></p>
+              <div id="title-and-body">
                 <div>
-                  <p><strong>1. Start a branch named <code>fix1</code> in a local repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
-                  <p><strong>2. Switch back to <code>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
-                  <img src="/se-book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
-                  <p></p>
-                  <p><strong>3. Try to merge the <code>fix1</code> branch onto the <code>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
-                  <pre><code class="hljs">COLORS
-------
-blue
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-black
-=======
-green
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; fix1
-red
-white
-</code></pre>
-                  <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and a line starting with <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting
-                    with <code>=======</code>.</p>
-                  <p>This is the conflicting part that is coming from the <code>master</code> branch:</p>
-                  <pre><code class="hljs">
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-black
-=======
-
-</code></pre>
-                  <p>This is the conflicting part that is coming from the <code>fix1</code> branch:</p>
-                  <pre><code class="hljs">
-=======
-green
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; fix1
-
-</code></pre>
-                  <p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
-                  <pre><code class="hljs">COLORS
-------
-blue
-black
-green
-red
-white
-</code></pre>
-                  <p><strong>6. Stage the changes, and commit.</strong></p>
+                  <h4 id="merge-conflicts"><span>Merge Conflicts</span><a class="fa fa-anchor" href="#merge-conflicts"></a></h4>
                 </div>
-                <div></div>
+                <div id="main">
+                  <div>
+                    <p><strong>1. Start a branch named <code>fix1</code> in a local repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
+                    <p><strong>2. Switch back to <code>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
+                    <img src="/se-book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
+                    <p></p>
+                    <p><strong>3. Try to merge the <code>fix1</code> branch onto the <code>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
+                    <pre><code class="hljs">COLORS
+------
+blue
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+black
+=======
+green
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; fix1
+red
+white
+</code></pre>
+                    <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and a line starting with <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code>=======</code>.</p>
+                    <p>This is the conflicting part that is coming from the <code>master</code> branch:</p>
+                    <pre><code class="hljs">
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+black
+=======
+
+</code></pre>
+                    <p>This is the conflicting part that is coming from the <code>fix1</code> branch:</p>
+                    <pre><code class="hljs">
+=======
+green
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; fix1
+
+</code></pre>
+                    <p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
+                    <pre><code class="hljs">COLORS
+------
+blue
+black
+green
+red
+white
+</code></pre>
+                    <p><strong>6. Stage the changes, and commit.</strong></p>
+                  </div>
+                  <div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <footer>
+      <div class="text-center">
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+    </footer>
   </div>
-</div>
-<div id="flex-div"></div>
-<footer>
-  <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
-</footer>
-</div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
 <script src="../../markbind/js/vue-strap.min.js"></script>
@@ -133,22 +117,23 @@ white
 <script src="../../markbind/js/polyfill.min.js"></script>
 <script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
-    const baseUrl = '/se-book'
-    const enableSearch = true
+  const baseUrl = '/se-book'
+  const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
-    function initAlgolia() {
-      docsearch({
-        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
-        indexName: "se-edu",
-        inputSelector: "#algolia-search-input",
-        algoliaOptions: {},
-        debug: false,
-      });
-    }
-    MarkBind.afterSetup(initAlgolia);
-  </script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+      indexName: "se-edu",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {},
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
+
 </html>

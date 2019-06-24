@@ -1,92 +1,79 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 1.21.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SEforSDL - Software Design Fundamentals: Cohesion: How</title>
-    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css" >
-    <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/markbind.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
-    <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-    
-    
-    
-    <link rel="icon" href="/se-book/favicon.ico">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SEforSDL - Software Design Fundamentals: Cohesion: How</title>
+  <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+  <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
+
+
+
+  <link rel="icon" href="/se-book/favicon.ico">
 </head>
+
 <body>
-<div id="app">
+  <div id="app">
+    <header>
+      <navbar placement="top" type="primary">
+        <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+        <li slot="right">
+          <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        </li>
+      </navbar>
+    </header>
     <div id="flex-body">
-  <div id="site-nav">
-    <navbar placement="top" type="inverse" class="temp-navbar">
-      <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
-      <li slot="right">
-        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
-      </li>
-    </navbar>
-  </div>
-  <div id="site-nav-btn-wrap">
-    <div id="site-nav-btn">
-      <div class="menu-top-bar"></div>
-      <div class="menu-middle-bar"></div>
-      <div class="menu-bottom-bar"></div>
-    </div>
-  </div>
-  <div id="page-content">
-    <div id="content-wrapper">
-      <div>
-        <link rel="stylesheet" href="/se-book/css/textbook.css">
-        <div class="website-content">
-          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can increase cohesion</span>
-            </span>
-            </span>
-            </span>
-          </p>
-          <p></p>
-          <p></p>
-          <div>
-            <div>
-              <p>
-                <panel src="/se-book/designFundamentals/cohesion/what/unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Design → Design Fundamentals → Cohesion →
-What%%" class="algolia-no-index"></panel>
-              </p>
-            </div>
+      <div id="content-wrapper">
+        <div>
+          <link rel="stylesheet" href="/se-book/css/textbook.css">
+          <div class="website-content">
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can increase cohesion</span></span></span></span></p>
             <p></p>
-            <p><span class="dimmed"><strong><span>Design → Design Fundamentals → Cohesion →
-</span></strong>
-              </span>
-            </p>
-            <div id="title-and-body">
+            <p></p>
+            <div>
               <div>
-                <h4 id="how"><span>How</span></h4>
+                <p>
+                  <panel src="/se-book/designFundamentals/cohesion/what/unit-inElsewhere-asFlat._include_.html" header="%%<md>:glyphicon-education:</md> Design → Design Fundamentals → Cohesion →
+What%%" class="algolia-no-index"></panel>
+                </p>
               </div>
-              <div id="main">
+              <p></p>
+              <p><span class="dimmed"><strong><span>Design → Design Fundamentals → Cohesion →
+                    </span></strong></span></p>
+              <div id="title-and-body">
                 <div>
-                  <p><strong>Cohesion can be present in many forms</strong>. Some examples:</p>
-                  <ul>
-                    <li>Code related to a single concept is kept together, e.g. the <code>Student</code> component handles everything related to students.</li>
-                    <li>Code that is invoked close together in time is kept together, e.g. all code related to initializing the system is kept together.</li>
-                    <li>Code that manipulates the same data structure is kept together, e.g. the <code>GameArchive</code> component handles everything related to the storage and retrieval of game sessions.</li>
-                  </ul>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> Suppose a Payroll application contains a class that deals with writing data to the database. If the class include some code to show an error dialog to the user if the database is unreachable, that
-                      class is not cohesive because it seems to be interacting with the user as well as the database.</p>
-                  </tip-box>
+                  <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how"></a></h4>
                 </div>
-                <div>
+                <div id="main">
                   <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="" class="algolia-no-index">
-                      <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which class is more cohesive?" class="algolia-no-index">
-                          <question has-input="true">
-                            <p>Compare the cohesion of the following two versions of the <code>EmailMessage</code> class. Which one is more cohesive and why?</p>
-                            <pre><code class="hljs java"><span class="hljs-comment">// version-1</span>
+                    <p><strong>Cohesion can be present in many forms</strong>. Some examples:</p>
+                    <ul>
+                      <li>Code related to a single concept is kept together, e.g. the <code>Student</code> component handles everything related to students.</li>
+                      <li>Code that is invoked close together in time is kept together, e.g. all code related to initializing the system is kept together.</li>
+                      <li>Code that manipulates the same data structure is kept together, e.g. the <code>GameArchive</code> component handles everything related to the storage and retrieval of game sessions.</li>
+                    </ul>
+                    <tip-box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose a Payroll application contains a class that deals with writing data to the database. If the class include some code to show an error dialog to the user if the database is unreachable, that class is not cohesive because it seems to be interacting with the user as well as the database.</p>
+                    </tip-box>
+                  </div>
+                  <div>
+                    <div>
+                      <panel header="<md>:fas-dumbbell:</md> Exercises" expandable class="algolia-no-index">
+                        <div>
+                          <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Which class is more cohesive?" class="algolia-no-index">
+                            <question has-input="true">
+                              <p>Compare the cohesion of the following two versions of the <code>EmailMessage</code> class. Which one is more cohesive and why?</p>
+                              <pre><code class="hljs java"><span class="hljs-comment">// version-1</span>
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{
     <span class="hljs-keyword">private</span> String sendTo;
  	  <span class="hljs-keyword">private</span> String subject;
@@ -126,15 +113,15 @@ What%%" class="algolia-no-index"></panel>
     }
 }
 </code></pre>
-                            <div slot="answer">
-                              <p>Version 2 is less cohesive.</p>
-                              <p>Explanation: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, we can improve the cohesion of
-                                both versions by removing the sendMessage functionality. Although sending message is related to emails, this class is supposed to represent an email message, not an email server.</p>
-                            </div>
-                          </question>
-                        </panel>
-                      </div>
-                    </panel>
+                              <div slot="answer" class="algolia-no-index">
+                                <p>Version 2 is less cohesive.</p>
+                                <p>Explanation: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, we can improve the cohesion of both versions by removing the sendMessage functionality. Although sending message is related to emails, this class is supposed to represent an email message, not an email server.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -143,14 +130,11 @@ What%%" class="algolia-no-index"></panel>
         </div>
       </div>
     </div>
+    <footer>
+      <div class="text-center">
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+    </footer>
   </div>
-</div>
-<div id="flex-div"></div>
-<footer>
-  <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
-</footer>
-</div>
 </body>
 <script src="../../../markbind/js/vue.min.js"></script>
 <script src="../../../markbind/js/vue-strap.min.js"></script>
@@ -158,22 +142,23 @@ What%%" class="algolia-no-index"></panel>
 <script src="../../../markbind/js/polyfill.min.js"></script>
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
-    const baseUrl = '/se-book'
-    const enableSearch = true
+  const baseUrl = '/se-book'
+  const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
-    function initAlgolia() {
-      docsearch({
-        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
-        indexName: "se-edu",
-        inputSelector: "#algolia-search-input",
-        algoliaOptions: {},
-        debug: false,
-      });
-    }
-    MarkBind.afterSetup(initAlgolia);
-  </script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+      indexName: "se-edu",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {},
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+
 </html>

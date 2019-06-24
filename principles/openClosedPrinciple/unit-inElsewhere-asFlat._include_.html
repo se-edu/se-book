@@ -1,58 +1,65 @@
-<div></div>
+<div>
+  <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\principles\openClosedPrinciple\text.md"></div>
+</div>
 <p></p>
-<p><span class="dimmed"><strong><span>Supplmentary → Principles →
-</span></strong>
-  </span>
-</p>
+<p><span class="dimmed"><strong><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\principles\path.md">Supplmentary → Principles →
+        </span></span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="open-closed-principle"><span>Open-Closed Principle</span></h4>
+    <h4 id="open-closed-principle"><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\principles\openClosedPrinciple\text.md">Open-Closed Principle</span></span></h4>
   </div>
   <div id="main">
     <div>
-      <p><strong>The Open-Close Principle aims to make a code entity easy to adapt and reuse without needing to modify the code entity itself.</strong></p>
-      <tip-box type="definition">
-        <div>
-          <p><strong>Open-Closed Principle (OCP)</strong>: A module should be <em>open</em> for extension but <em>closed</em> for modification. That is, modules should be written so that they can be extended, without requiring them to be modified. <sub>-- proposed by <a href="https://en.wikipedia.org/wiki/Bertrand_Meyer">Bertrand Meyer</a></sub></p>
-        </div>
-      </tip-box>
-      <p>In object-oriented programming, OCP can be achieved in various ways. This often requires separating the <em>specification (i.e. interface)</em> of a module from its <em>implementation</em>.</p>
-      <tip-box>
-        <p><span class="fas fa-cube"></span> In the design given below, the behavior of the <code>CommandQueue</code> class can be altered by adding more concrete <code>Command</code> subclasses. For example, by including a <code>Delete</code> class alongside
-          <code>List</code>, <code>Sort</code>, and <code>Reset</code>, the <code>CommandQueue</code> can now perform delete commands without modifying its code at all. That is, its behavior was extended without having to modify its code. Hence, it was
-          open to extensions, but closed to modification.</p>
-        <img src="/se-book/principles/openClosedPrinciple/images/commandQueue.png" height="170">
-        <p></p>
-      </tip-box>
-      <tip-box>
-        <p><span class="fas fa-cube"></span> The behavior of a Java generic class can be altered by passing it a different class as a parameter. In the code below, the <code>ArrayList</code> class behaves as a container of <code>Students</code> in one instance
-          and as a container of <code>Admin</code> objects in the other instance, without having to change its code. That is, the behavior of the <code>ArrayList</code> class is extended without modifying its code.</p>
-        <pre><code class="hljs java">ArrayList students = <span class="hljs-keyword">new</span> ArrayList&lt; Student &gt;();
+      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\principles\openClosedPrinciple\text.md">
+        <p><strong>The Open-Close Principle aims to make a code entity easy to adapt and reuse without needing to modify the code entity itself.</strong></p>
+        <tip-box type="definition">
+          <div>
+            <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\common\definitions.md">
+              <p><strong>Open-Closed Principle (OCP)</strong>: A module should be <em>open</em> for extension but <em>closed</em> for modification. That is, modules should be written so that they can be extended, without requiring them to be modified. <sub>-- proposed by <a href="https://en.wikipedia.org/wiki/Bertrand_Meyer">Bertrand Meyer</a></sub></p>
+            </div>
+          </div>
+        </tip-box>
+        <p>In object-oriented programming, OCP can be achieved in various ways. This often requires separating the <em>specification (i.e. interface)</em> of a module from its <em>implementation</em>.</p>
+        <tip-box>
+          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the design given below, the behavior of the <code>CommandQueue</code> class can be altered by adding more concrete <code>Command</code> subclasses. For example, by including a <code>Delete</code> class alongside <code>List</code>, <code>Sort</code>, and <code>Reset</code>, the <code>CommandQueue</code> can now perform delete commands without modifying its code at all. That is, its behavior was extended without having to modify its code. Hence, it was open to extensions, but closed to modification.</p>
+          <img src="/se-book/principles/openClosedPrinciple/images/commandQueue.png" height="170">
+          <p></p>
+        </tip-box>
+        <tip-box>
+          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The behavior of a Java generic class can be altered by passing it a different class as a parameter. In the code below, the <code>ArrayList</code> class behaves as a container of <code>Students</code> in one instance and as a container of <code>Admin</code> objects in the other instance, without having to change its code. That is, the behavior of the <code>ArrayList</code> class is extended without modifying its code.</p>
+          <pre><code class="hljs java">ArrayList students = <span class="hljs-keyword">new</span> ArrayList&lt; Student &gt;();
 ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt;();  	
 </code></pre>
-      </tip-box>
+        </tip-box>
+      </div>
     </div>
     <div>
-      <div>
-        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-          <div>
-            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Meaning of OCP">
-              <question>
-                <p>Which of these is closest to the meaning of the open-closed principle?</p>
-                <ul radio-group="6906e" class="radio-list">
-                  <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> a. We should be able to change a software module’s behavior without modifying its code.</label></li>
-                  <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> b. A software module should remain open to modification as long as possible.</label></li>
-                  <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> c. A software module should be open to modification and closed to extension.</label></li>
-                  <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> d. Open source software rocks. Closed source software sucks.</label></li>
-                </ul>
-                <div slot="answer">
-                  <p>(a)</p>
-                  <p>Explanation: Please refer the handout for the definition of OCP.</p>
+      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\principles\openClosedPrinciple\text.md">
+        <div>
+          <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\principles\openClosedPrinciple\exercises.md">
+            <panel header="<md>:fas-dumbbell:</md> Exercises" expandable>
+              <div>
+                <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\principles\openClosedPrinciple\q-tick-ocp.md">
+                  <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Meaning of OCP">
+                    <question>
+                      <p>Which of these is closest to the meaning of the open-closed principle?</p>
+                      <ul radio-group="6906e" class="radio-list">
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> a. We should be able to change a software module’s behavior without modifying its code.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> b. A software module should remain open to modification as long as possible.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> c. A software module should be open to modification and closed to extension.</label></li>
+                        <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> d. Open source software rocks. Closed source software sucks.</label></li>
+                      </ul>
+                      <div slot="answer">
+                        <p>(a)</p>
+                        <p>Explanation: Please refer the handout for the definition of OCP.</p>
+                      </div>
+                    </question>
+                  </panel>
                 </div>
-              </question>
+              </div>
             </panel>
           </div>
-        </panel>
+        </div>
       </div>
     </div>
   </div>

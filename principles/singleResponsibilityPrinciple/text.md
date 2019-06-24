@@ -20,7 +20,7 @@ If a class has only one responsibility, it needs to change only when there is a 
 
 </tip-box>
 
->{{ fas_quote_left }} Gather together the things that change for the same reasons. Separate those things that change for different reasons. <sub>―_Agile Software Development, Principles, Patterns, and Practices_ by Robert C. Martin</sub>
+>:fas-quote-left: Gather together the things that change for the same reasons. Separate those things that change for different reasons. <sub>―_Agile Software Development, Principles, Patterns, and Practices_ by Robert C. Martin</sub>
 
 </div>
 

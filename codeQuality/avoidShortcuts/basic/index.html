@@ -1,203 +1,175 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 1.21.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SEforSDL - Code Quality: [Guideline] Avoid Unsafe Shortcuts: Basic</title>
-    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css" >
-    <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/markbind.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
-    <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-    
-    
-    
-    <link rel="icon" href="/se-book/favicon.ico">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SEforSDL - Code Quality: [Guideline] Avoid Unsafe Shortcuts: Basic</title>
+  <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+  <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
+
+
+
+  <link rel="icon" href="/se-book/favicon.ico">
 </head>
+
 <body>
-<div id="app">
+  <div id="app">
+    <header>
+      <navbar placement="top" type="primary">
+        <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+        <li slot="right">
+          <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        </li>
+      </navbar>
+    </header>
     <div id="flex-body">
-  <div id="site-nav">
-    <navbar placement="top" type="inverse" class="temp-navbar">
-      <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
-      <li slot="right">
-        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
-      </li>
-    </navbar>
-  </div>
-  <div id="site-nav-btn-wrap">
-    <div id="site-nav-btn">
-      <div class="menu-top-bar"></div>
-      <div class="menu-middle-bar"></div>
-      <div class="menu-bottom-bar"></div>
-    </div>
-  </div>
-  <div id="page-content">
-    <div id="content-wrapper">
-      <div>
-        <link rel="stylesheet" href="/se-book/css/textbook.css">
-        <div class="website-content" id="all">
-          <p><span class="dimmed"><strong><span>Implementation → Code Quality → Error-Prone Practices →
-</span></strong>
-            </span>
-          </p>
-          <div id="title">
-            <h1 id="basic"><span>Basic</span><a class="fa fa-anchor" href="#basic"></a></h1>
-          </div>
-          <div id="main">
-            <div>
+      <div id="content-wrapper">
+        <div>
+          <link rel="stylesheet" href="/se-book/css/textbook.css">
+          <div class="website-content" id="all">
+            <p><span class="dimmed"><strong><span>Implementation → Code Quality → Error-Prone Practices →
+                  </span></strong></span></p>
+            <div id="title">
+              <h1 id="basic"><span>Basic</span><a class="fa fa-anchor" href="#basic"></a></h1>
+            </div>
+            <div id="main">
               <div>
-                <panel type="seamless" expanded="">
-                  <span slot="header" class="card-title"><div><h4 id="use-the-default-branch"><span>Use the Default Branch</span></h4>
-              </div>
-              </span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: use the default branch </span>
-                  </span>
-                  </span>
-                  </span>
-                </p>
-                <p></p>
-                <p></p>
-                <p></p>
                 <div>
-                  <p>Always include a default branch in <code>case</code> statements.</p>
-                  <p>Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the 'default' branch to detect errors (i.e. if execution reached the <code>default</code> branch,
-                    throw an exception). This also applies to the final <code>else</code> of an <code>if-else</code> construct. That is, the final <code>else</code> should mean 'everything else', and not the final option. Do not use <code>else</code>                    when an <code>if</code> condition can be explicitly specified, unless there is absolutely no other possibility.</p>
-                  <tip-box>
-                    <p>
-                      <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                        </span>
-                      </font>
-                    </p>
-                    <pre><code class="hljs java"><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;
+                  <panel type="seamless" expanded>
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="use-the-default-branch"><span>Use the Default Branch</span><a class="fa fa-anchor" href="#use-the-default-branch"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: use the default branch </span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p>Always include a default branch in <code>case</code> statements.</p>
+                        <p>Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the 'default' branch to detect errors (i.e. if execution reached the <code>default</code> branch, throw an exception). This also applies to the final <code>else</code> of an <code>if-else</code> construct. That is, the final <code>else</code> should mean 'everything else', and not the final option. Do not use <code>else</code> when an <code>if</code> condition can be explicitly specified, unless there is absolutely no other possibility.</p>
+                        <tip-box>
+                          <p>
+                            <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
+                          </p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;
 <span class="hljs-keyword">else</span> print <span class="hljs-string">"blue"</span>;
 </code></pre>
-                    <p>
-                      <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                        </span>
-                      </font>
-                    </p>
-                    <pre><code class="hljs java"><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;
+                          <p>
+                            <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
+                          </p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;
 <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (blue) print <span class="hljs-string">"blue"</span>;
 <span class="hljs-keyword">else</span> error(<span class="hljs-string">"incorrect input"</span>);
 </code></pre>
-                  </tip-box>
+                        </tip-box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
                 </div>
-                <div></div>
-              </div>
-              </panel>
-            </div>
-            <div>
-              <panel type="seamless" expanded="">
-                <span slot="header" class="card-title"><div><h4 id="don-t-recycle-variables-or-parameters"><span>Don't Recycle Variables or Parameters</span></h4>
-            </div>
-            </span>
-            <div class="indented">
-              <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: don't recycle variables or parameters </span>
-                </span>
-                </span>
-                </span>
-              </p>
-              <p></p>
-              <p></p>
-              <p></p>
-              <div>
-                <ul>
-                  <li>Use one variable for one purpose. Do not reuse a variable for a different purpose other than its intended one, just because the data type is the same.</li>
-                  <li>Do not reuse formal parameters as local variables inside the method.</li>
-                </ul>
-                <tip-box>
-                  <p>
-                    <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                      </span>
-                    </font>
-                  </p>
-                  <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{
+                <div>
+                  <panel type="seamless" expanded>
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="don-t-recycle-variables-or-parameters"><span>Don't Recycle Variables or Parameters</span><a class="fa fa-anchor" href="#don-t-recycle-variables-or-parameters"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: don't recycle variables or parameters </span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <ul>
+                          <li>Use one variable for one purpose. Do not reuse a variable for a different purpose other than its intended one, just because the data type is the same.</li>
+                          <li>Do not reuse formal parameters as local variables inside the method.</li>
+                        </ul>
+                        <tip-box>
+                          <p>
+                            <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
+                          </p>
+                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{
     length = length * width;
     <span class="hljs-keyword">return</span> length;
 }
 
 </code></pre>
-                  <p>
-                    <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                      </span>
-                    </font>
-                  </p>
-                  <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{
+                          <p>
+                            <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
+                          </p>
+                          <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{
     <span class="hljs-keyword">double</span> area;
     area = length * width;
     <span class="hljs-keyword">return</span> area;
 }
 </code></pre>
-                </tip-box>
+                        </tip-box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded>
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="avoid-empty-catch-blocks"><span>Avoid Empty Catch Blocks</span><a class="fa fa-anchor" href="#avoid-empty-catch-blocks"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: avoid empty catch blocks </span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p>Never write an empty <code>catch</code> statement. At least give a comment to explain why the <code>catch</code> block is left empty.</p>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded>
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="delete-dead-code"><span>Delete Dead Code</span><a class="fa fa-anchor" href="#delete-dead-code"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: delete dead code </span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p>We all feel reluctant to delete code we have painstakingly written, even if we have no use for that code any more (&quot;I spent a lot of time writing that code; what if we need it again?&quot;). Consider all code as baggage you have to carry; get rid of unused code the moment it becomes redundant. If you need that code again, simply recover it from the revision control tool you are using. Deleting code you wrote previously is a sign that you are improving.</p>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
               </div>
-              <div></div>
             </div>
-            </panel>
           </div>
-          <div>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><div><h4 id="avoid-empty-catch-blocks"><span>Avoid Empty Catch Blocks</span></h4>
-          </div>
-          </span>
-          <div class="indented">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: avoid empty catch blocks </span>
-              </span>
-              </span>
-              </span>
-            </p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <div>
-              <p>Never write an empty <code>catch</code> statement. At least give a comment to explain why the <code>catch</code> block is left empty.</p>
-            </div>
-            <div></div>
-          </div>
-          </panel>
         </div>
-        <div>
-          <panel type="seamless" expanded="">
-            <span slot="header" class="card-title"><div><h4 id="delete-dead-code"><span>Delete Dead Code</span></h4>
-        </div>
-        </span>
-        <div class="indented">
-          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: delete dead code </span>
-            </span>
-            </span>
-            </span>
-          </p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <div>
-            <p>We all feel reluctant to delete code we have painstakingly written, even if we have no use for that code any more (&quot;I spent a lot of time writing that code; what if we need it again?&quot;). Consider all code as baggage you have to carry;
-              get rid of unused code the moment it becomes redundant. If you need that code again, simply recover it from the revision control tool you are using. Deleting code you wrote previously is a sign that you are improving.</p>
-          </div>
-          <div></div>
-        </div>
-        </panel>
       </div>
     </div>
+    <footer>
+      <div class="text-center">
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+    </footer>
   </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="flex-div"></div>
-<footer>
-  <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
-</footer>
-</div>
 </body>
 <script src="../../../markbind/js/vue.min.js"></script>
 <script src="../../../markbind/js/vue-strap.min.js"></script>
@@ -205,22 +177,23 @@
 <script src="../../../markbind/js/polyfill.min.js"></script>
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
-    const baseUrl = '/se-book'
-    const enableSearch = true
+  const baseUrl = '/se-book'
+  const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
-    function initAlgolia() {
-      docsearch({
-        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
-        indexName: "se-edu",
-        inputSelector: "#algolia-search-input",
-        algoliaOptions: {},
-        debug: false,
-      });
-    }
-    MarkBind.afterSetup(initAlgolia);
-  </script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+      indexName: "se-edu",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {},
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+
 </html>

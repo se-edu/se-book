@@ -1,25 +1,25 @@
 <div>
-  <p>
-    <panel src="/se-book/designFundamentals/coupling/what/unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Design → Design Fundamentals → Coupling → What%%" popup-url="/se-book/designFundamentals/coupling/what"></panel>
-  </p>
+  <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\designFundamentals\coupling\how\text.md">
+    <p>
+      <panel src="/se-book/designFundamentals/coupling/what/unit-inElsewhere-asFlat._include_.html" header="%%<md>:glyphicon-education:</md> Design → Design Fundamentals → Coupling → What%%" popup-url="/se-book/designFundamentals/coupling/what"></panel>
+    </p>
+  </div>
 </div>
 <p></p>
-<p><span class="dimmed"><strong><span>Design → Design Fundamentals → Coupling →
-</span></strong>
-  </span>
-</p>
+<p><span class="dimmed"><strong><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\designFundamentals\coupling\path.md">Design → Design Fundamentals → Coupling →
+        </span></span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="how"><span>How</span></h4>
+    <h4 id="how"><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\designFundamentals\coupling\how\text.md">How</span></span></h4>
   </div>
   <div id="main">
     <div>
-      <p><strong>X is <em>coupled</em> to Y if a change to Y can <mark>potentially</mark> require a change in X</strong>.</p>
-      <tip-box>
-        <p><span class="fas fa-cube"></span> If <code>Foo</code> class calls the method <code>Bar#read()</code>, <code>Foo</code> is coupled to <code>Bar</code> because a change to <code>Bar</code> can potentially (but not always) require a change in the
-          <code>Foo</code> class <span class="dimmed"> e.g. if the signature of the <code>Bar#read()</code> is changed, <code>Foo</code> needs to change as well, but a change to the <code>Bar#write()</code> method may not require a change in the <code>Foo</code> class because <code>Foo</code> does not call <code>Bar#write()</code></span>.</p>
-        <panel type="seamless" header="%%code for the above example%%">
-          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\designFundamentals\coupling\how\text.md">
+        <p><strong>X is <em>coupled</em> to Y if a change to Y can <mark>potentially</mark> require a change in X</strong>.</p>
+        <tip-box>
+          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> If <code>Foo</code> class calls the method <code>Bar#read()</code>, <code>Foo</code> is coupled to <code>Bar</code> because a change to <code>Bar</code> can potentially (but not always) require a change in the <code>Foo</code> class <span class="dimmed"> e.g. if the signature of the <code>Bar#read()</code> is changed, <code>Foo</code> needs to change as well, but a change to the <code>Bar#write()</code> method may not require a change in the <code>Foo</code> class because <code>Foo</code> does not call <code>Bar#write()</code></span>.</p>
+          <panel type="seamless" header="%%code for the above example%%">
+            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
     ...
     <span class="hljs-keyword">new</span> Bar().read();
     ...
@@ -35,43 +35,50 @@
     }
 }
 </code></pre>
-        </panel>
-      </tip-box>
-      <tip-box>
-        <p><span class="fas fa-cube"></span> Some examples of coupling: <code>A</code> is coupled to <code>B</code> if,</p>
-        <ul>
-          <li><code>A</code> has access to the internal structure of <code>B</code> (this results in a very high level of coupling)</li>
-          <li><code>A</code> and <code>B</code> depend on the same global variable</li>
-          <li><code>A</code> calls <code>B</code></li>
-          <li><code>A</code> receives an object of <code>B</code> as a parameter or a return value</li>
-          <li><code>A</code> inherits from <code>B</code></li>
-          <li><code>A</code> and <code>B</code> are required to follow the same data format or communication protocol</li>
-        </ul>
-      </tip-box>
+          </panel>
+        </tip-box>
+        <tip-box>
+          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of coupling: <code>A</code> is coupled to <code>B</code> if,</p>
+          <ul>
+            <li><code>A</code> has access to the internal structure of <code>B</code> (this results in a very high level of coupling)</li>
+            <li><code>A</code> and <code>B</code> depend on the same global variable</li>
+            <li><code>A</code> calls <code>B</code></li>
+            <li><code>A</code> receives an object of <code>B</code> as a parameter or a return value</li>
+            <li><code>A</code> inherits from <code>B</code></li>
+            <li><code>A</code> and <code>B</code> are required to follow the same data format or communication protocol</li>
+          </ul>
+        </tip-box>
+      </div>
     </div>
     <div>
-      <div>
-        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-          <div>
-            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which indicate coupling?">
-              <question>
-                <p>Which of these indicate a coupling between components A and B?</p>
-                <ul class="task-list">
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. component A has access to internal structure of component B.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. component A and B are written by the same developer.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. component A calls component B.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. component A receives an object of component B as a parameter.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. component A inherits from component B.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. components A and B have to follow the same data format or communication protocol.</li>
-                </ul>
-                <div slot="answer">
-                  <p>(a)<s>(b)</s>(c)(d)(e)(f)</p>
-                  <p>Explanation: Being written by the same developer does not imply a coupling.</p>
+      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\designFundamentals\coupling\how\text.md">
+        <div>
+          <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\designFundamentals\coupling\how\exercises.md">
+            <panel header="<md>:fas-dumbbell:</md> Exercises" expandable>
+              <div>
+                <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\designFundamentals\coupling\how\q-tick-coupling.md">
+                  <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Which indicate coupling?">
+                    <question>
+                      <p>Which of these indicate a coupling between components A and B?</p>
+                      <ul class="task-list">
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. component A has access to internal structure of component B.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. component A and B are written by the same developer.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. component A calls component B.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. component A receives an object of component B as a parameter.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. component A inherits from component B.</li>
+                        <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. components A and B have to follow the same data format or communication protocol.</li>
+                      </ul>
+                      <div slot="answer">
+                        <p>(a)<s>(b)</s>(c)(d)(e)(f)</p>
+                        <p>Explanation: Being written by the same developer does not imply a coupling.</p>
+                      </div>
+                    </question>
+                  </panel>
                 </div>
-              </question>
+              </div>
             </panel>
           </div>
-        </panel>
+        </div>
       </div>
     </div>
   </div>

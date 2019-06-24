@@ -14,7 +14,7 @@
   <include src="../createPRs/unit-inElsewhere-asFlat.md#main" boilerplate />
 </modal>
 
-1a. Go to the respective PR page and click on the `Files changed` tab. Hover over the line you want to comment on and click on the <span style="color:#0066ff">{{ fas_plus_square }}</span> icon that appears on the left margin. That should create a text box for you to enter your comment.
+1a. Go to the respective PR page and click on the `Files changed` tab. Hover over the line you want to comment on and click on the <span style="color:#0066ff">:fas-plus-square:</span> icon that appears on the left margin. That should create a text box for you to enter your comment.
 
 <img src="{{baseUrl}}/gitAndGithub/managePRs/images/startReview.png" width="800" />
 <p/>

@@ -1,104 +1,89 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 1.21.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SEforSDL - Error Handling: Logging: What</title>
-    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css" >
-    <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/markbind.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
-    <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-    
-    
-    
-    <link rel="icon" href="/se-book/favicon.ico">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SEforSDL - Error Handling: Logging: What</title>
+  <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+  <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
+
+
+
+  <link rel="icon" href="/se-book/favicon.ico">
 </head>
+
 <body>
-<div id="app">
+  <div id="app">
+    <header>
+      <navbar placement="top" type="primary">
+        <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+        <li slot="right">
+          <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        </li>
+      </navbar>
+    </header>
     <div id="flex-body">
-  <div id="site-nav">
-    <navbar placement="top" type="inverse" class="temp-navbar">
-      <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
-      <li slot="right">
-        <searchbar placeholder="Search" algolia="" menu-align-right=""></searchbar>
-      </li>
-    </navbar>
-  </div>
-  <div id="site-nav-btn-wrap">
-    <div id="site-nav-btn">
-      <div class="menu-top-bar"></div>
-      <div class="menu-middle-bar"></div>
-      <div class="menu-bottom-bar"></div>
-    </div>
-  </div>
-  <div id="page-content">
-    <div id="content-wrapper">
-      <div>
-        <link rel="stylesheet" href="/se-book/css/textbook.css">
-        <div class="website-content">
-          <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain logging</span>
-            </span>
-            </span>
-            </span>
-          </p>
-          <p></p>
-          <p></p>
-          <div>
-            <div></div>
+      <div id="content-wrapper">
+        <div>
+          <link rel="stylesheet" href="/se-book/css/textbook.css">
+          <div class="website-content">
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain logging</span></span></span></span></p>
             <p></p>
-            <p><span class="dimmed"><strong><span>Implementation → Error Handling → Logging →
-</span></strong>
-              </span>
-            </p>
-            <div id="title-and-body">
-              <div>
-                <h4 id="what"><span>What</span></h4>
-              </div>
-              <div id="main">
+            <p></p>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Implementation → Error Handling → Logging →
+                    </span></strong></span></p>
+              <div id="title-and-body">
                 <div>
-                  <p><strong><em>Logging</em> is the deliberate recording of certain information during a program execution for future reference.</strong> Logs are typically written to a log file but it is also possible to log information in other ways
-                    <span
-                      class="dimmed"> e.g. into a database or a remote server</span>.</p>
-                  <p><strong><em>Logging</em> can be useful for troubleshooting problems</strong>. A good logging system records some system information regularly. When bad things happen to a system <span class="dimmed"> e.g. an unanticipated failure</span>,
-                    their associated log files may provide indications of what went wrong and action can then be taken to prevent it from happening again.</p>
-                  <div v-closeable="" alt="blackbox photo">
-                    <tip-box>
-                      <p>💡 <strong>A log file is like the <tooltip content="flight data recorder" class="algolia-no-index">black box</tooltip> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong
-                        after the fact.</p>
-                      <div class="non-printable">
-                        <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br>
-                          <sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub></p>
-                      </div>
-                    </tip-box>
-                  </div>
+                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
                 </div>
-                <div>
+                <div id="main">
                   <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="" class="algolia-no-index">
-                      <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Logging vs blackbox" class="algolia-no-index">
-                          <question>
-                            <p>Why is logging like having the 'black box' in an airplane?</p>
-                            <ul radio-group="6f5b0" class="radio-list">
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> a. Because they can be used to find more info about how the system behaved before/during an ‘incident’.</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> b. Because they are hidden from the view of normal users.</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> c. Because they both can be in hardcopy form or digital form.</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> d. Because they are hard to open by normal users.</label></li>
-                            </ul>
-                            <div slot="answer">
-                              <p>(a)</p>
-                            </div>
-                          </question>
-                        </panel>
-                      </div>
-                    </panel>
+                    <p><strong><em>Logging</em> is the deliberate recording of certain information during a program execution for future reference.</strong> Logs are typically written to a log file but it is also possible to log information in other ways <span class="dimmed"> e.g. into a database or a remote server</span>.</p>
+                    <p><strong><em>Logging</em> can be useful for troubleshooting problems</strong>. A good logging system records some system information regularly. When bad things happen to a system <span class="dimmed"> e.g. an unanticipated failure</span>, their associated log files may provide indications of what went wrong and action can then be taken to prevent it from happening again.</p>
+                    <div v-closeable alt="blackbox photo">
+                      <tip-box>
+                        <p>💡 <strong>A log file is like the <tooltip content="flight data recorder">black box</tooltip> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.</p>
+                        <div class="non-printable">
+                          <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br>
+                            <sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub></p>
+                        </div>
+                      </tip-box>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <panel header="<md>:fas-dumbbell:</md> Exercises" expandable class="algolia-no-index">
+                        <div>
+                          <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Logging vs blackbox" class="algolia-no-index">
+                            <question>
+                              <p>Why is logging like having the 'black box' in an airplane?</p>
+                              <ul radio-group="6f5b0" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> a. Because they can be used to find more info about how the system behaved before/during an ‘incident’.</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> b. Because they are hidden from the view of normal users.</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> c. Because they both can be in hardcopy form or digital form.</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> d. Because they are hard to open by normal users.</label></li>
+                              </ul>
+                              <div slot="answer" class="algolia-no-index">
+                                <p>(a)</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -107,14 +92,11 @@
         </div>
       </div>
     </div>
+    <footer>
+      <div class="text-center">
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+    </footer>
   </div>
-</div>
-<div id="flex-div"></div>
-<footer>
-  <div class="text-center">
-    <small>This site was built with <a href="https://markbind.org/">MarkBind 1.21.0</a> at Thu, 21 Mar 2019 07:03:52 GMT.</small></div>
-</footer>
-</div>
 </body>
 <script src="../../../markbind/js/vue.min.js"></script>
 <script src="../../../markbind/js/vue-strap.min.js"></script>
@@ -122,22 +104,23 @@
 <script src="../../../markbind/js/polyfill.min.js"></script>
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
-    const baseUrl = '/se-book'
-    const enableSearch = true
+  const baseUrl = '/se-book'
+  const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
-    function initAlgolia() {
-      docsearch({
-        apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
-        indexName: "se-edu",
-        inputSelector: "#algolia-search-input",
-        algoliaOptions: {},
-        debug: false,
-      });
-    }
-    MarkBind.afterSetup(initAlgolia);
-  </script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+      indexName: "se-edu",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {},
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+
 </html>

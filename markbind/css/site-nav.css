@@ -1,32 +1,13 @@
 /* Site navigation */
 
-#flex-body {
-    display: flex;
-    flex: 1;
-}
-
-#page-content {
-    flex: 1;
-    margin-left: 300px;
-    overflow-x: hidden;
-    padding: 0;
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-}
-
 #site-nav {
     background: white;
-    border-right: 1px solid lightgrey;
-    display: inline-block;
-    left: 0;
-    max-height: 80vh;
-    overflow: auto;
-    padding-right: 20px;
-    padding-top: 20px;
-    position: fixed;
+    display: block;
+    flex: 0 0 auto;
+    max-width: 300px;
+    padding: 0;
     transition: 0.4s;
     width: 300px;
-    z-index: 1;
     -webkit-transition: 0.4s;
 }
 
@@ -40,11 +21,11 @@
 }
 
 .site-nav__a:hover {
-    color: #0076FF;
+    color: #0076ff;
 }
 
 #site-nav a.current {
-    color: #0072EC;
+    color: #0072ec;
 }
 
 #site-nav-btn {
@@ -73,6 +54,12 @@
     -webkit-transition: 0.4s;
 }
 
+/* Navigation list */
+
+.site-nav-list {
+    list-style-type: none;
+}
+
 /* Navigation dropdown menu */
 
 .dropdown-btn {
@@ -88,7 +75,7 @@
 }
 
 .dropdown-btn:hover {
-    color: #0076FF;
+    color: #0076ff;
 }
 
 .dropdown-btn-icon {
@@ -100,14 +87,14 @@
 }
 
 .rotate-icon {
-    color: #0076FF;
+    color: #0076ff;
     transform: rotate(-180deg);
     -webkit-transform: rotate(-180deg);
 }
 
 .dropdown-container {
     background: transparent;
-    max-height: 0px;
+    max-height: 0;
     overflow: hidden;
     padding-left: 8px;
     transition: max-height 0.15s ease-out;
@@ -155,11 +142,10 @@
 
 /* Bootstrap medium(md) responsive breakpoint */
 @media screen and (max-width: 991.98px) {
-
     #site-nav {
         border: none;
         opacity: 0;
-        overflow: hidden;
+        padding-right: 0;
         width: 0;
     }
 
@@ -167,10 +153,6 @@
         max-height: calc(100vh - 50px);
         opacity: 1;
         width: 60px;
-    }
-
-    #page-content {
-        margin-left: 60px;
     }
 
     footer {
@@ -198,7 +180,6 @@
 
 /* Bootstrap extra small(xs) responsive breakpoint */
 @media screen and (max-width: 575.98px) {
-
     #site-nav {
         padding-right: 0;
     }
@@ -206,10 +187,6 @@
     #site-nav-btn-wrap {
         padding: 0;
         width: 0;
-    }
-
-    #page-content {
-        margin-left: 0;
     }
 
     footer {
@@ -230,11 +207,6 @@
 
 /* Hide site navigation when printing */
 @media print {
-
-    #page-content {
-        margin-left: 0;
-    }
-
     #site-nav {
         border: none;
         display: none;

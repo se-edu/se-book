@@ -21,10 +21,12 @@ function flattenModals() {
 
 function setupAnchors() {
   jQuery('h1, h2, h3, h4, h5, h6, .header-wrapper').each((index, heading) => {
-    jQuery(heading).on('mouseenter',
-                       () => jQuery(heading).find('.fa.fa-anchor').css('visibility', 'visible'));
-    jQuery(heading).on('mouseleave',
-                       () => jQuery(heading).find('.fa.fa-anchor').css('visibility', 'hidden'));
+    if (heading.id) {
+      jQuery(heading).on('mouseenter',
+                         () => jQuery(heading).find('.fa.fa-anchor').css('visibility', 'visible'));
+      jQuery(heading).on('mouseleave',
+                         () => jQuery(heading).find('.fa.fa-anchor').css('visibility', 'hidden'));
+    }
   });
   jQuery('.fa-anchor').each((index, anchor) => {
     jQuery(anchor).on('click', function () {
@@ -93,12 +95,6 @@ function setupSiteNav() {
   );
 }
 
-function setupPageNav() {
-  jQuery(window).on('activate.bs.scrollspy', (event, obj) => {
-    document.querySelectorAll(`a[href='${obj.relatedTarget}']`).item(0).scrollIntoView(false);
-  });
-}
-
 function setup() {
   // eslint-disable-next-line no-unused-vars
   const vm = new Vue({
@@ -111,7 +107,6 @@ function setup() {
     },
   });
   setupSiteNav();
-  setupPageNav();
 }
 
 function setupWithSearch() {
@@ -143,7 +138,6 @@ function setupWithSearch() {
     },
   });
   setupSiteNav();
-  setupPageNav();
 }
 
 if (enableSearch) {

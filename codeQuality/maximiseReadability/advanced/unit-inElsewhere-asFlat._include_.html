@@ -1,39 +1,38 @@
-<div></div>
+<div>
+  <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\codeQuality\maximiseReadability\advanced\text.md"></div>
+</div>
 <p></p>
-<p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability →
-</span></strong>
-  </span>
-</p>
+<p><span class="dimmed"><strong><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\codeQuality\maximiseReadability\path.md">Implementation → Code Quality → Readability →
+        </span></span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="advanced"><span>Advanced</span></h4>
+    <h4 id="advanced"><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\codeQuality\maximiseReadability\advanced\text.md">Advanced</span></span></h4>
   </div>
   <div id="main">
     <div>
-      <div>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><div><h4 id="make-the-happy-path-prominent"><span>Make the Happy Path Prominent</span></h4>
-      </div>
-      </span>
-      <div class="indented">
-        <p><span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can improve code quality using technique: make the happy path prominent </span>
-          </span>
-          </span>
-          </span>
-          <p></p>
-        </p>
-        <p></p>
+      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\codeQuality\maximiseReadability\advanced\text.md">
         <div>
-          <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unindented as much as possible. It is the ‘unusual’ cases that should be indented.
-            Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
-          <tip-box>
-            <p>Example:</p>
-            <p>
-              <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
-                </span>
-              </font>
-            </p>
-            <pre><code class="hljs java"><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span>
+          <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\codeQuality\maximiseReadability\advanced\makeHappyPathProminent\unit-inParent-asPanel.md">
+            <panel type="seamless" expanded>
+              <span slot="header" class="card-title">
+                <div>
+                  <h4 id="make-the-happy-path-prominent"><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\codeQuality\maximiseReadability\advanced\makeHappyPathProminent\text.md">Make the Happy Path Prominent</span></span></h4>
+                </div>
+              </span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\codeQuality\maximiseReadability\advanced\makeHappyPathProminent\text.md"><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: make the happy path prominent </span></span></span></span></span></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <div>
+                  <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\codeQuality\maximiseReadability\advanced\makeHappyPathProminent\text.md">
+                    <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unindented as much as possible. It is the ‘unusual’ cases that should be indented. Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
+                    <tip-box>
+                      <p>Example:</p>
+                      <p>
+                        <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
+                      </p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span>
     <span class="hljs-keyword">if</span> (!isErrorCase) {
         start();    <span class="hljs-comment">//main path</span>
         process();
@@ -46,17 +45,15 @@
     handleUnusualCase(); <span class="hljs-comment">//handling that unusual condition</span>
 }
 </code></pre>
-            <p>In the code above,</p>
-            <ul>
-              <li>Unusual condition detection is separated from their handling.</li>
-              <li>Main path is nested deeply.</li>
-            </ul>
-            <p>
-              <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
-                </span>
-              </font>
-            </p>
-            <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isUnusualCase) { <span class="hljs-comment">//Guard Clause</span>
+                      <p>In the code above,</p>
+                      <ul>
+                        <li>Unusual condition detection is separated from their handling.</li>
+                        <li>Main path is nested deeply.</li>
+                      </ul>
+                      <p>
+                        <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
+                      </p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isUnusualCase) { <span class="hljs-comment">//Guard Clause</span>
     handleUnusualCase();
     <span class="hljs-keyword">return</span>;
 }
@@ -71,18 +68,25 @@ process();
 cleanup();
 exit();
 </code></pre>
-            <p>In contrast, the above code</p>
-            <ul>
-              <li>deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.</li>
-              <li>keeps the main path un-indented.</li>
-            </ul>
-          </tip-box>
+                      <p>In contrast, the above code</p>
+                      <ul>
+                        <li>deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.</li>
+                        <li>keeps the main path un-indented.</li>
+                      </ul>
+                    </tip-box>
+                  </div>
+                </div>
+                <div>
+                  <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\codeQuality\maximiseReadability\advanced\makeHappyPathProminent\text.md"></div>
+                </div>
+              </div>
+            </panel>
+          </div>
         </div>
-        <div></div>
       </div>
-      </panel>
+    </div>
+    <div>
+      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\codeQuality\maximiseReadability\advanced\text.md"></div>
     </div>
   </div>
-  <div></div>
-</div>
 </div>

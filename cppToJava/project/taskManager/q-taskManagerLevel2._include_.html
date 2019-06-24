@@ -1,7 +1,7 @@
-<panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 2 - **Use Inheritance**">
+<panel header="<md>:glyphicon-question-sign:</md> TaskManager Level 2 - **Use Inheritance**">
   <div id="body">
     <p>
-      <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel1._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TM-L1" minimized="" fragment="main"></panel>
+      <panel type="seamless" src="/se-book/cppToJava/project/taskManager/q-taskManagerLevel1._include_.html#main" header="<md>:glyphicon-education:</md> TM-L1" minimized fragment="main"></panel>
     </p>
     <p><span class="dimmed">This exercise continues from the <code>TaskManager Level1</code> exercise quoted above.</span></p>
     <div id="main">
@@ -12,7 +12,7 @@
         <li>Deadline: a task to be done by a specific deadline</li>
       </ul>
       <p>Both types keeps an internal flag to indicate if the task is done. The flag is initially set to <code>false</code>.</p>
-      <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+      <p>Here is an example output: <span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
       <box>
         <div class="text-monospace">
           <p>Welcome to TaskManager-Level2!
@@ -52,96 +52,104 @@
         <li>Use polymorphism to store both types of tasks in an array of <code>Task</code> type and use one loop to print both types of tasks.</li>
       </ul>
       <p><strong>B. Add support for <trigger trigger="click" for="modal:taskManagerLevel2-testingClis">semi-automated regression testing using input/output redirection</trigger></strong>.</p>
-      <modal large="" title="Textbook »" id="modal:taskManagerLevel2-testingClis">
-      
-        <div>
-          <div></div>
-          <p></p>
-          <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
-</span></strong>
-            </span>
-          </p>
-          <div id="title-and-body">
+      <modal large title="Textbook »" id="modal:taskManagerLevel2-testingClis">
+          <div>
+          <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testing\testAutomation\testingTextUis\unit-inElsewhere-asFlat.md">
             <div>
-              <h4 id="automated-testing-of-cli-apps"><span>Automated Testing of CLI Apps</span></h4>
+              <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testing\testAutomation\testingTextUis\text.md"></div>
             </div>
-            <div id="main">
+            <p></p>
+            <p><span class="dimmed"><strong><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testing\testAutomation\path.md">Quality Assurance → Testing → Test Automation →
+                    </span></span></strong></span></p>
+            <div id="title-and-body">
               <div>
-                <p><strong>A simple way to semi-automate testing of a CLI(Command Line Interface) app is by using input/output re-direction.</strong></p>
-                <ul>
-                  <li>First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.</li>
-                  <li>Next, we compare the actual output file with another file containing the expected output.</li>
-                </ul>
-                <p>Let us assume we are testing a CLI app called <code>AddressBook</code>. Here are the detailed steps:</p>
-                <ol>
-                  <li>
-                    <p>Store the test input in the text file <code>input.txt</code>.</p>
-                    <panel header="%%<span class='fas fa-cube'></span> Example `input.txt`%%" type="seamless">
-                      <pre><code class="hljs">add Valid Name p/12345 valid@email.butNoPrefix
+                <h4 id="automated-testing-of-cli-apps"><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testing\testAutomation\testingTextUis\text.md">Automated Testing of CLI Apps</span></span></h4>
+              </div>
+              <div id="main">
+                <div>
+                  <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testing\testAutomation\testingTextUis\text.md">
+                    <p><strong>A simple way to semi-automate testing of a CLI(Command Line Interface) app is by using input/output re-direction.</strong></p>
+                    <ul>
+                      <li>First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.</li>
+                      <li>Next, we compare the actual output file with another file containing the expected output.</li>
+                    </ul>
+                    <p>Let us assume we are testing a CLI app called <code>AddressBook</code>. Here are the detailed steps:</p>
+                    <ol>
+                      <li>
+                        <p>Store the test input in the text file <code>input.txt</code>.</p>
+                        <panel header="%%<md>:fas-cube:</md> Example `input.txt`%%" type="seamless">
+                          <pre><code class="hljs">add Valid Name p/12345 valid@email.butNoPrefix
 add Valid Name 12345 e/valid@email.butPhonePrefixMissing
 </code></pre>
-                    </panel>
-                  </li>
-                  <li>
-                    <p>Store the output we expect from the SUT in another text file <code>expected.txt</code>.</p>
-                    <panel header="%%<span class='fas fa-cube'></span> Example `expected.txt`%%" type="seamless">
-                      <pre><code class="hljs">Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
+                        </panel>
+                      </li>
+                      <li>
+                        <p>Store the output we expect from the SUT in another text file <code>expected.txt</code>.</p>
+                        <panel header="%%<md>:fas-cube:</md> Example `expected.txt`%%" type="seamless">
+                          <pre><code class="hljs">Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
 Invalid command format: add 
 
 Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
 Invalid command format: add 
 </code></pre>
-                    </panel>
-                  </li>
-                  <li>
-                    <p>Run the program as given below, which will redirect the text in <code>input.txt</code> as the input to <code>AddressBook</code> and similarly, will redirect the output of AddressBook to a text file <code>output.txt</code>. <span class="dimmed">Note that this does not require any code changes to <code>AddressBook</code>.</span></p>
-                    <pre><code class="hljs sh">java AddressBook &lt; input.txt &gt; output.txt
-</code></pre>
-                    <ul>
-                      <li>
-                        <p>💡 The way to run a CLI program differs based on the language.<br> e.g., In Python, assuming the code is in <code>AddressBook.py</code> file, use the command<br>
-                          <code>python AddressBook.py &lt; input.txt &gt; output.txt</code></p>
+                        </panel>
                       </li>
                       <li>
-                        <p>💡 If you are using Windows, use a normal command window to run the app, not a Power Shell window.</p>
-                      </li>
-                    </ul>
-                    <panel header="" minimized="">
-                      <span slot="header" class="card-title"><span>More on the <code>&gt;</code> operator and the <code>&lt;</code> operator. <span class="badge badge-pill badge-secondary">tangential</span></span>
-                      </span>
-                      <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code>&lt;</code> and <code>&gt;</code>                        operators. For example, if you run <code>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
-                      <pre><code class="hljs sh">java AddressBook &gt; output.txt 
+                        <p>Run the program as given below, which will redirect the text in <code>input.txt</code> as the input to <code>AddressBook</code> and similarly, will redirect the output of AddressBook to a text file <code>output.txt</code>. <span class="dimmed">Note that this does not require any code changes to <code>AddressBook</code>.</span></p>
+                        <pre><code class="hljs sh">java AddressBook &lt; input.txt &gt; output.txt
 </code></pre>
-                      <p>the Operating System then creates a file <code>output.txt</code> and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding <code>&lt; input.txt</code> (or any other
-                        filename) makes the OS redirect the contents of the file as input to the program, as if the user typed the content of the file one line at a time.</p>
-                      <tip-box>
-                        <p><span class="fas fa-paperclip"></span> Resources:</p>
                         <ul>
-                          <li><a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">Using command redirection operators in Windows</a></li>
+                          <li>
+                            <p>💡 The way to run a CLI program differs based on the language.<br>
+                              e.g., In Python, assuming the code is in <code>AddressBook.py</code> file, use the command<br>
+                              <code>python AddressBook.py &lt; input.txt &gt; output.txt</code></p>
+                          </li>
+                          <li>
+                            <p>💡 If you are using Windows, use a normal command window to run the app, not a Power Shell window.</p>
+                          </li>
                         </ul>
-                      </tip-box>
-                      <p></p>
-                    </panel>
-                    <p></p>
-                  </li>
-                  <li>
-                    <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such as <em>WinMerge</em>.</p>
-                    <pre><code class="hljs">FC output.txt expected.txt
+                        <panel header minimized>
+                          <span slot="header" class="card-title"><span>More on the <code>&gt;</code> operator and the <code>&lt;</code> operator. <span class="badge badge-pill badge-secondary">tangential</span></span></span>
+                          <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code>&lt;</code> and <code>&gt;</code> operators. For example, if you run <code>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
+                          <pre><code class="hljs sh">java AddressBook &gt; output.txt 
 </code></pre>
-                  </li>
-                </ol>
-                <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. <span class="dimmed">If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases we need more sophisticated ways of automating tests.</span></p>
-                <div>
-                  <popover id="pop:cli" placement="top">
-                    <div slot="content">
-                      <div>
-                        <p><strong>CLI App</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p>
+                          <p>the Operating System then creates a file <code>output.txt</code> and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding <code>&lt; input.txt</code> (or any other filename) makes the OS redirect the contents of the file as input to the program, as if the user typed the content of the file one line at a time.</p>
+                          <tip-box>
+                            <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources:</p>
+                            <ul>
+                              <li><a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">Using command redirection operators in Windows</a></li>
+                            </ul>
+                          </tip-box>
+                          <p></p>
+                        </panel>
+                        <p></p>
+                      </li>
+                      <li>
+                        <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such as <em>WinMerge</em>.</p>
+                        <pre><code class="hljs">FC output.txt expected.txt
+</code></pre>
+                      </li>
+                    </ol>
+                    <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. <span class="dimmed">If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases we need more sophisticated ways of automating tests.</span></p>
+                    <div>
+                      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\common\popOvers.md">
+                        <popover id="pop:cli" placement="top">
+                          <div slot="content">
+                            <div>
+                              <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\common\definitions.md">
+                                <p><strong>CLI App</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </popover>
                       </div>
                     </div>
-                  </popover>
+                  </div>
+                </div>
+                <div>
+                  <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testing\testAutomation\testingTextUis\text.md"></div>
                 </div>
               </div>
-              <div></div>
             </div>
           </div>
         </div>
