@@ -6,7 +6,7 @@
 
 <div id="body">
 
->{{ fas_quote_left }} Every system is built from a domain-specific language designed by the programmers to describe that system. Functions are the verbs of that language, and classes are the nouns. <sub>― Robert C. Martin, _Clean Code: A Handbook of Agile Software Craftsmanship_</sub>
+>:fas-quote-left: Every system is built from a domain-specific language designed by the programmers to describe that system. Functions are the verbs of that language, and classes are the nouns. <sub>― Robert C. Martin, _Clean Code: A Handbook of Agile Software Craftsmanship_</sub>
 
 **Use nouns for classes/variables and verbs for methods/functions.**
 
