@@ -1,1 +1,1 @@
-Design → Architecture → Styles → Client-Server Style
+Design → Architecture → Styles → Client-Server Style →
