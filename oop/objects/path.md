@@ -1,1 +1,1 @@
-Paradigms → Object Oriented Programming → Objects →
+Paradigms → OOP → Objects →
