@@ -1,4 +1,4 @@
-<span id="title">Enums</span>
+<span id="title">Enumerations</span>
 
 <span id="prereqs"></span>
 
