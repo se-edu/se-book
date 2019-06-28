@@ -15,20 +15,20 @@ A video on GitHub Project Boards:
 
 @[youtube](C6MGKHkNtxU)
 
-  <hr></tab>
+  </tab>
   <tab header="Google Sheets">
 
 {{ icon_example }} Example Google Sheet for recording user stories:
 
 <img src="{{baseUrl}}/specifyingRequirements/userStories/usage/images/userStoriesInGoogleSheets.png" width="800" /><p/>
 
-  <hr></tab>  
+  </tab>  
   <tab header="Trello">
 
 {{ icon_example }} Example [Trello](https://trello.com) Board for recording user stories:
 
 <img src="{{baseUrl}}/specifyingRequirements/userStories/usage/images/userStoriesInTrello.png" width="800" /><p/>
 
-  <hr></tab>
+  </tab>
 
 </tabs>

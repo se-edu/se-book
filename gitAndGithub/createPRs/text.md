@@ -26,14 +26,14 @@ This repo can be used to practice creating PRs.
 <img src="{{baseUrl}}/gitAndGithub/createPRs/images/pushBranchToFork.png" height="300" />
 <p/>
     
-  <hr></tab>
+  </tab>
   <tab header="CLI">
   
 ```
 git push origin add-intro
 ```
     
-  <hr></tab>
+  </tab>
 </tabs>
 
 **4. Create a Pull Request from the `add-intro` branch in your fork to the `master` branch of the same fork** (i.e. `your-user-name/samplerepo-pr-practice`, not `se-edu/samplerepo-pr-practice`), as described below.

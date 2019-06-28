@@ -37,17 +37,17 @@ Here are examples of lower level designs of some components of the same software
 
 <img src="https://se-edu.github.io/addressbook-level4/images/UiClassDiagram.png" width="600" />
 
-  <hr></tab>
+  </tab>
   <tab header="Logic">
 
 <img src="https://se-edu.github.io/addressbook-level4/images/LogicClassDiagram.png" width="600" />
 
-  <hr></tab>
+  </tab>
   <tab header="Storage">
 
 <img src="https://se-edu.github.io/addressbook-level4/images/StorageClassDiagram.png" width="600" />
 
-  <hr></tab>
+  </tab>
 </tabs>
 
 </tip-box>

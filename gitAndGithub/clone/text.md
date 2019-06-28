@@ -21,10 +21,10 @@ Git repo URL: `https://github.com/se-edu/samplerepo-things.git` (note the `.git`
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree.md" />
-  <hr></tab>
+  </tab>
   <tab header="CLI">
     <include src="./cli.md" />
-  <hr></tab>
+  </tab>
 </tabs>
 
 </div>

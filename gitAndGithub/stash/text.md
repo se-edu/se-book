@@ -13,12 +13,12 @@
 
 Follow [this article from SourceTree creators](https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html). %%Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.%% 
 
-  <hr></tab>
+  </tab>
   <tab header="CLI">
 
 Follow [this article from Atlassian](https://www.atlassian.com/git/tutorials/git-stash).
 
-  <hr></tab>
+  </tab>
 </tabs>
 
 </div>

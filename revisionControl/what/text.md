@@ -27,12 +27,12 @@ Manually managing multiple versions of even a single file is an error-prone task
 
   </blockquote>
 
-  <hr></tab>
+  </tab>
   <tab header="{{ icon_video }}">
 
 @[youtube](M-O8ZNW9icQ)
 
-  <hr></tab>
+  </tab>
 </tabs>
 
 <modal large title="Reference » Mercurial: The Definitive Guide" id="modal:rcsWhat-bryanMercurialGuide">

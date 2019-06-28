@@ -19,30 +19,30 @@
 
 <img src="https://github.com/TEAMMATES/teammates/raw/master/docs/images/highlevelArchitecture.png" width="700"/><br>
 
-  <hr></tab>
+  </tab>
   <tab header="se-edu/addressbook-level4">
 
 <img src="https://se-edu.github.io/addressbook-level4/images/Architecture.png" width="700"/><br>
 
-  <hr></tab>
+  </tab>
   <tab header="Example 1">
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Accelerator_Architecture.png" width="700"/><br>
 <sub>[source: https://commons.wikimedia.org](https://commons.wikimedia.org/wiki/File:Accelerator_Architecture.png)</sub>
 
-  <hr></tab>
+  </tab>
   <tab header="Example 2">
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png" width="700"/><br>
 <sub>[source: https://commons.wikimedia.org](https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png)</sub>
 
-  <hr></tab>
+  </tab>
   <tab header="Example 3">
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg" width="700"/><br>
 <sub>[source: https://commons.wikimedia.org](https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg)</sub>
 
-  <hr></tab>
+  </tab>
 </tabs>
 
 </tip-box>

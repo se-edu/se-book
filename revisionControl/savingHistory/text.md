@@ -19,12 +19,12 @@
 
 **When ready to commit, we first ==_stage_== the specific changes we want to commit.** This intermediate step allows us to commit only some changes while saving other changes for a later commit.
 
-  <hr></tab>
+  </tab>
   <tab header="{{ icon_video }}">
 
 @[youtube](7exFDGHgQcw)
 
-  <hr></tab>
+  </tab>
 </tabs>
 
 ##### Identifying Points in History

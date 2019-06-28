@@ -11,10 +11,10 @@
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree_0.md" />
-  <hr></tab>
+  </tab>
   <tab header="CLI">
     <include src="./cli_0.md" />
-  <hr></tab>
+  </tab>
 </tabs>
 
 **1. Start a branch named `feature1` and switch to the new branch.**
@@ -22,10 +22,10 @@
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree_1.md" />
-  <hr></tab>
+  </tab>
   <tab header="CLI">
     <include src="./cli_1.md" />
-  <hr></tab>
+  </tab>
 </tabs>
 
 **2. Create some commits in the new branch.** %%Just commit as per normal. Commits you add while on a certain branch will become part of that branch.%%
@@ -35,10 +35,10 @@
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree_2.md" />
-  <hr></tab>
+  </tab>
   <tab header="CLI">
     <include src="./cli_2.md" />
-  <hr></tab>
+  </tab>
 </tabs>
 
 **4. Add a commit to the master branch.** Let’s imagine it’s a bug fix.
@@ -56,10 +56,10 @@
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree_3.md" />
-  <hr></tab>
+  </tab>
   <tab header="CLI">
     <include src="./cli_3.md" />
-  <hr></tab>
+  </tab>
 </tabs>
 
 Observe how the changes you did in the `master` branch (i.e. the imaginary bug fix) is now available even when you are in the `feature1` branch.
@@ -78,14 +78,14 @@ Observe how the changes you did in the `master` branch (i.e. the imaginary bug f
   
 Right-click on the `feature1` branch and choose `Merge...`. 
     
-  <hr></tab>
+  </tab>
   <tab header="CLI">
   
 ```
 git merge feature1
 ```
     
-  <hr></tab>
+  </tab>
 </tabs>
 
 **10. Create a new branch called `add-countries`, switch to it, and add some commits to it** %%(similar to steps 1-2 above)%%. You should have something like this now:
@@ -110,10 +110,10 @@ That is because **Git does a ==_fast forward_ merge== if possible**. Seeing that
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree_4.md" />
-  <hr></tab>
+  </tab>
   <tab header="CLI">
     <include src="./cli_4.md" />
-  <hr></tab>
+  </tab>
 </tabs>
 
 </div>

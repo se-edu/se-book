@@ -24,17 +24,17 @@
  
 @[youtube](jRwwb7iaRsU)
 
-  <hr></tab>
+  </tab>
   <tab header="{{ icon_video }} Black-box testing example">
  
 @[youtube](6pbB37nFUZw)
 
-  <hr></tab>
+  </tab>
   <tab header="{{ icon_video }} White-box testing example">
  
 @[youtube](KIAkoae6_jE)
 
-  <hr></tab>
+  </tab>
 
 </tabs>
 </panel>

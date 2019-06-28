@@ -13,7 +13,7 @@
 
 * [[Intellij Official Tutorial] **Creating, Running and Packaging Your First Java Application**](https://www.jetbrains.com/help/idea/creating-running-and-packaging-your-first-java-application.html)
 
-  <hr></tab>
+  </tab>
   <tab header="{{ icon_video }}">
 
 @[youtube](c0efB_CKOYo)
@@ -22,7 +22,7 @@ A little bit more detailed explanation %%(from CodeLaunch)%% with some additiona
 
 @[youtube](https://www.youtube.com/watch?v=S764o0mAXhg)
 
-  <hr></tab>
+  </tab>
 </tabs>
 
 ##### Importing a Project to Intellij IDEA

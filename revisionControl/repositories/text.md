@@ -17,12 +17,12 @@
 
 **You can have multiple repos in your computer**, each repo revision-controlling files of a different working directly, for examples, files of different projects.
 
-  <hr></tab>
+  </tab>
   <tab header="{{ icon_video }}">
 
 @[youtube](mLnxwlCEIb8)
 
-  <hr></tab>
+  </tab>
 </tabs>
 
 </div>
