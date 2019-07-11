@@ -34,6 +34,7 @@
 <span id="icon_text"><md>:far-file-alt:</md></span>
 <span id="icon_tick"><md>:fas-check:</md></span>
 <span id="icon_tick_green"><span style="color:green">{{ icon_tick | safe }}</span></span>
+<span id="icon_tip"><span class="badge badge-pill badge-warning">:fas-lightbulb:</span></span>
 <span id="icon_todo"><md>:glyphicon-check:</md></span>
 <span id="icon_tutorial"><md>:fas-chalkboard-teacher:</md></span>
 <span id="icon_slides"><md>:far-images:</md></span>
@@ -41,6 +42,7 @@
 <span id="icon_windows"><md>:fab-windows:</md></span>
 <span id="icon_x"><md>:fas-times:</md></span>
 <span id="icon_x_red"><span style="color:red">{{ icon_x | safe }}</span></span>
+<span id="indented_arrow">&nbsp;&nbsp;&nbsp;&nbsp; <big>↳</big></span>
 <span id="bad"><font color="red"><md>**{{ icon_dislike | safe }} Bad**</md></font></span>
 <span id="good"><font color="green"><md>**{{ icon_like | safe }} Good**</md></font></span>
 
