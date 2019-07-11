@@ -75,10 +75,10 @@ bye
 The project consists of the following:
 * **Base Features**: A series of features, meant to be added to Duke in the given order, although some can be skipped. These have been named `Duke 1` to `Duke 10` to indicate how the features make the product progressively "level up".
 * **Extensions:**
-  * **Category A**: These are internal/feature enhancements meant to help you practice a specific Java or an SE technique.  
-  * **Category B**: These are enhancements related to task tracking.
-  * **Category C**: These are enhancements, not specifically related to task tracking.
-  * **Category D**: Each of these adds the ability to track another type of entities.
+  * <big><span class="badge badge-pill badge-primary">Category A</span></big> These are internal/feature enhancements meant to help you practice a specific Java or an SE technique.  
+  * <big><span class="badge badge-pill badge-info">Category B</span></big> These are enhancements related to task tracking.
+  * <big><span class="badge badge-pill badge-success">Category C</span></big> These are enhancements, not specifically related to task tracking.
+  * <big><span class="badge badge-pill badge-danger">Category D</span></big> Each of these adds the ability to track another type of entities.
 
 </div><hr>
 <div id="level1">

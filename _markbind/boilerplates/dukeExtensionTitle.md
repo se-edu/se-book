@@ -1,2 +1,4 @@
-### <span class="badge badge-pill badge-info">{{ extId }}</span>
+<variable name="extStyle">primary</variable>
+
+### <span class="badge badge-pill badge-{{ extStyle }}">{{ extId }}</span>
 {{ indented_arrow | safe }} **{{ extHeading }}**</span>
