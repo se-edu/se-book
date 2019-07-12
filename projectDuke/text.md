@@ -3,19 +3,20 @@
 <div id="body">
 <div id="intro">
 
-<pic add-class="float-right border m-2 p-1 bg-white" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Duke_%28Java_mascot%29_waving.svg/226px-Duke_%28Java_mascot%29_waving.svg.png" width="60">
-
-<small><small>**Duke**, the Java Mascot<br>[[credit: Wikipedia](https://en.wikipedia.org/wiki/File:Duke_(Java_mascot)_waving.svg)]</small></small>
-</pic>
 
 # Project Duke
 
 <div class="lead">
 
+<pic add-class="float-left border m-2 p-1 bg-white" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Duke_%28Java_mascot%29_waving.svg/226px-Duke_%28Java_mascot%29_waving.svg.png" width="60">
+
+<small><small>**Duke**, the Java Mascot<br>[[credit: Wikipedia](https://en.wikipedia.org/wiki/File:Duke_(Java_mascot)_waving.svg)]</small></small>
+</pic>
+
 **Project Duke is a small software project designed to take you through the steps of building a small software _incrementally_**, while applying many Java and SE techniques along the way.
 </div>
 
-**The project aims to build a product named Duke, a Personal Assistant Chatbot that helps a person to keep track of various things.** %%The name _Duke_ was chosen as a placeholder name, in honor of the [Duke, the Java Mascot](https://www.oracle.com/java/duke.html).%% You may give it any other name you wish.
+**The project aims to build a product named Duke, a Personal Assistant Chatbot that helps a person to keep track of various things.** %%The name _Duke_ was chosen as a placeholder name, in honor of [Duke, the Java Mascot](https://www.oracle.com/java/duke.html).%% You may give it any other name you wish.
 
 Here is a sample interaction with Duke:
 ```
@@ -80,12 +81,15 @@ The project consists of the following:
   * <big><span class="badge badge-pill badge-success">Category C</span></big> These are enhancements, not specifically related to task tracking.
   * <big><span class="badge badge-pill badge-danger">Category D</span></big> Each of these adds the ability to track another type of entities.
 
-</div><hr>
+</div>
+
+## <div class="text-white bg-dark p-1">Levels</div>
+
 <div id="level1">
 
 ### Duke 1. Greet, Echo, Exit
 
-In this initial _skeletal_ version of Duke, it simply starts by greeting the user, echos whatever commands enters by the user, and exits when the user types `bye`.
+In this initial _skeletal_ version of Duke, it starts by greeting the user, simply  echos commands entered by the user, and exits when the user types `bye`.
 
 Example:
 ```
@@ -122,28 +126,28 @@ Add the ability to store whatever text entered by the user and display them back
 Example:
 ```
     ____________________________________________________________
-    Hello! I'm Duke
-    What can I do for you?
+     Hello! I'm Duke
+     What can I do for you?
     ____________________________________________________________
 
 read book
     ____________________________________________________________
-    added: read book
+     added: read book
     ____________________________________________________________
 
 return book
     ____________________________________________________________
-    added: return book
+     added: return book
     ____________________________________________________________
 
 list
     ____________________________________________________________
-    1. read book
-    2. return book
+     1. read book
+     2. return book
     ____________________________________________________________
 bye
     ____________________________________________________________
-    Bye. Hope to see you again soon!
+     Bye. Hope to see you again soon!
     ____________________________________________________________
 
 ```
@@ -270,7 +274,7 @@ delete 3
 </div><hr>
 <div id="level7">
 
-### Duke 7. Persistence
+### Duke 7. Save
 
 Save the tasks in the hard disk automatically whenever the task list changes. Automatically load the data from the hard disk whe duke starts up. You may hard-code the file name and location %%e.g., `[project_root]/data/duke.txt`%%
 
@@ -306,6 +310,8 @@ Add a GUI to Duke.
 <include boilerplate src="dukeNestedFragment.md" var-target="A-JavaFx" var-name="Extension: A-JavaFx" />
 
 </div>
+
+<p/>
 
 <include src="extensions.mbdf" />
 
