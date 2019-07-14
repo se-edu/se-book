@@ -1,0 +1,1 @@
+<thumbnail text="{{ text }}" font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"/>

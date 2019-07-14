@@ -87,10 +87,12 @@ The project consists of the following:
 
 <div id="level1">
 
+<include boilerplate src="level_thumb.md" var-text=":fas-comments:" inline />
+
 ### Duke 1. Greet, Echo, Exit
 
 In this initial _skeletal_ version of Duke, it starts by greeting the user, simply  echos commands entered by the user, and exits when the user types `bye`.
-
+<br>
 Example:
 ```
     ____________________________________________________________
@@ -116,8 +118,10 @@ bye
 ```
 * The indentation and horizontal lines are optional.
 
-</div><hr>
+</div><hr><!-- ================================================================================================ -->
 <div id="level2">
+
+<include boilerplate src="level_thumb.md" var-text=":fas-list:" inline />
 
 ### Duke 2. Add, List
 
@@ -154,12 +158,14 @@ bye
 
 * There is no need to save the data to the hard disk.
 * If you wish, you may use a fixed size array (e.g., `String[100]`) to store the items.
-</div><hr>
+</div><hr><!-- ================================================================================================ -->
 <div id="level3">
+
+<include boilerplate src="level_thumb.md" var-text=":fas-check:" inline />
 
 ### Duke 3. Mark as Done
 
-Add the ability to mark tasks as _done_.
+Add the ability to mark tasks as _done_.<br><br>
 
 ```
 list
@@ -179,13 +185,18 @@ done 2
 
 <include boilerplate src="dukeNestedFragment.md" var-target="A-Classes" var-name="Extension: A-Classes" />
 
-</div><hr>
+</div><hr><!-- ================================================================================================ -->
 <div id="level4">
+
+<include boilerplate src="level_thumb.md" var-text=":fas-business-time:" inline />
 
 ### Duke 4. ToDos, Events, Deadlines
 
 Add support for tracking three types of tasks:
-1. ToDos: tasks without any date/time attached to it %%e.g., visit new theme park%%
+<br>
+<br>
+
+1. ToDos: tasks without any date/time attached to it %%e.g., _visit new theme park_%%
 2. Deadlines: tasks that need to be done before a specific date/time %%e.g., _submit report by 11/10/2019 5pm_%%
 3. Events: tasks that start at a specific time and ends at a specific time %%e.g., _team project meeting on 2/10/2019 2-4pm_%%
 
@@ -224,12 +235,17 @@ event project meeting /at Mon 2-4pm
 ```
 
 <include boilerplate src="dukeNestedFragment.md" var-target="A-Inheritance" var-name="Extension: A-Inheritance" />
-</div><hr>
+</div><hr><!-- ================================================================================================ -->
 <div id="level5">
 
-### Duke 5. Incorrect Inputs
+<include boilerplate src="level_thumb.md" var-text=":fas-exclamation-triangle:" inline />
 
-Teach Duke to deal with all sorts of incorrect inputs.
+### Duke 5. Handle Errors
+
+Teach Duke to deal with errors such as incorrect inputs entered by the user.
+<br>
+<br>
+
 Example:
 ```
 todo
@@ -244,12 +260,21 @@ blah
 ```
 
 <include boilerplate src="dukeNestedFragment.md" var-target="A-Exceptions" var-name="Extension: A-Exceptions" />
-</div><hr>
+
+* **Minimal**: handle at least the two types of errors shown in the example above.
+* **Ideal**: handle all possible errors in the current version. As you evolve Duke, continue to handle errors related to the new features added. 
+
+</div><hr><!-- ================================================================================================ -->
 <div id="level6">
+
+<include boilerplate src="level_thumb.md" var-text=":fas-trash-alt:" inline />
 
 ### Duke 6. Delete
 
 Add support for deleting tasks from the list.
+<br>
+<br>
+
 Example:
 ```
 list
@@ -271,25 +296,34 @@ delete 3
 ```
 
 <include boilerplate src="dukeNestedFragment.md" var-target="A-Collections" var-name="Extension: A-Collections" />
-</div><hr>
+</div><hr><!-- ================================================================================================ -->
 <div id="level7">
+
+<include boilerplate src="level_thumb.md" var-text=":fas-save:" inline />
 
 ### Duke 7. Save
 
 Save the tasks in the hard disk automatically whenever the task list changes. Automatically load the data from the hard disk whe duke starts up. You may hard-code the file name and location %%e.g., `[project_root]/data/duke.txt`%%
 
-</div><hr>
+</div><hr><!-- ================================================================================================ -->
 <div id="level8">
+
+<include boilerplate src="level_thumb.md" var-text=":fas-clock:" inline />
 
 ### Duke 8. Dates and Times
 
 Teach Duke to understand dates and times. For example, if the command is `deadline return book /by 2/12/2019 1800`, Duke understands `2/12/2019 1800` as _2nd of December 2019, 6pm_, instead of storing it simply as a String.
-</div><hr>
+</div><hr><!-- ================================================================================================ -->
 <div id="level9">
+
+<include boilerplate src="level_thumb.md" var-text=":fas-search:" inline />
 
 ### Duke 9. Find
 
 Give users a way to find a task by searching for a keyword.
+<br>
+<br>
+
 Example:
 ```
 find book
@@ -300,12 +334,16 @@ find book
     ____________________________________________________________
 ```
 
-</div><hr>
+</div><hr><!-- ================================================================================================ -->
 <div id="level10">
+
+<include boilerplate src="level_thumb.md" var-text=":fas-window-maximize:" inline />
 
 ### Duke 10. GUI
 
 Add a GUI to Duke.
+<br>
+<br>
 
 <include boilerplate src="dukeNestedFragment.md" var-target="A-JavaFx" var-name="Extension: A-JavaFx" />
 
