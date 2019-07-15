@@ -6,6 +6,8 @@
 
 While it is possible to represent a task list as a multi-dimensional array containing <tooltip content="`String`, `int`, `boolean` etc.">primitive values</tooltip>, the more natural approach is to use a `Task` class to represent tasks.
 
+<panel type="seamless" header="Partial solution" minimized>
+
 ```java
 public class Task {
     protected String description;
@@ -16,8 +18,8 @@ public class Task {
         this.isDone = false;
     }
 
-    public String getStatus() {
-        return (isDone ? "✓" : "✗");
+    public String getStatusIcon() {
+        return (isDone ? "\u2713" : "\u2718"); //return tick or X symbols
     }
 
     //...
@@ -28,6 +30,7 @@ public class Task {
 Task t = new Taks("read book");
 t.markAsDone()
 ```
+</panel>
 
 </div><hr>
 <div id="A-Inheritance">
@@ -37,6 +40,32 @@ t.markAsDone()
 As there are multiple types of tasks that have some similarity between them, you can implement classes `Todo`, `Deadline` and `Event` classes to inherit from a `Task` class.
 
 Furthermore, use polymorphism to store all tasks in a data structure containing `Task` objects e.g., `Task[100]`.
+
+<panel type="seamless" header="Partial solution" minimized>
+
+```java
+public class Deadline extends Task {
+
+    protected String by;
+
+    public Deadline(String description, String by) {
+        super(description);
+        this.by = by;
+    }
+
+    @Override
+    public String toString() {
+        return "[D]" + super.toString() + " (by: " + by + ")";
+    }
+}
+```
+
+```java
+Task[] tasks = new Task[100];
+task[0] = new Deadline("return book", "Monday");
+```
+
+</panel>
 
 </div><hr>
 
@@ -65,8 +94,27 @@ Use Java Collections classes for storing data. For example, you can use an `Arra
          var-extHeading="Make the code more OOP"/>
 
 Refactor the code to extract out closely related code as classes.
-* **Minimal**: Extract `Ui`, `Storage`, `TaskList`, etc.
-* **Ideal**: Consider extracting more classes. e.g., `*Command` classes
+* **Minimal**: Extract the following classes:
+  * `Ui`: Deals with interactions with the user
+  * `Storage`: Deals with loading tasks from the file and saving tasks in the file.
+  * `Parser`: Deals with making sense of the user command
+  * `TaskList`: Contains the task list %%e.g., it has operations to add/delete tasks in the list%%
+* **Stretch Goal**: Consider extracting more classes. e.g., `*Command` classes (i.e., `AddCommand`, `DeleteCommand`, `ExitCommand` etc.) that inherits from an abstract `Command` class, so that you can write the main logic of the App as follows:
+  ```java
+  while (!isExit) {
+      try {
+          String fullCommand = ui.readCommand();
+          ui.showLine();
+          Command c = Parser.parse(fullCommand);
+          c.execute(tasks, ui, storage);
+          isExit = c.isExit();
+      } catch (DukeException e) {
+          ui.showError(e.getMessage());
+      } finally {
+          ui.showLine();
+      }
+  }
+  ```
 </div><hr>
 <div id="A-JUnit">
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-JUnit"
@@ -121,7 +169,12 @@ Package the app as an executable JAR file so that it can be distributed easily.
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-Gradle"
          var-extHeading="Automate project builds using Gradle"/>
 
-Use Gradle to automate some of the build tasks of the project. 
+Use Gradle to automate some of the build tasks of the project.
+
+* **Minimal**: Learn how to use Gradle when it is already set up.
+* **Recommended**: Learn how to tweak the Gradle gradle set up of for a project.
+* **Stretch Goal**: Learn how to set up Gradle for a project.
+
 </div><hr>
 <div id="A-Travis">
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-Travis"

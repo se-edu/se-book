@@ -157,7 +157,7 @@ bye
 ```
 
 * There is no need to save the data to the hard disk.
-* If you wish, you may use a fixed size array (e.g., `String[100]`) to store the items.
+* Assume there will be no more than 100 tasks. If you wish, you may use a fixed size array (e.g., `String[100]`) to store the items.
 </div><hr><!-- ================================================================================================ -->
 <div id="level3">
 
@@ -183,7 +183,7 @@ done 2
     ____________________________________________________________
 ```
 
-<include boilerplate src="dukeNestedFragment.md" var-target="A-Classes" var-name="Extension: A-Classes" />
+<include boilerplate src="dukeNestedFragment.md" var-target="A-Classes" var-name="Extension: `A-Classes`" />
 
 </div><hr><!-- ================================================================================================ -->
 <div id="level4">
@@ -196,9 +196,9 @@ Add support for tracking three types of tasks:
 <br>
 <br>
 
-1. ToDos: tasks without any date/time attached to it %%e.g., _visit new theme park_%%
-2. Deadlines: tasks that need to be done before a specific date/time %%e.g., _submit report by 11/10/2019 5pm_%%
-3. Events: tasks that start at a specific time and ends at a specific time %%e.g., _team project meeting on 2/10/2019 2-4pm_%%
+1. **ToDos**: tasks without any date/time attached to it %%e.g., _visit new theme park_%%
+2. **Deadlines**: tasks that need to be done before a specific date/time %%e.g., _submit report by 11/10/2019 5pm_%%
+3. **Events**: tasks that start at a specific time and ends at a specific time %%e.g., _team project meeting on 2/10/2019 2-4pm_%%
 
 Example:
 ```
@@ -234,7 +234,20 @@ event project meeting /at Mon 2-4pm
     ____________________________________________________________
 ```
 
-<include boilerplate src="dukeNestedFragment.md" var-target="A-Inheritance" var-name="Extension: A-Inheritance" />
+At this point, dates/times can be treated as strings; there is no need to convert them to actual dates/times.
+
+Example:
+```
+
+deadline do homework /by no idea :-p
+    ____________________________________________________________
+     Got it. I've added this task: 
+       [D][✗] do homework (by: no idea :-p)
+     Now you have 6 tasks in the list.
+    ____________________________________________________________
+```
+
+<include boilerplate src="dukeNestedFragment.md" var-target="A-Inheritance" var-name="Extension: `A-Inheritance`" />
 </div><hr><!-- ================================================================================================ -->
 <div id="level5">
 
@@ -259,7 +272,7 @@ blah
     ____________________________________________________________
 ```
 
-<include boilerplate src="dukeNestedFragment.md" var-target="A-Exceptions" var-name="Extension: A-Exceptions" />
+<include boilerplate src="dukeNestedFragment.md" var-target="A-Exceptions" var-name="Extension: `A-Exceptions`" />
 
 * **Minimal**: handle at least the two types of errors shown in the example above.
 * **Ideal**: handle all possible errors in the current version. As you evolve Duke, continue to handle errors related to the new features added. 
@@ -295,7 +308,7 @@ delete 3
     ____________________________________________________________
 ```
 
-<include boilerplate src="dukeNestedFragment.md" var-target="A-Collections" var-name="Extension: A-Collections" />
+<include boilerplate src="dukeNestedFragment.md" var-target="A-Collections" var-name="Extension: `A-Collections`" />
 </div><hr><!-- ================================================================================================ -->
 <div id="level7">
 
@@ -304,6 +317,14 @@ delete 3
 ### Duke 7. Save
 
 Save the tasks in the hard disk automatically whenever the task list changes. Automatically load the data from the hard disk whe duke starts up. You may hard-code the file name and location %%e.g., `[project_root]/data/duke.txt`%%
+
+The format of the file is up to you. Example:
+```
+T | 1 | read book
+D | 0 | return book | June 6th
+E | 0 | project meeting | Aug 6th 2-4pm
+T | 1 | join sports club
+```
 
 </div><hr><!-- ================================================================================================ -->
 <div id="level8">
@@ -345,7 +366,7 @@ Add a GUI to Duke.
 <br>
 <br>
 
-<include boilerplate src="dukeNestedFragment.md" var-target="A-JavaFx" var-name="Extension: A-JavaFx" />
+<include boilerplate src="dukeNestedFragment.md" var-target="A-JavaFx" var-name="Extension: `A-JavaFx`" />
 
 </div>
 
