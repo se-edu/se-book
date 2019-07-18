@@ -57,16 +57,16 @@ Less important info
 <tip-box>
 
 <tabs> 
-  <tab header="{{ icon_text }}">
-  
+  <tab header="{{ icon_text }}">
+  
 Some textual description of X
 
-  </tab>
-  <tab header="{{ icon_video }}">
+  </tab>
+  <tab header="{{ icon_video }}">
 
 Video describing X
 
-  </tab>
+  </tab>
 </tabs>
 
 </tip-box>

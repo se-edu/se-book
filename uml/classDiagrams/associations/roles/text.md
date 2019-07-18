@@ -21,7 +21,7 @@ Note how the variable names match closely with the association roles.
 
 <table> 
 <tr>
-  <td valign="top">
+  <td valign="top">
 
 Java {{ icon_output }}
 ```java
@@ -33,9 +33,9 @@ class Woman{
     Man husband;
 }
 ```
-  </td>
-  <td>&nbsp;&nbsp;<br><br></td>
-  <td valign="top">
+  </td>
+  <td>&nbsp;&nbsp;<br><br></td>
+  <td valign="top">
 
 Python {{ icon_output }}
 ```python
@@ -47,7 +47,7 @@ class Woman:
    def __init__(self):
      self.husband = None # a Man object
 ```
-  </td>
+  </td>
 </tr>
 </table>
 
@@ -62,7 +62,7 @@ class Woman:
 
 <table> 
 <tr>
-  <td valign="top">
+  <td valign="top">
 
 Java {{ icon_output }}
 ```java
@@ -70,9 +70,9 @@ class Admin{
     List<Student> charges;
 }
 ```
-  </td>
-  <td>&nbsp;&nbsp;<br><br></td>
-  <td valign="top">
+  </td>
+  <td>&nbsp;&nbsp;<br><br></td>
+  <td valign="top">
 
 Python {{ icon_output }}
 ```python
@@ -80,7 +80,7 @@ class Admin:
   def __init__(self):
     self.charges = [] # list of Student objects
 ```
-  </td>
+  </td>
 </tr>
 </table>
 

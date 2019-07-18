@@ -22,7 +22,7 @@ The basic UML notations used to represent a _class_:<br>
 
 <table> 
 <tr>
-  <td>
+  <td>
 
 Java {{ icon_output }}
 
@@ -41,9 +41,9 @@ class Table{
     }
 }
 ```
-  </td>
-  <td valign="bottom">&nbsp;&nbsp;<br><br></td>
-  <td valign="bottom">
+  </td>
+  <td valign="bottom">&nbsp;&nbsp;<br><br></td>
+  <td valign="bottom">
 
 Python {{ icon_output }}
 
@@ -62,7 +62,7 @@ class Table:
     # ...
     
 ```
-  </td>
+  </td>
 </tr>
 </table>
 

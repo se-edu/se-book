@@ -19,9 +19,9 @@
 </tip-box>
 
 <popover id="pop:epBasic-isValidMonth" title="`isValidMonth`" placement="top">
-  <div slot="content">
+  <div slot="content">
     <include src="../what/text.md#isValidMonth" />
-  </div>
+  </div>
 </popover>
 
 When the SUT has multiple inputs, you should identify EPs for each input. 

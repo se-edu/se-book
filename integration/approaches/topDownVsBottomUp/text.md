@@ -14,9 +14,9 @@
 **_Top-down_ integration: higher-level components are integrated before bringing in the lower-level components.** One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that this requires the use of <trigger for="pop:topdown-stub">stubs</trigger> in place of lower level components until the real lower-level components are integrated to the system. Otherwise, higher-level components cannot function as they depend on lower level ones.
 
 <popover id="pop:topdown-stub" title="{{icon_preview}}" placement="top">
-  <div slot="content">
+  <div slot="content">
     <include src="../../../common/definitions.md#def-stub" />
-  </div>
+  </div>
 </popover>
 
 **_Bottom-up_ integration: the reverse of top-down integration.** Note that when integrating lower level components, <tooltip content="additional code written to provide inputs to a component via an API">drivers</tooltip> may be needed to test the integrated components %%&nbsp;because the UI may not be integrated yet%%, just like top-down integration needs stubs.

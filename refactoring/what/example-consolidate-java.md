@@ -1,6 +1,6 @@
 <table> 
 <tr>
-  <td valign="top">
+  <td valign="top">
 
 ```java
 if (isSpecialDeal()) {
@@ -11,9 +11,9 @@ if (isSpecialDeal()) {
     send();
 }
 ```
-  </td>
-  <td valign="center">&nbsp;→&nbsp;</td>
-  <td valign="top">
+  </td>
+  <td valign="center">&nbsp;→&nbsp;</td>
+  <td valign="top">
 
 ```java
 if (isSpecialDeal()){
@@ -24,6 +24,6 @@ if (isSpecialDeal()){
 send();
 
 ```
-  </td>
+  </td>
 </tr>
 </table>

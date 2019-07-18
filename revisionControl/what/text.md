@@ -36,7 +36,7 @@ Manually managing multiple versions of even a single file is an error-prone task
 </tabs>
 
 <modal large title="Reference » Mercurial: The Definitive Guide" id="modal:rcsWhat-bryanMercurialGuide">
-  <include src="../../common/references.md#bryan-mercurial-guide" />
+  <include src="../../common/references.md#bryan-mercurial-guide" />
 </modal>
 
 <tip-box type="definition">

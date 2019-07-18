@@ -9,7 +9,7 @@
 <box type="definition">
 
 <include src="../../../common/definitions.md#def-abstractClass" /> 
-  
+  
 </box>
 
 **You can use declare a class as abstract when a class is merely a representation of commonalities among its subclasses** in which case it does not make sense to instantiate objects of that class.

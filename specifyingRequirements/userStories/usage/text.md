@@ -15,7 +15,7 @@
 **User stories can capture <trigger trigger="click" for="modal:userStoriesUsage-nfr">non-functional requirements</trigger> too** because even NFRs must benefit some stakeholder.
 
 <modal large title="Textbook {{ icon_embedding }}" id="modal:userStoriesUsage-nfr">
-  <include src="../../../requirements/nonFunctionalRequirements/unit-inElsewhere-asFlat.md" boilerplate/>
+  <include src="../../../requirements/nonFunctionalRequirements/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
 <tip-box>

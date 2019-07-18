@@ -1,6 +1,6 @@
 <table> 
 <tr>
-  <td valign="top">
+  <td valign="top">
 
 ```python
 if is_special_deal:
@@ -10,9 +10,9 @@ else:
     total = price * 0.98
     send()
 ```
-  </td>
-  <td valign="center">&nbsp;→&nbsp;</td>
-  <td valign="top">
+  </td>
+  <td valign="center">&nbsp;→&nbsp;</td>
+  <td valign="top">
 
 ```python
 if is_special_deal:
@@ -22,6 +22,6 @@ else:
     
 send()
 ```
-  </td>
+  </td>
 </tr>
 </table>

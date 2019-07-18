@@ -33,21 +33,21 @@ In a smaller system, design of the entire system can be shown in one place.
 Here are examples of lower level designs of some components of the same software:
 
 <tabs> 
-  <tab header="UI">
+  <tab header="UI">
 
 <img src="https://se-edu.github.io/addressbook-level4/images/UiClassDiagram.png" width="600" />
 
-  </tab>
-  <tab header="Logic">
+  </tab>
+  <tab header="Logic">
 
 <img src="https://se-edu.github.io/addressbook-level4/images/LogicClassDiagram.png" width="600" />
 
-  </tab>
-  <tab header="Storage">
+  </tab>
+  <tab header="Storage">
 
 <img src="https://se-edu.github.io/addressbook-level4/images/StorageClassDiagram.png" width="600" />
 
-  </tab>
+  </tab>
 </tabs>
 
 </tip-box>

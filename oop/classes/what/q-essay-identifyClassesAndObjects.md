@@ -4,7 +4,7 @@
 Consider the following scenario. If you were to simulate this in an OOP program, what are the classes and the objects you would use?
 
 <tip-box> 
-  
+  
 A customer (name: John) gave a cheque to the Cashier (name: Peter) to pay for the LoTR and GoT books he bought.
 
 </tip-box>

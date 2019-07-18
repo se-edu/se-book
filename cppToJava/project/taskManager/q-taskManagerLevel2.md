@@ -58,7 +58,7 @@ Suggestion:
 **B. Add support for <trigger trigger="click" for="modal:taskManagerLevel2-testingClis">semi-automated regression testing using input/output redirection</trigger>**.
 
 <modal large title="Textbook »" id="modal:taskManagerLevel2-testingClis">
-  <include src="../../../testing/testAutomation/testingTextUis/unit-inElsewhere-asFlat.md" boilerplate />
+  <include src="../../../testing/testAutomation/testingTextUis/unit-inElsewhere-asFlat.md" boilerplate />
 </modal>
 
 <panel type="seamless" header="Partial solution">

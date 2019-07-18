@@ -7,13 +7,13 @@
 <div id="body">
 
 <tip-box type="definition"> 
-  <include src="../../../common/definitions.md#def-dynamic-binding" />
+  <include src="../../../common/definitions.md#def-dynamic-binding" />
 </tip-box>
 
 **<trigger trigger="click" for="modal:dynamicAndStatic-overriding">Overridden methods</trigger> are resolved using dynamic binding, and therefore resolves to the implementation in the actual type of the object.**
 
 <modal large title="Textbook {{ icon_embedding }}" id="modal:dynamicAndStatic-overriding">
-  <include src="../overriding/unit-inElsewhere-asFlat.md" boilerplate/>
+  <include src="../overriding/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
 <tip-box>
@@ -32,13 +32,13 @@ However, at runtime s can receive an object of any subclass of `Staff`. That mea
 </tip-box>
 
 <tip-box type="definition"> 
-  <include src="../../../common/definitions.md#def-static-binding" />
+  <include src="../../../common/definitions.md#def-static-binding" />
 </tip-box>
 
 **In contrast, <trigger trigger="click" for="modal:dynamicAndStatic-overloading">overloaded</trigger> methods are resolved using static binding.**
 
 <modal large title="Textbook {{ icon_embedding }}" id="modal:dynamicAndStatic-overloading">
-  <include src="../overloading/unit-inElsewhere-asFlat.md" boilerplate/>
+  <include src="../overloading/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
 <tip-box>

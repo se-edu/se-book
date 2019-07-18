@@ -20,21 +20,21 @@
 <sub>Note: these videos are from the [Udacity course _Software Development Process_ by Georgia Tech](https://www.udacity.com/course/software-development-process--ud805)</sub>
 
 <tabs> 
-  <tab header="{{ icon_video }} Black-box vs White-box testing">
+  <tab header="{{ icon_video }} Black-box vs White-box testing">
  
 @[youtube](jRwwb7iaRsU)
 
-  </tab>
-  <tab header="{{ icon_video }} Black-box testing example">
+  </tab>
+  <tab header="{{ icon_video }} Black-box testing example">
  
 @[youtube](6pbB37nFUZw)
 
-  </tab>
-  <tab header="{{ icon_video }} White-box testing example">
+  </tab>
+  <tab header="{{ icon_video }} White-box testing example">
  
 @[youtube](KIAkoae6_jE)
 
-  </tab>
+  </tab>
 
 </tabs>
 </panel>

@@ -53,7 +53,7 @@ git push origin add-intro
 
 <tip-box type="info"> 
 
-The _base fork_ is where changes should be applied. The _head fork_ contains the changes you would like to be applied.  
+The _base fork_ is where changes should be applied. The _head fork_ contains the changes you would like to be applied.  
 
 </tip-box>
 
@@ -71,7 +71,7 @@ The _base fork_ is where changes should be applied. The _head fork_ contains the
 <tip-box type="important"> 
 
 A common newbie mistake when creating branch-based PRs is to mix commits of one PR with another. To learn how to avoid that mistake, you are encouraged to continue and create another PR as explained below.
-  
+  
 </tip-box>
 
 **5. In your local repo, create a new branch `add-summary`** off the `master` branch. 
