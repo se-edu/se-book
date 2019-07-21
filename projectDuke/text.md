@@ -73,8 +73,8 @@ bye
 
 ```
 
-The project consists of the following:
-* **Base Features**: A series of features, meant to be added to Duke in the given order, although some can be skipped. These have been named `Duke 1` to `Duke 10` to indicate how the features make the product progressively "level up".
+The project consists of the following _increments_:
+* **Levels**: A series of features, meant to be added to Duke in the given order, although some can be skipped. These have been named `Level 1` to `Level 10` to indicate how the features make the product progressively "level up".
 * **Extensions:**
   * <big><span class="badge badge-pill badge-primary">Category A</span></big> These are internal/feature enhancements meant to help you practice a specific Java or an SE technique.  
   * <big><span class="badge badge-pill badge-info">Category B</span></big> These are enhancements related to task tracking.
@@ -89,7 +89,7 @@ The project consists of the following:
 
 <include boilerplate src="level_thumb.md" var-text=":fas-comments:" inline />
 
-### Duke 1. Greet, Echo, Exit
+### Level 1. Greet, Echo, Exit
 
 In this initial _skeletal_ version of Duke, it starts by greeting the user, simply  echos commands entered by the user, and exits when the user types `bye`.
 <br>
@@ -123,7 +123,7 @@ bye
 
 <include boilerplate src="level_thumb.md" var-text=":fas-list:" inline />
 
-### Duke 2. Add, List
+### Level 2. Add, List
 
 Add the ability to store whatever text entered by the user and display them back to the user when requested.
 
@@ -163,7 +163,7 @@ bye
 
 <include boilerplate src="level_thumb.md" var-text=":fas-check:" inline />
 
-### Duke 3. Mark as Done
+### Level 3. Mark as Done
 
 Add the ability to mark tasks as _done_.<br><br>
 
@@ -190,7 +190,7 @@ done 2
 
 <include boilerplate src="level_thumb.md" var-text=":fas-business-time:" inline />
 
-### Duke 4. ToDos, Events, Deadlines
+### Level 4. ToDos, Events, Deadlines
 
 Add support for tracking three types of tasks:
 <br>
@@ -253,7 +253,7 @@ deadline do homework /by no idea :-p
 
 <include boilerplate src="level_thumb.md" var-text=":fas-exclamation-triangle:" inline />
 
-### Duke 5. Handle Errors
+### Level 5. Handle Errors
 
 Teach Duke to deal with errors such as incorrect inputs entered by the user.
 <br>
@@ -282,7 +282,7 @@ blah
 
 <include boilerplate src="level_thumb.md" var-text=":fas-trash-alt:" inline />
 
-### Duke 6. Delete
+### Level 6. Delete
 
 Add support for deleting tasks from the list.
 <br>
@@ -314,7 +314,7 @@ delete 3
 
 <include boilerplate src="level_thumb.md" var-text=":fas-save:" inline />
 
-### Duke 7. Save
+### Level 7. Save
 
 Save the tasks in the hard disk automatically whenever the task list changes. Automatically load the data from the hard disk whe duke starts up. You may hard-code the file name and location %%e.g., `[project_root]/data/duke.txt`%%
 
@@ -331,7 +331,7 @@ T | 1 | join sports club
 
 <include boilerplate src="level_thumb.md" var-text=":fas-clock:" inline />
 
-### Duke 8. Dates and Times
+### Level 8. Dates and Times
 
 Teach Duke to understand dates and times. For example, if the command is `deadline return book /by 2/12/2019 1800`, Duke understands `2/12/2019 1800` as _2nd of December 2019, 6pm_, instead of storing it simply as a String.
 </div><hr><!-- ================================================================================================ -->
@@ -339,7 +339,7 @@ Teach Duke to understand dates and times. For example, if the command is `deadli
 
 <include boilerplate src="level_thumb.md" var-text=":fas-search:" inline />
 
-### Duke 9. Find
+### Level 9. Find
 
 Give users a way to find a task by searching for a keyword.
 <br>
@@ -360,7 +360,7 @@ find book
 
 <include boilerplate src="level_thumb.md" var-text=":fas-window-maximize:" inline />
 
-### Duke 10. GUI
+### Level 10. GUI
 
 Add a GUI to Duke.
 <br>
