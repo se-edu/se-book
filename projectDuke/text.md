@@ -13,10 +13,10 @@
 <small><small>**Duke**, the Java Mascot<br>[[credit: Wikipedia](https://en.wikipedia.org/wiki/File:Duke_(Java_mascot)_waving.svg)]</small></small>
 </pic>
 
-**Project Duke is a small software project designed to take you through the steps of building a small software _incrementally_**, while applying many Java and SE techniques along the way.
+**Project Duke is a educational software project designed to take you through the steps of building a small software _incrementally_**, while applying as many Java and SE techniques as possible along the way.
 </div>
 
-**The project aims to build a product named Duke, a Personal Assistant Chatbot that helps a person to keep track of various things.** %%The name _Duke_ was chosen as a placeholder name, in honor of [Duke, the Java Mascot](https://www.oracle.com/java/duke.html).%% You may give it any other name you wish.
+**The project aims to build a product named _Duke_, a Personal Assistant Chatbot that helps a person to keep track of various things.** %%The name _Duke_ was chosen as a placeholder name, in honor of [Duke, the Java Mascot](https://www.oracle.com/java/duke.html).%% You may give it any other name you wish.
 
 Here is a sample interaction with Duke:
 ```
@@ -275,7 +275,7 @@ blah
 <include boilerplate src="dukeNestedFragment.md" var-target="A-Exceptions" var-name="Extension: `A-Exceptions`" />
 
 * **Minimal**: handle at least the two types of errors shown in the example above.
-* **Ideal**: handle all possible errors in the current version. As you evolve Duke, continue to handle errors related to the new features added. 
+* **Stretch goal**: handle all possible errors in the current version. As you evolve Duke, continue to handle errors related to the new features added. 
 
 </div><hr><!-- ================================================================================================ -->
 <div id="level6">
@@ -316,7 +316,7 @@ delete 3
 
 ### Level 7. Save
 
-Save the tasks in the hard disk automatically whenever the task list changes. Automatically load the data from the hard disk whe duke starts up. You may hard-code the file name and location %%e.g., `[project_root]/data/duke.txt`%%
+Save the tasks in the hard disk automatically whenever the task list changes. Load the data from the hard disk whe Duke starts up. You may hard-code the file name and location %%e.g., `[project_root]/data/duke.txt`%%
 
 The format of the file is up to you. Example:
 ```

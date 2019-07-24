@@ -95,23 +95,59 @@ Use Java Collections classes for storing data. For example, you can use an `Arra
 
 Refactor the code to extract out closely related code as classes.
 * **Minimal**: Extract the following classes:
-  * `Ui`: Deals with interactions with the user
-  * `Storage`: Deals with loading tasks from the file and saving tasks in the file.
-  * `Parser`: Deals with making sense of the user command
-  * `TaskList`: Contains the task list %%e.g., it has operations to add/delete tasks in the list%%
+  * `Ui`: deals with interactions with the user
+  * `Storage`: deals with loading tasks from the file and saving tasks in the file
+  * `Parser`: deals with making sense of the user command
+  * `TaskList`: contains the task list %%e.g., it has operations to add/delete tasks in the list%%
+<div class="indented-level2">
+
+For example, the code of the main class could look like this:
+```java
+public class Duke {
+
+    private Storage storage;
+    private TaskList tasks;
+    private Ui ui;
+
+    public Duke(String filePath) {
+        ui = new Ui();
+        storage = new Storage(filePath);
+        try {
+            tasks = new TaskList(storage.load());
+        } catch (DukeException e) {
+            ui.showLoadingError();
+            tasks = new TaskList();
+        }
+    }
+
+    public void run() {
+        //...
+    }
+
+    public static void main(String[] args) {
+        new Duke("data/tasks.txt").run();
+    }
+}
+```
+</div>
+
 * **Stretch Goal**: Consider extracting more classes. e.g., `*Command` classes (i.e., `AddCommand`, `DeleteCommand`, `ExitCommand` etc.) that inherits from an abstract `Command` class, so that you can write the main logic of the App as follows:
   ```java
-  while (!isExit) {
-      try {
-          String fullCommand = ui.readCommand();
-          ui.showLine();
-          Command c = Parser.parse(fullCommand);
-          c.execute(tasks, ui, storage);
-          isExit = c.isExit();
-      } catch (DukeException e) {
-          ui.showError(e.getMessage());
-      } finally {
-          ui.showLine();
+  public void run() {
+      ui.showWelcome();
+      boolean isExit = false;
+      while (!isExit) {
+          try {
+              String fullCommand = ui.readCommand();
+              ui.showLine();
+              Command c = Parser.parse(fullCommand);
+              c.execute(tasks, ui, storage);
+              isExit = c.isExit();
+          } catch (DukeException e) {
+              ui.showError(e.getMessage());
+          } finally {
+              ui.showLine();
+          }
       }
   }
   ```
