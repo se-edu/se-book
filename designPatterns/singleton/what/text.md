@@ -22,7 +22,7 @@ Make the constructor of the singleton class `private`, %%&nbsp;because a `public
 
 Example:
 
-<img src="{{baseUrl}}/designPatterns/singleton/what/images/singleton.png" height="130" />
+<puml src="images/singleton.puml" />
 <p/>
 
 </tip-box>
