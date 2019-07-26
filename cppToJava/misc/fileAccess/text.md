@@ -156,5 +156,4 @@ The techniques above are good enough to manipulate simple text files. Note that 
 </div>
 
 <div id="extras">
-  <include src="exercisesPanel.md" boilerplate />
 </div>

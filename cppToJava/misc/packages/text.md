@@ -152,5 +152,4 @@ Note how the class can use `PREFIX` and `format` (instead of `Formatter.PREFIX` 
 
 <div id="extras">
   <include src="resourcesPanel.md" boilerplate />
-  <include src="exercisesPanel.md" boilerplate />
 </div>

@@ -24,5 +24,4 @@ The IDE can help you to package your application as a JAR file.
 
 <div id="extras">
   <include src="resourcesPanel.md" boilerplate />
-  <include src="exercisesPanel.md" boilerplate />
 </div>
