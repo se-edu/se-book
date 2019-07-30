@@ -28,5 +28,5 @@
 </div>
 
 <div id="extras">
-  <include src="exercises.fr" />
+  <include src="exercises.mbdf" />
 </div>
