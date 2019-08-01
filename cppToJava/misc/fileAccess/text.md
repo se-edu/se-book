@@ -34,7 +34,7 @@ is Directory?: false
 ```
 </box>
 
-{{ icon_info }} If you use backslash to specify the file path in a Windows Computer, you need to use an additional backslash as an escape character because the backslash by itself has a special meaning. e.g., use {{ icon_tick_green }}`"data\\fruits.txt"`, not {{ icon_x_red }} `"data\fruits.txt"`. Alternatively, you can use forward slash {{ icon_tick_green }} `"data/fruits.txt"` (even on Windows).
+{{ icon_info }} If you use backslash to specify the file path in a Windows computer, you need to use an additional backslash as an escape character because the backslash by itself has a special meaning. e.g., use {{ icon_tick_green }}`"data\\fruits.txt"`, not {{ icon_x_red }} `"data\fruits.txt"`. Alternatively, you can use forward slash {{ icon_tick_green }} `"data/fruits.txt"` (even on Windows).
 
 **You can read from a file using a `Scanner` object that uses a `File` object as the _source_ of data.**
 
