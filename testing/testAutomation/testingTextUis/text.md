@@ -43,11 +43,11 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
    java AddressBook < input.txt > output.txt
    ```
    
-   * :bulb: The way to run a CLI program differs based on the language.<br>
+   * {{ icon_tip }} The way to run a CLI program differs based on the language.<br>
      e.g., In Python, assuming the code is in `AddressBook.py` file, use the command<br>
       `python AddressBook.py < input.txt > output.txt`
    
-   * :bulb: If you are using Windows, use a normal command window to run the app, not a Power Shell window.
+   * {{ icon_tip }} If you are using Windows, use a normal command window to run the app, not a Power Shell window.
    
    <panel header="" minimized >
    <span slot="header" class="card-title"><md>More on the `>` operator and the `<` operator. {{ icon_tangential }}</md></span>

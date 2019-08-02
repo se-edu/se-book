@@ -60,7 +60,7 @@ public class Rectangle {
 }
 ```
 
-:bulb: You may use an array of size 100 to store the shapes.
+{{ icon_tip }} You may use an array of size 100 to store the shapes.
 
 
 <panel type="seamless" header="Partial solution">

@@ -61,7 +61,7 @@ class Time{
 {{ icon_output_right }} `05:20:13`
 </box>
 
-:bulb: `@Override` is an optional annotation you can use to indicate that the method is overriding a method from the parent class.
+{{ icon_tip }} `@Override` is an optional annotation you can use to indicate that the method is overriding a method from the parent class.
 
 </div>
 

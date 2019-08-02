@@ -29,10 +29,10 @@ public class Main {
 5x5=25
 ```
 1. Update the code of `printArea` to print an error message if `WIDTH` and/or `HEIGHT` are not numbers %%e.g., `"Ax4"`%%<br>
-  :bulb: `calculateArea` will throw the unchecked exception `NumberFormatException` if the code tries to parse a non-number to an integer.
+  {{ icon_tip }} `calculateArea` will throw the unchecked exception `NumberFormatException` if the code tries to parse a non-number to an integer.
 
 1. Update the code of `printArea` to print an error message if the descriptor is missing `WIDTH` and/or `HEIGHT` %%e.g., `"x4"`%%<br>
-  :bulb: `calculateArea` will throw the unchecked exception `IndexOutOfBoundsException` if one or both dimensions are missing.
+  {{ icon_tip }} `calculateArea` will throw the unchecked exception `IndexOutOfBoundsException` if one or both dimensions are missing.
 
 1. Update the code of `calculateArea` to throw the checked exception `IllegalShapeException` if there are more than 2 dimensions %%e.g., `"5x4x3"`%% and update the `printArea` to print an error message for those cases. Here is the code for the `IllegalShapeException.java`
 

@@ -3,7 +3,7 @@
 
 The class given below keeps track of how many people signup to attend an event on each day of the week. Add the missing methods so that it produces the output given.
 
-:bulb: Use an `HashMap` to store the number of entries for each day.
+{{ icon_tip }} Use an `HashMap` to store the number of entries for each day.
 
 ```java
 public class Main {

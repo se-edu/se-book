@@ -14,7 +14,7 @@ As a user, I can login to the system ~~so that I can access my data~~
 
 </tip-box>
 
-:bulb: It is recommended to confirm there is a concrete benefit even if you omit it from the user story. If not, you could end up adding features that have no real benefit.
+{{ icon_tip }} It is recommended to confirm there is a concrete benefit even if you omit it from the user story. If not, you could end up adding features that have no real benefit.
 
 You can add more characteristics to the `{user role}` to provide more context to the user story.
 

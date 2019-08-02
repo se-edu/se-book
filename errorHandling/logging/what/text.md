@@ -14,7 +14,7 @@
                       
 <tip-box> 
 
-:bulb: **A log file is like the <tooltip content="flight data recorder">black box</tooltip> of an airplane**; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.
+{{ icon_tip }} **A log file is like the <tooltip content="flight data recorder">black box</tooltip> of an airplane**; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.
 
 <div class="non-printable">
 

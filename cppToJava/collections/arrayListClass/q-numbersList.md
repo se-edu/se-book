@@ -3,7 +3,7 @@
 
 Add the missing methods to the class given below so that it produces the output given.
 
-:bulb: Use an `ArrayList` to store the numbers.
+{{ icon_tip }} Use an `ArrayList` to store the numbers.
 
 ```java
 public class Main {

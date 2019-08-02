@@ -69,7 +69,7 @@ Given below are the interactions between the player and the Text UI for the whol
 
 <tip-box> 
 
-:bulb: Note that <tooltip content="using sequence diagramsn">a similar technique</tooltip> can be used when discovering/defining the architecture-level APIs.
+{{ icon_tip }} Note that <tooltip content="using sequence diagramsn">a similar technique</tooltip> can be used when discovering/defining the architecture-level APIs.
 
 <div v-closeable alt="Tic-Tac-Toe Video" class="non-printable">
 

@@ -44,7 +44,7 @@ public class Main{
 ```
 </box>
 
-:bulb: You might wonder why we can use the `System` class without importing it. `System` belongs to **the `java.lang` package, which is imported automatically**.
+{{ icon_tip }} You might wonder why we can use the `System` class without importing it. `System` belongs to **the `java.lang` package, which is imported automatically**.
 
 </div>
 

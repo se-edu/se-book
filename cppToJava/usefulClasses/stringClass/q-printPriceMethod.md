@@ -8,7 +8,7 @@ Implement the `printPrice` method in the code below to produce the given output.
 * The `name` part of the input can have trailing/leading spaces which should be omitted from the output.<br>
   e.g., `  banana --$3/50` {{ icon_output_right }} `BANANA: 3.50`
 
-:bulb: Do a Web search to find how to remove leading/trailing spaces. Suggested search terms `java string remove leading trailing spaces`
+{{ icon_tip }} Do a Web search to find how to remove leading/trailing spaces. Suggested search terms `java string remove leading trailing spaces`
 
 ```java
 public class Main {

@@ -42,7 +42,7 @@ public class Main {
 }
 ```
 
-:bulb: You can use the `split` method of the `String` class to convert a sentence into an array of words. e.g.,<br>
+{{ icon_tip }} You can use the `split` method of the `String` class to convert a sentence into an array of words. e.g.,<br>
 ```java
 String sentence = "hello my dear";
 String[] words = sentence.split(" "); // split using the space as the delimiter
@@ -52,7 +52,7 @@ System.out.println(Arrays.toString(words));
 
 <div slot="hint">
 
-:bulb: You can use `String.format("%.2f", doubleValue)` to format `doubleValue` to two decimal points.<br>
+{{ icon_tip }} You can use `String.format("%.2f", doubleValue)` to format `doubleValue` to two decimal points.<br>
 e.g., `String.format("%.2f", 1.3334)` {{ icon_output_right }} `1.33`
 
 

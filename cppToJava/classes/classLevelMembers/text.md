@@ -95,7 +95,7 @@ public class Bicycle {
 
 <tip-box>
 
-:bulb: Explanation of **`System.out.println(...)`**:
+{{ icon_tip }} Explanation of **`System.out.println(...)`**:
 
 * `out` is a class-level public attribute of the `System` class.
 * `println` is a instance level method of the `out` object.

@@ -93,7 +93,7 @@ is done? Yes
 do by: Postponed to Nov 18th
 ```
 
-:bulb: You can use the `super.toString` from the subclass to invoke the behavior of the method you are overriding. This is useful here because the overriding method is simply _adding onto_ the behavior of the overridden method.
+{{ icon_tip }} You can use the `super.toString` from the subclass to invoke the behavior of the method you are overriding. This is useful here because the overriding method is simply _adding onto_ the behavior of the overridden method.
 
 
 <div slot="hint">

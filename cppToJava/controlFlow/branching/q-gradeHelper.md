@@ -3,7 +3,7 @@
 
 Write a Java program that takes a letter grade e.g., `A+` as a command line argument and prints the CAP value for that grade.
 
-:bulb: Use a `switch` statement in your code.
+{{ icon_tip }} Use a `switch` statement in your code.
 
 <div id="capConversion">
 

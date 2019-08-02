@@ -15,7 +15,7 @@
 <img src="{{baseUrl}}/specifyingRequirements/useCases/usage/images/actorGeneralisation.png" height="250" />
 </tip-box>
 
-:bulb: Do not over-complicate use case diagrams by trying to include everything possible. A use case diagram is a brief summary of the use cases that is used as a starting point. Details of the use cases can be given in the use case descriptions.
+{{ icon_tip }} Do not over-complicate use case diagrams by trying to include everything possible. A use case diagram is a brief summary of the use cases that is used as a starting point. Details of the use cases can be given in the use case descriptions.
 
 **Some include ‘System’ as an actor to indicate that something is done by the system itself without being initiated by a user or an external system.** 
 

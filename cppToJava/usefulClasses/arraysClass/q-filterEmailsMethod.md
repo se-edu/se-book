@@ -46,7 +46,7 @@ public class Main {
   1. go through the elements in the `items` and add to `emails` if the element contains `@` (you can use the `contains` method of the `String` class here)
   1. Use `Arrays.copyOf` method to return the filled part of `emails`.
 * **`printItems(String[] items)`**
-  * :bulb: You can use the `Arrays.toString()` method for this.
+  * {{ icon_tip }} You can use the `Arrays.toString()` method for this.
 
 <panel type="seamless" header="Partial solution">
 

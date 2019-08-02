@@ -34,7 +34,7 @@ Given their lightweight nature, **user stories are quite handy for recording req
 
 <tip-box> 
 
-:bulb: Here are some tips for using user stories for early stages of requirement gathering:
+{{ icon_tip }} Here are some tips for using user stories for early stages of requirement gathering:
 
 * **Define the _target user_:**  
   Decide your target user's profile (e.g. a student, office worker, programmer, sales person) and work patterns (e.g. Does he work in groups or alone? Does he share his computer with others?). A clear understanding of the target user will help when deciding the importance of a user story. You can even give this user a name. %%&nbsp;e.g. Target user Jean is a university student studying in a non-IT field. She interacts with a lot of people due to her involvement in university clubs/societies. ...%%

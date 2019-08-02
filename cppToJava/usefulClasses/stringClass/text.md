@@ -206,7 +206,7 @@ Second "line"
 ```
 </box>
 
-:bulb: As the behavior of the `\n` depends on the platform, the recommended way to print a line break is using the `System.lineSeparator()` as it works the same in all platforms.
+{{ icon_tip }} As the behavior of the `\n` depends on the platform, the recommended way to print a line break is using the `System.lineSeparator()` as it works the same in all platforms.
 
 <box>
 

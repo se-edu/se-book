@@ -10,7 +10,7 @@
 
 <tip-box> 
 
-:bulb: Although object deletion is not that important in languages such as Java that support automatic memory management, you can still show object deletion in UML diagrams to indicate the point at which the object ceases to be used.
+{{ icon_tip }} Although object deletion is not that important in languages such as Java that support automatic memory management, you can still show object deletion in UML diagrams to indicate the point at which the object ceases to be used.
 
 </tip-box>
 
