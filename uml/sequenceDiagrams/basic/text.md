@@ -30,7 +30,7 @@ Note that unlike in object diagrams, the **class/object name is not underlined i
 
 <tip-box> 
 
-{{ icon_x_red }} **[Common notation error] Activation bar too long:** The activation bar of a method cannot start before the method call arrives and a method cannot remain active after the method had returned. %%&nbsp;In the two sequence diagrams below, the one on the left commits this error because the activation bar starts _before_ the method `Foo#xyz()` is called and remains active _after_ the method returns.%%
+{{ icon_x_red }} **[Common notation error] Activation bar too long:** The activation bar of a method cannot start before the method call arrives and a method cannot remain active after the method had returned. %%In the two sequence diagrams below, the one on the left commits this error because the activation bar starts _before_ the method `Foo#xyz()` is called and remains active _after_ the method returns.%%
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/basic/images/commonError-activationBarTooLong.png" height="120" />
 

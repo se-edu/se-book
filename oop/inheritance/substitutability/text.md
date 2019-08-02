@@ -21,7 +21,7 @@ The following code is valid because an `AcademicStaff` object is substitutable a
 Staff staff = new AcademicStaff (); // OK
 ```
 
-But the following code is not valid %%&nbsp;because `staff` is declared as a `Staff` type and therefore its value may or may not be of  type `AcademicStaff`, which is the type expected by variable `academicStaff`.%%
+But the following code is not valid %%because `staff` is declared as a `Staff` type and therefore its value may or may not be of  type `AcademicStaff`, which is the type expected by variable `academicStaff`.%%
 
 ```java
 Staff staff;

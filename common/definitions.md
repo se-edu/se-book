@@ -112,7 +112,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-domain-expert">
 
-**Domain Expert** : An expert of a discipline to which the product is connected %%&nbsp;e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting%%.
+**Domain Expert** : An expert of a discipline to which the product is connected %%e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting%%.
 
 </div>
 
