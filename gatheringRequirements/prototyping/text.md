@@ -39,7 +39,7 @@
 </tip-box>
 <p/>
 
-{{ icon_tip }} Prototyping can be used for _discovering_ as well as _specifying_ requirements %%&nbsp;e.g. a UI prototype can serve as a specification of what to build%%.
+{{ icon_tip }} Prototyping can be used for _discovering_ as well as _specifying_ requirements %%e.g. a UI prototype can serve as a specification of what to build%%.
 
 </div>
 

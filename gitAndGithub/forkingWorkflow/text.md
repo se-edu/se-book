@@ -17,7 +17,7 @@
    
 2. **Each team member: create PRs via own fork** 
    * **Fork that repo** from your team org to your own GitHub account.
-   * **Create a PR** to add a file `yourName.md` %%&nbsp;(e.g. `jonhDoe.md`)&nbsp;%% containing a brief resume of yourself %%&nbsp;(branch → commit → push → create PR)%%
+   * **Create a PR** to add a file `yourName.md` %%(e.g. `jonhDoe.md`)&nbsp;%% containing a brief resume of yourself %%(branch → commit → push → create PR)%%
    
 3. **For each PR: review, update, and merge.** 
    * A team member (not the PR author): Review the PR by adding comments (can be just dummy comments).

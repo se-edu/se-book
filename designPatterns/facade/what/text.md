@@ -21,7 +21,7 @@ Components need to access functionality deep inside other components.
 
 **Problem**
 
-Access to the component should be allowed without exposing its internal details. %%&nbsp;e.g.  the `UI` component should access the functionality of the `Logic` component without knowing that it contained a `Book` class within it.%%
+Access to the component should be allowed without exposing its internal details. %%e.g.  the `UI` component should access the functionality of the `Logic` component without knowing that it contained a `Book` class within it.%%
 
 **Solution**
 

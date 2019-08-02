@@ -22,10 +22,10 @@
 
 A PERT chart can help determine the following important information:
 
-* The order of tasks. %%&nbsp;In the example above, `Final Testing` cannot begin until all coding of individual subsystems have been completed.%%
-* Which tasks can be done concurrently. %%&nbsp;In the example above, the various subsystem designs can start independently once the `High level design` is completed.%%
-* The shortest possible completion time. %%&nbsp;In the example above, there is a path (indicated by the shaded boxes) from start to end that determines the shortest possible completion time.%%
-* The Critical Path. %%&nbsp;In the example above, the shortest possible path is also the critical path%%.
+* The order of tasks. %%In the example above, `Final Testing` cannot begin until all coding of individual subsystems have been completed.%%
+* Which tasks can be done concurrently. %%In the example above, the various subsystem designs can start independently once the `High level design` is completed.%%
+* The shortest possible completion time. %%In the example above, there is a path (indicated by the shaded boxes) from start to end that determines the shortest possible completion time.%%
+* The Critical Path. %%In the example above, the shortest possible path is also the critical path%%.
  
 <tip-box type="definition"> 
 

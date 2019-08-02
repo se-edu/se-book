@@ -14,9 +14,9 @@
 
 </tip-box>
 
-**Knowing more patterns is a way to become more ‘experienced’.** Aim to learn at least the context and the problem of patterns %%&nbsp;so that when you encounter those problems you know where to look for a solution%%. 
+**Knowing more patterns is a way to become more ‘experienced’.** Aim to learn at least the context and the problem of patterns %%so that when you encounter those problems you know where to look for a solution%%. 
 
-**Some patterns are domain-specific** %%&nbsp;e.g. patterns for distributed applications%%, **some are created in-house** %%&nbsp;e.g. patterns in the company/project%% and **some can be self-created** %%&nbsp;e.g. from past experience%%.
+**Some patterns are domain-specific** %%e.g. patterns for distributed applications%%, **some are created in-house** %%e.g. patterns in the company/project%% and **some can be self-created** %%e.g. from past experience%%.
 
 **Be careful not to overuse patterns.** Do not throw patterns at a problem at every opportunity. Patterns come with overhead such as adding more classes or increasing the levels of abstraction. Use them only when they are needed. Before applying a pattern, make sure that:
 * there is substantial improvement in  the design, not just superficial.

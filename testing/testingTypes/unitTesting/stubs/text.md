@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**A proper unit test requires the _unit_ to be tested ==in isolation==** so that bugs in the <tooltip content="code the unit depends on">dependencies</tooltip> cannot influence the test %%&nbsp;i.e. bugs outside of the unit should not affect the unit tests%%.
+**A proper unit test requires the _unit_ to be tested ==in isolation==** so that bugs in the <tooltip content="code the unit depends on">dependencies</tooltip> cannot influence the test %%i.e. bugs outside of the unit should not affect the unit tests%%.
 
 <tip-box> 
 

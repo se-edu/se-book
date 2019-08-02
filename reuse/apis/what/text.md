@@ -16,7 +16,7 @@
 
 </tip-box>
 
-When developing large systems, if you define the API of each components early, the development team can develop the components in parallel %%&nbsp;because the future behavior of the other components are now more predictable%%. 
+When developing large systems, if you define the API of each components early, the development team can develop the components in parallel %%because the future behavior of the other components are now more predictable%%. 
 
 </div>
 

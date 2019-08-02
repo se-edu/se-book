@@ -30,7 +30,7 @@ Exhaustive testing of this operation can take many more test cases.
 
 <div id="e-and-e">
 
-**Every test case adds to the cost of testing.** In some systems, a single test case can cost thousands of dollars %%&nbsp;e.g. on-field testing of flight-control software%%. Therefore, **test cases need to be designed to make the best use of testing resources.**  In particular:
+**Every test case adds to the cost of testing.** In some systems, a single test case can cost thousands of dollars %%e.g. on-field testing of flight-control software%%. Therefore, **test cases need to be designed to make the best use of testing resources.**  In particular:
 
 * **Testing should be _effective_** i.e., it finds a high percentage of existing bugs %%e.g., a set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system%%.
 

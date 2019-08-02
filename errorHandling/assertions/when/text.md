@@ -13,7 +13,7 @@
 
 <tip-box> 
 
-{{ icon_example }} The code below will not invoke the `writeFile()` method when assertions are disabled. %%&nbsp;If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.%%
+{{ icon_example }} The code below will not invoke the `writeFile()` method when assertions are disabled. %%If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.%%
 
 ```java
 ...
@@ -27,8 +27,8 @@ _Preconditions_, _Postconditions_, and _Class Invariants_.** Refer to [[Programm
 
 **Exceptions and assertions are two complementary ways of handling errors in software but they serve different purposes.** Therefore, both assertions and exceptions should be used in code. 
 
-* The raising of an exception indicates an unusual condition created by the user %%&nbsp;(e.g.  user inputs an unacceptable input)%% or the environment %%&nbsp;(e.g., a file needed for the program is missing)%%.
-* An assertion failure indicates the programmer made a mistake in the code %%&nbsp;(e.g., a null value is returned from a method that is not supposed to return null under any circumstances)%%.
+* The raising of an exception indicates an unusual condition created by the user %%(e.g.  user inputs an unacceptable input)%% or the environment %%(e.g., a file needed for the program is missing)%%.
+* An assertion failure indicates the programmer made a mistake in the code %%(e.g., a null value is returned from a method that is not supposed to return null under any circumstances)%%.
 
 </div>
 

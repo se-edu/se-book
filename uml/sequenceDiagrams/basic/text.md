@@ -34,7 +34,7 @@ Note that unlike in object diagrams, the **class/object name is not underlined i
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/basic/images/commonError-activationBarTooLong.png" height="120" />
 
-{{ icon_x_red }} **[Common notation error] Broken activation bar:** The activation bar should remain unbroken from the point the method is called until the method returns. %%&nbsp;In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method `Foo#abc()` is not contiguous, but appears as two pieces instead.%%
+{{ icon_x_red }} **[Common notation error] Broken activation bar:** The activation bar should remain unbroken from the point the method is called until the method returns. %%In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method `Foo#abc()` is not contiguous, but appears as two pieces instead.%%
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/basic/images/commonError-brokenActivationBar.png" height="120" />
 
