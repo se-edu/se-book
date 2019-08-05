@@ -7,7 +7,7 @@
 <div id="body">
 
 As you know,
-* Defining a class creates a new object type with the same name.
+* Defining a class creates a new object type.
 * Every object belongs to some object type; that is, it is an instance of some class.
 * A class definition is like a template for objects: it specifies what attributes the objects have and what methods can operate on them.
 * The `new` operator instantiates objects, that is, it creates new instances of a class.
@@ -28,9 +28,9 @@ public class Time {
 
 You can give a class any name you like. **The Java convention is to use <tooltip content="e.g., `MyHelloWord` rather than `myHelloWorld` or `myhelloword` or `my_hello_world`">PascalCase</tooltip> format for class names**.
 
-The code should be in a file whose name matches the class %%e.g., the `Time` class should be in a file named `Time.java`%%.
+The code is usually placed in a file whose name matches the class %%e.g., the `Time` class should be in a file named `Time.java`%%.
 
-When a class is `public` %%(e.g., the `Time` class in the above example)%% it can be used in other classes. But the <tooltip content="Attributes are also called **instance variables**, because each instance has its own variables.">instance variables</tooltip> that are `private` %%(e.g., the hour, `minute` and `second` attributes of the `Time` class)%% can only be accessed from inside the `Time` class.
+When a class is `public` %%(e.g., the `Time` class in the above example)%% it can be used in other classes. But the <tooltip content="Attributes are also called **instance variables**, because each instance has its own variables.">instance variables</tooltip> that are `private` %%(e.g., the `hour`, `minute` and `second` attributes of the `Time` class)%% can only be accessed from inside the `Time` class.
 
 ##### Constructos
 <div class="indented">
@@ -40,7 +40,7 @@ The syntax for <tooltip content="special methods that construct the object and i
 * The keyword `static` is omitted.
 * Do not return anything. A constructor returns the created object by default.
 
-When you invoke `new`, Java creates the object and calls your constructor to initialize the instance variables. When the constructor is done, new returns a reference to the new object.
+When you invoke `new`, Java creates the object and calls your constructor to initialize the instance variables. When the constructor is done, it returns a reference to the new object.
 
 <box>
 
@@ -57,11 +57,11 @@ public Time() {
 This constructor does not take any arguments. Each line initializes an instance variable to zero (which in this example means midnight).
 Now you can create `Time` objects.
 
-`Time time = new Time();`
+`Time time = new Time();`{.java}
 
 </box>
 
-Like other methods, constructors can be overloaded, which means you can provide multiple constructors with different parameters.
+Like other methods, constructors can be <tooltip content="i.e., you can provide multiple constructors with different parameters">overloaded</tooltip>.
 
 <box>
 
@@ -75,9 +75,7 @@ public Time(int h, int m, int s) {
 }
 ```
 Here's how you can invoke the new constructor:
-```java
-Time justBeforeMidnight = new Time(11, 59, 59);
-```
+`Time justBeforeMidnight = new Time(11, 59, 59);`{.java}
 </box>
 
 </div>

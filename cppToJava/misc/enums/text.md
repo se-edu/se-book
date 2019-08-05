@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**You can define an enum type by using the `enum` keyword.** Because they are constants, the names of an enum type's fields are in uppercase letters e.g., `FLAG_SUCCESS`.
+**You can define an enum type by using the `enum` keyword.** Because they are constants, the names of an enum type's fields are in uppercase letters e.g., `FLAG_SUCCESS` by convention.
 
 <box>
 

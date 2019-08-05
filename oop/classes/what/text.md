@@ -6,11 +6,11 @@
 
 <div id="body">
 
-**Writing an OOP program is essentially writing instructions that the computer uses to,**
- 1. **create the virtual world of object network, and**
+**Writing an OOP program is essentially writing instructions that the computer will uses to,**
+ 1. **create the virtual world of of the object network, and**
  2. **provide it the inputs to produce the outcome we want.** 
 
-**A ==_class_== contains instructions for creating a specific kind of objects**. It turns out sometimes multiple objects have the same behavior because they are of the _same kind_. Instructions for creating a one kind (or ‘class’) of objects can be done once and that same instructions can be used to <tooltip content="i.e. create">_instantiate_</tooltip> objects of that kind. We call such instructions a _Class_.
+**A ==_class_== contains instructions for creating a specific kind of objects**. It turns out sometimes multiple objects keep the same type of data and have the same behavior because they are of the _same kind_. Instructions for creating a one kind (or ‘class’) of objects can be done once and that same instructions can be used to <tooltip content="i.e. create">_instantiate_</tooltip> objects of that kind. We call such instructions a _Class_.
 
 <tip-box>
 

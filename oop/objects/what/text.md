@@ -61,10 +61,10 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 
 </tip-box>
 
-**Every object has an interface and an implementation.** 
+**Every object has an _interface_ and an _implementation_.**
 
 Every real world object has:
-* an interface that other objects can interact with
+* an interface through which other objects can interact with it
 * an implementation that supports the interface but may not be accessible to the other object
 
 <tip-box>
@@ -86,9 +86,7 @@ Similarly, every object in the virtual world has an interface and an implementat
 
 </tip-box>
 
-**Objects interact by sending messages.**
-
-Both real world and virtual world object interactions can be viewed as objects sending message to each other. The message can result in the sender object receiving a response and/or the receiving object’s state being changed. Furthermore, the result can vary based on which object received the message, even if the message is identical %%(see rows 1 and 2 in the example below)%%.
+**Objects interact by sending messages.** Both real world and virtual world object interactions can be viewed as objects sending message to each other. The message can result in the sender object receiving a response and/or the receiver object’s state being changed. Furthermore, the result can vary based on which object received the message, even if the message is identical %%(see rows 1 and 2 in the example below)%%.
 
 <tip-box>
 
