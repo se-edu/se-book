@@ -1,5 +1,5 @@
 <include src="text.md#title" />
-<tip-box>
+<box>
   <include src="text.md#outcomes" />
-</tip-box>
+</box>
 <include src="text.md#body" />

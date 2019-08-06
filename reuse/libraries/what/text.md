@@ -8,7 +8,7 @@
 
 A library is a collection of modular code that is general and can be used by other programs.
 
-<tip-box>
+<box>
 
 <div class="alt-java">
 
@@ -25,7 +25,7 @@ A library is a collection of modular code that is general and can be used by oth
 </div>
 
 
-</tip-box>
+</box>
 
 </div>
 

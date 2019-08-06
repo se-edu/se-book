@@ -19,7 +19,7 @@ If a software product has a GUI component, all product-level testing (i.e. the t
 
 **There are testing tools that can automate GUI testing.** 
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Some tools used for automated GUI testing:
 * **TestFx** can do automated testing of JavaFX GUIs<br>
@@ -35,7 +35,7 @@ If a software product has a GUI component, all product-level testing (i.e. the t
   </panel>
 
 
-</tip-box>
+</box>
 
 </div>
 

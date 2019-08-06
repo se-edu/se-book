@@ -8,7 +8,7 @@
 
 **Except for trivial <tooltip content="Software Under Test">SUTs</tooltip>, <tooltip content="testing all possible cases">exhaustive testing</tooltip> is not practical** because such testing often requires a massive/infinite number of test cases.  
 
-<tip-box>
+<box>
 
 {{ icon_example }} Consider the test cases for adding a string object to a <tooltip content="Java: `ArrayList`,<br>Python: `list`">collection</tooltip>:
 
@@ -23,7 +23,7 @@
 
 Exhaustive testing of this operation can take many more test cases.
 
-</tip-box>
+</box>
 
 > Program testing can be used to show the presence of bugs, but never to show their absence!  
 > <sub>--Edsger Dijkstra</sub>

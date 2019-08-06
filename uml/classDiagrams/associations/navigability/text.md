@@ -8,7 +8,7 @@
 
 **We use arrow heads to indication the navigability of an association.**
 
-<tip-box>
+<box>
 
 {{ icon_example }} `Logic` is aware of `Minefield`, but `Minefield` is not aware of `Logic`
 
@@ -19,17 +19,17 @@
 {{ icon_example }} Here is an example of a bidirectional navigability; each class is aware of the other.<p/>
 <img src="{{baseUrl}}/uml/classDiagrams/associations/navigability/images/manDog.png" height="40" />
 
-</tip-box>
+</box>
 
 **Navigability can be shown in class diagrams as well as object diagrams**.
 
-<tip-box> 
+<box>
 
 {{ icon_example }} According to this object diagram the given `Logic` object is associated with and aware of two `MineField` objects.
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/navigability/images/logicMinefieldObjects.png" height="80" />
 
-</tip-box>
+</box>
 
 
 </div>

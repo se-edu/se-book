@@ -3,11 +3,11 @@
 
 Consider the following real-world scenario.
 
-<tip-box>
+<box>
 
 Tom read a Software Engineering textbook (he has been assigned to read the book) and highlighted some of the text in it.
   
-</tip-box>
+</box>
 
 Explain the following statements about OOP using the above scenario as an example.
 

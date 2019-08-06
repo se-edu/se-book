@@ -6,13 +6,13 @@
 
 <div id="body">
 
-<tip-box type="definition">
+<box type="definition">
 <include src="../../../common/definitions.md#def-use-case" />
-</tip-box>
+</box>
 
 **A use case describes an _interaction between the user and the system_ for a _specific functionality_ of the system.**
 
-<tip-box> 
+<box>
 
 <panel header="{{ icon_example }} Example 1: 'check account balance' use case for an ATM" type="seamless" expanded>
 
@@ -42,7 +42,7 @@ ATM </popover>
   
 </panel>
 
-</tip-box>
+</box>
 
 
 <p/>

@@ -10,13 +10,13 @@ In a smaller system, design of the entire system can be shown in one place.
 
 <div v-closeable alt="single-level design example">
 
-<tip-box> 
+<box>
 
 {{ icon_example }} This class diagram of [se-edu/addressbook-level3](https://se-edu.github.io/addressbook-level3) depicts the design of the entire software.
 
 <img src="https://se-edu.github.io/addressbook-level3/images/mainClassDiagram.png" width="600" />
 
-</tip-box>
+</box>
 
 </div>
 
@@ -24,7 +24,7 @@ In a smaller system, design of the entire system can be shown in one place.
 
 <div v-closeable alt="multi-level design example">
 
-<tip-box> 
+<box>
 
 {{ icon_example }} This architecture diagram of [se-edu/addressbook-level4](https://se-edu.github.io/addressbook-level4) depicts the high-level design of the software.
 
@@ -50,7 +50,7 @@ Here are examples of lower level designs of some components of the same software
   </tab>
 </tabs>
 
-</tip-box>
+</box>
 
 </div>
 

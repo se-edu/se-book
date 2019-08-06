@@ -6,23 +6,23 @@
 
 <div id="body">
 
-<tip-box type="definition">
+<box type="definition">
   <include src="../../../common/definitions.md#def-testing" />
-</tip-box>
+</box>
 
 <img src="{{baseUrl}}/testing/introduction/what/images/diagram.png" height="220" />
 <p/>
 
 **When testing, we execute a set of _test cases_.** A test case specifies how to perform a test. At a minimum, it specifies the input to the _software under test (SUT)_ and the expected behavior.
 
-<tip-box>
+<box>
 
 {{ icon_example }} Example: A minimal test case for testing a browser:
 
 * **Input** – Start the browser using a blank page (vertical scrollbar disabled). Then, load `longfile.html` located in the `test data` folder.
 * **Expected behavior** – The scrollbar should be automatically enabled upon loading `longfile.html`.
 
-</tip-box>
+</box>
 
 **Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.**
 
@@ -46,11 +46,11 @@ For each test case we do the following:
 
 **A test case _failure_ is a mismatch between the expected behavior and the actual behavior. A failure is caused by a _defect_ (or a bug).**
 
-<tip-box>
+<box>
 
 {{ icon_example }} Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading `longfile.html`. The defect/bug causing that failure could be an uninitialized variable.
 
-</tip-box>
+</box>
 
 <panel type="seamless">
 <span slot="header" class="card-title"><md>%%A deeper look at the definition of testing%% {{ icon_extra }}</md></span>

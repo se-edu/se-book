@@ -8,15 +8,15 @@
 
 In the context of OOP associations, **a _dependency_ is a need for one class to depend on another without having a direction association with it.** One cause of dependencies is interactions between objects that do not have a long-term link between them.
 
-<tip-box> 
+<box>
 
 {{ icon_example }} A `Course` object can have a dependency on a `Registrar` object to obtain the maximum number of students it can support. 
 
-</tip-box>
+</box>
 
 ##### Implementing dependencies
 
-<tip-box>
+<box>
 
 {{ icon_example }} In the code below, `Foo` has a dependency on `Bar` but it is not an association because it is only a <tooltip content="temporary">transient</tooltip> interaction and there is no long term relationship between a `Foo` object and a `Bar` object. %%i.e. the `Foo` object does not keep the `Bar` object it receives as a parameter%%.
 
@@ -54,7 +54,7 @@ class Bar:
 ```
 </div>
 
-</tip-box>
+</box>
 
 
 </div>

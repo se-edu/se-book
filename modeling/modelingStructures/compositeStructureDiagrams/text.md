@@ -8,7 +8,7 @@
 
 **A _composite structure diagram_ hierarchically decomposes a class into its internal structure.**
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Here is an example composite structure diagram:
 
@@ -17,7 +17,7 @@
 
 <sub>source:[https://commons.wikimedia.org](https://en.wikipedia.org/wiki/Composite_structure_diagram)</sub>
 
-</tip-box>
+</box>
 </div>
 
 <div id="extras">

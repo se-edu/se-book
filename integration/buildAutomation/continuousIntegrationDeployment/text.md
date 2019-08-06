@@ -10,7 +10,7 @@
 
 **A natural extension of CI is _Continuous Deployment (CD)_ where the changes are not only integrated continuously, but also deployed to end-users at the same time.**
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Some examples of CI/CD tools:
 
@@ -19,7 +19,7 @@
 * [Appveyor](https://www.appveyor.com)
 * [CircleCI](https://circleci.com)
 
-</tip-box>
+</box>
 
 </div>
 

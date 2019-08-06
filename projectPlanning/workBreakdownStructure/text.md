@@ -8,7 +8,7 @@
 
 **A _Work Breakdown Structure (WBS)_ depicts information about tasks and their details in terms of subtasks.** When managing projects it is useful to divide the total work into smaller, well-defined units. Relatively complex tasks can be further split into subtasks.  In complex projects a WBS can also include prerequisite tasks and effort estimates for each task.
 
-<tip-box> 
+<box>
 
 {{ icon_example }} The high level tasks for a single iteration of a small project could look like the following:
 
@@ -20,12 +20,12 @@
 | D       | Testing                      | 1 man day              | C                 |
 | E       | Planning for next version    | 1 man day              | D                 |
 
-</tip-box>
+</box>
 
 
 **The effort is traditionally measured in _man hour/day/month_** i.e. work that can be done by one person in one hour/day/month. The _Task ID_ is a label for easy reference to a task. Simple labeling is suitable for a small project, while a more informative labeling system can be adopted for bigger projects.
 
-<tip-box> 
+<box>
 
 {{ icon_example }} An example WBS for a project for developing a game.
  
@@ -102,12 +102,12 @@
    </tr>
  </table>
 
-</tip-box>
+</box>
 
 
 **All tasks should be well-defined.** In particular, it should be clear as to when the task will be considered _done_. 
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Some examples of ill-defined tasks and their better-defined counterparts:
 
@@ -116,7 +116,7 @@
 | more coding | implement component X
 | do research on UI testing | find a suitable tool for testing the UI
 
-</tip-box>
+</box>
 
 
 </div>

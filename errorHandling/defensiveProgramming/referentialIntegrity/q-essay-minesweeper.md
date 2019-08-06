@@ -3,12 +3,12 @@
 
 Imagine that we now support the following feature in our Minesweeper game.
 
-<tip-box>
+<box>
 
 Feature ID: multiplayer<br>
 Description: A minefield is divided into mine regions. Each region is assigned to a single player. Players can swap regions. To win the game, all regions must be cleared.
 
-</tip-box>
+</box>
 
 Given below is an extract from our class diagram.
 

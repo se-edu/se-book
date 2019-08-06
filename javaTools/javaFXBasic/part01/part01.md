@@ -13,11 +13,11 @@ This tutorial will teach you how to create a new JavaFX application in IntelliJ,
 * IntelliJ (2018.2 or later)
 * [SceneBuilder 8](http://gluonhq.com/products/scene-builder/) (provided by Gluon as [Oracle no longer ships the tool in binary form](http://www.oracle.com/technetwork/java/javase/downloads/sb2download-2177776.html))
 
-<tip-box type="tip">
+<box type="tip">
 
 Do remember the installation path to SceneBuilder 8 as we will need it to configure IntelliJ in a later step.
 
-</tip-box>
+</box>
 
 ## IntelliJ Configurations
 
@@ -50,7 +50,7 @@ If this is the first time using IntelliJ, you need to tell IntelliJ where to fin
   <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/config-scene-builder-settings.png" alt="Scene Builder settings" height="350" />
   <p/>
 
-<tip-box type="info" header="Helpful Links">
+<box type="info" header="Helpful Links">
 
 The JavaDocs will come in handy when writing your own JavaFX applications:
 
@@ -60,7 +60,7 @@ The JavaDocs will come in handy when writing your own JavaFX applications:
 
 Additionally, [Oracle also has a tutorial on JavaFX](http://docs.oracle.com/javase/8/javafx/get-started-tutorial/get_start_apps.htm) if you are interested.
 
-</tip-box>
+</box>
 
 ## Create a new JavaFX Project
 
@@ -93,11 +93,11 @@ In We will create a package for each of the component. Ensure that your Project 
 <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/new-packages.png" alt="New Packages" height="200" />
 <p/>
 
-<tip-box type="info">
+<box type="info">
 
 In subsequent tutorials, our `view` package will also contain some controllers that are directly related to a single view. We will call them `view-controllers`.
 
-</tip-box>
+</box>
 
 ## Create the FXML Layout File
 
@@ -114,11 +114,11 @@ Right click on the `view` package, and press `New` → `FXML file`. For the file
 
 Right-click on `PersonOverview.fxml` and choose `Open with Scene Builder`. Now you should see the Scene Builder with just an AnchorPane (visible under Hierarchy on the left).
 
-<tip-box type="info">
+<box type="info">
 
 If IntelliJ prompts for a location of the SceneBuilder executable, make sure to point to where you install SceneBuilder.
 
-</tip-box>
+</box>
 
 1. Select the `Anchor Pane` in your Hierarchy, and adjust the size under Layout (right side). (Pref Width: 600, Pref Height: 300)
 
@@ -152,11 +152,11 @@ If IntelliJ prompts for a location of the SceneBuilder executable, make sure to 
 <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-title-label.png" width="800" />
 <p/>
 
-<tip-box type="tip">
+<box type="tip">
 
 You can use the Search Bar at the top of Library/Inspector to find the respective controls/properties.
 
-</tip-box>
+</box>
 
 8. Add a `GridPane` on the right side. Select it, and adjust its layout using anchors (Top: 30, Left: 5, Right: 5, Bottom: Blank).
 
@@ -173,11 +173,11 @@ You can use the Search Bar at the top of Library/Inspector to find the respectiv
 | Postal Code  | Label |
 | Birthday     | Label |
 
-<tip-box type="tip">
+<box type="tip">
 
 To add a row to the GridPane, select an existing row number, right click the row number and choose "Add Row Below".
 
-</tip-box>
+</box>
 
 <img src="{{baseUrl}}/javaTools/javaFXBasic/part01/images/design-scene-builder-grid-pane-2.png" height="250" />
 <p/>

@@ -11,13 +11,13 @@ The first version of the code you write may not be of production quality. It is 
 * **Refactoring is not rewriting**: Discarding poorly-written code entirely and re-writing it from scratch is not refactoring because refactoring needs to be done in small steps.
 * **Refactoring is not bug fixing**: By definition, refactoring is different from bug fixing or any other modifications that alter the external behavior (e.g. adding a feature) of the component in concern.
 
-<tip-box>
+<box>
 
 {{ icon_tip }} Improving code structure can have many secondary benefits: e.g.
  * hidden bugs become easier to spot
  * improve performance (sometimes, simpler code runs faster than complex code because simpler code is easier for the compiler to optimize). 
 
-</tip-box>
+</box>
 
 Given below are two common refactorings (<trigger trigger="click" for="modal:refactoring-catalog-what">more</trigger>).
 
@@ -25,7 +25,7 @@ Given below are two common refactorings (<trigger trigger="click" for="modal:ref
   <include src="../../common/references.md#refactoring-catalog"/>
 </modal>
 
-<tip-box>
+<box>
 
 Refactoring Name: **Consolidate Duplicate Conditional Fragments**
 
@@ -46,9 +46,9 @@ Method: Move it outside of the expression.
 
 </div>
 
-</tip-box>
+</box>
 
-<tip-box>
+<box>
 
 Refactoring Name:  **Extract Method**
 
@@ -65,7 +65,7 @@ Method: Turn the fragment into a method whose name explains the purpose of the m
   <include src="example-extract-python.md" />
 </div>
 
-</tip-box>
+</box>
 
 
 {{ icon_tip }} Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.

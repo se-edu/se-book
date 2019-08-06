@@ -8,26 +8,26 @@
 
 **The `{benefit}` can be omitted** if it is obvious.
 
-<tip-box>
+<box>
 
 As a user, I can login to the system ~~so that I can access my data~~
 
-</tip-box>
+</box>
 
 {{ icon_tip }} It is recommended to confirm there is a concrete benefit even if you omit it from the user story. If not, you could end up adding features that have no real benefit.
 
 You can add more characteristics to the `{user role}` to provide more context to the user story.
 
-<tip-box>
+<box>
 
 * As a ==forgetful== user, I can view a password hint, so that I can recall my password.
 * As an ==expert== user, I can tweak the underlying formatting tags of the document, so that I can format the document exactly as I need.
 
-</tip-box>
+</box>
 
 **You can write user stories at various levels**. High-level user stories, called ==_epics_== (or _themes_) cover bigger functionality. You can then break down these epics to multiple user stories of normal size.
 
-<tip-box>
+<box>
 
 [Epic] As a lecturer, I can monitor student participation levels
   * As a lecturer, I can view the forum post count of each student
@@ -37,11 +37,11 @@ You can add more characteristics to the `{user role}` to provide more context to
   * As a lecturer, I can view file download statistics of each student
     so that I can identify the students who do not download lecture materials
 
-</tip-box>
+</box>
 
 **You can add _conditions of satisfaction_ to a user story** to specify things that need to be true for the user story implementation to be accepted as ‘done’.
 
-<tip-box>
+<box>
 
 * _As a_ lecturer, _I can_ view the forum post count of each student _so that_ I can identify the activity level of students in the forum.
   
@@ -51,7 +51,7 @@ Conditions:
 - [ ] Total post count of a student should be shown
 - [ ] The list should be sortable by student name and post count
 
-</tip-box>
+</box>
 
 **Other useful info that can be added to a user story** includes (but not limited to)
 
@@ -65,7 +65,7 @@ Conditions:
 
 User stories for a travel website (credit: Mike Cohen)
 
-<tip-box>
+<box>
 
 * As a registered user, I am required to log in so that I can access the system
 * As a forgetful user, I can request a password reminder so that I can log in if I forget mine
@@ -79,7 +79,7 @@ User stories for a travel website (credit: Mike Cohen)
   * As a frequent ﬂyer, I want to request an upgrade
   * As a frequent ﬂyer, I want to see if my upgrade cleared
 
-</tip-box>
+</box>
 
 </panel>
 </span>

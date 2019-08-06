@@ -2,7 +2,7 @@
 
 **The main body of the use case is the sequence of steps that describes the interaction between the system and the actors.** Each step is given as a simple statement describing _who does what_.
 
-<tip-box>
+<box>
   
 {{ icon_example }} An example of the main body of a use case.
 
@@ -11,17 +11,17 @@
   3. Student specifies the file location
   4. LMS uploads the file
     
-</tip-box>
+</box>
 
 **A use case describes only the externally visible behavior, not internal details, of a system** i.e. should not mention give details that are not part of the interaction between the user and the system.
 
-<tip-box>
+<box>
   
 {{ icon_example }} This example use case step refers to behaviors not externally visible .
 
 1. LMS ==saves the file into the cache== and indicates success.
 
-</tip-box>
+</box>
 
 **A step gives the intention of the actor (not the mechanics).** That means UI details are usually omitted. The idea is to leave as much flexibility to the UI designer as possible. That is, the use case specification should be as general as possible (less specific) about the UI. 
 
@@ -40,7 +40,7 @@
 
 A use case description can show loops too.
 
-<tip-box>
+<box>
 
 {{ icon_example }} An example of how you can show a loop:
 
@@ -62,5 +62,5 @@ Actors: Player (multiple players)
 
 &nbsp;&nbsp;Use case ends.
 
-</tip-box>
+</box>
 

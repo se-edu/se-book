@@ -6,11 +6,11 @@
 
 <div id="body">
 
-<tip-box type="definition">
+<box type="definition">
 
 <include src="../../../common/definitions.md#def-polymorphism" />
 
-</tip-box>
+</box>
 
 **_Polymorphism_ allows you to write code targeting superclass objects, use that code on subclass objects, and achieve possibly different results based on the actual class of the object.**
 

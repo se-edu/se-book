@@ -93,14 +93,14 @@ public class Bicycle {
 
 </div>
 
-<tip-box>
+<box>
 
 {{ icon_tip }} Explanation of **`System.out.println(...)`**:
 
 * `out` is a class-level public attribute of the `System` class.
 * `println` is a instance level method of the `out` object.
 
-</tip-box>
+</box>
 
 
 

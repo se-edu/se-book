@@ -12,7 +12,7 @@
 
 **A ==_class_== contains instructions for creating a specific kind of objects**. It turns out sometimes multiple objects keep the same type of data and have the same behavior because they are of the _same kind_. Instructions for creating a one kind (or ‘class’) of objects can be done once and that same instructions can be used to <tooltip content="i.e. create">_instantiate_</tooltip> objects of that kind. We call such instructions a _Class_.
 
-<tip-box>
+<box>
 
 {{ icon_example }} Classes and objects in an example scenario
 
@@ -29,7 +29,7 @@ Class | Objects
 `Calculator` | an object to do the calculations
 `Main` | an object to represent you who manages the whole operation
 
-</tip-box>
+</box>
 
 
 </div>

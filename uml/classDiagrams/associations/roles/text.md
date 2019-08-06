@@ -10,7 +10,7 @@
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/notation.png" height="60" />
 
-<tip-box>
+<box>
 
 {{ icon_example }} This association represents a marriage between a `Man` object and a `Woman` object. The respective roles played by objects of these two classes are `husband` and `wife`. 
 
@@ -51,9 +51,9 @@ class Woman:
 </tr>
 </table>
 
-</tip-box>
+</box>
 
-<tip-box>
+<box>
 
 {{ icon_example }} The role of `Student` objects in this association is `charges` %%(i.e. Admin is in charge of students)%%
 
@@ -84,7 +84,7 @@ class Admin:
 </tr>
 </table>
 
-</tip-box>
+</box>
 
 
 </div>

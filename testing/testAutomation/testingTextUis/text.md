@@ -60,12 +60,12 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
    
    the Operating System then creates a file `output.txt` and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding ` < input.txt ` (or any other filename) makes the OS redirect the contents of the file as input to the program, as if the user typed the content of the file one line at a time.
    
-   <tip-box>
+   <box>
    
    {{ icon_resource }} Resources:
    * [Using command redirection operators in Windows](http://technet.microsoft.com/en-us/library/bb490982.aspx)
    
-   </tip-box>
+   </box>
    
    </panel><p/>
 

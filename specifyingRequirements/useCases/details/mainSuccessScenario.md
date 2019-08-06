@@ -2,7 +2,7 @@
 
 **The ==_Main Success Scenario (MSS)_== describes the most straightforward interaction for a given use case, which assumes that nothing goes wrong.** This is also called the _Basic Course of Action_ or the _Main Flow of Events_ of a use case. 
 
-<tip-box>
+<box>
 
 <ul>
   <li>System: Online Banking System (OBS)</li>
@@ -22,4 +22,4 @@
 
 Note how the MSS assumes that all entered details are correct and ignores problems such as timeouts, network outages etc. Fro example, MSS does not tell us what happens if the user enters an incorrect data.
 
-</tip-box>
+</box>

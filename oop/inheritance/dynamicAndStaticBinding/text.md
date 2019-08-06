@@ -6,9 +6,9 @@
 
 <div id="body">
 
-<tip-box type="definition"> 
+<box type="definition">
   <include src="../../../common/definitions.md#def-dynamic-binding" />
-</tip-box>
+</box>
 
 **<trigger trigger="click" for="modal:dynamicAndStatic-overriding">Overridden methods</trigger> are resolved using dynamic binding, and therefore resolves to the implementation in the actual type of the object.**
 
@@ -16,7 +16,7 @@
   <include src="../overriding/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
-<tip-box>
+<box>
 
 {{ icon_example }} Consider the code below. The declared type of `s` is `Staff` and it appears as if the `adjustSalary(int)` operation of the `Staff` class is invoked. 
 
@@ -29,11 +29,11 @@ void adjustSalary(int byPercent) {
 ```
 However, at runtime `s` can receive an object of any subclass of `Staff`. That means the `adjustSalary(int)` operation of the actual subclass object will be called. If the subclass does not override that operation, the operation defined in the superclass (in this case, `Staff` class) will be called.
 
-</tip-box>
+</box>
 
-<tip-box type="definition"> 
+<box type="definition">
   <include src="../../../common/definitions.md#def-static-binding" />
-</tip-box>
+</box>
 
 **In contrast, <trigger trigger="click" for="modal:dynamicAndStatic-overloading">overloaded</trigger> methods are resolved using static binding.**
 
@@ -41,7 +41,7 @@ However, at runtime `s` can receive an object of any subclass of `Staff`. That m
   <include src="../overloading/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
-<tip-box>
+<box>
 
 {{ icon_example }} Note how the constructor is overloaded in the class below. The method call `new Account()` is bound to the first constructor at compile time.
 
@@ -66,7 +66,7 @@ class Account {
 void calculateGrade (int[] averages) { ... }
 void calculateGrade (String matric) { ... }
 ```
-</tip-box>
+</box>
 
 </div>
 

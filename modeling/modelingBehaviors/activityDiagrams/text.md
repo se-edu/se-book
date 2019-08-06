@@ -9,7 +9,7 @@
 **Software projects often involve _workflows_.** Workflows define the <tooltip content="a connected sequence of steps"></tooltip>flow in which a process or a set of tasks is executed.
 Understanding such workflows is important for the success of the software project.
 
-<tip-box> 
+<box>
 
 Some examples in which a certain workflow is relevant to software project:
 
@@ -17,7 +17,7 @@ Some examples in which a certain workflow is relevant to software project:
 
 {{ icon_example }} The algorithm of a price of code represents the workflow (i.e. the execution flow) of the code.
 
-</tip-box>
+</box>
 
 <panel type="seamless" src="../../../uml/activityDiagrams/introduction/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Introduction → What" alt="{{ icon_prereq }} UML/AD/Intro" /><p/>
 

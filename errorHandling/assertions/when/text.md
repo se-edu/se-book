@@ -11,7 +11,7 @@
 
 **Do not use assertions to do _work_** because assertions can be disabled. If not, your program will stop working when assertions are not enabled.
 
-<tip-box> 
+<box>
 
 {{ icon_example }} The code below will not invoke the `writeFile()` method when assertions are disabled. %%If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.%%
 
@@ -20,7 +20,7 @@
 assert writeFile() : "File writing is supposed to return true";
 ```
 
-</tip-box>
+</box>
 
 **Assertions are suitable for verifying assumptions about _Internal Invariants_, _Control-Flow Invariants_, 
 _Preconditions_, _Postconditions_, and _Class Invariants_.** Refer to [[Programming with Assertions (second half)](http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#usage)] to learn more.

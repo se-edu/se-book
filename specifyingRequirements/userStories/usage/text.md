@@ -18,7 +18,7 @@
   <include src="../../../requirements/nonFunctionalRequirements/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
-<tip-box>
+<box>
 
 {{ icon_example }} An example of a NFR captured as a user story:
 
@@ -26,13 +26,13 @@ As a | I want to | so that
 -----|-----------|--------
 impatient user | to be able experience reasonable response time from the website while up to 1000 concurrent users are using it | I can use the app even when the traffic is at the maximum expected level
 
-</tip-box>
+</box>
 
 <div id="usageTips">
 
 Given their lightweight nature, **user stories are quite handy for recording requirements during early stages of requirements gathering**.
 
-<tip-box> 
+<box>
 
 {{ icon_tip }} Here are some tips for using user stories for early stages of requirement gathering:
 
@@ -50,7 +50,7 @@ Given their lightweight nature, **user stories are quite handy for recording req
 * **Don't discuss implementation details or whether you are actually going to implement it:**  
   When gathering requirements, your decision is whether the user's need is important enough for you to want to fulfil it. Implementation details can be discussed later. If a user story turns out to be too difficult to implement later, you can always omit it from the implementation plan. 
    
-</tip-box>
+</box>
 
 </div>
 

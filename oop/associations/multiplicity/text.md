@@ -8,28 +8,28 @@
 
 **_Multiplicity_ is the aspect of an OOP solution that dictates how many objects take part in each association.** 
 
-<tip-box> 
+<box>
 
 {{ icon_example }} The multiplicity of the association between `Course` objects and `Student` objects tells you how many `Course` objects can be associated with one `Student` object and vice versa.
 
-</tip-box>
+</box>
 
 ##### Implementing multiplicity
 
 **A normal instance-level variable gives us a `0..1` multiplicity** (also called _optional associations_) because a variable can hold a reference to a single object or `null`.
 
-<tip-box>
+<box>
 
 {{ icon_example }} In the code below, the `Logic` class has a variable that can hold `0..1` %%i.e., zero or one%% `Minefield` objects.
 
 <include src="../../../uml/classDiagrams/associations/navigability/logic-minefield.md" />
 
-</tip-box>
+</box>
 
 
 **A variable can be used to implement a `1` multiplicity too** (also called _compulsory associations_).
 
-<tip-box>
+<box>
 
 {{ icon_example }} In the code below, the `Logic` class will always have a `ConfigGenerator` object, provided the variable is not set to null at some point.
 
@@ -54,11 +54,11 @@ class Logic:
 </div>
 
 
-</tip-box>
+</box>
 
 **Bi-directional associations require matching variables in both classes.**
 
-<tip-box>
+<box>
 
 {{ icon_example }} In the code below, the `Foo` class has a variable to hold a `Bar` object and vice versa %%i.e., each object can have an association with an object of the other type%%.
 
@@ -95,11 +95,11 @@ class Bar:
 </div>
 
 
-</tip-box>
+</box>
 
 **To implement other multiplicities, choose a suitable data structure** such as Arrays, ArrayLists, HashMaps, Sets, etc.
 
-<tip-box>
+<box>
 <div class="alt-java">
 
 ```java
@@ -120,7 +120,7 @@ class Minefield:
 </div>
 
 
-</tip-box>
+</box>
 
 </div>
 

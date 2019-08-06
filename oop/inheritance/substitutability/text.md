@@ -8,7 +8,7 @@
 
 **Every instance of a subclass is an instance of the superclass, but not vice-versa.** As a result, inheritance allows _substitutability_ : the ability to substitute a child class object where a parent class object is expected.
 
-<tip-box> 
+<box>
 
 <img src="{{baseUrl}}/oop/inheritance/substitutability/images/staff.png" height="80" />
 <p/>
@@ -28,7 +28,7 @@ Staff staff;
 ...
 AcademicStaff academicStaff = staff; // Not OK
 ```
-</tip-box>
+</box>
 
 </div>
 

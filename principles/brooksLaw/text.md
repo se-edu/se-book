@@ -6,9 +6,9 @@
 
 <div id="body">
 
-<tip-box type="definition">
+<box type="definition">
   <include src="../../common/definitions.md#def-brooks-law" />
-</tip-box>
+</box>
 
 Explanation: The additional communication overhead will outweigh the benefit of adding extra manpower, especially if done near to a deadline.
 

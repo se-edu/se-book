@@ -8,7 +8,7 @@
 
 **An _Interaction overview_ diagrams is a combination of activity diagrams and sequence diagrams**.
 
-<tip-box> 
+<box>
 
 {{ icon_example }} An example:
 
@@ -17,7 +17,7 @@
 
 <sub>source:[https://commons.wikimedia.org](https://en.wikipedia.org/wiki/Interaction_overview_diagram)</sub>
 
-</tip-box>
+</box>
 
 </div>
 

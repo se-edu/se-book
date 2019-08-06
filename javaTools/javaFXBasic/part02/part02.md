@@ -188,21 +188,21 @@ We have our model and view. Let's get our data into our table. We'll need a cont
 
 Create a normal Java class inside the `view` package called `PersonOverviewController`.
 
-<tip-box type="tip">
+<box type="tip">
 
 Note: We must put the class inside the same package as `PersonOverview.fxml`, otherwise the SceneBuilder won't be able to find it.
 
-</tip-box>
+</box>
 
 We will add some instance variables that give us access to the table and the labels inside the view. The fields and some methods have a special `@FXML` annotation. This is necessary in order for the `.fxml` file to have access to private fields and private methods. After we have everything set up in the `.fxml` file, the application will automatically fill the variables when the `.fxml` file is loaded.
 
 So let's add the following code:
 
-<tip-box type="tip">
+<box type="tip">
 
 Note: Remember to always use the `javafx` imports, NOT `awt` or `swing`.
 
-</tip-box>
+</box>
 
 **PersonOverviewController.java**
 ```java
@@ -275,7 +275,7 @@ public class PersonOverviewController {
 * The `initialize()` method is automatically called after the `.fxml` file has been loaded. At this time, all the FXML fields should have been initialized already.
 * The `setCellValueFactory(...)` that we set on the table colums are used to determine which field inside the `Person` objects should be used for the particular column. The arrow `->` indicates that we're using a Java 8 feature called Lambdas. (Another option would be to use a [`PropertyValueFactory`]({{ java_api }}/javafx/scene/control/cell/PropertyValueFactory.html), but this is not type-safe).
 
-<tip-box type="tip">
+<box type="tip">
 
 Note:
 
@@ -288,7 +288,7 @@ myIntegerColumn.setCellValueFactory(cellData ->
 
 This is necessary because of a bad design decision of JavaFX (see [this discussion](https://community.oracle.com/thread/2575601) for more details).
 
-</tip-box>
+</box>
 
 ### Connecting MainApp with the PersonOverviewController
 

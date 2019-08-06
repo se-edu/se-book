@@ -8,7 +8,7 @@
 
 **Javadoc is a tool for generating API documentation in HTML format from doc comments in source.** In addition, modern IDEs use JavaDoc comments to generate explanatory tool tips.
 
-<tip-box>
+<box>
 
 {{ icon_example }} An example method header comment in JavaDoc format (adapted from [Oracle's Java documentation](http://www.oracle.com/technetwork/articles/java/index-137868.html))
 
@@ -45,7 +45,7 @@
 
 <img src="{{baseUrl}}/documentation/tools/javaDoc/what/images/intellijTooltip.png"/><p/>
 
-</tip-box>
+</box>
 
 </div>
 

@@ -18,14 +18,14 @@ A normal class can be instantiated multiple times by invoking the constructor.
 
 Make the constructor of the singleton class `private`, %%because a `public` constructor will allow others to instantiate the class at will%%. Provide a `public` class-level method to access the _single instance_.
 
-<tip-box>
+<box>
 
 Example:
 
 <puml src="images/singleton.puml" />
 <p/>
 
-</tip-box>
+</box>
 
 </div>
 

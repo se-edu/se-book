@@ -12,7 +12,7 @@ When deciding EPs of OOP methods, we need to identify EPs of all data participan
 * input parameters of the method call
 * other data/objects accessed by the method such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented)
 
-<tip-box>
+<box>
 
 {{ icon_example }} Consider this method in the `DataStack` class:
 `push(Object o): boolean`
@@ -27,9 +27,9 @@ EPs:
   * `o`: [null] [not null]
   * `FREEZE`: [true][false]
 
-</tip-box>
+</box>
 
-<tip-box>
+<box>
 
 {{ icon_example }} Consider a simple Minesweeper app. What are the EPs for the `newGame()` method of the `Logic` component?
 
@@ -44,9 +44,9 @@ Next, let us identify equivalence partitions for each participant. Will the `new
 * `IN_PLAY` : the current minefield is already in use
 * `WON`, `LOST` : let us assume the `newGame` behaves the same way for these two values
 
-</tip-box>
+</box>
 
-<tip-box>
+<box>
 
 {{ icon_example }} Consider the `Logic` component of the Minesweeper application. What are the EPs for the `markCellAt(int x, int y)` method?. The partitions in **bold** represent valid inputs.
 
@@ -55,7 +55,7 @@ Next, let us identify equivalence partitions for each participant. Will the `new
 * `y`: [MIN_INT..-1] **[0..(H-1)]** [H..MAX_INT]
 * `Cell` at `(x,y)`: **HIDDEN**, MARKED, CLEARED
 
-</tip-box>
+</box>
 
 </div>
 

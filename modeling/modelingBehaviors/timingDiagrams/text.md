@@ -8,7 +8,7 @@
 
 **A _timing diagram_ focus on timing constraints.**
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Here is an example timing diagram:
 
@@ -17,7 +17,7 @@
 
 <sub>Adapted from: _UML Distilled_ by Martin Fowler</sub>
 
-</tip-box>
+</box>
 
 </div>
 

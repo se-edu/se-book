@@ -8,11 +8,11 @@
 
 **_Big-bang integration_: integrate all components at the same time.** 
 
-<tip-box type="wrong"> 
+<box type="wrong">
 
 Big-bang is not recommended because it will uncover too many problems at the same time which could make debugging and bug-fixing more complex than when problems are uncovered incrementally.
 
-</tip-box>
+</box>
 
 **_Incremental integration_: integrate few components at a time.** This approach is better than the big-bang integration because it surfaces integration problems in a more manageable way.
 

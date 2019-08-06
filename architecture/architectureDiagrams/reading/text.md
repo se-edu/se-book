@@ -10,7 +10,7 @@
 
 <div v-closeable alt="architecture diagram examples" id="architecture-diagram-examples">
 
-<tip-box>
+<box>
 
 {{ icon_example }} Some example architecture diagrams:
 
@@ -45,7 +45,7 @@
   </tab>
 </tabs>
 
-</tip-box>
+</box>
 
 </div>
 

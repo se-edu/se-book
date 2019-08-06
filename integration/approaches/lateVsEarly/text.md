@@ -10,19 +10,19 @@
 
 **_Late and one-time_: wait till all components are completed and integrate all finished components near the end of the project.** 
 
-<tip-box type="wrong">
+<box type="wrong">
  
   This approach is not recommended because integration often causes many component incompatibilities (due to previous miscommunications and misunderstandings) to surface which can lead to delivery delays %%i.e. Late integration → incompatibilities found → major rework required → cannot meet the delivery date%%.
 
-</tip-box>
+</box>
 
 **_Early and frequent_: integrate early and evolve each part in parallel, in small steps, re-integrating frequently.** 
 
-<tip-box> 
+<box>
 
 {{ icon_example }} A _<tooltip content="it compiles and runs but does not produce any useful output">walking skeleton</tooltip>_ can be written first. This can be done by one developer, possibly the one in charge of integration. After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate the new code to the main system.
 
-</tip-box>
+</box>
 
 <div v-closeable alt="slideshow: comparison" class="non-printable">
 

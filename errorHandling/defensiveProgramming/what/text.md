@@ -8,7 +8,7 @@
 
 **A defensive programmer codes under the assumption "if we leave room for things to go wrong, they _will_ go wrong".** Therefore, a defensive programmer proactively tries to eliminate any room for things to go wrong.
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Consider a `MainApp#getConfig()` a method that returns a `Config` object containing configuration data. A typical implementation is given below:
 ```java
@@ -29,7 +29,7 @@ If the returned Config object is not meant to be modified, a defensive programme
     }
 ``` 
 
-</tip-box>
+</box>
 
 </div>
 

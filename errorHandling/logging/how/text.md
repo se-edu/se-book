@@ -8,7 +8,7 @@
 
 **Most programming environments come with logging systems that allow sophisticated forms of logging.** They have features such as the ability to enable and disable logging easily or to change the logging <tooltip content="how much information to record">intensity</tooltip>.
 
-<tip-box>
+<box>
 
 {{ icon_example }} This sample Java code uses Java’s default logging mechanism. 
 
@@ -36,7 +36,7 @@ if(error){
 //...
 logger.log(Level.INFO, "end of processing");
 ```
-</tip-box>
+</box>
 
 </div>
 

@@ -6,15 +6,15 @@
 
 <div id="body">
 
-<tip-box type="definition">
+<box type="definition">
 
 <include src="../../common/definitions.md#def-prototyping" />
 
-</tip-box>
+</box>
 
 **Prototyping can uncover requirements, in particular, those related to _how users interact with the system_.** UI prototypes are often used in brainstorming sessions, or in meetings with the users to get quick feedback from them.
 
-<tip-box> 
+<box>
 
 <panel header="{{ icon_example }} Simple text UI prototype for a primitive CLI (Command Line Interface) Minesweeper:" type="seamless" expanded>
 
@@ -36,7 +36,7 @@
 
 </panel>
 
-</tip-box>
+</box>
 <p/>
 
 {{ icon_tip }} Prototyping can be used for _discovering_ as well as _specifying_ requirements %%e.g. a UI prototype can serve as a specification of what to build%%.

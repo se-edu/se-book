@@ -11,14 +11,14 @@
 * Node or vertex captures the effort estimation of a task, and
 * Arrow depicts the precedence between tasks
 
-<tip-box>
+<box>
 
 {{ icon_example }} an example PERT chart for a simple software project
 
 <img src="{{baseUrl}}/projectPlanning/pertCharts/images/pert.jpg" height="320" /><br>
 `md` = man days
 
-</tip-box>
+</box>
 
 A PERT chart can help determine the following important information:
 
@@ -27,11 +27,11 @@ A PERT chart can help determine the following important information:
 * The shortest possible completion time. %%In the example above, there is a path (indicated by the shaded boxes) from start to end that determines the shortest possible completion time.%%
 * The Critical Path. %%In the example above, the shortest possible path is also the critical path%%.
  
-<tip-box type="definition"> 
+<box type="definition">
 
 **Critical path** is the path in which any delay can directly affect the project duration. It is important to ensure tasks on the critical path are completed on time.
 
-</tip-box>
+</box>
 
 </div>
 

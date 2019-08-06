@@ -10,9 +10,9 @@ Create an empty repo.
 
 Create a file named `fruits.txt` in the working directory and add some dummy text to it.
 
-<tip-box type="definition">
+<box type="definition">
   <include src="../../common/definitions.md#def-working-directory" />
-</tip-box>
+</box>
 
 Observe how the file is detected by Git.
 
@@ -27,13 +27,13 @@ Observe how the file is detected by Git.
 
 Although git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose we want to commit the current state of the file. First, we should stage the file.
 
-<tip-box type="definition">
+<box type="definition">
   <include src="../../common/definitions.md#def-commit" />
-</tip-box>
+</box>
 
-<tip-box type="definition">
+<box type="definition">
   <include src="../../common/definitions.md#def-stage" />
-</tip-box>
+</box>
 
 <tabs>
   <tab header="SourceTree">

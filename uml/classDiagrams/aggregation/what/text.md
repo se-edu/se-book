@@ -12,14 +12,14 @@ Notation:
 
 <img src="{{baseUrl}}/uml/classDiagrams/aggregation/what/images/notation.png" height="45" />
 
-<tip-box>
+<box>
 
 {{ icon_example }} Example:
 
 <img src="{{baseUrl}}/uml/classDiagrams/aggregation/what/images/clubPerson.png" height="85" />
 <p/>
 
-</tip-box>
+</box>
 
 <box>
 

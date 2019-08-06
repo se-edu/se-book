@@ -12,11 +12,11 @@ The concept of **_Objects_ in OOP is an <trigger trigger="click" for="modal:obje
   <include src="../../../common/definitions.md#def-abstraction"/>
 </modal>
 
-<tip-box>
+<box>
 
 {{ icon_example }} We can deal with a `Person` object that represents the person Adam and query the object for Adam's age instead of dealing with details such as Adam’s date of birth (DoB), in what format the DoB is stored, the algorithm used to calculate the age from the DoB, etc.
 
-</tip-box>
+</box>
 
 </div>
 

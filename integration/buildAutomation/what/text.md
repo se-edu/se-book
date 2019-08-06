@@ -14,7 +14,7 @@ Some of these build steps such as to compile, link and package are already autom
 
 However, most big projects use specialized build tools to automate complex build processes.
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Some popular build tools relevant to Java developers:
 
@@ -25,15 +25,15 @@ However, most big projects use specialized build tools to automate complex build
 
 {{ icon_example }} %%Some other build tools : Grunt (JavaScript), Rake (Ruby)%%
 
-</tip-box>
+</box>
 
 **Some build tools also serve as _dependency management tools_**. Modern software projects often depend on third party libraries that evolve constantly. That means developers need to download the correct version of the required libraries and update them regularly. Therefore, dependency management is an important part of build automation. Dependency Management tools can automate that aspect of a project. 
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Maven and Gradle, in addition to managing the build process, can play the role of dependency management tools too.
 
-</tip-box>
+</box>
 
 </div>
 

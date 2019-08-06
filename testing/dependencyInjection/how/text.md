@@ -12,7 +12,7 @@
   <include src="../../testingTypes/unitTesting/stubs/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Here is another example of using polymorphism to implement dependency injection:
 
@@ -81,7 +81,7 @@ class SalaryManagerStub extends SalaryManager {
     }
 }
 ```
-</tip-box>
+</box>
 
 </div>
 

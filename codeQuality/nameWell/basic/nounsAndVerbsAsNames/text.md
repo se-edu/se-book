@@ -10,7 +10,7 @@
 
 **Use nouns for classes/variables and verbs for methods/functions.**
 
-<tip-box>
+<box>
 
 Examples:
 
@@ -19,12 +19,12 @@ Name for a | {{bad}}        | {{good}}
 Class      |`CheckLimit`     | `LimitChecker`           
 method     |`result()`       | `calculate()`  
 
-</tip-box>
+</box>
 
 
 **Distinguish clearly between single-valued and multivalued variables.**
 
-<tip-box>
+<box>
 
 {{ icon_example }} Examples:
 
@@ -45,7 +45,7 @@ names = ['Jim', 'Alice']
 ```
 </div>
 
-</tip-box>
+</box>
 
 </div>
 

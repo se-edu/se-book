@@ -6,9 +6,9 @@
 
 <div id="body">
 
-<tip-box type="definition">
+<box type="definition">
   <include src="../../common/definitions.md#def-repo" />
-</tip-box>
+</box>
 
 <tabs>
   <tab header="{{ icon_text }}">

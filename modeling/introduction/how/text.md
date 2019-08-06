@@ -10,18 +10,18 @@
 
 a) **To analyze a complex entity related to software development.**
 
-<tip-box>
+<box>
 
 {{ icon_example }} Some examples of using models for analysis:
 
 1. Models of the problem domain (i.e. the environment in which the software is expected to solve a problem) can be built to aid the understanding of the problem to be solved.
 2. When planning a software solution, models can be created to figure out how the solution is to be built. An architecture diagram is such a model.
 
-</tip-box>
+</box>
 
 b) **To communicate information among stakeholders.**  Models can be used as a visual aid in discussions and documentations.
 
-<tip-box>
+<box>
 
 {{ icon_example }} Some examples of using models to communicate:
 
@@ -29,7 +29,7 @@ b) **To communicate information among stakeholders.**  Models can be used as a v
 2. A business analyst can use a use case diagram to explain to the customer the functionality of the system.
 3. A class diagram can be reverse-engineered from code so as to help explain the design of a component to a new developer.
 
-</tip-box>
+</box>
 
 <modal large title="Architecture Diagrams" id="modal:modelingIntro-archiDiagrams">
 
@@ -40,16 +40,16 @@ An _architecture diagram_ depicts the high-level design of a software.
 
 c) **As a blueprint for creating software.** Models can be used as instructions for building software.
 
-<tip-box>
+<box>
 
 {{ icon_example }} Some examples of using models to as blueprints:
 
 1. A senior developer draws a class diagram to propose a design for an OOP software and passes it to a junior programmer to implement.
 2. A software tool allows users to draw UML models using its interface and the tool automatically generates the code based on the model.
 
-</tip-box>
+</box>
 
-<tip-box>
+<box>
 
 <!-- TODO: make this an independent LO 4* -->
 
@@ -64,7 +64,7 @@ Further reading:
 
 </panel>
 
-</tip-box>
+</box>
 
 </div>
 

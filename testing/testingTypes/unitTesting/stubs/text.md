@@ -8,22 +8,22 @@
 
 **A proper unit test requires the _unit_ to be tested ==in isolation==** so that bugs in the <tooltip content="code the unit depends on">dependencies</tooltip> cannot influence the test %%i.e. bugs outside of the unit should not affect the unit tests%%.
 
-<tip-box> 
+<box>
 
 {{ icon_example }} If a `Logic` class depends on a `Storage` class, unit testing the `Logic` class requires isolating the `Logic` class from the `Storage` class.
 
-</tip-box>
+</box>
 
 **_Stubs_ can isolate the <popover content="Software Under Test (in this case, the _unit_ being tested)">SUT</popover> from its dependencies**. 
 
-<tip-box type="definition"> 
+<box type="definition">
 
 <include src="../../../../common/definitions.md#def-stub" />
 
-</tip-box>
+</box>
 
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Consider the code below:
 ```java
@@ -97,7 +97,7 @@ void getName() {
 }
 ```
 
-</tip-box>
+</box>
 
 In addition to Stubs, there are other type of replacements you can use during testing. E.g. _Mocks_, _Fakes_, _Dummies_, _Spies_.
 

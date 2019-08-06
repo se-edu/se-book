@@ -9,7 +9,7 @@
 *	Use one variable for one purpose. Do not reuse a variable for a different purpose other than its intended one, just because the data type is the same.
 *	Do not reuse formal parameters as local variables inside the method.
 
-<tip-box>
+<box>
 
 {{bad}}
 ```java
@@ -28,7 +28,7 @@ double computeRectangleArea(double length, double width) {
 }
 ```
 
-</tip-box>
+</box>
 
 </div>
 

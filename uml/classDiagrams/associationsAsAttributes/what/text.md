@@ -12,7 +12,7 @@ Association multiplicities and the default value too can be shown as part of the
 
 `name: type [multiplicity]  = default value`
 
-<tip-box>
+<box>
 
 {{ icon_example }} The diagram below depicts a multi-player _Square Game_ being played on a board comprising of 100 squares. Each of the squares may be occupied with any number of pieces, each belonging to a certain player. 
 
@@ -26,7 +26,7 @@ The association that a `Board` has 100 `Sqaure`s can be shown in either of these
 <img src="{{baseUrl}}/uml/classDiagrams/associationsAsAttributes/what/images/board.png" height="70" />
 <p/>
 
-</tip-box>
+</box>
 
 </div>
 

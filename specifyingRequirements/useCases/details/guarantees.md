@@ -2,7 +2,7 @@
 
 **==_Guarantees_== specify what the use case promises to give us at the end of its operation.**
 
-<tip-box>
+<box>
   <div>
     <ul>
       <li>Software System: Online Banking System</li>
@@ -24,6 +24,6 @@
       </li>
     </ul>
   </div>
-</tip-box>
+</box>
 
 <p/>

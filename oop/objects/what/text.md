@@ -20,7 +20,7 @@
 
 **Object Oriented Programming (OOP) views the world as _a network of interacting objects_.**
 
-<tip-box>
+<box>
 
 {{ icon_example }} A real world scenario viewed as a network of interacting objects:
 
@@ -28,7 +28,7 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 
 <!-- TODO {visual: real world scenario, objects and network marked} -->
 
-</tip-box>
+</box>
 
 **OOP solutions try to create a similar object network inside the computer’s memory** – a sort of a virtual simulation of the corresponding real world scenario – **so that a similar result can be achieved programmatically.**
 
@@ -36,7 +36,7 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 
 **OOP does not demand that the virtual world object network follow the real world _exactly_.**
 
-<tip-box>
+<box>
 
 {{ icon_example }} Our previous example can be tweaked a bit as follows:
 
@@ -45,11 +45,11 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 
 <!-- TODO {visual: optimizations:  You → Main; Pen + Paper → AgeList} -->
 
-</tip-box>
+</box>
 
 **Every object has both state (data) and behavior (operations on data).**
 
-<tip-box> 
+<box>
 
 | Object      | Real World? | Virtual World? | Example of State (i.e. Data)       | Examples of Behavior (i.e. Operations)                |
 | :---------: |:-----------:|:--------------:|:----------------------------------:| :----------------------------------------------------:|
@@ -59,7 +59,7 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 | Calculator  | {{ icon_tick }} | {{ icon_tick }} | Numbers already entered            | Calculate the sum, divide                             |
 | You/Main    | {{ icon_tick }} | {{ icon_tick }} | Average age, Sum of ages           | Use other objects to calculate                        |
 
-</tip-box>
+</box>
 
 **Every object has an _interface_ and an _implementation_.**
 
@@ -67,28 +67,28 @@ Every real world object has:
 * an interface through which other objects can interact with it
 * an implementation that supports the interface but may not be accessible to the other object
 
-<tip-box>
+<box>
 
 {{ icon_example }} The interface and implementation of some real-world objects in our example:
 
 * Calculator: the buttons and the display are part of the interface; circuits are part of the implementation.
 * Adam: In the context of our 'calculate average age' example, the interface of Adam consists of requests that adam will respond to, e.g.  "Give age to the nearest year, as at Jan 1st of this year" "State your name"; the implementation includes the mental calculation Adam uses to calculate the age which is not visible to other objects.
 
-</tip-box>
+</box>
 
 Similarly, every object in the virtual world has an interface and an implementation.
 
-<tip-box>
+<box>
 
 {{ icon_example }} The interface and implementation of some virtual-world objects in our example:
 
 * `Adam`: the interface might have a method `getAge(Date asAt)`; the implementation of that method is not visible to other objects.
 
-</tip-box>
+</box>
 
 **Objects interact by sending messages.** Both real world and virtual world object interactions can be viewed as objects sending message to each other. The message can result in the sender object receiving a response and/or the receiver object’s state being changed. Furthermore, the result can vary based on which object received the message, even if the message is identical %%(see rows 1 and 2 in the example below)%%.
 
-<tip-box>
+<box>
 
 Examples:
 
@@ -99,7 +99,7 @@ Examples:
 | Real     | You    | Pen                              | Put nib on paper and apply pressure  | Makes a mark on your paper | Ink level goes down   |
 | Virtual  | Main   | Calculator (current total is 50) | add(int i): int i = 23               | 73                         | total = total + 23    |
 
-</tip-box>
+</box>
 
 </div>
 

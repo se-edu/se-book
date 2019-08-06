@@ -8,7 +8,7 @@
 
 **A _Communication diagrams_ are like sequence diagrams but emphasize the data links between the various participants in the interaction rather than the sequence of interactions.**
 
-<tip-box> 
+<box>
 
 {{ icon_example }} An example:
 
@@ -17,7 +17,7 @@
 
 <sub>Adapted from: _UML Distilled_ by Martin Fowler</sub>
 
-</tip-box>
+</box>
 
 </div>
 

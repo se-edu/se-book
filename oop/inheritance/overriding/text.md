@@ -8,7 +8,7 @@
 
 **Method _overriding_ is when a sub-class changes the behavior inherited from the parent class** by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.
 
-<tip-box>
+<box>
 
 {{ icon_example }} Consider the following case of `EvaluationReport` class inheriting the `Report` class:
 
@@ -22,7 +22,7 @@
   <include src="../overloading/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
-</tip-box>
+</box>
 
 
 </div>

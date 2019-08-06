@@ -8,7 +8,7 @@
 
 Consider two classes, `Account` and `Guarantor`, with an association as shown in the following diagram:
 
-<tip-box>
+<box>
 
 Example:
 
@@ -56,7 +56,7 @@ class Account {
 }
 ```
 
-</tip-box>
+</box>
 
 </div>
 

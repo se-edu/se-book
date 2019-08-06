@@ -8,7 +8,7 @@
 
 **X is _coupled_ to Y if a change to Y can ==potentially== require a change in X**.
 
-<tip-box> 
+<box>
 
 {{ icon_example }} If `Foo` class calls the method `Bar#read()`, `Foo` is coupled to `Bar` because a change to `Bar` can potentially (but not always) require a change in the `Foo` class %%e.g. if the signature of the `Bar#read()` is changed, `Foo` needs to change as well, but a change to the `Bar#write()` method may not require a change in the `Foo` class because `Foo` does not call `Bar#write()`%%. 
 
@@ -33,10 +33,10 @@ class Bar{
 ```
 </panel>
 
-</tip-box>
+</box>
 
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Some examples of coupling: `A` is coupled to `B` if,
 
@@ -47,7 +47,7 @@ class Bar{
 * `A` inherits from `B`
 * `A` and `B` are required to follow the same data format or communication protocol
 
-</tip-box>
+</box>
 
 
 </div>

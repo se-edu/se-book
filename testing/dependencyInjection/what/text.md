@@ -12,13 +12,13 @@
   <include src="../../testingTypes/unitTesting/stubs/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
-<tip-box> 
+<box>
 
 {{ icon_example }} A `Foo` object normally depends on a `Bar` object, but we can inject a `BarStub` object so that the `Foo` object no longer depends on a `Bar` object. Now we can test the `Foo` object in isolation from the `Bar` object.
 
 <img src="{{baseUrl}}/testing/dependencyInjection/what/images/diagram.png" height="150" />
 
-</tip-box>
+</box>
 
 </div>
 

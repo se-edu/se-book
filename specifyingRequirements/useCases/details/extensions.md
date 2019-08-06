@@ -1,6 +1,6 @@
 **==_Extensions_== are "add-on"s to the MSS that describe _exceptional/alternative flow of events_.** They describe variations of the scenario that can happen if certain things are not as expected by the MSS. Extensions appear below the MSS. 
 
-<tip-box>
+<box>
 
 {{ icon_example }} This example adds some extensions to the use case in the previous example.
 
@@ -53,7 +53,7 @@
   </li>
 </ul>
 
-</tip-box>
+</box>
 
 Note that the numbering style is not a universal rule but a widely used convention. Based on that convention, 
 * either of the extensions marked `3a.` and `3b.` can happen just after step `3` of the MSS.

@@ -11,7 +11,7 @@
 
 An object (possibly, more than one) is interested to get notified when a change happens to another object. That is, some objects want to ‘observe’ another object.
 
-<tip-box>
+<box>
 
 {{ icon_example }} Consider this scenario from the a student management system where the user is adding a new student to the system.
 
@@ -30,7 +30,7 @@ When a student is added to the database using `NewStudentUi` shown above, both `
 
 However, the `StudentList` object has no knowledge about `StudentListUi` and `StudentStatsUi` (note the direction of the navigability) and has no way to inform those objects. This is an example of the type of problem addressed by the Observer pattern.
 
-</tip-box>
+</box>
 
 **Problem**
 
@@ -43,7 +43,7 @@ Force the communication through an interface known to both parties.
 <img src="{{baseUrl}}/designPatterns/observer/what/images/studentListObserver.png" height="160" />
 <p/>
 
-<tip-box>
+<box>
 
 {{ icon_example }} Here is the Observer pattern applied to the student management system.
 
@@ -95,7 +95,7 @@ Force the communication through an interface known to both parties.
    ```
    Note that `StudentList` is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.
 
-</tip-box>
+</box>
 
 Here is the generic description of the observer pattern:
 

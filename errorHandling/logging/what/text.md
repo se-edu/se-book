@@ -12,7 +12,7 @@
 
 <div v-closeable alt="blackbox photo">
                       
-<tip-box> 
+<box>
 
 {{ icon_tip }} **A log file is like the <tooltip content="flight data recorder">black box</tooltip> of an airplane**; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.
 
@@ -21,7 +21,7 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br>
 <sub>source:[https://commons.wikimedia.org](https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG)</sub>
 </div>
-</tip-box>                    
+</box>
                       
 </div>
 

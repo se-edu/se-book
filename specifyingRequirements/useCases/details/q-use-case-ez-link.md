@@ -5,17 +5,17 @@
 
 Complete the following use case (MSS, extensions, etc.). Note that you should not blindly follow how the existing  <tooltip content="A type of a cash card topup machine">EZ-Link machine</tooltip> operates because it will prevent you from designing a better system.  You should consider all possible extensions without complicating the use case too much.
 
-<tip-box>
+<box>
 
 * System: EZ-Link machine
 * Use case: UC2 top-up EZ-Link card
 * Actor: EZ-Link card user
 
-</tip-box>
+</box>
 
 <div slot="answer">
 
-<tip-box>
+<box>
   <div>
     <ul>
       <li>System: EZ-Link machine (those found at MRTs)</li>
@@ -56,9 +56,9 @@ Notes:
 * By not breaking step 4 into further steps, we avoid committing to a particular mechanism to enter data. For example, we are free to accept all data in one screen.
 * In step 5, we assume that the input mechanism does not allow any incorrect data.
 
-</tip-box>
+</box>
 
-<tip-box>
+<box>
   <div>
     <ul>
       <li>System: EZ-Link machine</li>
@@ -105,7 +105,7 @@ Notes:
 
 Note: UC02 can be written along similar lines.
 
-</tip-box>
+</box>
 
 </div>
 </question>

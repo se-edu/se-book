@@ -8,7 +8,7 @@
 
 Do not write comments as if they are private notes to self. Instead, write them well enough to be understood by another programmer. One type of comments that is almost always useful is the _header comment_ that you write for a class or an operation to explain its purpose.
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Examples:
 
@@ -23,7 +23,7 @@ Do not write comments as if they are private notes to self. Instead, write them 
 
 </div>
 
-</tip-box>
+</box>
 
 
 </div>

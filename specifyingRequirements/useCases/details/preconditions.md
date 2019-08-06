@@ -2,7 +2,7 @@
 
 **==_Preconditions_== specify the specific state we expect the system to be in before the use case starts.**
 
-<tip-box>
+<box>
   <div>
     <ul>
       <li>Software System: Online Banking System</li>
@@ -18,6 +18,6 @@
       </li>
     </ul>
   </div>
-</tip-box>
+</box>
 
 <p/>

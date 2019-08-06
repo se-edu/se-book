@@ -11,7 +11,7 @@ There are two kinds of requirements:
 1. **_Functional requirements_ specify what the system should do.**
 2. **_Non-functional requirements_ specify the constraints under which system is developed and operated.** 
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Some examples of non-functional requirement categories:
 
@@ -31,7 +31,7 @@ There are two kinds of requirements:
 * Any other noteworthy points: e.g. the game should not use images deemed offensive to those injured in real mine clearing activities.
 </panel>
 
-</tip-box>
+</box>
 
 
 We may have to spend an extra effort in digging NFRs out as early as possible because,

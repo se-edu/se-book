@@ -8,7 +8,7 @@
 
 The following description was adapted from the [XP home page](http://www.extremeprogramming.org), emphasis added:
 
-<tip-box>
+<box>
 
 **Extreme Programming (XP) stresses customer satisfaction.** Instead of delivering everything you could possibly want on some date far in the future, this process delivers the software you need as you need it.
 
@@ -23,7 +23,7 @@ The following description was adapted from the [XP home page](http://www.extreme
 <img src="{{baseUrl}}/processModels/exampleProcessModels/xp/images/diagram.png" height="200" />
 <p/>
 
-</tip-box type="tip">
+</box type="tip">
 
 **_Pair programming, CRC cards, project velocity_, and _standup meetings_ are some interesting topics related to XP.** Refer to extremeprogramming.org to find out more about XP.
 

@@ -6,11 +6,11 @@
 
 <div id="body">
 
-<tip-box type="definition">
+<box type="definition">
 <include src="../../../common/definitions.md#def-feature-list" />
-</tip-box>
+</box>
 
-<tip-box>
+<box>
 
 {{ icon_example }} A sample feature list from a simple Minesweeper game %%(only a brief description has been provided to save space)%%:
 
@@ -22,7 +22,7 @@
 4. Timer – Additional fixed time restriction on the player.
 5. ...
 
-</tip-box>
+</box>
 
 </div>
 

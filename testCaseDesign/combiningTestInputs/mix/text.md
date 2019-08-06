@@ -8,7 +8,7 @@
 
 Consider the calculateGrade scenario given below:
 
-<tip-box>
+<box>
 
 * SUT : `calculateGrade(participation, projectGrade, isAbsent, examScore)`
 * Values to test: invalid values are ++underlined++
@@ -17,11 +17,11 @@ Consider the calculateGrade scenario given below:
   * isAbsent: true, false
   * examScore: 0, 1, 69, 70, ++71++, ++72++
 
-</tip-box>
+</box>
 
 To get the first cut of test cases, let’s apply the _at least once_ strategy.
 
-<tip-box>
+<box>
 
 **Test cases for calculateGrade V1**
 
@@ -36,11 +36,11 @@ To get the first cut of test cases, let’s apply the _at least once_ strategy.
 
 VV/IV = Any Valid or Invalid Value, Err Msg = Error Message
 
-</tip-box>
+</box>
 
 Next, let’s apply the _each valid input at least once in a positive test case_ heuristic. Test case 5 has a valid value for `projectGrade=F` that doesn't appear in any other positive test case. Let's replace test case 5 with 5.1 and 5.2 to rectify that.
 
-<tip-box>
+<box>
 
 **Test cases for calculateGrade V2**
 
@@ -56,11 +56,11 @@ Next, let’s apply the _each valid input at least once in a positive test case_
 
 VV = Any Valid Value VV/IV = Any Valid or Invalid Value
 
-</tip-box>
+</box>
 
 Next, we apply the _no more than one invalid input in a test case_ heuristic. Test cases 5.2 and 6 don't follow that heuristic. Let's rectify the situation as follows:
 
-<tip-box>
+<box>
 
 **Test cases for calculateGrade V3**
 
@@ -76,11 +76,11 @@ Next, we apply the _no more than one invalid input in a test case_ heuristic. Te
 | ==6.1==  | VV             | VV           | VV          | ++71++    | Err Msg     |
 | ==6.2==  | VV             | VV           | VV          | ++72++    | Err Msg     |
 
-</tip-box>
+</box>
 
 Next, let us assume that there is a dependency between the inputs `examScore` and `isAbsent` such that an absent student can only have `examScore=0`. To cater for the hidden invalid case arising from this, we can add a new test case where `isAbsent=true` and `examScore!=0`. In addition, test cases 3-6.2 should have `isAbsent=false` so that the input remains valid.
 
-<tip-box>
+<box>
 
 **Test cases for calculateGrade V4**
 
@@ -97,7 +97,7 @@ Next, let us assume that there is a dependency between the inputs `examScore` an
 | 6.2      | VV             | VV           | ==false==   | ++72++    | Err Msg     |
 | ==7==    | ==VV==         | ==VV==       | ==true==    | ==!=0==   | ==Err Msg== |
 
-</tip-box>
+</box>
 
 </div>
 

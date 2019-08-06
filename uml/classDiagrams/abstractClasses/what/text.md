@@ -11,14 +11,14 @@
 <img src="{{baseUrl}}/uml/classDiagrams/abstractClasses/what/images/notation.png" height="110" />
 <p/>
 
-<tip-box>
+<box>
 
 Example:
 
 <img src="{{baseUrl}}/uml/classDiagrams/abstractClasses/what/images/staff.png" height="110" />
 <p/>
 
-</tip-box>
+</box>
 
 </div>
 
