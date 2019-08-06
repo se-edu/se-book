@@ -49,6 +49,8 @@ public abstract class Account {
 
 </box>
 
+{{ icon_info }} In Java, even **a class that does not have any abstract methods _can_ be declared as an abstract class.**
+
 **When an abstract class is subclassed, the subclass should provides implementations for all of the abstract methods in its superclass or else the subclass must also be declared abstract.**
 
 <box>
@@ -63,7 +65,7 @@ public abstract class Feline extends Animal {
 
 }
 ```
-The `DomesticCat` class inherits the abstract `Feline` class and provides the implementation for the abstract method `speak`. As a result, it need not be declared abstract.
+The `DomesticCat` class inherits the abstract `Feline` class and provides the implementation for the abstract method `speak`. As a result, it need not be (but _can_ be) declared as abstract.
 ```java
 public class DomesticCat extends Feline {
     public DomesticCat(String name) {
@@ -77,9 +79,8 @@ public class DomesticCat extends Feline {
 }
 ```
 
-`Animal a = new Feline("Mittens");` {{ icon_output_right }} {{ icon_x_red }} Compile error! `Feline` is abstract.
-
-`Animal a = new DomesticCat("Mittens");` {{ icon_output_right }} {{ icon_tick_green }} OK. `DomesticCat` can be instantiated and assigned to a variable of `Animal` type %%(the assignment is allowed by polymorphism)%%.
+* `Animal a = new Feline("Mittens");`{.java}<br>{{ icon_x_red }} Compile error! `Feline` is abstract.
+* `Animal a = new DomesticCat("Mittens");`{.java}<br>{{ icon_tick_green }} OK. `DomesticCat` can be instantiated and assigned to a variable of `Animal` type %%(the assignment is allowed by polymorphism)%%.
 
 </box>
 

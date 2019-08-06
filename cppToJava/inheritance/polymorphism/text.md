@@ -93,7 +93,7 @@ public class Dog {
 </panel>
 </box>
 
-A better way is to **take advantage of polymorphism to write code that targets a superclass but works with any subclass objects.**
+A better way is to **take advantage of polymorphism to write code that targets a superclass so that it works with any subclass objects.**
 
 <box>
 

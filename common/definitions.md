@@ -12,7 +12,7 @@ title: "Definitions"
 
 <div id="def-abstractClass">
 
-**Abstract Class**: A class declared as an _abstract class_ cannot be instantiated, but they can be subclassed.
+**Abstract Class**: A class declared as an _abstract class_ cannot be instantiated, but it can be subclassed.
 
 </div>
 <div id="def-abstractMethod">
@@ -326,7 +326,9 @@ Also known as
 
 **Type Signature**: The _type signature_ of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant. 
 
-<panel type="seamless" header="%%Examples%%">
+<box>
+
+{{ icon_example }} Example:
 
 | Method                           | Type Signature          |
 | :------------------------------: | :---------------------: |
@@ -334,9 +336,7 @@ Also known as
 | `void add(int A, int B)`         | `(int, int)`            |
 | `void m(int X, double Y)`        | `(int, double)`         |
 | `void m(double X, int Y)`        | `(double, int)`         |
-
-</panel>
-
+</box>
 </div>
 
 ## U

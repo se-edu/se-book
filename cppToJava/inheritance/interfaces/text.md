@@ -22,10 +22,10 @@ public interface DrivableVehicle {
     // more method signatures
 }
 ```
-Note that the method signatures have no braces and are terminated with a semicolon.
+Note that the method signatures have no braces (`{ }`) and are terminated with a semicolon.
 </box>
 
-**Interfaces cannot be instantiated—they can only be implemented by classes**. When an instantiable class implements an interface, indicated by the keyword `implements`, it provides a method body for each of the methods declared in the interface.
+**Interfaces cannot be instantiated—they can only be _implemented_ by classes**. When an instantiable class implements an interface, indicated by the keyword `implements`, it provides a method body for each of the methods declared in the interface.
 
 <box>
 
@@ -46,7 +46,7 @@ public class CarModelX implements DrivableVehicle {
 
 </box>
 
-**An interface can be used as a type** e.g., `DrivableVechile dv = new CarModelX();`.
+**An interface can be used as a type** e.g., `DrivableVechile dv = new CarModelX();`{.java}.
 
 
 **Interfaces can inherit from other interfaces** using the `extends` keyword, similar to a class inheriting another.

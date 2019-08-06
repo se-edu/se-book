@@ -12,7 +12,7 @@
   
 </box>
 
-**You can use declare a class as abstract when a class is merely a representation of commonalities among its subclasses** in which case it does not make sense to instantiate objects of that class.
+**You can declare a class as _abstract_ when a class is merely a representation of commonalities among its subclasses** in which case it does not make sense to instantiate objects of that class.
 
 <box>
 
@@ -33,9 +33,6 @@
 </box>
 
 **A class that has an abstract method becomes an abstract class** because the class definition is incomplete (due to the missing method body) and it is not possible to create objects using an incomplete class definition.
-
-Even **a class that does not have any abstract methods _can_ be declared as an abstract class.**
-
 
 </div>
 
