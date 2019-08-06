@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Professional software engineers often write code using _Integrated Development Environments (IDEs)_. IDEs support all development-related work within the same tool.**
+**Professional software engineers often write code using _Integrated Development Environments (IDEs)_. IDEs support most development-related work within the same tool** (hence, the term _integrated_).
 
 An IDE generally consists of:
 

@@ -26,8 +26,8 @@
 
 **Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.**
 
-<panel header="%%Other details a test case can contain%%" type="seamless">
-
+<panel type="seamless">
+<span slot="header" class="card-title"><md>%%Other details a test case can contain%% {{ icon_extra }}</md></span>
 A more elaborate test case can have other details such as those given below.  
 
 * A unique identifier : %%e.g. TC0034-a%%
@@ -52,7 +52,8 @@ For each test case we do the following:
 
 </tip-box>
 
-<panel header="%%A deeper look at the definition of testing%%" type="seamless">
+<panel type="seamless">
+<span slot="header" class="card-title"><md>%%A deeper look at the definition of testing%% {{ icon_extra }}</md></span>
 
 Here is another definition of testing:
 

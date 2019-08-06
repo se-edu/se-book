@@ -15,7 +15,7 @@
 **Focus groups are a kind of informal interview within an interactive group setting.** A group of people (e.g. potential users, beta testers) are asked about their understanding of a specific issue, process, product, advertisement, etc.  
 
 <panel type="seamless"  class="non-printable">
-  <span slot="header"><md>%%{{ icon_video }}: How do focus groups work? - Hector Lanz {{ icon_tangential }}%%</md></span>
+  <span slot="header"><md>%%{{ icon_video }}: How do focus groups work? - Hector Lanz {{ icon_extra }}%%</md></span>
 
 @[youtube](3TwgVQIZPsw)
 

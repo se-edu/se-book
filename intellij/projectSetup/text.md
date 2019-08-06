@@ -25,6 +25,8 @@ A little bit more detailed explanation %%(from CodeLaunch)%% with some additiona
   </tab>
 </tabs>
 
+<br>
+
 ##### Importing a Project to Intellij IDEA
 
 @[youtube](WIYTktB1bT4)

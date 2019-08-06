@@ -6,7 +6,7 @@
 
 <div id="body">
 
-Add a file names `temp.txt` to the `things` repo you created. Suppose we don’t want this file to be revision controlled by Git. Let’s instruct Git to ignore `temp.txt`
+Add a file named `temp.txt` to the `things` repo you created. Suppose we don’t want this file to be revision controlled by Git. Let’s instruct Git to ignore `temp.txt`
 
 <tabs>
   <tab header="SourceTree">

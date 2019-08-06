@@ -61,7 +61,7 @@ Conditions:
 
 <span class="non-printable">
 <panel minimized >
-<span slot="header" class="card-title">{{ icon_example }} More examples {{ icon_tangential }}</md></span>
+<span slot="header" class="card-title">{{ icon_example }} More examples {{ icon_extra }}</md></span>
 
 User stories for a travel website (credit: Mike Cohen)
 

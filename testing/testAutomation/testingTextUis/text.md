@@ -50,7 +50,7 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
    * {{ icon_tip }} If you are using Windows, use a normal command window to run the app, not a Power Shell window.
    
    <panel header="" minimized >
-   <span slot="header" class="card-title"><md>More on the `>` operator and the `<` operator. {{ icon_tangential }}</md></span>
+   <span slot="header" class="card-title"><md>More on the `>` operator and the `<` operator {{ icon_extra }}</md></span>
    
    A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using ` < ` and ` > ` operators. For example, if you run `AddressBook` in a command window, the output will be shown in the console, but if you run it like this,
    

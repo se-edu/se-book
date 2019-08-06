@@ -242,7 +242,7 @@ Also known as
 
 <div id="def-rcs">
 
-**RCS** :  **Revision Control Software** are the software tools that automate the process of _Revision Control_ i.e. managing revisions of software artifacts.
+**RCS**:  **Revision Control Software** are the software tools that automate the process of _Revision Control_ i.e. managing revisions of software artifacts.
 
 </div>
 
@@ -318,7 +318,7 @@ Also known as
 
 <div id="def-testing">
 
-**Testing**: Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component.  –- source: IEEE
+**Testing**: Operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component.  –- source: IEEE
 
 </div>
 

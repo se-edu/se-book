@@ -10,6 +10,7 @@
 <span id="icon_example"><md>:fas-cube:</md></span>
 <span id="icon_embedding"><md>:glyphicon-log-in:</md></span>
 <span id="icon_exercise"><md>:fas-dumbbell:</md></span>
+<span id="icon_extra"><span class='badge badge-pill badge-secondary'>:fas-plus: extra</span></span>
 <span id="icon_evidence"><md>:fas-briefcase:</md></span>
 <span id="icon_info"><md>:fas-info-circle:</md></span>
 <span id="icon_individual"><md>:fas-user:</md></span>
@@ -28,7 +29,6 @@
 <span id="icon_Q"><md>:glyphicon-question-sign:</md></span>
 <span id="icon_Q_A">{{ icon_Q | safe }}:glyphicon-ok-sign:</span>
 <span id="icon_resource"><md>:fas-paperclip:</md></span>
-<span id="icon_tangential"><span class='badge badge-pill badge-secondary'>tangential</span></span>
 <span id="icon_team"><md>:fas-users:</md></span>
 <span id="icon_terminal"><smal><span class="badge badge-secondary">&gt;_</span></smal></span>
 <span id="icon_text"><md>:far-file-alt:</md></span>
