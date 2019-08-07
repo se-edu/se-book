@@ -12,12 +12,7 @@
 
 <box>
 
-{{ icon_example }} Some examples of CI/CD tools:
-
-* [Travis](https://travis-ci.org/)
-* [Jenkins](http://jenkins-ci.org)
-* [Appveyor](https://www.appveyor.com)
-* [CircleCI](https://circleci.com)
+{{ icon_example }} Some examples of CI/CD tools: [Travis](https://travis-ci.org/), [Jenkins](http://jenkins-ci.org), [Appveyor](https://www.appveyor.com), [CircleCI](https://circleci.com)
 
 </box>
 

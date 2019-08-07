@@ -12,30 +12,14 @@
 
 </box>
 
-**Prototyping can uncover requirements, in particular, those related to _how users interact with the system_.** UI prototypes are often used in brainstorming sessions, or in meetings with the users to get quick feedback from them.
+**Prototyping can uncover requirements, in particular, those related to _how users interact with the system_.** UI prototypes or _mock ups_ are often used in brainstorming sessions, or in meetings with the users to get quick feedback from them.
 
 <box>
 
-<panel header="{{ icon_example }} Simple text UI prototype for a primitive CLI (Command Line Interface) Minesweeper:" type="seamless" expanded>
+{{ icon_example }} A mock up (also called a _wireframe_ diagram) of a dialog box:
 
-<img src="{{baseUrl}}/gatheringRequirements/prototyping/images/textPrototypeCLI.png" height="320" /><p/>
-
-</panel>
-
-<panel header="{{ icon_example }} A simple GUI prototype for the same Minesweeper, created using Powerpoint:" type="seamless" expanded>
-
-<img src="{{baseUrl}}/gatheringRequirements/prototyping/images/guiPrototypeMinesweeper.jpg" height="220" /><p/>
-
-</panel>
-
-<panel header="{{ icon_example }} A prototype for a mobile app, created using the UI prototyping tool Balsmiq:" type="seamless" expanded>
-
-<img src="{{baseUrl}}/gatheringRequirements/prototyping/images/balsamiqPrototypeGUI.jpg" height="450" />
-
-%%<sup>[source: http://balsamiq.com/products/mockups]</sup>%%
-
-</panel>
-
+![](http://s.plantuml.com/imgw/salt-t6yi9tca.webp)<br>
+<sub>%%[source: plantuml.com]%%</sub>
 </box>
 <p/>
 

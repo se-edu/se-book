@@ -6,8 +6,7 @@
 
 <div id="body">
 
-There are two kinds of requirements:  
-
+Requirements can be divided into two in the following way:
 1. **_Functional requirements_ specify what the system should do.**
 2. **_Non-functional requirements_ specify the constraints under which system is developed and operated.** 
 

@@ -1,8 +1,8 @@
-<span id="title">Minimise Code Duplication</span>
+<span id="title">Minimize Code Duplication</span>
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{ icon_outcome }} Can improve code quality using technique: minimise code duplication </span>
+<span id="outcomes">{{ icon_outcome }} Can improve code quality using technique: minimize code duplication </span>
 
 <div id="body">
 
