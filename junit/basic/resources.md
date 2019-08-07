@@ -1,7 +1,7 @@
 <panel header="{{ icon_resource }} Resources" expanded>
 
-* [JUnit cookbook](http://junit.sourceforge.net/doc/cookbook/cookbook.htm) - a short tutorial from JUnit creators
-* [JUnit tutorial](http://www.vogella.com/articles/JUnit/article.html) - a more detailed tutorial from a developer Lars Vogel
+* [JUnit Official User Guide](https://junit.org/junit5/docs/current/user-guide/)
+* [JUnit 5 Tutorial – Common Annotations With Examples](https://www.testingexcellence.com/junit-5-annotations/) - a short tutorial
 * How to test private methods in Java? 
   [ [short answer](http://stackoverflow.com/questions/34571/whats-the-proper-way-to-test-a-class-with-private-methods-using-junit) ] 
   [ [long answer](http://www.artima.com/suiterunner/private.html) ]

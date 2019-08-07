@@ -35,32 +35,35 @@ public class IntPair {
     }
 }
 ```
-Here's a `IntPairTest` class to match.
+Here's a `IntPairTest` class to match (using JUnit 5).
 ```java
-import org.junit.Test;
-import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class IntPairTest {
 
+
     @Test
     public void testStringConversion() {
-        Assert.assertEquals("4,7", new IntPair(4, 7).toString());
+        assertEquals("4,7", new IntPair(4, 7).toString());
     }
 
     @Test
     public void intDivision_nonZeroDivisor_success() throws Exception {
-        Assert.assertEquals(2, new IntPair(4, 2).intDivision());
-        Assert.assertEquals(0, new IntPair(1, 2).intDivision());
-        Assert.assertEquals(0, new IntPair(0, 5).intDivision());
+        assertEquals(2, new IntPair(4, 2).intDivision());
+        assertEquals(0, new IntPair(1, 2).intDivision());
+        assertEquals(0, new IntPair(0, 5).intDivision());
     }
 
     @Test
     public void intDivision_zeroDivisor_exceptionThrown() {
         try {
-            Assert.assertEquals(0, new IntPair(1, 0).intDivision());
-            Assert.fail(); // the test should not reach this line
+            assertEquals(0, new IntPair(1, 0).intDivision());
+            fail(); // the test should not reach this line
         } catch (Exception e) {
-            Assert.assertEquals("Divisor is zero", e.getMessage());
+            assertEquals("Divisor is zero", e.getMessage());
         }
     }
 }
@@ -71,26 +74,16 @@ Notes:
 * Each test method is marked with a `@Test` annotation.
 * Tests use `Assert.assertEquals(expected, actual)` methods to compare the expected output with the actual output. If they do not match, the test will fail. JUnit comes with other similar methods such as `Assert.assertNull` and `Assert.assertTrue`.
 * Java code normally use camelCase for method names e.g., `testStringConversion` but when writing test methods, sometimes another convention is used: `whatIsBeingTested_descriptionOfTestInputs_expectedOutcome` e.g., `intDivision_zeroDivisor_exceptionThrown`
-* There are [several ways to verify the code throws the correct exception](https://github.com/junit-team/junit4/wiki/exception-testing). The third test method in the example above shows one of the simpler methods. If the exception is thrown, it will be caught and further verified inside the `catch` block. But if it is not thrown as expected, the test will reach `Assert.fail()` line and will fail as a result.
+* There are [several ways to verify the code throws the correct exception](https://howtodoinjava.com/junit5/expected-exception-example/). The third test method in the example above shows one of the simpler methods. If the exception is thrown, it will be caught and further verified inside the `catch` block. But if it is not thrown as expected, the test will reach `Assert.fail()` line and will fail as a result.
 * The easiest way to run JUnit tests is to do it via the IDE. For example, in Intellij you can right-click the folder containing test classes and choose 'Run all tests...'
-* Optionally, you can use [static imports](https://docs.oracle.com/javase/1.5.0/docs/guide/language/static-import.html) to avoid having to specify `Assert.` everywhere.
-  ```java
-  import static org.junit.Assert.assertEquals;
-  //...
-  @Test
-  public void testStringConversion() {
-      assertEquals("4,7", new IntPair(4, 7).toString());
-  }
-  ```
-
 
 <div v-closeable alt="Junit tutorial video" class="non-printable">
 
 <box>
 
-**{{ icon_video }} JUnit 4 with IntelliJ: A quick introduction** <sub>-- by DrBFraser</sub>
+**{{ icon_video }} Adding JUnit 5 to your IntelliJ Project** <sub>-- by Kevintroko@YouTube</sub>
 
-@[youtube](Bld3644bIAo)
+@[youtube](Z8V7rnvDeB4)
 
 </box>
 </div>

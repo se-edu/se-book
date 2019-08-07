@@ -10,7 +10,7 @@
 <span id="icon_example"><md>:fas-cube:</md></span>
 <span id="icon_embedding"><md>:glyphicon-log-in:</md></span>
 <span id="icon_exercise"><md>:fas-dumbbell:</md></span>
-<span id="icon_extra"><span class='badge badge-pill badge-secondary'>:fas-plus: extra</span></span>
+<span id="icon_extra"><span class='badge badge-pill badge-secondary'><md>:fas-plus: extra</md></span></span>
 <span id="icon_evidence"><md>:fas-briefcase:</md></span>
 <span id="icon_info"><md>:fas-info-circle:</md></span>
 <span id="icon_individual"><md>:fas-user:</md></span>

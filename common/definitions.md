@@ -347,6 +347,12 @@ Also known as
 
 </div>
 
+<div id="def-unit-testing">
+
+**Unit testing**: testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly 
+
+</div>
+
 <div id="def-use-case">
 
 **Use Case**: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an <trigger for="pop:actor">actor</trigger>.[ :book: : <popover effect="fade" placement="top" >uml-user-guide<span slot="content"><include src="./references.md#uml-user-guide" inline/></span></popover>]

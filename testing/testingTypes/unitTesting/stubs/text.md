@@ -55,7 +55,7 @@ class DatabaseStorage implements Storage {
     }
 }
 ```
-Normally, you would use the `Logic` class as follows (not how the `Logic` object depends on a `DatabaseStorage` object to perform the `getName()` operation):
+Normally, you would use the `Logic` class as follows (note how the `Logic` object depends on a `DatabaseStorage` object to perform the `getName()` operation):
 ```java
 Logic logic = new Logic(new DatabaseStorage());
 String name = logic.getName(23);
@@ -86,7 +86,7 @@ class StorageStub implements Storage {
     }
 }
 ```
-Note how the stub has the same interface as the real dependency, is so simple that it is unlikely to contain bugs, and is pre-configured to respond with a hard-coded response, presumably, the correct response `DatabaseStorage` is expected to return for the given test input.
+Note how the `StorageStub` has the same interface as `DatabaseStorage`, is so simple that it is unlikely to contain bugs, and is pre-configured to respond with a hard-coded response, presumably, the correct response `DatabaseStorage` is expected to return for the given test input.
 
 Here is how you can use the stub to write a unit test. This test is not affected by any bugs in the `DatabaseStorage` class and hence is a pure unit test.
 ```java

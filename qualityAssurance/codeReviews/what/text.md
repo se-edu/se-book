@@ -58,4 +58,5 @@ Disadvantages:
 </div>
 
 <div id="extras">
+<include src="resources.md" />
 </div>

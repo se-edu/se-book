@@ -14,20 +14,8 @@ a) **To analyze a complex entity related to software development.**
 
 {{ icon_example }} Some examples of using models for analysis:
 
-1. Models of the problem domain (i.e. the environment in which the software is expected to solve a problem) can be built to aid the understanding of the problem to be solved.
-2. When planning a software solution, models can be created to figure out how the solution is to be built. An architecture diagram is such a model.
-
-</box>
-
-b) **To communicate information among stakeholders.**  Models can be used as a visual aid in discussions and documentations.
-
-<box>
-
-{{ icon_example }} Some examples of using models to communicate:
-
-1. We can use an <trigger trigger="click" for="modal:modelingIntro-archiDiagrams">architecture diagram</trigger> to explain the high-level design of the software to developers.
-2. A business analyst can use a use case diagram to explain to the customer the functionality of the system.
-3. A class diagram can be reverse-engineered from code so as to help explain the design of a component to a new developer.
+1. Models of the <tooltip content="i.e. the environment in which the software is expected to solve a problem">problem domain</tooltip> can be built to aid the understanding of the problem to be solved.
+2. When planning a software solution, models can be created to figure out how the solution is to be built. An <trigger trigger="click" for="modal:modelingIntro-archiDiagrams">architecture diagram</trigger> is such a model.
 
 </box>
 
@@ -37,6 +25,19 @@ An _architecture diagram_ depicts the high-level design of a software.
 
   <include src="../../../architecture/architectureDiagrams/reading/text.md#architecture-diagram-examples"/>
 </modal>
+
+b) **To communicate information among stakeholders.**  Models can be used as a visual aid in discussions and documentations.
+
+<box>
+
+{{ icon_example }} Some examples of using models to communicate:
+
+1. We can use an architecture diagram to explain the high-level design of the software to developers.
+2. A business analyst can use a _use case diagram_ to explain to the customer the functionality of the system.
+3. A _class diagram_ can be reverse-engineered from code so as to help explain the design of a component to a new developer.
+
+</box>
+
 
 c) **As a blueprint for creating software.** Models can be used as instructions for building software.
 

@@ -6,7 +6,9 @@
 
 <div id="body">
 
-**_Unit testing_ : testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly.**
+<box type="definition">
+<include src="../../../../common/definitions.md#def-unit-testing" />
+</box>
  
 In OOP code, it is common to write one or more unit tests for each public method of a class.
 
