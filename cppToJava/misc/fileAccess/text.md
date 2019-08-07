@@ -129,7 +129,7 @@ private static void appendToFile(String filePath, String textToAppend) throws IO
 
 </box>
 
-**The [`java.nio.file.Files`]({{ java_api }}/java/nio/file/Files.html) is a utility class provides several useful file operations.** It relies on the [`java.nio.file.Paths`]({{ java_api }}/java/nio/file/Paths.html) file to generate `Path` objects that represent file paths.
+**The [`java.nio.file.Files`]({{ java_api }}/java/nio/file/Files.html) is a utility class that provides several useful file operations.** It relies on the [`java.nio.file.Paths`]({{ java_api }}/java/nio/file/Paths.html) file to generate `Path` objects that represent file paths.
 
 <box>
 

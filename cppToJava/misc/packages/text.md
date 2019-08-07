@@ -8,11 +8,11 @@
 
 **You can organize your _types_ (i.e., classes, interfaces, enumerations, etc.) into _packages_** for easier management (among [other benefits](https://www.tutorialspoint.com/Advantages-of-using-packages-in-Java)).
 
-**To create a package, you put a package statement at the very top of every source file in that package.** The package statement must be the first line in the source file and there can be no more than one package statement in each source file.
+**To create a package, you put a package statement at the very top of every source file in that package.** The package statement must be the first line in the source file and there can be no more than one package statement in each source file. Furthermore, **the package of a type should match the folder path of the source file.** Similarly, the compiler will put the `.class` files in a folder structure that matches the package names.
 
 <box>
 
-{{ icon_example }} The `Formatter` class below (in `Formatter.java` file) is in the package `seedu.tojava.util`:
+{{ icon_example }} The `Formatter` class below (in `<source folder>/seedu/tojava/util/Formatter.java` file) is in the package `seedu.tojava.util`. When it is compiled, the `Formatter.class` file will be in the location `<compiler output folder>/seedu/tojava/util`:
 
 ```java
 package seedu.tojava.util;
@@ -25,10 +25,9 @@ public class Formatter {
     }
 }
 ```
-
 </box>
 
-**Package names are written in all lower case** (not camelCase), using the dot as a separate. Companies use their reversed Internet domain name to begin their package names. Packages in the Java language itself begin with `java`. or `javax`.
+**Package names are written in all lower case** (not camelCase), using the dot as a separator. Packages in the Java language itself begin with `java`. or `javax`. Companies use their reversed Internet domain name to begin their package names.
 
 <box>
 
@@ -122,17 +121,7 @@ public class Formatter {
 ```
 </panel>
 
-Note how the class can use `PREFIX` and `format` (instead of `Formatter.PREFIX` and `Formatter.format()`).
-
-</box>
-
-**The package of a type should match the folder path of the source file.** Similarly, the compiler will put the `.class` files in a folder structure that matches the package names.
-
-<box>
-
-{{ icon_example }} If the `seedu.tojava.Main` class in defined in the file `Main.java`,
-* the file should be in the location `<source folder>/seedu/tojava/`
-* when it is compiled, the `Main.class` file will be in the location `<compiler output folder>/seedu/tojava/`
+Note how the class can use `PREFIX` and `format()` (instead of `Formatter.PREFIX` and `Formatter.format()`).
 
 </box>
 
