@@ -4,22 +4,22 @@
 
 <box>
 
-<ul>
-  <li>System: Online Banking System (OBS)</li>
-  <li>Use case: UC23 - Transfer Money</li>
-  <li>Actor: User</li>
-  <li>MSS:
-    <ol>
-      <li>User chooses to transfer money.</li>
-      <li>OBS requests for details of the transfer.</li>
-      <li>User enters the requested details.</li>
-      <li>OBS requests for confirmation.</li>
-      <li>OBS transfers the money and displays the new account balance.</li>
-      <li class="custom-bullet-point">Use case ends.</li>
-    </ol>
-  </li>
-</ul>
+{{ icon_example }} Note how the MSS in the example below assumes that all entered details are correct and ignores problems such as timeouts, network outages etc. %%For example, MSS does not tell us what happens if the user enters an incorrect data.%%
 
-Note how the MSS assumes that all entered details are correct and ignores problems such as timeouts, network outages etc. Fro example, MSS does not tell us what happens if the user enters an incorrect data.
+<div class="text-monospace">
+
+System: Online Banking System (OBS)<br>
+Use case: UC23 - Transfer Money<br>
+Actor: User
+MSS:
+1. User chooses to transfer money.
+1. OBS requests for details of the transfer.
+1. User enters the requested details.
+1. OBS requests for confirmation.
+1. OBS transfers the money and displays the new account balance.
+
+Use case ends.
+</div>
+
 
 </box>

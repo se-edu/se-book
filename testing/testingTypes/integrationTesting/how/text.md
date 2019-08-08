@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Integration testing is not simply a repetition of the unit test cases but run using the actual dependencies** (instead of the stubs used in unit testing). Instead, integration tests are additional test cases that focus on the interactions between the parts.
+**Integration testing is not simply a case of repeating the unit test cases using the actual dependencies** (instead of the stubs used in unit testing). Instead, integration tests are additional test cases that focus on the interactions between the parts.
 
 <box>
 

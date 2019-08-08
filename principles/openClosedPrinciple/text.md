@@ -29,7 +29,7 @@ In object-oriented programming, OCP can be achieved in various ways. This often 
 
 ```java
 ArrayList students = new ArrayList< Student >();
-ArrayList admins = new ArrayList< Admin >();  	
+ArrayList admins = new ArrayList< Admin >();
 ```
 </box>
 

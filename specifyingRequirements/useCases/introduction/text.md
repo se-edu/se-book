@@ -11,10 +11,10 @@
 </box>
 
 **A use case describes an _interaction between the user and the system_ for a _specific functionality_ of the system.**
-
 <box>
 
 <panel header="{{ icon_example }} Example 1: 'check account balance' use case for an ATM" type="seamless" expanded>
+<div class="text-monospace">
 
 * System: <popover effect="fade" placement="right" content="Automated Teller Machine">
 ATM </popover>
@@ -27,10 +27,11 @@ ATM </popover>
   5. User enters the amount
   6. ATM ejects the ATM card and issues cash
   7. User collects the card and the cash.
-
+</div>
 </panel>
 
 <panel header="%%{{ icon_example }} Example 2: 'upload file' use case of an LMS%%" type="seamless">
+<div class="text-monospace">
 
 * System: A Learning Management System (LMS)
 * Actor: Student
@@ -39,7 +40,8 @@ ATM </popover>
   2. LMS requests for the file location
   3. Student specifies the file location
   4. LMS uploads the file
-  
+
+</div>
 </panel>
 
 </box>

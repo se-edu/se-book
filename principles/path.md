@@ -1,1 +1,1 @@
-Supplmentary → Principles →
+Principles →

@@ -9,6 +9,7 @@
 **Typically, we choose three values around the boundary to test: one value from the boundary, one value just below the boundary, and one value just above the boundary.** The number of values to pick depends on other factors, such as the cost of each test case.
 
 <box>
+<div class="text-monospace">
 
 {{ icon_example }} Some examples:
 
@@ -85,6 +86,7 @@ Stack with: one element, two elements, no empty spaces, only one empty space
   </tr>
 </table>
 
+</div>
 </box>
 
 

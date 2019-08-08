@@ -5,12 +5,13 @@
 <box>
   
 {{ icon_example }} An example of the main body of a use case.
+<div class="text-monospace">
 
-  1. Student requests to upload file
-  2. LMS requests for the file location
-  3. Student specifies the file location
-  4. LMS uploads the file
-    
+1. Student requests to upload file
+2. LMS requests for the file location
+3. Student specifies the file location
+4. LMS uploads the file
+</div>
 </box>
 
 **A use case describes only the externally visible behavior, not internal details, of a system** i.e. should not mention give details that are not part of the interaction between the user and the system.
@@ -18,9 +19,10 @@
 <box>
   
 {{ icon_example }} This example use case step refers to behaviors not externally visible .
+<div class="text-monospace">
 
 1. LMS ==saves the file into the cache== and indicates success.
-
+</div>
 </box>
 
 **A step gives the intention of the actor (not the mechanics).** That means UI details are usually omitted. The idea is to leave as much flexibility to the UI designer as possible. That is, the use case specification should be as general as possible (less specific) about the UI. 
@@ -43,9 +45,10 @@ A use case description can show loops too.
 <box>
 
 {{ icon_example }} An example of how you can show a loop:
+<div class="text-monospace">
 
-Software System: Square game
-Use case:  <popover content="Each use case can be given a unique identification for easier cross reference."> UC02 </popover>  - Play a Game
+Software System: Square game<br>
+Use case:  <popover content="Each use case can be given a unique identification for easier cross reference."> UC02 </popover>  - Play a Game<br>
 Actors: Player (multiple players)
 
 1. A Player starts the game.
@@ -60,7 +63,7 @@ Actors: Player (multiple players)
    ==Steps 5-9 are repeated for each Player, and for as many rounds as required until a Player reaches the 100th square.==
 10. Square Game shows the Winner.
 
-&nbsp;&nbsp;Use case ends.
-
+Use case ends.
+</div>
 </box>
 

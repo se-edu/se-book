@@ -6,10 +6,8 @@
 
 <div id="body">
 
-<box type="primary">
-
+<box type="definition">
 <include src="../../common/definitions.md#def-single-responsibility-principle" />
-
 </box>
 
 If a class has only one responsibility, it needs to change only when there is a change to that responsibility.

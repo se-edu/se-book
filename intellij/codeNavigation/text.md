@@ -14,15 +14,9 @@ Some useful navigation shortcuts:
 1. View the documentation of a method from where the method is being used, without navigating to the method itself.
 1. Find where a method/field is being used.
 
-<panel header="Intellij IDEA Code Navigation (Basics)" alt="basics" expanded>
+<panel header="Intellij IDEA Code Navigation" expanded>
 
-@[youtube](f885wy42IcM)
-
-</panel>
-
-<panel header="Intellij IDEA Code Navigation (Advanced)" alt="basics" >
-
-@[youtube](IiHZPvmVICg)
+@[youtube](1UHsJyCq1SU)
 
 </panel>
 

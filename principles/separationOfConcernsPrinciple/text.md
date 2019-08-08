@@ -6,10 +6,8 @@
 
 <div id="body">
 
-<box type="primary">
-
+<box type="definition">
 <include src="../../common/definitions.md#def-separation-concerns-principle" />
-
 </box>
 
 A _concern_ in this context is a set of information that affects the code of a computer program.

@@ -8,12 +8,12 @@
 
 <div class="text-monospace">
 
-* **Software System**: LearnSys
-* **Use case**:  UC01 - Conduct Survey
-* **Actors**: Staff, Student
-* **MSS**:
-  1. Staff ++creates the survey **(UC44)**++.
-  1. Student ++completes the survey **(UC50)**++.
+* Software System: LearnSys
+* Use case:  UC01 - Conduct Survey
+* Actors: Staff, Student
+* MSS:
+  1. Staff ==++creates the survey (UC44)++==.
+  1. Student ==++completes the survey (UC50)++==.
   1. Staff views the survey results.<br>
      Use case ends.
 </div>

@@ -6,7 +6,9 @@
 
 <div id="body">
 
-**_System testing_: take the _whole system_ and test it _against the system specification_.**
+<box type="definition">
+<include src="../../../../common/definitions.md#def-system-testing" />
+</box>
 
 System testing is typically done by a testing team (also called a QA team).
 

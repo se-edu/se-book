@@ -6,10 +6,9 @@
 
 <div id="body">
 
-The _Dependency Inversion Principle_ states that,
-
-1. High-level modules should not depend on low-level modules. Both should depend on abstractions.
-2. Abstractions should not depend on details. Details should depend on abstractions.
+<box type="definition">
+<include src="../../common/definitions.md#def-dependency-inversion-principle" />
+</box>
 
 <box>
 

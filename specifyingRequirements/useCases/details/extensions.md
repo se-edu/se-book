@@ -3,6 +3,7 @@
 <box>
 
 {{ icon_example }} This example adds some extensions to the use case in the previous example.
+<div class="text-monospace">
 
 <ul>
   <li>System: Online Banking System (OBS)</li>
@@ -53,6 +54,7 @@
   </li>
 </ul>
 
+</div>
 </box>
 
 Note that the numbering style is not a universal rule but a widely used convention. Based on that convention, 

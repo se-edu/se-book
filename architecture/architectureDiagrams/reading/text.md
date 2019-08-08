@@ -20,9 +20,9 @@
 <img src="https://github.com/TEAMMATES/teammates/raw/master/docs/images/highlevelArchitecture.png" width="700"/><br>
 
   </tab>
-  <tab header="se-edu/addressbook-level4">
+  <tab header="se-edu/addressbook-level3">
 
-<img src="https://se-edu.github.io/addressbook-level4/images/Architecture.png" width="700"/><br>
+<img src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300"/><br>
 
   </tab>
   <tab header="Example 1">

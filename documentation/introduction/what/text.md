@@ -37,6 +37,66 @@
 
 </box>
 
+Another view proposed by Daniele Procida in [this article](https://www.divio.com/blog/documentation/), is as follows:
+
+<blockquote>
+
+**There is a secret that needs to be understood in order to write good software documentation: there isn’t one thing called documentation, there are four.
+They are: tutorials, how-to guides, explanation and technical reference.** They represent four different purposes or functions, and require four different approaches to their creation. Understanding the implications of this will help improve most software documentation - often immensely.
+...
+
+<div class="container">
+<div class="row">
+<div class="col  border">
+
+**TUTORIALS**
+
+A tutorial:
+* is learning-oriented
+* allows the newcomer to get started
+* is a lesson
+
+Analogy: teaching a small child how to cook
+</div>
+<div class="col border">
+
+**HOW-TO GUIDES**
+
+A how-to guide:
+* is goal-oriented
+* shows how to solve a specific problem
+* is a series of steps
+
+Analogy: a recipe in a cookery book
+</div>
+<div class="w-100"></div>
+<div class="col border">
+
+**EXPLANATION**
+
+An explanation:
+* is understanding-oriented
+* explains
+* provides background and context
+
+Analogy: an article on culinary social history
+</div>
+<div class="col border">
+
+**REFERENCE**
+
+A reference guide:
+* is information-oriented
+* describes the machinery
+* is accurate and complete
+
+Analogy: a reference encyclopedia article
+</div>
+</div>
+</div>
+
+</blockquote>
+
 </div>
 
 <div id="extras">

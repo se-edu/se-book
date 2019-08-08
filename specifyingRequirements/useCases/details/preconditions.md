@@ -3,21 +3,17 @@
 **==_Preconditions_== specify the specific state we expect the system to be in before the use case starts.**
 
 <box>
-  <div>
-    <ul>
-      <li>Software System: Online Banking System</li>
-      <li>Use case:  UC23 - Transfer Money</li>
-      <li>Actor: User</li>
-      <li><b>Preconditions: User is logged in.</b></li>
-      <li>MSS:
-        <ol>
-          <li>User chooses to transfer money.</li>
-          <li>OBS requests for details for the transfer.</li>
-          <li class="custom-bullet-point">...</li>
-        </ol>
-      </li>
-    </ul>
-  </div>
+<div class="text-monospace">
+
+Software System: Online Banking System<br>
+Use case:  UC23 - Transfer Money<br>
+Actor: User<br>
+==Preconditions: User is logged in==<br>
+MSS:
+1. User chooses to transfer money.
+1. OBS requests for details for the transfer.<br>
+   ...
+</div>
 </box>
 
 <p/>

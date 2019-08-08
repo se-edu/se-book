@@ -27,6 +27,12 @@ title: "Definitions"
 
 </div>
 
+<div id="def-acceptance-testing">
+
+**_Acceptance testing_ (aka _User Acceptance Testing (UAT)_): test the delivered system to ensure it meets the user requirements.**
+
+</div>
+
 <div id="def-actor">
 
 **Actor**: An actor (in a use case) is a role played by a user.  An actor can be a human or another system. Actors are not part of the system; they reside outside the system.
@@ -310,7 +316,13 @@ Also known as
 
 <div id="def-sut">
 
-**SUT**: Software Under Test  
+**SUT**: Software Under Test
+
+</div>
+
+<div id="def-system-testing">
+
+**_System testing_: take the _whole system_ and test it _against the system specification_.**
 
 </div>
 
