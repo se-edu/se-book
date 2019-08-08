@@ -28,9 +28,8 @@
 
 <box>
 
-{{ icon_example }} In the code below, the `Email` has a composition type relationship with the `Subject` class, in the sense that the subject is part of the email.
 
-<div class="alt-java">
+<div class="alt-java float-right ml-5">
 
 ```java
 class Email {
@@ -40,16 +39,17 @@ class Email {
 ```
 
 </div>
-<div class="alt-python">
+<div class="alt-python  float-right ml-5">
 
 ```python
 class Email:
-  
+
   def __init__(self):
     self.__subject = Subject()
 ```
 </div>
 
+{{ icon_example }} In this code, the `Email` has a composition type relationship with the `Subject` class, in the sense that the subject is part of the email.
 
 </box>
 

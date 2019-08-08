@@ -18,14 +18,10 @@ Higher-end static analyzer tools can perform for more complex analysis such as l
 
 <box>
 
-{{ icon_example }} Some example static analyzer for Java:
-* [CheckStyle](http://checkstyle.sourceforge.net/)
-* [PMD](http://findbugs.sourceforge.net/)
-* [FindBugs](https://pmd.github.io/)
-
+{{ icon_example }} Some example static analyzer for Java: [CheckStyle](http://checkstyle.sourceforge.net/), [PMD](http://findbugs.sourceforge.net/), [FindBugs](https://pmd.github.io/)
 </box>
 
-_Linters_ are a subset of static analyzers that specifically aim to locate areas where the code can be made 'cleaner'.
+**_Linters_ are a subset of static analyzers** that specifically aim to locate areas where the code can be made 'cleaner'.
 
 </div>
 
