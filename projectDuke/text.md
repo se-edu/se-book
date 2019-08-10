@@ -72,6 +72,7 @@ bye
     ____________________________________________________________
 
 ```
+<div id="increments_summary">
 
 The project consists of the following _increments_:
 * **Levels**: A series of features, meant to be added to Duke in the given order, although some can be skipped. These have been named `Level 1` to `Level 10` to indicate how the features make the product progressively "level up".
@@ -80,7 +81,7 @@ The project consists of the following _increments_:
   * <big><span class="badge badge-pill badge-info">Category B</span></big> These are enhancements related to task tracking.
   * <big><span class="badge badge-pill badge-success">Category C</span></big> These are enhancements, not specifically related to task tracking.
   * <big><span class="badge badge-pill badge-danger">Category D</span></big> Each of these adds the ability to track another type of entities.
-
+</div>
 </div>
 
 ## <div class="text-white bg-dark p-1">Levels</div>
