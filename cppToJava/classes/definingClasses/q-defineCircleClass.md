@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} define a `Circle` class">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] define a `Circle` class</small></small>" expanded >
 <question>
 
 Define a `Circle` class so that the code given below produces the given output. The nature of the class is a follows:

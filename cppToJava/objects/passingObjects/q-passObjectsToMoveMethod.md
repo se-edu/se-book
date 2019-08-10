@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} pass objects to `move` method">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] pass objects to `move` method</small></small>" expanded >
 <question>
 
 Add a method `move(Point p, Rectangle r)` to the code below, to produce the given output. The behavior of the method is as follows:

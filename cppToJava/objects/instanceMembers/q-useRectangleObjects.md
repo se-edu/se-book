@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} use `Rectangle` objects">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] use `Rectangle` objects</small></small>" expanded >
 <question>
 
 Update the code below as described in code comments, to produce the given output.

@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} `getMultipleGradeCaps` Method">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] `getMultipleGradeCaps` Method</small></small>" expanded >
 <question>
 
 Add the following method to the class given below.

@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} add getters/setters to the `Circle` class">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] add getters/setters to the `Circle` class</small></small>" expanded >
 <question>
 
 Consider the `Circle` class below:
