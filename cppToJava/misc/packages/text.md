@@ -106,7 +106,7 @@ public class Main {
 }
 ```
 
-<panel type="seamless" header="`Foramtter` class">
+<panel type="seamless" header="`Formatter` class">
 
 ```java
 package seedu.tojava.util;

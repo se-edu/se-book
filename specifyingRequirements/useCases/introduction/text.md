@@ -11,6 +11,7 @@
 </box>
 
 **A use case describes an _interaction between the user and the system_ for a _specific functionality_ of the system.**
+
 <box>
 
 <panel header="{{ icon_example }} Example 1: 'check account balance' use case for an ATM" type="seamless" expanded>

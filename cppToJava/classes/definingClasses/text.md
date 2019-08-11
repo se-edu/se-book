@@ -32,7 +32,7 @@ The code is usually placed in a file whose name matches the class %%e.g., the `T
 
 When a class is `public` %%(e.g., the `Time` class in the above example)%% it can be used in other classes. But the <tooltip content="Attributes are also called **instance variables**, because each instance has its own variables.">instance variables</tooltip> that are `private` %%(e.g., the `hour`, `minute` and `second` attributes of the `Time` class)%% can only be accessed from inside the `Time` class.
 
-##### Constructos
+##### Constructors
 <div class="indented">
 
 The syntax for <tooltip content="special methods that construct the object and initialize the instance variables">constructors</tooltip> is similar to that of other methods, except:
