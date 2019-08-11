@@ -47,7 +47,7 @@ Manually managing multiple versions of even a single file is an error-prone task
   <include src="../../common/definitions.md#def-revision" />
 </box>
 
-Revision control is also known as _Version Control Software (VCS)_, and a few other names.
+Revision control software are also known as _Version Control Software (VCS)_, and by a few other names.
 
 </div>
 

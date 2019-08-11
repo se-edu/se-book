@@ -44,7 +44,7 @@ For each test case we do the following:
 2. Observe the actual output
 3. Compare actual output with the expected output
 
-**A test case _failure_ is a mismatch between the expected behavior and the actual behavior. A failure is caused by a _defect_ (or a bug).**
+**A test case _failure_ is a mismatch between the expected behavior and the actual behavior. A failure indicates a potential _defect_ (or a bug)**, unless the error is in the test case itself.
 
 <box>
 
