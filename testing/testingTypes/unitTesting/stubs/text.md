@@ -38,11 +38,13 @@ class Logic {
         return "Name: " + s.getName(index);
     }
 }
-
+```
+```java
 interface Storage {
     String getName(int index);
 }
-
+```
+```java
 class DatabaseStorage implements Storage {
 
     @Override
