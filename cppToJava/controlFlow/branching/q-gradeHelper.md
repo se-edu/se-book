@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} Grade Helper">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] Grade Helper</small></small>" expanded >
 <question>
 
 Write a Java program that takes a letter grade e.g., `A+` as a command line argument and prints the CAP value for that grade.
