@@ -304,7 +304,7 @@ list
 delete 3
     ____________________________________________________________
      Noted. I've removed this task: 
-       [T][✓] join sports club
+       [E][✗] project meeting (at: Aug 6th 2-4pm)
      Now you have 4 tasks in the list.
     ____________________________________________________________
 ```
