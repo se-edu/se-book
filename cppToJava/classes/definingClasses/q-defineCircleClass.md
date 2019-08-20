@@ -10,7 +10,7 @@ Define a `Circle` class so that the code given below produces the given output. 
   * **`Circle(int x, int y, double radius)`**: initializes the attributes to the given values
 * Methods:
   * **`getArea()`**: `int`<br>
-    Returns the area of the circle as an `int` value (not `double`). Calculated as 2xPIx(radius)<sup>2</sup><br>
+    Returns the area of the circle as an `int` value (not `double`). Calculated as <span class="text-monospace">2 * PI * (radius)<sup>2</sup></span><br>
     {{ icon_tip }} You can convert to `double` to an `int` using `(int)` e.g., `x = (int)2.25` gives `x` the value `2`.<br>
     {{ icon_tip }} You can use `Math.PI` to get the value of Pi<br>
     {{ icon_tip }} You can use `Math.pow()` to raise a number to a specific power e.g., `Math.pow(3, 2)` calculates 3<sup>2</sup>

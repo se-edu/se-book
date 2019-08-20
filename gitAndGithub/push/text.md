@@ -68,6 +68,13 @@ Next, you can push the existing local repo to the new remote repo as follows:
   </tab>
 </tabs>
 
+
+<box type="warning">
+
+Tags are not included in a normal push. Remember to tick `Push all tags` when pushing to the remote repo if you want them to be pushed to the repo.<br>
+<img src="images/pushTags.png" width="500" />
+</box>
+
 </div>
 
 <div id="extras">

@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} find total expenditure">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] find total expenditure</small></small>" expanded >
 <question>
 
 Write a program to ask the user for a description of overseas expenses (presumably, the user has just returned from an overseas trip) and calculate the total in local currency.

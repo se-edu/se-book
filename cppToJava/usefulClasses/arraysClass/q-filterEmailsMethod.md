@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} `filterEmails` method">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] `filterEmails` method</small></small>" expanded >
 <question>
 
 Implement the following two methods in the code below to produce the given output.

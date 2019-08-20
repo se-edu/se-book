@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} `printPrice` method">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] `printPrice` method</small></small>" expanded >
 <question>
 
 Implement the `printPrice` method in the code below to produce the given output. Its behavior:

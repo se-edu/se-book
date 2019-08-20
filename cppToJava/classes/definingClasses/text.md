@@ -7,7 +7,7 @@
 <div id="body">
 
 As you know,
-* Defining a class creates a new object type.
+* Defining a class introduces a new object type.
 * Every object belongs to some object type; that is, it is an instance of some class.
 * A class definition is like a template for objects: it specifies what attributes the objects have and what methods can operate on them.
 * The `new` operator instantiates objects, that is, it creates new instances of a class.

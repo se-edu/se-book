@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} `printTotalScore` method">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] `printTotalScore` method</small></small>" expanded >
 <question>
 
 Implement the `printTotalScore` method in the code below to produce the given output. Its behavior:
