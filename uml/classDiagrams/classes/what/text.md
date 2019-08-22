@@ -19,52 +19,40 @@ The basic UML notations used to represent a _class_:<br>
 <p/>
 
 <panel type="seamless" header="The equivalent code">
-
-<table> 
-<tr>
-  <td>
-
-Java {{ icon_output }}
+<div class="alt-java">
 
 ```java
 class Table{
-    
+
     Integer number;
     Chair[] chairs = null;
     
     Integer getNumber(){
         //...
     }
-    
+
     void setNumber(Integer n){
         //...
     }
 }
 ```
-  </td>
-  <td valign="bottom">&nbsp;&nbsp;<br><br></td>
-  <td valign="bottom">
-
-Python {{ icon_output }}
+</div>
+<div class="alt-python">
 
 ```python
 class Table:
-    
+
   def __init__(self):
     self.number = 0
     self.chairs = []
-    
+
   def get_number(self):
     # ...
-  
-    
+
   def set_number(self, n):
     # ...
-    
 ```
-  </td>
-</tr>
-</table>
+</div>
 
 </panel>
 
