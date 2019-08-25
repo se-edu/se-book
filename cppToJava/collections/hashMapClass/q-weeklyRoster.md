@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} Weekly roster">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] weekly roster</small></small>" expanded >
 <question>
 
 The class given below keeps track of how many people signup to attend an event on each day of the week. Add the missing methods so that it produces the output given.

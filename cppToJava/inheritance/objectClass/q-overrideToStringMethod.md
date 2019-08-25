@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} override the `toString` method">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] override the `toString` method</small></small>" expanded >
 <question>
 
 Suppose you have the following classes `Task`, `Todo`, `Deadline`:

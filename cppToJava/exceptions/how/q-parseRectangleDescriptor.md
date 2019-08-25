@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} parse rectangle descriptor">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] parse rectangle descriptor</small></small>" expanded >
 <question>
 
 The `Main` class below parses a string descriptor of a rectangle of the format `"WIDTHxHEIGHT"` %%e.g., `"3x4"`%% and prints the area of the rectangle.

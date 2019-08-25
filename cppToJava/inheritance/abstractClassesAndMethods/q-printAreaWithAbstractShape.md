@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} print area with abstract `Shape`">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] print area with abstract `Shape`</small></small>" expanded >
 <question>
 
 The `Main` class below keeps a list of `Circle` and `Rectangle` objects and prints the area (as an `int` value) of each shape when requested.
