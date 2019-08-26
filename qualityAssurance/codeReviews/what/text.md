@@ -10,6 +10,10 @@
 
 Reviews can be done in various forms. Some examples below:
 
+* **Pull Request reviews**
+
+  * Project Management Platforms such as GitHub and BitBucket allows the new code to be proposed as Pull Requests and provide the ability for others to review the code in the PR.
+
 * **In <trigger trigger="click" for="modal:codeReview-pairProgramming">pair programming</trigger>**
 
   * As pair programming involves two programmers working on the same code at the same time, there is an implicit review of the code by the other member of the pair.
@@ -30,11 +34,6 @@ Reviews can be done in various forms. Some examples below:
 @[youtube](ET3Q6zNK3Io)
 
 </modal>
-
-
-* **Pull Request reviews**
-
-  * Project Management Platforms such as GitHub and BitBucket allows the new code to be proposed as Pull Requests and provides the ability for others to review the code in the PR.
 
 * **Formal inspections**
 
