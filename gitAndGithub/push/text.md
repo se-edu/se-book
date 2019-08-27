@@ -28,6 +28,8 @@
   </tab>
 </tabs>
 
+<p/>
+
 <panel header="" minimized >
    <span slot="header" class="card-title"><md> Pushing an existing local repo into a new remote repo on GitHub {{ icon_extra }}</md></span>
 
