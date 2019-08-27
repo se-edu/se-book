@@ -28,7 +28,10 @@
   </tab>
 </tabs>
 
-**To push an existing local repo into a new remote repo on GitHub**, first you need to create an empty remote repo on GitHub.
+<panel header="" minimized >
+   <span slot="header" class="card-title"><md> Pushing an existing local repo into a new remote repo on GitHub {{ icon_extra }}</md></span>
+
+First, you need to create an empty remote repo on GitHub.
 
 1. Login to your GitHub account and choose to create a new Repo. <br>
    <img src="{{baseUrl}}/gitAndGithub/push/images/createNewRemoteRepo.png" width="150" />
@@ -67,13 +70,7 @@ Next, you can push the existing local repo to the new remote repo as follows:
 
   </tab>
 </tabs>
-
-
-<box type="warning">
-
-Tags are not included in a normal push. Remember to tick `Push all tags` when pushing to the remote repo if you want them to be pushed to the repo.<br>
-<img src="images/pushTags.png" width="500" />
-</box>
+</panel>
 
 </div>
 
