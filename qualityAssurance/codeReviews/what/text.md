@@ -12,7 +12,7 @@ Reviews can be done in various forms. Some examples below:
 
 * **Pull Request reviews**
 
-  * Project Management Platforms such as GitHub and BitBucket allows the new code to be proposed as Pull Requests and provide the ability for others to review the code in the PR.
+  * Project Management Platforms such as GitHub and BitBucket allow the new code to be proposed as _Pull Requests_ and provide the ability for others to review the code in the PR.
 
 * **In <trigger trigger="click" for="modal:codeReview-pairProgramming">pair programming</trigger>**
 

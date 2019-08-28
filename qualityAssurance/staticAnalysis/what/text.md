@@ -14,7 +14,7 @@
 
 Static analysis of code can find useful information such unused variables, unhandled exceptions, style errors, and statistics. Most modern IDEs come with some inbuilt static analysis capabilities. For example, an IDE can highlight unused variables as you type the code into the editor. 
 
-Higher-end static analyzer tools can perform for more complex analysis such as locating potential bugs, memory leaks, inefficient code structures etc.
+Higher-end static analyzer tools can perform more complex analysis such as locating potential bugs, memory leaks, inefficient code structures etc.
 
 <box>
 
