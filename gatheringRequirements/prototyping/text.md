@@ -18,7 +18,7 @@
 
 {{ icon_example }} A mock up (also called a _wireframe_ diagram) of a dialog box:
 
-![](http://s.plantuml.com/imgw/salt-t6yi9tca.webp)<br>
+<img class="border" src="images/wireframeExample.png" /><br>
 <sub>%%[source: plantuml.com]%%</sub>
 </box>
 <p/>
