@@ -12,5 +12,6 @@ Here are some exercises that combine multiple topics.
 <include src="exercises/usefulModelToDescribeWorkflow.md" />
 <include src="exercises/oddStatementOnProjMgtTools.md" />
 <include src="exercises/correctStatementAboutPrinciplesAndPatterns.md" />
+<include src="exercises/interpretClassAndObjectDiagramAllNotations.md" />
 
 </div>
