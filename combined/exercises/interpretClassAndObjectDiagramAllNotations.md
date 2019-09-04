@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} Choose the correct statement about requirements." expanded>
+<panel header="{{ icon_Q }} Are you able to interpet CD/OD notations?" expanded>
 
 
 <question>
