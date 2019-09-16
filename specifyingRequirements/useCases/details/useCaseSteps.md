@@ -14,11 +14,11 @@
 </div>
 </box>
 
-**A use case describes only the externally visible behavior, not internal details, of a system** i.e. should not mention give details that are not part of the interaction between the user and the system.
+**A use case describes only the externally visible behavior, not internal details, of a system** i.e. should minimize details that are not part of the interaction between the user and the system.
 
 <box>
   
-{{ icon_example }} This example use case step refers to behaviors not externally visible .
+{{ icon_example }} This example use case step refers to behaviors not externally visible.
 <div class="text-monospace">
 
 1. LMS ==saves the file into the cache== and indicates success.
