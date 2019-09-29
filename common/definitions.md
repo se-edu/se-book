@@ -29,7 +29,7 @@ title: "Definitions"
 
 <div id="def-acceptance-testing">
 
-**_Acceptance testing_ (aka _User Acceptance Testing (UAT)_): test the delivered system to ensure it meets the user requirements.**
+**_Acceptance testing_ (aka _User Acceptance Testing (UAT)_: test the system to ensure it meets the user requirements.**
 
 </div>
 

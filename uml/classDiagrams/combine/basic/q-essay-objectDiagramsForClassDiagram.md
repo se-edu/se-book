@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} Object Diagrams for Class Diagram">
+<panel header="{{ icon_Q }} Draw an Object Diagrams for the Class Diagram (Person-Guardian)">
 <question>
 
 Suppose we wrote a program to follow the class structure given in this class diagram:
