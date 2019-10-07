@@ -28,8 +28,8 @@ In object-oriented programming, OCP can be achieved in various ways. This often 
 {{ icon_example }} The behavior of a Java generic class can be altered by passing it a different class as a parameter. In the code below, the `ArrayList` class behaves as a container of `Students` in one instance and as a container of `Admin` objects in the other instance, without having to change its code. That is, the behavior of the `ArrayList` class is extended without modifying its code.
 
 ```java
-ArrayList students = new ArrayList< Student >();
-ArrayList admins = new ArrayList< Admin >();
+ArrayList students = new ArrayList<Student>();
+ArrayList admins = new ArrayList<Admin>();
 ```
 </box>
 
