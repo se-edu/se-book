@@ -79,7 +79,7 @@ public class Inventory {
   </div>
 </div>
 
-(a) Draw a class diagram to represent the code<br>
+(a) Draw a class diagram to represent the code. Show all attributes, associations, navigabilities, visibilities, known multiplicities, and association roles. Show associations as lines.<br>
 (b) Draw an object diagram to represent the situation where the inventory has one item with a name `spanner` and a review of `POOR` rating.
 
 </question>
