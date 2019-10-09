@@ -21,12 +21,14 @@ A `Piece` may or may not be on a `Square`.  Note how that association can be rep
 <img src="{{baseUrl}}/uml/classDiagrams/associationsAsAttributes/what/images/squareMultiplicity.png" width="600" />
 <p/>
 
-The association that a `Board` has 100 `Sqaure`s can be shown in either of these two ways: 
+The association that a `Board` has 100 `Square`s can be shown in either of these two ways:
 
 <img src="{{baseUrl}}/uml/classDiagrams/associationsAsAttributes/what/images/board.png" height="70" />
 <p/>
 
 </box>
+
+{{ icon_important_big_red }} Show each association as **either an attribute or a line but not both**. A line is preferred is it is easier to spot.
 
 </div>
 
