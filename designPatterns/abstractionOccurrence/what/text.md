@@ -74,7 +74,7 @@ The general solution:
 <img src="{{baseUrl}}/designPatterns/abstractionOccurrence/what/images/abstractionOccurrence.png" height="40" />
 <p/>
 
-The `<< Abstraction >>` class should hold all common information, and the unique information should be kept by the `<< Occurrence >>` class. Note that ‘Abstraction’ and ‘Occurrence’ are not class names, but roles played by each class. Think of this diagram as a _meta-model_ (i.e. a ‘model of a model’) of the `BookTitle-BookCopy` class diagram given above.
+The `<<Abstraction>>` class should hold all common information, and the unique information should be kept by the `<<Occurrence>>` class. Note that ‘Abstraction’ and ‘Occurrence’ are not class names, but roles played by each class. Think of this diagram as a _meta-model_ (i.e. a ‘model of a model’) of the `BookTitle-BookCopy` class diagram given above.
 
 </div>
 
