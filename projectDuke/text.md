@@ -335,6 +335,46 @@ T | 1 | join sports club
 ### Level 8. Dates and Times
 
 Teach Duke to understand dates and times. For example, if the command is `deadline return book /by 2/12/2019 1800`, Duke understands `2/12/2019 1800` as _2nd of December 2019, 6pm_, instead of storing it simply as a String.
+
+* **Minimal**: Store deadline dates as a `java.time.LocalDate` in your task objects. Accept dates in a format such as `yyyy-mm-dd` format (e.g., `2019-10-15`)  and print in a different format such as `MMM d yyyy` e.g., (`Oct 15 2019`).
+* **Stretch goal**: Use dates and times in more meaningful ways. e.g., add a command to print deadlines/events occurring on a specific date. 
+
+<panel header="Using dates/times in Java" minimized >
+
+A code snippet using the `LocalDate` class:
+```java
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+
+public class Main {
+    public static void main(String[] args) {
+        //create dates from strings
+        LocalDate d1 = LocalDate.parse("2019-12-01");
+        LocalDate d2 = LocalDate.parse("2019-12-02");
+        LocalDate d3 = LocalDate.parse("2019-12-02");
+        
+        //compare dates
+        System.out.println(d1.isBefore(d2)); // -> true
+        System.out.println(d1.isAfter(d2)); // -> false
+        System.out.println(d2.equals(d3)); // -> true
+        
+        //work with dates
+        System.out.println(d1.getDayOfWeek()); // -> SUNDAY
+        System.out.println(d1.getMonth()); // -> DECEMBER
+        System.out.println(d1.plus(1, ChronoUnit.YEARS));  // -> 2020-12-01
+        
+        // get today's date and print it in a specific format
+        LocalDate d4 = LocalDate.now();
+        System.out.println(d4); // -> 2019-10-15
+        System.out.println(d4.format(DateTimeFormatter.ofPattern("MMM d yyyy"))); // -> Oct 15 2019
+    }
+}
+```
+
+* [A tutorial from https://www.baeldung.com/](https://www.baeldung.com/java-8-date-time-intro)
+</panel>
+
 </div><hr><!-- ================================================================================================ -->
 <div id="level9">
 

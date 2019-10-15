@@ -183,7 +183,8 @@ Add JUnit tests to test the behavior of the code.
    1. In the next screen, select `Create module from existing sources`
    1. Keep clicking `Next` until the process is complete
 1. In the `Project` panel of Intellij, expand the newly-created `test` module, right-click on the `java` folder inside it, and choose `Mark Directory as` → `Test Source Root` (that will make the folder turn to green color).
-1. Now, create a class inside the `java` folder and type `@Test` inside it. Example:
+1. Now, create a class inside the `java` folder and type `@Test` inside it. A code example given below.<br>
+   {{ icon_info }} Note: If you are using packages, create this class in a matching package (to test `duke.Duke` class, create a `duke.DukeTest` i.e., in `src\test\java\duke\DukeTest.java`).
    ```java
    public class DukeTest {
        @Test
@@ -206,6 +207,9 @@ Add JUnit tests to test the behavior of the code.
       }
       ```
    1. Run the test (right-click on the class and choose `Run DukeTest`.
+1. To be able to refer to `Duke` from `DukeTest` class, you need to add `main` module as a dependency of the `test` module you just created.
+   * Option 1: When you add a reference to the `Duke` inside the `DukeTest`, Intellij will flag it as an error and will give you an option (i.e., in the bulb icon that pops up) to add the `main` module as a dependency.
+   * Option 2: Follow the info [here](https://www.jetbrains.com/help/idea/working-with-module-dependencies.html) to add the dependency yourself.
   </tab>
   <tab header="With Gradle">
 
@@ -231,6 +235,8 @@ Organize the classes into suitable java packages. e.g., `duke.task`, `duke.comma
          var-extHeading="Add JavaDoc comments"/>
 
 Add JavaDoc comments to the code.
+* **Minimal**: Add header comments to at least half of the non-private classes/methods.
+* **Stretch goal**: Add header comments to all non-private classes/methods, and non-trivial private methods.
 </div><hr>
 <div id="A-CodingStandard">
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-CodingStandard"
