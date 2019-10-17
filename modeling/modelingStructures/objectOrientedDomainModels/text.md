@@ -27,7 +27,7 @@ The above OO domain model omits the ladder class for simplicity. It can be inclu
 
 **OODMs represents the class _structure_ of the problem domain** and not their behavior, just like class diagrams. To show behavior, use other diagrams such as sequence diagrams.
 
-**OODM notation is similar to class diagram notation but typically omit methods and navigability.**
+**OODM notation is similar to class diagram notation but omit methods and navigability.**
 
 </div>
 
