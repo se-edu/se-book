@@ -21,7 +21,7 @@ class MainApp{
     }
 }
 ```
-If the returned Config object is not meant to be modified, a defensive programmer might use a more _defensive_ implementation given below. %% This is more defensive because even if the returned `Config` object is modified (although it is not meant to be) it will not affect the `config` object inside the `MainApp` object.%%
+If the returned Config object is not meant to be modified, a defensive programmer might use a more _defensive_ implementation given below. %%This is more defensive because even if the returned `Config` object is modified (although it is not meant to be) it will not affect the `config` object inside the `MainApp` object.%%
 ```java
     /** Returns a copy of the config object */
     Config getConfig(){
