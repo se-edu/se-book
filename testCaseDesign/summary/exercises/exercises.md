@@ -7,4 +7,5 @@
   <include src="q-essay-setWife.md" />
   <include src="q-tick-preRelease.md" />
   <include src="q-tick-trueFalse.md" />
+  <include src="q-essay-dayParameter.md" />
 </panel>
