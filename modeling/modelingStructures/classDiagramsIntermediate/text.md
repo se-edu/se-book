@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**A class diagram can also show different types of associations: inheritance, compositions, aggregations, dependencies.**
+**A class diagram can also show different types of relationships between classes: inheritance, compositions, aggregations, dependencies.**
 
 <div class="indented">
 
