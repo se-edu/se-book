@@ -97,6 +97,8 @@ Analogy: a reference encyclopedia article
 
 </blockquote>
 
+**Software documentation (applies to both user-facing and developer-facing) is best kept in a text format**, for the ease of version tracking. **A writer friendly source format is also desirable** as non-programmers (e.g., technical writers) may need to author/edit such documents. As a result, formats such as Markdown, Asciidoc, and PlantUML are often used for software documentation.
+
 </div>
 
 <div id="extras">
