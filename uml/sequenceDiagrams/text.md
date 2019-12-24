@@ -13,5 +13,6 @@
 <include src="parallelPaths/unit-inParent-asPanel.md" boilerplate />
 <include src="referenceFrames/unit-inParent-asPanel.md" boilerplate />
 <include src="minimalNotation/unit-inParent-asPanel.md" boilerplate />
+<include src="staticMethods/unit-inParent-asPanel.md" boilerplate />
 
 </div>
