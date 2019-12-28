@@ -414,11 +414,6 @@ title: "SE Book: Full List of Learning Outcomes"
 
 ### Java
 
-### JUnit
-
-<include src="../junit/basic/unit-inParent-asOutcome.md" boilerplate />
-<include src="../junit/intermediate/unit-inParent-asOutcome.md" boilerplate />
-
 ## Principles
 
 ### SE Principles

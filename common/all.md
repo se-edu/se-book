@@ -96,8 +96,6 @@ title: "SE Book [All-In-One-Page Big File!]"
 
 <include src="../gitAndGithub/chapter.md" boilerplate />
 
-<include src="../junit/chapter.md" boilerplate />
-
 
 # SECTION: SUPPLEMENTARY
 
