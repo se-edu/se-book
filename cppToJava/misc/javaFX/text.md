@@ -16,8 +16,8 @@ Adapted (with permissions) from [Marco Jakob's JavaFX 8 tutorial](http://code.ma
 
 Table of contents:
 
-* [Part 1: Scene Builder](part01/part01.md)
-* [Part 2: Model and TableView](part02/part02.md)
+* [Part 1: Scene Builder](part01/)
+* [Part 2: Model and TableView](part02/)
 
 After going through the two parts, you should be familiar with working with IntelliJ. You can continue with the original tutorial (which is written for Eclipse), with the following links:
 
