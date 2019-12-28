@@ -414,12 +414,6 @@ title: "SE Book: Full List of Learning Outcomes"
 
 ### Java
 
-<include src="../javaTools/collections/unit-inParent-asOutcome.md" boilerplate />
-<include src="../javaTools/enums/unit-inParent-asOutcome.md" boilerplate />
-<include src="../javaTools/varargs/unit-inParent-asOutcome.md" boilerplate />
-<include src="../javaTools/javaFXBasic/unit-inParent-asOutcome.md" boilerplate />
-<include src="../javaTools/streamsBasic/unit-inParent-asOutcome.md" boilerplate />
-
 ### JUnit
 
 <include src="../junit/basic/unit-inParent-asOutcome.md" boilerplate />

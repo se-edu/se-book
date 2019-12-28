@@ -86,8 +86,6 @@ title: "Book - Software Engineering for Self-Directed Learners"
 
 <include src="gitAndGithub/topicToc.md" />
 
-<include src="javaTools/topicToc.md" />
-
 <include src="junit/topicToc.md" />
 
 ### Principles
