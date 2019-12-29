@@ -4,6 +4,8 @@
 
 <div id="body">
 
+%%<small>{{ icon_info }} Contents of the panels given below belong to a different chapter; they have been embedded here for convenience and are collapsed by default to avoid content duplication in the printed version.</small>%%
+
 <panel type="seamless" src="../../../uml/classDiagrams/introduction/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Introduction → What" alt="{{ icon_prereq }} UML/ClassDiagrams" />
 
 **Classes form the basis of class diagrams.**
