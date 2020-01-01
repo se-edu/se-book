@@ -86,7 +86,7 @@ The project consists of the following _increments_:
 
 ## <div class="text-white bg-dark p-1">Levels</div>
 
-<div id="level1">
+<div id="Level-1">
 
 <include boilerplate src="level_thumb.md" var-text=":fas-comments:" inline />
 
@@ -120,7 +120,7 @@ bye
 * The indentation and horizontal lines are optional.
 
 </div><hr><!-- ================================================================================================ -->
-<div id="level2">
+<div id="Level-2">
 
 <include boilerplate src="level_thumb.md" var-text=":fas-list:" inline />
 
@@ -160,7 +160,7 @@ bye
 * There is no need to save the data to the hard disk.
 * Assume there will be no more than 100 tasks. If you wish, you may use a fixed size array (e.g., `String[100]`) to store the items.
 </div><hr><!-- ================================================================================================ -->
-<div id="level3">
+<div id="Level-3">
 
 <include boilerplate src="level_thumb.md" var-text=":fas-check:" inline />
 
@@ -187,7 +187,7 @@ done 2
 <include boilerplate src="dukeNestedFragment.md" var-target="A-Classes" var-name="Extension: `A-Classes`" />
 
 </div><hr><!-- ================================================================================================ -->
-<div id="level4">
+<div id="Level-4">
 
 <include boilerplate src="level_thumb.md" var-text=":fas-business-time:" inline />
 
@@ -250,7 +250,7 @@ deadline do homework /by no idea :-p
 
 <include boilerplate src="dukeNestedFragment.md" var-target="A-Inheritance" var-name="Extension: `A-Inheritance`" />
 </div><hr><!-- ================================================================================================ -->
-<div id="level5">
+<div id="Level-5">
 
 <include boilerplate src="level_thumb.md" var-text=":fas-exclamation-triangle:" inline />
 
@@ -279,7 +279,7 @@ blah
 * **Stretch goal**: handle all possible errors in the current version. As you evolve Duke, continue to handle errors related to the new features added. 
 
 </div><hr><!-- ================================================================================================ -->
-<div id="level6">
+<div id="Level-6">
 
 <include boilerplate src="level_thumb.md" var-text=":fas-trash-alt:" inline />
 
@@ -311,7 +311,7 @@ delete 3
 
 <include boilerplate src="dukeNestedFragment.md" var-target="A-Collections" var-name="Extension: `A-Collections`" />
 </div><hr><!-- ================================================================================================ -->
-<div id="level7">
+<div id="Level-7">
 
 <include boilerplate src="level_thumb.md" var-text=":fas-save:" inline />
 
@@ -328,7 +328,7 @@ T | 1 | join sports club
 ```
 
 </div><hr><!-- ================================================================================================ -->
-<div id="level8">
+<div id="Level-8">
 
 <include boilerplate src="level_thumb.md" var-text=":fas-clock:" inline />
 
@@ -376,7 +376,7 @@ public class Main {
 </panel>
 
 </div><hr><!-- ================================================================================================ -->
-<div id="level9">
+<div id="Level-9">
 
 <include boilerplate src="level_thumb.md" var-text=":fas-search:" inline />
 
@@ -397,7 +397,7 @@ find book
 ```
 
 </div><hr><!-- ================================================================================================ -->
-<div id="level10">
+<div id="Level-10">
 
 <include boilerplate src="level_thumb.md" var-text=":fas-window-maximize:" inline />
 
