@@ -15,6 +15,7 @@
       <li>OBS requests for details of the transfer.</li>
       <li>User enters the requested details.</li>
       <li>OBS requests for confirmation.</li>
+      <li>User confirms.</li>
       <li>OBS transfers the money and displays the new account balance.</li>
       <li class="custom-bullet-point">Use case ends.</li>
     </ol>

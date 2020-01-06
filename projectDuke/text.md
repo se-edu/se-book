@@ -119,6 +119,11 @@ bye
 ```
 * The indentation and horizontal lines are optional.
 
+<box type="tip">
+
+**You are strongly encouraged to customize the chatbot** name, command/display formats, and even the personality of the chatbot to make your chatbot unique.
+</box>
+
 </div><hr><!-- ================================================================================================ -->
 <div id="Level-2">
 
@@ -326,6 +331,10 @@ D | 0 | return book | June 6th
 E | 0 | project meeting | Aug 6th 2-4pm
 T | 1 | join sports club
 ```
+
+**{{ icon_tip }} If you use file paths in your code,**
+* remember to use relative paths rather than absolute paths such as `C:\data`. If not, your app can cause unpredictable results when used in another computer.
+* remember to [specify file paths in an OS-independent way](https://www.sghill.net/how-do-i-make-cross-platform-file-paths-in-java.html). If not, your app might not work when used on a different OS.
 
 </div><hr><!-- ================================================================================================ -->
 <div id="Level-8">
