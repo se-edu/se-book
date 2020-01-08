@@ -322,7 +322,7 @@ delete 3
 
 ### Level 7. Save
 
-Save the tasks in the hard disk automatically whenever the task list changes. Load the data from the hard disk whe Duke starts up. You may hard-code the file name and location %%e.g., `[project_root]/data/duke.txt`%%
+Save the tasks in the hard disk automatically whenever the task list changes. Load the data from the hard disk when Duke starts up. You may hard-code the file name and location %%e.g., `[project_root]/data/duke.txt`%%
 
 The format of the file is up to you. Example:
 ```
