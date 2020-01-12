@@ -6,7 +6,7 @@
 
 <div id="body">
 
-In the context of OOP associations, **a _dependency_ is a need for one class to depend on another without having a direction association with it.** One cause of dependencies is interactions between objects that do not have a long-term link between them.
+In the context of OOP associations, **a _dependency_ is a need for one class to depend on another without having a direct association with it.** One cause of dependencies is interactions between objects that do not have a long-term link between them.
 
 <box>
 
