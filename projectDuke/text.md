@@ -92,7 +92,7 @@ The project consists of the following _increments_:
 
 ### Level 1. Greet, Echo, Exit
 
-In this initial _skeletal_ version of Duke, it starts by greeting the user, simply  echos commands entered by the user, and exits when the user types `bye`.
+Implement an initial _skeletal_ version of Duke that starts by greeting the user, simply  echos commands entered by the user, and exits when the user types `bye`.
 <br>
 Example:
 ```
