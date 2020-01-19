@@ -85,14 +85,32 @@ The project consists of the following _increments_:
 </div>
 
 ## <div class="text-white bg-dark p-1">Levels</div>
+<div id="Level-0">
 
+<include boilerplate src="level_thumb.md" var-text=":fas-grin-hearts:" inline />
+
+### Level 0. Greet
+
+Implement an initial _skeletal_ version of the Duke that simply greets the user and exits.
+<br>
+Example:
+```
+____________________________________________________________
+ Hello! I'm Duke
+ What can I do for you?
+____________________________________________________________
+ Bye. Hope to see you again soon!
+____________________________________________________________
+```
+* The indentation and horizontal lines are optional.
+</div><hr><!-- ================================================================================================ -->
 <div id="Level-1">
 
 <include boilerplate src="level_thumb.md" var-text=":fas-comments:" inline />
 
 ### Level 1. Greet, Echo, Exit
 
-Implement an initial _skeletal_ version of Duke that starts by greeting the user, simply  echos commands entered by the user, and exits when the user types `bye`.
+Implement a _skeletal_ version of Duke that starts by greeting the user, simply echos commands entered by the user, and exits when the user types `bye`.
 <br>
 Example:
 ```
