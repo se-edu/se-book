@@ -52,7 +52,7 @@ The return type of this method is `Point`. The last line creates a new `Point` o
 
 <box>
 
-{{ icon_example }} In this example, the variable `spot` is assigned a `null` value. As a result, trying to access `spot.x` attribute or invoke `spot.translate` method results in a `NullPointerException`.
+{{ icon_example }} In this example, the variable `spot` is assigned a `null` value. As a result, trying to access `spot.x` attribute or invoking the `spot.translate` method results in a `NullPointerException`.
 
 ```java
 Point spot = null;
@@ -61,7 +61,7 @@ spot.translate(50, 50);  // NullPointerException
 ```
 </box>
 
-On the other hand, it is legal return null from a method or to pass a `null` reference as an argument to a method.
+On the other hand, it is legal to return null from a method or to pass a `null` reference as an argument to a method.
 
 <box>
 
@@ -117,11 +117,11 @@ p2: 1, 2
 ```
 </box>
 
-{{ different }} **Java does not have explicit pointers** (and other related things such as pointer de-referencing, pointer arithmetic). **When an object is passed into a method as an argument, the method gains access to the original object.** If the method changes the object it received, the changes are retained in the object even after the method is completed.
+{{ different }} **Java does not have explicit pointers** (and other related things such as pointer de-referencing and pointer arithmetic). **When an object is passed into a method as an argument, the method gains access to the original object.** If the method changes the object it received, the changes are retained in the object even after the method has completed.
 
 <box>
 
-{{ icon_example }} Note how `p3` retains changes done to it by the method `swapCoordinates` even after the method call.
+{{ icon_example }} Note how `p3` retains changes done to it by the method `swapCoordinates` even after the method has completed executing.
 
 ```java
 public static void swapCoordinates(Point p){

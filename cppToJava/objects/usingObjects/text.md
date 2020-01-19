@@ -22,7 +22,7 @@ package | Some example classes in the package
 
 <box>
 
-{{ icon_example }} This example imports the `java.awt.Point` (i.e., the `Point` class in the `java.awt` package) class -- which can be used to represent <trigger for="pop:usingObjects-coordinates">the coordinates of a location in a Cartesian plane</trigger>  -- and use it in the `main` method.
+{{ icon_example }} This example imports the `java.awt.Point` class (i.e., the `Point` class in the `java.awt` package) -- which can be used to represent <trigger for="pop:usingObjects-coordinates">the coordinates of a location in a Cartesian plane</trigger>  -- and use it in the `main` method.
 
 <popover id="pop:usingObjects-coordinates" title="Coordinates of a location in a Cartesian plane" placement="top">
   <div slot="content">

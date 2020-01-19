@@ -2,10 +2,10 @@
 <question>
 
 Add a method `move(Point p, Rectangle r)` to the code below, to produce the given output. The behavior of the method is as follows:
+* Returns `null` and does nothing if either `p` or `r` is null
 * Returns a new `Point` object that has attributes `x` and `y` that match those of `r`
 * Does not modify `p`
 * Updates `r` so that its attributes `x` and `y` match those of `p`
-* Returns `null` and does nothing if either `p` or `r` is null
 
 ```java
 import java.awt.Point;

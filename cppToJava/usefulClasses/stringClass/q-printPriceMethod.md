@@ -6,13 +6,12 @@ Implement the `printPrice` method in the code below to produce the given output.
 * It prints the `NAME: price` where the name is in upper case. The price does not have a `$` sign and has `.` in place of the `/`<br>
   e.g., `banana--$3/50` {{ icon_output_right }} `BANANA: 3.50`
 * The `name` part of the input can have trailing/leading spaces which should be omitted from the output.<br>
-  e.g., `  banana --$3/50` {{ icon_output_right }} `BANANA: 3.50`
+  e.g., `  ` `banana    --$3/50` {{ icon_output_right }} `BANANA: 3.50`
 
 {{ icon_tip }} Do a Web search to find how to remove leading/trailing spaces. Suggested search terms `java string remove leading trailing spaces`
 
 ```java
 public class Main {
-
 
     public static void printPrice(String item) {
         // TODO: add your code here

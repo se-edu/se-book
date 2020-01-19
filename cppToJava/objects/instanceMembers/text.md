@@ -12,7 +12,7 @@
 
 <box>
 
-{{ icon_example }} The code below uses `spot.x` which means "go to the object spot refers to, and get the value of the attribute `x`."
+{{ icon_example }} The code below uses `spot.x` which means "go to the object `spot` refers to, and get the value of the attribute `x`."
 
 ```java
 Point spot = new Point(3, 4);

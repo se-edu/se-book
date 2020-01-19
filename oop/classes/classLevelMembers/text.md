@@ -26,7 +26,7 @@ Similarly, when a normal method is being called, a message is being sent to the 
 
 <box>
 
-{{ icon_example }} Sending the `getName()` message to `Adam` object results in the response `"Adam"` while sending the same message to the `Beth` object gets the response `"Beth"`.
+{{ icon_example }} Sending the `getName()` message to the `Adam` object results in the response `"Adam"` while sending the same message to the `Beth` object results in the response `"Beth"`.
 
 </box>
 
@@ -34,7 +34,7 @@ However, there can be methods related to a specific class but not suitable for s
 
 <box>
 
-{{ icon_example }} The method `getTotalPersons()` is not suitable to send to a specific `Person` object %%because a specific object of the `Person` class should not know about the total number of `Person` objects%%.
+{{ icon_example }} The method `getTotalPersons()` is not suitable to send to a specific `Person` object %%because a specific object of the `Person` class should not have to know about the total number of `Person` objects%%.
 
 </box>
 

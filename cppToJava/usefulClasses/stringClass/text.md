@@ -116,18 +116,17 @@ The `indexOf` method searches for a single character (or a substring) in a strin
 ##### Comparing Strings
 <div class="indented">
 
-To compare two strings, it may be tempting to use the == and != operators.
+To compare two strings, it is tempting to use the `==` and `!=` operators.
 
 ```java
 String name1 = "Alan Turing";
-String name2 = "Ada Lovelace";
-if (name1 == name2) {                 // wrong!
-    System.out.println("The names are the same.");
-}
+String name2 = "Alan Turing";
+System.out.println(name1 == name2);
 ```
 
-This code compiles and runs, and most of the time it gets the answer right. But it is not correct, and sometimes it gets the answer wrong. The problem is that the `==` operator checks whether the two variables refer to the same object (by comparing the references). If you give it two different strings that contain the same letters, it yields false.
-The right way to compare strings is with the `equals` method.
+This code compiles and runs, and most of the time it shows `true`. But it is not correct. The problem is, <tooltip content="i.e., as opposed to comparing primitive values e.g., `2 == 2`">when used for comparing objects</tooltip>, the `==` operator checks whether the two variables refer to the same object (by comparing the references). If you give it two different string objects that contain the same letters, it is supposed to yield `true` because they are two distinct objects even if they contain the same text. However, because Java strings are immutable, ==in some cases (but not always)== Java reuses existing string objects instead of creating multiple objects, which can cause the above code to yield `true`. Therefore, it is not safe to use `==` to compare strings if your intention is to check if they contain the same text.
+
+**The right way to compare strings is with the `equals` method.**
 
 <box>
 
@@ -142,7 +141,7 @@ if (name1.equals(name2)) {
 </box>
 
 
-If the strings differ, we can use `compareTo` to see which comes first in alphabetical order. The return value from `compareTo` is the difference between the first characters in the strings that differ. If the strings are equal, their difference is zero. If the first string (the one on which the method is invoked) comes first in the alphabet, the difference is negative. Otherwise, the difference is positive.
+If the strings differ, you can use `compareTo` to see which comes first in alphabetical order. The return value from `compareTo` is the difference between the first characters in the strings that differ. If the strings are equal, their difference is zero. If the first string (the one on which the method is invoked) comes first in the alphabet, the difference is negative. Otherwise, the difference is positive.
 
 <box>
 
@@ -194,7 +193,7 @@ Escape sequence | meaning
 
 <box>
 
-{{ icon_example }} An example of using escape sequences to printing some special characters.
+{{ icon_example }} An example of using escape sequences to print some special characters.
 
 ```java
 System.out.println("First line\nSecond \"line\"");
@@ -206,7 +205,7 @@ Second "line"
 ```
 </box>
 
-{{ icon_tip }} As the behavior of the `\n` depends on the platform, the recommended way to print a line break is using the `System.lineSeparator()` as it works the same in all platforms.
+{{ icon_tip }} As the behavior of the `\n` <tooltip content="e.g., behavior differs between Windows and OS-X">depends on the platform</tooltip>, the recommended way to print a line break is using the `System.lineSeparator()` as it works the same in all platforms.
 
 <box>
 
@@ -227,7 +226,7 @@ Second line
 ##### String formatting
 <div class="indented">
 
-Sometimes programs need to create strings that are formatted a certain way. `String.format` takes a format specifier followed by a sequence of values and returns a new string formatted as specified.
+Sometimes programs need to create strings that are formatted in a certain way. `String.format` takes a _format specifier_ followed by a sequence of values and returns a new string formatted as specified.
 
 <box>
 

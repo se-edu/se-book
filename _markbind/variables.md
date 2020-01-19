@@ -26,6 +26,8 @@
 <span id="icon_print"><md>:glyphicon-print:</md></span>
 <span id="icon_prereq"><md>:glyphicon-education:</md></span>
 <span id="icon_preview"><md>:glyphicon-eye-open:</md></span>
+<span id="icon_quote_end"><md>:fas-quote-right:</md></span>
+<span id="icon_quote_start"><md>:fas-quote-left:</md></span>
 <span id="icon_Q"><md>:glyphicon-question-sign:</md></span>
 <span id="icon_Q_A">{{ icon_Q | safe }}:glyphicon-ok-sign:</span>
 <span id="icon_resource"><md>:fas-paperclip:</md></span>

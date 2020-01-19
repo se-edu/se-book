@@ -28,7 +28,7 @@ public class Time {
 
 You can give a class any name you like. **The Java convention is to use <tooltip content="e.g., `MyHelloWord` rather than `myHelloWorld` or `myhelloword` or `my_hello_world`">PascalCase</tooltip> format for class names**.
 
-The code is usually placed in a file whose name matches the class %%e.g., the `Time` class should be in a file named `Time.java`%%.
+The code is <tooltip content="there are exceptions to this rule">usually</tooltip> placed in a file whose name matches the class %%e.g., the `Time` class should be in a file named `Time.java`%%.
 
 When a class is `public` %%(e.g., the `Time` class in the above example)%% it can be used in other classes. But the <tooltip content="Attributes are also called **instance variables**, because each instance has its own variables.">instance variables</tooltip> that are `private` %%(e.g., the `hour`, `minute` and `second` attributes of the `Time` class)%% can only be accessed from inside the `Time` class.
 
@@ -38,7 +38,7 @@ When a class is `public` %%(e.g., the `Time` class in the above example)%% it ca
 The syntax for <tooltip content="special methods that construct the object and initialize the instance variables">constructors</tooltip> is similar to that of other methods, except:
 * The name of the constructor is the same as the name of the class.
 * The keyword `static` is omitted.
-* Do not return anything. A constructor returns the created object by default.
+* Does not return anything. A constructor returns the created object by default.
 
 When you invoke `new`, Java creates the object and calls your constructor to initialize the instance variables. When the constructor is done, it returns a reference to the new object.
 
@@ -54,7 +54,7 @@ public Time() {
 }
 ```
 
-This constructor does not take any arguments. Each line initializes an instance variable to zero (which in this example means midnight).
+This constructor does not take any arguments. Each line initializes an instance variable to `0` (which in this example means midnight).
 Now you can create `Time` objects.
 
 `Time time = new Time();`{.java}
@@ -84,7 +84,7 @@ Here's how you can invoke the new constructor:
 
 <div class="indented">
 
-**The `this` keyword is a reference variable in Java that refers to the current object.** You can use `this` the same way you use the name of any other object. For example, you can read and write the instance variables of `this`, and you can pass `this` as an argument to other methods. But you do not declare `this`, and you can’t make an assignment to it.
+**The `this` keyword is a reference variable in Java that refers to the <tooltip content="i.e., the enclosing object, or _myself_">current object</tooltip>.** You can use `this` the same way you use the name of any other object. For example, you can read and write the instance variables of `this`, and you can pass `this` as an argument to other methods. But you do not declare `this`, and you can’t make an assignment to it.
 
 <box>
 
