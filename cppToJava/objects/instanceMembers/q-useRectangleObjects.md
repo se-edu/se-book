@@ -18,7 +18,7 @@ public class Main {
         System.out.println("Area: " + area);
 
         //TODO: add a line here to set the size of r to 8x10 (width x height)
-        //Recommended: use the setSize(int height, int width) method of the Rectangle object
+        //Recommended: use the setSize(int width, int height) method of the Rectangle object
 
         System.out.println(r);
     }
