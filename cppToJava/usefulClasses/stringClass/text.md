@@ -145,9 +145,11 @@ If the strings differ, you can use `compareTo` to see which comes first in alpha
 
 <box>
 
-{{ icon_example }} In this example, `compareTo` returns positive 8, because the second letter of "Ada" comes before the second letter of "Alan" by 8 letters.
+{{ icon_example }} In this example, `compareTo` returns positive 8, because the second letter of "Alan" comes 8 letters _after_ the second letter of "Ada".
 
 ```java
+String name1 = "Alan";
+String name2 = "Ada";
 int diff = name1.compareTo(name2);
 if (diff == 0) {
     System.out.println("The names are the same.");
