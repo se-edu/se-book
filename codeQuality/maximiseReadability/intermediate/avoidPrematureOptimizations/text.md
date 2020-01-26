@@ -13,7 +13,7 @@
 
 A popular saying in the industry is **_make it work, make it right, make it fast_** which means in most cases getting the code to perform correctly should take priority over optimizing it. If the code doesn't work correctly, it has no value on matter how fast/efficient it it.
 
-> Premature optimization is the root of all evil in programming. <sub>--[Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth)</sub>
+> {{ icon_quote_start }} Premature optimization is the root of all evil in programming. {{ icon_start_end }} <sub>--[Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth)</sub>
 
 Note that **there are cases where optimizing takes priority over other things** %%e.g. when writing code for resource-constrained environments%%. This guideline simply a caution that you should optimize only when it is really needed.
 
