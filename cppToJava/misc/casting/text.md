@@ -6,13 +6,13 @@
 
 <div id="body">
 
-**==_Casting_== is the action of converting from one type to another**. You can use the `(newType)` syntax to cast a value to a new type.
+**==_Casting_== is the action of converting from one type to another**. You can use the `(newType)` syntax to cast a value to a type named `newType`.
 
 **When you cast a primitive value to another type, there may be a loss of precision.**
 
 <box>
 
-{{ icon_example }} The code below cast a `double` value to an `int` value and cast it back to a `double`. Note the loss of precision.
+{{ icon_example }} The code below casts a `double` value to an `int` value and casts it back to a `double`. Note the loss of precision.
 
 ```java
 double d = 5.3;
@@ -122,8 +122,8 @@ Integer x = (Integer)o;
 ```
 {{ icon_output }}
 ```
-Exception in thread "main" java.lang.ClassCastException: misc.casting.Animal cannot be cast to java.lang.Integer
-	at misc.casting.CastingExamples.main(CastingExamples.java:14)
+Exception in thread "main" java.lang.ClassCastException: misc.casting.Animal cannot be
+cast to java.lang.Integer at misc.casting.CastingExamples.main(CastingExamples.java:14)
 ```
 </box>
 
