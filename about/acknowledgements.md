@@ -1,5 +1,7 @@
 <frontmatter>
 title: "About: Acknowledgements"
+siteNav: mainNav.md
+pageNav: 3
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
