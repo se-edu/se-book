@@ -4,7 +4,7 @@
 
 * **Programming Languages**
 * C++
-* [About]({{baseUrl}})
+* [About](https://se-education.org/se-book/about/acknowledgements.html)
 
 </navigation>
 </span>
