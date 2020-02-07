@@ -4,7 +4,7 @@
 
 * **Programming Languages**
 * C++
-* [About]({{baseUrl}}/about/acknowledgements.html)
+* [About]({{baseUrl}}/blob/master/about/acknowledgements.html)
 
 </navigation>
 </span>
