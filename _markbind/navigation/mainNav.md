@@ -58,11 +58,11 @@
 * **Supplementary**
   * [C++ to Java](https://se-education.org/se-book/cppToJava/)
 
-* [Combined Exercises](https://se-education.org/se-book/combined/exercises.html)
-* [List of definitions](https://se-education.org/se-book/common/definitions.html)
-* [List of References](https://se-education.org/se-book/common/references.html)
-* [List of Learning Outcomes](https://se-education.org/se-book/common/outcomes.html)
-* [Printable Version](https://se-education.org/se-book/common/print.html)
+* **[Combined Exercises](https://se-education.org/se-book/combined/exercises.html)**
+* **[List of definitions](https://se-education.org/se-book/common/definitions.html)**
+* **[List of References](https://se-education.org/se-book/common/references.html)**
+* **[List of Learning Outcomes](https://se-education.org/se-book/common/outcomes.html)**
+* **[Printable Version](https://se-education.org/se-book/common/print.html)**
 
 </navigation>
 </span>
