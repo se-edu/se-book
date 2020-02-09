@@ -57,7 +57,7 @@ public class Box {
 The problem with this solution is, since its methods accept or return an `Object`, you are free to pass in whatever you want, provided that it is not one of the primitive types. There is no way to verify, at compile time, how the class is used. One part of the code may place an `Integer` in the box and expect to get `Integers` out of it, while another part of the code may mistakenly pass in a `String`, resulting in a runtime error.
 </box>
 
-**Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces and methods.** Much like the more familiar formal parameters used in method declarations, type parameters provide a way for you to re-use the same code with different inputs. The difference is that the inputs to formal parameters are values, while the inputs to type parameters are types.
+**Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces and methods.** Much like the more familiar <tooltip content="In a method `getName(Person p)`, `p` is a _formal parameter_">_formal parameters_ used in method declarations</tooltip>, _type parameters_ provide a way for you to re-use the same code with different inputs. The difference is that the inputs to formal parameters are values, while the inputs to type parameters are types.
 
 <box>
 
