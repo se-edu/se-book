@@ -3,7 +3,7 @@
 <navigation>
 
 * **About this Book**
-  * [About](https://se-education.org/se-book/about/acknowledgements.html)
+  * [About]({{baseUrl}}/about/acknowledgements.html)
   * [How to use this book](https://se-education.org/se-book/about/usage.html)
 
 * **Software Engineering**
@@ -49,8 +49,6 @@
   * [UML](https://se-education.org/se-book/uml/)
   * [Intellij IDEA](https://se-education.org/se-book/intellij/)
   * [Git and Github](https://se-education.org/se-book/gitAndGithub/)
-  * [Java](https://se-education.org/se-book/javaTools/)
-  * [JUnit](https://se-education.org/se-book/junit/)
 
 * **Principles**
   * [Principles](https://se-education.org/se-book/principles/)
