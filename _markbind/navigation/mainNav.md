@@ -1,5 +1,4 @@
 
-<span id="toc">
 <navigation>
 
 * **About this Book**
@@ -63,4 +62,3 @@
 * **[Printable Version]({{baseUrl}}/common/print.html)**
 
 </navigation>
-</span>
