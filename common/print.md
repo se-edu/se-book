@@ -1,5 +1,7 @@
 <frontmatter>
 title: "SE Book [Printable, Big File!]"
+siteNav: mainNav.md
+pageNav: 3
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
