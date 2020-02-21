@@ -12,11 +12,11 @@ Method calls to `static` i.e., class-level method are received by the class itse
 
 {{ icon_example }} In this example, `m` calls the static method `Person.getMaxAge()` and also the `setAge()` method of a `Person` object `p`.
  
-<img src="images/staticMethodCall.png" />
+<puml src="images/staticMethodCall.puml" />
 <p/>
 
 Here is the `Person` class, for reference:<br>
-<img src="images/personClass.png" />
+<puml src="images/personClass.puml" />
 </box>
 
 </div>
