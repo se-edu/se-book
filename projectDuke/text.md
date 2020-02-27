@@ -365,7 +365,7 @@ T | 1 | join sports club
 
 Teach Duke to understand dates and times. For example, if the command is `deadline return book /by 2/12/2019 1800`, Duke understands `2/12/2019 1800` as _2nd of December 2019, 6pm_, instead of storing it simply as a String.
 
-* **Minimal**: Store deadline dates as a `java.time.LocalDate` in your task objects. Accept dates in a format such as `yyyy-mm-dd` format (e.g., `2019-10-15`)  and print in a different format such as `MMM d yyyy` e.g., (`Oct 15 2019`).
+* **Minimal**: Store deadline dates as a `java.time.LocalDate` in your task objects. Accept dates in a format such as `yyyy-mm-dd` format (e.g., `2019-10-15`)  and print in a different format such as `MMM dd yyyy` e.g., (`Oct 15 2019`).
 * **Stretch goal**: Use dates and times in more meaningful ways. e.g., add a command to print deadlines/events occurring on a specific date. 
 
 <panel header="Using dates/times in Java" minimized >
