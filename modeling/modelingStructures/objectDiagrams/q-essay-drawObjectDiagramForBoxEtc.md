@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} Draw Class Diagram for Box etc.">
+<panel header="{{ icon_Q }} Draw an Object Diagram for Box etc.">
 <question>
 
 This question is based on the following question from another topic:
