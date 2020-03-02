@@ -30,9 +30,23 @@ Similarly, we can have ‘magic’ values of other data types.
 <box>
 
 {{bad}}
+
+<div class="alt-java">
+
 ```java
-"Error 1432"  // A magic string!
+return "Error 1432"  // A magic string!
 ```
+
+</div>
+<div class="alt-python">
+
+```python
+return "Error 1432"  # A magic string!
+```
+
+</div>
+
+
 
 </box>
 

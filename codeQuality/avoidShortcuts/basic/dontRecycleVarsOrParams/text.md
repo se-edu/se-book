@@ -12,14 +12,30 @@
 <box>
 
 {{bad}}
+
+<div class="alt-java">
+
 ```java
 double computeRectangleArea(double length, double width) {
     length = length * width;
     return length;
 }
-
 ```
+</div>
+<div class="alt-python">
+
+```python
+def compute_rectangle_area(length, width):
+    length = length * width
+    return length
+```
+
+</div>
+
 {{good}}
+
+<div class="alt-java">
+
 ```java
 double computeRectangleArea(double length, double width) {
     double area;
@@ -27,6 +43,16 @@ double computeRectangleArea(double length, double width) {
     return area;
 }
 ```
+</div>
+<div class="alt-python">
+
+```python
+def compute_rectangle_area(length, width):
+    area = length * width
+    return area
+}
+```
+</div>
 
 </box>
 
