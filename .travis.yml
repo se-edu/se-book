@@ -3,7 +3,16 @@ node_js:
   - '8'
 install:
   - npm i -g markbind-cli
-script: markbind build && markbind deploy --travis
+script: markbind build
 branches:
   only:
   - master
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  local_dir: _site
+  on:
+    branch: master
+    repo: se-edu/se-book
