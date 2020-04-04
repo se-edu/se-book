@@ -16,7 +16,7 @@ pageNav: 3
 
   <div id="xp-user-stories">
 
-  [http://www.extremeprogramming.org/rules/userstories.html]() : This is the main website for eXtreme Programming (XP), an approach to software development currently popular among practitioners. User stories are commonly used among XP practitioners to capture requirements.
+  [http://www.extremeprogramming.org/rules/userstories.html](http://www.extremeprogramming.org/rules/userstories.html) : This is the main website for eXtreme Programming (XP), an approach to software development currently popular among practitioners. User stories are commonly used among XP practitioners to capture requirements.
 
   </div>
 
@@ -40,12 +40,16 @@ pageNav: 3
 
   <div id="bach-et-explained">
   
-  [**Exploratory Testing Explained**](http://www.satisfice.com/articles/et-article.pdf), an online article by [James Bach](http://www.satisfice.com/aboutjames.shtml)  -- James Bach is an industry thought leader in software testing).
+  [_**Exploratory Testing Explained**_](http://www.satisfice.com/articles/et-article.pdf), an online article by [James Bach](http://www.satisfice.com/aboutjames.shtml)  -- James Bach is an industry thought leader in software testing).
   
   </div>
 
 * [bryan-mercurial-guide]
 
-  <div id="bryan-mercurial-guide">[Mercurial: The Definitive Guide](http://hgbook.red-bean.com/) by Bryan O'Sullivan retrieved on 2012/07/11</div>
+  <div id="bryan-mercurial-guide">
+  
+  [_**Mercurial: The Definitive Guide**_](http://hgbook.red-bean.com/) by Bryan O'Sullivan retrieved on 2012/07/11
+  
+  </div>
 
 </div>
