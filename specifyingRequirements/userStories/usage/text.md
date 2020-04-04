@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**User stories capture user requirements in a way that is convenient for <popover content="i.e. which features to include in the product">scoping</popover>, <popover content="i.e. how much effort each feature will take">estimation</popover> and <popover content="i.e. when to deliver each feature">scheduling</popover>.**
+**User stories capture user requirements in a way that is convenient for <popover content="i.e. which features to include in the product">scoping</popover>, <popover content="i.e. how much effort each feature will take">estimation</popover>, and <popover content="i.e. when to deliver each feature">scheduling</popover>.**
 
 > [User stories] strongly shift the focus from writing about features to discussing them. In fact, these discussions are more important than whatever text is written. <sub>[Mike Cohn, MountainGoat Software [:link:](https://www.mountaingoatsoftware.com/agile/user-stories)]</sub>
 
@@ -15,10 +15,10 @@
 **User stories can capture <trigger trigger="click" for="modal:userStoriesUsage-nfr">non-functional requirements</trigger> too** because even NFRs must benefit some stakeholder.
 
 <modal large title="Textbook {{ icon_embedding }}" id="modal:userStoriesUsage-nfr">
-  <include src="../../../requirements/nonFunctionalRequirements/unit-inElsewhere-asFlat.md" boilerplate/>
+  <include src="../../../requirements/nonFunctionalRequirements/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
-<tip-box>
+<box>
 
 {{ icon_example }} An example of a NFR captured as a user story:
 
@@ -26,20 +26,20 @@ As a | I want to | so that
 -----|-----------|--------
 impatient user | to be able experience reasonable response time from the website while up to 1000 concurrent users are using it | I can use the app even when the traffic is at the maximum expected level
 
-</tip-box>
+</box>
 
 <div id="usageTips">
 
 Given their lightweight nature, **user stories are quite handy for recording requirements during early stages of requirements gathering**.
 
-<tip-box> 
+<box>
 
-:bulb: Here are some tips for using user stories for early stages of requirement gathering:
+{{ icon_tip }} Here are some tips for using user stories for early stages of requirement gathering:
 
 * **Define the _target user_:**  
-  Decide your target user's profile (e.g. a student, office worker, programmer, sales person) and work patterns (e.g. Does he work in groups or alone? Does he share his computer with others?). A clear understanding of the target user will help when deciding the importance of a user story. You can even give this user a name. %%&nbsp;e.g. Target user Jean is a university student studying in a non-IT field. She interacts with a lot of people due to her involvement in university clubs/societies. ...%%
+  Decide your target user's profile (e.g. a student, office worker, programmer, sales person) and work patterns (e.g. Does he work in groups or alone? Does he share his computer with others?). A clear understanding of the target user will help when deciding the importance of a user story. You can even give this user a name. %%e.g. Target user Jean is a university student studying in a non-IT field. She interacts with a lot of people due to her involvement in university clubs/societies. ...%%
 * **Define the _problem scope_:**
-  Decide that exact problem you are going to solve for the target user. %%&nbsp;e.g. Help Jean keep track of all her school contacts%%
+  Decide that exact problem you are going to solve for the target user. %%e.g. Help Jean keep track of all her school contacts%%
 * **Don't be too hasty to discard 'unusual' user stories:**  
   Those might make your product unique and stand out from the rest, at least for the target users.
 * **Don't go into too much details:**  
@@ -50,7 +50,7 @@ Given their lightweight nature, **user stories are quite handy for recording req
 * **Don't discuss implementation details or whether you are actually going to implement it:**  
   When gathering requirements, your decision is whether the user's need is important enough for you to want to fulfil it. Implementation details can be discussed later. If a user story turns out to be too difficult to implement later, you can always omit it from the implementation plan. 
    
-</tip-box>
+</box>
 
 </div>
 

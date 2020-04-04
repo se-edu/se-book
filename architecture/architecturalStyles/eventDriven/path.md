@@ -1,1 +1,1 @@
-Design → Architecture → Styles → Event-Driven Style
+Design → Architecture → Styles → Event-Driven Style →

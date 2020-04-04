@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Modeling: Modeling Structures</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -38,713 +36,668 @@
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>Design → Modeling →
-                  </span></strong></span></p>
+</span></strong>
+              </span>
+            </p>
             <div id="title">
               <h1 id="modeling-structures"><span>Modeling Structures</span><a class="fa fa-anchor" href="#modeling-structures"></a></h1>
             </div>
             <div id="main">
               <div>
                 <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="oo-structures"><span>OO Structures</span><a class="fa fa-anchor" href="#oo-structures"></a></h4>
-                      </div>
+                  <panel type="seamless" expanded id="oo-structures">
+                    <span slot="header" class="card-title"><div><h4 id="oo-structures"><span>OO Structures</span><a class="fa fa-anchor" href="#oo-structures"></a></h4>
+                </div>
+                </span>
+                <div class="indented">
+                  <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain structure modelling of OO solutions</span>
                     </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain structure modelling of OO solutions</span></span></span></span></p>
+                    </span>
+                    </span>
+                  </p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <div>
+                    <p>An OO solution is basically a network of objects interacting with each other. Therefore, <strong>it is useful to be able to model how the relevant objects are 'networked' together</strong> inside a software <span class="dimmed">i.e. how the objects are connected together</span>.</p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Given below is an illustration of some objects and how they are connected together. <span class="dimmed">Note: the diagram uses an ad-hoc notation.</span></p>
+                      <p><img src="/se-book/modeling/modelingStructures/ooStructures/images/objectsAdHoc.png" width="500">
+                      </p>
+                      <p></p>
+                      <p></p>
+                    </box>
+                    <p>Note that these <strong>object structures within the same software can change over time</strong>.</p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Given below is how the object structure in the previous example could have looked like at a different time.</p>
+                      <p><img src="/se-book/modeling/modelingStructures/ooStructures/images/objectsAdHoc2.png" width="500">
+                      </p>
+                      <p></p>
+                      <p></p>
+                    </box>
+                    <p>However, object structures do not change at random; they change based on a set of rules, as was decided by the designer of that software. Those <strong>rules that object structures need to follow can be illustrated as a <em>class structure</em></strong>                      <span class="dimmed">i.e. a structure that exists among the relevant classes</span>.</p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is a class structure (drawn using an ad-hoc notation) that matches the object structures given in the previous two examples. For example, note how this class
+                        structure does not allow any connection between <code>Genre</code> objects and <code>Author</code> objects, a rule followed by the two object structures above.</p>
+                      <p><img src="/se-book/modeling/modelingStructures/ooStructures/images/classesAdHoc.png" width="500">
+                      </p>
+                      <p></p>
+                      <p></p>
+                    </box>
+                    <p>UML <em>Object Diagrams</em> are used to model object structures and UML <em>Class Diagrams</em> are used to model class structures of an OO solution.</p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an object diagram for the above example:</p>
+                      <p><img src="/se-book/modeling/modelingStructures/ooStructures/images/objectDiagram.png" width="500">
+                      </p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> And here is the class diagram for it:</p>
+                      <p><img src="/se-book/modeling/modelingStructures/ooStructures/images/classDiagram.png" width="500">
+                      </p>
                       <p></p>
                       <p></p>
                       <p></p>
-                      <div>
-                        <p>An OO solution is basically a network of objects interacting with each other. Therefore, <strong>it is useful to be able to model how the relevant objects are 'networked' together</strong> inside a software <span class="dimmed"> i.e. how the objects are connected together</span>.</p>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Given below is an illustration of some objects and how they are connected together. <span class="dimmed"> Note: the diagram uses an ad-hoc notation.</span></p>
-                          <p><img src="/se-book/modeling/modelingStructures/ooStructures/images/objectsAdHoc.png" width="500">
-                          </p>
-                          <p></p>
-                          <p></p>
-                        </tip-box>
-                        <p>Note that these <strong>object structures within the same software can change over time</strong>.</p>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Given below is how the object structure in the previous example could have looked like at a different time.</p>
-                          <p><img src="/se-book/modeling/modelingStructures/ooStructures/images/objectsAdHoc2.png" width="500">
-                          </p>
-                          <p></p>
-                          <p></p>
-                        </tip-box>
-                        <p>However, object structures do not change at random; they change based on a set of rules, as was decided by the designer of that software. Those <strong>rules that object structures need to follow can be illustrated as a <em>class structure</em></strong> <span class="dimmed"> i.e. a structure that exists among the relevant classes</span>.</p>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is a class structure (drawn using an ad-hoc notation) that matches the object structures given in the previous two examples. For example, note how this class structure does not allow any connection between <code>Genre</code> objects and <code>Author</code> objects, a rule followed by the two object structures above.</p>
-                          <p><img src="/se-book/modeling/modelingStructures/ooStructures/images/classesAdHoc.png" width="500">
-                          </p>
-                          <p></p>
-                          <p></p>
-                        </tip-box>
-                        <p>UML <em>Object Diagrams</em> are used to model object structures and UML <em>Class Diagrams</em> are used to model class structures of an OO solution.</p>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an object diagram for the above example:</p>
-                          <p><img src="/se-book/modeling/modelingStructures/ooStructures/images/objectDiagram.png" width="500">
-                          </p>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> And here is the class diagram for it:</p>
-                          <p><img src="/se-book/modeling/modelingStructures/ooStructures/images/classDiagram.png" width="500">
-                          </p>
-                          <p></p>
-                          <p></p>
-                          <p></p>
-                        </tip-box>
-                      </div>
-                      <div>
-                        <div></div>
-                      </div>
-                    </div>
-                  </panel>
+                    </box>
+                  </div>
+                  <div>
+                    <div></div>
+                  </div>
+                </div>
+                </panel>
+              </div>
+              <div>
+                <panel type="seamless" expanded id="class-diagrams-basics">
+                  <span slot="header" class="card-title"><div><h4 id="class-diagrams-basics"><span>Class Diagrams (Basics)</span><a class="fa fa-anchor" href="#class-diagrams-basics"></a></h4>
+              </div>
+              </span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use basic-level class diagrams</span>
+                  </span>
+                  </span>
+                  </span>
+                </p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <div>
+                  <p><span class="dimmed"><small><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Contents of the panels given below belong to a different chapter; they have been embedded here for convenience and are collapsed by
+                    default to avoid content duplication in the printed version.</small>
+                    </span>
+                  </p>
+                  <p>
+                    <panel type="seamless" src="/se-book/uml/classDiagrams/introduction/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Introduction → What</p></template>
+                      <template slot="_alt">
+                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/ClassDiagrams</p>
+                  </template>
+                    </panel>
+                  </p>
+                  <p><strong>Classes form the basis of class diagrams.</strong></p>
+                  <p>
+                    <panel type="seamless" src="/se-book/uml/classDiagrams/classes/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Classes → What</p></template>
+                      <template slot="_alt">
+                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Classes</p>
+                  </template>
+                    </panel>
+                    <panel type="seamless" src="/se-book/uml/classDiagrams/classLevelMembers/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Class-Level Members → What</p></template>
+                      <template slot="_alt">
+                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Class-Level Members</p>
+                  </template>
+                    </panel>
+                  </p>
+                  <p><strong><em>Associations</em> are the main connections among the classes in a class diagram.</strong></p>
+                  <p>
+                    <panel type="seamless" src="/se-book/oop/associations/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Associations → What</p></template>
+                      <template slot="_alt">
+                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Associations</p>
+                  </template>
+                    </panel>
+                    <panel type="seamless" src="/se-book/uml/classDiagrams/associations/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Associations → What</p></template>
+                      <template slot="_alt">
+                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Associations</p>
+                  </template>
+                    </panel>
+                  </p>
+                  <p>The most basic class diagram is a bunch of classes with some solid lines among them to represent associations, such as this one.</p>
+                  <box>
+                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example class diagram showing associations between classes.</p>
+                    <p></p><img src="/se-book/modeling/modelingStructures/classDiagramsBasic/images/ageListCalculatorPersonMinimal.png" width="450">
+                    <p></p>
+                  </box>
+                  <p>In addition, <strong>associations can show additional decorations such as <em>association labels</em>, <em>association roles</em>, <em>multiplicity</em> and <em>navigability</em></strong> to add more information to a class diagram.</p>
+                  <p>
+                    <panel type="seamless" src="/se-book/uml/classDiagrams/associations/labels/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Associations → Labels</p></template>
+                      <template slot="_alt">
+                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Labels</p>
+                  </template>
+                    </panel>
+                    <panel type="seamless" src="/se-book/uml/classDiagrams/associations/roles/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Associations → Roles</p></template>
+                      <template slot="_alt">
+                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Roles</p>
+                  </template>
+                    </panel>
+                    <panel type="seamless" src="/se-book/oop/associations/multiplicity/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Associations → Multiplicity</p></template>
+                      <template slot="_alt">
+                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Multiplicity</p>
+                  </template>
+                    </panel>
+                    <panel type="seamless" src="/se-book/uml/classDiagrams/associations/multiplicity/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Associations → Multiplicity</p></template>
+                      <template slot="_alt">
+                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Multiplicity</p>
+                  </template>
+                    </panel>
+                    <panel type="seamless" src="/se-book/oop/associations/navigability/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Associations → Navigability</p></template>
+                      <template slot="_alt">
+                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Navigability</p>
+                  </template>
+                    </panel>
+                    <panel type="seamless" src="/se-book/uml/classDiagrams/associations/navigability/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Associations → Navigability</p></template>
+                      <template slot="_alt">
+                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Navigability</p>
+                  </template>
+                    </panel>
+                  </p>
+                  <box>
+                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is the same class diagram shown earlier but with some additional information included:</p>
+                    <p></p><img src="/se-book/modeling/modelingStructures/classDiagramsBasic/images/ageListCalculatorPerson.png" width="450">
+                    <p></p>
+                  </box>
                 </div>
                 <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="class-diagrams-basics"><span>Class Diagrams (Basics)</span><a class="fa fa-anchor" href="#class-diagrams-basics"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use basic-level class diagrams</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p>
-                          <panel type="seamless" src="/se-book/uml/classDiagrams/introduction/what/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML <md>:glyphicon-log-in:</md> Class Diagrams → Introduction → What" alt="<md>:glyphicon-education:</md> UML/ClassDiagrams" fragment="main" class="algolia-no-index"></panel>
-                        </p>
-                        <p><strong>Classes form the basis of class diagrams.</strong></p>
-                        <p>
-                          <panel type="seamless" src="/se-book/uml/classDiagrams/classes/what/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML <md>:glyphicon-log-in:</md> Class Diagrams → Classes → What" alt="<md>:glyphicon-education:</md> Classes" fragment="main" class="algolia-no-index"></panel>
-                          <panel type="seamless" src="/se-book/uml/classDiagrams/classLevelMembers/what/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML <md>:glyphicon-log-in:</md> Class Diagrams → Class-Level Members → What" alt="<md>:glyphicon-education:</md> Class-Level Members" fragment="main" class="algolia-no-index"></panel>
-                        </p>
-                        <p><strong><em>Associations</em> are the main connections among the classes in a class diagram.</strong></p>
-                        <p>
-                          <panel type="seamless" src="/se-book/oop/associations/what/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> OOP <md>:glyphicon-log-in:</md> Associations → What" alt="<md>:glyphicon-education:</md> OOP/Associations" fragment="main" class="algolia-no-index"></panel>
-                          <panel type="seamless" src="/se-book/uml/classDiagrams/associations/what/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML <md>:glyphicon-log-in:</md> Class Diagrams → Associations → What" alt="<md>:glyphicon-education:</md> UML/Associations" fragment="main" class="algolia-no-index"></panel>
-                        </p>
-                        <p>The most basic class diagram is a bunch of classes with some solid lines among them to represent associations, such as this one.</p>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example class diagram showing associations between classes.</p>
-                          <p></p><img src="/se-book/modeling/modelingStructures/classDiagramsBasic/images/ageListCalculatorPersonMinimal.png" width="450">
-                          <p></p>
-                        </tip-box>
-                        <p>In addition, <strong>associations can show additional decorations such as <em>association labels</em>, <em>association roles</em>, <em>multiplicity</em> and <em>navigability</em></strong> to add more information to a class diagram.</p>
-                        <p>
-                          <panel type="seamless" src="/se-book/uml/classDiagrams/associations/labels/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML <md>:glyphicon-log-in:</md> Class Diagrams → Associations → Labels" alt="<md>:glyphicon-education:</md> Labels" fragment="main" class="algolia-no-index"></panel>
-                          <panel type="seamless" src="/se-book/uml/classDiagrams/associations/roles/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML <md>:glyphicon-log-in:</md> Class Diagrams → Associations → Roles" alt="<md>:glyphicon-education:</md> Roles" fragment="main" class="algolia-no-index"></panel>
-                          <panel type="seamless" src="/se-book/oop/associations/multiplicity/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> OOP <md>:glyphicon-log-in:</md> Associations → Multiplicity" alt="<md>:glyphicon-education:</md> OOP/Multiplicity" fragment="main" class="algolia-no-index"></panel>
-                          <panel type="seamless" src="/se-book/uml/classDiagrams/associations/multiplicity/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML <md>:glyphicon-log-in:</md> Class Diagrams → Associations → Multiplicity" alt="<md>:glyphicon-education:</md> UML/Multiplicity" fragment="main" class="algolia-no-index"></panel>
-                          <panel type="seamless" src="/se-book/oop/associations/navigability/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> OOP <md>:glyphicon-log-in:</md> Associations → Navigability" alt="<md>:glyphicon-education:</md> OOP/Navigability" fragment="main" class="algolia-no-index"></panel>
-                          <panel type="seamless" src="/se-book/uml/classDiagrams/associations/navigability/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML <md>:glyphicon-log-in:</md> Class Diagrams → Associations → Navigability" alt="<md>:glyphicon-education:</md> UML/Navigability" fragment="main" class="algolia-no-index"></panel>
-                        </p>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is the same class diagram shown earlier but with some additional information included:</p>
-                          <p></p><img src="/se-book/modeling/modelingStructures/classDiagramsBasic/images/ageListCalculatorPerson.png" width="450">
-                          <p></p>
-                        </tip-box>
-                      </div>
+                  <div>
+                    <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
                       <div>
                         <div>
-                          <panel header="<md>:fas-dumbbell:</md> Exercises" expandable class="algolia-no-index">
-                            <div>
-                              <div>
-                                <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Which association notations are shown?" class="algolia-no-index">
-                                  <question>
-                                    <p>Which association notatations are shown in this diagram?</p>
-                                    <img src="/se-book/modeling/modelingStructures/classDiagramsIntermediate/images/professorStudent.png" height="100">
-                                    <p></p>
-                                    <ul class="task-list">
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. association labels</li>
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. association roles</li>
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. association multiplicity</li>
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. class names</li>
-                                    </ul>
-                                    <div slot="answer" class="algolia-no-index">
-                                      <p>(a) (b) (c) (d)</p>
-                                      <p>Explanation: '1’ is a <em>multiplicity</em>, ‘mentored by’ is a <em>label</em>, and ‘mentor’ is a <em>role</em>.</p>
-                                    </div>
-                                  </question>
-                                </panel>
+                          <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which association notations are shown?</p></template>
+                            <question>
+                              <p>Which association notations are shown in this diagram?</p>
+                              <img src="/se-book/modeling/modelingStructures/classDiagramsIntermediate/images/professorStudent.png" height="100">
+                              <p></p>
+                              <ul class="task-list">
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. association labels</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. association roles</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. association multiplicity</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. class names</li>
+                              </ul>
+                              <div slot="answer" class="algolia-no-index">
+                                <p>(a) (b) (c) (d)</p>
+                                <p>Explanation: '1’ is a <em>multiplicity</em>, ‘mentored by’ is a <em>label</em>, and ‘mentor’ is a <em>role</em>.</p>
                               </div>
-                              <div>
-                                <panel header="<md>:glyphicon-question-sign:</md> Explain Class Diagram" class="algolia-no-index">
-                                  <question>
-                                    <p>Explain the associations, navigabilities, and multiplicities in the class diagram below:</p>
-                                    <img src="/se-book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
-                                    <p></p>
-                                  </question>
-                                </panel>
-                              </div>
-                              <div>
-                                <panel header="<md>:glyphicon-question-sign:</md> Draw Class Diagram for Box etc." class="algolia-no-index">
-                                  <question>
-                                    <p>Draw a class diagram for the code below. Show the attributes, methods, associations, navigabilities, and multiplicities in the class diagram below:</p>
-                                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
-    <span class="hljs-keyword">private</span> Item[] parts = <span class="hljs-keyword">new</span> Item[<span class="hljs-number">10</span>];
-    <span class="hljs-keyword">private</span> Item spareItem;
-    <span class="hljs-keyword">private</span> Lid lid; <span class="hljs-comment">// lid of this box</span>
-    <span class="hljs-keyword">private</span> Box outerBox;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>{
-        <span class="hljs-comment">//...</span>
-    }
-}
-</code></pre>
-                                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span> </span>{
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> totalItems;
-}
-</code></pre>
-                                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lid</span> </span>{
-    Box box; <span class="hljs-comment">// the box for which this is the lid</span>
-}
-</code></pre>
-                                  </question>
-                                </panel>
-                              </div>
-                            </div>
+                            </question>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Class Diagram</p></template>
+                            <question>
+                              <p>Explain the associations, navigabilities, and multiplicities in the class diagram below:</p>
+                              <img src="/se-book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
+                              <p></p>
+                            </question>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw Class Diagram for Box etc.</p></template>
+                            <question>
+                              <p>Draw a class diagram for the code below. Show the attributes, methods, associations, navigabilities, and multiplicities in the class diagram below:</p>
+                              <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{</span><span>    <span class="hljs-keyword">private</span> Item[] parts = <span class="hljs-keyword">new</span> Item[<span class="hljs-number">10</span>];</span><span>    <span class="hljs-keyword">private</span> Item spareItem;</span><span>    <span class="hljs-keyword">private</span> Lid lid; <span class="hljs-comment">// lid of this box</span></span><span>    <span class="hljs-keyword">private</span> Box outerBox;</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>{</span><span>        <span class="hljs-comment">//...</span></span><span>    }</span><span>}</span></code></pre>
+                              <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span> </span>{</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> totalItems;</span><span>}</span></code></pre>
+                              <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lid</span> </span>{</span><span>    Box box; <span class="hljs-comment">// the box for which this is the lid</span></span><span>}</span></code></pre>
+                            </question>
                           </panel>
                         </div>
                       </div>
-                    </div>
-                  </panel>
+                    </panel>
+                  </div>
                 </div>
-                <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="adding-more-info-to-uml-models"><span>Adding more info to UML Models</span><a class="fa fa-anchor" href="#adding-more-info-to-uml-models"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can add more info to UML models</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p><strong>UML notes can be used to add more info to any UML model.</strong></p>
-                        <p>
-                          <panel src="/se-book/uml/notes/notes/unit-inElsewhere-asFlat._include_.html#title-and-body" header="<md>:glyphicon-education:</md> UML → Notes" expanded fragment="title-and-body"></panel>
-                        </p>
-                      </div>
-                      <div></div>
-                    </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="class-diagrams-intermediate"><span>Class Diagrams - Intermediate</span><a class="fa fa-anchor" href="#class-diagrams-intermediate"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use intermediate-level class diagrams</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p><strong>A class diagram can also show different types of associations: inheritance, compositions, aggregations, dependencies.</strong></p>
-                        <div class="indented">
-                          <h5 id="modeling-inheritance">Modeling inheritance<a class="fa fa-anchor" href="#modeling-inheritance"></a></h5>
-                          <p>
-                            <panel type="seamless" src="/se-book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> OOP → Inheritance → What" alt="<md>:glyphicon-education:</md> OOP/Inheritance" fragment="main" class="algolia-no-index"></panel>
-                            <panel type="seamless" src="/se-book/uml/classDiagrams/classInheritance/what/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML → Class Diagrams → Inheritance → What" alt="<md>:glyphicon-education:</md> UML/Inheritance" fragment="main" class="algolia-no-index"></panel>
-                          </p>
-                          <h5 id="modeling-composition">Modeling composition<a class="fa fa-anchor" href="#modeling-composition"></a></h5>
-                          <p>
-                            <panel type="seamless" src="/se-book/oop/associations/composition/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> OOP → Associations → Composition" alt="<md>:glyphicon-education:</md> OOP/Composition" fragment="main" class="algolia-no-index"></panel>
-                            <panel type="seamless" src="/se-book/uml/classDiagrams/composition/what/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML → Class Diagrams → Composition → What" alt="<md>:glyphicon-education:</md> UML/Composition" fragment="main" class="algolia-no-index"></panel>
-                          </p>
-                          <h5 id="modeling-aggregation">Modeling aggregation<a class="fa fa-anchor" href="#modeling-aggregation"></a></h5>
-                          <p>
-                            <panel type="seamless" src="/se-book/oop/associations/aggregation/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> OOP → Associations → Aggregation" alt="<md>:glyphicon-education:</md> OOP/Aggregation" fragment="main" class="algolia-no-index"></panel>
-                            <panel type="seamless" src="/se-book/uml/classDiagrams/aggregation/what/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML → Class Diagrams → Aggregation → What" alt="<md>:glyphicon-education:</md> UML/Aggregation" fragment="main" class="algolia-no-index"></panel>
-                          </p>
-                          <h5 id="modeling-dependencies">Modeling dependencies<a class="fa fa-anchor" href="#modeling-dependencies"></a></h5>
-                          <p>
-                            <panel type="seamless" src="/se-book/oop/associations/dependencies/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> OOP → Associations → Dependencies" alt="<md>:glyphicon-education:</md> OOP/Dependencies" fragment="main" class="algolia-no-index"></panel>
-                            <panel type="seamless" src="/se-book/uml/classDiagrams/dependencies/what/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML → Class Diagrams → Dependencies → What" alt="<md>:glyphicon-education:</md> UML/Dependencies" fragment="main" class="algolia-no-index"></panel>
-                          </p>
-                        </div>
-                        <p><strong>A class diagram can also show different types of class-like entities:</strong></p>
-                        <div class="indented">
-                          <h5 id="modeling-enumerations">Modeling enumerations<a class="fa fa-anchor" href="#modeling-enumerations"></a></h5>
-                          <p>
-                            <panel type="seamless" src="/se-book/oop/classes/enumerations/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> OOP → Classes → Enumerations" alt="<md>:glyphicon-education:</md> OOP/Enumerations" fragment="main" class="algolia-no-index"></panel>
-                            <panel type="seamless" src="/se-book/uml/classDiagrams/enumerations/what/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML → Class Diagrams → Enumerations → What" alt="<md>:glyphicon-education:</md> UML/Enumerations" fragment="main" class="algolia-no-index"></panel>
-                          </p>
-                          <h5 id="modeling-abstract-classes">Modeling abstract classes<a class="fa fa-anchor" href="#modeling-abstract-classes"></a></h5>
-                          <p>
-                            <panel type="seamless" src="/se-book/oop/inheritance/abstractClasses/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> OOP → Inheritance → Abstract Classes" alt="<md>:glyphicon-education:</md> OOP/AbstractClasses" fragment="main" class="algolia-no-index"></panel>
-                            <panel type="seamless" src="/se-book/uml/classDiagrams/abstractClasses/what/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML → Class Diagrams → Abstract Classes → What" alt="<md>:glyphicon-education:</md> UML/AbstractClasses" fragment="main" class="algolia-no-index"></panel>
-                          </p>
-                          <h5 id="modeling-interfaces">Modeling interfaces<a class="fa fa-anchor" href="#modeling-interfaces"></a></h5>
-                          <p>
-                            <panel type="seamless" src="/se-book/oop/inheritance/interfaces/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> OOP → Inheritance → Interfaces" alt="<md>:glyphicon-education:</md> OOP/Interfaces" fragment="main" class="algolia-no-index"></panel>
-                            <panel type="seamless" src="/se-book/uml/classDiagrams/interfaces/what/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML → Class Diagrams → Interfaces → What" alt="<md>:glyphicon-education:</md> UML/Interfaces" fragment="main" class="algolia-no-index"></panel>
-                          </p>
-                        </div>
-                      </div>
-                      <div>
-                        <div>
-                          <panel header="<md>:fas-dumbbell:</md> Exercises" expandable class="algolia-no-index">
-                            <div>
-                              <div>
-                                <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Statements about class diagram." class="algolia-no-index">
-                                  <question>
-                                    <p>Which of these statements match the class diagram?</p>
-                                    <img src="/se-book/modeling/modelingStructures/classDiagramsIntermediate/images/mismatch.png" height="290">
-                                    <p></p>
-                                    <ul class="task-list">
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A <code>Snake</code> must belong to at least one <code>Board</code>.</li>
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. A <code>SnakeHeadSquare</code> can contain only one <code>Snake</code> head.</li>
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A <code>Square</code> can contain a <code>Snake</code> head.</li>
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. A <code>Snake</code> head can be in more than one <code>SnakeHeadSquare</code></li>
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. The <code>Board</code> has exactly 5 <code>Snake</code>s.</li>
-                                    </ul>
-                                    <div slot="answer" class="algolia-no-index">
-                                      <p><s>(a)</s>(b)(c)(d)(e)</p>
-                                      <p>Explanation:</p>
-                                      <p>(a) does not match because a <code>Snake</code> may or may not belong to a <code>Board</code> (multiplicity is <code>0..1</code>)<br>
-                                        (b) matches the diagram because the multiplicity given in <code>1</code><br>
-                                        (c) matches the diagram because <code>SnakeHeadSquare</code> is a <code>Square</code> (due to inheritance)<br>
-                                        (d) matches the diagram because the multiplicity given is <code>*</code><br>
-                                        (e) matches the diagram because the multiplicity given in <code>5</code><br></p>
-                                    </div>
-                                  </question>
-                                </panel>
-                              </div>
-                              <div>
-                                <panel header="<md>:glyphicon-question-sign:</md> Explain notations in the class diagram" class="algolia-no-index">
-                                  <question>
-                                    <p>Explain the meaning of various class diagram notations in the following class diagram:</p>
-                                    <img src="/se-book/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="750">
-                                  </question>
-                                </panel>
-                              </div>
-                              <div>
-                                <panel header="<md>:glyphicon-question-sign:</md> Draw a Class Diagram for Item etc." class="algolia-no-index">
-                                  <question>
-                                    <p>Consider the code below:</p>
-                                    <div class="row">
-                                      <div class="col-sm-6">
-                                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Billable</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bill</span><span class="hljs-params">()</span></span>;
-}
-</code></pre>
-                                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span>
-         <span class="hljs-keyword">implements</span> <span class="hljs-title">Billable</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>;
-}
-</code></pre>
-                                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StockItem</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Item</span> </span>{
-    <span class="hljs-keyword">private</span> Review review;
-    <span class="hljs-keyword">private</span> String name;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">StockItem</span><span class="hljs-params">(
-        String name, Rating rating)</span></span>{
-
-        <span class="hljs-keyword">this</span>.name = name;
-        <span class="hljs-keyword">this</span>.review = <span class="hljs-keyword">new</span> Review(rating);
-    }
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">//...</span>
-    }
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bill</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">//...</span>
-    }
-}
-</code></pre>
-                                      </div>
-                                      <div class="col-sm-6">
-                                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Rating {
-    GOOD, OK, POOR
-}
-</code></pre>
-                                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Review</span> </span>{
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Rating rating;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Review</span><span class="hljs-params">(Rating rating)</span> </span>{
-        <span class="hljs-keyword">this</span>.rating = rating;
-    }
-}
-</code></pre>
-                                        <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.List;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Inventory</span> </span>{
-    <span class="hljs-keyword">private</span> List&lt;Item&gt; items;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getItemCount</span><span class="hljs-params">()</span></span>{
-        <span class="hljs-keyword">return</span> items.size();
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">generateBill</span><span class="hljs-params">(Billable b)</span></span>{
-        <span class="hljs-comment">// ...</span>
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(Item s)</span> </span>{
-        items.add(s);
-    }
-}
-</code></pre>
-                                      </div>
-                                    </div>
-                                    <p>(a) Draw a class diagram to represent the code<br>
-                                      (b) Draw an object diagram to represent the situation where the inventory has one item with a name <code>spanner</code> and a review of <code>POOR</code> rating.</p>
-                                  </question>
-                                </panel>
-                              </div>
-                            </div>
-                          </panel>
-                        </div>
-                      </div>
-                    </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="class-diagrams-advanced"><span>Class Diagrams - Advanced</span><a class="fa fa-anchor" href="#class-diagrams-advanced"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use advanced class diagrams</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p><strong>A class diagram can show association classes too.</strong></p>
-                        <p>
-                          <panel type="seamless" src="/se-book/oop/associations/associationClasses/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> OOP → Associations → Association Classes" alt="<md>:glyphicon-education:</md> OOP/AssociationClasses" fragment="main" class="algolia-no-index"></panel>
-                          <panel type="seamless" src="/se-book/uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML → Class Diagrams → Association Classes → What" alt="<md>:glyphicon-education:</md> UML/AssociationsClasses" fragment="main" class="algolia-no-index"></panel>
-                        </p>
-                      </div>
-                      <div>
-                        <div>
-                          <panel header="<md>:fas-dumbbell:</md> Exercises" expandable class="algolia-no-index">
-                            <div>
-                              <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: draw class diagram: Player, Bot, etc." class="algolia-no-index">
-                                <p>(a) Draw a class diagram to represent the following code.</p>
-                                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Player</span></span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span></span>;
-}
-
-<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Trainable</span></span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">train</span><span class="hljs-params">()</span></span>;
-}
-
-<span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bot</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Player</span></span>{
-
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TrainableBot</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Bot</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Trainable</span></span>{
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span> </span>{
-
-    }
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">train</span><span class="hljs-params">()</span> </span>{
-
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Human</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Player</span></span>{
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span> </span>{
-
-    }
-}
-</code></pre>
-                                <p>(b) Add these association classes to the diagram:<br>
-                                  i. A <code>Player</code> can <em>challenge</em> another <code>Player</code> object. <code>Challenge</code> class keeps track that association between the two <code>Player</code> objects: the <em>challenger</em> and the <em>target</em> of the challenge.<br>
-                                  ii. A <code>Human</code> can <em>train</em> a <code>SmartBot</code> object. <code>Lesson</code> class keeps track of that association.</p>
-                                <p>(c) Convert the two association classes to normal classes.</p>
-                                <panel header=":key: (a)" class="algolia-no-index">
-                                  <img src="/se-book/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotA.png" height="250">
-                                  <p></p>
-                                  <p></p>
-                                </panel>
-                                <panel header=":key: (b)" class="algolia-no-index">
-                                  <img src="/se-book/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotB.png" height="310">
-                                  <p></p>
-                                  <p></p>
-                                </panel>
-                                <panel header=":key: (c)" class="algolia-no-index">
-                                  <img src="/se-book/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotC.png" height="290">
-                                  <p></p>
-                                  <p></p>
-                                </panel>
-                                <div slot="answer"></div>
-                              </panel>
-                            </div>
-                          </panel>
-                        </div>
-                      </div>
-                    </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="object-diagrams"><span>Object Diagrams</span><a class="fa fa-anchor" href="#object-diagrams"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use basic object diagrams</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p>
-                          <panel type="seamless" src="/se-book/uml/objectDiagrams/introduction/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML → Object Diagrams → Introduction" alt="<md>:glyphicon-education:</md> Object Diagrams" fragment="main" class="algolia-no-index"></panel>
-                        </p>
-                        <p><strong>Object diagrams can be used to complement class diagrams.</strong> For example, you can use object diagrams to model different object structures that can result from a design represented by a given class diagram.</p>
-                        <p>
-                          <panel type="seamless" src="/se-book/uml/objectDiagrams/objects/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML → Object Diagrams → Objects" alt="<md>:glyphicon-education:</md> OD/Objects" fragment="main" class="algolia-no-index"></panel>
-                          <panel type="seamless" src="/se-book/uml/objectDiagrams/associations/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML → Object Diagrams → Associations" alt="<md>:glyphicon-education:</md> OD/Associations" fragment="main" class="algolia-no-index"></panel>
-                        </p>
-                      </div>
-                      <div>
-                        <div>
-                          <panel header="<md>:fas-dumbbell:</md> Exercises" expandable class="algolia-no-index">
-                            <div>
-                              <div>
-                                <panel header="<md>:glyphicon-question-sign:</md> Draw Class Diagram for Box etc." class="algolia-no-index">
-                                  <question>
-                                    <p>This question is based on the following question from another topic:</p>
-                                    <div>
-                                      <panel header="<md>:glyphicon-question-sign:</md> Draw Class Diagram for Box etc." class="algolia-no-index">
-                                        <question>
-                                          <p>Draw a class diagram for the code below. Show the attributes, methods, associations, navigabilities, and multiplicities in the class diagram below:</p>
-                                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
-    <span class="hljs-keyword">private</span> Item[] parts = <span class="hljs-keyword">new</span> Item[<span class="hljs-number">10</span>];
-    <span class="hljs-keyword">private</span> Item spareItem;
-    <span class="hljs-keyword">private</span> Lid lid; <span class="hljs-comment">// lid of this box</span>
-    <span class="hljs-keyword">private</span> Box outerBox;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>{
-        <span class="hljs-comment">//...</span>
-    }
-}
-</code></pre>
-                                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span> </span>{
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> totalItems;
-}
-</code></pre>
-                                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lid</span> </span>{
-    Box box; <span class="hljs-comment">// the box for which this is the lid</span>
-}
-</code></pre>
-                                        </question>
-                                      </panel>
-                                    </div>
-                                    <p>Draw an object diagram to match the code. Include objects of all three classes in your object diagram.</p>
-                                  </question>
-                                </panel>
-                              </div>
-                            </div>
-                          </panel>
-                        </div>
-                      </div>
-                    </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="object-oriented-domain-models"><span>Object Oriented Domain Models</span><a class="fa fa-anchor" href="#object-oriented-domain-models"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain object oriented domain models</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <blockquote>
-                          <p>The analysis process for identifying objects and object classes is recognized as one of the most difficult areas of object-oriented development. <sub>--<a href="http://www.software-engin.com/">Ian Sommerville, in the book <em>Software Engineering</em></a></sub></p>
-                        </blockquote>
-                        <p>Class diagrams can also be used to model objects in the <tooltip content="the relevant information that needs to be examined to understand a problem">problem domain</tooltip> (i.e. to model how objects actually interact in the real world, before emulating them in the solution). <strong>Class diagrams are used to model the problem domain are called <em>conceptual class diagrams</em> or <em>OO domain models (OODMs)</em>.</strong></p>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> OO domain model of a snakes and ladders game is given below.</p>
-                          <p>Description: Snakes and ladders game is played by two or more players using a board and a die. The board has 100 squares marked 1 to 100. Each player owns one piece. Players take turns to throw the die and advance their piece by the number of squares they earned from the die throw. The board has a number of snakes. If a player’s piece lands on a square with a snake head, the piece is automatically moved to the square containing the snake’s tail. Similarly, a piece can automatically move from a ladder foot to the ladder top. The player whose piece is the first to reach the 100th square wins.</p>
-                          <img src="/se-book/modeling/modelingStructures/objectOrientedDomainModels/images/diagram.png" height="420">
+              </div>
+              </panel>
+            </div>
+            <div>
+              <panel type="seamless" expanded id="adding-more-info-to-uml-models">
+                <span slot="header" class="card-title"><div><h4 id="adding-more-info-to-uml-models"><span>Adding more info to UML Models</span><a class="fa fa-anchor" href="#adding-more-info-to-uml-models"></a></h4>
+            </div>
+            </span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can add more info to UML models</span>
+                </span>
+                </span>
+                </span>
+              </p>
+              <p></p>
+              <p></p>
+              <p></p>
+              <div>
+                <p><strong>UML notes can be used to add more info to any UML model.</strong></p>
+                <p>
+                  <panel src="/se-book/uml/notes/notes/unit-inElsewhere-asFlat._include_.html#title-and-body" expanded fragment="title-and-body"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Notes</p></template></panel>
+                </p>
+              </div>
+              <div></div>
+            </div>
+            </panel>
+          </div>
+          <div>
+            <panel type="seamless" expanded id="class-diagrams-intermediate">
+              <span slot="header" class="card-title"><div><h4 id="class-diagrams-intermediate"><span>Class Diagrams - Intermediate</span><a class="fa fa-anchor" href="#class-diagrams-intermediate"></a></h4>
+          </div>
+          </span>
+          <div class="indented">
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use intermediate-level class diagrams</span>
+              </span>
+              </span>
+              </span>
+            </p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <div>
+              <p><strong>A class diagram can also show different types of relationships between classes: inheritance, compositions, aggregations, dependencies.</strong></p>
+              <div class="indented">
+                <h5 id="modeling-inheritance">Modeling inheritance<a class="fa fa-anchor" href="#modeling-inheritance"></a></h5>
+                <p>
+                  <panel type="seamless" src="/se-book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Inheritance → What</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Inheritance</p></template></panel>
+                  <panel type="seamless" src="/se-book/uml/classDiagrams/classInheritance/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Class Diagrams → Inheritance → What</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Inheritance</p></template></panel>
+                </p>
+                <h5 id="modeling-composition">Modeling composition<a class="fa fa-anchor" href="#modeling-composition"></a></h5>
+                <p>
+                  <panel type="seamless" src="/se-book/oop/associations/composition/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Associations → Composition</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Composition</p></template></panel>
+                  <panel type="seamless" src="/se-book/uml/classDiagrams/composition/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Class Diagrams → Composition → What</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Composition</p></template></panel>
+                </p>
+                <h5 id="modeling-aggregation">Modeling aggregation<a class="fa fa-anchor" href="#modeling-aggregation"></a></h5>
+                <p>
+                  <panel type="seamless" src="/se-book/oop/associations/aggregation/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Associations → Aggregation</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Aggregation</p></template></panel>
+                  <panel type="seamless" src="/se-book/uml/classDiagrams/aggregation/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Class Diagrams → Aggregation → What</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Aggregation</p></template></panel>
+                </p>
+                <h5 id="modeling-dependencies">Modeling dependencies<a class="fa fa-anchor" href="#modeling-dependencies"></a></h5>
+                <p>
+                  <panel type="seamless" src="/se-book/oop/associations/dependencies/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Associations → Dependencies</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Dependencies</p></template></panel>
+                  <panel type="seamless" src="/se-book/uml/classDiagrams/dependencies/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Class Diagrams → Dependencies → What</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Dependencies</p></template></panel>
+                </p>
+              </div>
+              <p><strong>A class diagram can also show different types of class-like entities:</strong></p>
+              <div class="indented">
+                <h5 id="modeling-enumerations">Modeling enumerations<a class="fa fa-anchor" href="#modeling-enumerations"></a></h5>
+                <p>
+                  <panel type="seamless" src="/se-book/oop/classes/enumerations/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Classes → Enumerations</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Enumerations</p></template></panel>
+                  <panel type="seamless" src="/se-book/uml/classDiagrams/enumerations/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Class Diagrams → Enumerations → What</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Enumerations</p></template></panel>
+                </p>
+                <h5 id="modeling-abstract-classes">Modeling abstract classes<a class="fa fa-anchor" href="#modeling-abstract-classes"></a></h5>
+                <p>
+                  <panel type="seamless" src="/se-book/oop/inheritance/abstractClasses/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Inheritance → Abstract Classes</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/AbstractClasses</p></template></panel>
+                  <panel type="seamless" src="/se-book/uml/classDiagrams/abstractClasses/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Class Diagrams → Abstract Classes → What</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/AbstractClasses</p></template></panel>
+                </p>
+                <h5 id="modeling-interfaces">Modeling interfaces<a class="fa fa-anchor" href="#modeling-interfaces"></a></h5>
+                <p>
+                  <panel type="seamless" src="/se-book/oop/inheritance/interfaces/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Inheritance → Interfaces</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Interfaces</p></template></panel>
+                  <panel type="seamless" src="/se-book/uml/classDiagrams/interfaces/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Class Diagrams → Interfaces → What</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Interfaces</p></template></panel>
+                </p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+                  <div>
+                    <div>
+                      <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about class diagram.</p></template>
+                        <question>
+                          <p>Which of these statements match the class diagram?</p>
+                          <img src="/se-book/modeling/modelingStructures/classDiagramsIntermediate/images/mismatch.png" height="290">
                           <p></p>
-                          <p>The above OO domain model omits the ladder class for simplicity. It can be included in a similar fashion to the Snake class.</p>
-                        </tip-box>
-                        <p><strong>OODMs do not contain solution-specific classes</strong> (i.e. classes that are used in the solution domain but do not exist in the problem domain). For example, a class called DatabaseConnection could appear in a class diagram but not usually in an OO domain model because DatabaseConnection is something related to a software solution but not an entity in the problem domain.</p>
-                        <p><strong>OODMs represents the class <em>structure</em> of the problem domain</strong> and not their behavior, just like class diagrams. To show behavior, use other diagrams such as sequence diagrams.</p>
-                        <p><strong>OODM notation is similar to class diagram notation but typically omit methods and navigability.</strong></p>
-                      </div>
-                      <div>
-                        <div>
-                          <panel header="<md>:fas-dumbbell:</md> Exercises" expandable class="algolia-no-index">
-                            <div>
-                              <div>
-                                <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: This diagram is,..." class="algolia-no-index">
-                                  <question>
-                                    <p>This diagram is,</p>
-                                    <ul class="task-list">
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A class diagram.</li>
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An object diagram.</li>
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. An OO domain model, also known as a conceptual class diagram.</li>
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Can be either a class diagram or an OO domain model.</li>
-                                    </ul>
-                                    <img src="/se-book/modeling/modelingStructures/objectOrientedDomainModels/images/playerTurn.png" height="50">
-                                    <p></p>
-                                    <div slot="answer" class="algolia-no-index">
-                                      <p>(a)</p>
-                                      <p>Explanation: The diagram shows navigability which is not shown in an OO domain model. Hence, it has to be a class diagram.</p>
-                                    </div>
-                                  </question>
-                                </panel>
-                              </div>
-                              <div>
-                                <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Difference between a class diagram and and an OO domain model?" class="algolia-no-index">
-                                  <question>
-                                    <p>What is the main difference between a class diagram and and an OO domain model?</p>
-                                    <ul radio-group="88436" class="radio-list">
-                                      <li class="radio-list-item"><label><input class="radio-list-input" name="88436" type="radio"> a. One is about the problem domain while the other is about the solution domain.</label></li>
-                                      <li class="radio-list-item"><label><input class="radio-list-input" name="88436" type="radio"> b. One has more classes than the other.</label></li>
-                                      <li class="radio-list-item"><label><input class="radio-list-input" name="88436" type="radio"> c. One shows more details than the other.</label></li>
-                                      <li class="radio-list-item"><label><input class="radio-list-input" name="88436" type="radio"> d. One is a UML diagram, while the other is not a UML diagram.</label></li>
-                                    </ul>
-                                    <div slot="answer" class="algolia-no-index">
-                                      <p>(a)</p>
-                                      <p>Explanation: Both are UML diagrams, and use the class diagram notation. While it is true that often a class diagram may have more classes and more details, the main difference is that the OO domain model describes the problem domain while the class diagram describes the solution.</p>
-                                    </div>
-                                  </question>
-                                </panel>
-                              </div>
+                          <ul class="task-list">
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A <code>Snake</code> must belong to at least one <code>Board</code>.</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. A <code>SnakeHeadSquare</code> can contain only one <code>Snake</code> head.</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A <code>Square</code> can contain a <code>Snake</code> head.</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. A <code>Snake</code> head can be in more than one <code>SnakeHeadSquare</code></li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. The <code>Board</code> has exactly 5 <code>Snake</code>s.</li>
+                          </ul>
+                          <div slot="answer" class="algolia-no-index">
+                            <p><s>(a)</s>(b)(c)(d)(e)</p>
+                            <p>Explanation:</p>
+                            <p>(a) does not match because a <code>Snake</code> may or may not belong to a <code>Board</code> (multiplicity is <code>0..1</code>)<br> (b) matches the diagram because the multiplicity given in <code>1</code><br> (c) matches
+                              the diagram because <code>SnakeHeadSquare</code> is a <code>Square</code> (due to inheritance)<br> (d) matches the diagram because the multiplicity given is <code>*</code><br> (e) matches the diagram because the multiplicity
+                              given in <code>5</code><br></p>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                    <div>
+                      <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain notations in the class diagram</p></template>
+                        <question>
+                          <p>Explain the meaning of various class diagram notations in the following class diagram:</p>
+                          <img src="/se-book/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="750"></question>
+                      </panel>
+                    </div>
+                    <div>
+                      <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw a Class Diagram for the code (<code>StokItem</code>, <code>Inventory</code>, <code>Review</code> etc.)</p></template>
+                        <question>
+                          <p>Consider the code below:</p>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Billable</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bill</span><span class="hljs-params">()</span></span>;</span><span>}</span></code></pre>
+                              <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span></span></span><span><span class="hljs-class">         <span class="hljs-keyword">implements</span> <span class="hljs-title">Billable</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>;</span><span>}</span></code></pre>
+                              <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StockItem</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Item</span> </span>{</span><span>    <span class="hljs-keyword">private</span> Review review;</span><span>    <span class="hljs-keyword">private</span> String name;</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">StockItem</span><span class="hljs-params">(</span></span></span><span><span class="hljs-function"><span class="hljs-params">        String name, Rating rating)</span></span>{</span><span>&#x200B;</span><span>        <span class="hljs-keyword">this</span>.name = name;</span><span>        <span class="hljs-keyword">this</span>.review = <span class="hljs-keyword">new</span> Review(rating);</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-comment">//...</span></span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bill</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-comment">//...</span></span><span>    }</span><span>}</span></code></pre>
                             </div>
-                          </panel>
-                        </div>
-                      </div>
+                            <div class="col-sm-6">
+                              <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Rating {</span><span>    GOOD, OK, POOR</span><span>}</span></code></pre>
+                              <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Review</span> </span>{</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Rating rating;</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Review</span><span class="hljs-params">(Rating rating)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.rating = rating;</span><span>    }</span><span>}</span></code></pre>
+                              <pre><code class="hljs java"><span><span class="hljs-keyword">import</span> java.util.List;</span><span>&#x200B;</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Inventory</span> </span>{</span><span>    <span class="hljs-keyword">private</span> List&lt;Item&gt; items;</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getItemCount</span><span class="hljs-params">()</span></span>{</span><span>        <span class="hljs-keyword">return</span> items.size();</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">generateBill</span><span class="hljs-params">(Billable b)</span></span>{</span><span>        <span class="hljs-comment">// ...</span></span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(Item s)</span> </span>{</span><span>        items.add(s);</span><span>    }</span><span>}</span></code></pre>
+                            </div>
+                          </div>
+                          <p>(a) Draw a class diagram to represent the code. Show all attributes, methods, associations, navigabilities, visibilities, known multiplicities, and association roles. Show associations as lines.<br> (b) Draw an object diagram
+                            to represent the situation where the inventory has one item with a name <code>spanner</code> and a review of <code>POOR</code> rating.</p>
+                        </question>
+                      </panel>
                     </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="deployment-diagrams"><span>Deployment Diagrams</span><a class="fa fa-anchor" href="#deployment-diagrams"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain deployment diagrams</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p><strong>A <em>deployment diagram</em> shows a system's physical layout, revealing which pieces of software run on which pieces of hardware.</strong></p>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example deployment diagram:</p>
-                          <img src="/se-book/modeling/modelingStructures/deploymentDiagrams/images/diagram.png" height="500">
-                          <p></p>
-                          <p><sub>source:<a href="https://en.wikipedia.org/wiki/Deployment_diagram">https://commons.wikimedia.org</a></sub></p>
-                        </tip-box>
-                      </div>
-                      <div></div>
-                    </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="component-diagrams"><span>Component Diagrams</span><a class="fa fa-anchor" href="#component-diagrams"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain component diagrams</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p><strong>A <em>component diagram</em> is used to show how a system is divided into components and how they are connected to each other through interfaces.</strong></p>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example component diagram:</p>
-                          <p><img src="/se-book/modeling/modelingStructures/componentDiagrams/images/diagram.png" height="500"><br></p>
-                          <p><sub>source:<a href="https://en.wikipedia.org/wiki/Component_diagram">https://commons.wikimedia.org</a></sub></p>
-                        </tip-box>
-                      </div>
-                      <div></div>
-                    </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="package-diagrams"><span>Package Diagrams</span><a class="fa fa-anchor" href="#package-diagrams"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain package diagrams</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p><strong>A <em>package diagram</em> shows packages and their dependencies.</strong> A package is a grouping construct for grouping UML elements (classes, use cases, etc.).</p>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example package diagram:</p>
-                          <p><img src="/se-book/modeling/modelingStructures/packageDiagrams/images/diagram.png" height="450"><br>
-                            <sub>source:<a href="https://en.wikipedia.org/wiki/Package_diagram">https://commons.wikimedia.org</a></sub></p>
-                        </tip-box>
-                      </div>
-                      <div></div>
-                    </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="composite-structure-diagrams"><span>Composite Structure Diagrams</span><a class="fa fa-anchor" href="#composite-structure-diagrams"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain composite structure diagrams</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p><strong>A <em>composite structure diagram</em> hierarchically decomposes a class into its internal structure.</strong></p>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example composite structure diagram:</p>
-                          <img src="/se-book/modeling/modelingStructures/compositeStructureDiagrams/images/diagram.png" height="150">
-                          <br>
-                          <p><sub>source:<a href="https://en.wikipedia.org/wiki/Composite_structure_diagram">https://commons.wikimedia.org</a></sub></p>
-                        </tip-box>
-                      </div>
-                      <div></div>
-                    </div>
-                  </panel>
-                </div>
+                  </div>
+                </panel>
               </div>
             </div>
           </div>
+          </panel>
+        </div>
+        <div>
+          <panel type="seamless" expanded id="class-diagrams-advanced">
+            <span slot="header" class="card-title"><div><h4 id="class-diagrams-advanced"><span>Class Diagrams - Advanced</span><a class="fa fa-anchor" href="#class-diagrams-advanced"></a></h4>
+        </div>
+        </span>
+        <div class="indented">
+          <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use advanced class diagrams</span>
+            </span>
+            </span>
+            </span>
+          </p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <div>
+            <p><strong>A class diagram can show association classes too.</strong></p>
+            <p>
+              <panel type="seamless" src="/se-book/oop/associations/associationClasses/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Associations → Association Classes</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/AssociationClasses</p></template></panel>
+              <panel type="seamless" src="/se-book/uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Class Diagrams → Association Classes → What</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/AssociationsClasses</p></template></panel>
+            </p>
+          </div>
+          <div>
+            <div>
+              <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+                <div>
+                  <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> draw class diagram: Player, Bot, etc.</p></template>
+                    <p>(a) Draw a class diagram to represent the following code.</p>
+                    <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Player</span></span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span></span>;</span><span>}</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Trainable</span></span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">train</span><span class="hljs-params">()</span></span>;</span><span>}</span><span>&#x200B;</span><span><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bot</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Player</span></span>{</span><span>&#x200B;</span><span>}</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TrainableBot</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Bot</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Trainable</span></span>{</span><span>&#x200B;</span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span> </span>{</span><span>&#x200B;</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">train</span><span class="hljs-params">()</span> </span>{</span><span>&#x200B;</span><span>    }</span><span>}</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Human</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Player</span></span>{</span><span>&#x200B;</span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span> </span>{</span><span>&#x200B;</span><span>    }</span><span>}</span></code></pre>
+                    <p>(b) Add these association classes to the diagram:<br> i. A <code>Player</code> can <em>challenge</em> another <code>Player</code> object. <code>Challenge</code> class keeps track that association between the two <code>Player</code>                      objects: the <em>challenger</em> and the <em>target</em> of the challenge.<br> ii. A <code>Human</code> can <em>train</em> a <code>SmartBot</code> object. <code>Lesson</code> class keeps track of that association.</p>
+                    <p>(c) Convert the two association classes to normal classes.</p>
+                    <panel class="algolia-no-index"><template slot="_header"><p>🔑 (a)</p></template>
+                      <img src="/se-book/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotA.png" height="250">
+                      <p></p>
+                      <p></p>
+                    </panel>
+                    <panel class="algolia-no-index"><template slot="_header"><p>🔑 (b)</p></template>
+                      <img src="/se-book/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotB.png" height="310">
+                      <p></p>
+                      <p></p>
+                    </panel>
+                    <panel class="algolia-no-index"><template slot="_header"><p>🔑 (c)</p></template>
+                      <img src="/se-book/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotC.png" height="290">
+                      <p></p>
+                      <p></p>
+                    </panel>
+                    <div slot="answer"></div>
+                  </panel>
+                </div>
+              </panel>
+            </div>
+          </div>
+        </div>
+        </panel>
+      </div>
+      <div>
+        <panel type="seamless" expanded id="object-diagrams">
+          <span slot="header" class="card-title"><div><h4 id="object-diagrams"><span>Object Diagrams</span><a class="fa fa-anchor" href="#object-diagrams"></a></h4>
+      </div>
+      </span>
+      <div class="indented">
+        <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use basic object diagrams</span>
+          </span>
+          </span>
+          </span>
+        </p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <div>
+          <p>
+            <panel type="seamless" src="/se-book/uml/objectDiagrams/introduction/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Object Diagrams → Introduction</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Object Diagrams</p></template></panel>
+          </p>
+          <p><strong>Object diagrams can be used to complement class diagrams.</strong> For example, you can use object diagrams to model different object structures that can result from a design represented by a given class diagram.</p>
+          <p>
+            <panel type="seamless" src="/se-book/uml/objectDiagrams/objects/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Object Diagrams → Objects</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OD/Objects</p></template></panel>
+            <panel type="seamless" src="/se-book/uml/objectDiagrams/associations/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Object Diagrams → Associations</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OD/Associations</p></template></panel>
+          </p>
+        </div>
+        <div>
+          <div>
+            <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+              <div>
+                <div>
+                  <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw an Object Diagram for Box etc.</p></template>
+                    <question>
+                      <p>This question is based on the following question from another topic:</p>
+                      <div>
+                        <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw Class Diagram for Box etc.</p></template>
+                          <question>
+                            <p>Draw a class diagram for the code below. Show the attributes, methods, associations, navigabilities, and multiplicities in the class diagram below:</p>
+                            <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{</span><span>    <span class="hljs-keyword">private</span> Item[] parts = <span class="hljs-keyword">new</span> Item[<span class="hljs-number">10</span>];</span><span>    <span class="hljs-keyword">private</span> Item spareItem;</span><span>    <span class="hljs-keyword">private</span> Lid lid; <span class="hljs-comment">// lid of this box</span></span><span>    <span class="hljs-keyword">private</span> Box outerBox;</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>{</span><span>        <span class="hljs-comment">//...</span></span><span>    }</span><span>}</span></code></pre>
+                            <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span> </span>{</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> totalItems;</span><span>}</span></code></pre>
+                            <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lid</span> </span>{</span><span>    Box box; <span class="hljs-comment">// the box for which this is the lid</span></span><span>}</span></code></pre>
+                          </question>
+                        </panel>
+                      </div>
+                      <p>Draw an object diagram to match the code. Include objects of all three classes in your object diagram.</p>
+                    </question>
+                  </panel>
+                </div>
+              </div>
+            </panel>
+          </div>
+        </div>
+      </div>
+      </panel>
+    </div>
+    <div>
+      <panel type="seamless" expanded id="object-oriented-domain-models">
+        <span slot="header" class="card-title"><div><h4 id="object-oriented-domain-models"><span>Object Oriented Domain Models</span><a class="fa fa-anchor" href="#object-oriented-domain-models"></a></h4>
+    </div>
+    </span>
+    <div class="indented">
+      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain object oriented domain models</span>
+        </span>
+        </span>
+        </span>
+      </p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <div>
+        <blockquote>
+          <p>The analysis process for identifying objects and object classes is recognized as one of the most difficult areas of object-oriented development. <sub>--<a href="http://www.software-engin.com/">Ian Sommerville, in the book <em>Software Engineering</em></a></sub></p>
+        </blockquote>
+        <p>Class diagrams can also be used to model objects in the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">the relevant information that needs to be examined to understand a problem</span>problem
+          domain
+          </span> (i.e. to model how objects actually interact in the real world, before emulating them in the solution). <strong>Class diagrams are used to model the problem domain are called <em>conceptual class diagrams</em> or <em>OO domain models (OODMs)</em>.</strong></p>
+        <box>
+          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> OO domain model of a snakes and ladders game is given below.</p>
+          <p>Description: Snakes and ladders game is played by two or more players using a board and a die. The board has 100 squares marked 1 to 100. Each player owns one piece. Players take turns to throw the die and advance their piece by the number of
+            squares they earned from the die throw. The board has a number of snakes. If a player’s piece lands on a square with a snake head, the piece is automatically moved to the square containing the snake’s tail. Similarly, a piece can automatically
+            move from a ladder foot to the ladder top. The player whose piece is the first to reach the 100th square wins.</p>
+          <img src="/se-book/modeling/modelingStructures/objectOrientedDomainModels/images/diagram.png" height="420">
+          <p></p>
+          <p>The above OO domain model omits the ladder class for simplicity. It can be included in a similar fashion to the Snake class.</p>
+        </box>
+        <p><strong>OODMs do not contain solution-specific classes</strong> (i.e. classes that are used in the solution domain but do not exist in the problem domain). For example, a class called DatabaseConnection could appear in a class diagram but not
+          usually in an OO domain model because DatabaseConnection is something related to a software solution but not an entity in the problem domain.</p>
+        <p><strong>OODMs represents the class <em>structure</em> of the problem domain</strong> and not their behavior, just like class diagrams. To show behavior, use other diagrams such as sequence diagrams.</p>
+        <p><strong>OODM notation is similar to class diagram notation but omit methods and navigability.</strong></p>
+      </div>
+      <div>
+        <div>
+          <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+            <div>
+              <div>
+                <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> This diagram is,...</p></template>
+                  <question>
+                    <p>This diagram is,</p>
+                    <ul class="task-list">
+                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A class diagram.</li>
+                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An object diagram.</li>
+                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. An OO domain model, also known as a conceptual class diagram.</li>
+                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Can be either a class diagram or an OO domain model.</li>
+                    </ul>
+                    <img src="/se-book/modeling/modelingStructures/objectOrientedDomainModels/images/playerTurn.png" height="50">
+                    <p></p>
+                    <div slot="answer" class="algolia-no-index">
+                      <p>(a)</p>
+                      <p>Explanation: The diagram shows navigability which is not shown in an OO domain model. Hence, it has to be a class diagram.</p>
+                    </div>
+                  </question>
+                </panel>
+              </div>
+              <div>
+                <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Difference between a class diagram and and an OO domain model?</p></template>
+                  <question>
+                    <p>What is the main difference between a class diagram and and an OO domain model?</p>
+                    <ul radio-group="88436" class="radio-list">
+                      <li class="radio-list-item"><label><input class="radio-list-input" name="88436" type="radio"> a. One is about the problem domain while the other is about the solution domain.</label></li>
+                      <li class="radio-list-item"><label><input class="radio-list-input" name="88436" type="radio"> b. One has more classes than the other.</label></li>
+                      <li class="radio-list-item"><label><input class="radio-list-input" name="88436" type="radio"> c. One shows more details than the other.</label></li>
+                      <li class="radio-list-item"><label><input class="radio-list-input" name="88436" type="radio"> d. One is a UML diagram, while the other is not a UML diagram.</label></li>
+                    </ul>
+                    <div slot="answer" class="algolia-no-index">
+                      <p>(a)</p>
+                      <p>Explanation: Both are UML diagrams, and use the class diagram notation. While it is true that often a class diagram may have more classes and more details, the main difference is that the OO domain model describes the problem domain
+                        while the class diagram describes the solution.</p>
+                    </div>
+                  </question>
+                </panel>
+              </div>
+            </div>
+          </panel>
         </div>
       </div>
     </div>
-    <footer>
-      <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
-    </footer>
+    </panel>
+  </div>
+  <div>
+    <panel type="seamless" expanded id="deployment-diagrams">
+      <span slot="header" class="card-title"><div><h4 id="deployment-diagrams"><span>Deployment Diagrams</span><a class="fa fa-anchor" href="#deployment-diagrams"></a></h4>
+  </div>
+  </span>
+  <div class="indented">
+    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain deployment diagrams</span>
+      </span>
+      </span>
+      </span>
+    </p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <div>
+      <p><strong>A <em>deployment diagram</em> shows a system's physical layout, revealing which pieces of software run on which pieces of hardware.</strong></p>
+      <box>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example deployment diagram:</p>
+        <img src="/se-book/modeling/modelingStructures/deploymentDiagrams/images/diagram.png" height="500">
+        <p></p>
+        <p><sub>source:<a href="https://en.wikipedia.org/wiki/Deployment_diagram">https://commons.wikimedia.org</a></sub></p>
+      </box>
+    </div>
+    <div></div>
+  </div>
+  </panel>
+  </div>
+  <div>
+    <panel type="seamless" expanded id="component-diagrams">
+      <span slot="header" class="card-title"><div><h4 id="component-diagrams"><span>Component Diagrams</span><a class="fa fa-anchor" href="#component-diagrams"></a></h4>
+  </div>
+  </span>
+  <div class="indented">
+    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain component diagrams</span>
+      </span>
+      </span>
+      </span>
+    </p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <div>
+      <p><strong>A <em>component diagram</em> is used to show how a system is divided into components and how they are connected to each other through interfaces.</strong></p>
+      <box>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example component diagram:</p>
+        <p><img src="/se-book/modeling/modelingStructures/componentDiagrams/images/diagram.png" height="500"><br></p>
+        <p><sub>source:<a href="https://en.wikipedia.org/wiki/Component_diagram">https://commons.wikimedia.org</a></sub></p>
+      </box>
+    </div>
+    <div></div>
+  </div>
+  </panel>
+  </div>
+  <div>
+    <panel type="seamless" expanded id="package-diagrams">
+      <span slot="header" class="card-title"><div><h4 id="package-diagrams"><span>Package Diagrams</span><a class="fa fa-anchor" href="#package-diagrams"></a></h4>
+  </div>
+  </span>
+  <div class="indented">
+    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain package diagrams</span>
+      </span>
+      </span>
+      </span>
+    </p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <div>
+      <p><strong>A <em>package diagram</em> shows packages and their dependencies.</strong> A package is a grouping construct for grouping UML elements (classes, use cases, etc.).</p>
+      <box>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example package diagram:</p>
+        <p><img src="/se-book/modeling/modelingStructures/packageDiagrams/images/diagram.png" height="450"><br>
+          <sub>source:<a href="https://en.wikipedia.org/wiki/Package_diagram">https://commons.wikimedia.org</a></sub></p>
+      </box>
+    </div>
+    <div></div>
+  </div>
+  </panel>
+  </div>
+  <div>
+    <panel type="seamless" expanded id="composite-structure-diagrams">
+      <span slot="header" class="card-title"><div><h4 id="composite-structure-diagrams"><span>Composite Structure Diagrams</span><a class="fa fa-anchor" href="#composite-structure-diagrams"></a></h4>
+  </div>
+  </span>
+  <div class="indented">
+    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain composite structure diagrams</span>
+      </span>
+      </span>
+      </span>
+    </p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <div>
+      <p><strong>A <em>composite structure diagram</em> hierarchically decomposes a class into its internal structure.</strong></p>
+      <box>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example composite structure diagram:</p>
+        <img src="/se-book/modeling/modelingStructures/compositeStructureDiagrams/images/diagram.png" height="150">
+        <br>
+        <p><sub>source:<a href="https://en.wikipedia.org/wiki/Composite_structure_diagram">https://commons.wikimedia.org</a></sub></p>
+      </box>
+    </div>
+    <div></div>
+  </div>
+  </panel>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <footer>
+    <div class="text-center">
+      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
+  </footer>
   </div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>

@@ -8,9 +8,9 @@
 
 **A test driver is the code that ‘drives’ the <tooltip content="Software Under Test">SUT</tooltip> for the purpose of testing** i.e. invoking the SUT with test inputs and verifying the behavior is as expected. 
 
-<tip-box> 
+<box>
 
-{{ icon_example }} `PayrollTest` ‘drives’ the `PayRoll` class by sending it test inputs and verifies if the output is as expected.
+{{ icon_example }} `PayrollTest` ‘drives’ the `Payroll` class by sending it test inputs and verifies if the output is as expected.
 
 ```java
 public class PayrollTestDriver {
@@ -38,7 +38,7 @@ public class PayrollTestDriver {
     }
 }
 ```
-</tip-box>
+</box>
 
 </div>
 

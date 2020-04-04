@@ -1,4 +1,4 @@
-<tip-box>
+<box>
 
 {{ icon_example }} Example: 
 
@@ -18,4 +18,4 @@ is_urgent = type_code == URGENT
 return is_valid_code and is_urgent
 ```
 
-</tip-box>
+</box>

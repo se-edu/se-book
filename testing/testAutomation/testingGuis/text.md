@@ -15,11 +15,11 @@ If a software product has a GUI component, all product-level testing (i.e. the t
 <img src="{{baseUrl}}/testing/testAutomation/testingGuis/images/diagram.png" height="120" />
 <p/>
 
-**One approach to overcome the challenges of testing GUIs is to minimize logic aspects in the GUI.** Then, bypass the GUI to test the rest of the system using automated API testing. While this still requires the GUI to be tested manually, the number of such manual test cases can be reduced as most of the system has been tested using automated API testing.
+**Moving as much logic as possible out of the GUI can make the GUI testing easier.** That way, you can bypass the GUI to test the rest of the system using automated API testing. While this still requires the GUI to be tested, the number of such test cases can be reduced as most of the system has been tested using automated API testing.
 
 **There are testing tools that can automate GUI testing.** 
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Some tools used for automated GUI testing:
 * **TestFx** can do automated testing of JavaFX GUIs<br>
@@ -35,7 +35,7 @@ If a software product has a GUI component, all product-level testing (i.e. the t
   </panel>
 
 
-</tip-box>
+</box>
 
 </div>
 

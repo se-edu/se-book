@@ -12,14 +12,14 @@ Keeping track of project tasks %%(who is doing what, which tasks are ongoing, wh
 
 <div v-closeable alt="Jira screenshot">
 
-<tip-box> 
+<box>
 
 {{ icon_example }} A screenshot from the Jira Issue tracker software %%(Jira is part of the BitBucket project management tool suite)%%:
           
 <img src="{{baseUrl}}/projectPlanning/issueTrackers/images/xjira.png" height="350" />
 <p/>
 
-</tip-box>
+</box>
                  
 </div>
 

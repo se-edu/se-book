@@ -15,14 +15,14 @@ Commonly used multiplicities:
 * `*` : can be linked to 0 or more objects.
 * `n..m` : the number of linked objects must be `n` to `m` inclusive
 
-<tip-box>
+<box>
 
 {{ icon_example }} In the diagram below, an `Admin` object administers (in charge of) any number of students but a `Student` object must always be under the charge of exactly one `Admin` object
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/adminStudent.png" width="300" />
 
-</tip-box>
-<tip-box>
+</box>
+<box>
 
 {{ icon_example }} In the diagram below,
 * Each student must be supervised by exactly one professor. i.e. There cannot be a student who doesn't have a supervisor or has multiple supervisors.
@@ -32,7 +32,7 @@ Commonly used multiplicities:
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/adminProfessorStudent.png" height="70" />
 
-</tip-box>
+</box>
 
 
 </div>

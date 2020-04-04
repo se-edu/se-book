@@ -1,5 +1,6 @@
 <frontmatter>
 title: "Book - Software Engineering for Self-Directed Learners"
+siteNav: mainNav.md
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
@@ -85,10 +86,6 @@ title: "Book - Software Engineering for Self-Directed Learners"
 <include src="intellij/topicToc.md" />
 
 <include src="gitAndGithub/topicToc.md" />
-
-<include src="javaTools/topicToc.md" />
-
-<include src="junit/topicToc.md" />
 
 ### Principles
 

@@ -10,7 +10,7 @@
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/notation.png" height="60" />
 
-<tip-box>
+<box>
 
 {{ icon_example }} This association represents a marriage between a `Man` object and a `Woman` object. The respective roles played by objects of these two classes are `husband` and `wife`. 
 
@@ -18,12 +18,8 @@
 <p/>
 
 Note how the variable names match closely with the association roles.
+<div class="alt-java">
 
-<table> 
-<tr>
-  <td valign="top">
-
-Java {{ icon_output }}
 ```java
 class Man{
     Woman wife;
@@ -33,11 +29,9 @@ class Woman{
     Man husband;
 }
 ```
-  </td>
-  <td>&nbsp;&nbsp;<br><br></td>
-  <td valign="top">
+</div>
+<div class="alt-python">
 
-Python {{ icon_output }}
 ```python
 class Man:
   def __init__(self):
@@ -47,44 +41,35 @@ class Woman:
    def __init__(self):
      self.husband = None # a Man object
 ```
-  </td>
-</tr>
-</table>
+</div>
 
-</tip-box>
+</box>
 
-<tip-box>
+<box>
 
 {{ icon_example }} The role of `Student` objects in this association is `charges` %%(i.e. Admin is in charge of students)%%
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/adminStudent.png" height="70" />
 <p/>
 
-<table> 
-<tr>
-  <td valign="top">
+<div class="alt-java">
 
-Java {{ icon_output }}
 ```java
 class Admin{
     List<Student> charges;
 }
 ```
-  </td>
-  <td>&nbsp;&nbsp;<br><br></td>
-  <td valign="top">
+</div>
+<div class="alt-python">
 
-Python {{ icon_output }}
 ```python
 class Admin:
   def __init__(self):
     self.charges = [] # list of Student objects
 ```
-  </td>
-</tr>
-</table>
+</div>
 
-</tip-box>
+</box>
 
 
 </div>

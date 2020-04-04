@@ -16,7 +16,7 @@ Given below are some more commonly used refactorings. A more comprehensive list 
 2. [Decompose Conditional](https://refactoring.com/catalog/decomposeConditional.html)
 3. [Inline Method](https://refactoring.com/catalog/inlineMethod.html)
 4. [Remove Double Negative](https://refactoring.com/catalog/removeDoubleNegative.html)
-5. [Replace Magic Number with Symbolic Constant](https://refactoring.com/catalog/replaceMagicNumberWithSymbolicConstant.html)
+5. [Replace Magic Literal](https://refactoring.com/catalog/replaceMagicLiteral.html)
 6. [Replace Nested Conditional with Guard Clauses](https://refactoring.com/catalog/replaceNestedConditionalWithGuardClauses.html)
 7. [Replace Parameter with Explicit Methods](https://refactoring.com/catalog/replaceParameterWithExplicitMethods.html)
 8. [Reverse Conditional](https://refactoring.com/catalog/reverseConditional.html)

@@ -1,4 +1,4 @@
-<span id="title">Basic</span>
+<span id="title">What</span>
 
 <span id="prereqs"></span>
 
@@ -8,7 +8,7 @@
 
 <div class="alt-java">
 
-Learn _basic_ guidelines of the [**Java** coding standard (by OSS-Generic)]({{java_coding_standard}})
+Learn the _Java coding standard_ specified by your instructor.
 </div>
 <div class="alt-python">
 

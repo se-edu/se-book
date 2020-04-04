@@ -16,7 +16,7 @@ Compared to the notation for a class diagrams, object diagrams differ in the fol
 
 Furthermore, **multiple object diagrams can correspond to a single class diagram**.
 
-<tip-box>
+<box>
 
 {{ icon_example }} Both object diagrams are derived from the same class diagram shown earlier. In other words, each of these object diagrams shows ‘an instance of’ the same class diagram.
 
@@ -26,7 +26,7 @@ Furthermore, **multiple object diagrams can correspond to a single class diagram
 <img src="{{baseUrl}}/uml/miscellaneous/objectVsClassDiagrams/images/professorStudent.png" height="150" />
 <p/>
 
-</tip-box>
+</box>
 
 </div>
 

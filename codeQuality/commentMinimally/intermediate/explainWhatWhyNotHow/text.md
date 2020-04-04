@@ -10,7 +10,7 @@ Comments should explain _what_ and _why_ aspect of the code, rather than the _ho
 
 {{ icon_tick_green }} **What** : The specification of what the code _supposed_ to do. The reader can compare such comments to the implementation to verify if the implementation is correct
 
-<tip-box>
+<box>
 
 {{ icon_example }} Example: This method is possibly buggy because the implementation does not seem to match the comment. In this case the comment could help the reader to detect the bug.
 
@@ -20,11 +20,11 @@ void compact(String input){
     input.trim();
 }
 ```
-</tip-box>
+</box>
 
 {{ icon_tick_green }} **Why** : The rationale for the current implementation.
 
-<tip-box>
+<box>
 
 {{ icon_example }} Example: Without this comment, the reader will not know the reason for calling this method. 
 
@@ -33,11 +33,11 @@ void compact(String input){
 compact(input);
 ```
 
-</tip-box>
+</box>
 
 {{ icon_x_red }} **How** : The explanation for how the code works. This should already be apparent from the code, if the code is self-explanatory. Adding comments to explain the same thing is redundant.
 
-<tip-box>
+<box>
 
 {{ icon_example }} Example:  
 
@@ -54,7 +54,7 @@ boolean isSameSize = (input.size() == size) ;
 return (isLeftEndCorrect && isRightEndCorrect) || isSameSize;
 ```
 
-</tip-box>
+</box>
 
 
 

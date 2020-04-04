@@ -8,23 +8,23 @@
 
 Clone the sample repo [samplerepo-things](https://github.com/se-edu/samplerepo-things) to your computer.
 
-<tip-box type="error"> 
+<box type="error">
 
-Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project.
+Note that the URL of the Github project is different from the URL you need to clone a repo in that Github project.
 e.g.
 
 Github project URL: `https://github.com/se-edu/samplerepo-things` <br>
 Git repo URL: `https://github.com/se-edu/samplerepo-things.git` (note the `.git` at the end)
 
-</tip-box>
+</box>
 
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree.md" />
-  <hr></tab>
+  </tab>
   <tab header="CLI">
     <include src="./cli.md" />
-  <hr></tab>
+  </tab>
 </tabs>
 
 </div>

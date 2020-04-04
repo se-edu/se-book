@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Object Oriented Programming: Associations: Composition</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -37,14 +35,20 @@
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the meaning of composition</span></span></span></span></p>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the meaning of composition</span>
+              </span>
+              </span>
+              </span>
+            </p>
             <p></p>
             <p></p>
             <div>
               <div></div>
               <p></p>
-              <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Associations →
-                    </span></strong></span></p>
+              <p><span class="dimmed"><strong><span>Paradigms → OOP → Associations →
+</span></strong>
+                </span>
+              </p>
               <div id="title-and-body">
                 <div>
                   <h4 id="composition"><span>Composition</span><a class="fa fa-anchor" href="#composition"></a></h4>
@@ -52,32 +56,27 @@
                 <div id="main">
                   <div>
                     <p><strong>A composition is an association that represents a strong <em>whole-part</em> relationship.</strong> When the <em>whole</em> is destroyed, <em>parts</em> are destroyed too.</p>
-                    <tip-box>
+                    <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code>Board</code> (used for playing board games) consists of <code>Square</code> objects.</p>
-                    </tip-box>
+                    </box>
                     <p><strong>Composition also implies that there cannot be cyclical links</strong>.</p>
-                    <tip-box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The ‘sub-folder’ association between <code>Folder</code> objects is a composition type association. That means if the <code>Folder</code> object <code>foo</code> is a sub folder of <code>Folder</code> object <code>bar</code>, <code>bar</code> cannot be a sub-folder of <code>foo</code>.</p>
-                    </tip-box>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The ‘sub-folder’ association between <code>Folder</code> objects is a composition type association. That means if the <code>Folder</code> object <code>foo</code> is
+                        a sub folder of <code>Folder</code> object <code>bar</code>, <code>bar</code> cannot be a sub-folder of <code>foo</code>.</p>
+                    </box>
                     <h5 id="implementing-composition">Implementing composition<a class="fa fa-anchor" href="#implementing-composition"></a></h5>
-                    <p><strong>Composition is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’ object.</p>
-                    <tip-box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, the <code>Email</code> has a composition type relationship with the <code>Subject</code> class, in the sense that the subject is part of the email.</p>
-                      <div class="alt-java">
-                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span> </span>{
-    <span class="hljs-keyword">private</span> Subject subject;
-  ...
-}
-</code></pre>
+                    <p><strong>Composition is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the
+                      ‘whole’ object.
+                    </p>
+                    <box>
+                      <div class="alt-java float-right ml-5">
+                        <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span> </span>{</span><span>    <span class="hljs-keyword">private</span> Subject subject;</span><span>  ...</span><span>}</span></code></pre>
                       </div>
-                      <div class="alt-python">
-                        <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span>:</span>
-  
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
-    self.__subject = Subject()
-</code></pre>
+                      <div class="alt-python  float-right ml-5">
+                        <pre><code class="hljs python"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span>:</span></span><span>&#x200B;</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span></span><span>    self.__subject = Subject()</span></code></pre>
                       </div>
-                    </tip-box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this code, the <code>Email</code> has a composition type relationship with the <code>Subject</code> class, in the sense that the subject is part of the email.</p>
+                    </box>
                   </div>
                   <div></div>
                 </div>
@@ -89,7 +88,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
     </footer>
   </div>
 </body>

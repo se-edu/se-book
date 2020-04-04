@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Collections : The HashMap Class</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -37,132 +35,50 @@
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use the HashMap class</span></span></span></span></p>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use the HashMap class</span>
+              </span>
+              </span>
+              </span>
+            </p>
             <p></p>
             <p></p>
             <div>
               <div></div>
               <p></p>
               <p><span class="dimmed"><strong><span>C++ to Java → Collections →
-                    </span></strong></span></p>
+</span></strong>
+                </span>
+              </p>
               <div id="title-and-body">
                 <div>
                   <h4 id="the-hashmap-class"><span>The <code>HashMap</code> Class</span><a class="fa fa-anchor" href="#the-hashmap-class"></a></h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p><code>HashMap</code> is an implementation of the <code>Map</code> interface. It allows you to store a collection of <em>key-value pairs</em>. The example below illustrates how to use a <code>HashMap&lt;String, Point&gt;</code> to maintain a list of coordinates and their identifiers e.g., the identifier <code>x1</code> is used to identify the point <code>0,0</code> where <code>x1</code> is the <em>key</em> and <code>0,0</code> is the <em>value</em>.</p>
-                    <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
-<span class="hljs-keyword">import</span> java.util.HashMap;
-<span class="hljs-keyword">import</span> java.util.Map;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HashMapDemo</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        HashMap&lt;String, Point&gt; points = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
-
-        <span class="hljs-comment">// put the key-value pairs in the HashMap</span>
-        points.put(<span class="hljs-string">"x1"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>));
-        points.put(<span class="hljs-string">"x2"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>));
-        points.put(<span class="hljs-string">"x3"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">5</span>));
-        points.put(<span class="hljs-string">"x4"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">0</span>));
-
-        <span class="hljs-comment">// retrieve a value for a key using the get method</span>
-        print(<span class="hljs-string">"Coordinates of x1: "</span> + pointAsString(points.get(<span class="hljs-string">"x1"</span>)));
-
-        <span class="hljs-comment">// check if a key or a value exists</span>
-        print(<span class="hljs-string">"Key x1 exists? "</span> + points.containsKey(<span class="hljs-string">"x1"</span>));
-        print(<span class="hljs-string">"Key x1 exists? "</span> + points.containsKey(<span class="hljs-string">"y1"</span>));
-        print(<span class="hljs-string">"Value (0,0) exists? "</span> + points.containsValue(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)));
-        print(<span class="hljs-string">"Value (1,2) exists? "</span> + points.containsValue(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)));
-
-        <span class="hljs-comment">// update the value of a key to a new value</span>
-        points.put(<span class="hljs-string">"x1"</span>, <span class="hljs-keyword">new</span> Point(-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>));
-
-        <span class="hljs-comment">// iterate over the entries</span>
-        <span class="hljs-keyword">for</span> (Map.Entry&lt;String, Point&gt; entry : points.entrySet()) {
-            print(entry.getKey() + <span class="hljs-string">" = "</span> + pointAsString(entry.getValue()));
-        }
-
-        print(<span class="hljs-string">"Number of keys: "</span> + points.size());
-        points.clear();
-        print(<span class="hljs-string">"Number of keys after clearing: "</span> + points.size());
-
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">pointAsString</span><span class="hljs-params">(Point p)</span> </span>{
-        <span class="hljs-keyword">return</span> <span class="hljs-string">"["</span> + p.x + <span class="hljs-string">","</span> + p.y + <span class="hljs-string">"]"</span>;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(String s)</span> </span>{
-        System.out.println(s);
-    }
-}
-</code></pre>
-                    <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                    <pre><code class="hljs">Coordinates of x1: [0,0]
-Key x1 exists? true
-Key x1 exists? false
-Value (0,0) exists? true
-Value (1,2) exists? false
-x1 = [-1,-1]
-x2 = [0,5]
-x3 = [5,5]
-x4 = [5,0]
-Number of keys: 4
-Number of keys after clearing: 0
-</code></pre>
+                    <p><code>HashMap</code> is an implementation of the <code>Map</code> interface. It allows you to store a collection of <em>key-value pairs</em>. The example below illustrates how to use a <code>HashMap&lt;String, Point&gt;</code> to maintain
+                      a list of coordinates and their identifiers e.g., the identifier <code>x1</code> is used to identify the point <code>0,0</code> where <code>x1</code> is the <em>key</em> and <code>0,0</code> is the <em>value</em>.</p>
+                    <pre><code class="hljs java"><span><span class="hljs-keyword">import</span> java.awt.Point;</span><span><span class="hljs-keyword">import</span> java.util.HashMap;</span><span><span class="hljs-keyword">import</span> java.util.Map;</span><span>&#x200B;</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HashMapDemo</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        HashMap&lt;String, Point&gt; points = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();</span><span>&#x200B;</span><span>        <span class="hljs-comment">// put the key-value pairs in the HashMap</span></span><span>        points.put(<span class="hljs-string">"x1"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>));</span><span>        points.put(<span class="hljs-string">"x2"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>));</span><span>        points.put(<span class="hljs-string">"x3"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">5</span>));</span><span>        points.put(<span class="hljs-string">"x4"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">0</span>));</span><span>&#x200B;</span><span>        <span class="hljs-comment">// retrieve a value for a key using the get method</span></span><span>        print(<span class="hljs-string">"Coordinates of x1: "</span> + pointAsString(points.get(<span class="hljs-string">"x1"</span>)));</span><span>&#x200B;</span><span>        <span class="hljs-comment">// check if a key or a value exists</span></span><span>        print(<span class="hljs-string">"Key x1 exists? "</span> + points.containsKey(<span class="hljs-string">"x1"</span>));</span><span>        print(<span class="hljs-string">"Key x1 exists? "</span> + points.containsKey(<span class="hljs-string">"y1"</span>));</span><span>        print(<span class="hljs-string">"Value (0,0) exists? "</span> + points.containsValue(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)));</span><span>        print(<span class="hljs-string">"Value (1,2) exists? "</span> + points.containsValue(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)));</span><span>&#x200B;</span><span>        <span class="hljs-comment">// update the value of a key to a new value</span></span><span>        points.put(<span class="hljs-string">"x1"</span>, <span class="hljs-keyword">new</span> Point(-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>));</span><span>&#x200B;</span><span>        <span class="hljs-comment">// iterate over the entries</span></span><span>        <span class="hljs-keyword">for</span> (Map.Entry&lt;String, Point&gt; entry : points.entrySet()) {</span><span>            print(entry.getKey() + <span class="hljs-string">" = "</span> + pointAsString(entry.getValue()));</span><span>        }</span><span>&#x200B;</span><span>        print(<span class="hljs-string">"Number of keys: "</span> + points.size());</span><span>        points.clear();</span><span>        print(<span class="hljs-string">"Number of keys after clearing: "</span> + points.size());</span><span>&#x200B;</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">pointAsString</span><span class="hljs-params">(Point p)</span> </span>{</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"["</span> + p.x + <span class="hljs-string">","</span> + p.y + <span class="hljs-string">"]"</span>;</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(String s)</span> </span>{</span><span>        System.out.println(s);</span><span>    }</span><span>}</span></code></pre>
+                    <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
+                    </p>
+                    <pre><code class="hljs"><span>Coordinates of x1: [0,0]</span><span>Key x1 exists? true</span><span>Key x1 exists? false</span><span>Value (0,0) exists? true</span><span>Value (1,2) exists? false</span><span>x1 = [-1,-1]</span><span>x2 = [0,5]</span><span>x3 = [5,5]</span><span>x4 = [5,0]</span><span>Number of keys: 4</span><span>Number of keys after clearing: 0</span></code></pre>
                     <p><small>[<a href="https://repl.it/@seedu/Demo-HashMap">Try the above code on Repl.it</a>]</small></p>
                   </div>
                   <div>
                     <div>
-                      <panel header="<md>:fas-dumbbell:</md> Exercises" expandable class="algolia-no-index">
+                      <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
                         <div>
                           <div>
-                            <panel header="<md>:glyphicon-question-sign:</md> Weekly roster" class="algolia-no-index">
+                            <panel type="dark" expanded id="key-exercise-weekly-roster"><template slot="_header"><h3 id="key-exercise-weekly-roster"><small><small><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> [Key Exercise] weekly roster</small></small><a class="fa fa-anchor" href="#key-exercise-weekly-roster"></a></h3></template>
                               <question>
                                 <p>The class given below keeps track of how many people signup to attend an event on each day of the week. Add the missing methods so that it produces the output given.</p>
-                                <p>💡 Use an <code>HashMap</code> to store the number of entries for each day.</p>
-                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
-
-    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        addToRoster(<span class="hljs-string">"Monday"</span>); <span class="hljs-comment">// i.e., one person signed up for Monday</span>
-        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., one person signed up for Wednesday</span>
-        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., another person signed up for Wednesday</span>
-        addToRoster(<span class="hljs-string">"Friday"</span>);
-        addToRoster(<span class="hljs-string">"Monday"</span>);
-        printRoster();
-    }
-
-}
-</code></pre>
-                                <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                <pre><code class="hljs">Monday =&gt; 2
-Friday =&gt; 1
-Wednesday =&gt; 2
-</code></pre>
+                                <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Use an <code>HashMap</code> to store the number of entries for each day.</p>
+                                <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();</span><span>&#x200B;</span><span>    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span></span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        addToRoster(<span class="hljs-string">"Monday"</span>); <span class="hljs-comment">// i.e., one person signed up for Monday</span></span><span>        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., one person signed up for Wednesday</span></span><span>        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., another person signed up for Wednesday</span></span><span>        addToRoster(<span class="hljs-string">"Friday"</span>);</span><span>        addToRoster(<span class="hljs-string">"Monday"</span>);</span><span>        printRoster();</span><span>    }</span><span>&#x200B;</span><span>}</span></code></pre>
+                                <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
+                                </p>
+                                <pre><code class="hljs"><span>Monday =&gt; 2</span><span>Friday =&gt; 1</span><span>Wednesday =&gt; 2</span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <p>Partial solution:</p>
-                                  <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.HashMap;
-<span class="hljs-keyword">import</span> java.util.Map;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
-
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addToRoster</span><span class="hljs-params">(String day)</span> </span>{
-        <span class="hljs-keyword">if</span> (roster.containsKey(day)){
-            Integer newValue = Integer.valueOf(roster.get(day).intValue() + <span class="hljs-number">1</span>);
-            roster.put(day, newValue);
-        } <span class="hljs-keyword">else</span> {
-            roster.put(day, Integer.valueOf(<span class="hljs-number">1</span>));
-        }
-    }
-
-    <span class="hljs-comment">// ...</span>
-}
-</code></pre>
+                                  <pre><code class="hljs java"><span><span class="hljs-keyword">import</span> java.util.HashMap;</span><span><span class="hljs-keyword">import</span> java.util.Map;</span><span>&#x200B;</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addToRoster</span><span class="hljs-params">(String day)</span> </span>{</span><span>        <span class="hljs-keyword">if</span> (roster.containsKey(day)){</span><span>            Integer newValue = Integer.valueOf(roster.get(day).intValue() + <span class="hljs-number">1</span>);</span><span>            roster.put(day, newValue);</span><span>        } <span class="hljs-keyword">else</span> {</span><span>            roster.put(day, Integer.valueOf(<span class="hljs-number">1</span>));</span><span>        }</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-comment">// ...</span></span><span>}</span></code></pre>
                                 </div>
                               </question>
                             </panel>
@@ -171,7 +87,7 @@ Wednesday =&gt; 2
                       </panel>
                     </div>
                     <div>
-                      <panel header="<md>:fas-paperclip:</md> Resources" expanded>
+                      <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template>
                         <div>
                           <ul>
                             <li><a href="https://docs.oracle.com/javase/9/docs/api/java/util/HashMap.html"><code>HashMap</code> API</a></li>
@@ -190,7 +106,7 @@ Wednesday =&gt; 2
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
     </footer>
   </div>
 </body>

@@ -14,14 +14,14 @@ Both branch nodes and merge nodes are ==diamond shapes==. Guard conditions must 
 
 <img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/notation.png" height="180" />
 
-<tip-box>
+<box>
 
 {{ icon_example }} The AD below shows alternate paths involved in the workflow of the activity _shop for product_:
 
 <img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/example.png" height="240" />
 <p/>
 
-</tip-box>
+</box>
 
 </div>
 

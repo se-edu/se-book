@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} Draw a Class Diagram for Item etc.">
+<panel header="{{ icon_Q }} Draw a Class Diagram for the code (`StokItem`, `Inventory`, `Review` etc.)">
 <question>
 
 Consider the code below:
@@ -79,7 +79,7 @@ public class Inventory {
   </div>
 </div>
 
-(a) Draw a class diagram to represent the code<br>
+(a) Draw a class diagram to represent the code. Show all attributes, methods, associations, navigabilities, visibilities, known multiplicities, and association roles. Show associations as lines.<br>
 (b) Draw an object diagram to represent the situation where the inventory has one item with a name `spanner` and a review of `POOR` rating.
 
 </question>

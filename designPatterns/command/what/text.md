@@ -12,7 +12,7 @@ A system is required to execute a number of commands, each doing a different tas
 
 **Problem**
 
-It is preferable that some part of the code executes these commands without having to know each command type. %%&nbsp;e.g., there can be a `CommandQueue` object that is responsible for queuing commands and executing them without knowledge of what each command does.%%
+It is preferable that some part of the code executes these commands without having to know each command type. %%e.g., there can be a `CommandQueue` object that is responsible for queuing commands and executing them without knowledge of what each command does.%%
 
 **Solution**
 
@@ -20,14 +20,14 @@ The essential element of this pattern is to have a general `<<Command>>` object 
 
 Let us examine an example application of the pattern first:
 
-<tip-box>
+<box>
 
 {{ icon_example }} In the example solution below, the `CommandCreator` creates `List`, `Sort`, and `Reset Command` objects and adds them to the `CommandQueue` object. The `CommandQueue` object treats them all as `Command` objects and performs the execute/undo operation on each of them without knowledge of the specific `Command` type. When executed, each `Command` object will access the `DataStore` object to carry out its task. The `Command` class can also be an abstract class or an interface.
 
 <img src="{{baseUrl}}/designPatterns/command/what/images/commandCreator.png" height="150" />
 <p/>
 
-</tip-box>
+</box>
 
 The general form of the solution is as follows.
 

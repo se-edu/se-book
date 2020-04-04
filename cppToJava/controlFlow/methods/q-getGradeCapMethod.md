@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} `getGradeCap` Method">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] `getGradeCap` Method</small></small>" expanded >
 <question>
 
 Add the following method to the class given below.

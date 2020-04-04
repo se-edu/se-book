@@ -3,13 +3,13 @@
 
 Consider this SUT:
 
-<tip-box>
+<box>
 
 `isValidName (String s): boolean`
 
 Description: returns true if `s` is not `null` and not longer than 50 characters.
 
-</tip-box>
+</box>
 
 A. Which one of these is least likely to be an equivalence partition for the parameter s of the isValidName method given below?
 

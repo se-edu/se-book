@@ -24,7 +24,7 @@ class Car{
 </div>
 <div class="alt-python">
 
-:bulb: You may omit `self` from method signatures in the class diagram.
+{{ icon_tip }} You may omit `self` from method signatures in the class diagram.
 
 ```python
 class Car:

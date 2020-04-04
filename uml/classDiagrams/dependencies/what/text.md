@@ -10,14 +10,14 @@
 
 <img src="{{baseUrl}}/uml/classDiagrams/dependencies/what/images/notation.png" width="350" />
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Two examples of dependencies:
 
 <img src="{{baseUrl}}/uml/classDiagrams/dependencies/what/images/examples.png" width="450" />
 <p/>
 
-</tip-box>
+</box>
 
 </div>
 

@@ -1,9 +1,9 @@
-<panel header="{{ icon_Q }} Numbers list">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] Numbers list</small></small>" expanded >
 <question>
 
 Add the missing methods to the class given below so that it produces the output given.
 
-:bulb: Use an `ArrayList` to store the numbers.
+{{ icon_tip }} Use an `ArrayList` to store the numbers.
 
 ```java
 public class Main {

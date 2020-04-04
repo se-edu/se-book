@@ -8,7 +8,7 @@
 
 **A name is not just for differentiation; it should explain the named entity to the reader accurately and at a sufficient level of detail.**
 
-<tip-box>
+<box>
 
 Examples:
 
@@ -18,11 +18,11 @@ Examples:
 |`flag`   |  `isValidInput` |
 |`temp`   |   |
 
-</tip-box>
+</box>
 
 **If the name has multiple words, they should be in a sensible order.**
 
-<tip-box>
+<box>
 
 Examples:
 
@@ -30,11 +30,11 @@ Examples:
 | --------------- |  --------------- |
 |`bySizeOrder()`  |  `orderBySize()` |
 
-</tip-box>
+</box>
 
 Imagine going to the doctor's and saying "My eye1 is swollen"! Don’t use numbers or case to distinguish names.
 
-<tip-box>
+<box>
 
 Examples:
 
@@ -42,7 +42,7 @@ Examples:
 | ----------------- | ----------------- | ----------------------------- |
 |`value1`, `value2` | `value`, `Value`  | `originalValue`, `finalValue` |
 
-</tip-box>
+</box>
 
 
 </div>

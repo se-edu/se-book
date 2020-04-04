@@ -1,5 +1,7 @@
 <frontmatter>
 title: "SE Book: Full List of Learning Outcomes"
+siteNav: mainNav.md
+pageNav: 3
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
@@ -413,17 +415,6 @@ title: "SE Book: Full List of Learning Outcomes"
 <include src="../gitAndGithub/forkingWorkflow/unit-inParent-asOutcome.md" boilerplate />
 
 ### Java
-
-<include src="../javaTools/collections/unit-inParent-asOutcome.md" boilerplate />
-<include src="../javaTools/enums/unit-inParent-asOutcome.md" boilerplate />
-<include src="../javaTools/varargs/unit-inParent-asOutcome.md" boilerplate />
-<include src="../javaTools/javaFXBasic/unit-inParent-asOutcome.md" boilerplate />
-<include src="../javaTools/streamsBasic/unit-inParent-asOutcome.md" boilerplate />
-
-### JUnit
-
-<include src="../junit/basic/unit-inParent-asOutcome.md" boilerplate />
-<include src="../junit/intermediate/unit-inParent-asOutcome.md" boilerplate />
 
 ## Principles
 

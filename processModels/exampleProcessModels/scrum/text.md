@@ -8,7 +8,7 @@
 
 This description of Scrum was adapted from Wikipedia [retrieved on 18/10/2011], emphasis added:
 
-<tip-box>
+<box>
 
 **Scrum is a process skeleton that contains sets of practices and predefined roles. The main roles in Scrum are:**
 * **The Scrum Master**, who maintains the processes (typically in lieu of a project manager)
@@ -28,11 +28,11 @@ This description of Scrum was adapted from Wikipedia [retrieved on 18/10/2011], 
 <img src="{{baseUrl}}/processModels/exampleProcessModels/scrum/images/diagram.png" height="250" />
 <p/>
 
-</tip-box>
+</box>
 
 **_Daily Scrum_ is another key scrum practice**. The description below was adapted from [https://www.mountaingoatsoftware.com](https://www.mountaingoatsoftware.com/agile/scrum/meetings/daily-scrum) (emphasis added):
 
-<tip-box> 
+<box>
 
 **In Scrum, on each day of a sprint, the team holds a daily scrum meeting called the "daily scrum.”** Meetings are typically held in the same location and at the same time each day. Ideally, a daily scrum meeting is held in the morning, as it helps set the context for the coming day's work. These scrum meetings are strictly time-boxed to 15 minutes. This keeps the discussion brisk but relevant.
 

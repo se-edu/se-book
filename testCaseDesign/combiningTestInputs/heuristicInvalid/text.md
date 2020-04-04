@@ -18,7 +18,7 @@ After running these test cases can you be sure that the error message “invalid
 
 In this case a useful heuristic to apply is **no more than one invalid input in a test case**. After applying that, we get the following test cases.
 
-<tip-box> 
+<box>
 
 | Case   | fruitName  | unitPrice  | Expected                       |
 | :----: | :--------: | :--------: | :----------------------------: |
@@ -31,7 +31,7 @@ In this case a useful heuristic to apply is **no more than one invalid input in 
 
 VV/IV = Any Invalid or Valid Value VV=Any Valid Value
 
-</tip-box>
+</box>
 
 </div>
 

@@ -1,1 +1,1 @@
-Design → Architecture → Styles → Transaction Processing Style
+Design → Architecture → Styles → Transaction Processing Style →

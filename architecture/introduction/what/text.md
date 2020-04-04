@@ -11,7 +11,7 @@
 
 **The software architecture shows the overall organization of the system and can be viewed as a very high-level design.** It usually consists of a set of interacting components that fit together to achieve the required functionality. It should be a simple and technically viable structure that is well-understood and agreed-upon by everyone in the development team, and it forms the basis for the implementation.
 
-<tip-box>
+<box>
 
 {{ icon_example }} A possible architecture for a _Minesweeper_ game
 
@@ -31,7 +31,7 @@ Main components:
 * `Logic`: computation and logic of the game
 * `Store`: storage and retrieval of game data (high scores etc.)
 
-</tip-box>
+</box>
 
 **The architecture is typically designed by the _software architect_**, who provides the technical vision of the system and makes high-level (i.e. architecture-level) technical decisions about the project.
 

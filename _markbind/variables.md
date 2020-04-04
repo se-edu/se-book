@@ -10,6 +10,7 @@
 <span id="icon_example"><md>:fas-cube:</md></span>
 <span id="icon_embedding"><md>:glyphicon-log-in:</md></span>
 <span id="icon_exercise"><md>:fas-dumbbell:</md></span>
+<span id="icon_extra"><span class='badge badge-pill badge-secondary'><md>:fas-plus: extra</md></span></span>
 <span id="icon_evidence"><md>:fas-briefcase:</md></span>
 <span id="icon_info"><md>:fas-info-circle:</md></span>
 <span id="icon_individual"><md>:fas-user:</md></span>
@@ -25,15 +26,17 @@
 <span id="icon_print"><md>:glyphicon-print:</md></span>
 <span id="icon_prereq"><md>:glyphicon-education:</md></span>
 <span id="icon_preview"><md>:glyphicon-eye-open:</md></span>
+<span id="icon_quote_end"><md>:fas-quote-right:</md></span>
+<span id="icon_quote_start"><md>:fas-quote-left:</md></span>
 <span id="icon_Q"><md>:glyphicon-question-sign:</md></span>
 <span id="icon_Q_A">{{ icon_Q | safe }}:glyphicon-ok-sign:</span>
 <span id="icon_resource"><md>:fas-paperclip:</md></span>
-<span id="icon_tangential"><span class='badge badge-pill badge-secondary'>tangential</span></span>
 <span id="icon_team"><md>:fas-users:</md></span>
 <span id="icon_terminal"><smal><span class="badge badge-secondary">&gt;_</span></smal></span>
 <span id="icon_text"><md>:far-file-alt:</md></span>
 <span id="icon_tick"><md>:fas-check:</md></span>
 <span id="icon_tick_green"><span style="color:green">{{ icon_tick | safe }}</span></span>
+<span id="icon_tip"><span class="badge badge-pill badge-warning">:fas-lightbulb:</span></span>
 <span id="icon_todo"><md>:glyphicon-check:</md></span>
 <span id="icon_tutorial"><md>:fas-chalkboard-teacher:</md></span>
 <span id="icon_slides"><md>:far-images:</md></span>
@@ -41,6 +44,7 @@
 <span id="icon_windows"><md>:fab-windows:</md></span>
 <span id="icon_x"><md>:fas-times:</md></span>
 <span id="icon_x_red"><span style="color:red">{{ icon_x | safe }}</span></span>
+<span id="indented_arrow">&nbsp;&nbsp;&nbsp;&nbsp; <big>↳</big></span>
 <span id="bad"><font color="red"><md>**{{ icon_dislike | safe }} Bad**</md></font></span>
 <span id="good"><font color="green"><md>**{{ icon_like | safe }} Good**</md></font></span>
 

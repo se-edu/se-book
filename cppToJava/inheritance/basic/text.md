@@ -16,7 +16,7 @@ Given below is an extract from the {{ oracle }}, with slight adaptations.
 
 {{ different }} **Every class has one and only one direct superclass (_single inheritance_)**, except the `Object` class, which has no superclass, . In the absence of any other explicit superclass, every class is implicitly a subclass of `Object`. Classes can be derived from classes that are derived from classes that are derived from classes, and so on, and ultimately derived from the topmost class, `Object`. Such a class is said to be _descended_ from all the classes in the _inheritance chain_ stretching back to `Object`. Java does not support _multiple inheritance_ among classes.
 
-{{ different }} **The `java.lang.Object` class defines and implements behavior common to all classes**—including the ones that you write. In the Java platform, many classes derive directly from `Object`, other classes derive from some of those classes, and so on, forming a hierarchy of classes.
+{{ different }} **The `java.lang.Object` class defines and implements behavior common to all classes**—including the ones that you write. In the Java platform, many classes derive directly from `Object`, other classes derive from some of those classes, and so on, forming a single hierarchy of classes.
 
 **The keyword `extends` indicates one class inheriting from another.**
 
@@ -108,18 +108,18 @@ Printed in Superclass.
 Printed in Subclass
 ```
 
-Within `Subclass`, the simple name `printMethod()` refers to the one declared in `Subclass`, which overrides the one in `Superclass`. So, to refer to `printMethod()` inherited from `Superclass`, `Subclass` must use a qualified name, using `super` as shown. Compiling and executing `Subclass` prints the following:
+Within `Subclass`, the simple name `printMethod()` refers to the one declared in `Subclass`, which overrides the one in `Superclass`. So, to refer to `printMethod()` inherited from `Superclass`, `Subclass` must use a qualified name, using `super` as shown.
 
 </box>
 
 ##### Subclass Constructors
 
 **A subclass constructor can invoke the superclass constructor.** Invocation of a superclass constructor must be the first line in the subclass constructor.
-The syntax for calling a superclass constructor is `super()` %%(which invokes the no-argument constructor of the superclass)%% or `super(parameter list)` %%(to invoke the superclass constructor with a matching parameter list)%%.
+The syntax for calling a superclass constructor is `super()` %%(which invokes the no-argument constructor of the superclass)%% or `super(parameters)` %%(to invoke the superclass constructor with a matching parameter list)%%.
 
 <box>
 
-{{ icon_example }} The following example illustrates how to use the `super` keyword to invoke a superclass's constructor. Recall from the `Bicycle` example that `MountainBike` is a subclass of `Bicycle`. Here is the `MountainBike` (subclass) constructor that calls the superclass constructor and then adds initialization code of its own:
+{{ icon_example }} The following example illustrates how to use the `super` keyword to invoke a superclass's constructor. Recall from the `Bicycle` example that `MountainBike` is a subclass of `Bicycle`. Here is the `MountainBike` (subclass) constructor that calls the superclass constructor and then adds some initialization code of its own (i.e., `seatHeight = startHeight;`{.java}):
 
 ```java
 public MountainBike(int startHeight, int startSpeed, int startGear) {
@@ -133,7 +133,7 @@ Note: If a constructor does not explicitly invoke a superclass constructor, the 
 
 ##### Access Modifiers (simplified)
 
-**Access level modifiers determine whether other classes can use a particular field or invoke a particular method.** Given below is a simplified version of Java access modifiers, ==assuming you have not yet started placing your classes in different packages== i.e., all classes are places in the root level. A full explanation of access modifiers is given in a later topic.
+**Access level modifiers determine whether other classes can use a particular field or invoke a particular method.** Given below is a simplified version of Java access modifiers, ==assuming you have not yet started placing your classes in different packages== i.e., all classes are placed in the root level. A full explanation of access modifiers is given in a later topic.
 
 There are two levels of access control:
 
@@ -142,10 +142,10 @@ There are two levels of access control:
    * **no modifier**: same as `public`<br><br>
 
 2. **At the member level**:
-   * **`public`** : the class is visible to all other classes
+   * **`public`** : the member is visible to all other classes
    * **no modifier**: same as `public`
-   * **`protected`**: same as `public`
-   * **`private`**: the member can only be accessed in its own class
+   * **`protected`**: the member is visible to sub classes only
+   * **`private`**: the member is not visible to other classes (but can be accessed in its own class)
 
 </div>
 

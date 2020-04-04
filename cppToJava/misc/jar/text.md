@@ -14,7 +14,7 @@ An executable JAR file can be launched using the `java -jar` command.
 
 {{ icon_example }} `java -jar foo.jar` launches the `foo.jar` file.
 
-{{ icon_example }} You can delete the Collate-GUI.jar from [https://se-edu.github.io/collate/](https://se-edu.github.io/collate/) and run it using the command`java -jar Collate-GUI.jar` command.
+{{ icon_example }} You can download the Collate-TUI.jar from [https://se-edu.github.io/collate/](https://se-edu.github.io/collate/) and run it using the command`java -jar Collate-TUI.jar` command. It's usage is given [here](https://se-education.org/collate/docs/User-Guide.html#using-the-text-ui).
 
 </box>
 
@@ -24,5 +24,4 @@ The IDE can help you to package your application as a JAR file.
 
 <div id="extras">
   <include src="resourcesPanel.md" boilerplate />
-  <include src="exercisesPanel.md" boilerplate />
 </div>

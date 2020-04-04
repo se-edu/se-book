@@ -1,6 +1,6 @@
 <table> 
 <tr>
-  <td>
+  <td>
 
 {{bad}}
 ```java
@@ -22,9 +22,9 @@ int subsidy() {
     return subsidy;
 }
 ```
-  </td>
-  <td>&nbsp;&nbsp;<br><br></td>
-  <td valign="top">
+  </td>
+  <td>&nbsp;&nbsp;<br><br></td>
+  <td valign="top">
 
 {{good}}
 ```java
@@ -42,6 +42,6 @@ int calculateSubsidy() {
     return subsidy;
 }
 ```
-  </td>
+  </td>
 </tr>
 </table>

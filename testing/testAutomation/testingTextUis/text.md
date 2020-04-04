@@ -43,14 +43,14 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
    java AddressBook < input.txt > output.txt
    ```
    
-   * :bulb: The way to run a CLI program differs based on the language.<br>
+   * {{ icon_tip }} The way to run a CLI program differs based on the language.<br>
      e.g., In Python, assuming the code is in `AddressBook.py` file, use the command<br>
       `python AddressBook.py < input.txt > output.txt`
    
-   * :bulb: If you are using Windows, use a normal command window to run the app, not a Power Shell window.
+   * {{ icon_tip }} If you are using Windows, use a normal command window to run the app, not a Power Shell window.
    
    <panel header="" minimized >
-   <span slot="header" class="card-title"><md>More on the `>` operator and the `<` operator. {{ icon_tangential }}</md></span>
+   <span slot="header" class="card-title"><md>More on the `>` operator and the `<` operator {{ icon_extra }}</md></span>
    
    A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using ` < ` and ` > ` operators. For example, if you run `AddressBook` in a command window, the output will be shown in the console, but if you run it like this,
    
@@ -60,12 +60,12 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
    
    the Operating System then creates a file `output.txt` and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding ` < input.txt ` (or any other filename) makes the OS redirect the contents of the file as input to the program, as if the user typed the content of the file one line at a time.
    
-   <tip-box>
+   <box>
    
    {{ icon_resource }} Resources:
    * [Using command redirection operators in Windows](http://technet.microsoft.com/en-us/library/bb490982.aspx)
    
-   </tip-box>
+   </box>
    
    </panel><p/>
 

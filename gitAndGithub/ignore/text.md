@@ -6,15 +6,15 @@
 
 <div id="body">
 
-Add a file names `temp.txt` to the `things` repo you created. Suppose we don’t want this file to be revision controlled by Git. Let’s instruct Git to ignore `temp.txt`
+Add a file named `temp.txt` to the `things` repo you created. Suppose we don’t want this file to be revision controlled by Git. Let’s instruct Git to ignore `temp.txt`
 
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree.md" />
-  <hr></tab>
+  </tab>
   <tab header="CLI">
     <include src="./cli.md" />
-  <hr></tab>
+  </tab>
 </tabs>
 
 The `.gitignore` file tells Git which files to ignore when tracking revision history. That file itself can be either revision controlled or ignored.

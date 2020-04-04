@@ -18,14 +18,14 @@ Notes:
  * _Attributes_ compartment can be omitted if it is not relevant to the task at hand.
  * Object name can be omitted too e.g. `:Car` which is meant to say 'an _unnamed_ instance of a Car object'.
 
-<tip-box>
+<box>
 
 {{ icon_example }} Some example objects:
 
 <img src="{{baseUrl}}/uml/objectDiagrams/objects/images/professorStudent.png" height="65" />
 <p/>
 
-</tip-box>
+</box>
 
 </div>
 

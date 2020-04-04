@@ -6,9 +6,9 @@
 
 <div id="body">
 
-When the code has a number that does not explain the meaning of the number, we call that a magic number (as in “the number appears as if by magic”). Using a <tooltip content="e.g., `PI`">_named constant_</tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.
+When the code has a number that does not explain the meaning of the number, we call that a "magic number" (as in "the number appears as if by magic"). Using a <tooltip content="e.g., `PI`">_named constant_</tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.
 
-<tip-box>
+<box>
 
 {{ icon_example }} Example:
 
@@ -23,20 +23,34 @@ When the code has a number that does not explain the meaning of the number, we c
 
 </div>
 
-</tip-box>
+</box>
 
 Similarly, we can have ‘magic’ values of other data types.
 
-<tip-box>
+<box>
 
 {{bad}}
+
+<div class="alt-java">
+
 ```java
-"Error 1432"  // A magic string!
+return "Error 1432"  // A magic string!
 ```
 
-</tip-box>
+</div>
+<div class="alt-python">
+
+```python
+return "Error 1432"  # A magic string!
+```
+
+</div>
 
 
+
+</box>
+
+In general, try to avoid any magic literals.
 </div>
 
 <div id="extras">

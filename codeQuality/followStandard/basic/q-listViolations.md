@@ -29,7 +29,7 @@ public class Task {
 }
 ```
 
-In what ways the code violate the _basic_ guidelines (i.e., those marked with one :star:) of the OSS-Generic Java Coding Standard given [here](https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html)?
+In what ways the code violate the coding standard you are expected to follow?
 
 <div slot="hint">
 

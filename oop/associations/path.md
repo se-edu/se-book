@@ -1,1 +1,1 @@
-Paradigms → Object Oriented Programming → Associations →
+Paradigms → OOP → Associations →

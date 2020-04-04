@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Testing: Test Coverage</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -38,113 +36,122 @@
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>Quality Assurance → Testing →
-                  </span></strong></span></p>
+</span></strong>
+              </span>
+            </p>
             <div id="title">
               <h1 id="test-coverage"><span>Test Coverage</span><a class="fa fa-anchor" href="#test-coverage"></a></h1>
             </div>
             <div id="main">
               <div>
                 <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
-                      </div>
+                  <panel type="seamless" expanded id="what">
+                    <span slot="header" class="card-title"><div><h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                </div>
+                </span>
+                <div class="indented">
+                  <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain test coverage</span>
                     </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain test coverage</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p><strong><em>Test coverage</em> is a metric used to measure the extent to which testing exercises the code</strong> i.e., how much of the code is 'covered' by the tests.</p>
-                        <p>Here are some examples of different coverage criteria:</p>
-                        <ul>
-                          <li><strong>Function/method coverage</strong> : based on functions executed <span class="dimmed"> e.g., testing executed 90 out of 100 functions</span>.</li>
-                          <li><strong>Statement coverage</strong> : based on the number of line of code executed <span class="dimmed"> e.g., testing executed 23k out of 25k LOC</span>.</li>
-                          <li><strong>Decision/branch coverage</strong> : based on the decision points exercised <span class="dimmed"> e.g., an <code>if</code> statement evaluated to both <code>true</code> and <code>false</code> with separate test cases during testing is considered 'covered'</span>.</li>
-                          <li><strong>Condition coverage</strong> : based on the boolean sub-expressions, each evaluated to both true and false with different test cases. Condition coverage is not the same as the decision coverage.</li>
-                        </ul>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>if(x &gt; 2 &amp;&amp; x &lt; 44)</code> is considered one decision point but two conditions.</p>
-                          <p>For 100% branch or decision coverage, two test cases are required:</p>
-                          <ul>
-                            <li><code>(x &gt; 2 &amp;&amp; x &lt; 44) == true</code> : [e.g. <code>x == 4</code>]</li>
-                            <li><code>(x &gt; 2 &amp;&amp; x &lt; 44) == false</code> : [e.g. <code>x == 100</code>]</li>
-                          </ul>
-                          <p>For 100% condition coverage, three test cases are required</p>
-                          <ul>
-                            <li><code>(x &gt; 2) == true</code> , <code>(x &lt; 44) == true</code> : [e.g. <code>x == 4</code>]</li>
-                            <li><code>(x &lt; 44) == false</code> : [e.g. <code>x == 100</code>]</li>
-                            <li><code>(x &gt; 2) == false</code> : [e.g. <code>x == 0</code>]</li>
-                          </ul>
-                        </tip-box>
-                        <ul>
-                          <li><strong>Path coverage</strong> measures coverage in terms of possible paths through a given part of the code executed. 100% path coverage means all possible paths have been executed. A commonly used notation for path analysis is called the <em>Control Flow Graph (CFG)</em>.</li>
-                          <li><strong>Entry/exit coverage</strong> measures coverage in terms of possible <em>calls to</em> and <em>exits</em> from the operations in the SUT.</li>
-                        </ul>
-                      </div>
-                      <div>
+                    </span>
+                    </span>
+                  </p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <div>
+                    <p><strong><em>Test coverage</em> is a metric used to measure the extent to which testing exercises the code</strong> i.e., how much of the code is 'covered' by the tests.</p>
+                    <p>Here are some examples of different coverage criteria:</p>
+                    <ul>
+                      <li><strong>Function/method coverage</strong> : based on functions executed <span class="dimmed">e.g., testing executed 90 out of 100 functions</span>.</li>
+                      <li><strong>Statement coverage</strong> : based on the number of line of code executed <span class="dimmed">e.g., testing executed 23k out of 25k LOC</span>.</li>
+                      <li><strong>Decision/branch coverage</strong> : based on the decision points exercised <span class="dimmed">e.g., an <code>if</code> statement evaluated to both <code>true</code> and <code>false</code> with separate test cases during testing is considered 'covered'</span>.</li>
+                      <li><strong>Condition coverage</strong> : based on the boolean sub-expressions, each evaluated to both true and false with different test cases. Condition coverage is not the same as the decision coverage.</li>
+                    </ul>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>if(x &gt; 2 &amp;&amp; x &lt; 44)</code> is considered one decision point but two conditions.</p>
+                      <p>For 100% branch or decision coverage, two test cases are required:</p>
+                      <ul>
+                        <li><code>(x &gt; 2 &amp;&amp; x &lt; 44) == true</code> : [e.g. <code>x == 4</code>]</li>
+                        <li><code>(x &gt; 2 &amp;&amp; x &lt; 44) == false</code> : [e.g. <code>x == 100</code>]</li>
+                      </ul>
+                      <p>For 100% condition coverage, three test cases are required</p>
+                      <ul>
+                        <li><code>(x &gt; 2) == true</code> , <code>(x &lt; 44) == true</code> : [e.g. <code>x == 4</code>]</li>
+                        <li><code>(x &lt; 44) == false</code> : [e.g. <code>x == 100</code>]</li>
+                        <li><code>(x &gt; 2) == false</code> : [e.g. <code>x == 0</code>]</li>
+                      </ul>
+                    </box>
+                    <ul>
+                      <li><strong>Path coverage</strong> measures coverage in terms of possible paths through a given part of the code executed. 100% path coverage means all possible paths have been executed. A commonly used notation for path analysis is
+                        called the <em>Control Flow Graph (CFG)</em>.</li>
+                      <li><strong>Entry/exit coverage</strong> measures coverage in terms of possible <em>calls to</em> and <em>exits</em> from the operations in the SUT.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <div>
+                      <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
                         <div>
-                          <panel header="<md>:fas-dumbbell:</md> Exercises" expandable class="algolia-no-index">
-                            <div>
-                              <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: highest intensity coverage" class="algolia-no-index">
-                                <question>
-                                  <p>Which of these gives us the highest intensity of testing?</p>
-                                  <ul radio-group="3db75" class="radio-list">
-                                    <li class="radio-list-item"><label><input class="radio-list-input" name="3db75" type="radio"> a. 100% statement coverage</label></li>
-                                    <li class="radio-list-item"><label><input class="radio-list-input" name="3db75" type="radio"> b. 100% path coverage</label></li>
-                                    <li class="radio-list-item"><label><input class="radio-list-input" name="3db75" type="radio"> c. 100% branch coverage</label></li>
-                                    <li class="radio-list-item"><label><input class="radio-list-input" name="3db75" type="radio"> d. 100% condition coverage</label></li>
-                                  </ul>
-                                  <div slot="answer" class="algolia-no-index">
-                                    <p>(b)</p>
-                                    <p>Explanation: 100% path coverage implies all possible execution paths through the SUT have been tested. This is essentially ‘exhaustive testing’. While this is very hard to achieve for a non-trivial SUT, it technically gives us the highest intensity of testing. If all tests pass at 100% path coverage, the SUT code can be considered ‘bug free’. However, note that path coverage does not include paths that are missing from the code altogether because the programmer left them out by mistake.</p>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
+                          <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> highest intensity coverage</p></template>
+                            <question>
+                              <p>Which of these gives us the highest intensity of testing?</p>
+                              <ul radio-group="3db75" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="3db75" type="radio"> a. 100% statement coverage</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="3db75" type="radio"> b. 100% path coverage</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="3db75" type="radio"> c. 100% branch coverage</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="3db75" type="radio"> d. 100% condition coverage</label></li>
+                              </ul>
+                              <div slot="answer" class="algolia-no-index">
+                                <p>(b)</p>
+                                <p>Explanation: 100% path coverage implies all possible execution paths through the SUT have been tested. This is essentially ‘exhaustive testing’. While this is very hard to achieve for a non-trivial SUT, it technically gives
+                                  us the highest intensity of testing. If all tests pass at 100% path coverage, the SUT code can be considered ‘bug free’. However, note that path coverage does not include paths that are missing from the code altogether
+                                  because the programmer left them out by mistake.</p>
+                              </div>
+                            </question>
                           </panel>
                         </div>
-                      </div>
+                      </panel>
                     </div>
-                  </panel>
+                  </div>
                 </div>
-                <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain how test coverage works</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p><strong>Measuring coverage is often done using <em>coverage analysis tools</em>.</strong> Most IDEs have inbuilt support for measuring test coverage, or at least have plugins that can measure test coverage.</p>
-                        <p><strong>Coverage analysis can be useful in improving the quality of testing</strong> <span class="dimmed"> e.g., if a set of test cases does not achieve 100% branch coverage, more test cases can be added to cover missed branches</span>.</p>
-
-                        <div v-closeable alt="Test Coverage in Intellij" class="non-printable">
-                          <p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Measuring code coverage in Intellij IDEA</p>
-                          <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/yNYzZvyA2ik" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-                        </div>
-                      </div>
-                      <div></div>
-                    </div>
-                  </panel>
-                </div>
+                </panel>
               </div>
+              <div>
+                <panel type="seamless" expanded id="how">
+                  <span slot="header" class="card-title"><div><h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how"></a></h4>
+              </div>
+              </span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain how test coverage works</span>
+                  </span>
+                  </span>
+                  </span>
+                </p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <div>
+                  <p><strong>Measuring coverage is often done using <em>coverage analysis tools</em>.</strong> Most IDEs have inbuilt support for measuring test coverage, or at least have plugins that can measure test coverage.</p>
+                  <p><strong>Coverage analysis can be useful in improving the quality of testing</strong> <span class="dimmed">e.g., if a set of test cases does not achieve 100% branch coverage, more test cases can be added to cover missed branches</span>.</p>
+
+                  <div v-closeable alt="Test Coverage in Intellij" class="non-printable">
+                    <p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Measuring code coverage in Intellij IDEA</p>
+                    <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/yNYzZvyA2ik" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                  </div>
+                </div>
+                <div></div>
+              </div>
+              </panel>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <footer>
-      <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
-    </footer>
+  </div>
+  </div>
+  <footer>
+    <div class="text-center">
+      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
+  </footer>
   </div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>

@@ -12,20 +12,20 @@ Notation:
 
 <img src="{{baseUrl}}/uml/classDiagrams/aggregation/what/images/notation.png" height="45" />
 
-<tip-box>
+<box>
 
 {{ icon_example }} Example:
 
 <img src="{{baseUrl}}/uml/classDiagrams/aggregation/what/images/clubPerson.png" height="85" />
 <p/>
 
-</tip-box>
+</box>
 
 <box>
 
 **Aggregation vs Composition**
 
-:bulb: The distinction between composition (&#9670;) and aggregation (&#9671;) is rather blurred. Martin Fowler’s famous book _UML Distilled_ advocates omitting the aggregation symbol altogether because using it adds more confusion than clarity.
+{{ icon_tip }} The distinction between composition (&#9670;) and aggregation (&#9671;) is rather blurred. Martin Fowler’s famous book _UML Distilled_ advocates omitting the aggregation symbol altogether because using it adds more confusion than clarity.
 
 </box>
 

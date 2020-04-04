@@ -6,11 +6,11 @@
 
 <div id="body">
 
-> Programs should be written and polished until they acquire publication quality. <sub>--[Niklaus Wirth](https://en.wikipedia.org/wiki/Niklaus_Wirth)</sub>
+> {{ icon_quote_start }} Programs should be written and polished until they acquire publication quality. {{ icon_quote_end }} <sub>--[Niklaus Wirth](https://en.wikipedia.org/wiki/Niklaus_Wirth)</sub>
 
 **Among various dimensions of code quality, such as run-time efficiency, security, and robustness, one of the most important is understandability.** This is because in any non-trivial software project, code needs to be read, understood, and modified by other developers later on. Even if we do not intend to pass the code to someone else, code quality is still important because we all become 'strangers' to our own code someday.
 
-<tip-box>
+<box>
 
 {{ icon_example }} The two code samples given below achieve the same functionality, but one is easier to read.
 
@@ -21,7 +21,7 @@
   <include src="example-python.md" />
 </div>
 
-</tip-box>
+</box>
 
 
 

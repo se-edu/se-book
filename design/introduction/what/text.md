@@ -6,11 +6,11 @@
 
 <div id="body">
 
-<tip-box type="definition"> 
+<box type="definition">
 
 Design in the creative process of transforming the problem into a solution; the solution is also called design. <sub>-- :book: _Software Engineering Theory and Practice_,  Shari Lawrence; Atlee, Joanne M. Pfleeger</sub>
 
-</tip-box>
+</box>
 
 **Software design has two main aspects:**
 * **Product/external design: designing the external behavior of the product to meet the users' requirements.** This is usually done by product designers with the input from business analysts, user experience experts, user representatives, etc.

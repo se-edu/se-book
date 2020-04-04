@@ -8,13 +8,13 @@
 
 **Most applications use a mix of these architectural styles.**  
 
-<tip-box> 
+<box>
 
 {{ icon_example }} An application can use a client-server architecture where the server component comprises several layers, i.e. it uses the n-Tier architecture.
 
 <!-- TODO: add diagram -->
 
-</tip-box>
+</box>
 
 </div>
 

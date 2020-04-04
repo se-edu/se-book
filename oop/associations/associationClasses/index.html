@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Object Oriented Programming: Associations: Association Classes</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -37,14 +35,20 @@
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the meaning of association classes</span></span></span></span></p>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the meaning of association classes</span>
+              </span>
+              </span>
+              </span>
+            </p>
             <p></p>
             <p></p>
             <div>
               <div></div>
               <p></p>
-              <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Associations →
-                    </span></strong></span></p>
+              <p><span class="dimmed"><strong><span>Paradigms → OOP → Associations →
+</span></strong>
+                </span>
+              </p>
               <div id="title-and-body">
                 <div>
                   <h4 id="association-classes"><span>Association Classes</span><a class="fa fa-anchor" href="#association-classes"></a></h4>
@@ -52,36 +56,30 @@
                 <div id="main">
                   <div>
                     <p><strong>An <em>association class</em> represents additional information about an association.</strong> It is a normal class but plays a special role from a design point of view.</p>
-                    <tip-box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code>Man</code> class and a <code>Woman</code> class is linked with a ‘married to’ association and there is a need to store the date of marriage. However, that data is related to the association rather than specifically owned by either the <code>Man</code> object or the <code>Woman</code> object. In such situations, an additional association class can be introduced, e.g. a <code>Marriage</code> class, to store such information.</p>
-                    </tip-box>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code>Man</code> class and a <code>Woman</code> class is linked with a ‘married to’ association and there is a need to store the date of marriage. However, that
+                        data is related to the association rather than specifically owned by either the <code>Man</code> object or the <code>Woman</code> object. In such situations, an additional association class can be introduced, e.g. a <code>Marriage</code>                        class, to store such information.</p>
+                    </box>
                     <p>
-                      <panel type="seamless" src="/se-book/uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat._include_.html#main" header="<md>:glyphicon-education:</md> UML <md>:glyphicon-log-in:</md> Class Diagrams → Association Classes → What" alt="<md>:glyphicon-education:</md> UML/AssociationClasses" fragment="main" class="algolia-no-index"></panel>
+                      <panel type="seamless" src="/se-book/uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Association Classes → What</p></template>
+                        <template slot="_alt">
+                    <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/AssociationClasses</p>
+                    </template>
+                      </panel>
                     </p>
                     <h5 id="implementing-association-classes">Implementing association classes<a class="fa fa-anchor" href="#implementing-association-classes"></a></h5>
                     <p>There is no special way to implement an association class. It can be implemented as a normal class that has variables to represent the endpoint of the association it represents.</p>
-                    <tip-box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, the <code>Transaction</code> class is an association class that represent a transaction between a <code>Person</code> who is the seller and another <code>Person</code> who is the buyer.</p>
-                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Transaction</span></span>{
-    
-    <span class="hljs-comment">//all fields are compulsory</span>
-    Person seller;
-    Person buyer;
-    Date date;
-    String receiptNumber;
-    
-    Transaction (Person seller, Person buyer, Date date, String receiptNumber){
-        <span class="hljs-comment">//set fields</span>
-    }
-}
-</code></pre>
-                    </tip-box>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, the <code>Transaction</code> class is an association class that represent a transaction between a <code>Person</code> who is the seller and another
+                        <code>Person</code> who is the buyer.</p>
+                      <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Transaction</span></span>{</span><span>    </span><span>    <span class="hljs-comment">//all fields are compulsory</span></span><span>    Person seller;</span><span>    Person buyer;</span><span>    Date date;</span><span>    String receiptNumber;</span><span>    </span><span>    Transaction (Person seller, Person buyer, Date date, String receiptNumber){</span><span>        <span class="hljs-comment">//set fields</span></span><span>    }</span><span>}</span></code></pre>
+                    </box>
                   </div>
                   <div>
                     <div>
-                      <panel header="<md>:fas-dumbbell:</md> Exercises" expandable class="algolia-no-index">
+                      <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
                         <div>
-                          <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Which are suitable as an Association Class?" class="algolia-no-index">
+                          <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which are suitable as an Association Class?</p></template>
                             <question>
                               <p>Which one of these is the suitable as an Association Class?</p>
                               <img src="/se-book/oop/associations/associationClasses/images/exerciseDiagram.png" width="500">
@@ -94,7 +92,8 @@
                               </ul>
                               <div slot="answer" class="algolia-no-index">
                                 <p>(a)(b)<s>(c)</s>(d)</p>
-                                <p>Explanation: Mileage is a property of the car, and not specifically about the association between the Driver and the Car. If Mileage was defined as the total number of miles that car was driven by that driver, then it would be suitable as an association class.</p>
+                                <p>Explanation: Mileage is a property of the car, and not specifically about the association between the Driver and the Car. If Mileage was defined as the total number of miles that car was driven by that driver, then it would
+                                  be suitable as an association class.</p>
                               </div>
                             </question>
                           </panel>
@@ -111,7 +110,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
     </footer>
   </div>
 </body>

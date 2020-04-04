@@ -9,17 +9,33 @@
 *	Use one variable for one purpose. Do not reuse a variable for a different purpose other than its intended one, just because the data type is the same.
 *	Do not reuse formal parameters as local variables inside the method.
 
-<tip-box>
+<box>
 
 {{bad}}
+
+<div class="alt-java">
+
 ```java
 double computeRectangleArea(double length, double width) {
     length = length * width;
     return length;
 }
-
 ```
+</div>
+<div class="alt-python">
+
+```python
+def compute_rectangle_area(length, width):
+    length = length * width
+    return length
+```
+
+</div>
+
 {{good}}
+
+<div class="alt-java">
+
 ```java
 double computeRectangleArea(double length, double width) {
     double area;
@@ -27,8 +43,18 @@ double computeRectangleArea(double length, double width) {
     return area;
 }
 ```
+</div>
+<div class="alt-python">
 
-</tip-box>
+```python
+def compute_rectangle_area(length, width):
+    area = length * width
+    return area
+}
+```
+</div>
+
+</box>
 
 </div>
 

@@ -6,25 +6,26 @@
 
 <div id="body">
 
-<tip-box type="definition">
+<box type="definition">
 <include src="../../../common/definitions.md#def-user-story" />
-</tip-box>
+</box>
 
 **A common format** for writing user stories is:
 
-<tip-box type="definition">
+<box type="definition">
 <include src="../../../common/definitions.md#def-user-story-format" />
-</tip-box>
+</box>
 
-<tip-box>
+<box>
 
 {{ icon_example }} Examples (from a _Learning Management System_):
+<div class="text-monospace">
 
 1. %%As a%% student, %%I can%% download files uploaded by lecturers, %%so that%% I can get my own copy of the files
 2. %%As a%% lecturer, %%I can%% create discussion forums, %%so that%% students can discuss things online
 3. %%As a%% tutor, %%I can%% print attendance sheets, %%so that%% I can take attendance during the class
-
-</tip-box>
+</div>
+</box>
 
 <p/>
 

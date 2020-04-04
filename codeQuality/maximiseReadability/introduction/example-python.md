@@ -1,6 +1,6 @@
 <table> 
 <tr>
-  <td>
+  <td>
 
 {{bad}}
 ```python
@@ -17,9 +17,9 @@ def calculate_subs():
         subsidy = -1
     return subsidy
 ```
-  </td>
-  <td>&nbsp;&nbsp;<br><br></td>
-  <td valign="top">
+  </td>
+  <td>&nbsp;&nbsp;<br><br></td>
+  <td valign="top">
 
 {{good}}
 ```python
@@ -33,6 +33,6 @@ def calculate_subsidy():
     else:
         return FULLTIME_SUBSIDY
 ```
-  </td>
+  </td>
 </tr>
 </table>

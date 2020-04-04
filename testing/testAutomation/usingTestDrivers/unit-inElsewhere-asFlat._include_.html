@@ -1,49 +1,21 @@
-<div>
-  <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testing\testAutomation\usingTestDrivers\text.md"></div>
-</div>
+<div></div>
 <p></p>
-<p><span class="dimmed"><strong><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testing\testAutomation\path.md">Quality Assurance → Testing → Test Automation →
-        </span></span></strong></span></p>
+<p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
+</span></strong>
+  </span>
+</p>
 <div id="title-and-body">
   <div>
-    <h4 id="test-automation-using-test-drivers"><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testing\testAutomation\usingTestDrivers\text.md">Test Automation Using Test Drivers</span></span></h4>
+    <h4 id="test-automation-using-test-drivers"><span>Test Automation Using Test Drivers</span><a class="fa fa-anchor" href="#test-automation-using-test-drivers"></a></h4>
   </div>
   <div id="main">
     <div>
-      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testing\testAutomation\usingTestDrivers\text.md">
-        <p><strong>A test driver is the code that ‘drives’ the <tooltip content="Software Under Test">SUT</tooltip> for the purpose of testing</strong> i.e. invoking the SUT with test inputs and verifying the behavior is as expected.</p>
-        <tip-box>
-          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>PayrollTest</code> ‘drives’ the <code>PayRoll</code> class by sending it test inputs and verifies if the output is as expected.</p>
-          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestDriver</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
-
-        <span class="hljs-comment">//test setup</span>
-        Payroll p = <span class="hljs-keyword">new</span> Payroll();
-
-        <span class="hljs-comment">//test case 1</span>
-        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});
-        <span class="hljs-comment">// automatically verify the response</span>
-        <span class="hljs-keyword">if</span> (p.totalSalary() != <span class="hljs-number">6400</span>) {
-            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"case 1 failed "</span>);
-        }
-
-        <span class="hljs-comment">//test case 2</span>
-        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});
-        <span class="hljs-keyword">if</span> (p.totalSalary() != <span class="hljs-number">2300</span>) {
-            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"case 2 failed "</span>);
-        }
-
-        <span class="hljs-comment">//more tests...</span>
-
-        System.out.println(<span class="hljs-string">"All tests passed"</span>);
-    }
-}
-</code></pre>
-        </tip-box>
-      </div>
+      <p><strong>A test driver is the code that ‘drives’ the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Software Under Test</span>SUT</span> for the purpose of testing</strong>        i.e. invoking the SUT with test inputs and verifying the behavior is as expected.</p>
+      <box>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>PayrollTest</code> ‘drives’ the <code>Payroll</code> class by sending it test inputs and verifies if the output is as expected.</p>
+        <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestDriver</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{</span><span>&#x200B;</span><span>        <span class="hljs-comment">//test setup</span></span><span>        Payroll p = <span class="hljs-keyword">new</span> Payroll();</span><span>&#x200B;</span><span>        <span class="hljs-comment">//test case 1</span></span><span>        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});</span><span>        <span class="hljs-comment">// automatically verify the response</span></span><span>        <span class="hljs-keyword">if</span> (p.totalSalary() != <span class="hljs-number">6400</span>) {</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"case 1 failed "</span>);</span><span>        }</span><span>&#x200B;</span><span>        <span class="hljs-comment">//test case 2</span></span><span>        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});</span><span>        <span class="hljs-keyword">if</span> (p.totalSalary() != <span class="hljs-number">2300</span>) {</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"case 2 failed "</span>);</span><span>        }</span><span>&#x200B;</span><span>        <span class="hljs-comment">//more tests...</span></span><span>&#x200B;</span><span>        System.out.println(<span class="hljs-string">"All tests passed"</span>);</span><span>    }</span><span>}</span></code></pre>
+      </box>
     </div>
-    <div>
-      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\testing\testAutomation\usingTestDrivers\text.md"></div>
-    </div>
+    <div></div>
   </div>
 </div>

@@ -5,17 +5,17 @@
 
 Complete the following use case (MSS, extensions, etc.).
 
-<tip-box>
+<box>
 
 * System: LearnSys (an online Learning Management System)
 * Use case: UC01 reply to post in the forum
 * Actor: Student
 
-</tip-box>
+</box>
 
 <div slot="answer">
 
-<tip-box>
+<box>
   <div>
     <ul>
       <li>System: LearnSys</li>
@@ -81,7 +81,7 @@ Complete the following use case (MSS, extensions, etc.).
       </li>
     </ul>
   </div>
-</tip-box>
+</box>
 
 </div>
 </question>

@@ -6,17 +6,17 @@
 
 <div id="body">
 
-<tip-box type="definition">
+<box type="definition">
   <include src="../../common/definitions.md#def-liskov-substitution-principle" />
-</tip-box>
+</box>
 
 LSP sounds same as <trigger large trigger="click" for="modal:lsp-substitutability">substitutability</trigger> but it goes beyond substitutability; **LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.** As we know, Java has language support for substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.
 
 <modal large title="Textbook {{ icon_embedding }}" id="modal:lsp-substitutability">
-  <include src="../../oop/inheritance/substitutability/unit-inElsewhere-asFlat.md" boilerplate/>
+  <include src="../../oop/inheritance/substitutability/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal> 
 
-<tip-box>
+<box>
 
 {{ icon_example }} Suppose the `Payroll` class depends on the `adjustMySalary(int percent)` method of the `Staff` class. Furthermore, the `Staff` class states that the `adjustMySalary` method will work for all positive percent values. Both `Admin` and `Academic` classes override the `adjustMySalary` method.
 
@@ -71,7 +71,7 @@ This code will fail if it is called as `maekSameSize(new Rectangle(12,8), new Sq
 
 </panel>
 
-</tip-box>
+</box>
 
 </div>
 

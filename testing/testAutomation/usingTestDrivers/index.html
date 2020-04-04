@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Testing: Test Automation: Test Automation Using Test Drivers</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -37,49 +35,31 @@
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain test drivers</span></span></span></span></p>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain test drivers</span>
+              </span>
+              </span>
+              </span>
+            </p>
             <p></p>
             <p></p>
             <div>
               <div></div>
               <p></p>
               <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
-                    </span></strong></span></p>
+</span></strong>
+                </span>
+              </p>
               <div id="title-and-body">
                 <div>
                   <h4 id="test-automation-using-test-drivers"><span>Test Automation Using Test Drivers</span><a class="fa fa-anchor" href="#test-automation-using-test-drivers"></a></h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p><strong>A test driver is the code that ‘drives’ the <tooltip content="Software Under Test">SUT</tooltip> for the purpose of testing</strong> i.e. invoking the SUT with test inputs and verifying the behavior is as expected.</p>
-                    <tip-box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>PayrollTest</code> ‘drives’ the <code>PayRoll</code> class by sending it test inputs and verifies if the output is as expected.</p>
-                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestDriver</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
-
-        <span class="hljs-comment">//test setup</span>
-        Payroll p = <span class="hljs-keyword">new</span> Payroll();
-
-        <span class="hljs-comment">//test case 1</span>
-        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});
-        <span class="hljs-comment">// automatically verify the response</span>
-        <span class="hljs-keyword">if</span> (p.totalSalary() != <span class="hljs-number">6400</span>) {
-            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"case 1 failed "</span>);
-        }
-
-        <span class="hljs-comment">//test case 2</span>
-        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});
-        <span class="hljs-keyword">if</span> (p.totalSalary() != <span class="hljs-number">2300</span>) {
-            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"case 2 failed "</span>);
-        }
-
-        <span class="hljs-comment">//more tests...</span>
-
-        System.out.println(<span class="hljs-string">"All tests passed"</span>);
-    }
-}
-</code></pre>
-                    </tip-box>
+                    <p><strong>A test driver is the code that ‘drives’ the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Software Under Test</span>SUT</span> for the purpose of testing</strong>                      i.e. invoking the SUT with test inputs and verifying the behavior is as expected.</p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>PayrollTest</code> ‘drives’ the <code>Payroll</code> class by sending it test inputs and verifies if the output is as expected.</p>
+                      <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestDriver</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{</span><span>&#x200B;</span><span>        <span class="hljs-comment">//test setup</span></span><span>        Payroll p = <span class="hljs-keyword">new</span> Payroll();</span><span>&#x200B;</span><span>        <span class="hljs-comment">//test case 1</span></span><span>        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});</span><span>        <span class="hljs-comment">// automatically verify the response</span></span><span>        <span class="hljs-keyword">if</span> (p.totalSalary() != <span class="hljs-number">6400</span>) {</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"case 1 failed "</span>);</span><span>        }</span><span>&#x200B;</span><span>        <span class="hljs-comment">//test case 2</span></span><span>        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});</span><span>        <span class="hljs-keyword">if</span> (p.totalSalary() != <span class="hljs-number">2300</span>) {</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"case 2 failed "</span>);</span><span>        }</span><span>&#x200B;</span><span>        <span class="hljs-comment">//more tests...</span></span><span>&#x200B;</span><span>        System.out.println(<span class="hljs-string">"All tests passed"</span>);</span><span>    }</span><span>}</span></code></pre>
+                    </box>
                   </div>
                   <div></div>
                 </div>
@@ -91,7 +71,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
     </footer>
   </div>
 </body>

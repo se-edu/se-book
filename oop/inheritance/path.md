@@ -1,1 +1,1 @@
-Paradigms → Object Oriented Programming → Inheritance →
+Paradigms → OOP → Inheritance →

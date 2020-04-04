@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Coding Best Practices: [Practice] Avoid Deep Nesting</title>
   <link rel="stylesheet" href="../../../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -37,14 +35,20 @@
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: avoid deep nesting </span></span></span></span></p>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: avoid deep nesting </span>
+              </span>
+              </span>
+              </span>
+            </p>
             <p></p>
             <p></p>
             <div>
               <div></div>
               <p></p>
               <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Basic →
-                    </span></strong></span></p>
+</span></strong>
+                </span>
+              </p>
               <div id="title-and-body">
                 <div>
                   <h4 id="avoid-deep-nesting"><span>Avoid Deep Nesting</span><a class="fa fa-anchor" href="#avoid-deep-nesting"></a></h4>
@@ -63,50 +67,22 @@
                         <div>
                           <table>
                             <tr>
-                                <td>
+                              <td>
                                 <p>
-                                  <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
+                                  <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong>
+                                    </span>
+                                  </font>
                                 </p>
-                                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-keyword">int</span> subsidy;
-    <span class="hljs-keyword">if</span> (!age) {
-        <span class="hljs-keyword">if</span> (!sub) {
-            <span class="hljs-keyword">if</span> (!notFullTime) {
-                subsidy = <span class="hljs-number">500</span>;
-            } <span class="hljs-keyword">else</span> {
-                subsidy = <span class="hljs-number">250</span>;
-            }
-        } <span class="hljs-keyword">else</span> {
-            subsidy = <span class="hljs-number">250</span>;
-        }
-    } <span class="hljs-keyword">else</span> {
-        subsidy = -<span class="hljs-number">1</span>;
-    }
-    <span class="hljs-keyword">return</span> subsidy;
-}
-</code></pre>
-                                <p></p>
+                                <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-keyword">int</span> subsidy;</span><span>    <span class="hljs-keyword">if</span> (!age) {</span><span>        <span class="hljs-keyword">if</span> (!sub) {</span><span>            <span class="hljs-keyword">if</span> (!notFullTime) {</span><span>                subsidy = <span class="hljs-number">500</span>;</span><span>            } <span class="hljs-keyword">else</span> {</span><span>                subsidy = <span class="hljs-number">250</span>;</span><span>            }</span><span>        } <span class="hljs-keyword">else</span> {</span><span>            subsidy = <span class="hljs-number">250</span>;</span><span>        }</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        subsidy = -<span class="hljs-number">1</span>;</span><span>    }</span><span>    <span class="hljs-keyword">return</span> subsidy;</span><span>}</span></code></pre>
                               </td>
-                                <td>  <br><br></td>
-                                <td valign="top">
+                              <td>&nbsp;&nbsp;<br><br></td>
+                              <td valign="top">
                                 <p>
-                                  <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
+                                  <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong>
+                                    </span>
+                                  </font>
                                 </p>
-                                <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-keyword">int</span> subsidy;
-    <span class="hljs-keyword">if</span> (isSenior) {
-        subsidy = REJECT_SENIOR;
-    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {
-        subsidy = SUBSIDISED_SUBSIDY;
-    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {
-        subsidy = FULLTIME_SUBSIDY * RATIO;
-    } <span class="hljs-keyword">else</span> {
-        subsidy = FULLTIME_SUBSIDY;
-    }
-    <span class="hljs-keyword">return</span> subsidy;
-}
-</code></pre>
-                                <p></p>
+                                <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-keyword">int</span> subsidy;</span><span>    <span class="hljs-keyword">if</span> (isSenior) {</span><span>        subsidy = REJECT_SENIOR;</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {</span><span>        subsidy = SUBSIDISED_SUBSIDY;</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {</span><span>        subsidy = FULLTIME_SUBSIDY * RATIO;</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        subsidy = FULLTIME_SUBSIDY;</span><span>    }</span><span>    <span class="hljs-keyword">return</span> subsidy;</span><span>}</span></code></pre>
                               </td>
                             </tr>
                           </table>
@@ -116,41 +92,22 @@
                         <div>
                           <table>
                             <tr>
-                                <td>
+                              <td>
                                 <p>
-                                  <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
+                                  <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong>
+                                    </span>
+                                  </font>
                                 </p>
-                                <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span>
-    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:
-        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:
-            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:
-                subsidy = <span class="hljs-number">500</span>
-            <span class="hljs-keyword">else</span>:
-                subsidy = <span class="hljs-number">250</span>
-        <span class="hljs-keyword">else</span>:
-            subsidy = <span class="hljs-number">250</span>
-    <span class="hljs-keyword">else</span>:
-        subsidy = <span class="hljs-number">-1</span>
-    <span class="hljs-keyword">return</span> subsidy
-</code></pre>
-                                <p></p>
+                                <pre><code class="hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span></span><span>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:</span><span>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:</span><span>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:</span><span>                subsidy = <span class="hljs-number">500</span></span><span>            <span class="hljs-keyword">else</span>:</span><span>                subsidy = <span class="hljs-number">250</span></span><span>        <span class="hljs-keyword">else</span>:</span><span>            subsidy = <span class="hljs-number">250</span></span><span>    <span class="hljs-keyword">else</span>:</span><span>        subsidy = <span class="hljs-number">-1</span></span><span>    <span class="hljs-keyword">return</span> subsidy</span></code></pre>
                               </td>
-                                <td>  <br><br></td>
-                                <td valign="top">
+                              <td>&nbsp;&nbsp;<br><br></td>
+                              <td valign="top">
                                 <p>
-                                  <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
+                                  <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong>
+                                    </span>
+                                  </font>
                                 </p>
-                                <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span>
-    <span class="hljs-keyword">if</span> is_senior:
-        <span class="hljs-keyword">return</span> REJECT_SENIOR
-    <span class="hljs-keyword">elif</span> is_already_subsidised:
-        <span class="hljs-keyword">return</span> SUBSIDISED_SUBSIDY
-    <span class="hljs-keyword">elif</span> is_parttime:
-        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO
-    <span class="hljs-keyword">else</span>:
-        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY
-</code></pre>
-                                <p></p>
+                                <pre><code class="hljs python"><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span></span><span>    <span class="hljs-keyword">if</span> is_senior:</span><span>        <span class="hljs-keyword">return</span> REJECT_SENIOR</span><span>    <span class="hljs-keyword">elif</span> is_already_subsidised:</span><span>        <span class="hljs-keyword">return</span> SUBSIDISED_SUBSIDY</span><span>    <span class="hljs-keyword">elif</span> is_parttime:</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO</span><span>    <span class="hljs-keyword">else</span>:</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY</span></code></pre>
                               </td>
                             </tr>
                           </table>
@@ -168,7 +125,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
     </footer>
   </div>
 </body>

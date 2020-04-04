@@ -6,13 +6,13 @@
 
 <div id="body">
 
-<tip-box type="definition">
+<box type="definition">
 <include src="../../../common/definitions.md#def-feature-list" />
-</tip-box>
+</box>
 
-<tip-box>
+<box>
 
-{{ icon_example }} A sample feature list from a simple Minesweeper game %%&nbsp;(only a brief description has been provided to save space)%%:
+{{ icon_example }} A sample feature list from a simple Minesweeper game %%(only a brief description has been provided to save space)%%:
 
 1. Basic play – Single player play.
 2. Difficulty levels
@@ -22,7 +22,7 @@
 4. Timer – Additional fixed time restriction on the player.
 5. ...
 
-</tip-box>
+</box>
 
 </div>
 

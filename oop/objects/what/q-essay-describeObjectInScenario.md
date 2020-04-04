@@ -3,11 +3,11 @@
 
 Consider the following real-world scenario.
 
-<tip-box>
+<box>
 
 Tom read a Software Engineering textbook (he has been assigned to read the book) and highlighted some of the text in it.
-  
-</tip-box>
+  
+</box>
 
 Explain the following statements about OOP using the above scenario as an example.
 
@@ -25,7 +25,7 @@ Explain the following statements about OOP using the above scenario as an exampl
 
 Interacting objects in the scenario: `Tom`, `SE Textbook` (`Book` for short), `Text`, (possibly) `Highlighter`
  
-:bulb: objects usually match nouns in the description
+{{ icon_tip }} objects usually match nouns in the description
 
 >[2]Every object has both state (data) and behavior (operations on data).
 

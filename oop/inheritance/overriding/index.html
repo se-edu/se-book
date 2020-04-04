@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Object Oriented Programming: Inheritance: Overriding</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -37,18 +35,24 @@
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain method overriding</span></span></span></span></p>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain method overriding</span>
+              </span>
+              </span>
+              </span>
+            </p>
             <p></p>
             <p></p>
             <div>
               <div>
                 <p>
-                  <panel src="/se-book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" header="%%<md>:glyphicon-education:</md> OOP → Inheritance → What%%" popup-url="/se-book/oop/inheritance/what" class="algolia-no-index"></panel>
+                  <panel src="/se-book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/oop/inheritance/what" class="algolia-no-index"><template slot="_header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Inheritance → What</span></p></template></panel>
                 </p>
               </div>
               <p></p>
-              <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Inheritance →
-                    </span></strong></span></p>
+              <p><span class="dimmed"><strong><span>Paradigms → OOP → Inheritance →
+</span></strong>
+                </span>
+              </p>
               <div id="title-and-body">
                 <div>
                   <h4 id="overriding"><span>Overriding</span><a class="fa fa-anchor" href="#overriding"></a></h4>
@@ -56,7 +60,7 @@
                 <div id="main">
                   <div>
                     <p><strong>Method <em>overriding</em> is when a sub-class changes the behavior inherited from the parent class</strong> by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.</p>
-                    <tip-box>
+                    <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the following case of <code>EvaluationReport</code> class inheriting the <code>Report</code> class:</p>
                       <div class="table-responsive">
                         <table class="markbind-table table table-bordered table-striped">
@@ -81,17 +85,20 @@
                             <tr>
                               <td><code>read():String</code></td>
                               <td><code>read(int):String</code></td>
-                              <td>No. <span class="dimmed"> Reason: the two methods have different signatures; This is a case of <trigger trigger="click" for="modal:overriding-overloading"> <em>overloading</em></trigger> (rather than overriding).</span></td>
+                              <td>No. <span class="dimmed">Reason: the two methods have different signatures; This is a case of <span trigger="click" for="modal:overriding-overloading" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:overriding-overloading'].show()" class="trigger-click"> <em>overloading</em></span>                                (rather than overriding).</span>
+                              </td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
-                      <modal title="**Overloading**" id="modal:overriding-overloading" class="algolia-no-index">
+                      <b-modal id="modal:overriding-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:overriding-overloading"><template slot="modal-title"><strong>Overloading</strong></template>
                         <div>
                           <div></div>
                           <p></p>
-                          <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Inheritance →
-                                </span></strong></span></p>
+                          <p><span class="dimmed"><strong><span>Paradigms → OOP → Inheritance →
+</span></strong>
+                            </span>
+                          </p>
                           <div id="title-and-body">
                             <div>
                               <h4 id="overloading"><span>Overloading</span><a class="fa fa-anchor" href="#overloading"></a></h4>
@@ -99,10 +106,13 @@
                             <div id="main">
                               <div>
                                 <p><strong>Method overloading is when there are multiple methods with the same name but different type signatures.</strong> Overloading is used to indicate that multiple operations do similar things but take different parameters.</p>
-                                <tip-box type="primary">
+                                <box type="definition">
                                   <div>
-                                    <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.</p>
-                                    <panel type="seamless" header="%%Examples%%" class="algolia-no-index">
+                                    <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order
+                                      is significant.
+                                    </p>
+                                    <box>
+                                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
                                       <div class="table-responsive">
                                         <table class="markbind-table table table-bordered table-striped">
                                           <thead>
@@ -131,29 +141,29 @@
                                           </tbody>
                                         </table>
                                       </div>
-                                    </panel>
+                                    </box>
                                   </div>
-                                </tip-box>
-                                <tip-box>
-                                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the case below, the <code>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code>(String)</code> and <code>(int)</code></p>
+                                </box>
+                                <box>
+                                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the case below, the <code>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code>(String)</code>                                    and <code>(int)</code></p>
                                   <ul>
                                     <li><code>calculate(String): void</code></li>
                                     <li><code>calculate(int): void</code></li>
                                   </ul>
-                                </tip-box>
+                                </box>
                               </div>
                               <div></div>
                             </div>
                           </div>
                         </div>
-                      </modal>
-                    </tip-box>
+                      </b-modal>
+                    </box>
                   </div>
                   <div>
                     <div>
-                      <panel header="<md>:fas-dumbbell:</md> Exercises" expandable class="algolia-no-index">
+                      <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
                         <div>
-                          <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Which methods override?" class="algolia-no-index">
+                          <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which methods override?</p></template>
                             <question>
                               <p>Which of these methods override another method? <span class="dimmed"><code>A</code> is the parent class. <code>B</code> inherits <code>A</code>.</span></p>
                               <img src="/se-book/oop/inheritance/overriding/images/overriding.png" height="220">
@@ -184,7 +194,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
     </footer>
   </div>
 </body>

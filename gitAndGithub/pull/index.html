@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Git and Github: Pull</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -37,68 +35,73 @@
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can pull changes from a repo</span></span></span></span></p>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can pull changes from a repo</span>
+              </span>
+              </span>
+              </span>
+            </p>
             <p></p>
             <p></p>
             <div>
               <div>
                 <p>
-                  <panel src="/se-book/gitAndGithub/clone/unit-inElsewhere-asFlat._include_.html" header="<md>:glyphicon-education:</md> %%Tools → Git & GitHub → Clone%%" popup-url="/se-book/gitAndGithub/clone" class="algolia-no-index"></panel>
+                  <panel src="/se-book/gitAndGithub/clone/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/gitAndGithub/clone" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> <span class="dimmed">Tools → Git &amp; GitHub → Clone</span></p></template></panel>
                 </p>
               </div>
               <p></p>
               <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
-                    </span></strong></span></p>
+</span></strong>
+                </span>
+              </p>
               <div id="title-and-body">
                 <div>
                   <h4 id="pull"><span>Pull</span><a class="fa fa-anchor" href="#pull"></a></h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p>Clone the sample repo as explained in <trigger for="modal:clone-repository" trigger="click">[Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Tools → Git &amp; GitHub → Clone]</trigger>.</p>
+                    <p>Clone the sample repo as explained in <span for="modal:clone-repository" trigger="click" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:clone-repository'].show()"
+                        class="trigger-click">[Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Tools → Git &amp; GitHub → Clone]</span>.</p>
                     <p>Delete the last two commits to simulate cloning the repo 2 commits ago.</p>
-                    <modal title="**Clone Repository**" id="modal:clone-repository" class="algolia-no-index">
+                    <b-modal id="modal:clone-repository" hide-footer size modal-class="mb-zoom" ref="modal:clone-repository"><template slot="modal-title"><strong>Clone Repository</strong></template>
                       <div>
                         <panel type="seamless" expanded>
-                          <span slot="header" class="card-title">
-                            <div>
-                              <p>Clone</p>
-                            </div>
-                          </span>
-                          <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can clone a remote repo</span></span></span></span></p>
+                          <span slot="header" class="card-title"><div>
+<p>Clone</p></div></span>
+                          <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can clone a remote repo</span>
+                            </span>
+                            </span>
+                            </span>
+                          </p>
                           <p></p>
                           <p></p>
                           <p></p>
                           <div>
                             <p>Clone the sample repo <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your computer.</p>
-                            <tip-box type="error">
-                              <p>Note that the URL of the Github project is different form the URL you need to clone a repo in that Github project.
-                                e.g.</p>
-                              <p>Github project URL: <code>https://github.com/se-edu/samplerepo-things</code> <br>
-                                Git repo URL: <code>https://github.com/se-edu/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
-                            </tip-box>
+                            <box type="error">
+                              <p>Note that the URL of the Github project is different from the URL you need to clone a repo in that Github project. e.g.
+                              </p>
+                              <p>Github project URL: <code>https://github.com/se-edu/samplerepo-things</code> <br> Git repo URL: <code>https://github.com/se-edu/samplerepo-things.git</code> (note the <code>.git</code> at the end)</p>
+                            </box>
                             <tabs>
-                              <tab header="SourceTree">
+                              <tab><template slot="_header">SourceTree</template>
                                 <div>
                                   <p><code>File</code> → <code>Clone / New…</code> and provide the URL of the repo and the destination directory.</p>
                                 </div>
-                                <hr>
                               </tab>
-                              <tab header="CLI" class="algolia-no-index">
+                              <tab class="algolia-no-index"><template slot="_header">CLI</template>
                                 <div>
                                   <p>You can use the <code>clone</code> command to clone a repo.</p>
                                   <p>Follow instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p>
                                 </div>
-                                <hr>
                               </tab>
                             </tabs>
                           </div>
                           <div></div>
                         </panel>
                       </div>
-                    </modal>
+                    </b-modal>
                     <tabs>
-                      <tab header="SourceTree">
+                      <tab><template slot="_header">SourceTree</template>
                         <div>
                           <p>Right-click the target commit (i.e. the commit that is 2 commits behind the tip) and choose <code>Reset current branch to this commit</code>.</p>
                           <img src="/se-book/gitAndGithub/pull/images/rightClickOnTargetCommit.png" height="100">
@@ -110,23 +113,20 @@
                           <img src="/se-book/gitAndGithub/pull/images/sourcetree_2.png" height="150">
                           <p></p>
                           <p>Note the following (cross refer the screenshot above):</p>
-                          <p>Arrow marked as <code>a</code>: The local repo is now at this commit, marked by the <code>master</code> label.<br>
-                            Arrow marked as <code>b</code>: <code>origin/master</code> label shows what is the latest commit in the <code>master</code> branch in the remote repo.</p>
+                          <p>Arrow marked as <code>a</code>: The local repo is now at this commit, marked by the <code>master</code> label.<br> Arrow marked as <code>b</code>: <code>origin/master</code> label shows what is the latest commit in the <code>master</code>                            branch in the remote repo.</p>
                         </div>
-                        <hr>
                       </tab>
-                      <tab header="CLI" class="algolia-no-index">
+                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
                         <div>
                           <p>Use the <code>reset</code> command to delete commits at the tip of the revision history.</p>
-                          <pre><code class="hljs">git reset --hard HEAD~2
-</code></pre>
+                          <pre><code class="hljs"><span>git reset --hard HEAD~2</span></code></pre>
                         </div>
-                        <hr>
                       </tab>
                     </tabs>
-                    <p>Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago, as if somebody has added two more commits to the remote repo since you cloned it. To get those commits to your local repo (i.e. to sync your local repo with upstream repo) you can do a pull.</p>
+                    <p>Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago, as if somebody has added two more commits to the remote repo since you cloned it. To get those commits to your local repo (i.e. to sync
+                      your local repo with upstream repo) you can do a pull.</p>
                     <tabs>
-                      <tab header="SourceTree">
+                      <tab><template slot="_header">SourceTree</template>
                         <div>
                           <p>Click the <code>Pull</code> button in the main menu, choose <code>origin</code> and <code>master</code> in the next dialog, and click <code>OK</code>.</p>
                           <img src="/se-book/gitAndGithub/pull/images/sourcetree_3.png" height="160">
@@ -135,13 +135,11 @@
                           <img src="/se-book/gitAndGithub/pull/images/sourcetree_4.png" height="100">
                           <p></p>
                         </div>
-                        <hr>
                       </tab>
-                      <tab header="CLI" class="algolia-no-index">
+                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
                         <div>
                           <p><code>git pull origin</code></p>
                         </div>
-                        <hr>
                       </tab>
                     </tabs>
                   </div>
@@ -155,7 +153,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
     </footer>
   </div>
 </body>

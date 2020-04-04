@@ -6,12 +6,11 @@
 
 <div id="body">
 
-The _Dependency Inversion Principle_ states that,
+<box type="definition">
+<include src="../../common/definitions.md#def-dependency-inversion-principle" />
+</box>
 
-1. High-level modules should not depend on low-level modules. Both should depend on abstractions.
-2. Abstractions should not depend on details. Details should depend on abstractions.
-
-<tip-box>
+<box>
 
 Example:
 
@@ -22,7 +21,7 @@ In design (a), the higher level class `Payroll` depends on the lower level class
 
 Design (b) is more flexible (and less coupled) because now the `Payroll` class need not change when the `Employee` class changes.
 
-</tip-box>
+</box>
 
 </div>
 

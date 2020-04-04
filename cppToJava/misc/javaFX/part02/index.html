@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.13.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SEforSDL</title>
+  <link rel="stylesheet" href="../../../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+  <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
+  <link rel="icon" href="/se-book/favicon.ico">
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <navbar placement="top" type="primary" class="temp-navbar">
+        <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+        <li slot="right">
+          <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+        </li>
+      </navbar>
+    </header>
+    <div id="flex-body">
+      <div id="content-wrapper">
+        <h1 id="javafx-9-tutorial-part-2-model-and-tableview">JavaFx 9 tutorial - Part 2: Model and TableView<a class="fa fa-anchor" href="#javafx-9-tutorial-part-2-model-and-tableview"></a></h1>
+        <h2 id="introduction">Introduction<a class="fa fa-anchor" href="#introduction"></a></h2>
+        <p>In this tutorial, we will create the other parts of the application (mainly the model and the controller). We will also use <code>ObservableList</code> and <code>*Property</code> to bind our list of new model's <code>Person</code>s, and their
+          individual details, to the view, with the controller as the &quot;middleman&quot;.</p>
+        <img src="/se-book/cppToJava/misc/javaFX/part02/images/address-app-final-screenshot.png" height="350">
+        <p></p>
+        <h2 id="create-the-model-class">Create the Model class<a class="fa fa-anchor" href="#create-the-model-class"></a></h2>
+        <p>We need a model class in order to hold information about the people in our address book. Add a new class to the <code>model</code> package (<code>seedu.address.model</code>) called <code>Person</code>. The <code>Person</code> class will encapsulate
+          the details of an individual person such as name, address and birthday. Add the following code to the class. The JavaFX specifics will be explained after the code snippet.</p>
+        <p><strong>Person.java</strong></p>
+        <pre><code class="hljs java"><span><span class="hljs-keyword">package</span> seedu.address.model;</span><span>&#x200B;</span><span><span class="hljs-keyword">import</span> java.time.LocalDate;</span><span>&#x200B;</span><span><span class="hljs-keyword">import</span> javafx.beans.property.IntegerProperty;</span><span><span class="hljs-keyword">import</span> javafx.beans.property.ObjectProperty;</span><span><span class="hljs-keyword">import</span> javafx.beans.property.SimpleIntegerProperty;</span><span><span class="hljs-keyword">import</span> javafx.beans.property.SimpleObjectProperty;</span><span><span class="hljs-keyword">import</span> javafx.beans.property.SimpleStringProperty;</span><span><span class="hljs-keyword">import</span> javafx.beans.property.StringProperty;</span><span>&#x200B;</span><span><span class="hljs-comment">/**</span></span><span><span class="hljs-comment"> * Model class for a Person.</span></span><span><span class="hljs-comment"> */</span></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{</span><span>&#x200B;</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> StringProperty firstName;</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> StringProperty lastName;</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> StringProperty street;</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> IntegerProperty postalCode;</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> StringProperty city;</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> ObjectProperty&lt; LocalDate &gt; birthday;</span><span>&#x200B;</span><span>    <span class="hljs-comment">/**</span></span><span><span class="hljs-comment">     * Default constructor.</span></span><span><span class="hljs-comment">     */</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">this</span>(<span class="hljs-keyword">null</span>, <span class="hljs-keyword">null</span>);</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-comment">/**</span></span><span><span class="hljs-comment">     * Constructor with some initial data.</span></span><span><span class="hljs-comment">     */</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(String firstName, String lastName)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.firstName = <span class="hljs-keyword">new</span> SimpleStringProperty(firstName);</span><span>        <span class="hljs-keyword">this</span>.lastName = <span class="hljs-keyword">new</span> SimpleStringProperty(lastName);</span><span>&#x200B;</span><span>        <span class="hljs-comment">// Some initial dummy data, just for convenient testing.</span></span><span>        <span class="hljs-keyword">this</span>.street = <span class="hljs-keyword">new</span> SimpleStringProperty(<span class="hljs-string">"some street"</span>);</span><span>        <span class="hljs-keyword">this</span>.postalCode = <span class="hljs-keyword">new</span> SimpleIntegerProperty(<span class="hljs-number">1234</span>);</span><span>        <span class="hljs-keyword">this</span>.city = <span class="hljs-keyword">new</span> SimpleStringProperty(<span class="hljs-string">"some city"</span>);</span><span>        <span class="hljs-keyword">this</span>.birthday = <span class="hljs-keyword">new</span> SimpleObjectProperty&lt; LocalDate &gt;(LocalDate.of(<span class="hljs-number">1999</span>, <span class="hljs-number">2</span>, <span class="hljs-number">21</span>));</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getFirstName</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> firstName.get();</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setFirstName</span><span class="hljs-params">(String firstName)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.firstName.set(firstName);</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> StringProperty <span class="hljs-title">firstNameProperty</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> firstName;</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getLastName</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> lastName.get();</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setLastName</span><span class="hljs-params">(String lastName)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.lastName.set(lastName);</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> StringProperty <span class="hljs-title">lastNameProperty</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> lastName;</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getStreet</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> street.get();</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setStreet</span><span class="hljs-params">(String street)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.street.set(street);</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> StringProperty <span class="hljs-title">streetProperty</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> street;</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getPostalCode</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> postalCode.get();</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setPostalCode</span><span class="hljs-params">(<span class="hljs-keyword">int</span> postalCode)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.postalCode.set(postalCode);</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> IntegerProperty <span class="hljs-title">postalCodeProperty</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> postalCode;</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getCity</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> city.get();</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setCity</span><span class="hljs-params">(String city)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.city.set(city);</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> StringProperty <span class="hljs-title">cityProperty</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> city;</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> LocalDate <span class="hljs-title">getBirthday</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">return</span> birthday.get();</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setBirthday</span><span class="hljs-params">(LocalDate birthday)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.birthday.set(birthday);</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-keyword">public</span> ObjectProperty&lt; LocalDate &gt; birthdayProperty() {</span><span>        <span class="hljs-keyword">return</span> birthday;</span><span>    }</span><span>}</span></code></pre>
+        <h3 id="explanations">Explanations<a class="fa fa-anchor" href="#explanations"></a></h3>
+        <ul>
+          <li>With JavaFX, it is common to use <code>*Property</code> for all fields of a model class. A <code>Property</code> allows us, for example, to automatically be notified when the <code>lastName</code> or any other variable is changed. This helps
+            us keep the view in sync with the data.</li>
+          <li>To learn more about <code>*Property</code>, refer to <a href="http://docs.oracle.com/javase/8/javafx/properties-binding-tutorial/binding.htm">Using JavaFX Properties and Binding</a></li>
+          <li><code>LocalDate</code>, the type that we are using for <code>birthday</code>, is part of the <a href="http://docs.oracle.com/javase/tutorial/datetime/iso/">new Date and Time API since JDK 8</a></li>
+        </ul>
+        <h2 id="a-list-of-persons">A List of Persons<a class="fa fa-anchor" href="#a-list-of-persons"></a></h2>
+        <p>The main data that our application manages is simply a bunch of persons. Let's create a list of <code>Person</code> objects inside the <code>MainApp</code> class. All other controller classes will later get access to that central list inside the
+          <code>MainApp</code>.</p>
+        <h3 id="observablelist">ObservableList<a class="fa fa-anchor" href="#observablelist"></a></h3>
+        <p>We are working with JavaFX view classes that need to be informed about any changes made to the list of persons. This is important, since otherwise the view would not be in sync with the data. For this purpose, JavaFX introduces some new <a href="http://docs.oracle.com/javase/8/javafx/collections-tutorial/collections.htm">Collection classes</a>.</p>
+        <p>Among all these collections, we need the <code>ObservableList</code>. To create a new <code>ObservableList</code>, add the following code at the beginning of the <code>MainApp</code> class. We'll also add a constructor that creates some sample
+          data and a public getter method:</p>
+        <p><strong>MainApp.java</strong></p>
+        <pre><code class="hljs java"><span><span class="hljs-comment">// ... AFTER THE OTHER VARIABLES ...</span></span><span>&#x200B;</span><span><span class="hljs-comment">/**</span></span><span><span class="hljs-comment">* The data as an observable list of {<span class="hljs-doctag">@link</span> Person}.</span></span><span><span class="hljs-comment">*/</span></span><span><span class="hljs-keyword">private</span> ObservableList&lt; Person &gt; personData = FXCollections.observableArrayList();</span><span>&#x200B;</span><span>    <span class="hljs-comment">/**</span></span><span><span class="hljs-comment">     * Constructor</span></span><span><span class="hljs-comment">     */</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MainApp</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-comment">// Add some sample data</span></span><span>        personData.add(<span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Hans"</span>, <span class="hljs-string">"Muster"</span>));</span><span>        personData.add(<span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Ruth"</span>, <span class="hljs-string">"Mueller"</span>));</span><span>        personData.add(<span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Heinz"</span>, <span class="hljs-string">"Kurz"</span>));</span><span>        personData.add(<span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Cornelia"</span>, <span class="hljs-string">"Meier"</span>));</span><span>        personData.add(<span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Werner"</span>, <span class="hljs-string">"Meyer"</span>));</span><span>        personData.add(<span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Lydia"</span>, <span class="hljs-string">"Kunz"</span>));</span><span>        personData.add(<span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Anna"</span>, <span class="hljs-string">"Best"</span>));</span><span>        personData.add(<span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Stefan"</span>, <span class="hljs-string">"Meier"</span>));</span><span>        personData.add(<span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Martin"</span>, <span class="hljs-string">"Mueller"</span>));</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-comment">/**</span></span><span><span class="hljs-comment">     * Returns the data as an observable list of {<span class="hljs-doctag">@link</span> Person}.</span></span><span><span class="hljs-comment">     */</span></span><span>    <span class="hljs-keyword">public</span> ObservableList&lt; Person &gt; getPersonData() {</span><span>        <span class="hljs-keyword">return</span> personData;</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-comment">// ... THE REST OF THE CLASS ...</span></span></code></pre>
+        <h2 id="the-personoverviewcontroller">The PersonOverviewController<a class="fa fa-anchor" href="#the-personoverviewcontroller"></a></h2>
+        <p>We have our model and view. Let's get our data into our table. We'll need a controller for our <code>PersonOverview.fxml</code> to act as a &quot;middleman&quot; for the model and view.</p>
+        <p>Create a normal Java class inside the <code>view</code> package called <code>PersonOverviewController</code>.</p>
+        <box type="tip">
+          <p>Note: We must put the class inside the same package as <code>PersonOverview.fxml</code>, otherwise the SceneBuilder won't be able to find it.</p>
+        </box>
+        <p>We will add some instance variables that give us access to the table and the labels inside the view. The fields and some methods have a special <code>@FXML</code> annotation. This is necessary in order for the <code>.fxml</code> file to have access
+          to private fields and private methods. After we have everything set up in the <code>.fxml</code> file, the application will automatically fill the variables when the <code>.fxml</code> file is loaded.</p>
+        <p>So let's add the following code:</p>
+        <box type="tip">
+          <p>Note: Remember to always use the <code>javafx</code> imports, NOT <code>awt</code> or <code>swing</code>.</p>
+        </box>
+        <p><strong>PersonOverviewController.java</strong></p>
+        <pre><code class="hljs java"><span><span class="hljs-keyword">package</span> seedu.address.view;</span><span>&#x200B;</span><span><span class="hljs-keyword">import</span> javafx.fxml.FXML;</span><span><span class="hljs-keyword">import</span> javafx.scene.control.Label;</span><span><span class="hljs-keyword">import</span> javafx.scene.control.TableColumn;</span><span><span class="hljs-keyword">import</span> javafx.scene.control.TableView;</span><span><span class="hljs-keyword">import</span> seedu.address.MainApp;</span><span><span class="hljs-keyword">import</span> seedu.address.model.Person;</span><span>&#x200B;</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PersonOverviewController</span> </span>{</span><span>    <span class="hljs-meta">@FXML</span></span><span>    <span class="hljs-keyword">private</span> TableView&lt; Person&gt; personTable;</span><span>    <span class="hljs-meta">@FXML</span></span><span>    <span class="hljs-keyword">private</span> TableColumn&lt; Person, String&gt; firstNameColumn;</span><span>    <span class="hljs-meta">@FXML</span></span><span>    <span class="hljs-keyword">private</span> TableColumn&lt; Person, String&gt; lastNameColumn;</span><span>&#x200B;</span><span>    <span class="hljs-meta">@FXML</span></span><span>    <span class="hljs-keyword">private</span> Label firstNameLabel;</span><span>    <span class="hljs-meta">@FXML</span></span><span>    <span class="hljs-keyword">private</span> Label lastNameLabel;</span><span>    <span class="hljs-meta">@FXML</span></span><span>    <span class="hljs-keyword">private</span> Label streetLabel;</span><span>    <span class="hljs-meta">@FXML</span></span><span>    <span class="hljs-keyword">private</span> Label postalCodeLabel;</span><span>    <span class="hljs-meta">@FXML</span></span><span>    <span class="hljs-keyword">private</span> Label cityLabel;</span><span>    <span class="hljs-meta">@FXML</span></span><span>    <span class="hljs-keyword">private</span> Label birthdayLabel;</span><span>&#x200B;</span><span>    <span class="hljs-comment">// Reference to the main application.</span></span><span>    <span class="hljs-keyword">private</span> MainApp mainApp;</span><span>&#x200B;</span><span>    <span class="hljs-comment">/**</span></span><span><span class="hljs-comment">     * The constructor. It is called before the initialize() method.</span></span><span><span class="hljs-comment">     */</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">PersonOverviewController</span><span class="hljs-params">()</span> </span>{</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-comment">/**</span></span><span><span class="hljs-comment">     * Initializes the controller class. This method is automatically called</span></span><span><span class="hljs-comment">     * after the fxml file has been loaded.</span></span><span><span class="hljs-comment">     */</span></span><span>    <span class="hljs-meta">@FXML</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">initialize</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-comment">// Initialize the person table with the two columns.</span></span><span>        firstNameColumn.setCellValueFactory(cellData -&gt; cellData.getValue().firstNameProperty());</span><span>        lastNameColumn.setCellValueFactory(cellData -&gt; cellData.getValue().lastNameProperty());</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-comment">/**</span></span><span><span class="hljs-comment">     * Is called by the main application to give a reference back to itself.</span></span><span><span class="hljs-comment">     */</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setMainApp</span><span class="hljs-params">(MainApp mainApp)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.mainApp = mainApp;</span><span>&#x200B;</span><span>        <span class="hljs-comment">// Add observable list data to the table</span></span><span>        personTable.setItems(mainApp.getPersonData());</span><span>    }</span><span>}</span></code></pre>
+        <h3 id="explanations-2">Explanations<a class="fa fa-anchor" href="#explanations-2"></a></h3>
+        <ul>
+          <li>All fields and methods where the <code>.fxml</code> file needs access must be annotated with <code>@FXML</code>.
+            <ul>
+              <li>Actually, only if they are private, but it's better to have them private and mark them with the annotation!</li>
+            </ul>
+          </li>
+          <li>The <code>initialize()</code> method is automatically called after the <code>.fxml</code> file has been loaded. At this time, all the FXML fields should have been initialized already.</li>
+          <li>The <code>setCellValueFactory(...)</code> that we set on the table colums are used to determine which field inside the <code>Person</code> objects should be used for the particular column. The arrow <code>-&gt;</code> indicates that we're using
+            a Java 8 feature called Lambdas. (Another option would be to use a <a href="https://docs.oracle.com/javase/9/docs/api/javafx/scene/control/cell/PropertyValueFactory.html"><code>PropertyValueFactory</code></a>, but this is not type-safe).</li>
+        </ul>
+        <box type="tip">
+          <p>Note:</p>
+          <p>We're only using <code>StringProperty</code> values for our table columns in this example. When you want to use <code>IntegerProperty</code> or <code>DoubleProperty</code>, the <code>setCellValueFactory(...)</code> must have an additional <code>asObject()</code>:</p>
+          <pre><code class="hljs java"><span>myIntegerColumn.setCellValueFactory(cellData -&gt;</span><span>    cellData.getValue().myIntegerProperty().asObject());</span></code></pre>
+          <p>This is necessary because of a bad design decision of JavaFX (see <a href="https://community.oracle.com/thread/2575601">this discussion</a> for more details).</p>
+        </box>
+        <h3 id="connecting-mainapp-with-the-personoverviewcontroller">Connecting MainApp with the PersonOverviewController<a class="fa fa-anchor" href="#connecting-mainapp-with-the-personoverviewcontroller"></a></h3>
+        <p>The <code>setMainApp(...)</code> method must be called by the <code>MainApp</code> class. This gives us a way to access the <code>MainApp</code> object and get the list of <code>Persons</code> and other things. Add the following three lines to
+          <code>showPersonOverview()</code> the method:</p>
+        <p><strong>MainApp.java - additional lines to add to showPersonOverview() method</strong></p>
+        <pre><code class="hljs java"><span><span class="hljs-comment">// (.... root layout statement goes here ....)</span></span><span>&#x200B;</span><span><span class="hljs-comment">// Give the controller access to the main app.</span></span><span>    PersonOverviewController controller = loader.getController();</span><span>    controller.setMainApp(<span class="hljs-keyword">this</span>);</span><span>&#x200B;</span><span><span class="hljs-comment">// (.... catch statement goes here ....)</span></span></code></pre>
+        <p>Your <code>showPersonOverview()</code> method in <code>MainApp</code> should now look like this:</p>
+        <p><strong>MainApp.java - new showPersonOverview() method</strong></p>
+        <pre><code class="hljs java"><span><span class="hljs-comment">/**</span></span><span><span class="hljs-comment">* Shows the person overview inside the root layout.</span></span><span><span class="hljs-comment">*/</span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">showPersonOverview</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-keyword">try</span> {</span><span>        <span class="hljs-comment">// Load person overview.</span></span><span>        FXMLLoader loader = <span class="hljs-keyword">new</span> FXMLLoader();</span><span>        loader.setLocation(MainApp<span class="hljs-class">.<span class="hljs-keyword">class</span>.<span class="hljs-title">getResource</span>("<span class="hljs-title">view</span>/<span class="hljs-title">PersonOverview</span>.<span class="hljs-title">fxml</span>"))</span>;</span><span>        AnchorPane personOverview = loader.load();</span><span>&#x200B;</span><span>        <span class="hljs-comment">// Set person overview into the center of root layout.</span></span><span>        rootLayout.setCenter(personOverview);</span><span>&#x200B;</span><span>        <span class="hljs-comment">// Give the controller access to the main app.</span></span><span>        PersonOverviewController controller = loader.getController();</span><span>        controller.setMainApp(<span class="hljs-keyword">this</span>);</span><span>    } <span class="hljs-keyword">catch</span> (IOException e) {</span><span>        e.printStackTrace();</span><span>    }</span><span>}</span></code></pre>
+        <h2 id="hook-the-view-to-the-controller">Hook the View to the controller<a class="fa fa-anchor" href="#hook-the-view-to-the-controller"></a></h2>
+        <p>We're almost there! But one thing is missing: We haven't told our <code>PersonOverview.fxml</code> file which controller to use, and which element should match to which field inside the controller.</p>
+        <ol>
+          <li>Open <code>PersonOverview.fxml</code> with the SceneBuilder.</li>
+          <li>Open the Controller group on the left side (just below Hierarchy), and select the <code>seedu.address.view.PersonOverviewController</code> as the controller class.</li>
+        </ol>
+        <img src="/se-book/cppToJava/misc/javaFX/part02/images/hook-view-controller.png" height="350">
+        <p></p>
+        <ol start="3">
+          <li>Select the <code>TableView</code> in the Hierarchy group.</li>
+          <li>In the Inspector view, under the Code group, set 'fx:id' to <code>personTable</code>.</li>
+        </ol>
+        <img src="/se-book/cppToJava/misc/javaFX/part02/images/hook-view-person-table.png" height="250">
+        <p></p>
+        <ol start="5">
+          <li>Do the same for the table columns. Select <code>firstNameColumn</code> and <code>lastNameColumn</code> for the 'fx:id' respectively.</li>
+          <li>For each label in the second column of the grid pane, choose the corresponding 'fx:id'.</li>
+        </ol>
+        <img src="/se-book/cppToJava/misc/javaFX/part02/images/hook-view-labels.png" width="650">
+        <p></p>
+        <ol start="7">
+          <li>Save the <code>.fxml</code> file.</li>
+        </ol>
+        <h2 id="opening-up-the-personoverviewcontroller-to-javafx">Opening up the <code>PersonOverviewController</code> to JavaFx<a class="fa fa-anchor" href="#opening-up-the-personoverviewcontroller-to-javafx"></a></h2>
+        <p>If you try and run the application now, you will encounter the following error:</p>
+        <pre><code class="hljs"><span>javafx.fxml.LoadException: ...</span><span>&#x200B;</span><span>...</span><span>&#x200B;</span><span>Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueElement (in module javafx.fxml) cannot access class seedu.address.view.PersonOverviewController (in module AddressApp) because module AddressApp does not export seedu.address.view to module javafx.fxml</span></code></pre>
+        <p>This is because JavaFx is unable to access our <code>PersonOverviewController</code> class.</p>
+        <p>To fix this, add this line of code to <code>src/module-info.java</code>:</p>
+        <pre><code class="hljs java"><span><span class="hljs-keyword">module</span> AddressApp {</span><span>    ... </span><span>&#x200B;</span><span>    opens seedu.address.view;</span><span>}</span></code></pre>
+        <p>The file should now look something like this:</p>
+        <p><strong>module-info.java</strong></p>
+        <pre><code class="hljs java"><span><span class="hljs-keyword">module</span> AddressApp {</span><span>    <span class="hljs-keyword">requires</span> javafx.graphics;</span><span>    <span class="hljs-keyword">requires</span> javafx.fxml;</span><span>    <span class="hljs-keyword">requires</span> javafx.controls;</span><span>&#x200B;</span><span>    <span class="hljs-keyword">exports</span> seedu.address;</span><span>    opens seedu.address.view;</span><span>}</span></code></pre>
+        <h2 id="start-the-application">Start the Application<a class="fa fa-anchor" href="#start-the-application"></a></h2>
+        <p>When you start your application now, you should see something like this:</p>
+        <img src="/se-book/cppToJava/misc/javaFX/part02/images/address-app-final-screenshot.png" height="350">
+        <p></p>
+        <p>Congratulations! The application now shows the list of <code>Person</code>s in the view!</p>
+        <p>You may notice that selecting a person in the <code>TableView</code> does nothing to the labels at the right side. That is because the user interaction portion has not been programmed yet, which we will cover in the next part of the tutorial.</p>
+      </div>
+    </div>
+    <footer>
+      <div class="text-center">
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
+    </footer>
+  </div>
+</body>
+<script src="../../../../markbind/js/vue.min.js"></script>
+<script src="../../../../markbind/js/vue-strap.min.js"></script>
+<script src="../../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+  const baseUrl = '/se-book'
+  const enableSearch = true
+</script>
+<script src="../../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+      indexName: "se-edu",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {},
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+<script src="../../../../markbind/layouts/default/scripts.js"></script>
+
+</html>

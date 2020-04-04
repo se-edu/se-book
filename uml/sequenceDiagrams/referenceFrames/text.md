@@ -13,7 +13,7 @@ Notation:
 <img src="{{baseUrl}}/uml/sequenceDiagrams/referenceFrames/images/notation.png" height="100" />
 <p/>
 
-<tip-box>
+<box>
 
 {{ icon_example }} The details of the `get minefield appearance` interactions have been omitted from the diagram.
 
@@ -24,7 +24,7 @@ Those details are shown in a separate sequence diagram given below.<br>
 <img src="{{baseUrl}}/uml/sequenceDiagrams/referenceFrames/images/textLogic.png" height="170" />
 <p/>
 
-</tip-box>
+</box>
 
 </div>
 

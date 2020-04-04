@@ -12,14 +12,14 @@
 * **Integration is harder** because multiple components coupled with each other have to be integrated at the same time.
 * **Testing and reuse of the module is harder** due to its dependence on other modules.
 
-<tip-box>
+<box>
 
 {{ icon_example }} In the example below, design `A` appears to have a more coupling between the components than design `B`.
 
 <img src="{{baseUrl}}/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220" />
 <p/>
 
-</tip-box>
+</box>
 </div>
 <div id="extras">
 

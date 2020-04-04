@@ -8,21 +8,19 @@
 
 **Method overloading is when there are multiple methods with the same name but different type signatures.** Overloading is used to indicate that multiple operations do similar things but take different parameters. 
 
-<tip-box type="primary">
+<box type="definition">
 
 <include src="../../../common/definitions.md#def-type-signature" />
 
-</tip-box>
+</box>
 
-<tip-box>
+<box>
 
 {{ icon_example }} In the case below, the `calculate` method is overloaded because the two methods have the same name but different type signatures `(String)` and `(int)`
 
 * `calculate(String): void`
 * `calculate(int): void`
-
-
-</tip-box>
+</box>
 
 
 </div>

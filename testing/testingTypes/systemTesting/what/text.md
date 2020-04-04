@@ -6,13 +6,15 @@
 
 <div id="body">
 
-**_System testing_: take the _whole system_ and test it _against the system specification_.**
+<box type="definition">
+<include src="../../../../common/definitions.md#def-system-testing" />
+</box>
 
 System testing is typically done by a testing team (also called a QA team).
 
 **System test cases are based on the specified external behavior of the system.** Sometimes, system tests go beyond the bounds defined in the specification. This is useful when testing that the system fails 'gracefully' having pushed beyond its limits.
 
-<tip-box>
+<box>
 
 {{ icon_example }} Suppose the SUT is a browser supposedly capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully if pushed beyond its limits. 
 
@@ -24,7 +26,7 @@ Test case: load a web page that is too big
 
 This test case would fail if the browser attempted to load the large file anyway and crashed.
 
-</tip-box>
+</box>
 
 **System testing includes testing against non-functional requirements too.** Here are some examples.
 

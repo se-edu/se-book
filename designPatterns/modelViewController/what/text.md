@@ -27,7 +27,7 @@ The relationship between the components can be observed in the diagram below. Ty
 <img src="{{baseUrl}}/designPatterns/modelViewController/what/images/classDiagram.png" width="400" />
 <p/>
 
-<tip-box>
+<box>
 
 {{ icon_example }} Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving data of one student.
 
@@ -36,7 +36,7 @@ The relationship between the components can be observed in the diagram below. Ty
 
 In the diagram above, when the user clicks on a button using the UI, the ‘click’ event is caught and handled by the `UiController`. The `ref` frame indicates that the interactions within that frame have been extracted out to another separate sequence diagram.
 
-</tip-box>
+</box>
 
 Note that in a simple UI where there’s only one view, Controller and View can be combined as one class.
 

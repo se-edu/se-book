@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Software Design Patterns [Printable]</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -46,13 +44,13 @@
                 </div>
               </p>
               <div>
-                <tip-box type="definition">
+                <box type="definition">
                   <div>
                     <p><strong>Design Pattern</strong> : An <em>elegant reusable solution</em> to a <em>commonly recurring problem</em> within a <em>given context</em> in software design.</p>
                   </div>
-                </tip-box>
+                </box>
                 <p>In software development, there are certain problems that recur in a certain context.</p>
-                <tip-box>
+                <box>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of recurring design problems:</p>
                   <div class="table-responsive">
                     <table class="markbind-table table table-bordered table-striped">
@@ -74,8 +72,8 @@
                       </tbody>
                     </table>
                   </div>
-                </tip-box>
-                <p>After repeated attempts at solving such problems, better solutions are discovered and refined over time. These solutions are known as design patterns, <strong>a term popularized by the seminal book</strong> <a href="https://en.wikipedia.org/wiki/Design_Patterns"><strong><em>Design Patterns: Elements of Reusable Object-Oriented Software</em> by the so-called &quot;Gang of Four&quot; (GoF)</strong></a> written by Eric Gamma, Richard Helm, Ralph Johnson,and John Vlissides.</p>
+                </box>
+                <p>After repeated attempts at solving such problems, better solutions are discovered and refined over time. These solutions are known as design patterns, <strong>a term popularized by the seminal book</strong> <a href="https://en.wikipedia.org/wiki/Design_Patterns"><strong><em>Design Patterns: Elements of Reusable Object-Oriented Software</em> by the so-called &quot;Gang of Four&quot; (GoF)</strong></a>                  written by Eric Gamma, Richard Helm, Ralph Johnson,and John Vlissides.</p>
               </div>
             </div>
             <div>
@@ -100,7 +98,7 @@
             <div>
               <p>
                 <div>
-                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                  <h4 id="what-2"><span>What</span><a class="fa fa-anchor" href="#what-2"></a></h4>
                 </div>
               </p>
               <div>
@@ -109,12 +107,15 @@
                 <p><strong>Problem</strong></p>
                 <p>A normal class can be instantiated multiple times by invoking the constructor.</p>
                 <p><strong>Solution</strong></p>
-                <p>Make the constructor of the singleton class <code>private</code>, <span class="dimmed"> because a <code>public</code> constructor will allow others to instantiate the class at will</span>. Provide a <code>public</code> class-level method to access the <em>single instance</em>.</p>
-                <tip-box>
+                <p>Make the constructor of the singleton class <code>private</code>, <span class="dimmed">because a <code>public</code> constructor will allow others to instantiate the class at will</span>. Provide a <code>public</code> class-level method
+                  to access the <em>single instance</em>.</p>
+                <box>
                   <p>Example:</p>
-                  <img src="/se-book/designPatterns/singleton/what/images/singleton.png" height="130">
+                  <p>
+                    <pic src="/se-book/designPatterns/singleton/what/images/singleton.png"></pic>
+                  </p>
                   <p></p>
-                </tip-box>
+                </box>
               </div>
             </div>
             <div>
@@ -125,33 +126,18 @@
               </p>
               <div>
                 <p>Here is the typical implementation of how the Singleton pattern is applied to a class:</p>
-                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logic theOne = <span class="hljs-keyword">null</span>;
-
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Logic</span><span class="hljs-params">()</span> </span>{
-        ...
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Logic <span class="hljs-title">getInstance</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">if</span> (theOne == <span class="hljs-keyword">null</span>) {
-            theOne = <span class="hljs-keyword">new</span> Logic();
-        }
-        <span class="hljs-keyword">return</span> theOne;
-    }
-}
-</code></pre>
+                <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logic theOne = <span class="hljs-keyword">null</span>;</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Logic</span><span class="hljs-params">()</span> </span>{</span><span>        ...</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Logic <span class="hljs-title">getInstance</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-keyword">if</span> (theOne == <span class="hljs-keyword">null</span>) {</span><span>            theOne = <span class="hljs-keyword">new</span> Logic();</span><span>        }</span><span>        <span class="hljs-keyword">return</span> theOne;</span><span>    }</span><span>}</span></code></pre>
                 <p>Notes:</p>
                 <ul>
                   <li>The constructor is <code>private</code>, which prevents instantiation from outside the class.</li>
                   <li>The single instance of the singleton class is maintained by a <code>private</code> class-level variable.</li>
-                  <li>Access to this object is provided by a <code>public</code> class-level operation <code>getInstance()</code> which instantiates a single copy of the singleton class when it is executed for the first time. Subsequent calls to this operation return the single instance of the class.</li>
+                  <li>Access to this object is provided by a <code>public</code> class-level operation <code>getInstance()</code> which instantiates a single copy of the singleton class when it is executed for the first time. Subsequent calls to this operation
+                    return the single instance of the class.</li>
                 </ul>
                 <p>If <code>Logic</code> was not a Singleton class, an object is created like this:</p>
-                <pre><code class="hljs java">Logic m = <span class="hljs-keyword">new</span> Logic();
-</code></pre>
+                <pre><code class="hljs java"><span>Logic m = <span class="hljs-keyword">new</span> Logic();</span></code></pre>
                 <p>But now, the <code>Logic</code> object needs to be accessed like this:</p>
-                <pre><code class="hljs java">Logic m = Logic.getInstance();
-</code></pre>
+                <pre><code class="hljs java"><span>Logic m = Logic.getInstance();</span></code></pre>
               </div>
             </div>
             <div>
@@ -173,115 +159,131 @@
                   <li>In testing, it is difficult to replace Singleton objects with stubs (static methods cannot be overridden)</li>
                   <li>In testing, singleton objects carry data from one test to another even when we want each test to be independent of the others.</li>
                 </ul>
-                <p>Given there are some significant cons, it is recommended that you apply the Singleton pattern when, in addition to requiring only one instance of a class, there is a risk of creating multiple objects by mistake, and creating such multiple objects has real negative consequences.</p>
+                <p>Given there are some significant cons, it is recommended that you apply the Singleton pattern when, in addition to requiring only one instance of a class, there is a risk of creating multiple objects by mistake, and creating such multiple
+                  objects has real negative consequences.</p>
               </div>
             </div>
             <h2 id="abstraction-occurrence-pattern">Abstraction Occurrence Pattern<a class="fa fa-anchor" href="#abstraction-occurrence-pattern"></a></h2>
             <div>
               <p>
                 <div>
-                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                  <h4 id="what-3"><span>What</span><a class="fa fa-anchor" href="#what-3"></a></h4>
                 </div>
               </p>
               <div>
                 <p><strong>Context</strong></p>
                 <p>There is a group of similar entities that appears to be ‘occurrences’ (or ‘copies’) of the same thing, sharing lots of common information, but also differing in significant ways.</p>
-                <tip-box>
-                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In a library, there can be multiple copies of same book title. Each copy shares common information such as book title, author, ISBN etc. However, there are also significant differences like purchase date and barcode number (assumed to be unique for each copy of the book).</p>
+                <box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In a library, there can be multiple copies of same book title. Each copy shares common information such as book title, author, ISBN etc. However, there are also significant
+                    differences like purchase date and barcode number (assumed to be unique for each copy of the book).</p>
                   <p>Other examples:</p>
                   <ul>
                     <li>Episodes of the same TV series</li>
                     <li>Stock items of the same product model (e.g. TV sets of the same model).</li>
                   </ul>
-                </tip-box>
+                </box>
                 <p><strong>Problem</strong></p>
                 <p>Representing the objects mentioned previously as a single class would be problematic because it results in duplication of data which can lead to inconsistencies in data (if some of the duplicates are not updated consistently).</p>
-                <tip-box>
-                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial numbers.</p>
+                <box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Take for example the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different
+                    serial numbers.
+                  </p>
                   <img src="/se-book/designPatterns/abstractionOccurrence/what/images/book.png" height="200">
                   <p></p>
-                  <p>The above solution requires common information to be duplicated by all instances. This will not only waste storage space, but also creates a consistency problem. Suppose that after creating several copies of the same title, the librarian realized that the author name was wrongly spelt. To correct this mistake, the system needs to go through every copy of the same title to make the correction. Also, if a new copy of the title is added later on, the librarian (or the system) has to make sure that all information entered is the same as the existing copies to avoid inconsistency.</p>
-                </tip-box>
+                  <p>The above solution requires common information to be duplicated by all instances. This will not only waste storage space, but also creates a consistency problem. Suppose that after creating several copies of the same title, the librarian
+                    realized that the author name was wrongly spelt. To correct this mistake, the system needs to go through every copy of the same title to make the correction. Also, if a new copy of the title is added later on, the librarian (or the
+                    system) has to make sure that all information entered is the same as the existing copies to avoid inconsistency.</p>
+                </box>
                 <p><strong>Anti-pattern</strong></p>
-                <tip-box>
+                <box>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Refer to the same Library example given above.</p>
                   <img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookFriends.png" height="240">
                   <p></p>
-                  <p>The design above segregates the common and unique information into a class hierarchy. Each book title is represented by a separate class with common data (i.e. Name, Author, ISBN) hard-coded in the class itself. This solution is problematic because each book title is represented as a class, resulting in thousands of classes (one for each title). Every time the library buys new books, the source code of the system will have to be updated with new classes.</p>
-                </tip-box>
+                  <p>The design above segregates the common and unique information into a class hierarchy. Each book title is represented by a separate class with common data (i.e. Name, Author, ISBN) hard-coded in the class itself. This solution is problematic
+                    because each book title is represented as a class, resulting in thousands of classes (one for each title). Every time the library buys new books, the source code of the system will have to be updated with new classes.</p>
+                </box>
                 <p><strong>Solution</strong></p>
                 <p>Let a copy of an entity (e.g. a copy of a book)be represented by two objects instead of one, separating the common and unique information into two classes to avoid duplication.</p>
-                <tip-box>
+                <box>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Given below is how the pattern is applied to the Library example:</p>
                   <img src="/se-book/designPatterns/abstractionOccurrence/what/images/bookTitleBookCopy.png" height="260">
                   <p></p>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here's a more generic example:</p>
                   <img src="/se-book/designPatterns/abstractionOccurrence/what/images/beforeAfter.png" height="370">
                   <p></p>
-                </tip-box>
+                </box>
                 <p>The general solution:</p>
                 <img src="/se-book/designPatterns/abstractionOccurrence/what/images/abstractionOccurrence.png" height="40">
                 <p></p>
-                <p>The <code>&lt;&lt; Abstraction &gt;&gt;</code> class should hold all common information, and the unique information should be kept by the <code>&lt;&lt; Occurrence &gt;&gt;</code> class. Note that ‘Abstraction’ and ‘Occurrence’ are not class names, but roles played by each class. Think of this diagram as a <em>meta-model</em> (i.e. a ‘model of a model’) of the <code>BookTitle-BookCopy</code> class diagram given above.</p>
+                <p>The <code>&lt;&lt;Abstraction&gt;&gt;</code> class should hold all common information, and the unique information should be kept by the <code>&lt;&lt;Occurrence&gt;&gt;</code> class. Note that ‘Abstraction’ and ‘Occurrence’ are not class
+                  names, but roles played by each class. Think of this diagram as a <em>meta-model</em> (i.e. a ‘model of a model’) of the <code>BookTitle-BookCopy</code> class diagram given above.</p>
               </div>
             </div>
             <h2 id="facade-pattern">Facade Pattern<a class="fa fa-anchor" href="#facade-pattern"></a></h2>
             <div>
               <p>
                 <div>
-                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                  <h4 id="what-4"><span>What</span><a class="fa fa-anchor" href="#what-4"></a></h4>
                 </div>
               </p>
               <div>
                 <p><strong>Context</strong></p>
                 <p>Components need to access functionality deep inside other components.</p>
-                <tip-box>
-                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>UI</code> component of a <code>Library</code> system might want to access functionality of the <code>Book</code> class contained inside the <code>Logic</code> component.</p>
+                <box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>UI</code> component of a <code>Library</code> system might want to access functionality of the <code>Book</code> class contained inside the <code>Logic</code>                    component.</p>
                   <img src="/se-book/designPatterns/facade/what/images/textBook.png" height="120">
                   <p></p>
-                </tip-box>
+                </box>
                 <p><strong>Problem</strong></p>
-                <p>Access to the component should be allowed without exposing its internal details. <span class="dimmed"> e.g. the <code>UI</code> component should access the functionality of the <code>Logic</code> component without knowing that it contained a <code>Book</code> class within it.</span></p>
+                <p>Access to the component should be allowed without exposing its internal details. <span class="dimmed">e.g.  the <code>UI</code> component should access the functionality of the <code>Logic</code> component without knowing that it contained a <code>Book</code> class within it.</span></p>
                 <p><strong>Solution</strong></p>
-                <p>Include a <tooltip content="a French word that means 'front of a building'">Façade</tooltip> class that sits between the component internals and users of the component such that all access to the component happens through the Facade class.</p>
-                <tip-box>
+                <p>Include a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">a French word that means 'front of a building'</span>Façade</span> class that sits
+                  between the component internals and users of the component such that all access to the component happens through the Facade class.</p>
+                <box>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following class diagram applies the Façade pattern to the <code>Library System</code> example. The <code>LibraryLogic</code> class is the Facade class.</p>
                   <img src="/se-book/designPatterns/facade/what/images/textLibraryBook.png" height="120">
                   <p></p>
-                </tip-box>
+                </box>
               </div>
             </div>
             <h2 id="command-pattern">Command Pattern<a class="fa fa-anchor" href="#command-pattern"></a></h2>
             <div>
               <p>
                 <div>
-                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                  <h4 id="what-5"><span>What</span><a class="fa fa-anchor" href="#what-5"></a></h4>
                 </div>
               </p>
               <div>
                 <p><strong>Context</strong></p>
                 <p>A system is required to execute a number of commands, each doing a different task. For example, a system might have to support <code>Sort</code>, <code>List</code>, <code>Reset</code> commands.</p>
                 <p><strong>Problem</strong></p>
-                <p>It is preferable that some part of the code executes these commands without having to know each command type. <span class="dimmed"> e.g., there can be a <code>CommandQueue</code> object that is responsible for queuing commands and executing them without knowledge of what each command does.</span></p>
+                <p>It is preferable that some part of the code executes these commands without having to know each command type. <span class="dimmed">e.g., there can be a <code>CommandQueue</code> object that is responsible for queuing commands and executing them without knowledge of what each command does.</span></p>
                 <p><strong>Solution</strong></p>
                 <p>The essential element of this pattern is to have a general <code>&lt;&lt;Command&gt;&gt;</code> object that can be passed around, stored, executed, etc without knowing the type of command (i.e. via polymorphism).</p>
                 <p>Let us examine an example application of the pattern first:</p>
-                <tip-box>
-                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the example solution below, the <code>CommandCreator</code> creates <code>List</code>, <code>Sort</code>, and <code>Reset Command</code> objects and adds them to the <code>CommandQueue</code> object. The <code>CommandQueue</code> object treats them all as <code>Command</code> objects and performs the execute/undo operation on each of them without knowledge of the specific <code>Command</code> type. When executed, each <code>Command</code> object will access the <code>DataStore</code> object to carry out its task. The <code>Command</code> class can also be an abstract class or an interface.</p>
+                <box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the example solution below, the <code>CommandCreator</code> creates <code>List</code>, <code>Sort</code>, and <code>Reset Command</code> objects and adds them to the
+                    <code>CommandQueue</code> object. The <code>CommandQueue</code> object treats them all as <code>Command</code> objects and performs the execute/undo operation on each of them without knowledge of the specific <code>Command</code> type.
+                    When executed, each <code>Command</code> object will access the <code>DataStore</code> object to carry out its task. The <code>Command</code> class can also be an abstract class or an interface.</p>
                   <img src="/se-book/designPatterns/command/what/images/commandCreator.png" height="150">
                   <p></p>
-                </tip-box>
+                </box>
                 <p>The general form of the solution is as follows.</p>
                 <img src="/se-book/designPatterns/command/what/images/clientInvoker.png" height="200">
                 <p></p>
-                <p>The <code>&lt;&lt;Client&gt;&gt;</code> creates a <code>&lt;&lt;ConcreteCommand&gt;&gt;</code> object, and passes it to the <code>&lt;&lt;Invoker&gt;&gt;</code>. The <code>&lt;&lt;Invoker&gt;&gt;</code> object treats all commands as a general <code>&lt;&lt;Command&gt;&gt;</code> type. <code>&lt;&lt;Invoker&gt;&gt;</code> issues a request by calling <code>execute()</code> on the command. If a command is undoable, <code>&lt;&lt;ConcreteCommand&gt;&gt;</code> will store the state for undoing the command prior to invoking <code>execute()</code>. In addition, the <code>&lt;&lt;ConcreteCommand&gt;&gt;</code> object may have to be linked to any <code>&lt;&lt;Receiver&gt;&gt;</code> of the command (<tooltip content="the object the command will operate on, in case different commands operate on different objects">?</tooltip>) before it is passed to the <code>&lt;&lt;Invoker&gt;&gt;</code>. Note that an application of the command pattern does not have to follow the structure given above.</p>
+                <p>The <code>&lt;&lt;Client&gt;&gt;</code> creates a <code>&lt;&lt;ConcreteCommand&gt;&gt;</code> object, and passes it to the <code>&lt;&lt;Invoker&gt;&gt;</code>. The <code>&lt;&lt;Invoker&gt;&gt;</code> object treats all commands as a
+                  general
+                  <code>&lt;&lt;Command&gt;&gt;</code> type. <code>&lt;&lt;Invoker&gt;&gt;</code> issues a request by calling <code>execute()</code> on the command. If a command is undoable, <code>&lt;&lt;ConcreteCommand&gt;&gt;</code> will store the
+                  state for undoing the command prior to invoking <code>execute()</code>. In addition, the <code>&lt;&lt;ConcreteCommand&gt;&gt;</code> object may have to be linked to any <code>&lt;&lt;Receiver&gt;&gt;</code> of the command (<span data-mb-component-type="tooltip"
+                    v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">the object the command will operate on, in case different commands operate on different objects</span>?</span>) before it is passed
+                  to the <code>&lt;&lt;Invoker&gt;&gt;</code>. Note that an application of the command pattern does not have to follow the structure given above.</p>
               </div>
             </div>
             <h2 id="model-view-controller-mvc-pattern">Model View Controller (MVC) Pattern<a class="fa fa-anchor" href="#model-view-controller-mvc-pattern"></a></h2>
             <div>
               <p>
                 <div>
-                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                  <h4 id="what-6"><span>What</span><a class="fa fa-anchor" href="#what-6"></a></h4>
                 </div>
               </p>
               <div>
@@ -299,12 +301,13 @@
                 <p>The relationship between the components can be observed in the diagram below. Typically, the UI is the combination of view and controller.</p>
                 <img src="/se-book/designPatterns/modelViewController/what/images/classDiagram.png" width="400">
                 <p></p>
-                <tip-box>
+                <box>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving data of one student.</p>
                   <img src="/se-book/designPatterns/modelViewController/what/images/sequenceDiagram.png" width="500">
                   <p></p>
-                  <p>In the diagram above, when the user clicks on a button using the UI, the ‘click’ event is caught and handled by the <code>UiController</code>. The <code>ref</code> frame indicates that the interactions within that frame have been extracted out to another separate sequence diagram.</p>
-                </tip-box>
+                  <p>In the diagram above, when the user clicks on a button using the UI, the ‘click’ event is caught and handled by the <code>UiController</code>. The <code>ref</code> frame indicates that the interactions within that frame have been extracted
+                    out to another separate sequence diagram.</p>
+                </box>
                 <p>Note that in a simple UI where there’s only one view, Controller and View can be combined as one class.</p>
                 <p>There are many variations of the MVC model used in different domains. For example, the one used in a desktop GUI could be different from the one used in a Web application.</p>
               </div>
@@ -313,13 +316,13 @@
             <div>
               <p>
                 <div>
-                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                  <h4 id="what-7"><span>What</span><a class="fa fa-anchor" href="#what-7"></a></h4>
                 </div>
               </p>
               <div>
                 <p><strong>Context</strong></p>
                 <p>An object (possibly, more than one) is interested to get notified when a change happens to another object. That is, some objects want to ‘observe’ another object.</p>
-                <tip-box>
+                <box>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider this scenario from the a student management system where the user is adding a new student to the system.</p>
                   <img src="/se-book/designPatterns/observer/what/images/sequenceDiagram.png" height="330">
                   <p></p>
@@ -331,71 +334,54 @@
                   <p>When a student is added to the database using <code>NewStudentUi</code> shown above, both <code>StudentListUi</code> and <code>StudentStatsUi</code> should get updated automatically, as shown below.</p>
                   <img src="/se-book/designPatterns/observer/what/images/studentListUI.png" height="180">
                   <p></p>
-                  <p>However, the <code>StudentList</code> object has no knowledge about <code>StudentListUi</code> and <code>StudentStatsUi</code> (note the direction of the navigability) and has no way to inform those objects. This is an example of the type of problem addressed by the Observer pattern.</p>
-                </tip-box>
+                  <p>However, the <code>StudentList</code> object has no knowledge about <code>StudentListUi</code> and <code>StudentStatsUi</code> (note the direction of the navigability) and has no way to inform those objects. This is an example of the
+                    type of problem addressed by the Observer pattern.</p>
+                </box>
                 <p><strong>Problem</strong></p>
                 <p>The ‘observed’ object does not want to be coupled to objects that are ‘observing’ it.</p>
                 <p><strong>Solution</strong></p>
                 <p>Force the communication through an interface known to both parties.</p>
                 <img src="/se-book/designPatterns/observer/what/images/studentListObserver.png" height="160">
                 <p></p>
-                <tip-box>
+                <box>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is the Observer pattern applied to the student management system.</p>
                   <p><strong>During the initialization of the system,</strong></p>
                   <ol>
                     <li>
                       <p>First, create the relevant objects.</p>
-                      <pre><code class="hljs java">StudentList studentList = <span class="hljs-keyword">new</span> StudentList();
-StudentListUi listUi = <span class="hljs-keyword">new</span> StudentListUi();
-StudentStatusUi statusUi = <span class="hljs-keyword">new</span> StudentStatsUi();
-</code></pre>
+                      <pre><code class="hljs java"><span>StudentList studentList = <span class="hljs-keyword">new</span> StudentList();</span><span>StudentListUi listUi = <span class="hljs-keyword">new</span> StudentListUi();</span><span>StudentStatusUi statusUi = <span class="hljs-keyword">new</span> StudentStatsUi();</span></code></pre>
                     </li>
                     <li>
                       <p>Next, the two UIs indicate to the <code>StudentList</code> that they are interested in being updated whenever <code>StudentList</code> changes. This is also known as ‘subscribing for updates’.</p>
-                      <pre><code class="hljs java">studentList.addUi(listUi);
-studentList.addUi(statusUi);
-</code></pre>
+                      <pre><code class="hljs java"><span>studentList.addUi(listUi);</span><span>studentList.addUi(statusUi);</span></code></pre>
                     </li>
                     <li>
                       <p>Within the <code>addUi</code> operation of <code>StudentList</code>, all Observer objects subscribers are added to an internal data structure called <code>observerList</code>.</p>
-                      <pre><code class="hljs java"><span class="hljs-comment">//StudentList class</span>
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addUi</span><span class="hljs-params">(Observer o)</span> </span>{
-    observerList.add(o);
-}
-</code></pre>
+                      <pre><code class="hljs java"><span><span class="hljs-comment">//StudentList class</span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addUi</span><span class="hljs-params">(Observer o)</span> </span>{</span><span>    observerList.add(o);</span><span>}</span></code></pre>
                     </li>
                   </ol>
                   <p><strong>Now, whenever the data in <code>StudentList</code> changes</strong> (e.g. when a new student is added to the <code>StudentList</code>),</p>
                   <ol>
                     <li>
                       <p>All interested observers are updated by calling the <code>notifyUIs</code> operation.</p>
-                      <pre><code class="hljs java"><span class="hljs-comment">//StudentList class</span>
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notifyUIs</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-comment">//for each observer in the list</span>
-    <span class="hljs-keyword">for</span>(Observer o: observerList){
-        o.update();
-    }
-}
-</code></pre>
+                      <pre><code class="hljs java"><span><span class="hljs-comment">//StudentList class</span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notifyUIs</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-comment">//for each observer in the list</span></span><span>    <span class="hljs-keyword">for</span>(Observer o: observerList){</span><span>        o.update();</span><span>    }</span><span>}</span></code></pre>
                     </li>
                     <li>
                       <p>UIs can then pull data from the <code>StudentList</code> whenever the <code>update</code> operation is called.</p>
-                      <pre><code class="hljs java"><span class="hljs-comment">//StudentListUI class</span>
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-comment">//refresh UI by pulling data from StudentList</span>
-}
-</code></pre>
+                      <pre><code class="hljs java"><span><span class="hljs-comment">//StudentListUI class</span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-comment">//refresh UI by pulling data from StudentList</span></span><span>}</span></code></pre>
                       <p>Note that <code>StudentList</code> is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.</p>
                     </li>
                   </ol>
-                </tip-box>
+                </box>
                 <p>Here is the generic description of the observer pattern:</p>
                 <img src="/se-book/designPatterns/observer/what/images/observableInterfaceDiagram.png" height="100">
                 <p></p>
                 <ul>
-                  <li><code>&lt;&lt;Observer&gt;&gt;</code> is an interface: any class that implements it can observe an <code>&lt;&lt;Observable&gt;&gt;</code>. Any number of <code>&lt;&lt;Observer&gt;&gt;</code> objects can observe (i.e. listen to changes of) the <code>&lt;&lt;Observable&gt;&gt;</code> object.</li>
-                  <li>The <code>&lt;&lt;Observable&gt;&gt;</code> maintains a list of <code>&lt;&lt;Observer&gt;&gt;</code> objects. <code>addObserver(Observer)</code> operation adds a new <code>&lt;&lt;Observer&gt;&gt;</code> to the list of <code>&lt;&lt;Observer&gt;&gt;s</code>.</li>
-                  <li>Whenever there is a change in the <code>&lt;&lt;Observable&gt;&gt;</code>, the <code>notifyObservers()</code> operation is called that will call the <code>update()</code> operation of all <code>&lt;&lt;Observer&gt;&gt;s</code> in the list.</li>
+                  <li><code>&lt;&lt;Observer&gt;&gt;</code> is an interface: any class that implements it can observe an <code>&lt;&lt;Observable&gt;&gt;</code>. Any number of <code>&lt;&lt;Observer&gt;&gt;</code> objects can observe (i.e. listen to changes
+                    of) the <code>&lt;&lt;Observable&gt;&gt;</code> object.</li>
+                  <li>The <code>&lt;&lt;Observable&gt;&gt;</code> maintains a list of <code>&lt;&lt;Observer&gt;&gt;</code> objects. <code>addObserver(Observer)</code> operation adds a new <code>&lt;&lt;Observer&gt;&gt;</code> to the list of <code>&lt;&lt;Observer&gt;&gt;</code>'s.</li>
+                  <li>Whenever there is a change in the <code>&lt;&lt;Observable&gt;&gt;</code>, the <code>notifyObservers()</code> operation is called that will call the <code>update()</code> operation of all <code>&lt;&lt;Observer&gt;&gt;</code>'s in the
+                    list.</li>
                 </ul>
                 <box>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In a GUI application, how is the Controller notified when the “save” button is clicked? UI frameworks such as JavaFX has inbuilt support for the Observer pattern.</p>
@@ -411,8 +397,9 @@ studentList.addUi(statusUi);
               </p>
               <div>
                 <p><strong>Design patterns are usually embedded in a larger design and sometimes applied in combination with other design patterns.</strong></p>
-                <tip-box>
-                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Let us look at a case study that shows how design patterns are used in the design of a class structure for a Stock Inventory System (SIS) for a shop. The shop sells appliances, and accessories for the appliances. SIS simply stores information about each item in the store.</p>
+                <box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Let us look at a case study that shows how design patterns are used in the design of a class structure for a Stock Inventory System (SIS) for a shop. The shop sells appliances,
+                    and accessories for the appliances. SIS simply stores information about each item in the store.</p>
                   <p><strong>Use Cases</strong>:</p>
                   <ul>
                     <li>Create a new item</li>
@@ -421,7 +408,8 @@ studentList.addUi(statusUi);
                     <li>View all available accessories for a given appliance</li>
                     <li>List all items in the store</li>
                   </ul>
-                  <p>SIS can be accessed using multiple terminals. Shop assistants use their own terminals to access SIS, while the shop manager’s terminal continuously displays a list of all items in store. In the future, it is expected that suppliers of items use their own applications to connect to SIS to get real-time information about current stock status. User authentication is not required for the current version, but may be required in the future.</p>
+                  <p>SIS can be accessed using multiple terminals. Shop assistants use their own terminals to access SIS, while the shop manager’s terminal continuously displays a list of all items in store. In the future, it is expected that suppliers of
+                    items use their own applications to connect to SIS to get real-time information about current stock status. User authentication is not required for the current version, but may be required in the future.</p>
                   <p>A step by step explanation of the design is given below. Note that this is one out of many possible designs. Design patterns are also applied where appropriate.</p>
                   <p>A <code>StockItem</code> can be an Appliance or an Accessory.</p>
                   <img src="/se-book/designPatterns/more/combiningDesignPatterns/images/stockItem.png" height="100">
@@ -448,7 +436,7 @@ studentList.addUi(statusUi);
                   <img src="/se-book/designPatterns/more/combiningDesignPatterns/images/withObserver.png" height="270">
                   <p></p>
                   <p>In addition, the Singleton pattern can be applied to the façade class.</p>
-                </tip-box>
+                </box>
               </div>
             </div>
             <div>
@@ -486,12 +474,14 @@ studentList.addUi(statusUi);
               </p>
               <div>
                 <p><strong>Design pattern provides a high-level vocabulary to talk about design.</strong></p>
-                <tip-box>
+                <box>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Someone can say 'apply Observer pattern here' instead of having to describe the mechanics of the solution in detail.</p>
-                </tip-box>
-                <p><strong>Knowing more patterns is a way to become more ‘experienced’.</strong> Aim to learn at least the context and the problem of patterns <span class="dimmed"> so that when you encounter those problems you know where to look for a solution</span>.</p>
-                <p><strong>Some patterns are domain-specific</strong> <span class="dimmed"> e.g. patterns for distributed applications</span>, <strong>some are created in-house</strong> <span class="dimmed"> e.g. patterns in the company/project</span> and <strong>some can be self-created</strong> <span class="dimmed"> e.g. from past experience</span>.</p>
-                <p><strong>Be careful not to overuse patterns.</strong> Do not throw patterns at a problem at every opportunity. Patterns come with overhead such as adding more classes or increasing the levels of abstraction. Use them only when they are needed. Before applying a pattern, make sure that:</p>
+                </box>
+                <p><strong>Knowing more patterns is a way to become more ‘experienced’.</strong> Aim to learn at least the context and the problem of patterns <span class="dimmed">so that when you encounter those problems you know where to look for a solution</span>.</p>
+                <p><strong>Some patterns are domain-specific</strong> <span class="dimmed">e.g. patterns for distributed applications</span>, <strong>some are created in-house</strong> <span class="dimmed">e.g. patterns in the company/project</span> and
+                  <strong>some can be self-created</strong> <span class="dimmed">e.g. from past experience</span>.</p>
+                <p><strong>Be careful not to overuse patterns.</strong> Do not throw patterns at a problem at every opportunity. Patterns come with overhead such as adding more classes or increasing the levels of abstraction. Use them only when they are
+                  needed. Before applying a pattern, make sure that:</p>
                 <ul>
                   <li>there is substantial improvement in the design, not just superficial.</li>
                   <li>the associated tradeoffs are carefully considered. There are times when a design pattern is not appropriate (or an overkill).</li>
@@ -505,17 +495,19 @@ studentList.addUi(statusUi);
                 </div>
               </p>
               <div>
-                <p>The notion of capturing design ideas as &quot;patterns&quot; is usually attributed to <a href="https://en.wikipedia.org/wiki/Christopher_Alexander">Christopher Alexander</a>. He is a building architect noted for his theories about design. His book <em>Timeless way of building</em> talks about &quot;design patterns&quot; for constructing buildings.</p>
+                <p>The notion of capturing design ideas as &quot;patterns&quot; is usually attributed to <a href="https://en.wikipedia.org/wiki/Christopher_Alexander">Christopher Alexander</a>. He is a building architect noted for his theories about design.
+                  His book <em>Timeless way of building</em> talks about &quot;design patterns&quot; for constructing buildings.</p>
                 <p>Here is a sample pattern from that book:</p>
                 <blockquote>
-                  <p>When a room has a window with a view, the window becomes a focal point: people are attracted to the window and want to look through it. The furniture in the room creates a second focal point:
-                    everyone is attracted toward whatever point the furniture aims them at (usually the center of the room or a TV). This makes people feel uncomfortable. They want to look out the window,
-                    and toward the other focus at the same time. If you rearrange the furniture, so that its focal point becomes the window, then everyone will suddenly notice that the
-                    room is much more “comfortable”</p>
+                  <p>When a room has a window with a view, the window becomes a focal point: people are attracted to the window and want to look through it. The furniture in the room creates a second focal point: everyone is attracted toward whatever point
+                    the furniture aims them at (usually the center of the room or a TV). This makes people feel uncomfortable. They want to look out the window, and toward the other focus at the same time. If you rearrange the furniture, so that its focal
+                    point becomes the window, then everyone will suddenly notice that the room is much more “comfortable”</p>
                 </blockquote>
-                <p>Apparently, patterns and anti-patterns are found in the field of building architecture. This is because they are general concepts applicable to any domain, not just software design. In software engineering, there are many general types of patterns: Analysis patterns, Design patterns, Testing patterns, Architectural patterns, Project management patterns, and so on.</p>
+                <p>Apparently, patterns and anti-patterns are found in the field of building architecture. This is because they are general concepts applicable to any domain, not just software design. In software engineering, there are many general types
+                  of patterns: Analysis patterns, Design patterns, Testing patterns, Architectural patterns, Project management patterns, and so on.</p>
                 <p>In fact, the abstraction occurrence pattern is more of an analysis pattern than a design pattern, while MVC is more of an architectural pattern.</p>
-                <p>New patterns can be created too. If a common problem needs to be solved frequently that leads to a non-obvious and better solution, it can be formulated as a pattern so that it can be reused by others. However, don’t reinvent the wheel; the pattern might already exist.</p>
+                <p>New patterns can be created too. If a common problem needs to be solved frequently that leads to a non-obvious and better solution, it can be formulated as a pattern so that it can be reused by others. However, don’t reinvent the wheel;
+                  the pattern might already exist.</p>
               </div>
             </div>
             <div>
@@ -525,7 +517,8 @@ studentList.addUi(statusUi);
                 </div>
               </p>
               <div>
-                <p><strong>Design <em>principles</em> have varying degrees of formality – rules, opinions, rules of thumb, observations, and axioms.</strong> Compared to design patterns, principles are <strong>more general</strong>, have <strong>wider applicability</strong>, with correspondingly <strong>greater overlap</strong> among them.</p>
+                <p><strong>Design <em>principles</em>  have varying degrees of formality – rules, opinions, rules of thumb, observations, and axioms.</strong> Compared to design patterns, principles are <strong>more general</strong>, have <strong>wider applicability</strong>,
+                  with correspondingly <strong>greater overlap</strong> among them.</p>
               </div>
             </div>
           </div>
@@ -534,7 +527,7 @@ studentList.addUi(statusUi);
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
     </footer>
   </div>
 </body>

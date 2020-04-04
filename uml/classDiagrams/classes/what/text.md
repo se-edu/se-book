@@ -11,7 +11,7 @@ The basic UML notations used to represent a _class_:<br>
 <img src="{{baseUrl}}/uml/classDiagrams/classes/what/images/basicNotation.png" height="130" />
 <p/>
 
-<tip-box>
+<box>
 
 {{ icon_example }} A `Table` class shown in UML notation:
 
@@ -19,64 +19,52 @@ The basic UML notations used to represent a _class_:<br>
 <p/>
 
 <panel type="seamless" header="The equivalent code">
-
-<table> 
-<tr>
-  <td>
-
-Java {{ icon_output }}
+<div class="alt-java">
 
 ```java
 class Table{
-    
+
     Integer number;
     Chair[] chairs = null;
     
     Integer getNumber(){
         //...
     }
-    
+
     void setNumber(Integer n){
         //...
     }
 }
 ```
-  </td>
-  <td valign="bottom">&nbsp;&nbsp;<br><br></td>
-  <td valign="bottom">
-
-Python {{ icon_output }}
+</div>
+<div class="alt-python">
 
 ```python
 class Table:
-    
+
   def __init__(self):
     self.number = 0
     self.chairs = []
-    
+
   def get_number(self):
     # ...
-  
-    
+
   def set_number(self, n):
     # ...
-    
 ```
-  </td>
-</tr>
-</table>
+</div>
 
 </panel>
 
-</tip-box>
+</box>
 
 **The 'Operations' compartment and/or the 'Attributes' compartment may be omitted** if such details are not important for the task at hand. 'Attributes' always appear above the 'Operations' compartment. All operations should be in one compartment rather than each operation in a separate compartment. Same goes for attributes.
 
-<tip-box>
+<box>
 
 <img src="{{baseUrl}}/uml/classDiagrams/classes/what/images/classes.png" height="100" />
 
-</tip-box>
+</box>
 
 **The _visibility_ of attributes and operations is used to indicate the level of access allowed for each attribute or operation.** The types of visibility and their exact meanings depend on the programming language used. Here are some common visibilities and how they are indicated in a class diagram:
 
@@ -96,14 +84,14 @@ visibility | Java | Python
 
 </panel><p/>
 
-<tip-box>
+<box>
 
 {{ icon_example }} `Table` class with visibilities shown:
 
 <img src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operationsVisibility.png" height="150" />
 <p/>
 
-</tip-box>
+</box>
 
 </div>
 

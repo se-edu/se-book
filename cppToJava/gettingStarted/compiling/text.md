@@ -1,4 +1,4 @@
-<span id="title">Compliling a Program</span>
+<span id="title">Compiling a Program</span>
 
 <span id="prereqs"></span>
 
@@ -13,13 +13,13 @@ To compile the HelloWorld program, open a command console, navigate to the folde
 If the compilation is successful, you should see a file `HelloWorld.class`. That file contains the byte code for your program. If the compilation is unsuccessful, you will be notified of the <trigger for="pop:compiling-errors">compile-time errors</trigger>.
 
 <popover id="pop:compiling-errors" title="Compile-time errors" placement="top">
-  <div slot="content">
+  <div slot="content">
 
 _Compile-time errors_ %%(aka _compile errors_)%% occur when you violate the syntax rules of the Java language. For example, parentheses and braces have to come in matching pairs.
 
 Error messages from the compiler usually indicate where in the program the error occurred, and sometimes they can tell you exactly what the error is.
 
-  </div>
+  </div>
 </popover>
 
 Notes:

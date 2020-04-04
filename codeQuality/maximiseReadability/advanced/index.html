@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Code Quality: [Guideline] Maximise Readability: Advanced</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -38,88 +36,71 @@
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability →
-                  </span></strong></span></p>
+</span></strong>
+              </span>
+            </p>
             <div id="title">
               <h1 id="advanced"><span>Advanced</span><a class="fa fa-anchor" href="#advanced"></a></h1>
             </div>
             <div id="main">
               <div>
                 <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="make-the-happy-path-prominent"><span>Make the Happy Path Prominent</span><a class="fa fa-anchor" href="#make-the-happy-path-prominent"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: make the happy path prominent </span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unindented as much as possible. It is the ‘unusual’ cases that should be indented. Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
-                        <tip-box>
-                          <p>Example:</p>
-                          <p>
-                            <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
-                          </p>
-                          <pre><code class="hljs java"><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span>
-    <span class="hljs-keyword">if</span> (!isErrorCase) {
-        start();    <span class="hljs-comment">//main path</span>
-        process();
-        cleanup();
-        exit();
-    } <span class="hljs-keyword">else</span> {
-        handleError();
-    }
-} <span class="hljs-keyword">else</span> {
-    handleUnusualCase(); <span class="hljs-comment">//handling that unusual condition</span>
-}
-</code></pre>
-                          <p>In the code above,</p>
-                          <ul>
-                            <li>Unusual condition detection is separated from their handling.</li>
-                            <li>Main path is nested deeply.</li>
-                          </ul>
-                          <p>
-                            <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
-                          </p>
-                          <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isUnusualCase) { <span class="hljs-comment">//Guard Clause</span>
-    handleUnusualCase();
-    <span class="hljs-keyword">return</span>;
-}
-
-<span class="hljs-keyword">if</span> (isErrorCase) { <span class="hljs-comment">//Guard Clause</span>
-    handleError();
-    <span class="hljs-keyword">return</span>;
-}
-
-start();
-process();
-cleanup();
-exit();
-</code></pre>
-                          <p>In contrast, the above code</p>
-                          <ul>
-                            <li>deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.</li>
-                            <li>keeps the main path un-indented.</li>
-                          </ul>
-                        </tip-box>
-                      </div>
-                      <div></div>
-                    </div>
-                  </panel>
+                  <panel type="seamless" expanded id="make-the-happy-path-prominent">
+                    <span slot="header" class="card-title"><div><h4 id="make-the-happy-path-prominent"><span>Make the Happy Path Prominent</span><a class="fa fa-anchor" href="#make-the-happy-path-prominent"></a></h4>
                 </div>
+                </span>
+                <div class="indented">
+                  <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: make the happy path prominent </span>
+                    </span>
+                    </span>
+                    </span>
+                  </p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <div>
+                    <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unindented as much as possible. It is the ‘unusual’ cases that should
+                      be indented. Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
+                    <box>
+                      <p>Example:</p>
+                      <p>
+                        <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong>
+                          </span>
+                        </font>
+                      </p>
+                      <pre><code class="hljs java"><span><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span></span><span>    <span class="hljs-keyword">if</span> (!isErrorCase) {</span><span>        start();    <span class="hljs-comment">//main path</span></span><span>        process();</span><span>        cleanup();</span><span>        exit();</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        handleError();</span><span>    }</span><span>} <span class="hljs-keyword">else</span> {</span><span>    handleUnusualCase(); <span class="hljs-comment">//handling that unusual condition</span></span><span>}</span></code></pre>
+                      <p>In the code above,</p>
+                      <ul>
+                        <li>Unusual condition detection is separated from their handling.</li>
+                        <li>Main path is nested deeply.</li>
+                      </ul>
+                      <p>
+                        <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong>
+                          </span>
+                        </font>
+                      </p>
+                      <pre><code class="hljs java"><span><span class="hljs-keyword">if</span> (isUnusualCase) { <span class="hljs-comment">//Guard Clause</span></span><span>    handleUnusualCase();</span><span>    <span class="hljs-keyword">return</span>;</span><span>}</span><span>&#x200B;</span><span><span class="hljs-keyword">if</span> (isErrorCase) { <span class="hljs-comment">//Guard Clause</span></span><span>    handleError();</span><span>    <span class="hljs-keyword">return</span>;</span><span>}</span><span>&#x200B;</span><span>start();</span><span>process();</span><span>cleanup();</span><span>exit();</span></code></pre>
+                      <p>In contrast, the above code</p>
+                      <ul>
+                        <li>deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.</li>
+                        <li>keeps the main path un-indented.</li>
+                      </ul>
+                    </box>
+                  </div>
+                  <div></div>
+                </div>
+                </panel>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <footer>
-      <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
-    </footer>
+  </div>
+  <footer>
+    <div class="text-center">
+      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
+  </footer>
   </div>
 </body>
 <script src="../../../markbind/js/vue.min.js"></script>

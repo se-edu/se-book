@@ -8,7 +8,7 @@
 
 **A _State Machine Diagram_ models state-dependent behavior.**
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Consider how a CD player responds when the “eject CD” button is pushed:
 
@@ -20,7 +20,7 @@
 
 What this means is that the CD player’s response to pushing the “eject CD” button depends on what it was doing at the time of the event. More generally, the CD player’s response to the event received depends on its internal state. Such a behavior is called a _state-dependent behavior_.
 
-</tip-box>
+</box>
 
 
 Often, state-dependent behavior displayed by an object in a system is simple enough that it needs no extra attention; such a behavior can be as simple as a _conditional_ behavior like `if x>y, then x=x-y`.
@@ -28,14 +28,14 @@ Occasionally, objects may exhibit state-dependent behavior that is complex enoug
 
 An SMD views the life-cycle of an object as consisting of a finite number of states where each state displays a unique behavior pattern.  An SMD captures information such as the states an object can be in, during its lifetime, and how the object responds to various events while in each state and how the object transits from one state to another. In contrast to sequence diagrams that capture object behavior one scenario at a time, SMDs capture the object’s behavior over its full life cycle. 
 
-<tip-box>
+<box>
 
 {{ icon_example }} An SMD for the Minesweeper game. 
 
 <img src="{{baseUrl}}/modeling/modelingBehaviors/stateMachineDiagrams/images/minesweeper.png" height="200" />
 <p/>
 
-</tip-box>
+</box>
 
 </div>
 

@@ -8,7 +8,7 @@
 
 **A _deployment diagram_ shows a system's physical layout, revealing which pieces of software run on which pieces of hardware.**
 
-<tip-box> 
+<box>
 
 {{ icon_example }} An example deployment diagram:
 
@@ -17,7 +17,7 @@
 
 <sub>source:[https://commons.wikimedia.org](https://en.wikipedia.org/wiki/Deployment_diagram)</sub>
 
-</tip-box>
+</box>
 
 </div>
 

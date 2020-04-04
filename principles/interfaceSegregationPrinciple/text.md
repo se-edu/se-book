@@ -6,13 +6,13 @@
 
 <div id="body">
 
-<tip-box type="definition">
+<box type="definition">
 
 <include src="../../common/definitions.md#def-interface-segregation-principle" />
 
-</tip-box>
+</box>
 
-<tip-box>
+<box>
 
 {{ icon_example }} The `Payroll` class should not depend on the `AdminStaff` class because it does not use the `arrangeMeeting()` method. Instead, it should depend on the `SalariedStaff` interface.
 
@@ -38,7 +38,7 @@ public class Payroll {
 <img src="{{baseUrl}}/principles/interfaceSegregationPrinciple/images/payroll.png" height="200" />
 <p/>
 
-</tip-box>
+</box>
 
 </div>
 

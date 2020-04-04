@@ -17,7 +17,7 @@ Avoid complicated expressions, especially those having many negations and nested
 <include src="example-python.md" />
 </div>
 
-> The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. <sub>-- Edsger Dijkstra</sub>
+> {{ icon_quote_start }} The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. {{ icon_quote_end }} <sub>-- Edsger Dijkstra</sub>
 
 
 </div>

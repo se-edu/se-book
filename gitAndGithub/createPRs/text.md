@@ -13,7 +13,7 @@
 ```md
 
 # Introduction
-Creating Pull Requsts (PRs) is needed when using RCS in a multi-person projects.
+Creating Pull Requests (PRs) is needed when using RCS in a multi-person projects.
 This repo can be used to practice creating PRs.
 
 ```
@@ -26,14 +26,14 @@ This repo can be used to practice creating PRs.
 <img src="{{baseUrl}}/gitAndGithub/createPRs/images/pushBranchToFork.png" height="300" />
 <p/>
     
-  <hr></tab>
+  </tab>
   <tab header="CLI">
   
 ```
 git push origin add-intro
 ```
     
-  <hr></tab>
+  </tab>
 </tabs>
 
 **4. Create a Pull Request from the `add-intro` branch in your fork to the `master` branch of the same fork** (i.e. `your-user-name/samplerepo-pr-practice`, not `se-edu/samplerepo-pr-practice`), as described below.
@@ -51,11 +51,11 @@ git push origin add-intro
 <img src="{{baseUrl}}/gitAndGithub/createPRs/images/selectBase.png" width="800" />
 <p/>
 
-<tip-box type="info"> 
+<box type="info">
 
-The _base fork_ is where changes should be applied. The _head fork_ contains the changes you would like to be applied.  
+The _base fork_ is where changes should be applied. The _head fork_ contains the changes you would like to be applied.  
 
-</tip-box>
+</box>
 
 4c. (1) Set the base branch to `master` and head branch to `add-intro`, (2) confirm the _diff_ contains the changes you propose to merge in this PR %%(i.e. confirm that you did not accidentally include extra commits in the branch)%%, and (3) click the `Create pull request` button.
 
@@ -68,19 +68,19 @@ The _base fork_ is where changes should be applied. The _head fork_ contains the
 <img src="{{baseUrl}}/gitAndGithub/createPRs/images/setPrName.png" width="600" />
 <p/>
 
-<tip-box type="important"> 
+<box type="important">
 
 A common newbie mistake when creating branch-based PRs is to mix commits of one PR with another. To learn how to avoid that mistake, you are encouraged to continue and create another PR as explained below.
-  
-</tip-box>
+  
+</box>
 
 **5. In your local repo, create a new branch `add-summary`** off the `master` branch. 
 
-<tip-box type="warning"> 
+<box type="warning">
 
 When creating the new branch, it is very important that you switch back to the `master` branch first. If not, the new branch will be created off the current branch `add-intro`. And that is how you end up having commits of the first PR in the second PR as well.
 
-</tip-box>
+</box>
 
 **6. Add a commit in the `add-summary` branch** that adds a _Summary_ section to the `README.md`, in exactly the same place you added the _Introduction_ section earlier. 
 

@@ -22,7 +22,7 @@ public int getSecond() {
 }
 ```
 
-Methods like these are formally called “accessors”, but more commonly referred to as _getters_. By convention, the method that gets a variable named something is called `getSomething`.
+Methods like these are formally called “accessors”, but more commonly referred to as _getters_. By convention, the method that gets a variable named `something` is called `getSomething`.
 
 Similarly, **you can provide _setter_ methods to modify attributes** of a `Time` object:
 

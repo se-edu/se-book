@@ -10,7 +10,7 @@
 
 A common approach is to group requirements into priority categories. Note that all such scales are subjective, and stakeholders define the meaning of each level in the scale for the project at hand.
 
-<tip-box> 
+<box>
 
 {{ icon_example }} An example scheme for categorizing requirements:
 
@@ -24,17 +24,17 @@ A common approach is to group requirements into priority categories. Note that a
 * `Must-have`, `Nice-to-have`, `Unlikely-to-have`
 * `Level 0`, `Level 1`, `Level 2`, ...
 
-</tip-box>
+</box>
 
 **Some requirements can be discarded if they are considered ‘out of _<tooltip content="the extent to which the software features should go">scope</tooltip>_’.**
 
-<tip-box> 
+<box>
 
 {{ icon_example }} The requirement given below is for a Calendar application. Stakeholder of the software (e.g. product designers) might decide the following requirement is not in the scope of the software.
 
 >The software records the actual time taken by each task and show the difference between the _actual_ and _scheduled_ time for the task.
 
-</tip-box>
+</box>
 
 </div>
 

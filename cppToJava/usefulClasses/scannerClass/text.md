@@ -45,7 +45,7 @@ System.out.print("What is your name? ");
 String name = in.nextLine();
 System.out.printf("Hello %s, age %d\n", name, age);
 ```
-:bulb: Note the [use of `printf` method for formatting the output]({{ java_tutorial }}/java/data/numberformat.html).
+{{ icon_tip }} Note the [use of `printf` method for formatting the output]({{ java_tutorial }}/java/data/numberformat.html).
 
 </box>
 

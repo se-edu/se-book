@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} Compare names">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] Compare names</small></small>" expanded >
 <question>
 
 Write a Java program that takes two command line arguments and prints `true` or `false` to indicate if the two arguments have the same value. Follow the sample output given below.
@@ -21,7 +21,7 @@ Words given: eve, eve
 They are the same: true
 ```
 
-:bulb: Use the following technique to compare two `Strings`(i.e., don't use `==`). %%Reason: to be covered in a later topic%%.
+{{ icon_tip }} Use the following technique to compare two `Strings`(i.e., don't use `==`). %%Reason: to be covered in a later topic%%.
 ```java
 String x = "foo";
 boolean isSame = x.equals("bar") // false

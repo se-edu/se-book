@@ -22,13 +22,18 @@
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree.md" />
-  <hr></tab>
+  </tab>
   <tab header="CLI">
     <include src="./cli.md" />
-  <hr></tab>
+  </tab>
 </tabs>
 
-**To push an existing local repo into a new remote repo on GitHub**, first you need to create an empty remote repo on GitHub.
+<p/>
+
+<panel header="" minimized >
+   <span slot="header" class="card-title"><md> Pushing an existing local repo into a new remote repo on GitHub {{ icon_extra }}</md></span>
+
+First, you need to create an empty remote repo on GitHub.
 
 1. Login to your GitHub account and choose to create a new Repo. <br>
    <img src="{{baseUrl}}/gitAndGithub/push/images/createNewRemoteRepo.png" width="150" />
@@ -55,7 +60,7 @@ Next, you can push the existing local repo to the new remote repo as follows:
 1. Now you can push your repo to the new remote the usual way.<br>
    <img src="{{baseUrl}}/gitAndGithub/push/images/pushToRemote.png" width="470" />
 
-  <hr></tab>
+  </tab>
   <tab header="CLI">
 
 1. Navigate to the folder containing the local repo.
@@ -65,8 +70,9 @@ Next, you can push the existing local repo to the new remote repo as follows:
 1. Push to the new remote the usual way. You can use the `-u` flag to inform Git that you wish to <tooltip content="i.e., remember which branch in the remote repo corresponds to which branch in the local repo">track</tooltip> the branch.<br>
    e.g., `git push -u origin master`
 
-  <hr></tab>
+  </tab>
 </tabs>
+</panel>
 
 </div>
 

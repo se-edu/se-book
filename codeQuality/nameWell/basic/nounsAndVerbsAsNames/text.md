@@ -6,11 +6,11 @@
 
 <div id="body">
 
->:fas-quote-left: Every system is built from a domain-specific language designed by the programmers to describe that system. Functions are the verbs of that language, and classes are the nouns. <sub>― Robert C. Martin, _Clean Code: A Handbook of Agile Software Craftsmanship_</sub>
+>{{ icon_quote_start }} Every system is built from a domain-specific language designed by the programmers to describe that system. Functions are the verbs of that language, and classes are the nouns. {{ icon_quote_end }}<br><sub>― Robert C. Martin, _Clean Code: A Handbook of Agile Software Craftsmanship_</sub>
 
 **Use nouns for classes/variables and verbs for methods/functions.**
 
-<tip-box>
+<box>
 
 Examples:
 
@@ -19,12 +19,12 @@ Name for a | {{bad}}        | {{good}}
 Class      |`CheckLimit`     | `LimitChecker`           
 method     |`result()`       | `calculate()`  
 
-</tip-box>
+</box>
 
 
 **Distinguish clearly between single-valued and multivalued variables.**
 
-<tip-box>
+<box>
 
 {{ icon_example }} Examples:
 
@@ -45,7 +45,7 @@ names = ['Jim', 'Alice']
 ```
 </div>
 
-</tip-box>
+</box>
 
 </div>
 

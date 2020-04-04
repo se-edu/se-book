@@ -1,9 +1,9 @@
-<panel header="{{ icon_Q }} Draw a Sequence Diagram for code snippet">
+<panel header="{{ icon_Q }} Draw a Sequence Diagram for the code (`PersonList`, `Person`, `Tag`)">
 <question>
 
 Consider the code below:
 <div class="row">
-  <div class="col-sm-7">
+  <div class="col-sm-7">
 
 ```java
 class Person{
@@ -16,8 +16,8 @@ class Person{
     }
 }
 ```
-  </div>
-  <div class="col-sm-5">
+  </div>
+  <div class="col-sm-5">
 
 ```java
 class Tag{
@@ -32,7 +32,7 @@ class PersonList{
     }
 }
 ```
-  </div>
+  </div>
 </div>
 
 Draw a sequence diagram to illustrate the object interactions that happen in the code snippet below:

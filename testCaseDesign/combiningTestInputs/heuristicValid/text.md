@@ -8,7 +8,7 @@
 
 Consider the following scenario.
 
-<tip-box>
+<box>
 
 SUT:  `printLabel(fruitName String, unitPrice int)`
 
@@ -30,11 +30,11 @@ Values	| Explanation
 ++0++   | Invalid because 0 is not a valid price
 ++-1++  | Invalid because negative prices are not allowed
 
-</tip-box>
+</box>
 
 Suppose these are the test cases being considered.
 
-<tip-box> 
+<box>
 
 | Case   | fruitName  | unitPrice  | Expected                       |
 | :----: | :--------: | :--------: | :----------------------------: |
@@ -43,7 +43,7 @@ Suppose these are the test cases being considered.
 | 3      | Cherry     | ++0++      | Error message “invalid price”  |
 | 4      | ++Dog++    | ++-1++     | Error message “invalid fruit"  |
 
-</tip-box>
+</box>
 
 It looks like the test cases were created using the _at least once_ strategy. After running these tests can we confirm that square-format label printing is done correctly?
 * Answer: No.
@@ -51,7 +51,7 @@ It looks like the test cases were created using the _at least once_ strategy. Af
 
 In this case a useful heuristic to apply is **each valid input must appear at least once in a positive test case**. `Cherry` is a valid test input and we must ensure that it appears at least once in a positive test case. Here are the updated test cases after applying that heuristic.
 
-<tip-box> 
+<box>
 
 <div id="heuristic-valid-test-case">
 
@@ -67,7 +67,7 @@ VV/IV = Any Invalid or Valid Value VV=Any Valid Value
 
 </div>
 
-</tip-box>
+</box>
 
 </div>
 

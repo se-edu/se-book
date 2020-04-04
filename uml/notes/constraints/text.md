@@ -8,14 +8,14 @@
 
 **A _constraint_  can be given inside a note, within curly braces**. Natural language or a formal notation such as _OCL (Object Constraint Language)_ may be used to specify constraints. 
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Example:
 
 <img src="{{baseUrl}}/uml/notes/constraints/images/playerTurn.png" height="120" />
 <p/>
 
-</tip-box>
+</box>
 
 
 </div>

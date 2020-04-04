@@ -8,7 +8,7 @@
 
 **Method _overriding_ is when a sub-class changes the behavior inherited from the parent class** by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.
 
-<tip-box>
+<box>
 
 {{ icon_example }} Consider the following case of `EvaluationReport` class inheriting the `Report` class:
 
@@ -16,17 +16,17 @@
 -----------------|----------------------------|-----------
 `print()`        |`print()`                   | Yes
 `write(String)`  |`write(String)`             | Yes
-`read():String`  |`read(int):String`          | No. %%&nbsp;Reason: the two methods have different signatures; This is a case of <trigger trigger="click" for="modal:overriding-overloading"> _overloading_ </trigger> (rather than overriding).%%
+`read():String`  |`read(int):String`          | No. %%Reason: the two methods have different signatures; This is a case of <trigger trigger="click" for="modal:overriding-overloading"> _overloading_ </trigger> (rather than overriding).%%
 
-<modal title="**Overloading**" id="modal:overriding-overloading">
+<modal large title="**Overloading**" id="modal:overriding-overloading">
   <include src="../overloading/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
-</tip-box>
+</box>
 
 
 </div>
 
 <div id="extras">
-  <include src="exercises.fr" />
+  <include src="exercises.mbdf" />
 </div>

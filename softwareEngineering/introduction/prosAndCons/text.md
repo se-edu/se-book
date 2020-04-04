@@ -6,9 +6,9 @@
 
 <div id="body">
 
-<tip-box type="definition"> 
-  <include src="../../../common/definitions.md#def-se" />
-</tip-box>
+<box type="definition">
+  <include src="../../../common/definitions.md#def-se" />
+</box>
 
 The following description of the _Joys of the Programming Craft_ was taken from Chapter 1 of the famous book <trigger for="modal:mmm" trigger="click">_The Mythical Man-Month_, by Frederick P. Brooks</trigger>.
 

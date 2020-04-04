@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Principles: Law of Demeter</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -37,21 +35,26 @@
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the Law of Demeter</span></span></span></span></p>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the Law of Demeter</span>
+              </span>
+              </span>
+              </span>
+            </p>
             <p></p>
             <p></p>
             <div>
               <div></div>
               <p></p>
-              <p><span class="dimmed"><strong><span>Supplmentary → Principles →
-                    </span></strong></span></p>
+              <p><span class="dimmed"><strong><span>Principles →</span></strong>
+                </span>
+              </p>
               <div id="title-and-body">
                 <div>
                   <h4 id="law-of-demeter"><span>Law of Demeter</span><a class="fa fa-anchor" href="#law-of-demeter"></a></h4>
                 </div>
                 <div id="main">
                   <div>
-                    <tip-box type="definition">
+                    <box type="definition">
                       <div>
                         <p><strong>Law of Demeter (LoD)</strong>:</p>
                         <ul>
@@ -64,32 +67,31 @@
                           <li>Principle of least knowledge</li>
                         </ul>
                       </div>
-                    </tip-box>
+                    </box>
                     <p>More concretely, a method <code>m</code> of an object <code>O</code> should invoke only the methods of the following kinds of objects:</p>
                     <ul>
                       <li>The object <code>O</code> itself</li>
                       <li>Objects passed as parameters of <code>m</code></li>
                       <li>Objects created/instantiated in <code>m</code> (directly or indirectly)</li>
-                      <li>Objects from the <tooltip content="objects that are held by instance variables of">direct association of</tooltip> <code>O</code></li>
+                      <li>Objects from the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">objects that are held by instance variables of</span>direct association
+                        of</span>
+                        <code>O</code></li>
                     </ul>
-                    <tip-box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and <code>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
-                      <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
-    Goo g = b.getGoo();
-    g.doSomething();
-}
-</code></pre>
-                    </tip-box>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code>                        is a ‘friend of a friend’ (which should be considered a ‘stranger’), and <code>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
+                      <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{</span><span>    Goo g = b.getGoo();</span><span>    g.doSomething();</span><span>}</span></code></pre>
+                    </box>
                     <p><strong>LoD aims to prevent objects navigating internal structures of other objects.</strong></p>
-                    <tip-box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.</p>
-                    </tip-box>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends
+                        as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.</p>
+                    </box>
                   </div>
                   <div>
                     <div>
-                      <panel header="<md>:fas-dumbbell:</md> Exercises" expandable class="algolia-no-index">
+                      <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
                         <div>
-                          <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Examples for LoD" class="algolia-no-index">
+                          <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Examples for LoD</p></template>
                             <question has-input="true">
                               <p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
                               <div slot="answer" class="algolia-no-index">
@@ -107,14 +109,10 @@
                           </panel>
                         </div>
                         <div>
-                          <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: LoD violation?" class="algolia-no-index">
+                          <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> LoD violation?</p></template>
                             <question>
                               <p>This violates Law of Demeter.</p>
-                              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
-    Goo g =  <span class="hljs-keyword">new</span> Goo();
-    g.doSomething();
-}
-</code></pre>
+                              <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{</span><span>    Goo g =  <span class="hljs-keyword">new</span> Goo();</span><span>    g.doSomething();</span><span>}</span></code></pre>
                               <ul radio-group="3cf8e" class="radio-list">
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> True</label></li>
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> False</label></li>
@@ -127,7 +125,7 @@
                           </panel>
                         </div>
                         <div>
-                          <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Odd one out" class="algolia-no-index">
+                          <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Odd one out</p></template>
                             <question>
                               <p>Pick the odd one out.</p>
                               <ul class="task-list">
@@ -156,7 +154,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
     </footer>
   </div>
 </body>

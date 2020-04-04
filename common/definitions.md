@@ -1,5 +1,7 @@
 <frontmatter>
 title: "Definitions"
+siteNav: mainNav.md
+pageNav: 3
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
@@ -12,7 +14,7 @@ title: "Definitions"
 
 <div id="def-abstractClass">
 
-**Abstract Class**: A class declared as an _abstract class_ cannot be instantiated, but they can be subclassed.
+**Abstract Class**: A class declared as an _abstract class_ cannot be instantiated, but it can be subclassed.
 
 </div>
 <div id="def-abstractMethod">
@@ -24,6 +26,12 @@ title: "Definitions"
 <div id="def-abstraction">
 
 **Abstraction** is a technique for dealing with complexity. It works by establishing a level of complexity we are interested in, and suppressing the more complex details below that level.
+
+</div>
+
+<div id="def-acceptance-testing">
+
+**_Acceptance testing_ (aka _User Acceptance Testing (UAT)_: test the system to ensure it meets the user requirements.**
 
 </div>
 
@@ -112,7 +120,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-domain-expert">
 
-**Domain Expert** : An expert of a discipline to which the product is connected %%&nbsp;e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting%%.
+**Domain Expert** : An expert of a discipline to which the product is connected %%e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting%%.
 
 </div>
 
@@ -167,7 +175,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-glossary">
 
-**Glossary**: A glossary serves to ensure that _all stakeholders have a common understanding_ of the noteworthy terms, abbreviation, acronyms etc.
+**Glossary**: A glossary serves to ensure that _all stakeholders have a common understanding_ of the noteworthy terms, abbreviations, acronyms etc.
 
 </div>
 
@@ -242,7 +250,7 @@ Also known as
 
 <div id="def-rcs">
 
-**RCS** :  **Revision Control Software** are the software tools that automate the process of _Revision Control_ i.e. managing revisions of software artifacts.
+**RCS**:  **Revision Control Software** are the software tools that automate the process of _Revision Control_ i.e. managing revisions of software artifacts.
 
 </div>
 
@@ -310,7 +318,13 @@ Also known as
 
 <div id="def-sut">
 
-**SUT**: Software Under Test  
+**SUT**: Software Under Test
+
+</div>
+
+<div id="def-system-testing">
+
+**_System testing_: take the _whole system_ and test it _against the system specification_.**
 
 </div>
 
@@ -318,7 +332,7 @@ Also known as
 
 <div id="def-testing">
 
-**Testing**: Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component.  –- source: IEEE
+**Testing**: Operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component.  –- source: IEEE
 
 </div>
 
@@ -326,7 +340,9 @@ Also known as
 
 **Type Signature**: The _type signature_ of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant. 
 
-<panel type="seamless" header="%%Examples%%">
+<box>
+
+{{ icon_example }} Example:
 
 | Method                           | Type Signature          |
 | :------------------------------: | :---------------------: |
@@ -334,9 +350,7 @@ Also known as
 | `void add(int A, int B)`         | `(int, int)`            |
 | `void m(int X, double Y)`        | `(int, double)`         |
 | `void m(double X, int Y)`        | `(double, int)`         |
-
-</panel>
-
+</box>
 </div>
 
 ## U
@@ -344,6 +358,12 @@ Also known as
 <div id="def-uml">
 
 [**Unified Modeling Language (UML)**](http://www.uml.org/#UML2.0) is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the _de facto_ modeling notation used in the software industry. 
+
+</div>
+
+<div id="def-unit-testing">
+
+**Unit testing**: testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly 
 
 </div>
 

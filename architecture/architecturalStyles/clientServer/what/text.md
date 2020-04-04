@@ -12,14 +12,14 @@
 <img src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServer.png" height="120" />
 <p/>
 
-<tip-box> 
+<box>
 
 {{ icon_example }} The online game and the Web application below uses the client-server style.
 
 <img src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServerExamples.png" height="200" />
 
 
-</tip-box>
+</box>
 
 </div>
 

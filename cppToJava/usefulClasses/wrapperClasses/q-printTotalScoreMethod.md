@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} `printTotalScore` method">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] `printTotalScore` method</small></small>" expanded >
 <question>
 
 Implement the `printTotalScore` method in the code below to produce the given output. Its behavior:
@@ -28,7 +28,7 @@ public class Main {
 
 <div slot="hint">
 
-:bulb: You can use the [`Integer.parseInt()`](https://www.tutorialspoint.com/java/number_parseint.htm) method to convert a `String` to the equivalent `int` value.
+{{ icon_tip }} You can use the [`Integer.parseInt()`](https://www.tutorialspoint.com/java/number_parseint.htm) method to convert a `String` to the equivalent `int` value.
 
 Partial solution:
 ```java

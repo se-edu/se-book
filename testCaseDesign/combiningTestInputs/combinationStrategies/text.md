@@ -8,7 +8,7 @@
 
 Given below are some basic strategies for generating a set of test cases by combining multiple test input combination strategies.
 
-<tip-box>
+<box>
 
 {{ icon_example }} Let's assume the SUT has the following three inputs and you have selected the given values for testing:
 
@@ -22,11 +22,11 @@ Values to test:
 | p2      | 1, 2, 3     |
 | p3      | T, F        |  
 
-</tip-box>
+</box>
 
 **The _all combinations_ strategy generates test cases for each unique combination of test inputs.**
 
-<tip-box>
+<box>
 
 {{ icon_example }} the strategy generates 3x3x2=18 test cases
 
@@ -38,11 +38,11 @@ Values to test:
 | ...         | ...     | ...     | ...     |
 | 18          | c       | 3       | F       |
 
-</tip-box>
+</box>
 
 **The _at least once_ strategy includes each test input at least once.**
 
-<tip-box>
+<box>
 
 {{ icon_example }} this strategy generates 3 test cases.
 
@@ -54,11 +54,11 @@ Values to test:
 
 VV/IV = Any Valid Value / Any Invalid Value
 
-</tip-box>
+</box>
 
 **The _all pairs_ strategy creates test cases so that for any given pair of inputs, all combinations between them are tested.** It is based on the observations that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the _all combinations_ strategy, but higher than the _at least once_ approach.
 
-<tip-box>
+<box>
 
 {{ icon_example }} this strategy generates 9 test cases:
 
@@ -100,13 +100,13 @@ The 9 test cases given below covers all those 9+6+6 combinations.
 | 8           | c       | 2       | F       |
 | 9           | c       | 3       | T       |
 
-</tip-box>
+</box>
 
 A variation of this strategy is to test all pairs of inputs but only for inputs that could influence each other.
 
-<tip-box>
+<box>
 
-{{ icon_example }} Testing all pairs between p1 and p3 only while ensuring all p3 values are tested at least once
+{{ icon_example }} Testing all pairs between p1 and p3 only while ensuring all p2 values are tested at least once:
 
 | Test Case   | p1      | p2      | p3      |
 | :---------: | :-----: | :-----: | :-----: |
@@ -117,7 +117,7 @@ A variation of this strategy is to test all pairs of inputs but only for inputs 
 | 5           | c       | VV/IV   | T       |
 | 6           | c       | VV/IV   | F       |
 
-</tip-box>
+</box>
 
 **The _random_ strategy generates test cases using one of the other strategies and then pick a subset randomly** (presumably because the original set of test cases is too big).
 

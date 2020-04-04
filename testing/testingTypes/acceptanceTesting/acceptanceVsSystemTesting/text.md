@@ -19,7 +19,7 @@ Some differences between system testing and acceptance testing:
 
 %%Note: _negative_ test cases: cases where the SUT is not expected to work normally e.g. incorrect inputs; _positive_ test cases: cases where the SUT is expected to work normally%%
 
-<tip-box>
+<box>
 
 **Requirement Specification vs System Specification**
 
@@ -33,7 +33,7 @@ The requirement specification need not be the same as the system specification. 
 
 However, **in many cases one document serves as both a requirement specification and a system specification.**
 
-</tip-box>
+</box>
 
 **Passing system tests does not necessarily mean passing acceptance testing.** Some examples:
 * The system might work on the testbed environments but might not work the same way in the deployment environment, due to subtle differences between the two environments.

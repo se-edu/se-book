@@ -8,7 +8,7 @@
 
 **Design patterns are usually embedded in a larger design and sometimes applied in combination with other design patterns.**
 
-<tip-box>
+<box>
 
 {{ icon_example }} Let us look at a case study that shows how design patterns are used in the design of a class structure for a Stock Inventory System (SIS) for a shop. The shop sells appliances, and accessories for the appliances. SIS simply stores information about each item in the store.
 
@@ -67,7 +67,7 @@ Some views need to be updated when the data change; apply the Observer pattern h
 
 In addition, the Singleton pattern can be applied to the façade class.
 
-</tip-box>
+</box>
 
 </div>
 

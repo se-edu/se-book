@@ -14,13 +14,13 @@ An activity diagram (AD) captures an _activity_ of _actions_ and _control flows_
 
 Note the slight difference between the _start node_ and the _end node_ which represent the start and the end of the activity, respectively.
 
-<tip-box> 
+<box>
 
 {{ icon_example }} This activity diagram shows the action sequence of the activity _a passenger rides the bus_:
 
 <img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/linearPaths/images/example.png" width="450" />
 
-</tip-box>
+</box>
 
 
 </div>

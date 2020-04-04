@@ -10,38 +10,38 @@ Create an empty repo.
 
 Create a file named `fruits.txt` in the working directory and add some dummy text to it.
 
-<tip-box type="definition">
+<box type="definition">
   <include src="../../common/definitions.md#def-working-directory" />
-</tip-box>
+</box>
 
 Observe how the file is detected by Git.
 
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree_1.md" />
-  <hr></tab>
+  </tab>
   <tab header="CLI">
     <include src="./cli_1.md" />
-  <hr></tab>
+  </tab>
 </tabs>
 
 Although git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose we want to commit the current state of the file. First, we should stage the file.
 
-<tip-box type="definition">
+<box type="definition">
   <include src="../../common/definitions.md#def-commit" />
-</tip-box>
+</box>
 
-<tip-box type="definition">
+<box type="definition">
   <include src="../../common/definitions.md#def-stage" />
-</tip-box>
+</box>
 
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree_2.md" />
-  <hr></tab>
+  </tab>
   <tab header="CLI">
     <include src="./cli_2.md" />
-  <hr></tab>
+  </tab>
 </tabs>
 
 Now, you can commit the staged version of `fruits.txt`
@@ -49,10 +49,10 @@ Now, you can commit the staged version of `fruits.txt`
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree_3.md" />
-  <hr></tab>
+  </tab>
   <tab header="CLI">
     <include src="./cli_3.md" />
-  <hr></tab>
+  </tab>
 </tabs>
 
 Note the existence of something called the `master` branch. Git allows you to have multiple branches (i.e. it is a way to evolve the content in parallel) and Git creates a default branch named `master` on which the commits go on by default.

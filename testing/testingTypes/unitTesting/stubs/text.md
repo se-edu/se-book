@@ -6,24 +6,24 @@
 
 <div id="body">
 
-**A proper unit test requires the _unit_ to be tested ==in isolation==** so that bugs in the <tooltip content="code the unit depends on">dependencies</tooltip> cannot influence the test %%&nbsp;i.e. bugs outside of the unit should not affect the unit tests%%.
+**A proper unit test requires the _unit_ to be tested ==in isolation==** so that bugs in the <tooltip content="code the unit depends on">dependencies</tooltip> cannot influence the test %%i.e. bugs outside of the unit should not affect the unit tests%%.
 
-<tip-box> 
+<box>
 
 {{ icon_example }} If a `Logic` class depends on a `Storage` class, unit testing the `Logic` class requires isolating the `Logic` class from the `Storage` class.
 
-</tip-box>
+</box>
 
 **_Stubs_ can isolate the <popover content="Software Under Test (in this case, the _unit_ being tested)">SUT</popover> from its dependencies**. 
 
-<tip-box type="definition"> 
+<box type="definition">
 
 <include src="../../../../common/definitions.md#def-stub" />
 
-</tip-box>
+</box>
 
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Consider the code below:
 ```java
@@ -38,11 +38,13 @@ class Logic {
         return "Name: " + s.getName(index);
     }
 }
-
+```
+```java
 interface Storage {
     String getName(int index);
 }
-
+```
+```java
 class DatabaseStorage implements Storage {
 
     @Override
@@ -55,7 +57,7 @@ class DatabaseStorage implements Storage {
     }
 }
 ```
-Normally, you would use the `Logic` class as follows (not how the `Logic` object depends on a `DatabaseStorage` object to perform the `getName()` operation):
+Normally, you would use the `Logic` class as follows (note how the `Logic` object depends on a `DatabaseStorage` object to perform the `getName()` operation):
 ```java
 Logic logic = new Logic(new DatabaseStorage());
 String name = logic.getName(23);
@@ -86,7 +88,7 @@ class StorageStub implements Storage {
     }
 }
 ```
-Note how the stub has the same interface as the real dependency, is so simple that it is unlikely to contain bugs, and is pre-configured to respond with a hard-coded response, presumably, the correct response `DatabaseStorage` is expected to return for the given test input.
+Note how the `StorageStub` has the same interface as `DatabaseStorage`, is so simple that it is unlikely to contain bugs, and is pre-configured to respond with a hard-coded response, presumably, the correct response `DatabaseStorage` is expected to return for the given test input.
 
 Here is how you can use the stub to write a unit test. This test is not affected by any bugs in the `DatabaseStorage` class and hence is a pure unit test.
 ```java
@@ -97,7 +99,7 @@ void getName() {
 }
 ```
 
-</tip-box>
+</box>
 
 In addition to Stubs, there are other type of replacements you can use during testing. E.g. _Mocks_, _Fakes_, _Dummies_, _Spies_.
 

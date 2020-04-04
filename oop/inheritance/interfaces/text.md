@@ -10,19 +10,19 @@
 
 >There are a number of situations in software engineering when it is important for disparate groups of programmers to agree to a "contract" that spells out how their software interacts. Each group should be able to write their code without any knowledge of how the other group's code is written. Generally speaking, interfaces are such contracts. <sub>--[Oracle Docs on Java]({{ java_tutorial }}/java/IandI/createinterface.html)<sub>
 
-<tip-box>
+<box>
 
 {{ icon_example }} Suppose `SalariedStaff` is an interface that contains two methods `setSalary(int)` and `getSalary()`. `AcademicStaff` can declare itself as _implementing_ the `SalariedStaff` interface, which means the `AcademicStaff` class must implement all the methods specified by the `SalariedStaff` interface i.e., `setSalary(int)` and `getSalary()`. 
 
-</tip-box>
+</box>
 
 **A class implementing an interface results in an _is-a_ relationship**, just like in class inheritance.
 
-<tip-box>
+<box>
 
 {{ icon_example }} In the example above, `AcademicStaff` _is a_ `SalariedStaff`.  An `AcademicStaff` object can be used anywhere a `SalariedStaff` object is expected e.g. `SalariedStaff ss = new AcademicStaff()`. 
 
-</tip-box>
+</box>
 
 
 </div>

@@ -1,4 +1,5 @@
-<panel header="{{ icon_Q }} inherit the `Task` class">
+<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] inherit the `Task` class</small></small>" expanded >
+
 <question>
 
 Background: Suppose we are creating a software to manage various tasks a person has to do. Two types of such tasks are,

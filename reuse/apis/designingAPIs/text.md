@@ -16,7 +16,7 @@ Another approach is to define the API up-front. Doing so allows us to develop th
 
 We can use UML _sequence diagrams_ to analyze the required interactions between components in order to discover the required API. Given below is an example.
 
-<tip-box>
+<box>
 
 Example:
 
@@ -45,7 +45,7 @@ Preconditions are the conditions that must be true before calling this operation
 * **Preconditions**: game state is READY or IN_PLAY.  x and y are in 0..(H-1) and 0..(W-1), respectively.
 * **Postconditions**: Cell at x,y changes state to ZERO, ONE, TWO, THREE, …, EIGHT, or INCORRECTLY_CLEARED. Game state changes to IN_PLAY, WON or LOST as appropriate.
 
-</tip-box>
+</box>
 
 </div>
 

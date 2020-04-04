@@ -3,12 +3,12 @@
 
 Discuss the coupling levels of alternative designs _x_ and _y_.
 
-<tip-box>
+<box>
 
 <img src="{{baseUrl}}/designFundamentals/coupling/what/images/alternativeDesigns.png" height="180" />
 <p/>
 
-</tip-box>
+</box>
 
 <div slot="answer">
 

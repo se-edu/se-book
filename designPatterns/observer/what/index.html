@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Software Design Patterns: Observer: What</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -37,14 +35,20 @@
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the Observer design pattern</span></span></span></span></p>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the Observer design pattern</span>
+              </span>
+              </span>
+              </span>
+            </p>
             <p></p>
             <p></p>
             <div>
               <div></div>
               <p></p>
               <p><span class="dimmed"><strong><span>Design → Design Patterns → Observer Pattern →
-                    </span></strong></span></p>
+</span></strong>
+                </span>
+              </p>
               <div id="title-and-body">
                 <div>
                   <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
@@ -53,7 +57,7 @@
                   <div>
                     <p><strong>Context</strong></p>
                     <p>An object (possibly, more than one) is interested to get notified when a change happens to another object. That is, some objects want to ‘observe’ another object.</p>
-                    <tip-box>
+                    <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider this scenario from the a student management system where the user is adding a new student to the system.</p>
                       <img src="/se-book/designPatterns/observer/what/images/sequenceDiagram.png" height="330">
                       <p></p>
@@ -65,71 +69,55 @@
                       <p>When a student is added to the database using <code>NewStudentUi</code> shown above, both <code>StudentListUi</code> and <code>StudentStatsUi</code> should get updated automatically, as shown below.</p>
                       <img src="/se-book/designPatterns/observer/what/images/studentListUI.png" height="180">
                       <p></p>
-                      <p>However, the <code>StudentList</code> object has no knowledge about <code>StudentListUi</code> and <code>StudentStatsUi</code> (note the direction of the navigability) and has no way to inform those objects. This is an example of the type of problem addressed by the Observer pattern.</p>
-                    </tip-box>
+                      <p>However, the <code>StudentList</code> object has no knowledge about <code>StudentListUi</code> and <code>StudentStatsUi</code> (note the direction of the navigability) and has no way to inform those objects. This is an example of
+                        the type of problem addressed by the Observer pattern.</p>
+                    </box>
                     <p><strong>Problem</strong></p>
                     <p>The ‘observed’ object does not want to be coupled to objects that are ‘observing’ it.</p>
                     <p><strong>Solution</strong></p>
                     <p>Force the communication through an interface known to both parties.</p>
                     <img src="/se-book/designPatterns/observer/what/images/studentListObserver.png" height="160">
                     <p></p>
-                    <tip-box>
+                    <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is the Observer pattern applied to the student management system.</p>
                       <p><strong>During the initialization of the system,</strong></p>
                       <ol>
                         <li>
                           <p>First, create the relevant objects.</p>
-                          <pre><code class="hljs java">StudentList studentList = <span class="hljs-keyword">new</span> StudentList();
-StudentListUi listUi = <span class="hljs-keyword">new</span> StudentListUi();
-StudentStatusUi statusUi = <span class="hljs-keyword">new</span> StudentStatsUi();
-</code></pre>
+                          <pre><code class="hljs java"><span>StudentList studentList = <span class="hljs-keyword">new</span> StudentList();</span><span>StudentListUi listUi = <span class="hljs-keyword">new</span> StudentListUi();</span><span>StudentStatusUi statusUi = <span class="hljs-keyword">new</span> StudentStatsUi();</span></code></pre>
                         </li>
                         <li>
                           <p>Next, the two UIs indicate to the <code>StudentList</code> that they are interested in being updated whenever <code>StudentList</code> changes. This is also known as ‘subscribing for updates’.</p>
-                          <pre><code class="hljs java">studentList.addUi(listUi);
-studentList.addUi(statusUi);
-</code></pre>
+                          <pre><code class="hljs java"><span>studentList.addUi(listUi);</span><span>studentList.addUi(statusUi);</span></code></pre>
                         </li>
                         <li>
                           <p>Within the <code>addUi</code> operation of <code>StudentList</code>, all Observer objects subscribers are added to an internal data structure called <code>observerList</code>.</p>
-                          <pre><code class="hljs java"><span class="hljs-comment">//StudentList class</span>
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addUi</span><span class="hljs-params">(Observer o)</span> </span>{
-    observerList.add(o);
-}
-</code></pre>
+                          <pre><code class="hljs java"><span><span class="hljs-comment">//StudentList class</span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addUi</span><span class="hljs-params">(Observer o)</span> </span>{</span><span>    observerList.add(o);</span><span>}</span></code></pre>
                         </li>
                       </ol>
                       <p><strong>Now, whenever the data in <code>StudentList</code> changes</strong> (e.g. when a new student is added to the <code>StudentList</code>),</p>
                       <ol>
                         <li>
                           <p>All interested observers are updated by calling the <code>notifyUIs</code> operation.</p>
-                          <pre><code class="hljs java"><span class="hljs-comment">//StudentList class</span>
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notifyUIs</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-comment">//for each observer in the list</span>
-    <span class="hljs-keyword">for</span>(Observer o: observerList){
-        o.update();
-    }
-}
-</code></pre>
+                          <pre><code class="hljs java"><span><span class="hljs-comment">//StudentList class</span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notifyUIs</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-comment">//for each observer in the list</span></span><span>    <span class="hljs-keyword">for</span>(Observer o: observerList){</span><span>        o.update();</span><span>    }</span><span>}</span></code></pre>
                         </li>
                         <li>
                           <p>UIs can then pull data from the <code>StudentList</code> whenever the <code>update</code> operation is called.</p>
-                          <pre><code class="hljs java"><span class="hljs-comment">//StudentListUI class</span>
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">()</span> </span>{
-    <span class="hljs-comment">//refresh UI by pulling data from StudentList</span>
-}
-</code></pre>
+                          <pre><code class="hljs java"><span><span class="hljs-comment">//StudentListUI class</span></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">()</span> </span>{</span><span>    <span class="hljs-comment">//refresh UI by pulling data from StudentList</span></span><span>}</span></code></pre>
                           <p>Note that <code>StudentList</code> is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.</p>
                         </li>
                       </ol>
-                    </tip-box>
+                    </box>
                     <p>Here is the generic description of the observer pattern:</p>
                     <img src="/se-book/designPatterns/observer/what/images/observableInterfaceDiagram.png" height="100">
                     <p></p>
                     <ul>
-                      <li><code>&lt;&lt;Observer&gt;&gt;</code> is an interface: any class that implements it can observe an <code>&lt;&lt;Observable&gt;&gt;</code>. Any number of <code>&lt;&lt;Observer&gt;&gt;</code> objects can observe (i.e. listen to changes of) the <code>&lt;&lt;Observable&gt;&gt;</code> object.</li>
-                      <li>The <code>&lt;&lt;Observable&gt;&gt;</code> maintains a list of <code>&lt;&lt;Observer&gt;&gt;</code> objects. <code>addObserver(Observer)</code> operation adds a new <code>&lt;&lt;Observer&gt;&gt;</code> to the list of <code>&lt;&lt;Observer&gt;&gt;s</code>.</li>
-                      <li>Whenever there is a change in the <code>&lt;&lt;Observable&gt;&gt;</code>, the <code>notifyObservers()</code> operation is called that will call the <code>update()</code> operation of all <code>&lt;&lt;Observer&gt;&gt;s</code> in the list.</li>
+                      <li><code>&lt;&lt;Observer&gt;&gt;</code> is an interface: any class that implements it can observe an <code>&lt;&lt;Observable&gt;&gt;</code>. Any number of <code>&lt;&lt;Observer&gt;&gt;</code> objects can observe (i.e. listen to changes
+                        of) the <code>&lt;&lt;Observable&gt;&gt;</code> object.</li>
+                      <li>The <code>&lt;&lt;Observable&gt;&gt;</code> maintains a list of <code>&lt;&lt;Observer&gt;&gt;</code> objects. <code>addObserver(Observer)</code> operation adds a new <code>&lt;&lt;Observer&gt;&gt;</code> to the list of <code>&lt;&lt;Observer&gt;&gt;</code>'s.</li>
+                      <li>Whenever there is a change in the <code>&lt;&lt;Observable&gt;&gt;</code>, the <code>notifyObservers()</code> operation is called that will call the <code>update()</code> operation of all <code>&lt;&lt;Observer&gt;&gt;</code>'s in
+                        the list.
+                      </li>
                     </ul>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In a GUI application, how is the Controller notified when the “save” button is clicked? UI frameworks such as JavaFX has inbuilt support for the Observer pattern.</p>
@@ -137,15 +125,18 @@ studentList.addUi(statusUi);
                   </div>
                   <div>
                     <div>
-                      <panel header="<md>:fas-dumbbell:</md> Exercises" expandable class="algolia-no-index">
+                      <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
                         <div>
-                          <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: polymorphism and Observer pattern." class="algolia-no-index">
+                          <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> polymorphism and Observer pattern.</p></template>
                             <question has-input="true">
                               <p>Explain how polymorphism is used in the Observer pattern.</p>
                               <div slot="answer" class="algolia-no-index">
                                 <img src="/se-book/designPatterns/observer/what/images/observableInterfaceNotation.png" height="90">
                                 <p></p>
-                                <p>With respect to the general form of the Observer pattern given above, when the Observable object invokes the <code>notifyObservers()</code> method, it is treating all <code>ConcreteObserver</code> objects as a general type called <code>Observer</code> and calling the <code>update()</code> method of each of them. However, the <code>update()</code> method of each <code>ConcreteObserver</code> could potentially show different behavior based on its actual type. That is, <code>update()</code> method shows polymorphic behavior.</p>
+                                <p>With respect to the general form of the Observer pattern given above, when the Observable object invokes the <code>notifyObservers()</code> method, it is treating all <code>ConcreteObserver</code> objects as a general type
+                                  called
+                                  <code>Observer</code> and calling the <code>update()</code> method of each of them. However, the <code>update()</code> method of each <code>ConcreteObserver</code> could potentially show different behavior based on its
+                                  actual type. That is, <code>update()</code> method shows polymorphic behavior.</p>
                                 <p>In the example given below, the <code>notifyUIs</code> operation can result in <code>StudentListUi</code> and <code>StudentStatsUi</code> changing their views in two different ways.</p>
                                 <img src="/se-book/designPatterns/observer/what/images/studentListStudentListObserver.png" height="190">
                                 <p></p>
@@ -154,7 +145,7 @@ studentList.addUi(statusUi);
                           </panel>
                         </div>
                         <div>
-                          <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Observer patter usage" class="algolia-no-index">
+                          <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Observer patter usage</p></template>
                             <question>
                               <p>The Observer pattern can be used when we want one object to initiate an activity in another object without having a direct dependency from the first object to the second object.</p>
                               <ul radio-group="caf40" class="radio-list">
@@ -180,7 +171,7 @@ studentList.addUi(statusUi);
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
     </footer>
   </div>
 </body>

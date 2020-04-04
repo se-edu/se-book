@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Requirements [Printable]</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -53,12 +51,14 @@
                 </ul>
                 <p>In either case, requirements need to be gathered, analyzed, specified, and managed.</p>
                 <p><strong>Requirements come from <em>stakeholders</em>.</strong></p>
-                <tip-box type="definition">
+                <box type="definition">
                   <div>
                     <p><strong>Stakeholder</strong>: A party that is potentially affected by the software project. e.g. users, sponsors, developers, interest groups, government agencies, etc.</p>
                   </div>
-                </tip-box>
-                <p><strong>Identifying requirements is often not easy.</strong> For example, stakeholders may not be aware of their precise needs, may not know how to communicate their requirements correctly, may not be willing to spend effort in identifying requirements, etc.</p>
+                </box>
+                <p><strong>Identifying requirements is often not easy.</strong> For example, stakeholders may not be aware of their precise needs, may not know how to communicate their requirements correctly, may not be willing to spend effort in identifying
+                  requirements, etc.
+                </p>
               </div>
             </div>
             <div>
@@ -68,22 +68,25 @@
                 </div>
               </p>
               <div>
-                <p>There are two kinds of requirements:</p>
+                <p>Requirements can be divided into two in the following way:</p>
                 <ol>
                   <li><strong><em>Functional requirements</em> specify what the system should do.</strong></li>
                   <li><strong><em>Non-functional requirements</em> specify the constraints under which system is developed and operated.</strong></li>
                 </ol>
-                <tip-box>
+                <box>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of non-functional requirement categories:</p>
                   <ul>
-                    <li>Data requirements e.g. size, <tooltip content="how often do data change">volatility</tooltip>, <tooltip content="saving data permanenetly">persistency</tooltip> etc.,</li>
+                    <li>Data requirements e.g. size, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">how often do data change</span>volatility</span>, <span data-mb-component-type="tooltip"
+                        v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">saving data permanenetly</span>persistency</span> etc.,</li>
                     <li>Environment requirements e.g. technical environment in which system would operate or need to be compatible with.</li>
-                    <li>Accessibility, Capacity, Compliance with regulations, Documentation, Disaster recovery, Efficiency, Extensibility, Fault tolerance, Interoperability, Maintainability, Privacy, Portability, Quality, Reliability, Response time, Robustness, Scalability, Security, Stability, Testability, and more ...</li>
+                    <li>Accessibility, Capacity, Compliance with regulations, Documentation, Disaster recovery, Efficiency, Extensibility, Fault tolerance, Interoperability, Maintainability, Privacy, Portability, Quality, Reliability, Response time, Robustness,
+                      Scalability, Security, Stability, Testability, and more ...</li>
                   </ul>
-                  <panel type="seamless" header="<md>:fas-cube:</md> Some concrete examples of NFRs" expanded>
+                  <panel type="seamless" expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some concrete examples of NFRs</p></template>
                     <ul>
                       <li>Business/domain rules: e.g. the size of the minefield cannot be smaller than five.</li>
-                      <li>Constraints: e.g. the system should be backward compatible with data produced by earlier versions of the system; system testers are available only during the last month of the project; the total project cost should not exceed $1.5 million.</li>
+                      <li>Constraints: e.g. the system should be backward compatible with data produced by earlier versions of the system; system testers are available only during the last month of the project; the total project cost should not exceed $1.5
+                        million.</li>
                       <li>Technical requirements: e.g. the system should work on both 32-bit and 64-bit environments.</li>
                       <li>Performance requirements: e.g. the system should respond within two seconds.</li>
                       <li>Quality requirements: e.g. the system should be usable by a novice who has never carried out an online purchase.</li>
@@ -93,11 +96,11 @@
                       </li>
                     </ul>
                   </panel>
-                </tip-box>
+                </box>
                 <p>We may have to spend an extra effort in digging NFRs out as early as possible because,</p>
                 <ol>
-                  <li><strong>NFRs are easier to miss</strong> <span class="dimmed"> e.g., stakeholders tend to think of functional requirements first</span></li>
-                  <li>sometimes <strong>NFRs are critical to the success of the software.</strong> <span class="dimmed"> E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.</span></li>
+                  <li><strong>NFRs are easier to miss</strong> <span class="dimmed">e.g., stakeholders tend to think of functional requirements first</span></li>
+                  <li>sometimes <strong>NFRs are critical to the success of the software.</strong> <span class="dimmed">E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.</span></li>
                 </ol>
               </div>
             </div>
@@ -110,7 +113,7 @@
               <div>
                 <p><strong>Requirements can be prioritized based the importance and urgency</strong>, while keeping in mind the constraints of schedule, budget, staff resources, quality goals, and other constraints.</p>
                 <p>A common approach is to group requirements into priority categories. Note that all such scales are subjective, and stakeholders define the meaning of each level in the scale for the project at hand.</p>
-                <tip-box>
+                <box>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example scheme for categorizing requirements:</p>
                   <ul>
                     <li><code>Essential</code>: The product must have this requirement fulfilled or else it does not get user acceptance</li>
@@ -123,16 +126,15 @@
                     <li><code>Must-have</code>, <code>Nice-to-have</code>, <code>Unlikely-to-have</code></li>
                     <li><code>Level 0</code>, <code>Level 1</code>, <code>Level 2</code>, ...</li>
                   </ul>
-                </tip-box>
-                <p><strong>Some requirements can be discarded if they are considered ‘out of <em>
-                      <tooltip content="the extent to which the software features should go">scope</tooltip>
-                    </em>’.</strong></p>
-                <tip-box>
-                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The requirement given below is for a Calendar application. Stakeholder of the software (e.g. product designers) might decide the following requirement is not in the scope of the software.</p>
+                </box>
+                <p><strong>Some requirements can be discarded if they are considered ‘out of <em><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">the extent to which the software features should go</span>scope</span></em>’.</strong></p>
+                <box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The requirement given below is for a Calendar application. Stakeholder of the software (e.g. product designers) might decide the following requirement is not in the scope
+                    of the software.</p>
                   <blockquote>
                     <p>The software records the actual time taken by each task and show the difference between the <em>actual</em> and <em>scheduled</em> time for the task.</p>
                   </blockquote>
-                </tip-box>
+                </box>
               </div>
             </div>
             <div>
@@ -142,7 +144,7 @@
                 </div>
               </p>
               <div>
-                <p>Here are some characteristics of well-defined requirements <trigger for="pop:zielczynski"><sup>[📖 zielczynski]</sup></trigger>:</p>
+                <p>Here are some characteristics of well-defined requirements <span for="pop:zielczynski" v-b-popover.hover.top.html="popoverGenerator" v-b-tooltip.hover.top.html="tooltipContentGetter" v-on:mouseover="$refs['pop:zielczynski'].show()" class="trigger"><sup>[📖 zielczynski]</sup></span>:</p>
                 <ul>
                   <li>Unambiguous</li>
                   <li>Testable (verifiable)</li>
@@ -151,8 +153,7 @@
                   <li>Understandable</li>
                   <li>Feasible (realistic, possible)</li>
                   <li>Independent</li>
-                  <li>
-                    <tooltip content="Not divisible any further">Atomic</tooltip>
+                  <li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Not divisible any further</span>Atomic</span>
                   </li>
                   <li>Necessary</li>
                   <li>Implementation-free (i.e. abstract)</li>
@@ -163,14 +164,10 @@
                   <li>Non-redundant</li>
                   <li>Complete</li>
                 </ul>
-                <popover id="pop:zielczynski">
-                  <div slot="content" class="algolia-no-index">
-                    <div>
-                      <p>Peter Zielczynski, <em><strong>Requirements Management Using IBM Rational RequisitePro</strong></em>, IBM Press, 2008</p>
-                    </div>
-                  </div>
-                </popover>
-              </div>
+                <span id="pop:zielczynski" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger">
+  <div data-mb-html-for="content">
+    <div>
+<p>Peter Zielczynski, <em><strong>Requirements Management Using IBM Rational RequisitePro</strong></em>, IBM Press, 2008</p></div></div></span></div>
             </div>
           </div>
         </div>
@@ -178,7 +175,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
     </footer>
   </div>
 </body>

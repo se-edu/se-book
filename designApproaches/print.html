@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -47,38 +45,25 @@
               <div>
                 <p>In a smaller system, design of the entire system can be shown in one place.</p>
                 <div v-closeable alt="single-level design example">
-                  <tip-box>
-                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This class diagram of <a href="https://se-edu.github.io/addressbook-level3">se-edu/addressbook-level3</a> depicts the design of the entire software.</p>
-                    <img src="https://se-edu.github.io/addressbook-level3/images/mainClassDiagram.png" width="600">
-                  </tip-box>
+                  <box>
+                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This class diagram of <a href="https://se-education.org/addressbook-level2">se-edu/addressbook-level2</a> depicts the design of the entire software.</p>
+                    <img src="https://se-education.org/addressbook-level2/images/mainClassDiagram.png" width="600"></box>
                 </div>
                 <p><strong>Design of bigger systems needs to be done/shown at multiple levels.</strong></p>
                 <div v-closeable alt="multi-level design example">
-                  <tip-box>
-                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This architecture diagram of <a href="https://se-edu.github.io/addressbook-level4">se-edu/addressbook-level4</a> depicts the high-level design of the software.</p>
-                    <img src="https://se-edu.github.io/addressbook-level4/images/Architecture.png" width="600">
+                  <box>
+                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This architecture diagram of <a href="https://se-education.org/addressbook-level3">se-edu/addressbook-level3</a> depicts the high-level design of the software.</p>
+                    <img src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300">
                     <p>Here are examples of lower level designs of some components of the same software:</p>
                     <tabs>
-                        <tab header="UI">
-                        <img src="https://se-edu.github.io/addressbook-level4/images/UiClassDiagram.png" width="600">
-                        <p>
-                          <hr>
-                        </p>
-                      </tab>
-                        <tab header="Logic" class="algolia-no-index">
-                        <img src="https://se-edu.github.io/addressbook-level4/images/LogicClassDiagram.png" width="600">
-                        <p>
-                          <hr>
-                        </p>
-                      </tab>
-                        <tab header="Storage" class="algolia-no-index">
-                        <img src="https://se-edu.github.io/addressbook-level4/images/StorageClassDiagram.png" width="600">
-                        <p>
-                          <hr>
-                        </p>
-                      </tab>
+                      <tab><template slot="_header">UI</template>
+                        <img src="https://se-edu.github.io/addressbook-level3/images/UiClassDiagram.png" width="700"></tab>
+                      <tab class="algolia-no-index"><template slot="_header">Logic</template>
+                        <img src="https://se-edu.github.io/addressbook-level3/images/LogicClassDiagram.png" width="800"></tab>
+                      <tab class="algolia-no-index"><template slot="_header">Storage</template>
+                        <img src="https://se-edu.github.io/addressbook-level3/images/StorageClassDiagram.png" width="700"></tab>
                     </tabs>
-                  </tip-box>
+                  </box>
                 </div>
               </div>
             </div>
@@ -92,7 +77,8 @@
                 <p><strong>Multi-level design can be done in a top-down manner, bottom-up manner, or as a mix.</strong></p>
                 <ul>
                   <li>Top-down: Design the high-level design first and flesh out the lower levels later. This is especially useful when designing big and novel systems where the high-level design needs to be stable before lower levels can be designed.</li>
-                  <li>Bottom-up: Design lower level components first and put them together to create the higher-level systems later. This is not usually scalable for bigger systems. One instance where this approach might work is when designing a variations of an existing system or re-purposing existing components to build a new system.</li>
+                  <li>Bottom-up: Design lower level components first and put them together to create the higher-level systems later. This is not usually scalable for bigger systems. One instance where this approach might work is when designing a variations
+                    of an existing system or re-purposing existing components to build a new system.</li>
                   <li>Mix: Design the top levels using the top-down approach but switch to a bottom-up approach when designing the bottom levels.</li>
                 </ul>
               </div>
@@ -106,7 +92,10 @@
               <div>
                 <p><strong><em>Agile design</em> can be contrasted with <em>full upfront design</em> in the following way</strong>:</p>
                 <blockquote>
-                  <p><strong>Agile designs are emergent, they’re not defined up front.</strong> Your overall system design will emerge over time, evolving to fulfill new requirements and take advantage of new technologies as appropriate. Although you will often do <strong>some initial architectural modeling at the very beginning</strong> of a project, this will be just enough to get your team going. This approach does not produce a fully documented set of models in place before you may begin coding. <sub>-- adapted from <a href="http://agilemodeling.com/essays/agileDesign.htm">agilemodeling.com</a></sub></p>
+                  <p><strong>Agile designs are emergent, they’re not defined up front.</strong> Your overall system design will emerge over time, evolving to fulfill new requirements and take advantage of new technologies as appropriate. Although you will
+                    often do <strong>some initial architectural modeling at the very beginning</strong> of a project, this will be just enough to get your team going. This approach does not produce a fully documented set of models in place before you
+                    may begin coding.
+                    <sub>-- adapted from <a href="http://agilemodeling.com/essays/agileDesign.htm">agilemodeling.com</a></sub></p>
                 </blockquote>
               </div>
             </div>
@@ -116,7 +105,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
     </footer>
   </div>
 </body>

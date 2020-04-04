@@ -8,11 +8,11 @@
 
 **Software architectures follow various high-level styles (aka _architectural patterns_)**, just like <trigger trigger="click" for="modal:archiStyles-buildingArchitectures">building architectures follow various architecture styles</trigger>.
 
-<tip-box> 
+<box>
 
 {{ icon_example }} n-tier style, client-server style, event-driven style, transaction processing style, service-oriented style, pipes-and-filters style, message-driven style, broker style, ...
 
-</tip-box>
+</box>
 
 <modal large title="Building Architecture Styles" id="modal:archiStyles-buildingArchitectures">
 

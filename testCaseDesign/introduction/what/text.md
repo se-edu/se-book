@@ -8,7 +8,7 @@
 
 **Except for trivial <tooltip content="Software Under Test">SUTs</tooltip>, <tooltip content="testing all possible cases">exhaustive testing</tooltip> is not practical** because such testing often requires a massive/infinite number of test cases.  
 
-<tip-box>
+<box>
 
 {{ icon_example }} Consider the test cases for adding a string object to a <tooltip content="Java: `ArrayList`,<br>Python: `list`">collection</tooltip>:
 
@@ -23,14 +23,14 @@
 
 Exhaustive testing of this operation can take many more test cases.
 
-</tip-box>
+</box>
 
 > Program testing can be used to show the presence of bugs, but never to show their absence!  
 > <sub>--Edsger Dijkstra</sub>
 
 <div id="e-and-e">
 
-**Every test case adds to the cost of testing.** In some systems, a single test case can cost thousands of dollars %%&nbsp;e.g. on-field testing of flight-control software%%. Therefore, **test cases need to be designed to make the best use of testing resources.**  In particular:
+**Every test case adds to the cost of testing.** In some systems, a single test case can cost thousands of dollars %%e.g. on-field testing of flight-control software%%. Therefore, **test cases need to be designed to make the best use of testing resources.**  In particular:
 
 * **Testing should be _effective_** i.e., it finds a high percentage of existing bugs %%e.g., a set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system%%.
 

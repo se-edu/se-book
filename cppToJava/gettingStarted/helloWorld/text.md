@@ -30,14 +30,14 @@ int main() {
     return 0;
 }
 ```
-This HelloWorld Java program defines one method named main: `public static void main(String[] args)`
+This HelloWorld Java program defines one method named main: `public static void main(String[] args)`{.java}
 
-`System.out.println` displays results on the screen.
+`System.out.println()`{.java} displays a given text on the screen.
 
 
 {{ similar }} Some similarities:
 
-* Java programs are made up of class and method definitions, and <tooltip content="A _method_ is a named sequence of statements">methods</tooltip> are made up of <trigger for="pop:helloWorld-statement">statements</trigger>.
+* Java programs consists of <trigger for="pop:helloWorld-statement">statements</trigger>, grouped <tooltip content="A _method_ is a named sequence of statements">methods</tooltip>, which are then grouped into classes.
 * Java is “case-sensitive”, which means `SYSTEM` is different from `System`.
 * `public` is an _access modifier_ that indicates the method is accessible from outside this class. Similarly, `private` access modifier indicates that a method/attribute is not accessible outside the class.
 * `static` indicates this method is defined as a class-level member. Do not worry if you don’t know what that means. It will be explained later.
@@ -48,12 +48,12 @@ This HelloWorld Java program defines one method named main: `public static void 
 * The line starting with `//` is a comment. You can use `//` for single line comments and `/* ... */` for multi-line comments in Java code.
 
 <popover id="pop:helloWorld-statement" title="Statements" placement="top">
-  <div slot="content">
+  <div slot="content">
 
 A statement is a line of code that performs a basic operation. In the HelloWorld program, this line is a print statement that displays a message on the screen:
 
 `System.out.println("Hello, World!");`
-  </div>
+  </div>
 </popover>
 
 {{ different }} Some differences:

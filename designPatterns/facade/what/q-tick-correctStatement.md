@@ -13,7 +13,7 @@ Does the design below likely to use the Facade pattern?
 
 True.
 
-Facade is clearly visible (Storage is the << Facade >> class).
+Facade is clearly visible (Storage is the <<Facade>> class).
 
 </div>
 </question>

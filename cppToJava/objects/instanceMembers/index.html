@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Objects: Instance Members</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -37,14 +35,20 @@
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use instance members of objects</span></span></span></span></p>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use instance members of objects</span>
+              </span>
+              </span>
+              </span>
+            </p>
             <p></p>
             <p></p>
             <div>
               <div></div>
               <p></p>
               <p><span class="dimmed"><strong><span>C++ to Java → Objects →
-                    </span></strong></span></p>
+</span></strong>
+                </span>
+              </p>
               <div id="title-and-body">
                 <div>
                   <h4 id="instance-members"><span>Instance Members</span><a class="fa fa-anchor" href="#instance-members"></a></h4>
@@ -52,76 +56,47 @@
                 <div id="main">
                   <div>
                     <p><strong>Variables that belong to an object are called <em>attributes</em> (or <em>fields</em>).</strong></p>
-                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span></span></span> To access an attribute of an object, Java uses <em>dot notation</em>.</p>
+                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span>
+                      </span>
+                      </span> To access an attribute of an object, Java uses <em>dot notation</em>.</p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below uses <code>spot.x</code> which means &quot;go to the object spot refers to, and get the value of the attribute <code>x</code>.&quot;</p>
-                      <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
-<span class="hljs-keyword">int</span> sum = spot.x * spot.x + spot.y * spot.y;
-System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y + <span class="hljs-string">", "</span> + sum);
-</code></pre>
-                      <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                      <pre><code class="hljs">3, 4, 25
-</code></pre>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below uses <code>spot.x</code> which means &quot;go to the object <code>spot</code> refers to, and get the value of the attribute <code>x</code>.&quot;</p>
+                      <pre><code class="hljs java"><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);</span><span><span class="hljs-keyword">int</span> sum = spot.x * spot.x + spot.y * spot.y;</span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y + <span class="hljs-string">", "</span> + sum);</span></code></pre>
+                      <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
+                      </p>
+                      <pre><code class="hljs"><span>3, 4, 25</span></code></pre>
                     </box>
-                    <p><strong>You can <tooltip content="i.e., change/modify"><em>mutate</em></tooltip> an object by assigning a different values to its attributes.</strong></p>
+                    <p><strong>You can <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., change/modify</span><em>mutate</em></span> an object by assigning a different values to its attributes.</strong></p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example changes the x value of the <code>Point</code> object to <code>5</code>.</p>
-                      <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
-spot.x = <span class="hljs-number">5</span>;
-System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
-</code></pre>
-                      <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                      <pre><code class="hljs">5, 4
-</code></pre>
+                      <pre><code class="hljs java"><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);</span><span>spot.x = <span class="hljs-number">5</span>;</span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);</span></code></pre>
+                      <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
+                      </p>
+                      <pre><code class="hljs"><span>5, 4</span></code></pre>
                     </box>
-                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span></span></span> <strong>Java uses the dot notation to invoke methods on an object too.</strong></p>
+                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span>
+                      </span>
+                      </span> <strong>Java uses the dot notation to invoke methods on an object too.</strong></p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example invokes the <code>translate</code> method on a <code>Point</code> object so that it moves to a different location.</p>
-                      <pre><code class="hljs java">Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
-System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
-spot.translate(<span class="hljs-number">5</span>,<span class="hljs-number">5</span>);
-System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
-</code></pre>
-                      <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                      <pre><code class="hljs">3, 4
-8, 9
-</code></pre>
+                      <pre><code class="hljs java"><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);</span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);</span><span>spot.translate(<span class="hljs-number">5</span>,<span class="hljs-number">5</span>);</span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);</span></code></pre>
+                      <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
+                      </p>
+                      <pre><code class="hljs"><span>3, 4</span><span>8, 9</span></code></pre>
                     </box>
                   </div>
                   <div>
                     <div>
-                      <panel header="<md>:fas-dumbbell:</md> Exercises" expandable class="algolia-no-index">
+                      <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
                         <div>
                           <div>
-                            <panel header="<md>:glyphicon-question-sign:</md> use `Rectangle` objects" class="algolia-no-index">
+                            <panel type="dark" expanded id="key-exercise-use-rectangle-objects"><template slot="_header"><h3 id="key-exercise-use-rectangle-objects"><small><small><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> [Key Exercise] use <code>Rectangle</code> objects</small></small><a class="fa fa-anchor" href="#key-exercise-use-rectangle-objects"></a></h3></template>
                               <question>
                                 <p>Update the code below as described in code comments, to produce the given output.</p>
-                                <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Rectangle;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        Rectangle r = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>);
-        System.out.println(r);
-
-        <span class="hljs-keyword">int</span> area;
-        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add a line below to calculate the area using width and height properties of r</span>
-        <span class="hljs-comment">// and assign it to the variable area</span>
-
-        System.out.println(<span class="hljs-string">"Area: "</span> + area);
-
-        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add a line here to set the size of r to 8x10 (width x height)</span>
-        <span class="hljs-comment">//Recommended: use the setSize(int height, int width) method of the Rectangle object</span>
-
-        System.out.println(r);
-    }
-
-}
-</code></pre>
-                                <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                <pre><code class="hljs">java.awt.Rectangle[x=0,y=0,width=4,height=6]
-Area: 24
-java.awt.Rectangle[x=0,y=0,width=8,height=10]
-</code></pre>
+                                <pre><code class="hljs java"><span><span class="hljs-keyword">import</span> java.awt.Rectangle;</span><span>&#x200B;</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        Rectangle r = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>);</span><span>        System.out.println(r);</span><span>&#x200B;</span><span>        <span class="hljs-keyword">int</span> area;</span><span>        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add a line below to calculate the area using width and height properties of r</span></span><span>        <span class="hljs-comment">// and assign it to the variable area</span></span><span>&#x200B;</span><span>        System.out.println(<span class="hljs-string">"Area: "</span> + area);</span><span>&#x200B;</span><span>        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add a line here to set the size of r to 8x10 (width x height)</span></span><span>        <span class="hljs-comment">//Recommended: use the setSize(int width, int height) method of the Rectangle object</span></span><span>&#x200B;</span><span>        System.out.println(r);</span><span>    }</span><span>&#x200B;</span><span>}</span></code></pre>
+                                <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
+                                </p>
+                                <pre><code class="hljs"><span>java.awt.Rectangle[x=0,y=0,width=4,height=6]</span><span>Area: 24</span><span>java.awt.Rectangle[x=0,y=0,width=8,height=10]</span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <ul>
                                     <li>Area can be calculated as <code>r.width * r.height</code></li>
@@ -144,7 +119,7 @@ java.awt.Rectangle[x=0,y=0,width=8,height=10]
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
     </footer>
   </div>
 </body>

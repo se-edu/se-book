@@ -1,5 +1,7 @@
 <frontmatter>
 title: "About: Usage"
+siteNav: mainNav.md
+pageNav: 3
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
@@ -29,7 +31,7 @@ This book tries to _layer_ information so that readers can decide to omit less i
 
 **More important information are in bold** or ==highlighted== while %%less important information are dimmed%% or in collapsed panels such as the below.
 
-<tip-box> 
+<box>
 
 <panel header="Some less important info in a minimized panel" minimized>
 
@@ -49,27 +51,27 @@ Less important info
 
 </panel><p/>
 
-</tip-box>
+</box>
 
 
 **Tabs indicate alternative formats of the same content** (e.g. video vs text). You can choose the one you like and ignore the other tabs. 
 
-<tip-box>
+<box>
 
 <tabs> 
-  <tab header="{{ icon_text }}">
-  
+  <tab header="{{ icon_text }}">
+  
 Some textual description of X
 
-  </tab>
-  <tab header="{{ icon_video }}">
+  </tab>
+  <tab header="{{ icon_video }}">
 
 Video describing X
 
-  </tab>
+  </tab>
 </tabs>
 
-</tip-box>
+</box>
 
 **Dotted underlines indicate <trigger for="pop:tooltip-example">tool tips</trigger>** (activated by hovering over it) and **dashed underlines indicate <trigger for="modal:modal-example" trigger="click">modal windows</trigger>** (activated by clicking) containing additional information.
 
@@ -112,27 +114,27 @@ Meaning of some shortened headings:
 #### Boxed-Text Styles
 <div class="indented">
 
-<tip-box type="info">
+<box type="info">
     additional info
-</tip-box>
-<tip-box type="warning">
+</box>
+<box type="warning">
     warning
-</tip-box>
-<tip-box type="success">
+</box>
+<box type="success">
     positive message
-</tip-box>
-<tip-box type="important">
+</box>
+<box type="important">
     important message
-</tip-box>
-<tip-box type="wrong">
+</box>
+<box type="wrong">
     an error to avoid
-</tip-box>
-<tip-box type="tip">
+</box>
+<box type="tip">
     tip
-</tip-box>
-<tip-box type="definition">
+</box>
+<box type="definition">
     definition
-</tip-box>
+</box>
 
 </div>
 
@@ -140,7 +142,7 @@ Meaning of some shortened headings:
 
 <div class="indented">
 
-{{ icon_tangential }} : tangential info, can be ignored if not interested<br>
+{{ icon_extra }} : tangential info, can be ignored if not interested<br>
 {{ icon_new_window }} : direct link to the LO. <kbd>Ctrl</kbd>+`Click` to open the LO in new window/tab.<br>
 {{ icon_outcome }} : learning outcomes<br>
 {{ icon_prereq }} : prerequisite learning outcome<br>

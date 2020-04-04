@@ -8,7 +8,7 @@
 
 **A UML sequence diagram _captures the interactions between multiple objects for a given scenario._**
 
-<tip-box>
+<box>
 
 {{ icon_example }} Consider the code below.
 
@@ -37,7 +37,7 @@ Here is the sequence diagram to model the interactions for the method call `prod
 <img src="{{baseUrl}}/uml/sequenceDiagrams/introduction/images/Machine.png" width="450" />
 <p/>
 
-</tip-box>
+</box>
 
 </div>
 

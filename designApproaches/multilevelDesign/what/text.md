@@ -10,13 +10,13 @@ In a smaller system, design of the entire system can be shown in one place.
 
 <div v-closeable alt="single-level design example">
 
-<tip-box> 
+<box>
 
-{{ icon_example }} This class diagram of [se-edu/addressbook-level3](https://se-edu.github.io/addressbook-level3) depicts the design of the entire software.
+{{ icon_example }} This class diagram of [se-edu/addressbook-level2](https://se-education.org/addressbook-level2) depicts the design of the entire software.
 
-<img src="https://se-edu.github.io/addressbook-level3/images/mainClassDiagram.png" width="600" />
+<img src="https://se-education.org/addressbook-level2/images/mainClassDiagram.png" width="600" />
 
-</tip-box>
+</box>
 
 </div>
 
@@ -24,33 +24,33 @@ In a smaller system, design of the entire system can be shown in one place.
 
 <div v-closeable alt="multi-level design example">
 
-<tip-box> 
+<box>
 
-{{ icon_example }} This architecture diagram of [se-edu/addressbook-level4](https://se-edu.github.io/addressbook-level4) depicts the high-level design of the software.
+{{ icon_example }} This architecture diagram of [se-edu/addressbook-level3](https://se-education.org/addressbook-level3) depicts the high-level design of the software.
 
-<img src="https://se-edu.github.io/addressbook-level4/images/Architecture.png" width="600" />
+<img src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300" />
 
 Here are examples of lower level designs of some components of the same software:
 
 <tabs> 
-  <tab header="UI">
+  <tab header="UI">
 
-<img src="https://se-edu.github.io/addressbook-level4/images/UiClassDiagram.png" width="600" />
+<img src="https://se-edu.github.io/addressbook-level3/images/UiClassDiagram.png" width="700" />
 
-  <hr></tab>
-  <tab header="Logic">
+  </tab>
+  <tab header="Logic">
 
-<img src="https://se-edu.github.io/addressbook-level4/images/LogicClassDiagram.png" width="600" />
+<img src="https://se-edu.github.io/addressbook-level3/images/LogicClassDiagram.png" width="800" />
 
-  <hr></tab>
-  <tab header="Storage">
+  </tab>
+  <tab header="Storage">
 
-<img src="https://se-edu.github.io/addressbook-level4/images/StorageClassDiagram.png" width="600" />
+<img src="https://se-edu.github.io/addressbook-level3/images/StorageClassDiagram.png" width="700" />
 
-  <hr></tab>
+  </tab>
 </tabs>
 
-</tip-box>
+</box>
 
 </div>
 

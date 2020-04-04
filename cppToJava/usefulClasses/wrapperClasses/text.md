@@ -18,7 +18,18 @@ System.out.println(i.equals(5));  // compiler error
 ```
 </box>
 
-But **for each primitive type, there is a corresponding class in the Java library, called a _wrapper class_**. The wrapper class for `char` is called `Character`; for `int` it’s called `Integer`. Other wrapper classes include `Boolean`, `Long`, and `Double`. They are in the `java.lang` package, so you can use them without importing them.
+But **for each primitive type, there is a corresponding class in the Java library, called a _wrapper class_**, as given in the table below. They are in the `java.lang` package i.e., no need to import.
+
+Primitive type | Wrapper class
+---------------|-------------
+`byte`         | `Byte`
+`short`        | `Short`
+`int`          | `Integer`
+`long`         | `Long`
+`float`        | `Float`
+`double`       | `Double`
+`char`         | `Character`
+`boolean`      | `Boolean`
 
 <box>
 
@@ -38,7 +49,7 @@ System.out.println(i);
 
 </box>
 
-Each wrapper class defines constants `MIN_VALUE` and `MAX_VALUE`. Because these constants are available in wrapper classes, you don’t have to remember them, and you don’t have to include them in your programs.
+Each wrapper class defines constants `MIN_VALUE` and `MAX_VALUE`.
 
 <box>
 
@@ -52,13 +63,13 @@ System.out.println(Integer.MIN_VALUE + " : " + Integer.MAX_VALUE);
 </box>
 
 
-**Wrapper classes provide methods for converting strings to other types.** In this context, parse means something like “read and translate”. `Integer.parseInt` converts a string to (you guessed it) an integer. The other wrapper classes provide similar methods, like `Double.parseDouble` and `Boolean.parseBoolean`.
+**Wrapper classes provide methods for <tooltip content="In this context, parse means something like “read and translate”">_parsing_</tooltip> strings to other types** e.g., `Integer.parseInt` converts a string to (you guessed it) an integer. The other wrapper classes provide similar methods, like `Double.parseDouble` and `Boolean.parseBoolean`.
 
-{{ icon_example }} `Integer.parseInt("12345")` {{ icon_output_right }} `1234`
+{{ icon_example }} `Integer.parseInt("1234")` {{ icon_output_right }} `1234`
 
 Wrapper classes also provide `toString`, which returns a string representation of a value.
 
-{{ icon_example }} `Integer.toString(12345)` {{ icon_output_right }} `"1234"`
+{{ icon_example }} `Integer.toString(1234)` {{ icon_output_right }} `"1234"`
 
 
 </div>

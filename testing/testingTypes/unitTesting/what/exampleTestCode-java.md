@@ -10,7 +10,8 @@ class Foo{
     }
     
 }
-
+```
+```java
 class FooTest{
     
     @Test

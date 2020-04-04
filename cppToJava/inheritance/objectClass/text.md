@@ -11,7 +11,7 @@ As you know, all Java objects inherit from the `Object` class. Let us look at so
 ##### The `toString` method
 <div class="indented">
 
-**Every class inherits a `toString` method from the `Object` class that is used by Java to get a string representation of the object** %%e.g., for printing%%. By default it simply returns the type of the object and its address (in hexadecimal).
+**Every class inherits a `toString` method from the `Object` class that is used by Java to get a string representation of the object** %%e.g., for printing%%. By default, it simply returns the type of the object and its address (in hexadecimal).
 
 <box>
 
@@ -61,7 +61,7 @@ class Time{
 {{ icon_output_right }} `05:20:13`
 </box>
 
-:bulb: `@Override` is an optional annotation you can use to indicate that the method is overriding a method from the parent class.
+{{ icon_tip }} `@Override` is an optional annotation you can use to indicate that the method is overriding a method from the parent class.
 
 </div>
 

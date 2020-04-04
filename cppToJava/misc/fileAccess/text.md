@@ -34,7 +34,7 @@ is Directory?: false
 ```
 </box>
 
-{{ icon_info }} If you use backslash to specify the file path in a Windows Computer, you need to use an additional backslash as an escape character because the backslash by itself has a special meaning. e.g., use {{ icon_tick_green }}`"data\\fruits.txt"`, not {{ icon_x_red }} `"data\fruits.txt"`. Alternatively, you can use forward slash {{ icon_tick_green }} `"data/fruits.txt"` (even on Windows).
+{{ icon_info }} If you use backslash to specify the file path in a Windows computer, you need to use an additional backslash as an escape character because the backslash by itself has a special meaning. e.g., use {{ icon_tick_green }}`"data\\fruits.txt"`, not {{ icon_x_red }} `"data\fruits.txt"`. Alternatively, you can use forward slash {{ icon_tick_green }} `"data/fruits.txt"` (even on Windows).
 
 **You can read from a file using a `Scanner` object that uses a `File` object as the _source_ of data.**
 
@@ -129,7 +129,7 @@ private static void appendToFile(String filePath, String textToAppend) throws IO
 
 </box>
 
-**The [`java.nio.file.Files`]({{ java_api }}/java/nio/file/Files.html) is a utility class provides several useful file operations.** It relies on the [`java.nio.file.Paths`]({{ java_api }}/java/nio/file/Paths.html) file to generate `Path` objects that represent file paths.
+**The [`java.nio.file.Files`]({{ java_api }}/java/nio/file/Files.html) is a utility class that provides several useful file operations.** It relies on the [`java.nio.file.Paths`]({{ java_api }}/java/nio/file/Paths.html) file to generate `Path` objects that represent file paths.
 
 <box>
 
@@ -156,5 +156,4 @@ The techniques above are good enough to manipulate simple text files. Note that 
 </div>
 
 <div id="extras">
-  <include src="exercisesPanel.md" boilerplate />
 </div>

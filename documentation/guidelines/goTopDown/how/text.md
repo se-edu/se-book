@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<tip-box> 
+<box>
 
 {{ icon_example }} To explain a system called `SystemFoo` with two sub-systems, `FrontEnd` and `BackEnd`, start by describing the system at the highest level of abstraction, and progressively drill down to lower level details. An outline for such a description is given below.
 
@@ -40,7 +40,7 @@
 
 >...
 
-</tip-box>
+</box>
 
 </div>
 

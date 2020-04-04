@@ -1,10 +1,10 @@
 <span id="title">Class Diagrams (Basics)</span>
 
-<span id="prereqs"><panel src="../../../oop/classes/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Design → OOP → Classes → Basic%%" popup-url="{{ baseUrl }}/oop/classes/what" /></span>
-
 <span id="outcomes">{{ icon_outcome }} Can use basic-level class diagrams</span>
 
 <div id="body">
+
+%%<small>{{ icon_info }} Contents of the panels given below belong to a different chapter; they have been embedded here for convenience and are collapsed by default to avoid content duplication in the printed version.</small>%%
 
 <panel type="seamless" src="../../../uml/classDiagrams/introduction/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Introduction → What" alt="{{ icon_prereq }} UML/ClassDiagrams" />
 
@@ -20,13 +20,13 @@
 
 The most basic class diagram is a bunch of classes with some solid lines among them to represent associations, such as this one.
 
-<tip-box>
+<box>
 
 {{ icon_example }} An example class diagram showing associations between classes.
 <p/><img src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/ageListCalculatorPersonMinimal.png" width="450" />
 <p/>
 
-</tip-box>
+</box>
 
 In addition, **associations can show additional decorations such as _association labels_, _association roles_, _multiplicity_ and _navigability_** to add more information to a class diagram.
 
@@ -37,13 +37,13 @@ In addition, **associations can show additional decorations such as _association
 <panel type="seamless" src="../../../oop/associations/navigability/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} OOP {{ icon_embedding }} Associations → Navigability" alt="{{ icon_prereq }} OOP/Navigability"/>
 <panel type="seamless" src="../../../uml/classDiagrams/associations/navigability/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations → Navigability" alt="{{ icon_prereq }} UML/Navigability" />
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Here is the same class diagram shown earlier but with some additional information included: 
 <p/><img src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/ageListCalculatorPerson.png" width="450" />
 <p/>
 
-</tip-box>
+</box>
 
 
 </div>

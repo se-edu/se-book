@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Some Useful Classes: The String Class</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -37,69 +35,64 @@
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use the String class</span></span></span></span></p>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use the String class</span>
+              </span>
+              </span>
+              </span>
+            </p>
             <p></p>
             <p></p>
             <div>
               <div></div>
               <p></p>
               <p><span class="dimmed"><strong><span>C++ to Java → Some Useful Classes →
-                    </span></strong></span></p>
+</span></strong>
+                </span>
+              </p>
               <div id="title-and-body">
                 <div>
                   <h4 id="the-string-class"><span>The <code>String</code> Class</span><a class="fa fa-anchor" href="#the-string-class"></a></h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p>String is a built-in Java class that you <trigger trigger="click" for="modal:stringClass-javaLang">can use without importing</trigger>. Given below are some useful String methods:</p>
-                    <modal id="modal:stringClass-javaLang" title=":bulb: `java.lang` classes can be used without importing" placement="top" class="algolia-no-index">
+                    <p>String is a built-in Java class that you <span trigger="click" for="modal:stringClass-javaLang" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:stringClass-javaLang'].show()"
+                        class="trigger-click">can use without importing</span>. Given below are some useful String methods:</p>
+                    <b-modal id="modal:stringClass-javaLang" placement="top" hide-footer size modal-class="mb-zoom" ref="modal:stringClass-javaLang"><template slot="modal-title">💡 <code>java.lang</code> classes can be used without importing</template>
                       <p>Any class in the <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/package-summary.html"><code>java.lang</code></a> package can be used without importing.
                       </p>
-                    </modal>
+                    </b-modal>
                     <h5 id="find-characters-of-a-string">Find characters of a string<a class="fa fa-anchor" href="#find-characters-of-a-string"></a></h5>
                     <div class="indented">
                       <p>Strings provide a method named <code>charAt</code>, which extracts a character. It returns a <code>char</code>, a primitive type that stores an individual character (as opposed to strings of them).</p>
-                      <pre><code class="hljs java">String fruit = <span class="hljs-string">"banana"</span>;
-<span class="hljs-keyword">char</span> letter = fruit.charAt(<span class="hljs-number">0</span>);
-</code></pre>
+                      <pre><code class="hljs java"><span>String fruit = <span class="hljs-string">"banana"</span>;</span><span><span class="hljs-keyword">char</span> letter = fruit.charAt(<span class="hljs-number">0</span>);</span></code></pre>
                       <p>The argument 0 means that we want the letter at position 0. Like array indexes, string indexes start at 0, so the character assigned to <code>letter</code> is <code>'b'</code>.</p>
                       <p>You can convert a string to an array of characters using the <code>toCharArray</code> method.</p>
-                      <pre><code class="hljs java"><span class="hljs-keyword">char</span>[] fruitChars = fruit.toCharArray()
-</code></pre>
+                      <pre><code class="hljs java"><span><span class="hljs-keyword">char</span>[] fruitChars = fruit.toCharArray()</span></code></pre>
                     </div>
                     <h5 id="change-a-string-to-upper-lower-case">Change a string to upper/lower case<a class="fa fa-anchor" href="#change-a-string-to-upper-lower-case"></a></h5>
                     <div class="indented">
                       <p>Strings provide methods, <code>toUpperCase</code> and <code>toLowerCase</code>, that convert from uppercase to lowercase and back.</p>
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> After these statements run, <code>upperName</code> refers to the string <code>&quot;ALAN TURING&quot;</code> but <code>name</code> still refers to <code>&quot;Alan Turing&quot;</code>.</p>
-                        <pre><code class="hljs java">String name = <span class="hljs-string">"Alan Turing"</span>;
-String upperName = name.toUpperCase();
-System.out.println(name);
-System.out.println(upperName);
-</code></pre>
-                        <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                        <pre><code class="hljs">Alan Turing
-ALAN TURING
-</code></pre>
+                        <pre><code class="hljs java"><span>String name = <span class="hljs-string">"Alan Turing"</span>;</span><span>String upperName = name.toUpperCase();</span><span>System.out.println(name);</span><span>System.out.println(upperName);</span></code></pre>
+                        <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
+                        </p>
+                        <pre><code class="hljs"><span>Alan Turing</span><span>ALAN TURING</span></code></pre>
                       </box>
-                      <p>Note that <strong>a string method cannot change the string object on which the method is invoked, because strings are <tooltip content="once created, cannot be modified"><em>immutable</em></tooltip></strong>. For example, when you invoke <code>toUpperCase</code> on a string <code>&quot;abc&quot;</code>, you get a new string object <code>&quot;ABC&quot;</code> as the return value rather than the string <code>&quot;abc&quot;</code> being changed to <code>&quot;ABC&quot;</code>. As a result, for such string methods that <em>seemingly</em> modify the string but <em>actually</em> return a new string instead e.g., <code>toLowerCase</code>, <mark>invoking the method has no effect if you don’t assign the return value to a variable</mark>.</p>
-                      <pre><code class="hljs java">String s = <span class="hljs-string">"Ada"</span>;
-s.toUpperCase(); <span class="hljs-comment">// no effect</span>
-s = s.toUpperCase(); <span class="hljs-comment">// the correct way</span>
-</code></pre>
+                      <p>Note that <strong>a string method cannot change the string object on which the method is invoked, because strings are <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">once created, cannot be modified</span><em>immutable</em></span></strong>.
+                        For example, when you invoke <code>toUpperCase</code> on a string <code>&quot;abc&quot;</code>, you get a new string object <code>&quot;ABC&quot;</code> as the return value rather than the string <code>&quot;abc&quot;</code> being
+                        changed to <code>&quot;ABC&quot;</code>. As a result, for such string methods that <em>seemingly</em> modify the string but <em>actually</em> return a new string instead e.g., <code>toLowerCase</code>, <mark>invoking the method has no effect if you don’t assign the return value to a variable</mark>.</p>
+                      <pre><code class="hljs java"><span>String s = <span class="hljs-string">"Ada"</span>;</span><span>s.toUpperCase(); <span class="hljs-comment">// no effect</span></span><span>s = s.toUpperCase(); <span class="hljs-comment">// the correct way</span></span></code></pre>
                     </div>
                     <h5 id="replacing-parts-of-a-string">Replacing parts of a string<a class="fa fa-anchor" href="#replacing-parts-of-a-string"></a></h5>
                     <div class="indented">
                       <p>Another useful method is <code>replace</code>, which finds and replaces instances of one string within another.</p>
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example replaces <code>&quot;Computer Science&quot;</code> with <code>&quot;CS&quot;</code>.</p>
-                        <pre><code class="hljs java">String text = <span class="hljs-string">"Computer Science is fun!"</span>;
-text = text.replace(<span class="hljs-string">"Computer Science"</span>, <span class="hljs-string">"CS"</span>);
-System.out.println(text);
-</code></pre>
-                        <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                        <pre><code class="hljs">CS is fun!
-</code></pre>
+                        <pre><code class="hljs java"><span>String text = <span class="hljs-string">"Computer Science is fun!"</span>;</span><span>text = text.replace(<span class="hljs-string">"Computer Science"</span>, <span class="hljs-string">"CS"</span>);</span><span>System.out.println(text);</span></code></pre>
+                        <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
+                        </p>
+                        <pre><code class="hljs"><span>CS is fun!</span></code></pre>
                       </box>
                     </div>
                     <h5 id="accessing-substrings">Accessing substrings<a class="fa fa-anchor" href="#accessing-substrings"></a></h5>
@@ -129,41 +122,27 @@ System.out.println(text);
                     </div>
                     <h5 id="comparing-strings">Comparing Strings<a class="fa fa-anchor" href="#comparing-strings"></a></h5>
                     <div class="indented">
-                      <p>To compare two strings, it may be tempting to use the == and != operators.</p>
-                      <pre><code class="hljs java">String name1 = <span class="hljs-string">"Alan Turing"</span>;
-String name2 = <span class="hljs-string">"Ada Lovelace"</span>;
-<span class="hljs-keyword">if</span> (name1 == name2) {                 <span class="hljs-comment">// wrong!</span>
-    System.out.println(<span class="hljs-string">"The names are the same."</span>);
-}
-</code></pre>
-                      <p>This code compiles and runs, and most of the time it gets the answer right. But it is not correct, and sometimes it gets the answer wrong. The problem is that the <code>==</code> operator checks whether the two variables refer to the same object (by comparing the references). If you give it two different strings that contain the same letters, it yields false.
-                        The right way to compare strings is with the <code>equals</code> method.</p>
+                      <p>To compare two strings, it is tempting to use the <code>==</code> and <code>!=</code> operators.</p>
+                      <pre><code class="hljs java"><span>String name1 = <span class="hljs-string">"Alan Turing"</span>;</span><span>String name2 = <span class="hljs-string">"Alan Turing"</span>;</span><span>System.out.println(name1 == name2);</span></code></pre>
+                      <p>This code compiles and runs, and most of the time it shows <code>true</code>. But it is not correct. The problem is, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., as opposed to comparing primitive values e.g., <code>2 == 2</code></span>when
+                        used for comparing objects</span>, the <code>==</code> operator checks whether the two variables refer to the same object (by comparing the references). If you give it two different string objects that contain the same letters,
+                        it is supposed to yield <code>true</code> because they are two distinct objects even if they contain the same text. However, because Java strings are immutable, <mark>in some cases (but not always)</mark> Java reuses existing string
+                        objects instead of creating multiple objects, which can cause the above code to yield <code>true</code>. Therefore, it is not safe to use <code>==</code> to compare strings if your intention is to check if they contain the same
+                        text.</p>
+                      <p><strong>The right way to compare strings is with the <code>equals</code> method.</strong></p>
                       <box>
-                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example invokes <code>equals</code> on <code>name1</code> and passes <code>name2</code> as an argument. The <code>equals</code> method returns <code>true</code> if the strings contain the same characters; otherwise it returns <code>false</code>.</p>
-                        <pre><code class="hljs java"><span class="hljs-keyword">if</span> (name1.equals(name2)) {
-    System.out.println(<span class="hljs-string">"The names are the same."</span>);
-}
-</code></pre>
+                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example invokes <code>equals</code> on <code>name1</code> and passes <code>name2</code> as an argument. The <code>equals</code> method returns <code>true</code>                          if the strings contain the same characters; otherwise it returns <code>false</code>.</p>
+                        <pre><code class="hljs java"><span><span class="hljs-keyword">if</span> (name1.equals(name2)) {</span><span>    System.out.println(<span class="hljs-string">"The names are the same."</span>);</span><span>}</span></code></pre>
                       </box>
-                      <p>If the strings differ, we can use <code>compareTo</code> to see which comes first in alphabetical order. The return value from <code>compareTo</code> is the difference between the first characters in the strings that differ. If the strings are equal, their difference is zero. If the first string (the one on which the method is invoked) comes first in the alphabet, the difference is negative. Otherwise, the difference is positive.</p>
+                      <p>If the strings differ, you can use <code>compareTo</code> to see which comes first in alphabetical order. The return value from <code>compareTo</code> is the difference between the first characters in the strings that differ. If
+                        the strings are equal, their difference is zero. If the first string (the one on which the method is invoked) comes first in the alphabet, the difference is negative. Otherwise, the difference is positive.</p>
                       <box>
-                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example, <code>compareTo</code> returns positive 8, because the second letter of &quot;Ada&quot; comes before the second letter of &quot;Alan&quot; by 8 letters.</p>
-                        <pre><code class="hljs java"><span class="hljs-keyword">int</span> diff = name1.compareTo(name2);
-<span class="hljs-keyword">if</span> (diff == <span class="hljs-number">0</span>) {
-    System.out.println(<span class="hljs-string">"The names are the same."</span>);
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &lt; <span class="hljs-number">0</span>) {
-    System.out.println(<span class="hljs-string">"name1 comes before name2."</span>);
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &gt; <span class="hljs-number">0</span>) {
-    System.out.println(<span class="hljs-string">"name2 comes before name1."</span>);
-}
-</code></pre>
+                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example, <code>compareTo</code> returns positive 8, because the second letter of &quot;Alan&quot; comes 8 letters <em>after</em> the second letter of &quot;Ada&quot;.</p>
+                        <pre><code class="hljs java"><span>String name1 = <span class="hljs-string">"Alan"</span>;</span><span>String name2 = <span class="hljs-string">"Ada"</span>;</span><span><span class="hljs-keyword">int</span> diff = name1.compareTo(name2);</span><span><span class="hljs-keyword">if</span> (diff == <span class="hljs-number">0</span>) {</span><span>    System.out.println(<span class="hljs-string">"The names are the same."</span>);</span><span>} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &lt; <span class="hljs-number">0</span>) {</span><span>    System.out.println(<span class="hljs-string">"name1 comes before name2."</span>);</span><span>} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (diff &gt; <span class="hljs-number">0</span>) {</span><span>    System.out.println(<span class="hljs-string">"name2 comes before name1."</span>);</span><span>}</span></code></pre>
                       </box>
-                      <p>Both <code>equals</code> and <code>compareTo</code> are case-sensitive. The uppercase letters come before the lowercase letters, so <code>&quot;Ada&quot;</code> comes before <code>&quot;ada&quot;</code>. To check if two strings are similar irrespective of the differences in case, you can use the <code>equalsIgnoreCase</code> method.</p>
-                      <pre><code class="hljs java">String s1 = <span class="hljs-string">"Apple"</span>;
-String s2 = <span class="hljs-string">"apple"</span>;
-System.out.println(s1.equals(s2)); <span class="hljs-comment">//false</span>
-System.out.println(s1.equalsIgnoreCase(s2)); <span class="hljs-comment">//true</span>
-</code></pre>
+                      <p>Both <code>equals</code> and <code>compareTo</code> are case-sensitive. The uppercase letters come before the lowercase letters, so <code>&quot;Ada&quot;</code> comes before <code>&quot;ada&quot;</code>. To check if two strings are
+                        similar irrespective of the differences in case, you can use the <code>equalsIgnoreCase</code> method.</p>
+                      <pre><code class="hljs java"><span>String s1 = <span class="hljs-string">"Apple"</span>;</span><span>String s2 = <span class="hljs-string">"apple"</span>;</span><span>System.out.println(s1.equals(s2)); <span class="hljs-comment">//false</span></span><span>System.out.println(s1.equalsIgnoreCase(s2)); <span class="hljs-comment">//true</span></span></code></pre>
                       <p>Some more comparison-related <code>String</code> methods:</p>
                       <ul>
                         <li><code>contains</code>: checks if one string is a sub-string of the other e.g., <code>Snapple</code> and <code>app</code></li>
@@ -223,50 +202,34 @@ System.out.println(s1.equalsIgnoreCase(s2)); <span class="hljs-comment">//true</
                         </table>
                       </div>
                       <box>
-                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of using escape sequences to printing some special characters.</p>
-                        <pre><code class="hljs java">System.out.println(<span class="hljs-string">"First line\nSecond \"line\""</span>);
-</code></pre>
-                        <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                        <pre><code class="hljs">First line
-Second &quot;line&quot;
-</code></pre>
+                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of using escape sequences to print some special characters.</p>
+                        <pre><code class="hljs java"><span>System.out.println(<span class="hljs-string">"First line\nSecond \"line\""</span>);</span></code></pre>
+                        <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
+                        </p>
+                        <pre><code class="hljs"><span>First line</span><span>Second &quot;line&quot;</span></code></pre>
                       </box>
-                      <p>💡 As the behavior of the <code>\n</code> depends on the platform, the recommended way to print a line break is using the <code>System.lineSeparator()</code> as it works the same in all platforms.</p>
+                      <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> As the behavior of the <code>\n</code> <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter"
+                          class="trigger"><span data-mb-html-for="_content">e.g., behavior differs between Windows and OS-X</span>depends on the platform</span>, the recommended way to print a line break is using the <code>System.lineSeparator()</code>                        as it works the same in all platforms.</p>
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Using <code>System.lineSeparator()</code> to print a line break.</p>
-                        <pre><code class="hljs java">System.out.println(<span class="hljs-string">"First line"</span> + System.lineSeparator() + <span class="hljs-string">"Second line"</span>);
-</code></pre>
-                        <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                        <pre><code class="hljs">First line
-Second line
-</code></pre>
+                        <pre><code class="hljs java"><span>System.out.println(<span class="hljs-string">"First line"</span> + System.lineSeparator() + <span class="hljs-string">"Second line"</span>);</span></code></pre>
+                        <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
+                        </p>
+                        <pre><code class="hljs"><span>First line</span><span>Second line</span></code></pre>
                       </box>
                     </div>
                     <h5 id="string-formatting">String formatting<a class="fa fa-anchor" href="#string-formatting"></a></h5>
                     <div class="indented">
-                      <p>Sometimes programs need to create strings that are formatted a certain way. <code>String.format</code> takes a format specifier followed by a sequence of values and returns a new string formatted as specified.</p>
+                      <p>Sometimes programs need to create strings that are formatted in a certain way. <code>String.format</code> takes a <em>format specifier</em> followed by a sequence of values and returns a new string formatted as specified.</p>
                       <box>
-                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following method returns a time string in 12-hour format. The format specifier <code>\%02d</code> means “two digit integer padded with zeros”, so <code>timeString(19, 5)</code> returns the string <code>&quot;07:05 PM&quot;</code>.</p>
-                        <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">timeString</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute)</span> </span>{
-    String ampm;
-    <span class="hljs-keyword">if</span> (hour &lt; <span class="hljs-number">12</span>) {
-        ampm = <span class="hljs-string">"AM"</span>;
-        <span class="hljs-keyword">if</span> (hour == <span class="hljs-number">0</span>) {
-            hour = <span class="hljs-number">12</span>;  <span class="hljs-comment">// midnight</span>
-        }
-    } <span class="hljs-keyword">else</span> {
-        ampm = <span class="hljs-string">"PM"</span>;
-        hour = hour - <span class="hljs-number">12</span>;
-    }
-    <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">"%02d:%02d %s"</span>, hour, minute, ampm); <span class="hljs-comment">// returns "07:05 PM"</span>
-}
-</code></pre>
+                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following method returns a time string in 12-hour format. The format specifier <code>\%02d</code> means “two digit integer padded with zeros”, so <code>timeString(19, 5)</code>                          returns the string <code>&quot;07:05 PM&quot;</code>.</p>
+                        <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">timeString</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute)</span> </span>{</span><span>    String ampm;</span><span>    <span class="hljs-keyword">if</span> (hour &lt; <span class="hljs-number">12</span>) {</span><span>        ampm = <span class="hljs-string">"AM"</span>;</span><span>        <span class="hljs-keyword">if</span> (hour == <span class="hljs-number">0</span>) {</span><span>            hour = <span class="hljs-number">12</span>;  <span class="hljs-comment">// midnight</span></span><span>        }</span><span>    } <span class="hljs-keyword">else</span> {</span><span>        ampm = <span class="hljs-string">"PM"</span>;</span><span>        hour = hour - <span class="hljs-number">12</span>;</span><span>    }</span><span>    <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">"%02d:%02d %s"</span>, hour, minute, ampm); <span class="hljs-comment">// returns "07:05 PM"</span></span><span>}</span></code></pre>
                       </box>
                     </div>
                   </div>
                   <div>
                     <div>
-                      <panel header="<md>:fas-paperclip:</md> Resources" expanded>
+                      <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template>
                         <div>
                           <ul>
                             <li><a href="https://docs.oracle.com/javase/9/docs/api/java/lang/String.html"><code>String</code> API</a></li>
@@ -276,50 +239,27 @@ Second line
                       </panel>
                     </div>
                     <div>
-                      <panel header="<md>:fas-dumbbell:</md> Exercises" expandable class="algolia-no-index">
+                      <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
                         <div>
                           <div>
-                            <panel header="<md>:glyphicon-question-sign:</md> `printPrice` method" class="algolia-no-index">
+                            <panel type="dark" expanded id="key-exercise-printprice-method"><template slot="_header"><h3 id="key-exercise-printprice-method"><small><small><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> [Key Exercise] <code>printPrice</code> method</small></small><a class="fa fa-anchor" href="#key-exercise-printprice-method"></a></h3></template>
                               <question>
                                 <p>Implement the <code>printPrice</code> method in the code below to produce the given output. Its behavior:</p>
                                 <ul>
                                   <li>The parameter <code>item</code> is a string in the format <code>name--$price</code> i.e., a name and a price of an item separated using a <code>--</code> e.g., <code>banana--$3/50</code></li>
-                                  <li>It prints the <code>NAME: price</code> where the name is in upper case. The price does not have a <code>$</code> sign and has <code>.</code> in place of the <code>/</code><br>
-                                    e.g., <code>banana--$3/50</code> <span><span aria-hidden="true" class="fas fa-arrow-right"></span></span> <code>BANANA: 3.50</code></li>
-                                  <li>The <code>name</code> part of the input can have trailing/leading spaces which should be omitted from the output.<br>
-                                    e.g., <code>banana --$3/50</code> <span><span aria-hidden="true" class="fas fa-arrow-right"></span></span> <code>BANANA: 3.50</code></li>
+                                  <li>It prints the <code>NAME: price</code> where the name is in upper case. The price does not have a <code>$</code> sign and has <code>.</code> in place of the <code>/</code><br> e.g., <code>banana--$3/50</code> <span><span aria-hidden="true" class="fas fa-arrow-right"></span></span>
+                                    <code>BANANA: 3.50</code></li>
+                                  <li>The <code>name</code> part of the input can have trailing/leading spaces which should be omitted from the output.<br> e.g., <code></code> <code>banana --$3/50</code> <span><span aria-hidden="true" class="fas fa-arrow-right"></span></span>
+                                    <code>BANANA: 3.50</code></li>
                                 </ul>
-                                <p>💡 Do a Web search to find how to remove leading/trailing spaces. Suggested search terms <code>java string remove leading trailing spaces</code></p>
-                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
-
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPrice</span><span class="hljs-params">(String item)</span> </span>{
-        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span>
-
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        printPrice(<span class="hljs-string">"sandwich  --$4/50"</span>);
-        printPrice(<span class="hljs-string">"  soda --$10/00"</span>);
-        printPrice(<span class="hljs-string">"  fries --$0/50"</span>);
-    }
-}
-</code></pre>
-                                <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                <pre><code class="hljs">SANDWICH: 4.50
-SODA: 10.00
-FRIES: 0.50
-</code></pre>
+                                <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Do a Web search to find how to remove leading/trailing spaces. Suggested search terms <code>java string remove leading trailing spaces</code></p>
+                                <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPrice</span><span class="hljs-params">(String item)</span> </span>{</span><span>        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span></span><span>&#x200B;</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        printPrice(<span class="hljs-string">"sandwich  --$4/50"</span>);</span><span>        printPrice(<span class="hljs-string">"  soda --$10/00"</span>);</span><span>        printPrice(<span class="hljs-string">"  fries --$0/50"</span>);</span><span>    }</span><span>}</span></code></pre>
+                                <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
+                                </p>
+                                <pre><code class="hljs"><span>SANDWICH: 4.50</span><span>SODA: 10.00</span><span>FRIES: 0.50</span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <p>Partial solution:</p>
-                                  <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPrice</span><span class="hljs-params">(String item)</span> </span>{
-    <span class="hljs-keyword">int</span> dividerPosition = item.indexOf(<span class="hljs-string">"--"</span>);
-    String itemName = item.substring(<span class="hljs-number">0</span>, dividerPosition);
-    <span class="hljs-comment">//...</span>
-    System.out.println(itemName.trim().toUpperCase() + ...);
-
-}
-</code></pre>
+                                  <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printPrice</span><span class="hljs-params">(String item)</span> </span>{</span><span>    <span class="hljs-keyword">int</span> dividerPosition = item.indexOf(<span class="hljs-string">"--"</span>);</span><span>    String itemName = item.substring(<span class="hljs-number">0</span>, dividerPosition);</span><span>    <span class="hljs-comment">//...</span></span><span>    System.out.println(itemName.trim().toUpperCase() + ...);</span><span>&#x200B;</span><span>}</span></code></pre>
                                 </div>
                               </question>
                             </panel>
@@ -337,7 +277,7 @@ FRIES: 0.50
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
     </footer>
   </div>
 </body>

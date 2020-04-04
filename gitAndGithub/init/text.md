@@ -21,10 +21,10 @@ Suppose you want to create a repository in an empty directory `things`. Here are
 <tabs>
   <tab header="SourceTree">
     <include src="./sourcetree.md" />
-  <hr></tab>
+  </tab>
   <tab header="CLI">
     <include src="./cli.md" />
-  <hr></tab>
+  </tab>
 </tabs>
 
 </div>

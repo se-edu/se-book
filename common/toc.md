@@ -35,6 +35,5 @@
   * [Intellij IDEA](#intellij-idea)
   * [Git and Github](#git-and-github)
   * [Java](#java)
-  * [JUnit](#junit)
-* [**SECTION: SUPPLEMENTARY**](#section-supplementary) 
+* [**SECTION: SUPPLEMENTARY**](#section-supplementary)
   * [Principles](#principles)

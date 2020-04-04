@@ -1,0 +1,600 @@
+## <div class="text-white bg-primary p-1">Extensions: Category A</div>
+
+<div id="A-Classes">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-Classes"
+         var-extHeading="Use a class to represent tasks"/>
+
+While it is possible to represent a task list as a multi-dimensional array containing <tooltip content="`String`, `int`, `boolean` etc.">primitive values</tooltip>, the more natural approach is to use a `Task` class to represent tasks.
+
+<panel type="seamless" header="Partial solution" minimized>
+
+```java
+public class Task {
+    protected String description;
+    protected boolean isDone;
+
+    public Task(String description) {
+        this.description = description;
+        this.isDone = false;
+    }
+
+    public String getStatusIcon() {
+        return (isDone ? "\u2713" : "\u2718"); //return tick or X symbols
+    }
+
+    //...
+}
+```
+
+```java
+Task t = new Taks("read book");
+t.markAsDone()
+```
+</panel>
+
+</div><hr>
+<div id="A-Inheritance">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-Inheritance"
+         var-extHeading="Use Inheritance to support multiple task types"/>
+
+As there are multiple types of tasks that have some similarity between them, you can implement classes `Todo`, `Deadline` and `Event` classes to inherit from a `Task` class.
+
+Furthermore, use polymorphism to store all tasks in a data structure containing `Task` objects e.g., `Task[100]`.
+
+<panel type="seamless" header="Partial solution" minimized>
+
+```java
+public class Deadline extends Task {
+
+    protected String by;
+
+    public Deadline(String description, String by) {
+        super(description);
+        this.by = by;
+    }
+
+    @Override
+    public String toString() {
+        return "[D]" + super.toString() + " (by: " + by + ")";
+    }
+}
+```
+
+```java
+Task[] tasks = new Task[100];
+task[0] = new Deadline("return book", "Monday");
+```
+
+</panel>
+
+</div><hr>
+
+<div id="A-Exceptions">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-Exceptions"
+         var-extHeading="Use Exceptions to handle errors"/>
+
+Use exceptions to handle errors. For example, define a class `DukeException` to represent exceptions specific to Duke.
+
+</div><hr>
+
+<div id="A-TextUiTesting">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-TextUiTesting"
+         var-extHeading="Test using the I/O redirection technique"/>
+
+Use the input/output redirection technique to semi-automate the testing of Duke.
+
+{{ icon_tip }} A tutorial is provided in the duke repository.
+</div><hr>
+<div id="A-Collections">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-Collections"
+         var-extHeading="Use Java Collections classes"/>
+
+Use Java Collections classes for storing data. For example, you can use an `ArrayList<Task>` to store the tasks.
+</div><hr>
+<div id="A-MoreOOP">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-MoreOOP"
+         var-extHeading="Make the code more OOP"/>
+
+Refactor the code to extract out closely related code as classes.
+* **Minimal**: Extract the following classes:
+  * `Ui`: deals with interactions with the user
+  * `Storage`: deals with loading tasks from the file and saving tasks in the file
+  * `Parser`: deals with making sense of the user command
+  * `TaskList`: contains the task list %%e.g., it has operations to add/delete tasks in the list%%
+<div class="indented-level2">
+
+For example, the code of the main class could look like this:
+```java
+public class Duke {
+
+    private Storage storage;
+    private TaskList tasks;
+    private Ui ui;
+
+    public Duke(String filePath) {
+        ui = new Ui();
+        storage = new Storage(filePath);
+        try {
+            tasks = new TaskList(storage.load());
+        } catch (DukeException e) {
+            ui.showLoadingError();
+            tasks = new TaskList();
+        }
+    }
+
+    public void run() {
+        //...
+    }
+
+    public static void main(String[] args) {
+        new Duke("data/tasks.txt").run();
+    }
+}
+```
+</div>
+
+* **Stretch Goal**: Consider extracting more classes. e.g., `*Command` classes (i.e., `AddCommand`, `DeleteCommand`, `ExitCommand` etc.) that inherits from an abstract `Command` class, so that you can write the main logic of the App as follows:
+  ```java
+  public void run() {
+      ui.showWelcome();
+      boolean isExit = false;
+      while (!isExit) {
+          try {
+              String fullCommand = ui.readCommand();
+              ui.showLine(); // show the divider line ("_______")
+              Command c = Parser.parse(fullCommand);
+              c.execute(tasks, ui, storage);
+              isExit = c.isExit();
+          } catch (DukeException e) {
+              ui.showError(e.getMessage());
+          } finally {
+              ui.showLine();
+          }
+      }
+  }
+  ```
+  {{ icon_tip }} You can get some inspiration from how the code of the [addressbook-level2](https://github.com/se-edu/addressbook-level2) is organized.
+</div><hr>
+<div id="A-JUnit">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-JUnit"
+         var-extHeading="Add JUnit tests"/>
+
+Add JUnit tests to test the behavior of the code.
+
+**Conventions to follow**:
+* Add test code in a folder named `[project root]\src\test\java\` folder (reason: to follow the convention followed by the project structure so far).
+* Name the test class to match the class being tested (`Todo.java` can be tested by `TodoTest.java`), and put it in a package to match. For example, 
+  * Class being tested `seedu.duke.Todo`: `src\main\java\seedu\duke\Todo.java`
+  * Test class `seedu.duke.TodoTest`: `src\test\java\seedu\duke\TodoTest.java`
+
+**Requirements**:
+* Minimum: More than two test methods, preferably targeting more than one class (if you have multiple classes)
+* Stretch goal: test methods to target all public methods of all classes
+
+**Adding JUnit support to your project:** As JUnit is a third-party library, you need to add support to it specifically in your project.
+
+<tabs> 
+  <tab header="In Intellij, without Gradle">
+
+1. Add a folder named `[project root]\src\test\java\` (you may have to do this outside of Intellij)
+1. Go to Intellij and add a new module to the project as follows.
+   1. `File` → `New` → `Module From Existing Sources ...`
+   1. Choose the `[project root]\src\test\` (not the `java`) folder.
+   1. In the next screen, select `Create module from existing sources`
+   1. Keep clicking `Next` until the process is complete
+1. In the `Project` panel of Intellij, expand the newly-created `test` module, right-click on the `java` folder inside it, and choose `Mark Directory as` → `Test Source Root` (that will make the folder turn to green color).
+1. Now, create a class inside the `java` folder and type `@Test` inside it. A code example given below.<br>
+   {{ icon_info }} Note: If you are using packages, create this class in a matching package (to test `duke.Duke` class, create a `duke.DukeTest` i.e., in `src\test\java\duke\DukeTest.java`).
+   ```java
+   public class DukeTest {
+       @Test
+   }
+   ```
+1. Note how the `@Test` turn to red because Intellij (not having JUnit support yet) does not understand it. But it will pop up a hint, asking if you want to add support for JUnit. Select `Add JUnit 5.* to classpath`.
+  1. In the dialog that pops up, you can optionally tick the `Sources`, `JavaDocs` and `Annotations` boxes. After that, click `OK` to add the JUnit 5 to the project dependencies.
+1. To check if JUnit integration is working as expected,
+   1. Add a dummy test method to the class e.g.,
+      ```java
+      import org.junit.jupiter.api.Test;
+      
+      import static org.junit.jupiter.api.Assertions.assertEquals;
+      
+      public class DukeTest {
+          @Test
+          public void dummyTest(){
+              assertEquals(2, 2);
+          }
+      }
+      ```
+   1. Run the test (right-click on the class and choose `Run DukeTest`.
+1. To be able to refer to `Duke` from `DukeTest` class, you need to add `main` module as a dependency of the `test` module you just created.
+   * Option 1: When you add a reference to the `Duke` inside the `DukeTest`, Intellij will flag it as an error and will give you an option (i.e., in the bulb icon that pops up) to add the `main` module as a dependency.
+   * Option 2: Follow the info [here](https://www.jetbrains.com/help/idea/working-with-module-dependencies.html) to add the dependency yourself.
+  </tab>
+  <tab header="With Gradle">
+
+{{ icon_tip }} Refer to the Gradle tutorial at the Duke repo (i.e., the repo you forked from) to find how to use JUnit via Gradle.
+
+<panel header="**Extension `A-Gradle`**">
+<include src="extensions.mbdf#A-Gradle" />
+</panel>
+
+</tab>
+</tabs>
+
+
+</div><hr>
+<div id="A-Packages">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-Packages"
+         var-extHeading="Divide classes into packages"/>
+
+Organize the classes into suitable java packages.
+* **Minimal**: put all classes in one package e.g., `duke`
+* **Stretch goal**: divide into multiple packages as the number of classes increase e.g., `duke.task`, `duke.command`
+</div><hr>
+<div id="A-JavaDoc">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-JavaDoc"
+         var-extHeading="Add JavaDoc comments"/>
+
+Add JavaDoc comments to the code.
+* **Minimal**: Add header comments to at least half of the non-private classes/methods.
+* **Stretch goal**: Add header comments to all non-private classes/methods, and non-trivial private methods.
+</div><hr>
+<div id="A-CodingStandard">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-CodingStandard"
+         var-extHeading="Tweak the code to comply with a coding standard"/>
+
+Tweak the code to comply with a chosen coding standard. From this point onward, ensure any new code added are compliant with the coding standard.
+</div><hr>
+<div id="A-CheckStyle">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-CheckStyle"
+         var-extHeading="Use CheckStyle"/>
+
+Use checkStyle to detect coding style violations.
+
+{{ icon_tip }} If you are using Gradle for your project, refer to the Gradle tutorial at the Duke repo (i.e., the repo you forked from) to find how to use CheckStyle via Gradle. Alternatively, you can try the CheckStyle plugin for Intellij.
+
+<panel header="**Extension `A-Gradle`**">
+<include src="extensions.mbdf#A-Gradle" />
+</panel>
+<p/>
+
+
+
+</div><hr>
+<div id="A-CodeQuality">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-CodeQuality"
+         var-extHeading="Improve code quality"/>
+
+Critically examines the code and refactor to improve the code quality where necessary.
+
+{{ icon_important_big_red }} When adding this increment, follow closely the 'Code Quality' topics you have learned so far, rather than merely follow your own intuition about code quality.
+</div><hr>
+<div id="A-Assertions">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-Assertions"
+         var-extHeading="Use Assertions"/>
+
+Use `assert` feature (not JUnit assertions) to document important assumptions that should hold at various points in the code.
+</div><hr>
+<div id="A-Jar">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-Jar"
+         var-extHeading="Package the App as a JAR file"/>
+
+Package the app as an executable JAR file so that it can be distributed easily.
+
+You can assume **the user will run the jar file in the following way only**:
+* Copy the jar file into an empty folder
+* Open a command window in that folder
+* Run the command `java -jar {filename}.jar` e.g., `java -jar Duke.jar` (i.e., run the command in the same folder as the jar file)
+
+{{ icon_important }} Do not commit the JAR file created. Instead, you can make the JAR file available in the following manner.
+* Go to your fork on GitHub and [create a new _release_](https://help.github.com/en/articles/creating-releases).
+* In the page where you fill the details of th release,
+  * give an appropriate version number e.g., `v0.1`
+  * attach the JAR file where it says `Attach binaries by dropping them ...`.
+
+{{ icon_tip }} If you are using Gradle for your project, refer to the Gradle tutorial at the Duke repo (i.e., the repo you forked from) to find how to create a jar file using Gradle.
+
+<panel header="**Extension `A-Gradle`**">
+<include src="extensions.mbdf#A-Gradle" />
+</panel>
+
+</div><hr>
+<div id="A-Gradle">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-Gradle"
+         var-extHeading="Automate project builds using Gradle"/>
+
+Use Gradle to automate some of the build tasks of the project. Refer to the Gradle tutorial at the Duke repo (i.e., the repo you forked from) to find how to set up Gradle for your project.
+
+* **Minimal**: Set up gradle so that you can build and run Duke using gradle.
+* **Recommended**: Set up gradle to run unit tests.
+* **Stretch Goal**: Use gradle to automate more things in your project.
+
+</div><hr>
+<div id="A-Travis">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-Travis"
+         var-extHeading="Use Travis for CI"/>
+
+Use Travis (and GitHub) to perform Continuous Integration (CI).
+</div><hr>
+<div id="A-Enums">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-Enums"
+         var-extHeading="Use Enumerations"/>
+
+Use Java `enum`s, if applicable.
+</div><hr>
+<div id="A-Varargs">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-Varargs"
+         var-extHeading="Use var-args"/>
+
+Use Java varargs feature, if applicable.
+</div><hr>
+<div id="A-Lambdas">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-Lambdas"
+         var-extHeading="Use Lambdas"/>
+
+Use the Lambdas feature of Java in your code, if applicable.
+</div><hr>
+<div id="A-Streams">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-Streams"
+         var-extHeading="Use Streams"/>
+
+Use the Streams feature of Java in your code, if applicable.
+</div><hr>
+<div id="A-Libraries">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-Libraries"
+         var-extHeading="Use external libraries"/>
+
+Use third-party libraries in your project. For example, you can use the Natty library to parse strings into meaningful dates.
+</div><hr>
+<div id="A-JavaFx">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-JavaFx"
+         var-extHeading="use JavaFX"/>
+
+Use JavaFX to create a GUI. Refer to the JavaFX tutorials at the Duke repo (i.e., the repo you forked from) to learn how to get started.
+</div><hr>
+<div id="A-UserGuide">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-UserGuide"
+         var-extHeading="Add a User Guide"/>
+
+Add a User Guide to the project. Here is one simple way to do it.
+* Update the given `docs\README.md`. See [this guide](https://guides.github.com/features/mastering-markdown/) to GitHub flavored Markdown (GFMD).
+* Go to the <span class="border border-secondary border-bottom-0 pr-1 pl-1 mr-1 ml-1 rounded-top"><small>:fas-cog: settings</small></span> page of your Duke fork and enable GitHub pages to publish from the `docs` folder (you can select a theme too).
+* Go to `http://{your username}.github.io/duke/` to view the user guide of your product. %%Note: it could take 5-10 minutes for GitHub to update the page.%%
+
+</div><hr>
+<div id="A-DevGuide">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-DevGuide"
+         var-extHeading="Add a Developer Guide"/>
+
+Add a Developer Guide to the project, explaining the design and implementation to future developers.
+</div><hr>
+<div id="A-Release">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-Release"
+         var-extHeading="Release the product"/>
+
+Release the product to be used by potential users. %%e.g., you can make it available on GitHub%%
+</div>
+
+<!-- ======================================================================================================= -->
+
+## <div class="text-white bg-info p-1">Extensions: Category B</div>
+
+<div id="B-TentativeScheduling">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="B-TentativeScheduling" var-extStyle="info"
+         var-extHeading="Tentative scheduling"/>
+
+Provide a way for an event to be tentatively scheduled in multiple slots, and later to be confirmed to one the slots.
+</div><hr>
+<div id="B-Snooze">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="B-Snooze" var-extStyle="info"
+         var-extHeading="Snoozing/postponing tasks"/>
+
+Provide a way to easily snooze/postpone/reschedule tasks.
+</div><hr>
+<div id="B-RecurringTasks">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="B-RecurringTasks" var-extStyle="info"
+         var-extHeading="Recurring tasks"/>
+
+Provide support for managing _recurring_ tasks %%e.g., a weekly project meeting%%.
+</div><hr>
+<div id="B-DoAfterTasks">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="B-DoAfterTasks" var-extStyle="info"
+         var-extHeading="'Do after' tasks"/>
+
+Support the managing of tasks that need to be _done_ after a specific time/task %%e.g., return book after the exam is over%%.
+</div><hr>
+<div id="B-DoWithinPeriodTasks">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="B-DoWithinPeriodTasks" var-extStyle="info"
+         var-extHeading="'Do within a period' task"/>
+
+Provide support for managing tasks that need to be done within a certain period %%e.g., collect certificate between Jan 15 and 25th%%.
+</div><hr>
+<div id="B-FixedDurationTasks">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="B-FixedDurationTasks" var-extStyle="info"
+         var-extHeading="Unscheduled tasks with a fixed duration"/>
+
+Provide support for managing tasks that takes a fixed amount of time but does not have a fixed start/end time %%e.g., reading the sales report (needs 2 hours)%%.
+</div><hr>
+<div id="B-Reminders">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="B-Reminders" var-extStyle="info"
+         var-extHeading="Reminders for tasks"/>
+
+Provide a way to get reminders about tasks %%e.g., remind the user about upcoming deadlines%%.
+</div><hr>
+<div id="B-FindFreeTimes">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="B-FindFreeTimes" var-extStyle="info"
+         var-extHeading="Find free times"/>
+
+Provide a way for the user to find free times %%e.g., when is the nearest day in which I have a 4 hour free slot?%%.
+</div><hr>
+<div id="B-ViewSchedules">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="B-ViewSchedules" var-extStyle="info"
+         var-extHeading="View schedules"/>
+
+Provide a way to view tasks in the form of a schedule %%e.g., view the schedule for a specific date%%.
+</div><hr>
+<div id="B-DetectAnomalies">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="B-DetectAnomalies" var-extStyle="info"
+         var-extHeading="Detect scheduling anomalies"/>
+
+Deal with schedule anomalies %%e.g., detect if a task being added clashes with another task in the list%%.
+</div><!-- ======================================================================================================= -->
+
+## <div class="text-white bg-success p-1">Extensions: Category C</div>
+
+<div id="C-DetectDuplicates">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="C-DetectDuplicates" var-extStyle="success"
+         var-extHeading="Deal duplicate items"/>
+
+Add the ability to recognize and deal with duplicate items. %%e.g., the same task added multiple times%%.
+</div><hr>
+<div id="C-FlexibleDataSource">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="C-FlexibleDataSource" var-extStyle="success"
+         var-extHeading="Flexible data source"/>
+
+Provide more flexibility with the data source %%e.g., the ability for the user to specify which file to use as the data source%%.
+</div><hr>
+
+<div id="C-Sort">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="C-Sort" var-extStyle="success"
+         var-extHeading="Sorting items managed by the App"/>
+
+The ability to sort items %%e.g., sort deadlines chronologically%%.
+</div>
+<div id="C-NaturalDates">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="C-NaturalDates" var-extStyle="success"
+         var-extHeading="More natural date formats"/>
+
+Support more natural date formats %%e.g., `Mon` in a user command can be interpreted as the date of the next Monday in the calendar%%.
+</div>
+<div id="C-BetterSearch">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="C-BetterSearch" var-extStyle="success"
+         var-extHeading="More flexibility in searching for items"/>
+
+All more flexibility in search %%e.g., find items even if the keyword matches the item only partially%%.
+</div>
+<div id="C-Update">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="C-Update" var-extStyle="success"
+         var-extHeading="Easily edit items"/>
+
+Support a way to easily edit details of items %%e.g., change the end time of an event without changing anything else%%.
+
+Minimal: the ability to update an existing item without having to delete it first
+
+Other ideas:
+* the ability to _clone_ items (to easily create new items based on existing items)
+</div>
+<div id="C-Tagging">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="C-Tagging" var-extStyle="success"
+         var-extHeading="Tagging items"/>
+
+Provide a way to tag items %%e.g., tag a task as `#fun`%%.
+</div>
+<div id="C-Priority">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="C-Priority" var-extStyle="success"
+         var-extHeading="Prioritizing items"/>
+
+Provide a way to attach priorities to items %%e.g., mark an item as a `high` priority (or priority level `1`)%%.
+</div>
+<div id="C-Archive">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="C-Archive" var-extStyle="success"
+         var-extHeading="Archiving items"/>
+
+Provide a way to _archive_ items so that the user can remove items from the app but still keep a record of them somewhere %%e.g., archive all tasks in the list into a file so that the user can start over with a clean slate%%.
+</div>
+<div id="C-MassOps">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="C-MassOps" var-extStyle="success"
+         var-extHeading="Mass operations"/>
+
+Provide a way to perform tasks on multiple items %%e.g., delete some specific items in one go%%.
+</div>
+<div id="C-Statistics">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="C-Statistics" var-extStyle="success"
+         var-extHeading="Statistics and insights"/>
+
+Provide a way to leverage statistics about the items managed by the App %%e.g., show the number of tasks that have been completed in the past week%%. 
+</div>
+<div id="C-UndoRedo">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="C-Undo" var-extStyle="success"
+         var-extHeading="Undo"/>
+
+Provide a way to undo a command.
+
+Minimal: the ability to undo the most recent command.
+</div>
+<div id="C-Help">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="C-Help" var-extStyle="success"
+         var-extHeading="Give help to users"/>
+
+Provide in-App guidance to users. 
+
+Minimal: add a command to access a help page.
+
+Other ideas:
+* Load the App with some sample data at the first run.
+
+</div>
+<div id="C-FriendlierSyntax">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="C-FriendlierSyntax" var-extStyle="success"
+         var-extHeading="Friendlier syntax for commands"/>
+
+Make the command syntax more flexible.
+
+Minimal: provide shorter aliases for keywords %%e.g., `t` can be shorter alias for `todo`%%.
+
+Other ideas:
+* Allow users to define their own aliases
+* Remove the need for the parts of a command to be in a specific order
+</div><!-- ======================================================================================================= -->
+
+## <div class="text-white bg-danger p-1">Extensions: Category D</div>
+
+<div id="D-Contacts">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="D-Contacts" var-extStyle="danger"
+         var-extHeading="Support managing contacts"/>
+
+Support managing info about contacts %%e.g., details of friends%%
+</div>
+<div id="D-Notes">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="D-Notes" var-extStyle="danger"
+         var-extHeading="Support managing notes"/>
+
+Support managing info about small snippets of textual information the user wants to record %%e.g., one's own waist size, a name of a movie that the user wants to remember%%
+</div>
+<div id="D-Expenses">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="D-Expenses" var-extStyle="danger"
+         var-extHeading="Support managing expenses"/>
+
+Support managing info about expenses %%e.g., the amounts spent on food, books, transport, etc.%%
+</div>
+<div id="D-Loans">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="D-Loans" var-extStyle="danger"
+         var-extHeading="Support managing loan records"/>
+
+Support keeping records of loans given/taken %%e.g., money lent/owed to colleagues/friends%%
+</div>
+<div id="D-Places">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="D-Places" var-extStyle="danger"
+         var-extHeading="Support managing info about places"/>
+
+Support recording info about places %%e.g., info about restaurants visited, for future reference%%
+</div>
+<div id="D-Trivia">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="D-Trivia" var-extStyle="danger"
+         var-extHeading="Support managing trivia"/>
+
+Provide the ability to learn/memorize things%%e.g., learn vocabulary, answers to questions%%
+</div>
+<div id="D-Clients">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="D-Clients" var-extStyle="danger"
+         var-extHeading="Support managing client info"/>
+
+Support managing info about clients %%e.g., for an insurance agent to keep track of clients%%
+</div>
+<div id="D-Merchandise">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="D-Merchandise" var-extStyle="danger"
+         var-extHeading="Support managing merchandise info"/>
+
+Support managing info about merchandise %%e.g., a property agent to keep track of properties, a collector of stamps keep track of items in the collection%%
+</div>

@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Quality Assurance [Printable]</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -70,7 +68,7 @@
             <div>
               <p>
                 <div>
-                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                  <h4 id="what-2"><span>What</span><a class="fa fa-anchor" href="#what-2"></a></h4>
                 </div>
               </p>
               <div>
@@ -78,33 +76,34 @@
                 <p>Reviews can be done in various forms. Some examples below:</p>
                 <ul>
                   <li>
-                    <p><strong>In <trigger trigger="click" for="modal:codeReview-pairProgramming">pair programming</trigger></strong></p>
+                    <p><strong>Pull Request reviews</strong></p>
+                    <ul>
+                      <li>Project Management Platforms such as GitHub and BitBucket allow the new code to be proposed as <em>Pull Requests</em> and provide the ability for others to review the code in the PR.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p><strong>In <span trigger="click" for="modal:codeReview-pairProgramming" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:codeReview-pairProgramming'].show()" class="trigger-click">pair programming</span></strong></p>
                     <ul>
                       <li>As pair programming involves two programmers working on the same code at the same time, there is an implicit review of the code by the other member of the pair.</li>
                     </ul>
                   </li>
                 </ul>
-                <modal large title="Pair Programming" id="modal:codeReview-pairProgramming" class="algolia-no-index">
-                  <tip-box type="definition">
+                <b-modal id="modal:codeReview-pairProgramming" hide-footer size="lg" modal-class="mb-zoom" ref="modal:codeReview-pairProgramming"><template slot="modal-title">Pair Programming</template>
+                  <box type="definition">
                     <div>
                       <p><strong>Pair Programming</strong>:</p>
                       <blockquote>
-                        <p>Pair programming is an agile software development technique in which two programmers work together at one workstation. One, the driver, writes code while the other, the observer or navigator, reviews each line of code as it is typed in. The two programmers switch roles frequently. <sub>[<a href="https://en.wikipedia.org/wiki/Pair_programming">source: Wikipedia</a>]</sub></p>
+                        <p>Pair programming is an agile software development technique in which two programmers work together at one workstation. One, the driver, writes code while the other, the observer or navigator, reviews each line of code as it is
+                          typed in. The two programmers switch roles frequently. <sub>[<a href="https://en.wikipedia.org/wiki/Pair_programming">source: Wikipedia</a>]</sub></p>
                       </blockquote>
                     </div>
-                  </tip-box>
+                  </box>
                   <p><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Pair_programming_1.jpg" width="400"><br>
                     <sub>[<a href="https://en.wikipedia.org/wiki/Pair_programming">image credit: Wikipedia</a>]</sub></p>
                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> A good introduction to pair programming:</p>
                   <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/ET3Q6zNK3Io" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-                </modal>
+                </b-modal>
                 <ul>
-                  <li>
-                    <p><strong>Pull Request reviews</strong></p>
-                    <ul>
-                      <li>Project Management Platforms such as GitHub and BitBucket allows the new code to be proposed as Pull Requests and provides the ability for others to review the code in the PR.</li>
-                    </ul>
-                  </li>
                   <li>
                     <p><strong>Formal inspections</strong></p>
                     <ul>
@@ -136,38 +135,34 @@
             <div>
               <p>
                 <div>
-                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                  <h4 id="what-3"><span>What</span><a class="fa fa-anchor" href="#what-3"></a></h4>
                 </div>
               </p>
               <div>
-                <tip-box type="definition">
+                <box type="definition">
                   <div>
                     <p><strong>Static analysis</strong>: Static analysis is the analysis of code without actually executing the code.</p>
                   </div>
-                </tip-box>
-                <p>Static analysis of code can find useful information such unused variables, unhandled exceptions, style errors, and statistics. Most modern IDEs come with some inbuilt static analysis capabilities. For example, an IDE can highlight unused variables as you type the code into the editor.</p>
-                <p>Higher-end static analyzer tools can perform for more complex analysis such as locating potential bugs, memory leaks, inefficient code structures etc.</p>
-                <tip-box>
-                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some example static analyzer for Java:</p>
-                  <ul>
-                    <li><a href="http://checkstyle.sourceforge.net/">CheckStyle</a></li>
-                    <li><a href="http://findbugs.sourceforge.net/">PMD</a></li>
-                    <li><a href="https://pmd.github.io/">FindBugs</a></li>
-                  </ul>
-                </tip-box>
-                <p><em>Linters</em> are a subset of static analyzers that specifically aim to locate areas where the code can be made 'cleaner'.</p>
+                </box>
+                <p>Static analysis of code can find useful information such unused variables, unhandled exceptions, style errors, and statistics. Most modern IDEs come with some inbuilt static analysis capabilities. For example, an IDE can highlight unused
+                  variables as you type the code into the editor.</p>
+                <p>Higher-end static analyzer tools can perform more complex analysis such as locating potential bugs, memory leaks, inefficient code structures etc.</p>
+                <box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some example static analyzer for Java: <a href="http://checkstyle.sourceforge.net/">CheckStyle</a>, <a href="https://pmd.github.io/">PMD</a>, <a href="http://findbugs.sourceforge.net/">FindBugs</a></p>
+                </box>
+                <p><strong><em>Linters</em> are a subset of static analyzers</strong> that specifically aim to locate areas where the code can be made 'cleaner'.</p>
               </div>
             </div>
             <h2 id="formal-verification">Formal Verification<a class="fa fa-anchor" href="#formal-verification"></a></h2>
             <div>
               <p>
                 <div>
-                  <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+                  <h4 id="what-4"><span>What</span><a class="fa fa-anchor" href="#what-4"></a></h4>
                 </div>
               </p>
               <div>
                 <p><strong>Formal verification uses mathematical techniques to prove the correctness of a program.</strong></p>
-                <panel type="seamless" header="<md>:glyphicon-facetime-video:</md> An introduction to Formal Methods" class="non-printable algolia-no-index">
+                <panel type="seamless" class="non-printable algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> An introduction to Formal Methods</p></template>
                   <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/89fKiaMxHrA" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
                   <p>by <a href="http://www.cs.utoronto.ca/~hehner/">Eric Hehner</a></p>
                   <p></p>
@@ -190,7 +185,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
     </footer>
   </div>
 </body>

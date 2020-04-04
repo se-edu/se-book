@@ -6,12 +6,11 @@
 
 <div id="body">
 
-There are two kinds of requirements:  
-
+Requirements can be divided into two in the following way:
 1. **_Functional requirements_ specify what the system should do.**
 2. **_Non-functional requirements_ specify the constraints under which system is developed and operated.** 
 
-<tip-box> 
+<box>
 
 {{ icon_example }} Some examples of non-functional requirement categories:
 
@@ -31,12 +30,12 @@ There are two kinds of requirements:
 * Any other noteworthy points: e.g. the game should not use images deemed offensive to those injured in real mine clearing activities.
 </panel>
 
-</tip-box>
+</box>
 
 
 We may have to spend an extra effort in digging NFRs out as early as possible because,
-1. **NFRs are easier to miss** %%&nbsp;e.g., stakeholders tend to think of functional requirements first%%
-1. sometimes **NFRs are critical to the success of the software.** %%&nbsp;E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.%%
+1. **NFRs are easier to miss** %%e.g., stakeholders tend to think of functional requirements first%%
+1. sometimes **NFRs are critical to the success of the software.** %%E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.%%
 
 </div>
 

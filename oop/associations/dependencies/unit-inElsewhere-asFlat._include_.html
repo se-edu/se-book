@@ -1,57 +1,32 @@
-<div>
-  <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\oop\associations\dependencies\text.md"></div>
-</div>
+<div></div>
 <p></p>
-<p><span class="dimmed"><strong><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\oop\associations\path.md">Paradigms → Object Oriented Programming → Associations →
-        </span></span></strong></span></p>
+<p><span class="dimmed"><strong><span>Paradigms → OOP → Associations →
+</span></strong>
+  </span>
+</p>
 <div id="title-and-body">
   <div>
-    <h4 id="dependencies"><span><span data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\oop\associations\dependencies\text.md">Dependencies</span></span></h4>
+    <h4 id="dependencies"><span>Dependencies</span><a class="fa fa-anchor" href="#dependencies"></a></h4>
   </div>
   <div id="main">
     <div>
-      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\oop\associations\dependencies\text.md">
-        <p>In the context of OOP associations, <strong>a <em>dependency</em> is a need for one class to depend on another without having a direction association with it.</strong> One cause of dependencies is interactions between objects that do not have a long-term link between them.</p>
-        <tip-box>
-          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code>Course</code> object can have a dependency on a <code>Registrar</code> object to obtain the maximum number of students it can support.</p>
-        </tip-box>
-        <h5 id="implementing-dependencies">Implementing dependencies</h5>
-        <tip-box>
-          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, <code>Foo</code> has a dependency on <code>Bar</code> but it is not an association because it is only a <tooltip content="temporary">transient</tooltip> interaction and there is no long term relationship between a <code>Foo</code> object and a <code>Bar</code> object. <span class="dimmed">i.e. the <code>Foo</code> object does not keep the <code>Bar</code> object it receives as a parameter</span>.</p>
-          <div class="alt-java">
-            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
-    
-    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculate</span><span class="hljs-params">(Bar bar)</span></span>{
-        <span class="hljs-keyword">return</span> bar.getValue();
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span></span>{
-    <span class="hljs-keyword">int</span> value;
-    
-    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getValue</span><span class="hljs-params">()</span></span>{
-        <span class="hljs-keyword">return</span> value;
-    }
-}
-</code></pre>
-          </div>
-          <div class="alt-python">
-            <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
-    
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate</span><span class="hljs-params">(self, bar)</span>:</span>
-        <span class="hljs-keyword">return</span> bar.value;
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span>:</span>
-    
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, value)</span>:</span>
-      self.value = value
-</code></pre>
-          </div>
-        </tip-box>
-      </div>
+      <p>In the context of OOP associations, <strong>a <em>dependency</em> is a need for one class to depend on another without having a direct association with it.</strong> One cause of dependencies is interactions between objects that do not have a long-term
+        link between them.</p>
+      <box>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code>Course</code> object can have a dependency on a <code>Registrar</code> object to obtain the maximum number of students it can support.</p>
+      </box>
+      <h5 id="implementing-dependencies">Implementing dependencies<a class="fa fa-anchor" href="#implementing-dependencies"></a></h5>
+      <box>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, <code>Foo</code> has a dependency on <code>Bar</code> but it is not an association because it is only a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter"
+            class="trigger"><span data-mb-html-for="_content">temporary</span>transient</span> interaction and there is no long term relationship between a <code>Foo</code> object and a <code>Bar</code> object. <span class="dimmed">i.e. the <code>Foo</code> object does not keep the <code>Bar</code> object it receives as a parameter</span>.</p>
+        <div class="alt-java">
+          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{</span><span>    </span><span>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculate</span><span class="hljs-params">(Bar bar)</span></span>{</span><span>        <span class="hljs-keyword">return</span> bar.getValue();</span><span>    }</span><span>}</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span></span>{</span><span>    <span class="hljs-keyword">int</span> value;</span><span>    </span><span>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getValue</span><span class="hljs-params">()</span></span>{</span><span>        <span class="hljs-keyword">return</span> value;</span><span>    }</span><span>}</span></code></pre>
+        </div>
+        <div class="alt-python">
+          <pre><code class="hljs python"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span></span><span>    </span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate</span><span class="hljs-params">(self, bar)</span>:</span></span><span>        <span class="hljs-keyword">return</span> bar.value;</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span>:</span></span><span>    </span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, value)</span>:</span></span><span>      self.value = value</span></code></pre>
+        </div>
+      </box>
     </div>
-    <div>
-      <div data-included-from="C:\repos\nus-cs2103-AY1920S1\cs2103-website\book\oop\associations\dependencies\text.md"></div>
-    </div>
+    <div></div>
   </div>
 </div>

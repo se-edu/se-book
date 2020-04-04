@@ -13,7 +13,7 @@ Notation:
 <img src="{{baseUrl}}/uml/sequenceDiagrams/selfInvocation/images/notation.png" height="120" />
 <p/>
 
-<tip-box>
+<box>
 
 {{ icon_example }} The `markCellAt(...)` method of a `Logic` object is calling its own `updateState(...)` method.
 
@@ -25,7 +25,7 @@ Notation:
 <img src="{{baseUrl}}/uml/sequenceDiagrams/selfInvocation/images/callBack.png" height="150" />
 <p/>
 
-</tip-box>
+</box>
 
 </div>
 

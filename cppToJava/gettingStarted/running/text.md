@@ -17,7 +17,7 @@ Notes:
 
 When you run a Java program, you can encounter a <tooltip content="so-called because it does not appear until after the program has started running">run-time error</tooltip>. These errors are also called "exceptions" because they usually indicate that something exceptional (and bad) has happened. When a run-time error occurs, the interpreter displays an error message that explains what happened and where.
 
-<tip-box>
+<box>
 
 {{ icon_example }} For example, modify the HelloWorld code to include the following line, compile it again, and run it.
 
@@ -31,7 +31,7 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
     at Hello.main(Hello.java:5)
 ```
 
-</tip-box>
+</box>
 
 
 **Integrated Development Environments (IDEs)** can automate the intermediate step of compiling. They usually have a <span style="color:green">:fas-play-circle:</span> _Run_ button which compiles the code first and then runs it.

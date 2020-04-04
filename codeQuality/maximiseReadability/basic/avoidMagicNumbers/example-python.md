@@ -2,7 +2,7 @@ Note: Python does not have a way to make a variable a constant. However, you can
 
 <table> 
 <tr>
-  <td valign="top">
+  <td valign="top">
 
 {{bad}}
 ```python
@@ -10,9 +10,9 @@ return 3.14236
 ...
 return 9
 ```
-  </td>
-  <td>&nbsp;&nbsp;<br><br></td>
-  <td valign="top">
+  </td>
+  <td>&nbsp;&nbsp;<br><br></td>
+  <td valign="top">
 
 {{good}}
 ```python
@@ -23,6 +23,6 @@ return PI
 ...
 return MAX_SIZE-1
 ```
-  </td>
+  </td>
 </tr>
 </table> 

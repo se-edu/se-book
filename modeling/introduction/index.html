@@ -5,27 +5,25 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.5.1">
+  <meta name="generator" content="MarkBind 2.13.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Modeling: Introduction</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-
-
-
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
 <body>
   <div id="app">
     <header>
-      <navbar placement="top" type="primary">
+      <navbar placement="top" type="primary" class="temp-navbar">
         <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
         <li slot="right">
           <searchbar placeholder="Search" algolia menu-align-right></searchbar>
@@ -38,258 +36,275 @@
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>Design → Modeling →
-                  </span></strong></span></p>
+</span></strong>
+              </span>
+            </p>
             <div id="title">
               <h1 id="introduction"><span>Introduction</span><a class="fa fa-anchor" href="#introduction"></a></h1>
             </div>
             <div id="main">
               <div>
                 <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain models</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p><strong>A <em>model</em> is a representation of something else.</strong></p>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <trigger trigger="click" for="modal:modellingIntro-classDiagram">class diagram</trigger> is a model that represents a software design.</p>
-                        </tip-box>
-                        <modal large title="Class diagrams" id="modal:modellingIntro-classDiagram" class="algolia-no-index">
-                          <p>A <em>class diagram</em> is a diagram drawn using the UML modelling notation.<br>
-                            <span><span aria-hidden="true" class="fas fa-cube"></span></span> An example class diagram:<br></p>
-                          <img src="/se-book/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600">
-                        </modal>
-                        <p><strong>A <em>model</em> provides a simpler view of a complex entity because a model captures only a selected aspect.</strong> This omission of some aspects implies models are <trigger trigger="click" for="modal:modellingIntro-abstraction">abstractions</trigger>.</p>
-                        <modal large title="%%Textbook <md>:glyphicon-log-in:</md>%%" id="modal:modellingIntro-abstraction" class="algolia-no-index">
-                            <div>
-                            <div></div>
-                            <p></p>
-                            <p><span class="dimmed"><strong><span>Design → Design Fundamentals → Abstraction →
-                                  </span></strong></span></p>
-                            <div id="title-and-body">
-                              <div>
-                                <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
-                              </div>
-                              <div id="main">
-                                <div>
-                                  <tip-box type="definition">
-                                    <div>
-                                      <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity we are interested in, and suppressing the more complex details below that level.</p>
-                                    </div>
-                                  </tip-box>
-                                  <p><strong>The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand needs to be considered.</strong> As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.</p>
-                                  <p><strong>Ignoring lower level data items and thinking in terms of bigger entities is called <mark><em>data abstraction</em></mark>.</strong></p>
-                                  <tip-box>
-                                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Within a certain software component, we might deal with a <em>user</em> data type, while ignoring the details contained in the user data item such as <em>name</em>, and <em>date of birth</em>. These details have been ‘abstracted away’ as they do not affect the task of that software component.</p>
-                                  </tip-box>
-                                  <p><strong><mark><em>Control abstraction</em></mark> abstracts away details of the actual control flow to focus on tasks at a simplified level.</strong></p>
-                                  <tip-box>
-                                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p>
-                                  </tip-box>
-                                  <p><strong>Abstraction can be applied repeatedly to obtain progressively <em>higher levels of abstractions</em>.</strong></p>
-                                  <tip-box>
-                                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of data abstraction: a <code>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a bit.</p>
-                                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of control abstraction: <code>execute(Game)</code> is at a higher level than <code>print(Char)</code> which is at a higher than an Assembly language instruction <code>MOV</code>.</p>
-                                  </tip-box>
-                                  <p><strong>Abstraction is a general concept that is not limited to just data or control abstractions.</strong></p>
-                                  <box>
-                                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some more general examples of abstraction:</p>
-                                    <ul>
-                                      <li>An OOP <em>class</em> is an abstraction over related data and behaviors.</li>
-                                      <li>An <em>architecture</em> is a higher-level abstraction of the design of a software.</li>
-                                      <li>Models (e.g., UML models) are abstractions of some aspect of reality.</li>
-                                    </ul>
-                                  </box>
-                                </div>
-                                <div></div>
-                              </div>
-                            </div>
-                          </div>
-                        </modal>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A class diagram captures the structure of the software design but not the behavior.</p>
-                        </tip-box>
-                        <p><strong>Multiple models of the same entity may be needed to capture it fully.</strong></p>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In addition to a class diagram (or even multiple class diagrams), a number of other diagrams may be needed to capture various interesting aspects of the software.</p>
-                        </tip-box>
-                      </div>
-                      <div></div>
-                    </div>
-                  </panel>
+                  <panel type="seamless" expanded id="what">
+                    <span slot="header" class="card-title"><div><h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
                 </div>
-                <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how"></a></h4>
-                      </div>
+                </span>
+                <div class="indented">
+                  <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain models</span>
                     </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain how models are used</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
+                    </span>
+                    </span>
+                  </p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <div>
+                    <p><strong>A <em>model</em> is a representation of something else.</strong></p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <span trigger="click" for="modal:modellingIntro-classDiagram" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:modellingIntro-classDiagram'].show()"
+                          class="trigger-click">class diagram</span> is a model that represents a software design.</p>
+                    </box>
+                    <b-modal id="modal:modellingIntro-classDiagram" hide-footer size="lg" modal-class="mb-zoom" ref="modal:modellingIntro-classDiagram"><template slot="modal-title">Class diagrams</template>
+                      <p>A <em>class diagram</em> is a diagram drawn using the UML modelling notation.<br>
+                        <span><span aria-hidden="true" class="fas fa-cube"></span></span> An example class diagram:<br></p>
+                      <img src="/se-book/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600"></b-modal>
+                    <p><strong>A <em>model</em> provides a simpler view of a complex entity because a model captures only a selected aspect.</strong> This omission of some aspects implies models are <span trigger="click" for="modal:modellingIntro-abstraction"
+                        v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:modellingIntro-abstraction'].show()" class="trigger-click">abstractions</span>.</p>
+                    <b-modal id="modal:modellingIntro-abstraction" hide-footer size="lg" modal-class="mb-zoom" ref="modal:modellingIntro-abstraction"><template slot="modal-title"><span class="dimmed">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></span></template>
                       <div>
-                        <p><strong>In software development, models are useful in several ways:</strong></p>
-                        <p>a) <strong>To analyze a complex entity related to software development.</strong></p>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of using models for analysis:</p>
-                          <ol>
-                            <li>Models of the problem domain (i.e. the environment in which the software is expected to solve a problem) can be built to aid the understanding of the problem to be solved.</li>
-                            <li>When planning a software solution, models can be created to figure out how the solution is to be built. An architecture diagram is such a model.</li>
-                          </ol>
-                        </tip-box>
-                        <p>b) <strong>To communicate information among stakeholders.</strong> Models can be used as a visual aid in discussions and documentations.</p>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of using models to communicate:</p>
-                          <ol>
-                            <li>We can use an <trigger trigger="click" for="modal:modelingIntro-archiDiagrams">architecture diagram</trigger> to explain the high-level design of the software to developers.</li>
-                            <li>A business analyst can use a use case diagram to explain to the customer the functionality of the system.</li>
-                            <li>A class diagram can be reverse-engineered from code so as to help explain the design of a component to a new developer.</li>
-                          </ol>
-                        </tip-box>
-                        <modal large title="Architecture Diagrams" id="modal:modelingIntro-archiDiagrams" class="algolia-no-index">
-                          <p>An <em>architecture diagram</em> depicts the high-level design of a software.</p>
+                        <div></div>
+                        <p></p>
+                        <p><span class="dimmed"><strong><span>Design → Design Fundamentals → Abstraction →
+</span></strong>
+                          </span>
+                        </p>
+                        <div id="title-and-body">
                           <div>
-                            <tip-box>
-                              <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some example architecture diagrams:</p>
-                              <tabs>
-                                  <tab header="TEAMMATES">
-                                  <p><img src="https://github.com/TEAMMATES/teammates/raw/master/docs/images/highlevelArchitecture.png" width="700"><br></p>
-                                  <p>
-                                    <hr>
-                                  </p>
-                                </tab>
-                                  <tab header="se-edu/addressbook-level4" class="algolia-no-index">
-                                  <p><img src="https://se-edu.github.io/addressbook-level4/images/Architecture.png" width="700"><br></p>
-                                  <p>
-                                    <hr>
-                                  </p>
-                                </tab>
-                                  <tab header="Example 1" class="algolia-no-index">
-                                  <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Accelerator_Architecture.png" width="700"><br>
-                                    <sub><a href="https://commons.wikimedia.org/wiki/File:Accelerator_Architecture.png">source: https://commons.wikimedia.org</a></sub></p>
-                                  <p>
-                                    <hr>
-                                  </p>
-                                </tab>
-                                  <tab header="Example 2" class="algolia-no-index">
-                                  <p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png" width="700"><br>
-                                    <sub><a href="https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png">source: https://commons.wikimedia.org</a></sub></p>
-                                  <p>
-                                    <hr>
-                                  </p>
-                                </tab>
-                                  <tab header="Example 3" class="algolia-no-index">
-                                  <p><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg" width="700"><br>
-                                    <sub><a href="https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg">source: https://commons.wikimedia.org</a></sub></p>
-                                  <p>
-                                    <hr>
-                                  </p>
-                                </tab>
-                              </tabs>
-                            </tip-box>
+                            <h4 id="what-2"><span>What</span><a class="fa fa-anchor" href="#what-2"></a></h4>
                           </div>
-                        </modal>
-                        <p>c) <strong>As a blueprint for creating software.</strong> Models can be used as instructions for building software.</p>
-                        <tip-box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of using models to as blueprints:</p>
-                          <ol>
-                            <li>A senior developer draws a class diagram to propose a design for an OOP software and passes it to a junior programmer to implement.</li>
-                            <li>A software tool allows users to draw UML models using its interface and the tool automatically generates the code based on the model.</li>
-                          </ol>
-                        </tip-box>
-                        <tip-box>
-
-                          <panel type="seamless" class="algolia-no-index">
-                            <span slot="header" class="card-title">Model Driven Development <span class="badge badge-pill badge-secondary">tangential</span></span>
-                            <p><strong><em>Model-driven development (MDD)</em>, also called <em>Model-driven engineering</em>, is an approach to software development that strives to exploit models as blueprints.</strong> MDD uses models as primary engineering artifacts when developing software. That is, the system is first created in the form of models. After that, the models are converted to code using code-generation techniques (usually, automated or semi-automated, but can even involve manual translation from model to code). MDD requires the use of a very expressive modeling notation (graphical or otherwise), often specific to a given problem domain. It also requires sophisticated tools to generate code from models and maintain the link between models and the code. One advantage of MDD is that the same model can be used to create software for different platforms and different languages. MDD has a lot of promise, but it is still an emerging technology</p>
-                            <p>Further reading:</p>
-                            <ul>
-                              <li><a href="https://martinfowler.com/bliki/ModelDrivenSoftwareDevelopment.html">Martin Fowler's view on MDD</a> - TLDR: he is sceptical</li>
-                              <li><a href="http://www.theenterprisearchitect.eu/blog/2009/03/31/5-types-of-model-driven-software-development/">5 types of Model Driven Software Development</a> - A more optimistic view, although an old article</li>
-                            </ul>
-                          </panel>
-                        </tip-box>
-                      </div>
-                      <div>
-                        <div>
-                          <panel header="<md>:fas-dumbbell:</md> Exercises" expandable class="algolia-no-index">
+                          <div id="main">
                             <div>
-                              <panel header="<md>:glyphicon-question-sign:</md>:glyphicon-ok-sign: Statements about models" class="algolia-no-index">
-                                <question>
-                                  <p>Choose the correct statements about models.</p>
-                                  <ul class="task-list">
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Models are abstractions.</li>
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Models can be used for communication.</li>
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Models can be used for analysis of a problem.</li>
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Generating models from code is useless.</li>
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Models can be used as blueprints for generating code.</li>
-                                  </ul>
-                                  <div slot="answer" class="algolia-no-index">
-                                    <p>(a) (b) (c) (e)</p>
-                                    <p>Explanation: Models generated from code can be used for understanding, analysing, and communicating about the code.</p>
-                                  </div>
-                                </question>
-                              </panel>
+                              <box type="definition">
+                                <div>
+                                  <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity we are interested in, and suppressing the more complex details below that level.</p>
+                                </div>
+                              </box>
+                              <p><strong>The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand needs to be considered.</strong> As most programs are written to solve complex problems involving
+                                large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.</p>
+                              <p><strong><mark><em>Data abstraction</em></mark>: abstracting away the lower level data items and thinking in terms of bigger entities</strong></p>
+                              <box>
+                                <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Within a certain software component, we might deal with a <em>user</em> data type, while ignoring the details contained in the user data item such as <em>name</em>,
+                                  and <em>date of birth</em>. These details have been ‘abstracted away’ as they do not affect the task of that software component.</p>
+                              </box>
+                              <p><strong><mark><em>Control abstraction</em></mark>: abstracting away details of the actual control flow to focus on tasks at a higher level</strong></p>
+                              <box>
+                                <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p>
+                              </box>
+                              <p><strong>Abstraction can be applied repeatedly to obtain progressively <em>higher levels of abstractions</em>.</strong></p>
+                              <box>
+                                <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of data abstraction: a <code>File</code> is a data item that is at a higher level than an array and an array is at a higher
+                                  level than a bit.</p>
+                                <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of control abstraction: <code>execute(Game)</code> is at a higher level than <code>print(Char)</code> which is at a higher
+                                  than an Assembly language instruction <code>MOV</code>.</p>
+                              </box>
+                              <p><strong>Abstraction is a general concept that is not limited to just data or control abstractions.</strong></p>
+                              <box>
+                                <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some more general examples of abstraction:</p>
+                                <ul>
+                                  <li>An OOP <em>class</em> is an abstraction over related data and behaviors.</li>
+                                  <li>An <em>architecture</em> is a higher-level abstraction of the design of a software.</li>
+                                  <li>Models (e.g., UML models) are abstractions of some aspect of reality.</li>
+                                </ul>
+                              </box>
                             </div>
-                            <div>
-                              <panel header="<md>:glyphicon-question-sign:</md> Explain usage of models in a class project" class="algolia-no-index">
-                                <question>
-                                  <p>Explain how models (e.g. UML diagrams) can be used in a class project.</p>
-                                  <div slot="hint" class="algolia-no-index">
-                                    <p>Can models be useful in evaluating the design quality of a software written by students?</p>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
-                          </panel>
+                            <div></div>
+                          </div>
                         </div>
                       </div>
+                    </b-modal>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A class diagram captures the structure of the software design but not the behavior.</p>
+                    </box>
+                    <p><strong>Multiple models of the same entity may be needed to capture it fully.</strong></p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In addition to a class diagram (or even multiple class diagrams), a number of other diagrams may be needed to capture various interesting aspects of the software.</p>
+                    </box>
+                  </div>
+                  <div></div>
+                </div>
+                </panel>
+              </div>
+              <div>
+                <panel type="seamless" expanded id="how">
+                  <span slot="header" class="card-title"><div><h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how"></a></h4>
+              </div>
+              </span>
+              <div class="indented">
+                <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain how models are used</span>
+                  </span>
+                  </span>
+                  </span>
+                </p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <div>
+                  <p><strong>In software development, models are useful in several ways:</strong></p>
+                  <p>a) <strong>To analyze a complex entity related to software development.</strong></p>
+                  <box>
+                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of using models for analysis:</p>
+                    <ol>
+                      <li>Models of the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e. the environment in which the software is expected to solve a problem</span>problem
+                        domain
+                        </span> can be built to aid the understanding of the problem to be solved.</li>
+                      <li>When planning a software solution, models can be created to figure out how the solution is to be built. An <span trigger="click" for="modal:modelingIntro-archiDiagrams" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter"
+                          v-on:click="$refs['modal:modelingIntro-archiDiagrams'].show()" class="trigger-click">architecture diagram</span> is such a model.</li>
+                    </ol>
+                  </box>
+                  <b-modal id="modal:modelingIntro-archiDiagrams" hide-footer size="lg" modal-class="mb-zoom" ref="modal:modelingIntro-archiDiagrams"><template slot="modal-title">Architecture Diagrams</template>
+                    <p>An <em>architecture diagram</em> depicts the high-level design of a software.</p>
+                    <div>
+                      <box>
+                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some example architecture diagrams:</p>
+                        <tabs>
+                          <tab><template slot="_header">TEAMMATES</template>
+                            <p><img src="https://github.com/TEAMMATES/teammates/raw/master/docs/images/highlevelArchitecture.png" width="700"><br></p>
+                          </tab>
+                          <tab class="algolia-no-index"><template slot="_header">se-edu/addressbook-level3</template>
+                            <p><img src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300"><br></p>
+                          </tab>
+                          <tab class="algolia-no-index"><template slot="_header">Example 1</template>
+                            <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Accelerator_Architecture.png" width="700"><br>
+                              <sub><a href="https://commons.wikimedia.org/wiki/File:Accelerator_Architecture.png">source: https://commons.wikimedia.org</a></sub></p>
+                          </tab>
+                          <tab class="algolia-no-index"><template slot="_header">Example 2</template>
+                            <p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png" width="700"><br>
+                              <sub><a href="https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png">source: https://commons.wikimedia.org</a></sub></p>
+                          </tab>
+                          <tab class="algolia-no-index"><template slot="_header">Example 3</template>
+                            <p><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg" width="700"><br>
+                              <sub><a href="https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg">source: https://commons.wikimedia.org</a></sub></p>
+                          </tab>
+                        </tabs>
+                      </box>
                     </div>
-                  </panel>
+                  </b-modal>
+                  <p>b) <strong>To communicate information among stakeholders.</strong> Models can be used as a visual aid in discussions and documentations.</p>
+                  <box>
+                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of using models to communicate:</p>
+                    <ol>
+                      <li>We can use an architecture diagram to explain the high-level design of the software to developers.</li>
+                      <li>A business analyst can use a <em>use case diagram</em> to explain to the customer the functionality of the system.</li>
+                      <li>A <em>class diagram</em> can be reverse-engineered from code so as to help explain the design of a component to a new developer.</li>
+                    </ol>
+                  </box>
+                  <p>c) <strong>As a blueprint for creating software.</strong> Models can be used as instructions for building software.</p>
+                  <box>
+                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of using models to as blueprints:</p>
+                    <ol>
+                      <li>A senior developer draws a class diagram to propose a design for an OOP software and passes it to a junior programmer to implement.</li>
+                      <li>A software tool allows users to draw UML models using its interface and the tool automatically generates the code based on the model.</li>
+                    </ol>
+                  </box>
+                  <box>
+
+                    <panel type="seamless" class="algolia-no-index">
+                      <span slot="header" class="card-title">Model Driven Development <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span>
+                      </span>
+                      </span>
+                      <p><strong><em>Model-driven development (MDD)</em>, also called <em>Model-driven engineering</em>, is an approach to software development that strives to exploit models as blueprints.</strong> MDD uses models as primary engineering
+                        artifacts when developing software. That is, the system is first created in the form of models. After that, the models are converted to code using code-generation techniques (usually, automated or semi-automated, but can even involve
+                        manual translation from model to code). MDD requires the use of a very expressive modeling notation (graphical or otherwise), often specific to a given problem domain. It also requires sophisticated tools to generate code from
+                        models and maintain the link between models and the code. One advantage of MDD is that the same model can be used to create software for different platforms and different languages. MDD has a lot of promise, but it is still an
+                        emerging technology</p>
+                      <p>Further reading:</p>
+                      <ul>
+                        <li><a href="https://martinfowler.com/bliki/ModelDrivenSoftwareDevelopment.html">Martin Fowler's view on MDD</a> - TLDR: he is sceptical</li>
+                        <li><a href="http://www.theenterprisearchitect.eu/blog/2009/03/31/5-types-of-model-driven-software-development/">5 types of Model Driven Software Development</a> - A more optimistic view, although an old article</li>
+                      </ul>
+                    </panel>
+                  </box>
                 </div>
                 <div>
-                  <panel type="seamless" expanded>
-                    <span slot="header" class="card-title">
+                  <div>
+                    <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
                       <div>
-                        <h4 id="uml-models"><span>UML Models</span><a class="fa fa-anchor" href="#uml-models"></a></h4>
+                        <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about models</p></template>
+                          <question>
+                            <p>Choose the correct statements about models.</p>
+                            <ul class="task-list">
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Models are abstractions.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Models can be used for communication.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Models can be used for analysis of a problem.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Generating models from code is useless.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Models can be used as blueprints for generating code.</li>
+                            </ul>
+                            <div slot="answer" class="algolia-no-index">
+                              <p>(a) (b) (c) (e)</p>
+                              <p>Explanation: Models generated from code can be used for understanding, analysing, and communicating about the code.</p>
+                            </div>
+                          </question>
+                        </panel>
                       </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can identify UML models</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
                       <div>
-                        <p>The following diagram uses the class diagram notation to show the different types of UML diagrams.</p>
-                        <tip-box>
-                          <p><img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/UML_diagrams_overview.svg" width="800"><br>
-                            <sub>source:<a href="https://en.wikipedia.org/wiki/Unified_Modeling_Language">https://en.wikipedia.org/</a></sub></p>
-                        </tip-box>
+                        <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain usage of models in a class project</p></template>
+                          <question>
+                            <p>Explain how models (e.g. UML diagrams) can be used in a class project.</p>
+                            <div slot="hint" class="algolia-no-index">
+                              <p>Can models be useful in evaluating the design quality of a software written by students?</p>
+                            </div>
+                          </question>
+                        </panel>
                       </div>
-                      <div></div>
-                    </div>
-                  </panel>
+                    </panel>
+                  </div>
                 </div>
               </div>
+              </panel>
             </div>
+            <div>
+              <panel type="seamless" expanded id="uml-models">
+                <span slot="header" class="card-title"><div><h4 id="uml-models"><span>UML Models</span><a class="fa fa-anchor" href="#uml-models"></a></h4>
+            </div>
+            </span>
+            <div class="indented">
+              <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can identify UML models</span>
+                </span>
+                </span>
+                </span>
+              </p>
+              <p></p>
+              <p></p>
+              <p></p>
+              <div>
+                <p>The following diagram uses the class diagram notation to show the different types of <span trigger="click" for="modal:umlModels-uml" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:umlModels-uml'].show()"
+                    class="trigger-click">UML</span> diagrams.</p>
+                <b-modal id="modal:umlModels-uml" hide-footer size="lg" modal-class="mb-zoom" ref="modal:umlModels-uml"><template slot="modal-title">UML (Unified Modeling Language)</template>
+                  <div>
+                    <p><a href="http://www.uml.org/#UML2.0"><strong>Unified Modeling Language (UML)</strong></a> is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James
+                      Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’
+                      in UML). UML is currently the <em>de facto</em> modeling notation used in the software industry.</p>
+                  </div>
+                </b-modal>
+                <box>
+                  <p><img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/UML_diagrams_overview.svg" width="800"><br>
+                    <sub>source:<a href="https://en.wikipedia.org/wiki/Unified_Modeling_Language">https://en.wikipedia.org/</a></sub></p>
+                </box>
+              </div>
+              <div></div>
+            </div>
+            </panel>
           </div>
         </div>
       </div>
     </div>
-    <footer>
-      <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.5.1</a> at Mon, 24 Jun 2019 07:05:04 GMT.</small></div>
-    </footer>
+  </div>
+  </div>
+  </div>
+  <footer>
+    <div class="text-center">
+      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sat, Apr 4, 2020, 12:09:16 PM UTC.</small></div>
+  </footer>
   </div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
