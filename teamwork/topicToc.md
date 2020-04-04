@@ -1,5 +1,5 @@
 * [Teamwork]({{baseUrl}}/teamwork/)
-  <trigger for="pop:teamwork-preview">{{icon_preview}}</trigger> [{{icon_print}}](teamwork/print.html)
+  <trigger for="pop:teamwork-preview">{{icon_preview}}</trigger> [{{icon_print}}](print.html)
 
 <popover id="pop:teamwork-preview" title="Teamwork {{icon_preview}}" placement="right">
   <div slot="content">

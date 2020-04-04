@@ -1,5 +1,5 @@
 * [Principles]({{baseUrl}}/principles/)
-  <trigger for="pop:principles-preview">{{icon_preview}}</trigger> [{{icon_print}}](principles/print.html)
+  <trigger for="pop:principles-preview">{{icon_preview}}</trigger> [{{icon_print}}](print.html)
 
 <popover id="pop:principles-preview" title="Principles {{icon_preview}}" placement="right">
   <div slot="content">
