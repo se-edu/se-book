@@ -17,7 +17,7 @@ Choose the least correct statement
 
 <div slot="answer">
 
-- (x) e
+e
 
 Explanation: Patterns have costs and sometimes they may be an overkill. Therefore, we should apply them judiciously.
 

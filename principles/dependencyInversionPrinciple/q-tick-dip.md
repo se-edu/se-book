@@ -10,10 +10,7 @@ Which of these statements is true about the Dependency Inversion Principle.
 
 <div slot="answer">
 
-- [x] a.
-- [ ] b.
-- [ ] c.
-- [ ] d.
+a
 
 Explanation: Replacing dependencies with mocks is Dependency Injection, not DIP. DIP does not reduce dependencies, rather, it changes the direction of dependencies. Yes, it can introduce extra abstractions but often the benefit can outweigh the extra complications.
 

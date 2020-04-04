@@ -19,7 +19,7 @@ Choose the correct statement
 
 <div slot="answer">
 
-- (x) d
+d
 
 Explanation:
 
