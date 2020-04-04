@@ -1,5 +1,5 @@
 * [Reuse]({{baseUrl}}/reuse/)
-  <trigger for="pop:reuse-preview">{{icon_preview}}</trigger> [{{icon_print}}](reuse/print.html)
+  <trigger for="pop:reuse-preview">{{icon_preview}}</trigger> [{{icon_print}}](print.html)
 
 <popover id="pop:reuse-preview" title="Reuse {{icon_preview}}" placement="right">
   <div slot="content">

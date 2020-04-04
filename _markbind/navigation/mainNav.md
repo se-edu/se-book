@@ -56,7 +56,7 @@
   * [C++ to Java]({{baseUrl}}/cppToJava/)
 
 * **[Combined Exercises]({{baseUrl}}/combined/exercises.html)**
-* **[List of definitions]({{baseUrl}}/common/definitions.html)**
+* **[List of Definitions]({{baseUrl}}/common/definitions.html)**
 * **[List of References]({{baseUrl}}/common/references.html)**
 * **[List of Learning Outcomes]({{baseUrl}}/common/outcomes.html)**
 * **[Printable Version]({{baseUrl}}/common/print.html)**
