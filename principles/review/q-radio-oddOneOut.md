@@ -18,7 +18,7 @@ Pick the odd one out.
 
 <div slot="answer">
 
-- (x) a. Separation of Concerns Principle.
+- (x) a
 
 Explanation: These five principles make up the SOLID principles, but only if SCP is replaced by SRP.
 

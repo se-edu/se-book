@@ -21,7 +21,7 @@ Which one of these is the most useful to model a workflow?
 
 <div slot="answer">
 
-- (x) c. activity diagram
+- (x) c
 
 </div>
 </question>

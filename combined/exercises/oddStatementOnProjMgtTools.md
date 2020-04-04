@@ -21,7 +21,7 @@ Pick the odd one out.
 
 <div slot="answer">
 
-- (x) a. RCS (Revision Control Software)
+- (x) a
 
 Explanation: RCS is for managing code changes. The others are tools and techniques for managing project schedules. It’s OK if you don’t agree with the answer. What matters is that you know what each one is for.
 
