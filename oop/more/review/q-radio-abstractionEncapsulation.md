@@ -18,7 +18,7 @@ In the context of OOP, what is the relationship between abstraction and encapsul
 
 <div slot="answer">
 
-- (x) c. Encapsulation strengthens abstraction
+c
 
 Explanation: We can have abstraction without encapsulation. For example, we can *think* in terms of student entities when we code in C (a procedural language). But when we use a language that has encapsulation too (e.g., in Java/C++/C#), we can package all student related data and functions into one construct (i.e. a class). This makes the ‘student’ abstraction stronger because now we can not only think in terms of students, the program can perform actions using objects that represent student entities.
 

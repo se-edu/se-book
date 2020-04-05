@@ -8,7 +8,7 @@ Scripted testing is better than exploratory testing.
 
 <div slot="answer">
 
-B) False
+False
 
 Explanation: Each has pros and cons. Relying on only one is not recommended. A combination is better.
 

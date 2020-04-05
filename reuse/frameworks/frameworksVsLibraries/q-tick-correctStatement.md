@@ -3,10 +3,10 @@
 
 Which one of these are frameworks ?
 
-- ( ) a. JUnit
-- ( ) b. Eclipse
-- ( ) c. Drupal
-- ( ) d. Ruby on Rails
+- [ ] a. JUnit
+- [ ] b. Eclipse
+- [ ] c. Drupal
+- [ ] d. Ruby on Rails
 
 <div slot="answer">
 

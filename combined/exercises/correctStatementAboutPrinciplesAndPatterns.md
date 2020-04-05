@@ -17,7 +17,7 @@ Choose the least correct statement
 
 <div slot="answer">
 
-- (x) e. The more patterns we apply, the better the design becomes.
+e
 
 Explanation: Patterns have costs and sometimes they may be an overkill. Therefore, we should apply them judiciously.
 

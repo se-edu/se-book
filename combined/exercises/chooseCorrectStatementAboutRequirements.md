@@ -19,7 +19,7 @@ Choose the correct statement
 
 <div slot="answer">
 
-- (x) d. Prototyping can be used to discover as well as record requirements.
+d
 
 Explanation:
 
