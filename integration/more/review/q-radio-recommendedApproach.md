@@ -18,7 +18,7 @@ Which is the recommended integration approach in general?
 
 <div slot="answer">
 
-- (x) b. Early, incremental, and frequent
+b
 
 </div>
 </question>
