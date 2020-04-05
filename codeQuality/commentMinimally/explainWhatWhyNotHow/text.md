@@ -61,4 +61,7 @@ return (isLeftEndCorrect && isRightEndCorrect) || isSameSize;
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 </div>

@@ -31,11 +31,14 @@ displayResult();
 </box>
 
 <modal title="" id="modal:slap-abstraction">
-  <include src="../../../../designFundamentals/abstraction/what/unit-inElsewhere-asFlat.md" boilerplate/>
+  <include src="../../../designFundamentals/abstraction/what/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
 
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 </div>
