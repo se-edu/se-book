@@ -166,37 +166,12 @@ pageNav: 3
 
 <include src="../codeQuality/introduction/basic/unit-inParent-asOutcome.md" boilerplate />
 <include src="../codeQuality/maximiseReadability/introduction/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/avoidLongMethods/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/avoidDeepNesting/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/avoidComplicatedExpressions/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/avoidMagicNumbers/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/makeCodeObvious/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/structureCodeLogically/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/dontTripReader/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/practiceKISSing/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/avoidPrematureOptimizations/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/slapHard/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/makeHappyPathProminent/unit-inParent-asPanel.md" boilerplate />
 <include src="../codeQuality/followStandard/introduction/unit-inParent-asOutcome.md" boilerplate />
 <include src="../codeQuality/followStandard/basic/unit-inParent-asOutcome.md" boilerplate />
 <include src="../codeQuality/followStandard/intermediate/unit-inParent-asOutcome.md" boilerplate />
 <include src="../codeQuality/nameWell/introduction/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/nameWell/nounsAndVerbsAsNames/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/nameWell/useStandardWords/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/nameWell/useNameExplain/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/nameWell/notTooLongNorShort/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/nameWell/avoidMisleadingNames/unit-inParent-asPanel.md" boilerplate />
 <include src="../codeQuality/avoidShortcuts/introduction/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/avoidShortcuts/useDefaultBranch/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/avoidShortcuts/dontRecycleVarsOrParams/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/avoidShortcuts/avoidEmptyCatchBlocks/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/avoidShortcuts/deleteDeadCode/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/avoidShortcuts/minimiseVariableScope/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/avoidShortcuts/minimiseCodeDuplication/unit-inParent-asPanel.md" boilerplate />
 <include src="../codeQuality/commentMinimally/introduction/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/commentMinimally/dontRepeatObvious/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/commentMinimally/writeToReader/unit-inParent-asPanel.md" boilerplate />
-<include src="../codeQuality/commentMinimally/explainWhatWhyNotHow/unit-inParent-asPanel.md" boilerplate />
 
 ### Refactoring
 
