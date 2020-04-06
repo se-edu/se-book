@@ -1,0 +1,82 @@
+<div></div>
+<p></p>
+<p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Intermediate →
+</span></strong>
+  </span>
+</p>
+<div id="title-and-body">
+  <div>
+    <h4 id="slap-hard"><span>SLAP Hard</span><a class="fa fa-anchor" href="#slap-hard"></a></h4>
+  </div>
+  <div id="main">
+    <div>
+      <p>Avoid varying the level of <span trigger="click" for="modal:slap-abstraction" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:slap-abstraction'].show()" class="trigger-click">abstraction</span>        within a code fragment. Note: The <em>Productive Programmer</em> (by Neal Ford) calls this the <em>SLAP principle</em> i.e. Single Level of Abstraction Per method.</p>
+      <box>
+        <p>Example:</p>
+        <p>
+          <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong>
+            </span>
+          </font> (<code>readData();</code> and <code>salary = basic*rise+1000;</code> are at different levels of abstraction)</p>
+        <pre><code class="hljs java"><span>readData();</span><span>salary = basic*rise+<span class="hljs-number">1000</span>;</span><span>tax = (taxable?salary*<span class="hljs-number">0.07</span>:<span class="hljs-number">0</span>);</span><span>displayResult();</span></code></pre>
+        <p>
+          <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong>
+            </span>
+          </font> (all statements are at the same level of abstraction)</p>
+        <pre><code class="hljs java"><span>readData();</span><span>processData();</span><span>displayResult();</span></code></pre>
+      </box>
+      <b-modal id="modal:slap-abstraction" hide-footer size modal-class="mb-zoom" ref="modal:slap-abstraction"><template slot="modal-title"></template>
+        <div>
+          <div></div>
+          <p></p>
+          <p><span class="dimmed"><strong><span>Design → Design Fundamentals → Abstraction →
+</span></strong>
+            </span>
+          </p>
+          <div id="title-and-body">
+            <div>
+              <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+            </div>
+            <div id="main">
+              <div>
+                <box type="definition">
+                  <div>
+                    <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity we are interested in, and suppressing the more complex details below that level.</p>
+                  </div>
+                </box>
+                <p><strong>The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand needs to be considered.</strong> As most programs are written to solve complex problems involving large
+                  amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.</p>
+                <p><strong><mark><em>Data abstraction</em></mark>: abstracting away the lower level data items and thinking in terms of bigger entities</strong></p>
+                <box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Within a certain software component, we might deal with a <em>user</em> data type, while ignoring the details contained in the user data item such as <em>name</em>, and
+                    <em>date of birth</em>. These details have been ‘abstracted away’ as they do not affect the task of that software component.</p>
+                </box>
+                <p><strong><mark><em>Control abstraction</em></mark>: abstracting away details of the actual control flow to focus on tasks at a higher level</strong></p>
+                <box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p>
+                </box>
+                <p><strong>Abstraction can be applied repeatedly to obtain progressively <em>higher levels of abstractions</em>.</strong></p>
+                <box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of data abstraction: a <code>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a
+                    bit.</p>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of control abstraction: <code>execute(Game)</code> is at a higher level than <code>print(Char)</code> which is at a higher than an Assembly
+                    language instruction <code>MOV</code>.</p>
+                </box>
+                <p><strong>Abstraction is a general concept that is not limited to just data or control abstractions.</strong></p>
+                <box>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some more general examples of abstraction:</p>
+                  <ul>
+                    <li>An OOP <em>class</em> is an abstraction over related data and behaviors.</li>
+                    <li>An <em>architecture</em> is a higher-level abstraction of the design of a software.</li>
+                    <li>Models (e.g., UML models) are abstractions of some aspect of reality.</li>
+                  </ul>
+                </box>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </b-modal>
+    </div>
+    <div></div>
+  </div>
+</div>
