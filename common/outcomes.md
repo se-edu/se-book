@@ -414,8 +414,6 @@ pageNav: 3
 <include src="../gitAndGithub/managePRs/unit-inParent-asOutcome.md" boilerplate />
 <include src="../gitAndGithub/forkingWorkflow/unit-inParent-asOutcome.md" boilerplate />
 
-### Java
-
 ## Principles
 
 ### SE Principles
