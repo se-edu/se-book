@@ -33,7 +33,7 @@
 * [**SECTION: TOOLS**](#section-tools) 
   * [UML](#uml)
   * [Intellij IDEA](#intellij-idea)
-  * [Git and Github](#git-and-github)
+  * [Git and GitHub](#git-and-github)
   * [Java](#java)
 * [**SECTION: SUPPLEMENTARY**](#section-supplementary)
   * [Principles](#principles)

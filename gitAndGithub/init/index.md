@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Git and Github: Init"
+title: "Git and GitHub: Init"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

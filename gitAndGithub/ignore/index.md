@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Git and Github: Ignore"
+title: "Git and GitHub: Ignore"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />
