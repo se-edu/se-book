@@ -101,6 +101,10 @@ title: "SE Book [All-In-One-Page Big File!]"
 
 <include src="../principles/chapter.md" boilerplate />
 
+# SECTION: SUPPLEMENTARY
+
+<include src="../cppToJava/chapter.md" boilerplate />
+
 <!-- TODO: add review -->
 
 * [List of Definitions](common/definitions.html)
