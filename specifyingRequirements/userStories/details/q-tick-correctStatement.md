@@ -11,10 +11,7 @@ Choose the correct statements
 
 <div slot="answer">
 
-- [ ] a. 
-- [ ] b. 
-- [ ] c. 
-- [x] d. 
+d 
 
 Explanation: User stories are short and written in natural language, NOT in a formal language. They are used for estimation and scheduling purposes but do not contain enough details to form a complete system specification.
 

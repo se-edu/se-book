@@ -1,4 +1,4 @@
-<panel header="Q: Which of these are true about user stories?">
+<panel header="{{ icon_Q_A }} Which of these are true about user stories?">
 <question>
 
 - [ ] a. They are based on stories users tell about similar systems
