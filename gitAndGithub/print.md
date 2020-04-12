@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Git and Github [Printable]"
+title: "Git and GitHub [Printable]"
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">

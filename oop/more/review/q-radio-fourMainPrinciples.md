@@ -22,7 +22,7 @@ Which of these do not belong to four main OO principles?
 
 <div slot="answer">
 
-- (x) d
+d
 
 </div>
 </question>
