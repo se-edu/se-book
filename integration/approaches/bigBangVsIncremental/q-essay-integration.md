@@ -1,4 +1,4 @@
-<panel header="Q: Big-bang integration in school projects">
+<panel header="{{ icon_Q_A }} Big-bang integration in school projects">
 <question has-input="true">
 
 Give two arguments in support and two arguments against the following statement.

@@ -8,7 +8,7 @@ Scripted testing requires tests to be written in a scripting language; Manual te
 
 <div slot="answer">
 
-A) False
+False
 
 Explanation: “Scripted” means test cases are predetermined. They need not be an executable script. However, exploratory testing is usually manual.
 

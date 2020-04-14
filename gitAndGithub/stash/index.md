@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Git and Github: Stash"
+title: "Git and GitHub: Stash"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

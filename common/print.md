@@ -87,9 +87,15 @@ pageNav: 3
 
 <hr>
 
-# SECTION: SUPPLEMENTARY
+# SECTION: PRINCIPLES
 
 <include src="../principles/print.md#main" />
+
+<hr>
+
+# SECTION: SUPPLEMENTARY
+
+<include src="../cppToJava/print.md#main" />
 
 <!-- TODO: add review -->
 

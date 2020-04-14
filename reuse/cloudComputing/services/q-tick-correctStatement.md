@@ -3,9 +3,9 @@
 
 Google Calendar belongs to which category of cloud computing services?
 
-- [ ] a. IaaS
-- [ ] b. PaaS
-- [ ] c. SaaS
+- ( ) a. IaaS
+- ( ) b. PaaS
+- ( ) c. SaaS
 
 <div slot="answer">
 

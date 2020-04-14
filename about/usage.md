@@ -10,12 +10,6 @@ pageNav: 3
 
 # Using This Book
 
-* [Browser Compatibility](#browsers)
-* [Information Layers](#layers)
-* [Conventions Used](#conventions)
-* [Saving as PDF files](#saving)
-* [Printing](#printing)
-
 <div id="browsers">
 
 ### Browser Compatibility
