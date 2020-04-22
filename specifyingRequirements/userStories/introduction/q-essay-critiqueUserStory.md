@@ -1,4 +1,4 @@
-<panel header="Q: What's wrong with this user story?">
+<panel header="{{ icon_Q_A }} What's wrong with this user story?">
 <question has-input="true">
 
 Critique the following user story taken from a software project to build an e-commerce website. 

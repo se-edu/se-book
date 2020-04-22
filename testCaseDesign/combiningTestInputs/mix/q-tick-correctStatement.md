@@ -10,7 +10,7 @@ Which of these contradict the heuristics recommended when creating test cases wi
 
 <div slot="answer">
 
-(a) inputs.
+a
 
 Explanation: If you test all invalid test inputs together, you will not know if each one of the invalid inputs are handled correctly by the SUT. This is because most SUTs return an error message upon encountering the first invalid input. 
 

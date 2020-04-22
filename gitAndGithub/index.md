@@ -1,7 +1,7 @@
 <frontmatter>
-title: "Git and Github"
+title: "Git and GitHub"
 siteNav: mainNav.md
-pageNav: 3
+pageNav: 4
 </frontmatter>
 
 <include src="container-inPage-asFlat.md" boilerplate />

@@ -1,4 +1,4 @@
-<span id="title">Guideline: Name Well</span>
+<span id="title">Guideline: Name well</span>
 
 <div id="body">
 

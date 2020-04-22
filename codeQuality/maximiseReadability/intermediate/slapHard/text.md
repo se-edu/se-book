@@ -1,4 +1,4 @@
-<span id="title">SLAP Hard</span>
+<span id="title">SLAP hard</span>
 
 <span id="prereqs"></span>
 

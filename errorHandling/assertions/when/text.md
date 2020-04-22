@@ -1,7 +1,6 @@
 <span id="title">When</span>
 
-<span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Error Handling → Assertions → What%%" popup-url="{{ baseUrl }}/errorHandling/assertions/what" />
-<panel src="../../exceptions/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Error Handling → Exceptions → What%%" popup-url="{{ baseUrl }}/errorHandling/exceptions/what" /></span>
+<span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can use assertions optimally</span>
 

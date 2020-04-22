@@ -1,4 +1,4 @@
-<span id="title">Deployment Diagrams</span>
+<span id="title">Deployment diagrams</span>
 
 <span id="prereqs"></span>
 

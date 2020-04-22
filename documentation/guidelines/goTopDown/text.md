@@ -1,4 +1,4 @@
-<span id="title">Guideline: Go Top-down, Not Bottom-up</span>
+<span id="title">Guideline: Go top-down, not bottom-up</span>
 
 <div id="body">
 

@@ -1,4 +1,4 @@
-<span id="title">Use Nouns for Things and Verbs for Actions</span>
+<span id="title">Use nouns for things and verbs for actions</span>
 
 <span id="prereqs"></span>
 

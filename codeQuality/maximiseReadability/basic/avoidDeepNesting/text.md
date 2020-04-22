@@ -1,4 +1,4 @@
-<span id="title">Avoid Deep Nesting</span>
+<span id="title">Avoid deep nesting</span>
 
 <span id="prereqs"></span>
 

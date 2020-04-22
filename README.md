@@ -1,4 +1,4 @@
 # Se-book
 
 ## Online Version
-[Demo](https://markbind.github.io/se-book/)
+[Demo](https://se-edu.github.io/se-book/)

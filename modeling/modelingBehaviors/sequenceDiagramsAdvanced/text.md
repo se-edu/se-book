@@ -2,7 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can interpret advanced sequence diagrams</span>
 
-<span id="title">Sequence Diagrams - Advanced</span>
+<span id="title">Sequence diagrams - advanced</span>
 
 <div id="body">
 

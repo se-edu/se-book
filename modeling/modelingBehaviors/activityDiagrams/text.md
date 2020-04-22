@@ -1,4 +1,4 @@
-<span id="title">Activity Diagrams - Basic</span>
+<span id="title">Activity diagrams - basic</span>
 
 <span id="prereqs"></span>
 

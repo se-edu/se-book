@@ -14,6 +14,7 @@ Method calls to `static` i.e., class-level method are received by the class itse
  
 <puml src="images/staticMethodCall.puml" />
 <p/>
+
 Here is the `Person` class, for reference:<br>
 <puml src="images/personClass.puml" />
 </box>

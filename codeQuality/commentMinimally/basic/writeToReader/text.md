@@ -1,4 +1,4 @@
-<span id="title">Write to the Reader</span>
+<span id="title">Write to the reader</span>
 
 <span id="prereqs"></span>
 

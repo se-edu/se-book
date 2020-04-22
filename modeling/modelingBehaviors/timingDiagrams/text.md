@@ -1,4 +1,4 @@
-<span id="title">Timing Diagrams</span>
+<span id="title">Timing diagrams</span>
 
 <span id="prereqs"></span>
 

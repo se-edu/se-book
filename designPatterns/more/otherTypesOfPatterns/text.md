@@ -1,4 +1,4 @@
-<span id="title">Other Types of Patterns</span>
+<span id="title">Other types of patterns</span>
 
 <span id="prereqs"></span>
 

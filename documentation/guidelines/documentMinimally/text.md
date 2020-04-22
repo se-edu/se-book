@@ -1,4 +1,4 @@
-<span id="title">Guideline: Document Minimally, but Sufficiently</span>
+<span id="title">Guideline: Document minimally, but sufficiently</span>
 
 <div id="body">
 

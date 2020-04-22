@@ -19,7 +19,7 @@ Choose the incorrect statement.
 
 <div slot="answer">
 
-- (x) d. A sequence diagram represents how objects are connected to each other.
+d
 
 Explanation: A sequence diagram is a behavior diagram, not a structure diagram. An SD can represent how objects interact with each other (i.e., behavior), not how they are connected to each other (i.e. structure).
 

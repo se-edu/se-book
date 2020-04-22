@@ -1,4 +1,4 @@
-<span id="title">Modeling a Solution</span>
+<span id="title">Modeling a solution</span>
 
 <div id="body">
 

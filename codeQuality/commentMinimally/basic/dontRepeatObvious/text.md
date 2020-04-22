@@ -1,4 +1,4 @@
-<span id="title">Do Not Repeat the Obvious</span>
+<span id="title">Do not repeat the obvious</span>
 
 <span id="prereqs"></span>
 
@@ -12,7 +12,7 @@ If the code is self-explanatory, refrain from repeating the description in a com
 
 {{bad}}
 ```java
-// increment x
+//increment x
 x++;
 
 //trim the input
@@ -23,10 +23,10 @@ trimInput();
 
 {{bad}}
 ```python
-// increment x
+# increment x
 x = x + 1
 
-//trim the input
+# trim the input
 trim_input()
 ```
 </div>

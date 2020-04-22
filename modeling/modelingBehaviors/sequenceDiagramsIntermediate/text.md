@@ -1,4 +1,4 @@
-<span id="title">Sequence Diagrams - Intermediate</span>
+<span id="title">Sequence diagrams - intermediate</span>
 
 <span id="prereqs"></span>
 
@@ -10,7 +10,11 @@
 <panel type="seamless" src="../../../uml/sequenceDiagrams/selfInvocation/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Self-Invocation" alt="{{ icon_prereq }} UML/SD/Self-Invocation" />
 <panel type="seamless" src="../../../uml/sequenceDiagrams/alternativePaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Alternative Paths" alt="{{ icon_prereq }} UML/SD/Alternative" />
 <panel type="seamless" src="../../../uml/sequenceDiagrams/optionalPaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Optional Paths" alt="{{ icon_prereq }} UML/SD/Optional" />
-<panel type="seamless" src="../../../uml/sequenceDiagrams/staticMethods/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Calls to Static Methods" alt="{{ icon_prereq }} UML/SD/StaticMethods" />
+
+<panel type="seamless"  header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Calls to Static Methods" alt="{{ icon_prereq }} UML/SD/StaticMethods">
+
+<include src="../../../uml/sequenceDiagrams/staticMethods/unit-inElsewhere-asFlat.md#main"  boilerplate />
+</panel>
 
 </div>
 

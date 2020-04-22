@@ -1,4 +1,4 @@
-<span id="title">Minimize Scope of Variables</span>
+<span id="title">Minimize scope of variables</span>
 
 <span id="prereqs"></span>
 

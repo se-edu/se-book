@@ -1,4 +1,4 @@
-<span id="title">Modeling Structures</span>
+<span id="title">Modeling structures</span>
 
 <div id="body">
 

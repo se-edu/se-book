@@ -106,7 +106,7 @@ A variation of this strategy is to test all pairs of inputs but only for inputs 
 
 <box>
 
-{{ icon_example }} Testing all pairs between p1 and p3 only while ensuring all p3 values are tested at least once
+{{ icon_example }} Testing all pairs between p1 and p3 only while ensuring all p2 values are tested at least once:
 
 | Test Case   | p1      | p2      | p3      |
 | :---------: | :-----: | :-----: | :-----: |

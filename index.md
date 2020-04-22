@@ -16,84 +16,114 @@ siteNav: mainNav.md
 
 ### Software Engineering
 
-<include src="softwareEngineering/topicToc.md" />
+* [Software Engineering]({{baseUrl}}/softwareEngineering/)
+  [{{icon_print}}]({{baseUrl}}/softwareEngineering/print.html)
 
 ### Object-Oriented Programming
 
-<include src="oop/topicToc.md" />
+* [Object-Oriented Programming]({{baseUrl}}/oop/)
+  [{{icon_print}}]({{baseUrl}}/oop/print.html)
 
 
 ### Requirements
 
-<include src="requirements/topicToc.md" />
+* [Requirements]({{baseUrl}}/requirements/)
+  [{{icon_print}}]({{baseUrl}}/requirements/print.html)
 
-<include src="gatheringRequirements/topicToc.md" />
+* [Gathering Requirements]({{baseUrl}}/gatheringRequirements/) 
+  [{{icon_print}}]({{baseUrl}}/gatheringRequirements/print.html)
 
-<include src="specifyingRequirements/topicToc.md" />
+* [Specifying Requirements]({{baseUrl}}/specifyingRequirements/)
+  [{{icon_print}}]({{baseUrl}}/specifyingRequirements/print.html)
 
 ### Design
 
-<include src="design/topicToc.md" />
+* [Design]({{baseUrl}}/design/)
+  [{{icon_print}}]({{baseUrl}}/design/print.html)
 
-<include src="designFundamentals/topicToc.md" />
+* [Design Fundamentals]({{baseUrl}}/designFundamentals/) 
+  [{{icon_print}}]({{baseUrl}}/designFundamentals/print.html)
 
-<include src="modeling/topicToc.md" />
+* [Modeling]({{baseUrl}}/modeling/)
+  [{{icon_print}}]({{baseUrl}}/modeling/print.html)
+  
+* [Architecture]({{baseUrl}}/architecture/)
+  [{{icon_print}}]({{baseUrl}}/architecture/print.html)
 
-<include src="architecture/topicToc.md" />
+* [Design Patterns]({{baseUrl}}/designPatterns/) 
+  [{{icon_print}}]({{baseUrl}}/designPatterns/print.html)
 
-<include src="designPatterns/topicToc.md" />
-
-<include src="designApproaches/topicToc.md" />
+* [Design Approaches]({{baseUrl}}/designApproaches/)
+  [{{icon_print}}]({{baseUrl}}/designApproaches/print.html)
 
 ### Implementation
 
-<include src="ides/topicToc.md" />
+* [IDEs]({{baseUrl}}/ides/)
+  [{{icon_print}}]({{baseUrl}}/ides/print.html)
 
-<include src="codeQuality/topicToc.md" />
+* [Code Quality]({{baseUrl}}/codeQuality/) 
+  [{{icon_print}}]({{baseUrl}}/codeQuality/print.html)
 
-<include src="refactoring/topicToc.md" />
+* [Refactoring]({{baseUrl}}/refactoring/)
+  [{{icon_print}}]({{baseUrl}}/refactoring/print.html)
+  
+* [Documentation]({{baseUrl}}/documentation/)
+  [{{icon_print}}]({{baseUrl}}/documentation/print.html)
 
-<include src="documentation/topicToc.md" />
+* [Error Handling]({{baseUrl}}/errorHandling/) 
+  [{{icon_print}}]({{baseUrl}}/errorHandling/print.html)
 
-<include src="errorHandling/topicToc.md" />
-
-<include src="integration/topicToc.md" />
-
-<include src="reuse/topicToc.md" />
+* [Integration]({{baseUrl}}/integration/)
+  [{{icon_print}}]({{baseUrl}}/integration/print.html)
+  
+* [Reuse]({{baseUrl}}/reuse/)
+  [{{icon_print}}]({{baseUrl}}/reuse/print.html)
 
 ### Quality Assurance
 
-<include src="qualityAssurance/topicToc.md" />
+* [Quality Assurance]({{baseUrl}}/qualityAssurance/) 
+  [{{icon_print}}]({{baseUrl}}/qualityAssurance/print.html)
 
-<include src="testing/topicToc.md" />
-
-<include src="testCaseDesign/topicToc.md" />
+* [Testing]({{baseUrl}}/testing/)
+  [{{icon_print}}]({{baseUrl}}/testing/print.html)
+  
+* [Test Case Design]({{baseUrl}}/testCaseDesign/)
+  [{{icon_print}}]({{baseUrl}}/testCaseDesign/print.html)
 
 ### Project Management
 
-<include src="revisionControl/topicToc.md" />
+* [Revision Control]({{baseUrl}}/revisionControl/) 
+  [{{icon_print}}]({{baseUrl}}/revisionControl/print.html)
 
-<include src="projectPlanning/topicToc.md" />
+* [Project Planning]({{baseUrl}}/projectPlanning/)
+  [{{icon_print}}]({{baseUrl}}/projectPlanning/print.html)
+  
+* [Teamwork]({{baseUrl}}/teamwork/)
+  [{{icon_print}}]({{baseUrl}}/teamwork/print.html)
 
-<include src="teamwork/topicToc.md" />
-
-<include src="processModels/topicToc.md" />
+* [Process Models]({{baseUrl}}/processModels/) 
+  [{{icon_print}}]({{baseUrl}}/processModels/print.html)
 
 ### Tools
 
-<include src="uml/topicToc.md" />
+* [UML]({{baseUrl}}/uml/) 
+  [{{icon_print}}]({{baseUrl}}/uml/print.html)
 
-<include src="intellij/topicToc.md" />
-
-<include src="gitAndGithub/topicToc.md" />
+* [Intellij IDEA]({{baseUrl}}/intellij/)
+  [{{icon_print}}]({{baseUrl}}/intellij/print.html)
+  
+* [Git and GitHub]({{baseUrl}}/gitAndGithub/)
+  [{{icon_print}}]({{baseUrl}}/gitAndGithub/print.html)
 
 ### Principles
 
-<include src="principles/topicToc.md" />
+* [Principles]({{baseUrl}}/principles/)
+  [{{icon_print}}]({{baseUrl}}/principles/print.html)
 
 ### Supplementary
 
-<include src="cppToJava/topicToc.md" />
+* [C++ to Java]({{baseUrl}}/cppToJava/)
+  [{{icon_print}}]({{baseUrl}}/cppToJava/print.html)
 
 * [Combined Exercises](combined/exercises.html)
 * [List of Definitions](common/definitions.html)

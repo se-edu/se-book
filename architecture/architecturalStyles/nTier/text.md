@@ -1,4 +1,4 @@
-<span id="title">N-tier Architectural Style</span>
+<span id="title">N-tier architectural style</span>
 
 <div id="body">
 

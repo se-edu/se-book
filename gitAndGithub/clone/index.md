@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Git and Github: Clone"
+title: "Git and GitHub: Clone"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

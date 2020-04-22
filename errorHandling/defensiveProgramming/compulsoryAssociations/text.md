@@ -1,4 +1,4 @@
-<span id="title">Enforcing Compulsory Associations</span>
+<span id="title">Enforcing compulsory associations</span>
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Error Handling → Defensive Programming → What%%" popup-url="{{ baseUrl }}/errorHandling/defensiveProgramming/what" /></span>
 
@@ -34,7 +34,7 @@ Account a = new Account();
 a.setGuarantor(null);
 ```
 
-This results in an `Account` without a `Guarantor`! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. We can make the code more defensive by proactively enforcing the multiplicity constraint, like this:
+This results in an `Account` without a `Guarantor`! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. You can make the code more defensive by proactively enforcing the multiplicity constraint, like this:
 
 ```java
 class Account {

@@ -1,4 +1,4 @@
-<span id="title">Observer Pattern</span>
+<span id="title">Observer pattern</span>
 
 <div id="body">
 

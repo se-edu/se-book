@@ -1,4 +1,4 @@
-<span id="title">Enforcing Referential Integrity</span>
+<span id="title">Enforcing referential integrity</span>
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Error Handling → Defensive Programming → What%%" popup-url="{{ baseUrl }}/errorHandling/defensiveProgramming/what" /></span>
 
@@ -51,7 +51,7 @@ james.setGirlfriend(jean);
 jean.setBoyfriend(yong);  
 ```
 
-Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this "love triangle". In such a situation, we say that _the referential integrity has been violated_. It simply means _there is an inconsistency in object references_.
+Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this "love triangle". In such a situation, you should say that _the referential integrity has been violated_. It simply means _there is an inconsistency in object references_.
 
 <img src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50" />
 <p/>

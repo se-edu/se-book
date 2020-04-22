@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Git and Github: Create PRs"
+title: "Git and GitHub: Create PRs"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

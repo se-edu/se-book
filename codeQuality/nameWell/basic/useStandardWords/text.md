@@ -1,4 +1,4 @@
-<span id="title">Use Standard Words</span>
+<span id="title">Use standard words</span>
 
 <span id="prereqs"></span>
 

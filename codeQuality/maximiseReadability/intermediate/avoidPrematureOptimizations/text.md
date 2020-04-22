@@ -1,4 +1,4 @@
-<span id="title">Avoid Premature Optimizations</span>
+<span id="title">Avoid premature optimizations</span>
 
 <span id="prereqs"></span>
 
@@ -7,7 +7,7 @@
 <div id="body">
 
 **Optimizing code prematurely has several drawbacks**:
-* **We may not know which parts are the real performance bottlenecks**. This is especially the case when the code undergoes transformations (e.g. compiling, minifying, transpiling, etc.) before it becomes an executable. Ideally, you should use a profiler tool to identify the actual bottlenecks of the code first, and optimize only those parts.
+* **You may not know which parts are the real performance bottlenecks**. This is especially the case when the code undergoes transformations (e.g. compiling, minifying, transpiling, etc.) before it becomes an executable. Ideally, you should use a profiler tool to identify the actual bottlenecks of the code first, and optimize only those parts.
 * **Optimizing can complicate the code**, affecting correctness and understandability
 * **Hand-optimized code can be harder for the compiler to optimize** (the simpler the code, the easier for the compiler to optimize it). In many cases a compiler can do a better job of optimizing the runtime code if you don't get in the way by trying to hand-optimize the source code.
 

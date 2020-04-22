@@ -6,12 +6,12 @@ Which of these class diagrams match the given object diagram?
 <img src="{{baseUrl}}/uml/miscellaneous/objectVsClassDiagrams/images/exerciseDiagram.png" height="330" />
 <p/>
 
-- [ ] a
-- [ ] b
+- [ ] 1
+- [ ] 2
 
 <div slot="answer">
 
-(a) (b)
+(1) (2)
 
 Explanation: Both class diagrams allow one `Unit` object to be linked to one `Item` object.
 

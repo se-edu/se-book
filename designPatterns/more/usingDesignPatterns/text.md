@@ -1,4 +1,4 @@
-<span id="title">Using Design Patterns</span>
+<span id="title">Using design patterns</span>
 
 <span id="prereqs"></span>
 

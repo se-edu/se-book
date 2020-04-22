@@ -1,4 +1,4 @@
-<span id="title">Class Diagrams (Basics)</span>
+<span id="title">Class diagrams - basic </span>
 
 <span id="outcomes">{{ icon_outcome }} Can use basic-level class diagrams</span>
 

@@ -1,4 +1,4 @@
-<span id="title">Avoid Magic Numbers</span>
+<span id="title">Avoid magic numbers</span>
 
 <span id="prereqs"></span>
 
@@ -6,7 +6,7 @@
 
 <div id="body">
 
-When the code has a number that does not explain the meaning of the number, we call that a "magic number" (as in "the number appears as if by magic"). Using a <tooltip content="e.g., `PI`">_named constant_</tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.
+When the code has a number that does not explain the meaning of the number, it is called a "magic number" (as in "the number appears as if by magic"). Using a <tooltip content="e.g., `PI`">_named constant_</tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.
 
 <box>
 
@@ -25,14 +25,28 @@ When the code has a number that does not explain the meaning of the number, we c
 
 </box>
 
-Similarly, we can have ‘magic’ values of other data types.
+Similarly, you can have ‘magic’ values of other data types.
 
 <box>
 
 {{bad}}
+
+<div class="alt-java">
+
 ```java
-"Error 1432"  // A magic string!
+return "Error 1432"  // A magic string!
 ```
+
+</div>
+<div class="alt-python">
+
+```python
+return "Error 1432"  # A magic string!
+```
+
+</div>
+
+
 
 </box>
 
