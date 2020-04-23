@@ -1,12 +1,10 @@
 <div></div>
 <p></p>
 <p><span class="dimmed"><strong><span>Paradigms → OOP → Associations →
-</span></strong>
-  </span>
-</p>
+      </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="composition"><span>Composition</span><a class="fa fa-anchor" href="#composition"></a></h4>
+    <h4 id="composition"><span>Composition</span><a class="fa fa-anchor" href="#composition" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
@@ -16,17 +14,16 @@
       </box>
       <p><strong>Composition also implies that there cannot be cyclical links</strong>.</p>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The ‘sub-folder’ association between <code>Folder</code> objects is a composition type association. That means if the <code>Folder</code> object <code>foo</code> is a sub folder
-          of <code>Folder</code> object <code>bar</code>, <code>bar</code> cannot be a sub-folder of <code>foo</code>.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The ‘sub-folder’ association between <code>Folder</code> objects is a composition type association. That means if the <code>Folder</code> object <code>foo</code> is a sub folder of <code>Folder</code> object <code>bar</code>, <code>bar</code> cannot be a sub-folder of <code>foo</code>.</p>
       </box>
-      <h5 id="implementing-composition">Implementing composition<a class="fa fa-anchor" href="#implementing-composition"></a></h5>
+      <h5 id="implementing-composition">Implementing composition<a class="fa fa-anchor" href="#implementing-composition" onclick="event.stopPropagation()"></a></h5>
       <p><strong>Composition is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’ object.</p>
       <box>
         <div class="alt-java float-right ml-5">
-          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span> </span>{</span><span>    <span class="hljs-keyword">private</span> Subject subject;</span><span>  ...</span><span>}</span></code></pre>
+          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Subject subject;<br></span><span>  ...<br></span><span>}<br></span></code></pre>
         </div>
         <div class="alt-python  float-right ml-5">
-          <pre><code class="hljs python"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span>:</span></span><span>&#x200B;</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span></span><span>    self.__subject = Subject()</span></code></pre>
+          <pre><code class="hljs python"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span>:</span><br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span><br></span><span>    self.__subject = Subject()<br></span></code></pre>
         </div>
         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this code, the <code>Email</code> has a composition type relationship with the <code>Subject</code> class, in the sense that the subject is part of the email.</p>
       </box>

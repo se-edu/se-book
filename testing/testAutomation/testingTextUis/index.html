@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.13.1">
+  <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Testing: Test Automation: Automated Testing of Text UIs</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+  <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
@@ -31,27 +32,22 @@
       </navbar>
     </header>
     <div id="flex-body">
+
       <div id="content-wrapper">
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can semi-automate testing of CLIs</span>
-              </span>
-              </span>
-              </span>
-            </p>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can semi-automate testing of CLIs</span></span></span></span></p>
             <p></p>
             <p></p>
             <div>
               <div></div>
               <p></p>
               <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
-</span></strong>
-                </span>
-              </p>
+                    </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="automated-testing-of-cli-apps"><span>Automated Testing of CLI Apps</span><a class="fa fa-anchor" href="#automated-testing-of-cli-apps"></a></h4>
+                  <h4 id="automated-testing-of-cli-apps"><span>Automated Testing of CLI Apps</span><a class="fa fa-anchor" href="#automated-testing-of-cli-apps" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
@@ -64,25 +60,27 @@
                     <ol>
                       <li>
                         <p>Store the test input in the text file <code>input.txt</code>.</p>
-                        <panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code>input.txt</code></span></p></template>
-                          <pre><code class="hljs"><span>add Valid Name p/12345 valid@email.butNoPrefix</span><span>add Valid Name 12345 e/valid@email.butPhonePrefixMissing</span></code></pre>
+                        <panel type="seamless" class="algolia-no-index"><template slot="_header">
+                            <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code>input.txt</code></span></p>
+                          </template>
+                          <pre><code class="hljs"><span>add Valid Name p/12345 valid@email.butNoPrefix<br></span><span>add Valid Name 12345 e/valid@email.butPhonePrefixMissing<br></span></code></pre>
                         </panel>
                       </li>
                       <li>
                         <p>Store the output we expect from the SUT in another text file <code>expected.txt</code>.</p>
-                        <panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code>expected.txt</code></span></p></template>
-                          <pre><code class="hljs"><span>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]</span><span>Invalid command format: add </span><span>&#x200B;</span><span>Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]</span><span>Invalid command format: add </span></code></pre>
+                        <panel type="seamless" class="algolia-no-index"><template slot="_header">
+                            <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code>expected.txt</code></span></p>
+                          </template>
+                          <pre><code class="hljs"><span>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]<br></span><span>Invalid command format: add <br></span><span><br></span><span>Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]<br></span><span>Invalid command format: add <br></span></code></pre>
                         </panel>
                       </li>
                       <li>
-                        <p>Run the program as given below, which will redirect the text in <code>input.txt</code> as the input to <code>AddressBook</code> and similarly, will redirect the output of AddressBook to a text file <code>output.txt</code>.
-                          <span
-                            class="dimmed">Note that this does not require any code changes to <code>AddressBook</code>.</span>
-                        </p>
-                        <pre><code class="hljs sh"><span>java AddressBook &lt; input.txt &gt; output.txt</span></code></pre>
+                        <p>Run the program as given below, which will redirect the text in <code>input.txt</code> as the input to <code>AddressBook</code> and similarly, will redirect the output of AddressBook to a text file <code>output.txt</code>. <span class="dimmed">Note that this does not require any code changes to <code>AddressBook</code>.</span></p>
+                        <pre><code class="no-line-numbers hljs sh"><span>java AddressBook &lt; input.txt &gt; output.txt<br></span></code></pre>
                         <ul>
                           <li>
-                            <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> The way to run a CLI program differs based on the language.<br> e.g., In Python, assuming the code is in <code>AddressBook.py</code>                              file, use the command<br>
+                            <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> The way to run a CLI program differs based on the language.<br>
+                              e.g., In Python, assuming the code is in <code>AddressBook.py</code> file, use the command<br>
                               <code>python AddressBook.py &lt; input.txt &gt; output.txt</code></p>
                           </li>
                           <li>
@@ -90,14 +88,10 @@
                           </li>
                         </ul>
                         <panel minimized class="algolia-no-index"><template slot="_header"></template>
-                          <span slot="header" class="card-title"><span>More on the <code>&gt;</code> operator and the <code>&lt;</code> operator <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span>                          extra</span>
-                          </span>
-                          </span>
-                          </span>
-                          <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code>&lt;</code> and <code>&gt;</code>                            operators. For example, if you run <code>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
-                          <pre><code class="hljs sh"><span>java AddressBook &gt; output.txt </span></code></pre>
-                          <p>the Operating System then creates a file <code>output.txt</code> and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding <code>&lt; input.txt</code> (or any
-                            other filename) makes the OS redirect the contents of the file as input to the program, as if the user typed the content of the file one line at a time.</p>
+                          <span slot="header" class="card-title"><span>More on the <code>&gt;</code> operator and the <code>&lt;</code> operator <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span>
+                          <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code>&lt;</code> and <code>&gt;</code> operators. For example, if you run <code>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
+                          <pre><code class="no-line-numbers hljs sh"><span>java AddressBook &gt; output.txt <br></span></code></pre>
+                          <p>the Operating System then creates a file <code>output.txt</code> and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding <code>&lt; input.txt</code> (or any other filename) makes the OS redirect the contents of the file as input to the program, as if the user typed the content of the file one line at a time.</p>
                           <box>
                             <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources:</p>
                             <ul>
@@ -110,15 +104,18 @@
                       </li>
                       <li>
                         <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such as <em>WinMerge</em>.</p>
-                        <pre><code class="hljs"><span>FC output.txt expected.txt</span></code></pre>
+                        <pre><code class="hljs"><span>FC output.txt expected.txt<br></span></code></pre>
                       </li>
                     </ol>
                     <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. <span class="dimmed">If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases we need more sophisticated ways of automating tests.</span></p>
                     <div>
                       <span id="pop:cli" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger">
-  <div data-mb-html-for="content">
-    <div>
-<p><strong>CLI App</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p></div></div></span></div>
+                        <div data-mb-html-for="content">
+                          <div>
+                            <p><strong>CLI App</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p>
+                          </div>
+                        </div>
+                      </span></div>
                   </div>
                   <div></div>
                 </div>
@@ -127,10 +124,11 @@
           </div>
         </div>
       </div>
+
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sun, Apr 12, 2020, 3:34:31 PM GMT+8.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.14.1</a> at Fri, Apr 24, 2020, 1:44:23 AM GMT+8.</small></div>
     </footer>
   </div>
 </body>

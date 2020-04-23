@@ -1,16 +1,16 @@
 <div>
   <p>
-    <panel src="/se-book/revisionControl/branching/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/revisionControl/branching" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> <span class="dimmed">Project Management → Revision Control → Branching</span></p></template></panel>
+    <panel src="/se-book/revisionControl/branching/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/revisionControl/branching" class="algolia-no-index"><template slot="_header">
+        <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> <span class="dimmed">Project Management → Revision Control → Branching</span></p>
+      </template></panel>
   </p>
 </div>
 <p></p>
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
-</span></strong>
-  </span>
-</p>
+      </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="branch"><span>Branch</span><a class="fa fa-anchor" href="#branch"></a></h4>
+    <h4 id="branch"><span>Branch</span><a class="fa fa-anchor" href="#branch" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
@@ -24,10 +24,9 @@
         </tab>
         <tab class="algolia-no-index"><template slot="_header">CLI</template>
           <div>
-            <pre><code class="hljs"><span>git status</span></code></pre>
-            <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
-            </p>
-            <pre><code class="hljs"><span>on branch master</span></code></pre>
+            <pre><code class="hljs"><span>git status<br></span></code></pre>
+            <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+            <pre><code class="hljs"><span>on branch master<br></span></code></pre>
           </div>
         </tab>
       </tabs>
@@ -46,9 +45,9 @@
         <tab class="algolia-no-index"><template slot="_header">CLI</template>
           <div>
             <p>You can use the <code>branch</code> command to create a new branch and the <code>checkout</code> command to switch to a specific branch.</p>
-            <pre><code class="hljs"><span>git branch feature1</span><span>git checkout feature1</span></code></pre>
+            <pre><code class="hljs"><span>git branch feature1<br></span><span>git checkout feature1<br></span></code></pre>
             <p>One-step shortcut to create a branch and switch to it at the same time:</p>
-            <pre><code class="hljs"><span>git checkout –b feature1</span></code></pre>
+            <pre><code class="hljs"><span>git checkout –b feature1<br></span></code></pre>
           </div>
         </tab>
       </tabs>
@@ -64,7 +63,7 @@
         </tab>
         <tab class="algolia-no-index"><template slot="_header">CLI</template>
           <div>
-            <pre><code class="hljs"><span>git checkout master</span></code></pre>
+            <pre><code class="hljs"><span>git checkout master<br></span></code></pre>
           </div>
         </tab>
       </tabs>
@@ -83,7 +82,7 @@
         </tab>
         <tab class="algolia-no-index"><template slot="_header">CLI</template>
           <div>
-            <pre><code class="hljs"><span>git merge master</span></code></pre>
+            <pre><code class="hljs"><span>git merge master<br></span></code></pre>
           </div>
         </tab>
       </tabs>
@@ -98,21 +97,19 @@
           <p>Right-click on the <code>feature1</code> branch and choose <code>Merge...</code>.</p>
         </tab>
         <tab class="algolia-no-index"><template slot="_header">CLI</template>
-          <pre><code class="hljs"><span>git merge feature1</span></code></pre>
+          <pre><code class="hljs"><span>git merge feature1<br></span></code></pre>
         </tab>
       </tabs>
       <p><strong>10. Create a new branch called <code>add-countries</code>, switch to it, and add some commits to it</strong> <span class="dimmed">(similar to steps 1-2 above)</span>. You should have something like this now:</p>
       <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80">
       <p></p>
-      <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to see something
-        like the below,</p>
+      <p><strong>11. Go back to the <code>master</code> branch and merge the <code>add-countries</code> branch onto the <code>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to see something like the below,</p>
       <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100">
       <p></p>
       <p>... you are likely to see something like this instead:</p>
       <img src="/se-book/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80">
       <p></p>
-      <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided it is simpler to
-        just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
+      <p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code>master</code> branch has not changed since you started the <code>add-countries</code> branch, Git has decided it is simpler to just put the commits of the <code>add-countries</code> branch in front of the <code>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
       <p><strong>It is possible to force Git to create a merge commit even if fast forwarding is possible.</strong></p>
       <tabs>
         <tab><template slot="_header">SourceTree</template>
@@ -125,7 +122,7 @@
         <tab class="algolia-no-index"><template slot="_header">CLI</template>
           <div>
             <p>Use the <code>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
-            <pre><code class="hljs"><span>git merge --no-ff add-countries</span></code></pre>
+            <pre><code class="hljs"><span>git merge --no-ff add-countries<br></span></code></pre>
           </div>
         </tab>
       </tabs>

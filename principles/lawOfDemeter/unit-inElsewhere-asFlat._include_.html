@@ -1,11 +1,9 @@
 <div></div>
 <p></p>
-<p><span class="dimmed"><strong><span>Principles →</span></strong>
-  </span>
-</p>
+<p><span class="dimmed"><strong><span>Principles →</span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="law-of-demeter"><span>Law of Demeter</span><a class="fa fa-anchor" href="#law-of-demeter"></a></h4>
+    <h4 id="law-of-demeter"><span>Law of Demeter</span><a class="fa fa-anchor" href="#law-of-demeter" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
@@ -28,25 +26,26 @@
         <li>The object <code>O</code> itself</li>
         <li>Objects passed as parameters of <code>m</code></li>
         <li>Objects created/instantiated in <code>m</code> (directly or indirectly)</li>
-        <li>Objects from the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">objects that are held by instance variables of</span>direct association of</span>
-          <code>O</code></li>
+        <li>Objects from the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">objects that are held by instance variables of</span>direct association of</span> <code>O</code></li>
       </ul>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code> is a ‘friend
-          of a friend’ (which should be considered a ‘stranger’), and <code>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
-        <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{</span><span>    Goo g = b.getGoo();</span><span>    g.doSomething();</span><span>}</span></code></pre>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and <code>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
+        <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{<br></span><span>    Goo g = b.getGoo();<br></span><span>    g.doSomething();<br></span><span>}<br></span></code></pre>
       </box>
       <p><strong>LoD aims to prevent objects navigating internal structures of other objects.</strong></p>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake
-          is your friend and Adam is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.</p>
       </box>
     </div>
     <div>
       <div>
-        <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+        <panel expandable class="algolia-no-index"><template slot="_header">
+            <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+          </template>
           <div>
-            <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Examples for LoD</p></template>
+            <panel class="algolia-no-index"><template slot="_header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Examples for LoD</p>
+              </template>
               <question has-input="true">
                 <p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
                 <div slot="answer" class="algolia-no-index">
@@ -64,10 +63,12 @@
             </panel>
           </div>
           <div>
-            <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> LoD violation?</p></template>
+            <panel class="algolia-no-index"><template slot="_header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> LoD violation?</p>
+              </template>
               <question>
                 <p>This violates Law of Demeter.</p>
-                <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{</span><span>    Goo g =  <span class="hljs-keyword">new</span> Goo();</span><span>    g.doSomething();</span><span>}</span></code></pre>
+                <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{<br></span><span>    Goo g =  <span class="hljs-keyword">new</span> Goo();<br></span><span>    g.doSomething();<br></span><span>}<br></span></code></pre>
                 <ul radio-group="3cf8e" class="radio-list">
                   <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> True</label></li>
                   <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> False</label></li>
@@ -80,7 +81,9 @@
             </panel>
           </div>
           <div>
-            <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Odd one out</p></template>
+            <panel class="algolia-no-index"><template slot="_header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Odd one out</p>
+              </template>
               <question>
                 <p>Pick the odd one out.</p>
                 <ul class="task-list">

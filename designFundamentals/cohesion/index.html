@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.13.1">
+  <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Software Design Fundamentals: Cohesion</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+  <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
@@ -31,107 +32,102 @@
       </navbar>
     </header>
     <div id="flex-body">
+
       <div id="content-wrapper">
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>Design → Design Fundamentals →
-</span></strong>
-              </span>
-            </p>
+                  </span></strong></span></p>
             <div id="title">
-              <h1 id="cohesion"><span>Cohesion</span><a class="fa fa-anchor" href="#cohesion"></a></h1>
+              <h1 id="cohesion"><span>Cohesion</span><a class="fa fa-anchor" href="#cohesion" onclick="event.stopPropagation()"></a></h1>
             </div>
             <div id="main">
               <div>
                 <div>
                   <panel type="seamless" expanded id="what">
-                    <span slot="header" class="card-title"><div><h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
-                </div>
-                </span>
-                <div class="indented">
-                  <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain cohesion</span>
-                    </span>
-                    </span>
-                    </span>
-                  </p>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                  <div>
-                    <p><strong><em>Cohesion</em> is a measure of how strongly-related and focused the various responsibilities of a component are.</strong> A highly-cohesive component keeps related functionalities together while keeping out all other unrelated
-                      things.
-                    </p>
-                    <p><strong>Higher cohesion is better.</strong> Disadvantages of low cohesion (aka <em>weak</em> cohesion):</p>
-                    <ul>
-                      <li>Lowers the understandability of modules as it is difficult to express module functionalities at a higher level.</li>
-                      <li>Lowers maintainability because a module can be modified due to unrelated causes <span class="dimmed">(reason: the module contains code unrelated to each other)</span> or many many modules may need to be modified to achieve a small
-                        change in behavior <span class="dimmed">(reason: because the code related to that change is not localized to a single module)</span>.</li>
-                      <li>Lowers reusability of modules because they do not represent logical units of functionality.</li>
-                    </ul>
-                  </div>
-                  <div></div>
-                </div>
-                </panel>
-              </div>
-              <div>
-                <panel type="seamless" expanded id="how">
-                  <span slot="header" class="card-title"><div><h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how"></a></h4>
-              </div>
-              </span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can increase cohesion</span>
-                  </span>
-                  </span>
-                  </span>
-                </p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <div>
-                  <p><strong>Cohesion can be present in many forms</strong>. Some examples:</p>
-                  <ul>
-                    <li>Code related to a single concept is kept together, e.g. the <code>Student</code> component handles everything related to students.</li>
-                    <li>Code that is invoked close together in time is kept together, e.g. all code related to initializing the system is kept together.</li>
-                    <li>Code that manipulates the same data structure is kept together, e.g. the <code>GameArchive</code> component handles everything related to the storage and retrieval of game sessions.</li>
-                  </ul>
-                  <box>
-                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose a Payroll application contains a class that deals with writing data to the database. If the class include some code to show an error dialog to the user if the
-                      database is unreachable, that class is not cohesive because it seems to be interacting with the user as well as the database.</p>
-                  </box>
-                </div>
-                <div>
-                  <div>
-                    <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+                    <span slot="header" class="card-title">
                       <div>
-                        <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which class is more cohesive?</p></template>
-                          <question has-input="true">
-                            <p>Compare the cohesion of the following two versions of the <code>EmailMessage</code> class. Which one is more cohesive and why?</p>
-                            <pre><code class="hljs java"><span><span class="hljs-comment">// version-1</span></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{</span><span>    <span class="hljs-keyword">private</span> String sendTo;</span><span> 	  <span class="hljs-keyword">private</span> String subject;</span><span>    <span class="hljs-keyword">private</span> String message;</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.sendTo = sendTo;</span><span>        <span class="hljs-keyword">this</span>.subject = subject;</span><span>        <span class="hljs-keyword">this</span>.message = message;</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-comment">// sends message using sendTo, subject and message</span></span><span>    }</span><span>}</span><span>&#x200B;</span><span><span class="hljs-comment">// version-2</span></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{</span><span>    <span class="hljs-keyword">private</span> String sendTo;</span><span>    <span class="hljs-keyword">private</span> String subject;</span><span>    <span class="hljs-keyword">private</span> String message;</span><span>    <span class="hljs-keyword">private</span> String username;</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.sendTo = sendTo;</span><span>        <span class="hljs-keyword">this</span>.subject = subject;</span><span>        <span class="hljs-keyword">this</span>.message = message;</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{</span><span>        <span class="hljs-comment">// sends message using sendTo, subject and message</span></span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">login</span><span class="hljs-params">(String username, String password)</span> </span>{</span><span>        <span class="hljs-keyword">this</span>.username = username;</span><span>        <span class="hljs-comment">// code to login</span></span><span>    }</span><span>}</span></code></pre>
-                            <div slot="answer" class="algolia-no-index">
-                              <p>Version 2 is less cohesive.</p>
-                              <p>Explanation: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, we can improve the cohesion of
-                                both versions by removing the sendMessage functionality. Although sending message is related to emails, this class is supposed to represent an email message, not an email server.</p>
-                            </div>
-                          </question>
-                        </panel>
+                        <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
                       </div>
-                    </panel>
-                  </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain cohesion</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong><em>Cohesion</em> is a measure of how strongly-related and focused the various responsibilities of a component are.</strong> A highly-cohesive component keeps related functionalities together while keeping out all other unrelated things.</p>
+                        <p><strong>Higher cohesion is better.</strong> Disadvantages of low cohesion (aka <em>weak</em> cohesion):</p>
+                        <ul>
+                          <li>Lowers the understandability of modules as it is difficult to express module functionalities at a higher level.</li>
+                          <li>Lowers maintainability because a module can be modified due to unrelated causes <span class="dimmed">(reason: the module contains code unrelated to each other)</span> or many many modules may need to be modified to achieve a small change in behavior <span class="dimmed">(reason: because the code related to that change is not localized to a single module)</span>.</li>
+                          <li>Lowers reusability of modules because they do not represent logical units of functionality.</li>
+                        </ul>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="how">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can increase cohesion</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>Cohesion can be present in many forms</strong>. Some examples:</p>
+                        <ul>
+                          <li>Code related to a single concept is kept together, e.g. the <code>Student</code> component handles everything related to students.</li>
+                          <li>Code that is invoked close together in time is kept together, e.g. all code related to initializing the system is kept together.</li>
+                          <li>Code that manipulates the same data structure is kept together, e.g. the <code>GameArchive</code> component handles everything related to the storage and retrieval of game sessions.</li>
+                        </ul>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose a Payroll application contains a class that deals with writing data to the database. If the class include some code to show an error dialog to the user if the database is unreachable, that class is not cohesive because it seems to be interacting with the user as well as the database.</p>
+                        </box>
+                      </div>
+                      <div>
+                        <div>
+                          <panel expandable class="algolia-no-index"><template slot="_header">
+                              <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                            </template>
+                            <div>
+                              <panel class="algolia-no-index"><template slot="_header">
+                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which class is more cohesive?</p>
+                                </template>
+                                <question has-input="true">
+                                  <p>Compare the cohesion of the following two versions of the <code>EmailMessage</code> class. Which one is more cohesive and why?</p>
+                                  <pre><code class="hljs java"><span><span class="hljs-comment">// version-1</span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> String sendTo;<br></span><span> 	  <span class="hljs-keyword">private</span> String subject;<br></span><span>    <span class="hljs-keyword">private</span> String message;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.sendTo = sendTo;<br></span><span>        <span class="hljs-keyword">this</span>.subject = subject;<br></span><span>        <span class="hljs-keyword">this</span>.message = message;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">// sends message using sendTo, subject and message</span><br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-comment">// version-2</span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> String sendTo;<br></span><span>    <span class="hljs-keyword">private</span> String subject;<br></span><span>    <span class="hljs-keyword">private</span> String message;<br></span><span>    <span class="hljs-keyword">private</span> String username;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.sendTo = sendTo;<br></span><span>        <span class="hljs-keyword">this</span>.subject = subject;<br></span><span>        <span class="hljs-keyword">this</span>.message = message;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">// sends message using sendTo, subject and message</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">login</span><span class="hljs-params">(String username, String password)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.username = username;<br></span><span>        <span class="hljs-comment">// code to login</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                  <div slot="answer" class="algolia-no-index">
+                                    <p>Version 2 is less cohesive.</p>
+                                    <p>Explanation: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, we can improve the cohesion of both versions by removing the sendMessage functionality. Although sending message is related to emails, this class is supposed to represent an email message, not an email server.</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
+                    </div>
+                  </panel>
                 </div>
               </div>
-              </panel>
             </div>
           </div>
         </div>
       </div>
+
     </div>
-  </div>
-  </div>
-  <footer>
-    <div class="text-center">
-      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sun, Apr 12, 2020, 3:34:31 PM GMT+8.</small></div>
-  </footer>
+    <footer>
+      <div class="text-center">
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.14.1</a> at Fri, Apr 24, 2020, 1:44:23 AM GMT+8.</small></div>
+    </footer>
   </div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>

@@ -1,33 +1,32 @@
 <div>
   <p>
-    <panel src="/se-book/modeling/modelingBehaviors/sequenceDiagramsBasic/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/modeling/modelingBehaviors/sequenceDiagramsBasic" class="algolia-no-index"><template slot="_header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Design → Modeling → Modeling Behaviors → Sequence Diagrams → Basic</span></p></template></panel>
-    <panel src="/se-book/modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/modeling/modelingStructures/classDiagramsBasic" class="algolia-no-index"><template slot="_header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Design → Modeling → Modeling Structures → Class Diagrams → Basic</span></p></template></panel>
+    <panel src="/se-book/modeling/modelingBehaviors/sequenceDiagramsBasic/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/modeling/modelingBehaviors/sequenceDiagramsBasic" class="algolia-no-index"><template slot="_header">
+        <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Design → Modeling → Modeling Behaviors → Sequence Diagrams → Basic</span></p>
+      </template></panel>
+    <panel src="/se-book/modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/modeling/modelingStructures/classDiagramsBasic" class="algolia-no-index"><template slot="_header">
+        <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Design → Modeling → Modeling Structures → Class Diagrams → Basic</span></p>
+      </template></panel>
   </p>
 </div>
 <p></p>
 <p><span class="dimmed"><strong><span>Design → Modeling → Modeling a Solution →
-</span></strong>
-  </span>
-</p>
+      </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="basic"><span>Basic</span><a class="fa fa-anchor" href="#basic"></a></h4>
+    <h4 id="basic"><span>Basic</span><a class="fa fa-anchor" href="#basic" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
-      <p>As mentioned in [<span trigger="click" for="modal:basicModelling-modelingIntro" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:basicModelling-modelingIntro'].show()" class="trigger-click">Design → Modeling → Modeling a Solutions → Introduction</span>],
-        this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.</p>
+      <p>As mentioned in [<span trigger="click" for="modal:basicModelling-modelingIntro" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:basicModelling-modelingIntro'].show()" class="trigger-click">Design → Modeling → Modeling a Solutions → Introduction</span>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.</p>
       <b-modal id="modal:basicModelling-modelingIntro" hide-footer size="lg" modal-class="mb-zoom" ref="modal:basicModelling-modelingIntro"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
         <div>
           <div></div>
           <p></p>
           <p><span class="dimmed"><strong><span>Design → Modeling → Modeling a Solution →
-</span></strong>
-            </span>
-          </p>
+                </span></strong></span></p>
           <div id="title-and-body">
             <div>
-              <h4 id="introduction"><span>Introduction</span><a class="fa fa-anchor" href="#introduction"></a></h4>
+              <h4 id="introduction"><span>Introduction</span><a class="fa fa-anchor" href="#introduction" onclick="event.stopPropagation()"></a></h4>
             </div>
             <div id="main">
               <div>
@@ -56,13 +55,14 @@
         <p></p>
         <p><code>newgame</code> and <code>clear x y</code> represent commands typed by the <code>Player</code> on the <code>TextUi</code>.</p>
       </box>
-      <p>How does the <code>TextUi</code> object carry out the requests it has received from player? It would need to interact with other objects of the system. Because the <code>Logic</code> class is the one that controls the game logic, the <code>TextUi</code>        needs to collaborate with <code>Logic</code> to fulfill the <code>newgame</code> request. Let us extend the model to capture that interaction.</p>
+      <p>How does the <code>TextUi</code> object carry out the requests it has received from player? It would need to interact with other objects of the system. Because the <code>Logic</code> class is the one that controls the game logic, the <code>TextUi</code> needs to collaborate with <code>Logic</code> to fulfill the <code>newgame</code> request. Let us extend the model to capture that interaction.</p>
       <box>
         <img src="/se-book/modeling/modelingASolution/basic/images/playerTextLogic.png" height="280">
         <p></p>
         <p><code>W</code> = Width of the minefield; <code>H</code> = Height of the minefield</p>
       </box>
-      <p>The above diagram assumes that <code>W</code> and <code>H</code> are the only information <code>TextUi</code> requires to display the minefield to the <code>Player</code>. Note that there could be other ways of doing this.<br> The <code>Logic</code>        methods we conceptualized in our modelling so far are:</p>
+      <p>The above diagram assumes that <code>W</code> and <code>H</code> are the only information <code>TextUi</code> requires to display the minefield to the <code>Player</code>. Note that there could be other ways of doing this.<br>
+        The <code>Logic</code> methods we conceptualized in our modelling so far are:</p>
       <box>
         <img src="/se-book/modeling/modelingASolution/basic/images/textLogicMinefieldCell.png" height="115"></box>
       <p>Now, let us look at what other objects and interactions are needed to support the <code>newGame()</code> operation. It is likely that a new <code>Minefield</code> object is created when the <code>newGame()</code> method is called.</p>
@@ -77,8 +77,7 @@
       </box>
       <p></p>
       <box>
-        <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Note that <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">using sequence diagramsn</span>a
-          similar technique</span> can be used when discovering/defining the architecture-level APIs.</p>
+        <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Note that <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">using sequence diagramsn</span>a similar technique</span> can be used when discovering/defining the architecture-level APIs.</p>
         <div v-closeable alt="Tic-Tac-Toe Video" class="non-printable">
           <p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Defining the architecture-level APIs for a small Tic-Tac-Toe game:</p>
           <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Un80XoRT1ME" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>

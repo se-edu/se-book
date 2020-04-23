@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.13.1">
+  <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Miscellaneous Topics: Casting</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+  <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
@@ -31,27 +32,22 @@
       </navbar>
     </header>
     <div id="flex-body">
+
       <div id="content-wrapper">
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Java casting</span>
-              </span>
-              </span>
-              </span>
-            </p>
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Java casting</span></span></span></span></p>
             <p></p>
             <p></p>
             <div>
               <div></div>
               <p></p>
               <p><span class="dimmed"><strong><span>C++ to Java → Miscellaneous Topics →
-</span></strong>
-                </span>
-              </p>
+                    </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="casting"><span>Casting</span><a class="fa fa-anchor" href="#casting"></a></h4>
+                  <h4 id="casting"><span>Casting</span><a class="fa fa-anchor" href="#casting" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
@@ -59,44 +55,40 @@
                     <p><strong>When you cast a primitive value to another type, there may be a loss of precision.</strong></p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below casts a <code>double</code> value to an <code>int</code> value and casts it back to a <code>double</code>. Note the loss of precision.</p>
-                      <pre><code class="hljs java"><span><span class="hljs-keyword">double</span> d = <span class="hljs-number">5.3</span>;</span><span>System.out.println(<span class="hljs-string">"Before casting to an int: "</span> + d);</span><span><span class="hljs-keyword">int</span> i = (<span class="hljs-keyword">int</span>)d; <span class="hljs-comment">// cast d to an int</span></span><span>System.out.println(<span class="hljs-string">"After casting to an int: "</span> + i);</span><span>d = (<span class="hljs-keyword">double</span>)i; <span class="hljs-comment">// cast i back to a double</span></span><span>System.out.println(<span class="hljs-string">"After casting back a double: "</span> + d);</span></code></pre>
-                      <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
-                      </p>
-                      <pre><code class="hljs"><span>Before casting to an int: 5.3</span><span>After casting to an int: 5</span><span>After casting back a double: 5.0</span></code></pre>
+                      <pre><code class="hljs java"><span><span class="hljs-keyword">double</span> d = <span class="hljs-number">5.3</span>;<br></span><span>System.out.println(<span class="hljs-string">"Before casting to an int: "</span> + d);<br></span><span><span class="hljs-keyword">int</span> i = (<span class="hljs-keyword">int</span>)d; <span class="hljs-comment">// cast d to an int</span><br></span><span>System.out.println(<span class="hljs-string">"After casting to an int: "</span> + i);<br></span><span>d = (<span class="hljs-keyword">double</span>)i; <span class="hljs-comment">// cast i back to a double</span><br></span><span>System.out.println(<span class="hljs-string">"After casting back a double: "</span> + d);<br></span></code></pre>
+                      <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+                      <pre><code class="hljs"><span>Before casting to an int: 5.3<br></span><span>After casting to an int: 5<br></span><span>After casting back a double: 5.0<br></span></code></pre>
                     </box>
                     <p><strong><mark><em>Downcasting</em></mark> is when you cast an object reference from a superclass to a subclass.</strong></p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Assume the following class hierarchy:</p>
-                      <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span></span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>{</span><span>        System.out.println(<span class="hljs-string">"I'm an animal"</span>);</span><span>    }</span><span>}</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span></span>{</span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{</span><span>        System.out.println(<span class="hljs-string">"I'm a Cat"</span>);</span><span>    }</span><span>}</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DomesticCat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Cat</span></span>{</span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{</span><span>        System.out.println(<span class="hljs-string">"I'm a DomesticCat"</span>);</span><span>    }</span><span>}</span></code></pre>
+                      <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span></span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>{<br></span><span>        System.out.println(<span class="hljs-string">"I'm an animal"</span>);<br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span></span>{<br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"I'm a Cat"</span>);<br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DomesticCat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Cat</span></span>{<br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"I'm a DomesticCat"</span>);<br></span><span>    }<br></span><span>}<br></span></code></pre>
                       <p>The <code>foo</code> method below downcasts an <code>Animal</code> object to its subclasses.</p>
-                      <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Animal a)</span></span>{</span><span>    a.speak();</span><span>    Cat c = (Cat)a; <span class="hljs-comment">// downcast a to a Cat</span></span><span>    c.speak();</span><span>    DomesticCat dc = (DomesticCat)a; <span class="hljs-comment">// downcast a to a DomesticCat</span></span><span>    dc.speak();</span><span>}</span></code></pre>
+                      <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Animal a)</span></span>{<br></span><span>    a.speak();<br></span><span>    Cat c = (Cat)a; <span class="hljs-comment">// downcast a to a Cat</span><br></span><span>    c.speak();<br></span><span>    DomesticCat dc = (DomesticCat)a; <span class="hljs-comment">// downcast a to a DomesticCat</span><br></span><span>    dc.speak();<br></span><span>}<br></span></code></pre>
                     </box>
                     <p><strong><mark><em>Upcasting</em></mark> is when you cast an object reference from a subclass to a superclass.</strong> However, upcasting is done automatically by the compiler even if you do not specify it explicitly.</p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example upcasts a <code>Cat</code> object to its superclass <code>Animal</code>:</p>
-                      <pre><code class="hljs java"><span>Cat c = <span class="hljs-keyword">new</span> Cat();</span><span>Animal a1 = (Animal)c; <span class="hljs-comment">//upcasting c to the Animal class</span></span><span>Animal a2 = c; <span class="hljs-comment">//upcasting is implicit</span></span><span>&#x200B;</span></code></pre>
+                      <pre><code class="hljs java"><span>Cat c = <span class="hljs-keyword">new</span> Cat();<br></span><span>Animal a1 = (Animal)c; <span class="hljs-comment">//upcasting c to the Animal class</span><br></span><span>Animal a2 = c; <span class="hljs-comment">//upcasting is implicit</span><br></span><span><br></span></code></pre>
                     </box>
                     <p>Note that due to polymorphism, the behavior of the object will reflect the actual type of the object irrespective of the type of the variable holding a reference to it.</p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The call to the <code>speak()</code> method in the code below always executes the <code>speak()</code> method of the <code>DomesticCat</code> class because the actual
-                        type of the object remains <code>DomesticCat</code> although the reference to it is being downcast/upcast to various other types.</p>
-                      <pre><code class="hljs java"><span>Animal a = <span class="hljs-keyword">new</span> DomesticCat(); <span class="hljs-comment">//implicit upcast</span></span><span>a.speak();</span><span>Cat c = (Cat)a; <span class="hljs-comment">//downcast</span></span><span>c.speak();</span><span>DomesticCat dc = (DomesticCat)a; <span class="hljs-comment">//downcast</span></span><span>dc.speak();</span></code></pre>
-                      <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
-                      </p>
-                      <pre><code class="hljs"><span>I'm a DomesticCat</span><span>I'm a DomesticCat</span><span>I'm a DomesticCat</span></code></pre>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The call to the <code>speak()</code> method in the code below always executes the <code>speak()</code> method of the <code>DomesticCat</code> class because the actual type of the object remains <code>DomesticCat</code> although the reference to it is being downcast/upcast to various other types.</p>
+                      <pre><code class="hljs java"><span>Animal a = <span class="hljs-keyword">new</span> DomesticCat(); <span class="hljs-comment">//implicit upcast</span><br></span><span>a.speak();<br></span><span>Cat c = (Cat)a; <span class="hljs-comment">//downcast</span><br></span><span>c.speak();<br></span><span>DomesticCat dc = (DomesticCat)a; <span class="hljs-comment">//downcast</span><br></span><span>dc.speak();<br></span></code></pre>
+                      <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+                      <pre><code class="hljs"><span>I'm a DomesticCat<br></span><span>I'm a DomesticCat<br></span><span>I'm a DomesticCat<br></span></code></pre>
                     </box>
                     <p><strong>Casting to an incompatible type can result in a <code>ClassCastException</code> at runtime.</strong></p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code will cause a <code>ClassCastException</code>:</p>
-                      <pre><code class="hljs java"><span>Object o = <span class="hljs-keyword">new</span> Animal();</span><span>Integer x = (Integer)o;</span></code></pre>
-                      <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
-                      </p>
-                      <pre><code class="hljs"><span>Exception in thread &quot;main&quot; java.lang.ClassCastException: misc.casting.Animal cannot be</span><span>cast to java.lang.Integer at misc.casting.CastingExamples.main(CastingExamples.java:14)</span></code></pre>
+                      <pre><code class="hljs java"><span>Object o = <span class="hljs-keyword">new</span> Animal();<br></span><span>Integer x = (Integer)o;<br></span></code></pre>
+                      <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+                      <pre><code class="hljs"><span>Exception in thread &quot;main&quot; java.lang.ClassCastException: misc.casting.Animal cannot be<br></span><span>cast to java.lang.Integer at misc.casting.CastingExamples.main(CastingExamples.java:14)<br></span></code></pre>
                     </box>
                     <p>You can use the <code>instanceof</code> operator to check if a cast is safe to perform.</p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code checks if the object <code>a</code> is an instance of the <code>Cat</code> class before casting it to a <code>Cat</code>.</p>
-                      <pre><code class="hljs java"><span>Cat c;</span><span><span class="hljs-keyword">if</span> (a <span class="hljs-keyword">instanceof</span> Cat){</span><span>    c = (Cat)a;</span><span>}</span></code></pre>
+                      <pre><code class="hljs java"><span>Cat c;<br></span><span><span class="hljs-keyword">if</span> (a <span class="hljs-keyword">instanceof</span> Cat){<br></span><span>    c = (Cat)a;<br></span><span>}<br></span></code></pre>
                     </box>
                   </div>
                   <div></div>
@@ -106,10 +98,11 @@
           </div>
         </div>
       </div>
+
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sun, Apr 12, 2020, 3:34:31 PM GMT+8.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.14.1</a> at Fri, Apr 24, 2020, 1:44:23 AM GMT+8.</small></div>
     </footer>
   </div>
 </body>

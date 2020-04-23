@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.13.1">
+  <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Object Oriented Programming: Polymorphism</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+  <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
@@ -31,118 +32,116 @@
       </navbar>
     </header>
     <div id="flex-body">
+
       <div id="content-wrapper">
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>Paradigms → OOP →
-</span></strong>
-              </span>
-            </p>
+                  </span></strong></span></p>
             <div id="title">
-              <h1 id="polymorphism"><span>Polymorphism</span><a class="fa fa-anchor" href="#polymorphism"></a></h1>
+              <h1 id="polymorphism"><span>Polymorphism</span><a class="fa fa-anchor" href="#polymorphism" onclick="event.stopPropagation()"></a></h1>
             </div>
             <div id="main">
               <div>
                 <div>
                   <panel type="seamless" expanded id="what">
-                    <span slot="header" class="card-title"><div><h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
-                </div>
-                </span>
-                <div class="indented">
-                  <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain OOP polymorphism</span>
-                    </span>
-                    </span>
-                    </span>
-                  </p>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                  <div>
-                    <box type="definition">
+                    <span slot="header" class="card-title">
                       <div>
-                        <p><strong>Polymorphism</strong>:</p>
-                        <blockquote>
-                          <p>The ability of different objects to respond, each in its own way, to identical messages is called polymorphism. <sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
-                        </blockquote>
+                        <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
                       </div>
-                    </box>
-                    <p><strong><em>Polymorphism</em> allows you to write code targeting superclass objects, use that code on subclass objects, and achieve possibly different results based on the actual class of the object.</strong></p>
-                    <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Assume classes <code>Cat</code> and <code>Dog</code> are both subclasses of the <code>Animal</code> class. You can write code targeting <code>Animal</code> objects
-                        and use that code on <code>Cat</code> and <code>Dog</code> objects, achieving possibly different results based on whether it is a <code>Cat</code> object or a <code>Dog</code> object. Some examples:</p>
-                      <ul>
-                        <li>Declare an array of type <code>Animal</code> and still be able to store <code>Dog</code> and <code>Cat</code> objects in it.</li>
-                        <li>Define a method that takes an <code>Animal</code> object as a parameter and yet be able to pass <code>Dog</code> and <code>Cat</code> objects to it.</li>
-                        <li>Call a method on a <code>Dog</code> or a <code>Cat</code> object as if it is an <code>Animal</code> object <span class="dimmed">(i.e., without knowing whether it is a <code>Dog</code> object or a <code>Cat</code> object)</span>                          and get a different response from it based on its actual class <span class="dimmed">e.g., call the <code>Animal</code> class' method <code>speak()</code> on object <code>a</code> and get a <code>&quot;Meow&quot;</code> as the return value if <code>a</code> is a <code>Cat</code> object and <code>&quot;Woof&quot;</code> if it is a <code>Dog</code> object</span>.
-                        </li>
-                      </ul>
-                    </box>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain OOP polymorphism</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <box type="definition">
+                          <div>
+                            <p><strong>Polymorphism</strong>:</p>
+                            <blockquote>
+                              <p>The ability of different objects to respond, each in its own way, to identical messages is called polymorphism. <sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
+                            </blockquote>
+                          </div>
+                        </box>
+                        <p><strong><em>Polymorphism</em> allows you to write code targeting superclass objects, use that code on subclass objects, and achieve possibly different results based on the actual class of the object.</strong></p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Assume classes <code>Cat</code> and <code>Dog</code> are both subclasses of the <code>Animal</code> class. You can write code targeting <code>Animal</code> objects and use that code on <code>Cat</code> and <code>Dog</code> objects, achieving possibly different results based on whether it is a <code>Cat</code> object or a <code>Dog</code> object. Some examples:</p>
+                          <ul>
+                            <li>Declare an array of type <code>Animal</code> and still be able to store <code>Dog</code> and <code>Cat</code> objects in it.</li>
+                            <li>Define a method that takes an <code>Animal</code> object as a parameter and yet be able to pass <code>Dog</code> and <code>Cat</code> objects to it.</li>
+                            <li>Call a method on a <code>Dog</code> or a <code>Cat</code> object as if it is an <code>Animal</code> object <span class="dimmed">(i.e., without knowing whether it is a <code>Dog</code> object or a <code>Cat</code> object)</span> and get a different response from it based on its actual class <span class="dimmed">e.g., call the <code>Animal</code> class' method <code>speak()</code> on object <code>a</code> and get a <code>&quot;Meow&quot;</code> as the return value if <code>a</code> is a <code>Cat</code> object and <code>&quot;Woof&quot;</code> if it is a <code>Dog</code> object</span>.
+                            </li>
+                          </ul>
+                        </box>
 
-                    <p><em>Polymorphism</em> literally means &quot;ability to take many forms&quot;.</p>
-                  </div>
-                  <div></div>
-                </div>
-                </panel>
-              </div>
-              <div>
-                <panel type="seamless" expanded id="how">
-                  <span slot="header" class="card-title"><div><h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how"></a></h4>
-              </div>
-              </span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain how substitutability operation overriding, and dynamic binding relates to polymorphism</span>
-                  </span>
-                  </span>
-                  </span>
-                </p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <div>
-                  <p><strong>Three concepts combine to achieve polymorphism: <em>substitutability, operation overriding, and dynamic binding</em>.</strong></p>
-                  <ul>
-                    <li><strong>Substitutability:</strong> Because of substitutability, you can write code that expects object of a parent class and yet use that code with objects of child classes. That is how polymorphism is able to <em>treat objects of different types as one type</em>.</li>
-                    <li><strong>Overriding:</strong> To get polymorphic behavior from an operation, the operation in the superclass needs to be overridden in each of the subclasses. That is how overriding allows objects of different subclasses to <em>display different behaviors in response to the same method call</em>.</li>
-                    <li><strong>Dynamic binding</strong>: Calls to overridden methods are bound to the implementation of the actual object's class dynamically during the runtime. That is how the polymorphic code can call the method of the parent class and
-                      yet execute the implementation of the child class.</li>
-                  </ul>
-                </div>
-                <div>
-                  <div>
-                    <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
-                      <div>
-                        <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Concepts related to polymorphism</p></template>
-                          <question>
-                            <p>Which one of these is least related to how OO programs achieve polymorphism?</p>
-                            <ul radio-group="8bdf8" class="radio-list">
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> a. substitutability</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> b. dynamic binding</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> c. operation overloading</label></li>
-                            </ul>
-                            <div slot="answer" class="algolia-no-index">
-                              <p>(c)</p>
-                              <p>Explanation: Operation overriding is the one that is related, not operation overloading.</p>
-                            </div>
-                          </question>
-                        </panel>
+                        <p><em>Polymorphism</em> literally means &quot;ability to take many forms&quot;.</p>
                       </div>
-                    </panel>
-                  </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="how">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain how substitutability operation overriding, and dynamic binding relates to polymorphism</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>Three concepts combine to achieve polymorphism: <em>substitutability, operation overriding, and dynamic binding</em>.</strong></p>
+                        <ul>
+                          <li><strong>Substitutability:</strong> Because of substitutability, you can write code that expects object of a parent class and yet use that code with objects of child classes. That is how polymorphism is able to <em>treat objects of different types as one type</em>.</li>
+                          <li><strong>Overriding:</strong> To get polymorphic behavior from an operation, the operation in the superclass needs to be overridden in each of the subclasses. That is how overriding allows objects of different subclasses to <em>display different behaviors in response to the same method call</em>.</li>
+                          <li><strong>Dynamic binding</strong>: Calls to overridden methods are bound to the implementation of the actual object's class dynamically during the runtime. That is how the polymorphic code can call the method of the parent class and yet execute the implementation of the child class.</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <div>
+                          <panel expandable class="algolia-no-index"><template slot="_header">
+                              <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                            </template>
+                            <div>
+                              <panel class="algolia-no-index"><template slot="_header">
+                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Concepts related to polymorphism</p>
+                                </template>
+                                <question>
+                                  <p>Which one of these is least related to how OO programs achieve polymorphism?</p>
+                                  <ul radio-group="8bdf8" class="radio-list">
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> a. substitutability</label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> b. dynamic binding</label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> c. operation overloading</label></li>
+                                  </ul>
+                                  <div slot="answer" class="algolia-no-index">
+                                    <p>(c)</p>
+                                    <p>Explanation: Operation overriding is the one that is related, not operation overloading.</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
+                    </div>
+                  </panel>
                 </div>
               </div>
-              </panel>
             </div>
           </div>
         </div>
       </div>
+
     </div>
-  </div>
-  </div>
-  <footer>
-    <div class="text-center">
-      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sun, Apr 12, 2020, 3:34:31 PM GMT+8.</small></div>
-  </footer>
+    <footer>
+      <div class="text-center">
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.14.1</a> at Fri, Apr 24, 2020, 1:44:23 AM GMT+8.</small></div>
+    </footer>
   </div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>

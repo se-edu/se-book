@@ -1,11 +1,9 @@
 <div></div>
 <p></p>
-<p><span class="dimmed"><strong><span>Principles →</span></strong>
-  </span>
-</p>
+<p><span class="dimmed"><strong><span>Principles →</span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="liskov-substitution-principle"><span>Liskov Substitution Principle</span><a class="fa fa-anchor" href="#liskov-substitution-principle"></a></h4>
+    <h4 id="liskov-substitution-principle"><span>Liskov Substitution Principle</span><a class="fa fa-anchor" href="#liskov-substitution-principle" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
@@ -14,37 +12,34 @@
           <p><strong>Liskov Substitution Principle (LSP)</strong>: Derived classes must be substitutable for their base classes. <sub>-- proposed by <a href="https://en.wikipedia.org/wiki/Barbara_Liskov">Barbara Liskov</a></sub></p>
         </div>
       </box>
-      <p>LSP sounds same as <span large trigger="click" for="modal:lsp-substitutability" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:lsp-substitutability'].show()" class="trigger-click">substitutability</span>        but it goes beyond substitutability; <strong>LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.</strong> As we know, Java has language support for substitutability. However, if LSP is not
-        followed, substituting a subclass object for a superclass object can break the functionality of the code.</p>
+      <p>LSP sounds same as <span large trigger="click" for="modal:lsp-substitutability" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:lsp-substitutability'].show()" class="trigger-click">substitutability</span> but it goes beyond substitutability; <strong>LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.</strong> As we know, Java has language support for substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.</p>
       <b-modal id="modal:lsp-substitutability" hide-footer size="lg" modal-class="mb-zoom" ref="modal:lsp-substitutability"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
         <div>
           <div>
             <p>
-              <panel src="/se-book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/oop/inheritance/what" class="algolia-no-index"><template slot="_header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Paradigms → Object Oriented Programming → Inheritance → What</span></p></template></panel>
+              <panel src="/se-book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/oop/inheritance/what" class="algolia-no-index"><template slot="_header">
+                  <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Paradigms → Object Oriented Programming → Inheritance → What</span></p>
+                </template></panel>
             </p>
           </div>
           <p></p>
           <p><span class="dimmed"><strong><span>Paradigms → OOP → Inheritance →
-</span></strong>
-            </span>
-          </p>
+                </span></strong></span></p>
           <div id="title-and-body">
             <div>
-              <h4 id="substitutability"><span>Substitutability</span><a class="fa fa-anchor" href="#substitutability"></a></h4>
+              <h4 id="substitutability"><span>Substitutability</span><a class="fa fa-anchor" href="#substitutability" onclick="event.stopPropagation()"></a></h4>
             </div>
             <div id="main">
               <div>
-                <p><strong>Every instance of a subclass is an instance of the superclass, but not vice-versa.</strong> As a result, inheritance allows <em>substitutability</em> : the ability to substitute a child class object where a parent class object
-                  is expected.</p>
+                <p><strong>Every instance of a subclass is an instance of the superclass, but not vice-versa.</strong> As a result, inheritance allows <em>substitutability</em> : the ability to substitute a child class object where a parent class object is expected.</p>
                 <box>
                   <img src="/se-book/oop/inheritance/substitutability/images/staff.png" height="80">
                   <p></p>
-                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> an <code>Academic</code> is an instance of a <code>Staff</code>, but a <code>Staff</code> is not necessarily an instance of an <code>Academic</code>. i.e. wherever an
-                    object of the superclass is expected, it can be substituted by an object of any of its subclasses.</p>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> an <code>Academic</code> is an instance of a <code>Staff</code>, but a <code>Staff</code> is not necessarily an instance of an <code>Academic</code>. i.e. wherever an object of the superclass is expected, it can be substituted by an object of any of its subclasses.</p>
                   <p>The following code is valid because an <code>AcademicStaff</code> object is substitutable as a <code>Staff</code> object.</p>
-                  <pre><code class="hljs java"><span>Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span></span></code></pre>
-                  <p>But the following code is not valid <span class="dimmed">because <code>staff</code> is declared as a <code>Staff</code> type and therefore its value may or may not be of  type <code>AcademicStaff</code>, which is the type expected by variable <code>academicStaff</code>.</span></p>
-                  <pre><code class="hljs java"><span>Staff staff;</span><span>...</span><span>AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span></span></code></pre>
+                  <pre><code class="hljs java"><span>Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span><br></span></code></pre>
+                  <p>But the following code is not valid <span class="dimmed">because <code>staff</code> is declared as a <code>Staff</code> type and therefore its value may or may not be of type <code>AcademicStaff</code>, which is the type expected by variable <code>academicStaff</code>.</span></p>
+                  <pre><code class="hljs java"><span>Staff staff;<br></span><span>...<br></span><span>AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span><br></span></code></pre>
                 </box>
               </div>
               <div></div>
@@ -53,8 +48,7 @@
         </div>
       </b-modal>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose the <code>Payroll</code> class depends on the <code>adjustMySalary(int percent)</code> method of the <code>Staff</code> class. Furthermore, the <code>Staff</code> class
-          states that the <code>adjustMySalary</code> method will work for all positive percent values. Both <code>Admin</code> and <code>Academic</code> classes override the <code>adjustMySalary</code> method.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose the <code>Payroll</code> class depends on the <code>adjustMySalary(int percent)</code> method of the <code>Staff</code> class. Furthermore, the <code>Staff</code> class states that the <code>adjustMySalary</code> method will work for all positive percent values. Both <code>Admin</code> and <code>Academic</code> classes override the <code>adjustMySalary</code> method.</p>
         <img src="/se-book/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200">
         <p></p>
         <p>Now consider the following:</p>
@@ -64,26 +58,31 @@
         </ul>
         <p>In the above scenario,</p>
         <ul>
-          <li><code>Admin</code> class follows LSP because it fulfills <code>Payroll</code>’s expectation of <code>Staff</code> objects (i.e. it works for all positive values). Substituting <code>Admin</code> objects for Staff objects will not break the <code>Payroll</code>            class functionality.</li>
-          <li><code>Academic</code> class violates LSP because it will not work for percent values over <code>100</code> as expected by the <code>Payroll</code> class. Substituting <code>Academic</code> objects for <code>Staff</code> objects can potentially
-            break the <code>Payroll</code> class functionality.</li>
+          <li><code>Admin</code> class follows LSP because it fulfills <code>Payroll</code>’s expectation of <code>Staff</code> objects (i.e. it works for all positive values). Substituting <code>Admin</code> objects for Staff objects will not break the <code>Payroll</code> class functionality.</li>
+          <li><code>Academic</code> class violates LSP because it will not work for percent values over <code>100</code> as expected by the <code>Payroll</code> class. Substituting <code>Academic</code> objects for <code>Staff</code> objects can potentially break the <code>Payroll</code> class functionality.</li>
         </ul>
-        <panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Another example</span></p></template>
-          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>Rectangle#resize()</code> can take any integers for <code>height</code> and <code>width</code>. This contract is violated by the subclass <code>Square#resize()</code>            because it does not accept a <code>height</code> that is different from the <code>width</code>.</p>
+        <panel type="seamless" class="algolia-no-index"><template slot="_header">
+            <p><span class="dimmed">Another example</span></p>
+          </template>
+          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>Rectangle#resize()</code> can take any integers for <code>height</code> and <code>width</code>. This contract is violated by the subclass <code>Square#resize()</code> because it does not accept a <code>height</code> that is different from the <code>width</code>.</p>
           <img src="/se-book/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120">
           <p></p>
-          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{</span><span>    ...</span><span>    <span class="hljs-comment">/** sets the size to given height and width*/</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{</span><span>        ...</span><span>    }</span><span>}</span><span>&#x200B;</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Square</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Rectangle</span> </span>{</span><span>    </span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{</span><span>        <span class="hljs-keyword">if</span> (height != width) {</span><span>            <span class="hljs-comment">//error</span></span><span>       }</span><span>    }</span><span>}</span></code></pre>
+          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{<br></span><span>    ...<br></span><span>    <span class="hljs-comment">/** sets the size to given height and width*/</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{<br></span><span>        ...<br></span><span>    }<br></span><span>}<br></span><span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Square</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Rectangle</span> </span>{<br></span><span>    <br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{<br></span><span>        <span class="hljs-keyword">if</span> (height != width) {<br></span><span>            <span class="hljs-comment">//error</span><br></span><span>       }<br></span><span>    }<br></span><span>}<br></span></code></pre>
           <p>Now consider the following method that is written to work with the <code>Rectangle</code> class.</p>
-          <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">makeSameSize</span><span class="hljs-params">(Rectangle original, Rectangle toResize)</span></span>{</span><span>    toResize.resize(original.getHeight(), original.getWidth());</span><span>}</span></code></pre>
+          <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">makeSameSize</span><span class="hljs-params">(Rectangle original, Rectangle toResize)</span></span>{<br></span><span>    toResize.resize(original.getHeight(), original.getWidth());<br></span><span>}<br></span></code></pre>
           <p>This code will fail if it is called as <code>maekSameSize(new Rectangle(12,8), new Square(4, 4))</code> That is, <code>Square</code> class is not substitutable for the <code>Rectangle</code> class.</p>
         </panel>
       </box>
     </div>
     <div>
       <div>
-        <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+        <panel expandable class="algolia-no-index"><template slot="_header">
+            <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+          </template>
           <div>
-            <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Is this LSP?</p></template>
+            <panel class="algolia-no-index"><template slot="_header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Is this LSP?</p>
+              </template>
               <question>
                 <p>If a subclass imposes more restrictive conditions than its parent class, it violates Liskov Substitution Principle.</p>
                 <ul radio-group="55ada" class="radio-list">

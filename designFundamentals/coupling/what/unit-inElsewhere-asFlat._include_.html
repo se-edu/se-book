@@ -1,16 +1,14 @@
 <div></div>
 <p></p>
 <p><span class="dimmed"><strong><span>Design → Design Fundamentals → Coupling →
-</span></strong>
-  </span>
-</p>
+      </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what"></a></h4>
+    <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
-      <p><strong><em>Coupling</em> is a measure of the degree of <em>dependence</em></strong> between components, classes, methods, etc. Low coupling indicates that a component is less dependent on other components. <strong>High coupling (aka <em>tight</em> coupling or <em>strong</em> coupling) is discouraged</strong>        due to the following disadvantages:</p>
+      <p><strong><em>Coupling</em> is a measure of the degree of <em>dependence</em></strong> between components, classes, methods, etc. Low coupling indicates that a component is less dependent on other components. <strong>High coupling (aka <em>tight</em> coupling or <em>strong</em> coupling) is discouraged</strong> due to the following disadvantages:</p>
       <ul>
         <li><strong>Maintenance is harder</strong> because a change in one module could cause changes in other modules coupled to it (i.e. a ripple effect).</li>
         <li><strong>Integration is harder</strong> because multiple components coupled with each other have to be integrated at the same time.</li>
@@ -24,9 +22,13 @@
     </div>
     <div>
       <div>
-        <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+        <panel expandable class="algolia-no-index"><template slot="_header">
+            <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+          </template>
           <div>
-            <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Coupling levels of alternative designs</p></template>
+            <panel class="algolia-no-index"><template slot="_header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Coupling levels of alternative designs</p>
+              </template>
               <question has-input="true">
                 <p>Discuss the coupling levels of alternative designs <em>x</em> and <em>y</em>.</p>
                 <box>
@@ -34,15 +36,15 @@
                   <p></p>
                 </box>
                 <div slot="answer" class="algolia-no-index">
-                  <p>Overall coupling levels in <em>x</em> and <em>y</em> seem to be similar (neither has more dependencies than the other). (Note that the number of dependency links is not a definitive measure of the level of coupling. Some links may be
-                    stronger than the others.). However, in <em>x</em>, <code>A</code> is highly-coupled to the rest of the system while <code>B</code>, <code>C</code>, <code>D</code>, and <code>E</code> are standalone (do not depend on anything else).
-                    In <em>y</em>, no component is as highly-coupled as <code>A</code> of <em>x</em>. However, only <code>D</code> and <code>E</code> are standalone.</p>
+                  <p>Overall coupling levels in <em>x</em> and <em>y</em> seem to be similar (neither has more dependencies than the other). (Note that the number of dependency links is not a definitive measure of the level of coupling. Some links may be stronger than the others.). However, in <em>x</em>, <code>A</code> is highly-coupled to the rest of the system while <code>B</code>, <code>C</code>, <code>D</code>, and <code>E</code> are standalone (do not depend on anything else). In <em>y</em>, no component is as highly-coupled as <code>A</code> of <em>x</em>. However, only <code>D</code> and <code>E</code> are standalone.</p>
                 </div>
               </question>
             </panel>
           </div>
           <div>
-            <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> regressions and coupling.</p></template>
+            <panel class="algolia-no-index"><template slot="_header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> regressions and coupling.</p>
+              </template>
               <question has-input="true">
                 <p>Explain the link (if any) between regressions and coupling.</p>
                 <div slot="answer" class="algolia-no-index">
@@ -52,18 +54,21 @@
             </panel>
           </div>
           <div>
-            <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Coupling and testability</p></template>
+            <panel class="algolia-no-index"><template slot="_header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Coupling and testability</p>
+              </template>
               <question has-input="true">
                 <p>Discuss the relationship between coupling and <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">a measure of how easily a given component can be tested</span>testability</span>.</p>
                 <div slot="answer" class="algolia-no-index">
-                  <p>Coupling decreases testability because if the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Software Under Test</span>SUT</span> is coupled
-                    to many other components it becomes difficult to test the SUI in isolation of its dependencies.</p>
+                  <p>Coupling decreases testability because if the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Software Under Test</span>SUT</span> is coupled to many other components it becomes difficult to test the SUI in isolation of its dependencies.</p>
                 </div>
               </question>
             </panel>
           </div>
           <div>
-            <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about coupling</p></template>
+            <panel class="algolia-no-index"><template slot="_header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about coupling</p>
+              </template>
               <question>
                 <p>Choose the correct statements.</p>
                 <ul class="task-list">

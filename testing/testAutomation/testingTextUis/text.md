@@ -39,7 +39,7 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
    
 1. Run the program as given below, which will redirect the text in `input.txt` as the input to `AddressBook` and similarly, will redirect the output of AddressBook to a text file `output.txt`. %%Note that this does not require any code changes to `AddressBook`.%%
 
-   ```sh
+   ```sh{.no-line-numbers}
    java AddressBook < input.txt > output.txt
    ```
    
@@ -54,7 +54,7 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
    
    A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using ` < ` and ` > ` operators. For example, if you run `AddressBook` in a command window, the output will be shown in the console, but if you run it like this,
    
-   ```sh
+   ```sh{.no-line-numbers}
    java AddressBook > output.txt 
    ```
    

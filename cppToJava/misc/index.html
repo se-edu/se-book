@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.13.1">
+  <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Miscellaneous Topics</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+  <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
@@ -31,593 +32,535 @@
       </navbar>
     </header>
     <div id="flex-body">
+
       <div id="content-wrapper">
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>C++ to Java →
-</span></strong>
-              </span>
-            </p>
+                  </span></strong></span></p>
             <div id="title">
-              <h1 id="miscellaneous-topics"><span>Miscellaneous Topics</span><a class="fa fa-anchor" href="#miscellaneous-topics"></a></h1>
+              <h1 id="miscellaneous-topics"><span>Miscellaneous Topics</span><a class="fa fa-anchor" href="#miscellaneous-topics" onclick="event.stopPropagation()"></a></h1>
             </div>
             <div id="main">
               <div>
                 <div>
                   <panel type="seamless" expanded id="enumerations">
-                    <span slot="header" class="card-title"><div><h4 id="enumerations"><span>Enumerations</span><a class="fa fa-anchor" href="#enumerations"></a></h4>
-                </div>
-                </span>
-                <div class="indented">
-                  <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Java enumerations</span>
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="enumerations"><span>Enumerations</span><a class="fa fa-anchor" href="#enumerations" onclick="event.stopPropagation()"></a></h4>
+                      </div>
                     </span>
-                    </span>
-                    </span>
-                  </p>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                  <div>
-                    <p><strong>You can define an enum type by using the <code>enum</code> keyword.</strong> Because they are constants, the names of an enum type's fields are in uppercase letters e.g., <code>FLAG_SUCCESS</code> by convention.</p>
-                    <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Defining an enumeration to represent days of a week (code to be put in the <code>Day.java</code> file):</p>
-                      <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Day {</span><span>    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,</span><span>    THURSDAY, FRIDAY, SATURDAY</span><span>}</span></code></pre>
-                      <p>Some examples of using the <code>Day</code> enumeration defined above:</p>
-                      <pre><code class="hljs java"><span>Day today = Day.MONDAY;</span><span>Day[] holidays = <span class="hljs-keyword">new</span> Day[]{Day.SATURDAY, Day.SUNDAY};</span><span>&#x200B;</span><span><span class="hljs-keyword">switch</span> (today) {</span><span><span class="hljs-keyword">case</span> SATURDAY:</span><span><span class="hljs-keyword">case</span> SUNDAY:</span><span>    System.out.println(<span class="hljs-string">"It's the weekend"</span>);</span><span>    <span class="hljs-keyword">break</span>;</span><span><span class="hljs-keyword">default</span>:</span><span>    System.out.println(<span class="hljs-string">"It's a week day"</span>);</span><span>}</span></code></pre>
-                    </box>
-                    <p>Note that while enumerations are usually a simple set of fixed values, <strong>Java enumerations can have behaviors too</strong>, as explained in <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">this tutorial from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></a></p>
-                  </div>
-                  <div>
-                    <div>
-                      <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Java enumerations</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>You can define an enum type by using the <code>enum</code> keyword.</strong> Because they are constants, the names of an enum type's fields are in uppercase letters e.g., <code>FLAG_SUCCESS</code> by convention.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Defining an enumeration to represent days of a week (code to be put in the <code>Day.java</code> file):</p>
+                          <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Day {<br></span><span>    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,<br></span><span>    THURSDAY, FRIDAY, SATURDAY<br></span><span>}<br></span></code></pre>
+                          <p>Some examples of using the <code>Day</code> enumeration defined above:</p>
+                          <pre><code class="hljs java"><span>Day today = Day.MONDAY;<br></span><span>Day[] holidays = <span class="hljs-keyword">new</span> Day[]{Day.SATURDAY, Day.SUNDAY};<br></span><span><br></span><span><span class="hljs-keyword">switch</span> (today) {<br></span><span><span class="hljs-keyword">case</span> SATURDAY:<br></span><span><span class="hljs-keyword">case</span> SUNDAY:<br></span><span>    System.out.println(<span class="hljs-string">"It's the weekend"</span>);<br></span><span>    <span class="hljs-keyword">break</span>;<br></span><span><span class="hljs-keyword">default</span>:<br></span><span>    System.out.println(<span class="hljs-string">"It's a week day"</span>);<br></span><span>}<br></span></code></pre>
+                        </box>
+                        <p>Note that while enumerations are usually a simple set of fixed values, <strong>Java enumerations can have behaviors too</strong>, as explained in <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">this tutorial from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></a></p>
+                      </div>
+                      <div>
                         <div>
-                          <div>
-                            <panel type="dark" expanded id="key-exercise-show-priority-color"><template slot="_header"><h3 id="key-exercise-show-priority-color"><small><small><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> [Key Exercise] show priority color</small></small><a class="fa fa-anchor" href="#key-exercise-show-priority-color"></a></h3></template>
-                              <question>
-                                <p>Define an enumeration named <code>Priority</code>. Add the missing <code>describe</code> method to the code below so that it produces the output given.</p>
-                                <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>&#x200B;</span><span>    <span class="hljs-comment">// Add your method here</span></span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        describe(<span class="hljs-string">"Red"</span>, Priority.HIGH);</span><span>        describe(<span class="hljs-string">"Orange"</span>, Priority.MEDIUM);</span><span>        describe(<span class="hljs-string">"Blue"</span>, Priority.MEDIUM);</span><span>        describe(<span class="hljs-string">"Green"</span>, Priority.LOW);</span><span>    }</span><span>}</span></code></pre>
-                                <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
-                                </p>
-                                <pre><code class="hljs"><span>Red indicates high priority</span><span>Orange indicates medium priority</span><span>Blue indicates medium priority</span><span>Green indicates low priority</span></code></pre>
-                                <div slot="hint" class="algolia-no-index">
-                                  <p>Use a <code>switch</code> statement to select between possible values for <code>Priority</code>.</p>
-                                  <pre><code class="hljs java"><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describe</span><span class="hljs-params">(String color, Priority p)</span> </span>{</span><span>        <span class="hljs-keyword">switch</span> (p) {</span><span>            <span class="hljs-keyword">case</span> LOW:</span><span>                System.out.println(color + <span class="hljs-string">" indicates low priority"</span>);</span><span>                <span class="hljs-keyword">break</span>;</span><span>            <span class="hljs-comment">// ...</span></span><span>        }</span><span>    }</span></code></pre>
-                                  <p>Code for the enumeration is given below:</p>
-                                  <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Priority {</span><span>    HIGH, MEDIUM, LOW</span><span>}</span></code></pre>
-                                </div>
-                              </question>
-                            </panel>
+                          <panel expanded><template slot="_header">
+                              <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                            </template>
+                            <div>
+                              <div>
+                                <panel type="dark" expanded id="key-exercise-show-priority-color"><template slot="_header">
+                                    <h3 id="key-exercise-show-priority-color"><small><small><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> [Key Exercise] show priority color</small></small><a class="fa fa-anchor" href="#key-exercise-show-priority-color" onclick="event.stopPropagation()"></a></h3>
+                                  </template>
+                                  <question>
+                                    <p>Define an enumeration named <code>Priority</code>. Add the missing <code>describe</code> method to the code below so that it produces the output given.</p>
+                                    <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-comment">// Add your method here</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        describe(<span class="hljs-string">"Red"</span>, Priority.HIGH);<br></span><span>        describe(<span class="hljs-string">"Orange"</span>, Priority.MEDIUM);<br></span><span>        describe(<span class="hljs-string">"Blue"</span>, Priority.MEDIUM);<br></span><span>        describe(<span class="hljs-string">"Green"</span>, Priority.LOW);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                    <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+                                    <pre><code class="hljs"><span>Red indicates high priority<br></span><span>Orange indicates medium priority<br></span><span>Blue indicates medium priority<br></span><span>Green indicates low priority<br></span></code></pre>
+                                    <div slot="hint" class="algolia-no-index">
+                                      <p>Use a <code>switch</code> statement to select between possible values for <code>Priority</code>.</p>
+                                      <pre><code class="hljs java"><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describe</span><span class="hljs-params">(String color, Priority p)</span> </span>{<br></span><span>        <span class="hljs-keyword">switch</span> (p) {<br></span><span>            <span class="hljs-keyword">case</span> LOW:<br></span><span>                System.out.println(color + <span class="hljs-string">" indicates low priority"</span>);<br></span><span>                <span class="hljs-keyword">break</span>;<br></span><span>            <span class="hljs-comment">// ...</span><br></span><span>        }<br></span><span>    }<br></span></code></pre>
+                                      <p>Code for the enumeration is given below:</p>
+                                      <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Priority {<br></span><span>    HIGH, MEDIUM, LOW<br></span><span>}<br></span></code></pre>
+                                    </div>
+                                  </question>
+                                </panel>
+                              </div>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="packages">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="packages"><span>Packages</span><a class="fa fa-anchor" href="#packages" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Java packages</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>You can organize your <em>types</em> (i.e., classes, interfaces, enumerations, etc.) into <em>packages</em></strong> for easier management (among <a href="https://www.tutorialspoint.com/Advantages-of-using-packages-in-Java">other benefits</a>).</p>
+                        <p><strong>To create a package, you put a package statement at the very top of every source file in that package.</strong> The package statement must be the first line in the source file and there can be no more than one package statement in each source file. Furthermore, <strong>the package of a type should match the folder path of the source file.</strong> Similarly, the compiler will put the <code>.class</code> files in a folder structure that matches the package names.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>Formatter</code> class below (in <code>&lt;source folder&gt;/seedu/tojava/util/Formatter.java</code> file) is in the package <code>seedu.tojava.util</code>. When it is compiled, the <code>Formatter.class</code> file will be in the location <code>&lt;compiler output folder&gt;/seedu/tojava/util</code>:</p>
+                          <pre><code class="hljs java"><span><span class="hljs-keyword">package</span> seedu.tojava.util;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Formatter</span> </span>{<br></span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PREFIX = <span class="hljs-string">"&gt;&gt;"</span>;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">format</span><span class="hljs-params">(String s)</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> PREFIX + s;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                        </box>
+                        <p><strong>Package names are written in all lower case</strong> (not camelCase), using the dot as a separator. Packages in the Java language itself begin with <code>java</code>. or <code>javax</code>. Companies use their reversed Internet domain name to begin their package names.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> For example, <code>com.foobar.doohickey.util</code> can be the name of a package created by a company with a domain name <code>foobar.com</code></p>
+                        </box>
+                        <p><strong>To use a public <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">types contained in the package</span>package member</span> from outside its package, you must do one of the following:</strong></p>
+                        <ol>
+                          <li><strong>Use the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">type name prefixed by the package name e.g., <code>java.io.IOException</code></span>fully qualified name</span></strong> to refer to the member</li>
+                          <li><strong>Import</strong> the package or the specific package member</li>
+                        </ol>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>Main</code> class below has two import statements:</p>
+                          <ul>
+                            <li><code>import seedu.tojava.util.StringParser</code>: imports the class <code>StringParser</code> in the <code>seedu.tojava.util</code> package</li>
+                            <li><code>import seedu.tojava.frontend.*</code>: imports all the classes in the <code>seedu.tojava.frontend</code> package</li>
+                          </ul>
+                          <pre><code class="hljs java"><span><span class="hljs-keyword">package</span> seedu.tojava;<br></span><span><br></span><span><span class="hljs-keyword">import</span> seedu.tojava.util.StringParser;<br></span><span><span class="hljs-keyword">import</span> seedu.tojava.frontend.*;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span><br></span><span>        <span class="hljs-comment">// Using the fully qualified name to access the Processor class</span><br></span><span>        String status = seedu.tojava.logic.Processor.getStatus();<br></span><span><br></span><span>        <span class="hljs-comment">// Using the StringParser previously imported</span><br></span><span>        StringParser sp = <span class="hljs-keyword">new</span> StringParser();<br></span><span><br></span><span>        <span class="hljs-comment">// Using classes from the tojava.frontend package</span><br></span><span>        Ui ui = <span class="hljs-keyword">new</span> Ui();<br></span><span>        Message m = <span class="hljs-keyword">new</span> Message();<br></span><span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                          <p>Note how the class can still use the <code>Processor</code> without importing it first, by using its fully qualified name <code>seedu.tojava.logic.Processor</code></p>
+                        </box>
+                        <p><strong>Importing a package does not import its sub-packages</strong>, as packages do not behave as hierarchies despite appearances.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>import seedu.tojava.frontend.*</code> does not import the classes in the sub-package <code>seedu.tojava.frontend.widget</code>.</p>
+                        </box>
+                        <p><strong>If you do not use a package statement, your type doesn't have a package</strong> -- a practice not recommended (except for small code examples) as it is not possible for a type in a package to import a type that is not in a package.</p>
+                        <p><strong>Optionally, a <em>static import</em> can be used to import static members of a type</strong> so that the imported members can be used without specifying the type name.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The class below uses static imports to import the constant <code>PREFIX</code> and the method <code>format()</code> from the <code>seedu.tojava.util.Formatter</code> class.</p>
+                          <pre><code class="hljs java"><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> seedu.tojava.util.Formatter.PREFIX;<br></span><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> seedu.tojava.util.Formatter.format;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span><br></span><span>        String formatted = format(<span class="hljs-string">"Hello"</span>);<br></span><span>        <span class="hljs-keyword">boolean</span> isFormatted = formatted.startsWith(PREFIX);<br></span><span>        System.out.println(formatted);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                          <panel type="seamless" class="algolia-no-index"><template slot="_header">
+                              <p><code>Formatter</code> class</p>
+                            </template>
+                            <pre><code class="hljs java"><span><span class="hljs-keyword">package</span> seedu.tojava.util;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Formatter</span> </span>{<br></span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PREFIX = <span class="hljs-string">"&gt;&gt;"</span>;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">format</span><span class="hljs-params">(String s)</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> PREFIX + s;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                          </panel>
+                          <p>Note how the class can use <code>PREFIX</code> and <code>format()</code> (instead of <code>Formatter.PREFIX</code> and <code>Formatter.format()</code>).</p>
+                        </box>
+                        <p><strong>When using the commandline to compile/run Java, you should take the package into account.</strong></p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> If the <code>seedu.tojava.Main</code> class in defined in the file <code>Main.java</code>,</p>
+                          <ul>
+                            <li>when compiling from the <code>&lt;source folder&gt;</code>, the command is:<br>
+                              <code>javac seedu/tojava/Main.java</code></li>
+                            <li>when running it from the <code>&lt;compiler output folder&gt;</code>, the command is:<br>
+                              <code>java seedu.tojava.Main</code></li>
+                          </ul>
+                        </box>
+                      </div>
+                      <div>
+                        <div>
+                          <panel expanded><template slot="_header">
+                              <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
+                            </template>
+                            <div>
+                              <ul>
+                                <li>Oracle's tutorial on packages: [<a href="https://docs.oracle.com/javase/tutorial/java/concepts/package.html">What is a Package?</a>] [<a href="https://docs.oracle.com/javase/tutorial/java/package/index.html">Creating and Using Packages</a>]</li>
+                              </ul>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="access-modifiers">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="access-modifiers"><span>Access Modifiers</span><a class="fa fa-anchor" href="#access-modifiers" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain access modifiers</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>Access level modifiers determine whether other classes can use a particular field or invoke a particular method.</strong></p>
+                        <p>There are two levels of access control:</p>
+                        <ol>
+                          <li>
+                            <p><strong>At the class level</strong>:</p>
+                            <ul>
+                              <li><strong><code>public</code></strong>: the class is visible to all classes everywhere</li>
+                              <li><strong>no modifier (the default, also known as <em>package-private</em>)</strong>: it is visible only within its own package<br><br></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>At the member level</strong>:</p>
+                            <ul>
+                              <li><strong><code>public</code></strong> or <strong>no modifier (<em>package-private</em>)</strong>: same meaning as when used with top-level classes</li>
+                              <li><strong><code>private</code></strong>: the member can only be accessed in its own class</li>
+                              <li><strong><code>protected</code></strong>: the member can only be accessed within its own package (as with package-private) and, in addition, by a subclass of its class in another package</li>
+                            </ul>
+                          </li>
+                        </ol>
+                        <p>The following table shows the access to members permitted by each modifier.</p>
+                        <div class="indented">
+                          <div class="table-responsive">
+                            <table class="markbind-table table table-bordered table-striped">
+                              <thead>
+                                <tr>
+                                  <th>Modifier</th>
+                                  <th><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">whether the class itself has access to the member defined by the access level</span>Class</span></th>
+                                  <th><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">whether classes in the same package as the class (regardless of their parentage) have access to the member</span>Package</span></th>
+                                  <th><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">whether subclasses of the class declared outside this package have access to the member</span>Subclass</span></th>
+                                  <th><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">whether all classes have access to the member</span>World</span></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><code>public</code></td>
+                                  <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span></td>
+                                  <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span></td>
+                                  <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span></td>
+                                  <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span></td>
+                                </tr>
+                                <tr>
+                                  <td><code>protected</code></td>
+                                  <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span></td>
+                                  <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span></td>
+                                  <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span></td>
+                                  <td><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span></td>
+                                </tr>
+                                <tr>
+                                  <td>no modifier</td>
+                                  <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span></td>
+                                  <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span></td>
+                                  <td><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span></td>
+                                  <td><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span></td>
+                                </tr>
+                                <tr>
+                                  <td><code>private</code></td>
+                                  <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span></td>
+                                  <td><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span></td>
+                                  <td><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span></td>
+                                  <td><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
                           </div>
                         </div>
-                      </panel>
+                        <p>Access levels affect you in two ways:</p>
+                        <ol>
+                          <li>When you use classes that come from another source, such as the classes in the Java platform, access levels determine which members of those classes your own classes can use.</li>
+                          <li>When you write a class, you need to decide what access level every member variable and every method in your class should have.</li>
+                        </ol>
+                      </div>
+                      <div></div>
                     </div>
-                  </div>
-                </div>
-                </panel>
-              </div>
-              <div>
-                <panel type="seamless" expanded id="packages">
-                  <span slot="header" class="card-title"><div><h4 id="packages"><span>Packages</span><a class="fa fa-anchor" href="#packages"></a></h4>
-              </div>
-              </span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Java packages</span>
-                  </span>
-                  </span>
-                  </span>
-                </p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <div>
-                  <p><strong>You can organize your <em>types</em> (i.e., classes, interfaces, enumerations, etc.) into <em>packages</em></strong> for easier management (among <a href="https://www.tutorialspoint.com/Advantages-of-using-packages-in-Java">other benefits</a>).</p>
-                  <p><strong>To create a package, you put a package statement at the very top of every source file in that package.</strong> The package statement must be the first line in the source file and there can be no more than one package statement
-                    in each source file. Furthermore, <strong>the package of a type should match the folder path of the source file.</strong> Similarly, the compiler will put the <code>.class</code> files in a folder structure that matches the package
-                    names.</p>
-                  <box>
-                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>Formatter</code> class below (in <code>&lt;source folder&gt;/seedu/tojava/util/Formatter.java</code> file) is in the package <code>seedu.tojava.util</code>.
-                      When it is compiled, the <code>Formatter.class</code> file will be in the location <code>&lt;compiler output folder&gt;/seedu/tojava/util</code>:</p>
-                    <pre><code class="hljs java"><span><span class="hljs-keyword">package</span> seedu.tojava.util;</span><span>&#x200B;</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Formatter</span> </span>{</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PREFIX = <span class="hljs-string">"&gt;&gt;"</span>;</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">format</span><span class="hljs-params">(String s)</span></span>{</span><span>        <span class="hljs-keyword">return</span> PREFIX + s;</span><span>    }</span><span>}</span></code></pre>
-                  </box>
-                  <p><strong>Package names are written in all lower case</strong> (not camelCase), using the dot as a separator. Packages in the Java language itself begin with <code>java</code>. or <code>javax</code>. Companies use their reversed Internet
-                    domain name to begin their package names.</p>
-                  <box>
-                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> For example, <code>com.foobar.doohickey.util</code> can be the name of a package created by a company with a domain name <code>foobar.com</code></p>
-                  </box>
-                  <p><strong>To use a public <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">types contained in the package</span>package member</span> from outside its package, you must do one of the following:</strong></p>
-                  <ol>
-                    <li><strong>Use the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">type name prefixed by the package name e.g., <code>java.io.IOException</code></span>fully qualified name</span></strong>                      to refer to the member</li>
-                    <li><strong>Import</strong> the package or the specific package member</li>
-                  </ol>
-                  <box>
-                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>Main</code> class below has two import statements:</p>
-                    <ul>
-                      <li><code>import seedu.tojava.util.StringParser</code>: imports the class <code>StringParser</code> in the <code>seedu.tojava.util</code> package</li>
-                      <li><code>import seedu.tojava.frontend.*</code>: imports all the classes in the <code>seedu.tojava.frontend</code> package</li>
-                    </ul>
-                    <pre><code class="hljs java"><span><span class="hljs-keyword">package</span> seedu.tojava;</span><span>&#x200B;</span><span><span class="hljs-keyword">import</span> seedu.tojava.util.StringParser;</span><span><span class="hljs-keyword">import</span> seedu.tojava.frontend.*;</span><span>&#x200B;</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>&#x200B;</span><span>        <span class="hljs-comment">// Using the fully qualified name to access the Processor class</span></span><span>        String status = seedu.tojava.logic.Processor.getStatus();</span><span>&#x200B;</span><span>        <span class="hljs-comment">// Using the StringParser previously imported</span></span><span>        StringParser sp = <span class="hljs-keyword">new</span> StringParser();</span><span>&#x200B;</span><span>        <span class="hljs-comment">// Using classes from the tojava.frontend package</span></span><span>        Ui ui = <span class="hljs-keyword">new</span> Ui();</span><span>        Message m = <span class="hljs-keyword">new</span> Message();</span><span>&#x200B;</span><span>    }</span><span>}</span></code></pre>
-                    <p>Note how the class can still use the <code>Processor</code> without importing it first, by using its fully qualified name <code>seedu.tojava.logic.Processor</code></p>
-                  </box>
-                  <p><strong>Importing a package does not import its sub-packages</strong>, as packages do not behave as hierarchies despite appearances.</p>
-                  <box>
-                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>import seedu.tojava.frontend.*</code> does not import the classes in the sub-package <code>seedu.tojava.frontend.widget</code>.</p>
-                  </box>
-                  <p><strong>If you do not use a package statement, your type doesn't have a package</strong> -- a practice not recommended (except for small code examples) as it is not possible for a type in a package to import a type that is not in a package.</p>
-                  <p><strong>Optionally, a <em>static import</em> can be used to import static members of a type</strong> so that the imported members can be used without specifying the type name.</p>
-                  <box>
-                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The class below uses static imports to import the constant <code>PREFIX</code> and the method <code>format()</code> from the <code>seedu.tojava.util.Formatter</code>                      class.</p>
-                    <pre><code class="hljs java"><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> seedu.tojava.util.Formatter.PREFIX;</span><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> seedu.tojava.util.Formatter.format;</span><span>&#x200B;</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>&#x200B;</span><span>        String formatted = format(<span class="hljs-string">"Hello"</span>);</span><span>        <span class="hljs-keyword">boolean</span> isFormatted = formatted.startsWith(PREFIX);</span><span>        System.out.println(formatted);</span><span>    }</span><span>}</span></code></pre>
-                    <panel type="seamless" class="algolia-no-index"><template slot="_header"><p><code>Formatter</code> class</p></template>
-                      <pre><code class="hljs java"><span><span class="hljs-keyword">package</span> seedu.tojava.util;</span><span>&#x200B;</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Formatter</span> </span>{</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PREFIX = <span class="hljs-string">"&gt;&gt;"</span>;</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">format</span><span class="hljs-params">(String s)</span></span>{</span><span>        <span class="hljs-keyword">return</span> PREFIX + s;</span><span>    }</span><span>}</span></code></pre>
-                    </panel>
-                    <p>Note how the class can use <code>PREFIX</code> and <code>format()</code> (instead of <code>Formatter.PREFIX</code> and <code>Formatter.format()</code>).</p>
-                  </box>
-                  <p><strong>When using the commandline to compile/run Java, you should take the package into account.</strong></p>
-                  <box>
-                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> If the <code>seedu.tojava.Main</code> class in defined in the file <code>Main.java</code>,</p>
-                    <ul>
-                      <li>when compiling from the <code>&lt;source folder&gt;</code>, the command is:<br>
-                        <code>javac seedu/tojava/Main.java</code></li>
-                      <li>when running it from the <code>&lt;compiler output folder&gt;</code>, the command is:<br>
-                        <code>java seedu.tojava.Main</code></li>
-                    </ul>
-                  </box>
+                  </panel>
                 </div>
                 <div>
-                  <div>
-                    <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template>
+                  <panel type="seamless" expanded id="constants">
+                    <span slot="header" class="card-title">
                       <div>
+                        <h4 id="constants"><span>Constants</span><a class="fa fa-anchor" href="#constants" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Java constants</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p>Java does not directly support constants. The convention is to use a <code>static</code> <code>final</code> variable where a constant is needed. The <code>static</code> modifier causes the variable to be available without instantiating an object. The <code>final</code> modifier causes the variable to be unchangeable. Java constants are normally declared in ALL CAPS separated by underscores.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example of a constant named <code>MAX_BALANCE</code> which can be accessed as <code>Account.MAX_BALANCE</code>.</p>
+                          <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span></span>{<br></span><span><br></span><span>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> MAX_BALANCE = <span class="hljs-number">1000000.0</span>;<br></span><span><br></span><span>}<br></span></code></pre>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Math.html#PI"><code>Math.PI</code></a> is an example constant that comes with Java.</p>
+                        </box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="casting">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="casting"><span>Casting</span><a class="fa fa-anchor" href="#casting" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Java casting</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong><mark><em>Casting</em></mark> is the action of converting from one type to another</strong>. You can use the <code>(newType)</code> syntax to cast a value to a type named <code>newType</code>.</p>
+                        <p><strong>When you cast a primitive value to another type, there may be a loss of precision.</strong></p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below casts a <code>double</code> value to an <code>int</code> value and casts it back to a <code>double</code>. Note the loss of precision.</p>
+                          <pre><code class="hljs java"><span><span class="hljs-keyword">double</span> d = <span class="hljs-number">5.3</span>;<br></span><span>System.out.println(<span class="hljs-string">"Before casting to an int: "</span> + d);<br></span><span><span class="hljs-keyword">int</span> i = (<span class="hljs-keyword">int</span>)d; <span class="hljs-comment">// cast d to an int</span><br></span><span>System.out.println(<span class="hljs-string">"After casting to an int: "</span> + i);<br></span><span>d = (<span class="hljs-keyword">double</span>)i; <span class="hljs-comment">// cast i back to a double</span><br></span><span>System.out.println(<span class="hljs-string">"After casting back a double: "</span> + d);<br></span></code></pre>
+                          <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+                          <pre><code class="hljs"><span>Before casting to an int: 5.3<br></span><span>After casting to an int: 5<br></span><span>After casting back a double: 5.0<br></span></code></pre>
+                        </box>
+                        <p><strong><mark><em>Downcasting</em></mark> is when you cast an object reference from a superclass to a subclass.</strong></p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Assume the following class hierarchy:</p>
+                          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span></span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>{<br></span><span>        System.out.println(<span class="hljs-string">"I'm an animal"</span>);<br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span></span>{<br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"I'm a Cat"</span>);<br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DomesticCat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Cat</span></span>{<br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"I'm a DomesticCat"</span>);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                          <p>The <code>foo</code> method below downcasts an <code>Animal</code> object to its subclasses.</p>
+                          <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Animal a)</span></span>{<br></span><span>    a.speak();<br></span><span>    Cat c = (Cat)a; <span class="hljs-comment">// downcast a to a Cat</span><br></span><span>    c.speak();<br></span><span>    DomesticCat dc = (DomesticCat)a; <span class="hljs-comment">// downcast a to a DomesticCat</span><br></span><span>    dc.speak();<br></span><span>}<br></span></code></pre>
+                        </box>
+                        <p><strong><mark><em>Upcasting</em></mark> is when you cast an object reference from a subclass to a superclass.</strong> However, upcasting is done automatically by the compiler even if you do not specify it explicitly.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example upcasts a <code>Cat</code> object to its superclass <code>Animal</code>:</p>
+                          <pre><code class="hljs java"><span>Cat c = <span class="hljs-keyword">new</span> Cat();<br></span><span>Animal a1 = (Animal)c; <span class="hljs-comment">//upcasting c to the Animal class</span><br></span><span>Animal a2 = c; <span class="hljs-comment">//upcasting is implicit</span><br></span><span><br></span></code></pre>
+                        </box>
+                        <p>Note that due to polymorphism, the behavior of the object will reflect the actual type of the object irrespective of the type of the variable holding a reference to it.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The call to the <code>speak()</code> method in the code below always executes the <code>speak()</code> method of the <code>DomesticCat</code> class because the actual type of the object remains <code>DomesticCat</code> although the reference to it is being downcast/upcast to various other types.</p>
+                          <pre><code class="hljs java"><span>Animal a = <span class="hljs-keyword">new</span> DomesticCat(); <span class="hljs-comment">//implicit upcast</span><br></span><span>a.speak();<br></span><span>Cat c = (Cat)a; <span class="hljs-comment">//downcast</span><br></span><span>c.speak();<br></span><span>DomesticCat dc = (DomesticCat)a; <span class="hljs-comment">//downcast</span><br></span><span>dc.speak();<br></span></code></pre>
+                          <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+                          <pre><code class="hljs"><span>I'm a DomesticCat<br></span><span>I'm a DomesticCat<br></span><span>I'm a DomesticCat<br></span></code></pre>
+                        </box>
+                        <p><strong>Casting to an incompatible type can result in a <code>ClassCastException</code> at runtime.</strong></p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code will cause a <code>ClassCastException</code>:</p>
+                          <pre><code class="hljs java"><span>Object o = <span class="hljs-keyword">new</span> Animal();<br></span><span>Integer x = (Integer)o;<br></span></code></pre>
+                          <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+                          <pre><code class="hljs"><span>Exception in thread &quot;main&quot; java.lang.ClassCastException: misc.casting.Animal cannot be<br></span><span>cast to java.lang.Integer at misc.casting.CastingExamples.main(CastingExamples.java:14)<br></span></code></pre>
+                        </box>
+                        <p>You can use the <code>instanceof</code> operator to check if a cast is safe to perform.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code checks if the object <code>a</code> is an instance of the <code>Cat</code> class before casting it to a <code>Cat</code>.</p>
+                          <pre><code class="hljs java"><span>Cat c;<br></span><span><span class="hljs-keyword">if</span> (a <span class="hljs-keyword">instanceof</span> Cat){<br></span><span>    c = (Cat)a;<br></span><span>}<br></span></code></pre>
+                        </box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="file-access">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="file-access"><span>File Access</span><a class="fa fa-anchor" href="#file-access" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can read/write text files using Java</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>You can use the <a href="https://docs.oracle.com/javase/9/docs/api/java/io/File.html"><code>java.io.File</code></a> class to represent a file object</strong>. It can be used to access properties of the file object.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code creates a <code>File</code> object to represent a file <code>fruits.txt</code> that exists in the <code>data</code> directory <mark>relative to the current working directory</mark> and uses that object to print some properties of the file.</p>
+                          <pre><code class="hljs java"><span><span class="hljs-keyword">import</span> java.io.File;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileClassDemo</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        File f = <span class="hljs-keyword">new</span> File(<span class="hljs-string">"data/fruits.txt"</span>);<br></span><span>        System.out.println(<span class="hljs-string">"full path: "</span> + f.getAbsolutePath());<br></span><span>        System.out.println(<span class="hljs-string">"file exists?: "</span> + f.exists());<br></span><span>        System.out.println(<span class="hljs-string">"is Directory?: "</span> + f.isDirectory());<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
+                          <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+                          <pre><code class="hljs"><span>full path: C:\sample-code\data\fruits.txt<br></span><span>file exists?: true<br></span><span>is Directory?: false<br></span></code></pre>
+                        </box>
+                        <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> If you use backslash to specify the file path in a Windows computer, you need to use an additional backslash as an escape character because the backslash by itself has a special meaning. e.g., use <span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span><code>&quot;data\\fruits.txt&quot;</code>, not <span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> <code>&quot;data\fruits.txt&quot;</code>. Alternatively, you can use forward slash <span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span> <code>&quot;data/fruits.txt&quot;</code> (even on Windows).</p>
+                        <p><strong>You can read from a file using a <code>Scanner</code> object that uses a <code>File</code> object as the <em>source</em> of data.</strong></p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code uses a <code>Scanner</code> object to read (and print) contents of a text file line-by-line:</p>
+                          <pre><code class="hljs java"><span><span class="hljs-keyword">import</span> java.io.File;<br></span><span><span class="hljs-keyword">import</span> java.io.FileNotFoundException;<br></span><span><span class="hljs-keyword">import</span> java.util.Scanner;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileReadingDemo</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printFileContents</span><span class="hljs-params">(String filePath)</span> <span class="hljs-keyword">throws</span> FileNotFoundException </span>{<br></span><span>        File f = <span class="hljs-keyword">new</span> File(filePath); <span class="hljs-comment">// create a File for the given file path</span><br></span><span>        Scanner s = <span class="hljs-keyword">new</span> Scanner(f); <span class="hljs-comment">// create a Scanner using the File as the source</span><br></span><span>        <span class="hljs-keyword">while</span> (s.hasNext()) {<br></span><span>            System.out.println(s.nextLine());<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-keyword">try</span> {<br></span><span>            printFileContents(<span class="hljs-string">"data/fruits.txt"</span>);<br></span><span>        } <span class="hljs-keyword">catch</span> (FileNotFoundException e) {<br></span><span>            System.out.println(<span class="hljs-string">"File not found"</span>);<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
+                          <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> i.e., contents of the <code>data/fruits.txt</code></p>
+                          <pre><code class="hljs"><span>5 Apples<br></span><span>3 Bananas<br></span><span>6 Cherries<br></span></code></pre>
+                        </box>
+                        <p><strong>You can use a <a href="https://docs.oracle.com/javase/9/docs/api/java/io/FileWriter.html"><code>java.io.FileWriter</code></a> object to write to a file.</strong></p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>writeToFile</code> method below uses a <code>FileWrite</code> object to write to a file. The method is being used to write two lines to the file <code>temp/lines.txt</code>.</p>
+                          <pre><code class="hljs java"><span><span class="hljs-keyword">import</span> java.io.FileWriter;<br></span><span><span class="hljs-keyword">import</span> java.io.IOException;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileWritingDemo</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeToFile</span><span class="hljs-params">(String filePath, String textToAdd)</span> <span class="hljs-keyword">throws</span> IOException </span>{<br></span><span>        FileWriter fw = <span class="hljs-keyword">new</span> FileWriter(filePath);<br></span><span>        fw.write(textToAdd);<br></span><span>        fw.close();<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        String file2 = <span class="hljs-string">"temp/lines.txt"</span>;<br></span><span>        <span class="hljs-keyword">try</span> {<br></span><span>            writeToFile(file2, <span class="hljs-string">"first line"</span> + System.lineSeparator() + <span class="hljs-string">"second line"</span>);<br></span><span>        } <span class="hljs-keyword">catch</span> (IOException e) {<br></span><span>            System.out.println(<span class="hljs-string">"Something went wrong: "</span> + e.getMessage());<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
+                          <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> Contents of the <code>temp/lines.txt</code>:</p>
+                          <pre><code class="hljs"><span>first line<br></span><span>second line<br></span></code></pre>
+                        </box>
+                        <p>Note that you <mark>need to call the <code>close()</code> method</mark> of the <code>FileWriter</code> object for the writing operation to be completed.</p>
+                        <p><strong>You can create a <code>FileWriter</code> object that appends to the file</strong> (instead of overwriting the current content) by specifying an additional boolean parameter to the constructor.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The method below appends to the file rather than overwrites.</p>
+                          <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">appendToFile</span><span class="hljs-params">(String filePath, String textToAppend)</span> <span class="hljs-keyword">throws</span> IOException </span>{<br></span><span>    FileWriter fw = <span class="hljs-keyword">new</span> FileWriter(filePath, <span class="hljs-keyword">true</span>); <span class="hljs-comment">// create a FileWriter in append mode</span><br></span><span>    fw.write(textToAppend);<br></span><span>    fw.close();<br></span><span>}<br></span></code></pre>
+                        </box>
+                        <p><strong>The <a href="https://docs.oracle.com/javase/9/docs/api/java/nio/file/Files.html"><code>java.nio.file.Files</code></a> is a utility class that provides several useful file operations.</strong> It relies on the <a href="https://docs.oracle.com/javase/9/docs/api/java/nio/file/Paths.html"><code>java.nio.file.Paths</code></a> file to generate <code>Path</code> objects that represent file paths.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example uses the <code>Files</code> class to copy a file and delete a file.</p>
+                          <pre><code class="hljs java"><span><span class="hljs-keyword">import</span> java.io.IOException;<br></span><span><span class="hljs-keyword">import</span> java.nio.file.Files;<br></span><span><span class="hljs-keyword">import</span> java.nio.file.Paths;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FilesClassDemo</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException</span>{<br></span><span>        Files.copy(Paths.get(<span class="hljs-string">"data/fruits.txt"</span>), Paths.get(<span class="hljs-string">"temp/fruits2.txt"</span>));<br></span><span>        Files.delete(Paths.get(<span class="hljs-string">"temp/fruits2.txt"</span>));<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
+                        </box>
+                        <p>The techniques above are good enough to manipulate simple text files. Note that <strong>it is also possible to <a href="https://www.tutorialspoint.com/java/java_files_io.htm">perform file I/O operations using other classes</a></strong>.</p>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="using-jar-files">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="using-jar-files"><span>Using JAR Files</span><a class="fa fa-anchor" href="#using-jar-files" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use JAR files</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>Java applications are typically delivered as JAR (short for <em>Java Archive</em>) files.</strong> A JAR contains Java classes and other resources (icons, media files, etc.).</p>
+                        <p>An executable JAR file can be launched using the <code>java -jar</code> command.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>java -jar foo.jar</code> launches the <code>foo.jar</code> file.</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> You can download the Collate-TUI.jar from <a href="https://se-edu.github.io/collate/">https://se-edu.github.io/collate/</a> and run it using the command<code>java -jar Collate-TUI.jar</code> command. It's usage is given <a href="https://se-education.org/collate/docs/User-Guide.html#using-the-text-ui">here</a>.</p>
+                        </box>
+                        <p>The IDE can help you to package your application as a JAR file.</p>
+                      </div>
+                      <div>
+                        <div>
+                          <panel expanded><template slot="_header">
+                              <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
+                            </template>
+                            <div>
+                              <ul>
+                                <li><a href="https://docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html">Oracle's tutorial on JAR files</a></li>
+                              </ul>
+                              <p><strong><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Creating a JAR file in Intellij</strong> - A video by Artur Spirin:</p>
+                              <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/3Xo6zSBgdgk" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="varargs">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="varargs"><span>Varargs</span><a class="fa fa-anchor" href="#varargs" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Java varargs feature</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p>Variable Arguments (Varargs) is a <em>syntactic sugar</em> type feature that allows writing a methods that can take a variable number of arguments.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>search</code> method below can be called as <code>search()</code>, <code>search(&quot;book&quot;)</code>, <code>search(&quot;book&quot;, &quot;paper&quot;)</code>, etc.</p>
+                          <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">search</span><span class="hljs-params">(String ... keywords)</span></span>{<br></span><span>   <span class="hljs-comment">// method body</span><br></span><span>}<br></span></code></pre>
+                        </box>
+                        <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources:</p>
                         <ul>
-                          <li>Oracle's tutorial on packages: [<a href="https://docs.oracle.com/javase/tutorial/java/concepts/package.html">What is a Package?</a>] [<a href="https://docs.oracle.com/javase/tutorial/java/package/index.html">Creating and Using Packages</a>]</li>
+                          <li><a href="http://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html">Java Varargs feature (from Oracle.com)</a></li>
+                          <li><a href="https://www.javatpoint.com/varargs">Java Varargs tutorial (for javaTpoint.com)</a></li>
                         </ul>
                       </div>
-                    </panel>
-                  </div>
+                      <div></div>
+                    </div>
+                  </panel>
                 </div>
-              </div>
-              </panel>
-            </div>
-            <div>
-              <panel type="seamless" expanded id="access-modifiers">
-                <span slot="header" class="card-title"><div><h4 id="access-modifiers"><span>Access Modifiers</span><a class="fa fa-anchor" href="#access-modifiers"></a></h4>
-            </div>
-            </span>
-            <div class="indented">
-              <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain access modifiers</span>
-                </span>
-                </span>
-                </span>
-              </p>
-              <p></p>
-              <p></p>
-              <p></p>
-              <div>
-                <p><strong>Access level modifiers determine whether other classes can use a particular field or invoke a particular method.</strong></p>
-                <p>There are two levels of access control:</p>
-                <ol>
-                  <li>
-                    <p><strong>At the class level</strong>:</p>
-                    <ul>
-                      <li><strong><code>public</code></strong>: the class is visible to all classes everywhere</li>
-                      <li><strong>no modifier (the default, also known as <em>package-private</em>)</strong>: it is visible only within its own package<br><br></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <p><strong>At the member level</strong>:</p>
-                    <ul>
-                      <li><strong><code>public</code></strong> or <strong>no modifier (<em>package-private</em>)</strong>: same meaning as when used with top-level classes</li>
-                      <li><strong><code>private</code></strong>: the member can only be accessed in its own class</li>
-                      <li><strong><code>protected</code></strong>: the member can only be accessed within its own package (as with package-private) and, in addition, by a subclass of its class in another package</li>
-                    </ul>
-                  </li>
-                </ol>
-                <p>The following table shows the access to members permitted by each modifier.</p>
-                <div class="indented">
-                  <div class="table-responsive">
-                    <table class="markbind-table table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th>Modifier</th>
-                          <th><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">whether the class itself has access to the member defined by the access level</span>Class</span>
-                          </th>
-                          <th><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">whether classes in the same package as the class (regardless of their parentage) have access to the member</span>Package</span>
-                          </th>
-                          <th><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">whether subclasses of the class declared outside this package have access to the member</span>Subclass</span>
-                          </th>
-                          <th><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">whether all classes have access to the member</span>World</span>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><code>public</code></td>
-                          <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span>
-                            </span>
-                          </td>
-                          <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span>
-                            </span>
-                          </td>
-                          <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span>
-                            </span>
-                          </td>
-                          <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span>
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code>protected</code></td>
-                          <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span>
-                            </span>
-                          </td>
-                          <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span>
-                            </span>
-                          </td>
-                          <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span>
-                            </span>
-                          </td>
-                          <td><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span>
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>no modifier</td>
-                          <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span>
-                            </span>
-                          </td>
-                          <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span>
-                            </span>
-                          </td>
-                          <td><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span>
-                            </span>
-                          </td>
-                          <td><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span>
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code>private</code></td>
-                          <td><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span>
-                            </span>
-                          </td>
-                          <td><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span>
-                            </span>
-                          </td>
-                          <td><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span>
-                            </span>
-                          </td>
-                          <td><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span>
-                            </span>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                <p>Access levels affect you in two ways:</p>
-                <ol>
-                  <li>When you use classes that come from another source, such as the classes in the Java platform, access levels determine which members of those classes your own classes can use.</li>
-                  <li>When you write a class, you need to decide what access level every member variable and every method in your class should have.</li>
-                </ol>
-              </div>
-              <div></div>
-            </div>
-            </panel>
-          </div>
-          <div>
-            <panel type="seamless" expanded id="constants">
-              <span slot="header" class="card-title"><div><h4 id="constants"><span>Constants</span><a class="fa fa-anchor" href="#constants"></a></h4>
-          </div>
-          </span>
-          <div class="indented">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Java constants</span>
-              </span>
-              </span>
-              </span>
-            </p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <div>
-              <p>Java does not directly support constants. The convention is to use a <code>static</code> <code>final</code> variable where a constant is needed. The <code>static</code> modifier causes the variable to be available without instantiating an
-                object. The <code>final</code> modifier causes the variable to be unchangeable. Java constants are normally declared in ALL CAPS separated by underscores.</p>
-              <box>
-                <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example of a constant named <code>MAX_BALANCE</code> which can be accessed as <code>Account.MAX_BALANCE</code>.</p>
-                <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span></span>{</span><span>&#x200B;</span><span>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> MAX_BALANCE = <span class="hljs-number">1000000.0</span>;</span><span>&#x200B;</span><span>}</span></code></pre>
-                <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Math.html#PI"><code>Math.PI</code></a> is an example constant that comes with Java.</p>
-              </box>
-            </div>
-            <div></div>
-          </div>
-          </panel>
-        </div>
-        <div>
-          <panel type="seamless" expanded id="casting">
-            <span slot="header" class="card-title"><div><h4 id="casting"><span>Casting</span><a class="fa fa-anchor" href="#casting"></a></h4>
-        </div>
-        </span>
-        <div class="indented">
-          <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Java casting</span>
-            </span>
-            </span>
-            </span>
-          </p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <div>
-            <p><strong><mark><em>Casting</em></mark> is the action of converting from one type to another</strong>. You can use the <code>(newType)</code> syntax to cast a value to a type named <code>newType</code>.</p>
-            <p><strong>When you cast a primitive value to another type, there may be a loss of precision.</strong></p>
-            <box>
-              <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below casts a <code>double</code> value to an <code>int</code> value and casts it back to a <code>double</code>. Note the loss of precision.</p>
-              <pre><code class="hljs java"><span><span class="hljs-keyword">double</span> d = <span class="hljs-number">5.3</span>;</span><span>System.out.println(<span class="hljs-string">"Before casting to an int: "</span> + d);</span><span><span class="hljs-keyword">int</span> i = (<span class="hljs-keyword">int</span>)d; <span class="hljs-comment">// cast d to an int</span></span><span>System.out.println(<span class="hljs-string">"After casting to an int: "</span> + i);</span><span>d = (<span class="hljs-keyword">double</span>)i; <span class="hljs-comment">// cast i back to a double</span></span><span>System.out.println(<span class="hljs-string">"After casting back a double: "</span> + d);</span></code></pre>
-              <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
-              </p>
-              <pre><code class="hljs"><span>Before casting to an int: 5.3</span><span>After casting to an int: 5</span><span>After casting back a double: 5.0</span></code></pre>
-            </box>
-            <p><strong><mark><em>Downcasting</em></mark> is when you cast an object reference from a superclass to a subclass.</strong></p>
-            <box>
-              <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Assume the following class hierarchy:</p>
-              <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span></span>{</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>{</span><span>        System.out.println(<span class="hljs-string">"I'm an animal"</span>);</span><span>    }</span><span>}</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span></span>{</span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{</span><span>        System.out.println(<span class="hljs-string">"I'm a Cat"</span>);</span><span>    }</span><span>}</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DomesticCat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Cat</span></span>{</span><span>    <span class="hljs-meta">@Override</span></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{</span><span>        System.out.println(<span class="hljs-string">"I'm a DomesticCat"</span>);</span><span>    }</span><span>}</span></code></pre>
-              <p>The <code>foo</code> method below downcasts an <code>Animal</code> object to its subclasses.</p>
-              <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Animal a)</span></span>{</span><span>    a.speak();</span><span>    Cat c = (Cat)a; <span class="hljs-comment">// downcast a to a Cat</span></span><span>    c.speak();</span><span>    DomesticCat dc = (DomesticCat)a; <span class="hljs-comment">// downcast a to a DomesticCat</span></span><span>    dc.speak();</span><span>}</span></code></pre>
-            </box>
-            <p><strong><mark><em>Upcasting</em></mark> is when you cast an object reference from a subclass to a superclass.</strong> However, upcasting is done automatically by the compiler even if you do not specify it explicitly.</p>
-            <box>
-              <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example upcasts a <code>Cat</code> object to its superclass <code>Animal</code>:</p>
-              <pre><code class="hljs java"><span>Cat c = <span class="hljs-keyword">new</span> Cat();</span><span>Animal a1 = (Animal)c; <span class="hljs-comment">//upcasting c to the Animal class</span></span><span>Animal a2 = c; <span class="hljs-comment">//upcasting is implicit</span></span><span>&#x200B;</span></code></pre>
-            </box>
-            <p>Note that due to polymorphism, the behavior of the object will reflect the actual type of the object irrespective of the type of the variable holding a reference to it.</p>
-            <box>
-              <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The call to the <code>speak()</code> method in the code below always executes the <code>speak()</code> method of the <code>DomesticCat</code> class because the actual type
-                of the object remains <code>DomesticCat</code> although the reference to it is being downcast/upcast to various other types.</p>
-              <pre><code class="hljs java"><span>Animal a = <span class="hljs-keyword">new</span> DomesticCat(); <span class="hljs-comment">//implicit upcast</span></span><span>a.speak();</span><span>Cat c = (Cat)a; <span class="hljs-comment">//downcast</span></span><span>c.speak();</span><span>DomesticCat dc = (DomesticCat)a; <span class="hljs-comment">//downcast</span></span><span>dc.speak();</span></code></pre>
-              <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
-              </p>
-              <pre><code class="hljs"><span>I'm a DomesticCat</span><span>I'm a DomesticCat</span><span>I'm a DomesticCat</span></code></pre>
-            </box>
-            <p><strong>Casting to an incompatible type can result in a <code>ClassCastException</code> at runtime.</strong></p>
-            <box>
-              <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code will cause a <code>ClassCastException</code>:</p>
-              <pre><code class="hljs java"><span>Object o = <span class="hljs-keyword">new</span> Animal();</span><span>Integer x = (Integer)o;</span></code></pre>
-              <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
-              </p>
-              <pre><code class="hljs"><span>Exception in thread &quot;main&quot; java.lang.ClassCastException: misc.casting.Animal cannot be</span><span>cast to java.lang.Integer at misc.casting.CastingExamples.main(CastingExamples.java:14)</span></code></pre>
-            </box>
-            <p>You can use the <code>instanceof</code> operator to check if a cast is safe to perform.</p>
-            <box>
-              <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code checks if the object <code>a</code> is an instance of the <code>Cat</code> class before casting it to a <code>Cat</code>.</p>
-              <pre><code class="hljs java"><span>Cat c;</span><span><span class="hljs-keyword">if</span> (a <span class="hljs-keyword">instanceof</span> Cat){</span><span>    c = (Cat)a;</span><span>}</span></code></pre>
-            </box>
-          </div>
-          <div></div>
-        </div>
-        </panel>
-      </div>
-      <div>
-        <panel type="seamless" expanded id="file-access">
-          <span slot="header" class="card-title"><div><h4 id="file-access"><span>File Access</span><a class="fa fa-anchor" href="#file-access"></a></h4>
-      </div>
-      </span>
-      <div class="indented">
-        <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can read/write text files using Java</span>
-          </span>
-          </span>
-          </span>
-        </p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <div>
-          <p><strong>You can use the <a href="https://docs.oracle.com/javase/9/docs/api/java/io/File.html"><code>java.io.File</code></a> class to represent a file object</strong>. It can be used to access properties of the file object.</p>
-          <box>
-            <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code creates a <code>File</code> object to represent a file <code>fruits.txt</code> that exists in the <code>data</code> directory <mark>relative to the current working directory</mark>              and uses that object to print some properties of the file.</p>
-            <pre><code class="hljs java"><span><span class="hljs-keyword">import</span> java.io.File;</span><span>&#x200B;</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileClassDemo</span> </span>{</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        File f = <span class="hljs-keyword">new</span> File(<span class="hljs-string">"data/fruits.txt"</span>);</span><span>        System.out.println(<span class="hljs-string">"full path: "</span> + f.getAbsolutePath());</span><span>        System.out.println(<span class="hljs-string">"file exists?: "</span> + f.exists());</span><span>        System.out.println(<span class="hljs-string">"is Directory?: "</span> + f.isDirectory());</span><span>    }</span><span>&#x200B;</span><span>}</span></code></pre>
-            <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
-            </p>
-            <pre><code class="hljs"><span>full path: C:\sample-code\data\fruits.txt</span><span>file exists?: true</span><span>is Directory?: false</span></code></pre>
-          </box>
-          <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> If you use backslash to specify the file path in a Windows computer, you need to use an additional backslash as an escape character because the backslash by itself has
-            a special meaning. e.g., use <span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span>
-            </span><code>&quot;data\\fruits.txt&quot;</code>, not <span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span>
-            </span> <code>&quot;data\fruits.txt&quot;</code>. Alternatively, you can use forward slash <span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span>
-            </span> <code>&quot;data/fruits.txt&quot;</code> (even on Windows).</p>
-          <p><strong>You can read from a file using a <code>Scanner</code> object that uses a <code>File</code> object as the <em>source</em> of data.</strong></p>
-          <box>
-            <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code uses a <code>Scanner</code> object to read (and print) contents of a text file line-by-line:</p>
-            <pre><code class="hljs java"><span><span class="hljs-keyword">import</span> java.io.File;</span><span><span class="hljs-keyword">import</span> java.io.FileNotFoundException;</span><span><span class="hljs-keyword">import</span> java.util.Scanner;</span><span>&#x200B;</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileReadingDemo</span> </span>{</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printFileContents</span><span class="hljs-params">(String filePath)</span> <span class="hljs-keyword">throws</span> FileNotFoundException </span>{</span><span>        File f = <span class="hljs-keyword">new</span> File(filePath); <span class="hljs-comment">// create a File for the given file path</span></span><span>        Scanner s = <span class="hljs-keyword">new</span> Scanner(f); <span class="hljs-comment">// create a Scanner using the File as the source</span></span><span>        <span class="hljs-keyword">while</span> (s.hasNext()) {</span><span>            System.out.println(s.nextLine());</span><span>        }</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        <span class="hljs-keyword">try</span> {</span><span>            printFileContents(<span class="hljs-string">"data/fruits.txt"</span>);</span><span>        } <span class="hljs-keyword">catch</span> (FileNotFoundException e) {</span><span>            System.out.println(<span class="hljs-string">"File not found"</span>);</span><span>        }</span><span>    }</span><span>&#x200B;</span><span>}</span></code></pre>
-            <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> i.e., contents of the <code>data/fruits.txt</code></p>
-            <pre><code class="hljs"><span>5 Apples</span><span>3 Bananas</span><span>6 Cherries</span></code></pre>
-          </box>
-          <p><strong>You can use a <a href="https://docs.oracle.com/javase/9/docs/api/java/io/FileWriter.html"><code>java.io.FileWriter</code></a> object to write to a file.</strong></p>
-          <box>
-            <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>writeToFile</code> method below uses a <code>FileWrite</code> object to write to a file. The method is being used to write two lines to the file <code>temp/lines.txt</code>.</p>
-            <pre><code class="hljs java"><span><span class="hljs-keyword">import</span> java.io.FileWriter;</span><span><span class="hljs-keyword">import</span> java.io.IOException;</span><span>&#x200B;</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileWritingDemo</span> </span>{</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeToFile</span><span class="hljs-params">(String filePath, String textToAdd)</span> <span class="hljs-keyword">throws</span> IOException </span>{</span><span>        FileWriter fw = <span class="hljs-keyword">new</span> FileWriter(filePath);</span><span>        fw.write(textToAdd);</span><span>        fw.close();</span><span>    }</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><span>        String file2 = <span class="hljs-string">"temp/lines.txt"</span>;</span><span>        <span class="hljs-keyword">try</span> {</span><span>            writeToFile(file2, <span class="hljs-string">"first line"</span> + System.lineSeparator() + <span class="hljs-string">"second line"</span>);</span><span>        } <span class="hljs-keyword">catch</span> (IOException e) {</span><span>            System.out.println(<span class="hljs-string">"Something went wrong: "</span> + e.getMessage());</span><span>        }</span><span>    }</span><span>&#x200B;</span><span>}</span></code></pre>
-            <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> Contents of the <code>temp/lines.txt</code>:</p>
-            <pre><code class="hljs"><span>first line</span><span>second line</span></code></pre>
-          </box>
-          <p>Note that you <mark>need to call the <code>close()</code> method</mark> of the <code>FileWriter</code> object for the writing operation to be completed.</p>
-          <p><strong>You can create a <code>FileWriter</code> object that appends to the file</strong> (instead of overwriting the current content) by specifying an additional boolean parameter to the constructor.</p>
-          <box>
-            <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The method below appends to the file rather than overwrites.</p>
-            <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">appendToFile</span><span class="hljs-params">(String filePath, String textToAppend)</span> <span class="hljs-keyword">throws</span> IOException </span>{</span><span>    FileWriter fw = <span class="hljs-keyword">new</span> FileWriter(filePath, <span class="hljs-keyword">true</span>); <span class="hljs-comment">// create a FileWriter in append mode</span></span><span>    fw.write(textToAppend);</span><span>    fw.close();</span><span>}</span></code></pre>
-          </box>
-          <p><strong>The <a href="https://docs.oracle.com/javase/9/docs/api/java/nio/file/Files.html"><code>java.nio.file.Files</code></a> is a utility class that provides several useful file operations.</strong> It relies on the <a href="https://docs.oracle.com/javase/9/docs/api/java/nio/file/Paths.html"><code>java.nio.file.Paths</code></a>            file to generate <code>Path</code> objects that represent file paths.</p>
-          <box>
-            <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example uses the <code>Files</code> class to copy a file and delete a file.</p>
-            <pre><code class="hljs java"><span><span class="hljs-keyword">import</span> java.io.IOException;</span><span><span class="hljs-keyword">import</span> java.nio.file.Files;</span><span><span class="hljs-keyword">import</span> java.nio.file.Paths;</span><span>&#x200B;</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FilesClassDemo</span> </span>{</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException</span>{</span><span>        Files.copy(Paths.get(<span class="hljs-string">"data/fruits.txt"</span>), Paths.get(<span class="hljs-string">"temp/fruits2.txt"</span>));</span><span>        Files.delete(Paths.get(<span class="hljs-string">"temp/fruits2.txt"</span>));</span><span>    }</span><span>&#x200B;</span><span>}</span></code></pre>
-          </box>
-          <p>The techniques above are good enough to manipulate simple text files. Note that <strong>it is also possible to <a href="https://www.tutorialspoint.com/java/java_files_io.htm">perform file I/O operations using other classes</a></strong>.</p>
-        </div>
-        <div></div>
-      </div>
-      </panel>
-    </div>
-    <div>
-      <panel type="seamless" expanded id="using-jar-files">
-        <span slot="header" class="card-title"><div><h4 id="using-jar-files"><span>Using JAR Files</span><a class="fa fa-anchor" href="#using-jar-files"></a></h4>
-    </div>
-    </span>
-    <div class="indented">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use JAR files</span>
-        </span>
-        </span>
-        </span>
-      </p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <div>
-        <p><strong>Java applications are typically delivered as JAR (short for <em>Java Archive</em>) files.</strong> A JAR contains Java classes and other resources (icons, media files, etc.).</p>
-        <p>An executable JAR file can be launched using the <code>java -jar</code> command.</p>
-        <box>
-          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>java -jar foo.jar</code> launches the <code>foo.jar</code> file.</p>
-          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> You can download the Collate-TUI.jar from <a href="https://se-edu.github.io/collate/">https://se-edu.github.io/collate/</a> and run it using the command<code>java -jar Collate-TUI.jar</code>            command. It's usage is given <a href="https://se-education.org/collate/docs/User-Guide.html#using-the-text-ui">here</a>.</p>
-        </box>
-        <p>The IDE can help you to package your application as a JAR file.</p>
-      </div>
-      <div>
-        <div>
-          <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template>
-            <div>
-              <ul>
-                <li><a href="https://docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html">Oracle's tutorial on JAR files</a></li>
-              </ul>
-              <p><strong><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Creating a JAR file in Intellij</strong> - A video by Artur Spirin:</p>
-              <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/3Xo6zSBgdgk" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-            </div>
-          </panel>
-        </div>
-      </div>
-    </div>
-    </panel>
-  </div>
-  <div>
-    <panel type="seamless" expanded id="varargs">
-      <span slot="header" class="card-title"><div><h4 id="varargs"><span>Varargs</span><a class="fa fa-anchor" href="#varargs"></a></h4>
-  </div>
-  </span>
-  <div class="indented">
-    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Java varargs feature</span>
-      </span>
-      </span>
-      </span>
-    </p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <div>
-      <p>Variable Arguments (Varargs) is a <em>syntactic sugar</em> type feature that allows writing a methods that can take a variable number of arguments.</p>
-      <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>search</code> method below can be called as <code>search()</code>, <code>search(&quot;book&quot;)</code>, <code>search(&quot;book&quot;, &quot;paper&quot;)</code>, etc.</p>
-        <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">search</span><span class="hljs-params">(String ... keywords)</span></span>{</span><span>   <span class="hljs-comment">// method body</span></span><span>}</span></code></pre>
-      </box>
-      <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources:</p>
-      <ul>
-        <li><a href="http://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html">Java Varargs feature (from Oracle.com)</a></li>
-        <li><a href="https://www.javatpoint.com/varargs">Java Varargs tutorial (for javaTpoint.com)</a></li>
-      </ul>
-    </div>
-    <div></div>
-  </div>
-  </panel>
-  </div>
-  <div>
-    <panel type="seamless" expanded id="streams-basic">
-      <span slot="header" class="card-title"><div><h4 id="streams-basic"><span>Streams: Basic</span><a class="fa fa-anchor" href="#streams-basic"></a></h4>
-  </div>
-  </span>
-  <div class="indented">
-    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Java8 streams</span>
-      </span>
-      </span>
-      </span>
-    </p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <div>
-      <p><strong>Java 8 introduced a number of new features (e.g. Lambdas, Streams)</strong> that are not trivial to learn but also extremely useful to know.</p>
-      <p><a href="http://winterbe.com/posts/2014/03/16/java-8-tutorial/">Here</a> is an overview of new Java 8 features .<span class="dimmed">(written by Benjamin Winterberg)</span></p>
-    </div>
-    <div>
-      <div>
-        <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template>
-          <p><strong>Tutorials</strong>:</p>
-          <tabs>
-            <tab><template slot="_header"><span><span aria-hidden="true" class="far fa-file-alt"></span></span></template>
-              <ul>
-                <li>
-                  <p><a href="https://www.tutorialspoint.com/java8/"><strong>Java 8 Tutorial</strong></a> -- from <a href="http://tutorialspoint.com">tutorialspoint.com</a>. <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span>
-                    Also provides a way to try out code online</p>
-                </li>
-                <li>
-                  <p><strong>Tutorials from Oracle</strong>: [<a href="http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html">Lambdas</a>][<a href="http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html">Streams</a>]</p>
-                </li>
-              </ul>
-            </tab>
-            <tab class="algolia-no-index"><template slot="_header"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span></template>
+                <div>
+                  <panel type="seamless" expanded id="streams-basic">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="streams-basic"><span>Streams: Basic</span><a class="fa fa-anchor" href="#streams-basic" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Java8 streams</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>Java 8 introduced a number of new features (e.g. Lambdas, Streams)</strong> that are not trivial to learn but also extremely useful to know.</p>
+                        <p><a href="http://winterbe.com/posts/2014/03/16/java-8-tutorial/">Here</a> is an overview of new Java 8 features .<span class="dimmed">(written by Benjamin Winterberg)</span></p>
+                      </div>
+                      <div>
+                        <div>
+                          <panel expanded><template slot="_header">
+                              <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
+                            </template>
+                            <p><strong>Tutorials</strong>:</p>
+                            <tabs>
+                              <tab><template slot="_header"><span><span aria-hidden="true" class="far fa-file-alt"></span></span></template>
+                                <ul>
+                                  <li>
+                                    <p><a href="https://www.tutorialspoint.com/java8/"><strong>Java 8 Tutorial</strong></a> -- from <a href="http://tutorialspoint.com">tutorialspoint.com</a>. <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Also provides a way to try out code online</p>
+                                  </li>
+                                  <li>
+                                    <p><strong>Tutorials from Oracle</strong>: [<a href="http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html">Lambdas</a>][<a href="http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html">Streams</a>]</p>
+                                  </li>
+                                </ul>
+                              </tab>
+                              <tab class="algolia-no-index"><template slot="_header"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span></template>
 
 
-              <p>A video tutorial by well-known Java coach Venkat Subramaniam</p>
-              <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Ee5t_EGjv0A" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-              <panel type="seamless" class="algolia-no-index"><template slot="_header"><p>A a more detailed version covering similar grounds</p></template>
-                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/1OpAgZvYXLQ" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-              </panel>
-            </tab>
-          </tabs>
-        </panel>
+                                <p>A video tutorial by well-known Java coach Venkat Subramaniam</p>
+                                <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Ee5t_EGjv0A" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                                <panel type="seamless" class="algolia-no-index"><template slot="_header">
+                                    <p>A a more detailed version covering similar grounds</p>
+                                  </template>
+                                  <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/1OpAgZvYXLQ" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                                </panel>
+                              </tab>
+                            </tabs>
+                          </panel>
+                        </div>
+                      </div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="javafx">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="javafx"><span>JavaFX</span><a class="fa fa-anchor" href="#javafx" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use JavaFX to build a simple GUI</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p>JavaFX is a technology for building Java-based GUIs. Previously it was a part Java itself, but has become a third-party dependency since then. It is now being maintained by <a href="https://wiki.openjdk.java.net/display/OpenJFX">OpenJDK</a>.</p>
+                        <box>
+                          <h5 id="javafx-9-tutorial">JavaFx 9 tutorial<a class="fa fa-anchor" href="#javafx-9-tutorial" onclick="event.stopPropagation()"></a></h5>
+                          <p>Adapted (with permissions) from <a href="http://code.makery.ch/library/javafx-8-tutorial/">Marco Jakob's JavaFX 8 tutorial</a>. Thanks to <a href="https://github.com/marcojakob">Marco Jakob</a> for allowing us to adapt his tutorials for IntelliJ.</p>
+                          <p>Table of contents:</p>
+                          <ul>
+                            <li><a href="/se-book/cppToJava/misc/javaFX/part01">Part 1: Scene Builder</a></li>
+                            <li><a href="/se-book/cppToJava/misc/javaFX/part02">Part 2: Model and TableView</a></li>
+                          </ul>
+                          <p>After going through the two parts, you should be familiar with working with IntelliJ. You can continue with the original tutorial (which is written for Eclipse), with the following links:</p>
+                          <ul>
+                            <li><a href="http://code.makery.ch/library/javafx-8-tutorial/part3/">Part 3: Interacting with the User</a></li>
+                            <li><a href="http://code.makery.ch/library/javafx-8-tutorial/part4/">Part 4: CSS Styling</a></li>
+                            <li><a href="http://code.makery.ch/library/javafx-8-tutorial/part5/">Part 5: Storing Data as XML</a></li>
+                          </ul>
+                        </box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
-  </div>
-  </panel>
-  </div>
-  <div>
-    <panel type="seamless" expanded id="javafx">
-      <span slot="header" class="card-title"><div><h4 id="javafx"><span>JavaFX</span><a class="fa fa-anchor" href="#javafx"></a></h4>
-  </div>
-  </span>
-  <div class="indented">
-    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use JavaFX to build a simple GUI</span>
-      </span>
-      </span>
-      </span>
-    </p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <div>
-      <p>JavaFX is a technology for building Java-based GUIs. Previously it was a part Java itself, but has become a third-party dependency since then. It is now being maintained by <a href="https://wiki.openjdk.java.net/display/OpenJFX">OpenJDK</a>.</p>
-      <box>
-        <h5 id="javafx-9-tutorial">JavaFx 9 tutorial<a class="fa fa-anchor" href="#javafx-9-tutorial"></a></h5>
-        <p>Adapted (with permissions) from <a href="http://code.makery.ch/library/javafx-8-tutorial/">Marco Jakob's JavaFX 8 tutorial</a>. Thanks to <a href="https://github.com/marcojakob">Marco Jakob</a> for allowing us to adapt his tutorials for IntelliJ.</p>
-        <p>Table of contents:</p>
-        <ul>
-          <li><a href="/se-book/cppToJava/misc/javaFX/part01">Part 1: Scene Builder</a></li>
-          <li><a href="/se-book/cppToJava/misc/javaFX/part02">Part 2: Model and TableView</a></li>
-        </ul>
-        <p>After going through the two parts, you should be familiar with working with IntelliJ. You can continue with the original tutorial (which is written for Eclipse), with the following links:</p>
-        <ul>
-          <li><a href="http://code.makery.ch/library/javafx-8-tutorial/part3/">Part 3: Interacting with the User</a></li>
-          <li><a href="http://code.makery.ch/library/javafx-8-tutorial/part4/">Part 4: CSS Styling</a></li>
-          <li><a href="http://code.makery.ch/library/javafx-8-tutorial/part5/">Part 5: Storing Data as XML</a></li>
-        </ul>
-      </box>
-    </div>
-    <div></div>
-  </div>
-  </panel>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <footer>
-    <div class="text-center">
-      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sun, Apr 12, 2020, 3:34:31 PM GMT+8.</small></div>
-  </footer>
+    <footer>
+      <div class="text-center">
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.14.1</a> at Fri, Apr 24, 2020, 1:44:23 AM GMT+8.</small></div>
+    </footer>
   </div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>

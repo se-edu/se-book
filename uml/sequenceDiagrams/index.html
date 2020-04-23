@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.13.1">
+  <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - UML: Sequence Diagrams</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+  <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
@@ -31,406 +32,375 @@
       </navbar>
     </header>
     <div id="flex-body">
+
       <div id="content-wrapper">
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>Tools → UML →
-</span></strong>
-              </span>
-            </p>
+                  </span></strong></span></p>
             <div id="title">
-              <h1 id="sequence-diagrams"><span>Sequence Diagrams</span><a class="fa fa-anchor" href="#sequence-diagrams"></a></h1>
+              <h1 id="sequence-diagrams"><span>Sequence Diagrams</span><a class="fa fa-anchor" href="#sequence-diagrams" onclick="event.stopPropagation()"></a></h1>
             </div>
             <div id="main">
               <div>
                 <div>
                   <panel type="seamless" expanded id="introduction">
-                    <span slot="header" class="card-title"><div><h4 id="introduction"><span>Introduction</span><a class="fa fa-anchor" href="#introduction"></a></h4>
-                </div>
-                </span>
-                <div class="indented">
-                  <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain/identify sequence diagrams</span>
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="introduction"><span>Introduction</span><a class="fa fa-anchor" href="#introduction" onclick="event.stopPropagation()"></a></h4>
+                      </div>
                     </span>
-                    </span>
-                    </span>
-                  </p>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                  <div>
-                    <p><strong>A UML sequence diagram <em>captures the interactions between multiple objects for a given scenario.</em></strong></p>
-                    <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the code below.</p>
-                      <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Machine</span> </span>{</span><span>&#x200B;</span><span>    <span class="hljs-function">Unit <span class="hljs-title">producePrototype</span><span class="hljs-params">()</span> </span>{</span><span>        Unit prototype = <span class="hljs-keyword">new</span> Unit();</span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {</span><span>            prototype.stressTest();</span><span>        }</span><span>        <span class="hljs-keyword">return</span> prototype;</span><span>    }</span><span>}</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Unit</span> </span>{</span><span>&#x200B;</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stressTest</span><span class="hljs-params">()</span> </span>{</span><span>&#x200B;</span><span>    }</span><span>}</span><span>&#x200B;</span></code></pre>
-                      <p>Here is the sequence diagram to model the interactions for the method call <code>producePrototype()</code> on a <code>Machine</code> object.</p>
-                      <img src="/se-book/uml/sequenceDiagrams/introduction/images/Machine.png" width="450">
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain/identify sequence diagrams</span></span></span></span></p>
                       <p></p>
-                    </box>
-                  </div>
-                  <div></div>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>A UML sequence diagram <em>captures the interactions between multiple objects for a given scenario.</em></strong></p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the code below.</p>
+                          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Machine</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function">Unit <span class="hljs-title">producePrototype</span><span class="hljs-params">()</span> </span>{<br></span><span>        Unit prototype = <span class="hljs-keyword">new</span> Unit();<br></span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {<br></span><span>            prototype.stressTest();<br></span><span>        }<br></span><span>        <span class="hljs-keyword">return</span> prototype;<br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Unit</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stressTest</span><span class="hljs-params">()</span> </span>{<br></span><span><br></span><span>    }<br></span><span>}<br></span><span><br></span></code></pre>
+                          <p>Here is the sequence diagram to model the interactions for the method call <code>producePrototype()</code> on a <code>Machine</code> object.</p>
+                          <img src="/se-book/uml/sequenceDiagrams/introduction/images/Machine.png" width="450">
+                          <p></p>
+                        </box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
                 </div>
-                </panel>
-              </div>
-              <div>
-                <panel type="seamless" expanded id="basic">
-                  <span slot="header" class="card-title"><div><h4 id="basic"><span>Basic</span><a class="fa fa-anchor" href="#basic"></a></h4>
-              </div>
-              </span>
-              <div class="indented">
-                <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with basic notation</span>
-                  </span>
-                  </span>
-                  </span>
-                </p>
-                <p></p>
-                <p></p>
-                <p></p>
                 <div>
-                  <p>Notation:</p>
-                  <img src="/se-book/uml/sequenceDiagrams/basic/images/notation.png" height="300">
-                  <p></p>
-                  <box>
-                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This sequence diagram shows some interactions between a human user and the Text UI of a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter"
-                        class="trigger"><span data-mb-html-for="_content">Command Line Interface</span>CLI</span> Minesweeper game.</p>
-                    <img src="/se-book/uml/sequenceDiagrams/basic/images/playerText.png" height="300">
-                    <p></p>
-                    <p>The player runs the <code>newgame</code> action on the <code>TextUi</code> object which results in the <code>TextUi</code> showing the minefield to the player. Then, the player runs the <code>clear x y</code> command; in response,
-                      the <code>TextUi</code> object shows the updated minefield.</p>
-                  </box>
-                  <p>The <code>:TextUi</code> in the above example denotes <em>an unnamed instance of the class TextUi</em>. If there were two instances of <code>TextUi</code> in the diagram, they can be distinguished by naming them e.g. <code>TextUi1:TextUi</code>                    and <code>TextUi2:TextUi</code>.</p>
-                  <p><strong>Arrows representing method calls should be solid arrows while those representing method returns should be dashed arrows</strong>.</p>
-                  <p>Note that unlike in object diagrams, the <strong>class/object name is not underlined in sequence diagrams</strong>.</p>
-                  <box>
-                    <p><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span>
-                      </span> <strong>[Common notation error] Activation bar too long:</strong> The activation bar of a method cannot start before the method call arrives and a method cannot remain active after the method had returned. <span class="dimmed">In the two sequence diagrams below, the one on the left commits this error because the activation bar starts <em>before</em> the method <code>Foo#xyz()</code> is called and remains active <em>after</em> the method returns.</span></p>
-                    <img src="/se-book/uml/sequenceDiagrams/basic/images/commonError-activationBarTooLong.png" height="120">
-                    <p><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span>
-                      </span> <strong>[Common notation error] Broken activation bar:</strong> The activation bar should remain unbroken from the point the method is called until the method returns. <span class="dimmed">In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method <code>Foo#abc()</code> is not contiguous, but appears as two pieces instead.</span></p>
-                    <img src="/se-book/uml/sequenceDiagrams/basic/images/commonError-brokenActivationBar.png" height="120"></box>
+                  <panel type="seamless" expanded id="basic">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="basic"><span>Basic</span><a class="fa fa-anchor" href="#basic" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with basic notation</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p>Notation:</p>
+                        <img src="/se-book/uml/sequenceDiagrams/basic/images/notation.png" height="300">
+                        <p></p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This sequence diagram shows some interactions between a human user and the Text UI of a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Command Line Interface</span>CLI</span> Minesweeper game.</p>
+                          <img src="/se-book/uml/sequenceDiagrams/basic/images/playerText.png" height="300">
+                          <p></p>
+                          <p>The player runs the <code>newgame</code> action on the <code>TextUi</code> object which results in the <code>TextUi</code> showing the minefield to the player. Then, the player runs the <code>clear x y</code> command; in response, the <code>TextUi</code> object shows the updated minefield.</p>
+                        </box>
+                        <p>The <code>:TextUi</code> in the above example denotes <em>an unnamed instance of the class TextUi</em>. If there were two instances of <code>TextUi</code> in the diagram, they can be distinguished by naming them e.g. <code>TextUi1:TextUi</code> and <code>TextUi2:TextUi</code>.</p>
+                        <p><strong>Arrows representing method calls should be solid arrows while those representing method returns should be dashed arrows</strong>.</p>
+                        <p>Note that unlike in object diagrams, the <strong>class/object name is not underlined in sequence diagrams</strong>.</p>
+                        <box>
+                          <p><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> <strong>[Common notation error] Activation bar too long:</strong> The activation bar of a method cannot start before the method call arrives and a method cannot remain active after the method had returned. <span class="dimmed">In the two sequence diagrams below, the one on the left commits this error because the activation bar starts <em>before</em> the method <code>Foo#xyz()</code> is called and remains active <em>after</em> the method returns.</span></p>
+                          <img src="/se-book/uml/sequenceDiagrams/basic/images/commonError-activationBarTooLong.png" height="120">
+                          <p><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> <strong>[Common notation error] Broken activation bar:</strong> The activation bar should remain unbroken from the point the method is called until the method returns. <span class="dimmed">In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method <code>Foo#abc()</code> is not contiguous, but appears as two pieces instead.</span></p>
+                          <img src="/se-book/uml/sequenceDiagrams/basic/images/commonError-brokenActivationBar.png" height="120">
+                        </box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
                 </div>
-                <div></div>
-              </div>
-              </panel>
-            </div>
-            <div>
-              <panel type="seamless" expanded id="object-creation">
-                <span slot="header" class="card-title"><div><h4 id="object-creation"><span>Object Creation</span><a class="fa fa-anchor" href="#object-creation"></a></h4>
-            </div>
-            </span>
-            <div class="indented">
-              <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with object creation</span>
-                </span>
-                </span>
-                </span>
-              </p>
-              <p></p>
-              <p></p>
-              <p></p>
-              <div>
-                <p>Notation:</p>
-                <img src="/se-book/uml/sequenceDiagrams/objectCreation/images/notation.png" height="180">
-                <p></p>
-                <ul>
-                  <li>The arrow that represents the constructor arrives at the side of the box representing the instance.</li>
-                  <li>The activation bar represents the period the constructor is active.</li>
-                </ul>
-                <box>
-                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>Logic</code> object creates a <code>Minefield</code> object.</p>
-                  <img src="/se-book/uml/sequenceDiagrams/objectCreation/images/logicMinefield.png" height="150">
-                  <p></p>
-                </box>
-              </div>
-              <div></div>
-            </div>
-            </panel>
-          </div>
-          <div>
-            <panel type="seamless" expanded id="object-deletion">
-              <span slot="header" class="card-title"><div><h4 id="object-deletion"><span>Object Deletion</span><a class="fa fa-anchor" href="#object-deletion"></a></h4>
-          </div>
-          </span>
-          <div class="indented">
-            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with object deletion</span>
-              </span>
-              </span>
-              </span>
-            </p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <div>
-              <p><strong>UML uses an <code>X</code> at the end of the lifeline of an object to show it's deletion.</strong></p>
-              <box>
-                <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Although object deletion is not that important in languages such as Java that support automatic memory management, you can still
-                  show object deletion in UML diagrams to indicate the point at which the object ceases to be used.</p>
-              </box>
-              <p>Notation:</p>
-              <img src="/se-book/uml/sequenceDiagrams/objectDeletion/images/notation.png" height="100">
-              <p></p>
-              <box>
-                <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Note how the diagrams shows the deletion of the <code>Minefield</code> object</p>
-                <img src="/se-book/uml/sequenceDiagrams/objectDeletion/images/logicMinefield.png" height="120">
-                <p></p>
-              </box>
-            </div>
-            <div></div>
-          </div>
-          </panel>
-        </div>
-        <div>
-          <panel type="seamless" expanded id="loops">
-            <span slot="header" class="card-title"><div><h4 id="loops"><span>Loops</span><a class="fa fa-anchor" href="#loops"></a></h4>
-        </div>
-        </span>
-        <div class="indented">
-          <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with loops</span>
-            </span>
-            </span>
-            </span>
-          </p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <div>
-            <p>Notation:</p>
-            <img src="/se-book/uml/sequenceDiagrams/loops/images/notation.png" height="80">
-            <p></p>
-            <box>
-              <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>Player</code> calls the <code>mark x,y</code> command or <code>clear x y</code> command repeatedly until the game is won or lost.</p>
-              <img src="/se-book/uml/sequenceDiagrams/loops/images/playerText.png" height="300">
-              <p></p>
-            </box>
-          </div>
-          <div></div>
-        </div>
-        </panel>
-      </div>
-      <div>
-        <panel type="seamless" expanded id="self-invocation">
-          <span slot="header" class="card-title"><div><h4 id="self-invocation"><span>Self Invocation</span><a class="fa fa-anchor" href="#self-invocation"></a></h4>
-      </div>
-      </span>
-      <div class="indented">
-        <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with self invocation</span>
-          </span>
-          </span>
-          </span>
-        </p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <div>
-          <p><strong>UML can show a method of an object calling another of its own methods.</strong></p>
-          <p>Notation:</p>
-          <img src="/se-book/uml/sequenceDiagrams/selfInvocation/images/notation.png" height="120">
-          <p></p>
-          <box>
-            <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>markCellAt(...)</code> method of a <code>Logic</code> object is calling its own <code>updateState(...)</code> method.</p>
-            <img src="/se-book/uml/sequenceDiagrams/selfInvocation/images/logic.png" height="100">
-            <p></p>
-            <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this variation, the <code>Book#write()</code> method is calling the <code>Chapter#getText()</code> method which in turn does a <em>call back</em> by calling the <code>getAuthor()</code>              method of the calling object.</p>
-            <img src="/se-book/uml/sequenceDiagrams/selfInvocation/images/callBack.png" height="150">
-            <p></p>
-          </box>
-        </div>
-        <div></div>
-      </div>
-      </panel>
-    </div>
-    <div>
-      <panel type="seamless" expanded id="alternative-paths">
-        <span slot="header" class="card-title"><div><h4 id="alternative-paths"><span>Alternative Paths</span><a class="fa fa-anchor" href="#alternative-paths"></a></h4>
-    </div>
-    </span>
-    <div class="indented">
-      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with alternative paths</span>
-        </span>
-        </span>
-        </span>
-      </p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <div>
-        <p><strong>UML uses <code>alt</code> frames to indicate alternative paths.</strong></p>
-        <p>Notation:</p>
-        <img src="/se-book/uml/sequenceDiagrams/alternativePaths/images/notation.png" height="100">
-        <p></p>
-        <box>
-          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>Minefield</code> calls the <code>Cell#setMine</code> if the cell is supposed to be a mined cell, and calls the <code>Cell:setMineCount(...)</code> method otherwise.</p>
-          <img src="/se-book/uml/sequenceDiagrams/alternativePaths/images/minefieldCell.png" height="180">
-          <p></p>
-        </box>
-      </div>
-      <div></div>
-    </div>
-    </panel>
-  </div>
-  <div>
-    <panel type="seamless" expanded id="optional-paths">
-      <span slot="header" class="card-title"><div><h4 id="optional-paths"><span>Optional Paths</span><a class="fa fa-anchor" href="#optional-paths"></a></h4>
-  </div>
-  </span>
-  <div class="indented">
-    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with optional paths</span>
-      </span>
-      </span>
-      </span>
-    </p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <div>
-      <p><strong>UML uses <code>opt</code> frames to indicate optional paths.</strong></p>
-      <p>Notation:</p>
-      <img src="/se-book/uml/sequenceDiagrams/optionalPaths/images/notation.png" height="50">
-      <p></p>
-      <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>Logic#markCellAt(...)</code> calls <code>Timer#start()</code> only if it is the first move of the player.</p>
-        <img src="/se-book/uml/sequenceDiagrams/optionalPaths/images/logicTimer.png" height="150">
-        <p></p>
-      </box>
-    </div>
-    <div></div>
-  </div>
-  </panel>
-  </div>
-  <div>
-    <panel type="seamless" expanded id="parallel-paths">
-      <span slot="header" class="card-title"><div><h4 id="parallel-paths"><span>Parallel Paths</span><a class="fa fa-anchor" href="#parallel-paths"></a></h4>
-  </div>
-  </span>
-  <div class="indented">
-    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with parallel paths</span>
-      </span>
-      </span>
-      </span>
-    </p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <div>
-      <p><strong>UML uses <code>par</code> frames to indicate parallel paths.</strong></p>
-      <p>Notation:</p>
-      <img src="/se-book/uml/sequenceDiagrams/parallelPaths/images/notation.png" height="100">
-      <p></p>
-      <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>Logic</code> is calling methods <code>CloudServer#poll()</code> and <code>LocalServer#poll()</code> in parallel.</p>
-        <img src="/se-book/uml/sequenceDiagrams/parallelPaths/images/logicServerData.png" height="150">
-        <p></p>
-        <box>
-          <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you show parallel paths in a sequence diagram, the corresponding Java implementation is likely to be <em>multi-threaded</em>
-            <span class="dimmed">because a normal Java program cannot do multiple things at the same time</span>.</p>
-        </box>
-      </box>
-    </div>
-    <div></div>
-  </div>
-  </panel>
-  </div>
-  <div>
-    <panel type="seamless" expanded id="reference-frames">
-      <span slot="header" class="card-title"><div><h4 id="reference-frames"><span>Reference Frames</span><a class="fa fa-anchor" href="#reference-frames"></a></h4>
-  </div>
-  </span>
-  <div class="indented">
-    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with reference frames</span>
-      </span>
-      </span>
-      </span>
-    </p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <div>
-      <p><strong>UML uses <em>ref frame</em> to allow a segment of the interaction to be omitted and shown as a separate sequence diagram.</strong> Reference frames help us to break complicated sequence diagrams into multiple parts or simply to omit details
-        we are not interested in showing.</p>
-      <p>Notation:</p>
-      <img src="/se-book/uml/sequenceDiagrams/referenceFrames/images/notation.png" height="100">
-      <p></p>
-      <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The details of the <code>get minefield appearance</code> interactions have been omitted from the diagram.</p>
-        <img src="/se-book/uml/sequenceDiagrams/referenceFrames/images/playerTextLogic.png" height="250">
-        <p></p>
-        <p>Those details are shown in a separate sequence diagram given below.<br>
-          <img src="/se-book/uml/sequenceDiagrams/referenceFrames/images/textLogic.png" height="170"></p>
-        <p></p>
-      </box>
-    </div>
-    <div></div>
-  </div>
-  </panel>
-  </div>
-  <div>
-    <panel type="seamless" expanded id="minimal-notation">
-      <span slot="header" class="card-title"><div><h4 id="minimal-notation"><span>Minimal Notation</span><a class="fa fa-anchor" href="#minimal-notation"></a></h4>
-  </div>
-  </span>
-  <div class="indented">
-    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with minimal notation</span>
-      </span>
-      </span>
-      </span>
-    </p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <div>
-      <p>To reduce clutter, <strong>activation bars and return arrows may be omitted</strong> if they do not result in ambiguities or loss of information. Informal operation descriptions such as those given in the example below can be used, if more precise
-        details are not required for the task at hand.</p>
-      <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A minimal sequence diagram</p>
+                <div>
+                  <panel type="seamless" expanded id="object-creation">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="object-creation"><span>Object Creation</span><a class="fa fa-anchor" href="#object-creation" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with object creation</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p>Notation:</p>
+                        <img src="/se-book/uml/sequenceDiagrams/objectCreation/images/notation.png" height="180">
+                        <p></p>
+                        <ul>
+                          <li>The arrow that represents the constructor arrives at the side of the box representing the instance.</li>
+                          <li>The activation bar represents the period the constructor is active.</li>
+                        </ul>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>Logic</code> object creates a <code>Minefield</code> object.</p>
+                          <img src="/se-book/uml/sequenceDiagrams/objectCreation/images/logicMinefield.png" height="150">
+                          <p></p>
+                        </box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="object-deletion">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="object-deletion"><span>Object Deletion</span><a class="fa fa-anchor" href="#object-deletion" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with object deletion</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>UML uses an <code>X</code> at the end of the lifeline of an object to show it's deletion.</strong></p>
+                        <box>
+                          <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Although object deletion is not that important in languages such as Java that support automatic memory management, you can still show object deletion in UML diagrams to indicate the point at which the object ceases to be used.</p>
+                        </box>
+                        <p>Notation:</p>
+                        <img src="/se-book/uml/sequenceDiagrams/objectDeletion/images/notation.png" height="100">
+                        <p></p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Note how the diagrams shows the deletion of the <code>Minefield</code> object</p>
+                          <img src="/se-book/uml/sequenceDiagrams/objectDeletion/images/logicMinefield.png" height="120">
+                          <p></p>
+                        </box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="loops">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="loops"><span>Loops</span><a class="fa fa-anchor" href="#loops" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with loops</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p>Notation:</p>
+                        <img src="/se-book/uml/sequenceDiagrams/loops/images/notation.png" height="80">
+                        <p></p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>Player</code> calls the <code>mark x,y</code> command or <code>clear x y</code> command repeatedly until the game is won or lost.</p>
+                          <img src="/se-book/uml/sequenceDiagrams/loops/images/playerText.png" height="300">
+                          <p></p>
+                        </box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="self-invocation">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="self-invocation"><span>Self Invocation</span><a class="fa fa-anchor" href="#self-invocation" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with self invocation</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>UML can show a method of an object calling another of its own methods.</strong></p>
+                        <p>Notation:</p>
+                        <img src="/se-book/uml/sequenceDiagrams/selfInvocation/images/notation.png" height="120">
+                        <p></p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>markCellAt(...)</code> method of a <code>Logic</code> object is calling its own <code>updateState(...)</code> method.</p>
+                          <img src="/se-book/uml/sequenceDiagrams/selfInvocation/images/logic.png" height="100">
+                          <p></p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this variation, the <code>Book#write()</code> method is calling the <code>Chapter#getText()</code> method which in turn does a <em>call back</em> by calling the <code>getAuthor()</code> method of the calling object.</p>
+                          <img src="/se-book/uml/sequenceDiagrams/selfInvocation/images/callBack.png" height="150">
+                          <p></p>
+                        </box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="alternative-paths">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="alternative-paths"><span>Alternative Paths</span><a class="fa fa-anchor" href="#alternative-paths" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with alternative paths</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>UML uses <code>alt</code> frames to indicate alternative paths.</strong></p>
+                        <p>Notation:</p>
+                        <img src="/se-book/uml/sequenceDiagrams/alternativePaths/images/notation.png" height="100">
+                        <p></p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>Minefield</code> calls the <code>Cell#setMine</code> if the cell is supposed to be a mined cell, and calls the <code>Cell:setMineCount(...)</code> method otherwise.</p>
+                          <img src="/se-book/uml/sequenceDiagrams/alternativePaths/images/minefieldCell.png" height="180">
+                          <p></p>
+                        </box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="optional-paths">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="optional-paths"><span>Optional Paths</span><a class="fa fa-anchor" href="#optional-paths" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with optional paths</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>UML uses <code>opt</code> frames to indicate optional paths.</strong></p>
+                        <p>Notation:</p>
+                        <img src="/se-book/uml/sequenceDiagrams/optionalPaths/images/notation.png" height="50">
+                        <p></p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>Logic#markCellAt(...)</code> calls <code>Timer#start()</code> only if it is the first move of the player.</p>
+                          <img src="/se-book/uml/sequenceDiagrams/optionalPaths/images/logicTimer.png" height="150">
+                          <p></p>
+                        </box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="parallel-paths">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="parallel-paths"><span>Parallel Paths</span><a class="fa fa-anchor" href="#parallel-paths" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with parallel paths</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>UML uses <code>par</code> frames to indicate parallel paths.</strong></p>
+                        <p>Notation:</p>
+                        <img src="/se-book/uml/sequenceDiagrams/parallelPaths/images/notation.png" height="100">
+                        <p></p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code>Logic</code> is calling methods <code>CloudServer#poll()</code> and <code>LocalServer#poll()</code> in parallel.</p>
+                          <img src="/se-book/uml/sequenceDiagrams/parallelPaths/images/logicServerData.png" height="150">
+                          <p></p>
+                          <box>
+                            <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you show parallel paths in a sequence diagram, the corresponding Java implementation is likely to be <em>multi-threaded</em> <span class="dimmed">because a normal Java program cannot do multiple things at the same time</span>.</p>
+                          </box>
+                        </box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="reference-frames">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="reference-frames"><span>Reference Frames</span><a class="fa fa-anchor" href="#reference-frames" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with reference frames</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>UML uses <em>ref frame</em> to allow a segment of the interaction to be omitted and shown as a separate sequence diagram.</strong> Reference frames help us to break complicated sequence diagrams into multiple parts or simply to omit details we are not interested in showing.</p>
+                        <p>Notation:</p>
+                        <img src="/se-book/uml/sequenceDiagrams/referenceFrames/images/notation.png" height="100">
+                        <p></p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The details of the <code>get minefield appearance</code> interactions have been omitted from the diagram.</p>
+                          <img src="/se-book/uml/sequenceDiagrams/referenceFrames/images/playerTextLogic.png" height="250">
+                          <p></p>
+                          <p>Those details are shown in a separate sequence diagram given below.<br>
+                            <img src="/se-book/uml/sequenceDiagrams/referenceFrames/images/textLogic.png" height="170"></p>
+                          <p></p>
+                        </box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="minimal-notation">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="minimal-notation"><span>Minimal Notation</span><a class="fa fa-anchor" href="#minimal-notation" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with minimal notation</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p>To reduce clutter, <strong>activation bars and return arrows may be omitted</strong> if they do not result in ambiguities or loss of information. Informal operation descriptions such as those given in the example below can be used, if more precise details are not required for the task at hand.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A minimal sequence diagram</p>
 
-        <img src="/se-book/uml/sequenceDiagrams/minimalNotation/images/textLogic.png" height="150">
-        <p></p>
-      </box>
+                          <img src="/se-book/uml/sequenceDiagrams/minimalNotation/images/textLogic.png" height="150">
+                          <p></p>
+                        </box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="calls-to-static-methods">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="calls-to-static-methods"><span>Calls to Static Methods</span><a class="fa fa-anchor" href="#calls-to-static-methods" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can show calls to static methods</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p>Method calls to <code>static</code> i.e., class-level method are received by the class itself, not an instance of that class. We can use the <code>&lt;&lt;class&gt;&gt;</code> to show that a participant is the class itself.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example, <code>m</code> calls the static method <code>Person.getMaxAge()</code> and also the <code>setAge()</code> method of a <code>Person</code> object <code>p</code>.</p>
+                          <p>
+                            <pic src="/se-book/uml/sequenceDiagrams/staticMethods/images/staticMethodCall.png"></pic>
+                          </p>
+                          <p></p>
+                          <p>Here is the <code>Person</code> class, for reference:<br>
+                            <pic src="/se-book/uml/sequenceDiagrams/staticMethods/images/personClass.png"></pic>
+                          </p>
+                        </box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div></div>
-  </div>
-  </panel>
-  </div>
-  <div>
-    <panel type="seamless" expanded id="calls-to-static-methods">
-      <span slot="header" class="card-title"><div><h4 id="calls-to-static-methods"><span>Calls to Static Methods</span><a class="fa fa-anchor" href="#calls-to-static-methods"></a></h4>
-  </div>
-  </span>
-  <div class="indented">
-    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can show calls to static methods</span>
-      </span>
-      </span>
-      </span>
-    </p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <div>
-      <p>Method calls to <code>static</code> i.e., class-level method are received by the class itself, not an instance of that class. We can use the <code>&lt;&lt;class&gt;&gt;</code> to show that a participant is the class itself.</p>
-      <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example, <code>m</code> calls the static method <code>Person.getMaxAge()</code> and also the <code>setAge()</code> method of a <code>Person</code> object <code>p</code>.</p>
-        <p>
-          <pic src="/se-book/uml/sequenceDiagrams/staticMethods/images/staticMethodCall.png"></pic>
-        </p>
-        <p></p>
-        <p>Here is the <code>Person</code> class, for reference:<br>
-          <pic src="/se-book/uml/sequenceDiagrams/staticMethods/images/personClass.png"></pic>
-        </p>
-      </box>
-    </div>
-    <div></div>
-  </div>
-  </panel>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <footer>
-    <div class="text-center">
-      <small>This site was built with <a href="https://markbind.org/">MarkBind 2.13.1</a> at Sun, Apr 12, 2020, 3:34:31 PM GMT+8.</small></div>
-  </footer>
+    <footer>
+      <div class="text-center">
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.14.1</a> at Fri, Apr 24, 2020, 1:44:23 AM GMT+8.</small></div>
+    </footer>
   </div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>

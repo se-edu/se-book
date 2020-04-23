@@ -1,29 +1,25 @@
 <div></div>
 <p></p>
 <p><span class="dimmed"><strong><span>Paradigms → OOP → Associations →
-</span></strong>
-  </span>
-</p>
+      </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="dependencies"><span>Dependencies</span><a class="fa fa-anchor" href="#dependencies"></a></h4>
+    <h4 id="dependencies"><span>Dependencies</span><a class="fa fa-anchor" href="#dependencies" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
-      <p>In the context of OOP associations, <strong>a <em>dependency</em> is a need for one class to depend on another without having a direct association with it.</strong> One cause of dependencies is interactions between objects that do not have a long-term
-        link between them.</p>
+      <p>In the context of OOP associations, <strong>a <em>dependency</em> is a need for one class to depend on another without having a direct association with it.</strong> One cause of dependencies is interactions between objects that do not have a long-term link between them.</p>
       <box>
         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code>Course</code> object can have a dependency on a <code>Registrar</code> object to obtain the maximum number of students it can support.</p>
       </box>
-      <h5 id="implementing-dependencies">Implementing dependencies<a class="fa fa-anchor" href="#implementing-dependencies"></a></h5>
+      <h5 id="implementing-dependencies">Implementing dependencies<a class="fa fa-anchor" href="#implementing-dependencies" onclick="event.stopPropagation()"></a></h5>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, <code>Foo</code> has a dependency on <code>Bar</code> but it is not an association because it is only a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter"
-            class="trigger"><span data-mb-html-for="_content">temporary</span>transient</span> interaction and there is no long term relationship between a <code>Foo</code> object and a <code>Bar</code> object. <span class="dimmed">i.e. the <code>Foo</code> object does not keep the <code>Bar</code> object it receives as a parameter</span>.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, <code>Foo</code> has a dependency on <code>Bar</code> but it is not an association because it is only a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">temporary</span>transient</span> interaction and there is no long term relationship between a <code>Foo</code> object and a <code>Bar</code> object. <span class="dimmed">i.e. the <code>Foo</code> object does not keep the <code>Bar</code> object it receives as a parameter</span>.</p>
         <div class="alt-java">
-          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{</span><span>    </span><span>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculate</span><span class="hljs-params">(Bar bar)</span></span>{</span><span>        <span class="hljs-keyword">return</span> bar.getValue();</span><span>    }</span><span>}</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span></span>{</span><span>    <span class="hljs-keyword">int</span> value;</span><span>    </span><span>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getValue</span><span class="hljs-params">()</span></span>{</span><span>        <span class="hljs-keyword">return</span> value;</span><span>    }</span><span>}</span></code></pre>
+          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{<br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculate</span><span class="hljs-params">(Bar bar)</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> bar.getValue();<br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span></span>{<br></span><span>    <span class="hljs-keyword">int</span> value;<br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getValue</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> value;<br></span><span>    }<br></span><span>}<br></span></code></pre>
         </div>
         <div class="alt-python">
-          <pre><code class="hljs python"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span></span><span>    </span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate</span><span class="hljs-params">(self, bar)</span>:</span></span><span>        <span class="hljs-keyword">return</span> bar.value;</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span>:</span></span><span>    </span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, value)</span>:</span></span><span>      self.value = value</span></code></pre>
+          <pre><code class="hljs python"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span><br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate</span><span class="hljs-params">(self, bar)</span>:</span><br></span><span>        <span class="hljs-keyword">return</span> bar.value;<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span>:</span><br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, value)</span>:</span><br></span><span>      self.value = value<br></span></code></pre>
         </div>
       </box>
     </div>

@@ -1,30 +1,27 @@
 <div></div>
 <p></p>
 <p><span class="dimmed"><strong><span>Paradigms → OOP → Associations →
-</span></strong>
-  </span>
-</p>
+      </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="multiplicity"><span>Multiplicity</span><a class="fa fa-anchor" href="#multiplicity"></a></h4>
+    <h4 id="multiplicity"><span>Multiplicity</span><a class="fa fa-anchor" href="#multiplicity" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
       <p><strong><em>Multiplicity</em> is the aspect of an OOP solution that dictates how many objects take part in each association.</strong></p>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The multiplicity of the association between <code>Course</code> objects and <code>Student</code> objects tells you how many <code>Course</code> objects can be associated with one
-          <code>Student</code> object and vice versa.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The multiplicity of the association between <code>Course</code> objects and <code>Student</code> objects tells you how many <code>Course</code> objects can be associated with one <code>Student</code> object and vice versa.</p>
       </box>
-      <h5 id="implementing-multiplicity">Implementing multiplicity<a class="fa fa-anchor" href="#implementing-multiplicity"></a></h5>
+      <h5 id="implementing-multiplicity">Implementing multiplicity<a class="fa fa-anchor" href="#implementing-multiplicity" onclick="event.stopPropagation()"></a></h5>
       <p><strong>A normal instance-level variable gives us a <code>0..1</code> multiplicity</strong> (also called <em>optional associations</em>) because a variable can hold a reference to a single object or <code>null</code>.</p>
       <box>
         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, the <code>Logic</code> class has a variable that can hold <code>0..1</code> <span class="dimmed">i.e., zero or one</span> <code>Minefield</code> objects.</p>
         <div>
           <div class="alt-java">
-            <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span></span>{</span><span>    Minefield minefield;</span><span>}</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span></span>{</span><span>    ...</span><span>}</span></code></pre>
+            <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span></span>{<br></span><span>    Minefield minefield;<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span></span>{<br></span><span>    ...<br></span><span>}<br></span></code></pre>
           </div>
           <div class="alt-python">
-            <pre><code class="hljs python"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span></span><span>  </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, minefield)</span>:</span></span><span>    self.minefield = minefield</span><span>    </span><span>  <span class="hljs-comment"># ...</span></span><span>&#x200B;</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span></span><span>  <span class="hljs-comment"># ...</span></span></code></pre>
+            <pre><code class="hljs python"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span><br></span><span>  <br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, minefield)</span>:</span><br></span><span>    self.minefield = minefield<br></span><span>    <br></span><span>  <span class="hljs-comment"># ...</span><br></span><span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span><br></span><span>  <span class="hljs-comment"># ...</span><br></span></code></pre>
           </div>
         </div>
       </box>
@@ -32,30 +29,30 @@
       <box>
         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, the <code>Logic</code> class will always have a <code>ConfigGenerator</code> object, provided the variable is not set to null at some point.</p>
         <div class="alt-java">
-          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{</span><span>    ConfigGenerator cg = <span class="hljs-keyword">new</span> ConfigGenerator();</span><span>    ...</span><span>}</span></code></pre>
+          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{<br></span><span>    ConfigGenerator cg = <span class="hljs-keyword">new</span> ConfigGenerator();<br></span><span>    ...<br></span><span>}<br></span></code></pre>
         </div>
         <div class="alt-python">
-          <pre><code class="hljs python"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span></span><span>&#x200B;</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span></span><span>    self.config_gen = ConfigGenerator()</span></code></pre>
+          <pre><code class="hljs python"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span><br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span><br></span><span>    self.config_gen = ConfigGenerator()<br></span></code></pre>
         </div>
       </box>
       <p><strong>Bi-directional associations require matching variables in both classes.</strong></p>
       <box>
         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, the <code>Foo</code> class has a variable to hold a <code>Bar</code> object and vice versa <span class="dimmed">i.e., each object can have an association with an object of the other type</span>.</p>
         <div class="alt-java">
-          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{</span><span>    Bar bar;</span><span>    <span class="hljs-comment">//...</span></span><span>}</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> </span>{</span><span>    Foo foo;</span><span>    <span class="hljs-comment">//...</span></span><span>}</span><span>&#x200B;</span></code></pre>
+          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{<br></span><span>    Bar bar;<br></span><span>    <span class="hljs-comment">//...</span><br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> </span>{<br></span><span>    Foo foo;<br></span><span>    <span class="hljs-comment">//...</span><br></span><span>}<br></span><span><br></span></code></pre>
         </div>
         <div class="alt-python">
-          <pre><code class="hljs python"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span></span><span>  </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, bar)</span>:</span></span><span>    self.bar = bar;</span><span>&#x200B;</span><span>&#x200B;</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span>:</span></span><span>  </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, foo)</span>:</span></span><span>    self.foo = foo;</span><span>    </span></code></pre>
+          <pre><code class="hljs python"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span><br></span><span>  <br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, bar)</span>:</span><br></span><span>    self.bar = bar;<br></span><span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span>:</span><br></span><span>  <br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, foo)</span>:</span><br></span><span>    self.foo = foo;<br></span><span>    <br></span></code></pre>
         </div>
       </box>
       <p><strong>To implement other multiplicities, choose a suitable data structure</strong> such as Arrays, ArrayLists, HashMaps, Sets, etc.</p>
       <box>
         <div class="alt-java">
           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code uses an two-dimensional array to implement a 1-to-many association from the <code>Minefield</code> to <code>Cell</code>.</p>
-          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{</span><span>    Cell[][] cell;</span><span>    ...</span><span>}</span></code></pre>
+          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{<br></span><span>    Cell[][] cell;<br></span><span>    ...<br></span><span>}<br></span></code></pre>
         </div>
         <div class="alt-python">
-          <pre><code class="hljs python"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span></span><span>  </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span></span><span>    self.cells = {<span class="hljs-number">1</span>:[], <span class="hljs-number">2</span>:[], <span class="hljs-number">3</span>:[]}</span></code></pre>
+          <pre><code class="hljs python"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span><br></span><span>  <br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span><br></span><span>    self.cells = {<span class="hljs-number">1</span>:[], <span class="hljs-number">2</span>:[], <span class="hljs-number">3</span>:[]}<br></span></code></pre>
         </div>
       </box>
     </div>

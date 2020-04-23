@@ -1,33 +1,26 @@
 <div></div>
 <p></p>
 <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Basic →
-</span></strong>
-  </span>
-</p>
+      </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="avoid-complicated-expressions"><span>Avoid Complicated Expressions</span><a class="fa fa-anchor" href="#avoid-complicated-expressions"></a></h4>
+    <h4 id="avoid-complicated-expressions"><span>Avoid Complicated Expressions</span><a class="fa fa-anchor" href="#avoid-complicated-expressions" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
-      <p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate the final
-        value).</p>
+      <p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate the final value).</p>
       <div class="alt-java">
         <div>
           <box>
             <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
             <p>
-              <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong>
-                </span>
-              </font>
+              <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
             </p>
-            <pre><code class="hljs java"><span><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);</span></code></pre>
+            <pre><code class="hljs java"><span><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);<br></span></code></pre>
             <p>
-              <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong>
-                </span>
-              </font>
+              <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
             </p>
-            <pre><code class="hljs java"><span>&#x200B;</span><span><span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;</span><span><span class="hljs-keyword">boolean</span> isSameSize = previousSize != length;</span><span><span class="hljs-keyword">boolean</span> isValidCode = isWithinSizeLimit || isSameSize;</span><span>&#x200B;</span><span><span class="hljs-keyword">boolean</span> isUrgent = typeCode == URGENT;</span><span>&#x200B;</span><span><span class="hljs-keyword">return</span> isValidCode &amp;&amp; isUrgent;</span></code></pre>
+            <pre><code class="hljs java"><span><br></span><span><span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;<br></span><span><span class="hljs-keyword">boolean</span> isSameSize = previousSize != length;<br></span><span><span class="hljs-keyword">boolean</span> isValidCode = isWithinSizeLimit || isSameSize;<br></span><span><br></span><span><span class="hljs-keyword">boolean</span> isUrgent = typeCode == URGENT;<br></span><span><br></span><span><span class="hljs-keyword">return</span> isValidCode &amp;&amp; isUrgent;<br></span></code></pre>
           </box>
         </div>
       </div>
@@ -36,23 +29,18 @@
           <box>
             <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
             <p>
-              <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong>
-                </span>
-              </font>
+              <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
             </p>
-            <pre><code class="hljs python"><span><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) <span class="hljs-keyword">or</span> (previous_size != length)) <span class="hljs-keyword">and</span> (type_code == URGENT)</span></code></pre>
+            <pre><code class="hljs python"><span><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) <span class="hljs-keyword">or</span> (previous_size != length)) <span class="hljs-keyword">and</span> (type_code == URGENT)<br></span></code></pre>
             <p>
-              <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong>
-                </span>
-              </font>
+              <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
             </p>
-            <pre><code class="hljs python"><span>is_within_size_limit = length &lt; MAX_LENGTH</span><span>is_same_size = previous_size != length</span><span>is_valid_code = is_within_size_limit <span class="hljs-keyword">or</span> is_same_size</span><span>&#x200B;</span><span>is_urgent = type_code == URGENT</span><span>&#x200B;</span><span><span class="hljs-keyword">return</span> is_valid_code <span class="hljs-keyword">and</span> is_urgent</span></code></pre>
+            <pre><code class="hljs python"><span>is_within_size_limit = length &lt; MAX_LENGTH<br></span><span>is_same_size = previous_size != length<br></span><span>is_valid_code = is_within_size_limit <span class="hljs-keyword">or</span> is_same_size<br></span><span><br></span><span>is_urgent = type_code == URGENT<br></span><span><br></span><span><span class="hljs-keyword">return</span> is_valid_code <span class="hljs-keyword">and</span> is_urgent<br></span></code></pre>
           </box>
         </div>
       </div>
       <blockquote>
-        <p><span><span aria-hidden="true" class="fas fa-quote-left"></span></span> The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things
-          he avoids clever tricks like the plague. <span><span aria-hidden="true" class="fas fa-quote-right"></span></span> <sub>-- Edsger Dijkstra</sub></p>
+        <p><span><span aria-hidden="true" class="fas fa-quote-left"></span></span> The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. <span><span aria-hidden="true" class="fas fa-quote-right"></span></span> <sub>-- Edsger Dijkstra</sub></p>
       </blockquote>
     </div>
     <div></div>
