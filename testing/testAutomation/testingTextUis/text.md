@@ -71,7 +71,7 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
 
 1. Next, we compare `output.txt` with the `expected.txt`. This can be done using a utility such as Windows `FC` (i.e. File Compare) command, Unix `diff` command, or a GUI tool such as _WinMerge_. 
 
-   ```
+   ```{.no-line-numbers}
    FC output.txt expected.txt
    ```
 
