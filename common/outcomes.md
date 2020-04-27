@@ -166,37 +166,12 @@ pageNav: 3
 
 <include src="../codeQuality/introduction/basic/unit-inParent-asOutcome.md" boilerplate />
 <include src="../codeQuality/maximiseReadability/introduction/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/basic/avoidComplicatedExpressions/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/basic/avoidDeepNesting/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/basic/avoidLongMethods/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/basic/avoidMagicNumbers/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/basic/makeCodeObvious/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/intermediate/avoidPrematureOptimizations/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/intermediate/dontTripReader/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/intermediate/practiceKISSing/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/intermediate/slapHard/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/intermediate/structureCodeLogically/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/advanced/makeHappyPathProminent/unit-inParent-asOutcome.md" boilerplate />
 <include src="../codeQuality/followStandard/introduction/unit-inParent-asOutcome.md" boilerplate />
 <include src="../codeQuality/followStandard/basic/unit-inParent-asOutcome.md" boilerplate />
 <include src="../codeQuality/followStandard/intermediate/unit-inParent-asOutcome.md" boilerplate />
 <include src="../codeQuality/nameWell/introduction/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/nameWell/basic/nounsAndVerbsAsNames/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/nameWell/basic/useStandardWords/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/nameWell/intermediate/avoidMisleadingNames/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/nameWell/intermediate/notTooLongNorShort/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/nameWell/intermediate/useNameExplain/unit-inParent-asOutcome.md" boilerplate />
 <include src="../codeQuality/avoidShortcuts/introduction/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/avoidShortcuts/basic/avoidEmptyCatchBlocks/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/avoidShortcuts/basic/deleteDeadCode/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/avoidShortcuts/basic/dontRecycleVarsOrParams/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/avoidShortcuts/basic/useDefaultBranch/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/avoidShortcuts/intermediate/minimiseCodeDuplication/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/avoidShortcuts/intermediate/minimiseVariableScope/unit-inParent-asOutcome.md" boilerplate />
 <include src="../codeQuality/commentMinimally/introduction/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/commentMinimally/basic/dontRepeatObvious/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/commentMinimally/basic/writeToReader/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/commentMinimally/intermediate/explainWhatWhyNotHow/unit-inParent-asOutcome.md" boilerplate />
 
 ### Refactoring
 

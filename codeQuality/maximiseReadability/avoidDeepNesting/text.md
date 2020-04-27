@@ -10,7 +10,7 @@
 
 In particular, avoid [_arrowhead_ style code](https://blog.codinghorror.com/flattening-arrow-code/).
 
-<img src="{{baseUrl}}/codeQuality/maximiseReadability/basic/avoidDeepNesting/images/arrowheadStyle.png" width="500" />
+<img src="{{baseUrl}}/codeQuality/maximiseReadability/avoidDeepNesting/images/arrowheadStyle.png" width="500" />
 <p/>
 
 <box>
@@ -18,10 +18,10 @@ In particular, avoid [_arrowhead_ style code](https://blog.codinghorror.com/flat
 {{ icon_example }} A real code example:
 
 <div class="alt-java">
-  <include src="../../introduction/example-java.md" />
+  <include src="../introduction/example-java.md" />
 </div>
 <div class="alt-python">
-  <include src="../../introduction/example-python.md" />
+  <include src="../introduction/example-python.md" />
 </div>
 
 </box>

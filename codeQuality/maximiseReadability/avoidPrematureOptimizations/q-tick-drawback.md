@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} Drawbacks of prepature optimizations">
+<panel header="{{ icon_Q_A }} Drawbacks of premature optimizations">
 <question>
 
 What are the drawbacks of trying to optimize code too soon?

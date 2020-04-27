@@ -20,4 +20,7 @@ Note that **there are cases where optimizing takes priority over other things** 
 </div>
 
 <div id="extras">
+
+<include src="exercises.md" />
+
 </div>
