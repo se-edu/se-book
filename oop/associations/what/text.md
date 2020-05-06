@@ -10,7 +10,7 @@ Objects in an OO solution need to be connected to each other to form a network s
 
 <box>
 
-{{ icon_example }} Suppose an OOP program for managing a learning management system creates an object structure to represent the related objects. In that object structure youcan expect to have associations between a`Course` object that represents a specific course and `Student` objects that represent students taking that course.
+{{ icon_example }} Suppose an OOP program for managing a learning management system creates an object structure to represent the related objects. In that object structure you can expect to have associations between a`Course` object that represents a specific course and `Student` objects that represent students taking that course.
 
 </box>
 
