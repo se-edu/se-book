@@ -26,7 +26,7 @@ Objects in an OO solution need to be connected to each other to form a network s
 
 <box>
 
-{{ icon_example }} In our example, as some `Course` objects can have associations with some `Student` objects, youcan view it as an association between the `Course` class and the `Student` class.
+{{ icon_example }} In our example, as some `Course` objects can have associations with some `Student` objects, you can view it as an association between the `Course` class and the `Student` class.
 
 </box>
 
