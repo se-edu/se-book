@@ -1,4 +1,4 @@
-<span id="title">Top-Down and Bottom-Up Design</span>
+<span id="title">Top-down and bottom-up design</span>
 
 <div id="body">
 

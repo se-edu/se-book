@@ -1,4 +1,4 @@
-<span id="title">Communication Diagrams</span>
+<span id="title">Communication diagrams</span>
 
 <span id="prereqs"></span>
 

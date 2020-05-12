@@ -16,7 +16,7 @@
 
 <box>
 
-{{ icon_example }} Within a certain software component, we might deal with a _user_ data type, while ignoring the details contained in the user data item such as _name_, and _date of birth_. These details have been ‘abstracted away’ as they do not affect the task of that software component.
+{{ icon_example }} Within a certain software component, you might deal with a _user_ data type, while ignoring the details contained in the user data item such as _name_, and _date of birth_. These details have been ‘abstracted away’ as they do not affect the task of that software component.
 
 </box>
 

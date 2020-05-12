@@ -1,4 +1,4 @@
-<span id="title">Avoid Empty Catch Blocks</span>
+<span id="title">Avoid empty catch blocks</span>
 
 <span id="prereqs"></span>
 

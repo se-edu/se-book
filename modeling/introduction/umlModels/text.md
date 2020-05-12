@@ -1,4 +1,4 @@
-<span id="title">UML Models</span>
+<span id="title">UML models</span>
 
 <span id="prereqs"></span>
 

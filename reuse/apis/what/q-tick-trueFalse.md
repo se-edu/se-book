@@ -10,7 +10,7 @@ Defining component APIs early is useful for developing components in parallel.
 
 True
 
-Explanation: Yes, once we know the precise behavior expected of each component, we can start developing them in parallel.
+Explanation: Yes, once you know the precise behavior expected of each component, you can start developing them in parallel.
 
 </div>
 </question>

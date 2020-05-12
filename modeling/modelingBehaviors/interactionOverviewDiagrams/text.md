@@ -1,4 +1,4 @@
-<span id="title">Interaction Overview Diagrams</span>
+<span id="title">Interaction overview diagrams</span>
 
 <span id="prereqs"></span>
 

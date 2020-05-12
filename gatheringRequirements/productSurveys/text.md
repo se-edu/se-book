@@ -1,4 +1,4 @@
-<span id="title">Product Surveys</span>
+<span id="title">Product surveys</span>
 
 <span id="prereqs"></span>
 

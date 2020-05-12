@@ -10,7 +10,7 @@ Bidirectional associations, if not implemented properly, can result in referenti
 
 True
 
-Explanation: Bidirectional associations require two objects to link to each other. When one of these links is not consistent with the other, we have a referential integrity violation.
+Explanation: Bidirectional associations require two objects to link to each other. When one of these links is not consistent with the other, you have a referential integrity violation.
 
 </div>
 </question>

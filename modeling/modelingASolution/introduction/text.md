@@ -15,9 +15,9 @@ Suppose You are planning to implement a simple minesweeper game that has a text 
 
 Before jumping into coding, you may want to find out things such as,
 
-* Is this class structure is able to produce the behavior we want?
+* Is this class structure able to produce the behavior you want?
 * What API should each class have?
-* Do we need more classes?
+* Do you need more classes?
 
 To answer those questions, you can analyze the how the objects of these classes will interact with each other to produce the behavior you want.
 

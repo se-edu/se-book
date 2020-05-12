@@ -1,4 +1,4 @@
-<span id="title">Component Diagrams</span>
+<span id="title">Component diagrams</span>
 
 <span id="prereqs"></span>
 

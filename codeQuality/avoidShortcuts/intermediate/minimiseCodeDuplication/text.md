@@ -1,4 +1,4 @@
-<span id="title">Minimize Code Duplication</span>
+<span id="title">Minimize code duplication</span>
 
 <span id="prereqs"></span>
 

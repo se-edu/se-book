@@ -1,4 +1,4 @@
-<span id="title">Service-oriented Architectural Style</span>
+<span id="title">Service-oriented architectural style</span>
 
 <div id="body">
 

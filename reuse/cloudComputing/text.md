@@ -1,4 +1,4 @@
-<span id="title">Cloud Computing</span>
+<span id="title">Cloud computing</span>
 
 <div id="body">
 

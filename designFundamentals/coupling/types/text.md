@@ -1,4 +1,4 @@
-<span id="title">Types of Coupling</span>
+<span id="title">Types of coupling</span>
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Design Fundamentals → Coupling → What%%" popup-url="{{ baseUrl }}/designFundamentals/coupling/what" /></span>
 

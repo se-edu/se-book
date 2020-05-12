@@ -122,7 +122,7 @@
                 </box>
                 <p><strong>If the runtime detects an <em>assertion failure</em>, it typically take some drastic action</strong> such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner the execution stops, the safer it is.</p>
                 <box>
-                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the Java code below, suppose we set an assertion that <code>timeout</code> returned by <code>Config.getTimeout()</code> is greater than <code>0</code>. Now, if the <code>Config.getTimeout()</code> returned <code>-1</code> in a specific execution of this line, the runtime can detect it as a <em>assertion failure</em> -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result of a bug -- and take some drastic action such as terminating the execution.</p>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the Java code below, suppose you set an assertion that <code>timeout</code> returned by <code>Config.getTimeout()</code> is greater than <code>0</code>. Now, if the <code>Config.getTimeout()</code> returned <code>-1</code> in a specific execution of this line, the runtime can detect it as a <em>assertion failure</em> -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result of a bug -- and take some drastic action such as terminating the execution.</p>
                   <pre><code class="hljs java"><span><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); <br></span></code></pre>
                 </box>
               </div>
@@ -147,7 +147,7 @@
                   <p><strong>Java disables assertions by default.</strong> This could create a situation where you think all assertions are being verified as <code>true</code> while in fact they are not being verified at all. Therefore, remember to enable assertions when you run the program if you want them to be in effect.</p>
                 </box>
                 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Enable assertions in Intellij (<a href="https://stackoverflow.com/questions/18168257/where-to-add-compiler-options-like-ea-in-intellij-idea">how?</a>) and get an assertion to fail temporarily (e.g. insert an <code>assert false</code> into the code temporarily) to confirm assertions are being verified.</p>
-                <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> <strong>Java <code>assert</code> vs JUnit assertions: They are similar in purpose but JUnit assertions are more powerful and customized for testing.</strong> In addition, JUnit assertions are not disabled by default. We recommend you use JUnit assertions in test code and Java <code>assert</code> in functional code.</p>
+                <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> <strong>Java <code>assert</code> vs JUnit assertions: They are similar in purpose but JUnit assertions are more powerful and customized for testing.</strong> In addition, JUnit assertions are not disabled by default. You recommend you use JUnit assertions in test code and Java <code>assert</code> in functional code.</p>
               </div>
             </div>
             <div>
@@ -220,7 +220,7 @@
               </div>
               </p>
               <div>
-                <p><strong>A defensive programmer codes under the assumption &quot;if we leave room for things to go wrong, they <em>will</em> go wrong&quot;.</strong> Therefore, a defensive programmer proactively tries to eliminate any room for things to go wrong.</p>
+                <p><strong>A defensive programmer codes under the assumption &quot;if you leave room for things to go wrong, they <em>will</em> go wrong&quot;.</strong> Therefore, a defensive programmer proactively tries to eliminate any room for things to go wrong.</p>
                 <box>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider a <code>MainApp#getConfig()</code> a method that returns a <code>Config</code> object containing configuration data. A typical implementation is given below:</p>
                   <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainApp</span></span>{<br></span><span>    Config config;<br></span><span>    <br></span><span>    <span class="hljs-comment">/** Returns the config object */</span><br></span><span>    <span class="hljs-function">Config <span class="hljs-title">getConfig</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> config;<br></span><span>    }<br></span><span>}<br></span></code></pre>
@@ -232,7 +232,7 @@
             <div>
               <p>
               <div>
-                <h4 id="enforcing-compulsory-associations"><span>Enforcing Compulsory Associations</span><a class="fa fa-anchor" href="#enforcing-compulsory-associations" onclick="event.stopPropagation()"></a></h4>
+                <h4 id="enforcing-compulsory-associations"><span>Enforcing compulsory associations</span><a class="fa fa-anchor" href="#enforcing-compulsory-associations" onclick="event.stopPropagation()"></a></h4>
               </div>
               </p>
               <div>
@@ -245,7 +245,7 @@
                   <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{<br></span><span>    Guarantor guarantor;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span><span class="hljs-params">(Guarantor g)</span> </span>{<br></span><span>        guarantor = g;<br></span><span>    }<br></span><span>}<br></span></code></pre>
                   <p>However, what if someone else used the <code>Account</code> class like this?</p>
                   <pre><code class="hljs java"><span>Account a = <span class="hljs-keyword">new</span> Account();<br></span><span>a.setGuarantor(<span class="hljs-keyword">null</span>);<br></span></code></pre>
-                  <p>This results in an <code>Account</code> without a <code>Guarantor</code>! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. We can make the code more defensive by proactively enforcing the multiplicity constraint, like this:</p>
+                  <p>This results in an <code>Account</code> without a <code>Guarantor</code>! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. You can make the code more defensive by proactively enforcing the multiplicity constraint, like this:</p>
                   <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Guarantor guarantor;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span></span>{<br></span><span>        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {<br></span><span>            stopSystemWithMessage(<span class="hljs-string">"multiplicity violated. Null Guarantor"</span>);<br></span><span>        }<br></span><span>        guarantor = g;<br></span><span>    }<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span> <span class="hljs-params">(Guarantor g)</span></span>{<br></span><span>        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {<br></span><span>            stopSystemWithMessage(<span class="hljs-string">"multiplicity violated. Null Guarantor"</span>);<br></span><span>        }<br></span><span>        guarantor = g;<br></span><span>    }<br></span><span>    …<br></span><span>}<br></span></code></pre>
                 </box>
               </div>
@@ -253,7 +253,7 @@
             <div>
               <p>
               <div>
-                <h4 id="enforcing-1-to-1-associations"><span>Enforcing 1-to-1 Associations</span><a class="fa fa-anchor" href="#enforcing-1-to-1-associations" onclick="event.stopPropagation()"></a></h4>
+                <h4 id="enforcing-1-to-1-associations"><span>Enforcing 1-to-1 associations</span><a class="fa fa-anchor" href="#enforcing-1-to-1-associations" onclick="event.stopPropagation()"></a></h4>
               </div>
               </p>
               <div>
@@ -271,7 +271,7 @@
             <div>
               <p>
               <div>
-                <h4 id="enforcing-referential-integrity"><span>Enforcing Referential Integrity</span><a class="fa fa-anchor" href="#enforcing-referential-integrity" onclick="event.stopPropagation()"></a></h4>
+                <h4 id="enforcing-referential-integrity"><span>Enforcing referential integrity</span><a class="fa fa-anchor" href="#enforcing-referential-integrity" onclick="event.stopPropagation()"></a></h4>
               </div>
               </p>
               <div>
@@ -284,7 +284,7 @@
                 <pre><code class="hljs java"><span>Woman jean;<br></span><span>Man james;<br></span><span>…<br></span><span>james.setGirlfriend(jean);<br></span><span>jean.setBoyfriend(james);<br></span></code></pre>
                 <p>Suppose the two classes were used this instead:</p>
                 <pre><code class="hljs java"><span>Woman jean; Man james, yong;<br></span><span>…<br></span><span>james.setGirlfriend(jean);  <br></span><span>jean.setBoyfriend(yong);  <br></span></code></pre>
-                <p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this &quot;love triangle&quot;. In such a situation, we say that <em>the referential integrity has been violated</em>. It simply means <em>there is an inconsistency in object references</em>.</p>
+                <p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this &quot;love triangle&quot;. In such a situation, you should say that <em>the referential integrity has been violated</em>. It simply means <em>there is an inconsistency in object references</em>.</p>
                 <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
                 <p></p>
                 <p>One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.</p>
@@ -330,7 +330,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.14.1</a> at Sun, Apr 26, 2020, 8:07:33 PM GMT+8.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.14.1</a> at Tue, May 12, 2020, 10:00:51 PM GMT+8.</small></div>
     </footer>
   </div>
 </body>

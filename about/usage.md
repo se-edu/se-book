@@ -12,14 +12,14 @@ pageNav: 3
 
 <div id="browsers">
 
-### Browser Compatibility
+### Browser compatibility
 
 Most of this will work on most mainstream Browsers, but ==embedded slides are best viewed using Chrome==.
 
 </div>
 <div id="layers">
 
-### Information Layers
+### Information layers
 
 This book tries to _layer_ information so that readers can decide to omit less important layers if they wish to. 
 
@@ -82,9 +82,9 @@ Video describing X
 </div>
 <div id="conventions">
 
-### Conventions Used
+### Conventions used
 
-#### Shorthand Headings
+#### Shorthand headings
 
 Meaning of some shortened headings:
 
@@ -105,7 +105,7 @@ Meaning of some shortened headings:
   <panel header="%%Example%%" src="../refactoring/when/unit-inElsewhere-asFlat.md" boilerplate />
   
 
-#### Boxed-Text Styles
+#### Boxed-text styles
 <div class="indented">
 
 <box type="info">
@@ -132,7 +132,7 @@ Meaning of some shortened headings:
 
 </div>
 
-#### Meaning of Icons
+#### Meaning of icons
 
 <div class="indented">
 
@@ -165,7 +165,7 @@ The book currently does not have a _search_ feature. The workaround is to load [
 </div>
 <div id="saving">
 
-### Saving as PDF Files
+### Saving as PDF files
 
 1. Use Chrome to load the page you want to save as pdf.
 

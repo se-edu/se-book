@@ -10,7 +10,7 @@ Implement this bidirectional association.  Note that the `Bank` uses `accNumber`
 
 The code below contains a method in the `Bank` class to create an account; the bank field in the new account is thereby filled by the bank creating it.
 
-We assume that once an `Account` has been assigned to one `Bank`, it cannot be assigned to a different `Bank`. Once the `Account` is removed from the `Bank`, it will not be used any more (hence, no need to remove the link from `Account` to `Bank`).
+Assume that once an `Account` has been assigned to one `Bank`, it cannot be assigned to a different `Bank`. Once the `Account` is removed from the `Bank`, it will not be used any more (hence, no need to remove the link from `Account` to `Bank`).
 
 ```java
 public class Account {

@@ -1,4 +1,4 @@
-<span id="title">Modeling Behaviors</span>
+<span id="title">Modeling behaviors</span>
 
 <div id="body">
 

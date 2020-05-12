@@ -1,4 +1,4 @@
-<span id="title">Late-and-One-Time vs Early-and-Frequent</span>
+<span id="title">Late and one time VS early and frequent</span>
 
 <span id="prereqs"><panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Integration → Introduction → What%%" popup-url="{{ baseUrl }}/integration/introduction/what" /></span>
 

@@ -1,4 +1,4 @@
-<span id="title">Feature Lists</span>
+<span id="title">Feature lists</span>
 
 <div id="body">
 

@@ -1,4 +1,4 @@
-<span id="title">User Stories</span>
+<span id="title">User stories</span>
 
 <div id="body">
 

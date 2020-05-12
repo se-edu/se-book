@@ -1,4 +1,4 @@
-<span id="title">Use the Default Branch</span>
+<span id="title">Use the default branch</span>
 
 <span id="prereqs"></span>
 

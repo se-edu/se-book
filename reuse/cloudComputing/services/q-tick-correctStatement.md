@@ -11,7 +11,7 @@ Google Calendar belongs to which category of cloud computing services?
 
 (c)
 
-Explanation: It is a _software_ as a service. Instead of installing a calendar software on your desktop, we can use the Google Calendar software that lives ‘on the cloud’.
+Explanation: It is a _software_ as a service. Instead of installing a calendar software on your desktop, you can use the Google Calendar software that lives ‘on the cloud’.
 
 </div>
 </question>

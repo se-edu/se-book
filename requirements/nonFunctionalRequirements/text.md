@@ -33,7 +33,7 @@ Requirements can be divided into two in the following way:
 </box>
 
 
-We may have to spend an extra effort in digging NFRs out as early as possible because,
+You may have to spend an extra effort in digging NFRs out as early as possible because,
 1. **NFRs are easier to miss** %%e.g., stakeholders tend to think of functional requirements first%%
 1. sometimes **NFRs are critical to the success of the software.** %%E.g. A web application that is too slow or that has low security is unlikely to succeed even if it has all the right functionality.%%
 

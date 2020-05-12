@@ -53,7 +53,7 @@
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="enforcing-compulsory-associations"><span>Enforcing Compulsory Associations</span><a class="fa fa-anchor" href="#enforcing-compulsory-associations" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="enforcing-compulsory-associations"><span>Enforcing compulsory associations</span><a class="fa fa-anchor" href="#enforcing-compulsory-associations" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
@@ -66,7 +66,7 @@
                       <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{<br></span><span>    Guarantor guarantor;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span><span class="hljs-params">(Guarantor g)</span> </span>{<br></span><span>        guarantor = g;<br></span><span>    }<br></span><span>}<br></span></code></pre>
                       <p>However, what if someone else used the <code>Account</code> class like this?</p>
                       <pre><code class="hljs java"><span>Account a = <span class="hljs-keyword">new</span> Account();<br></span><span>a.setGuarantor(<span class="hljs-keyword">null</span>);<br></span></code></pre>
-                      <p>This results in an <code>Account</code> without a <code>Guarantor</code>! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. We can make the code more defensive by proactively enforcing the multiplicity constraint, like this:</p>
+                      <p>This results in an <code>Account</code> without a <code>Guarantor</code>! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. You can make the code more defensive by proactively enforcing the multiplicity constraint, like this:</p>
                       <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Guarantor guarantor;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span></span>{<br></span><span>        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {<br></span><span>            stopSystemWithMessage(<span class="hljs-string">"multiplicity violated. Null Guarantor"</span>);<br></span><span>        }<br></span><span>        guarantor = g;<br></span><span>    }<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span> <span class="hljs-params">(Guarantor g)</span></span>{<br></span><span>        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {<br></span><span>            stopSystemWithMessage(<span class="hljs-string">"multiplicity violated. Null Guarantor"</span>);<br></span><span>        }<br></span><span>        guarantor = g;<br></span><span>    }<br></span><span>    …<br></span><span>}<br></span></code></pre>
                     </box>
                   </div>
@@ -154,7 +154,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.14.1</a> at Sun, Apr 26, 2020, 8:07:33 PM GMT+8.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.14.1</a> at Tue, May 12, 2020, 10:00:51 PM GMT+8.</small></div>
     </footer>
   </div>
 </body>

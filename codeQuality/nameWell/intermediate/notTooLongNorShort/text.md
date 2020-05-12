@@ -1,4 +1,4 @@
-<span id="title">Not Too Long, Not Too Short</span>
+<span id="title">Not too long, not too short</span>
 
 <span id="prereqs"></span>
 

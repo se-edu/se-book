@@ -1,4 +1,4 @@
-<span id="title">Client-server Architectural Style</span>
+<span id="title">Client-server architectural style</span>
 
 <div id="body">
 

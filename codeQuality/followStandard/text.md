@@ -1,4 +1,4 @@
-<span id="title">Guideline: Follow a Standard</span>
+<span id="title">Guideline: Follow a standard</span>
 
 <div id="body">
 

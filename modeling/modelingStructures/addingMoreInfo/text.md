@@ -1,4 +1,4 @@
-<span id="title">Adding more info to UML Models</span>
+<span id="title">Adding more info to UML models</span>
 
 <span id="prereqs"></span>
 

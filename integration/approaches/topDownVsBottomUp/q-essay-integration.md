@@ -19,8 +19,8 @@ There can be many acceptable answers to this question. But any good strategy sho
 
 * Because `HospitalUI` will be developed early, it’s OK to integrate it early, using stubs, rather than wait for the rest of the system to finish. (i.e. a top-down integration is suitable for `HospitalUI`)
 * Because `HospitalFacade` is unlikely to have a lot of business logic, it may not be worth to write stubs to test it (i.e. a bottom-up integration is better for `HospitalFacade`).
-* Because `IO_Helper` is to be reused from an earlier project, we can finish it early. This is especially suitable since there are many classes that use it. Therefore `IO_Helper` can be integrated with the dependent classes in bottom-up fashion.
-* Because `OutPatient` class may be delayed, we may have to integrate `PatientMgr` using a stub.
+* Because `IO_Helper` is to be reused from an earlier project, you can finish it early. This is especially suitable since there are many classes that use it. Therefore `IO_Helper` can be integrated with the dependent classes in bottom-up fashion.
+* Because `OutPatient` class may be delayed, you may have to integrate `PatientMgr` using a stub.
 * `TypeA`, `TypeB`, and `TypeC` seem to be tightly coupled. It may be a good idea to test them together.
 
 Given below is one possible integration test strategy. Relative positioning also indicates a rough timeline.

@@ -1,4 +1,4 @@
-<span id="title">Continuous Integration and Continuous Deployment</span>
+<span id="title">Continuous integration and continuous deployment</span>
 
 <span id="prereqs"></span>
 

@@ -14,11 +14,11 @@ Cons
 
 * Learning curve may be steep.
 * May not be stable (it was recently released).
-* May not allow us to do exactly what we want. While frameworks allow customization, such customization can be limited.
+* May not allow you to do exactly what you want. While frameworks allow customization, such customization can be limited.
 * Performance penalties.
 * Might interfere with learning objectives of the module.
 
-Note that having more cons does not mean we should not use this framework. Further investigation is required before we can make a final decision.
+Note that having more cons does not mean you should not use this framework. Further investigation is required before you can make a final decision.
 
 </div>
 </question>
