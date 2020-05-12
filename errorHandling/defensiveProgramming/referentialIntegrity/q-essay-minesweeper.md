@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} Implement `Player` and `Region`">
 <question has-input="true">
 
-Imagine that we now support the following feature in our Minesweeper game.
+Imagine that you now support the following feature in our Minesweeper game.
 
 <box>
 
@@ -37,7 +37,7 @@ Implement the two classes using a more defensive approach. Take note of the bidi
 
 <div slot="answer">
 
-In this solution, we assume `Regions` can be created without `Players` (note that we cannot be 100% defensive all the time). The usage will be something like this:
+In this solution, assume `Regions` can be created without `Players` (note that you cannot be 100% defensive all the time). The usage will be something like this:
 
 ```java
 Region r1 = new Region();
@@ -48,7 +48,7 @@ p1.setRegion(r2);
 r1.setPlayer(p2);
 ```
 
-Here are the two classes.  Get methods are omitted as they are simple.  Note how much extra effort we need to be defensive.
+Here are the two classes.  Get methods are omitted as they are simple.  Note how much extra effort you need to be defensive.
 
 ```java
 public class Region {
@@ -125,7 +125,7 @@ public class Player {
 }
 ```
 
-Note that the above code stops the system when the multiplicity is violated. Alternatively, we can throw an exception and let the caller handle the situation.
+Note that the above code stops the system when the multiplicity is violated. Alternatively, you can throw an exception and let the caller handle the situation.
 
 </div>
 </question>

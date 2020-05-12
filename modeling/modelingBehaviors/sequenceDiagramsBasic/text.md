@@ -1,4 +1,4 @@
-<span id="title">Sequence Diagrams - Basic</span>
+<span id="title">Sequence diagrams - basic</span>
 
 <span id="prereqs"></span>
 

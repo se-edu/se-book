@@ -1,4 +1,4 @@
-<span id="title">Activity Diagrams - Intermediate</span>
+<span id="title">Activity diagrams - intermediate</span>
 
 <span id="prereqs"></span>
 

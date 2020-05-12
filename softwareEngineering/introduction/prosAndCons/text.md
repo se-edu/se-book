@@ -2,7 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can explain pros and cons of software engineering</span>
 
-<span id="title">Pros and Cons</span>
+<span id="title">Pros and cons</span>
 
 <div id="body">
 
@@ -18,7 +18,7 @@ The following description of the _Joys of the Programming Craft_ was taken from 
 > especially things of his own design. I think this delight must be an image of God's delight in making things,
 > a delight shown in the distinctness and newness of each leaf and each snowflake.
 >
-> Second is the pleasure of making things that are useful to other people. Deep within, we want others to use our work and
+> Second is the pleasure of making things that are useful to other people. Deep within, you want others to use your work and
 > to find it helpful. In this respect the programming system is not essentially different from the child's
 > first clay pencil holder "for Daddy's office."
 >
@@ -39,7 +39,7 @@ The following description of the _Joys of the Programming Craft_ was taken from 
 > The magic of myth and legend has come true in our time. One types the correct incantation on a keyboard, and a display screen comes to life,
 > showing things that never were nor could be.
 >
-> Programming then is fun because it gratifies creative longings built deep within us and delights sensibilities we have in common with all men.  
+> Programming then is fun because it gratifies creative longings built deep within us and delights sensibilities you have in common with all men.  
 
 
 > **Not all is delight, however, and knowing the inherent woes makes it easier to bear them when they appear.**

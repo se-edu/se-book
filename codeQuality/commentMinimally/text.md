@@ -1,4 +1,4 @@
-<span id="title">Guideline: Comment Minimally, but Sufficiently</span>
+<span id="title">Guideline: Comment minimally, but sufficiently</span>
 
 <div id="body">
 

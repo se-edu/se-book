@@ -8,13 +8,13 @@
 
 An API should be well-designed (i.e. should cater for the needs of its users) and well-documented.
 
-When we write software consisting of multiple components, we need to define the API of each component.
+When you write software consisting of multiple components, you need to define the API of each component.
 
-One approach is to let the API emerge and evolve over time as we write code.
+One approach is to let the API emerge and evolve over time as you write code.
 
 Another approach is to define the API up-front. Doing so allows us to develop the components in parallel.
 
-We can use UML _sequence diagrams_ to analyze the required interactions between components in order to discover the required API. Given below is an example.
+You can use UML _sequence diagrams_ to analyze the required interactions between components in order to discover the required API. Given below is an example.
 
 <box>
 
@@ -23,7 +23,7 @@ Example:
 <img src="{{baseUrl}}/reuse/apis/designingAPIs/images/textLogic.png" height="500" />
 <p/>
 
-As we analyze the interactions between components using sequence diagrams, we discover the API of those components. For example, the diagram above tells us that the MSLogic component API should have the methods:
+As you analyze the interactions between components using sequence diagrams, you discover the API of those components. For example, the diagram above tells us that the MSLogic component API should have the methods:
 
 * `new()`
 * `getWidth:int`

@@ -32,7 +32,7 @@ b) **To communicate information among stakeholders.**  Models can be used as a v
 
 {{ icon_example }} Some examples of using models to communicate:
 
-1. We can use an architecture diagram to explain the high-level design of the software to developers.
+1. You can use an architecture diagram to explain the high-level design of the software to developers.
 2. A business analyst can use a _use case diagram_ to explain to the customer the functionality of the system.
 3. A _class diagram_ can be reverse-engineered from code so as to help explain the design of a component to a new developer.
 

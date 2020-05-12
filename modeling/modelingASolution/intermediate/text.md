@@ -43,7 +43,7 @@ Here is the updated class diagram:
 </box>
 
 The above is for the case when Actor `Player` interacts with the system using a text UI. Additional operations (if any) required for the GUI can be discovered similarly.
-Suppose `Logic` supports a `reset()` operation. We can model it like this:
+Suppose `Logic` supports a `reset()` operation. You can model it like this:
 
 
 <box>

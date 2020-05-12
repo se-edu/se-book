@@ -2,7 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can use basic object diagrams</span>
 
-<span id="title">Object Diagrams</span>
+<span id="title">Object diagrams</span>
 
 <div id="body">
 

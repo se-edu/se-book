@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
-**==_Preconditions_== specify the specific state we expect the system to be in before the use case starts.**
+**==_Preconditions_== specify the specific state you expect the system to be in before the use case starts.**
 
 <box>
 <div class="text-monospace">

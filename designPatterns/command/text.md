@@ -1,4 +1,4 @@
-<span id="title">Command Pattern</span>
+<span id="title">Command pattern</span>
 
 <div id="body">
 

@@ -1,4 +1,4 @@
-<span id="title">Focus Groups</span>
+<span id="title">Focus groups</span>
 
 <span id="prereqs"></span>
 

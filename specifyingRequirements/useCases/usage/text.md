@@ -30,7 +30,7 @@
 
 However, others argue that only use cases providing value to an external user/system should be shown in the use case diagram. For example, they argue that ‘view daily report’ should be the use case and  `generate daily report` is not to be shown in the use case diagram because it is simply something the system has to do to support the `view daily report` use case.
 
-We recommend that you follow the latter view (i.e. not to use System as a user). Limit use cases for modeling behaviors that involve an external actor.
+You are recommended to follow the latter view (i.e. not to use System as a user). Limit use cases for modeling behaviors that involve an external actor.
 
 **UML is not very specific about the text contents of a use case.** Hence, there are many styles for writing use cases. For example, the steps can be written as a continuous paragraph.
 Use cases should be easy to read. Note that there is no strict rule about writing all details of all steps or a need to use all the elements of a use case.

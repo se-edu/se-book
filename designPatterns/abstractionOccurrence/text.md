@@ -1,4 +1,4 @@
-<span id="title">Abstraction Occurrence Pattern</span>
+<span id="title">Abstraction occurrence pattern</span>
 
 <div id="body">
 

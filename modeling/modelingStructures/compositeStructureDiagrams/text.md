@@ -1,4 +1,4 @@
-<span id="title">Composite Structure Diagrams</span>
+<span id="title">Composite structure diagrams</span>
 
 <span id="prereqs"></span>
 

@@ -39,7 +39,7 @@ How does the `TextUi` object carry out the requests it has received from player?
 </box>
 
 The above diagram assumes that `W` and `H` are the only information `TextUi` requires to display the minefield to the `Player`. Note that there could be other ways of doing this.  
-The `Logic` methods we conceptualized in our modelling so far are:
+The `Logic` methods you conceptualized in our modelling so far are:
 
 <box>
 

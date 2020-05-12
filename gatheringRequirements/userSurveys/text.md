@@ -1,4 +1,4 @@
-<span id="title">User Surveys</span>
+<span id="title">User surveys</span>
 
 <span id="prereqs"></span>
 

@@ -1,4 +1,4 @@
-<span id="title">State Machine Diagrams</span>
+<span id="title">State machine diagrams</span>
 
 <span id="prereqs"></span>
 

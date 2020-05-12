@@ -1,4 +1,4 @@
-<span id="title">Enforcing 1-to-1 Associations</span>
+<span id="title">Enforcing 1-to-1 associations</span>
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Error Handling → Defensive Programming → What%%" popup-url="{{ baseUrl }}/errorHandling/defensiveProgramming/what" /></span>
 

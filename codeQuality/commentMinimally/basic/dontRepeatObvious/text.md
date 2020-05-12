@@ -1,4 +1,4 @@
-<span id="title">Do Not Repeat the Obvious</span>
+<span id="title">Do not repeat the obvious</span>
 
 <span id="prereqs"></span>
 

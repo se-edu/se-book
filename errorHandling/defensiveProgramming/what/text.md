@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**A defensive programmer codes under the assumption "if we leave room for things to go wrong, they _will_ go wrong".** Therefore, a defensive programmer proactively tries to eliminate any room for things to go wrong.
+**A defensive programmer codes under the assumption "if you leave room for things to go wrong, they _will_ go wrong".** Therefore, a defensive programmer proactively tries to eliminate any room for things to go wrong.
 
 <box>
 

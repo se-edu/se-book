@@ -1,4 +1,4 @@
-<span id="title">Use Name to Explain</span>
+<span id="title">Use name to explain</span>
 
 <span id="prereqs"></span>
 

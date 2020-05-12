@@ -1,4 +1,4 @@
-<span id="title">Code Quality</span>
+<span id="title">Code quality</span>
 
 <div id="body">
 

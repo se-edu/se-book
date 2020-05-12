@@ -1,4 +1,4 @@
-<span id="title">Don't Recycle Variables or Parameters</span>
+<span id="title">Don't recycle variables or parameters</span>
 
 <span id="prereqs"></span>
 

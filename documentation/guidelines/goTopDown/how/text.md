@@ -22,7 +22,7 @@
 >And this is how `FrontEnd` and `BackEnd` work together ...
 
 
-[Now we can drill down to `FrontEnd`'s details.]
+[Now you can drill down to `FrontEnd`'s details.]
 
 >`FrontEnd` consists of three major components: `A`, `B`, `C`<br><br>
 >`A`'s job is to ...<br>`B`'s job is to...<br>`C`'s job is to...<br><br>

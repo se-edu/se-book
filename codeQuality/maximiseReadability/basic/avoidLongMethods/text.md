@@ -1,4 +1,4 @@
-<span id="title">Avoid Long Methods</span>
+<span id="title">Avoid long methods</span>
 
 <span id="prereqs"></span>
 

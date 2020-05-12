@@ -12,7 +12,7 @@ Which statements are correct?
 
 (a)~~(b)~~(c)
 
-Explanation: DbC is not an alternative to OOP. We can use DbC in an OOP solution. 
+Explanation: DbC is not an alternative to OOP. You can use DbC in an OOP solution. 
 
 </div>
 </question>
