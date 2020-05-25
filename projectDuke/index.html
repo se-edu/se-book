@@ -564,82 +564,29 @@
                       <p>     <big>↳</big> <strong>Add JUnit tests</strong></p>
                     </div>
                     <p>Add JUnit tests to test the behavior of the code.</p>
-                    <p><strong>Conventions to follow</strong>:</p>
-                    <ul>
-                      <li>Add test code in a folder named <code>[project root]\src\test\java\</code> folder (reason: to follow the convention followed by the project structure so far).</li>
-                      <li>Name the test class to match the class being tested (<code>Todo.java</code> can be tested by <code>TodoTest.java</code>), and put it in a package to match. For example,
-                        <ul>
-                          <li>Class being tested <code>seedu.duke.Todo</code>: <code>src\main\java\seedu\duke\Todo.java</code></li>
-                          <li>Test class <code>seedu.duke.TodoTest</code>: <code>src\test\java\seedu\duke\TodoTest.java</code></li>
-                        </ul>
-                      </li>
-                    </ul>
                     <p><strong>Requirements</strong>:</p>
                     <ul>
                       <li>Minimum: More than two test methods, preferably targeting more than one class (if you have multiple classes)</li>
                       <li>Stretch goal: test methods to target all public methods of all classes</li>
                     </ul>
-                    <p><strong>Adding JUnit support to your project:</strong> As JUnit is a third-party library, you need to add support to it specifically in your project.</p>
-                    <tabs>
-                      <tab><template slot="_header">In Intellij, without Gradle</template>
-                        <ol>
-                          <li>Add a folder named <code>[project root]\src\test\java\</code> (you may have to do this outside of Intellij)</li>
-                          <li>Go to Intellij and add a new module to the project as follows.
-                            <ol>
-                              <li><code>File</code> → <code>New</code> → <code>Module From Existing Sources ...</code></li>
-                              <li>Choose the <code>[project root]\src\test\</code> (not the <code>java</code>) folder.</li>
-                              <li>In the next screen, select <code>Create module from existing sources</code></li>
-                              <li>Keep clicking <code>Next</code> until the process is complete</li>
-                            </ol>
-                          </li>
-                          <li>In the <code>Project</code> panel of Intellij, expand the newly-created <code>test</code> module, right-click on the <code>java</code> folder inside it, and choose <code>Mark Directory as</code> → <code>Test Source Root</code> (that will make the folder turn to green color).</li>
-                          <li>Now, create a class inside the <code>java</code> folder and type <code>@Test</code> inside it. A code example given below.<br>
-                            <span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Note: If you are using packages, create this class in a matching package (to test <code>duke.Duke</code> class, create a <code>duke.DukeTest</code> i.e., in <code>src\test\java\duke\DukeTest.java</code>).
-                            <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DukeTest</span> </span>{<br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>}<br></span></code></pre>
-                          </li>
-                          <li>Note how the <code>@Test</code> turn to red because Intellij (not having JUnit support yet) does not understand it. But it will pop up a hint, asking if you want to add support for JUnit. Select <code>Add JUnit 5.* to classpath</code>.</li>
-                          <li>In the dialog that pops up, you can optionally tick the <code>Sources</code>, <code>JavaDocs</code> and <code>Annotations</code> boxes. After that, click <code>OK</code> to add the JUnit 5 to the project dependencies.</li>
-                          <li>To check if JUnit integration is working as expected,
-                            <ol>
-                              <li>Add a dummy test method to the class e.g.,
-                                <pre><code class="hljs java"><span><span class="hljs-keyword">import</span> org.junit.jupiter.api.Test;<br></span><span><br></span><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.junit.jupiter.api.Assertions.assertEquals;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DukeTest</span> </span>{<br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">dummyTest</span><span class="hljs-params">()</span></span>{<br></span><span>        assertEquals(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>);<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                              </li>
-                              <li>Run the test (right-click on the class and choose <code>Run DukeTest</code>.</li>
-                            </ol>
-                          </li>
-                          <li>To be able to refer to <code>Duke</code> from <code>DukeTest</code> class, you need to add <code>main</code> module as a dependency of the <code>test</code> module you just created.
-                            <ul>
-                              <li>Option 1: When you add a reference to the <code>Duke</code> inside the <code>DukeTest</code>, Intellij will flag it as an error and will give you an option (i.e., in the bulb icon that pops up) to add the <code>main</code> module as a dependency.</li>
-                              <li>Option 2: Follow the info <a href="https://www.jetbrains.com/help/idea/working-with-module-dependencies.html">here</a> to add the dependency yourself.
-                              </li>
-                            </ul>
-                          </li>
-                        </ol>
-                      </tab>
-                      <tab class="algolia-no-index"><template slot="_header">With Gradle</template>
-
-
-
-                        <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Refer to the Gradle tutorial at the Duke repo (i.e., the repo you forked from) to find how to use JUnit via Gradle.</p>
-                        <panel class="algolia-no-index"><template slot="_header">
-                            <p><strong>Extension <code>A-Gradle</code></strong></p>
-                          </template>
-                          <div>
-                            <div>
-                              <div></div>
-                              <h3 id="a-gradle"><span class="badge badge-pill badge-primary">A-Gradle</span><a class="fa fa-anchor" href="#a-gradle" onclick="event.stopPropagation()"></a></h3>
-                              <p>     <big>↳</big> <strong>Automate project builds using Gradle</strong></p>
-                            </div>
-                            <p>Use Gradle to automate some of the build tasks of the project. Refer to the Gradle tutorial at the Duke repo (i.e., the repo you forked from) to find how to set up Gradle for your project.</p>
-                            <ul>
-                              <li><strong>Minimal</strong>: Set up gradle so that you can build and run Duke using gradle.</li>
-                              <li><strong>Recommended</strong>: Set up gradle to run unit tests.</li>
-                              <li><strong>Stretch Goal</strong>: Use gradle to automate more things in your project.</li>
-                            </ul>
-                          </div>
-                        </panel>
-                      </tab>
-                    </tabs>
+                    <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Refer to the <a href="https://se-education.org/guides/tutorials/junitTutorial.html"><em>Gradle tutorial</em> at se-edu/guides</a> to find how to use JUnit.</p>
+                    <panel class="algolia-no-index"><template slot="_header">
+                        <p><strong>Extension <code>A-Gradle</code></strong></p>
+                      </template>
+                      <div>
+                        <div>
+                          <div></div>
+                          <h3 id="a-gradle"><span class="badge badge-pill badge-primary">A-Gradle</span><a class="fa fa-anchor" href="#a-gradle" onclick="event.stopPropagation()"></a></h3>
+                          <p>     <big>↳</big> <strong>Automate project builds using Gradle</strong></p>
+                        </div>
+                        <p>Use Gradle to automate some of the build tasks of the project. Refer to the Gradle tutorial at the Duke repo (i.e., the repo you forked from) to find how to set up Gradle for your project.</p>
+                        <ul>
+                          <li><strong>Minimal</strong>: Set up gradle so that you can build and run Duke using gradle.</li>
+                          <li><strong>Recommended</strong>: Set up gradle to run unit tests.</li>
+                          <li><strong>Stretch Goal</strong>: Use gradle to automate more things in your project.</li>
+                        </ul>
+                      </div>
+                    </panel>
                   </div>
                   <hr>
                   <div id="A-Packages">
@@ -1276,7 +1223,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.14.1</a> at Tue, May 12, 2020, 10:00:51 PM GMT+8.</small></div>
+        <small>This site was built with <a href="https://markbind.org/">MarkBind 2.14.1</a> at Tue, May 26, 2020, 12:25:32 AM GMT+8.</small></div>
     </footer>
   </div>
 </body>
