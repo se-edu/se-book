@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Teamwork"
-siteNav: mainNav.md
 pageNav: 4
 </frontmatter>
 

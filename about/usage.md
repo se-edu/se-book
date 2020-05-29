@@ -1,6 +1,5 @@
 <frontmatter>
 title: "About: Usage"
-siteNav: mainNav.md
 pageNav: 3
 </frontmatter>
 
@@ -69,13 +68,13 @@ Video describing X
 
 **Dotted underlines indicate <trigger for="pop:tooltip-example">tool tips</trigger>** (activated by hovering over it) and **dashed underlines indicate <trigger for="modal:modal-example" trigger="click">modal windows</trigger>** (activated by clicking) containing additional information.
 
-<popover id="pop:tooltip-example" title="Tooltip Example" placement="top">
+<popover id="pop:tooltip-example" header="Tooltip Example" placement="top">
   <div slot="content">
     Additional information
   </div>
 </popover>
 
-<modal title="Modal Example" id="modal:modal-example">
+<modal header="Modal Example" id="modal:modal-example">
   Additional information
 </modal>
 

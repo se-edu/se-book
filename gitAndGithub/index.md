@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Git and GitHub"
-siteNav: mainNav.md
 pageNav: 4
 </frontmatter>
 

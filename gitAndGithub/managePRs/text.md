@@ -10,7 +10,7 @@
 
 **1. Go to the GitHub page of your fork and review the `add-intro` PR** you created previously in [<trigger trigger="click" for="modal:managePrs-createPrs">Tools → Git & GitHub → Create PRs</trigger>] to simulate the PR being reviewed by another developer, as explained below. %%Note that some features available to PR reviewers will be unavailable to you because you are also the author of the PR.%%
 
-<modal large title="Tools → Git & GitHub → Create PRs" id="modal:managePrs-createPrs">
+<modal large header="Tools → Git & GitHub → Create PRs" id="modal:managePrs-createPrs">
   <include src="../createPRs/unit-inElsewhere-asFlat.md#main" boilerplate />
 </modal>
 

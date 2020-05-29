@@ -1,6 +1,5 @@
 <frontmatter>
 title: "About: Acknowledgements"
-siteNav: mainNav.md	
 pageNav: 3
 </frontmatter>
 
@@ -9,7 +8,29 @@ pageNav: 3
 <div class="website-content">
 <div id="body">
 
-# Acknowledgements
+**This book is [SE-EDU](https://se-education.org) sub project.**
+
+## License
+
+* This book is free and open-source, and is available under the MIT licence.
+
+
+## Bug reports, suggestions
+
+* Please post in [issue tracker](https://github.com/se-edu/se-book/issues).
+
+
+## Contributions
+
+* PRs are welcome.
+
+
+## Contact us
+
+* You can contact us as `seer[at]comp.nus.edu.sg`.
+
+
+## Acknowledgements
 
 <div id="text-only">
 

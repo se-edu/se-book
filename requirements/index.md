@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Requirements"
-siteNav: mainNav.md
 pageNav: 4
 </frontmatter>
 

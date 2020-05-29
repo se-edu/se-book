@@ -16,7 +16,7 @@
 
 </box>
 
-<modal large title="Class diagrams" id="modal:modellingIntro-classDiagram">
+<modal large header="Class diagrams" id="modal:modellingIntro-classDiagram">
 
 A _class diagram_ is a diagram drawn using the UML modelling notation.<br>
 {{ icon_example }} An example class diagram:<br>
@@ -27,7 +27,7 @@ A _class diagram_ is a diagram drawn using the UML modelling notation.<br>
 
 **A _model_ provides a simpler view of a complex entity because a model captures only a selected aspect.** This omission of some aspects implies models are <trigger trigger="click" for="modal:modellingIntro-abstraction">abstractions</trigger>.
 
-<modal large title="%%Textbook {{ icon_embedding }}%%" id="modal:modellingIntro-abstraction">
+<modal large header="%%Textbook {{ icon_embedding }}%%" id="modal:modellingIntro-abstraction">
   <include src="../../../designFundamentals/abstraction/what/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 

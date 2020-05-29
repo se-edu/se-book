@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Project Duke"
-siteNav: mainNav.md
 pageNav: 3
 </frontmatter>
 

@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Combined Exercises"
-siteNav: mainNav.md
 pageNav: 3
 </frontmatter>
 

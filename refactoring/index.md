@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Refactoring"
-siteNav: mainNav.md
 pageNav: 3
 </frontmatter>
 

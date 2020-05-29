@@ -8,7 +8,7 @@
 
 Given below are some more commonly used refactorings. A more comprehensive list is available at <trigger trigger="click" for="modal:refactoring-catalog-how"> refactoring-catalog </trigger>.
 
-<modal title="**Refactoring Catalog**" id="modal:refactoring-catalog-how">
+<modal header="**Refactoring Catalog**" id="modal:refactoring-catalog-how">
   <include src="../../common/references.md#refactoring-catalog"/>
 </modal>
 

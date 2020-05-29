@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Revision Control"
-siteNav: mainNav.md
 pageNav: 4
 </frontmatter>
 

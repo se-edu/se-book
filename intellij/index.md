@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Intellij IDEA"
-siteNav: mainNav.md
 pageNav: 4
 </frontmatter>
 

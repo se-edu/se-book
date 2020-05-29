@@ -1,6 +1,5 @@
 <frontmatter>
 title: "SE Book [Printable, Big File!]"
-siteNav: mainNav.md
 pageNav: 3
 </frontmatter>
 

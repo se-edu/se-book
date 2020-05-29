@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Design Approaches"
-siteNav: mainNav.md
 pageNav: 3
 </frontmatter>
 
