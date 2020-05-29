@@ -1,6 +1,5 @@
 <frontmatter>
 title: "C++ to Java"
-siteNav: mainNav.md
 pageNav: 3
 </frontmatter>
 

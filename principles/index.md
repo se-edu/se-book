@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Principles"
-siteNav: mainNav.md
 pageNav: 4
 </frontmatter>
 

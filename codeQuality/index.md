@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Code Quality"
-siteNav: mainNav.md
 pageNav: 3
 </frontmatter>
 

@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Software Architecture"
-siteNav: mainNav.md
 pageNav: 3
 
 </frontmatter>

@@ -1,17 +1,19 @@
 <frontmatter>
 title: "Book - Software Engineering for Self-Directed Learners"
-siteNav: mainNav.md
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content" id="all">
 
-## Software Engineering for Self-Directed Learners
+<div class="lead">
+
+**This is a free and open-source SE textbook under the [SE-EDU](https://se-education.org) initiative.**
+</div>
 
 ### About this Book
 
-* [Acknowledgements](about/acknowledgements.html)
+* [About](about/acknowledgements.html)
 * [How to use this book](about/usage.html)
 
 ### Software Engineering

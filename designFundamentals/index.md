@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Software Design Fundamentals"
-siteNav: mainNav.md
 pageNav: 3
 </frontmatter>
 

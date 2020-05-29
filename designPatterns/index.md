@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Software Design Patterns"
-siteNav: mainNav.md
 pageNav: 3
 </frontmatter>
 

@@ -1,6 +1,5 @@
 <frontmatter>
 title: "UML"
-siteNav: mainNav.md
 pageNav: 3
 </frontmatter>
 

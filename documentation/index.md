@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Documentation"
-siteNav: mainNav.md
 pageNav: 3
 </frontmatter>
 

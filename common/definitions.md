@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Definitions"
-siteNav: mainNav.md
 pageNav: 3
 </frontmatter>
 

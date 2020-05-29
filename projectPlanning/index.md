@@ -1,6 +1,5 @@
 <frontmatter>
 title: "Project Planning"
-siteNav: mainNav.md
 pageNav: 4
 </frontmatter>
 
