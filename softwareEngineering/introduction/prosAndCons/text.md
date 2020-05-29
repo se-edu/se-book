@@ -79,7 +79,7 @@ The following description of the _Joys of the Programming Craft_ was taken from 
 > This then is programming, both a tar pit in which many efforts have floundered and a creative activity with joys
 >  and woes all its own. For many, the joys far outweigh the woes....  
 
-<modal title="**:book: The Mythical Man-Month: Essays on Software Engineering**" id="modal:mmm">
+<modal header="**:book: The Mythical Man-Month: Essays on Software Engineering**" id="modal:mmm">
 
 <table>
 <tr>

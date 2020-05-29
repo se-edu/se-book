@@ -23,7 +23,7 @@
 * .NET is a similar platform and a framework. Its runtime is called CLR (Common Language Runtime) and usually used on Windows machines.
 
 </box>
-<modal title="**Enterprise Applications**" id="modal:enterprise-application">
+<modal header="**Enterprise Applications**" id="modal:enterprise-application">
   <include src="../../../common/definitions.md#def-enterprise-application" />
 </modal>
 

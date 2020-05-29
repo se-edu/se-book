@@ -19,7 +19,7 @@ a) **To analyze a complex entity related to software development.**
 
 </box>
 
-<modal large title="Architecture Diagrams" id="modal:modelingIntro-archiDiagrams">
+<modal large header="Architecture Diagrams" id="modal:modelingIntro-archiDiagrams">
 
 An _architecture diagram_ depicts the high-level design of a software.
 

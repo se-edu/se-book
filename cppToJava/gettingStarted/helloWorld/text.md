@@ -47,7 +47,7 @@ This HelloWorld Java program defines one method named main: `public static void 
 * Java uses squiggly braces (`{` and `}`) to group things together.
 * The line starting with `//` is a comment. You can use `//` for single line comments and `/* ... */` for multi-line comments in Java code.
 
-<popover id="pop:helloWorld-statement" title="Statements" placement="top">
+<popover id="pop:helloWorld-statement" header="Statements" placement="top">
   <div slot="content">
 
 A statement is a line of code that performs a basic operation. In the HelloWorld program, this line is a print statement that displays a message on the screen:

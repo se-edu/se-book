@@ -73,7 +73,7 @@ Extensions:
 
 In the example on the right, note how use cases are shown as ovals and user roles relevant to each use case are shown as stick figures connected to the corresponding ovals.
 
-<modal title="**Unified Modeling Language (UML)**" id="modal:uml">
+<modal header="**Unified Modeling Language (UML)**" id="modal:uml">
   <include src="../../../common/definitions.md#def-uml" />
 </modal>
 </box>

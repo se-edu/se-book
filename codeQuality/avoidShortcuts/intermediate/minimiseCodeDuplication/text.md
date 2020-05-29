@@ -10,7 +10,7 @@
 
 This guideline is closely related to the <trigger for="modal:duplication-dry" trigger="click">DRY Principle<trigger>. 
 
-<modal title="**{{icon_preview}} DRY Principle**" id="modal:duplication-dry">
+<modal header="**{{icon_preview}} DRY Principle**" id="modal:duplication-dry">
   <include src="../../../../principles/dryPrinciple/unit-inElsewhere-asFlat.md" boilerplate />
 </modal>
 

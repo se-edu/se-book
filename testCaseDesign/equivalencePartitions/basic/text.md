@@ -18,7 +18,7 @@
 
 </box>
 
-<popover id="pop:epBasic-isValidMonth" title="`isValidMonth`" placement="top">
+<popover id="pop:epBasic-isValidMonth" header="`isValidMonth`" placement="top">
   <div slot="content">
     <include src="../what/text.md#isValidMonth" />
   </div>

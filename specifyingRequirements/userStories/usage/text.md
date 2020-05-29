@@ -14,7 +14,7 @@
 
 **User stories can capture <trigger trigger="click" for="modal:userStoriesUsage-nfr">non-functional requirements</trigger> too** because even NFRs must benefit some stakeholder.
 
-<modal large title="Textbook {{ icon_embedding }}" id="modal:userStoriesUsage-nfr">
+<modal large header="Textbook {{ icon_embedding }}" id="modal:userStoriesUsage-nfr">
   <include src="../../../requirements/nonFunctionalRequirements/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
@@ -62,7 +62,7 @@ While use cases can be recorded on <tooltip content="e.g. index cards or sticky 
 </panel>
 </span>
 
-<modal id="modal:xp-user-stories" title=":bookmark: User stories vs traditional requirement specifications, according to XP">
+<modal id="modal:xp-user-stories" header=":bookmark: User stories vs traditional requirement specifications, according to XP">
 
 <include src="../../../common/popOvers.md#xp" inline /> uses User stories to capture requirements.
 

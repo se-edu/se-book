@@ -9,7 +9,7 @@
 
 As mentioned in [<trigger trigger="click" for="modal:basicModelling-modelingIntro">Design → Modeling → Modeling a Solutions → Introduction</trigger>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.
 
-<modal large title="Textbook {{ icon_embedding }}" id="modal:basicModelling-modelingIntro">
+<modal large header="Textbook {{ icon_embedding }}" id="modal:basicModelling-modelingIntro">
   <include src="../introduction/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 

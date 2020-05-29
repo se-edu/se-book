@@ -30,7 +30,7 @@ displayResult();
 
 </box>
 
-<modal title="" id="modal:slap-abstraction">
+<modal header="" id="modal:slap-abstraction">
   <include src="../../../../designFundamentals/abstraction/what/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 

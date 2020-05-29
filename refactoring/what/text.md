@@ -21,7 +21,7 @@ The first version of the code you write may not be of production quality. It is 
 
 Given below are two common refactorings (<trigger trigger="click" for="modal:refactoring-catalog-what">more</trigger>).
 
-<modal title="**Refactoring Catalogs**" id="modal:refactoring-catalog-what">
+<modal header="**Refactoring Catalogs**" id="modal:refactoring-catalog-what">
   <include src="../../common/references.md#refactoring-catalog"/>
 </modal>
 

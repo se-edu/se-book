@@ -19,7 +19,7 @@ Reviews can be done in various forms. Some examples below:
   * As pair programming involves two programmers working on the same code at the same time, there is an implicit review of the code by the other member of the pair.
 
 
-<modal large title="Pair Programming" id="modal:codeReview-pairProgramming">
+<modal large header="Pair Programming" id="modal:codeReview-pairProgramming">
 
 <box type="definition">
   <include src="../../../common/definitions.md#def-pair-programming" />

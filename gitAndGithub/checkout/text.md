@@ -30,7 +30,7 @@ Git can also show you the difference between two points in the history of the re
 
 Git can load a specific version of the history to the working directory. Note that if you have uncommitted changes in the working directory, you need to <trigger trigger="click" for="modal:checkout-stash">stash</trigger> them first to prevent them from being overwritten.
 
-<modal large title="%%Extract%%" id="modal:checkout-stash">
+<modal large header="%%Extract%%" id="modal:checkout-stash">
   <include src="../stash/unit-inElsewhere-asPanelBody.md" boilerplate />
 </modal>
 

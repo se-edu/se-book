@@ -24,7 +24,7 @@ package | Some example classes in the package
 
 {{ icon_example }} This example imports the `java.awt.Point` class (i.e., the `Point` class in the `java.awt` package) -- which can be used to represent <trigger for="pop:usingObjects-coordinates">the coordinates of a location in a Cartesian plane</trigger>  -- and use it in the `main` method.
 
-<popover id="pop:usingObjects-coordinates" title="Coordinates of a location in a Cartesian plane" placement="top">
+<popover id="pop:usingObjects-coordinates" header="Coordinates of a location in a Cartesian plane" placement="top">
   <div slot="content">
 
 In mathematical notation, points are often written in parentheses with a comma separating the coordinates. For example, `(0,0)` indicates the origin, and `(x,y)` indicates the point `x` units to the right and `y` units up from the origin.

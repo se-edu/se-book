@@ -8,7 +8,7 @@
 
 String is a built-in Java class that you <trigger trigger="click" for="modal:stringClass-javaLang">can use without importing</trigger>. Given below are some useful String methods:
 
-<modal id="modal:stringClass-javaLang" title=":bulb: `java.lang` classes can be used without importing" placement="top">
+<modal id="modal:stringClass-javaLang" header=":bulb: `java.lang` classes can be used without importing" placement="top">
 
  Any class in the [`java.lang`]({{ java_api }}/java/lang/package-summary.html) package can be used without importing.
 </modal>

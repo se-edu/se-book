@@ -35,7 +35,7 @@ Polly likes crackers
 ```
 By convention, method names should be named in the <trigger trigger="click" for="modal:javaMethods_camelCase">_camelCase_</trigger> format.
 
-<modal large title="Defintion: camelCase" id="modal:javaMethods_camelCase">
+<modal large header="Defintion: camelCase" id="modal:javaMethods_camelCase">
   <include src="../../../common/definitions.md#def-camel-case" />
 </modal>
 

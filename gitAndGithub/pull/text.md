@@ -10,7 +10,7 @@ Clone the sample repo as explained in <trigger for="modal:clone-repository" trig
 
 Delete the last two commits to simulate cloning the repo 2 commits ago.
 
-<modal title="**Clone Repository**" id="modal:clone-repository">
+<modal header="**Clone Repository**" id="modal:clone-repository">
   <include src="../clone/embed.md" boilerplate />
 </modal>
 
