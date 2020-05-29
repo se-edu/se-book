@@ -1,2 +1,2 @@
-# <span class="text-dark">****Software Engeneering for Self-Directed Learners »****</span>
+# <span class="text-dark"><small>****Software Engineering for Self-Directed Learners »****</small></span>
 {{ MAIN_CONTENT_BODY }}
