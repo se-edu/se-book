@@ -1,4 +1,4 @@
-<span id="title">Equivalence Partitions</span>
+<span id="title">Equivalence partitions</span>
 
 <div id="body">
 

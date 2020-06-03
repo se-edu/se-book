@@ -1,4 +1,4 @@
-<span id="title">Test Input Combination Strategies</span>
+<span id="title">Test input combination strategies</span>
 
 <span id="prereqs"></span>
 

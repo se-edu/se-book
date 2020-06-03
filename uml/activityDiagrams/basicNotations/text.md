@@ -1,4 +1,4 @@
-<span id="title">Basic Notations</span>
+<span id="title">Basic notations</span>
 
 <div id="body">
 

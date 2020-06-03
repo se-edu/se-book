@@ -1,4 +1,4 @@
-<span id="title">Revision Control</span>
+<span id="title">Revision control</span>
 
 <div id="body">
 

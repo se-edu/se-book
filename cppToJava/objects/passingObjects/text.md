@@ -1,4 +1,4 @@
-<span id="title">Passing Objects Around</span>
+<span id="title">Passing objects around</span>
 
 <span id="prereqs"></span>
 

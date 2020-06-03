@@ -1,4 +1,4 @@
-<span id="title">Minimal Notation</span>
+<span id="title">Minimal notation</span>
 
 <span id="prereqs"></span>
 

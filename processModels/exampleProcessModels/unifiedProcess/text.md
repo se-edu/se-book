@@ -1,4 +1,4 @@
-<span id="title">Unified Process</span>
+<span id="title">Unified process</span>
 
 <span id="prereqs"></span>
 

@@ -1,4 +1,4 @@
-<span id="title">Combining Test Inputs</span>
+<span id="title">Combining test inputs</span>
 
 <div id="body">
 

@@ -1,4 +1,4 @@
-<span id="title">Alpha and Beta Testing</span>
+<span id="title">Alpha and beta testing</span>
 
 <div id="body">
 

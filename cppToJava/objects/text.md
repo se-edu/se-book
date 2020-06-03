@@ -1,4 +1,4 @@
-<span id="title">Java Objects</span>
+<span id="title">Java objects</span>
 
 <div id="body">
 

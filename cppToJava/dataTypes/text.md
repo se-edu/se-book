@@ -1,4 +1,4 @@
-<span id="title">Data Types</span>
+<span id="title">Data types</span>
 
 <div id="body">
 

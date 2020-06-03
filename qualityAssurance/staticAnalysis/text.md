@@ -1,4 +1,4 @@
-<span id="title">Static Analysis</span>
+<span id="title">Static analysis</span>
 
 <div id="body">
 

@@ -1,4 +1,4 @@
-<span id="title">Formal Verification</span>
+<span id="title">Formal verification</span>
 
 <div id="body">
 

@@ -1,4 +1,4 @@
-<span id="title">Issue Trackers</span>
+<span id="title">Issue trackers</span>
 
 <span id="prereqs"></span>
 

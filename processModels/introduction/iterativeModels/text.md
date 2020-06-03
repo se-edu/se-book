@@ -1,4 +1,4 @@
-<span id="title">Iterative Models</span>
+<span id="title">Iterative models</span>
 
 <span id="prereqs"></span>
 

@@ -1,4 +1,4 @@
-<span id="title">Interface Segregation Principle</span>
+<span id="title">Interface segregation principle</span>
 
 <span id="prereqs"></span>
 

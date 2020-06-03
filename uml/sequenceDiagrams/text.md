@@ -1,4 +1,4 @@
-<span id="title">Sequence Diagrams</span>
+<span id="title">Sequence diagrams</span>
 
 <div id="body">
 

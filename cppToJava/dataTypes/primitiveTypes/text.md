@@ -1,4 +1,4 @@
-<span id="title">Primitive Data Types</span>
+<span id="title">Primitive data types</span>
 
 <span id="prereqs"></span>
 

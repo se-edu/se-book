@@ -1,4 +1,4 @@
-<span id="title">Getting Started</span>
+<span id="title">Getting started</span>
 
 <div id="body">
 

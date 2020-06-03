@@ -1,4 +1,4 @@
-<span id="title">Access Modifiers</span>
+<span id="title">Access modifiers</span>
 
 <span id="prereqs"></span>
 

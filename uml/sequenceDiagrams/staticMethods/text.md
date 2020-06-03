@@ -1,4 +1,4 @@
-<span id="title">Calls to Static Methods</span>
+<span id="title">Calls to static methods</span>
 
 <span id="prereqs"></span>
 
