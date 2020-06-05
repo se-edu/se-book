@@ -1,4 +1,4 @@
-<span id="title">Positive vs Negative Test Cases</span>
+<span id="title">Positive vs Negative test cases</span>
 
 <span id="prereqs"></span>
 

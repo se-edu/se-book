@@ -1,4 +1,4 @@
-<span id="title">SDLC Process Models</span>
+<span id="title">SDLC process models</span>
 
 <div id="body">
 

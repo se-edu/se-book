@@ -1,4 +1,4 @@
-<span id="title">Developer Testing</span>
+<span id="title">Developer testing</span>
 
 <div id="body">
 

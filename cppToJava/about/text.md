@@ -1,4 +1,4 @@
-<span id="title">About this Chapter</span>
+<span id="title">About this chapter</span>
 
 <span id="prereqs"></span>
 

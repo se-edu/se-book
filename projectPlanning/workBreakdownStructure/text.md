@@ -1,4 +1,4 @@
-<span id="title">Work Breakdown Structure</span>
+<span id="title">Work breakdown structure</span>
 
 <span id="prereqs"></span>
 

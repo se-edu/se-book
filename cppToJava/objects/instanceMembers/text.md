@@ -1,4 +1,4 @@
-<span id="title">Instance Members</span>
+<span id="title">Instance members</span>
 
 <span id="prereqs"></span>
 

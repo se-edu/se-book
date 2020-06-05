@@ -1,4 +1,4 @@
-<span id="title">Using JAR Files</span>
+<span id="title">Using JAR files</span>
 
 <span id="prereqs"></span>
 

@@ -1,4 +1,4 @@
-<span id="title">Acceptance vs System Testing</span>
+<span id="title">Acceptance vs System testing</span>
 
 <span id="prereqs"></span>
 
@@ -21,11 +21,11 @@ Some differences between system testing and acceptance testing:
 
 <box>
 
-**Requirement Specification vs System Specification**
+**Requirement specification vs System specification**
 
 The requirement specification need not be the same as the system specification. Some example differences:
 
-| Requirements Specification | System Specification |
+| Requirements specification | System specification |
 | :------------------------- | :------------------- |
 | limited to how the system behaves in normal working conditions | can also include details on how it will fail gracefully when pushed beyond limits, how to recover, etc. specification
 | written in terms of problems that need to be solved (e.g. provide a method to locate an email quickly)| written in terms of how the system solve those problems (e.g. explain the email search feature) |

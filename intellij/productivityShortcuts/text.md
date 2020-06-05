@@ -2,7 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can use some useful IDE productivity shortcuts</span>
 
-<span id="title">Productivity Shortcuts</span>
+<span id="title">Productivity shortcuts</span>
 
 <div id="body">
 

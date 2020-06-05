@@ -1,4 +1,4 @@
-<span id="title">Feature Branch Flow</span>
+<span id="title">Feature branch flow</span>
 
 <span id="prereqs"><panel src="../forkingWorkflow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Revision Control → Forking Workflow%%" popup-url="{{ baseUrl }}/revisionControl/forkingWorkflow" /></span>
 

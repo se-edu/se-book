@@ -1,4 +1,4 @@
-<span id="title">Object Deletion</span>
+<span id="title">Object deletion</span>
 
 <span id="prereqs"></span>
 

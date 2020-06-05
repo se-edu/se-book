@@ -1,4 +1,4 @@
-<span id="title">System Testing</span>
+<span id="title">System testing</span>
 
 <div id="body">
 

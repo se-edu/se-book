@@ -1,4 +1,4 @@
-<span id="title">Control Flow</span>
+<span id="title">Control flow</span>
 
 <div id="body">
 

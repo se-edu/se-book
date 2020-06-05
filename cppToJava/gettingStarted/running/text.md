@@ -1,4 +1,4 @@
-<span id="title">Running a Program</span>
+<span id="title">Running a program</span>
 
 <span id="prereqs"></span>
 

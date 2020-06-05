@@ -1,4 +1,4 @@
-<span id="title">Single Responsibility Principle</span>
+<span id="title">Single responsibility principle</span>
 
 <span id="prereqs"></span>
 

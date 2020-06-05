@@ -1,4 +1,4 @@
-<span id="title">The Java World</span>
+<span id="title">The Java world</span>
 
 <div id="body">
 

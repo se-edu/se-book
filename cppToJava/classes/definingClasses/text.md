@@ -1,4 +1,4 @@
-<span id="title">Defining Classes</span>
+<span id="title">Defining classes</span>
 
 <span id="prereqs"></span>
 
