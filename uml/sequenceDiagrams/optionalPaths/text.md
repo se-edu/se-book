@@ -1,4 +1,4 @@
-<span id="title">Optional Paths</span>
+<span id="title">Optional paths</span>
 
 <span id="prereqs"></span>
 

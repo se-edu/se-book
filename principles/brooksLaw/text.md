@@ -1,4 +1,4 @@
-<span id="title">Brooks' Law</span>
+<span id="title">Brooks' law</span>
 
 <span id="prereqs"></span>
 

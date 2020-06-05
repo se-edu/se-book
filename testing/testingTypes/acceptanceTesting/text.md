@@ -1,4 +1,4 @@
-<span id="title">Acceptance Testing</span>
+<span id="title">Acceptance testing</span>
 
 <div id="body">
 

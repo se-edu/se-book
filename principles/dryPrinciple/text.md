@@ -1,4 +1,4 @@
-<span id="title">DRY Principle</span>
+<span id="title">DRY principle</span>
 
 <span id="prereqs"></span>
 

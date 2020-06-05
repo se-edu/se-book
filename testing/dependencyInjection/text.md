@@ -1,4 +1,4 @@
-<span id="title">Dependency Injection</span>
+<span id="title">Dependency injection</span>
 
 <div id="body">
 

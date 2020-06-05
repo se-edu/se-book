@@ -1,4 +1,4 @@
-<span id="title">Abstract Classes</span>
+<span id="title">Abstract classes</span>
 
 <div id="body">
 

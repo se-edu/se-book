@@ -1,4 +1,4 @@
-<span id="title">Activity Diagrams</span>
+<span id="title">Activity diagrams</span>
 
 <div id="body">
 

@@ -1,4 +1,4 @@
-<span id="title">YAGNI Principle</span>
+<span id="title">YAGNI principle</span>
 
 <span id="prereqs"></span>
 

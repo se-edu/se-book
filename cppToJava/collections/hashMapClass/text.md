@@ -1,4 +1,4 @@
-<span id="title">The `HashMap` Class</span>
+<span id="title">The `HashMap` class</span>
 
 <span id="prereqs"></span>
 

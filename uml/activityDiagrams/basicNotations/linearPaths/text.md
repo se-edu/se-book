@@ -1,4 +1,4 @@
-<span id="title">Linear Paths</span>
+<span id="title">Linear paths</span>
 
 <span id="prereqs"></span>
 

@@ -1,4 +1,4 @@
-<span id="title">The Collections Framework</span>
+<span id="title">The collections framework</span>
 
 <span id="prereqs"></span>
 

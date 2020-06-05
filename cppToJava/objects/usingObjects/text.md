@@ -1,4 +1,4 @@
-<span id="title">Using Java Objects</span>
+<span id="title">Using Java objects</span>
 
 <span id="prereqs"></span>
 

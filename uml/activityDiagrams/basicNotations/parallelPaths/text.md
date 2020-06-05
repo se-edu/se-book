@@ -1,4 +1,4 @@
-<span id="title">Parallel Paths</span>
+<span id="title">Parallel paths</span>
 
 <span id="prereqs"></span>
 

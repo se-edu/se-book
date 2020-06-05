@@ -1,4 +1,4 @@
-<span id="title">SOLID Principles</span>
+<span id="title">SOLID principles</span>
 
 <span id="prereqs"></span>
 

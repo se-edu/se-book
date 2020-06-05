@@ -1,4 +1,4 @@
-<span id="title">Quality Assurance</span>
+<span id="title">Quality assurance</span>
 
 <div id="body">
 

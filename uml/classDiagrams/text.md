@@ -1,4 +1,4 @@
-<span id="title">Class Diagrams</span>
+<span id="title">Class diagrams</span>
 
 <div id="body">
 

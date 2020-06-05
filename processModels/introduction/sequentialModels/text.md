@@ -1,4 +1,4 @@
-<span id="title">Sequential Models</span>
+<span id="title">Sequential models</span>
 
 <span id="prereqs"></span>
 

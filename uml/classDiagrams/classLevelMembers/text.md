@@ -1,4 +1,4 @@
-<span id="title">Class-Level Members</span>
+<span id="title">Class-level members</span>
 
 <div id="body">
 

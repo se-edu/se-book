@@ -1,4 +1,4 @@
-<span id="title">Garbage Collection</span>
+<span id="title">Garbage collection</span>
 
 <span id="prereqs"></span>
 

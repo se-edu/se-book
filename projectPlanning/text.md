@@ -1,4 +1,4 @@
-<span id="title">Project Planning</span>
+<span id="title">Project planning</span>
 
 <div id="body">
 

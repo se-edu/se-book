@@ -1,4 +1,4 @@
-<span id="title">Agile Models</span>
+<span id="title">Agile models</span>
 
 <span id="prereqs"></span>
 

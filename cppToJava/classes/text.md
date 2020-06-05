@@ -1,4 +1,4 @@
-<span id="title">Java Classes</span>
+<span id="title">Java classes</span>
 
 <div id="body">
 

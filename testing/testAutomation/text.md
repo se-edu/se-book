@@ -1,4 +1,4 @@
-<span id="title">Test Automation</span>
+<span id="title">Test automation</span>
 
 <div id="body">
 

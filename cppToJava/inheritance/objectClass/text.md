@@ -1,4 +1,4 @@
-<span id="title">The `Object` Class</span>
+<span id="title">The `Object` class</span>
 
 <span id="prereqs"></span>
 
