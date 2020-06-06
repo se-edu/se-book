@@ -1,4 +1,4 @@
-<span id="title">Exploratory vs Scripted testing</span>
+<span id="title">Exploratory versus scripted testing</span>
 
 <div id="body">
 
