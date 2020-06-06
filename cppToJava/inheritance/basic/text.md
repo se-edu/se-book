@@ -72,7 +72,7 @@ public class MountainBike extends Bicycle {
 
 **A subclass inherits all the fields and methods of the superclass.** In the example above, `MountainBike` inherits all the fields and methods of `Bicycle` and adds the field `seatHeight` and a method to set it.
 
-##### Accessing Superclass Members
+##### Accessing superclass members
 
 **If your method overrides one of its superclass's methods, you can invoke the overridden method through the use of the keyword `super`.** You can also use `super` to refer to a <tooltip content="when both the superclass and the subclass use the same variable name, the superclass variables is said to be _hidden/shadowed_ by the subclass variable">hidden field</tooltip> (although hiding fields is discouraged).
 
@@ -112,7 +112,7 @@ Within `Subclass`, the simple name `printMethod()` refers to the one declared in
 
 </box>
 
-##### Subclass Constructors
+##### Subclass constructors
 
 **A subclass constructor can invoke the superclass constructor.** Invocation of a superclass constructor must be the first line in the subclass constructor.
 The syntax for calling a superclass constructor is `super()` %%(which invokes the no-argument constructor of the superclass)%% or `super(parameters)` %%(to invoke the superclass constructor with a matching parameter list)%%.
@@ -131,7 +131,7 @@ public MountainBike(int startHeight, int startSpeed, int startGear) {
 
 Note: If a constructor does not explicitly invoke a superclass constructor, the Java compiler automatically inserts a call to the no-argument constructor of the superclass. If the superclass does not have a no-argument constructor, you will get a compile-time error. `Object` does have such a constructor, so if `Object` is the only superclass, there is no problem.
 
-##### Access Modifiers (simplified)
+##### Access modifiers (simplified)
 
 **Access level modifiers determine whether other classes can use a particular field or invoke a particular method.** Given below is a simplified version of Java access modifiers, ==assuming you have not yet started placing your classes in different packages== i.e., all classes are placed in the root level. A full explanation of access modifiers is given in a later topic.
 

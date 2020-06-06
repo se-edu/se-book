@@ -1,4 +1,4 @@
-<span id="title">Top-down VS bottom-up integration</span>
+<span id="title">Top-down vs Bottom-up integration</span>
 
 <span id="prereqs"><panel src="../bigBangVsIncremental/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Integration → Approaches → Big-Bang Vs Incremental%%" popup-url="{{ baseUrl }}/integration/approaches/bigBangVsIncremental" /></span>
 

@@ -1,4 +1,4 @@
-<span id="title">Quality of Requirements</span>
+<span id="title">Quality of requirements</span>
 
 <span id="prereqs"></span>
 

@@ -1,4 +1,4 @@
-<span id="title">Non-Functional Requirements</span>
+<span id="title">Non-functional requirements</span>
 
 <span id="prereqs"></span>
 

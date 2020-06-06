@@ -1,4 +1,4 @@
-<span id="title">Abstract Classes and Methods</span>
+<span id="title">Abstract classes and methods</span>
 
 <span id="prereqs"></span>
 

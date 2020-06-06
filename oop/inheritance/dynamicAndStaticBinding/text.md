@@ -2,7 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can explain dynamic and static binding</span>
 
-<span id="title">Dynamic and Static Binding</span>
+<span id="title">Dynamic and static binding</span>
 
 <div id="body">
 

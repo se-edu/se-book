@@ -1,4 +1,4 @@
-<span id="title">Agile Design</span>
+<span id="title">Agile design</span>
 
 <span id="prereqs"></span>
 

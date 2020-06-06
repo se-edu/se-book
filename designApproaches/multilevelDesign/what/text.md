@@ -1,4 +1,4 @@
-<span id="title">Multi-Level Design</span>
+<span id="title">Multi-level design</span>
 
 <span id="prereqs"></span>
 
