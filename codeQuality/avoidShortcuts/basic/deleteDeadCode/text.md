@@ -1,4 +1,4 @@
-<span id="title">Delete Dead Code</span>
+<span id="title">Delete dead code</span>
 
 <span id="prereqs"></span>
 

@@ -1,4 +1,4 @@
-<span id="title">Singleton Pattern</span>
+<span id="title">Singleton pattern</span>
 
 <div id="body">
 

@@ -6,11 +6,11 @@
 
 <div id="body">
 
-##### Tracking and Ignoring
+##### Tracking and ignoring
 
 **In a repo, we can specify which files to track and which files to ==ignore==.** Some files such as temporary log files created during the build/test process should not be revision-controlled.
 
-##### Staging and Committing 
+##### Staging and committing 
 
 <tabs> 
   <tab header="{{ icon_text }}">
@@ -27,7 +27,7 @@
   </tab>
 </tabs>
 
-##### Identifying Points in History
+##### Identifying points in history
 
 **Each commit in a repo is a recorded point in the history of the project that is uniquely identified by an auto-generated ==hash==** e.g. `a16043703f28e5b3dab95915f5c5e5bf4fdc5fc1`. 
 

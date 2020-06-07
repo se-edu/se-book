@@ -1,4 +1,4 @@
-<span id="title">Prioritizing Requirements</span>
+<span id="title">Prioritizing requirements</span>
 
 <span id="prereqs"></span>
 

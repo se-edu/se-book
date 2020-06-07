@@ -1,4 +1,4 @@
-<span id="title">Black box vs Glass box</span>
+<span id="title">Black box versus glass box</span>
 
 <span id="prereqs"></span>
 

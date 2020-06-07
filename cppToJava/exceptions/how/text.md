@@ -1,4 +1,4 @@
-<span id="title">How to Use Exceptions</span>
+<span id="title">How to use Exceptions</span>
 
 <span id="prereqs"></span>
 

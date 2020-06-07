@@ -1,4 +1,4 @@
-<span id="title">Testing Based on Use Cases</span>
+<span id="title">Testing based on use cases</span>
 
 <span id="prereqs"></span>
 

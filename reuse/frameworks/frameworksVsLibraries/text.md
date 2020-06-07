@@ -1,4 +1,4 @@
-<span id="title">Frameworks VS libraries</span>
+<span id="title">Frameworks versus libraries</span>
 
 <span id="prereqs"></span>
 

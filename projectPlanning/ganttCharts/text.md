@@ -1,4 +1,4 @@
-<span id="title">Gantt Charts</span>
+<span id="title">Gantt charts</span>
 
 <span id="prereqs"></span>
 

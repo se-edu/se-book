@@ -1,4 +1,4 @@
-<span id="title">Objects as Abstractions</span>
+<span id="title">Objects as abstractions</span>
 
 <span id="prereqs"></span>
 

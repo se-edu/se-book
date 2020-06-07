@@ -1,4 +1,4 @@
-<span id="title">Acceptance vs System testing</span>
+<span id="title">Acceptance versus system testing</span>
 
 <span id="prereqs"></span>
 
@@ -21,7 +21,7 @@ Some differences between system testing and acceptance testing:
 
 <box>
 
-**Requirement specification vs System specification**
+**Requirement specification versus system specification**
 
 The requirement specification need not be the same as the system specification. Some example differences:
 
