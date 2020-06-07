@@ -2,7 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can explain remote repositories</span>
 
-<span id="title">Remote Repositories</span>
+<span id="title">Remote repositories</span>
 
 <div id="body">
 

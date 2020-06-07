@@ -7,7 +7,7 @@ pageNav: 3
 
 <div class="website-content">
 
-# Using This Book
+# Using this book
 
 <div id="browsers">
 

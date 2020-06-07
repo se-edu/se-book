@@ -113,7 +113,7 @@ The `indexOf` method searches for a single character (or a substring) in a strin
 
 </div>
 
-##### Comparing Strings
+##### Comparing strings
 <div class="indented">
 
 To compare two strings, it is tempting to use the `==` and `!=` operators.

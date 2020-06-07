@@ -1,4 +1,4 @@
-<span id="title">Associations as Attributes</span>
+<span id="title">Associations as attributes</span>
 
 <span id="prereqs"></span>
 

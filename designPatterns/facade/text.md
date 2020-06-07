@@ -1,4 +1,4 @@
-<span id="title">Facade Pattern</span>
+<span id="title">Facade pattern</span>
 
 <div id="body">
 

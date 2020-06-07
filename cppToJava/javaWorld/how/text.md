@@ -1,4 +1,4 @@
-<span id="title">How Java Works</span>
+<span id="title">How Java works</span>
 
 <span id="prereqs"></span>
 

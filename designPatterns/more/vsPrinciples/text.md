@@ -1,4 +1,4 @@
-<span id="title">Design patterns VS design principles</span>
+<span id="title">Design patterns versus design principles</span>
 
 <span id="prereqs"></span>
 

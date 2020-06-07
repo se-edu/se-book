@@ -1,4 +1,4 @@
-<span id="title">Big-bang VS incremental integration</span>
+<span id="title">Big-bang versus incremental integration</span>
 
 <span id="prereqs"></span>
 

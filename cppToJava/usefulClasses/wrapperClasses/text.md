@@ -1,4 +1,4 @@
-<span id="title">Wrapper Classes for Primitive Types</span>
+<span id="title">Wrapper Classes for primitive types</span>
 
 <span id="prereqs"></span>
 
