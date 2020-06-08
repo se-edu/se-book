@@ -1,4 +1,4 @@
-<span id="title">Specifying Requirements</span>
+<span id="title">Specifying requirements</span>
 
 <div id="body">
 

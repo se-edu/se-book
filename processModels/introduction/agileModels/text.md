@@ -8,16 +8,16 @@
 
 In 2001, a group of prominent software engineering practitioners met and brainstormed for an alternative to documentation-driven, heavyweight software development processes that were used in most large projects at the time. This resulted in something called the _agile manifesto_ (a vision statement of what they were looking to do). 
 
->We are uncovering better ways of developing software by doing it and helping others do it.
+>You are uncovering better ways of developing software by doing it and helping others do it.
 >
->Through this work we have come to value:
+>Through this work you have come to value:
 >
 >* **Individuals and interactions** over processes and tools
 >* **Working software** over comprehensive documentation
 >* **Customer collaboration** over contract negotiation
 >* **Responding to change** over following a plan
 >
->That is, while there is value in the items on the right, we value the items on the left more.<br>
+>That is, while there is value in the items on the right, you value the items on the left more.<br>
 ><sub>Extract from the [Agile Manifesto](http://agilemanifesto.org/)</sub>
 
 Subsequently, some of the signatories of the manifesto went on to create process models that try to follow it. These processes are collectively called agile processes. Some of the key features of agile approaches are:

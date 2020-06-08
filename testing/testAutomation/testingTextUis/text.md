@@ -8,10 +8,10 @@
 
 **A simple way to semi-automate testing of a CLI(Command Line Interface) app is by using input/output re-direction.**
 
-* First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.
-* Next, we compare the actual output file with another file containing the expected output.
+* First, you feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.
+* Next, you compare the actual output file with another file containing the expected output.
 
-Let us assume we are testing a CLI app called `AddressBook`. Here are the detailed steps:
+Lets assume you are testing a CLI app called `AddressBook`. Here are the detailed steps:
 
 1. Store the test input in the text file `input.txt`. 
  
@@ -24,7 +24,7 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
    
    </panel>
 
-1. Store the output we expect from the SUT in another text file `expected.txt`. 
+1. Store the output you expect from the SUT in another text file `expected.txt`. 
    
    <panel header="%%{{ icon_example }} Example `expected.txt`%%" type="seamless">
    
@@ -69,13 +69,13 @@ Let us assume we are testing a CLI app called `AddressBook`. Here are the detail
    
    </panel><p/>
 
-1. Next, we compare `output.txt` with the `expected.txt`. This can be done using a utility such as Windows `FC` (i.e. File Compare) command, Unix `diff` command, or a GUI tool such as _WinMerge_. 
+1. Next, you compare `output.txt` with the `expected.txt`. This can be done using a utility such as Windows `FC` (i.e. File Compare) command, Unix `diff` command, or a GUI tool such as _WinMerge_. 
 
    ```{.no-line-numbers}
    FC output.txt expected.txt
    ```
 
-Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. %%If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases we need more sophisticated ways of automating tests.%%
+Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. %%If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases you need more sophisticated ways of automating tests.%%
 
 <include src="../../../common/popOvers.md#cli" />
 

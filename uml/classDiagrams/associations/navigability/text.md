@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**We use arrow heads to indication the navigability of an association.**
+**You should use arrow heads to indicate the navigability of an association.**
 
 <box>
 

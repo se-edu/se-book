@@ -54,7 +54,7 @@ EPs for `i`:
 
 </box>
 
-Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases we have to consider each value as a partition by itself.
+Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases you have to consider each value as a partition by itself.
 
 <box>
 
