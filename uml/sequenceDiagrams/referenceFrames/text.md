@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**UML uses _ref frame_ to allow a segment of the interaction to be omitted and shown as a separate sequence diagram.** Reference frames help us to break complicated sequence diagrams into multiple parts or simply to omit details we are not interested in showing.
+**UML uses _ref frame_ to allow a segment of the interaction to be omitted and shown as a separate sequence diagram.** Reference frames help you to break complicated sequence diagrams into multiple parts or simply to omit details you are not interested in showing.
 
 Notation:
 

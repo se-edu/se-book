@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Typically, we choose three values around the boundary to test: one value from the boundary, one value just below the boundary, and one value just above the boundary.** The number of values to pick depends on other factors, such as the cost of each test case.
+**Typically, you choose three values around the boundary to test: one value from the boundary, one value just below the boundary, and one value just above the boundary.** The number of values to pick depends on other factors, such as the cost of each test case.
 
 <box>
 <div class="text-monospace">
@@ -75,7 +75,7 @@ No specific boundary
   <td>
       
 [non-empty Stack]<br>
-%%(we assume a fixed size stack)%%
+%%(assuming a fixed size stack)%%
       
   </td>
   <td>

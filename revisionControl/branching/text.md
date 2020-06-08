@@ -14,7 +14,7 @@
   <strong>Branching and merging</strong>
 </pic>
 
-**==_Merge conflicts_== happen when you try to merge two branches that had changed the same part of the code** and the RCS software cannot decide which changes to keep. In those cases we have to ‘resolve’ those conflicts manually.
+**==_Merge conflicts_== happen when you try to merge two branches that had changed the same part of the code** and the RCS software cannot decide which changes to keep. In those cases you have to ‘resolve’ those conflicts manually.
 
 </div>
 

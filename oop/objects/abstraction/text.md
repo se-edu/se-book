@@ -14,7 +14,7 @@ The concept of **_Objects_ in OOP is an <trigger trigger="click" for="modal:obje
 
 <box>
 
-{{ icon_example }} We can deal with a `Person` object that represents the person Adam and query the object for Adam's age instead of dealing with details such as Adam’s date of birth (DoB), in what format the DoB is stored, the algorithm used to calculate the age from the DoB, etc.
+{{ icon_example }} You can deal with a `Person` object that represents the person Adam and query the object for Adam's age instead of dealing with details such as Adam’s date of birth (DoB), in what format the DoB is stored, the algorithm used to calculate the age from the DoB, etc.
 
 </box>
 

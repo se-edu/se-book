@@ -36,7 +36,7 @@ Exhaustive testing of this operation can take many more test cases.
 
 * **Testing should be _efficient_** i.e., it has a high rate of success (bugs found/test cases) %%a set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects%%.
 
-**For testing to be <tooltip content="Efficient and Effective">E&E</tooltip>, each new test we add should be targeting a potential fault that is not already targeted by existing test cases.** There are test case design techniques that can help us improve E&E of testing.
+**For testing to be <tooltip content="Efficient and Effective">E&E</tooltip>, each new test you add should be targeting a potential fault that is not already targeted by existing test cases.** There are test case design techniques that can help us improve E&E of testing.
 </div>
 
 </div>

@@ -25,7 +25,7 @@ In general, **most SUTs do not treat each input in a unique way. Instead, they p
   <include src="../../../common/definitions.md#def-equivalence-partition" />
 </box>
 
-**By dividing possible inputs into equivalence partitions we can,**
+**By dividing possible inputs into equivalence partitions you can,**
 * **avoid testing too many inputs from one partition.** Testing too many inputs from the same partition is unlikely to find new bugs. This increases the efficiency of testing by reducing redundant test cases.
 * **ensure all partitions are tested.** Missing partitions can result in bugs going unnoticed. This increases the effectiveness of testing by increasing the chance of finding bugs.
 

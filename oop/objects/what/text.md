@@ -41,7 +41,7 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 {{ icon_example }} Our previous example can be tweaked a bit as follows:
 
 * Use an object called `Main` to represent your role in the scenario.
-* As there is no physical writing involved, we can replace the `Pen` and `Paper` with an object called `AgeList` that is able to keep a list of ages.
+* As there is no physical writing involved, you can replace the `Pen` and `Paper` with an object called `AgeList` that is able to keep a list of ages.
 
 <!-- TODO {visual: optimizations:  You → Main; Pen + Paper → AgeList} -->
 

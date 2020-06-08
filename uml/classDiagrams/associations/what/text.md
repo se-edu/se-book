@@ -6,7 +6,7 @@
 
 <div id="body">
 
-We use a solid line to show an association between two classes.
+You should use a solid line to show an association between two classes.
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/what/images/notation.png" width="300" />
 <p/>

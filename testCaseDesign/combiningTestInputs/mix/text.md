@@ -58,7 +58,7 @@ VV = Any Valid Value VV/IV = Any Valid or Invalid Value
 
 </box>
 
-Next, we apply the _no more than one invalid input in a test case_ heuristic. Test cases 5.2 and 6 don't follow that heuristic. Let's rectify the situation as follows:
+Next, you have to apply the _no more than one invalid input in a test case_ heuristic. Test cases 5.2 and 6 don't follow that heuristic. Let's rectify the situation as follows:
 
 <box>
 
@@ -78,7 +78,7 @@ Next, we apply the _no more than one invalid input in a test case_ heuristic. Te
 
 </box>
 
-Next, let us assume that there is a dependency between the inputs `examScore` and `isAbsent` such that an absent student can only have `examScore=0`. To cater for the hidden invalid case arising from this, we can add a new test case where `isAbsent=true` and `examScore!=0`. In addition, test cases 3-6.2 should have `isAbsent=false` so that the input remains valid.
+Next, you can assume that there is a dependency between the inputs `examScore` and `isAbsent` such that an absent student can only have `examScore=0`. To cater for the hidden invalid case arising from this, you can add a new test case where `isAbsent=true` and `examScore!=0`. In addition, test cases 3-6.2 should have `isAbsent=false` so that the input remains valid.
 
 <box>
 

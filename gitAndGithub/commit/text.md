@@ -25,7 +25,7 @@ Observe how the file is detected by Git.
   </tab>
 </tabs>
 
-Although git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose we want to commit the current state of the file. First, we should stage the file.
+Although git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose you want to commit the current state of the file. First, you should stage the file.
 
 <box type="definition">
   <include src="../../common/definitions.md#def-commit" />
