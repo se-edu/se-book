@@ -38,7 +38,7 @@ A more elaborate test case can have other details such as those given below.
 
 </panel><p/>
 
-For each test case you do the following:
+For each test case you should do the following:
 
 1. Feed the input to the SUT
 2. Observe the actual output
