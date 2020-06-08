@@ -6,7 +6,7 @@
 
 <div id="body">
 
-Method calls to `static` i.e., class-level method are received by the class itself, not an instance of that class. We can use the `<<class>>` to show that a participant is the class itself. 
+Method calls to `static` i.e., class-level method are received by the class itself, not an instance of that class. You can use the `<<class>>` to show that a participant is the class itself. 
 
 <box>
 

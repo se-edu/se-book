@@ -6,7 +6,7 @@
 
 <div id="body">
 
-When deciding EPs of OOP methods, we need to identify EPs of all data participants  that can potentially influence the behaviour of the method, such as,
+When deciding EPs of OOP methods, you need to identify EPs of all data participants that can potentially influence the behaviour of the method, such as,
 
 * the target object of the method call
 * input parameters of the method call
@@ -51,7 +51,7 @@ Next, let us identify equivalence partitions for each participant. Will the `new
 {{ icon_example }} Consider the `Logic` component of the Minesweeper application. What are the EPs for the `markCellAt(int x, int y)` method?. The partitions in **bold** represent valid inputs.
 
 * `Logic`: PRE_GAME, **READY**, **IN_PLAY**, WON, LOST
-* `x`: [MIN_INT..-1] **[0..(W-1)]** [W..MAX_INT] %%(we assume a minefield size of WxH)%%
+* `x`: [MIN_INT..-1] **[0..(W-1)]** [W..MAX_INT] %%(assuming a minefield size of WxH)%%
 * `y`: [MIN_INT..-1] **[0..(H-1)]** [H..MAX_INT]
 * `Cell` at `(x,y)`: **HIDDEN**, MARKED, CLEARED
 
