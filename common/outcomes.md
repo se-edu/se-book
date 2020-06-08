@@ -7,7 +7,7 @@ pageNav: 3
 
 <div class="website-content">
 
-# Learning outcomes
+# Learning Outcomes
 
 ## Software Engineering
 
