@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Typically, you choose three values around the boundary to test: one value from the boundary, one value just below the boundary, and one value just above the boundary.** The number of values to pick depends on other factors, such as the cost of each test case.
+**Typically, you should choose three values around the boundary to test: one value from the boundary, one value just below the boundary, and one value just above the boundary.** The number of values to pick depends on other factors, such as the cost of each test case.
 
 <box>
 <div class="text-monospace">
