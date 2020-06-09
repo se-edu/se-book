@@ -89,7 +89,7 @@ pageNav: 3
 <include src="../oop/more/miscellaneous/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oop/more/review/unit-inParent-asOutcome.md" boilerplate />
 
-### modeling
+### Modeling
 
 <include src="../modeling/introduction/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../modeling/introduction/how/unit-inParent-asOutcome.md" boilerplate />
@@ -116,7 +116,7 @@ pageNav: 3
 <include src="../modeling/modelingASolution/basic/unit-inParent-asOutcome.md" boilerplate />
 <include src="../modeling/modelingASolution/intermediate/unit-inParent-asOutcome.md" boilerplate />
 
-### architecture
+### Architecture
 
 <include src="../architecture/introduction/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../architecture/architectureDiagrams/reading/unit-inParent-asOutcome.md" boilerplate />
