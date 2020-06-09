@@ -11,19 +11,19 @@ title: "Book - Software Engineering for Self-Directed Learners"
 **This is a free and open-source SE textbook under the [SE-EDU](https://se-education.org) initiative.**
 </div>
 
-### About this Book
+### About this book
 
 * [About](about/acknowledgements.html)
 * [How to use this book](about/usage.html)
 
-### Software Engineering
+### Software engineering
 
-* [Software Engineering]({{baseUrl}}/softwareEngineering/)
+* [Software engineering]({{baseUrl}}/softwareEngineering/)
   [{{icon_print}}]({{baseUrl}}/softwareEngineering/print.html)
 
-### Object-Oriented Programming
+### Object-oriented programming
 
-* [Object-Oriented Programming]({{baseUrl}}/oop/)
+* [Object-oriented programming]({{baseUrl}}/oop/)
   [{{icon_print}}]({{baseUrl}}/oop/print.html)
 
 
@@ -32,10 +32,10 @@ title: "Book - Software Engineering for Self-Directed Learners"
 * [Requirements]({{baseUrl}}/requirements/)
   [{{icon_print}}]({{baseUrl}}/requirements/print.html)
 
-* [Gathering Requirements]({{baseUrl}}/gatheringRequirements/) 
+* [Gathering requirements]({{baseUrl}}/gatheringRequirements/) 
   [{{icon_print}}]({{baseUrl}}/gatheringRequirements/print.html)
 
-* [Specifying Requirements]({{baseUrl}}/specifyingRequirements/)
+* [Specifying requirements]({{baseUrl}}/specifyingRequirements/)
   [{{icon_print}}]({{baseUrl}}/specifyingRequirements/print.html)
 
 ### Design
@@ -43,7 +43,7 @@ title: "Book - Software Engineering for Self-Directed Learners"
 * [Design]({{baseUrl}}/design/)
   [{{icon_print}}]({{baseUrl}}/design/print.html)
 
-* [Design Fundamentals]({{baseUrl}}/designFundamentals/) 
+* [Design fundamentals]({{baseUrl}}/designFundamentals/) 
   [{{icon_print}}]({{baseUrl}}/designFundamentals/print.html)
 
 * [Modeling]({{baseUrl}}/modeling/)
@@ -52,10 +52,10 @@ title: "Book - Software Engineering for Self-Directed Learners"
 * [Architecture]({{baseUrl}}/architecture/)
   [{{icon_print}}]({{baseUrl}}/architecture/print.html)
 
-* [Design Patterns]({{baseUrl}}/designPatterns/) 
+* [Design patterns]({{baseUrl}}/designPatterns/) 
   [{{icon_print}}]({{baseUrl}}/designPatterns/print.html)
 
-* [Design Approaches]({{baseUrl}}/designApproaches/)
+* [Design approaches]({{baseUrl}}/designApproaches/)
   [{{icon_print}}]({{baseUrl}}/designApproaches/print.html)
 
 ### Implementation
@@ -63,7 +63,7 @@ title: "Book - Software Engineering for Self-Directed Learners"
 * [IDEs]({{baseUrl}}/ides/)
   [{{icon_print}}]({{baseUrl}}/ides/print.html)
 
-* [Code Quality]({{baseUrl}}/codeQuality/) 
+* [Code quality]({{baseUrl}}/codeQuality/) 
   [{{icon_print}}]({{baseUrl}}/codeQuality/print.html)
 
 * [Refactoring]({{baseUrl}}/refactoring/)
@@ -72,7 +72,7 @@ title: "Book - Software Engineering for Self-Directed Learners"
 * [Documentation]({{baseUrl}}/documentation/)
   [{{icon_print}}]({{baseUrl}}/documentation/print.html)
 
-* [Error Handling]({{baseUrl}}/errorHandling/) 
+* [Error handling]({{baseUrl}}/errorHandling/) 
   [{{icon_print}}]({{baseUrl}}/errorHandling/print.html)
 
 * [Integration]({{baseUrl}}/integration/)
@@ -81,29 +81,29 @@ title: "Book - Software Engineering for Self-Directed Learners"
 * [Reuse]({{baseUrl}}/reuse/)
   [{{icon_print}}]({{baseUrl}}/reuse/print.html)
 
-### Quality Assurance
+### Quality assurance
 
-* [Quality Assurance]({{baseUrl}}/qualityAssurance/) 
+* [Quality assurance]({{baseUrl}}/qualityAssurance/) 
   [{{icon_print}}]({{baseUrl}}/qualityAssurance/print.html)
 
 * [Testing]({{baseUrl}}/testing/)
   [{{icon_print}}]({{baseUrl}}/testing/print.html)
   
-* [Test Case Design]({{baseUrl}}/testCaseDesign/)
+* [Test case design]({{baseUrl}}/testCaseDesign/)
   [{{icon_print}}]({{baseUrl}}/testCaseDesign/print.html)
 
-### Project Management
+### Project management
 
-* [Revision Control]({{baseUrl}}/revisionControl/) 
+* [Revision control]({{baseUrl}}/revisionControl/) 
   [{{icon_print}}]({{baseUrl}}/revisionControl/print.html)
 
-* [Project Planning]({{baseUrl}}/projectPlanning/)
+* [Project planning]({{baseUrl}}/projectPlanning/)
   [{{icon_print}}]({{baseUrl}}/projectPlanning/print.html)
   
 * [Teamwork]({{baseUrl}}/teamwork/)
   [{{icon_print}}]({{baseUrl}}/teamwork/print.html)
 
-* [Process Models]({{baseUrl}}/processModels/) 
+* [Process models]({{baseUrl}}/processModels/) 
   [{{icon_print}}]({{baseUrl}}/processModels/print.html)
 
 ### Tools
@@ -127,10 +127,10 @@ title: "Book - Software Engineering for Self-Directed Learners"
 * [C++ to Java]({{baseUrl}}/cppToJava/)
   [{{icon_print}}]({{baseUrl}}/cppToJava/print.html)
 
-* [Combined Exercises](combined/exercises.html)
-* [List of Definitions](common/definitions.html)
-* [List of References](common/references.html)
-* [List of Learning Outcomes](common/outcomes.html)
-* [Printable Version {{icon_print}}](common/print.html)
+* [Combined exercises](combined/exercises.html)
+* [List of definitions](common/definitions.html)
+* [List of references](common/references.html)
+* [List of learning outcomes](common/outcomes.html)
+* [Printable version {{icon_print}}](common/print.html)
 
 </div>

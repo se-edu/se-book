@@ -7,9 +7,9 @@ pageNav: 3
 
 <div class="website-content">
 
-# Learning Outcomes
+# Learning outcomes
 
-## Software Engineering
+## Software engineering
 
 <include src="../softwareEngineering/introduction/prosAndCons/unit-inParent-asOutcome.md" boilerplate/>
 
@@ -48,11 +48,11 @@ pageNav: 3
 
 ## Design
 
-### Software Design
+### Software design
 
 <include src="../design/introduction/what/unit-inParent-asOutcome.md" boilerplate />
 
-### Design Fundamentals
+### Design fundamentals
 
 <include src="../designFundamentals/abstraction/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../designFundamentals/coupling/what/unit-inParent-asOutcome.md" boilerplate />
@@ -61,7 +61,7 @@ pageNav: 3
 <include src="../designFundamentals/cohesion/how/unit-inParent-asOutcome.md" boilerplate />
 <include src="../designFundamentals/cohesion/what/unit-inParent-asOutcome.md" boilerplate />
 
-### Object Oriented Programming
+### Object oriented programming
 
 <include src="../oop/introduction/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../oop/objects/what/unit-inParent-asOutcome.md" boilerplate />
@@ -130,7 +130,7 @@ pageNav: 3
 <include src="../architecture/architecturalStyles/more/moreStyles/unit-inParent-asOutcome.md" boilerplate />
 <include src="../architecture/architecturalStyles/more/usingStyles/unit-inParent-asOutcome.md" boilerplate />
 
-### Design Patterns
+### Design patterns
 
 <include src="../designPatterns/introduction/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../designPatterns/introduction/format/unit-inParent-asOutcome.md" boilerplate />
@@ -148,7 +148,7 @@ pageNav: 3
 <include src="../designPatterns/more/otherTypesOfPatterns/unit-inParent-asOutcome.md" boilerplate />
 <include src="../designPatterns/more/vsPrinciples/unit-inParent-asOutcome.md" boilerplate />
 
-## Design Approaches
+## Design approaches
 
 <include src="../designApproaches/multilevelDesign/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../designApproaches/topDownBottomUp/what/unit-inParent-asOutcome.md" boilerplate />
@@ -161,7 +161,7 @@ pageNav: 3
 <include src="../ides/introduction/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../ides/debugging/what/unit-inParent-asOutcome.md" boilerplate />
 
-### Code Quality
+### Code quality
 
 <include src="../codeQuality/introduction/basic/unit-inParent-asOutcome.md" boilerplate />
 <include src="../codeQuality/maximiseReadability/introduction/unit-inParent-asOutcome.md" boilerplate />
@@ -219,7 +219,7 @@ pageNav: 3
 <include src="../documentation/tools/markdown/how/unit-inParent-asOutcome.md" boilerplate />
 <include src="../documentation/tools/asciiDoc/what/unit-inParent-asOutcome.md" boilerplate />
 
-### Error Handling
+### Error handling
 
 <include src="../errorHandling/introduction/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../errorHandling/exceptions/what/unit-inParent-asOutcome.md" boilerplate />
@@ -261,9 +261,9 @@ pageNav: 3
 <include src="../reuse/cloudComputing/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../reuse/cloudComputing/services/unit-inParent-asOutcome.md" boilerplate />
 
-## Quality Assurance
+## Quality assurance
 
-### Quality Assurance
+### Quality assurance
 
 <include src="../qualityAssurance/introduction/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../qualityAssurance/introduction/validationVsVerification/unit-inParent-asOutcome.md" boilerplate />
@@ -300,7 +300,7 @@ pageNav: 3
 <include src="../testing/tdd/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../testing/tdd/how/unit-inParent-asOutcome.md" boilerplate />
 
-### Test Case Design
+### Test case design
 
 <include src="../testCaseDesign/introduction/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../testCaseDesign/introduction/positiveVsNegative/unit-inParent-asOutcome.md" boilerplate />
@@ -319,9 +319,9 @@ pageNav: 3
 <include src="../testCaseDesign/summary/recap/unit-inParent-asOutcome.md" boilerplate />
 <include src="../testCaseDesign/summary/exercises/unit-inParent-asOutcome.md" boilerplate />
 
-## Project Management
+## Project management
 
-### Revision Control
+### Revision control
 
 <include src="../revisionControl/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../revisionControl/repositories/unit-inParent-asOutcome.md" boilerplate />
@@ -334,7 +334,7 @@ pageNav: 3
 <include src="../revisionControl/featureBranchFlow/unit-inParent-asOutcome.md" boilerplate />
 <include src="../revisionControl/centralizedFlow/unit-inParent-asOutcome.md" boilerplate />
 
-### Project Planning
+### Project planning
 
 <include src="../projectPlanning/workBreakdownStructure/unit-inParent-asOutcome.md" boilerplate />
 <include src="../projectPlanning/milestones/unit-inParent-asOutcome.md" boilerplate />
@@ -347,7 +347,7 @@ pageNav: 3
 
 <include src="../teamwork/teamStructures/unit-inParent-asOutcome.md" boilerplate />
 
-### Process Models
+### Process models
 
 <include src="../processModels/introduction/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../processModels/introduction/sequentialModels/unit-inParent-asOutcome.md" boilerplate />
@@ -431,7 +431,7 @@ pageNav: 3
 
 ## Principles
 
-### SE Principles
+### SE principles
 
 <include src="../principles/singleResponsibilityPrinciple/unit-inParent-asOutcome.md" boilerplate />
 <include src="../principles/interfaceSegregationPrinciple/unit-inParent-asOutcome.md" boilerplate />

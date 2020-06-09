@@ -13,12 +13,12 @@ pageNav: 3
 
 <div id="def-abstractClass">
 
-**Abstract Class**: A class declared as an _abstract class_ cannot be instantiated, but it can be subclassed.
+**Abstract class**: A class declared as an _abstract class_ cannot be instantiated, but it can be subclassed.
 
 </div>
 <div id="def-abstractMethod">
 
-**Abstract Method**: An _abstract method_ is a method signature without a method implementation.
+**Abstract method**: An _abstract method_ is a method signature without a method implementation.
 
 </div>
 
@@ -56,7 +56,7 @@ pageNav: 3
 
 <div id="def-brooks-law">
 
-**Brooks' Law**: Adding people to a late project will make it later. -- Fred Brooks (author of _The Mythical Man-Month_)
+**Brooks' law**: Adding people to a late project will make it later. -- Fred Brooks (author of _The Mythical Man-Month_)
 
 </div>
 
@@ -84,7 +84,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-cli">
 
-**CLI App**: An application that has a _Command Line Interface_. i.e. user interacts with the app by typing in commands.
+**CLI application**: An application that has a _Command Line Interface_. i.e. user interacts with the app by typing in commands.
 
 </div>
 
@@ -104,7 +104,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-dependency-inversion-principle">
 
-**Dependency Inversion Principle**:
+**Dependency inversion principle**:
 
 1. High-level modules should not depend on low-level modules. Both should depend on abstractions.
 2. Abstractions should not depend on details. Details should depend on abstractions.
@@ -113,25 +113,25 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-design-pattern">
 
-**Design Pattern** : An _elegant reusable solution_ to a _commonly recurring problem_ within a _given context_ in software design.
+**Design pattern** : An _elegant reusable solution_ to a _commonly recurring problem_ within a _given context_ in software design.
 
 </div>
 
 <div id="def-domain-expert">
 
-**Domain Expert** : An expert of a discipline to which the product is connected %%e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting%%.
+**Domain expert** : An expert of a discipline to which the product is connected %%e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting%%.
 
 </div>
 
 <div id="def-dry-principle">
 
-**DRY (Don't Repeat Yourself) Principle**: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub>_The Pragmatic Programmer_, by Andy Hunt and Dave Thomas</sub>
+**DRY (Don't Repeat Yourself) principle**: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub>_The Pragmatic Programmer_, by Andy Hunt and Dave Thomas</sub>
 
 </div>
 
 <div id="def-dynamic-binding">
 
-**Dynamic Binding** (<tooltip content="There are subtle differences between late binding and dynamic binding, but they are beyond the scope of this document">aka late binding</tooltip>) : a mechanism where method calls in code are <tooltip content="deciding which method implementation to execure">resolved</tooltip> at <tooltip content="at the moment the method call is executed">runtime</tooltip>, rather than at compile time.
+**Dynamic binding** (<tooltip content="There are subtle differences between late binding and dynamic binding, but they are beyond the scope of this document">aka late binding</tooltip>) : a mechanism where method calls in code are <tooltip content="deciding which method implementation to execure">resolved</tooltip> at <tooltip content="at the moment the method call is executed">runtime</tooltip>, rather than at compile time.
 
 </div>
 
@@ -139,7 +139,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-enterprise-application">
 
-**Enterprise Application**: ‘enterprise applications’ means software applications used at organizations level and therefore has to meet much higher demands (such as in scalability, security, performance, and robustness) than software meant for individual use.
+**Enterprise application**: ‘enterprise applications’ means software applications used at organizations level and therefore has to meet much higher demands (such as in scalability, security, performance, and robustness) than software meant for individual use.
 
 </div>
 
@@ -160,13 +160,13 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-feature-list">
 
-**Feature List**: A list of features of a product _grouped according to some criteria_ such as aspect, priority, order of delivery, etc.
+**Feature list**: A list of features of a product _grouped according to some criteria_ such as aspect, priority, order of delivery, etc.
 
 </div>
 
 <div id="def-focus-group">
 
-**Focus Groups**: A kind of _informal interview_ within an _interactive group setting_.
+**Focus groups**: A kind of _informal interview_ within an _interactive group setting_.
 
 </div>
 
@@ -182,7 +182,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-interface-segregation-principle">
 
-**Interface Segregation Principle (ISP)**: No client should be forced to depend on methods it does not use.
+**Interface segregation principle (ISP)**: No client should be forced to depend on methods it does not use.
 
 </div>
 
@@ -204,7 +204,7 @@ Also known as
 
 <div id="def-liskov-substitution-principle">
 
-**Liskov Substitution Principle (LSP)**: Derived classes must be substitutable for their base classes. <sub>-- proposed by [Barbara Liskov](https://en.wikipedia.org/wiki/Barbara_Liskov)</sub>
+**Liskov substitution principle (LSP)**: Derived classes must be substitutable for their base classes. <sub>-- proposed by [Barbara Liskov](https://en.wikipedia.org/wiki/Barbara_Liskov)</sub>
 
 </div>
 
@@ -212,7 +212,7 @@ Also known as
 
 <div id="def-open-closed-principle">
 
-**Open-Closed Principle (OCP)**: A module should be _open_ for extension but _closed_ for modification. That is, modules should be written so that they can be extended, without requiring them to be modified. <sub>-- proposed by [Bertrand Meyer](https://en.wikipedia.org/wiki/Bertrand_Meyer)</sub>
+**Open-closed principle (OCP)**: A module should be _open_ for extension but _closed_ for modification. That is, modules should be written so that they can be extended, without requiring them to be modified. <sub>-- proposed by [Bertrand Meyer](https://en.wikipedia.org/wiki/Bertrand_Meyer)</sub>
 
 </div>
 
@@ -220,7 +220,7 @@ Also known as
 
 <div id="def-pair-programming">
 
-**Pair Programming**: 
+**Pair programming**: 
 
 >Pair programming is an agile software development technique in which two programmers work together at one workstation. One, the driver, writes code while the other, the observer or navigator, reviews each line of code as it is typed in. The two programmers switch roles frequently. <sub>[[source: Wikipedia](https://en.wikipedia.org/wiki/Pair_programming)]</sub>
 
@@ -249,7 +249,7 @@ Also known as
 
 <div id="def-rcs">
 
-**RCS**:  **Revision Control Software** are the software tools that automate the process of _Revision Control_ i.e. managing revisions of software artifacts.
+**RCS**:  **Revision control software** are the software tools that automate the process of _Revision Control_ i.e. managing revisions of software artifacts.
 
 </div>
 
@@ -269,19 +269,19 @@ Also known as
 
 <div id="def-separation-concerns-principle">
 
-**Separation of Concerns Principle (SoC)**: To achieve better modularity, separate the code into distinct sections, such that each section addresses a separate _concern_. -- Proposed by [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra)
+**Separation of concerns principle (SoC)**: To achieve better modularity, separate the code into distinct sections, such that each section addresses a separate _concern_. -- Proposed by [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra)
 
 </div>
 
 <div id="def-single-responsibility-principle">
 
-**Single Responsibility Principle (SRP)**: A class should have one, and only one, reason to change. <sub>-- Robert C. Martin</sub>
+**Single responsibility principle (SRP)**: A class should have one, and only one, reason to change. <sub>-- Robert C. Martin</sub>
 
 </div>
 
 <div id="def-se">
 
-**Software Engineering**: Software Engineering is the application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software" <sub>-- IEEE Standard Glossary of Software Engineering Terminology</sub>
+**Software engineering**: Software Engineering is the application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software" <sub>-- IEEE Standard Glossary of Software Engineering Terminology</sub>
 
 </div>
 
@@ -337,7 +337,7 @@ Also known as
 
 <div id="def-type-signature">
 
-**Type Signature**: The _type signature_ of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant. 
+**Type signature**: The _type signature_ of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant. 
 
 <box>
 
@@ -368,7 +368,7 @@ Also known as
 
 <div id="def-use-case">
 
-**Use Case**: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an <trigger for="pop:actor">actor</trigger>.[ :book: : <popover effect="fade" placement="top" >uml-user-guide<span slot="content"><include src="./references.md#uml-user-guide" inline/></span></popover>]
+**Use case**: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an <trigger for="pop:actor">actor</trigger>.[ :book: : <popover effect="fade" placement="top" >uml-user-guide<span slot="content"><include src="./references.md#uml-user-guide" inline/></span></popover>]
   
 <popover id="pop:actor" header="{{icon_preview}}" placement="top">
   <div slot="content">
