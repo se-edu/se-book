@@ -19,7 +19,7 @@
 **The project aims to build a product named _Duke_, a Personal Assistant Chatbot that helps a person to keep track of various things.** %%The name _Duke_ was chosen as a placeholder name, in honor of [Duke, the Java Mascot](https://www.oracle.com/java/duke.html).%% **You may give it any other name and personality you wish.**
 
 Here is a sample interaction with Duke:
-```
+```{.no-line-numbers}
     ____________________________________________________________
       ____        _        
      |  _ \ _   _| | _____ 
@@ -94,7 +94,7 @@ The project consists of the following _increments_:
 Implement an initial _skeletal_ version of the Duke that simply greets the user and exits.
 <br>
 Example:
-```
+```{.no-line-numbers}
 ____________________________________________________________
  Hello! I'm Duke
  What can I do for you?
@@ -113,7 +113,7 @@ ____________________________________________________________
 Implement a _skeletal_ version of Duke that starts by greeting the user, simply echos commands entered by the user, and exits when the user types `bye`.
 <br>
 Example:
-```
+```{.no-line-numbers}
     ____________________________________________________________
      Hello! I'm Duke
      What can I do for you?
@@ -152,7 +152,7 @@ bye
 Add the ability to store whatever text entered by the user and display them back to the user when requested.
 
 Example:
-```
+```{.no-line-numbers}
     ____________________________________________________________
      Hello! I'm Duke
      What can I do for you?
@@ -191,7 +191,7 @@ bye
 
 Add the ability to mark tasks as _done_.<br><br>
 
-```
+```{.no-line-numbers}
 list
     ____________________________________________________________
      Here are the tasks in your list:
@@ -225,7 +225,7 @@ Add support for tracking three types of tasks:
 3. **Events**: tasks that start at a specific time and ends at a specific time %%e.g., _team project meeting on 2/10/2019 2-4pm_%%
 
 Example:
-```
+```{.no-line-numbers}
 todo borrow book
     ____________________________________________________________
      Got it. I've added this task: 
@@ -261,7 +261,7 @@ event project meeting /at Mon 2-4pm
 At this point, dates/times can be treated as strings; there is no need to convert them to actual dates/times.
 
 Example:
-```
+```{.no-line-numbers}
 
 deadline do homework /by no idea :-p
     ____________________________________________________________
@@ -284,7 +284,7 @@ Teach Duke to deal with errors such as incorrect inputs entered by the user.
 <br>
 
 Example:
-```
+```{.no-line-numbers}
 todo
     ____________________________________________________________
      ☹ OOPS!!! The description of a todo cannot be empty.
@@ -313,7 +313,7 @@ Add support for deleting tasks from the list.
 <br>
 
 Example:
-```
+```{.no-line-numbers}
 list
     ____________________________________________________________
      Here are the tasks in your list:
@@ -343,7 +343,7 @@ delete 3
 Save the tasks in the hard disk automatically whenever the task list changes. Load the data from the hard disk when Duke starts up. You may hard-code the file name and location %%e.g., `[project_root]/data/duke.txt`%%
 
 The format of the file is up to you. Example:
-```
+```{.no-line-numbers}
 T | 1 | read book
 D | 0 | return book | June 6th
 E | 0 | project meeting | Aug 6th 2-4pm
@@ -363,7 +363,7 @@ T | 1 | join sports club
 
 ### Level 8. Dates and Times
 
-Teach Duke to understand dates and times. For example, if the command is `deadline return book /by 2/12/2019 1800`, Duke understands `2/12/2019 1800` as _2nd of December 2019, 6pm_, instead of storing it simply as a String.
+Teach Duke to how to understand dates and times. For example, if the command is `deadline return book /by 2/12/2019 1800`, Duke should understand `2/12/2019 1800` as _2nd of December 2019, 6pm_, instead of storing it simply as a String.
 
 * **Minimal**: Store deadline dates as a `java.time.LocalDate` in your task objects. Accept dates in a format such as `yyyy-mm-dd` format (e.g., `2019-10-15`)  and print in a different format such as `MMM dd yyyy` e.g., (`Oct 15 2019`).
 * **Stretch goal**: Use dates and times in more meaningful ways. e.g., add a command to print deadlines/events occurring on a specific date. 
@@ -416,7 +416,7 @@ Give users a way to find a task by searching for a keyword.
 <br>
 
 Example:
-```
+```{.no-line-numbers}
 find book
     ____________________________________________________________
      Here are the matching tasks in your list:
@@ -432,11 +432,12 @@ find book
 
 ### Level 10. GUI
 
-Add a GUI to Duke.
+Add a GUI to Duke. Use the JavaFX technology to implement the GUI.
+
 <br>
 <br>
 
-<include boilerplate src="dukeNestedFragment.md" var-target="A-JavaFx" var-name="Extension: `A-JavaFx`" />
+Refer to the [_JavaFX tutorial_ @SE-EDU/guides](https://se-education.org/guides/tutorials/javaFxPart1.html) to learn how to get started with JavaFX.
 
 </div>
 
