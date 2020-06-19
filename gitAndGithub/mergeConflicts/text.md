@@ -19,22 +19,22 @@
 COLORS
 ------
 blue
-<<<<<<< HEAD
+<<<<<< HEAD
 black
 =======
 green
->>>>>>> fix1
+>>>>>> fix1
 red
 white
 ```
 
-**4. Observe how the conflicted part is marked** between a line starting with `<<<<<<< ` and a line starting with `>>>>>>>`, separated by another line starting with `=======`. 
+**4. Observe how the conflicted part is marked** between a line starting with `<<<<<< ` and a line starting with `>>>>>>`, separated by another line starting with `=======`.
 
 This is the conflicting part that is coming from the `master` branch:
 
 ```txt
 
-<<<<<<< HEAD
+<<<<<< HEAD
 black
 =======
 
@@ -46,7 +46,7 @@ This is the conflicting part that is coming from the `fix1` branch:
 
 =======
 green
->>>>>>> fix1
+>>>>>> fix1
 
 ```
 
