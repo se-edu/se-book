@@ -15,7 +15,24 @@ The basic UML notations used to represent a _class_:<br>
 
 {{ icon_example }} A `Table` class shown in UML notation:
 
-<img src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operations.png" height="150" />
+<img tags="m--cs2113 m--cs2103 m--tic2002" src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operations.png" height="150" />
+
+<span tags="m--te3201">
+<puml>
+@startuml
+skinparam classAttributeIconSize 0
+skinparam backgroundcolor transparent
+skinparam shadowing false
+hide circle
+class Table {
+number: int = 0
+chairs: Chair[ ] = [ ]
+get_number(): int
+set_number(n:int)
+}
+@enduml
+</puml>
+</span>
 <p/>
 
 <panel type="seamless" header="The equivalent code">
@@ -88,8 +105,62 @@ visibility | Java | Python
 
 {{ icon_example }} `Table` class with visibilities shown:
 
-<img src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operationsVisibility.png" height="150" />
+<img tags="m--cs2113 m--cs2103 m--tic2002" src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operationsVisibility.png" height="150" />
+<span tags="m--te3201">
+<puml>
+@startuml
+skinparam classAttributeIconSize 0
+skinparam backgroundcolor transparent
+skinparam shadowing false
+hide circle
+class Table {
+<b><color:red>-</color>__number</b>: int = 0
+<b><color:red>-</color></b>__chairs: Chair[ ] = [ ]
+<b><color:red>+</color></b>get_number(): int
+<b><color:red>+</color></b>set_number(n:int)
+}
+@enduml
+</puml>
+</span>
 <p/>
+
+<panel type="seamless" header="The equivalent code">
+<div class="alt-java">
+
+```java
+class Table{
+
+    private Integer number;
+    private Chair[] chairs = null;
+
+    public Integer getNumber(){
+        //...
+    }
+
+    public void setNumber(Integer n){
+        //...
+    }
+}
+```
+</div>
+<div class="alt-python">
+
+```python
+class Table:
+
+  def __init__(self):
+    self.__number = 0
+    self.__chairs = []
+
+  def get_number(self):
+    # ...
+
+  def set_number(self, n):
+    # ...
+```
+</div>
+
+</panel>
 
 </box>
 
