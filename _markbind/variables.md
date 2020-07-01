@@ -23,6 +23,7 @@
 <span id="icon_outcome"><md>:fas-trophy:</md></span>
 <span id="icon_output"><md>:fas-arrow-down:</md></span>
 <span id="icon_output_right"><md>:fas-arrow-right:</md></span>
+<span id="icon_pr"><md>:octicon-git-pull-request:</md></span>
 <span id="icon_print"><md>:glyphicon-print:</md></span>
 <span id="icon_prereq"><md>:glyphicon-education:</md></span>
 <span id="icon_preview"><md>:glyphicon-eye-open:</md></span>

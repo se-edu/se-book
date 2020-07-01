@@ -1,65 +1,40 @@
-<span id="title">Manage PRs</span>
+<span id="title">Merging PRs</span>
 
-<span id="prereqs"><panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Branching%%" popup-url="{{ baseUrl }}/gitAndGithub/branch" />
-<panel src="../createPRs/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Create PRs%%" popup-url="{{ baseUrl }}/gitAndGithub/createPRs" />
-<panel src="../mergeConflicts/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Merge Conflicts%%" popup-url="{{ baseUrl }}/gitAndGithub/mergeConflicts" /></span>
+<span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can review and merge PRs on GitHub</span>
 
+{% macro dropdown(text) %}<span class="btn btn-light border">{{ text }} :octicon-triangle-down:</span>{% endmacro %}
+{% macro button_green(text) %}<span class="btn btn-success pl-1 pr-1 pb-0 pt-0">{{ text }}</span>{% endmacro %}
+{% macro button_light(text) %}<span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">{{ text }}</span>{% endmacro %}
+
 <div id="body">
 
-**1. Go to the GitHub page of your fork and review the `add-intro` PR** you created previously in [<trigger trigger="click" for="modal:managePrs-createPrs">Tools → Git & GitHub → Create PRs</trigger>] to simulate the PR being reviewed by another developer, as explained below. %%Note that some features available to PR reviewers will be unavailable to you because you are also the author of the PR.%%
+Let's look at the steps involved in merging a PR, assuming the PR has been reviewed, refined, and approved for merging already.
 
-<modal large header="Tools → Git & GitHub → Create PRs" id="modal:managePrs-createPrs">
-  <include src="../createPRs/unit-inElsewhere-asFlat.md#main" boilerplate />
+**1. Locate the PR** to be merged in your repo's GitHub page.
+
+**2. Click on the <span class="tab">:far-comments: Conversation</span> tab** and scroll to the bottom. You'll see a panel containing the PR status summary.<br>
+<img src="{{baseUrl}}/gitAndGithub/managePRs/images/mergePr.png" width="800" />
+
+**3. If the PR is not merge-able in the current state**, the {{ button_light("Merge pull request :octicon-triangle-down:") }} will not be green. Here are the possible reasons and remedies:
+
+* **Problem: The PR code is out-of-date**, indicated by the message **%%This branch is out-of-date with the base branch%%**. That means the repo's `master` branch has been updated since the PR code was last updated.
+  * If the PR author has allowed you to update the PR and you have sufficient permissions, GitHub will allow you to update the PR simply by clicking the {{ button_light("Update branch") }} on the right side of the 'out-of-date' error message.
+    If that option is not available, post a message in the PR requesting the PR author to update the PR.
+* **Problem: There are merge conflicts**, indicated by the message **%%This branch has conflicts that must be resolved%%**. That means the repo's `master` branch has been updated since the PR code was last updated, in a way that the PR code conflicts with the current `master` branch. Those <trigger trigger="click" for="modal:managePRs-mergeConflics">conflicts must be resolved</trigger>  before the PR can be merged.
+  * If the conflicts are simple, GitHub might allow you to resolve them using the Web interface.
+  * If that option is not available, post a message in the PR requesting the PR author to update the PR.
+
+<modal large header="Tools → Git & GitHub → Merge Conflicts" id="modal:managePRs-mergeConflics">
+  <include src="../mergeConflicts/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
-1a. Go to the respective PR page and click on the `Files changed` tab. Hover over the line you want to comment on and click on the <span style="color:#0066ff">:fas-plus-square:</span> icon that appears on the left margin. That should create a text box for you to enter your comment.
+**3. Merge the PR** by clicking on the {{ button_green("Merge pull request :octicon-triangle-down:") }} button, followed by the `Confirm merge` button. You should see a `Pull request successfully merged and closed` message after the PR is merged.<br>
 
-<img src="{{baseUrl}}/gitAndGithub/managePRs/images/startReview.png" width="800" />
-<p/>
+* You can choose between three merging options by clicking on the down-arrow in the {{ button_green("Merge pull request :octicon-triangle-down:") }} button. If you are new to Git and GitHub, `Create merge commit` or `Squash and merge` options are recommended.
 
-
-1b. Enter some dummy comment and click on `Start a review` button.
-
-<img src="{{baseUrl}}/gitAndGithub/managePRs/images/addComment.png" width="800" />
-<p/>
-
-1c. Add a few more comments in other places of the code.
-
-
-1d. Click on the `Review Changes` button, enter an overall comment, and click on the `Submit review` button.
-
-<img src="{{baseUrl}}/gitAndGithub/managePRs/images/submitReview.png" width="500" />
-<p/>
-
-
-**2. Update the PR** to simulate revising the code based on reviewer comments. Add some more commits to the `add-intro` branch and push the new commits to the fork. Observe how the PR is updated automatically to reflect the new code.
-
-**3. Merge the PR.** Go to the GitHub page of the respective PR, scroll to the bottom of the `Conversation` tab, and click on the `Merge pull request` button, followed by the `Confirm merge` button. You should see a `Pull request successfully merged and closed` message after the PR is merged.
-
-<img src="{{baseUrl}}/gitAndGithub/managePRs/images/mergePr.png" width="800" />
-<p/>
-
-
-**4. Sync the local repo with the remote repo.** Because of the merge you did on the GitHub, the `master` branch of your fork is now ahead of your local repo by one commit.  To sync the local repo with the remote repo, pull the `master` branch to the local repo. 
-
-```
-git checkout master
-git pull origin master
-```
-
-Observe how the `add-intro` branch is now merged to the `master` branch in your local repo as well.
-
-**5. De-conflict the `add-summary` PR** <trigger trigger="click" for="modal:managePrs-createPrs">that you created earlier</trigger>. Note that GitHub page for the `add-summary` PR is now showing a conflict %%(when you scroll to the bottom of that page, you should see a message `This branch has conflicts that must be resolved`)%%. You can resolve it locally and update the PR accordingly, as explained below.
-
-5a. Switch to the `add-summary` branch. To make that branch up-to-date with the `master` branch, merge the `master` branch to it, which will surface the merge conflict. Resolve it and complete the merge.
-
-5b. Push the updated `add-summary` branch to the fork. That will remove the 'merge conflicts' warning in the GitHub page of the PR.
-
-**6. Merge the `add-summary` PR** using the GitHub interface, similar to how you merged the previous PR. 
-
-{{ icon_info }} Note that you could have merged the `add-summary` branch to the `master` branch locally before pushing it to GitHub. In that case, the PR will be merged on GitHub automatically to reflect that the branch has been merged already.
+**Next, sync your local repos (and forks).** Merging a PR simply merges the code in the upstream remote repository in which it was merged. The PR author (and other members of the repo) needs to pull the merged code from the upstream repo to their local repos and push the new code to their respective forks to syn the fork with the upstream repo.
 
 </div>
 

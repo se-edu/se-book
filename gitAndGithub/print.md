@@ -14,6 +14,7 @@ title: "Git and GitHub [Printable]"
 <include src="commit/unit-inParent-asFlat-print.md" boilerplate />
 <include src="ignore/unit-inParent-asFlat-print.md" boilerplate />
 <include src="tag/unit-inParent-asFlat-print.md" boilerplate />
+<include src="diff/unit-inParent-asFlat-print.md" boilerplate />
 <include src="checkout/unit-inParent-asFlat-print.md" boilerplate />
 <include src="stash/unit-inParent-asFlat-print.md" boilerplate />
 <include src="clone/unit-inParent-asFlat-print.md" boilerplate />
@@ -22,6 +23,7 @@ title: "Git and GitHub [Printable]"
 <include src="branch/unit-inParent-asFlat-print.md" boilerplate />
 <include src="mergeConflicts/unit-inParent-asFlat-print.md" boilerplate />
 <include src="createPRs/unit-inParent-asFlat-print.md" boilerplate />
+<include src="reviewPRs/unit-inParent-asFlat-print.md" boilerplate />
 <include src="managePRs/unit-inParent-asFlat-print.md" boilerplate />
 <include src="forkingWorkflow/unit-inParent-asFlat-print.md" boilerplate />
 

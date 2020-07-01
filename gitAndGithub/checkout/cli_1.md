@@ -1,25 +1,7 @@
-```sh
-git show < part-of-commit-hash >
-```
-Example:
-```
-git show 251b4cf
-```
-{{ icon_output }}
-```diff
-commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3
-Author: … < … >
-Date:   Sat Jul 8 16:50:27 2017 +0800
+Use the `checkout <commit-identifier>` command to change the working directory to the state it was in at a specific past commit.
 
-    fruits.txt: replace banana with berries
+* `git checkout v1.0`: loads the state as at commit tagged `v1.0`
+* `git checkout 0023cdd`: loads the state as at commit with the hash `0023cdd`
+* `git checkout HEAD~2`: loads the state that is 2 commits behind the most recent commit
 
-diff --git a/fruits.txt b/fruits.txt
-index 15b57f7..17f4528 100644
---- a/fruits.txt
-+++ b/fruits.txt
-@@ -1,3 +1,3 @@
- apples
--bananas
-+berries
- cherries
-```
+For now, you can ignore the warning about ‘detached HEAD’.

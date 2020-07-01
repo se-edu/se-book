@@ -2,22 +2,19 @@
 
 <span id="outcomes">{{ icon_outcome }} Can push to a remote repo</span>
 
-<span id="title">Push</span>
+<span id="title">`push`: Uploading data other repos</span>
 
 <div id="body">
 
-1. Create a GitHub account if you don't have one yet.
-1. Fork the [samplerepo-things](https://github.com/se-edu/samplerepo-things) to your GitHub account:
+**Git provides a way to _push_ your new commits to another repo**. Given below are some steps you can follow along to learn how to push commits to a remote repo hosted on GitHub.
 
-   <panel type="seamless" header="%%How to fork a repo?%%">
-    
-    Navigate to the  on GitHub and click on the <img src="{{baseUrl}}/gitAndGithub/push/images/fork.png" height="30" /> button on the top-right corner.
-    
-   </panel><p/>
+**1. Fork** an existing GitHub repo (e.g., [samplerepo-things](https://github.com/se-edu/samplerepo-things)) to your GitHub account:
 
-2. Clone the fork (not the original) to your computer.
-3. Create some commits in your repo.
-4. Push the new commits to your fork on GitHub
+**2. Clone the fork** (not the original) to your computer.
+
+**3. Commit** some changes in your local repo.
+
+**4. Push** the new commits to your fork on GitHub
 
 <tabs>
   <tab header="SourceTree">
@@ -30,10 +27,33 @@
 
 <p/>
 
-<panel header="" minimized >
-   <span slot="header" class="card-title"><md> Pushing an existing local repo into a new remote repo on GitHub {{ icon_extra }}</md></span>
+**You can push to repos other than the one you cloned from**, as long as the target repo and your repo have a shared history.
+1. <trigger trigger="click" for="modal:push-addRemoteForNormalPushing">Add the GitHub repo URL as a remote</trigger>, if you haven't done so already.
+1. Push to the target repo.
 
-First, you need to create an empty remote repo on GitHub.
+<modal large header="Git & GitHub → Pull →" id="modal:push-addRemoteForNormalPushing">
+  <include src="../pull/text.md#section-working-with-multiple-remotes"/>
+</modal>
+
+<tabs>
+  <tab header="SourceTree">
+
+Push your repo to the new remote the usual way, but select the name of target remote instead of `origin`.<br>
+<img src="{{baseUrl}}/gitAndGithub/push/images/pushToRemote.png" width="470" />
+
+  </tab>
+  <tab header="CLI">
+
+Push to the new remote the usual way  e.g., `git push upstream1 master` (assuming the you gave the name `upstream1` to the remote).
+
+  </tab>
+</tabs>
+
+<p/>
+
+**You can even push an entire local repository** to GitHub, to form an entirely new remote repository. For example, you created a local repo and worked with it for a while but now you want to upload it onto GitHub (as a backup or to share it with others). The steps are given below.
+
+**1. Create an ==empty== remote repo on GitHub.**
 
 1. Login to your GitHub account and choose to create a new Repo. <br>
    <img src="{{baseUrl}}/gitAndGithub/push/images/createNewRemoteRepo.png" width="150" />
@@ -42,37 +62,30 @@ First, you need to create an empty remote repo on GitHub.
    <img src="{{baseUrl}}/gitAndGithub/push/images/fillNewRepoInfo.png" width="600" />
 
 1. Note the URL of the repo. It will be of the form `https://github.com/{your_user_name}/{repo_name}.git`<br>
-   e.g., `https://github.com/johndoe/foobar.git`<br>
+   e.g., `https://github.com/johndoe/foobar.git` (not the `.git` at the end)<br>
    <img src="{{baseUrl}}/gitAndGithub/push/images/newRepoUrl.png" width="450" />
 
-Next, you can push the existing local repo to the new remote repo as follows:
+**2. <trigger trigger="click" for="modal:push-addRemote">Add the GitHub repo URL as a remote</trigger>** of the local repo. You can give it the name `origin` (or any other name).
+
+<modal large header="Git & GitHub → Pull →" id="modal:push-addRemote">
+  <include src="../pull/text.md#section-working-with-multiple-remotes"/>
+</modal>
+
+**3. Push the repo** to the remote.
 
 <tabs>
   <tab header="SourceTree">
 
-1. Open the local repo in SourceTree.
-1. Choose `Repository` → `Repository Settings` menu option.
-1. Add a new _remote_ to the repo with the following values.
-   * `Remote name`: the name you want to assign to the remote repo. Recommended `origin`
-   * `URL/path`: the URL of your repo (ending in `.git`) that you collected earlier.
-   * `Username`: your GitHub username<br>
-     <img src="{{baseUrl}}/gitAndGithub/push/images/fillRemoteInfoForSourceTree.png" width="450" />
-1. Now you can push your repo to the new remote the usual way.<br>
-   <img src="{{baseUrl}}/gitAndGithub/push/images/pushToRemote.png" width="470" />
+<img src="{{baseUrl}}/gitAndGithub/push/images/pushToRemote.png" width="470" />
 
   </tab>
   <tab header="CLI">
 
-1. Navigate to the folder containing the local repo.
-1. Set the new remote repo as a _remote_ of the local repo.<br>
-   command: `git remote add {remote_name} {remote_repo_url}`<br>
-   e.g., `git remote add origin https://github.com/johndoe/foobar.git`
-1. Push to the new remote the usual way. You can use the `-u` flag to inform Git that you wish to <tooltip content="i.e., remember which branch in the remote repo corresponds to which branch in the local repo">track</tooltip> the branch.<br>
+Push each branch to the new remote the usual way ==but use the `-u` flag== to inform Git that you wish to <tooltip content="i.e., remember which branch in the remote repo corresponds to which branch in the local repo">track</tooltip> the branch.<br>
    e.g., `git push -u origin master`
 
   </tab>
 </tabs>
-</panel>
 
 </div>
 

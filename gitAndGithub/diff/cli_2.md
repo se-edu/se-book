@@ -1,7 +1,8 @@
 The `diff` command can be used to view the differences between two points of the history.
 
 * `git diff` : shows the changes (uncommitted) since the last commit
-* `git diff 0023cdd..fcd6199`: shows the changes between the points indicated by by commit hashes
+* `git diff 0023cdd..fcd6199`: shows the changes between the points indicated by by commit hashes<br>
+  {{ icon_tip }} Note that when using a commit hash in a Git command, you can use only the first few characters (e.g., first 7-10 chars) as that's usually enough for Git to locate the commit.
 * `git diff v1.0..HEAD`: shows changes that happened from the commit tagged as `v1.0` to the most recent commit.
 
 <panel header="{{ icon_resource }} Resources" expanded>

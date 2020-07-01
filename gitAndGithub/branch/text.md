@@ -1,4 +1,4 @@
-<span id="title">Branch</span>
+<span id="title">`branch`: Doing multiple parallel changes</span>
 
 <span id="prereqs"><panel src="../../revisionControl/branching/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Branching%%" popup-url="{{ baseUrl }}/revisionControl/branching" /></span>
 
@@ -6,7 +6,9 @@
 
 <div id="body">
 
-**0. Observe that you are normally in the branch called `master`.** For this, you can take any repo you have on your computer (e.g. a clone of the [samplerepo-things](https://github.com/se-edu/samplerepo-things)). 
+**Git branches allow you to do multiple parallel changes to the content of a repository**. Follow the steps below to learn how to work with branches. You can use any repo you have on your computer (e.g. a clone of the [samplerepo-things](https://github.com/se-edu/samplerepo-things)) for this.
+
+**0. Observe that you are normally in the branch called `master`.**
 
 <tabs>
   <tab header="SourceTree">
@@ -115,6 +117,42 @@ That is because **Git does a ==_fast forward_ merge== if possible**. Seeing that
     <include src="./cli_4.md" />
   </tab>
 </tabs>
+
+<box>
+
+<div id="pushing-a-branch">
+
+##### Pushing a branch to a remote repo
+
+Here's how to push a branch to a remote repo:
+
+<tabs>
+  <tab header="SourceTree">
+
+Here's how to push a branch named `add-intro` to your own fork of a repo named `samplerepo-pr-practice`:
+
+<img src="images/pushBranchToFork.png" height="300" />
+<p/>
+
+  </tab>
+  <tab header="CLI">
+
+Normally: `git push {remote repository} {branch}`. Examples:<br>
+* `git push origin master` pushes the `master` branch to the repo named `origin` (i.e., the repo you cloned from)
+* `git push upstream-repo add-intro` pushes the `add-intro` branch to the repo named `upstream-repo`
+
+**If pushing a branch you created locally to the remote for the _first time_**, add the `-u` flag to get the local branch to track the new upstream branch:<br/>
+e.g., `git push -u origin add-intro`
+
+
+{{ icon_resource }} See [git-scm.com/docs/git-push](https://git-scm.com/docs/git-push) for details of the `push` command.
+
+  </tab>
+</tabs>
+<p/>
+</div>
+
+</box>
 
 </div>
 

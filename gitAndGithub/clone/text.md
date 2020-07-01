@@ -2,13 +2,15 @@
 
 <span id="outcomes">{{ icon_outcome }} Can clone a remote repo</span>
 
-<span id="title">Clone</span>
+<span id="title">`clone`: Copying a repo</span>
 
 <div id="body">
 
-Clone the sample repo [samplerepo-things](https://github.com/se-edu/samplerepo-things) to your computer.
+**_Cloning_ is the act of copying a Git repository**, including its entire revision history. Given below is an example you can follow to learn Git cloning:
 
-<box type="error">
+Suppose you want to clone the sample repo [samplerepo-things](https://github.com/se-edu/samplerepo-things) to your computer.
+
+<box type="warning">
 
 Note that the URL of the Github project is different from the URL you need to clone a repo in that Github project.
 e.g.
