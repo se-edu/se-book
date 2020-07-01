@@ -9,7 +9,26 @@ You can create issues for each of the user stories and use a GitHub _Project Boa
 
 {{ icon_example }} Example Issue to represent a user story:
 
+
+<div id="user-stories-in-issue-tracker">
+
+You can break the user story into issue subject and description in this way:
+
+title | `As a user I can add a deadline`
+------|---------------------------------
+Description | `... so that I can keep track of my deadlines`
+
 <img src="{{baseUrl}}/specifyingRequirements/userStories/usage/images/userStoryAsGitHubIssue.png" width="800" /><p/>
+
+Alternatively, you can put the entire user story in the description.
+
+title | `Add deadline`
+------|---------------------------------
+Description | `As a user I can so that I can keep track of my deadlines`
+
+In both cases, apply the <span class="badge badge-pill badge-info">type.Story</span> label.
+
+</div>
 
 A video on GitHub Project Boards:
 

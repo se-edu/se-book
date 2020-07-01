@@ -1,93 +1,76 @@
-<span id="title">Create PRs</span>
-
-<span id="prereqs"><panel src="../branch/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Branching%%" popup-url="{{ baseUrl }}/gitAndGithub/branch" /></span>
+<span id="title">Creating PRs</span>
 
 <span id="outcomes">{{ icon_outcome }} Can create PRs on GitHub</span>
 
+{% macro dropdown(text) %}<span class="btn btn-light border">{{ text }} :octicon-triangle-down:</span>{% endmacro %}
+{% macro button_green(text) %}<span class="btn btn-success pl-1 pr-1 pb-0 pt-0">{{ text }}</span>{% endmacro %}
+{% macro button_light(text) %}<span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">{{ text }}</span>{% endmacro %}
+
 <div id="body">
 
-**1. Fork the [samplerepo-pr-practice](https://github.com/se-edu/samplerepo-pr-practice) onto your GitHub account. Clone it onto your computer.**
+**A pull request (PR for short) is a request from one GitHub repo to another to accept some proposed code changes** i.e., "I'm _requesting_ you to _pull_ my proposed changes to your repo". For this to work, the two repos must have a shared history i.e., not possible to PR between unrelated repos. The most common case is sending PRs from a fork to its <tooltip content="_upstream_ repo is a repo you forked from">upstream</tooltip> repo.
 
-**2. Create a branch named `add-intro` in your clone. Add a couple of commits** which adds/modifies an _Introduction_ section to the `README.md`. Example:
+Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-practice](https://github.com/se-edu/samplerepo-pr-practice)) as a PR. Here are the steps:
 
-```md
+**1. Fork** the repo onto your GitHub account.
 
-# Introduction
-Creating Pull Requests (PRs) is needed when using RCS in a multi-person projects.
-This repo can be used to practice creating PRs.
+**2. Clone** it onto your computer.
 
-```
+**3. Commit** your changes e.g., add a new file with some contents and commit it.
+* **Option A - Commit changes to the `master` branch**
+* **Option B - Commit to a new branch** e.g., create a branch named `add-intro` (remember to switch to the `master` branch before creating a new branch) and add your commit to it.
 
-**3. Push the `add-intro` branch to your fork.**
+**4. Push** the updated `master` branch (or the new branch) to your fork, as explained <trigger trigger="click" for="modal:createPr-pushBranch">here </trigger>.
 
-<tabs>
-  <tab header="SourceTree">
-  
-<img src="{{baseUrl}}/gitAndGithub/createPRs/images/pushBranchToFork.png" height="300" />
-<p/>
-    
-  </tab>
-  <tab header="CLI">
-  
-```
-git push origin add-intro
-```
-    
-  </tab>
-</tabs>
+<modal large header="Git & GitHub → Branch →" id="modal:createPr-pushBranch">
+  <include src="../branch/text.md#pushing-a-branch"/>
+</modal>
 
-**4. Create a Pull Request from the `add-intro` branch in your fork to the `master` branch of the same fork** (i.e. `your-user-name/samplerepo-pr-practice`, not `se-edu/samplerepo-pr-practice`), as described below.
+**5. Initiate the PR creation:**
 
-4a. Go to the GitHub page of your fork (i.e. `https://github.com/{your_username}/samplerepo-pr-practice`), click on the `Pull Requests` tab, and then click on `New Pull Request` button.
+1. Go to your fork.
+1. Click on the <span class="tab">%%:octicon-git-pull-request:%% Pull requests</span> tab followed by the {{ button_green("New pull request") }} **button**. This will bring you to the 'Comparing changes' page.
+1. Set the appropriate target repo and the branch that should receive your PR, using the `base repository` and `base` dropdowns. e.g.,<br>
+   {{ dropdown("base repository: **se-edu/samplerepo-pr-practice**") }} {{ dropdown("base: **master**") }}<br>
 
-<img src="{{baseUrl}}/gitAndGithub/createPRs/images/createPrButton.png" width="800" />
-<p/>
+   <box type="info" light>
 
-4b. Select `base fork` and `head fork` as follows:
+   Normally, the default value shown in the dropdown is what you want but in case your fork has <popover content="e.g., the repo you forked from is also a fork of a another repo, which means both of those are considered upstream repos of your fork">multiple upstream repos</popover>, the default may not be what you want.
 
-* `base fork`: your own fork (i.e. `{your user name}/samplerepo-pr-practice`, ==NOT `se-edu/samplerepo-pr-practice`==)
-* `head fork`: your own fork.
+   </box>
+1. Indicate which repo:branch contains your proposed code, using the `head repository` and `compare` dropdowns. e.g.,<br>
+  {{ dropdown("head repository: **myrepo/samplerepo-pr-practice**") }} {{ dropdown("compare: **master**") }}<br>
 
-<img src="{{baseUrl}}/gitAndGithub/createPRs/images/selectBase.png" width="800" />
-<p/>
+**6. Verify proposed code**: Verify the diff view in the page shows the exact change you intend to propose. If it doesn't, <tooltip content="commit the new code and push to the branch">update the branch</tooltip> as necessary.
 
-<box type="info">
+**7. Submit the PR:**
+<span id="submit-the-pr">
 
-The _base fork_ is where changes should be applied. The _head fork_ contains the changes you would like to be applied.  
+   1. Click the {{ button_green(icon_pr + " Create pull request") }} button.
 
-</box>
-
-4c. (1) Set the base branch to `master` and head branch to `add-intro`, (2) confirm the _diff_ contains the changes you propose to merge in this PR %%(i.e. confirm that you did not accidentally include extra commits in the branch)%%, and (3) click the `Create pull request` button.
-
-<img src="{{baseUrl}}/gitAndGithub/createPRs/images/checkDiff.png" width="800" />
-<p/>
+   1. Fill in the PR name and description e.g.,<br>
+      Name: `Add an introduction to the README.md`<br>
+      Description:
+      ```{.no-line-numbers}
+      Add some paragraph to the README.md to explain ...
+      Also add a heading ...
+      ```
+   1. If you want to indicate that the PR you are about to create is 'still work in progress, not yet ready', click on the dropdown arrow in the {{ button_green(" Create pull request :octicon-triangle-down:") }} button and choose `Create draft pull request` option.
+   1. Click the {{ button_green(" Create pull request :octicon-triangle-down:") }} button to create the PR.<br>
+   1. Go to the receiving repo to verify your PR appears there in the `Pull requests` tab.
+</span>
 
 
-4d. (1) Set PR name, (2) set PR description, and (3) Click the `Create pull request` button.
+**The next step of the PR life cycle is the PR _review_.** The members of the repo that received your PR can now review your proposed changes.
+* If they like the changes, they can _merge_ the changes to their repo, which also closes the PR automatically.
+* If they don't like it at all, they can simply close the PR too i.e., they reject your proposed change.
+* In most cases, they will add comments to the PR to suggest further changes. When that happens, GitHub will notify you.
 
-<img src="{{baseUrl}}/gitAndGithub/createPRs/images/setPrName.png" width="600" />
-<p/>
+**You can update the PR along the way too.** Suppose PR reviewers suggested a certain improvement to your proposed code. To update your PR as per the suggestion, you can simply modify the code in your local repo, commit the updated code to the same `master` branch, and push to your fork as you did earlier. The PR will auto-update accordingly.
 
-<box type="important">
+**Sending PRs using the `master` branch is less common** than sending PRs using separate branches. For example, suppose you wanted to propose two bug fixes that are not related to each other. In that case, it is more appropriate to send two separate PRs so that each fix can be reviewed, refined, and merged independently. But if you send PRs using the `master` branch only, both fixes (and any other change you do in the `master` branch) will appear in the PRs you create from it.
 
-A common newbie mistake when creating branch-based PRs is to mix commits of one PR with another. To learn how to avoid that mistake, you are encouraged to continue and create another PR as explained below.
-  
-</box>
-
-**5. In your local repo, create a new branch `add-summary`** off the `master` branch. 
-
-<box type="warning">
-
-When creating the new branch, it is very important that you switch back to the `master` branch first. If not, the new branch will be created off the current branch `add-intro`. And that is how you end up having commits of the first PR in the second PR as well.
-
-</box>
-
-**6. Add a commit in the `add-summary` branch** that adds a _Summary_ section to the `README.md`, in exactly the same place you added the _Introduction_ section earlier. 
-
-<img src="{{baseUrl}}/gitAndGithub/createPRs/images/addSummaryBranch.png" width="400" />
-<p/>
-
-**7. Push the `add-summary` to your fork and create a new PR** similar to before.
+**To create another PR** while the current PR is still under review, create a new branch (remember to ==switch back to the `master` first==), add your new proposed change in that branch, and create a new PR following the steps given above.
 
 <panel header="{{ icon_resource }} Resources" expanded>
 

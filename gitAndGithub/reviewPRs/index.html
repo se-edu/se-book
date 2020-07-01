@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.14.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SEforSDL - Git and GitHub: Manage PRs</title>
+  <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+  <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+  <link rel="stylesheet" href="../../markbind/css/site-nav.css">
+  <link rel="icon" href="/se-book/favicon.ico">
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <navbar placement="top" type="dark" class="temp-navbar">
+        <a slot="brand" href="https://se-education.org" title="SE-EDU" class="navbar-brand"><span><span aria-hidden="true" class="fas fa-chevron-circle-left"></span> <strong><strong>SE-EDU</strong></strong></span></a>
+        <li><a href="/se-book/index.html" class="nav-link"><span><strong>Home</strong></span></a></li>
+        <li><a href="/se-book/about/acknowledgements.html" class="nav-link"><span><strong>About</strong></span></a></li>
+        <li><a href="https://github.com/se-edu/se-book" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a></li>
+        <li slot="right" class="nav-link">
+          <form class="navbar-form">
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+          </form>
+        </li>
+      </navbar>
+    </header>
+    <div id="flex-body">
+      <nav id="site-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-right-grey nav-inner position-sticky slim-scroll">
+          <ul class="px-0 site-nav-list">
+            <li class="mt-2"><button class="dropdown-btn"><strong>About this book</strong>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+              <div class="dropdown-container">
+                <ul class="pl-3 site-nav-list">
+                  <li class="mt-2"><a href="/se-book/about/acknowledgements.html" class="site-nav__a">About</a></li>
+                  <li class="mt-2"><a href="/se-book/about/usage.html" class="site-nav__a">How to use this book</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mt-2"><button class="dropdown-btn"><strong>Software engineering</strong>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+              <div class="dropdown-container">
+                <ul class="pl-3 site-nav-list">
+                  <li class="mt-2"><a href="/se-book/softwareEngineering/index.html" class="site-nav__a">Software engineering</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mt-2"><button class="dropdown-btn"><strong>Object-oriented programming</strong>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+              <div class="dropdown-container">
+                <ul class="pl-3 site-nav-list">
+                  <li class="mt-2"><a href="/se-book/oop/index.html" class="site-nav__a">Object-oriented programming</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mt-2"><button class="dropdown-btn"><strong>Requirements</strong>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+              <div class="dropdown-container">
+                <ul class="pl-3 site-nav-list">
+                  <li class="mt-2"><a href="/se-book/requirements/index.html" class="site-nav__a">Requirements</a></li>
+                  <li class="mt-2"><a href="/se-book/gatheringRequirements/index.html" class="site-nav__a">Gathering requirements</a></li>
+                  <li class="mt-2"><a href="/se-book/specifyingRequirements/index.html" class="site-nav__a">Specifying requirements</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mt-2"><button class="dropdown-btn"><strong>Design</strong>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+              <div class="dropdown-container">
+                <ul class="pl-3 site-nav-list">
+                  <li class="mt-2"><a href="/se-book/design/index.html" class="site-nav__a">Design</a></li>
+                  <li class="mt-2"><a href="/se-book/designFundamentals/index.html" class="site-nav__a">Design fundamentals</a></li>
+                  <li class="mt-2"><a href="/se-book/modeling/index.html" class="site-nav__a">Modeling</a></li>
+                  <li class="mt-2"><a href="/se-book/architecture/index.html" class="site-nav__a">Architecture</a></li>
+                  <li class="mt-2"><a href="/se-book/designPatterns/index.html" class="site-nav__a">Design patterns</a></li>
+                  <li class="mt-2"><a href="/se-book/designApproaches/index.html" class="site-nav__a">Design approaches</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mt-2"><button class="dropdown-btn"><strong>Implementation</strong>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+              <div class="dropdown-container">
+                <ul class="pl-3 site-nav-list">
+                  <li class="mt-2"><a href="/se-book/ides/index.html" class="site-nav__a">IDEs</a></li>
+                  <li class="mt-2"><a href="/se-book/codeQuality/index.html" class="site-nav__a">Code quality</a></li>
+                  <li class="mt-2"><a href="/se-book/refactoring/index.html" class="site-nav__a">Refactoring</a></li>
+                  <li class="mt-2"><a href="/se-book/documentation/index.html" class="site-nav__a">Documentation</a></li>
+                  <li class="mt-2"><a href="/se-book/errorHandling/index.html" class="site-nav__a">Error handling</a></li>
+                  <li class="mt-2"><a href="/se-book/integration/index.html" class="site-nav__a">Integration</a></li>
+                  <li class="mt-2"><a href="/se-book/reuse/index.html" class="site-nav__a">Reuse</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mt-2"><button class="dropdown-btn"><strong>Quality assurance</strong>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+              <div class="dropdown-container">
+                <ul class="pl-3 site-nav-list">
+                  <li class="mt-2"><a href="/se-book/qualityAssurance/index.html" class="site-nav__a">Quality assurance</a></li>
+                  <li class="mt-2"><a href="/se-book/testing/index.html" class="site-nav__a">Testing</a></li>
+                  <li class="mt-2"><a href="/se-book/testCaseDesign/index.html" class="site-nav__a">Test case design</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mt-2"><button class="dropdown-btn"><strong>Project management</strong>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+              <div class="dropdown-container">
+                <ul class="pl-3 site-nav-list">
+                  <li class="mt-2"><a href="/se-book/revisionControl/index.html" class="site-nav__a">Revision control</a></li>
+                  <li class="mt-2"><a href="/se-book/projectPlanning/index.html" class="site-nav__a">Project planning</a></li>
+                  <li class="mt-2"><a href="/se-book/teamwork/index.html" class="site-nav__a">Teamwork</a></li>
+                  <li class="mt-2"><a href="/se-book/processModels/index.html" class="site-nav__a">SDLC process models</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mt-2"><button class="dropdown-btn"><strong>Tools</strong>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+              <div class="dropdown-container">
+                <ul class="pl-3 site-nav-list">
+                  <li class="mt-2"><a href="/se-book/uml/index.html" class="site-nav__a">UML</a></li>
+                  <li class="mt-2"><a href="/se-book/intellij/index.html" class="site-nav__a">Intellij IDEA</a></li>
+                  <li class="mt-2"><a href="/se-book/gitAndGithub/index.html" class="site-nav__a">Git and GitHub</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mt-2"><button class="dropdown-btn"><strong>Principles</strong>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+              <div class="dropdown-container">
+                <ul class="pl-3 site-nav-list">
+                  <li class="mt-2"><a href="/se-book/principles/index.html" class="site-nav__a">Principles</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mt-2"><button class="dropdown-btn"><strong>Supplementary</strong>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+              <div class="dropdown-container">
+                <ul class="pl-3 site-nav-list">
+                  <li class="mt-2"><a href="/se-book/cppToJava/index.html" class="site-nav__a">C++ to Java</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mt-2"><strong><a href="/se-book/combined/exercises.html" class="site-nav__a">Combined exercises</a></strong></li>
+            <li class="mt-2"><strong><a href="/se-book/common/definitions.html" class="site-nav__a">List of definitions</a></strong></li>
+            <li class="mt-2"><strong><a href="/se-book/common/references.html" class="site-nav__a">List of references</a></strong></li>
+            <li class="mt-2"><strong><a href="/se-book/common/outcomes.html" class="site-nav__a">List of learning outcomes</a></strong></li>
+            <li class="mt-2"><strong><a href="/se-book/common/print.html" class="site-nav__a">Printable version</a></strong></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="content-wrapper">
+        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <div>
+          <link rel="stylesheet" href="/se-book/css/textbook.css">
+          <div class="website-content">
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can review PRs on GitHub</span></span></span></span></p>
+            <p></p>
+            <p></p>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+                    </span></strong></span></p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="reviewing-prs"><span>Reviewing PRs</span><a class="fa fa-anchor" href="#reviewing-prs" onclick="event.stopPropagation()"></a></h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p><em>PR review</em> stage is a dialog between the PR author and members of the repo that received the PR, in order to refine and eventually merge the PR.</p>
+                    <p>Given below are some steps you can follow when reviewing a PR.</p>
+                    <p><strong>1. Locate the PR:</strong></p>
+                    <ol>
+                      <li>Go to the GitHub page of the repo.</li>
+                      <li>Click on the <span class="tab"><span><svg version="1.1" width="12" height="16" viewbox="0 0 12 16" class="octicon octicon-git-pull-request" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z" /></svg></span> Pull requests</span> tab.</li>
+                      <li>Click on the PR you want to review.</li>
+                    </ol>
+                    <p><strong>2. Read the PR description.</strong> It might contain information relevant to reviewing the PR.</p>
+                    <p><strong>3. Click on the</strong> <span class="tab"><u>+</u> Files changed</span> tab to see the <em>diff</em> view.</p>
+                    <p><strong>4. Add review comments:</strong></p>
+                    <ol>
+                      <li>Hover over the line you want to comment on and click on the <span style="color:#0066ff"><span aria-hidden="true" class="fas fa-plus-square"></span></span> icon that appears on the left margin. That should create a text box for you to enter your comment.<br>
+                        <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> To mark multiple lines, click-and-drag the <span style="color:#0066ff"><span aria-hidden="true" class="fas fa-plus-square"></span></span> icon.</li>
+                      <li>Enter your comment.<br>
+                        <span><span aria-hidden="true" class="fas fa-paperclip"></span></span> <a href="https://se-education.org/guides/guidelines/PRs-reviewing.html">This page @SE-EDU/guides</a> has some best practices PR reviewers can follow.</li>
+                      <li>After typing in the comment, click on the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Start a revew</span> button (not the <span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">Add single comment</span> button. This way, your comment is saved but not visible to others yet. It will be visible to others only when you have finished the entire review.<br>
+                        <img src="/se-book/gitAndGithub/reviewPRs/images/addComment.png" width="800">
+                        <p></p>
+                      </li>
+                      <li>Repeat the above steps to add more comments.</li>
+                    </ol>
+                    <p><strong>5. Submit the review:</strong><br>
+                      <img src="/se-book/gitAndGithub/reviewPRs/images/submitReview.png" width="500"></p>
+                    <p></p>
+                    <ol>
+                      <li>When there are no more comments to add, click on the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Review changes <svg version="1.1" width="12" height="16" viewbox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> button (on the top right of the diff page).</li>
+                      <li>Type in an overall comment about the PR, if any.<br>
+                        <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <code>LGTM</code> is often used in such overall comments, to indicate <code>Looks good to merge</code>.<br>
+                        <code>nit</code> is another such term, used to indicate minor flaw e.g., <code>LGTM, almost. Just a few nits to fix.</code></li>
+                      <li>Choose <code>Approve</code>, <code>Comment</code>, or <code>Request changes</code> option as appropriate and click on the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Submit review</span> button.</li>
+                    </ol>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <footer>
+
+      <div class="text-center">
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, Jul 1, 2020, 9:07:34 PM GMT+8]</small></div>
+    </footer>
+  </div>
+</body>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/vue-strap.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+  const baseUrl = '/se-book'
+  const enableSearch = true
+</script>
+<script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
+      indexName: "se-edu",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {},
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
+
+</html>

@@ -10,11 +10,13 @@
       </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="ignore"><span>Ignore</span><a class="fa fa-anchor" href="#ignore" onclick="event.stopPropagation()"></a></h4>
+    <h4 id="omitting-files-from-revision-control"><span>Omitting files from revision control</span><a class="fa fa-anchor" href="#omitting-files-from-revision-control" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
-      <p>Add a file named <code>temp.txt</code> to the <code>things</code> repo you created. Suppose you don’t want this file to be revision controlled by Git. Let’s instruct Git to ignore <code>temp.txt</code></p>
+      <p>Often, there are files inside the Git working folder that you don't want to revision-control e.g., temporary log files. Follow the steps below to learn how to configure Git to ignore such files.</p>
+      <p><strong>1. Add a file into your repo's working folder that you supposedly don't want to revision-control</strong> e.g., a file named <code>temp.txt</code>. Observe how Git has detected the new file.</p>
+      <p><strong>2. Tell Git to ignore that file:</strong></p>
       <tabs>
         <tab><template slot="_header">SourceTree</template>
           <div>
@@ -30,11 +32,22 @@
           </div>
         </tab>
       </tabs>
-      <p>The <code>.gitignore</code> file tells Git which files to ignore when tracking revision history. That file itself can be either revision controlled or ignored.</p>
-      <ul>
-        <li>To version control it (the more common choice – which allows you to track how the <code>.gitignore</code> file changed over time), simply commit it as you would commit any other file.</li>
-        <li>To ignore it, follow the same steps you followed above when you set Git to ignore the <code>temp.txt</code> file.</li>
-      </ul>
+      <box>
+        <h5 id="the-ignore-file">The <code>.ignore</code> file<a class="fa fa-anchor" href="#the-ignore-file" onclick="event.stopPropagation()"></a></h5>
+        <p>The <code>.gitignore</code> file tells Git which files to ignore when tracking revision history. That file itself can be either revision controlled or ignored.</p>
+        <ul>
+          <li>
+            <p>To version control it (the more common choice – which allows you to track how the <code>.gitignore</code> file changed over time), simply commit it as you would commit any other file.</p>
+          </li>
+          <li>
+            <p>To ignore it, follow the same steps you followed above when you set Git to ignore the <code>temp.txt</code> file.</p>
+          </li>
+          <li>
+            <p>It supports file patterns e.g., adding <code>temp/*.tmp</code> to the <code>.gitignore</code> file prevents Git from tracking any <code>.tmp</code> file in the <code>temp</code> directory.</p>
+          </li>
+        </ul>
+        <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> More information about the <code>.gitignore</code> file: <a href="https://git-scm.com/docs/gitignore">git-scm.com/docs/gitignore</a></p>
+      </box>
     </div>
     <div></div>
   </div>

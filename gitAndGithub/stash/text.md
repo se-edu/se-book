@@ -2,7 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can use Git to stash files</span>
 
-<span id="title">Stash</span>
+<span id="title">`stash`: Shelving changes temporarily</span>
 
 <div id="body">
 

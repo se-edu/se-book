@@ -166,12 +166,7 @@ The book currently does not have a _search_ feature. The workaround is to load [
 
 ### Saving as PDF files
 
-1. Use Chrome to load the page you want to save as pdf.
-
-1. Click on the `Print` option in Chrome’s menu.
-
-1. Set the destination to `Save as PDF`, then click `Save` to save a copy of the file in PDF format. For best results, use the settings indicated in the screenshot below.<br/>
-  <img src="{{baseUrl}}/about/images/chromeSaveAsPdf.png" />
+Follow [this guide @SE-EDU/guides](https://se-education.org/guides/tutorials/savingPdf.html).
 
 </div>
 <div id="printing">

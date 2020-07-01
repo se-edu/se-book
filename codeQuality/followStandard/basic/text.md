@@ -8,7 +8,7 @@
 
 <div class="alt-java">
 
-Learn the _Java coding standard_ specified by your instructor.
+Go through the [Java coding standard at @SE-EDU](https://se-education.org/guides/conventions/java/basic.html) and learn the _basic_ style rules.
 </div>
 <div class="alt-python">
 

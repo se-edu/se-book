@@ -179,109 +179,78 @@
             <p></p>
             <p></p>
             <div>
-              <div>
-                <p>
-                  <panel src="/se-book/gitAndGithub/branch/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/gitAndGithub/branch" class="algolia-no-index"><template slot="_header">
-                      <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> <span class="dimmed">Tools → Git &amp; GitHub → Branching</span></p>
-                    </template></panel>
-                  <panel src="/se-book/gitAndGithub/createPRs/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/gitAndGithub/createPRs" class="algolia-no-index"><template slot="_header">
-                      <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> <span class="dimmed">Tools → Git &amp; GitHub → Create PRs</span></p>
-                    </template></panel>
-                  <panel src="/se-book/gitAndGithub/mergeConflicts/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/gitAndGithub/mergeConflicts" class="algolia-no-index"><template slot="_header">
-                      <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> <span class="dimmed">Tools → Git &amp; GitHub → Merge Conflicts</span></p>
-                    </template></panel>
-                </p>
-              </div>
+              <div></div>
               <p></p>
               <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="manage-prs"><span>Manage PRs</span><a class="fa fa-anchor" href="#manage-prs" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="merging-prs"><span>Merging PRs</span><a class="fa fa-anchor" href="#merging-prs" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p><strong>1. Go to the GitHub page of your fork and review the <code>add-intro</code> PR</strong> you created previously in [<span trigger="click" for="modal:managePrs-createPrs" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:managePrs-createPrs'].show()" class="trigger-click">Tools → Git &amp; GitHub → Create PRs</span>] to simulate the PR being reviewed by another developer, as explained below. <span class="dimmed">Note that some features available to PR reviewers will be unavailable to you because you are also the author of the PR.</span></p>
-                    <b-modal id="modal:managePrs-createPrs" hide-footer size="lg" modal-class="mb-zoom" ref="modal:managePrs-createPrs"><template slot="modal-title">Tools → Git &amp; GitHub → Create PRs</template>
+                    <p>Let's look at the steps involved in merging a PR, assuming the PR has been reviewed, refined, and approved for merging already.</p>
+                    <p><strong>1. Locate the PR</strong> to be merged in your repo's GitHub page.</p>
+                    <p><strong>2. Click on the <span class="tab"><span aria-hidden="true" class="far fa-comments"></span> Conversation</span> tab</strong> and scroll to the bottom. You'll see a panel containing the PR status summary.<br>
+                      <img src="/se-book/gitAndGithub/managePRs/images/mergePr.png" width="800"></p>
+                    <p><strong>3. If the PR is not merge-able in the current state</strong>, the <span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">Merge pull request <svg version="1.1" width="12" height="16" viewbox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> will not be green. Here are the possible reasons and remedies:</p>
+                    <ul>
+                      <li><strong>Problem: The PR code is out-of-date</strong>, indicated by the message <strong><span class="dimmed">This branch is out-of-date with the base branch</span></strong>. That means the repo's <code>master</code> branch has been updated since the PR code was last updated.
+                        <ul>
+                          <li>If the PR author has allowed you to update the PR and you have sufficient permissions, GitHub will allow you to update the PR simply by clicking the <span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">Update branch</span> on the right side of the 'out-of-date' error message.
+                            If that option is not available, post a message in the PR requesting the PR author to update the PR.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Problem: There are merge conflicts</strong>, indicated by the message <strong><span class="dimmed">This branch has conflicts that must be resolved</span></strong>. That means the repo's <code>master</code> branch has been updated since the PR code was last updated, in a way that the PR code conflicts with the current <code>master</code> branch. Those <span trigger="click" for="modal:managePRs-mergeConflics" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:managePRs-mergeConflics'].show()" class="trigger-click">conflicts must be resolved</span> before the PR can be merged.
+                        <ul>
+                          <li>If the conflicts are simple, GitHub might allow you to resolve them using the Web interface.</li>
+                          <li>If that option is not available, post a message in the PR requesting the PR author to update the PR.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <b-modal id="modal:managePRs-mergeConflics" hide-footer size="lg" modal-class="mb-zoom" ref="modal:managePRs-mergeConflics"><template slot="modal-title">Tools → Git &amp; GitHub → Merge Conflicts</template>
                       <div>
-                        <div>
-                          <p><strong>1. Fork the <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a> onto your GitHub account. Clone it onto your computer.</strong></p>
-                          <p><strong>2. Create a branch named <code>add-intro</code> in your clone. Add a couple of commits</strong> which adds/modifies an <em>Introduction</em> section to the <code>README.md</code>. Example:</p>
-                          <pre><code class="hljs md"><span><br></span><span><span class="hljs-section"># Introduction</span><br></span><span>Creating Pull Requests (PRs) is needed when using RCS in a multi-person projects.<br></span><span>This repo can be used to practice creating PRs.<br></span><span><br></span></code></pre>
-                          <p><strong>3. Push the <code>add-intro</code> branch to your fork.</strong></p>
-                          <tabs>
-                            <tab><template slot="_header">SourceTree</template>
-                              <img src="/se-book/gitAndGithub/createPRs/images/pushBranchToFork.png" height="300">
-                              <p></p>
-                            </tab>
-                            <tab class="algolia-no-index"><template slot="_header">CLI</template>
-                              <pre><code class="hljs"><span>git push origin add-intro<br></span></code></pre>
-                            </tab>
-                          </tabs>
-                          <p><strong>4. Create a Pull Request from the <code>add-intro</code> branch in your fork to the <code>master</code> branch of the same fork</strong> (i.e. <code>your-user-name/samplerepo-pr-practice</code>, not <code>se-edu/samplerepo-pr-practice</code>), as described below.</p>
-                          <p>4a. Go to the GitHub page of your fork (i.e. <code>https://github.com/{your_username}/samplerepo-pr-practice</code>), click on the <code>Pull Requests</code> tab, and then click on <code>New Pull Request</code> button.</p>
-                          <img src="/se-book/gitAndGithub/createPRs/images/createPrButton.png" width="800">
-                          <p></p>
-                          <p>4b. Select <code>base fork</code> and <code>head fork</code> as follows:</p>
-                          <ul>
-                            <li><code>base fork</code>: your own fork (i.e. <code>{your user name}/samplerepo-pr-practice</code>, <mark>NOT <code>se-edu/samplerepo-pr-practice</code></mark>)</li>
-                            <li><code>head fork</code>: your own fork.</li>
-                          </ul>
-                          <img src="/se-book/gitAndGithub/createPRs/images/selectBase.png" width="800">
-                          <p></p>
-                          <box type="info">
-                            <p>The <em>base fork</em> is where changes should be applied. The <em>head fork</em> contains the changes you would like to be applied.</p>
-                          </box>
-                          <p>4c. (1) Set the base branch to <code>master</code> and head branch to <code>add-intro</code>, (2) confirm the <em>diff</em> contains the changes you propose to merge in this PR <span class="dimmed">(i.e. confirm that you did not accidentally include extra commits in the branch)</span>, and (3) click the <code>Create pull request</code> button.</p>
-                          <img src="/se-book/gitAndGithub/createPRs/images/checkDiff.png" width="800">
-                          <p></p>
-                          <p>4d. (1) Set PR name, (2) set PR description, and (3) Click the <code>Create pull request</code> button.</p>
-                          <img src="/se-book/gitAndGithub/createPRs/images/setPrName.png" width="600">
-                          <p></p>
-                          <box type="important">
-                            <p>A common newbie mistake when creating branch-based PRs is to mix commits of one PR with another. To learn how to avoid that mistake, you are encouraged to continue and create another PR as explained below.</p>
-                          </box>
-                          <p><strong>5. In your local repo, create a new branch <code>add-summary</code></strong> off the <code>master</code> branch.</p>
-                          <box type="warning">
-                            <p>When creating the new branch, it is very important that you switch back to the <code>master</code> branch first. If not, the new branch will be created off the current branch <code>add-intro</code>. And that is how you end up having commits of the first PR in the second PR as well.</p>
-                          </box>
-                          <p><strong>6. Add a commit in the <code>add-summary</code> branch</strong> that adds a <em>Summary</em> section to the <code>README.md</code>, in exactly the same place you added the <em>Introduction</em> section earlier.</p>
-                          <img src="/se-book/gitAndGithub/createPRs/images/addSummaryBranch.png" width="400">
-                          <p></p>
-                          <p><strong>7. Push the <code>add-summary</code> to your fork and create a new PR</strong> similar to before.</p>
-                          <panel expanded><template slot="_header">
-                              <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
-                            </template>
-                            <ul>
-                              <li><a href="https://help.github.com/articles/creating-a-pull-request/">GitHub's own documentation on creating a PR</a></li>
-                            </ul>
-                          </panel>
-                        </div>
                         <div></div>
+                        <p></p>
+                        <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+                              </span></strong></span></p>
+                        <div id="title-and-body">
+                          <div>
+                            <h4 id="dealing-with-merge-conflicts"><span>Dealing with merge conflicts</span><a class="fa fa-anchor" href="#dealing-with-merge-conflicts" onclick="event.stopPropagation()"></a></h4>
+                          </div>
+                          <div id="main">
+                            <div>
+                              <p><strong>Merge conflicts happen when you try to combine two incompatible versions</strong> (e.g., merging a branch to another but each branch changed the same part of the code in a different way).</p>
+                              <p>Here are the steps to simulate a merge conflict and use it to learn how to resolve merge conflicts.</p>
+                              <p><strong>0. Create an empty repo or clone an existing repo</strong>, to be used for this activity.</p>
+                              <p><strong>1. Start a branch named <code>fix1</code> in the repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
+                              <p><strong>2. Switch back to <code>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
+                              <img src="/se-book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
+                              <p></p>
+                              <p><strong>3. Try to merge the <code>fix1</code> branch onto the <code>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
+                              <pre><code class="hljs"><span>COLORS<br></span><span>------<br></span><span>blue<br></span><span class="highlighted">&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br></span><span>black<br></span><span class="highlighted">=======<br></span><span>green<br></span><span class="highlighted">&gt;&gt;&gt;&gt;&gt;&gt; fix1<br></span><span>red<br></span><span>white<br></span></code></pre>
+                              <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code>&lt;&lt;&lt;&lt;&lt;&lt;</code> and a line starting with <code>&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code>=======</code>.</p>
+                              <p>Highlighted below is the conflicting part that is coming from the <code>master</code> branch:</p>
+                              <pre><code style="counter-reset: line 2;" class="hljs"><span>blue<br></span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br></span><span class="highlighted">black<br></span><span>=======<br></span><span>green<br></span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1<br></span><span>red<br></span></code></pre>
+                              <p>This is the conflicting part that is coming from the <code>fix1</code> branch:</p>
+                              <pre><code style="counter-reset: line 2;" class="hljs"><span>blue<br></span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br></span><span>black<br></span><span>=======<br></span><span class="highlighted">green<br></span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1<br></span><span>red<br></span></code></pre>
+                              <p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
+                              <pre><code class="hljs"><span>COLORS<br></span><span>------<br></span><span>blue<br></span><span class="highlighted">black<br></span><span class="highlighted">green<br></span><span>red<br></span><span>white<br></span></code></pre>
+                              <p><strong>6. Stage the changes, and commit.</strong></p>
+                            </div>
+                            <div></div>
+                          </div>
+                        </div>
                       </div>
                     </b-modal>
-                    <p>1a. Go to the respective PR page and click on the <code>Files changed</code> tab. Hover over the line you want to comment on and click on the <span style="color:#0066ff"><span aria-hidden="true" class="fas fa-plus-square"></span></span> icon that appears on the left margin. That should create a text box for you to enter your comment.</p>
-                    <img src="/se-book/gitAndGithub/managePRs/images/startReview.png" width="800">
-                    <p></p>
-                    <p>1b. Enter some dummy comment and click on <code>Start a review</code> button.</p>
-                    <img src="/se-book/gitAndGithub/managePRs/images/addComment.png" width="800">
-                    <p></p>
-                    <p>1c. Add a few more comments in other places of the code.</p>
-                    <p>1d. Click on the <code>Review Changes</code> button, enter an overall comment, and click on the <code>Submit review</code> button.</p>
-                    <img src="/se-book/gitAndGithub/managePRs/images/submitReview.png" width="500">
-                    <p></p>
-                    <p><strong>2. Update the PR</strong> to simulate revising the code based on reviewer comments. Add some more commits to the <code>add-intro</code> branch and push the new commits to the fork. Observe how the PR is updated automatically to reflect the new code.</p>
-                    <p><strong>3. Merge the PR.</strong> Go to the GitHub page of the respective PR, scroll to the bottom of the <code>Conversation</code> tab, and click on the <code>Merge pull request</code> button, followed by the <code>Confirm merge</code> button. You should see a <code>Pull request successfully merged and closed</code> message after the PR is merged.</p>
-                    <img src="/se-book/gitAndGithub/managePRs/images/mergePr.png" width="800">
-                    <p></p>
-                    <p><strong>4. Sync the local repo with the remote repo.</strong> Because of the merge you did on the GitHub, the <code>master</code> branch of your fork is now ahead of your local repo by one commit. To sync the local repo with the remote repo, pull the <code>master</code> branch to the local repo.</p>
-                    <pre><code class="hljs"><span>git checkout master<br></span><span>git pull origin master<br></span></code></pre>
-                    <p>Observe how the <code>add-intro</code> branch is now merged to the <code>master</code> branch in your local repo as well.</p>
-                    <p><strong>5. De-conflict the <code>add-summary</code> PR</strong> <span trigger="click" for="modal:managePrs-createPrs" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:managePrs-createPrs'].show()" class="trigger-click">that you created earlier</span>. Note that GitHub page for the <code>add-summary</code> PR is now showing a conflict <span class="dimmed">(when you scroll to the bottom of that page, you should see a message <code>This branch has conflicts that must be resolved</code>)</span>. You can resolve it locally and update the PR accordingly, as explained below.</p>
-                    <p>5a. Switch to the <code>add-summary</code> branch. To make that branch up-to-date with the <code>master</code> branch, merge the <code>master</code> branch to it, which will surface the merge conflict. Resolve it and complete the merge.</p>
-                    <p>5b. Push the updated <code>add-summary</code> branch to the fork. That will remove the 'merge conflicts' warning in the GitHub page of the PR.</p>
-                    <p><strong>6. Merge the <code>add-summary</code> PR</strong> using the GitHub interface, similar to how you merged the previous PR.</p>
-                    <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Note that you could have merged the <code>add-summary</code> branch to the <code>master</code> branch locally before pushing it to GitHub. In that case, the PR will be merged on GitHub automatically to reflect that the branch has been merged already.</p>
+                    <p><strong>3. Merge the PR</strong> by clicking on the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Merge pull request <svg version="1.1" width="12" height="16" viewbox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> button, followed by the <code>Confirm merge</code> button. You should see a <code>Pull request successfully merged and closed</code> message after the PR is merged.<br></p>
+                    <ul>
+                      <li>You can choose between three merging options by clicking on the down-arrow in the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Merge pull request <svg version="1.1" width="12" height="16" viewbox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> button. If you are new to Git and GitHub, <code>Create merge commit</code> or <code>Squash and merge</code> options are recommended.</li>
+                    </ul>
+                    <p><strong>Next, sync your local repos (and forks).</strong> Merging a PR simply merges the code in the upstream remote repository in which it was merged. The PR author (and other members of the repo) needs to pull the merged code from the upstream repo to their local repos and push the new code to their respective forks to syn the fork with the upstream repo.</p>
                   </div>
                   <div></div>
                 </div>
@@ -296,7 +265,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[Powered by <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a> on Tue, Jun 23, 2020, 12:11:14 AM GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, Jul 1, 2020, 9:07:34 PM GMT+8]</small></div>
     </footer>
   </div>
 </body>

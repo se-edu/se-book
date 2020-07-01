@@ -90,7 +90,8 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-commit">
 
-**Commit**: Saving the current state of the working folder into the Git revision history.
+**Commit** (noun): a change (aka a _revision_) saved in the Git revision history.<br>
+  (verb): the act of creating a commit i.e., saving a change in the working directory into the Git revision history.
 
 </div>
 
@@ -394,7 +395,7 @@ Also known as
 
 <div id="def-working-directory">
 
-**Working directory**: The directory the repo is based in is called the _working directory_.
+**Working directory**: the root directory revision-controlled by Git (e.g., the directory in which the repo was initialized).
 
 </div>
 

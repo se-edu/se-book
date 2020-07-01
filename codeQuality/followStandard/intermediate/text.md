@@ -6,7 +6,7 @@
 
 <div id="body">
 
-Go through the [provided Java coding standard]({{java_coding_standard}}) and learn the _intermediate_ style rules.
+Go through the [Java coding standard at @SE-EDU](https://se-education.org/guides/conventions/java/intermediate.html) and learn the _intermediate_ style rules.
 
 </div>
 
