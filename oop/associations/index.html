@@ -343,7 +343,7 @@
                       <p></p>
                       <p></p>
                       <div>
-                        <p><strong>A composition is an association that represents a strong <em>whole-part</em> relationship.</strong> When the <em>whole</em> is destroyed, <em>parts</em> are destroyed too.</p>
+                        <p><strong>A composition is an association that represents a strong <em>whole-part</em> relationship.</strong> When the <em>whole</em> is destroyed, <em>parts</em> are destroyed too i.e., the <em>part</em> should not exist without being attached to a <em>whole</em>.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code>Board</code> (used for playing board games) consists of <code>Square</code> objects.</p>
                         </box>
@@ -351,6 +351,17 @@
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The ‘sub-folder’ association between <code>Folder</code> objects is a composition type association. That means if the <code>Folder</code> object <code>foo</code> is a sub folder of <code>Folder</code> object <code>bar</code>, <code>bar</code> cannot be a sub-folder of <code>foo</code>.</p>
                         </box>
+                        <p><strong>Whether a relationship is a composition can depend on the context</strong>.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Is the relationship between <code>Email</code> and <code>EmailSubject</code> composition? That is, is the email subject <em>part</em> of an email to the extent that an email subject cannot exist without an email?</p>
+                          <ul>
+                            <li>When modeling an application that sends emails, the answer is 'yes'.</li>
+                            <li>When modeling an application that gather analytics about email traffic, the answer may be 'no' <span class="dimmed">(e.g., the application might collect just the email subjects for text analysis)</span>.</li>
+                          </ul>
+                        </box>
+                        <p><strong>A common use of composition is when parts of a big class is carved out as smaller classes</strong> for the ease of managing the internal design. In such cases, the classes extracted out still act as <em>parts</em> of the bigger class and the outside world has no business knowing about them.</p>
+                        <p><strong>Cascading deletion alone is not sufficient for composition.</strong> Suppose there is a design in which <code>Person</code> objects are attached to <code>Task</code> objects and the former get deleted whenever the latter is deleted. This fact alone does not mean there is a composition relationship between the two classes. For it to be composition, a <code>Person</code> must be an integral <em>part</em> of a <code>Task</code> in the context of that association, at the concept level (not simply at implementation level).</p>
+                        <p><strong>Identifying and keeping track of composition relationships in the design has benefits</strong> such as helping to maintain the data integrity of the system. For example, when you know that a certain relationship is a composition, you can take extra care in your implementation to ensure that when the <em>whole</em> object is deleted, all its <em>parts</em> are deleted too.</p>
                         <h5 id="implementing-composition">Implementing composition<a class="fa fa-anchor" href="#implementing-composition" onclick="event.stopPropagation()"></a></h5>
                         <p><strong>Composition is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’ object.</p>
                         <box>
@@ -474,7 +485,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Thu, Jul 2, 2020, 3:42:20 PM GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Thu, Jul 2, 2020, 5:49:04 PM GMT+8]</small></div>
     </footer>
   </div>
 </body>
