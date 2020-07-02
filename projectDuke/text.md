@@ -437,7 +437,7 @@ Add a GUI to Duke. Use the JavaFX technology to implement the GUI.
 <br>
 <br>
 
-Refer to the [_JavaFX tutorial_ @SE-EDU/guides](https://se-education.org/guides/tutorials/javaFxPart1.html) to learn how to get started with JavaFX.
+Refer to the [_JavaFX tutorial_ @SE-EDU/guides](https://se-education.org/guides/tutorials/javaFx.html) to learn how to get started with JavaFX.
 
 </div>
 
