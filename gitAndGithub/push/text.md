@@ -2,7 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can push to a remote repo</span>
 
-<span id="title">`push`: Uploading data other repos</span>
+<span id="title">`push`: Uploading data to other repos</span>
 
 <div id="body">
 

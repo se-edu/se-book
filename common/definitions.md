@@ -288,7 +288,7 @@ Also known as
 
 <div id="def-stage">
 
-**Stage**: Instructing Git to prepare a file for committing.
+**Stage** (verb): Instructing Git to prepare a file for committing.
 
 </div>
 
