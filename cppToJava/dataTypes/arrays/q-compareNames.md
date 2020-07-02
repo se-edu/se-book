@@ -4,18 +4,18 @@
 Write a Java program that takes two command line arguments and prints `true` or `false` to indicate if the two arguments have the same value. Follow the sample output given below.
 
 ```java
-class WordComparator {
+class Main {
   public static void main(String[] args) {
       // add your code here
   }
 }
 ```
-{{ icon_terminal }} `java WordComparator adam eve` {{ icon_output }}
+{{ icon_terminal }} `java Main adam eve` {{ icon_output }}
 ```
 Words given: adam, eve
 They are the same: false
 ```
-{{ icon_terminal }} `java WordComparator eve eve` {{ icon_output }}
+{{ icon_terminal }} `java Main eve eve` {{ icon_output }}
 ```
 Words given: eve, eve
 They are the same: true
@@ -36,7 +36,7 @@ isSame = x.equals("foo") // true
 <panel type="seamless" header="partial solution">
 
 ```java
-class WordComparator {
+class Main {
   public static void main(String[] args) {
       String first = args[0];
       String second = args[1];
