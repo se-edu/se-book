@@ -66,7 +66,7 @@ Video describing X
 
 </box>
 
-**Dotted underlines indicate <trigger for="pop:tooltip-example">tool tips</trigger>** (activated by hovering over it) and **dashed underlines indicate <trigger for="modal:modal-example" trigger="click">modal windows</trigger>** (activated by clicking) containing additional information.
+**Dotted underlines indicate <popover content="some additional info">tool tips</popover>** (activated by hovering over it) and **dashed underlines indicate <trigger for="modal:modal-example" trigger="click">modal windows</trigger>** (activated by clicking) containing additional information.
 
 <popover id="pop:tooltip-example" header="Tooltip Example" placement="top">
   <div slot="content">
