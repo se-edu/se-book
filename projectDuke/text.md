@@ -75,7 +75,7 @@ bye
 <div id="increments_summary">
 
 The project consists of the following _increments_:
-* **Levels**: A series of features, meant to be added to Duke in the given order, although some can be skipped. These have been named `Level 1` to `Level 10` to indicate how the features make the product progressively "level up".
+* **Levels**: A series of features, meant to be added to Duke in the given order, although some can be skipped. These have been named `Level 1` to `Level 10` to indicate how each makes the product progressively "level up".
 * **Extensions:**
   * <big><span class="badge badge-pill badge-primary">Category A</span></big> These are internal/feature enhancements meant to help you practice a specific Java or an SE technique.  
   * <big><span class="badge badge-pill badge-info">Category B</span></big> These are enhancements related to task tracking.
