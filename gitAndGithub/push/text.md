@@ -6,7 +6,11 @@
 
 <div id="body">
 
-**Git provides a way to _push_ your new commits to another repo**. Given below are some steps you can follow along to learn how to push commits to a remote repo hosted on GitHub.
+Given below is a scenario you can try in order to learn how to <trigger trigger="click" for="modal:githubPushing-rcsPushing">push</trigger> commits to a remote repo hosted on GitHub:
+
+<modal large header="Project Management → Revision Control → Remote Repositories →" id="modal:githubPushing-rcsPushing">
+  <include src="..\..\revisionControl\remoteRepositories\text.md#section-pushing"/>
+</modal>
 
 **1. Fork** an existing GitHub repo (e.g., [samplerepo-things](https://github.com/se-edu/samplerepo-things)) to your GitHub account:
 

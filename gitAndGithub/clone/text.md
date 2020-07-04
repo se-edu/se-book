@@ -6,7 +6,11 @@
 
 <div id="body">
 
-**_Cloning_ is the act of copying a Git repository**, including its entire revision history. Given below is an example you can follow to learn Git cloning:
+Given below is an example scenario you can try yourself to learn Git <trigger trigger="click" for="modal:gitCloning-rcsCloning">cloning</trigger>.
+
+<modal large header="Project Management → Revision Control → Remote Repositories →" id="modal:gitCloning-rcsCloning">
+  <include src="..\..\revisionControl\remoteRepositories\text.md#section-cloning"/>
+</modal>
 
 Suppose you want to clone the sample repo [samplerepo-things](https://github.com/se-edu/samplerepo-things) to your computer.
 

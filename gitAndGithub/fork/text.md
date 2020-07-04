@@ -6,7 +6,11 @@
 
 <div id="body">
 
-**_Forking_ creates a remote copy of a GitHub repo**. As you know, cloning creates a local copy of a repo. In contrast, Forking creates a remote copy of a Git repo hosted on GitHub. This is particularly useful if you want to play around with a GitHub repo but you don't have write permissions to it; you can simply fork the repo and do whatever you want with the fork as you are the owner of the fork. Here are the steps:
+Given below is a scenario you can try in order to learn how to <trigger trigger="click" for="modal:githubForking-rcsForking">fork</trigger> a repo:.
+
+<modal large header="Project Management → Revision Control → Remote Repositories →" id="modal:githubForking-rcsForking">
+  <include src="..\..\revisionControl\remoteRepositories\text.md#section-forking"/>
+</modal>
 
 **0. Create a GitHub account if you don't have one yet.**
 
