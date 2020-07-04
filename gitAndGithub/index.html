@@ -1268,8 +1268,12 @@
                       <p></p>
                       <p></p>
                       <div>
-                        <p><strong>A pull request (PR for short) is a request from one GitHub repo to another to accept some proposed code changes</strong> i.e., &quot;I'm <em>requesting</em> you to <em>pull</em> my proposed changes to your repo&quot;. For this to work, the two repos must have a shared history i.e., not possible to PR between unrelated repos. The most common case is sending PRs from a fork to its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><em>upstream</em> repo is a repo you forked from</span>upstream</span> repo.</p>
-                        <p>Suppose you want to propose some changes to a GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a>) as a PR. Here are the steps:</p>
+                        <p>Suppose you want to propose some changes to a GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a>) as a <span trigger="click" for="modal:githubPullRequests-rcsPullRequests" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:githubPullRequests-rcsPullRequests'].show()" class="trigger-click">pull request (PR)</span>. Here is a scenario you can try in order to learn how to create PRs:</p>
+                        <b-modal id="modal:githubPullRequests-rcsPullRequests" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPullRequests-rcsPullRequests"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
+                          <div>
+                            <p><strong>A <mark><em>pull request</em></mark> (PR for short) is mechanism for contributing code to a remote repo.</strong> i.e., &quot;I'm <em>requesting</em> you to <em>pull</em> my proposed changes to your repo&quot;. For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><em>upstream</em> repo is a repo you forked from</span>upstream</span> repo.</p>
+                          </div>
+                        </b-modal>
                         <p><strong>1. Fork</strong> the repo onto your GitHub account.</p>
                         <p><strong>2. Clone</strong> it onto your computer.</p>
                         <p><strong>3. Commit</strong> your changes e.g., add a new file with some contents and commit it.</p>
@@ -1277,7 +1281,7 @@
                           <li><strong>Option A - Commit changes to the <code>master</code> branch</strong></li>
                           <li><strong>Option B - Commit to a new branch</strong> e.g., create a branch named <code>add-intro</code> (remember to switch to the <code>master</code> branch before creating a new branch) and add your commit to it.</li>
                         </ul>
-                        <p><strong>4. Push</strong> the updated <code>master</code> branch (or the new branch) to your fork, as explained <span trigger="click" for="modal:createPr-pushBranch" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:createPr-pushBranch'].show()" class="trigger-click">here </span>.</p>
+                        <p><strong>4. Push</strong> the branch you updated (i.e., <code>master</code> branch or the new branch) to your fork, as explained <span trigger="click" for="modal:createPr-pushBranch" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:createPr-pushBranch'].show()" class="trigger-click">here </span>.</p>
                         <b-modal id="modal:createPr-pushBranch" hide-footer size="lg" modal-class="mb-zoom" ref="modal:createPr-pushBranch"><template slot="modal-title">Git &amp; GitHub → Branch →</template>
                           <div>
                             <h5 id="pushing-a-branch-to-a-remote-repo-2">Pushing a branch to a remote repo<a class="fa fa-anchor" href="#pushing-a-branch-to-a-remote-repo-2" onclick="event.stopPropagation()"></a></h5>
@@ -1327,7 +1331,7 @@
                                   <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span><br></p>
                           </li>
                         </ol>
-                        <p><strong>6. Verify proposed code</strong>: Verify the diff view in the page shows the exact change you intend to propose. If it doesn't, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">commit the new code and push to the branch</span>update the branch</span> as necessary.</p>
+                        <p><strong>6. Verify the proposed code</strong>: Verify that the diff view in the page shows the exact change you intend to propose. If it doesn't, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">commit the new code and push to the branch</span>update the branch</span> as necessary.</p>
                         <p><strong>7. Submit the PR:</strong>
                           <span id="submit-the-pr"></span></p>
                         <ol>
@@ -1363,6 +1367,7 @@
                         <p><strong>You can update the PR along the way too.</strong> Suppose PR reviewers suggested a certain improvement to your proposed code. To update your PR as per the suggestion, you can simply modify the code in your local repo, commit the updated code to the same <code>master</code> branch, and push to your fork as you did earlier. The PR will auto-update accordingly.</p>
                         <p><strong>Sending PRs using the <code>master</code> branch is less common</strong> than sending PRs using separate branches. For example, suppose you wanted to propose two bug fixes that are not related to each other. In that case, it is more appropriate to send two separate PRs so that each fix can be reviewed, refined, and merged independently. But if you send PRs using the <code>master</code> branch only, both fixes (and any other change you do in the <code>master</code> branch) will appear in the PRs you create from it.</p>
                         <p><strong>To create another PR</strong> while the current PR is still under review, create a new branch (remember to <mark>switch back to the <code>master</code> first</mark>), add your new proposed change in that branch, and create a new PR following the steps given above.</p>
+                        <p><strong>It is possible to create PRs within the same repo</strong> e.g., you can create a PR from branch <code>feature-x</code> to the <code>master</code> branch, within the same repo. Doing so will allow the code to be reviewed (using PR review mechanism) before it is merged.</p>
                         <panel expanded><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
                           </template>
@@ -1645,7 +1650,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, Jul 4, 2020, 6:12:25 PM GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, Jul 5, 2020, 1:16:31 AM GMT+8]</small></div>
     </footer>
   </div>
 </body>

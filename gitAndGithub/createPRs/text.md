@@ -8,9 +8,11 @@
 
 <div id="body">
 
-**A pull request (PR for short) is a request from one GitHub repo to another to accept some proposed code changes** i.e., "I'm _requesting_ you to _pull_ my proposed changes to your repo". For this to work, the two repos must have a shared history i.e., not possible to PR between unrelated repos. The most common case is sending PRs from a fork to its <tooltip content="_upstream_ repo is a repo you forked from">upstream</tooltip> repo.
+Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-practice](https://github.com/se-edu/samplerepo-pr-practice)) as a <trigger trigger="click" for="modal:githubPullRequests-rcsPullRequests">pull request (PR)</trigger>. Here is a scenario you can try in order to learn how to create PRs:
 
-Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-practice](https://github.com/se-edu/samplerepo-pr-practice)) as a PR. Here are the steps:
+<modal large header="Project Management → Revision Control → Remote Repositories →" id="modal:githubPullRequests-rcsPullRequests">
+  <include src="..\..\revisionControl\remoteRepositories\text.md#section-pull-request"/>
+</modal>
 
 **1. Fork** the repo onto your GitHub account.
 
@@ -20,7 +22,7 @@ Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-
 * **Option A - Commit changes to the `master` branch**
 * **Option B - Commit to a new branch** e.g., create a branch named `add-intro` (remember to switch to the `master` branch before creating a new branch) and add your commit to it.
 
-**4. Push** the updated `master` branch (or the new branch) to your fork, as explained <trigger trigger="click" for="modal:createPr-pushBranch">here </trigger>.
+**4. Push** the branch you updated (i.e., `master` branch or the new branch) to your fork, as explained <trigger trigger="click" for="modal:createPr-pushBranch">here </trigger>.
 
 <modal large header="Git & GitHub → Branch →" id="modal:createPr-pushBranch">
   <include src="../branch/text.md#pushing-a-branch"/>
@@ -41,23 +43,23 @@ Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-
 1. Indicate which repo:branch contains your proposed code, using the `head repository` and `compare` dropdowns. e.g.,<br>
   {{ dropdown("head repository: **myrepo/samplerepo-pr-practice**") }} {{ dropdown("compare: **master**") }}<br>
 
-**6. Verify proposed code**: Verify the diff view in the page shows the exact change you intend to propose. If it doesn't, <tooltip content="commit the new code and push to the branch">update the branch</tooltip> as necessary.
+**6. Verify the proposed code**: Verify that the diff view in the page shows the exact change you intend to propose. If it doesn't, <tooltip content="commit the new code and push to the branch">update the branch</tooltip> as necessary.
 
 **7. Submit the PR:**
 <span id="submit-the-pr">
 
-   1. Click the {{ button_green(icon_pr + " Create pull request") }} button.
+1. Click the {{ button_green(icon_pr + " Create pull request") }} button.
 
-   1. Fill in the PR name and description e.g.,<br>
-      Name: `Add an introduction to the README.md`<br>
-      Description:
-      ```{.no-line-numbers}
-      Add some paragraph to the README.md to explain ...
-      Also add a heading ...
-      ```
-   1. If you want to indicate that the PR you are about to create is 'still work in progress, not yet ready', click on the dropdown arrow in the {{ button_green(" Create pull request :octicon-triangle-down:") }} button and choose `Create draft pull request` option.
-   1. Click the {{ button_green(" Create pull request :octicon-triangle-down:") }} button to create the PR.<br>
-   1. Go to the receiving repo to verify your PR appears there in the `Pull requests` tab.
+1. Fill in the PR name and description e.g.,<br>
+   Name: `Add an introduction to the README.md`<br>
+   Description:
+   ```{.no-line-numbers}
+   Add some paragraph to the README.md to explain ...
+   Also add a heading ...
+   ```
+1. If you want to indicate that the PR you are about to create is 'still work in progress, not yet ready', click on the dropdown arrow in the {{ button_green(" Create pull request :octicon-triangle-down:") }} button and choose `Create draft pull request` option.
+1. Click the {{ button_green(" Create pull request :octicon-triangle-down:") }} button to create the PR.<br>
+1. Go to the receiving repo to verify your PR appears there in the `Pull requests` tab.
 </span>
 
 
@@ -71,6 +73,8 @@ Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-
 **Sending PRs using the `master` branch is less common** than sending PRs using separate branches. For example, suppose you wanted to propose two bug fixes that are not related to each other. In that case, it is more appropriate to send two separate PRs so that each fix can be reviewed, refined, and merged independently. But if you send PRs using the `master` branch only, both fixes (and any other change you do in the `master` branch) will appear in the PRs you create from it.
 
 **To create another PR** while the current PR is still under review, create a new branch (remember to ==switch back to the `master` first==), add your new proposed change in that branch, and create a new PR following the steps given above.
+
+**It is possible to create PRs within the same repo** e.g., you can create a PR from branch `feature-x` to the `master` branch, within the same repo. Doing so will allow the code to be reviewed (using PR review mechanism) before it is merged.
 
 <panel header="{{ icon_resource }} Resources" expanded>
 
