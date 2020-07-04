@@ -14,7 +14,12 @@
   </div>
   <div id="main">
     <div>
-      <p><strong>Git provides a way to <em>push</em> your new commits to another repo</strong>. Given below are some steps you can follow along to learn how to push commits to a remote repo hosted on GitHub.</p>
+      <p>Given below is a scenario you can try in order to learn how to <span trigger="click" for="modal:githubPushing-rcsPushing" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:githubPushing-rcsPushing'].show()" class="trigger-click">push</span> commits to a remote repo hosted on GitHub:</p>
+      <b-modal id="modal:githubPushing-rcsPushing" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPushing-rcsPushing"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
+        <div>
+          <p><strong>You can <mark><em>push</em></mark> new commits in one repo to another repo</strong> which will copy the new commits onto the destination repo. Note that pushing to a repo requires you to have write-access to it. Furthermore, you can push between repos only if those repos have a shared history among them (i.e, one was created by copying the other at some point in the past).</p>
+        </div>
+      </b-modal>
       <p><strong>1. Fork</strong> an existing GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>) to your GitHub account:</p>
       <p><strong>2. Clone the fork</strong> (not the original) to your computer.</p>
       <p><strong>3. Commit</strong> some changes in your local repo.</p>
@@ -49,8 +54,12 @@
       <b-modal id="modal:push-addRemoteForNormalPushing" hide-footer size="lg" modal-class="mb-zoom" ref="modal:push-addRemoteForNormalPushing"><template slot="modal-title">Git &amp; GitHub → Pull →</template>
         <div>
           <h5 id="working-with-multiple-remotes">Working with multiple remotes<a class="fa fa-anchor" href="#working-with-multiple-remotes" onclick="event.stopPropagation()"></a></h5>
-          <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo.</p>
-          <p><strong>A Git repo can work with remote repos other than the one it was cloned from</strong> as long as those repos has a shared history with your repo. For example, let's say a repo <code>repo1</code> was cloned as <code>repo2</code> which was then cloned as <code>repo3</code> Any of these repos can work with the other two because they have a shared history.</p>
+          <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <span trigger="click" for="modal:gitPull-rcsMultipleRepos" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:gitPull-rcsMultipleRepos'].show()" class="trigger-click">a Git repo can work with remote repos other than the one it was cloned from</span>.</p>
+          <b-modal id="modal:gitPull-rcsMultipleRepos" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitPull-rcsMultipleRepos"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
+            <div>
+              <p><strong>A repo can work with any number of other repositories as long as they have a shared history</strong> e.g., <code>repo1</code> can pull from (or push to) <code>repo2</code> and <code>repo3</code> if they have a shared history between them.</p>
+            </div>
+          </b-modal>
           <p><strong>To communicate with another remote repo, you can first add it as a <em>remote</em> of your repo</strong>. Here are the steps:</p>
           <tabs>
             <tab><template slot="_header">SourceTree</template>
@@ -131,8 +140,12 @@
       <b-modal id="modal:push-addRemote" hide-footer size="lg" modal-class="mb-zoom" ref="modal:push-addRemote"><template slot="modal-title">Git &amp; GitHub → Pull →</template>
         <div>
           <h5 id="working-with-multiple-remotes-2">Working with multiple remotes<a class="fa fa-anchor" href="#working-with-multiple-remotes-2" onclick="event.stopPropagation()"></a></h5>
-          <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo.</p>
-          <p><strong>A Git repo can work with remote repos other than the one it was cloned from</strong> as long as those repos has a shared history with your repo. For example, let's say a repo <code>repo1</code> was cloned as <code>repo2</code> which was then cloned as <code>repo3</code> Any of these repos can work with the other two because they have a shared history.</p>
+          <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <span trigger="click" for="modal:gitPull-rcsMultipleRepos" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:gitPull-rcsMultipleRepos'].show()" class="trigger-click">a Git repo can work with remote repos other than the one it was cloned from</span>.</p>
+          <b-modal id="modal:gitPull-rcsMultipleRepos" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitPull-rcsMultipleRepos"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
+            <div>
+              <p><strong>A repo can work with any number of other repositories as long as they have a shared history</strong> e.g., <code>repo1</code> can pull from (or push to) <code>repo2</code> and <code>repo3</code> if they have a shared history between them.</p>
+            </div>
+          </b-modal>
           <p><strong>To communicate with another remote repo, you can first add it as a <em>remote</em> of your repo</strong>. Here are the steps:</p>
           <tabs>
             <tab><template slot="_header">SourceTree</template>

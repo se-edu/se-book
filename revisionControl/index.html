@@ -413,15 +413,30 @@
                       <p></p>
                       <p></p>
                       <div>
-                        <p><strong>Remote repositories are copies of a repo that are hosted on remote computers.</strong> They are especially useful for sharing the revision history of a codebase among team members of a multi-person project. <span class="dimmed">They can also serve as a remote backup of your code base.</span></p>
-                        <p><strong>You can <mark><em>clone</em></mark> a remote repo onto your computer</strong> which will create a copy of a remote repo on your computer, including the version history as the remote repo.</p>
-                        <p><strong>You can <mark><em>push</em></mark> new commits in your clone to the remote repo</strong> which will copy the new commits onto the remote repo. Note that pushing to a remote repo requires you to have write-access to it.</p>
-                        <p><strong>You can <mark><em>pull</em></mark> from the remote repos to receive new commits in the remote repo</strong>. Pulling is used to <em>sync</em> your local repo with latest changes to the remote repo.</p>
-                        <p>While it is possible to set up your own remote repo on a server, an easier option is to use a remote repo hosting service such as GitHub or BitBucket.</p>
-                        <p><strong>A <mark><em>fork</em></mark> is a remote copy of a remote repo</strong>. If there is a remote repo that you want to push to but you do not have write access to it, you can fork the remote repo, which gives you your own remote repo that you can push to.</p>
-                        <p><strong>A <mark><em>pull request</em></mark> is mechanism for contributing code to a remote repo.</strong> It is a formal request sent to the maintainers of the repo asking them to pull your new code to their repo.</p>
+                        <p><strong>Remote repositories are repos that are hosted on remote computers</strong> and allows remote access. They are especially useful for sharing the revision history of a codebase among team members of a multi-person project. <span class="dimmed">They can also serve as a remote backup of your code base.</span></p>
+                        <p><strong>It is possible to set up your own remote repo on a server</strong>, but the easier option is to use a remote repo hosting service such as GitHub or BitBucket.</p>
+                        <div id="section-cloning">
+                          <p><strong>You can <mark><em>clone</em></mark> a repo</strong> to create a copy of that repo on another location in your computer. The copy will have even the revision history of the original repo i.e., identical to the original repo. For example, you can clone a remote repo onto your computer to create a local copy of the remote repo.<br></p>
+                        </div>
+                        <p><strong>When you clone from a repo, the original repo is commonly referred to as the <mark><em>upstream</em></mark> repo.</strong> A repo can have multiple upstream repos. For example, let's say a repo <code>repo1</code> was cloned as <code>repo2</code> which was then cloned as <code>repo3</code> In this case <code>repo1</code> and <code>repo2</code> are upstream repos of <code>repo3</code>.</p>
+                        <div id="section-pulling">
+                          <p><strong>You can <mark><em>pull</em></mark> from a repo to another, to receive new commits in the second repo</strong>, if the repos have a shared history. Let's say some new commits were added to the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><em>upstream</em> repo is a term used to refer to the repo you cloned from</span>upstream repo</span> after you cloned it and you would like to copy over those new commits to your own clone i.e., <mark>sync</mark> your clone with the upstream repo. In that case you pull from the upstream repo to your clone.</p>
+                        </div>
+                        <div id="section-pushing">
+                          <p><strong>You can <mark><em>push</em></mark> new commits in one repo to another repo</strong> which will copy the new commits onto the destination repo. Note that pushing to a repo requires you to have write-access to it. Furthermore, you can push between repos only if those repos have a shared history among them (i.e, one was created by copying the other at some point in the past).</p>
+                        </div>
+                        <p>Cloning, pushing, and pulling can be done between two local repos too, although it is more common for them to involve a remote repo.</p>
+                        <div id="section-working-with-multiple-repos">
+                          <p><strong>A repo can work with any number of other repositories as long as they have a shared history</strong> e.g., <code>repo1</code> can pull from (or push to) <code>repo2</code> and <code>repo3</code> if they have a shared history between them.</p>
+                        </div>
+                        <div id="section-forking">
+                          <p><strong>A <mark><em>fork</em></mark> is a remote copy of a remote repo</strong>. As you know, cloning creates a local copy of a repo. In contrast, Forking creates a remote copy of a Git repo hosted on GitHub. This is particularly useful if you want to play around with a GitHub repo but you don't have write permissions to it; you can simply fork the repo and do whatever you want with the fork as you are the owner of the fork.</p>
+                        </div>
+                        <div id="section-pull-request">
+                          <p><strong>A <mark><em>pull request</em></mark> (PR for short) is mechanism for contributing code to a remote repo.</strong> i.e., &quot;I'm <em>requesting</em> you to <em>pull</em> my proposed changes to your repo&quot;. For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><em>upstream</em> repo is a repo you forked from</span>upstream</span> repo.</p>
+                        </div>
                         <div v-closeable alt="slideshow: remote repo scenario" class="non-printable">
-                          <p>Here is a scenario that includes all the concepts introduced above (click on the slide to advance the animation):</p>
+                          <p>Here is a scenario that includes all the concepts introduced above (click <em>inside</em> the slide to advance the animation):</p>
                           <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212290&authkey=&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
                         </div>
                       </div>
@@ -638,7 +653,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, Jul 4, 2020, 2:00:31 AM GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, Jul 4, 2020, 6:12:25 PM GMT+8]</small></div>
     </footer>
   </div>
 </body>
