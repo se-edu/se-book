@@ -12,6 +12,13 @@
 
 Let's look at the steps involved in merging a PR, assuming the PR has been reviewed, refined, and approved for merging already.
 
+Preparation: If you would like to try merging a PR yourself, you can create a dummy PR in the following manner.
+1. Fork any repo (e.g., [samplerepo-pr-practice](https://github.com/se-edu/samplerepo-pr-practice)).
+1. Clone in to your computer.
+1. Create a new branch e.g., (`feature1`) and add some commits to it.
+1. Push the new branch to the fork.
+1. Create a PR from that branch to the `master` branch in your fork. Yes, it is possible to create a PR within the same repo.
+
 **1. Locate the PR** to be merged in your repo's GitHub page.
 
 **2. Click on the <span class="tab">:far-comments: Conversation</span> tab** and scroll to the bottom. You'll see a panel containing the PR status summary.<br>
@@ -32,7 +39,7 @@ Let's look at the steps involved in merging a PR, assuming the PR has been revie
 
 **3. Merge the PR** by clicking on the {{ button_green("Merge pull request :octicon-triangle-down:") }} button, followed by the `Confirm merge` button. You should see a `Pull request successfully merged and closed` message after the PR is merged.<br>
 
-* You can choose between three merging options by clicking on the down-arrow in the {{ button_green("Merge pull request :octicon-triangle-down:") }} button. If you are new to Git and GitHub, `Create merge commit` or `Squash and merge` options are recommended.
+* You can choose between three merging options by clicking on the down-arrow in the {{ button_green("Merge pull request :octicon-triangle-down:") }} button. If you are new to Git and GitHub, the `Create merge commit` options are recommended.
 
 **Next, sync your local repos (and forks).** Merging a PR simply merges the code in the upstream remote repository in which it was merged. The PR author (and other members of the repo) needs to pull the merged code from the upstream repo to their local repos and push the new code to their respective forks to syn the fork with the upstream repo.
 
