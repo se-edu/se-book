@@ -46,4 +46,5 @@ Given below are some steps you can follow when reviewing a PR.
 </div>
 
 <div id="extras">
+   <include src="resources.md" />
 </div>
