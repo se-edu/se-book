@@ -21,7 +21,7 @@ Given below are some steps you can follow when reviewing a PR.
 
 **2. Read the PR description.** It might contain information relevant to reviewing the PR.
 
-**3. Click on the** <span class="tab"><u>+</u> Files changed</span> tab to see the _diff_ view.
+**3. Click on the** <span class="tab">:octicon-diff: Files changed</span> tab to see the _diff_ view.
 
 **4. Add review comments:**
 1. Hover over the line you want to comment on and click on the <span style="color:#0066ff">:fas-plus-square:</span> icon that appears on the left margin. That should create a text box for you to enter your comment.<br>
