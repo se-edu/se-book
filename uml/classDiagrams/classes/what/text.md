@@ -15,9 +15,10 @@ The basic UML notations used to represent a _class_:<br>
 
 {{ icon_example }} A `Table` class shown in UML notation:
 
-<img tags="m--cs2113 m--cs2103 m--tic2002" src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operations.png" height="150" />
-
-<span tags="m--te3201">
+<div class="alt-java">
+<img src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operations.png" height="150" />
+</div>
+<div class="alt-python">
 <puml>
 @startuml
 skinparam classAttributeIconSize 0
@@ -32,7 +33,7 @@ set_number(n:int)
 }
 @enduml
 </puml>
-</span>
+</div>
 <p/>
 
 <panel type="seamless" header="The equivalent code">
@@ -104,9 +105,10 @@ visibility | Java | Python
 <box>
 
 {{ icon_example }} `Table` class with visibilities shown:
-
-<img tags="m--cs2113 m--cs2103 m--tic2002" src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operationsVisibility.png" height="150" />
-<span tags="m--te3201">
+<div class="alt-java">
+<img src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operationsVisibility.png" height="150" />
+</div>
+<div class="alt-python">
 <puml>
 @startuml
 skinparam classAttributeIconSize 0
@@ -121,7 +123,7 @@ class Table {
 }
 @enduml
 </puml>
-</span>
+</div>
 <p/>
 
 <panel type="seamless" header="The equivalent code">
