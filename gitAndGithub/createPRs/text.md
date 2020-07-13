@@ -46,6 +46,7 @@ Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-
 **6. Verify the proposed code**: Verify that the diff view in the page shows the exact change you intend to propose. If it doesn't, <tooltip content="commit the new code and push to the branch">update the branch</tooltip> as necessary.
 
 **7. Submit the PR:**
+
 <span id="submit-the-pr">
 
 1. Click the {{ button_green(icon_pr + " Create pull request") }} button.
