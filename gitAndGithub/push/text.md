@@ -6,6 +6,8 @@
 
 <div id="body">
 
+<div id="simple-push">
+
 Given below is a scenario you can try in order to learn how to <trigger trigger="click" for="modal:githubPushing-rcsPushing">push</trigger> commits to a remote repo hosted on GitHub:
 
 <modal large header="Project Management → Revision Control → Remote Repositories →" id="modal:githubPushing-rcsPushing">
@@ -30,6 +32,7 @@ Given below is a scenario you can try in order to learn how to <trigger trigger=
 </tabs>
 
 <p/>
+</div>
 
 **You can push to repos other than the one you cloned from**, as long as the target repo and your repo have a shared history.
 1. <trigger trigger="click" for="modal:push-addRemoteForNormalPushing">Add the GitHub repo URL as a remote</trigger>, if you haven't done so already.
