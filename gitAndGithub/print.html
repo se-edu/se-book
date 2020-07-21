@@ -767,38 +767,40 @@
               </div>
               </p>
               <div>
-                <p>Given below is a scenario you can try in order to learn how to <span trigger="click" for="modal:githubPushing-rcsPushing" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:githubPushing-rcsPushing'].show()" class="trigger-click">push</span> commits to a remote repo hosted on GitHub:</p>
-                <b-modal id="modal:githubPushing-rcsPushing" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPushing-rcsPushing"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
-                  <div>
-                    <p><strong>You can <mark><em>push</em></mark> new commits in one repo to another repo</strong> which will copy the new commits onto the destination repo. Note that pushing to a repo requires you to have write-access to it. Furthermore, you can push between repos only if those repos have a shared history among them (i.e, one was created by copying the other at some point in the past).</p>
-                  </div>
-                </b-modal>
-                <p><strong>1. Fork</strong> an existing GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>) to your GitHub account:</p>
-                <p><strong>2. Clone the fork</strong> (not the original) to your computer.</p>
-                <p><strong>3. Commit</strong> some changes in your local repo.</p>
-                <p><strong>4. Push</strong> the new commits to your fork on GitHub</p>
-                <tabs>
-                  <tab><template slot="_header">SourceTree</template>
+                <div id="simple-push">
+                  <p>Given below is a scenario you can try in order to learn how to <span trigger="click" for="modal:githubPushing-rcsPushing" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:githubPushing-rcsPushing'].show()" class="trigger-click">push</span> commits to a remote repo hosted on GitHub:</p>
+                  <b-modal id="modal:githubPushing-rcsPushing" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPushing-rcsPushing"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                     <div>
-                      <p>Click the <code>Push</code> button on the main menu, ensure the settings are as follows in the next dialog, and click the <code>Push</code> button on the dialog.</p>
-                      <img src="/se-book/gitAndGithub/push/images/sourcetree_1.png" height="150">
-                      <p></p>
-                      <box type="warning">
-                        <p>Tags are not included in a normal push. Remember to tick <code>Push all tags</code> when pushing to the remote repo if you want them to be pushed to the repo.<br>
-                          <img src="/se-book/gitAndGithub/push/images/pushTags.png" width="500"></p>
-                      </box>
+                      <p><strong>You can <mark><em>push</em></mark> new commits in one repo to another repo</strong> which will copy the new commits onto the destination repo. Note that pushing to a repo requires you to have write-access to it. Furthermore, you can push between repos only if those repos have a shared history among them (i.e, one was created by copying the other at some point in the past).</p>
                     </div>
-                  </tab>
-                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
-                    <div>
-                      <p>Use the command <code>git push origin master</code>. Enter Github username and password when prompted.</p>
-                      <box type="warning">
-                        <p>Tags are not included in a normal push. To push a tag, use this command: <code>git push origin &lt;tag_name&gt;</code> e.g.. <code>git push origin v1.0</code></p>
-                      </box>
-                    </div>
-                  </tab>
-                </tabs>
-                <p></p>
+                  </b-modal>
+                  <p><strong>1. Fork</strong> an existing GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>) to your GitHub account:</p>
+                  <p><strong>2. Clone the fork</strong> (not the original) to your computer.</p>
+                  <p><strong>3. Commit</strong> some changes in your local repo.</p>
+                  <p><strong>4. Push</strong> the new commits to your fork on GitHub</p>
+                  <tabs>
+                    <tab><template slot="_header">SourceTree</template>
+                      <div>
+                        <p>Click the <code>Push</code> button on the main menu, ensure the settings are as follows in the next dialog, and click the <code>Push</code> button on the dialog.</p>
+                        <img src="/se-book/gitAndGithub/push/images/sourcetree_1.png" height="150">
+                        <p></p>
+                        <box type="warning">
+                          <p>Tags are not included in a normal push. Remember to tick <code>Push all tags</code> when pushing to the remote repo if you want them to be pushed to the repo.<br>
+                            <img src="/se-book/gitAndGithub/push/images/pushTags.png" width="500"></p>
+                        </box>
+                      </div>
+                    </tab>
+                    <tab class="algolia-no-index"><template slot="_header">CLI</template>
+                      <div>
+                        <p>Use the command <code>git push origin master</code>. Enter Github username and password when prompted.</p>
+                        <box type="warning">
+                          <p>Tags are not included in a normal push. To push a tag, use this command: <code>git push origin &lt;tag_name&gt;</code> e.g.. <code>git push origin v1.0</code></p>
+                        </box>
+                      </div>
+                    </tab>
+                  </tabs>
+                  <p></p>
+                </div>
                 <p><strong>You can push to repos other than the one you cloned from</strong>, as long as the target repo and your repo have a shared history.</p>
                 <ol>
                   <li><span trigger="click" for="modal:push-addRemoteForNormalPushing" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:push-addRemoteForNormalPushing'].show()" class="trigger-click">Add the GitHub repo URL as a remote</span>, if you haven't done so already.</li>
@@ -1471,7 +1473,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Fri, Jul 17, 2020, 12:54:46 PM GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Tue, Jul 21, 2020, 10:20:54 PM GMT+8]</small></div>
     </footer>
   </div>
 </body>
