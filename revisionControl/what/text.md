@@ -39,11 +39,11 @@ Manually managing multiple versions of even a single file is an error-prone task
   <include src="../../common/references.md#bryan-mercurial-guide" />
 </modal>
 
-<box type="definition">
+<box type="definition" seamless>
   <include src="../../common/definitions.md#def-rcs" />
 </box>
 
-<box type="definition">
+<box type="definition" seamless>
   <include src="../../common/definitions.md#def-revision" />
 </box>
 

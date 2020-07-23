@@ -8,7 +8,7 @@
 
 **The Open-Close Principle aims to make a code entity easy to adapt and reuse without needing to modify the code entity itself.**
 
-<box type="definition">
+<box type="definition" seamless>
   <include src="../../common/definitions.md#def-open-closed-principle"/>
 </box>
 
