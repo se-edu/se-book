@@ -6,13 +6,13 @@
 
 <div id="body">
 
-<box type="definition">
+<box type="definition" seamless>
 <include src="../../../common/definitions.md#def-user-story" />
 </box>
 
 **A common format** for writing user stories is:
 
-<box type="definition">
+<box type="definition" seamless>
 <include src="../../../common/definitions.md#def-user-story-format" />
 </box>
 

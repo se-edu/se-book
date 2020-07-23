@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<box type="definition">
+<box type="definition" seamless>
 
 CMMI (Capability Maturity Model Integration) is a process improvement approach defined by Software Engineering Institute at Carnegie Melon University. CMMI provides organizations with the essential elements of effective processes, which will improve their performance. <sub>-- adapted from [http://www.sei.cmu.edu/cmmi/](http://www.sei.cmu.edu/cmmi/)</sub>
 

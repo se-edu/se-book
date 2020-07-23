@@ -16,7 +16,7 @@ In either case, requirements need to be gathered, analyzed, specified, and manag
 
 **Requirements come from _stakeholders_.**
 
-<box type="definition">
+<box type="definition" seamless>
   <include src="../../common/definitions.md#def-stakeholder"/>  
 </box>
 

@@ -125,7 +125,7 @@ Meaning of some shortened headings:
 <box type="tip">
     tip
 </box>
-<box type="definition">
+<box type="definition" seamless>
     definition
 </box>
 

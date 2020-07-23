@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<box type="definition">
+<box type="definition" seamless>
   <include src="../../../common/definitions.md#def-dynamic-binding" />
 </box>
 
@@ -31,7 +31,7 @@ However, at runtime `s` can receive an object of any subclass of `Staff`. That m
 
 </box>
 
-<box type="definition">
+<box type="definition" seamless>
   <include src="../../../common/definitions.md#def-static-binding" />
 </box>
 

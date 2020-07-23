@@ -16,7 +16,7 @@
 
 **_Stubs_ can isolate the <popover content="Software Under Test (in this case, the _unit_ being tested)">SUT</popover> from its dependencies**. 
 
-<box type="definition">
+<box type="definition" seamless>
 
 <include src="../../../../common/definitions.md#def-stub" />
 

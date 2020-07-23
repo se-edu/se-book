@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<box type="definition">
+<box type="definition" seamless>
 
 Design in the creative process of transforming the problem into a solution; the solution is also called design. <sub>-- :book: _Software Engineering Theory and Practice_,  Shari Lawrence; Atlee, Joanne M. Pfleeger</sub>
 

@@ -7,7 +7,7 @@
 <div id="body">
 
 
-<box type="definition">
+<box type="definition" seamless>
 <include src="../../../common/definitions.md#def-design-pattern" />
 </box>
 

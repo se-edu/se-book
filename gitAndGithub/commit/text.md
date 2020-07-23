@@ -8,10 +8,10 @@
 
 **After initializing a repository, Git can help you with revision controlling files inside the _working directory_. However, it is not automatic.** It is up to you to tell Git which of your changes (aka _revisions_) should be _committed_ to its memory for later use. Saving changes into Git's memory in that way is often called _committing_ and a change saved to the revision history is called a _commit_.
 
-<box type="definition">
+<box type="definition" seamless>
   <include src="../../common/definitions.md#def-working-directory" />
 </box>
-<box type="definition">
+<box type="definition" seamless>
   <include src="../../common/definitions.md#def-commit" />
 </box>
 
@@ -33,7 +33,7 @@ Here are the steps you can follow to learn how to work with Git commits:
 **3. Stage the changes to commit**: Although Git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose you want to commit the current changes to the file. First, you should _stage_ the file.
 
 
-<box type="definition">
+<box type="definition" seamless>
   <include src="../../common/definitions.md#def-stage" />
 </box>
 

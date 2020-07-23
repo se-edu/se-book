@@ -21,7 +21,7 @@ Reviews can be done in various forms. Some examples below:
 
 <modal large header="Pair Programming" id="modal:codeReview-pairProgramming">
 
-<box type="definition">
+<box type="definition" seamless>
   <include src="../../../common/definitions.md#def-pair-programming" />
 </box>
 
