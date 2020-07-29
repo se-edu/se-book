@@ -47,7 +47,7 @@ Similar to the `main` method, the `printTwice` method is `public` %%(i.e., it ca
 
 **The value provided as an argument must have the same type as the parameter.** Sometimes Java can convert an argument from one type to another automatically. For example, if the method requires a `double`, you can invoke it with an `int` argument `5` and Java will automatically convert the argument to the equivalent value of type double `5.0`.
 
-**Because variables only exist inside the methods where they are defined, they are often called _local_ variables.** Parameters and other variables declared inside a method only exist inside their own methods. Inside `main`, there is no such thing as `s`. If you try to use it there, you’ll get a compiler error. Similarly, inside `printTwice` there is no such thing as `sentence`. That variable belongs to `main`.
+**Because a variable declared inside a method only exists inside that method, such variables are called _local_ variables. That applies to parameters of a method too.** For example, In the code above, `s` cannot be used inside `main` because it is a parameter of the `printTwice` method and can only be used inside that method. If you try to use `s` inside `main`, you’ll get a compiler error. Similarly, inside `printTwice` there is no such thing as `sentence`. That variable belongs to `main`.
 
 </div>
 
@@ -91,7 +91,7 @@ public class AreaCalculator{
 
 <div class="indented">
 
-{{ similar }} **Java methods can be _overloaded_.** If two methods do the same thing, it is natural to give them the same name. Having more than one method with the same name is called overloading, and it is legal in Java as long as each version takes different parameters.
+{{ similar }} **Java methods can be _overloaded_.** If two methods do the same thing, it is natural to give them the same name. Having more than one method with the same name is called overloading, and it is legal in Java as long as each version has a different method _signature_ (the signature of the method is the method name and ordered list of parameter types) . For example, the following overloading of the method `calculateArea` is allowed because the method signatures are different (i.e., `calculateArea(double)` vs `calculateArea(double, double)`).
 
 ```java
 public static double calculateArea(double radius) {
