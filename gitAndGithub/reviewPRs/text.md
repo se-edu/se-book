@@ -28,7 +28,7 @@ Given below are some steps you can follow when reviewing a PR.
    {{ icon_tip }} To mark multiple lines, click-and-drag the <span style="color:#0066ff">:fas-plus-square:</span> icon.
 1. Enter your comment.<br>
    {{ icon_resource }} [This page @SE-EDU/guides](https://se-education.org/guides/guidelines/PRs-reviewing.html) has some best practices PR reviewers can follow.
-1. After typing in the comment, click on the {{ button_green("Start a revew") }} button (not the {{ button_light("Add single comment") }} button. This way, your comment is saved but not visible to others yet. It will be visible to others only when you have finished the entire review.<br>
+1. After typing in the comment, click on the {{ button_green("Start a review") }} button (not the {{ button_light("Add single comment") }} button. This way, your comment is saved but not visible to others yet. It will be visible to others only when you have finished the entire review.<br>
    <img src="images/addComment.png" width="800" />
    <p/>
 1. Repeat the above steps to add more comments.
@@ -38,7 +38,7 @@ Given below are some steps you can follow when reviewing a PR.
    <p/>
 
 1. When there are no more comments to add, click on the {{ button_green("Review changes :octicon-triangle-down:") }} button (on the top right of the diff page).
-1. Type in an overall comment about the PR, if any.e.g.,<br>e.g.,
+1. Type in an overall comment about the PR, if any. e.g.,
    ```
    Overall, I found your code easy to read for the most part except a few places
    where the nesting was too deep. I noted a few minor coding standard violations
