@@ -7,7 +7,8 @@
 <div id="body">
 
 
-Java has the following **arithmetic operators**:
+**Java supports the usual arithmetic operators**, given below.
+
 Operator | Description | Examples
 ---------|-------------|---------
 `+` | Additive operator | `2 + 3` %%{{ icon_output_right }}%% `5`
@@ -16,7 +17,7 @@ Operator | Description | Examples
 `/` | Division operator | ==`5 / 2` %%{{ icon_output_right }}%% `2`== but ==`5.0 / 2` %%{{ icon_output_right }}%% `2.5`==
 `%` | Remainder operator | `5 % 2` %%{{ icon_output_right }}%% `1`
 
-The following program uses some operators as part of an expression `hour * 60 + minute`:
+The following program uses some operators as part of an _expression_ `hour * 60 + minute`:
 
 ```java
 int hour = 11;
@@ -38,9 +39,9 @@ Examples:
 * `4 * (5 - 1)` {{ icon_output_right }} `16` (parentheses `(` `)` have higher precedence than `*`)
 </box>
 
-{{ different }} Java does not allow _operator overloading_.
+{{ different }} Java does not allow <tooltip content="changing the meaning of operators">_operator overloading_</tooltip>.
 
-> The **unary operators** require only one operand; they perform various operations such as incrementing/decrementing a value by one, negating an expression, or inverting the value of a boolean.{{ oracle }}
+The **unary operators** require only one operand; they perform various operations such as incrementing/decrementing a value by one, negating an expression, or inverting the value of a boolean.{{ oracle }}
 
 
 Operator | Description {{ oracle }} | example

@@ -6,6 +6,8 @@
 
 <div id="body">
 
+**Java has `while` and `for` constructs for looping**.
+
 ##### `while` loops
 
 <div class="indented">
