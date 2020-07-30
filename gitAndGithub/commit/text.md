@@ -66,7 +66,7 @@ Here are the steps you can follow to learn how to work with Git commits:
    <img src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_6.png" height="180" />
    <p/>
 
-1. Add more Next, add two more files `colors.txt` and `shapes.txt` to the same working directory. Add a third commit to record the current state of the working directory.
+1. Next, add two more files `colors.txt` and `shapes.txt` to the same working directory. Add a third commit to record the current state of the working directory.
 
    <img src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_7.png" height="150" />
    <p/>
