@@ -27,10 +27,6 @@ A little bit more detailed explanation %%(from CodeLaunch)%% with some additiona
 
 <br>
 
-##### Importing a Project to Intellij IDEA
-
-@[youtube](WIYTktB1bT4)
-
 </div>
 
 <div id="extras">

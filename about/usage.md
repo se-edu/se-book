@@ -87,56 +87,44 @@ Video describing X
 
 Meaning of some shortened headings:
 
-* <big>**What**</big> : the **meaning** of the concept in concern 
+* <big>**What**</big> : the **meaning** of the concept in concern (<trigger trigger="click" for="modal:conventions-what">example</trigger>)
 
-  <panel header="%%Example%%" src="../refactoring/what/unit-inElsewhere-asFlat.md" boilerplate />
+<modal large header="Example of a 'What' topic" id="modal:conventions-what">
+  <include src="../refactoring/what/unit-inElsewhere-asFlat.md" boilerplate />
+</modal>
 
-* <big>**Why**</big> : the **motivation** behind the concept in concern
+* <big>**Why**</big> : the **motivation** behind the concept in concern (<trigger trigger="click" for="modal:conventions-why">example</trigger>)
 
-  <panel header="%%Example%%" src="../documentation/guidelines/goTopDown/why/unit-inElsewhere-asFlat.md" boilerplate />
-  
-* <big>**How**</big> : the **usage** of the concept in concern 
+<modal large header="Example of a 'Why' topic" id="modal:conventions-why">
+  <include src="../documentation/guidelines/goTopDown/why/unit-inElsewhere-asFlat.md" boilerplate />
+</modal>
 
-  <panel header="%%Example%%" src="../refactoring/how/unit-inElsewhere-asFlat.md" boilerplate />
-  
-* <big>**When**</big> : the **pros and cons** of the concept in concern, **when to use** the concept 
+* <big>**How**</big> : the **usage** of the concept in concern (<trigger trigger="click" for="modal:conventions-how">example</trigger>)
 
-  <panel header="%%Example%%" src="../refactoring/when/unit-inElsewhere-asFlat.md" boilerplate />
-  
+<modal large header="Example of a 'How' topic" id="modal:conventions-how">
+  <include src="../refactoring/how/unit-inElsewhere-asFlat.md" boilerplate />
+</modal>
 
-#### Boxed-text styles
-<div class="indented">
+* <big>**When**</big> : the **pros and cons** of the concept in concern, **when to use** the concept (<trigger trigger="click" for="modal:conventions-when">example</trigger>)
 
-<box type="info">
-    additional info
-</box>
-<box type="warning">
-    warning
-</box>
-<box type="success">
-    positive message
-</box>
-<box type="important">
-    important message
-</box>
-<box type="wrong">
-    an error to avoid
-</box>
-<box type="tip">
-    tip
-</box>
-<box type="definition" seamless>
-    definition
-</box>
+<modal large header="Example of a 'When' topic" id="modal:conventions-when">
+  <include src="../refactoring/when/unit-inElsewhere-asFlat.md" boilerplate />
+</modal>
 
-</div>
 
 #### Meaning of icons
 
 <div class="indented">
 
+<span class="text-info">:fas-info:</span> : additional info <br>
+<span class="text-warning">:fas-exclamation:</span> : warning <br>
+<span class="text-success">:fas-check:</span> : positive message <br>
+<span class="text-danger">:fas-flag:</span> or {{ icon_important_big_red }} : important message <br>
+<span class="text-danger">:fas-times:</span> : error or danger to avoid <br>
+<span class="text-success">:fas-lightbulb:</span> or {{ icon_tip }} : tip <br>
+<span class="text-primary">:fas-book:</span> : definition or topic <br>
 {{ icon_extra }} : tangential info, can be ignored if not interested<br>
-{{ icon_new_window }} : direct link to the LO. <kbd>Ctrl</kbd>+`Click` to open the LO in new window/tab.<br>
+{{ icon_new_window }} : <kbd>Ctrl</kbd>+`Click` to open the LO in new window/tab.<br>
 {{ icon_outcome }} : learning outcomes<br>
 {{ icon_prereq }} : prerequisite learning outcome<br>
 {{ icon_example }} : examples<br>
