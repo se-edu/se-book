@@ -45,7 +45,7 @@ Given below is a scenario you can try in order to learn how to <trigger trigger=
 <tabs>
   <tab header="SourceTree">
 
-Push your repo to the new remote the usual way, but select the name of target remote instead of `origin`.<br>
+Push your repo to the new remote the usual way, but select the name of target remote instead of `origin` and remember to select the `Track` checkbox.<br>
 <img src="{{baseUrl}}/gitAndGithub/push/images/pushToRemote.png" width="470" />
 
   </tab>
