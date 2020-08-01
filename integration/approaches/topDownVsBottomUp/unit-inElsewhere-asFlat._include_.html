@@ -45,21 +45,21 @@
                 <p>Suggest an integration strategy for the system represented by following diagram. You need not follow a strict top-down, bottom-up, sandwich, or big bang approach. Dashed arrows represent dependencies between classes.</p>
                 <p>Also take into account the following facts in your test strategy.</p>
                 <ul>
-                  <li><code>HospitalUI</code> will be developed early, so as to get customer feedback early.</li>
-                  <li><code>HospitalFacade</code> shields the UI from complexities of the application layer. It simply redirects the method calls received to the appropriate classes below</li>
-                  <li><code>IO_Helper</code> is to be reused from an earlier project, with minor modifications</li>
-                  <li>Development of <code>OutPatient</code> component has been outsourced, and the delivery is not expected until the 2nd half of the project.</li>
+                  <li><code v-pre>HospitalUI</code> will be developed early, so as to get customer feedback early.</li>
+                  <li><code v-pre>HospitalFacade</code> shields the UI from complexities of the application layer. It simply redirects the method calls received to the appropriate classes below</li>
+                  <li><code v-pre>IO_Helper</code> is to be reused from an earlier project, with minor modifications</li>
+                  <li>Development of <code v-pre>OutPatient</code> component has been outsourced, and the delivery is not expected until the 2nd half of the project.</li>
                 </ul>
                 <img src="/se-book/integration/approaches/topDownVsBottomUp/images/hospital.png" height="250">
                 <p></p>
                 <div slot="answer" class="algolia-no-index">
                   <p>There can be many acceptable answers to this question. But any good strategy should consider at least some of the below.</p>
                   <ul>
-                    <li>Because <code>HospitalUI</code> will be developed early, it’s OK to integrate it early, using stubs, rather than wait for the rest of the system to finish. (i.e. a top-down integration is suitable for <code>HospitalUI</code>)</li>
-                    <li>Because <code>HospitalFacade</code> is unlikely to have a lot of business logic, it may not be worth to write stubs to test it (i.e. a bottom-up integration is better for <code>HospitalFacade</code>).</li>
-                    <li>Because <code>IO_Helper</code> is to be reused from an earlier project, you can finish it early. This is especially suitable since there are many classes that use it. Therefore <code>IO_Helper</code> can be integrated with the dependent classes in bottom-up fashion.</li>
-                    <li>Because <code>OutPatient</code> class may be delayed, you may have to integrate <code>PatientMgr</code> using a stub.</li>
-                    <li><code>TypeA</code>, <code>TypeB</code>, and <code>TypeC</code> seem to be tightly coupled. It may be a good idea to test them together.</li>
+                    <li>Because <code v-pre>HospitalUI</code> will be developed early, it’s OK to integrate it early, using stubs, rather than wait for the rest of the system to finish. (i.e. a top-down integration is suitable for <code v-pre>HospitalUI</code>)</li>
+                    <li>Because <code v-pre>HospitalFacade</code> is unlikely to have a lot of business logic, it may not be worth to write stubs to test it (i.e. a bottom-up integration is better for <code v-pre>HospitalFacade</code>).</li>
+                    <li>Because <code v-pre>IO_Helper</code> is to be reused from an earlier project, you can finish it early. This is especially suitable since there are many classes that use it. Therefore <code v-pre>IO_Helper</code> can be integrated with the dependent classes in bottom-up fashion.</li>
+                    <li>Because <code v-pre>OutPatient</code> class may be delayed, you may have to integrate <code v-pre>PatientMgr</code> using a stub.</li>
+                    <li><code v-pre>TypeA</code>, <code v-pre>TypeB</code>, and <code v-pre>TypeC</code> seem to be tightly coupled. It may be a good idea to test them together.</li>
                   </ul>
                   <p>Given below is one possible integration test strategy. Relative positioning also indicates a rough timeline.</p>
                   <img src="/se-book/integration/approaches/topDownVsBottomUp/images/hospitalIntegration.png" height="250">

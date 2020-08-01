@@ -23,15 +23,15 @@
                 <question>
                   <p>According to the given Java coding standard, which one of these is not a good name?</p>
                   <ul radio-group="d008b" class="radio-list">
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> a. integer variable name: <code>totalPeople</code></label></li>
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> b. boolean variable name: <code>checkWeight</code></label></li>
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> c. method name (returns integer): <code>getPeopleCount</code></label></li>
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> d. method name (returns boolean): <code>isValidAddress</code></label></li>
-                    <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> e. String variable name: <code>description</code></label></li>
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> a. integer variable name: <code v-pre>totalPeople</code></label></li>
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> b. boolean variable name: <code v-pre>checkWeight</code></label></li>
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> c. method name (returns integer): <code v-pre>getPeopleCount</code></label></li>
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> d. method name (returns boolean): <code v-pre>isValidAddress</code></label></li>
+                    <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> e. String variable name: <code v-pre>description</code></label></li>
                   </ul>
                   <div slot="answer" class="algolia-no-index">
                     <p>b</p>
-                    <p>Explanation: <code>checkWeight</code> is an action. Naming variables as actions makes the code harder to follow. <code>isWeightValid</code> may be a better name.</p>
+                    <p>Explanation: <code v-pre>checkWeight</code> is an action. Naming variables as actions makes the code harder to follow. <code v-pre>isWeightValid</code> may be a better name.</p>
                   </div>
                 </question>
               </panel>
@@ -48,14 +48,14 @@
                       </template>
                       <question>
                         <p>Consider the code given below:</p>
-                        <pre><code class="hljs java"><span><span class="hljs-keyword">import</span> java.util.*;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;<br></span><span>    <span class="hljs-keyword">private</span> String description;<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;<br></span><span>    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{<br></span><span>      <span class="hljs-keyword">this</span>.description = d;<br></span><span>      <span class="hljs-keyword">if</span> (!d.isEmpty())<br></span><span>          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }<br></span><span><br></span><span>    <span class="hljs-comment">/**</span><br></span><span><span class="hljs-comment">     * Print the description as a string.</span><br></span><span><span class="hljs-comment">     */</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }<br></span><span>}<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;<br></span><span>    <span class="hljs-keyword">private</span> String description;<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;<br></span><span>    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{<br></span><span>      <span class="hljs-keyword">this</span>.description = d;<br></span><span>      <span class="hljs-keyword">if</span> (!d.isEmpty())<br></span><span>          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }<br></span><span><br></span><span>    <span class="hljs-comment">/**</span><br></span><span><span class="hljs-comment">     * Print the description as a string.</span><br></span><span><span class="hljs-comment">     */</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }<br></span><span>}<br></span></code></pre>
                         <p>In what ways the code violate the coding standard you are expected to follow?</p>
                         <div slot="hint" class="algolia-no-index">
                           <p>Here are three:</p>
                           <ul>
-                            <li><code>descriptionPrefix</code> is a constant and should be named <code>DESCRIPTION_PREFIX</code></li>
-                            <li>method name <code>printingDescription()</code> should be named as <code>printDescription()</code></li>
-                            <li>boolean variable <code>important</code> should be named to sound boolean e.g., <code>isImportant</code></li>
+                            <li><code v-pre>descriptionPrefix</code> is a constant and should be named <code v-pre>DESCRIPTION_PREFIX</code></li>
+                            <li>method name <code v-pre>printingDescription()</code> should be named as <code v-pre>printDescription()</code></li>
+                            <li>boolean variable <code v-pre>important</code> should be named to sound boolean e.g., <code v-pre>isImportant</code></li>
                           </ul>
                           <p>There are many more.</p>
                         </div>
@@ -65,7 +65,7 @@
                   <div slot="hint" class="algolia-no-index">
                     <p>Here's one you are more likely to miss:</p>
                     <ul>
-                      <li><code>* Print the description as a string.</code> → <code>* Prints the description as a string.</code></li>
+                      <li><code v-pre>* Print the description as a string.</code> → <code v-pre>* Prints the description as a string.</code></li>
                     </ul>
                     <p>There are more.</p>
                   </div>

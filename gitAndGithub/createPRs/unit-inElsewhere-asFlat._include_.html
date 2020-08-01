@@ -9,7 +9,7 @@
   <div id="main">
     <div>
       <p>Suppose you want to propose some changes to a GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a>) as a <span trigger="click" for="modal:githubPullRequests-rcsPullRequests" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:githubPullRequests-rcsPullRequests'].show()" class="trigger-click">pull request (PR)</span>. Here is a scenario you can try in order to learn how to create PRs:</p>
-      <b-modal id="modal:githubPullRequests-rcsPullRequests" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPullRequests-rcsPullRequests"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
+      <b-modal id="modal:githubPullRequests-rcsPullRequests" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPullRequests-rcsPullRequests" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
         <div>
           <p><strong>A <mark><em>pull request</em></mark> (PR for short) is mechanism for contributing code to a remote repo.</strong> i.e., &quot;I'm <em>requesting</em> you to <em>pull</em> my proposed changes to your repo&quot;. For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><em>upstream</em> repo is a repo you forked from</span>upstream</span> repo.</p>
         </div>
@@ -18,29 +18,29 @@
       <p><strong>2. Clone</strong> it onto your computer.</p>
       <p><strong>3. Commit</strong> your changes e.g., add a new file with some contents and commit it.</p>
       <ul>
-        <li><strong>Option A - Commit changes to the <code>master</code> branch</strong></li>
-        <li><strong>Option B - Commit to a new branch</strong> e.g., create a branch named <code>add-intro</code> (remember to switch to the <code>master</code> branch before creating a new branch) and add your commit to it.</li>
+        <li><strong>Option A - Commit changes to the <code v-pre>master</code> branch</strong></li>
+        <li><strong>Option B - Commit to a new branch</strong> e.g., create a branch named <code v-pre>add-intro</code> (remember to switch to the <code v-pre>master</code> branch before creating a new branch) and add your commit to it.</li>
       </ul>
-      <p><strong>4. Push</strong> the branch you updated (i.e., <code>master</code> branch or the new branch) to your fork, as explained <span trigger="click" for="modal:createPr-pushBranch" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:createPr-pushBranch'].show()" class="trigger-click">here </span>.</p>
-      <b-modal id="modal:createPr-pushBranch" hide-footer size="lg" modal-class="mb-zoom" ref="modal:createPr-pushBranch"><template slot="modal-title">Git &amp; GitHub → Branch →</template>
+      <p><strong>4. Push</strong> the branch you updated (i.e., <code v-pre>master</code> branch or the new branch) to your fork, as explained <span trigger="click" for="modal:createPr-pushBranch" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:createPr-pushBranch'].show()" class="trigger-click">here </span>.</p>
+      <b-modal id="modal:createPr-pushBranch" hide-footer size="lg" modal-class="mb-zoom" ref="modal:createPr-pushBranch" class="algolia-no-index"><template slot="modal-title">Git &amp; GitHub → Branch →</template>
         <div>
           <h5 id="pushing-a-branch-to-a-remote-repo">Pushing a branch to a remote repo<a class="fa fa-anchor" href="#pushing-a-branch-to-a-remote-repo" onclick="event.stopPropagation()"></a></h5>
           <p>Here's how to push a branch to a remote repo:</p>
           <tabs>
             <tab><template slot="_header">SourceTree</template>
-              <p>Here's how to push a branch named <code>add-intro</code> to your own fork of a repo named <code>samplerepo-pr-practice</code>:</p>
+              <p>Here's how to push a branch named <code v-pre>add-intro</code> to your own fork of a repo named <code v-pre>samplerepo-pr-practice</code>:</p>
               <img src="/se-book/gitAndGithub/branch/images/pushBranchToFork.png" height="300">
               <p></p>
             </tab>
             <tab class="algolia-no-index"><template slot="_header">CLI</template>
-              <p>Normally: <code>git push {remote repository} {branch}</code>. Examples:<br></p>
+              <p>Normally: <code v-pre>git push {remote repository} {branch}</code>. Examples:<br></p>
               <ul>
-                <li><code>git push origin master</code> pushes the <code>master</code> branch to the repo named <code>origin</code> (i.e., the repo you cloned from)</li>
-                <li><code>git push upstream-repo add-intro</code> pushes the <code>add-intro</code> branch to the repo named <code>upstream-repo</code></li>
+                <li><code v-pre>git push origin master</code> pushes the <code v-pre>master</code> branch to the repo named <code v-pre>origin</code> (i.e., the repo you cloned from)</li>
+                <li><code v-pre>git push upstream-repo add-intro</code> pushes the <code v-pre>add-intro</code> branch to the repo named <code v-pre>upstream-repo</code></li>
               </ul>
-              <p><strong>If pushing a branch you created locally to the remote for the <em>first time</em></strong>, add the <code>-u</code> flag to get the local branch to track the new upstream branch:<br>
-                e.g., <code>git push -u origin add-intro</code></p>
-              <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> See <a href="https://git-scm.com/docs/git-push">git-scm.com/docs/git-push</a> for details of the <code>push</code> command.</p>
+              <p><strong>If pushing a branch you created locally to the remote for the <em>first time</em></strong>, add the <code v-pre>-u</code> flag to get the local branch to track the new upstream branch:<br>
+                e.g., <code v-pre>git push -u origin add-intro</code></p>
+              <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> See <a href="https://git-scm.com/docs/git-push">git-scm.com/docs/git-push</a> for details of the <code v-pre>push</code> command.</p>
             </tab>
           </tabs>
           <p></p>
@@ -52,22 +52,22 @@
           <p>Go to your fork.</p>
         </li>
         <li>
-          <p>Click on the <span class="tab"><span class="dimmed"><svg version="1.1" width="12" height="16" viewbox="0 0 12 16" class="octicon octicon-git-pull-request" aria-hidden="true">
+          <p>Click on the <span class="tab"><span class="dimmed"><svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-git-pull-request" aria-hidden="true">
                   <path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z" /></svg></span> Pull requests</span> tab followed by the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">New pull request</span> <strong>button</strong>. This will bring you to the 'Comparing changes' page.</p>
         </li>
         <li>
-          <p>Set the appropriate target repo and the branch that should receive your PR, using the <code>base repository</code> and <code>base</code> dropdowns. e.g.,<br>
-            <span class="btn btn-light border">base repository: <strong>se-edu/samplerepo-pr-practice</strong> <svg version="1.1" width="12" height="16" viewbox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> <span class="btn btn-light border">base: <strong>master</strong> <svg version="1.1" width="12" height="16" viewbox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
+          <p>Set the appropriate target repo and the branch that should receive your PR, using the <code v-pre>base repository</code> and <code v-pre>base</code> dropdowns. e.g.,<br>
+            <span class="btn btn-light border">base repository: <strong>se-edu/samplerepo-pr-practice</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
+                <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> <span class="btn btn-light border">base: <strong>master</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
                 <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span><br></p>
-          <box type="info" light>
+          <box type="info" seamless>
             <p>Normally, the default value shown in the dropdown is what you want but in case your fork has <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content">e.g., the repo you forked from is also a fork of a another repo, which means both of those are considered upstream repos of your fork</span>multiple upstream repos</span>, the default may not be what you want.</p>
           </box>
         </li>
         <li>
-          <p>Indicate which repo:branch contains your proposed code, using the <code>head repository</code> and <code>compare</code> dropdowns. e.g.,<br>
-            <span class="btn btn-light border">head repository: <strong>myrepo/samplerepo-pr-practice</strong> <svg version="1.1" width="12" height="16" viewbox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> <span class="btn btn-light border">compare: <strong>master</strong> <svg version="1.1" width="12" height="16" viewbox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
+          <p>Indicate which repo:branch contains your proposed code, using the <code v-pre>head repository</code> and <code v-pre>compare</code> dropdowns. e.g.,<br>
+            <span class="btn btn-light border">head repository: <strong>myrepo/samplerepo-pr-practice</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
+                <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> <span class="btn btn-light border">compare: <strong>master</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
                 <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span><br></p>
         </li>
       </ol>
@@ -76,29 +76,30 @@
       <span id="submit-the-pr">
         <ol>
           <li>
-            <p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"><span><svg version="1.1" width="12" height="16" viewbox="0 0 12 16" class="octicon octicon-git-pull-request" aria-hidden="true">
+            <p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"><span><svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-git-pull-request" aria-hidden="true">
                     <path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z" /></svg></span> Create pull request</span> button.</p>
           </li>
           <li>
             <p>Fill in the PR name and description e.g.,<br>
-              Name: <code>Add an introduction to the README.md</code><br>
+              Name: <code v-pre>Add an introduction to the README.md</code><br>
               Description:</p>
-            <pre><code class="no-line-numbers hljs"><span>Add some paragraph to the README.md to explain ...<br></span><span>Also add a heading ...<br></span></code></pre>
+            <pre><code class="no-line-numbers hljs" v-pre><span>Add some paragraph to the README.md to explain ...<br></span><span>Also add a heading ...<br></span></code></pre>
           </li>
           <li>
-            <p>If you want to indicate that the PR you are about to create is 'still work in progress, not yet ready', click on the dropdown arrow in the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="12" height="16" viewbox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> button and choose <code>Create draft pull request</code> option.</p>
+            <p>If you want to indicate that the PR you are about to create is 'still work in progress, not yet ready', click on the dropdown arrow in the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> button and choose <code v-pre>Create draft pull request</code> option.</p>
           </li>
           <li>
-            <p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="12" height="16" viewbox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
+            <p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
                   <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> button to create the PR.<br></p>
           </li>
           <li>
-            <p>Go to the receiving repo to verify your PR appears there in the <code>Pull requests</code> tab.
+            <p>Go to the receiving repo to verify your PR appears there in the <code v-pre>Pull requests</code> tab.
             </p>
           </li>
         </ol>
       </span>
+      <p></p>
 
 
       <p><strong>The next step of the PR life cycle is the PR <em>review</em>.</strong> The members of the repo that received your PR can now review your proposed changes.</p>
@@ -107,10 +108,10 @@
         <li>If they don't like it at all, they can simply close the PR too i.e., they reject your proposed change.</li>
         <li>In most cases, they will add comments to the PR to suggest further changes. When that happens, GitHub will notify you.</li>
       </ul>
-      <p><strong>You can update the PR along the way too.</strong> Suppose PR reviewers suggested a certain improvement to your proposed code. To update your PR as per the suggestion, you can simply modify the code in your local repo, commit the updated code to the same <code>master</code> branch, and push to your fork as you did earlier. The PR will auto-update accordingly.</p>
-      <p><strong>Sending PRs using the <code>master</code> branch is less common</strong> than sending PRs using separate branches. For example, suppose you wanted to propose two bug fixes that are not related to each other. In that case, it is more appropriate to send two separate PRs so that each fix can be reviewed, refined, and merged independently. But if you send PRs using the <code>master</code> branch only, both fixes (and any other change you do in the <code>master</code> branch) will appear in the PRs you create from it.</p>
-      <p><strong>To create another PR</strong> while the current PR is still under review, create a new branch (remember to <mark>switch back to the <code>master</code> first</mark>), add your new proposed change in that branch, and create a new PR following the steps given above.</p>
-      <p><strong>It is possible to create PRs within the same repo</strong> e.g., you can create a PR from branch <code>feature-x</code> to the <code>master</code> branch, within the same repo. Doing so will allow the code to be reviewed (using PR review mechanism) before it is merged.</p>
+      <p><strong>You can update the PR along the way too.</strong> Suppose PR reviewers suggested a certain improvement to your proposed code. To update your PR as per the suggestion, you can simply modify the code in your local repo, commit the updated code to the same <code v-pre>master</code> branch, and push to your fork as you did earlier. The PR will auto-update accordingly.</p>
+      <p><strong>Sending PRs using the <code v-pre>master</code> branch is less common</strong> than sending PRs using separate branches. For example, suppose you wanted to propose two bug fixes that are not related to each other. In that case, it is more appropriate to send two separate PRs so that each fix can be reviewed, refined, and merged independently. But if you send PRs using the <code v-pre>master</code> branch only, both fixes (and any other change you do in the <code v-pre>master</code> branch) will appear in the PRs you create from it.</p>
+      <p><strong>To create another PR</strong> while the current PR is still under review, create a new branch (remember to <mark>switch back to the <code v-pre>master</code> first</mark>), add your new proposed change in that branch, and create a new PR following the steps given above.</p>
+      <p><strong>It is possible to create PRs within the same repo</strong> e.g., you can create a PR from branch <code v-pre>feature-x</code> to the <code v-pre>master</code> branch, within the same repo. Doing so will allow the code to be reviewed by other developers (using PR review mechanism) before it is merged.</p>
       <panel expanded><template slot="_header">
           <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
         </template>

@@ -14,7 +14,7 @@
         </div>
       </box>
       <p><strong><span trigger="click" for="modal:dynamicAndStatic-overriding" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:dynamicAndStatic-overriding'].show()" class="trigger-click">Overridden methods</span> are resolved using dynamic binding, and therefore resolves to the implementation in the actual type of the object.</strong></p>
-      <b-modal id="modal:dynamicAndStatic-overriding" hide-footer size="lg" modal-class="mb-zoom" ref="modal:dynamicAndStatic-overriding"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+      <b-modal id="modal:dynamicAndStatic-overriding" hide-footer size="lg" modal-class="mb-zoom" ref="modal:dynamicAndStatic-overriding" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
         <div>
           <div>
             <p>
@@ -34,36 +34,36 @@
               <div>
                 <p><strong>Method <em>overriding</em> is when a sub-class changes the behavior inherited from the parent class</strong> by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.</p>
                 <box>
-                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the following case of <code>EvaluationReport</code> class inheriting the <code>Report</code> class:</p>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the following case of <code v-pre>EvaluationReport</code> class inheriting the <code v-pre>Report</code> class:</p>
                   <div class="table-responsive">
                     <table class="markbind-table table table-bordered table-striped">
                       <thead>
                         <tr>
-                          <th><code>Report</code> methods</th>
-                          <th><code>EvaluationReport</code> methods</th>
+                          <th><code v-pre>Report</code> methods</th>
+                          <th><code v-pre>EvaluationReport</code> methods</th>
                           <th>Overrides?</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td><code>print()</code></td>
-                          <td><code>print()</code></td>
+                          <td><code v-pre>print()</code></td>
+                          <td><code v-pre>print()</code></td>
                           <td>Yes</td>
                         </tr>
                         <tr>
-                          <td><code>write(String)</code></td>
-                          <td><code>write(String)</code></td>
+                          <td><code v-pre>write(String)</code></td>
+                          <td><code v-pre>write(String)</code></td>
                           <td>Yes</td>
                         </tr>
                         <tr>
-                          <td><code>read():String</code></td>
-                          <td><code>read(int):String</code></td>
+                          <td><code v-pre>read():String</code></td>
+                          <td><code v-pre>read(int):String</code></td>
                           <td>No. <span class="dimmed">Reason: the two methods have different signatures; This is a case of <span trigger="click" for="modal:overriding-overloading" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:overriding-overloading'].show()" class="trigger-click"> <em>overloading</em></span> (rather than overriding).</span></td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
-                  <b-modal id="modal:overriding-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:overriding-overloading"><template slot="modal-title"><strong>Overloading</strong></template>
+                  <b-modal id="modal:overriding-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:overriding-overloading" class="algolia-no-index"><template slot="modal-title"><strong>Overloading</strong></template>
                     <div>
                       <div></div>
                       <p></p>
@@ -91,20 +91,20 @@
                                       </thead>
                                       <tbody>
                                         <tr>
-                                          <td style="text-align:center"><code>int add(int X, int Y)</code></td>
-                                          <td style="text-align:center"><code>(int, int)</code></td>
+                                          <td style="text-align:center"><code v-pre>int add(int X, int Y)</code></td>
+                                          <td style="text-align:center"><code v-pre>(int, int)</code></td>
                                         </tr>
                                         <tr>
-                                          <td style="text-align:center"><code>void add(int A, int B)</code></td>
-                                          <td style="text-align:center"><code>(int, int)</code></td>
+                                          <td style="text-align:center"><code v-pre>void add(int A, int B)</code></td>
+                                          <td style="text-align:center"><code v-pre>(int, int)</code></td>
                                         </tr>
                                         <tr>
-                                          <td style="text-align:center"><code>void m(int X, double Y)</code></td>
-                                          <td style="text-align:center"><code>(int, double)</code></td>
+                                          <td style="text-align:center"><code v-pre>void m(int X, double Y)</code></td>
+                                          <td style="text-align:center"><code v-pre>(int, double)</code></td>
                                         </tr>
                                         <tr>
-                                          <td style="text-align:center"><code>void m(double X, int Y)</code></td>
-                                          <td style="text-align:center"><code>(double, int)</code></td>
+                                          <td style="text-align:center"><code v-pre>void m(double X, int Y)</code></td>
+                                          <td style="text-align:center"><code v-pre>(double, int)</code></td>
                                         </tr>
                                       </tbody>
                                     </table>
@@ -113,10 +113,10 @@
                               </div>
                             </box>
                             <box>
-                              <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the case below, the <code>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code>(String)</code> and <code>(int)</code></p>
+                              <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the case below, the <code v-pre>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code v-pre>(String)</code> and <code v-pre>(int)</code></p>
                               <ul>
-                                <li><code>calculate(String): void</code></li>
-                                <li><code>calculate(int): void</code></li>
+                                <li><code v-pre>calculate(String): void</code></li>
+                                <li><code v-pre>calculate(int): void</code></li>
                               </ul>
                             </box>
                           </div>
@@ -137,15 +137,15 @@
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which methods override?</p>
                         </template>
                         <question>
-                          <p>Which of these methods override another method? <span class="dimmed"><code>A</code> is the parent class. <code>B</code> inherits <code>A</code>.</span></p>
+                          <p>Which of these methods override another method? <span class="dimmed"><code v-pre>A</code> is the parent class. <code v-pre>B</code> inherits <code v-pre>A</code>.</span></p>
                           <img src="/se-book/oop/inheritance/overriding/images/overriding.png" height="220">
                           <p></p>
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e</li>
+                          <ul class="contains-task-list">
+                            <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a</li>
+                            <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b</li>
+                            <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c</li>
+                            <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d</li>
+                            <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e</li>
                           </ul>
                           <div slot="answer" class="algolia-no-index">
                             <p>d</p>
@@ -162,9 +162,9 @@
         </div>
       </b-modal>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the code below. The declared type of <code>s</code> is <code>Staff</code> and it appears as if the <code>adjustSalary(int)</code> operation of the <code>Staff</code> class is invoked.</p>
-        <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{<br></span><span>    <span class="hljs-keyword">for</span> (Staff s: staff) {<br></span><span>        s.adjustSalary(byPercent);<br></span><span>    }<br></span><span>}<br></span></code></pre>
-        <p>However, at runtime <code>s</code> can receive an object of any subclass of <code>Staff</code>. That means the <code>adjustSalary(int)</code> operation of the actual subclass object will be called. If the subclass does not override that operation, the operation defined in the superclass (in this case, <code>Staff</code> class) will be called.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the code below. The declared type of <code v-pre>s</code> is <code v-pre>Staff</code> and it appears as if the <code v-pre>adjustSalary(int)</code> operation of the <code v-pre>Staff</code> class is invoked.</p>
+        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{<br></span><span>    <span class="hljs-keyword">for</span> (Staff s: staff) {<br></span><span>        s.adjustSalary(byPercent);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+        <p>However, at runtime <code v-pre>s</code> can receive an object of any subclass of <code v-pre>Staff</code>. That means the <code v-pre>adjustSalary(int)</code> operation of the actual subclass object will be called. If the subclass does not override that operation, the operation defined in the superclass (in this case, <code v-pre>Staff</code> class) will be called.</p>
       </box>
       <box type="definition" seamless>
         <div>
@@ -172,7 +172,7 @@
         </div>
       </box>
       <p><strong>In contrast, <span trigger="click" for="modal:dynamicAndStatic-overloading" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:dynamicAndStatic-overloading'].show()" class="trigger-click">overloaded</span> methods are resolved using static binding.</strong></p>
-      <b-modal id="modal:dynamicAndStatic-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:dynamicAndStatic-overloading"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+      <b-modal id="modal:dynamicAndStatic-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:dynamicAndStatic-overloading" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
         <div>
           <div></div>
           <p></p>
@@ -200,20 +200,20 @@
                           </thead>
                           <tbody>
                             <tr>
-                              <td style="text-align:center"><code>int add(int X, int Y)</code></td>
-                              <td style="text-align:center"><code>(int, int)</code></td>
+                              <td style="text-align:center"><code v-pre>int add(int X, int Y)</code></td>
+                              <td style="text-align:center"><code v-pre>(int, int)</code></td>
                             </tr>
                             <tr>
-                              <td style="text-align:center"><code>void add(int A, int B)</code></td>
-                              <td style="text-align:center"><code>(int, int)</code></td>
+                              <td style="text-align:center"><code v-pre>void add(int A, int B)</code></td>
+                              <td style="text-align:center"><code v-pre>(int, int)</code></td>
                             </tr>
                             <tr>
-                              <td style="text-align:center"><code>void m(int X, double Y)</code></td>
-                              <td style="text-align:center"><code>(int, double)</code></td>
+                              <td style="text-align:center"><code v-pre>void m(int X, double Y)</code></td>
+                              <td style="text-align:center"><code v-pre>(int, double)</code></td>
                             </tr>
                             <tr>
-                              <td style="text-align:center"><code>void m(double X, int Y)</code></td>
-                              <td style="text-align:center"><code>(double, int)</code></td>
+                              <td style="text-align:center"><code v-pre>void m(double X, int Y)</code></td>
+                              <td style="text-align:center"><code v-pre>(double, int)</code></td>
                             </tr>
                           </tbody>
                         </table>
@@ -222,10 +222,10 @@
                   </div>
                 </box>
                 <box>
-                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the case below, the <code>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code>(String)</code> and <code>(int)</code></p>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the case below, the <code v-pre>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code v-pre>(String)</code> and <code v-pre>(int)</code></p>
                   <ul>
-                    <li><code>calculate(String): void</code></li>
-                    <li><code>calculate(int): void</code></li>
+                    <li><code v-pre>calculate(String): void</code></li>
+                    <li><code v-pre>calculate(int): void</code></li>
                   </ul>
                 </box>
               </div>
@@ -235,10 +235,10 @@
         </div>
       </b-modal>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Note how the constructor is overloaded in the class below. The method call <code>new Account()</code> is bound to the first constructor at compile time.</p>
-        <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{<br></span><span><br></span><span>    Account () {<br></span><span>        <span class="hljs-comment">// Signature: ()</span><br></span><span>        ...<br></span><span>    }<br></span><span><br></span><span>    Account (String name, String number, <span class="hljs-keyword">double</span> balance) {<br></span><span>        <span class="hljs-comment">// Signature: (String, String, double)</span><br></span><span>        ...<br></span><span>    }<br></span><span>}<br></span></code></pre>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Similarly, the <code>calcuateGrade</code> method is overloaded in the code below and a method call <code>calculateGrade(&quot;A1213232&quot;)</code> is bound to the second implementation, at compile time.</p>
-        <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculateGrade</span> <span class="hljs-params">(<span class="hljs-keyword">int</span>[] averages)</span> </span>{ ... }<br></span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculateGrade</span> <span class="hljs-params">(String matric)</span> </span>{ ... }<br></span></code></pre>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Note how the constructor is overloaded in the class below. The method call <code v-pre>new Account()</code> is bound to the first constructor at compile time.</p>
+        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{<br></span><span><br></span><span>    Account () {<br></span><span>        <span class="hljs-comment">// Signature: ()</span><br></span><span>        ...<br></span><span>    }<br></span><span><br></span><span>    Account (String name, String number, <span class="hljs-keyword">double</span> balance) {<br></span><span>        <span class="hljs-comment">// Signature: (String, String, double)</span><br></span><span>        ...<br></span><span>    }<br></span><span>}<br></span></code></pre>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Similarly, the <code v-pre>calcuateGrade</code> method is overloaded in the code below and a method call <code v-pre>calculateGrade(&quot;A1213232&quot;)</code> is bound to the second implementation, at compile time.</p>
+        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculateGrade</span> <span class="hljs-params">(<span class="hljs-keyword">int</span>[] averages)</span> </span>{ ... }<br></span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">calculateGrade</span> <span class="hljs-params">(String matric)</span> </span>{ ... }<br></span></code></pre>
       </box>
     </div>
     <div></div>

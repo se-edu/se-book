@@ -18,7 +18,7 @@
   <div id="main">
     <div>
       <p>Continuing with the example in [<span trigger="click" for="modal:conceptualingIntermediate-basic" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:conceptualingIntermediate-basic'].show()" class="trigger-click">Design → Modeling → Modeling a Solution → Basic</span>], next let us model how the TextUi interacts with the Logic to support the mark or clear operations until the game is won or lost.</p>
-      <b-modal id="modal:conceptualingIntermediate-basic" hide-footer size="lg" modal-class="mb-zoom" ref="modal:conceptualingIntermediate-basic"><template slot="modal-title"></template>
+      <b-modal id="modal:conceptualingIntermediate-basic" hide-footer size="lg" modal-class="mb-zoom" ref="modal:conceptualingIntermediate-basic" class="algolia-no-index"><template slot="modal-title"></template>
         <div>
           <div>
             <p>
@@ -40,7 +40,7 @@
             <div id="main">
               <div>
                 <p>As mentioned in [<span trigger="click" for="modal:basicModelling-modelingIntro" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:basicModelling-modelingIntro'].show()" class="trigger-click">Design → Modeling → Modeling a Solutions → Introduction</span>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.</p>
-                <b-modal id="modal:basicModelling-modelingIntro" hide-footer size="lg" modal-class="mb-zoom" ref="modal:basicModelling-modelingIntro"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                <b-modal id="modal:basicModelling-modelingIntro" hide-footer size="lg" modal-class="mb-zoom" ref="modal:basicModelling-modelingIntro" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
                   <div>
                     <div></div>
                     <p></p>
@@ -71,26 +71,26 @@
                 </b-modal>
                 <img src="/se-book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50">
                 <p></p>
-                <p>Let us start by modelling a sample interaction between the person playing the game and the <code>TextUi</code> object.</p>
+                <p>Let us start by modelling a sample interaction between the person playing the game and the <code v-pre>TextUi</code> object.</p>
                 <box>
                   <img src="/se-book/modeling/modelingASolution/basic/images/playerText.png" height="300">
                   <p></p>
-                  <p><code>newgame</code> and <code>clear x y</code> represent commands typed by the <code>Player</code> on the <code>TextUi</code>.</p>
+                  <p><code v-pre>newgame</code> and <code v-pre>clear x y</code> represent commands typed by the <code v-pre>Player</code> on the <code v-pre>TextUi</code>.</p>
                 </box>
-                <p>How does the <code>TextUi</code> object carry out the requests it has received from player? It would need to interact with other objects of the system. Because the <code>Logic</code> class is the one that controls the game logic, the <code>TextUi</code> needs to collaborate with <code>Logic</code> to fulfill the <code>newgame</code> request. Let us extend the model to capture that interaction.</p>
+                <p>How does the <code v-pre>TextUi</code> object carry out the requests it has received from player? It would need to interact with other objects of the system. Because the <code v-pre>Logic</code> class is the one that controls the game logic, the <code v-pre>TextUi</code> needs to collaborate with <code v-pre>Logic</code> to fulfill the <code v-pre>newgame</code> request. Let us extend the model to capture that interaction.</p>
                 <box>
                   <img src="/se-book/modeling/modelingASolution/basic/images/playerTextLogic.png" height="280">
                   <p></p>
-                  <p><code>W</code> = Width of the minefield; <code>H</code> = Height of the minefield</p>
+                  <p><code v-pre>W</code> = Width of the minefield; <code v-pre>H</code> = Height of the minefield</p>
                 </box>
-                <p>The above diagram assumes that <code>W</code> and <code>H</code> are the only information <code>TextUi</code> requires to display the minefield to the <code>Player</code>. Note that there could be other ways of doing this.<br>
-                  The <code>Logic</code> methods you conceptualized in our modelling so far are:</p>
+                <p>The above diagram assumes that <code v-pre>W</code> and <code v-pre>H</code> are the only information <code v-pre>TextUi</code> requires to display the minefield to the <code v-pre>Player</code>. Note that there could be other ways of doing this.<br>
+                  The <code v-pre>Logic</code> methods you conceptualized in our modelling so far are:</p>
                 <box>
                   <img src="/se-book/modeling/modelingASolution/basic/images/textLogicMinefieldCell.png" height="115"></box>
-                <p>Now, let us look at what other objects and interactions are needed to support the <code>newGame()</code> operation. It is likely that a new <code>Minefield</code> object is created when the <code>newGame()</code> method is called.</p>
+                <p>Now, let us look at what other objects and interactions are needed to support the <code v-pre>newGame()</code> operation. It is likely that a new <code v-pre>Minefield</code> object is created when the <code v-pre>newGame()</code> method is called.</p>
                 <box>
                   <img src="/se-book/modeling/modelingASolution/basic/images/logicMinefield.png" height="150"></box>
-                <p>Note that the behavior of the <code>Minefield</code> constructor has been abstracted away. It can be designed at a later stage.</p>
+                <p>Note that the behavior of the <code v-pre>Minefield</code> constructor has been abstracted away. It can be designed at a later stage.</p>
                 <p>Given below are the interactions between the player and the Text UI for the whole game.</p>
                 <box>
                   <img src="/se-book/modeling/modelingASolution/basic/images/playerTextLoop.png" height="300">
@@ -105,6 +105,7 @@
                     <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Un80XoRT1ME" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
                   </div>
                 </box>
+                <p></p>
               </div>
               <div></div>
             </div>
@@ -116,44 +117,44 @@
         <p></p>
         <img src="/se-book/modeling/modelingASolution/intermediate/images/textLogicSd.png" height="210">
       </box>
-      <p>This interaction adds the following methods to the <code>Logic</code> class</p>
+      <p>This interaction adds the following methods to the <code v-pre>Logic</code> class</p>
       <ul>
-        <li><code>clearCellAt(int x, int y)</code></li>
-        <li><code>markCellAt(int x, int y)</code></li>
-        <li><code>getGameState() :GAME_STATE (GAME_STATE: READY, IN_PLAY, WON, LOST, …)</code></li>
+        <li><code v-pre>clearCellAt(int x, int y)</code></li>
+        <li><code v-pre>markCellAt(int x, int y)</code></li>
+        <li><code v-pre>getGameState() :GAME_STATE (GAME_STATE: READY, IN_PLAY, WON, LOST, …)</code></li>
       </ul>
       <p>And it adds the following operation to Logic API:</p>
       <ul>
-        <li><code>getAppearanceOfCellAt(int,int):CELL_APPEARANCE (CELL_APPEARANCE: HIDDEN, ZERO, ONE, TWO, THREE, …, MARKED, INCORRECTLY_MARKED, INCORRECTLY_CLEARED)</code></li>
+        <li><code v-pre>getAppearanceOfCellAt(int,int):CELL_APPEARANCE (CELL_APPEARANCE: HIDDEN, ZERO, ONE, TWO, THREE, …, MARKED, INCORRECTLY_MARKED, INCORRECTLY_CLEARED)</code></li>
       </ul>
-      <p>In the above design, <code>TextUi</code> does not access <code>Cell</code> objects directly. Instead, it gets values of type <code>CELL_APPEARANCE</code> from <code>Logic</code> to be displayed as a minefield to the player. Alternatively, each cell or the entire Minefield can be passed directly to <code>TextUi</code>.</p>
+      <p>In the above design, <code v-pre>TextUi</code> does not access <code v-pre>Cell</code> objects directly. Instead, it gets values of type <code v-pre>CELL_APPEARANCE</code> from <code v-pre>Logic</code> to be displayed as a minefield to the player. Alternatively, each cell or the entire Minefield can be passed directly to <code v-pre>TextUi</code>.</p>
       <p>Here is the updated class diagram:</p>
       <box>
         <img src="/se-book/modeling/modelingASolution/intermediate/images/textLogicMinefieldCell.png" height="200"></box>
-      <p>The above is for the case when Actor <code>Player</code> interacts with the system using a text UI. Additional operations (if any) required for the GUI can be discovered similarly.
-        Suppose <code>Logic</code> supports a <code>reset()</code> operation. You can model it like this:</p>
+      <p>The above is for the case when Actor <code v-pre>Player</code> interacts with the system using a text UI. Additional operations (if any) required for the GUI can be discovered similarly.
+        Suppose <code v-pre>Logic</code> supports a <code v-pre>reset()</code> operation. You can model it like this:</p>
       <box>
         <img src="/se-book/modeling/modelingASolution/intermediate/images/logicMinefieldReset.png" height="100"></box>
-      <p>Our current model assumes that the <code>Minefield</code> object has enough information (i.e. H, W, and mine locations) to create itself.</p>
+      <p>Our current model assumes that the <code v-pre>Minefield</code> object has enough information (i.e. H, W, and mine locations) to create itself.</p>
       <box>
         <img src="/se-book/modeling/modelingASolution/intermediate/images/logicMinefieldNewGame.png" height="85">
         <p></p>
       </box>
-      <p>An alternative is to have a <code>ConfigGenerator</code> object that generates a string containing the minefield information as shown below.</p>
+      <p>An alternative is to have a <code v-pre>ConfigGenerator</code> object that generates a string containing the minefield information as shown below.</p>
       <box>
         <img src="/se-book/modeling/modelingASolution/intermediate/images/logicConfigGenerator.png" height="170">
         <p></p>
       </box>
-      <p>In addition, <code>getWidth()</code>, <code>getHeight()</code>, <code>markCellAt(x,y)</code> and <code>clearCellAt(x,y)</code> can be handled like this.</p>
+      <p>In addition, <code v-pre>getWidth()</code>, <code v-pre>getHeight()</code>, <code v-pre>markCellAt(x,y)</code> and <code v-pre>clearCellAt(x,y)</code> can be handled like this.</p>
       <box>
         <img src="/se-book/modeling/modelingASolution/intermediate/images/logicMinefieldFunctions.png" height="180"></box>
       <p>The updated class diagram:</p>
       <box>
         <img src="/se-book/modeling/modelingASolution/intermediate/images/textLogicMinefieldCellConfigGenerator.png" height="250"></box>
-      <p>How is <code>getGameState()</code> operation supported? Given below are two ways (there could be other ways):</p>
+      <p>How is <code v-pre>getGameState()</code> operation supported? Given below are two ways (there could be other ways):</p>
       <ol>
-        <li><code>Minefield</code> class knows the state of the game at any time. <code>Logic</code> class retrieves it from the <code>Minefield</code> class as and when required.</li>
-        <li><code>Logic</code> class maintains the state of the game at all times.</li>
+        <li><code v-pre>Minefield</code> class knows the state of the game at any time. <code v-pre>Logic</code> class retrieves it from the <code v-pre>Minefield</code> class as and when required.</li>
+        <li><code v-pre>Logic</code> class maintains the state of the game at all times.</li>
       </ol>
       <p>Here’s the SD for option 1.</p>
       <box>
@@ -161,10 +162,10 @@
       <p>Here’s the SD for option 2. Here, assume that the game state is updated after every mark/clear action.</p>
       <box>
         <img src="/se-book/modeling/modelingASolution/intermediate/images/logicMinefieldUpdateState.png" height="250"></box>
-      <p>It is now time to explore what happens inside the <code>Minefield</code> constructor? One way is to design it as follows.</p>
+      <p>It is now time to explore what happens inside the <code v-pre>Minefield</code> constructor? One way is to design it as follows.</p>
       <box>
         <img src="/se-book/modeling/modelingASolution/intermediate/images/minefieldCellAlt.png" height="200"></box>
-      <p>Now let us assume that <code>Minesweeper</code> supports a ‘timing’ feature.</p>
+      <p>Now let us assume that <code v-pre>Minesweeper</code> supports a ‘timing’ feature.</p>
       <box>
         <img src="/se-book/modeling/modelingASolution/intermediate/images/logicTimerOpt.png" height="130"></box>
       <p>Updated class diagram:</p>

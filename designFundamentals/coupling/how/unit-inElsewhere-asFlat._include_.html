@@ -16,22 +16,22 @@
     <div>
       <p><strong>X is <em>coupled</em> to Y if a change to Y can <mark>potentially</mark> require a change in X</strong>.</p>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> If <code>Foo</code> class calls the method <code>Bar#read()</code>, <code>Foo</code> is coupled to <code>Bar</code> because a change to <code>Bar</code> can potentially (but not always) require a change in the <code>Foo</code> class <span class="dimmed">e.g. if the signature of the <code>Bar#read()</code> is changed, <code>Foo</code> needs to change as well, but a change to the <code>Bar#write()</code> method may not require a change in the <code>Foo</code> class because <code>Foo</code> does not call <code>Bar#write()</code></span>.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> If <code v-pre>Foo</code> class calls the method <code v-pre>Bar#read()</code>, <code v-pre>Foo</code> is coupled to <code v-pre>Bar</code> because a change to <code v-pre>Bar</code> can potentially (but not always) require a change in the <code v-pre>Foo</code> class <span class="dimmed">e.g. if the signature of the <code v-pre>Bar#read()</code> is changed, <code v-pre>Foo</code> needs to change as well, but a change to the <code v-pre>Bar#write()</code> method may not require a change in the <code v-pre>Foo</code> class because <code v-pre>Foo</code> does not call <code v-pre>Bar#write()</code></span>.</p>
         <panel type="seamless" class="algolia-no-index"><template slot="_header">
             <p><span class="dimmed">code for the above example</span></p>
           </template>
-          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{<br></span><span>    ...<br></span><span>    <span class="hljs-keyword">new</span> Bar().read();<br></span><span>    ...<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span></span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{<br></span><span>        ...<br></span><span>    }<br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">()</span></span>{<br></span><span>        ...<br></span><span>    }<br></span><span>}<br></span></code></pre>
+          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{<br></span><span>    ...<br></span><span>    <span class="hljs-keyword">new</span> Bar().read();<br></span><span>    ...<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span></span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{<br></span><span>        ...<br></span><span>    }<br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">()</span></span>{<br></span><span>        ...<br></span><span>    }<br></span><span>}<br></span></code></pre>
         </panel>
       </box>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of coupling: <code>A</code> is coupled to <code>B</code> if,</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of coupling: <code v-pre>A</code> is coupled to <code v-pre>B</code> if,</p>
         <ul>
-          <li><code>A</code> has access to the internal structure of <code>B</code> (this results in a very high level of coupling)</li>
-          <li><code>A</code> and <code>B</code> depend on the same global variable</li>
-          <li><code>A</code> calls <code>B</code></li>
-          <li><code>A</code> receives an object of <code>B</code> as a parameter or a return value</li>
-          <li><code>A</code> inherits from <code>B</code></li>
-          <li><code>A</code> and <code>B</code> are required to follow the same data format or communication protocol</li>
+          <li><code v-pre>A</code> has access to the internal structure of <code v-pre>B</code> (this results in a very high level of coupling)</li>
+          <li><code v-pre>A</code> and <code v-pre>B</code> depend on the same global variable</li>
+          <li><code v-pre>A</code> calls <code v-pre>B</code></li>
+          <li><code v-pre>A</code> receives an object of <code v-pre>B</code> as a parameter or a return value</li>
+          <li><code v-pre>A</code> inherits from <code v-pre>B</code></li>
+          <li><code v-pre>A</code> and <code v-pre>B</code> are required to follow the same data format or communication protocol</li>
         </ul>
       </box>
     </div>
@@ -46,13 +46,13 @@
               </template>
               <question>
                 <p>Which of these indicate a coupling between components A and B?</p>
-                <ul class="task-list">
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. component A has access to internal structure of component B.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. component A and B are written by the same developer.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. component A calls component B.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. component A receives an object of component B as a parameter.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. component A inherits from component B.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. components A and B have to follow the same data format or communication protocol.</li>
+                <ul class="contains-task-list">
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. component A has access to internal structure of component B.</li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. component A and B are written by the same developer.</li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. component A calls component B.</li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. component A receives an object of component B as a parameter.</li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. component A inherits from component B.</li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. components A and B have to follow the same data format or communication protocol.</li>
                 </ul>
                 <div slot="answer" class="algolia-no-index">
                   <p>(a)<s>(b)</s>(c)(d)(e)(f)</p>

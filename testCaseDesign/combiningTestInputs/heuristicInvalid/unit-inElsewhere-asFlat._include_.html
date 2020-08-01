@@ -15,7 +15,7 @@
   <div id="main">
     <div>
       <p>Consider the <span for="modal:heuristic-valid-test-case" trigger="click" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:heuristic-valid-test-case'].show()" class="trigger-click">test cases designed in [Heuristic: each valid input at least once in a positive test case]</span>.</p>
-      <b-modal id="modal:heuristic-valid-test-case" hide-footer size="lg" modal-class="mb-zoom" ref="modal:heuristic-valid-test-case"><template slot="modal-title"><strong>Extract from Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: each valid input at least once in a positive test case</strong></template>
+      <b-modal id="modal:heuristic-valid-test-case" hide-footer size="lg" modal-class="mb-zoom" ref="modal:heuristic-valid-test-case" class="algolia-no-index"><template slot="modal-title"><strong>Extract from Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: each valid input at least once in a positive test case</strong></template>
         <div>
           <div class="table-responsive">
             <table class="markbind-table table table-bordered table-striped">
@@ -67,7 +67,7 @@
       <p>After running these test cases can you be sure that the error message “invalid price” is shown for negative prices?</p>
       <ul>
         <li>Answer: No.</li>
-        <li>Reason: <code>-1</code> -- the only input that is a negative price -– is in a test case that produces the error message “invalid fruit”.</li>
+        <li>Reason: <code v-pre>-1</code> -- the only input that is a negative price -– is in a test case that produces the error message “invalid fruit”.</li>
       </ul>
       <p>In this case a useful heuristic to apply is <strong>no more than one invalid input in a test case</strong>. After applying that, you get the following test cases.</p>
       <box>

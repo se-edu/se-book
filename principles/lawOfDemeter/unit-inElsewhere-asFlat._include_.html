@@ -21,16 +21,16 @@
           </ul>
         </div>
       </box>
-      <p>More concretely, a method <code>m</code> of an object <code>O</code> should invoke only the methods of the following kinds of objects:</p>
+      <p>More concretely, a method <code v-pre>m</code> of an object <code v-pre>O</code> should invoke only the methods of the following kinds of objects:</p>
       <ul>
-        <li>The object <code>O</code> itself</li>
-        <li>Objects passed as parameters of <code>m</code></li>
-        <li>Objects created/instantiated in <code>m</code> (directly or indirectly)</li>
-        <li>Objects from the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">objects that are held by instance variables of</span>direct association of</span> <code>O</code></li>
+        <li>The object <code v-pre>O</code> itself</li>
+        <li>Objects passed as parameters of <code v-pre>m</code></li>
+        <li>Objects created/instantiated in <code v-pre>m</code> (directly or indirectly)</li>
+        <li>Objects from the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">objects that are held by instance variables of</span>direct association of</span> <code v-pre>O</code></li>
       </ul>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following code fragment violates LoD due to the reason: while <code>b</code> is a ‘friend’ of <code>foo</code> (because it receives it as a parameter), <code>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and <code>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
-        <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{<br></span><span>    Goo g = b.getGoo();<br></span><span>    g.doSomething();<br></span><span>}<br></span></code></pre>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following code fragment violates LoD due to the reason: while <code v-pre>b</code> is a ‘friend’ of <code v-pre>foo</code> (because it receives it as a parameter), <code v-pre>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and <code v-pre>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
+        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{<br></span><span>    Goo g = b.getGoo();<br></span><span>    g.doSomething();<br></span><span>}<br></span></code></pre>
       </box>
       <p><strong>LoD aims to prevent objects navigating internal structures of other objects.</strong></p>
       <box>
@@ -49,14 +49,14 @@
               <question has-input="true">
                 <p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
                 <div slot="answer" class="algolia-no-index">
-                  <p>Let us take the <code>Logic</code> class as an example. Assume that it has the following operation.</p>
-                  <p><code>setMinefield(Minefiled mf):void</code></p>
+                  <p>Let us take the <code v-pre>Logic</code> class as an example. Assume that it has the following operation.</p>
+                  <p><code v-pre>setMinefield(Minefiled mf):void</code></p>
                   <p>Consider the following that can happen inside this operation.</p>
                   <ul>
-                    <li><code>mf.init();</code>: this does not violate LoD since LoD allows calling operations of parameters received.</li>
-                    <li><code>mf.getCell(1,3).clear();</code>: //this violates LoD because <code>Logic</code> is handling <code>Cell</code> objects deep inside <code>Minefield</code>. Instead, it should be <code>mf.clearCellAt(1,3);</code></li>
-                    <li><code>timer.start();</code>: //this does not violate LoD because <code>timer</code> appears to be an internal component (i.e. a variable) of <code>Logic</code> itself.</li>
-                    <li><code>Cell c = new Cell();</code> <code>c.init();</code>: // this does not violate LoD because <code>c</code> was created inside the operation.</li>
+                    <li><code v-pre>mf.init();</code>: this does not violate LoD since LoD allows calling operations of parameters received.</li>
+                    <li><code v-pre>mf.getCell(1,3).clear();</code>: //this violates LoD because <code v-pre>Logic</code> is handling <code v-pre>Cell</code> objects deep inside <code v-pre>Minefield</code>. Instead, it should be <code v-pre>mf.clearCellAt(1,3);</code></li>
+                    <li><code v-pre>timer.start();</code>: //this does not violate LoD because <code v-pre>timer</code> appears to be an internal component (i.e. a variable) of <code v-pre>Logic</code> itself.</li>
+                    <li><code v-pre>Cell c = new Cell();</code> <code v-pre>c.init();</code>: // this does not violate LoD because <code v-pre>c</code> was created inside the operation.</li>
                   </ul>
                 </div>
               </question>
@@ -68,14 +68,14 @@
               </template>
               <question>
                 <p>This violates Law of Demeter.</p>
-                <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{<br></span><span>    Goo g =  <span class="hljs-keyword">new</span> Goo();<br></span><span>    g.doSomething();<br></span><span>}<br></span></code></pre>
+                <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{<br></span><span>    Goo g =  <span class="hljs-keyword">new</span> Goo();<br></span><span>    g.doSomething();<br></span><span>}<br></span></code></pre>
                 <ul radio-group="3cf8e" class="radio-list">
                   <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> True</label></li>
                   <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> False</label></li>
                 </ul>
                 <div slot="answer" class="algolia-no-index">
                   <p>False</p>
-                  <p>Explanation: The line <code>g.doSomething()</code> does not violate LoD because it is OK to invoke methods of objects created within a method.</p>
+                  <p>Explanation: The line <code v-pre>g.doSomething()</code> does not violate LoD because it is OK to invoke methods of objects created within a method.</p>
                 </div>
               </question>
             </panel>
@@ -86,12 +86,12 @@
               </template>
               <question>
                 <p>Pick the odd one out.</p>
-                <ul class="task-list">
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Law of Demeter.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Don’t add people to a late project.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Don’t talk to strangers.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Principle of least knowledge.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Coupling.</li>
+                <ul class="contains-task-list">
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. Law of Demeter.</li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. Don’t add people to a late project.</li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Don’t talk to strangers.</li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Principle of least knowledge.</li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. Coupling.</li>
                 </ul>
                 <div slot="answer" class="algolia-no-index">
                   <p>(b)</p>

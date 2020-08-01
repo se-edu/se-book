@@ -14,7 +14,7 @@
       </blockquote>
       <p><strong>User stories differ from <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content">e.g. a description of the requirements written in prose</span>traditional requirements specifications</span> mainly in the level of detail.</strong> User stories should only provide enough details to make a reasonably low risk estimate of how long the user story will take to implement. When the time comes to implement the user story, the developers will meet with the customer face-to-face to work out a more detailed description of the requirements. <span class="dimmed">[<span for="modal:xp-user-stories" trigger="click" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:xp-user-stories'].show()" class="trigger-click">more...</span>]</span></p>
       <p><strong>User stories can capture <span trigger="click" for="modal:userStoriesUsage-nfr" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:userStoriesUsage-nfr'].show()" class="trigger-click">non-functional requirements</span> too</strong> because even NFRs must benefit some stakeholder.</p>
-      <b-modal id="modal:userStoriesUsage-nfr" hide-footer size="lg" modal-class="mb-zoom" ref="modal:userStoriesUsage-nfr"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+      <b-modal id="modal:userStoriesUsage-nfr" hide-footer size="lg" modal-class="mb-zoom" ref="modal:userStoriesUsage-nfr" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
         <div>
           <div></div>
           <p></p>
@@ -71,14 +71,14 @@
                         </template>
                         <question>
                           <p>Given below are some requirements of TEAMMATES (an online peer evaluation system for education). Which one of these are non-functional requirements?</p>
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. The response to any use action should become visible within 5 seconds.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. The application admin should be able to view a log of user activities.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. The source code should be open source.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. A course should be able to have up to 2000 students.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. As a student user, I can view details of my team members so that I can know who they are.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. The user interface should be intuitive enough for users who are not IT-savvy.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> g. The product is offered as a free online service.</li>
+                          <ul class="contains-task-list">
+                            <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. The response to any use action should become visible within 5 seconds.</li>
+                            <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. The application admin should be able to view a log of user activities.</li>
+                            <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. The source code should be open source.</li>
+                            <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. A course should be able to have up to 2000 students.</li>
+                            <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. As a student user, I can view details of my team members so that I can know who they are.</li>
+                            <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. The user interface should be intuitive enough for users who are not IT-savvy.</li>
+                            <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> g. The product is offered as a free online service.</li>
                           </ul>
                           <div slot="answer" class="algolia-no-index">
                             <p>(a)(c)(d)(f)(g)</p>
@@ -186,7 +186,7 @@
             <li><strong>Don't be too hasty to discard 'unusual' user stories:</strong>
               Those might make your product unique and stand out from the rest, at least for the target users.</li>
             <li><strong>Don't go into too much details:</strong><br>
-              For example, consider this user story: <code>As a user, I want to see a list of tasks that needs my attention most at the present time, so that I pay attention to them first.</code><br>
+              For example, consider this user story: <code v-pre>As a user, I want to see a list of tasks that needs my attention most at the present time, so that I pay attention to them first.</code><br>
               When discussing this user story, don't worry about what tasks should be considered <em>needs my attention most at the present time</em>. Those details can be worked out later.</li>
             <li><strong>Don't be biased by preconceived product ideas:</strong><br>
               When you are at the stage of identifying user needs, clear your mind of ideas you have about what your end product will look like. That is, don't try to reverse-engineer a preconceived product idea into user stories.</li>
@@ -218,13 +218,13 @@
                       <thead>
                         <tr>
                           <th>title</th>
-                          <th><code>As a user I can add a deadline</code></th>
+                          <th><code v-pre>As a user I can add a deadline</code></th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td>Description</td>
-                          <td><code>... so that I can keep track of my deadlines</code></td>
+                          <td><code v-pre>... so that I can keep track of my deadlines</code></td>
                         </tr>
                       </tbody>
                     </table>
@@ -238,13 +238,13 @@
                       <thead>
                         <tr>
                           <th>title</th>
-                          <th><code>Add deadline</code></th>
+                          <th><code v-pre>Add deadline</code></th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td>Description</td>
-                          <td><code>As a user I can so that I can keep track of my deadlines</code></td>
+                          <td><code v-pre>As a user I can so that I can keep track of my deadlines</code></td>
                         </tr>
                       </tbody>
                     </table>
@@ -270,7 +270,7 @@
           </div>
         </panel>
       </span>
-      <b-modal id="modal:xp-user-stories" hide-footer size modal-class="mb-zoom" ref="modal:xp-user-stories"><template slot="modal-title">🔖 User stories vs traditional requirement specifications, according to XP</template>
+      <b-modal id="modal:xp-user-stories" hide-footer size modal-class="mb-zoom" ref="modal:xp-user-stories" class="algolia-no-index"><template slot="modal-title">🔖 User stories vs traditional requirement specifications, according to XP</template>
         <p><span>
             <span id="pop:xp" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="header">eXtreme Programming (XP)</span>eXtreme Programming (XP)</span></span></p>
         <div slot="content">

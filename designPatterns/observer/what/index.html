@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.14.1">
+  <meta name="generator" content="MarkBind 2.15.2">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Software Design Patterns: Observer: What</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -40,132 +40,185 @@
     <div id="flex-body">
       <nav id="site-nav" class="navbar navbar-light bg-transparent">
         <div class="border-right-grey nav-inner position-sticky slim-scroll">
-          <ul class="px-0 site-nav-list">
-            <li class="mt-2"><button class="dropdown-btn"><strong>About this book</strong>
-                <i class="dropdown-btn-icon">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
-              <div class="dropdown-container">
-                <ul class="pl-3 site-nav-list">
-                  <li class="mt-2"><a href="/se-book/about/acknowledgements.html" class="site-nav__a">About</a></li>
-                  <li class="mt-2"><a href="/se-book/about/usage.html" class="site-nav__a">How to use this book</a></li>
-                </ul>
-              </div>
+          <ul class="site-nav-list site-nav-list-root">
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>About this book</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/about/acknowledgements.html">About</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/about/usage.html">How to use this book</a></div>
+                </li>
+              </ul>
             </li>
-            <li class="mt-2"><button class="dropdown-btn"><strong>Software engineering</strong>
-                <i class="dropdown-btn-icon">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
-              <div class="dropdown-container">
-                <ul class="pl-3 site-nav-list">
-                  <li class="mt-2"><a href="/se-book/softwareEngineering/index.html" class="site-nav__a">Software engineering</a></li>
-                </ul>
-              </div>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Software engineering</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/softwareEngineering/index.html">Software engineering</a></div>
+                </li>
+              </ul>
             </li>
-            <li class="mt-2"><button class="dropdown-btn"><strong>Object-oriented programming</strong>
-                <i class="dropdown-btn-icon">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
-              <div class="dropdown-container">
-                <ul class="pl-3 site-nav-list">
-                  <li class="mt-2"><a href="/se-book/oop/index.html" class="site-nav__a">Object-oriented programming</a></li>
-                </ul>
-              </div>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Object-oriented programming</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/oop/index.html">Object-oriented programming</a></div>
+                </li>
+              </ul>
             </li>
-            <li class="mt-2"><button class="dropdown-btn"><strong>Requirements</strong>
-                <i class="dropdown-btn-icon">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
-              <div class="dropdown-container">
-                <ul class="pl-3 site-nav-list">
-                  <li class="mt-2"><a href="/se-book/requirements/index.html" class="site-nav__a">Requirements</a></li>
-                  <li class="mt-2"><a href="/se-book/gatheringRequirements/index.html" class="site-nav__a">Gathering requirements</a></li>
-                  <li class="mt-2"><a href="/se-book/specifyingRequirements/index.html" class="site-nav__a">Specifying requirements</a></li>
-                </ul>
-              </div>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Requirements</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/requirements/index.html">Requirements</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gatheringRequirements/index.html">Gathering requirements</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/specifyingRequirements/index.html">Specifying requirements</a></div>
+                </li>
+              </ul>
             </li>
-            <li class="mt-2"><button class="dropdown-btn"><strong>Design</strong>
-                <i class="dropdown-btn-icon">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
-              <div class="dropdown-container">
-                <ul class="pl-3 site-nav-list">
-                  <li class="mt-2"><a href="/se-book/design/index.html" class="site-nav__a">Design</a></li>
-                  <li class="mt-2"><a href="/se-book/designFundamentals/index.html" class="site-nav__a">Design fundamentals</a></li>
-                  <li class="mt-2"><a href="/se-book/modeling/index.html" class="site-nav__a">Modeling</a></li>
-                  <li class="mt-2"><a href="/se-book/architecture/index.html" class="site-nav__a">Architecture</a></li>
-                  <li class="mt-2"><a href="/se-book/designPatterns/index.html" class="site-nav__a">Design patterns</a></li>
-                  <li class="mt-2"><a href="/se-book/designApproaches/index.html" class="site-nav__a">Design approaches</a></li>
-                </ul>
-              </div>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Design</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/design/index.html">Design</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/designFundamentals/index.html">Design fundamentals</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/modeling/index.html">Modeling</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/architecture/index.html">Architecture</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/designPatterns/index.html">Design patterns</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/designApproaches/index.html">Design approaches</a></div>
+                </li>
+              </ul>
             </li>
-            <li class="mt-2"><button class="dropdown-btn"><strong>Implementation</strong>
-                <i class="dropdown-btn-icon">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
-              <div class="dropdown-container">
-                <ul class="pl-3 site-nav-list">
-                  <li class="mt-2"><a href="/se-book/ides/index.html" class="site-nav__a">IDEs</a></li>
-                  <li class="mt-2"><a href="/se-book/codeQuality/index.html" class="site-nav__a">Code quality</a></li>
-                  <li class="mt-2"><a href="/se-book/refactoring/index.html" class="site-nav__a">Refactoring</a></li>
-                  <li class="mt-2"><a href="/se-book/documentation/index.html" class="site-nav__a">Documentation</a></li>
-                  <li class="mt-2"><a href="/se-book/errorHandling/index.html" class="site-nav__a">Error handling</a></li>
-                  <li class="mt-2"><a href="/se-book/integration/index.html" class="site-nav__a">Integration</a></li>
-                  <li class="mt-2"><a href="/se-book/reuse/index.html" class="site-nav__a">Reuse</a></li>
-                </ul>
-              </div>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Implementation</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/ides/index.html">IDEs</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/codeQuality/index.html">Code quality</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/refactoring/index.html">Refactoring</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/documentation/index.html">Documentation</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/errorHandling/index.html">Error handling</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/integration/index.html">Integration</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/reuse/index.html">Reuse</a></div>
+                </li>
+              </ul>
             </li>
-            <li class="mt-2"><button class="dropdown-btn"><strong>Quality assurance</strong>
-                <i class="dropdown-btn-icon">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
-              <div class="dropdown-container">
-                <ul class="pl-3 site-nav-list">
-                  <li class="mt-2"><a href="/se-book/qualityAssurance/index.html" class="site-nav__a">Quality assurance</a></li>
-                  <li class="mt-2"><a href="/se-book/testing/index.html" class="site-nav__a">Testing</a></li>
-                  <li class="mt-2"><a href="/se-book/testCaseDesign/index.html" class="site-nav__a">Test case design</a></li>
-                </ul>
-              </div>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Quality assurance</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/qualityAssurance/index.html">Quality assurance</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/testing/index.html">Testing</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/testCaseDesign/index.html">Test case design</a></div>
+                </li>
+              </ul>
             </li>
-            <li class="mt-2"><button class="dropdown-btn"><strong>Project management</strong>
-                <i class="dropdown-btn-icon">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
-              <div class="dropdown-container">
-                <ul class="pl-3 site-nav-list">
-                  <li class="mt-2"><a href="/se-book/revisionControl/index.html" class="site-nav__a">Revision control</a></li>
-                  <li class="mt-2"><a href="/se-book/projectPlanning/index.html" class="site-nav__a">Project planning</a></li>
-                  <li class="mt-2"><a href="/se-book/teamwork/index.html" class="site-nav__a">Teamwork</a></li>
-                  <li class="mt-2"><a href="/se-book/processModels/index.html" class="site-nav__a">SDLC process models</a></li>
-                </ul>
-              </div>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Project management</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/revisionControl/index.html">Revision control</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/projectPlanning/index.html">Project planning</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/teamwork/index.html">Teamwork</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/processModels/index.html">SDLC process models</a></div>
+                </li>
+              </ul>
             </li>
-            <li class="mt-2"><button class="dropdown-btn"><strong>Tools</strong>
-                <i class="dropdown-btn-icon">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
-              <div class="dropdown-container">
-                <ul class="pl-3 site-nav-list">
-                  <li class="mt-2"><a href="/se-book/uml/index.html" class="site-nav__a">UML</a></li>
-                  <li class="mt-2"><a href="/se-book/intellij/index.html" class="site-nav__a">Intellij IDEA</a></li>
-                  <li class="mt-2"><a href="/se-book/gitAndGithub/index.html" class="site-nav__a">Git and GitHub</a></li>
-                </ul>
-              </div>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Tools</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
+                </li>
+              </ul>
             </li>
-            <li class="mt-2"><button class="dropdown-btn"><strong>Principles</strong>
-                <i class="dropdown-btn-icon">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
-              <div class="dropdown-container">
-                <ul class="pl-3 site-nav-list">
-                  <li class="mt-2"><a href="/se-book/principles/index.html" class="site-nav__a">Principles</a></li>
-                </ul>
-              </div>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Principles</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/principles/index.html">Principles</a></div>
+                </li>
+              </ul>
             </li>
-            <li class="mt-2"><button class="dropdown-btn"><strong>Supplementary</strong>
-                <i class="dropdown-btn-icon">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
-              <div class="dropdown-container">
-                <ul class="pl-3 site-nav-list">
-                  <li class="mt-2"><a href="/se-book/cppToJava/index.html" class="site-nav__a">C++ to Java</a></li>
-                </ul>
-              </div>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Supplementary</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/cppToJava/index.html">C++ to Java</a></div>
+                </li>
+              </ul>
             </li>
-            <li class="mt-2"><strong><a href="/se-book/combined/exercises.html" class="site-nav__a">Combined exercises</a></strong></li>
-            <li class="mt-2"><strong><a href="/se-book/common/definitions.html" class="site-nav__a">List of definitions</a></strong></li>
-            <li class="mt-2"><strong><a href="/se-book/common/references.html" class="site-nav__a">List of references</a></strong></li>
-            <li class="mt-2"><strong><a href="/se-book/common/outcomes.html" class="site-nav__a">List of learning outcomes</a></strong></li>
-            <li class="mt-2"><strong><a href="/se-book/common/print.html" class="site-nav__a">Printable version</a></strong></li>
+            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/combined/exercises.html">Combined exercises</a></strong></li>
+            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/common/definitions.html">List of definitions</a></strong></li>
+            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/common/references.html">List of references</a></strong></li>
+            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/common/outcomes.html">List of learning outcomes</a></strong></li>
+            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/common/print.html">Printable version</a></strong></li>
           </ul>
         </div>
       </nav>
@@ -176,6 +229,7 @@
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
             <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the Observer design pattern</span></span></span></span></p>
+            <p></p>
             <p></p>
             <p></p>
             <div>
@@ -197,13 +251,13 @@
                       <p></p>
                       <p>Now, assume the system has two additional views used in parallel by different users:</p>
                       <ul>
-                        <li><code>StudentListUi</code>: that accesses a list of students and</li>
-                        <li><code>StudentStatsUi</code>: that generates statistics of current students.</li>
+                        <li><code v-pre>StudentListUi</code>: that accesses a list of students and</li>
+                        <li><code v-pre>StudentStatsUi</code>: that generates statistics of current students.</li>
                       </ul>
-                      <p>When a student is added to the database using <code>NewStudentUi</code> shown above, both <code>StudentListUi</code> and <code>StudentStatsUi</code> should get updated automatically, as shown below.</p>
+                      <p>When a student is added to the database using <code v-pre>NewStudentUi</code> shown above, both <code v-pre>StudentListUi</code> and <code v-pre>StudentStatsUi</code> should get updated automatically, as shown below.</p>
                       <img src="/se-book/designPatterns/observer/what/images/studentListUI.png" height="180">
                       <p></p>
-                      <p>However, the <code>StudentList</code> object has no knowledge about <code>StudentListUi</code> and <code>StudentStatsUi</code> (note the direction of the navigability) and has no way to inform those objects. This is an example of the type of problem addressed by the Observer pattern.</p>
+                      <p>However, the <code v-pre>StudentList</code> object has no knowledge about <code v-pre>StudentListUi</code> and <code v-pre>StudentStatsUi</code> (note the direction of the navigability) and has no way to inform those objects. This is an example of the type of problem addressed by the Observer pattern.</p>
                     </box>
                     <p><strong>Problem</strong></p>
                     <p>The ‘observed’ object does not want to be coupled to objects that are ‘observing’ it.</p>
@@ -217,27 +271,27 @@
                       <ol>
                         <li>
                           <p>First, create the relevant objects.</p>
-                          <pre><code class="hljs java"><span>StudentList studentList = <span class="hljs-keyword">new</span> StudentList();<br></span><span>StudentListUi listUi = <span class="hljs-keyword">new</span> StudentListUi();<br></span><span>StudentStatusUi statusUi = <span class="hljs-keyword">new</span> StudentStatsUi();<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span>StudentList studentList = <span class="hljs-keyword">new</span> StudentList();<br></span><span>StudentListUi listUi = <span class="hljs-keyword">new</span> StudentListUi();<br></span><span>StudentStatusUi statusUi = <span class="hljs-keyword">new</span> StudentStatsUi();<br></span></code></pre>
                         </li>
                         <li>
-                          <p>Next, the two UIs indicate to the <code>StudentList</code> that they are interested in being updated whenever <code>StudentList</code> changes. This is also known as ‘subscribing for updates’.</p>
-                          <pre><code class="hljs java"><span>studentList.addUi(listUi);<br></span><span>studentList.addUi(statusUi);<br></span></code></pre>
+                          <p>Next, the two UIs indicate to the <code v-pre>StudentList</code> that they are interested in being updated whenever <code v-pre>StudentList</code> changes. This is also known as ‘subscribing for updates’.</p>
+                          <pre><code class="hljs java" v-pre><span>studentList.addUi(listUi);<br></span><span>studentList.addUi(statusUi);<br></span></code></pre>
                         </li>
                         <li>
-                          <p>Within the <code>addUi</code> operation of <code>StudentList</code>, all Observer objects subscribers are added to an internal data structure called <code>observerList</code>.</p>
-                          <pre><code class="hljs java"><span><span class="hljs-comment">//StudentList class</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addUi</span><span class="hljs-params">(Observer o)</span> </span>{<br></span><span>    observerList.add(o);<br></span><span>}<br></span></code></pre>
+                          <p>Within the <code v-pre>addUi</code> operation of <code v-pre>StudentList</code>, all Observer objects subscribers are added to an internal data structure called <code v-pre>observerList</code>.</p>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//StudentList class</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addUi</span><span class="hljs-params">(Observer o)</span> </span>{<br></span><span>    observerList.add(o);<br></span><span>}<br></span></code></pre>
                         </li>
                       </ol>
-                      <p><strong>Now, whenever the data in <code>StudentList</code> changes</strong> (e.g. when a new student is added to the <code>StudentList</code>),</p>
+                      <p><strong>Now, whenever the data in <code v-pre>StudentList</code> changes</strong> (e.g. when a new student is added to the <code v-pre>StudentList</code>),</p>
                       <ol>
                         <li>
-                          <p>All interested observers are updated by calling the <code>notifyUIs</code> operation.</p>
-                          <pre><code class="hljs java"><span><span class="hljs-comment">//StudentList class</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notifyUIs</span><span class="hljs-params">()</span> </span>{<br></span><span>    <span class="hljs-comment">//for each observer in the list</span><br></span><span>    <span class="hljs-keyword">for</span>(Observer o: observerList){<br></span><span>        o.update();<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                          <p>All interested observers are updated by calling the <code v-pre>notifyUIs</code> operation.</p>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//StudentList class</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notifyUIs</span><span class="hljs-params">()</span> </span>{<br></span><span>    <span class="hljs-comment">//for each observer in the list</span><br></span><span>    <span class="hljs-keyword">for</span>(Observer o: observerList){<br></span><span>        o.update();<br></span><span>    }<br></span><span>}<br></span></code></pre>
                         </li>
                         <li>
-                          <p>UIs can then pull data from the <code>StudentList</code> whenever the <code>update</code> operation is called.</p>
-                          <pre><code class="hljs java"><span><span class="hljs-comment">//StudentListUI class</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">()</span> </span>{<br></span><span>    <span class="hljs-comment">//refresh UI by pulling data from StudentList</span><br></span><span>}<br></span></code></pre>
-                          <p>Note that <code>StudentList</code> is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.</p>
+                          <p>UIs can then pull data from the <code v-pre>StudentList</code> whenever the <code v-pre>update</code> operation is called.</p>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//StudentListUI class</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">()</span> </span>{<br></span><span>    <span class="hljs-comment">//refresh UI by pulling data from StudentList</span><br></span><span>}<br></span></code></pre>
+                          <p>Note that <code v-pre>StudentList</code> is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.</p>
                         </li>
                       </ol>
                     </box>
@@ -245,9 +299,9 @@
                     <img src="/se-book/designPatterns/observer/what/images/observableInterfaceDiagram.png" height="100">
                     <p></p>
                     <ul>
-                      <li><code>&lt;&lt;Observer&gt;&gt;</code> is an interface: any class that implements it can observe an <code>&lt;&lt;Observable&gt;&gt;</code>. Any number of <code>&lt;&lt;Observer&gt;&gt;</code> objects can observe (i.e. listen to changes of) the <code>&lt;&lt;Observable&gt;&gt;</code> object.</li>
-                      <li>The <code>&lt;&lt;Observable&gt;&gt;</code> maintains a list of <code>&lt;&lt;Observer&gt;&gt;</code> objects. <code>addObserver(Observer)</code> operation adds a new <code>&lt;&lt;Observer&gt;&gt;</code> to the list of <code>&lt;&lt;Observer&gt;&gt;</code>'s.</li>
-                      <li>Whenever there is a change in the <code>&lt;&lt;Observable&gt;&gt;</code>, the <code>notifyObservers()</code> operation is called that will call the <code>update()</code> operation of all <code>&lt;&lt;Observer&gt;&gt;</code>'s in the list.</li>
+                      <li><code v-pre>&lt;&lt;Observer&gt;&gt;</code> is an interface: any class that implements it can observe an <code v-pre>&lt;&lt;Observable&gt;&gt;</code>. Any number of <code v-pre>&lt;&lt;Observer&gt;&gt;</code> objects can observe (i.e. listen to changes of) the <code v-pre>&lt;&lt;Observable&gt;&gt;</code> object.</li>
+                      <li>The <code v-pre>&lt;&lt;Observable&gt;&gt;</code> maintains a list of <code v-pre>&lt;&lt;Observer&gt;&gt;</code> objects. <code v-pre>addObserver(Observer)</code> operation adds a new <code v-pre>&lt;&lt;Observer&gt;&gt;</code> to the list of <code v-pre>&lt;&lt;Observer&gt;&gt;</code>'s.</li>
+                      <li>Whenever there is a change in the <code v-pre>&lt;&lt;Observable&gt;&gt;</code>, the <code v-pre>notifyObservers()</code> operation is called that will call the <code v-pre>update()</code> operation of all <code v-pre>&lt;&lt;Observer&gt;&gt;</code>'s in the list.</li>
                     </ul>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In a GUI application, how is the Controller notified when the “save” button is clicked? UI frameworks such as JavaFX has inbuilt support for the Observer pattern.</p>
@@ -267,8 +321,8 @@
                               <div slot="answer" class="algolia-no-index">
                                 <img src="/se-book/designPatterns/observer/what/images/observableInterfaceNotation.png" height="90">
                                 <p></p>
-                                <p>With respect to the general form of the Observer pattern given above, when the Observable object invokes the <code>notifyObservers()</code> method, it is treating all <code>ConcreteObserver</code> objects as a general type called <code>Observer</code> and calling the <code>update()</code> method of each of them. However, the <code>update()</code> method of each <code>ConcreteObserver</code> could potentially show different behavior based on its actual type. That is, <code>update()</code> method shows polymorphic behavior.</p>
-                                <p>In the example given below, the <code>notifyUIs</code> operation can result in <code>StudentListUi</code> and <code>StudentStatsUi</code> changing their views in two different ways.</p>
+                                <p>With respect to the general form of the Observer pattern given above, when the Observable object invokes the <code v-pre>notifyObservers()</code> method, it is treating all <code v-pre>ConcreteObserver</code> objects as a general type called <code v-pre>Observer</code> and calling the <code v-pre>update()</code> method of each of them. However, the <code v-pre>update()</code> method of each <code v-pre>ConcreteObserver</code> could potentially show different behavior based on its actual type. That is, <code v-pre>update()</code> method shows polymorphic behavior.</p>
+                                <p>In the example given below, the <code v-pre>notifyUIs</code> operation can result in <code v-pre>StudentListUi</code> and <code v-pre>StudentStatsUi</code> changing their views in two different ways.</p>
                                 <img src="/se-book/designPatterns/observer/what/images/studentListStudentListObserver.png" height="190">
                                 <p></p>
                               </div>
@@ -307,12 +361,12 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, Aug 1, 2020, 12:20:33 AM GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Sun, Aug 2, 2020, 12:27:23 AM GMT+8]</small></div>
     </footer>
   </div>
 </body>
 <script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/vue-strap.min.js"></script>
+<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
 <script src="../../../markbind/js/polyfill.min.js"></script>
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>

@@ -13,7 +13,7 @@
         </div>
       </box>
       <p>LSP sounds same as <span large trigger="click" for="modal:lsp-substitutability" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:lsp-substitutability'].show()" class="trigger-click">substitutability</span> but it goes beyond substitutability; <strong>LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.</strong> As you know, Java has language support for substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.</p>
-      <b-modal id="modal:lsp-substitutability" hide-footer size="lg" modal-class="mb-zoom" ref="modal:lsp-substitutability"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+      <b-modal id="modal:lsp-substitutability" hide-footer size="lg" modal-class="mb-zoom" ref="modal:lsp-substitutability" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
         <div>
           <div>
             <p>
@@ -35,11 +35,11 @@
                 <box>
                   <img src="/se-book/oop/inheritance/substitutability/images/staff.png" height="80">
                   <p></p>
-                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> an <code>Academic</code> is an instance of a <code>Staff</code>, but a <code>Staff</code> is not necessarily an instance of an <code>Academic</code>. i.e. wherever an object of the superclass is expected, it can be substituted by an object of any of its subclasses.</p>
-                  <p>The following code is valid because an <code>AcademicStaff</code> object is substitutable as a <code>Staff</code> object.</p>
-                  <pre><code class="hljs java"><span>Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span><br></span></code></pre>
-                  <p>But the following code is not valid <span class="dimmed">because <code>staff</code> is declared as a <code>Staff</code> type and therefore its value may or may not be of type <code>AcademicStaff</code>, which is the type expected by variable <code>academicStaff</code>.</span></p>
-                  <pre><code class="hljs java"><span>Staff staff;<br></span><span>...<br></span><span>AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span><br></span></code></pre>
+                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> an <code v-pre>Academic</code> is an instance of a <code v-pre>Staff</code>, but a <code v-pre>Staff</code> is not necessarily an instance of an <code v-pre>Academic</code>. i.e. wherever an object of the superclass is expected, it can be substituted by an object of any of its subclasses.</p>
+                  <p>The following code is valid because an <code v-pre>AcademicStaff</code> object is substitutable as a <code v-pre>Staff</code> object.</p>
+                  <pre><code class="hljs java" v-pre><span>Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span><br></span></code></pre>
+                  <p>But the following code is not valid <span class="dimmed">because <code v-pre>staff</code> is declared as a <code v-pre>Staff</code> type and therefore its value may or may not be of type <code v-pre>AcademicStaff</code>, which is the type expected by variable <code v-pre>academicStaff</code>.</span></p>
+                  <pre><code class="hljs java" v-pre><span>Staff staff;<br></span><span>...<br></span><span>AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span><br></span></code></pre>
                 </box>
               </div>
               <div></div>
@@ -48,29 +48,29 @@
         </div>
       </b-modal>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose the <code>Payroll</code> class depends on the <code>adjustMySalary(int percent)</code> method of the <code>Staff</code> class. Furthermore, the <code>Staff</code> class states that the <code>adjustMySalary</code> method will work for all positive percent values. Both <code>Admin</code> and <code>Academic</code> classes override the <code>adjustMySalary</code> method.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose the <code v-pre>Payroll</code> class depends on the <code v-pre>adjustMySalary(int percent)</code> method of the <code v-pre>Staff</code> class. Furthermore, the <code v-pre>Staff</code> class states that the <code v-pre>adjustMySalary</code> method will work for all positive percent values. Both <code v-pre>Admin</code> and <code v-pre>Academic</code> classes override the <code v-pre>adjustMySalary</code> method.</p>
         <img src="/se-book/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200">
         <p></p>
         <p>Now consider the following:</p>
         <ul>
-          <li><code>Admin#adjustMySalary</code> method works for both negative and positive percent values.</li>
-          <li><code>Academic#adjustMySalary</code> method works for percent values <code>1..100</code> only.</li>
+          <li><code v-pre>Admin#adjustMySalary</code> method works for both negative and positive percent values.</li>
+          <li><code v-pre>Academic#adjustMySalary</code> method works for percent values <code v-pre>1..100</code> only.</li>
         </ul>
         <p>In the above scenario,</p>
         <ul>
-          <li><code>Admin</code> class follows LSP because it fulfills <code>Payroll</code>’s expectation of <code>Staff</code> objects (i.e. it works for all positive values). Substituting <code>Admin</code> objects for Staff objects will not break the <code>Payroll</code> class functionality.</li>
-          <li><code>Academic</code> class violates LSP because it will not work for percent values over <code>100</code> as expected by the <code>Payroll</code> class. Substituting <code>Academic</code> objects for <code>Staff</code> objects can potentially break the <code>Payroll</code> class functionality.</li>
+          <li><code v-pre>Admin</code> class follows LSP because it fulfills <code v-pre>Payroll</code>’s expectation of <code v-pre>Staff</code> objects (i.e. it works for all positive values). Substituting <code v-pre>Admin</code> objects for Staff objects will not break the <code v-pre>Payroll</code> class functionality.</li>
+          <li><code v-pre>Academic</code> class violates LSP because it will not work for percent values over <code v-pre>100</code> as expected by the <code v-pre>Payroll</code> class. Substituting <code v-pre>Academic</code> objects for <code v-pre>Staff</code> objects can potentially break the <code v-pre>Payroll</code> class functionality.</li>
         </ul>
         <panel type="seamless" class="algolia-no-index"><template slot="_header">
             <p><span class="dimmed">Another example</span></p>
           </template>
-          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code>Rectangle#resize()</code> can take any integers for <code>height</code> and <code>width</code>. This contract is violated by the subclass <code>Square#resize()</code> because it does not accept a <code>height</code> that is different from the <code>width</code>.</p>
+          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>Rectangle#resize()</code> can take any integers for <code v-pre>height</code> and <code v-pre>width</code>. This contract is violated by the subclass <code v-pre>Square#resize()</code> because it does not accept a <code v-pre>height</code> that is different from the <code v-pre>width</code>.</p>
           <img src="/se-book/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120">
           <p></p>
-          <pre><code class="hljs java"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{<br></span><span>    ...<br></span><span>    <span class="hljs-comment">/** sets the size to given height and width*/</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{<br></span><span>        ...<br></span><span>    }<br></span><span>}<br></span><span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Square</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Rectangle</span> </span>{<br></span><span>    <br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{<br></span><span>        <span class="hljs-keyword">if</span> (height != width) {<br></span><span>            <span class="hljs-comment">//error</span><br></span><span>       }<br></span><span>    }<br></span><span>}<br></span></code></pre>
-          <p>Now consider the following method that is written to work with the <code>Rectangle</code> class.</p>
-          <pre><code class="hljs java"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">makeSameSize</span><span class="hljs-params">(Rectangle original, Rectangle toResize)</span></span>{<br></span><span>    toResize.resize(original.getHeight(), original.getWidth());<br></span><span>}<br></span></code></pre>
-          <p>This code will fail if it is called as <code>maekSameSize(new Rectangle(12,8), new Square(4, 4))</code> That is, <code>Square</code> class is not substitutable for the <code>Rectangle</code> class.</p>
+          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{<br></span><span>    ...<br></span><span>    <span class="hljs-comment">/** sets the size to given height and width*/</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{<br></span><span>        ...<br></span><span>    }<br></span><span>}<br></span><span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Square</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Rectangle</span> </span>{<br></span><span>    <br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{<br></span><span>        <span class="hljs-keyword">if</span> (height != width) {<br></span><span>            <span class="hljs-comment">//error</span><br></span><span>       }<br></span><span>    }<br></span><span>}<br></span></code></pre>
+          <p>Now consider the following method that is written to work with the <code v-pre>Rectangle</code> class.</p>
+          <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">makeSameSize</span><span class="hljs-params">(Rectangle original, Rectangle toResize)</span></span>{<br></span><span>    toResize.resize(original.getHeight(), original.getWidth());<br></span><span>}<br></span></code></pre>
+          <p>This code will fail if it is called as <code v-pre>maekSameSize(new Rectangle(12,8), new Square(4, 4))</code> That is, <code v-pre>Square</code> class is not substitutable for the <code v-pre>Rectangle</code> class.</p>
         </panel>
       </box>
     </div>

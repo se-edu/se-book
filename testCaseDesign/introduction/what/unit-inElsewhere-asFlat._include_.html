@@ -10,7 +10,7 @@
     <div>
       <p><strong>Except for trivial <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Software Under Test</span>SUTs</span>, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">testing all possible cases</span>exhaustive testing</span> is not practical</strong> because such testing often requires a massive/infinite number of test cases.</p>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the test cases for adding a string object to a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Java: <code>ArrayList</code>,<br>Python: <code>list</code></span>collection</span>:</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the test cases for adding a string object to a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Java: <code v-pre>ArrayList</code>,<br>Python: <code v-pre>list</code></span>collection</span>:</p>
         <ul>
           <li>Add an item to an empty collection.</li>
           <li>Add an item when there is one item in the collection.</li>
@@ -47,13 +47,13 @@
           </template>
           <div>
             <panel class="algolia-no-index"><template slot="_header">
-                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Test cases for <code>TriangleDetector</code></p>
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Test cases for <code v-pre>TriangleDetector</code></p>
               </template>
               <question has-input="true">
-                <p>Given below is the sample output from a text-based program <code>TriangleDetector</code> ithat determines whether the three input numbers make up the three sides of a valid triangle. List test cases you would use to test this software. Two sample test cases are given below.</p>
-                <pre><code class="hljs"><span>C:\&gt; java TriangleDetector<br></span><span>Enter side 1: 34<br></span><span>Enter side 2: 34<br></span><span>Enter side 3: 32<br></span><span>Can this be a triangle?:  Yes<br></span><span>Enter side 1:<br></span></code></pre>
+                <p>Given below is the sample output from a text-based program <code v-pre>TriangleDetector</code> ithat determines whether the three input numbers make up the three sides of a valid triangle. List test cases you would use to test this software. Two sample test cases are given below.</p>
+                <pre><code class="hljs" v-pre><span>C:\&gt; java TriangleDetector<br></span><span>Enter side 1: 34<br></span><span>Enter side 2: 34<br></span><span>Enter side 3: 32<br></span><span>Can this be a triangle?:  Yes<br></span><span>Enter side 1:<br></span></code></pre>
                 <p>Sample test cases,</p>
-                <pre><code class="hljs"><span>34,34,34: Yes<br></span><span>0, any valid, any valid: No<br></span></code></pre>
+                <pre><code class="hljs" v-pre><span>34,34,34: Yes<br></span><span>0, any valid, any valid: No<br></span></code></pre>
                 <div slot="answer" class="algolia-no-index">
                   <p>In addition to obvious test cases such as</p>
                   <ul>
@@ -63,7 +63,7 @@
                   <p>We may also devise some interesting test cases such as the ones depicted below.</p>
                   <p>Note that their applicability depends on the context in which the software is operating.</p>
                   <ul>
-                    <li>Non-integer number, negative numbers, <code>0</code>, numbers formatted differently (e.g. <code>13F</code>), very large numbers (e.g. <code>MAX_INT</code>), numbers with many decimal places, empty string, ...</li>
+                    <li>Non-integer number, negative numbers, <code v-pre>0</code>, numbers formatted differently (e.g. <code v-pre>13F</code>), very large numbers (e.g. <code v-pre>MAX_INT</code>), numbers with many decimal places, empty string, ...</li>
                     <li>Check many triangles one after the other (will the system run out of memory?)</li>
                     <li><kbd>Backspace</kbd>, <kbd>tab</kbd>, <kbd>CTRL+C</kbd> , …</li>
                     <li>Introduce a long delay between entering data (will the program be affected by, say the screensaver?), minimize and restore window during the operation, hibernate the system in the middle of a calculation, start with invalid inputs (the system may perform error handling differently for the very first test case), …</li>
@@ -79,17 +79,17 @@
                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Exhaustive testing in Minesweeper</p>
               </template>
               <question has-input="true">
-                <p>Explain the why exhaustive testing is not practical using the example of testing <code>newGame()</code> operation in the <code>Logic</code> class of a Minesweeper game.</p>
+                <p>Explain the why exhaustive testing is not practical using the example of testing <code v-pre>newGame()</code> operation in the <code v-pre>Logic</code> class of a Minesweeper game.</p>
                 <div slot="answer" class="algolia-no-index">
                   <p>Consider this sequence of test cases:</p>
                   <ul>
-                    <li>Test case 1. Start Minesweeper. Activate <code>newGame()</code> and see if it works.</li>
-                    <li>Test case 2. Start Minesweeper. Activate <code>newGame()</code>. Activate <code>newGame()</code> again and see if it works.</li>
-                    <li>Test case 3. Start Minesweeper. Activate <code>newGame()</code> three times consecutively and see if it works.</li>
+                    <li>Test case 1. Start Minesweeper. Activate <code v-pre>newGame()</code> and see if it works.</li>
+                    <li>Test case 2. Start Minesweeper. Activate <code v-pre>newGame()</code>. Activate <code v-pre>newGame()</code> again and see if it works.</li>
+                    <li>Test case 3. Start Minesweeper. Activate <code v-pre>newGame()</code> three times consecutively and see if it works.</li>
                     <li>…</li>
-                    <li>Test case 267. Start Minesweeper. Activate <code>newGame()</code> 267 times consecutively and see if it works.</li>
+                    <li>Test case 267. Start Minesweeper. Activate <code v-pre>newGame()</code> 267 times consecutively and see if it works.</li>
                   </ul>
-                  <p>Well, you get the idea. Exhaustive testing of <code>newGame()</code> is not practical.</p>
+                  <p>Well, you get the idea. Exhaustive testing of <code v-pre>newGame()</code> is not practical.</p>
                 </div>
               </question>
             </panel>
@@ -100,13 +100,13 @@
               </template>
               <question>
                 <p>Improving efficiency and effectiveness of test case design can,</p>
-                <ul class="task-list">
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. improve the quality of the SUT.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. save money.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. save time spent on test execution.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. save effort on writing and maintaining tests.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. minimize redundant test cases.</li>
-                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. forces us to understand the SUT better.</li>
+                <ul class="contains-task-list">
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. improve the quality of the SUT.</li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. save money.</li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. save time spent on test execution.</li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. save effort on writing and maintaining tests.</li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. minimize redundant test cases.</li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. forces us to understand the SUT better.</li>
                 </ul>
                 <div slot="answer" class="algolia-no-index">
                   <p>(a)(b)(c)(d)(e)(f)</p>
