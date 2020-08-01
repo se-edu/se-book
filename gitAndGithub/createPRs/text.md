@@ -35,7 +35,7 @@ Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-
 1. Set the appropriate target repo and the branch that should receive your PR, using the `base repository` and `base` dropdowns. e.g.,<br>
    {{ dropdown("base repository: **se-edu/samplerepo-pr-practice**") }} {{ dropdown("base: **master**") }}<br>
 
-   <box type="info" light>
+   <box type="info" seamless>
 
    Normally, the default value shown in the dropdown is what you want but in case your fork has <popover content="e.g., the repo you forked from is also a fork of a another repo, which means both of those are considered upstream repos of your fork">multiple upstream repos</popover>, the default may not be what you want.
 
@@ -75,7 +75,7 @@ Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-
 
 **To create another PR** while the current PR is still under review, create a new branch (remember to ==switch back to the `master` first==), add your new proposed change in that branch, and create a new PR following the steps given above.
 
-**It is possible to create PRs within the same repo** e.g., you can create a PR from branch `feature-x` to the `master` branch, within the same repo. Doing so will allow the code to be reviewed (using PR review mechanism) before it is merged.
+**It is possible to create PRs within the same repo** e.g., you can create a PR from branch `feature-x` to the `master` branch, within the same repo. Doing so will allow the code to be reviewed by other developers (using PR review mechanism) before it is merged.
 
 <panel header="{{ icon_resource }} Resources" expanded>
 

@@ -6,7 +6,29 @@
 
 <div id="body">
 
-**Git branches allow you to do multiple parallel changes to the content of a repository**. Follow the steps below to learn how to work with branches. You can use any repo you have on your computer (e.g. a clone of the [samplerepo-things](https://github.com/se-edu/samplerepo-things)) for this.
+**Git supports branching** which allows you to do multiple parallel changes to the content of a repository.
+
+**A Git branch is simply a _named label_ pointing to a commit. The `HEAD` label indicates which branch you are on.** Git creates a branch named `master` by default. When you add a commit, it goes into the branch you are currently on, and the branch label (together with the `HEAD` label) moves to the new commit.
+
+Given below is an illustrations of how branch labels move as branches evolve.
+
+<pic src="images/branchesAsLabels1.png" width="650"/>
+
+1. There is only one branch (i.e., `master`) and there is only one commit on it.
+1. A new commit has been added. The `master` and the `HEAD` labels have moved to the new commit.
+1. A new branch `fix1` has been added. The repo has switched to the new branch too (hence, the `HEAD` label is attached to the `fix1` branch).
+1. A new commit (`c`) has been added. The current branch label `fix1` moves to the new commit, together with the `HEAD` label.
+1. The repo has switched back to the `master` branch.
+
+<pic src="images/branchesAsLabels2.png" width="600"/>
+
+6. A new commit (`d`) has been added. The `master` label has moved to that commit.
+1. The repo has switched back to the `fix1` branch and added a new commit (`e`) to it.
+1. The repo has switched to the `master` branch and the `fix1` branch has been merged into the `master` branch, creating a _merge commit_ `f`. The repo is currently on the `master` branch.
+
+
+
+Follow the steps below to learn how to work with branches. You can use any repo you have on your computer (e.g. a clone of the [samplerepo-things](https://github.com/se-edu/samplerepo-things)) for this.
 
 **0. Observe that you are normally in the branch called `master`.**
 
@@ -30,7 +52,8 @@
   </tab>
 </tabs>
 
-**2. Create some commits in the new branch.** %%Just commit as per normal. Commits you add while on a certain branch will become part of that branch.%%
+**2. Create some commits in the new branch.** %%Just commit as per normal. Commits you add while on a certain branch will become part of that branch.%%<br>
+Note how the `master` label and the `HEAD` label moves to the new commit (The `HEAD` label of the local repo is represented as :fas-dot-circle: in SourceTree)
 
 **3. Switch to the `master` branch.** Note how the changes you did in the `feature1` branch are no longer in the working directory.
 
@@ -43,7 +66,8 @@
   </tab>
 </tabs>
 
-**4. Add a commit to the master branch.** Let’s imagine it’s a bug fix.
+**4. Add a commit to the master branch.** Let’s imagine it’s a bug fix.<br>
+To keep things simple for the time being, this commit should ==not involve the same content that you changed in the `feature1` branch==. To be one the safe side, this commit can change an entirely different file.
 
 <img src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_4.png" height="100" />
 <p/>
@@ -64,7 +88,12 @@
   </tab>
 </tabs>
 
-Observe how the changes you did in the `master` branch (i.e. the imaginary bug fix) is now available even when you are in the `feature1` branch.
+The objective of that merge was to _sync_ the `feature1` branch with the `master` branch. Observe how the changes you did in the `master` branch (i.e. the imaginary bug fix) is now available even when you are in the `feature1` branch.
+
+<box type="info" seamless>
+
+Instead of merging `master` to `feature1`, an alternative is to [_rebase_](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) the `feature1` branch. However, rebasing is an advance feature that requires modifying past commits. If you modify past commits that have been pushed to a remote repository, you'll have to [_force-push_](https://www.datree.io/resources/git-push-force) the modified commit to the remote repo in order to update the commits in it.
+</box>
 
 **7. Add another commit to the `feature1` branch.**
 
@@ -94,6 +123,13 @@ git merge feature1
 
 <img src="{{baseUrl}}/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80" />
 <p/>
+
+<box type="wrong" seamless>
+
+**Avoid this common rookie mistake!**{.text-danger}
+
+==Always remember to switch back to the `master` branch before creating a new branch.== If not, your new branch will be created on top of the current branch.
+</box>
 
 **11. Go back to the `master` branch and merge the `add-countries` branch onto the `master` branch** %%(similar to steps 8-9 above)%%. While you might expect to see something like the below,
 
