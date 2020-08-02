@@ -12,7 +12,7 @@
 
 Here’s an example of adding more methods to a class:
 
-```java
+```java{highlight-lines="3-6"}
 public class PrintTwice {
 
     public static void printTwice(String s) {
@@ -57,7 +57,7 @@ Similar to the `main` method, the `printTwice` method is `public` %%(i.e., it ca
 
 {{ similar }} **The `return` statement allows you to terminate a method before you reach the end of it**:
 
-```java
+```java{highlight-lines="4"}
 public static void printLogarithm(double x) {
     if (x <= 0.0) {
         System.out.println("Error: x must be positive.");
@@ -70,7 +70,7 @@ public static void printLogarithm(double x) {
 
 {{ similar }} **It can be used to return a value from a method too**:
 
-```java
+```java{highlight-lines="5"}
 public class AreaCalculator{
 
     public static double calculateArea(double radius) {
@@ -111,7 +111,7 @@ public static double calculateArea(double height, double width) {
 
 {{ similar }} **Methods can be _recursive_.** Here is an example in which the `nLines` method calls itself recursively:
 
-```java
+```java{highlight-lines="4"}
 public static void nLines(int n) {
     if (n > 0) {
         System.out.println();

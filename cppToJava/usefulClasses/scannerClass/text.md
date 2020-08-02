@@ -8,7 +8,7 @@
 
 **`Scanner` is a class that provides methods for inputting words, numbers, and other data.** `Scanner` provides a method called `nextLine` that reads a line of input from the keyboard and returns a String. The following example reads two lines and repeats them back to the user:
 
-```java
+```java{highlight-lines="1,7,10"}
 import java.util.Scanner;
 
 public class Echo {

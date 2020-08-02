@@ -12,7 +12,7 @@
 
 {{ icon_example }} The `printPoint` method below takes a `Point` object as an argument and displays its attributes in `(x,y)` format.
 
-```java
+```java{highlight-lines="1-3"}
 public static void printPoint(Point p) {
     System.out.println("(" + p.x + ", " + p.y + ")");
 }
@@ -34,7 +34,7 @@ public static void main(String[] args) {
 
 {{ icon_example }} The `java.awt` package also provides a class called `Rectangle`. `Rectangle` objects are similar to points, but they have four attributes: `x`, `y`, `width`, and `height`. The `findCenter` method below takes a `Rectangle` as an argument and returns a `Point` that corresponds to the center of the rectangle:
 
-```java
+```java{highlight-lines="4"}
 public static Point findCenter(Rectangle box) {
     int x = box.x + box.width / 2;
     int y = box.y + box.height / 2;

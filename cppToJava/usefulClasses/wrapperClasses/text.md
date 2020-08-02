@@ -35,7 +35,7 @@ Primitive type | Wrapper class
 
 {{ icon_example }}
 
-```java
+```java{highlight-lines="1"}
 Double d = new Double(2.5);
 int i = d.intValue();
 System.out.println(d);

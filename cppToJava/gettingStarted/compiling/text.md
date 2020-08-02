@@ -24,7 +24,8 @@ Error messages from the compiler usually indicate where in the program the error
 
 Notes:
 * `javac` is the java compiler that you get when you install the JDK.
-* For the above command to work, your console program should be able to find the javac executable (e.g., {{ icon_windows }} the location of the `javac.exe` should be in the `PATH` system variable).
+* For the above command to work, your console program should be able to find the javac executable (e.g., In Windows, the location of the `javac.exe` should be in the `PATH` system variable).<br>
+  [This page](https://www.java.com/en/download/help/path.xml) shows how to set PATH in different OS'es.
 
 </div>
 

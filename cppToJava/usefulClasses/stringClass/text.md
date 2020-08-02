@@ -234,7 +234,7 @@ Sometimes programs need to create strings that are formatted in a certain way. `
 
 {{ icon_example }} The following method returns a time string in 12-hour format. The format specifier `\%02d` means “two digit integer padded with zeros”, so `timeString(19, 5)` returns the string `"07:05 PM"`.
 
-```java
+```java{highlight-lines="12"}
 public static String timeString(int hour, int minute) {
     String ampm;
     if (hour < 12) {
