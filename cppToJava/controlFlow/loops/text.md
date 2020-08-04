@@ -12,9 +12,9 @@
 
 <div class="indented">
 
-{{ similar }} Here is an example while loop:
+{{ similar }} Here is an example `while` loop:
 
-```java
+```java{highlight-lines="2,5"}
 public static void countdown(int n) {
     while (n > 0) {
         System.out.println(n);
@@ -36,7 +36,7 @@ for (initializer; condition; update) {
 }
 ```
 Here is an example:
-```java
+```java{highlight-lines="2,4"}
 public static void printTable(int rows) {
     for (int i = 1; i <= rows; i = i + 1) {
         printRow(i, rows);
@@ -53,7 +53,7 @@ public static void printTable(int rows) {
 The `while` and `for` statements are _pretest_ loops; that is, they test the condition first and at the beginning of each pass through the loop. Java also provides a _posttest_ loop: the `do-while` statement. This type of loop is useful when you need to run the body of the loop at least once.
 
 Here is an example %%(from {{ oracle }})%%:
-```java
+```java{highlight-lines="4,7"}
 class DoWhileDemo {
     public static void main(String[] args){
         int count = 1;
@@ -74,7 +74,7 @@ class DoWhileDemo {
 {{ similar }} **A `break` statement exits the current loop**.
 
 Here is an example %%(from {{ oracle }})%%:
-```java
+```java{highlight-lines="6"}
 class Main {
     public static void main(String[] args) {
         int[] numbers = new int[] { 1, 2, 3, 0, 4, 5, 0 };
@@ -96,7 +96,7 @@ class Main {
 {{ similar }} **A `continue` statement skips the remainder of the current iteration** and moves to the next iteration of the loop.
 
 Here is an example %%(from {{ oracle }})%%:
-```java
+```java{highlight-lines="5"}
 public static void main(String[] args) {
     int[] numbers = new int[] { 1, 2, 3, 0, 4, 5, 0 };
     for (int i = 0; i < numbers.length; i++) {

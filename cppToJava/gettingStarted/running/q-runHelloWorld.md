@@ -1,4 +1,4 @@
-<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] Run HelloWorld</small></small>" expanded >
+<panel type="secondary" header="###  <small><small>{{ icon_important }} [Exercise] Run HelloWorld</small></small>" expanded >
 <question>
 
 * Install Java in your computer, if you haven't done so already.

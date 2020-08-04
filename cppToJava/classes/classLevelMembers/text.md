@@ -46,7 +46,7 @@ The Java programming language supports static methods as well as static variable
 
 {{ icon_example }} Here is an example with class-level variables and class-level methods:
 
-```java
+```java{highlight-lines="8,23"}
 public class Bicycle {
 
     private int gear;

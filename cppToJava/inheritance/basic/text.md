@@ -50,7 +50,7 @@ public class Bicycle {
 }
 ```
 
-```java
+```java{highlight-lines="1"}
 public class MountainBike extends Bicycle {
 
     // the MountainBike subclass adds one field
@@ -88,7 +88,7 @@ public class Superclass {
     }
 }
 ```
-```java
+```java{highlight-lines="5"}
 public class Subclass extends Superclass {
 
     // overrides printMethod in Superclass
@@ -121,7 +121,7 @@ The syntax for calling a superclass constructor is `super()` %%(which invokes th
 
 {{ icon_example }} The following example illustrates how to use the `super` keyword to invoke a superclass's constructor. Recall from the `Bicycle` example that `MountainBike` is a subclass of `Bicycle`. Here is the `MountainBike` (subclass) constructor that calls the superclass constructor and then adds some initialization code of its own (i.e., `seatHeight = startHeight;`{.java}):
 
-```java
+```java{highlight-lines="2"}
 public MountainBike(int startHeight, int startSpeed, int startGear) {
     super(startSpeed, startGear);
     seatHeight = startHeight;

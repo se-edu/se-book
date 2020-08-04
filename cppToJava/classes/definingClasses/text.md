@@ -105,7 +105,7 @@ public Time(int hour, int minute, int second) {
 
 {{ icon_example }} In this example the constructor `Time()` uses the `this` keyword to call its own overloaded constructor `Time(int, int, int)`
 
-```java
+```java{highlight-lines="2, 5-7"}
 public Time() {
     this(0, 0, 0); // call the overloaded constructor
 }
