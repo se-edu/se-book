@@ -11,6 +11,8 @@ Add the following method to the class given below.
 
 </div>
 
+==Do not change the code of the `main` method!==
+
 ```java
 public class Main {
 
