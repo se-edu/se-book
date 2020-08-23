@@ -23,7 +23,7 @@ Some other examples of programming paradigms are:
 Paradigm | Programming Languages
 -------- | ---------------------
 [_Procedural Programming_ paradigm](https://en.wikipedia.org/wiki/Procedural_programming)| C
-[_Functional Programming_ paradigm](https://en.wikipedia.org/wiki/Functional_programming)| F#, Haskel, Scala
+[_Functional Programming_ paradigm](https://en.wikipedia.org/wiki/Functional_programming)| F#, Haskell, Scala
 [_Logic Programming_ paradigm](https://en.wikipedia.org/wiki/Logic_programming) | Prolog
 
 **Some programming languages support multiple paradigms.**
