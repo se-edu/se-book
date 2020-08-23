@@ -13,7 +13,7 @@
 {{ icon_example }} `PayrollTest` ‘drives’ the `Payroll` class by sending it test inputs and verifies if the output is as expected.
 
 ```java
-public class PayrollTestDriver {
+public class PayrollTest {
     public static void main(String[] args) throws Exception {
 
         //test setup
