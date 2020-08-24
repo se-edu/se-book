@@ -129,7 +129,7 @@ Note how the class can use `PREFIX` and `format()` (instead of `Formatter.PREFIX
 
 <box>
 
-{{ icon_example }} If the `seedu.tojava.Main` class in defined in the file `Main.java`,
+{{ icon_example }} If the `seedu.tojava.Main` class is defined in the file `Main.java`,
 * when compiling from the `<source folder>`, the command is:<br>
   `javac seedu/tojava/Main.java`
 * when running it from the `<compiler output folder>`, the command is:<br>
