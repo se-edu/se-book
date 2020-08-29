@@ -28,7 +28,7 @@ The association that a `Board` has 100 `Square`s can be shown in either of these
 
 </box>
 
-{{ icon_important_big_red }} Show each association as **either an attribute or a line but not both**. A line is preferred is it is easier to spot.
+{{ icon_important_big_red }} Show each association as **either an attribute or a line but not both**. A line is preferred as it is easier to spot.
 
 </div>
 
