@@ -47,14 +47,14 @@ Decide your target user's profile (e.g. a student, office worker, programmer, sa
 
 ****Step 2:**** **Define the _problem scope_:**
 
-Decide that exact problem you are going to solve for the target user. It is also useful to specify what related problems it will _not_ solve so that the exact scope is clear.
+Decide the exact problem you are going to solve for the target user. It is also useful to specify what related problems it will _not_ solve so that the exact scope is clear.
 
 > ProductX helps Jean keep track of all her school contacts. It does not cover communicating with contacts.
 
 
 ****Step 3:**** **List _scenarios_ to form a _narrative_:**
 
-Think of the various likely scenarios your target user is likely to go through as she uses your app. Following a chronological sequence as if you are telling a story might be helpful.
+Think of the various scenarios your target user is likely to go through as she uses your app. Following a chronological sequence as if you are telling a story might be helpful.
 
 <blockquote>
 
