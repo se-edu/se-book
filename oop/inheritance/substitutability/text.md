@@ -10,10 +10,24 @@
 
 <box>
 
-<img src="{{baseUrl}}/oop/inheritance/substitutability/images/staff.png" height="80" />
-<p/>
+<puml>
+@startuml
+skinparam classAttributeIconSize 0
+skinparam backgroundcolor transparent
+skinparam shadowing false
+hide circle
+Staff <|-- AcademicStaff
+Staff <|-- AdminStaff
+hide Staff methods
+hide Staff fields
+hide AcademicStaff methods
+hide AcademicStaff fields
+hide AdminStaff methods
+hide AdminStaff fields
+@enduml
+</puml>
 
-{{ icon_example }} an `Academic` is an instance of a `Staff`, but a `Staff` is not necessarily an instance of an `Academic`.  i.e. wherever an object of the superclass is expected, it can be substituted by an object of any of its subclasses. 
+{{ icon_example }} an `AcademicStaff` is an instance of a `Staff`, but a `Staff` is not necessarily an instance of an `AcademicStaff`.  i.e. wherever an object of the superclass is expected, it can be substituted by an object of any of its subclasses.
 
 The following code is valid because an `AcademicStaff` object is substitutable as a `Staff` object.
 
