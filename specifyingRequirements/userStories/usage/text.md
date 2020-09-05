@@ -38,6 +38,11 @@ Given their lightweight nature, **user stories are quite handy for recording req
 
 Given below is a possible _recipe_ you can take when using user stories for early stages of requirement gathering.
 
+****Step 0:**** **Clear your mind of preconceived product ideas**
+
+Even if you already have some idea of what your product will look/behave like in the end, clear your mind of those ideas. The product is the _solution_. At this point, we are still at the stage of figuring out the _problem_ (i.e., user requirements). Let's try to get from the problem to the solution in a systematic way, one step at a time.
+
+
 ****Step 1:**** **Define the _target user_ as a _persona_:**
 
 Decide your target user's profile (e.g. a student, office worker, programmer, sales person) and work patterns (e.g. Does he work in groups or alone? Does he share his computer with others?). A clear understanding of the target user will help when deciding the importance of a user story. You can even narrow it down to a _persona_. Here is an example:
