@@ -5,9 +5,9 @@
 <p/>
 
 - [ ] a. A `Unit` object can be linked to any number of `Item` objects
-- [ ] b. An `Item` object must be linked 1,2,3 or 4 `Unit` objects.
-- [ ] c. A `Unit` object must be linked 1,2,3, or 4 `Item` objects
-- [ ] d. A `Item` object can be 0 or more `Unit` objects.
+- [ ] b. An `Item` object must be linked to 1,2,3 or 4 `Unit` objects.
+- [ ] c. A `Unit` object must be linked to 1,2,3, or 4 `Item` objects
+- [ ] d. A `Item` object can be linked to 0 or more `Unit` objects.
 
 <div slot="answer">
 
